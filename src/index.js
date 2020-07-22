@@ -1,5 +1,3 @@
-import "./styles.css";
-
 function clearProblem() {
   $(".problem-section").remove();
   $(".attribution").remove();
