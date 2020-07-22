@@ -1,0 +1,26 @@
+/* Dark theme styles */
+body {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+a {
+  color: #88bff6;
+}
+
+.error {
+  color: #f66;
+}
+
+.header {
+  color: #ddd;
+}
+
+.problem-section {
+  background: #252525;
+}
+
+img.latex,
+img.latexcenter {
+  filter: invert(1) hue-rotate(180deg);
+} /* to do: add link colors, section header colors */
