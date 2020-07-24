@@ -9,6 +9,41 @@ function clearAll() {
   $(".attribution").remove();
 }
 
+async function addArticle() {
+  $(".options-input-container").after(
+    `<div class="problem-section">
+      <h2 class="section-header" id="article-header">Article Text</h2>
+      <div class="article-text" id="full-text"></div>
+    </div>
+    <p class="attribution">
+      Article content retrieved from the
+      <a
+        href="https://artofproblemsolving.com/wiki/index.php/"
+        text="Art of Problem Solving Wiki"
+        >Art of Problem Solving Wiki</a
+      >.
+    </p>`
+  );
+
+  var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+  var pagename = $("#find-input .input-field").val();
+  var params = `action=parse&page=${pagename}&format=json`;
+
+  const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+  const json = await response.json();
+
+  if (typeof json.parse !== "undefined") {
+    var problemText = json.parse.text["*"];
+    $(".article-text").html(problemText); // need to sanitize quotes & angles
+  } else {
+    $(".article-text").html(
+      `<p class="error">The page you specified does not exist.</p>`
+    );
+  }
+
+  $("#article-header").html(pagename);
+}
+
 async function addProblem(problem) {
   $(".options-input-container").after(
     `<div class="problem-section">
@@ -49,45 +84,85 @@ async function addProblem(problem) {
   $("#article-header").html(pagename);
 }
 
-async function getPagesOfSubjectTags() {
+async function getPages() {
   let inputSubjects = document.querySelector("#input-subjects");
-  let tags = JSON.parse(inputSubjects.value);
-  var pages = [];
+  let inputTests = document.querySelector("#input-tests");
+  let subjects = JSON.parse(inputSubjects.value);
+  let tests = JSON.parse(inputTests.value);
+  let pages = [];
 
-  // (async function fetchAllCatsMembers() {
-  //   const request = async () => {
-  if (tags.some(e => e.value === "(All Subjects)")) {
-    console.log("All Subjects");
-  } else {
-    //  for (let i = 0; i < tags.length; i++) {
-    let i = 0;
+  if (subjects.some(e => e.value === "(All Subjects)")) {
+    console.log("All subjects chosen, this will take a while...");
+    let done = false;
+
+    while (!done) {
+      let response = await fetch(
+        `https://artofproblemsolving.com/wiki/api.php?action=query&list=random&rnnamespace=0&rnlimit=1&format=json&origin=*`
+      );
+      let json = await response.json();
+      if (
+        json.query.random[0].title.includes("Problems/Problem") &&
+        matchesOptions(
+          json.query.random[0].title,
+          tests,
+          yearsFrom,
+          yearsTo,
+          diffFrom,
+          diffTo
+        )
+      ) {
+        pages.push(json.query.random[0].title);
+        done = true;
+      }
+    }
+    /* Slow as fuck
     var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-    var pagename = tags[i].value;
-    var params = `action=query&list=categorymembers&cmtitle=Category:${pagename}&cmlimit=max&format=json`;
+    var params = `action=query&list=allpages&aplimit=max&format=json`;
     var paramsContinue;
+
     var response = await fetch(`${apiEndpoint}?${params}&origin=*`);
     var json = await response.json();
 
-    for (var j = 0; j < json.query.categorymembers.length; j++) {
-      pages.push(json.query.categorymembers[j].title);
+    for (var j = 0; j < json.query.allpages.length; j++) {
+      pages.push(json.query.allpages[j].title);
     }
-    console.log(json.continue);
     while (typeof json.continue !== "undefined") {
-      paramsContinue = params + `&cmcontinue=${json.continue.cmcontinue}`;
-      console.log(paramsContinue);
+      paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
       response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
       json = await response.json();
-      console.log(json);
-      for (var j = 0; j < json.query.categorymembers.length; j++) {
-        pages.push(json.query.categorymembers[j].title);
+      for (var k = 0; k < json.query.allpages.length; k++) {
+        pages.push(json.query.allpages[k].title);
       }
     }
-    console.log(pages.length);
-    return pages;
+    */
+  } else {
+    for (let i = 0; i < subjects.length; i++) {
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let pagename = subjects[i].value;
+      let params = `action=query&list=categorymembers&cmtitle=Category:${pagename}&cmlimit=max&format=json`;
+      let paramsContinue;
+
+      let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+      let json = await response.json();
+
+      if (typeof json.query.categorymembers[0] !== "undefined") {
+        for (var j = 0; j < json.query.categorymembers.length; j++) {
+          pages.push(json.query.categorymembers[j].title);
+        }
+        while (typeof json.continue !== "undefined") {
+          paramsContinue = params + `&cmcontinue=${json.continue.cmcontinue}`;
+          response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
+          json = await response.json();
+          for (var k = 0; k < json.query.categorymembers.length; k++) {
+            pages.push(json.query.categorymembers[k].title);
+          }
+        }
+      } else {
+        console.log(`No problems found in subject ${pagename}.`);
+      }
+    }
   }
-  // }
-  //    };
-  //  })();
+  return pages;
 }
 
 $("#single-problem").click(function() {
@@ -113,14 +188,23 @@ $("#single-problem").click(function() {
           placeholder="Subjects, e.g. Olympiad Algebra Problems"
           value="(All Subjects)"
           data-whitelist="(All Subjects),
+          Introductory Algebra Problems,
+          Introductory Combinatorics Problems,
+          Introductory Geometry Problems,
+          Introductory Logic Problems‏‎,
+          Introductory Number Theory Problems,
+          Introductory Probability Problems‏‎,
+          Introductory Trigonometry Problems,
           Intermediate Algebra Problems,
           Intermediate Combinatorics Problems,
           Intermediate Geometry Problems,
           Intermediate Number Theory Problems,
+          Intermediate Probability Problems‏‎,
           Intermediate Trigonometry Problems,
           Olympiad Algebra Problems,
           Olympiad Combinatorics Problems,
           Olympiad Geometry Problems,
+          Olympiad Inequality Problems,
           Olympiad Number Theory Problems,
           Olympiad Trigonometry Problems‏‎">
         </input>
@@ -141,7 +225,9 @@ $("#single-problem").click(function() {
           View Random
         </button>
       </div>
-      *The AHSME was gradually reduced from 50 to 30 problems from 1950 to 1974. Difficulty levels will likely be inaccurate for earlier years.
+      *The AHSME was gradually reduced from 50 to 30 problems from 1950 to 1974.
+      Difficulty levels will likely be more inaccurate for earlier years, because of this variation
+      and because of the general increase in difficulty of the AHSME/AMC over the years.
       <br/>
       **The 30-problem AHSME was replaced by the 25-problem AMC 10/12 with the 
       2000 exam.
@@ -202,38 +288,7 @@ $("#find-article").click(function() {
 $(".page-container").on("click", "#find-button", async function() {
   clearProblem();
 
-  $(".options-input-container").after(
-    `<div class="problem-section">
-      <h2 class="section-header" id="article-header">Article Text</h2>
-      <div class="article-text" id="full-text"></div>
-    </div>
-    <p class="attribution">
-      Article content retrieved from the
-      <a
-        href="https://artofproblemsolving.com/wiki/index.php/"
-        text="Art of Problem Solving Wiki"
-        >Art of Problem Solving Wiki</a
-      >.
-    </p>`
-  );
-
-  var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-  var pagename = $("#find-input .input-field").val();
-  var params = `action=parse&page=${pagename}&format=json`;
-
-  const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-  const json = await response.json();
-
-  if (typeof json.parse !== "undefined") {
-    var problemText = json.parse.text["*"];
-    $(".article-text").html(problemText); // need to sanitize quotes & angles
-  } else {
-    $(".article-text").html(
-      `<p class="error">The page you specified does not exist.</p>`
-    );
-  }
-
-  $("#article-header").html(pagename);
+  addArticle();
 });
 /* Make some kind of thing for clicking on links in the article */
 
@@ -247,7 +302,8 @@ $(".page-container").on("click", "#random-button", async function() {
   clearProblem();
 
   let pages = [];
-  pages = await getPagesOfSubjectTags();
+  pages = await getPages();
+  console.log(`${pages.length} total problems retrieved.`);
   let randomPage = pages[Math.floor(Math.random() * pages.length)];
 
   addProblem(randomPage);
