@@ -115,10 +115,6 @@ body {
   margin-bottom: 2rem;
 }
 
-#random-label {
-  flex: 1 1 21%;
-}
-
 .input-multi {
   flex: 1 0 30%;
 }

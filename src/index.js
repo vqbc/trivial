@@ -92,11 +92,10 @@ async function getPages() {
 
   let subjects = JSON.parse(inputSubjects.val());
   let tests = JSON.parse(inputTests.val());
-  let yearsFrom = $("#input-years").data().from;
-  let yearsTo = $("#input-years").data().to;
-  let diffFrom = $("#input-diff").data().from;
-  let diffTo = $("#input-diff").data().to;
-  console.log(yearsFrom);
+  let yearsFrom = inputYears.data().from;
+  let yearsTo = inputYears.data().to;
+  let diffFrom = inputDiff.data().from;
+  let diffTo = inputDiff.data().to;
 
   let pages = [];
 
@@ -193,7 +192,25 @@ async function getPages() {
   return pages;
 }
 
-function matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, diffTo) {}
+function matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, diffTo) {
+  console.log(problem);
+  if (!/^\d{4}.*\w+$/.test(problem)) return false;
+
+  let problemTest = problem.match(/(\d{4} )(.*)( Problems)/)[2];
+  problemTest = problemTest
+    .replace(/AMC ((?:10)|(?:12))[AB]/, "AMC $1")
+    .replace(/AIME I+/, "AIME");
+  console.log(problemTest);
+  let matchesTests = false;
+
+  let problemYear = problem.match(/^\d{4}/)[0];
+  console.log(problemYear);
+  if (problemYear < yearsFrom || yearsTo < problemYear) return false;
+
+  let problemNumber = problem.match(/\w+$/)[0];
+  console.log(problemNumber);
+  return true;
+}
 
 $("#single-problem").click(function() {
   clearAll();
@@ -204,14 +221,14 @@ $("#single-problem").click(function() {
         <label class="input-label" for="title">
           Year, test, problem number:
         </label>
-        <input class="input-field" type="text" placeholder="2005 AMC 10A Problem 8"/>
+        <input class="input-field" type="text" placeholder="e.g. 2005 AMC 10A Problem 8"/>
         <button class="input-button" id="single-button">
-          View Article
+          View Problem
         </button>
       </div>
       <div class="options-input" id="random-input">
         <label class="input-label" id="random-label">
-          Choose the allowed subjects, tests, years, <a
+          Allowed subjects, tests, years, <a
           id="dark-link"
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
           text="difficulty">difficulty</a>:
@@ -261,9 +278,6 @@ $("#single-problem").click(function() {
       *The AHSME was gradually reduced from 50 to 30 problems from 1950 to 1974.
       Difficulty levels will likely be more inaccurate for earlier years, because of this variation
       and because of the general increase in difficulty of the AHSME/AMC over the years.
-      <br/>
-      **The 30-problem AHSME was replaced by the 25-problem AMC 10/12 with the 
-      2000 exam.
     </div>`
   );
 
