@@ -85,14 +85,22 @@ async function addProblem(problem) {
 }
 
 async function getPages() {
-  let inputSubjects = document.querySelector("#input-subjects");
-  let inputTests = document.querySelector("#input-tests");
-  let subjects = JSON.parse(inputSubjects.value);
-  let tests = JSON.parse(inputTests.value);
+  let inputSubjects = $("#input-subjects");
+  let inputTests = $("#input-tests");
+  let inputYears = $("#input-years");
+  let inputDiff = $("#input-diff");
+
+  let subjects = JSON.parse(inputSubjects.val());
+  let tests = JSON.parse(inputTests.val());
+  let yearsFrom = $("#input-years").data().from;
+  let yearsTo = $("#input-years").data().to;
+  let diffFrom = $("#input-diff").data().from;
+  let diffTo = $("#input-diff").data().to;
+  console.log(yearsFrom);
+
   let pages = [];
 
   if (subjects.some(e => e.value === "(All Subjects)")) {
-    console.log("All subjects chosen, this will take a while...");
     let done = false;
 
     while (!done) {
@@ -147,14 +155,34 @@ async function getPages() {
 
       if (typeof json.query.categorymembers[0] !== "undefined") {
         for (var j = 0; j < json.query.categorymembers.length; j++) {
-          pages.push(json.query.categorymembers[j].title);
+          if (
+            matchesOptions(
+              json.query.categorymembers[j].title,
+              tests,
+              yearsFrom,
+              yearsTo,
+              diffFrom,
+              diffTo
+            )
+          )
+            pages.push(json.query.categorymembers[j].title);
         }
         while (typeof json.continue !== "undefined") {
           paramsContinue = params + `&cmcontinue=${json.continue.cmcontinue}`;
           response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
           json = await response.json();
           for (var k = 0; k < json.query.categorymembers.length; k++) {
-            pages.push(json.query.categorymembers[k].title);
+            if (
+              matchesOptions(
+                json.query.categorymembers[k].title,
+                tests,
+                yearsFrom,
+                yearsTo,
+                diffFrom,
+                diffTo
+              )
+            )
+              pages.push(json.query.categorymembers[k].title);
           }
         }
       } else {
@@ -165,6 +193,8 @@ async function getPages() {
   return pages;
 }
 
+function matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, diffTo) {}
+
 $("#single-problem").click(function() {
   clearAll();
 
@@ -172,19 +202,22 @@ $("#single-problem").click(function() {
     `<div class="options-input-container">
       <div class="options-input" id="single-input">
         <label class="input-label" for="title">
-          Exact article name (title case):
+          Year, test, problem number:
         </label>
-        <input class="input-field" type="text"/>
+        <input class="input-field" type="text" placeholder="2005 AMC 10A Problem 8"/>
         <button class="input-button" id="single-button">
           View Article
         </button>
       </div>
       <div class="options-input" id="random-input">
         <label class="input-label" id="random-label">
-          Choose the allowed subjects, tests, years, problem numbers: <!--replace with difficulty level?-->
+          Choose the allowed subjects, tests, years, <a
+          id="dark-link"
+          href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
+          text="difficulty">difficulty</a>:
         </label>
-        <input id="input-subjects" name="input-subjects"
-          class="input-multi"
+        <input class="input-multi" name="input-subjects"
+          id="input-subjects"
           placeholder="Subjects, e.g. Olympiad Algebra Problems"
           value="(All Subjects)"
           data-whitelist="(All Subjects),
@@ -208,8 +241,8 @@ $("#single-problem").click(function() {
           Olympiad Number Theory Problems,
           Olympiad Trigonometry Problems‏‎">
         </input>
-        <input id="input-tests" name="input-tests"
-          class="input-multi"
+        <input class="input-multi" name="input-tests"
+          id="input-tests"
           placeholder="Tests, e.g. AMC 10"
           value="(All Tests)"
           data-whitelist="(All Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
@@ -219,7 +252,7 @@ $("#single-problem").click(function() {
           <input class="input-range" id="input-years"></input>
         </div>
         <div class="range-container">
-          <input class="input-range" id="input-problems"></input>
+          <input class="input-range" id="input-diff"></input>
         </div>
         <button class="input-button" id="random-button">
           View Random
@@ -248,14 +281,14 @@ $("#single-problem").click(function() {
     to: 2018,
     prettify_enabled: false
   });
-  $("#input-problems").ionRangeSlider({
+  $("#input-diff").ionRangeSlider({
     type: "double",
     grid: true,
-    min: 1,
-    max: 50,
-    from: 15,
-    to: 20,
-    prefix: "Problem "
+    min: 0,
+    max: 10,
+    from: 3,
+    to: 6.5,
+    step: 0.5
   });
 });
 
@@ -275,7 +308,7 @@ $("#find-article").click(function() {
   $(".button-container").after(
     `<div class="options-input options-input-container" id="find-input">
       <label class="input-label" for="title">
-        Exact article name (title case):
+        Exact article name:
       </label>
       <input class="input-field" type="text"/>
       <button class="input-button" id="find-button">
@@ -295,7 +328,11 @@ $(".page-container").on("click", "#find-button", async function() {
 $(".page-container").on("click", "#single-button", function() {
   clearProblem();
 
-  addProblem($("#single-input .input-field").val());
+  addProblem(
+    $("#single-input .input-field")
+      .val()
+      .replace("Problem", "Problems/Problem")
+  );
 });
 
 $(".page-container").on("click", "#random-button", async function() {
