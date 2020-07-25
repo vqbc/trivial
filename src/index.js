@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 function clearProblem() {
   $(".problem-section").remove();
   $(".attribution").remove();
@@ -51,7 +52,7 @@ async function addProblem(problem) {
       <!-- Replace with name of problem-->
       <div class="article-text" id="problem-text"></div>
     </div>
-    <div class="problem-section">
+    <div class="problem-section" id="solution-section">
       <h2 class="section-header" id="solutions-header">Solutions</h2>
       <!-- Make collapsible -->
       <div class="article-text" id="solution-text"></div>
@@ -193,22 +194,48 @@ async function getPages() {
 }
 
 function matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, diffTo) {
-  console.log(problem);
-  if (!/^\d{4}.*\w+$/.test(problem)) return false;
+  if (!/^\d{4}.*Problems\/Problem \d+$/.test(problem)) return false;
 
-  let problemTest = problem.match(/(\d{4} )(.*)( Problems)/)[2];
-  problemTest = problemTest
+  let problemTest = problem
+    .match(/(\d{4} )(.*)( Problems)/)[2]
     .replace(/AMC ((?:10)|(?:12))[AB]/, "AMC $1")
     .replace(/AIME I+/, "AIME");
-  console.log(problemTest);
-  let matchesTests = false;
+  if (
+    !tests.some(e => e.value === "(All Tests)") &&
+    tests.map(e => e.value).indexOf(problemTest) < 0
+  )
+    return false;
 
   let problemYear = problem.match(/^\d{4}/)[0];
-  console.log(problemYear);
   if (problemYear < yearsFrom || yearsTo < problemYear) return false;
 
-  let problemNumber = problem.match(/\w+$/)[0];
+  let problemNumber = problem.match(/\d+$/)[0];
   console.log(problemNumber);
+  let problemDiff;
+  switch (problemTest) {
+    case "AMC 8":
+      if (problemNumber < 13) {
+        problemDiff = 1;
+      } else if (problemNumber < 21) {
+        problemDiff = 1.5;
+      } else {
+        problemDiff = 2;
+      }
+      break;
+    case "AMC 10":
+      if (problemNumber < 13) {
+        problemDiff = 1;
+      } else if (problemNumber < 21) {
+        problemDiff = 1.5;
+      } else {
+        problemDiff = 2;
+      }
+      break;
+    default:
+      break;
+  }
+  if (problemDiff < diffFrom || diffTo < problemDiff) return false;
+
   return true;
 }
 
@@ -235,7 +262,7 @@ $("#single-problem").click(function() {
         </label>
         <input class="input-multi" name="input-subjects"
           id="input-subjects"
-          placeholder="Subjects, e.g. Olympiad Algebra Problems"
+          placeholder="Subjects, e.g. Intermediate Algebra Problems"
           value="(All Subjects)"
           data-whitelist="(All Subjects),
           Introductory Algebra Problems,
@@ -263,7 +290,7 @@ $("#single-problem").click(function() {
           placeholder="Tests, e.g. AMC 10"
           value="(All Tests)"
           data-whitelist="(All Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
-          USAJMO, USAMO, Canadian MO, IMO">
+          AIME, USAJMO, USAMO, Canadian MO, IMO">
         </input>
         <div class="range-container">
           <input class="input-range" id="input-years"></input>
@@ -357,5 +384,11 @@ $(".page-container").on("click", "#random-button", async function() {
   console.log(`${pages.length} total problems retrieved.`);
   let randomPage = pages[Math.floor(Math.random() * pages.length)];
 
-  addProblem(randomPage);
+  await addProblem(randomPage);
+  if (pages.length === 0) {
+    $("#solution-section").hide();
+    $(".article-text").html(
+      `<p class="error">No problems could be found meeting those requirements.</p>`
+    );
+  }
 });
