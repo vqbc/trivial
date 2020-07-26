@@ -277,7 +277,13 @@ a {
   text-decoration: none;
 }
 
-a#dark-link {
+a#aops-link {
+  display: block;
+  margin-top: 1em;
+  font-style: italic;
+}
+
+a.dark-link {
   color: inherit;
   text-decoration: underline;
 }

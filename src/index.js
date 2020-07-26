@@ -10,10 +10,19 @@ function clearAll() {
   $(".attribution").remove();
 }
 
+function fixLinks() {
+  $(".article-text a").each(function() {
+    let href = $(this).attr("href");
+    if (href.charAt(0) === "/")
+      $(this).attr("href", `https://artofproblemsolving.com${href}`);
+  });
+}
+
 async function addArticle() {
   $(".options-input-container").after(
     `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
+      <a href="" text="(view on aops)" id="aops-link">(View on the AoPS Wiki)</a>
       <div class="article-text" id="full-text"></div>
     </div>
     <p class="attribution">
@@ -43,13 +52,17 @@ async function addArticle() {
   }
 
   $("#article-header").html(pagename);
+  $("#aops-link").attr(
+    "href",
+    `https://artofproblemsolving.com/wiki/index.php/${pagename}`
+  );
 }
 
 async function addProblem(problem) {
   $(".options-input-container").after(
     `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
-      <!-- Replace with name of problem-->
+      <a href="" text="(view on aops)" id="aops-link">(View on the AoPS Wiki)</a>
       <div class="article-text" id="problem-text"></div>
     </div>
     <div class="problem-section" id="solution-section">
@@ -83,6 +96,10 @@ async function addProblem(problem) {
   }
 
   $("#article-header").html(pagename);
+  $("#aops-link").attr(
+    "href",
+    `https://artofproblemsolving.com/wiki/index.php/${pagename}`
+  );
 }
 
 async function getPages() {
@@ -210,7 +227,6 @@ function matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, diffTo) {
   if (problemYear < yearsFrom || yearsTo < problemYear) return false;
 
   let problemNumber = problem.match(/\d+$/)[0];
-  console.log(problemNumber);
   let problemDiff;
   switch (problemTest) {
     case "AMC 8":
@@ -256,7 +272,7 @@ $("#single-problem").click(function() {
       <div class="options-input" id="random-input">
         <label class="input-label" id="random-label">
           Allowed subjects, tests, years, <a
-          id="dark-link"
+          class="dark-link"
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
           text="difficulty">difficulty</a>:
         </label>
@@ -319,7 +335,7 @@ $("#single-problem").click(function() {
     min: 1950,
     max: 2020,
     from: 1974,
-    to: 2018,
+    to: 2020,
     prettify_enabled: false
   });
   $("#input-diff").ionRangeSlider({
@@ -327,8 +343,8 @@ $("#single-problem").click(function() {
     grid: true,
     min: 0,
     max: 10,
-    from: 3,
-    to: 6.5,
+    from: 2,
+    to: 9,
     step: 0.5
   });
 });
@@ -351,7 +367,7 @@ $("#find-article").click(function() {
       <label class="input-label" for="title">
         Exact article name:
       </label>
-      <input class="input-field" type="text"/>
+      <input class="input-field" type="text" placeholder="e.g. Heron's Formula"/>
       <button class="input-button" id="find-button">
         View Article
       </button>
@@ -362,18 +378,20 @@ $("#find-article").click(function() {
 $(".page-container").on("click", "#find-button", async function() {
   clearProblem();
 
-  addArticle();
+  await addArticle();
+  fixLinks();
 });
 /* Make some kind of thing for clicking on links in the article */
 
-$(".page-container").on("click", "#single-button", function() {
+$(".page-container").on("click", "#single-button", async function() {
   clearProblem();
 
-  addProblem(
+  await addProblem(
     $("#single-input .input-field")
       .val()
       .replace("Problem", "Problems/Problem")
   );
+  fixLinks();
 });
 
 $(".page-container").on("click", "#random-button", async function() {
@@ -391,4 +409,5 @@ $(".page-container").on("click", "#random-button", async function() {
       `<p class="error">No problems could be found meeting those requirements.</p>`
     );
   }
+  fixLinks();
 });
