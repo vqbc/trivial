@@ -239,7 +239,7 @@ tags > span {
 .irs--flat .irs-from,
 .irs--flat .irs-to,
 .irs--flat .irs-single {
-  background: #66aaee;
+  background: #6ae;
 }
 
 .irs--flat .irs-handle.state_hover > i:first-child,
@@ -250,7 +250,7 @@ tags > span {
 .irs--flat .irs-from:before,
 .irs--flat .irs-to:before,
 .irs--flat .irs-single:before {
-  border-top-color: #66aaee;
+  border-top-color: #6ae;
 } /**/
 
 /* Problem sections */
@@ -259,7 +259,7 @@ tags > span {
   padding: 0.6rem 1rem 0.3rem;
   color: white;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
-  background: #44bb99;
+  background: #4b9;
 }
 
 .problem-section {
@@ -270,7 +270,7 @@ tags > span {
 
 /* In-article or inline styling */
 a {
-  color: #2288ee;
+  color: #28e;
   text-decoration: none;
 }
 
