@@ -1,4 +1,8 @@
 /* Container styles and sizing */
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-size: 1.1rem;
   font-family: "Computer Modern Sans";
