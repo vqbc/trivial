@@ -106,7 +106,7 @@ body {
   outline: 2px solid #a3dbd8;
 } /**/
 
-/* Layout for the problem options input */
+/* Problem options input */
 .options-input-container {
   margin-bottom: 2rem;
 }
@@ -182,7 +182,7 @@ body {
   }
 } /**/
 
-/* Direct input text field */
+/* Direct input field */
 .input-field {
   flex: 1 0 30%;
   min-width: 0;
