@@ -10,11 +10,21 @@ function clearAll() {
   $(".attribution").remove();
 }
 
+function formatProblem() {
+  console.log("Gonna write code later");
+}
+
 function fixLinks() {
   $(".article-text a").each(function() {
     let href = $(this).attr("href");
-    if (href.charAt(0) === "/")
+    if (typeof href !== "undefined" && href.charAt(0) === "/")
       $(this).attr("href", `https://artofproblemsolving.com${href}`);
+  });
+}
+
+function collapseSolutions() {
+  $("#solutions-header").click(function() {
+    $("#solutions-section").toggleClass("section-collapsed");
   });
 }
 
@@ -56,19 +66,20 @@ async function addArticle() {
     "href",
     `https://artofproblemsolving.com/wiki/index.php/${pagename}`
   );
+  return true;
 }
 
 async function addProblem(problem) {
   $(".options-input-container").after(
     `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
-      <a href="" text="(view on aops)" id="aops-link">(View on the AoPS Wiki)</a>
+      <a text="(View on the AoPS Wiki)" id="aops-link">(View on the AoPS Wiki)</a>
       <div class="article-text" id="problem-text"></div>
     </div>
-    <div class="problem-section" id="solution-section">
+    <div class="problem-section section-collapsed" id="solutions-section">
       <h2 class="section-header" id="solutions-header">Solutions</h2>
       <!-- Make collapsible -->
-      <div class="article-text" id="solution-text"></div>
+      <div class="article-text" id="solutions-text"></div>
     </div>
     <p class="attribution">
       Article content retrieved from the
@@ -100,6 +111,7 @@ async function addProblem(problem) {
     "href",
     `https://artofproblemsolving.com/wiki/index.php/${pagename}`
   );
+  return true;
 }
 
 async function getPages() {
@@ -161,7 +173,7 @@ async function getPages() {
     }
     */
   } else {
-    for (let i = 0; i < subjects.length; i++) {
+    for (let i = 0, iLength = subjects.length; i < iLength; i++) {
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
       let pagename = subjects[i].value;
       let params = `action=query&list=categorymembers&cmtitle=Category:${pagename}&cmlimit=max&format=json`;
@@ -170,11 +182,11 @@ async function getPages() {
       let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
       let json = await response.json();
 
-      if (typeof json.query.categorymembers[0] !== "undefined") {
-        for (var j = 0; j < json.query.categorymembers.length; j++) {
+      function addPagesFromJSON(members) {
+        for (let j = 0, jLength = members.length; j < jLength; j++) {
           if (
             matchesOptions(
-              json.query.categorymembers[j].title,
+              members[j].title,
               tests,
               yearsFrom,
               yearsTo,
@@ -182,25 +194,17 @@ async function getPages() {
               diffTo
             )
           )
-            pages.push(json.query.categorymembers[j].title);
+            pages.push(members[j].title);
         }
+      }
+
+      if (typeof json.query.categorymembers[0] !== "undefined") {
+        addPagesFromJSON(json.query.categorymembers);
         while (typeof json.continue !== "undefined") {
           paramsContinue = params + `&cmcontinue=${json.continue.cmcontinue}`;
           response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
           json = await response.json();
-          for (var k = 0; k < json.query.categorymembers.length; k++) {
-            if (
-              matchesOptions(
-                json.query.categorymembers[k].title,
-                tests,
-                yearsFrom,
-                yearsTo,
-                diffFrom,
-                diffTo
-              )
-            )
-              pages.push(json.query.categorymembers[k].title);
-          }
+          addPagesFromJSON(json.query.categorymembers);
         }
       } else {
         console.log(`No problems found in subject ${pagename}.`);
@@ -378,20 +382,26 @@ $("#find-article").click(function() {
 $(".page-container").on("click", "#find-button", async function() {
   clearProblem();
 
-  await addArticle();
-  fixLinks();
+  let response = await addArticle();
+  if (response) {
+    fixLinks();
+  }
 });
 /* Make some kind of thing for clicking on links in the article */
 
 $(".page-container").on("click", "#single-button", async function() {
   clearProblem();
 
-  await addProblem(
+  let response = await addProblem(
     $("#single-input .input-field")
       .val()
       .replace("Problem", "Problems/Problem")
   );
-  fixLinks();
+  if (response) {
+    formatProblem();
+    fixLinks();
+    collapseSolutions();
+  }
 });
 
 $(".page-container").on("click", "#random-button", async function() {
@@ -402,12 +412,16 @@ $(".page-container").on("click", "#random-button", async function() {
   console.log(`${pages.length} total problems retrieved.`);
   let randomPage = pages[Math.floor(Math.random() * pages.length)];
 
-  await addProblem(randomPage);
-  if (pages.length === 0) {
-    $("#solution-section").hide();
-    $(".article-text").html(
-      `<p class="error">No problems could be found meeting those requirements.</p>`
-    );
+  let response = await addProblem(randomPage);
+  if (response) {
+    if (pages.length === 0) {
+      $("#solution-section").hide();
+      $(".article-text").html(
+        `<p class="error">No problems could be found meeting those requirements.</p>`
+      );
+    }
+    formatProblem();
+    fixLinks();
+    collapseSolutions();
   }
-  fixLinks();
 });
