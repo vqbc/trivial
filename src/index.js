@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 (() => {
   var allPages = [];
+  var categoryPages = [];
   (async function() {
     console.log("Preloading all wiki pages, allow around 10 seconds...");
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -144,6 +145,22 @@
   }
 
   async function getPages() {
+    function addPagesFromJSON(members) {
+      for (let problem of members) {
+        if (
+          matchesOptions(
+            problem.title,
+            tests,
+            yearsFrom,
+            yearsTo,
+            diffFrom,
+            diffTo
+          )
+        )
+          pages.push(problem.title);
+      }
+    }
+
     let inputSubjects = $("#input-subjects");
     let inputTests = $("#input-tests");
     let inputYears = $("#input-years");
@@ -159,81 +176,43 @@
     let pages = [];
 
     if (subjects.some(e => e.value === "(All Subjects)")) {
-      let done = false;
-
-      while (!done) {
-        /*
-        let response = await fetch(
-          `https://artofproblemsolving.com/wiki/api.php?action=query&list=random&rnnamespace=0&rnlimit=1&format=json&origin=*`
-        );
-        let json = await response.json();
-        let problem = json.query.random[0].title;
-        */
-
-        let problem = allPages[Math.floor(Math.random() * allPages.length)];
+      for (let problem of allPages) {
         if (
           problem.includes("Problems/Problem") &&
           matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, diffTo)
-        ) {
+        )
           pages.push(problem);
-          done = true;
-        }
       }
-      /* Slow as fuck
-    var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-    var params = `action=query&list=allpages&aplimit=max&format=json`;
-    var paramsContinue;
-
-    var response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-    var json = await response.json();
-
-    for (var j = 0; j < json.query.allpages.length; j++) {
-      pages.push(json.query.allpages[j].title);
-    }
-    while (typeof json.continue !== "undefined") {
-      paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
-      response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
-      json = await response.json();
-      for (var k = 0; k < json.query.allpages.length; k++) {
-        pages.push(json.query.allpages[k].title);
-      }
-    }
-    */
     } else {
-      for (let i = 0, iLength = subjects.length; i < iLength; i++) {
-        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-        let pagename = subjects[i].value;
-        let params = `action=query&list=categorymembers&cmtitle=Category:${pagename}&cmlimit=max&format=json`;
-        let paramsContinue;
-
-        let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-        let json = await response.json();
-
-        function addPagesFromJSON(members) {
-          members.forEach(problem => {
-            if (
-              matchesOptions(
-                problem.title,
-                tests,
-                yearsFrom,
-                yearsTo,
-                diffFrom,
-                diffTo
-              )
-            )
-              pages.push(problem.title);
-          });
-        }
-        if (typeof json.query.categorymembers[0] !== "undefined") {
-          addPagesFromJSON(json.query.categorymembers);
-          while (typeof json.continue !== "undefined") {
-            paramsContinue = params + `&cmcontinue=${json.continue.cmcontinue}`;
-            response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
-            json = await response.json();
-            addPagesFromJSON(json.query.categorymembers);
-          }
+      for (let subject of subjects) {
+        console.log(categoryPages.some(e => e.subject === subject));
+        if (categoryPages.some(e => e.subject === subject)) {
+          addPagesFromJSON(
+            categoryPages.find(e => e.subject === subject).pages
+          );
         } else {
-          console.log(`No problems found in subject ${pagename}.`);
+          let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+          let pagename = subject.value;
+          let params = `action=query&list=categorymembers&cmtitle=Category:${pagename}&cmlimit=max&format=json`;
+          let paramsContinue;
+
+          let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+          let json = await response.json();
+
+          if (typeof json.query.categorymembers[0] !== "undefined") {
+            addPagesFromJSON(json.query.categorymembers);
+            while (typeof json.continue !== "undefined") {
+              paramsContinue =
+                params + `&cmcontinue=${json.continue.cmcontinue}`;
+              response = await fetch(
+                `${apiEndpoint}?${paramsContinue}&origin=*`
+              );
+              json = await response.json();
+              addPagesFromJSON(json.query.categorymembers);
+            }
+          }
+          categoryPages.push({ subject: subject.value, pages: pages });
+          console.log(categoryPages);
         }
       }
     }
@@ -248,7 +227,6 @@
     diffFrom,
     diffTo
   ) {
-    console.log(problem);
     if (!/^\d{4}.*Problems\/Problem \d+$/.test(problem)) return false;
 
     let problemTest = problem
