@@ -19,8 +19,8 @@
       paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
       response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
       json = await response.json();
-      for (let i = 0, iLength = json.query.allpages.length; i < iLength; i++) {
-        allPages.push(json.query.allpages[i].title);
+      for (let page of json.query.allpages) {
+        allPages.push(page.title);
       }
     }
 
@@ -50,6 +50,10 @@
       if (typeof href !== "undefined" && href.charAt(0) === "/")
         $(this).attr("href", `https://artofproblemsolving.com${href}`);
     });
+  }
+
+  function directLinks() {
+    console.log("Gonna write more code later");
   }
 
   function collapseSolutions() {
@@ -145,6 +149,15 @@
   }
 
   async function getPages() {
+    function addPagesFromArray(members) {
+      for (let problem of members) {
+        if (
+          matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, diffTo)
+        )
+          pages.push(problem);
+      }
+    }
+
     function addPagesFromJSON(members) {
       for (let problem of members) {
         if (
@@ -158,6 +171,7 @@
           )
         )
           pages.push(problem.title);
+        fullPages.push(problem.title);
       }
     }
 
@@ -174,6 +188,7 @@
     let diffTo = inputDiff.data().to;
 
     let pages = [];
+    let fullPages = [];
 
     if (subjects.some(e => e.value === "(All Subjects)")) {
       for (let problem of allPages) {
@@ -185,10 +200,9 @@
       }
     } else {
       for (let subject of subjects) {
-        console.log(categoryPages.some(e => e.subject === subject));
-        if (categoryPages.some(e => e.subject === subject)) {
-          addPagesFromJSON(
-            categoryPages.find(e => e.subject === subject).pages
+        if (categoryPages.some(e => e.subject === subject.value)) {
+          addPagesFromArray(
+            categoryPages.find(e => e.subject === subject.value).pages
           );
         } else {
           let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -211,8 +225,7 @@
               addPagesFromJSON(json.query.categorymembers);
             }
           }
-          categoryPages.push({ subject: subject.value, pages: pages });
-          console.log(categoryPages);
+          categoryPages.push({ subject: subject.value, pages: fullPages });
         }
       }
     }
@@ -336,16 +349,13 @@
         </button>
       </div>
       <p>
-      *The AHSME was gradually reduced from 50 to 30 problems from 1950 to 1974.
-      Difficulty levels will likely be more inaccurate for earlier years,
-      because of this variation and because of the general increase in
-      difficulty of the AHSME/AMC over the years.
+      *Difficulty levels will likely be more inaccurate for earlier years,
+      because of changes in competition difficulty and problem design over time.
       </p>
       <p>
       **The script preloads a list of all pages in alphabetical order when the
-      site is loaded, for use when a random page is selected from all subjects,
-      because it would take too long to get the list again with every new random
-      problem. Because it takes around 10 seconds to fully load, trying to get a
+      site is loaded, for use when a random page is selected from all subjects.
+      Because it takes around 10 seconds to fully load, trying to get a
       problem before then will only give older problems early in alphabetical
       order.
       </p>
@@ -409,9 +419,9 @@
     let response = await addArticle();
     if (response) {
       fixLinks();
+      directLinks();
     }
   });
-  /* Make some kind of thing for clicking on links in the article */
 
   $(".page-container").on("click", "#single-button", async function() {
     clearProblem();
@@ -425,6 +435,7 @@
       formatProblem();
       fixLinks();
       collapseSolutions();
+      directLinks();
     }
   });
 
@@ -447,6 +458,7 @@
       formatProblem();
       fixLinks();
       collapseSolutions();
+      directLinks();
     }
   });
 })();
