@@ -11,8 +11,8 @@
     let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
     let json = await response.json();
 
-    for (let i = 0, iLength = json.query.allpages.length; i < iLength; i++) {
-      allPages.push(json.query.allpages[i].title);
+    for (let page of json.query.allpages) {
+      allPages.push(page.title);
     }
 
     while (typeof json.continue !== "undefined") {
@@ -40,10 +40,6 @@
     $(".attribution").remove();
   }
 
-  function formatProblem() {
-    console.log("Gonna write code later");
-  }
-
   function fixLinks() {
     $(".article-text a").each(function() {
       let href = $(this).attr("href");
@@ -52,17 +48,29 @@
     });
   }
 
-  function directLinks() {
-    console.log("Gonna write more code later");
+  async function directLinks() {
+    $(".article-text a").click(async function(event) {
+      let pagename = $(this).attr("href");
+      if (pagename.includes("artofproblemsolving.com/wiki/")) {
+        event.preventDefault();
+        pagename = pagename
+          .replace("https://artofproblemsolving.com/wiki/index.php/", "")
+          .replace("_", " ");
+        clearProblem();
+        await addArticle(pagename);
+        fixLinks();
+        directLinks();
+      }
+    });
   }
 
   function collapseSolutions() {
-    $("#solutions-header").click(function() {
+    $("#solutions-header").click(() => {
       $("#solutions-section").toggleClass("section-collapsed");
     });
   }
 
-  async function addArticle() {
+  async function addArticle(pagename) {
     $(".options-input-container").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
@@ -80,7 +88,6 @@
     );
 
     var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-    var pagename = $("#find-input .input-field").val();
     var params = `action=parse&page=${pagename}&format=json`;
 
     const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
@@ -88,7 +95,7 @@
 
     if (typeof json.parse !== "undefined") {
       var problemText = json.parse.text["*"];
-      $(".article-text").html(problemText); // need to sanitize quotes & angles
+      $(".article-text").html(problemText);
     } else {
       $(".article-text").html(
         `<p class="error">The page you specified does not exist.</p>`
@@ -103,7 +110,45 @@
     return true;
   }
 
-  async function addProblem(problem) {
+  async function addProblem(pagename) {
+    function getProblem(htmlString) {
+      console.log(htmlString);
+      let htmlParsed = $.parseHTML(htmlString);
+      if (
+        $(htmlParsed)
+          .children()
+          .filter("h2:contains('Problem'), h3:contains('Problem')").length
+      ) {
+        let before = $(htmlParsed)
+          .children()
+          .filter("h2:contains('Problem'), h3:contains('Problem')")
+          .nextUntil("h2, h3");
+        let beforeHTML = "";
+
+        before.each(function() {
+          beforeHTML += this.outerHTML;
+        });
+        return beforeHTML;
+      } else {
+        return htmlString;
+      }
+    }
+
+    function getSolutions(htmlString) {
+      let htmlParsed = $.parseHTML(htmlString);
+      let after = $(htmlParsed)
+        .children()
+        .filter("h2:contains('Solution'), h3:contains('Solution')")
+        .nextUntil("h2, h3, table")
+        .addBack("h2:contains('Solution '), h3:contains('Solution ')");
+      let afterHTML = "";
+
+      after.each(function() {
+        afterHTML += this.outerHTML;
+      });
+      return afterHTML;
+    }
+
     $(".options-input-container").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
@@ -125,7 +170,6 @@
     </p>`
     );
     var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-    var pagename = problem;
     var params = `action=parse&page=${pagename}&format=json`;
 
     const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
@@ -133,7 +177,8 @@
 
     if (typeof json.parse !== "undefined") {
       var problemText = json.parse.text["*"];
-      $(".article-text").html(problemText); // need to sanitize quotes & angles
+      $("#problem-text").html(getProblem(problemText));
+      $("#solutions-text").html(getSolutions(problemText));
     } else {
       $(".article-text").html(
         `<p class="error">The page you specified does not exist.</p>`
@@ -387,7 +432,7 @@
     });
   });
 
-  $("#printable-batch").click(function() {
+  $("#problem-batch").click(function() {
     clearAll();
 
     $(".button-container").after(
@@ -416,27 +461,31 @@
   $(".page-container").on("click", "#find-button", async function() {
     clearProblem();
 
-    let response = await addArticle();
-    if (response) {
-      fixLinks();
-      directLinks();
-    }
+    await addArticle(
+      $("#find-input .input-field")
+        .val()
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+    );
+    fixLinks();
+    directLinks();
   });
 
   $(".page-container").on("click", "#single-button", async function() {
     clearProblem();
 
-    let response = await addProblem(
+    await addProblem(
       $("#single-input .input-field")
         .val()
         .replace("Problem", "Problems/Problem")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
     );
-    if (response) {
-      formatProblem();
-      fixLinks();
-      collapseSolutions();
-      directLinks();
-    }
+    fixLinks();
+    collapseSolutions();
+    directLinks();
   });
 
   $(".page-container").on("click", "#random-button", async function() {
@@ -446,19 +495,17 @@
     pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
     let randomPage = pages[Math.floor(Math.random() * pages.length)];
+    console.log(randomPage);
 
-    let response = await addProblem(randomPage);
-    if (response) {
-      if (pages.length === 0) {
-        $("#solution-section").hide();
-        $(".article-text").html(
-          `<p class="error">No problems could be found meeting those requirements.</p>`
-        );
-      }
-      formatProblem();
-      fixLinks();
-      collapseSolutions();
-      directLinks();
+    addProblem(randomPage);
+    if (pages.length === 0) {
+      $("#solution-section").hide();
+      $(".article-text").html(
+        `<p class="error">No problems could be found meeting those requirements.</p>`
+      );
     }
+    fixLinks();
+    collapseSolutions();
+    directLinks();
   });
 })();

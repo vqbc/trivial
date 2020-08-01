@@ -303,6 +303,10 @@ a {
   text-decoration: none;
 }
 
+a.new {
+  color: #d33; /* redlinks */
+}
+
 a#aops-link {
   display: block;
   margin-top: 1em;
@@ -321,23 +325,9 @@ a.dark-link {
 }
 
 .article-text .toc,
-.article-text .mw-editsection,
-#problem-text h2:nth-of-type(2),
-#problem-text h2:nth-of-type(2) ~ *,
-#solutions-text > .mw-parser-output > * {
+.article-text .mw-editsection {
   display: none;
 }
-#solutions-text h2:nth-of-type(2),
-#solutions-text h2:nth-of-type(2) ~ * {
-  display: block;
-}
-#solutions-text h2:last-of-type,
-#solutions-text h2:last-of-type ~ * {
-  display: none;
-}
-#solutions-text p:nth-last-child(2) {
-  display: block;
-} /* </cascading hell> (should probably replace with text selectors) */
 
 img.latex,
 img.latexcenter {
