@@ -318,7 +318,8 @@ a.dark-link {
   text-decoration: underline;
 }
 
-.article-text h2 {
+.article-text h2,
+.article-text h3 {
   font-size: 1em;
   letter-spacing: 0.4px;
   text-transform: uppercase;
