@@ -140,7 +140,10 @@
         .children()
         .filter("h2:contains('Solution'), h3:contains('Solution')")
         .nextUntil("h2, h3, table")
-        .addBack("h2:contains('Solution '), h3:contains('Solution ')");
+        .addBack(
+          `h2:contains('Solution '), h3:contains('Solution '),
+          h2:contains(' Solution'), h3:contains(' Solution')`
+        );
       let afterHTML = "";
 
       after.each(function() {
