@@ -2,7 +2,8 @@
 (() => {
   var allPages = [];
   var categoryPages = [];
-  (async function() {
+
+  (async () => {
     console.log("Preloading all wiki pages, allow around 10 seconds...");
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=query&list=allpages&aplimit=max&format=json`;
@@ -23,68 +24,18 @@
         allPages.push(page.title);
       }
     }
-
-    if (typeof json.continue === "undefined") {
-      console.log("Finished loading Special:AllPages.");
-    }
+    console.log("Finished loading Special:AllPages.");
   })();
-
-  function clearProblem() {
-    $(".problem-section").remove();
-    $(".attribution").remove();
-  }
-
-  function clearAll() {
-    $(".options-input-container").remove();
-    $(".problem-section").remove();
-    $(".attribution").remove();
-  }
-
-  function fixLinks() {
-    $(".article-text a").each(function() {
-      let href = $(this).attr("href");
-      if (typeof href !== "undefined" && href.charAt(0) === "/")
-        $(this).attr("href", `https://artofproblemsolving.com${href}`);
-    });
-  }
-
-  async function directLinks() {
-    $(".article-text a").click(async function(event) {
-      let pagename = $(this).attr("href");
-      if (pagename.includes("artofproblemsolving.com/wiki/")) {
-        event.preventDefault();
-        pagename = pagename
-          .replace("https://artofproblemsolving.com/wiki/index.php/", "")
-          .replace("_", " ");
-        clearProblem();
-        await addArticle(pagename);
-        fixLinks();
-        directLinks();
-      }
-    });
-  }
-
-  function collapseSolutions() {
-    $("#solutions-header").click(() => {
-      $("#solutions-section").toggleClass("section-collapsed");
-    });
-  }
 
   async function addArticle(pagename) {
     $(".options-input-container").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
-      <a href="" text="(view on aops)" id="aops-link">(View on the AoPS Wiki)</a>
+      <a href="" text="(View on the AoPS Wiki)" id="aops-link">
+        (View on the AoPS Wiki)
+      </a>
       <div class="article-text" id="full-text"></div>
-    </div>
-    <p class="attribution">
-      Article content retrieved from the
-      <a
-        href="https://artofproblemsolving.com/wiki/index.php/"
-        text="Art of Problem Solving Wiki"
-        >Art of Problem Solving Wiki</a
-      >.
-    </p>`
+    </div>`
     );
 
     var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -102,7 +53,12 @@
       );
     }
 
-    $("#article-header").html(pagename);
+    $("#article-header").html(
+      pagename
+        .replace("Problems/Problem", "Problem")
+        .replace("_", " ")
+        .replace("%27", "'")
+    );
     $("#aops-link").attr(
       "href",
       `https://artofproblemsolving.com/wiki/index.php/${pagename}`
@@ -111,66 +67,19 @@
   }
 
   async function addProblem(pagename) {
-    function getProblem(htmlString) {
-      console.log(htmlString);
-      let htmlParsed = $.parseHTML(htmlString);
-      if (
-        $(htmlParsed)
-          .children()
-          .filter("h2:contains('Problem'), h3:contains('Problem')").length
-      ) {
-        let before = $(htmlParsed)
-          .children()
-          .filter("h2:contains('Problem'), h3:contains('Problem')")
-          .nextUntil("h2, h3");
-        let beforeHTML = "";
-
-        before.each(function() {
-          beforeHTML += this.outerHTML;
-        });
-        return beforeHTML;
-      } else {
-        return htmlString;
-      }
-    }
-
-    function getSolutions(htmlString) {
-      let htmlParsed = $.parseHTML(htmlString);
-      let after = $(htmlParsed)
-        .children()
-        .filter("h2:contains('Solution'), h3:contains('Solution')")
-        .nextUntil("h2, h3, table")
-        .addBack(
-          `h2:contains('Solution '), h3:contains('Solution '),
-          h2:contains(' Solution'), h3:contains(' Solution')`
-        );
-      let afterHTML = "";
-
-      after.each(function() {
-        afterHTML += this.outerHTML;
-      });
-      return afterHTML;
-    }
-
     $(".options-input-container").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
-      <a text="(View on the AoPS Wiki)" id="aops-link">(View on the AoPS Wiki)</a>
+      <a href="" text="(View on the AoPS Wiki)" id="aops-link">
+        (View on the AoPS Wiki)
+      </a>
       <div class="article-text" id="problem-text"></div>
     </div>
     <div class="problem-section section-collapsed" id="solutions-section">
       <h2 class="section-header" id="solutions-header">Solutions</h2>
       <!-- Make collapsible -->
       <div class="article-text" id="solutions-text"></div>
-    </div>
-    <p class="attribution">
-      Article content retrieved from the
-      <a
-        href="https://artofproblemsolving.com/wiki/index.php/"
-        text="Art of Problem Solving Wiki"
-        >Art of Problem Solving Wiki</a
-      >.
-    </p>`
+    </div>`
     );
     var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     var params = `action=parse&page=${pagename}&format=json`;
@@ -188,7 +97,12 @@
       );
     }
 
-    $("#article-header").html(pagename);
+    $("#article-header").html(
+      pagename
+        .replace("Problems/Problem", "Problem")
+        .replace("_", " ")
+        .replace("%27", "'")
+    );
     $("#aops-link").attr(
       "href",
       `https://artofproblemsolving.com/wiki/index.php/${pagename}`
@@ -333,7 +247,45 @@
     return true;
   }
 
-  $("#single-problem").click(function() {
+  function getProblem(htmlString) {
+    let htmlParsed = $.parseHTML(htmlString);
+    let after = $(htmlParsed)
+      .children()
+      .first()
+      .nextUntil(":header:not(:contains('Problem')), table")
+      .addBack()
+      .not(".toc")
+      .not(":header:contains('Problem')");
+    let afterHTML = "";
+
+    after.each(function() {
+      afterHTML += this.outerHTML;
+    });
+    return afterHTML;
+  }
+
+  function getSolutions(htmlString) {
+    let htmlParsed = $.parseHTML(htmlString);
+    let after = $(htmlParsed)
+      .children()
+      .filter(":header:contains('Solution')")
+      .nextUntil(":header:not(:contains('Solution')), table")
+      .addBack(":header:contains(' Solution'), :header:contains('Solution ')");
+    let afterHTML = "";
+
+    after.each(function() {
+      afterHTML += this.outerHTML;
+    });
+    return afterHTML;
+  }
+
+  var sanitize = string =>
+    string
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+
+  $("#single-problem").click(() => {
     clearAll();
 
     $(".button-container").after(
@@ -342,7 +294,7 @@
         <label class="input-label" for="title">
           Year, test, problem number:
         </label>
-        <input class="input-field" type="text" placeholder="e.g. 2005 AMC 10A Problem 8"/>
+        <input class="input-field" type="text" placeholder="e.g. 2014 AMC 8 Problem 18"/>
         <button class="input-button" id="single-button">
           View Problem
         </button>
@@ -359,6 +311,7 @@
           placeholder="Subjects, e.g. Intermediate Algebra Problems"
           value="(All Subjects)"
           data-whitelist="(All Subjects),
+          3D Geometry Problems,
           Introductory Algebra Problems,
           Introductory Combinatorics Problems,
           Introductory Geometry Problems,
@@ -435,17 +388,125 @@
     });
   });
 
-  $("#problem-batch").click(function() {
+  $("#problem-batch").click(() => {
     clearAll();
 
     $(".button-container").after(
-      `<div class="options-input options-input-container" id="batch-input">
-      (placeholder)
+      `<div class="options-input-container">
+      <div class="options-input" id="batch-input">
+        <label class="input-label" for="title">
+          Year and test:
+        </label>
+        <input class="input-field" type="text" placeholder="e.g. 2019 AIME I"/>
+        <button class="input-button" id="single-button">
+          View Problems
+        </button>
+      </div>
+      <div class="options-input" id="randombatch-input">
+        <label class="input-label" id="randombatch-label">
+          Allowed subjects, tests, years, <a
+          class="dark-link"
+          href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
+          text="difficulty">difficulty</a>, number of problems:
+        </label>
+        <input class="input-multi" name="input-subjects"
+          id="input-subjects"
+          placeholder="Subjects, e.g. Intermediate Algebra Problems"
+          value="(All Subjects)"
+          data-whitelist="(All Subjects),
+          3D Geometry Problems,
+          Introductory Algebra Problems,
+          Introductory Combinatorics Problems,
+          Introductory Geometry Problems,
+          Introductory Logic Problems‏‎,
+          Introductory Number Theory Problems,
+          Introductory Probability Problems‏‎,
+          Introductory Trigonometry Problems,
+          Intermediate Algebra Problems,
+          Intermediate Combinatorics Problems,
+          Intermediate Geometry Problems,
+          Intermediate Number Theory Problems,
+          Intermediate Probability Problems‏‎,
+          Intermediate Trigonometry Problems,
+          Olympiad Algebra Problems,
+          Olympiad Combinatorics Problems,
+          Olympiad Geometry Problems,
+          Olympiad Inequality Problems,
+          Olympiad Number Theory Problems,
+          Olympiad Trigonometry Problems‏‎">
+        </input>
+        <input class="input-multi" name="input-tests"
+          id="input-tests"
+          placeholder="Tests, e.g. AMC 10"
+          value="(All Tests)"
+          data-whitelist="(All Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
+          AIME, USAJMO, USAMO, Canadian MO, IMO">
+        </input>
+        <div class="range-container">
+          <input class="input-range" id="input-years"></input>
+        </div>
+        <div class="range-container">
+          <input class="input-range" id="input-diff"></input>
+        </div>
+        <div class="range-container">
+          <input class="input-range" id="input-number"></input>
+        </div>
+        <div class="range-container">
+          <input type="checkbox" class="input-check" id="input-sort"></input>
+          <label class="input-label" id="checkbox-label">
+            Sort by difficulty?
+          </label>
+        </div>
+        <button class="input-button" id="random-button">
+          View Random
+        </button>
+      </div>
+      <p>
+      *Difficulty levels will likely be more inaccurate for earlier years,
+      because of changes in competition difficulty and problem design over time.
+      </p>
+      <p>
+      **The script preloads a list of all pages in alphabetical order when the
+      site is loaded, for use when a random page is selected from all subjects.
+      Because it takes around 10 seconds to fully load, trying to get a
+      problem before then will only give older problems early in alphabetical
+      order.
+      </p>
     </div>`
     );
+
+    var inputSubjects = document.querySelector("#input-subjects");
+    new Tagify(inputSubjects);
+    var inputTests = document.querySelector("#input-tests");
+    new Tagify(inputTests);
+
+    $("#input-years").ionRangeSlider({
+      type: "double",
+      grid: true,
+      min: 1950,
+      max: 2020,
+      from: 1974,
+      to: 2020,
+      prettify_enabled: false
+    });
+    $("#input-diff").ionRangeSlider({
+      type: "double",
+      grid: true,
+      min: 0,
+      max: 10,
+      from: 2,
+      to: 9,
+      step: 0.5
+    });
+    $("#input-number").ionRangeSlider({
+      grid: true,
+      min: 0,
+      max: 50,
+      from: 25
+    });
   });
 
-  $("#find-article").click(function() {
+  $("#find-article").click(() => {
     clearAll();
 
     $(".button-container").after(
@@ -461,37 +522,30 @@
     );
   });
 
-  $(".page-container").on("click", "#find-button", async function() {
+  $(".page-container").on("click", "#find-button", async () => {
     clearProblem();
 
-    await addArticle(
-      $("#find-input .input-field")
-        .val()
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-    );
+    await addArticle(sanitize($("#find-input .input-field").val()));
     fixLinks();
     directLinks();
   });
 
-  $(".page-container").on("click", "#single-button", async function() {
+  $(".page-container").on("click", "#single-button", async () => {
     clearProblem();
 
     await addProblem(
-      $("#single-input .input-field")
-        .val()
-        .replace("Problem", "Problems/Problem")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
+      sanitize(
+        $("#single-input .input-field")
+          .val()
+          .replace("Problem", "Problems/Problem")
+      )
     );
     fixLinks();
     collapseSolutions();
     directLinks();
   });
 
-  $(".page-container").on("click", "#random-button", async function() {
+  $(".page-container").on("click", "#random-button", async () => {
     clearProblem();
 
     let pages = [];
@@ -500,7 +554,7 @@
     let randomPage = pages[Math.floor(Math.random() * pages.length)];
     console.log(randomPage);
 
-    addProblem(randomPage);
+    await addProblem(randomPage);
     if (pages.length === 0) {
       $("#solution-section").hide();
       $(".article-text").html(
@@ -512,3 +566,42 @@
     directLinks();
   });
 })();
+
+function clearProblem() {
+  $(".problem-section").remove();
+}
+
+function clearAll() {
+  $(".options-input-container").remove();
+  $(".problem-section").remove();
+}
+
+function fixLinks() {
+  $(".article-text a").each(function() {
+    let href = $(this).attr("href");
+    if (typeof href !== "undefined" && href.charAt(0) === "/")
+      $(this).attr("href", `https://artofproblemsolving.com${href}`);
+  });
+}
+
+async function directLinks() {
+  $(".article-text a").click(async event => {
+    let pagename = $(this).attr("href");
+    if (pagename.includes("artofproblemsolving.com/wiki/")) {
+      event.preventDefault();
+      pagename = pagename
+        .replace("https://artofproblemsolving.com/wiki/index.php/", "")
+        .replace("_", " ");
+      clearProblem();
+      await addArticle(pagename);
+      fixLinks();
+      directLinks();
+    }
+  });
+}
+
+function collapseSolutions() {
+  $("#solutions-header").click(() => {
+    $("#solutions-section").toggleClass("section-collapsed");
+  });
+}

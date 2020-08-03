@@ -42,25 +42,43 @@
   </head>
   <body>
     <div class="page-container">
-      <h1 class="header">
-        Trivial. ∎
-        <br />
-        <span class="subtitle">An AoPS Wiki Reader for Studying</span>
-      </h1>
-      <div class="button-container">
-        <button type="button" class="button" id="single-problem">
-          Single Problem
-        </button>
-        <!-- Same as ^ with slider for # of problems & option for sort by
+      <main>
+        <h1 class="header">
+          Trivial. ∎
+        </h1>
+        <p class="subtitle">An AoPS Wiki Reader for Studying</p>
+        <article>
+          <div class="button-container">
+            <button type="button" class="button" id="single-problem">
+              Single Problem
+            </button>
+            <!-- Same as ^ with slider for # of problems & option for sort by
           difficulty, do not print solution links and have option to show
           problem year & # -->
-        <button type="button" class="button" id="problem-batch">
-          Problem Batch
-        </button>
-        <button type="button" class="button" id="find-article">
-          Find an Article
-        </button>
-      </div>
+            <button type="button" class="button" id="problem-batch">
+              Problem Batch
+            </button>
+            <button type="button" class="button" id="find-article">
+              Find an Article
+            </button>
+          </div>
+        </article>
+      </main>
+      <footer>
+        Article content retrieved from the
+        <a
+          href="https://artofproblemsolving.com/wiki/index.php/"
+          text="Art of Problem Solving Wiki"
+          >Art of Problem Solving Wiki</a
+        >.
+        <br />
+        Trivial is
+        <a
+          href="https://github.com/vqbc/vqbc.github.io"
+          text="free and open source"
+          >free and open source</a
+        >!
+      </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.15.3/tagify.min.js"></script>
