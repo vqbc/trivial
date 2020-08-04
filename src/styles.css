@@ -24,11 +24,11 @@ body {
 }
 
 .page-container {
-  box-sizing: border-box;
-  margin: auto;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   height: 100vh;
+  margin: auto;
 }
 
 .page-container {
@@ -58,17 +58,17 @@ body {
 
 /* Main header */
 .header {
+  margin-bottom: 0;
   color: var(--header-color);
   font-size: 2em;
-  margin-bottom: 0;
 }
 
 .subtitle {
+  margin-top: 0;
   color: var(--subtitle-color);
   font-weight: normal;
   font-size: 1.5em;
   font-style: italic;
-  margin-top: 0;
 } /**/
 
 /* Big top buttons */
@@ -158,8 +158,8 @@ body {
 
 #random-button,
 #ranbatch-button {
-  margin-left: 0;
   flex: 1 0 100%;
+  margin-left: 0;
 }
 
 .range-container:nth-of-type(odd) {
@@ -241,11 +241,11 @@ tags > span {
 
 /* Range slider thingy */
 .range-container {
+  align-self: stretch;
   box-sizing: border-box;
   margin-bottom: 0.5rem;
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 10, 26, 0.2);
-  align-self: stretch;
 }
 
 .range-container:focus {
@@ -388,8 +388,8 @@ main {
 }
 
 footer {
-  font-style: italic;
   padding-bottom: 1em;
+  font-style: italic;
 } /**/
 
 /* Print styling */
