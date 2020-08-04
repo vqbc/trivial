@@ -2,6 +2,45 @@
 (() => {
   var allPages = [];
   var categoryPages = [];
+  var problemOptions = `<input class="input-multi" name="input-subjects"
+    id="input-subjects"
+    placeholder="Subjects, e.g. Intermediate Algebra Problems"
+    value="(All Subjects)"
+    data-whitelist="(All Subjects),
+    3D Geometry Problems,
+    Introductory Algebra Problems,
+    Introductory Combinatorics Problems,
+    Introductory Geometry Problems,
+    Introductory Logic Problems‏‎,
+    Introductory Number Theory Problems,
+    Introductory Probability Problems‏‎,
+    Introductory Trigonometry Problems,
+    Intermediate Algebra Problems,
+    Intermediate Combinatorics Problems,
+    Intermediate Geometry Problems,
+    Intermediate Number Theory Problems,
+    Intermediate Probability Problems‏‎,
+    Intermediate Trigonometry Problems,
+    Olympiad Algebra Problems,
+    Olympiad Combinatorics Problems,
+    Olympiad Geometry Problems,
+    Olympiad Inequality Problems,
+    Olympiad Number Theory Problems,
+    Olympiad Trigonometry Problems‏‎">
+  </input>
+  <input class="input-multi" name="input-tests"
+    id="input-tests"
+    placeholder="Tests, e.g. AMC 10"
+    value="(All Tests)"
+    data-whitelist="(All Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
+    AIME, USAJMO, USAMO, Canadian MO, IMO">
+  </input>
+  <div class="range-container">
+    <input class="input-range" id="input-years"></input>
+  </div>
+  <div class="range-container">
+    <input class="input-range" id="input-diff"></input>
+  </div>`;
 
   (async () => {
     console.log("Preloading all wiki pages, allow around 10 seconds...");
@@ -55,7 +94,7 @@
 
     $("#article-header").html(
       pagename
-        .replace("Problems/Problem", "Problem")
+        .replace("Problems/Problem ", "#")
         .replace("_", " ")
         .replace("%27", "'")
     );
@@ -99,7 +138,7 @@
 
     $("#article-header").html(
       pagename
-        .replace("Problems/Problem", "Problem")
+        .replace("Problems/Problem ", "#")
         .replace("_", " ")
         .replace("%27", "'")
     );
@@ -294,7 +333,7 @@
         <label class="input-label" for="title">
           Year, test, problem number:
         </label>
-        <input class="input-field" type="text" placeholder="e.g. 2014 AMC 8 Problem 18"/>
+        <input class="input-field" type="text" placeholder="e.g. 2012 AMC 10A #23"/>
         <button class="input-button" id="single-button">
           View Problem
         </button>
@@ -306,45 +345,7 @@
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
           text="difficulty">difficulty</a>:
         </label>
-        <input class="input-multi" name="input-subjects"
-          id="input-subjects"
-          placeholder="Subjects, e.g. Intermediate Algebra Problems"
-          value="(All Subjects)"
-          data-whitelist="(All Subjects),
-          3D Geometry Problems,
-          Introductory Algebra Problems,
-          Introductory Combinatorics Problems,
-          Introductory Geometry Problems,
-          Introductory Logic Problems‏‎,
-          Introductory Number Theory Problems,
-          Introductory Probability Problems‏‎,
-          Introductory Trigonometry Problems,
-          Intermediate Algebra Problems,
-          Intermediate Combinatorics Problems,
-          Intermediate Geometry Problems,
-          Intermediate Number Theory Problems,
-          Intermediate Probability Problems‏‎,
-          Intermediate Trigonometry Problems,
-          Olympiad Algebra Problems,
-          Olympiad Combinatorics Problems,
-          Olympiad Geometry Problems,
-          Olympiad Inequality Problems,
-          Olympiad Number Theory Problems,
-          Olympiad Trigonometry Problems‏‎">
-        </input>
-        <input class="input-multi" name="input-tests"
-          id="input-tests"
-          placeholder="Tests, e.g. AMC 10"
-          value="(All Tests)"
-          data-whitelist="(All Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
-          AIME, USAJMO, USAMO, Canadian MO, IMO">
-        </input>
-        <div class="range-container">
-          <input class="input-range" id="input-years"></input>
-        </div>
-        <div class="range-container">
-          <input class="input-range" id="input-diff"></input>
-        </div>
+        ${problemOptions}
         <button class="input-button" id="random-button">
           View Random
         </button>
@@ -398,66 +399,36 @@
           Year and test:
         </label>
         <input class="input-field" type="text" placeholder="e.g. 2019 AIME I"/>
-        <button class="input-button" id="single-button">
+        <button class="input-button" id="batch-button">
           View Problems
         </button>
       </div>
-      <div class="options-input" id="randombatch-input">
-        <label class="input-label" id="randombatch-label">
+      <div class="options-input" id="ranbatch-input">
+        <label class="input-label" id="ranbatch-label">
           Allowed subjects, tests, years, <a
           class="dark-link"
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
           text="difficulty">difficulty</a>, number of problems:
         </label>
-        <input class="input-multi" name="input-subjects"
-          id="input-subjects"
-          placeholder="Subjects, e.g. Intermediate Algebra Problems"
-          value="(All Subjects)"
-          data-whitelist="(All Subjects),
-          3D Geometry Problems,
-          Introductory Algebra Problems,
-          Introductory Combinatorics Problems,
-          Introductory Geometry Problems,
-          Introductory Logic Problems‏‎,
-          Introductory Number Theory Problems,
-          Introductory Probability Problems‏‎,
-          Introductory Trigonometry Problems,
-          Intermediate Algebra Problems,
-          Intermediate Combinatorics Problems,
-          Intermediate Geometry Problems,
-          Intermediate Number Theory Problems,
-          Intermediate Probability Problems‏‎,
-          Intermediate Trigonometry Problems,
-          Olympiad Algebra Problems,
-          Olympiad Combinatorics Problems,
-          Olympiad Geometry Problems,
-          Olympiad Inequality Problems,
-          Olympiad Number Theory Problems,
-          Olympiad Trigonometry Problems‏‎">
-        </input>
-        <input class="input-multi" name="input-tests"
-          id="input-tests"
-          placeholder="Tests, e.g. AMC 10"
-          value="(All Tests)"
-          data-whitelist="(All Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
-          AIME, USAJMO, USAMO, Canadian MO, IMO">
-        </input>
-        <div class="range-container">
-          <input class="input-range" id="input-years"></input>
-        </div>
-        <div class="range-container">
-          <input class="input-range" id="input-diff"></input>
-        </div>
+        ${problemOptions}
         <div class="range-container">
           <input class="input-range" id="input-number"></input>
         </div>
-        <div class="range-container">
-          <input type="checkbox" class="input-check" id="input-sort"></input>
-          <label class="input-label" id="checkbox-label">
-            Sort by difficulty?
-          </label>
+        <div class="range-container checkbox-container">
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-sort"></input>
+            <label class="checkbox-label">
+              Sort questions by difficulty?
+            </label>
+          </div>
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-sort"></input>
+            <label class="checkbox-label">
+              Hide question sources when printed?
+            </label>
+          </div>
         </div>
-        <button class="input-button" id="random-button">
+        <button class="input-button" id="ranbatch-button">
           View Random
         </button>
       </div>
@@ -537,7 +508,7 @@
       sanitize(
         $("#single-input .input-field")
           .val()
-          .replace("Problem", "Problems/Problem")
+          .replace("#", "Problems/Problem ")
       )
     );
     fixLinks();
@@ -548,8 +519,7 @@
   $(".page-container").on("click", "#random-button", async () => {
     clearProblem();
 
-    let pages = [];
-    pages = await getPages();
+    let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
     let randomPage = pages[Math.floor(Math.random() * pages.length)];
     console.log(randomPage);
@@ -565,43 +535,73 @@
     collapseSolutions();
     directLinks();
   });
-})();
 
-function clearProblem() {
-  $(".problem-section").remove();
-}
+  $(".page-container").on("click", "#batch-button", async () => {
+    clearProblem();
 
-function clearAll() {
-  $(".options-input-container").remove();
-  $(".problem-section").remove();
-}
-
-function fixLinks() {
-  $(".article-text a").each(function() {
-    let href = $(this).attr("href");
-    if (typeof href !== "undefined" && href.charAt(0) === "/")
-      $(this).attr("href", `https://artofproblemsolving.com${href}`);
+    await addArticle(
+      sanitize(`${$("#batch-input .input-field").val()} Problems`)
+    );
+    fixLinks();
+    directLinks();
   });
-}
 
-async function directLinks() {
-  $(".article-text a").click(async event => {
-    let pagename = $(this).attr("href");
-    if (pagename.includes("artofproblemsolving.com/wiki/")) {
-      event.preventDefault();
-      pagename = pagename
-        .replace("https://artofproblemsolving.com/wiki/index.php/", "")
-        .replace("_", " ");
-      clearProblem();
-      await addArticle(pagename);
-      fixLinks();
-      directLinks();
+  $(".page-container").on("click", "#ranbatch-button", async () => {
+    clearProblem();
+
+    let pages = await getPages();
+    console.log(`${pages.length} total problems retrieved.`);
+    let randomPage = pages[Math.floor(Math.random() * pages.length)];
+    console.log(randomPage);
+
+    await addProblem(randomPage);
+    if (pages.length === 0) {
+      $("#solution-section").hide();
+      $(".article-text").html(
+        `<p class="error">No problems could be found meeting those requirements.</p>`
+      );
     }
+    fixLinks();
+    collapseSolutions();
+    directLinks();
   });
-}
 
-function collapseSolutions() {
-  $("#solutions-header").click(() => {
-    $("#solutions-section").toggleClass("section-collapsed");
-  });
-}
+  function clearProblem() {
+    $(".problem-section").remove();
+  }
+
+  function clearAll() {
+    $(".options-input-container").remove();
+    $(".problem-section").remove();
+  }
+
+  function fixLinks() {
+    $(".article-text a").each(function() {
+      let href = $(this).attr("href");
+      if (typeof href !== "undefined" && href.charAt(0) === "/")
+        $(this).attr("href", `https://artofproblemsolving.com${href}`);
+    });
+  }
+
+  async function directLinks() {
+    $(".article-text a").click(async function(event) {
+      let pagename = $(this).attr("href");
+      if (pagename.includes("artofproblemsolving.com/wiki/")) {
+        event.preventDefault();
+        pagename = pagename
+          .replace("https://artofproblemsolving.com/wiki/index.php/", "")
+          .replace("_", " ");
+        clearProblem();
+        await addArticle(pagename);
+        fixLinks();
+        directLinks();
+      }
+    });
+  }
+
+  function collapseSolutions() {
+    $("#solutions-header").click(() => {
+      $("#solutions-section").toggleClass("section-collapsed");
+    });
+  }
+})();

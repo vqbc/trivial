@@ -1,6 +1,7 @@
 /* Variables */
 :root {
   --header-color: #333;
+  --subtitle-color: #444;
   --main-button-color: #449faf;
   --main-button-focus-color: #a3d3db;
   --main-button-box-shadow: 0 2px 10px rgba(0, 10, 26, 0.2);
@@ -57,12 +58,13 @@ body {
 
 /* Main header */
 .header {
-  color: #333;
+  color: var(--header-color);
   font-size: 2em;
   margin-bottom: 0;
 }
 
 .subtitle {
+  color: var(--subtitle-color);
   font-weight: normal;
   font-size: 1.5em;
   font-style: italic;
@@ -84,14 +86,14 @@ body {
   font-size: 1.1em;
   font-family: "Computer Modern Sans";
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  background: #449faf;
+  background: var(--main-button-color);
   border: none;
-  box-shadow: 0 2px 10px rgba(0, 10, 26, 0.2);
+  box-shadow: var(--main-button-box-shadow);
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .button:hover {
-  box-shadow: 0 4px 10px rgba(0, 10, 26, 0.2);
+  box-shadow: var(--main-button-focus-box-shadow);
   transform: translateY(-2px);
   cursor: pointer;
 }
@@ -150,34 +152,34 @@ body {
   margin-right: 0.6rem;
 }
 
-.range-container,
-#random-button {
+.range-container {
   flex: 1 0 45%;
 }
 
-#random-button {
+#random-button,
+#ranbatch-button {
   margin-left: 0;
+  flex: 1 0 100%;
 }
 
-.range-container:first-of-type {
+.range-container:nth-of-type(odd) {
   margin-right: 0.6rem;
 } /**/
 
 /* Breakpoint layouts */
-@media only screen and (max-width: 840px) {
-  .options-input {
-    flex-wrap: wrap;
-  }
-
-  .input-label,
-  #random-input .input-label {
+@media only screen and (max-width: 1270px) {
+  #ranbatch-label {
     flex: 1 0 100%;
     margin-right: auto;
     margin-bottom: 0.5rem;
   }
+}
 
-  .range-container {
-    flex: 1 0 45%;
+@media only screen and (max-width: 840px) {
+  .input-label {
+    flex: 1 0 100%;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -271,6 +273,22 @@ tags > span {
 .irs--flat .irs-to:before,
 .irs--flat .irs-single:before {
   border-top-color: #6ae;
+} /**/
+
+/* Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.checkbox-wrap {
+  margin-right: 0.6rem;
+}
+
+.checkbox-label {
+  margin-bottom: 0;
+  color: #333;
 } /**/
 
 /* Problem sections */
