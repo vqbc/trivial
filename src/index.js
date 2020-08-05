@@ -86,23 +86,18 @@
     if (typeof json.parse !== "undefined") {
       var problemText = json.parse.text["*"];
       $(".article-text").html(problemText);
+      $("#article-header").html(titleCleanup(pagename));
+      $("#aops-link").attr(
+        "href",
+        `https://artofproblemsolving.com/wiki/index.php/${pagename}`
+      );
     } else {
       $(".article-text").html(
         `<p class="error">The page you specified does not exist.</p>`
       );
+      $("#article-header").html("Error");
+      $("#aops-link").remove();
     }
-
-    $("#article-header").html(
-      pagename
-        .replace("Problems/Problem ", "#")
-        .replace("_", " ")
-        .replace("%27", "'")
-    );
-    $("#aops-link").attr(
-      "href",
-      `https://artofproblemsolving.com/wiki/index.php/${pagename}`
-    );
-    return true;
   }
 
   async function addProblem(pagename) {
@@ -116,7 +111,6 @@
     </div>
     <div class="problem-section section-collapsed" id="solutions-section">
       <h2 class="section-header" id="solutions-header">Solutions</h2>
-      <!-- Make collapsible -->
       <div class="article-text" id="solutions-text"></div>
     </div>`
     );
@@ -130,23 +124,28 @@
       var problemText = json.parse.text["*"];
       $("#problem-text").html(getProblem(problemText));
       $("#solutions-text").html(getSolutions(problemText));
+      $("#article-header").html(titleCleanup(pagename));
+      $("#aops-link").attr(
+        "href",
+        `https://artofproblemsolving.com/wiki/index.php/${pagename}`
+      );
     } else {
       $(".article-text").html(
         `<p class="error">The page you specified does not exist.</p>`
       );
+      $("#article-header").html("Error");
+      $("#aops-link").remove();
+      $("#solutions-section").remove();
     }
+  }
 
-    $("#article-header").html(
-      pagename
-        .replace("Problems/Problem ", "#")
-        .replace("_", " ")
-        .replace("%27", "'")
+  function addBatch() {
+    $(".options-input-container").after(
+      `<div class="problem-section">
+      <h2 class="section-header" id="article-header">Problem Batch</h2>
+      <div class="article-text" id="batch-text"></div>
+    </div>`
     );
-    $("#aops-link").attr(
-      "href",
-      `https://artofproblemsolving.com/wiki/index.php/${pagename}`
-    );
-    return true;
   }
 
   async function getPages() {
@@ -318,11 +317,17 @@
     return afterHTML;
   }
 
-  var sanitize = string =>
+  const sanitize = string =>
     string
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
+
+  const titleCleanup = string =>
+    string
+      .replace(/_/g, " ")
+      .replace("Problems/Problem ", "#")
+      .replace("%27", "'");
 
   $("#single-problem").click(() => {
     clearAll();
@@ -398,7 +403,7 @@
         <label class="input-label" for="title">
           Year and test:
         </label>
-        <input class="input-field" type="text" placeholder="e.g. 2019 AIME I"/>
+        <input class="input-field" type="text" placeholder="e.g. 2016 AIME I"/>
         <button class="input-button" id="batch-button">
           View Problems
         </button>
@@ -521,15 +526,18 @@
 
     let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
-    let randomPage = pages[Math.floor(Math.random() * pages.length)];
-    console.log(randomPage);
 
-    await addProblem(randomPage);
     if (pages.length === 0) {
-      $("#solution-section").hide();
+      await addProblem("Error");
+      $("#aops-link").remove();
+      $("#solutions-section").remove();
       $(".article-text").html(
         `<p class="error">No problems could be found meeting those requirements.</p>`
       );
+    } else {
+      let randomPage = pages[Math.floor(Math.random() * pages.length)];
+      console.log(randomPage);
+      await addProblem(randomPage);
     }
     fixLinks();
     collapseSolutions();
@@ -542,6 +550,7 @@
     await addArticle(
       sanitize(`${$("#batch-input .input-field").val()} Problems`)
     );
+    formatBatch();
     fixLinks();
     directLinks();
   });
@@ -549,20 +558,22 @@
   $(".page-container").on("click", "#ranbatch-button", async () => {
     clearProblem();
 
-    let pages = await getPages();
+    addBatch();
+    /* let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
-    let randomPage = pages[Math.floor(Math.random() * pages.length)];
-    console.log(randomPage);
-
-    await addProblem(randomPage);
     if (pages.length === 0) {
-      $("#solution-section").hide();
+      await addProblem("Error");
+      $("#aops-link").remove();
+      $("#solutions-section").remove();
       $(".article-text").html(
         `<p class="error">No problems could be found meeting those requirements.</p>`
       );
-    }
+    } else {
+      let randomPage = pages[Math.floor(Math.random() * pages.length)];
+      console.log(randomPage);
+      await addProblem(randomPage);
+    } */
     fixLinks();
-    collapseSolutions();
     directLinks();
   });
 
@@ -573,6 +584,15 @@
   function clearAll() {
     $(".options-input-container").remove();
     $(".problem-section").remove();
+  }
+
+  function formatBatch() {
+    $("p")
+      .has("a:contains(Solution)")
+      .remove();
+    $("table:contains(Problem)").remove();
+    $("table:contains(Answer)").remove();
+    $("p:contains('The problems on this page are copyrighted')").remove();
   }
 
   function fixLinks() {
@@ -588,9 +608,10 @@
       let pagename = $(this).attr("href");
       if (pagename.includes("artofproblemsolving.com/wiki/")) {
         event.preventDefault();
-        pagename = pagename
-          .replace("https://artofproblemsolving.com/wiki/index.php/", "")
-          .replace("_", " ");
+        pagename = pagename.replace(
+          "https://artofproblemsolving.com/wiki/index.php/",
+          ""
+        );
         clearProblem();
         await addArticle(pagename);
         fixLinks();
