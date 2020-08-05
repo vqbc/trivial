@@ -366,6 +366,10 @@
       problem before then will only give older problems early in alphabetical
       order.
       </p>
+      <p>
+      ***The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the AIME was split into the
+      AIME I and AIME II in 2000. THe AMC 10 and AMC 12 were split into A and B tests in 2002.
+      </p>
     </div>`
     );
 
