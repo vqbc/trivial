@@ -502,14 +502,6 @@
     );
   });
 
-  $(".page-container").on("click", "#find-button", async () => {
-    clearProblem();
-
-    await addArticle(sanitize($("#find-input .input-field").val()));
-    fixLinks();
-    directLinks();
-  });
-
   $(".page-container").on("click", "#single-button", async () => {
     clearProblem();
 
@@ -577,6 +569,14 @@
       console.log(randomPage);
       await addProblem(randomPage);
     } */
+    fixLinks();
+    directLinks();
+  });
+
+  $(".page-container").on("click", "#find-button", async () => {
+    clearProblem();
+
+    await addArticle(sanitize($("#find-input .input-field").val()));
     fixLinks();
     directLinks();
   });
