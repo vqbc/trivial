@@ -41,6 +41,23 @@
   <div class="range-container">
     <input class="input-range" id="input-diff"></input>
   </div>`;
+  var notes = `<p>
+    *Difficulty levels will likely be more inaccurate for earlier years,
+    because of changes in competition difficulty and problem design over
+    time.
+  </p>
+  <p>
+    **The script preloads a list of all pages in alphabetical order when the
+    site is loaded, for use when a random page is selected from all
+    subjects. Because it takes around 10 seconds to fully load, trying to
+    get a problem before then will only give older problems early in
+    alphabetical order.
+  </p>
+  <p>
+    ***The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the
+    AIME was split into the AIME I and AIME II in 2000. THe AMC 10 and 
+    AMC 12 were split into A and B tests in 2002.
+  </p>`;
 
   (async () => {
     console.log("Preloading all wiki pages, allow around 10 seconds...");
@@ -190,7 +207,7 @@
     let pages = [];
     let fullPages = [];
 
-    if (subjects.some(e => e.value === "(All Subjects)")) {
+    if (subjects.some((e) => e.value === "(All Subjects)")) {
       for (let problem of allPages) {
         if (
           problem.includes("Problems/Problem") &&
@@ -200,9 +217,9 @@
       }
     } else {
       for (let subject of subjects) {
-        if (categoryPages.some(e => e.subject === subject.value)) {
+        if (categoryPages.some((e) => e.subject === subject.value)) {
           addPagesFromArray(
-            categoryPages.find(e => e.subject === subject.value).pages
+            categoryPages.find((e) => e.subject === subject.value).pages
           );
         } else {
           let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -247,8 +264,8 @@
       .replace(/AMC ((?:10)|(?:12))[AB]/, "AMC $1")
       .replace(/AIME I+/, "AIME");
     if (
-      !tests.some(e => e.value === "(All Tests)") &&
-      tests.map(e => e.value).indexOf(problemTest) < 0
+      !tests.some((e) => e.value === "(All Tests)") &&
+      tests.map((e) => e.value).indexOf(problemTest) < 0
     )
       return false;
 
@@ -296,7 +313,7 @@
       .not(":header:contains('Problem')");
     let afterHTML = "";
 
-    after.each(function() {
+    after.each(function () {
       afterHTML += this.outerHTML;
     });
     return afterHTML;
@@ -311,19 +328,16 @@
       .addBack(":header:contains(' Solution'), :header:contains('Solution ')");
     let afterHTML = "";
 
-    after.each(function() {
+    after.each(function () {
       afterHTML += this.outerHTML;
     });
     return afterHTML;
   }
 
-  const sanitize = string =>
-    string
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
+  const sanitize = (string) =>
+    string.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-  const titleCleanup = string =>
+  const titleCleanup = (string) =>
     string
       .replace(/_/g, " ")
       .replace("Problems/Problem ", "#")
@@ -356,19 +370,21 @@
         </button>
       </div>
       <p>
-      *Difficulty levels will likely be more inaccurate for earlier years,
-      because of changes in competition difficulty and problem design over time.
+        *Difficulty levels will likely be more inaccurate for earlier years,
+        because of changes in competition difficulty and problem design over
+        time.
       </p>
       <p>
-      **The script preloads a list of all pages in alphabetical order when the
-      site is loaded, for use when a random page is selected from all subjects.
-      Because it takes around 10 seconds to fully load, trying to get a
-      problem before then will only give older problems early in alphabetical
-      order.
+        **The script preloads a list of all pages in alphabetical order when the
+        site is loaded, for use when a random page is selected from all
+        subjects. Because it takes around 10 seconds to fully load, trying to
+        get a problem before then will only give older problems early in
+        alphabetical order.
       </p>
       <p>
-      ***The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the AIME was split into the
-      AIME I and AIME II in 2000. THe AMC 10 and AMC 12 were split into A and B tests in 2002.
+        ***The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the
+        AIME was split into the AIME I and AIME II in 2000. THe AMC 10 and 
+        AMC 12 were split into A and B tests in 2002.
       </p>
     </div>`
     );
@@ -385,7 +401,7 @@
       max: 2020,
       from: 1974,
       to: 2020,
-      prettify_enabled: false
+      prettify_enabled: false,
     });
     $("#input-diff").ionRangeSlider({
       type: "double",
@@ -394,7 +410,7 @@
       max: 10,
       from: 2,
       to: 9,
-      step: 0.5
+      step: 0.5,
     });
   });
 
@@ -467,7 +483,7 @@
       max: 2020,
       from: 1974,
       to: 2020,
-      prettify_enabled: false
+      prettify_enabled: false,
     });
     $("#input-diff").ionRangeSlider({
       type: "double",
@@ -476,13 +492,13 @@
       max: 10,
       from: 2,
       to: 9,
-      step: 0.5
+      step: 0.5,
     });
     $("#input-number").ionRangeSlider({
       grid: true,
       min: 0,
       max: 50,
-      from: 25
+      from: 25,
     });
   });
 
@@ -507,9 +523,7 @@
 
     await addProblem(
       sanitize(
-        $("#single-input .input-field")
-          .val()
-          .replace("#", "Problems/Problem ")
+        $("#single-input .input-field").val().replace("#", "Problems/Problem ")
       )
     );
     fixLinks();
@@ -591,16 +605,14 @@
   }
 
   function formatBatch() {
-    $("p")
-      .has("a:contains(Solution)")
-      .remove();
+    $("p").has("a:contains(Solution)").remove();
     $("table:contains(Problem)").remove();
     $("table:contains(Answer)").remove();
     $("p:contains('The problems on this page are copyrighted')").remove();
   }
 
   function fixLinks() {
-    $(".article-text a").each(function() {
+    $(".article-text a").each(function () {
       let href = $(this).attr("href");
       if (typeof href !== "undefined" && href.charAt(0) === "/")
         $(this).attr("href", `https://artofproblemsolving.com${href}`);
@@ -608,7 +620,7 @@
   }
 
   async function directLinks() {
-    $(".article-text a").click(async function(event) {
+    $(".article-text a").click(async function (event) {
       let pagename = $(this).attr("href");
       if (pagename.includes("artofproblemsolving.com/wiki/")) {
         event.preventDefault();
