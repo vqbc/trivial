@@ -87,7 +87,7 @@
     $(".options-input-container").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
-      <a href="" text="(View on the AoPS Wiki)" id="aops-link">
+      <a href="" id="aops-link">
         (View on the AoPS Wiki)
       </a>
       <div class="article-text" id="full-text"></div>
@@ -121,7 +121,7 @@
     $(".options-input-container").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
-      <a href="" text="(View on the AoPS Wiki)" id="aops-link">
+      <a href="" id="aops-link">
         (View on the AoPS Wiki)
       </a>
       <div class="article-text" id="problem-text"></div>
@@ -359,10 +359,12 @@
       </div>
       <div class="options-input" id="random-input">
         <label class="input-label" id="random-label">
-          Allowed subjects, tests, years, <a
-          class="dark-link"
-          href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-          text="difficulty">difficulty</a>:
+          Allowed subjects, tests, years,
+          <a
+            class="dark-link"
+            href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
+            >difficulty</a
+          >:
         </label>
         ${problemOptions}
         <button class="input-button" id="random-button">
@@ -413,10 +415,12 @@
       </div>
       <div class="options-input" id="ranbatch-input">
         <label class="input-label" id="ranbatch-label">
-          Allowed subjects, tests, years, <a
-          class="dark-link"
-          href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-          text="difficulty">difficulty</a>, number of problems:
+          Allowed subjects, tests, years,
+          <a
+            class="dark-link"
+            href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
+            >difficulty</a
+          >, number of problems:
         </label>
         ${problemOptions}
         <div class="range-container">
@@ -437,7 +441,7 @@
           </div>
         </div>
         <button class="input-button" id="ranbatch-button">
-          View Random
+          Make Random
         </button>
       </div>
       ${notes}
@@ -571,7 +575,13 @@
         const json = await response.json();
 
         var problemText = json.parse.text["*"];
-        $("#batch-text").append(`<h2>Problem ${i + 1}</h2>`);
+        $("#batch-text").append(`<h2>Problem ${i + 1}
+          <span class="header-sourcelink">
+            (<a href="https://artofproblemsolving.com/wiki/index.php/${randomPage}">${titleCleanup(
+          randomPage
+        )}</a>)
+          </span>
+        </h2>`);
         $("#batch-text").append(getProblem(problemText));
 
         pages.splice(pageIndex, 1);

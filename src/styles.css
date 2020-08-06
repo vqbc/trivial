@@ -357,6 +357,10 @@ a.dark-link {
   text-decoration: underline;
 }
 
+.header-sourcelink {
+  font-weight: normal;
+}
+
 .article-text h2,
 .article-text h3 {
   font-size: 1em;
