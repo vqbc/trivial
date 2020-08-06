@@ -55,7 +55,7 @@
   </p>
   <p>
     ***The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the
-    AIME was split into the AIME I and AIME II in 2000. THe AMC 10 and 
+    AIME was split into the AIME I and AIME II in 2000. The AMC 10 and 
     AMC 12 were split into A and B tests in 2002.
   </p>`;
 
@@ -369,24 +369,7 @@
           View Random
         </button>
       </div>
-      <p>
-        *Difficulty levels will likely be more inaccurate for earlier years,
-        because of changes in competition difficulty and problem design over
-        time.
-      </p>
-      <p>
-        **The script preloads a list of all pages in alphabetical order when the
-        site is loaded, for use when a random page is selected from all
-        subjects. Because it takes around 10 seconds to fully load, trying to
-        get a problem before then will only give older problems early in
-        alphabetical order.
-      </p>
-      <p>
-        ***The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the
-        AIME was split into the AIME I and AIME II in 2000. THe AMC 10 and 
-        AMC 12 were split into A and B tests in 2002.
-      </p>
-    </div>`
+      ${notes}`
     );
 
     var inputSubjects = document.querySelector("#input-subjects");
@@ -457,17 +440,7 @@
           View Random
         </button>
       </div>
-      <p>
-      *Difficulty levels will likely be more inaccurate for earlier years,
-      because of changes in competition difficulty and problem design over time.
-      </p>
-      <p>
-      **The script preloads a list of all pages in alphabetical order when the
-      site is loaded, for use when a random page is selected from all subjects.
-      Because it takes around 10 seconds to fully load, trying to get a
-      problem before then will only give older problems early in alphabetical
-      order.
-      </p>
+      ${notes}
     </div>`
     );
 
