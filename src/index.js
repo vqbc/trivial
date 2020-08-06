@@ -420,17 +420,17 @@
         </label>
         ${problemOptions}
         <div class="range-container">
-          <input class="input-range" id="input-number"></input>
+          <input class="input-range" id="input-number"/>
         </div>
         <div class="range-container checkbox-container">
           <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-sort"></input>
+            <input type="checkbox" checked class="input-check" id="input-sort"/>
             <label class="checkbox-label">
               Sort questions by difficulty?
             </label>
           </div>
           <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-sort"></input>
+            <input type="checkbox" checked class="input-check" id="input-sort"/>
             <label class="checkbox-label">
               Hide question sources when printed?
             </label>
@@ -515,7 +515,9 @@
       $("#aops-link").remove();
       $("#solutions-section").remove();
       $(".article-text").html(
-        `<p class="error">No problems could be found meeting those requirements.</p>`
+        `<p class="error">
+          No problems could be found meeting those requirements.
+        </p>`
       );
     } else {
       let randomPage = pages[Math.floor(Math.random() * pages.length)];
@@ -546,7 +548,9 @@
     console.log(`${pages.length} total problems retrieved.`);
     if (pages.length === 0) {
       $(".article-text").html(
-        `<p class="error">No problems could be found meeting those requirements.</p>`
+        `<p class="error">
+          No problems could be found meeting those requirements.
+        </p>`
       );
       $("#article-header").html("Error");
     } else {
