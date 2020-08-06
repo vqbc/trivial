@@ -569,20 +569,37 @@
     clearProblem();
 
     addBatch();
-    /* let pages = await getPages();
+    let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
     if (pages.length === 0) {
-      await addProblem("Error");
-      $("#aops-link").remove();
-      $("#solutions-section").remove();
       $(".article-text").html(
         `<p class="error">No problems could be found meeting those requirements.</p>`
       );
+      $("#article-header").html("Error");
     } else {
-      let randomPage = pages[Math.floor(Math.random() * pages.length)];
-      console.log(randomPage);
-      await addProblem(randomPage);
-    } */
+      let inputNumber = $("#input-number");
+      let numProblems = inputNumber.data().from;
+      let randomPage;
+      let pageIndex;
+
+      for (let i = 0; i < numProblems && pages.length !== 0; i++) {
+        pageIndex = Math.floor(Math.random() * pages.length);
+        randomPage = pages[pageIndex];
+        console.log(randomPage);
+
+        var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+        var params = `action=parse&page=${randomPage}&format=json`;
+
+        const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        const json = await response.json();
+
+        var problemText = json.parse.text["*"];
+        $("#batch-text").append(`<h2>Problem ${i + 1}</h2>`);
+        $("#batch-text").append(getProblem(problemText));
+
+        pages.splice(pageIndex, 1);
+      }
+    }
     fixLinks();
     directLinks();
   });
