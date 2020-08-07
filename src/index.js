@@ -202,8 +202,8 @@
     let inputYears = $("#input-years");
     let inputDiff = $("#input-diff");
 
-    let subjects = JSON.parse(inputSubjects.val());
-    let tests = JSON.parse(inputTests.val());
+    let subjects = inputSubjects.val().split(",");
+    let tests = inputTests.val().split(",");
     let yearsFrom = inputYears.data().from;
     let yearsTo = inputYears.data().to;
     let diffFrom = inputDiff.data().from;
@@ -212,7 +212,7 @@
     let pages = [];
     let fullPages = [];
 
-    if (subjects.some((e) => e.value === "(All Subjects)")) {
+    if (subjects.indexOf("(All Subjects)") > -1) {
       for (let problem of allPages) {
         if (
           problem.includes("Problems/Problem") &&
@@ -222,13 +222,13 @@
       }
     } else {
       for (let subject of subjects) {
-        if (categoryPages.some((e) => e.subject === subject.value)) {
+        if (categoryPages.some((e) => e.subject === subject)) {
           addPagesFromArray(
-            categoryPages.find((e) => e.subject === subject.value).pages
+            categoryPages.find((e) => e.subject === subject).pages
           );
         } else {
           let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-          let pagename = subject.value;
+          let pagename = subject;
           let params = `action=query&list=categorymembers&cmtitle=Category:${pagename}&cmlimit=max&format=json`;
           let paramsContinue;
 
@@ -247,7 +247,7 @@
               addPagesFromJSON(json.query.categorymembers);
             }
           }
-          categoryPages.push({ subject: subject.value, pages: fullPages });
+          categoryPages.push({ subject: subject, pages: fullPages });
         }
       }
     }
@@ -268,10 +268,22 @@
       .match(/(\d{4} )(.*)( Problems)/)[2]
       .replace(/AMC ((?:10)|(?:12))[AB]/, "AMC $1")
       .replace(/AIME I+/, "AIME");
-    if (
-      !tests.some((e) => e.value === "(All Tests)") &&
-      tests.map((e) => e.value).indexOf(problemTest) < 0
-    )
+
+    if (tests.indexOf("(AMC Tests)") > -1) {
+      tests.splice(
+        tests.indexOf("(AMC Tests)"),
+        1,
+        "AJHSME",
+        "AHSME",
+        "AMC 8",
+        "AMC 10",
+        "AMC 12",
+        "AIME",
+        "USAMO",
+        "IMO"
+      );
+    }
+    if (tests.indexOf("(All Tests)") < 0 && tests.indexOf(problemTest) < 0)
       return false;
 
     let problemYear = problem.match(/^\d{4}/)[0];
@@ -380,9 +392,13 @@
     );
 
     var inputSubjects = document.querySelector("#input-subjects");
-    new Tagify(inputSubjects);
+    new Tagify(inputSubjects, {
+      originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+    });
     var inputTests = document.querySelector("#input-tests");
-    new Tagify(inputTests);
+    new Tagify(inputTests, {
+      originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+    });
 
     $("#input-years").ionRangeSlider({
       type: "double",
@@ -454,9 +470,13 @@
     );
 
     var inputSubjects = document.querySelector("#input-subjects");
-    new Tagify(inputSubjects);
+    new Tagify(inputSubjects, {
+      originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+    });
     var inputTests = document.querySelector("#input-tests");
-    new Tagify(inputTests);
+    new Tagify(inputTests, {
+      originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+    });
 
     $("#input-years").ionRangeSlider({
       type: "double",
@@ -567,8 +587,9 @@
       let numProblems = inputNumber.data().from;
       let randomPage;
       let pageIndex;
+      let problemIndex = 0;
 
-      for (let i = 0; i < numProblems && pages.length !== 0; i++) {
+      /*for (let i = 0; i < numProblems && pages.length !== 0; i++) {
         pageIndex = Math.floor(Math.random() * pages.length);
         randomPage = pages[pageIndex];
         console.log(randomPage);
@@ -590,6 +611,38 @@
         $("#batch-text").append(getProblem(problemText));
 
         pages.splice(pageIndex, 1);
+      }*/
+      while (problemIndex < numProblems && pages.length !== 0) {
+        pageIndex = Math.floor(Math.random() * pages.length);
+        randomPage = pages[pageIndex];
+        console.log(randomPage);
+
+        var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+        var params = `action=parse&page=${randomPage}&format=json`;
+
+        const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        const json = await response.json();
+
+        var problemText = json.parse.text["*"];
+        var problemProblem = getProblem(problemText);
+        var problemSolutions = getSolutions(problemText);
+
+        if (problemProblem && problemSolutions) {
+          $("#batch-text").append(`<h2>Problem ${problemIndex + 1}
+          <span class="header-sourcelink">
+            (<a href="https://artofproblemsolving.com/wiki/index.php/${randomPage}">${titleCleanup(
+            randomPage
+          )}</a>)
+          </span>
+        </h2>`);
+          $("#batch-text").append(getProblem(problemText));
+
+          pages.splice(pageIndex, 1);
+
+          problemIndex++;
+        } else {
+          console.log("Invalid problem, skipping...");
+        }
       }
     }
     fixLinks();
