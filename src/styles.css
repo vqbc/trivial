@@ -310,6 +310,7 @@ tags > span {
 .section-header {
   margin: -0.5rem -2rem 0;
   padding: 0.6rem 1rem 0.3rem;
+  font-family: "Computer Modern Bright";
   color: white;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
   background: #4b9;
