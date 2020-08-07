@@ -27,11 +27,11 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  width: 1300px;
   min-height: 100vh;
   margin: auto;
   padding: 0 5rem;
-  width: 1300px;
-  box-sizing: border-box;
   background: white;
   box-shadow: 0 5px 20px rgba(0, 10, 26, 0.2);
 } /**/
