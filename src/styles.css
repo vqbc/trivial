@@ -384,7 +384,8 @@ a.dark-link {
 }
 
 .article-text .toc,
-.article-text .mw-editsection {
+.article-text .mw-editsection,
+.article-text p:empty {
   display: none;
 }
 
@@ -394,7 +395,7 @@ img.latexcenter {
   height: auto;
 }
 
-.article-text > img:last-child {
+.article-text > *:last-child {
   margin-bottom: 1em;
 }
 
