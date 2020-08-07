@@ -32,7 +32,7 @@ body {
   min-height: 100vh;
   margin: auto;
   padding: 0 5rem;
-  background: white;
+  background: #fcfcfc;
   box-shadow: 0 5px 20px rgba(0, 10, 26, 0.2);
 } /**/
 
@@ -250,6 +250,7 @@ body {
   max-height: 55px;
   margin-bottom: 0.5rem;
   overflow-x: scroll;
+  background: white;
   border: none;
   box-shadow: 0 2px 5px rgba(0, 10, 26, 0.2);
 }
@@ -269,6 +270,7 @@ tags > span {
   box-sizing: border-box;
   margin-bottom: 0.5rem;
   padding: 5px;
+  background: white;
   box-shadow: 0 2px 5px rgba(0, 10, 26, 0.2);
 }
 
@@ -328,6 +330,7 @@ tags > span {
 .problem-section {
   margin-bottom: 1.5rem;
   padding: 0.5rem 2rem;
+  background: white;
   box-shadow: 0 2px 10px rgba(0, 10, 26, 0.2);
 }
 
@@ -394,7 +397,8 @@ a.dark-link {
 
 .article-text .toc,
 .article-text .mw-editsection,
-.article-text p:empty {
+.article-text p:empty,
+.article-text p > br:only-child {
   display: none;
 }
 

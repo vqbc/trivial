@@ -31,8 +31,8 @@
   <input class="input-multi" name="input-tests"
     id="input-tests"
     placeholder="Tests, e.g. AMC 10"
-    value="(All Tests)"
-    data-whitelist="(All Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
+    value="(AMC Tests)"
+    data-whitelist="(All Tests), (AMC Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
     AIME, USAJMO, USAMO, Canadian MO, IMO">
   </input>
   <div class="range-container">
@@ -41,23 +41,28 @@
   <div class="range-container">
     <input class="input-range" id="input-diff"></input>
   </div>`;
-  var notes = `<p>
-    *Difficulty levels will likely be more inaccurate for earlier years,
-    because of changes in competition difficulty and problem design over
-    time.
-  </p>
-  <p>
-    **The script preloads a list of all pages in alphabetical order when the
-    site is loaded, for use when a random page is selected from all
-    subjects. Because it takes around 10 seconds to fully load, trying to
-    get a problem before then will only give older problems early in
-    alphabetical order.
-  </p>
-  <p>
-    ***The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the
-    AIME was split into the AIME I and AIME II in 2000. The AMC 10 and 
-    AMC 12 were split into A and B tests in 2002.
-  </p>`;
+  var notes = `<ul>
+    <li>
+      Difficulty levels will likely be more inaccurate for earlier years,
+      because of changes in competition difficulty and problem design over
+      time.
+    </li>
+    <li>
+      The script preloads a list of all pages in alphabetical order when the
+      site is loaded, for use when a random page is selected from all
+      subjects. Because it takes around 10 seconds to fully load, trying to
+      get a problem before then will only give older problems early in
+      alphabetical order.
+    </li>
+    <li>
+      The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the
+      AIME was split into the AIME I and AIME II in 2000. The AMC 10 and 
+      AMC 12 were split into A and B tests in 2002.
+    </li>
+    <li>
+      AMC Tests refers to the AHSME, AJHSME, AMC 8/10/12, AIME, USAMO, and IMO.
+    </li>
+  <ul>`;
 
   (async () => {
     console.log("Preloading all wiki pages, allow around 10 seconds...");
@@ -456,9 +461,9 @@
     $("#input-years").ionRangeSlider({
       type: "double",
       grid: true,
-      min: 1950,
+      min: 1974,
       max: 2020,
-      from: 1974,
+      from: 2000,
       to: 2020,
       prettify_enabled: false,
     });
