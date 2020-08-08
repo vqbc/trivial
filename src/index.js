@@ -11,22 +11,22 @@
     Introductory Algebra Problems,
     Introductory Combinatorics Problems,
     Introductory Geometry Problems,
-    Introductory Logic Problems‏‎,
+    Introductory Logic Problems‎,
     Introductory Number Theory Problems,
-    Introductory Probability Problems‏‎,
+    Introductory Probability Problems‎,
     Introductory Trigonometry Problems,
     Intermediate Algebra Problems,
     Intermediate Combinatorics Problems,
     Intermediate Geometry Problems,
     Intermediate Number Theory Problems,
-    Intermediate Probability Problems‏‎,
+    Intermediate Probability Problems‎,
     Intermediate Trigonometry Problems,
     Olympiad Algebra Problems,
     Olympiad Combinatorics Problems,
     Olympiad Geometry Problems,
     Olympiad Inequality Problems,
     Olympiad Number Theory Problems,
-    Olympiad Trigonometry Problems‏‎">
+    Olympiad Trigonometry Problems‎">
   </input>
   <input class="input-multi" name="input-tests"
     id="input-tests"
