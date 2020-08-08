@@ -405,7 +405,7 @@ a.dark-link {
   font-weight: normal;
 }
 
-h2,
+.article-text h2,
 h3 {
   font-size: 1em;
   font-family: "Computer Modern Bright";

@@ -42,7 +42,7 @@
     <input class="input-range" id="input-diff"></input>
   </div>`;
   var notes = `
-  <h2>Notes</h2>
+  <h3>Notes</h3>
   <ul>
     <li>
       Difficulty levels will likely be more inaccurate for earlier years,
