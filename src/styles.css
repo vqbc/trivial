@@ -265,6 +265,10 @@ tags > span {
 } /**/
 
 /* Range slider thingy */
+.irs {
+  font-family: "Computer Modern Bright";
+}
+
 .range-container {
   align-self: stretch;
   box-sizing: border-box;
@@ -285,9 +289,22 @@ tags > span {
 .irs--flat .irs-bar,
 .irs--flat .irs-handle > i:first-child,
 .irs--flat .irs-from,
-.irs--flat .irs-to,
-.irs--flat .irs-single {
+.irs--flat .irs-single,
+.irs--flat .irs-to {
   background: #6ae;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-from,
+.irs--flat .irs-single,
+.irs--flat .irs-to,
+.irs--flat .irs-max {
+  padding-top: 2px;
+  font-size: 12px;
+}
+
+.irs-grid-text {
+  font-size: 11px;
 }
 
 .irs--flat .irs-handle.state_hover > i:first-child,
@@ -296,8 +313,8 @@ tags > span {
 }
 
 .irs--flat .irs-from:before,
-.irs--flat .irs-to:before,
-.irs--flat .irs-single:before {
+.irs--flat .irs-single:before,
+.irs--flat .irs-to:before {
   border-top-color: #6ae;
 } /**/
 
