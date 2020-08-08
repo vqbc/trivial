@@ -66,6 +66,7 @@
       </li>
     <ul>
   </div>`;
+  var ranbatchClicked = 0;
 
   (async () => {
     console.log("Preloading all wiki pages, allow around 10 seconds...");
@@ -590,6 +591,8 @@
   });
 
   $(".page-container").on("click", "#ranbatch-button", async () => {
+    ranbatchClicked++;
+    let ranbatchClickedThen = ranbatchClicked;
     clearProblem();
 
     addBatch();
@@ -609,7 +612,11 @@
       let pageIndex;
       let problemIndex = 0;
 
-      while (problemIndex < numProblems && pages.length !== 0) {
+      while (
+        problemIndex < numProblems &&
+        pages.length !== 0 &&
+        ranbatchClicked === ranbatchClickedThen
+      ) {
         pageIndex = Math.floor(Math.random() * pages.length);
         randomPage = pages[pageIndex];
         console.log(randomPage);
@@ -624,7 +631,11 @@
         var problemProblem = getProblem(problemText);
         var problemSolutions = getSolutions(problemText);
 
-        if (problemProblem && problemSolutions) {
+        if (
+          problemProblem &&
+          problemSolutions &&
+          ranbatchClicked === ranbatchClickedThen
+        ) {
           $("#batch-text").append(`<h2>Problem ${problemIndex + 1}
           <span class="source-link">
             (<a href="https://artofproblemsolving.com/wiki/index.php/${randomPage}">${titleCleanup(

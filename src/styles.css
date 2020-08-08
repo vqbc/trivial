@@ -416,6 +416,7 @@ h3 {
   text-transform: uppercase;
 }
 
+.article-text dl, /* redirect disclaimers etc */
 .article-text .toc,
 .article-text .mw-editsection,
 .article-text p:empty,
