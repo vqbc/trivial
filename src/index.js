@@ -213,7 +213,7 @@
     let pages = [];
     let fullPages = [];
 
-    if (subjects.indexOf("(All Subjects)") > -1) {
+    if (subjects.includes("(All Subjects)")) {
       for (let problem of allPages) {
         if (
           problem.includes("Problems/Problem") &&
@@ -265,12 +265,9 @@
   ) {
     if (!/^\d{4}.*Problems\/Problem \d+$/.test(problem)) return false;
 
-    let problemTest = problem
-      .match(/(\d{4} )(.*)( Problems)/)[2]
-      .replace(/AMC ((?:10)|(?:12))[AB]/, "AMC $1")
-      .replace(/AIME I+/, "AIME");
+    let problemTest = computeTest(problem);
 
-    if (tests.indexOf("(AMC Tests)") > -1) {
+    if (tests.includes("(AMC Tests)")) {
       tests.splice(
         tests.indexOf("(AMC Tests)"),
         1,
@@ -284,40 +281,53 @@
         "IMO"
       );
     }
-    if (tests.indexOf("(All Tests)") < 0 && tests.indexOf(problemTest) < 0)
+    if (!tests.includes("(All Tests)") && !tests.includes(problemTest))
       return false;
 
-    let problemYear = problem.match(/^\d{4}/)[0];
+    let problemYear = computeYear(problem);
     if (problemYear < yearsFrom || yearsTo < problemYear) return false;
 
-    let problemNumber = problem.match(/\d+$/)[0];
-    let problemDiff;
-    switch (problemTest) {
-      case "AMC 8":
-        if (problemNumber < 13) {
-          problemDiff = 1;
-        } else if (problemNumber < 21) {
-          problemDiff = 1.5;
-        } else {
-          problemDiff = 2;
-        }
-        break;
-      case "AMC 10":
-        if (problemNumber < 13) {
-          problemDiff = 1;
-        } else if (problemNumber < 21) {
-          problemDiff = 1.5;
-        } else {
-          problemDiff = 2;
-        }
-        break;
-      default:
-        problemDiff = 3;
-        break;
-    }
+    let problemNumber = computeNumber(problem);
+    let problemDiff = computeDiff(problemTest, problemNumber);
     if (problemDiff < diffFrom || diffTo < problemDiff) return false;
 
     return true;
+  }
+
+  const computeTest = (problem) =>
+    problem
+      .match(/(\d{4} )(.*)( Problems)/)[2]
+      .replace(/AMC ((?:10)|(?:12))[AB]/, "AMC $1")
+      .replace(/AIME I+/, "AIME");
+  const computeYear = (problem) => problem.match(/^\d{4}/)[0];
+  const computeNumber = (problem) => problem.match(/\d+$/)[0];
+
+  function computeDiff(test, number) {
+    let diff;
+    switch (test) {
+      case "AMC 8":
+        if (number < 13) {
+          diff = 1;
+        } else if (number < 21) {
+          diff = 1.5;
+        } else {
+          diff = 2;
+        }
+        break;
+      case "AMC 10":
+        if (number < 13) {
+          diff = 1;
+        } else if (number < 21) {
+          diff = 1.5;
+        } else {
+          diff = 2;
+        }
+        break;
+      default:
+        diff = 3;
+        break;
+    }
+    return diff;
   }
 
   function getProblem(htmlString) {
