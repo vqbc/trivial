@@ -41,29 +41,31 @@
   <div class="range-container">
     <input class="input-range" id="input-diff"></input>
   </div>`;
-  var notes = `<h3>Notes</h3>
-  <ul>
-    <li>
-      Difficulty levels will likely be more inaccurate for earlier years,
-      because of changes in competition difficulty and problem design over
-      time.
-    </li>
-    <li>
-      The script preloads a list of all pages in alphabetical order when the
-      site is loaded, for use when a random page is selected from all
-      subjects. Because it takes around 10 seconds to fully load, trying to
-      get a problem before then will only give older problems early in
-      alphabetical order.
-    </li>
-    <li>
-      The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the
-      AIME was split into the AIME I and AIME II in 2000. The AMC 10 and 
-      AMC 12 were split into A and B tests in 2002.
-    </li>
-    <li>
-      AMC Tests refers to the AHSME, AJHSME, AMC 8/10/12, AIME, USAMO, and IMO.
-    </li>
-  <ul>`;
+  var notes = `<div class="notes">
+    <h3>Notes</h3>
+    <ul>
+      <li>
+        Difficulty levels will likely be more inaccurate for earlier years,
+        because of changes in competition difficulty and problem design over
+        time.
+      </li>
+      <li>
+        The script preloads a list of all pages in alphabetical order when the
+        site is loaded, for use when a random page is selected from all
+        subjects. Because it takes around 10 seconds to fully load, trying to
+        get a problem before then will only give older problems early in
+        alphabetical order.
+      </li>
+      <li>
+        The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the
+        AIME was split into the AIME I and AIME II in 2000. The AMC 10 and 
+        AMC 12 were split into A and B tests in 2002.
+      </li>
+      <li>
+        AMC Tests refers to the AHSME, AJHSME, AMC 8/10/12, AIME, USAMO, and IMO.
+      </li>
+    <ul>
+  </div>`;
 
   (async () => {
     console.log("Preloading all wiki pages, allow around 10 seconds...");
@@ -466,7 +468,7 @@
             </label>
           </div>
           <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-sort"/>
+            <input type="checkbox" checked class="input-check" id="input-hide"/>
             <label class="checkbox-label">
               Hide question sources when printed?
             </label>
@@ -624,7 +626,7 @@
 
         if (problemProblem && problemSolutions) {
           $("#batch-text").append(`<h2>Problem ${problemIndex + 1}
-          <span class="header-sourcelink">
+          <span class="source-link">
             (<a href="https://artofproblemsolving.com/wiki/index.php/${randomPage}">${titleCleanup(
             randomPage
           )}</a>)
@@ -642,6 +644,7 @@
     }
     fixLinks();
     directLinks();
+    hideLinks();
   });
 
   $(".page-container").on("click", "#find-button", async () => {
@@ -691,6 +694,12 @@
         directLinks();
       }
     });
+  }
+
+  function hideLinks() {
+    if ($("#input-hide").prop("checked")) {
+      $(".source-link").addClass("noprint");
+    }
   }
 
   function collapseSolutions() {

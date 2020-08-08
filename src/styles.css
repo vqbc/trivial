@@ -13,7 +13,7 @@
   --input-box-shadow: 0 2px 5px rgb(0, 10, 26, 0.2);
   --input-hover-box-shadow: 0 3px 5px rgb(0, 10, 26, 0.2);
   --button-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --main-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  --main-text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
 } /**/
 
 /* Container styles and sizing */
@@ -404,7 +404,7 @@ a.dark-link {
   text-decoration: underline;
 }
 
-.header-sourcelink {
+.source-link {
   font-weight: normal;
 }
 
@@ -450,18 +450,31 @@ footer {
 /* Print styling */
 @media print {
   .header,
+  .subtitle,
   .button-container,
-  .options-input {
+  .options-input-container,
+  .notes,
+  .noprint {
     display: none;
   }
 
+  body,
+  .page-container {
+    background: none;
+  }
+
   .section-header {
-    color: black;
+    color: inherit;
     text-shadow: none;
     background: none;
   }
 
+  .page-container,
   .problem-section {
     box-shadow: none;
+  }
+
+  a {
+    color: inherit;
   }
 } /**/
