@@ -41,7 +41,9 @@
   <div class="range-container">
     <input class="input-range" id="input-diff"></input>
   </div>`;
-  var notes = `<ul>
+  var notes = `
+  <h2>Notes</h2>
+  <ul>
     <li>
       Difficulty levels will likely be more inaccurate for earlier years,
       because of changes in competition difficulty and problem design over

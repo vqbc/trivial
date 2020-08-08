@@ -388,8 +388,8 @@ a.dark-link {
   font-weight: normal;
 }
 
-.article-text h2,
-.article-text h3 {
+h2,
+h3 {
   font-size: 1em;
   font-family: "Computer Modern Bright";
   letter-spacing: 0.4px;
