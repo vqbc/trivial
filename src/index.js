@@ -552,6 +552,13 @@
       let randomPage = pages[Math.floor(Math.random() * pages.length)];
       console.log(randomPage);
       await addProblem(randomPage);
+      /*let invalid = true;
+      while (invalid === true) {
+        let randomPage = pages[Math.floor(Math.random() * pages.length)];
+        console.log(randomPage);
+        let randomProblem = get;
+        await addProblem(randomPage);
+      }*/
     }
     fixLinks();
     collapseSolutions();
@@ -589,29 +596,6 @@
       let pageIndex;
       let problemIndex = 0;
 
-      /*for (let i = 0; i < numProblems && pages.length !== 0; i++) {
-        pageIndex = Math.floor(Math.random() * pages.length);
-        randomPage = pages[pageIndex];
-        console.log(randomPage);
-
-        var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-        var params = `action=parse&page=${randomPage}&format=json`;
-
-        const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-        const json = await response.json();
-
-        var problemText = json.parse.text["*"];
-        $("#batch-text").append(`<h2>Problem ${i + 1}
-          <span class="header-sourcelink">
-            (<a href="https://artofproblemsolving.com/wiki/index.php/${randomPage}">${titleCleanup(
-          randomPage
-        )}</a>)
-          </span>
-        </h2>`);
-        $("#batch-text").append(getProblem(problemText));
-
-        pages.splice(pageIndex, 1);
-      }*/
       while (problemIndex < numProblems && pages.length !== 0) {
         pageIndex = Math.floor(Math.random() * pages.length);
         randomPage = pages[pageIndex];
