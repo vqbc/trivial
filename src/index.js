@@ -475,6 +475,7 @@
             </label>
           </div>
         </div>
+        <input class="input-field" id="input-name" type="text" placeholder="Batch name (optional)"/>
         <button class="input-button" id="ranbatch-button">
           Make Random
         </button>
@@ -591,21 +592,7 @@
   });
 
   $(".page-container").on("click", "#ranbatch-button", async () => {
-    ranbatchClicked++;
-    let ranbatchClickedThen = ranbatchClicked;
-    clearProblem();
-
-    addBatch();
-    let pages = await getPages();
-    console.log(`${pages.length} total problems retrieved.`);
-    if (pages.length === 0) {
-      $(".article-text").html(
-        `<p class="error">
-          No problems could be found meeting those requirements.
-        </p>`
-      );
-      $("#article-header").html("Error");
-    } else {
+    async function makeBatch() {
       let inputNumber = $("#input-number");
       let numProblems = inputNumber.data().from;
       let randomPage;
@@ -637,12 +624,12 @@
           ranbatchClicked === ranbatchClickedThen
         ) {
           $("#batch-text").append(`<h2>Problem ${problemIndex + 1}
-          <span class="source-link">
-            (<a href="https://artofproblemsolving.com/wiki/index.php/${randomPage}">${titleCleanup(
+            <span class="source-link">
+              (<a href="https://artofproblemsolving.com/wiki/index.php/${randomPage}">${titleCleanup(
             randomPage
           )}</a>)
-          </span>
-        </h2>`);
+            </span>
+          </h2>`);
           $("#batch-text").append(getProblem(problemText));
 
           pages.splice(pageIndex, 1);
@@ -653,6 +640,25 @@
         }
       }
     }
+
+    ranbatchClicked++;
+    let ranbatchClickedThen = ranbatchClicked;
+    clearProblem();
+
+    addBatch();
+    let pages = await getPages();
+    console.log(`${pages.length} total problems retrieved.`);
+    if (pages.length === 0) {
+      $(".article-text").html(
+        `<p class="error">
+          No problems could be found meeting those requirements.
+        </p>`
+      );
+      $("#article-header").html("Error");
+    } else {
+      await makeBatch();
+    }
+    changeName();
     fixLinks();
     directLinks();
     hideLinks();
@@ -680,6 +686,11 @@
     $("table:contains(Problem)").remove();
     $("table:contains(Answer)").remove();
     $("p:contains('The problems on this page are copyrighted')").remove();
+  }
+
+  function changeName() {
+    name = $("#input-name").val();
+    if (name) $("#article-header").html(name);
   }
 
   function fixLinks() {

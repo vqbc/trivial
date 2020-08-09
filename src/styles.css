@@ -140,8 +140,7 @@ body {
   flex: 1 0 45%;
 }
 
-#random-button,
-#ranbatch-button {
+#random-button {
   flex: 1 0 100%;
   margin-left: 0;
 }
