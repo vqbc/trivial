@@ -318,12 +318,22 @@
         }
         break;
       case "AMC 10":
-        if (number < 13) {
+        if (number < 4) {
           difficulty = 1;
-        } else if (number < 21) {
+        } else if (number < 7) {
           difficulty = 1.5;
-        } else {
+        } else if (number < 13) {
           difficulty = 2;
+        } else if (number < 17) {
+          difficulty = 2.5;
+        } else if (number < 21) {
+          difficulty = 3;
+        } else if (number < 23) {
+          difficulty = 3.5;
+        } else if (number < 25) {
+          difficulty = 4;
+        } else {
+          difficulty = 4.5;
         }
         break;
       default:
