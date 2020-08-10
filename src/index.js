@@ -168,7 +168,7 @@
   function addBatch() {
     $(".options-input-container").after(
       `<div class="problem-section">
-      <h2 class="section-header" id="article-header">Problem Batch</h2>
+      <h2 class="section-header" id="batch-header">Problem Batch</h2>
       <div class="article-text" id="batch-text"></div>
     </div>`
     );
@@ -536,14 +536,14 @@
 
     $(".button-container").after(
       `<div class="options-input options-input-container" id="find-input">
-      <label class="input-label" for="title">
-        Exact article name:
-      </label>
-      <input class="input-field" type="text" placeholder="e.g. Heron's Formula"/>
-      <button class="input-button" id="find-button">
-        View Article
-      </button>
-    </div>`
+        <label class="input-label" for="title">
+          Exact article name:
+        </label>
+        <input class="input-field" type="text" placeholder="e.g. Heron's Formula"/>
+        <button class="input-button" id="find-button">
+          View Article
+        </button>
+      </div>`
     );
   });
 
@@ -613,6 +613,15 @@
       let getIndex = 0;
       let problemIndex = 0;
 
+      $("#batch-header").after(
+        `<div class="loading-notice">
+          <div class="loading-text">Loading problems…</div>
+          <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+          </div>
+        </div>`
+      );
+
       while (
         getIndex < numProblems &&
         pages.length !== 0 &&
@@ -647,26 +656,29 @@
           });
           pages.splice(pageIndex, 1);
           getIndex++;
+          $(".loading-bar").css("width", `${(getIndex / numProblems) * 100}%`);
         } else {
           console.log("Invalid problem, skipping...");
         }
       }
 
-      if ($("#input-sort").prop("checked")) {
-        problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
-      }
-      console.log(problems);
+      if (ranbatchClicked === ranbatchClickedThen) {
+        if ($("#input-sort").prop("checked")) {
+          problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
+        }
+        console.log(problems);
 
-      for (let problem of problems) {
-        $("#batch-text").append(`<h2>Problem ${problemIndex + 1}
+        for (let problem of problems) {
+          $("#batch-text").append(`<h2>Problem ${problemIndex + 1}
             <span class="source-link">
               (<a href="https://artofproblemsolving.com/wiki/index.php/${
                 problem.title
               }">${titleCleanup(problem.title)}</a>)
             </span>
           </h2>`);
-        $("#batch-text").append(problem.content);
-        problemIndex++;
+          $("#batch-text").append(problem.content);
+          problemIndex++;
+        }
       }
     }
 
@@ -687,6 +699,7 @@
     } else {
       await makeBatch();
     }
+    if (ranbatchClicked === ranbatchClickedThen) $(".loading-notice").remove();
     changeName();
     fixLinks();
     directLinks();
