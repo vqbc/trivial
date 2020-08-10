@@ -96,7 +96,7 @@
     $(".options-input-container").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
-      <a href="" id="aops-link">
+      <a href="" class="aops-link">
         (View on the AoPS Wiki)
       </a>
       <div class="article-text" id="full-text"></div>
@@ -113,7 +113,7 @@
       var problemText = json.parse.text["*"];
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
-      $("#aops-link").attr(
+      $(".aops-link").attr(
         "href",
         `https://artofproblemsolving.com/wiki/index.php/${pagename}`
       );
@@ -122,7 +122,7 @@
         `<p class="error">The page you specified does not exist.</p>`
       );
       $("#article-header").html("Error");
-      $("#aops-link").remove();
+      $(".aops-link").remove();
     }
   }
 
@@ -130,7 +130,7 @@
     $(".options-input-container").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
-      <a href="" id="aops-link">
+      <a href="" class="aops-link">
         (View on the AoPS Wiki)
       </a>
       <div class="article-text" id="problem-text"></div>
@@ -151,7 +151,7 @@
       $("#problem-text").html(getProblem(problemText));
       $("#solutions-text").html(getSolutions(problemText));
       $("#article-header").html(titleCleanup(pagename));
-      $("#aops-link").attr(
+      $(".aops-link").attr(
         "href",
         `https://artofproblemsolving.com/wiki/index.php/${pagename}`
       );
@@ -160,7 +160,7 @@
         `<p class="error">The page you specified does not exist.</p>`
       );
       $("#article-header").html("Error");
-      $("#aops-link").remove();
+      $(".aops-link").remove();
       $("#solutions-section").remove();
     }
   }
@@ -291,7 +291,7 @@
     if (problemYear < yearsFrom || yearsTo < problemYear) return false;
 
     let problemNumber = computeNumber(problem);
-    let problemDiff = computeDiff(problemTest, problemNumber);
+    let problemDiff = computeDifficulty(problemTest, problemNumber);
     if (problemDiff < diffFrom || diffTo < problemDiff) return false;
 
     return true;
@@ -305,32 +305,32 @@
   const computeYear = (problem) => problem.match(/^\d{4}/)[0];
   const computeNumber = (problem) => problem.match(/\d+$/)[0];
 
-  function computeDiff(test, number) {
-    let diff;
+  function computeDifficulty(test, number) {
+    let difficulty;
     switch (test) {
       case "AMC 8":
         if (number < 13) {
-          diff = 1;
+          difficulty = 1;
         } else if (number < 21) {
-          diff = 1.5;
+          difficulty = 1.5;
         } else {
-          diff = 2;
+          difficulty = 2;
         }
         break;
       case "AMC 10":
         if (number < 13) {
-          diff = 1;
+          difficulty = 1;
         } else if (number < 21) {
-          diff = 1.5;
+          difficulty = 1.5;
         } else {
-          diff = 2;
+          difficulty = 2;
         }
         break;
       default:
-        diff = 3;
+        difficulty = 3;
         break;
     }
-    return diff;
+    return difficulty;
   }
 
   function getProblem(htmlString) {
@@ -408,10 +408,16 @@
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
       originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
     });
     var inputTests = document.querySelector("#input-tests");
     new Tagify(inputTests, {
       originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
     });
 
     $("#input-years").ionRangeSlider({
@@ -487,10 +493,16 @@
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
       originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
     });
     var inputTests = document.querySelector("#input-tests");
     new Tagify(inputTests, {
       originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
     });
 
     $("#input-years").ionRangeSlider({
@@ -498,7 +510,7 @@
       grid: true,
       min: 1974,
       max: 2020,
-      from: 2000,
+      from: 1974,
       to: 2020,
       prettify_enabled: false,
     });
@@ -556,7 +568,7 @@
 
     if (pages.length === 0) {
       await addProblem("Error");
-      $("#aops-link").remove();
+      $(".aops-link").remove();
       $("#solutions-section").remove();
       $(".article-text").html(
         `<p class="error">
@@ -597,10 +609,12 @@
       let numProblems = inputNumber.data().from;
       let randomPage;
       let pageIndex;
+      let problems = [];
+      let getIndex = 0;
       let problemIndex = 0;
 
       while (
-        problemIndex < numProblems &&
+        getIndex < numProblems &&
         pages.length !== 0 &&
         ranbatchClicked === ranbatchClickedThen
       ) {
@@ -623,21 +637,36 @@
           problemSolutions &&
           ranbatchClicked === ranbatchClickedThen
         ) {
-          $("#batch-text").append(`<h2>Problem ${problemIndex + 1}
-            <span class="source-link">
-              (<a href="https://artofproblemsolving.com/wiki/index.php/${randomPage}">${titleCleanup(
-            randomPage
-          )}</a>)
-            </span>
-          </h2>`);
-          $("#batch-text").append(getProblem(problemText));
-
+          problems.push({
+            title: randomPage,
+            difficulty: computeDifficulty(
+              computeTest(randomPage),
+              computeNumber(randomPage)
+            ),
+            content: problemProblem,
+          });
           pages.splice(pageIndex, 1);
-
-          problemIndex++;
+          getIndex++;
         } else {
           console.log("Invalid problem, skipping...");
         }
+      }
+
+      if ($("#input-sort").prop("checked")) {
+        problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
+      }
+      console.log(problems);
+
+      for (let problem of problems) {
+        $("#batch-text").append(`<h2>Problem ${problemIndex + 1}
+            <span class="source-link">
+              (<a href="https://artofproblemsolving.com/wiki/index.php/${
+                problem.title
+              }">${titleCleanup(problem.title)}</a>)
+            </span>
+          </h2>`);
+        $("#batch-text").append(problem.content);
+        problemIndex++;
       }
     }
 
