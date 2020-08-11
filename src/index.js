@@ -4,8 +4,7 @@
   var categoryPages = [];
   var problemOptions = `<input class="input-multi" name="input-subjects"
     id="input-subjects"
-    placeholder="Subjects, e.g. Intermediate Algebra Problems"
-    value="(All Subjects)"
+    placeholder="Subjects, e.g. Olympiad Algebra Problems"
     data-whitelist="(All Subjects),
     3D Geometry Problems,
     Introductory Algebra Problems,
@@ -31,7 +30,6 @@
   <input class="input-multi" name="input-tests"
     id="input-tests"
     placeholder="Tests, e.g. AMC 10"
-    value="(AMC Tests)"
     data-whitelist="(All Tests), (AMC Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
     AIME, USAJMO, USAMO, Canadian MO, IMO">
   </input>
