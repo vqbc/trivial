@@ -214,6 +214,20 @@
     let pages = [];
     let fullPages = [];
 
+    let noSubjects = false;
+    let noTests = false;
+
+    console.log(subjects);
+    console.log(tests);
+    if (!subjects[0]) {
+      noSubjects = true;
+      return [pages, noSubjects, noTests];
+    }
+    if (!tests[0]) {
+      noTests = true;
+      return [pages, noSubjects, noTests];
+    }
+
     if (subjects.includes("(All Subjects)")) {
       for (let problem of allPages) {
         if (
@@ -253,7 +267,7 @@
         }
       }
     }
-    return pages;
+    return [pages, noSubjects, noTests];
   }
 
   function matchesOptions(
@@ -571,10 +585,28 @@
   $(".page-container").on("click", "#random-button", async () => {
     clearProblem();
 
-    let pages = await getPages();
+    let [pages, noSubjects, noTests] = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
 
-    if (pages.length === 0) {
+    if (noSubjects) {
+      await addProblem("Error");
+      $(".aops-link").remove();
+      $("#solutions-section").remove();
+      $(".article-text").html(
+        `<p class="error">
+          No subjects were entered.
+        </p>`
+      );
+    } else if (noTests) {
+      await addProblem("Error");
+      $(".aops-link").remove();
+      $("#solutions-section").remove();
+      $(".article-text").html(
+        `<p class="error">
+          No tests were entered.
+        </p>`
+      );
+    } else if (pages.length === 0) {
       await addProblem("Error");
       $(".aops-link").remove();
       $("#solutions-section").remove();
@@ -695,15 +727,29 @@
     clearProblem();
 
     addBatch();
-    let pages = await getPages();
+    let [pages, noSubjects, noTests] = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
-    if (pages.length === 0) {
+    if (noSubjects) {
+      $(".article-text").html(
+        `<p class="error">
+          No subjects were entered.
+        </p>`
+      );
+      $("#batch-header").html("Error");
+    } else if (noTests) {
+      $(".article-text").html(
+        `<p class="error">
+          No tests were entered.
+        </p>`
+      );
+      $("#batch-header").html("Error");
+    } else if (pages.length === 0) {
       $(".article-text").html(
         `<p class="error">
           No problems could be found meeting those requirements.
         </p>`
       );
-      $("#article-header").html("Error");
+      $("#batch-header").html("Error");
     } else {
       await makeBatch();
     }

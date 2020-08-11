@@ -353,6 +353,10 @@ tags > span {
   box-shadow: var(--main-box-shadow);
 }
 
+#solutions-section {
+  break-before: page;
+}
+
 #solutions-header {
   position: relative;
 }
