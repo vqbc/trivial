@@ -243,6 +243,10 @@ body {
 .input-field:focus {
   outline: 2px solid #ccc;
   outline-offset: 0;
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0, 0.4);
 } /**/
 
 /* Tagify */
@@ -264,6 +268,29 @@ body {
 tags > tag,
 tags > span {
   flex: 0 0 auto;
+}
+
+.tagify.input-field {
+  margin-bottom: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+
+.tagify__input {
+  margin: 3px;
+  padding: 4px 10px;
+}
+
+.tagify__tag {
+  margin: 3px 0 3px 3px;
+}
+
+.tagify__tag > div {
+  padding: calc(0.3em - 1px) 0.5em;
+}
+
+.tagify__tag + .tagify__input::before {
+  display: none;
 } /**/
 
 /* Range slider thingy */
@@ -448,6 +475,7 @@ main {
 
 footer {
   padding-bottom: 1em;
+  color: var(--subtitle-color);
   font-style: italic;
 } /**/
 

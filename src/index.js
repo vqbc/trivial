@@ -2,7 +2,7 @@
 (() => {
   var allPages = [];
   var categoryPages = [];
-  var problemOptions = `<input class="input-multi" name="input-subjects"
+  var problemOptions = `<input class="input-multi"
     id="input-subjects"
     placeholder="Subjects, e.g. Olympiad Algebra Problems"
     data-whitelist="(All Subjects),
@@ -27,7 +27,7 @@
     Olympiad Number Theory Problems,
     Olympiad Trigonometry Problems‎">
   </input>
-  <input class="input-multi" name="input-tests"
+  <input class="input-multi"
     id="input-tests"
     placeholder="Tests, e.g. AMC 10"
     data-whitelist="(All Tests), (AMC Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
@@ -217,8 +217,11 @@
     let noSubjects = false;
     let noTests = false;
 
-    console.log(subjects);
-    console.log(tests);
+    if (!subjects[0] && !tests[0]) {
+      noSubjects = true;
+      noTests = true;
+      return [pages, noSubjects, noTests];
+    }
     if (!subjects[0]) {
       noSubjects = true;
       return [pages, noSubjects, noTests];
@@ -429,14 +432,14 @@
 
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
-      originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+      originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
       },
     });
     var inputTests = document.querySelector("#input-tests");
     new Tagify(inputTests, {
-      originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+      originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
       },
@@ -514,14 +517,14 @@
 
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
-      originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+      originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
       },
     });
     var inputTests = document.querySelector("#input-tests");
     new Tagify(inputTests, {
-      originalInputValueFormat: (valuesArr) => valuesArr.map((e) => e.value),
+      originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
       },
@@ -561,12 +564,23 @@
         <label class="input-label" for="title">
           Exact article name:
         </label>
-        <input class="input-field" type="text" placeholder="e.g. Heron's Formula"/>
+        <input class="input-field" id="input-find" type="text"
+        placeholder="e.g. Heron's Formula"
+        data-whitelist="${allPages.toString()}">
         <button class="input-button" id="find-button">
           View Article
         </button>
       </div>`
     );
+
+    var inputFind = document.querySelector("#input-find");
+    new Tagify(inputFind, {
+      maxTags: 1,
+      originalInputValueFormat: (values) => values.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
+    });
   });
 
   $(".page-container").on("click", "#single-button", async () => {
@@ -588,13 +602,22 @@
     let [pages, noSubjects, noTests] = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
 
-    if (noSubjects) {
+    if (noSubjects && noTests) {
       await addProblem("Error");
       $(".aops-link").remove();
       $("#solutions-section").remove();
       $(".article-text").html(
         `<p class="error">
-          No subjects were entered.
+          Please enter a subject and test.
+        </p>`
+      );
+    } else if (noSubjects) {
+      await addProblem("Error");
+      $(".aops-link").remove();
+      $("#solutions-section").remove();
+      $(".article-text").html(
+        `<p class="error">
+          Please enter a subject.
         </p>`
       );
     } else if (noTests) {
@@ -603,7 +626,7 @@
       $("#solutions-section").remove();
       $(".article-text").html(
         `<p class="error">
-          No tests were entered.
+          Please enter a test.
         </p>`
       );
     } else if (pages.length === 0) {
@@ -729,17 +752,24 @@
     addBatch();
     let [pages, noSubjects, noTests] = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
-    if (noSubjects) {
+    if (noSubjects && noTests) {
       $(".article-text").html(
         `<p class="error">
-          No subjects were entered.
+          Please enter a subject and test.
+        </p>`
+      );
+      $("#batch-header").html("Error");
+    } else if (noSubjects) {
+      $(".article-text").html(
+        `<p class="error">
+          Please enter a subject.
         </p>`
       );
       $("#batch-header").html("Error");
     } else if (noTests) {
       $(".article-text").html(
         `<p class="error">
-          No tests were entered.
+          Please enter a test.
         </p>`
       );
       $("#batch-header").html("Error");
@@ -763,7 +793,7 @@
   $(".page-container").on("click", "#find-button", async () => {
     clearProblem();
 
-    await addArticle(sanitize($("#find-input .input-field").val()));
+    await addArticle(sanitize($("#input-find").val()));
     fixLinks();
     directLinks();
   });
