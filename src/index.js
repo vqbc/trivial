@@ -406,9 +406,30 @@
       `<div class="options-input-container">
       <div class="options-input" id="single-input">
         <label class="input-label" for="title">
-          Year, test, problem number:
+          Test, year, problem number:
         </label>
-        <input class="input-field" type="text" placeholder="e.g. 2012 AMC 10A #23"/>
+        <input class="input-field input-field-single input-singletest"
+          type="text"
+          id="input-singletest"
+          placeholder="Test, e.g. AMC 10A"
+          data-whitelist="AJHSME, AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B,
+          AMC 12, AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO,
+          Canadian MO, IMO">
+        </input>
+          <input class="input-field input-field-single"
+          type="number"
+          min="1974"
+          max="2020"
+          id="input-singleyear"
+          placeholder="Year">
+          </input>
+          <input class="input-field input-field-single"
+          type="number"
+          min="1"
+          max="30"
+          id="input-singlenum"
+          placeholder="Problem #">
+          </input>
         <button class="input-button" id="single-button">
           View Problem
         </button>
@@ -430,6 +451,14 @@
       ${notes}`
     );
 
+    var inputsingletest = document.querySelector("#input-singletest");
+    new Tagify(inputsingletest, {
+      originalInputValueFormat: (values) => values.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
+      maxTags: 1,
+    });
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
@@ -472,9 +501,23 @@
       `<div class="options-input-container">
       <div class="options-input" id="batch-input">
         <label class="input-label" for="title">
-          Year and test:
+          Test and year:
         </label>
-        <input class="input-field" type="text" placeholder="e.g. 2016 AIME I"/>
+        <input class="input-field input-field-single input-singletest"
+          type="text"
+          id="input-singletest"
+          placeholder="Test, e.g. AMC 10A"
+          data-whitelist="AJHSME, AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B,
+          AMC 12, AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO,
+          Canadian MO, IMO">
+        </input>
+          <input class="input-field input-field-single"
+          type="number"
+          min="1974"
+          max="2020"
+          id="input-singleyear"
+          placeholder="Year">
+          </input>
         <button class="input-button" id="batch-button">
           View Problems
         </button>
@@ -515,6 +558,14 @@
     </div>`
     );
 
+    var inputsingletest = document.querySelector("#input-singletest");
+    new Tagify(inputsingletest, {
+      originalInputValueFormat: (values) => values.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
+      maxTags: 1,
+    });
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
@@ -588,7 +639,9 @@
 
     await addProblem(
       sanitize(
-        $("#single-input .input-field").val().replace("#", "Problems/Problem ")
+        `${$("#input-singleyear").val()} ${$(
+          "#input-singletest"
+        ).val()} Problems/Problem ${$("#input-singlenum").val()}`
       )
     );
     fixLinks();
@@ -659,7 +712,11 @@
     clearProblem();
 
     await addArticle(
-      sanitize(`${$("#batch-input .input-field").val()} Problems`)
+      sanitize(
+        `${$("#input-singleyear").val()} ${$(
+          "#input-singletest"
+        ).val()} Problems`
+      )
     );
     formatBatch();
     fixLinks();
