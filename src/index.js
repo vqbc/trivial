@@ -401,6 +401,7 @@
 
   $("#single-problem").click(() => {
     clearAll();
+    activeButton("single-problem");
 
     $(".button-container").after(
       `<div class="options-input-container">
@@ -497,6 +498,7 @@
 
   $("#problem-batch").click(() => {
     clearAll();
+    activeButton("problem-batch");
 
     $(".button-container").after(
       `<div class="options-input-container">
@@ -611,6 +613,7 @@
 
   $("#find-article").click(() => {
     clearAll();
+    activeButton("find-article");
 
     $(".button-container").after(
       `<div class="options-input options-input-container" id="find-input">
@@ -867,6 +870,11 @@
     $(".options-input-container").remove();
     $(".notes").remove();
     $(".problem-section").remove();
+  }
+
+  function activeButton(buttonName) {
+    $(".button").removeClass("button-active");
+    $(`#${buttonName}`).addClass("button-active");
   }
 
   function collapseNotes() {
