@@ -1,6 +1,7 @@
 /* Variables */
 :root {
-  --header-color: #333;
+  --header-color: #222;
+  --secondary-color: #333;
   --subtitle-color: #444;
   --page-container-box-shadow: 0 5px 20px rgb(0, 10, 26, 0.2);
   --main-button-color: #449faf;
@@ -169,8 +170,7 @@ input::placeholder {
   color: rgb(0, 0, 0, 0.4);
 }
 
-.input-singletest,
-#input-singleyear {
+.input-field.input-field-single:not(:nth-last-child(2)) {
   margin-right: 0.6rem;
 }
 
@@ -278,9 +278,9 @@ tags > span {
   background: #4d80b3;
 }
 
-.irs--flat .irs-from:before,
-.irs--flat .irs-single:before,
-.irs--flat .irs-to:before {
+.irs--flat .irs-from::before,
+.irs--flat .irs-single::before,
+.irs--flat .irs-to::before {
   border-top-color: #6ae;
 } /**/
 
@@ -297,7 +297,36 @@ tags > span {
 
 .checkbox-label {
   margin-bottom: 0;
-  color: #333;
+  color: var(--secondary-color);
+} /**/
+
+/* Notes */
+#notes-header {
+  position: relative;
+}
+
+#notes-header::after {
+  position: absolute;
+  right: 1rem;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  vertical-align: middle;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  border-radius: 2px;
+  transform: rotate(135deg);
+  content: "";
+}
+
+.notes-collapsed #notes-text {
+  display: none;
+}
+
+.notes-collapsed #notes-header::after {
+  top: 5px;
+  transform: rotate(-45deg);
 } /**/
 
 /* Problem sections */
@@ -346,7 +375,7 @@ tags > span {
 }
 
 .section-collapsed #solutions-header::after {
-  top: 50%;
+  top: calc(50% - 2px);
   transform: rotate(-45deg);
 } /**/
 
@@ -412,7 +441,7 @@ main {
 
 footer {
   padding-bottom: 1em;
-  color: var(--header-color);
+  color: var(--secondary-color);
   font-style: italic;
 } /**/
 

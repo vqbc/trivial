@@ -40,8 +40,8 @@
     <input class="input-range" id="input-diff"></input>
   </div>`;
   var notes = `<div class="notes">
-    <h3>Notes</h3>
-    <ul>
+    <h3 id="notes-header">Notes</h3>
+    <ul id="notes-text">
       <li>
         Difficulty levels will likely be more inaccurate for earlier years,
         because of changes in competition difficulty and problem design over
@@ -428,7 +428,7 @@
           min="1"
           max="30"
           id="input-singlenum"
-          placeholder="Problem #">
+          placeholder="#">
           </input>
         <button class="input-button" id="single-button">
           View Problem
@@ -450,6 +450,7 @@
       </div>
       ${notes}`
     );
+    collapseNotes();
 
     var inputsingletest = document.querySelector("#input-singletest");
     new Tagify(inputsingletest, {
@@ -557,6 +558,7 @@
       ${notes}
     </div>`
     );
+    collapseNotes();
 
     var inputsingletest = document.querySelector("#input-singletest");
     new Tagify(inputsingletest, {
@@ -621,8 +623,10 @@
         <button class="input-button" id="find-button">
           View Article
         </button>
-      </div>`
+      </div>
+      ${notes}`
     );
+    collapseNotes();
 
     var inputFind = document.querySelector("#input-find");
     new Tagify(inputFind, {
@@ -861,7 +865,14 @@
 
   function clearAll() {
     $(".options-input-container").remove();
+    $(".notes").remove();
     $(".problem-section").remove();
+  }
+
+  function collapseNotes() {
+    $("#notes-header").click(() => {
+      $(".notes").toggleClass("notes-collapsed");
+    });
   }
 
   function formatBatch() {
