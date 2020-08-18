@@ -231,7 +231,11 @@ tags > span {
   padding: calc(0.3em - 1px) 0.5em;
 }
 
-.tagify__tag + .tagify__input {
+.tagify:not(.tagify--focus) .tagify__tag + .tagify__input {
+  min-width: 0;
+}
+
+.tagify:not(.tagify--focus) .tagify__tag + .tagify__input::before {
   display: none;
 } /**/
 
@@ -417,6 +421,18 @@ h3 {
   text-transform: uppercase;
 }
 
+.batch-solutions-text h2,
+.batch-solutions-text h3 {
+  text-transform: initial;
+  letter-spacing: initial;
+}
+
+.article-text .problem-heading {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
 .article-text dl, /* redirect disclaimers etc */
 .article-text .toc,
 .article-text .mw-editsection,
@@ -568,6 +584,7 @@ footer {
   .notes,
   a.aops-link,
   .section-collapsed,
+  #solutions-header::after,
   .noprint,
   footer {
     display: none;

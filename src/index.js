@@ -168,6 +168,10 @@
       `<div class="problem-section">
       <h2 class="section-header" id="batch-header">Problem Batch</h2>
       <div class="article-text" id="batch-text"></div>
+    </div>
+    <div class="problem-section section-collapsed" id="solutions-section">
+      <h2 class="section-header" id="solutions-header">Solutions</h2>
+      <div class="article-text batch-solutions-text" id="solutions-text"></div>
     </div>`
     );
   }
@@ -453,8 +457,8 @@
     );
     collapseNotes();
 
-    var inputsingletest = document.querySelector("#input-singletest");
-    new Tagify(inputsingletest, {
+    var inputSingleTest = document.querySelector("#input-singletest");
+    new Tagify(inputSingleTest, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
@@ -779,7 +783,8 @@
               computeTest(randomPage),
               computeNumber(randomPage)
             ),
-            content: problemProblem,
+            problem: problemProblem,
+            solutions: problemSolutions,
           });
           pages.splice(pageIndex, 1);
           getIndex++;
@@ -803,7 +808,17 @@
               }">${titleCleanup(problem.title)}</a>)
             </span>
           </h2>`);
-          $("#batch-text").append(problem.content);
+          $("#batch-text").append(problem.problem);
+
+          $("#solutions-text").append(`<h2 class="problem-heading">
+            Problem ${problemIndex + 1}
+            <span class="source-link">
+              (<a href="https://artofproblemsolving.com/wiki/index.php/${
+                problem.title
+              }">${titleCleanup(problem.title)}</a>)
+            </span>
+          </h2>`);
+          $("#solutions-text").append(problem.solutions);
           problemIndex++;
         }
       }
@@ -850,6 +865,7 @@
     if (ranbatchClicked === ranbatchClickedThen) $(".loading-notice").remove();
     changeName();
     fixLinks();
+    collapseSolutions();
     directLinks();
     hideLinks();
   });
