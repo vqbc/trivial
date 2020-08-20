@@ -439,6 +439,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.article-problem {
+  break-inside: avoid;
+}
+
 .article-text dl, /* redirect disclaimers etc */
 .article-text .toc,
 .article-text .mw-editsection,

@@ -683,6 +683,7 @@
 
   $(".page-container").on("click", "#random-button", async () => {
     clearProblem();
+    allPagesWarn();
 
     let [pages, noSubjects, noTests] = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
@@ -822,14 +823,15 @@
         console.log(problems);
 
         for (let problem of problems) {
-          $("#batch-text").append(`<h2>Problem ${problemIndex + 1}
-            <span class="source-link">
-              (<a href="https://artofproblemsolving.com/wiki/index.php/${
-                problem.title
-              }">${titleCleanup(problem.title)}</a>)
-            </span>
-          </h2>`);
-          $("#batch-text").append(problem.problem);
+          $("#batch-text").append(`<div class="article-problem">
+            <h2>Problem ${problemIndex + 1}
+              <span class="source-link">
+                (<a href="https://artofproblemsolving.com/wiki/index.php/${
+                  problem.title
+                }">${titleCleanup(problem.title)}</a>)
+              </span>
+            </h2>${problem.problem}
+          </div>`);
 
           $("#solutions-text").append(`<h2 class="problem-heading">
             Problem ${problemIndex + 1}
@@ -850,6 +852,8 @@
     clearProblem();
 
     addBatch();
+    allPagesWarn();
+
     let [pages, noSubjects, noTests] = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
     if (noSubjects && noTests) {
@@ -927,6 +931,16 @@
     $("table:contains(Problem)").remove();
     $("table:contains(Answer)").remove();
     $("p:contains('The problems on this page are copyrighted')").remove();
+  }
+
+  function allPagesWarn() {
+    if (!allPagesLoaded && $("#allpages-error").length === 0) {
+      $(".notes").after(`<p class="error" id="allpages-error">
+          Page index not done loading, please try again to get newer problems.
+        </p>`);
+    } else if (allPagesLoaded) {
+      $("#allpages-error").remove();
+    }
   }
 
   function fakeTex() {
