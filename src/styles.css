@@ -131,7 +131,7 @@ body {
 }
 
 .input-multi {
-  flex: 1 0 29%;
+  flex: 1 0 28%;
 }
 
 .input-multi:first-of-type {
@@ -389,6 +389,11 @@ tags > span {
 } /**/
 
 /* In-article or inline styling */
+.serif-text {
+  font-size: 1.05em;
+  font-family: "Computer Modern Serif";
+}
+
 a {
   color: #28e;
   text-decoration: none;
@@ -406,7 +411,8 @@ a.aops-link {
 
 a.dark-link {
   color: inherit;
-  text-decoration: underline;
+  font-size: 0.8em;
+  text-transform: uppercase;
 }
 
 .source-link {
@@ -417,20 +423,20 @@ a.dark-link {
 h3 {
   font-size: 1em;
   font-family: "Computer Modern Bright";
-  letter-spacing: 0.4px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .batch-solutions-text h2,
 .batch-solutions-text h3 {
-  text-transform: initial;
   letter-spacing: initial;
+  text-transform: initial;
 }
 
 .article-text .problem-heading {
   font-size: 1.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
 }
 
 .article-text dl, /* redirect disclaimers etc */

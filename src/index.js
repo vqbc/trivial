@@ -65,6 +65,7 @@
     <ul>
   </div>`;
   var ranbatchClicked = 0;
+  var allPagesLoaded = false;
 
   (async () => {
     console.log("Preloading all wiki pages, allow around 10 seconds...");
@@ -76,7 +77,7 @@
     let json = await response.json();
 
     for (let page of json.query.allpages) {
-      allPages.push(page.title);
+      if (page.title.charAt(0) !== "/") allPages.push(page.title);
     }
 
     while (typeof json.continue !== "undefined") {
@@ -84,9 +85,10 @@
       response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
       json = await response.json();
       for (let page of json.query.allpages) {
-        allPages.push(page.title);
+        if (page.title.charAt(0) !== "/") allPages.push(page.title);
       }
     }
+    allPagesLoaded = true;
     console.log("Finished loading Special:AllPages.");
   })();
 
@@ -462,6 +464,7 @@
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
+        maxItems: 100,
       },
       maxTags: 1,
     });
@@ -470,6 +473,7 @@
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
+        maxItems: 100,
       },
     });
     var inputTests = document.querySelector("#input-tests");
@@ -477,6 +481,7 @@
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
+        maxItems: 100,
       },
     });
 
@@ -555,6 +560,12 @@
               Hide question sources when printed?
             </label>
           </div>
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-serif"/>
+            <label class="checkbox-label">
+              Use a LaTeX-style serif font?
+            </label>
+          </div>
         </div>
         <input class="input-field" id="input-name" type="text" placeholder="Batch name (optional)"/>
         <button class="input-button" id="ranbatch-button">
@@ -566,11 +577,12 @@
     );
     collapseNotes();
 
-    var inputsingletest = document.querySelector("#input-singletest");
-    new Tagify(inputsingletest, {
+    var inputSingleTest = document.querySelector("#input-singletest");
+    new Tagify(inputSingleTest, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
+        maxItems: 100,
       },
       maxTags: 1,
     });
@@ -579,6 +591,7 @@
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
+        maxItems: 100,
       },
     });
     var inputTests = document.querySelector("#input-tests");
@@ -586,6 +599,7 @@
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
+        maxItems: 100,
       },
     });
 
@@ -633,6 +647,12 @@
       </div>
       ${notes}`
     );
+    if (!allPagesLoaded) {
+      $(".options-input-container").after(`<p class="error">
+          Page index not done loading, please toggle away from the "Find an
+          Article" section and back to refresh the autocomplete suggestions.
+        </p>`);
+    }
     collapseNotes();
 
     var inputFind = document.querySelector("#input-find");
@@ -641,6 +661,7 @@
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
+        maxItems: 7,
       },
     });
   });
@@ -863,6 +884,7 @@
       await makeBatch();
     }
     if (ranbatchClicked === ranbatchClickedThen) $(".loading-notice").remove();
+    fakeTex();
     changeName();
     fixLinks();
     collapseSolutions();
@@ -884,6 +906,7 @@
 
   function clearAll() {
     $(".options-input-container").remove();
+    $(".error").remove();
     $(".notes").remove();
     $(".problem-section").remove();
   }
@@ -904,6 +927,12 @@
     $("table:contains(Problem)").remove();
     $("table:contains(Answer)").remove();
     $("p:contains('The problems on this page are copyrighted')").remove();
+  }
+
+  function fakeTex() {
+    if ($("#input-serif").prop("checked")) {
+      $(".article-text").addClass("serif-text");
+    }
   }
 
   function changeName() {
