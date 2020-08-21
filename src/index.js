@@ -92,6 +92,9 @@
     console.log("Finished loading Special:AllPages.");
   })();
 
+  const allPagesLoadWait = () =>
+    Math.round(10 - (allPages.length / 12500) * 10);
+
   async function addArticle(pagename) {
     $(".options-input-container").after(
       `<div class="problem-section">
@@ -650,7 +653,8 @@
     if (!allPagesLoaded) {
       $(".options-input-container").after(`<p class="error">
           Page index not done loading, please toggle away from the "Find an
-          Article" section and back to refresh the autocomplete suggestions.
+          Article" section and back in ${allPagesLoadWait()} seconds to refresh
+          the autocomplete suggestions.
         </p>`);
     }
     collapseNotes();
@@ -936,7 +940,8 @@
   function allPagesWarn() {
     if (!allPagesLoaded && $("#allpages-error").length === 0) {
       $(".notes").after(`<p class="error" id="allpages-error">
-          Page index not done loading, please try again to get newer problems.
+          Page index not done loading, please try again in ${allPagesLoadWait()}
+          seconds to get newer problems.
         </p>`);
     } else if (allPagesLoaded) {
       $("#allpages-error").remove();
