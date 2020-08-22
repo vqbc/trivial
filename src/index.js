@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 (() => {
   var allPages = [];
+  var allProblems = [];
   var categoryPages = [];
   var problemOptions = `<input class="input-multi"
     id="input-subjects"
@@ -78,6 +79,8 @@
 
     for (let page of json.query.allpages) {
       if (page.title.charAt(0) !== "/") allPages.push(page.title);
+      if (page.title.includes("Problems/Problem"))
+        allProblems.push(titleCleanup(page.title));
     }
 
     while (typeof json.continue !== "undefined") {
@@ -86,6 +89,8 @@
       json = await response.json();
       for (let page of json.query.allpages) {
         if (page.title.charAt(0) !== "/") allPages.push(page.title);
+        if (page.title.includes("Problems/Problem"))
+          allProblems.push(titleCleanup(page.title));
       }
     }
     allPagesLoaded = true;
@@ -106,8 +111,8 @@
     </div>`
     );
 
-    var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-    var params = `action=parse&page=${pagename}&format=json`;
+    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+    let params = `action=parse&page=${pagename}&format=json`;
 
     const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
     const json = await response.json();
@@ -143,8 +148,8 @@
       <div class="article-text" id="solutions-text"></div>
     </div>`
     );
-    var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-    var params = `action=parse&page=${pagename}&format=json`;
+    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+    let params = `action=parse&page=${pagename}&format=json`;
 
     const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
     const json = await response.json();
@@ -166,6 +171,7 @@
       $(".aops-link").remove();
       $("#solutions-section").remove();
     }
+    return !(getProblem(problemText) && getSolutions(problemText));
   }
 
   function addBatch() {
@@ -329,42 +335,35 @@
   const computeYear = (problem) => problem.match(/^\d{4}/)[0];
   const computeNumber = (problem) => problem.match(/\d+$/)[0];
 
-  function computeDifficulty(test, number) {
-    let difficulty;
+  function computeDifficulty(test, num) {
+    let diff;
     switch (test) {
       case "AMC 8":
-        if (number < 13) {
-          difficulty = 1;
-        } else if (number < 21) {
-          difficulty = 1.5;
-        } else {
-          difficulty = 2;
-        }
+        diff = num < 13 ? 1 : num < 21 ? 1.5 : 2;
         break;
       case "AMC 10":
-        if (number < 4) {
-          difficulty = 1;
-        } else if (number < 7) {
-          difficulty = 1.5;
-        } else if (number < 13) {
-          difficulty = 2;
-        } else if (number < 17) {
-          difficulty = 2.5;
-        } else if (number < 21) {
-          difficulty = 3;
-        } else if (number < 23) {
-          difficulty = 3.5;
-        } else if (number < 25) {
-          difficulty = 4;
-        } else {
-          difficulty = 4.5;
-        }
+        diff =
+          num < 4
+            ? 1
+            : num < 7
+            ? 1.5
+            : num < 13
+            ? 2
+            : num < 17
+            ? 2.5
+            : num < 21
+            ? 3
+            : num < 23
+            ? 3.5
+            : num < 25
+            ? 4
+            : 4.5;
         break;
       default:
-        difficulty = 3;
+        diff = 3;
         break;
     }
-    return difficulty;
+    return diff;
   }
 
   function getProblem(htmlString) {
@@ -446,7 +445,7 @@
       </div>
       <div class="options-input" id="random-input">
         <label class="input-label" id="random-label">
-          Allowed subjects, tests, years,
+          Choose subjects, tests, years,
           <a
             class="dark-link"
             href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
@@ -454,6 +453,14 @@
           >:
         </label>
         ${problemOptions}
+        <div class="range-container checkbox-container bottom-container">
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-serif"/>
+            <label class="checkbox-label">
+              Use a LaTeX-style serif font?
+            </label>
+          </div>
+        </div>
         <button class="input-button" id="random-button">
           View Random
         </button>
@@ -514,6 +521,10 @@
 
     $(".button-container").after(
       `<div class="options-input-container">
+      <div class="options-input" id="batchname-input">
+        <input class="input-field" id="input-name" type="text"
+          placeholder='Batch name (optional, works for "View Test/Problems" too)'/>
+      </div>
       <div class="options-input" id="batch-input">
         <label class="input-label" for="title">
           Test and year:
@@ -534,17 +545,28 @@
           placeholder="Year">
           </input>
         <button class="input-button" id="batch-button">
+          View Test
+        </button>
+      </div>
+      <div class="options-input" id="problems-input">
+        <label class="input-label" for="title">
+          Choose batch problems:
+        </label>
+        <input class="input-field" id="input-problems" type="text"
+        placeholder="e.g. 2018 AMC 12B #24"
+        data-whitelist="${allProblems.toString()}">
+        <button class="input-button" id="problems-button">
           View Problems
         </button>
       </div>
       <div class="options-input" id="ranbatch-input">
         <label class="input-label" id="ranbatch-label">
-          Allowed subjects, tests, years,
+          Choose subjects, tests, years,
           <a
             class="dark-link"
             href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
             >difficulty</a
-          >, number of problems:
+          >, # of problems:
         </label>
         ${problemOptions}
         <div class="range-container">
@@ -570,7 +592,6 @@
             </label>
           </div>
         </div>
-        <input class="input-field" id="input-name" type="text" placeholder="Batch name (optional)"/>
         <button class="input-button" id="ranbatch-button">
           Make Random
         </button>
@@ -588,6 +609,13 @@
         maxItems: 100,
       },
       maxTags: 1,
+    });
+    var inputProblems = document.querySelector("#input-problems");
+    new Tagify(inputProblems, {
+      originalInputValueFormat: (values) => values.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
     });
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
@@ -729,17 +757,17 @@
         </p>`
       );
     } else {
-      let randomPage = pages[Math.floor(Math.random() * pages.length)];
-      console.log(randomPage);
-      await addProblem(randomPage);
-      /*let invalid = true;
-      while (invalid === true) {
+      let invalid = true;
+      while (invalid) {
+        clearProblem();
+        allPagesWarn();
+
         let randomPage = pages[Math.floor(Math.random() * pages.length)];
         console.log(randomPage);
-        let randomProblem = get;
-        await addProblem(randomPage);
-      }*/
+        invalid = await addProblem(randomPage);
+      }
     }
+    fakeTex();
     fixLinks();
     collapseSolutions();
     directLinks();
@@ -758,6 +786,112 @@
     formatBatch();
     fixLinks();
     directLinks();
+  });
+
+  $(".page-container").on("click", "#problems-button", async () => {
+    async function makeBatch() {
+      let problems = [];
+      let problemIndex = 0;
+      let inputProblems = $("#input-problems");
+      let problemTitles = inputProblems
+        .val()
+        .split(",")
+        .map((e) => e.replace("#", "Problems/Problem "));
+      let numProblems = problemTitles.length;
+
+      $("#batch-header").after(
+        `<div class="loading-notice">
+          <div class="loading-text">Loading problems…</div>
+          <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+          </div>
+        </div>`
+      );
+
+      for (let [problemIndex, currentProblem] of problemTitles.entries()) {
+        if (ranbatchClicked !== ranbatchClickedThen) break;
+        console.log(currentProblem);
+
+        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+        let params = `action=parse&page=${currentProblem}&format=json`;
+
+        const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        const json = await response.json();
+
+        var problemText = json.parse.text["*"];
+        var problemProblem = getProblem(problemText);
+        var problemSolutions = getSolutions(problemText);
+
+        if (
+          problemProblem &&
+          problemSolutions &&
+          ranbatchClicked === ranbatchClickedThen
+        ) {
+          problems.push({
+            title: currentProblem,
+            difficulty: computeDifficulty(
+              computeTest(currentProblem),
+              computeNumber(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+
+          $(".loading-bar").css(
+            "width",
+            `${((problemIndex + 1) / numProblems) * 100}%`
+          );
+        } else {
+          console.log("Invalid problem, skipping...");
+        }
+      }
+
+      if (ranbatchClicked === ranbatchClickedThen) {
+        if ($("#input-sort").prop("checked")) {
+          problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
+        }
+        console.log(problems);
+
+        for (let problem of problems) {
+          $("#batch-text").append(`<div class="article-problem">
+            <h2>Problem ${problemIndex + 1}
+              <span class="source-link">
+                (<a href="https://artofproblemsolving.com/wiki/index.php/${
+                  problem.title
+                }">${titleCleanup(problem.title)}</a>)
+              </span>
+            </h2>${problem.problem}
+          </div>`);
+
+          $("#solutions-text").append(`<h2 class="problem-heading">
+            Problem ${problemIndex + 1}
+            <span class="source-link">
+              (<a href="https://artofproblemsolving.com/wiki/index.php/${
+                problem.title
+              }">${titleCleanup(problem.title)}</a>)
+            </span>
+          </h2>`);
+          $("#solutions-text").append(problem.solutions);
+          problemIndex++;
+        }
+      }
+    }
+
+    ranbatchClicked++;
+    let ranbatchClickedThen = ranbatchClicked;
+    clearProblem();
+
+    addBatch();
+    allPagesWarn();
+    await makeBatch();
+
+    if (ranbatchClicked === ranbatchClickedThen) $(".loading-notice").remove();
+    fakeTex();
+    changeName();
+    fixLinks();
+    collapseSolutions();
+    directLinks();
+    hideLinks();
   });
 
   $(".page-container").on("click", "#ranbatch-button", async () => {
@@ -788,8 +922,8 @@
         randomPage = pages[pageIndex];
         console.log(randomPage);
 
-        var apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-        var params = `action=parse&page=${randomPage}&format=json`;
+        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+        let params = `action=parse&page=${randomPage}&format=json`;
 
         const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
         const json = await response.json();
@@ -955,8 +1089,9 @@
   }
 
   function changeName() {
+    console.log("Test");
     name = $("#input-name").val();
-    if (name) $("#article-header").html(name);
+    if (name) $("#batch-header").html(name);
   }
 
   function fixLinks() {
