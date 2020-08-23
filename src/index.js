@@ -31,8 +31,8 @@
   <input class="input-multi"
     id="input-tests"
     placeholder="Tests, e.g. AMC 10"
-    data-whitelist="(All Tests), (AMC Tests), AJHSME, AHSME, AMC 8, AMC 10, AMC 12,
-    AIME, USAJMO, USAMO, Canadian MO, IMO">
+    data-whitelist="(All Tests), (AMC Tests), AJHSME, AHSME, AMC 8, AMC 10,
+    AMC 12, AIME, USAJMO, USAMO, Canadian MO, IMO">
   </input>
   <div class="range-container">
     <input class="input-range" id="input-years"></input>
@@ -964,6 +964,7 @@
         var problemSolutions = getSolutions(problemText);
 
         if (
+          // Detect redirect instead here!
           problemProblem &&
           problemSolutions &&
           ranbatchClicked === ranbatchClickedThen
