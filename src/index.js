@@ -79,8 +79,12 @@
 
     for (let page of json.query.allpages) {
       if (page.title.charAt(0) !== "/") allPages.push(page.title);
-      if (page.title.includes("Problems/Problem"))
-        allProblems.push(titleCleanup(page.title));
+      if (
+        page.title.includes("Problems/Problem") &&
+        page.title.match(/^\d{4}/) &&
+        page.title.match(/\d+$/)
+      )
+        allProblems.push(page.title);
     }
 
     while (typeof json.continue !== "undefined") {
@@ -89,19 +93,26 @@
       json = await response.json();
       for (let page of json.query.allpages) {
         if (page.title.charAt(0) !== "/") allPages.push(page.title);
-        if (page.title.includes("Problems/Problem"))
-          allProblems.push(titleCleanup(page.title));
+        if (
+          page.title.includes("Problems/Problem") &&
+          page.title.match(/^\d{4}/) &&
+          page.title.match(/\d+$/)
+        )
+          allProblems.push(page.title);
       }
     }
     allPagesLoaded = true;
     console.log("Finished loading Special:AllPages.");
+
+    allProblems = sortProblems(allProblems);
+    console.log("Finished sorting problem index.");
   })();
 
   const allPagesLoadWait = () =>
     Math.round(10 - (allPages.length / 12500) * 10);
 
   async function addArticle(pagename) {
-    $(".options-input-container").after(
+    $(".notes").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
       <a href="" class="aops-link">
@@ -135,7 +146,7 @@
   }
 
   async function addProblem(pagename) {
-    $(".options-input-container").after(
+    $(".notes").after(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
       <a href="" class="aops-link">
@@ -175,7 +186,7 @@
   }
 
   function addBatch() {
-    $(".options-input-container").after(
+    $(".notes").after(
       `<div class="problem-section">
       <h2 class="section-header" id="batch-header">Problem Batch</h2>
       <div class="article-text" id="batch-text"></div>
@@ -366,6 +377,25 @@
     return diff;
   }
 
+  const sortProblems = (problems) =>
+    problems.sort((a, b) => {
+      switch (Math.sign(computeYear(a) - computeYear(b))) {
+        case -1:
+          return -1;
+        case 1:
+          return 1;
+        case 0:
+          switch (computeTest(a).localeCompare(computeTest(b))) {
+            case -1:
+              return -1;
+            case 1:
+              return 1;
+            case 0:
+              return Math.sign(computeNumber(a) - computeNumber(b));
+          }
+      }
+    });
+
   function getProblem(htmlString) {
     let htmlParsed = $.parseHTML(htmlString);
     let after = $(htmlParsed)
@@ -413,57 +443,58 @@
 
     $(".button-container").after(
       `<div class="options-input-container">
-      <div class="options-input" id="single-input">
-        <label class="input-label" for="title">
-          Test, year, problem number:
-        </label>
-        <input class="input-field input-field-single input-singletest"
-          type="text"
-          id="input-singletest"
-          placeholder="Test, e.g. AMC 10A"
-          data-whitelist="AJHSME, AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B,
-          AMC 12, AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO,
-          Canadian MO, IMO">
-        </input>
-          <input class="input-field input-field-single"
-          type="number"
-          min="1974"
-          max="2020"
-          id="input-singleyear"
-          placeholder="Year">
+        <div class="options-input" id="single-input">
+          <label class="input-label" for="title">
+            Test, year, problem number:
+          </label>
+          <input class="input-field input-field-single input-singletest"
+            type="text"
+            id="input-singletest"
+            placeholder="Test, e.g. AMC 10A"
+            data-whitelist="AJHSME, AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B,
+            AMC 12, AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO,
+            Canadian MO, IMO">
           </input>
-          <input class="input-field input-field-single"
-          type="number"
-          min="1"
-          max="30"
-          id="input-singlenum"
-          placeholder="#">
-          </input>
-        <button class="input-button" id="single-button">
-          View Problem
-        </button>
-      </div>
-      <div class="options-input" id="random-input">
-        <label class="input-label" id="random-label">
-          Choose subjects, tests, years,
-          <a
-            class="dark-link"
-            href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-            >difficulty</a
-          >:
-        </label>
-        ${problemOptions}
-        <div class="range-container checkbox-container bottom-container">
-          <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-serif"/>
-            <label class="checkbox-label">
-              Use a LaTeX-style serif font?
-            </label>
-          </div>
+            <input class="input-field input-field-single"
+            type="number"
+            min="1974"
+            max="2020"
+            id="input-singleyear"
+            placeholder="Year">
+            </input>
+            <input class="input-field input-field-single"
+            type="number"
+            min="1"
+            max="30"
+            id="input-singlenum"
+            placeholder="#">
+            </input>
+          <button class="input-button" id="single-button">
+            View Problem
+          </button>
         </div>
-        <button class="input-button" id="random-button">
-          View Random
-        </button>
+        <div class="options-input" id="random-input">
+          <label class="input-label" id="random-label">
+            Choose subjects, tests, years,
+            <a
+              class="dark-link"
+              href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
+              >difficulty</a
+            >:
+          </label>
+          ${problemOptions}
+          <div class="range-container checkbox-container bottom-container">
+            <div class="checkbox-wrap">
+              <input type="checkbox" checked class="input-check" id="input-serif"/>
+              <label class="checkbox-label">
+                Use a LaTeX-style serif font?
+              </label>
+            </div>
+          </div>
+          <button class="input-button" id="random-button">
+            View Random
+          </button>
+        </div>
       </div>
       ${notes}`
     );
@@ -554,7 +585,7 @@
         </label>
         <input class="input-field" id="input-problems" type="text"
         placeholder="e.g. 2018 AMC 12B #24"
-        data-whitelist="${allProblems.toString()}">
+        data-whitelist="${allProblems.map((e) => titleCleanup(e)).toString()}">
         <button class="input-button" id="problems-button">
           View Problems
         </button>
@@ -596,9 +627,10 @@
           Make Random
         </button>
       </div>
-      ${notes}
-    </div>`
+    </div>
+    ${notes}`
     );
+    allPagesWarnAC();
     collapseNotes();
 
     var inputSingleTest = document.querySelector("#input-singletest");
@@ -678,13 +710,7 @@
       </div>
       ${notes}`
     );
-    if (!allPagesLoaded) {
-      $(".options-input-container").after(`<p class="error">
-          Page index not done loading, please toggle away from the "Find an
-          Article" section and back in ${allPagesLoadWait()} seconds to refresh
-          the autocomplete suggestions.
-        </p>`);
-    }
+    allPagesWarnAC();
     collapseNotes();
 
     var inputFind = document.querySelector("#input-find");
@@ -1079,6 +1105,18 @@
         </p>`);
     } else if (allPagesLoaded) {
       $("#allpages-error").remove();
+    }
+  }
+
+  function allPagesWarnAC() {
+    if (!allPagesLoaded && $("#allpages-ac-error").length === 0) {
+      $(".button-container").after(`<p class="error" id="allpages-ac-error">
+          Page index not done loading, please toggle away from this section and
+          back in ${allPagesLoadWait()} seconds to refresh the autocomplete
+          suggestions.
+        </p>`);
+    } else if (allPagesLoaded) {
+      $("#allpages-ac-error").remove();
     }
   }
 
