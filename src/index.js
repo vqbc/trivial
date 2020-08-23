@@ -1116,9 +1116,8 @@
   function allPagesWarnAC() {
     if (!allPagesLoaded && $("#allpages-ac-error").length === 0) {
       $(".button-container").after(`<p class="error" id="allpages-ac-error">
-          Page index not done loading, please toggle away from this section and
-          back in ${allPagesLoadWait()} seconds to refresh the autocomplete
-          suggestions.
+          Page index not done loading, please reclick this section in
+          ${allPagesLoadWait()} seconds to refresh the autocomplete suggestions.
         </p>`);
     } else if (allPagesLoaded) {
       $("#allpages-ac-error").remove();
