@@ -652,6 +652,7 @@
       dropdown: {
         enabled: 0,
       },
+      enforceWhitelist: true,
     });
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
