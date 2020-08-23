@@ -105,7 +105,6 @@
     console.log("Finished loading Special:AllPages.");
 
     allProblems = sortProblems(allProblems);
-    console.log("Finished sorting problem index.");
   })();
 
   const allPagesLoadWait = () =>
@@ -377,8 +376,8 @@
     return diff;
   }
 
-  const sortProblems = (problems) =>
-    problems.sort((a, b) => {
+  const sortProblems = (problems) => {
+    let sorted = problems.sort((a, b) => {
       switch (Math.sign(computeYear(a) - computeYear(b))) {
         case -1:
           return -1;
@@ -395,6 +394,9 @@
           }
       }
     });
+    console.log("Finished sorting problem index.");
+    return sorted;
+  };
 
   function getProblem(htmlString) {
     let htmlParsed = $.parseHTML(htmlString);
@@ -554,7 +556,7 @@
       `<div class="options-input-container">
       <div class="options-input" id="batchname-input">
         <input class="input-field" id="input-name" type="text"
-          placeholder='Batch name (optional, works for "View Test/Problems" too)'/>
+          placeholder='Batch name (optional)'/>
       </div>
       <div class="options-input" id="batch-input">
         <label class="input-label" for="title">
@@ -585,7 +587,9 @@
         </label>
         <input class="input-field" id="input-problems" type="text"
         placeholder="e.g. 2018 AMC 12B #24"
-        data-whitelist="${allProblems.map((e) => titleCleanup(e)).toString()}">
+        data-whitelist="${sortProblems(allProblems)
+          .map((e) => titleCleanup(e))
+          .toString()}">
         <button class="input-button" id="problems-button">
           View Problems
         </button>

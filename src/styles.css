@@ -16,6 +16,8 @@
   --input-hover-box-shadow: 0 3px 5px rgb(0, 10, 26, 0.2);
   --button-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   --main-text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  --vertical-item-spacing: 0.5rem;
+  --horizontal-item-spacing: 0.6rem;
 } /**/
 
 /* Container styles and sizing */
@@ -96,8 +98,8 @@ body {
 /* Input buttons */
 .input-button {
   height: 1.9em;
-  margin-left: 0.6rem;
-  padding: 0.3rem 0.6rem;
+  margin-left: var(--horizontal-item-spacing);
+  padding: 0.3rem var(--horizontal-item-spacing);
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -138,11 +140,11 @@ body {
 }
 
 .input-multi:first-of-type {
-  margin-right: 0.6rem;
+  margin-right: var(--horizontal-item-spacing);
 }
 
 .input-label {
-  margin-right: 0.6rem;
+  margin-right: var(--horizontal-item-spacing);
 }
 
 .range-container {
@@ -159,7 +161,7 @@ body {
 }
 
 .range-container:nth-of-type(odd) {
-  margin-right: 0.6rem;
+  margin-right: var(--horizontal-item-spacing);
 } /**/
 
 /* Direct input field */
@@ -183,7 +185,7 @@ input::placeholder {
 }
 
 .input-field.input-field-single:not(:nth-last-child(2)) {
-  margin-right: 0.6rem;
+  margin-right: var(--horizontal-item-spacing);
 }
 
 .input-singletest {
@@ -203,7 +205,7 @@ input::placeholder {
   display: flex;
   flex-wrap: nowrap;
   max-height: 55px;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--vertical-item-spacing);
   overflow-x: scroll;
   background: white;
   border: none;
@@ -254,7 +256,7 @@ tags > span {
 .range-container {
   align-self: stretch;
   box-sizing: border-box;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--vertical-item-spacing);
   padding: 5px;
   background: white;
   box-shadow: var(--input-box-shadow);
@@ -312,7 +314,7 @@ tags > span {
 }
 
 .checkbox-wrap {
-  margin-right: 0.6rem;
+  margin-right: var(--horizontal-item-spacing);
 }
 
 .checkbox-label {
@@ -490,7 +492,7 @@ footer {
 /* Loading bar */
 .loading-notice {
   display: flex;
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 var(--vertical-item-spacing);
 }
 
 .loading-bar-container {
@@ -543,7 +545,7 @@ footer {
   #ranbatch-label {
     flex: 1 0 100%;
     margin-right: auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--vertical-item-spacing);
   }
 }
 
@@ -556,7 +558,7 @@ footer {
   .input-label {
     flex: 1 0 100%;
     margin-right: auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--vertical-item-spacing);
   }
 }
 
@@ -577,7 +579,7 @@ footer {
   }
 
   .button {
-    width: 100%;
+    flex: 1 0 100%;
     margin-bottom: 0.75rem;
   }
 
@@ -593,6 +595,14 @@ footer {
 
   .range-container:first-of-type {
     margin-right: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  #single-button {
+    flex: 1 0 100%;
+    margin-top: var(--vertical-item-spacing);
+    margin-left: 0;
   }
 } /**/
 
