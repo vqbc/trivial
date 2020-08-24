@@ -65,7 +65,7 @@
       </li>
     <ul>
   </div>`;
-  var ranbatchClicked = 0;
+  var clickedTimes = 0;
   var allPagesLoaded = false;
 
   (async () => {
@@ -829,29 +829,18 @@
   });
 
   $(".page-container").on("click", "#batch-button", async () => {
-    clearProblem();
-
-    await addArticle(
-      sanitize(
-        `${$("#input-singleyear").val()} ${$(
-          "#input-singletest"
-        ).val()} Problems`
-      )
-    );
-    formatBatch();
-    fixLinks();
-    directLinks();
-  });
-
-  $(".page-container").on("click", "#problems-button", async () => {
     async function makeBatch() {
       let problems = [];
       let problemIndex = 0;
-      let inputProblems = $("#input-problems");
-      let problemTitles = inputProblems
-        .val()
-        .split(",")
-        .map((e) => e.replace("#", "Problems/Problem "));
+      let problemTitles = sortProblems(allProblems).filter((e) =>
+        e.includes(
+          sanitize(
+            `${$("#input-singleyear").val()} ${$(
+              "#input-singletest"
+            ).val()} Problems/Problem`
+          )
+        )
+      );
       let numProblems = problemTitles.length;
 
       $("#batch-header").after(
@@ -864,7 +853,7 @@
       );
 
       for (let [problemIndex, currentProblem] of problemTitles.entries()) {
-        if (ranbatchClicked !== ranbatchClickedThen) break;
+        if (clickedTimes !== clickedTimesThen) break;
         console.log(currentProblem);
 
         let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -880,7 +869,7 @@
         if (
           problemProblem &&
           problemSolutions &&
-          ranbatchClicked === ranbatchClickedThen
+          clickedTimes === clickedTimesThen
         ) {
           problems.push({
             title: currentProblem,
@@ -901,7 +890,7 @@
         }
       }
 
-      if (ranbatchClicked === ranbatchClickedThen) {
+      if (clickedTimes === clickedTimesThen) {
         if ($("#input-sort").prop("checked")) {
           problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
         }
@@ -932,15 +921,121 @@
       }
     }
 
-    ranbatchClicked++;
-    let ranbatchClickedThen = ranbatchClicked;
+    clickedTimes++;
+    let clickedTimesThen = clickedTimes;
     clearProblem();
 
     addBatch();
     allPagesWarn();
     await makeBatch();
 
-    if (ranbatchClicked === ranbatchClickedThen) $(".loading-notice").remove();
+    if (clickedTimes === clickedTimesThen) $(".loading-notice").remove();
+    fakeTex();
+    changeName();
+    fixLinks();
+    collapseSolutions();
+    directLinks();
+    hideLinks();
+  });
+
+  $(".page-container").on("click", "#problems-button", async () => {
+    async function makeBatch() {
+      let problems = [];
+      let problemIndex = 0;
+      let inputProblems = $("#input-problems");
+      let problemTitles = inputProblems
+        .val()
+        .split(",")
+        .map((e) => e.replace("#", "Problems/Problem "));
+      let numProblems = problemTitles.length;
+
+      $("#batch-header").after(
+        `<div class="loading-notice">
+          <div class="loading-text">Loading problems…</div>
+          <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+          </div>
+        </div>`
+      );
+
+      for (let [problemIndex, currentProblem] of problemTitles.entries()) {
+        if (clickedTimes !== ranbatchClickedThen) break;
+        console.log(currentProblem);
+
+        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+        let params = `action=parse&page=${currentProblem}&format=json`;
+
+        const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        const json = await response.json();
+
+        var problemText = json.parse.text["*"];
+        var problemProblem = getProblem(problemText);
+        var problemSolutions = getSolutions(problemText);
+
+        if (
+          problemProblem &&
+          problemSolutions &&
+          clickedTimes === ranbatchClickedThen
+        ) {
+          problems.push({
+            title: currentProblem,
+            difficulty: computeDifficulty(
+              computeTest(currentProblem),
+              computeNumber(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+
+          $(".loading-bar").css(
+            "width",
+            `${((problemIndex + 1) / numProblems) * 100}%`
+          );
+        } else {
+          console.log("Invalid problem, skipping...");
+        }
+      }
+
+      if (clickedTimes === ranbatchClickedThen) {
+        if ($("#input-sort").prop("checked")) {
+          problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
+        }
+        console.log(problems);
+
+        for (let problem of problems) {
+          $("#batch-text").append(`<div class="article-problem">
+            <h2>Problem ${problemIndex + 1}
+              <span class="source-link">
+                (<a href="https://artofproblemsolving.com/wiki/index.php/${
+                  problem.title
+                }">${titleCleanup(problem.title)}</a>)
+              </span>
+            </h2>${problem.problem}
+          </div>`);
+
+          $("#solutions-text").append(`<h2 class="problem-heading">
+            Problem ${problemIndex + 1}
+            <span class="source-link">
+              (<a href="https://artofproblemsolving.com/wiki/index.php/${
+                problem.title
+              }">${titleCleanup(problem.title)}</a>)
+            </span>
+          </h2>`);
+          $("#solutions-text").append(problem.solutions);
+          problemIndex++;
+        }
+      }
+    }
+
+    clickedTimes++;
+    let ranbatchClickedThen = clickedTimes;
+    clearProblem();
+
+    addBatch();
+    allPagesWarn();
+    await makeBatch();
+
+    if (clickedTimes === ranbatchClickedThen) $(".loading-notice").remove();
     fakeTex();
     changeName();
     fixLinks();
@@ -970,7 +1065,7 @@
       while (
         getIndex < numProblems &&
         pages.length !== 0 &&
-        ranbatchClicked === ranbatchClickedThen
+        clickedTimes === clickedTimesThen
       ) {
         pageIndex = Math.floor(Math.random() * pages.length);
         randomPage = pages[pageIndex];
@@ -989,7 +1084,7 @@
         if (
           problemProblem &&
           problemSolutions &&
-          ranbatchClicked === ranbatchClickedThen
+          clickedTimes === clickedTimesThen
         ) {
           problems.push({
             title: randomPage,
@@ -1041,7 +1136,7 @@
         }
       }
 
-      if (ranbatchClicked === ranbatchClickedThen) {
+      if (clickedTimes === clickedTimesThen) {
         if ($("#input-sort").prop("checked")) {
           problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
         }
@@ -1072,8 +1167,8 @@
       }
     }
 
-    ranbatchClicked++;
-    let ranbatchClickedThen = ranbatchClicked;
+    clickedTimes++;
+    let clickedTimesThen = clickedTimes;
     clearProblem();
 
     addBatch();
@@ -1112,7 +1207,7 @@
     } else {
       await makeBatch();
     }
-    if (ranbatchClicked === ranbatchClickedThen) $(".loading-notice").remove();
+    if (clickedTimes === clickedTimesThen) $(".loading-notice").remove();
     fakeTex();
     changeName();
     fixLinks();
