@@ -181,7 +181,11 @@
       $(".aops-link").remove();
       $("#solutions-section").remove();
     }
-    return !(getProblem(problemText) && getSolutions(problemText));
+    return [
+      (getProblem(problemText) && getSolutions(problemText) ? 1 : 0) -
+        problemText.includes("Redirect to"),
+      problemText,
+    ];
   }
 
   function addBatch() {
@@ -789,13 +793,33 @@
       );
     } else {
       let invalid = true;
+      let response;
+      let problemText;
       while (invalid) {
         clearProblem();
         allPagesWarn();
 
         let randomPage = pages[Math.floor(Math.random() * pages.length)];
         console.log(randomPage);
-        invalid = await addProblem(randomPage);
+        [response, problemText] = await addProblem(randomPage);
+
+        if (response < 0) {
+          clearProblem();
+          allPagesWarn();
+          console.log("Redirect problem, going there instead...");
+
+          let redirHref = $($.parseHTML(problemText))
+            .find(".redirectText a")
+            .attr("href");
+          let redirPage = redirHref
+            .replace("/wiki/index.php/", "")
+            .replace(/_/g, " ");
+          console.log(redirPage);
+
+          await addProblem(redirPage);
+        }
+
+        invalid = !response;
       }
     }
     fakeTex();
@@ -927,8 +951,7 @@
 
   $(".page-container").on("click", "#ranbatch-button", async () => {
     async function makeBatch() {
-      let inputNumber = $("#input-number");
-      let numProblems = inputNumber.data().from;
+      let numProblems = pages.length;
       let randomPage;
       let pageIndex;
       let problems = [];
@@ -956,15 +979,14 @@
         let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
         let params = `action=parse&page=${randomPage}&format=json`;
 
-        const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-        const json = await response.json();
+        let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        let json = await response.json();
 
         var problemText = json.parse.text["*"];
         var problemProblem = getProblem(problemText);
         var problemSolutions = getSolutions(problemText);
 
         if (
-          // Detect redirect instead here!
           problemProblem &&
           problemSolutions &&
           ranbatchClicked === ranbatchClickedThen
@@ -978,6 +1000,39 @@
             problem: problemProblem,
             solutions: problemSolutions,
           });
+
+          pages.splice(pageIndex, 1);
+          getIndex++;
+          $(".loading-bar").css("width", `${(getIndex / numProblems) * 100}%`);
+        } else if (problemText.includes("Redirect to")) {
+          console.log("Redirect problem, going there instead...");
+
+          let redirHref = $($.parseHTML(problemText))
+            .find(".redirectText a")
+            .attr("href");
+          let redirPage = redirHref
+            .replace("/wiki/index.php/", "")
+            .replace(/_/g, " ");
+          console.log(redirPage);
+
+          params = `action=parse&page=${redirPage}&format=json`;
+          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+          json = await response.json();
+
+          problemText = json.parse.text["*"];
+          problemProblem = getProblem(problemText);
+          problemSolutions = getSolutions(problemText);
+
+          problems.push({
+            title: redirPage,
+            difficulty: computeDifficulty(
+              computeTest(redirPage),
+              computeNumber(redirPage)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+
           pages.splice(pageIndex, 1);
           getIndex++;
           $(".loading-bar").css("width", `${(getIndex / numProblems) * 100}%`);
@@ -1132,7 +1187,6 @@
   }
 
   function changeName() {
-    console.log("Test");
     name = $("#input-name").val();
     if (name) $("#batch-header").html(name);
   }
@@ -1147,10 +1201,10 @@
 
   async function directLinks() {
     $(".article-text a").click(async function (event) {
-      let pagename = $(this).attr("href");
-      if (pagename.includes("artofproblemsolving.com/wiki/")) {
+      let href = $(this).attr("href");
+      if (href.includes("artofproblemsolving.com/wiki/")) {
         event.preventDefault();
-        pagename = pagename.replace(
+        let pagename = href.replace(
           "https://artofproblemsolving.com/wiki/index.php/",
           ""
         );
