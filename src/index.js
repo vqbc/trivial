@@ -1208,7 +1208,8 @@
     } else {
       await makeBatch();
     }
-    if (clickedTimes === clickedTimesThen) $(".loading-notice").remove();
+
+    $(".loading-notice").remove();
     fakeTex();
     changeName();
     fixLinks();
