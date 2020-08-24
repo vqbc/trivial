@@ -959,7 +959,7 @@
       );
 
       for (let [problemIndex, currentProblem] of problemTitles.entries()) {
-        if (clickedTimes !== ranbatchClickedThen) break;
+        if (clickedTimes !== clickedTimesThen) break;
         console.log(currentProblem);
 
         let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -975,7 +975,7 @@
         if (
           problemProblem &&
           problemSolutions &&
-          clickedTimes === ranbatchClickedThen
+          clickedTimes === clickedTimesThen
         ) {
           problems.push({
             title: currentProblem,
@@ -996,7 +996,7 @@
         }
       }
 
-      if (clickedTimes === ranbatchClickedThen) {
+      if (clickedTimes === clickedTimesThen) {
         if ($("#input-sort").prop("checked")) {
           problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
         }
@@ -1028,14 +1028,14 @@
     }
 
     clickedTimes++;
-    let ranbatchClickedThen = clickedTimes;
+    let clickedTimesThen = clickedTimes;
     clearProblem();
 
     addBatch();
     allPagesWarn();
     await makeBatch();
 
-    if (clickedTimes === ranbatchClickedThen) $(".loading-notice").remove();
+    if (clickedTimes === clickedTimesThen) $(".loading-notice").remove();
     fakeTex();
     changeName();
     fixLinks();
@@ -1046,7 +1046,8 @@
 
   $(".page-container").on("click", "#ranbatch-button", async () => {
     async function makeBatch() {
-      let numProblems = pages.length;
+      let inputNumber = $("#input-number");
+      let numProblems = Math.min(inputNumber.data().from, pages.length);
       let randomPage;
       let pageIndex;
       let problems = [];
