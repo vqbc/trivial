@@ -1248,13 +1248,6 @@
     });
   }
 
-  function formatBatch() {
-    $("p").has("a:contains(Solution)").remove();
-    $("table:contains(Problem)").remove();
-    $("table:contains(Answer)").remove();
-    $("p:contains('The problems on this page are copyrighted')").remove();
-  }
-
   function allPagesWarn() {
     if (!allPagesLoaded && $("#allpages-error").length === 0) {
       $(".notes").after(`<p class="error" id="allpages-error">
