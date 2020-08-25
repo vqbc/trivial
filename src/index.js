@@ -111,7 +111,7 @@
     Math.round(10 - (allPages.length / 12500) * 10);
 
   async function addArticle(pagename) {
-    $(".notes").after(
+    $("article").append(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
       <a href="" class="aops-link">
@@ -145,7 +145,7 @@
   }
 
   async function addProblem(pagename) {
-    $(".notes").after(
+    $("article").append(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
       <a href="" class="aops-link">
@@ -173,6 +173,11 @@
         "href",
         `https://artofproblemsolving.com/wiki/index.php/${pagename}`
       );
+      return [
+        (getProblem(problemText) && getSolutions(problemText) ? 1 : 0) -
+          problemText.includes("Redirect to"),
+        problemText,
+      ];
     } else {
       $(".article-text").html(
         `<p class="error">The page you specified does not exist.</p>`
@@ -181,11 +186,6 @@
       $(".aops-link").remove();
       $("#solutions-section").remove();
     }
-    return [
-      (getProblem(problemText) && getSolutions(problemText) ? 1 : 0) -
-        problemText.includes("Redirect to"),
-      problemText,
-    ];
   }
 
   function addBatch() {
@@ -749,8 +749,8 @@
   });
 
   $(".page-container").on("click", "#random-button", async () => {
-    clearProblem();
     allPagesWarn();
+    clearProblem();
 
     let [pages, noSubjects, noTests] = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
