@@ -451,7 +451,7 @@
       `<div class="options-input-container">
         <div class="options-input" id="single-input">
           <label class="input-label" for="title">
-            Test, year, problem number:
+            Choose a single problem:
           </label>
           <input class="input-field input-field-single input-singletest"
             type="text"
@@ -564,7 +564,7 @@
       </div>
       <div class="options-input" id="batch-input">
         <label class="input-label" for="title">
-          Test and year:
+          Choose a single test:
         </label>
         <input class="input-field input-field-single input-singletest"
           type="text"
@@ -707,9 +707,6 @@
 
     $(".button-container").after(
       `<div class="options-input options-input-container" id="find-input">
-        <label class="input-label" for="title">
-          Exact article name:
-        </label>
         <input class="input-field" id="input-find" type="text"
         placeholder="e.g. Heron's Formula"
         data-whitelist="${allPages.toString()}">
