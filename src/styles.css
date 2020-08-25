@@ -47,16 +47,13 @@ body {
 .header {
   margin-bottom: 0;
   color: var(--header-color);
-  font-size: 2em;
-  font-family: "Computer Modern Bright";
+  font: 2em "Computer Modern Bright";
 }
 
 .subtitle {
   margin-top: 0;
   color: var(--subtitle-color);
-  font-size: 1.5em;
-  font-family: "Computer Modern Bright";
-  font-style: italic;
+  font: italic 1.5em "Computer Modern Bright";
 } /**/
 
 /* Big top buttons */
@@ -70,9 +67,7 @@ body {
   width: 32%;
   padding: 0.7rem 0.6rem 0.5rem;
   color: white;
-  font-weight: bold;
-  font-size: 1.1em;
-  font-family: "Computer Modern Bright";
+  font: bold 1.1em "Computer Modern Bright";
   text-shadow: var(--button-text-shadow);
   background: var(--main-button-color);
   border: none;
@@ -101,9 +96,7 @@ body {
   margin-left: var(--horizontal-item-spacing);
   padding: 0.3rem var(--horizontal-item-spacing);
   color: white;
-  font-weight: bold;
-  font-size: 1em;
-  font-family: "Computer Modern Bright";
+  font: bold 1em "Computer Modern Bright";
   text-shadow: var(--button-text-shadow);
   background: var(--input-button-color);
   border: none;
@@ -169,8 +162,7 @@ body {
   flex: 1 0 30%;
   min-width: 0;
   padding: 0.3em 0.6em;
-  font-size: 1em;
-  font-family: "Computer Modern Sans";
+  font: 1em "Computer Modern Sans";
   border: none;
   box-shadow: var(--input-box-shadow);
 }
