@@ -47,7 +47,7 @@ body {
 .header {
   margin-bottom: 0;
   color: var(--header-color);
-  font: 2em "Computer Modern Bright";
+  font: bold 2em "Computer Modern Bright";
 }
 
 .subtitle {
@@ -416,10 +416,10 @@ a.aops-link {
 
 a.dark-link {
   color: inherit;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  font-family: "Computer Modern Bright";
   font-weight: bold;
+  font-size: 0.8em;
+  font-family: "Computer Modern Bright";
+  text-transform: uppercase;
 }
 
 .source-link {
@@ -602,6 +602,13 @@ footer {
 
 /* Print styling */
 @media print {
+  body {
+    width: 140%;
+    margin-top: -95vh;
+    margin-left: -20%;
+    transform: scale(0.67);
+  }
+
   .header,
   .subtitle,
   .button-container,
