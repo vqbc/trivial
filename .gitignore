@@ -1,3 +1,4 @@
 .vscode/
 .codesandbox/
 node_modules
+.prettierrc

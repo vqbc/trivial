@@ -1033,6 +1033,11 @@
       let problems = [];
       let getIndex = 0;
 
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params;
+      let response;
+      let json;
+
       $("#batch-header").after(
         `<div class="loading-notice">
           <div class="loading-text">Loading problems…</div>
@@ -1051,11 +1056,9 @@
         randomPage = pages[pageIndex];
         console.log(randomPage);
 
-        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-        let params = `action=parse&page=${randomPage}&format=json`;
-
-        let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-        let json = await response.json();
+        params = `action=parse&page=${randomPage}&format=json`;
+        response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        json = await response.json();
 
         var problemText = json.parse.text["*"];
         var problemProblem = getProblem(problemText);
