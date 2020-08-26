@@ -562,7 +562,7 @@
     $("#input-years").ionRangeSlider({
       type: "double",
       grid: true,
-      min: 1950,
+      min: 1974,
       max: 2020,
       from: 1974,
       to: 2020,
