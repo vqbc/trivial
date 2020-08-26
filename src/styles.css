@@ -302,8 +302,8 @@ tags > span {
 .checkbox-container {
   display: flex;
   align-items: center;
-  padding-left: 1rem;
   margin-right: var(--horizontal-item-spacing);
+  padding-left: 1rem;
 }
 
 .checkbox-wrap {

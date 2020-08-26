@@ -31,7 +31,7 @@
   <input class="input-multi"
     id="input-tests"
     placeholder="Tests, e.g. AMC 10"
-    data-whitelist="(All Tests), (AMC Tests), AJHSME, AHSME, AMC 8, AMC 10,
+    data-whitelist="(All Tests), (AMC Tests), AHSME, AMC 8, AMC 10,
     AMC 12, AIME, USAJMO, USAMO, Canadian MO, IMO">
   </input>
   <div class="range-container">
@@ -44,11 +44,6 @@
     <h3 id="notes-header">Notes</h3>
     <ul id="notes-text">
       <li>
-        Difficulty levels will likely be more inaccurate for earlier years,
-        because of changes in competition difficulty and problem design over
-        time.
-      </li>
-      <li>
         The script preloads a list of all pages in alphabetical order when the
         site is loaded, for use when a random page is selected from all
         subjects. Because it takes around 10 seconds to fully load, trying to
@@ -56,12 +51,22 @@
         alphabetical order.
       </li>
       <li>
-        The 30-question AHMSE was replaced by the AMC 10 and AMC 12 and the
+        Difficulty levels will likely be more inaccurate for earlier years,
+        because of changes in competition difficulty and problem design over
+        time. They are intended to be an approximation and group problems based
+        on test and problem number. Difficulty levels are currently available
+        for the tests included under AMC Tests.
+      </li>
+      <li>
+        The 30-question AHSME was replaced by the AMC 10 and AMC 12 and the
         AIME was split into the AIME I and AIME II in 2000. The AMC 10 and 
         AMC 12 were split into A and B tests in 2002.
       </li>
       <li>
-        AMC Tests refers to the AHSME, AJHSME, AMC 8/10/12, AIME, USAMO, and IMO.
+        AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
+      </li>
+      <li>
+        The AJHSME is included as the AMC 8 tests before 1999.
       </li>
     <ul>
   </div>`;
@@ -318,7 +323,6 @@
       tests.splice(
         tests.indexOf("(AMC Tests)"),
         1,
-        "AJHSME",
         "AHSME",
         "AMC 8",
         "AMC 10",
@@ -345,7 +349,8 @@
     problem
       .match(/(\d{4} )(.*)( Problems)/)[2]
       .replace(/AMC ((?:10)|(?:12))[AB]/, "AMC $1")
-      .replace(/AIME I+/, "AIME");
+      .replace(/AIME I+/, "AIME")
+      .replace(/AJHSME/, "AMC 8");
   const computeYear = (problem) => problem.match(/^\d{4}/)[0];
   const computeNumber = (problem) => problem.match(/\d+$/)[0];
 
@@ -372,6 +377,75 @@
             : num < 25
             ? 4
             : 4.5;
+        break;
+      case "AMC 12":
+        diff =
+          num < 6
+            ? 1.5
+            : num < 11
+            ? 2
+            : num < 14
+            ? 2.5
+            : num < 17
+            ? 3
+            : num < 21
+            ? 3.5
+            : num < 23
+            ? 4
+            : num < 24
+            ? 4.5
+            : num < 25
+            ? 5
+            : 5.5;
+        break;
+      case "AHSME":
+        diff =
+          num < 4
+            ? 1
+            : num < 7
+            ? 1.5
+            : num < 13
+            ? 2
+            : num < 17
+            ? 2.5
+            : num < 21
+            ? 3
+            : num < 23
+            ? 3.5
+            : num < 25
+            ? 4
+            : num < 27
+            ? 4.5
+            : num < 29
+            ? 5
+            : 5.5;
+        break;
+      case "AIME":
+        diff =
+          num < 3
+            ? 3
+            : num < 6
+            ? 3.5
+            : num < 8
+            ? 4
+            : num < 10
+            ? 4.5
+            : num < 11
+            ? 5
+            : num < 13
+            ? 5.5
+            : num < 14
+            ? 6
+            : 6.5;
+        break;
+      case "USAJMO":
+        diff = num == 1 || num == 4 ? 5.5 : num == 2 || num == 5 ? 6 : 7;
+        break;
+      case "USAMO":
+        diff = num == 1 || num == 4 ? 6.5 : num == 2 || num == 5 ? 7.5 : 8.5;
+        break;
+      case "IMO":
+        diff = num == 1 || num == 4 ? 6.5 : num == 2 || num == 5 ? 7.5 : 9.5;
         break;
       default:
         diff = 3;
@@ -484,9 +558,9 @@
             type="text"
             id="input-singletest"
             placeholder="Test, e.g. AMC 10A"
-            data-whitelist="AJHSME, AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B,
-            AMC 12, AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO,
-            Canadian MO, IMO">
+            data-whitelist="AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B, AMC 12,
+            AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO, Canadian MO,
+            IMO">
           </input>
             <input class="input-field input-field-single"
             type="number"
@@ -617,9 +691,9 @@
           type="text"
           id="input-singletest"
           placeholder="Test, e.g. AMC 10A"
-          data-whitelist="AJHSME, AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B,
-          AMC 12, AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO,
-          Canadian MO, IMO">
+          data-whitelist="AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B, AMC 12,
+          AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO, Canadian MO,
+          IMO">
         </input>
           <input class="input-field input-field-single"
           type="number"
