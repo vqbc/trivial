@@ -1,13 +1,13 @@
 /* Import fonts */
-@import "/computer-modern/bright/style.css";
-@import "/computer-modern/bright-semibold/style.css";
-@import "/computer-modern/classical-serif-italic/style.css";
-@import "/computer-modern/concrete/style.css";
-@import "/computer-modern/sans/style.css";
-@import "/computer-modern/sans-demi-condensed/style.css";
-@import "/computer-modern/serif/style.css";
-@import "/computer-modern/serif-slanted/style.css";
-@import "/computer-modern/typewriter/style.css";
-@import "/computer-modern/typewriter-light/style.css";
-@import "/computer-modern/typewriter-variable/style.css";
-@import "/computer-modern/upright-italic/style.css"; /**/
+@import "../computer-modern/bright/style.css";
+@import "../computer-modern/bright-semibold/style.css";
+@import "../computer-modern/classical-serif-italic/style.css";
+@import "../computer-modern/concrete/style.css";
+@import "../computer-modern/sans/style.css";
+@import "../computer-modern/sans-demi-condensed/style.css";
+@import "../computer-modern/serif/style.css";
+@import "../computer-modern/serif-slanted/style.css";
+@import "../computer-modern/typewriter/style.css";
+@import "../computer-modern/typewriter-light/style.css";
+@import "../computer-modern/typewriter-variable/style.css";
+@import "../computer-modern/upright-italic/style.css"; /**/
