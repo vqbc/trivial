@@ -434,6 +434,33 @@
     return afterHTML;
   }
 
+  function addProblems(problems) {
+    let problemIndex = 0;
+    for (let problem of problems) {
+      $("#batch-text").append(`<div class="article-problem">
+        <h2 class="problem-heading">Problem ${problemIndex + 1}
+          <span class="source-link">
+            (<a href="https://artofproblemsolving.com/wiki/index.php/${
+              problem.title
+            }">${titleCleanup(problem.title)}</a>)
+          </span>
+        </h2>${problem.problem}
+      </div>`);
+
+      $("#solutions-text").append(`<div class="article-problem">
+        <h2 class="problem-heading">
+          Problem ${problemIndex + 1}
+          <span class="source-link">
+            (<a href="https://artofproblemsolving.com/wiki/index.php/${
+              problem.title
+            }">${titleCleanup(problem.title)}</a>)
+          </span>
+        </h2>${problem.solutions}
+      </div>`);
+      problemIndex++;
+    }
+  }
+
   const sanitize = (string) =>
     string.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
@@ -828,7 +855,6 @@
   $(".page-container").on("click", "#batch-button", async () => {
     async function makeBatch() {
       let problems = [];
-      let problemIndex = 0;
       let problemTitles = sortProblems(allProblems).filter((e) =>
         e.includes(
           sanitize(
@@ -893,28 +919,7 @@
         }
         console.log(problems);
 
-        for (let problem of problems) {
-          $("#batch-text").append(`<div class="article-problem">
-            <h2>Problem ${problemIndex + 1}
-              <span class="source-link">
-                (<a href="https://artofproblemsolving.com/wiki/index.php/${
-                  problem.title
-                }">${titleCleanup(problem.title)}</a>)
-              </span>
-            </h2>${problem.problem}
-          </div>`);
-
-          $("#solutions-text").append(`<h2 class="problem-heading">
-            Problem ${problemIndex + 1}
-            <span class="source-link">
-              (<a href="https://artofproblemsolving.com/wiki/index.php/${
-                problem.title
-              }">${titleCleanup(problem.title)}</a>)
-            </span>
-          </h2>`);
-          $("#solutions-text").append(problem.solutions);
-          problemIndex++;
-        }
+        addProblems(problems);
       }
     }
 
@@ -938,7 +943,6 @@
   $(".page-container").on("click", "#problems-button", async () => {
     async function makeBatch() {
       let problems = [];
-      let problemIndex = 0;
       let inputProblems = $("#input-problems");
       let problemTitles = inputProblems
         .val()
@@ -999,28 +1003,7 @@
         }
         console.log(problems);
 
-        for (let problem of problems) {
-          $("#batch-text").append(`<div class="article-problem">
-            <h2>Problem ${problemIndex + 1}
-              <span class="source-link">
-                (<a href="https://artofproblemsolving.com/wiki/index.php/${
-                  problem.title
-                }">${titleCleanup(problem.title)}</a>)
-              </span>
-            </h2>${problem.problem}
-          </div>`);
-
-          $("#solutions-text").append(`<h2 class="problem-heading">
-            Problem ${problemIndex + 1}
-            <span class="source-link">
-              (<a href="https://artofproblemsolving.com/wiki/index.php/${
-                problem.title
-              }">${titleCleanup(problem.title)}</a>)
-            </span>
-          </h2>`);
-          $("#solutions-text").append(problem.solutions);
-          problemIndex++;
-        }
+        addProblems(problems);
       }
     }
 
@@ -1049,7 +1032,6 @@
       let pageIndex;
       let problems = [];
       let getIndex = 0;
-      let problemIndex = 0;
 
       $("#batch-header").after(
         `<div class="loading-notice">
@@ -1140,28 +1122,7 @@
         }
         console.log(problems);
 
-        for (let problem of problems) {
-          $("#batch-text").append(`<div class="article-problem">
-            <h2>Problem ${problemIndex + 1}
-              <span class="source-link">
-                (<a href="https://artofproblemsolving.com/wiki/index.php/${
-                  problem.title
-                }">${titleCleanup(problem.title)}</a>)
-              </span>
-            </h2>${problem.problem}
-          </div>`);
-
-          $("#solutions-text").append(`<h2 class="problem-heading">
-            Problem ${problemIndex + 1}
-            <span class="source-link">
-              (<a href="https://artofproblemsolving.com/wiki/index.php/${
-                problem.title
-              }">${titleCleanup(problem.title)}</a>)
-            </span>
-          </h2>`);
-          $("#solutions-text").append(problem.solutions);
-          problemIndex++;
-        }
+        addProblems(problems);
       }
     }
 
