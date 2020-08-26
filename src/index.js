@@ -588,6 +588,26 @@
       <div class="options-input" id="batchname-input">
         <input class="input-field" id="input-name" type="text"
           placeholder='Batch name (optional)'/>
+        <div class="range-container checkbox-container top-checkbox-container">
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-sort"/>
+            <label class="checkbox-label">
+              Sort questions by difficulty?
+            </label>
+          </div>
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-hide"/>
+            <label class="checkbox-label">
+              Hide question sources when printed?
+            </label>
+          </div>
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-serif"/>
+            <label class="checkbox-label">
+              Use a LaTeX-style serif font?
+            </label>
+          </div>
+        </div>
       </div>
       <div class="options-input" id="batch-input">
         <label class="input-label" for="title">
@@ -637,26 +657,6 @@
         ${problemOptions}
         <div class="range-container">
           <input class="input-range" id="input-number"/>
-        </div>
-        <div class="range-container checkbox-container">
-          <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-sort"/>
-            <label class="checkbox-label">
-              Sort questions by difficulty?
-            </label>
-          </div>
-          <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-hide"/>
-            <label class="checkbox-label">
-              Hide question sources when printed?
-            </label>
-          </div>
-          <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-serif"/>
-            <label class="checkbox-label">
-              Use a LaTeX-style serif font?
-            </label>
-          </div>
         </div>
         <button class="input-button" id="ranbatch-button">
           Make Random

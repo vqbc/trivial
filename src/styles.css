@@ -153,7 +153,7 @@ body {
   margin-left: auto;
 }
 
-.range-container:nth-of-type(odd) {
+.range-container:first-of-type:not(.top-checkbox-container) {
   margin-right: var(--horizontal-item-spacing);
 } /**/
 
@@ -303,6 +303,7 @@ tags > span {
   display: flex;
   align-items: center;
   padding-left: 1rem;
+  margin-right: var(--horizontal-item-spacing);
 }
 
 .checkbox-wrap {
@@ -312,6 +313,10 @@ tags > span {
 .checkbox-label {
   margin-bottom: 0;
   color: var(--secondary-color);
+}
+
+.top-checkbox-container {
+  margin: 0 0 0 var(--vertical-item-spacing);
 } /**/
 
 /* Notes */
@@ -590,6 +595,11 @@ footer {
 
   .range-container:first-of-type {
     margin-right: 0;
+  }
+
+  .top-checkbox-container {
+    margin-top: var(--horizontal-item-spacing);
+    margin-left: 0;
   }
 }
 
