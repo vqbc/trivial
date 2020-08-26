@@ -866,6 +866,11 @@
       );
       let numProblems = problemTitles.length;
 
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params;
+      let response;
+      let json;
+
       $("#batch-header").after(
         `<div class="loading-notice">
           <div class="loading-text">Loading problems…</div>
@@ -879,15 +884,13 @@
         if (clickedTimes !== clickedTimesThen) break;
         console.log(currentProblem);
 
-        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-        let params = `action=parse&page=${currentProblem}&format=json`;
+        params = `action=parse&page=${currentProblem}&format=json`;
+        response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        json = await response.json();
 
-        const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-        const json = await response.json();
-
-        var problemText = json.parse.text["*"];
-        var problemProblem = getProblem(problemText);
-        var problemSolutions = getSolutions(problemText);
+        let problemText = json.parse.text["*"];
+        let problemProblem = getProblem(problemText);
+        let problemSolutions = getSolutions(problemText);
 
         if (
           problemProblem &&
@@ -899,6 +902,39 @@
             difficulty: computeDifficulty(
               computeTest(currentProblem),
               computeNumber(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+
+          $(".loading-bar").css(
+            "width",
+            `${((problemIndex + 1) / numProblems) * 100}%`
+          );
+        } else if (problemText.includes("Redirect to")) {
+          console.log("Redirect problem, going there instead...");
+
+          let redirHref = $($.parseHTML(problemText))
+            .find(".redirectText a")
+            .attr("href");
+          let redirPage = redirHref
+            .replace("/wiki/index.php/", "")
+            .replace(/_/g, " ");
+          console.log(redirPage);
+
+          params = `action=parse&page=${redirPage}&format=json`;
+          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+          json = await response.json();
+
+          problemText = json.parse.text["*"];
+          problemProblem = getProblem(problemText);
+          problemSolutions = getSolutions(problemText);
+
+          problems.push({
+            title: redirPage,
+            difficulty: computeDifficulty(
+              computeTest(redirPage),
+              computeNumber(redirPage)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
