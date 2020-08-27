@@ -55,7 +55,8 @@
         because of changes in competition difficulty and problem design over
         time. They are intended to be an approximation and group problems based
         on test and problem number. Difficulty levels are currently available
-        for the tests included under AMC Tests.
+        for the tests included under AMC Tests, the Canadian, Balkan, and
+        Asia-Pacific MOs, and the Putnam exam.
       </li>
       <li>
         The 30-question AHSME was replaced by the AMC 10 and AMC 12 and the
@@ -447,8 +448,23 @@
       case "IMO":
         diff = num == 1 || num == 4 ? 6.5 : num == 2 || num == 5 ? 7.5 : 9.5;
         break;
+      case "APMO":
+        diff =
+          num == 1 ? 6 : num == 2 ? 6.5 : num == 3 ? 7 : num == 4 ? 7.5 : 8.5;
+        break;
+      case "BMO":
+        diff = num == 1 ? 6 : num == 2 ? 6.5 : num == 3 ? 7.5 : 8;
+        break;
+      case "Canadian MO":
+        diff =
+          num == 1 ? 5.5 : num == 2 ? 6 : num == 3 ? 6.5 : num == 4 ? 7 : 7.5;
+        break;
+      case "Putnam":
+        diff =
+          num == 1 ? 7 : num == 2 ? 7.5 : num == 3 ? 8 : num == 4 ? 8.5 : 9;
+        break;
       default:
-        diff = 3;
+        diff = 0;
         break;
     }
     return diff;
