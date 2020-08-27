@@ -577,7 +577,7 @@
     $(".button-container").after(
       `<div class="options-input-container">
         <div class="options-input" id="single-input">
-          <label class="input-label" for="title">
+          <label class="input-label" for="single-button">
             Choose a single problem:
           </label>
           <input class="input-field input-field-single input-singletest"
@@ -607,7 +607,7 @@
           </button>
         </div>
         <div class="options-input" id="random-input">
-          <label class="input-label" id="random-label">
+          <label class="input-label" id="random-label" for="random-button">
             Choose options for a random problem:
           </label>
           ${problemOptions}
@@ -705,7 +705,7 @@
         </div>
       </div>
       <div class="options-input" id="batch-input">
-        <label class="input-label" for="title">
+        <label class="input-label" for="batch-button">
           Choose a single test:
         </label>
         <input class="input-field input-field-single input-singletest"
@@ -728,7 +728,7 @@
         </button>
       </div>
       <div class="options-input" id="problems-input">
-        <label class="input-label" for="title">
+        <label class="input-label" for="problems-button">
           Choose batch problems:
         </label>
         <input class="input-field" id="input-problems" type="text"
@@ -827,7 +827,7 @@
 
     $(".button-container").after(
       `<div class="options-input options-input-container" id="find-input">
-        <label class="input-label" for="title">
+        <label class="input-label" for="find-button">
           Choose an article name:
         </label>
         <input class="input-field" id="input-find" type="text"
