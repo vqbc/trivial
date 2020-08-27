@@ -1,26 +1,28 @@
-/* Dark theme styles */
-body {
-  color: #fff;
-  background: #1f1f1f;
-}
+/* Dark theme styles (not completed) */
+@media screen {
+  body {
+    color: #fff;
+    background: #1f1f1f;
+  }
 
-a {
-  color: #88bff6;
-}
+  a {
+    color: #88bff6;
+  }
 
-.error {
-  color: #f66;
-}
+  .error {
+    color: #f66;
+  }
 
-.header {
-  color: #ddd;
-}
+  .header {
+    color: #ddd;
+  }
 
-.problem-section {
-  background: #252525;
-}
+  .problem-section {
+    background: #252525;
+  }
 
-img.latex,
-img.latexcenter {
-  filter: invert(1) hue-rotate(180deg);
+  img.latex,
+  img.latexcenter {
+    filter: invert(1) hue-rotate(180deg);
+  }
 } /* to do: add link colors, section header colors */
