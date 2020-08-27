@@ -18,6 +18,7 @@
   --main-text-shadow: 0 2px 3px rgb(0, 0, 0, 0.4);
   --vertical-item-spacing: 0.5rem;
   --horizontal-item-spacing: 0.6rem;
+  --error-color: #d33;
 } /**/
 
 /* Container styles and sizing */
@@ -427,7 +428,7 @@ a {
 }
 
 a.new {
-  color: #d33; /* redlinks */
+  color: var(--error-color); /* redlinks */
 }
 
 a.aops-link {
@@ -489,7 +490,7 @@ img.latexcenter {
 }
 
 .error {
-  color: #d33;
+  color: var(--error-color);
 }
 
 main {
