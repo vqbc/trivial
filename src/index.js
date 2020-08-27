@@ -35,9 +35,19 @@
     AMC 12, AIME, USAJMO, USAMO, Canadian MO, IMO">
   </input>
   <div class="range-container">
+    <label class="input-label range-label">
+      Years allowed:
+    </label>
     <input class="input-range" id="input-years"></input>
   </div>
   <div class="range-container">
+    <label class="input-label range-label">
+      <a
+        class="dark-link"
+        href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
+        >Difficulty</a
+      > range allowed:
+    </label>
     <input class="input-range" id="input-diff"></input>
   </div>`;
   var notes = `<div class="notes">
@@ -195,7 +205,7 @@
   }
 
   function addBatch() {
-    $(".notes").after(
+    $("article").append(
       `<div class="problem-section">
       <h2 class="section-header" id="batch-header">Problem Batch</h2>
       <div class="article-text" id="batch-text"></div>
@@ -598,12 +608,7 @@
         </div>
         <div class="options-input" id="random-input">
           <label class="input-label" id="random-label">
-            Choose subjects, tests, years,
-            <a
-              class="dark-link"
-              href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-              >difficulty</a
-            >:
+            Choose options for a random problem:
           </label>
           ${problemOptions}
           <div class="range-container checkbox-container bottom-container">
@@ -737,15 +742,13 @@
       </div>
       <div class="options-input" id="ranbatch-input">
         <label class="input-label" id="ranbatch-label">
-          Choose subjects, tests, years,
-          <a
-            class="dark-link"
-            href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-            >difficulty</a
-          >, # of problems:
+          Choose options for random problems:
         </label>
         ${problemOptions}
         <div class="range-container">
+        <label class="input-label range-label">
+          # of problems:
+        </label>
           <input class="input-range" id="input-number"/>
         </div>
         <button class="input-button" id="ranbatch-button">
@@ -824,6 +827,9 @@
 
     $(".button-container").after(
       `<div class="options-input options-input-container" id="find-input">
+        <label class="input-label" for="title">
+          Choose an article name:
+        </label>
         <input class="input-field" id="input-find" type="text"
         placeholder="e.g. Heron's Formula"
         data-whitelist="${allPages.toString()}">
