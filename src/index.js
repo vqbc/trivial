@@ -3,6 +3,7 @@
   var allPages = [];
   var allProblems = [];
   var categoryPages = [];
+  var theoremPages = [];
   var problemOptions = `<input class="input-multi"
     id="input-subjects"
     placeholder="Subjects, e.g. Olympiad Algebra Problems"
@@ -277,9 +278,8 @@
     }
 
     if (subjects.includes("(All Subjects)")) {
-      for (let problem of allPages) {
+      for (let problem of allProblems) {
         if (
-          problem.includes("Problems/Problem") &&
           matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, diffTo)
         )
           pages.push(problem);
@@ -291,6 +291,7 @@
             categoryPages.find((e) => e.subject === subject).pages
           );
         } else {
+          console.log(`Loading category ${subject}...`);
           let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
           let pagename = subject;
           let params = `action=query&list=categorymembers&cmtitle=Category:${pagename}&cmlimit=max&format=json`;
@@ -826,16 +827,23 @@
     activeButton("find-article");
 
     $(".button-container").after(
-      `<div class="options-input options-input-container" id="find-input">
-        <label class="input-label" for="find-button">
-          Choose an article name:
-        </label>
-        <input class="input-field" id="input-find" type="text"
-        placeholder="e.g. Heron's Formula"
-        data-whitelist="${allPages.toString()}">
-        <button class="input-button" id="find-button">
-          View Article
-        </button>
+      `<div class="options-input-container">
+        <div class="options-input" id="find-input">
+          <label class="input-label" for="find-button">
+            Choose an article name:
+          </label>
+          <input class="input-field" id="input-find" type="text"
+          placeholder="e.g. Heron's Formula"
+          data-whitelist="${allPages.toString()}">
+          <button class="input-button" id="find-button">
+            View Article
+          </button>
+        </div>
+        <div class="options-input" id="theorem-input">
+          <button class="input-button" id="theorem-button">
+            Random Theorem
+          </button>
+        </div>
       </div>
       ${notes}`
     );
@@ -1315,6 +1323,28 @@
     clearProblem();
 
     await addArticle(sanitize($("#input-find").val()));
+    fixLinks();
+    directLinks();
+  });
+
+  $(".page-container").on("click", "#theorem-button", async () => {
+    clearProblem();
+
+    if (!theoremPages[0]) {
+      console.log("Loading theorems...");
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params = `action=query&list=categorymembers&cmtitle=Category:Theorems&cmlimit=max&format=json`;
+
+      let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+      let json = await response.json();
+
+      for (let page of json.query.categorymembers)
+        theoremPages.push(page.title);
+    }
+
+    let randomTheorem =
+      theoremPages[Math.floor(Math.random() * theoremPages.length)];
+    await addArticle(randomTheorem);
     fixLinks();
     directLinks();
   });
