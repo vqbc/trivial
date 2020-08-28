@@ -572,7 +572,7 @@
       .replace("%27", "'");
 
   $("#single-problem").click(() => {
-    clearAll();
+    clearOptions();
     activeButton("single-problem");
 
     $(".button-container").after(
@@ -676,7 +676,7 @@
   });
 
   $("#problem-batch").click(() => {
-    clearAll();
+    clearOptions();
     activeButton("problem-batch");
 
     $(".button-container").after(
@@ -823,7 +823,7 @@
   });
 
   $("#find-article").click(() => {
-    clearAll();
+    clearOptions();
     activeButton("find-article");
 
     $(".button-container").after(
@@ -1353,7 +1353,7 @@
     $(".problem-section").remove();
   }
 
-  function clearAll() {
+  function clearOptions() {
     $(".options-input-container").remove();
     $(".error").remove();
     $(".notes").remove();
