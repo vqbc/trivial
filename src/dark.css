@@ -1,28 +1,39 @@
 /* Dark theme styles (not completed) */
 @media screen {
+  :root {
+    --header-color: #ddd;
+    --secondary-color: #ccc;
+    --subtitle-color: #bbb;
+    --body-color: #1f1f1f;
+    --page-container-color: #252525;
+    --item-color: #2f2f2f;
+    --main-button-color: #449faf;
+    --main-active-button-color: #61b3c2;
+    --main-button-focus-color: #a3d3db;
+    --input-button-color: #44afaa;
+    --input-button-focus-color: #a3dbd8;
+    --input-field-focus-color: #ccc;
+    --error-color: #f66;
+  }
+
   body {
     color: #fff;
-    background: #1f1f1f;
+  }
+
+  input {
+    background: var(--item-color);
   }
 
   a {
     color: #88bff6;
   }
 
-  .error {
-    color: #f66;
-  }
-
   .header {
     color: #ddd;
-  }
-
-  .problem-section {
-    background: #252525;
   }
 
   img.latex,
   img.latexcenter {
     filter: invert(1) hue-rotate(180deg);
   }
-} /* to do: add link colors, section header colors */
+} /* to do: add accent colors, placeholder colors */

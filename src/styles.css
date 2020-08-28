@@ -3,7 +3,10 @@
   --header-color: #222;
   --secondary-color: #333;
   --subtitle-color: #444;
+  --body-color: #f3f3f3;
+  --page-container-color: #fcfcfc;
   --page-container-box-shadow: 0 5px 20px rgb(0, 10, 26, 0.2);
+  --item-color: white;
   --main-button-color: #449faf;
   --main-active-button-color: #61b3c2;
   --main-button-focus-color: #a3d3db;
@@ -16,9 +19,9 @@
   --input-hover-box-shadow: 0 3px 5px rgb(0, 10, 26, 0.2);
   --button-text-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
   --main-text-shadow: 0 2px 3px rgb(0, 0, 0, 0.4);
+  --error-color: #d33;
   --vertical-item-spacing: 0.5rem;
   --horizontal-item-spacing: 0.6rem;
-  --error-color: #d33;
 } /**/
 
 /* Container styles and sizing */
@@ -29,7 +32,7 @@ html {
 body {
   font-size: 1.1rem;
   font-family: "Computer Modern Sans";
-  background: #f3f3f3;
+  background: var(--body-color);
 }
 
 .page-container {
@@ -40,7 +43,7 @@ body {
   min-height: 100vh;
   margin: auto;
   padding: 0 5rem;
-  background: #fcfcfc;
+  background: var(--page-container-color);
   box-shadow: var(--page-container-box-shadow);
 } /**/
 
@@ -217,7 +220,7 @@ input::placeholder {
   max-height: 55px;
   margin-bottom: var(--vertical-item-spacing);
   overflow-x: scroll;
-  background: white;
+  background: var(--item-color);
   border: none;
   box-shadow: var(--input-box-shadow);
 }
@@ -268,7 +271,7 @@ tags > span {
   box-sizing: border-box;
   margin-bottom: var(--vertical-item-spacing);
   padding: 5px;
-  background: white;
+  background: var(--item-color);
   box-shadow: var(--input-box-shadow);
 }
 
@@ -379,7 +382,7 @@ tags > span {
 .problem-section {
   margin-bottom: 1.5rem;
   padding: 0.5rem 2rem;
-  background: white;
+  background: var(--item-color);
   box-shadow: var(--main-box-shadow);
 }
 

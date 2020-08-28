@@ -748,7 +748,7 @@
         ${problemOptions}
         <div class="range-container">
         <label class="input-label range-label">
-          # of problems:
+          Number of problems:
         </label>
           <input class="input-range" id="input-number"/>
         </div>
