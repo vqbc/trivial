@@ -1137,6 +1137,7 @@
     collapseSolutions();
     directLinks();
     hideLinks();
+    breakSets();
   });
 
   $(".page-container").on("click", "#problems-button", async () => {
@@ -1221,6 +1222,7 @@
     collapseSolutions();
     directLinks();
     hideLinks();
+    breakSets();
   });
 
   $(".page-container").on("click", "#ranbatch-button", async () => {
@@ -1376,6 +1378,7 @@
     collapseSolutions();
     directLinks();
     hideLinks();
+    breakSets();
   });
 
   $(".page-container").on("click", "#find-button", async () => {
@@ -1514,7 +1517,7 @@
     });
   }
 
-  function changeName() {
+  function breakSets() {
     let breakNum = $("#input-break").val();
     if (breakNum)
       $(`.article-problem:nth-child(${breakNum}n)`).css("break-after", "page");
