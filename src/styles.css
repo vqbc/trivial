@@ -610,33 +610,16 @@ footer {
 
 /* Print styling */
 @media print {
+  /* Smaller */
   body {
     font-size: 11.5pt;
   }
 
   img.latex {
     transform: scale(0.9);
-  }
+  } /**/
 
-  .header,
-  .subtitle,
-  .button-container,
-  .options-input,
-  .notes,
-  .error,
-  a.aops-link,
-  .section-collapsed,
-  #solutions-header::after,
-  .noprint,
-  footer {
-    display: none;
-  }
-
-  body,
-  .page-container {
-    background: none;
-  }
-
+  /* Prettier */
   .section-header {
     margin: 0 0 1.5rem;
     padding: 0;
@@ -654,5 +637,31 @@ footer {
 
   a {
     color: inherit;
+  } /**/
+
+  /* Hide things */
+  .header,
+  .subtitle,
+  .button-container,
+  .options-input,
+  .notes,
+  .error,
+  a.aops-link,
+  .section-collapsed,
+  #solutions-header::after,
+  .noprint {
+    display: none;
+  } /**/
+
+  /* Footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+  } /**/
+}
+
+@media screen {
+  .printonly {
+    display: none;
   }
 } /**/

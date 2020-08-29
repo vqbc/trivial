@@ -1507,7 +1507,7 @@
 
   function hideLinks() {
     if ($("#input-hide").prop("checked")) {
-      $(".source-link").addClass("noprint");
+      $("#batch-text .source-link").addClass("noprint");
     }
   }
 
