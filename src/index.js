@@ -4,7 +4,7 @@
   var allProblems = [];
   var categoryPages = [];
   var theoremPages = [];
-  var problemOptions = `<input class="input-multi"
+  var problemOptions = `<input class="input-multi input-multi-left"
     id="input-subjects"
     placeholder="Subjects, e.g. Olympiad Algebra Problems"
     data-whitelist="(All Subjects),
@@ -35,14 +35,14 @@
     data-whitelist="(All Tests), (AMC Tests), AHSME, AMC 8, AMC 10,
     AMC 12, AIME, USAJMO, USAMO, Canadian MO, IMO">
   </input>
-  <div class="range-container">
-    <label class="input-label range-label">
+  <div class="input-container input-container-left">
+    <label class="range-label">
       Years allowed:
     </label>
     <input class="input-range" id="input-years"></input>
   </div>
-  <div class="range-container">
-    <label class="input-label range-label">
+  <div class="input-container">
+    <label class="range-label">
       <a
         class="dark-link"
         href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
@@ -51,6 +51,28 @@
     </label>
     <input class="input-range" id="input-diff"></input>
   </div>`;
+  var batchOptions = `<input class="input-field" id="input-name" type="text"
+      placeholder='Batch name (optional)'/>
+    <div class="input-container checkbox-container">
+      <div class="checkbox-wrap">
+        <input type="checkbox" checked class="input-check" id="input-sort"/>
+        <label class="checkbox-label">
+          Sort questions by difficulty?
+        </label>
+      </div>
+      <div class="checkbox-wrap">
+        <input type="checkbox" checked class="input-check" id="input-hide"/>
+        <label class="checkbox-label">
+          Hide question sources when printed?
+        </label>
+      </div>
+      <div class="checkbox-wrap">
+        <input type="checkbox" checked class="input-check" id="input-serif"/>
+        <label class="checkbox-label">
+          Use a LaTeX-style serif font?
+        </label>
+      </div>
+    </div>`;
   var notes = `<div class="notes">
     <h3 id="notes-header">Notes</h3>
     <ul id="notes-text">
@@ -572,58 +594,87 @@
       .replace("%27", "'");
 
   $("#single-problem").click(() => {
-    clearOptions();
+    clearAll();
     activeButton("single-problem");
 
-    $(".button-container").after(
-      `<div class="options-input-container">
-        <div class="options-input" id="single-input">
-          <label class="input-label" for="single-button">
-            Choose a single problem:
-          </label>
-          <input class="input-field input-field-single input-singletest"
-            type="text"
-            id="input-singletest"
-            placeholder="Test, e.g. AMC 10A"
-            data-whitelist="AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B, AMC 12,
-            AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO, Canadian MO,
-            IMO">
+    $("#main-button-container").after(
+      `<div class="button-container" id="secondary-button-container">
+        <button type="button" class="button secondary-button" id="single-nav">
+          Choose a Problem
+        </button>
+        <button type="button" class="button secondary-button" id="random-nav">
+          Random Problem
+        </button>
+      </div>`
+    );
+  });
+
+  $("#problem-batch").click(() => {
+    clearAll();
+    activeButton("problem-batch");
+
+    $("#main-button-container").after(
+      `<div class="button-container" id="secondary-button-container">
+        <button type="button" class="button secondary-button" id="batch-nav">
+          Choose a Test
+        </button>
+        <button type="button" class="button secondary-button" id="problems-nav">
+          Choose Problems
+        </button>
+        <button type="button" class="button secondary-button" id="ranbatch-nav">
+          Random Problems
+        </button>
+      </div>`
+    );
+  });
+
+  $("#find-article").click(() => {
+    clearAll();
+    activeButton("find-article");
+
+    $("#main-button-container").after(
+      `<div class="button-container" id="secondary-button-container">
+        <button type="button" class="button secondary-button" id="find-nav">
+          Choose an Article
+        </button>
+        <button type="button" class="button secondary-button" id="theorem-button">
+          Random Theorem
+        </button>
+      </div>`
+    );
+  });
+
+  $(".page-container").on("click", "#single-nav", () => {
+    clearOptions();
+    activeSecondaryButton("single-nav");
+
+    $("#secondary-button-container").after(
+      `<div class="options-input" id="single-input">
+        <input class="input-field input-field-single input-singletest"
+          type="text"
+          id="input-singletest"
+          placeholder="Test, e.g. AMC 10A"
+          data-whitelist="AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B, AMC 12,
+          AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO, Canadian MO,
+          IMO">
+        </input>
+          <input class="input-field input-field-single"
+          type="number"
+          min="1974"
+          max="2020"
+          id="input-singleyear"
+          placeholder="Year">
           </input>
-            <input class="input-field input-field-single"
-            type="number"
-            min="1974"
-            max="2020"
-            id="input-singleyear"
-            placeholder="Year">
-            </input>
-            <input class="input-field input-field-single"
-            type="number"
-            min="1"
-            max="30"
-            id="input-singlenum"
-            placeholder="#">
-            </input>
-          <button class="input-button" id="single-button">
-            View Problem
-          </button>
-        </div>
-        <div class="options-input" id="random-input">
-          <label class="input-label" id="random-label" for="random-button">
-            Choose options for a random problem:
-          </label>
-          ${problemOptions}
-          <div class="range-container checkbox-container bottom-container">
-            <div class="checkbox-wrap">
-              <input type="checkbox" checked class="input-check" id="input-serif"/>
-              <label class="checkbox-label">
-                Use a LaTeX-style serif font?
-              </label>
-            </div>
-          </div>
-          <button class="input-button" id="random-button">
-            View Random
-          </button>
-        </div>
+          <input class="input-field input-field-single"
+          type="number"
+          min="1"
+          max="30"
+          id="input-singlenum"
+          placeholder="#">
+          </input>
+        <button class="input-button" id="single-button">
+          View Problem
+        </button>
       </div>
       ${notes}`
     );
@@ -638,6 +689,31 @@
       },
       maxTags: 1,
     });
+  });
+
+  $(".page-container").on("click", "#random-nav", () => {
+    clearOptions();
+    activeSecondaryButton("random-nav");
+
+    $("#secondary-button-container").after(
+      `<div class="options-input" id="random-input">
+        ${problemOptions}
+        <div class="input-container checkbox-container input-container-bottom">
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-serif"/>
+            <label class="checkbox-label">
+              Use a LaTeX-style serif font?
+            </label>
+          </div>
+        </div>
+        <button class="input-button" id="random-button">
+          View Random
+        </button>
+      </div>
+      ${notes}`
+    );
+    collapseNotes();
+
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
@@ -670,45 +746,18 @@
       min: 0,
       max: 10,
       from: 2,
-      to: 9,
+      to: 4.5,
       step: 0.5,
     });
   });
 
-  $("#problem-batch").click(() => {
+  $(".page-container").on("click", "#batch-nav", () => {
     clearOptions();
-    activeButton("problem-batch");
+    activeSecondaryButton("batch-nav");
 
-    $(".button-container").after(
-      `<div class="options-input-container">
-      <div class="options-input" id="batchname-input">
-        <input class="input-field" id="input-name" type="text"
-          placeholder='Batch name (optional)'/>
-        <div class="range-container checkbox-container top-checkbox-container">
-          <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-sort"/>
-            <label class="checkbox-label">
-              Sort questions by difficulty?
-            </label>
-          </div>
-          <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-hide"/>
-            <label class="checkbox-label">
-              Hide question sources when printed?
-            </label>
-          </div>
-          <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-serif"/>
-            <label class="checkbox-label">
-              Use a LaTeX-style serif font?
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="options-input" id="batch-input">
-        <label class="input-label" for="batch-button">
-          Choose a single test:
-        </label>
+    $("#secondary-button-container").after(
+      `<div class="options-input" id="batch-input">
+        ${batchOptions}
         <input class="input-field input-field-single input-singletest"
           type="text"
           id="input-singletest"
@@ -728,38 +777,8 @@
           View Test
         </button>
       </div>
-      <div class="options-input" id="problems-input">
-        <label class="input-label" for="problems-button">
-          Choose batch problems:
-        </label>
-        <input class="input-field" id="input-problems" type="text"
-        placeholder="e.g. 2018 AMC 12B #24"
-        data-whitelist="${sortProblems(allProblems)
-          .map((e) => titleCleanup(e))
-          .toString()}">
-        <button class="input-button" id="problems-button">
-          View Problems
-        </button>
-      </div>
-      <div class="options-input" id="ranbatch-input">
-        <label class="input-label" id="ranbatch-label">
-          Choose options for random problems:
-        </label>
-        ${problemOptions}
-        <div class="range-container">
-        <label class="input-label range-label">
-          Number of problems:
-        </label>
-          <input class="input-range" id="input-number"/>
-        </div>
-        <button class="input-button" id="ranbatch-button">
-          Make Random
-        </button>
-      </div>
-    </div>
-    ${notes}`
+      ${notes}`
     );
-    allPagesWarnAC();
     collapseNotes();
 
     var inputSingleTest = document.querySelector("#input-singletest");
@@ -771,6 +790,29 @@
       },
       maxTags: 1,
     });
+  });
+
+  $(".page-container").on("click", "#problems-nav", () => {
+    clearOptions();
+    activeSecondaryButton("problems-nav");
+
+    $("#secondary-button-container").after(
+      `<div class="options-input" id="problems-input">
+        ${batchOptions}
+        <input class="input-field" id="input-problems" type="text"
+        placeholder="e.g. 2018 AMC 12B #24"
+        data-whitelist="${sortProblems(allProblems)
+          .map((e) => titleCleanup(e))
+          .toString()}">
+        <button class="input-button" id="problems-button">
+          View Problems
+        </button>
+      </div>
+      ${notes}`
+    );
+    allPagesWarnAC();
+    collapseNotes();
+
     var inputProblems = document.querySelector("#input-problems");
     new Tagify(inputProblems, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
@@ -779,6 +821,30 @@
       },
       enforceWhitelist: true,
     });
+  });
+
+  $(".page-container").on("click", "#ranbatch-nav", () => {
+    clearOptions();
+    activeSecondaryButton("ranbatch-nav");
+
+    $("#secondary-button-container").after(
+      `<div class="options-input" id="ranbatch-input">
+        ${batchOptions}
+        ${problemOptions}
+        <div class="input-container">
+        <label class="range-label">
+          Number of problems:
+        </label>
+          <input class="input-range" id="input-number"/>
+        </div>
+        <button class="input-button input-button-full" id="ranbatch-button">
+          Make Random
+        </button>
+      </div>
+      ${notes}`
+    );
+    collapseNotes();
+
     var inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
@@ -822,28 +888,18 @@
     });
   });
 
-  $("#find-article").click(() => {
+  $(".page-container").on("click", "#find-nav", () => {
     clearOptions();
-    activeButton("find-article");
+    activeSecondaryButton("find-nav");
 
-    $(".button-container").after(
-      `<div class="options-input-container">
-        <div class="options-input" id="find-input">
-          <label class="input-label" for="find-button">
-            Choose an article name:
-          </label>
-          <input class="input-field" id="input-find" type="text"
-          placeholder="e.g. Heron's Formula"
-          data-whitelist="${allPages.toString()}">
-          <button class="input-button" id="find-button">
-            View Article
-          </button>
-        </div>
-        <div class="options-input" id="theorem-input">
-          <button class="input-button" id="theorem-button">
-            Random Theorem
-          </button>
-        </div>
+    $("#secondary-button-container").after(
+      `<div class="options-input" id="find-input">
+        <input class="input-field" id="input-find" type="text"
+        placeholder="e.g. Heron's Formula"
+        data-whitelist="${allPages.toString()}">
+        <button class="input-button" id="find-button">
+          View Article
+        </button>
       </div>
       ${notes}`
     );
@@ -1328,7 +1384,7 @@
   });
 
   $(".page-container").on("click", "#theorem-button", async () => {
-    clearProblem();
+    clearOptions();
 
     if (!theoremPages[0]) {
       console.log("Loading theorems...");
@@ -1354,7 +1410,15 @@
   }
 
   function clearOptions() {
-    $(".options-input-container").remove();
+    $(".options-input").remove();
+    $(".error").remove();
+    $(".notes").remove();
+    $(".problem-section").remove();
+  }
+
+  function clearAll() {
+    $("#secondary-button-container").remove();
+    $(".options-input").remove();
     $(".error").remove();
     $(".notes").remove();
     $(".problem-section").remove();
@@ -1363,6 +1427,11 @@
   function activeButton(buttonName) {
     $(".button").removeClass("button-active");
     $(`#${buttonName}`).addClass("button-active");
+  }
+
+  function activeSecondaryButton(buttonName) {
+    $(".secondary-button").removeClass("secondary-button-active");
+    $(`#${buttonName}`).addClass("secondary-button-active");
   }
 
   function collapseNotes() {
@@ -1384,7 +1453,8 @@
 
   function allPagesWarnAC() {
     if (!allPagesLoaded && $("#allpages-ac-error").length === 0) {
-      $(".button-container").after(`<p class="error" id="allpages-ac-error">
+      $("#secondary-button-container")
+        .after(`<p class="error" id="allpages-ac-error">
           Page index not done loading, please reclick this section in
           ${allPagesLoadWait()} seconds to refresh the autocomplete suggestions.
         </p>`);

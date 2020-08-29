@@ -12,6 +12,9 @@
   --main-button-focus-color: #a3d3db;
   --main-box-shadow: 0 2px 10px rgb(0, 10, 26, 0.2);
   --main-button-focus-box-shadow: 0 4px 10px rgb(0, 10, 26, 0.2);
+  --secondary-button-color: #44aaaf;
+  --secondary-active-button-color: #61bdc2;
+  --secondary-button-focus-color: #a3d8db;
   --input-button-color: #44afaa;
   --input-button-focus-color: #a3dbd8;
   --input-field-focus-color: #ccc;
@@ -68,7 +71,8 @@ body {
 }
 
 .button {
-  width: 32%;
+  flex: 1;
+  margin: 0 1%;
   padding: 0.7rem 0.6rem 0.5rem;
   color: white;
   font: bold 1.1em "Computer Modern Bright";
@@ -78,6 +82,14 @@ body {
   border-bottom: 3px solid rgb(0, 0, 0, 0.1);
   box-shadow: var(--main-box-shadow);
   transition: all 0.1s;
+}
+
+.button:first-child {
+  margin-left: 0;
+}
+
+.button:last-child {
+  margin-right: 0;
 }
 
 .button:hover {
@@ -92,6 +104,21 @@ body {
 
 .button-active {
   background: var(--main-active-button-color);
+} /**/
+
+/* Secondary buttons */
+.secondary-button {
+  padding: 0.5rem 0.6rem 0.4rem;
+  font-size: 1em;
+  background: var(--secondary-button-color);
+}
+
+.secondary-button:focus {
+  outline: 2px solid var(--secondary-button-focus-color);
+}
+
+.secondary-button-active {
+  background: var(--secondary-active-button-color);
 } /**/
 
 /* Input buttons */
@@ -117,64 +144,47 @@ body {
 
 .input-button:focus {
   outline: 2px solid var(--input-button-focus-color);
+}
+
+.input-button-full {
+  width: 100%;
+  margin-left: auto;
 } /**/
 
 /* Problem options input */
-.options-input-container {
-  margin-bottom: 2rem;
-}
-
 .options-input {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   margin-bottom: 2rem;
-  align-items: stretch;
-}
+} /**/
 
-.input-multi {
-  flex: 1 0 28%;
-}
-
-.input-multi:first-of-type {
-  margin-right: var(--horizontal-item-spacing);
-}
-
-.input-label {
-  display: flex;
-  margin-right: var(--horizontal-item-spacing);
-  align-items: center;
-}
-
-.range-label {
-  display: block;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  color: rgb(0, 0, 0, 0.4);
-}
-
-.range-container {
+/* Input containers */
+.input-container {
+  box-sizing: border-box;
+  margin-bottom: var(--vertical-item-spacing);
+  padding: 5px;
+  background: var(--item-color);
+  box-shadow: var(--input-box-shadow);
   flex: 1 0 45%;
 }
 
-#random-button {
-  margin-left: 0;
+.input-container:focus {
+  outline: 2px solid #ccc;
 }
 
-#ranbatch-button,
-#theorem-button {
-  width: 100%;
-  margin-left: auto;
+.input-container-bottom {
+  margin-bottom: 0;
 }
 
-.range-container:first-of-type:not(.top-checkbox-container) {
+.input-container-left {
   margin-right: var(--horizontal-item-spacing);
 }
 
-#ranbatch-label,
-#random-label {
+#input-name {
+  margin-right: var(--horizontal-item-spacing);
   margin-bottom: var(--vertical-item-spacing);
 } /**/
 
@@ -205,10 +215,7 @@ input::placeholder {
   flex: 1 0 30%;
 }
 
-#input-singleyear {
-  flex: 1 0 5%;
-}
-
+#input-singleyear,
 #input-singlenum {
   flex: 1 0 5%;
 } /**/
@@ -259,28 +266,19 @@ tags > span {
 
 .tagify:not(.tagify--focus) .tagify__tag + .tagify__input::before {
   display: none;
+}
+
+.input-multi {
+  flex: 1 0 28%;
+}
+
+.input-multi-left {
+  margin-right: var(--horizontal-item-spacing);
 } /**/
 
 /* Range slider thingy */
 .irs {
   font-family: "Computer Modern Bright";
-}
-
-.range-container {
-  align-self: stretch;
-  box-sizing: border-box;
-  margin-bottom: var(--vertical-item-spacing);
-  padding: 5px;
-  background: var(--item-color);
-  box-shadow: var(--input-box-shadow);
-}
-
-.range-container:focus {
-  outline: 2px solid #ccc;
-}
-
-.bottom-container {
-  margin-bottom: 0;
 }
 
 .irs--flat .irs-line {
@@ -317,13 +315,20 @@ tags > span {
 .irs--flat .irs-single::before,
 .irs--flat .irs-to::before {
   border-top-color: #6ae;
+}
+
+.range-label {
+  display: block;
+  width: 100%;
+  margin: 0;
+  color: rgb(0, 0, 0, 0.4);
+  text-align: center;
 } /**/
 
 /* Checkbox */
 .checkbox-container {
   display: flex;
   align-items: center;
-  margin-right: var(--horizontal-item-spacing);
   padding-left: 1rem;
 }
 
@@ -334,10 +339,6 @@ tags > span {
 .checkbox-label {
   margin-bottom: 0;
   color: var(--secondary-color);
-}
-
-.top-checkbox-container {
-  margin: 0 0 0 var(--vertical-item-spacing);
 } /**/
 
 /* Notes */
@@ -536,47 +537,17 @@ footer {
   .page-container {
     width: 1200px;
   }
-  #ranbatch-label {
-    flex: 1 0 22%;
-  }
 }
 
 @media (max-width: 1350px) {
   .page-container {
     width: 1125px;
   }
-
-  #ranbatch-label {
-    flex: 1 0 15%;
-  }
 }
 
 @media (max-width: 1200px) {
   .page-container {
     width: 1000px;
-  }
-
-  #random-label {
-    flex: 1 0 19%;
-  }
-
-  #ranbatch-label {
-    flex: 1 0 100%;
-    margin-right: auto;
-    margin-bottom: var(--vertical-item-spacing);
-  }
-}
-
-@media (max-width: 1100px) {
-  .page-container {
-    width: 950px;
-  }
-
-  #random-label,
-  .input-label {
-    flex: 1 0 100%;
-    margin-right: auto;
-    margin-bottom: var(--vertical-item-spacing);
   }
 }
 
@@ -586,23 +557,18 @@ footer {
   }
 }
 
-@media (max-width: 800px) {
-  .page-container {
-    width: 100%;
-    padding: 0 1rem;
-  }
-
+@media (max-width: 1000px) {
   .button-container {
     flex-wrap: wrap;
   }
 
   .button {
     flex: 1 0 100%;
-    margin-bottom: 0.75rem;
+    margin: 0 0 0.75rem;
   }
 
   .tagify:not(.input-field),
-  .range-container:not(.bottom-container) {
+  .input-container:not(.input-container-bottom) {
     flex: 1 0 100%;
   }
 
@@ -611,13 +577,20 @@ footer {
     max-height: initial;
   }
 
-  .range-container:first-of-type {
+  .input-container-left {
     margin-right: 0;
   }
 
-  .top-checkbox-container {
-    margin-top: var(--horizontal-item-spacing);
-    margin-left: 0;
+  #input-name {
+    margin-bottom: var(--horizontal-item-spacing);
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-container {
+    width: 100%;
+    padding: 0 1rem;
   }
 }
 
@@ -642,7 +615,7 @@ footer {
   .header,
   .subtitle,
   .button-container,
-  .options-input-container,
+  .options-input,
   .notes,
   .error,
   a.aops-link,
