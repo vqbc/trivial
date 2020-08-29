@@ -1525,6 +1525,7 @@
   function collapseSolutions() {
     $("#solutions-header").click(() => {
       $("#solutions-section").toggleClass("section-collapsed");
+      $("footer").toggleClass("footer-fixed");
     });
   }
 

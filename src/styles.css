@@ -250,7 +250,6 @@ tags > span {
 .tagify.input-field {
   margin-bottom: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .tagify__input {
@@ -654,7 +653,7 @@ footer {
   } /**/
 
   /* Footer */
-  footer {
+  .footer-fixed {
     position: fixed;
     bottom: 0;
   } /**/
