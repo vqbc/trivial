@@ -110,6 +110,7 @@
   var clickedTimes = 0;
   var allPagesLoaded = false;
 
+  // Loads pages
   (async () => {
     console.log("Preloading all wiki pages, allow around 10 seconds...");
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -152,40 +153,7 @@
   const allPagesLoadWait = () =>
     Math.round(10 - (allPages.length / 12500) * 10);
 
-  async function addArticle(pagename) {
-    $("article").append(
-      `<div class="problem-section">
-      <h2 class="section-header" id="article-header">Article Text</h2>
-      <a href="" class="aops-link">
-        (View on the AoPS Wiki)
-      </a>
-      <div class="article-text" id="full-text"></div>
-    </div>`
-    );
-
-    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-    let params = `action=parse&page=${pagename}&format=json`;
-
-    const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-    const json = await response.json();
-
-    if (typeof json.parse !== "undefined") {
-      var problemText = json.parse.text["*"];
-      $(".article-text").html(problemText);
-      $("#article-header").html(titleCleanup(pagename));
-      $(".aops-link").attr(
-        "href",
-        `https://artofproblemsolving.com/wiki/index.php/${pagename}`
-      );
-    } else {
-      $(".article-text").html(
-        `<p class="error">The page you specified does not exist.</p>`
-      );
-      $("#article-header").html("Error");
-      $(".aops-link").remove();
-    }
-  }
-
+  // Adds things
   async function addProblem(pagename) {
     $("article").append(
       `<div class="problem-section">
@@ -243,6 +211,41 @@
     );
   }
 
+  async function addArticle(pagename) {
+    $("article").append(
+      `<div class="problem-section">
+      <h2 class="section-header" id="article-header">Article Text</h2>
+      <a href="" class="aops-link">
+        (View on the AoPS Wiki)
+      </a>
+      <div class="article-text" id="full-text"></div>
+    </div>`
+    );
+
+    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+    let params = `action=parse&page=${pagename}&format=json`;
+
+    const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+    const json = await response.json();
+
+    if (typeof json.parse !== "undefined") {
+      var problemText = json.parse.text["*"];
+      $(".article-text").html(problemText);
+      $("#article-header").html(titleCleanup(pagename));
+      $(".aops-link").attr(
+        "href",
+        `https://artofproblemsolving.com/wiki/index.php/${pagename}`
+      );
+    } else {
+      $(".article-text").html(
+        `<p class="error">The page you specified does not exist.</p>`
+      );
+      $("#article-header").html("Error");
+      $(".aops-link").remove();
+    }
+  }
+
+  // Gets and checks pages
   async function getPages() {
     function addPagesFromArray(members) {
       for (let problem of members) {
@@ -506,6 +509,7 @@
     return diff;
   }
 
+  // Sorts
   const sortProblems = (problems) => {
     let sorted = problems.sort((a, b) => {
       switch (Math.sign(computeYear(a) - computeYear(b))) {
@@ -528,6 +532,7 @@
     return sorted;
   };
 
+  // Splits and adds problem parts
   function getProblem(htmlString) {
     let htmlParsed = $.parseHTML(htmlString);
     let after = $(htmlParsed)
@@ -587,6 +592,7 @@
     }
   }
 
+  // Formatting
   const sanitize = (string) =>
     string.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
@@ -596,6 +602,7 @@
       .replace("Problems/Problem ", "#")
       .replace("%27", "'");
 
+  // Nav elements
   $("#single-problem").click(() => {
     clearAll();
     activeButton("single-problem");
@@ -1411,6 +1418,7 @@
     directLinks();
   });
 
+  // Clears things
   function clearProblem() {
     $(".problem-section").remove();
   }
@@ -1430,6 +1438,7 @@
     $(".problem-section").remove();
   }
 
+  // Active buttons
   function activeButton(buttonName) {
     $(".button").removeClass("button-active");
     $(`#${buttonName}`).addClass("button-active");
@@ -1440,12 +1449,7 @@
     $(`#${buttonName}`).addClass("secondary-button-active");
   }
 
-  function collapseNotes() {
-    $("#notes-header").click(() => {
-      $(".notes").toggleClass("notes-collapsed");
-    });
-  }
-
+  // Warnings
   function allPagesWarn() {
     if (!allPagesLoaded && $("#allpages-error").length === 0) {
       $(".notes").after(`<p class="error" id="allpages-error">
@@ -1467,6 +1471,13 @@
     } else if (allPagesLoaded) {
       $("#allpages-ac-error").remove();
     }
+  }
+
+  // Formatting
+  function collapseNotes() {
+    $("#notes-header").click(() => {
+      $(".notes").toggleClass("notes-collapsed");
+    });
   }
 
   function fakeTex() {
