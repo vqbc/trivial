@@ -163,12 +163,12 @@ body {
 
 /* Input containers */
 .input-container {
+  flex: 1 0 45%;
   box-sizing: border-box;
   margin-bottom: var(--vertical-item-spacing);
   padding: 5px;
   background: var(--item-color);
   box-shadow: var(--input-box-shadow);
-  flex: 1 0 45%;
 }
 
 .input-container:focus {
@@ -183,7 +183,7 @@ body {
   margin-right: var(--horizontal-item-spacing);
 }
 
-#input-name {
+.input-field-top {
   margin-right: var(--horizontal-item-spacing);
   margin-bottom: var(--vertical-item-spacing);
 } /**/
@@ -207,7 +207,8 @@ input::placeholder {
   color: rgb(0, 0, 0, 0.4);
 }
 
-.input-field.input-field-single:not(:nth-last-child(2)) {
+.input-field.input-field-single:not(:nth-last-child(2)),
+.input-field-left {
   margin-right: var(--horizontal-item-spacing);
 }
 
@@ -218,6 +219,11 @@ input::placeholder {
 #input-singleyear,
 #input-singlenum {
   flex: 1 0 5%;
+}
+
+#input-name,
+#input-break {
+  flex: 1 0 20%;
 } /**/
 
 /* Tagify */
@@ -577,13 +583,13 @@ footer {
     max-height: initial;
   }
 
+  .input-field-right,
   .input-container-left {
     margin-right: 0;
   }
 
-  #input-name {
+  .input-field-top {
     margin-bottom: var(--horizontal-item-spacing);
-    margin-right: 0;
   }
 }
 

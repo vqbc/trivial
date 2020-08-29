@@ -51,8 +51,11 @@
     </label>
     <input class="input-range" id="input-diff"></input>
   </div>`;
-  var batchOptions = `<input class="input-field" id="input-name" type="text"
-      placeholder='Batch name (optional)'/>
+  var batchOptions = `<input class="input-field input-field-top input-field-left"
+      id="input-name" type="text" placeholder='Batch name (optional)'/>
+    <input class="input-field input-field-top input-field-right"
+      id="input-break" type="number" min="1" max="50"
+      placeholder='Page break every n problems (optional)'/>
     <div class="input-container checkbox-container">
       <div class="checkbox-wrap">
         <input type="checkbox" checked class="input-check" id="input-sort"/>
@@ -877,7 +880,7 @@
       min: 0,
       max: 10,
       from: 2,
-      to: 9,
+      to: 4.5,
       step: 0.5,
     });
     $("#input-number").ionRangeSlider({
@@ -1470,7 +1473,7 @@
   }
 
   function changeName() {
-    name = $("#input-name").val();
+    let name = $("#input-name").val();
     if (name) $("#batch-header").html(name);
   }
 
@@ -1509,5 +1512,11 @@
     $("#solutions-header").click(() => {
       $("#solutions-section").toggleClass("section-collapsed");
     });
+  }
+
+  function changeName() {
+    let breakNum = $("#input-break").val();
+    if (breakNum)
+      $(`.article-problem:nth-child(${breakNum}n)`).css("break-after", "page");
   }
 })();
