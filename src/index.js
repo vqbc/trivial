@@ -122,12 +122,7 @@
 
     for (let page of json.query.allpages) {
       if (page.title.charAt(0) !== "/") allPages.push(page.title);
-      if (
-        page.title.includes("Problems/Problem") &&
-        page.title.match(/^\d{4}/) &&
-        page.title.match(/\d+$/)
-      )
-        allProblems.push(page.title);
+      if (validProblem(page.title)) allProblems.push(page.title);
     }
 
     while (typeof json.continue !== "undefined") {
@@ -136,12 +131,7 @@
       json = await response.json();
       for (let page of json.query.allpages) {
         if (page.title.charAt(0) !== "/") allPages.push(page.title);
-        if (
-          page.title.includes("Problems/Problem") &&
-          page.title.match(/^\d{4}/) &&
-          page.title.match(/\d+$/)
-        )
-          allProblems.push(page.title);
+        if (validProblem(page.title)) allProblems.push(page.title);
       }
     }
     allPagesLoaded = true;
@@ -384,6 +374,11 @@
 
     return true;
   }
+
+  const validProblem = (problem) =>
+    problem.includes("Problems/Problem") &&
+    problem.match(/^\d{4}/) &&
+    problem.match(/\d+$/);
 
   const computeTest = (problem) =>
     problem
@@ -1511,7 +1506,12 @@
           ""
         );
         clearProblem();
-        await addArticle(pagename);
+        if (validProblem(pagename)) {
+          await addProblem(pagename);
+          collapseSolutions();
+        } else {
+          await addArticle(pagename);
+        }
         fixLinks();
         directLinks();
       }
