@@ -571,9 +571,9 @@
       $("#batch-text").append(`<div class="article-problem">
         <h2 class="problem-heading">Problem ${problemIndex + 1}
           <span class="source-link">
-            (<a href="https://artofproblemsolving.com/wiki/index.php/${
+            (<a href="https://artofproblemsolving.com/wiki/index.php/${underscores(
               problem.title
-            }">${titleCleanup(problem.title)}</a>)
+            )}">${titleCleanup(problem.title)}</a>)
           </span>
         </h2>${problem.problem}
       </div>`);
@@ -582,9 +582,9 @@
         <h2 class="problem-heading">
           Problem ${problemIndex + 1}
           <span class="source-link">
-            (<a href="https://artofproblemsolving.com/wiki/index.php/${
+            (<a href="https://artofproblemsolving.com/wiki/index.php/${underscores(
               problem.title
-            }">${titleCleanup(problem.title)}</a>)
+            )}">${titleCleanup(problem.title)}</a>)
           </span>
         </h2>${problem.solutions}
       </div>`);
@@ -601,6 +601,8 @@
       .replace(/_/g, " ")
       .replace("Problems/Problem ", "#")
       .replace("%27", "'");
+
+  const underscores = (string) => string.replace(/ /g, "_");
 
   // Nav elements
   $("#single-problem").click(() => {
