@@ -752,8 +752,8 @@
       grid: true,
       min: 0,
       max: 10,
-      from: 2,
-      to: 4.5,
+      from: 0,
+      to: 10,
       step: 0.5,
     });
   });
@@ -883,8 +883,8 @@
       grid: true,
       min: 0,
       max: 10,
-      from: 2,
-      to: 4.5,
+      from: 0,
+      to: 10,
       step: 0.5,
     });
     $("#input-number").ionRangeSlider({
