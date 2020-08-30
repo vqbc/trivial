@@ -232,7 +232,7 @@ input::placeholder {
   flex-wrap: nowrap;
   max-height: 55px;
   margin-bottom: var(--vertical-item-spacing);
-  overflow-x: scroll;
+  overflow-x: auto;
   background: var(--item-color);
   border: none;
   box-shadow: var(--input-box-shadow);
