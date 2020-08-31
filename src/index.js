@@ -369,7 +369,11 @@
     if (problemYear < yearsFrom || yearsTo < problemYear) return false;
 
     let problemNumber = computeNumber(problem);
-    let problemDiff = computeDifficulty(problemTest, problemNumber);
+    let problemDiff = computeDifficulty(
+      problemTest,
+      problemNumber,
+      problemYear
+    );
     if (problemDiff < diffFrom || diffTo < problemDiff) return false;
 
     return true;
@@ -389,7 +393,7 @@
   const computeYear = (problem) => problem.match(/^\d{4}/)[0];
   const computeNumber = (problem) => problem.match(/\d+$/)[0];
 
-  function computeDifficulty(test, num) {
+  function computeDifficulty(test, num, year) {
     let diff;
     switch (test) {
       case "AMC 8":
@@ -482,6 +486,9 @@
       case "IMO":
         diff = num == 1 || num == 4 ? 6.5 : num == 2 || num == 5 ? 7.5 : 9.5;
         break;
+      case "Alabama ARML TST":
+        diff = num < 4 ? 3 : num < 7 ? 3.5 : num < 10 ? 4 : num < 13 ? 4.5 : 5;
+        break;
       case "APMO":
         diff =
           num == 1 ? 6 : num == 2 ? 6.5 : num == 3 ? 7 : num == 4 ? 7.5 : 8.5;
@@ -493,9 +500,113 @@
         diff =
           num == 1 ? 5.5 : num == 2 ? 6 : num == 3 ? 6.5 : num == 4 ? 7 : 7.5;
         break;
+      case "Indonesia MO":
+        diff =
+          num == 1 || num == 5
+            ? 3.5
+            : num == 2 || num == 6
+            ? 4.5
+            : num == 3 || num == 7
+            ? 5
+            : 6;
+        break;
+      case "iTest":
+        switch (year) {
+          case 2006:
+          case 2007:
+            diff =
+              num < 5
+                ? 1
+                : num < 9
+                ? 1.5
+                : num < 13
+                ? 2
+                : num < 17
+                ? 2.5
+                : num < 21
+                ? 3
+                : num < 25
+                ? 3.5
+                : num < 29
+                ? 4
+                : num < 33
+                ? 4.5
+                : num < 37
+                ? 5
+                : num < 41
+                ? 5.5
+                : num < 45
+                ? 6
+                : num < 49
+                ? 6.5
+                : num < 53
+                ? 7
+                : num < 57
+                ? 7.5
+                : 8;
+            break;
+          case 2008:
+            diff =
+              num < 8
+                ? 1
+                : num < 15
+                ? 1.5
+                : num < 21
+                ? 2
+                : num < 28
+                ? 2.5
+                : num < 35
+                ? 3
+                : num < 41
+                ? 3.5
+                : num < 48
+                ? 4
+                : num < 55
+                ? 4.5
+                : num < 61
+                ? 5
+                : num < 68
+                ? 5.5
+                : num < 75
+                ? 6
+                : num < 81
+                ? 6.5
+                : num < 88
+                ? 7
+                : num < 95
+                ? 7.5
+                : 8;
+            break;
+        }
+        break;
+      case "JBMO":
+        diff = num == 1 ? 4 : num == 2 ? 4.5 : num == 3 ? 5 : 6;
+        break;
       case "Putnam":
         diff =
           num == 1 ? 7 : num == 2 ? 7.5 : num == 3 ? 8 : num == 4 ? 8.5 : 9;
+        break;
+      case "UNCO Math Contest II":
+        diff =
+          num < 2
+            ? 1
+            : num < 3
+            ? 1.5
+            : num < 4
+            ? 2
+            : num < 5
+            ? 2.5
+            : num < 6
+            ? 3
+            : num < 7
+            ? 3.5
+            : num < 8
+            ? 4
+            : num < 9
+            ? 4.5
+            : num < 10
+            ? 5
+            : 5.5;
         break;
       default:
         diff = 0;
@@ -1068,7 +1179,8 @@
             title: currentProblem,
             difficulty: computeDifficulty(
               computeTest(currentProblem),
-              computeNumber(currentProblem)
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
@@ -1101,7 +1213,8 @@
             title: redirPage,
             difficulty: computeDifficulty(
               computeTest(redirPage),
-              computeNumber(redirPage)
+              computeNumber(redirPage),
+              computeYear(redirPage)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
@@ -1188,7 +1301,8 @@
             title: currentProblem,
             difficulty: computeDifficulty(
               computeTest(currentProblem),
-              computeNumber(currentProblem)
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
@@ -1282,7 +1396,8 @@
             title: randomPage,
             difficulty: computeDifficulty(
               computeTest(randomPage),
-              computeNumber(randomPage)
+              computeNumber(randomPage),
+              computeYear(randomPage)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
@@ -1314,7 +1429,8 @@
             title: redirPage,
             difficulty: computeDifficulty(
               computeTest(redirPage),
-              computeNumber(redirPage)
+              computeNumber(redirPage),
+              computeYear(redirPage)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
