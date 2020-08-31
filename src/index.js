@@ -1519,6 +1519,7 @@
 
   $(".page-container").on("click", "#theorem-button", async () => {
     clearOptions();
+    activeSecondaryButton("theorem-button");
 
     if (!theoremPages[0]) {
       console.log("Loading theorems...");
