@@ -1134,14 +1134,16 @@
     allPagesWarn();
     await makeBatch();
 
-    if (clickedTimes === clickedTimesThen) $(".loading-notice").remove();
-    fakeTex();
-    changeName();
-    fixLinks();
-    collapseSolutions();
-    directLinks();
-    hideLinks();
-    breakSets();
+    if (clickedTimes === clickedTimesThen) {
+      $(".loading-notice").remove();
+      fakeTex();
+      changeName();
+      fixLinks();
+      collapseSolutions();
+      directLinks();
+      hideLinks();
+      breakSets();
+    }
   });
 
   $(".page-container").on("click", "#problems-button", async () => {
@@ -1219,14 +1221,16 @@
     allPagesWarn();
     await makeBatch();
 
-    if (clickedTimes === clickedTimesThen) $(".loading-notice").remove();
-    fakeTex();
-    changeName();
-    fixLinks();
-    collapseSolutions();
-    directLinks();
-    hideLinks();
-    breakSets();
+    if (clickedTimes === clickedTimesThen) {
+      $(".loading-notice").remove();
+      fakeTex();
+      changeName();
+      fixLinks();
+      collapseSolutions();
+      directLinks();
+      hideLinks();
+      breakSets();
+    }
   });
 
   $(".page-container").on("click", "#ranbatch-button", async () => {
@@ -1375,14 +1379,16 @@
       await makeBatch();
     }
 
-    $(".loading-notice").remove();
-    fakeTex();
-    changeName();
-    fixLinks();
-    collapseSolutions();
-    directLinks();
-    hideLinks();
-    breakSets();
+    if (clickedTimes === clickedTimesThen) {
+      $(".loading-notice").remove();
+      fakeTex();
+      changeName();
+      fixLinks();
+      collapseSolutions();
+      directLinks();
+      hideLinks();
+      breakSets();
+    }
   });
 
   $(".page-container").on("click", "#find-button", async () => {
