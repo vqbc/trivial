@@ -610,6 +610,24 @@
             ? 5
             : 5.5;
         break;
+      case "UNM-PNM Statewide High School Mathematics Contest II":
+        diff =
+          num < 3
+            ? 2
+            : num < 4
+            ? 2.5
+            : num < 5
+            ? 3
+            : num < 6
+            ? 3.5
+            : num < 8
+            ? 4
+            : num < 9
+            ? 4.5
+            : num < 10
+            ? 5
+            : 5.5;
+        break;
       default:
         diff = 0;
         break;
