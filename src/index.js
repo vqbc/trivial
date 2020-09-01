@@ -82,7 +82,7 @@
       <li>
         The script preloads a list of all pages in alphabetical order when the
         site is loaded, for use when a random page is selected from all
-        subjects. Because it takes around 10 seconds to fully load, trying to
+        subjects. Because it takes around ten seconds to fully load, trying to
         get a problem before then will only give older problems early in
         alphabetical order.
       </li>
@@ -97,9 +97,9 @@
         exam.
       </li>
       <li>
-        The 30-question AHSME was replaced by the AMC 10 and AMC 12 and the
-        AIME was split into the AIME I and AIME II in 2000. The AMC 10 and 
-        AMC 12 were split into A and B tests in 2002.
+        The 30-question AHSME was replaced by the AMC 10 and AMC 12 while the
+        AIME was split into the AIME I and AIME II in 2000. The AMC 10 and
+        AMC 12 were similarly split into two A and B tests in 2002.
       </li>
       <li>
         AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
