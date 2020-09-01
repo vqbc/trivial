@@ -1596,7 +1596,12 @@
           Page index not done loading, please try again in ${allPagesLoadWait()}
           seconds to get newer problems.
         </p>`);
-    } else if (allPagesLoaded) {
+    } else if (!allPagesLoaded) {
+      $("#allpages-error").replaceWith(`<p class="error" id="allpages-error">
+          Page index not done loading, please try again in ${allPagesLoadWait()}
+          seconds to get newer problems.
+        </p>`);
+    } else {
       $("#allpages-error").remove();
     }
   }
