@@ -250,18 +250,20 @@
 
     function addPagesFromJSON(members) {
       for (let problem of members) {
-        if (
-          matchesOptions(
-            problem.title,
-            tests,
-            yearsFrom,
-            yearsTo,
-            diffFrom,
-            diffTo
+        if (validProblem(problem.title)) {
+          if (
+            matchesOptions(
+              problem.title,
+              tests,
+              yearsFrom,
+              yearsTo,
+              diffFrom,
+              diffTo
+            )
           )
-        )
-          pages.push(problem.title);
-        fullPages.push(problem.title);
+            pages.push(problem.title);
+          fullPages.push(problem.title);
+        }
       }
     }
 
