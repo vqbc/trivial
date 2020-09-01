@@ -588,6 +588,20 @@
         diff =
           num == 1 ? 7 : num == 2 ? 7.5 : num == 3 ? 8 : num == 4 ? 8.5 : 9;
         break;
+      case "UMO":
+        diff =
+          num == 1
+            ? 3
+            : num == 2
+            ? 3.5
+            : num == 3
+            ? 4
+            : num == 4
+            ? 5
+            : num == 5
+            ? 6
+            : 6.5;
+        break;
       case "UNCO Math Contest II":
         diff =
           num < 2
