@@ -258,7 +258,6 @@ tags > span {
   padding: 2px 10px;
 }
 
-.input-field-single .tagify__input,
 .input-field .tagify__input {
   margin: 3px;
 }
@@ -267,8 +266,8 @@ tags > span {
   margin: 3px 0 3px 3px;
 }
 
-.tagify__tag > div {
-  padding: calc(0.3em - 1px) 0.5em;
+.input-field .tagify__tag > div {
+  padding: calc(0.3em - 3px) 0.5em;
 }
 
 .tagify:not(.tagify--focus) .tagify__tag + .tagify__input {
