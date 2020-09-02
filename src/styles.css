@@ -22,7 +22,11 @@
   --input-hover-box-shadow: 0 3px 5px rgb(0, 10, 26, 0.2);
   --button-text-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
   --main-text-shadow: 0 2px 3px rgb(0, 0, 0, 0.4);
+  --placeholder-color: rgb(0, 0, 0, 0.4);
+  --input-accent-color: #6ae;
+  --input-handle-color: #4d80b3;
   --error-color: #d33;
+  --link-color: #28e;
   --vertical-item-spacing: 0.5rem;
   --horizontal-item-spacing: 0.6rem;
 } /**/
@@ -204,7 +208,7 @@ body {
 }
 
 input::placeholder {
-  color: rgb(0, 0, 0, 0.4);
+  color: var(--placeholder-color);
 }
 
 .input-field.input-field-single:not(:nth-last-child(2)),
@@ -300,7 +304,7 @@ tags > span {
 .irs--flat .irs-from,
 .irs--flat .irs-single,
 .irs--flat .irs-to {
-  background: #6ae;
+  background: var(--input-accent-color);
 }
 
 .irs--flat .irs-min,
@@ -318,20 +322,20 @@ tags > span {
 
 .irs--flat .irs-handle.state_hover > i:first-child,
 .irs--flat .irs-handle:hover > i:first-child {
-  background: #4d80b3;
+  background: var(--input-handle-color);
 }
 
 .irs--flat .irs-from::before,
 .irs--flat .irs-single::before,
 .irs--flat .irs-to::before {
-  border-top-color: #6ae;
+  border-top-color: var(--input-accent-color);
 }
 
 .range-label {
   display: block;
   width: 100%;
   margin: 0;
-  color: rgb(0, 0, 0, 0.4);
+  color: var(--placeholder-color);
   text-align: center;
 } /**/
 
@@ -437,7 +441,7 @@ tags > span {
 }
 
 a {
-  color: #28e;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -537,7 +541,7 @@ footer {
 .loading-bar {
   width: 0%;
   height: 100%;
-  background: #6ae;
+  background: var(--input-accent-color);
   border-radius: 0.2rem;
   transition: width 0.1s linear;
 } /**/

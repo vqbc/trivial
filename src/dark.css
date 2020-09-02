@@ -10,26 +10,27 @@
     --main-button-color: #449faf;
     --main-active-button-color: #61b3c2;
     --main-button-focus-color: #a3d3db;
+    --secondary-button-color: #44aaaf;
+    --secondary-active-button-color: #61bdc2;
+    --secondary-button-focus-color: #a3d8db;
     --input-button-color: #44afaa;
     --input-button-focus-color: #a3dbd8;
     --input-field-focus-color: #ccc;
+    --placeholder-color: rgb(255, 255, 255, 0.4);
     --error-color: #f66;
+    --link-color: #88bff6;
+  }
+
+  .tagify {
+    --placeholder-color: rgb(255, 255, 255, 0.4);
   }
 
   body {
-    color: #fff;
+    color: #ddd;
   }
 
   input {
     background: var(--item-color);
-  }
-
-  a {
-    color: #88bff6;
-  }
-
-  .header {
-    color: #ddd;
   }
 
   img.latex,
