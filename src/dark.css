@@ -1,4 +1,4 @@
-/* Dark theme styles (not completed) */
+/* Dark theme */
 @media screen {
   :root {
     --header-color: #ddd;
@@ -7,26 +7,36 @@
     --body-color: #1f1f1f;
     --page-container-color: #252525;
     --item-color: #2f2f2f;
-    --main-button-color: #449faf;
-    --main-active-button-color: #61b3c2;
-    --main-button-focus-color: #a3d3db;
-    --secondary-button-color: #44aaaf;
-    --secondary-active-button-color: #61bdc2;
-    --secondary-button-focus-color: #a3d8db;
-    --input-button-color: #44afaa;
-    --input-button-focus-color: #a3dbd8;
-    --input-field-focus-color: #ccc;
-    --placeholder-color: rgb(255, 255, 255, 0.4);
-    --error-color: #f66;
-    --link-color: #88bff6;
-  }
-
-  .tagify {
-    --placeholder-color: rgb(255, 255, 255, 0.4);
+    --main-button-color: hsl(189deg, 39%, 43%);
+    --main-active-button-color: hsl(189deg, 39%, 52%);
+    --main-button-focus-color: hsl(189deg, 39%, 70%);
+    --secondary-button-color: hsl(183deg, 39%, 43%);
+    --secondary-active-button-color: hsl(183deg, 39%, 52%);
+    --secondary-button-focus-color: hsl(183deg, 39%, 70%);
+    --input-button-color: hsl(177deg, 39%, 43%);
+    --input-button-focus-color: hsl(177deg, 39%, 70%);
+    --input-focus-color: #555;
+    --placeholder-color: rgb(255, 255, 255, 0.5);
+    --error-color: hsl(0deg, 100%, 70%);
+    --section-color: hsl(163deg, 42%, 45%);
+    --link-color: hsl(210deg, 86%, 75%);
   }
 
   body {
     color: #ddd;
+  }
+
+  .tagify {
+    --placeholder-color: rgb(255, 255, 255, 0.5);
+    --placeholder-color-focus: rgb(255, 255, 255, 0.3);
+    --tag-bg: #ccc;
+    --tag-hover: #bcc;
+    --tag-text-color--edit: #ddd;
+  }
+
+  .tagify__dropdown__wrapper {
+    --tagify-dd-bg-color: #333;
+    --tagify-dd-color-primary: hsl(210deg, 41%, 44%);
   }
 
   input {
@@ -37,4 +47,28 @@
   img.latexcenter {
     filter: invert(1) hue-rotate(180deg);
   }
-} /* to do: add accent colors, placeholder colors */
+
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    cursor: default;
+  }
+  ::-webkit-scrollbar-button {
+    background-color: #666;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #646464;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: #444;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #666;
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: #646464;
+  }
+  ::-webkit-resizer {
+    background-color: #666;
+  }
+} /**/

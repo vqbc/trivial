@@ -108,6 +108,7 @@
   </div>`;
   var clickedTimes = 0;
   var allPagesLoaded = false;
+  var darkTheme = false;
 
   // Loads pages
   (async () => {
@@ -137,6 +138,21 @@
     console.log("Finished loading Special:AllPages.");
 
     allProblems = sortProblems(allProblems);
+  })();
+
+  // Dark theme toggle
+  (() => {
+    $(".dark-toggle").click(() => {
+      if (!darkTheme) {
+        $("#stylesheet-link").after(
+          `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
+        );
+        darkTheme = true;
+      } else {
+        $("#dark-stylesheet-link").remove();
+        darkTheme = false;
+      }
+    });
   })();
 
   const allPagesLoadWait = () =>
