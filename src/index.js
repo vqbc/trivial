@@ -92,9 +92,9 @@
         time. They are intended to be an approximation and group problems based
         on test and problem number. Difficulty levels are currently available
         for the tests included under AMC Tests, the Asia-Pacific, Balkan, Junior
-        Balkan, Canadian, and Indonesia MOs, the iTest, the University of
-        Northern Colorado Math Contest, the Alabama ARML TST, and the Putnam
-        exam.
+        Balkan, Canadian, Indonesia, and Utah MOs, the iTest, the University of
+        Northern Colorado Math Contest, the UNM-PNM Statewide High School
+        Mathematics Contest II, the Alabama ARML TST, and the Putnam exam.
       </li>
       <li>
         The 30-question AHSME was replaced by the AMC 10 and AMC 12 while the
