@@ -102,9 +102,7 @@
       </li>
       <li>
         AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
-      </li>
-      <li>
-        The AJHSME is included as the AMC 8 tests before 1999.
+        (The AJHSME is included as the AMC 8 tests before 1999.)
       </li>
     <ul>
   </div>`;
@@ -928,7 +926,27 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="batch-input">
-        ${batchOptions}
+        <input class="input-field input-field-top input-field-left"
+          id="input-name" type="text" placeholder='Batch name (optional)'/>
+        <input class="input-field input-field-top input-field-right"
+          id="input-break" type="number" min="1" max="50"
+          placeholder='Page break every n problems (optional)'/>
+        <div class="input-container checkbox-container">
+          <div class="checkbox-wrap">
+          </div>
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-hide"/>
+            <label class="checkbox-label">
+              Hide question sources when printed?
+            </label>
+          </div>
+          <div class="checkbox-wrap">
+            <input type="checkbox" checked class="input-check" id="input-serif"/>
+            <label class="checkbox-label">
+              Use a LaTeX-style serif font?
+            </label>
+          </div>
+        </div>
         <input class="input-field input-field-single input-singletest"
           type="text"
           id="input-singletest"
@@ -1281,11 +1299,7 @@
       }
 
       if (clickedTimes === clickedTimesThen) {
-        if ($("#input-sort").prop("checked")) {
-          problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
-        }
         console.log(problems);
-
         addProblems(problems);
       }
     }
