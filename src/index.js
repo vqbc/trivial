@@ -164,7 +164,7 @@
 
   // Adds things
   async function addProblem(pagename) {
-    $("article").append(
+    $("main").append(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
       <a href="" class="aops-link">
@@ -208,7 +208,7 @@
   }
 
   function addBatch() {
-    $("article").append(
+    $("main").append(
       `<div class="problem-section">
       <h2 class="section-header" id="batch-header">Problem Batch</h2>
       <div class="article-text" id="batch-text"></div>
@@ -221,7 +221,7 @@
   }
 
   async function addArticle(pagename) {
-    $("article").append(
+    $("main").append(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
       <a href="" class="aops-link">
