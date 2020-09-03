@@ -29,8 +29,8 @@
   .tagify {
     --placeholder-color: rgb(255, 255, 255, 0.5);
     --placeholder-color-focus: rgb(255, 255, 255, 0.3);
-    --tag-bg: #ccc;
-    --tag-hover: #bcc;
+    --tag-bg: #bbb;
+    --tag-hover: #abb;
     --tag-text-color--edit: #ddd;
   }
 

@@ -108,7 +108,27 @@
   </div>`;
   var clickedTimes = 0;
   var allPagesLoaded = false;
-  var darkTheme = false;
+
+  // Dark theme toggle
+  (() => {
+    if (JSON.parse(localStorage.getItem("darkTheme")) == true) {
+      $("#stylesheet-link").after(
+        `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
+      );
+    }
+    $(".dark-toggle").click(() => {
+      if (!JSON.parse(localStorage.getItem("darkTheme"))) {
+        console.log("Test");
+        $("#stylesheet-link").after(
+          `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
+        );
+        localStorage.setItem("darkTheme", true);
+      } else {
+        $("#dark-stylesheet-link").remove();
+        localStorage.setItem("darkTheme", false);
+      }
+    });
+  })();
 
   // Loads pages
   (async () => {
@@ -138,21 +158,6 @@
     console.log("Finished loading Special:AllPages.");
 
     allProblems = sortProblems(allProblems);
-  })();
-
-  // Dark theme toggle
-  (() => {
-    $(".dark-toggle").click(() => {
-      if (!darkTheme) {
-        $("#stylesheet-link").after(
-          `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
-        );
-        darkTheme = true;
-      } else {
-        $("#dark-stylesheet-link").remove();
-        darkTheme = false;
-      }
-    });
   })();
 
   const allPagesLoadWait = () =>

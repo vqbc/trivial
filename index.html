@@ -35,7 +35,6 @@
     <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#00aba9" />
     <meta name="theme-color" content="#ffffff" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-176118017-1"
@@ -49,7 +48,6 @@
 
       gtag("config", "UA-176118017-1");
     </script>
-    <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -62,10 +60,13 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-WFF6RGS");
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.15.3/tagify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
   </head>
   <body>
     <div class="page-container">
-      <main>
+      <header>
         <h1 class="header">
           Trivial.
           <svg width="13" height="26" viewBox="0 0 132.29 264.58">
@@ -80,19 +81,19 @@
           </svg>
         </h1>
         <p class="subtitle">An AoPS Wiki Reader for Studying</p>
-        <article>
-          <div class="button-container" id="main-button-container">
-            <button type="button" class="button" id="single-problem">
-              Single Problem
-            </button>
-            <button type="button" class="button" id="problem-batch">
-              Problem Batch
-            </button>
-            <button type="button" class="button" id="find-article">
-              Find an Article
-            </button>
-          </div>
-        </article>
+      </header>
+      <main>
+        <div class="button-container" id="main-button-container">
+          <button type="button" class="button" id="single-problem">
+            Single Problem
+          </button>
+          <button type="button" class="button" id="problem-batch">
+            Problem Batch
+          </button>
+          <button type="button" class="button" id="find-article">
+            Find an Article
+          </button>
+        </div>
       </main>
       <footer class="footer-fixed">
         <span class="noprint"><a class="dark-toggle">Dark theme (β)</a> |</span>
@@ -111,9 +112,6 @@
         </span>
       </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.15.3/tagify.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script type="module" src="src/index.js"></script>
   </body>
 </html>
