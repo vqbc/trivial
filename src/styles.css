@@ -242,6 +242,7 @@ input::placeholder {
   background: var(--item-color);
   border: none;
   box-shadow: var(--input-box-shadow);
+  transition: none;
 }
 
 .tagify.tagify--focus {
@@ -266,6 +267,10 @@ tags > span {
 
 .input-field .tagify__input {
   margin: 3px;
+}
+
+.tagify__input:empty::before {
+  transition: none;
 }
 
 .tagify__tag {
