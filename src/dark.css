@@ -25,7 +25,8 @@
     --link-color: hsl(210deg, 86%, 75%);
   }
 
-  body {
+  body,
+  .input-field {
     color: #ddd;
   }
 
