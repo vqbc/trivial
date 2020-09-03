@@ -111,7 +111,7 @@
 
   // Dark theme toggle
   (() => {
-    if (JSON.parse(localStorage.getItem("darkTheme")) == true) {
+    if (JSON.parse(localStorage.getItem("darkTheme")) === true) {
       $("#stylesheet-link").after(
         `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
       );
