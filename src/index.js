@@ -4,6 +4,8 @@
   var allProblems = [];
   var categoryPages = [];
   var theoremPages = [];
+  var testsList = `AMC 8, AMC 10A, AMC 10B, AMC 12A, AMC 12B, AIME I, AIME II,
+    USAJMO, USAMO, IMO, AJHSME, AHSME, AMC 10, AMC 12, AIME`;
   var problemOptions = `<input class="input-multi input-multi-left"
     id="input-subjects"
     placeholder="Subjects, e.g. Olympiad Algebra Problems"
@@ -825,9 +827,7 @@
           type="text"
           id="input-singletest"
           placeholder="Test, e.g. AMC 10A"
-          data-whitelist="AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B, AMC 12,
-          AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO, Canadian MO,
-          IMO">
+          data-whitelist="${testsList}">
         </input>
           <input class="input-field input-field-single"
           type="number"
@@ -933,9 +933,7 @@
           type="text"
           id="input-singletest"
           placeholder="Test, e.g. AMC 10A"
-          data-whitelist="AHSME, AMC 8, AMC 10, AMC 10A, AMC 10B, AMC 12,
-          AMC 12A, AMC 12B, AIME, AIME I, AIME II, USAJMO, USAMO, Canadian MO,
-          IMO">
+          data-whitelist="${testsList}">
         </input>
           <input class="input-field input-field-single"
           type="number"
