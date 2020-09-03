@@ -23,6 +23,7 @@
   --button-text-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
   --main-text-shadow: 0 2px 3px rgb(0, 0, 0, 0.4);
   --placeholder-color: rgb(0, 0, 0, 0.4);
+  --input-slider-color: hsl(217deg, 15%, 90%);
   --input-accent-color: hsl(210deg, 80%, 67%);
   --input-handle-color: hsl(210deg, 40%, 50%);
   --error-color: hsl(0deg, 71%, 53%);
@@ -297,6 +298,7 @@ tags > span {
 }
 
 .irs--flat .irs-line {
+  background: var(--input-slider-color);
   border-radius: 0 !important;
 }
 
@@ -306,6 +308,12 @@ tags > span {
 .irs--flat .irs-single,
 .irs--flat .irs-to {
   background: var(--input-accent-color);
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  color: var(--placeholder-color);
+  background: var(--input-slider-color);
 }
 
 .irs--flat .irs-min,

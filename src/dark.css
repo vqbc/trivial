@@ -4,9 +4,9 @@
     --header-color: #ddd;
     --secondary-color: #ccc;
     --subtitle-color: #bbb;
-    --body-color: #1f1f1f;
-    --page-container-color: #252525;
-    --item-color: #2f2f2f;
+    --body-color: hsl(201deg, 8%, 12%);
+    --page-container-color: hsl(201deg, 8%, 15%);
+    --item-color: hsl(201deg, 8%, 18%);
     --main-button-color: hsl(189deg, 39%, 43%);
     --main-active-button-color: hsl(189deg, 39%, 52%);
     --main-button-focus-color: hsl(189deg, 39%, 70%);
@@ -15,8 +15,11 @@
     --secondary-button-focus-color: hsl(183deg, 39%, 70%);
     --input-button-color: hsl(177deg, 39%, 43%);
     --input-button-focus-color: hsl(177deg, 39%, 70%);
-    --input-focus-color: #555;
+    --input-focus-color: hsl(201deg, 5%, 33%);
     --placeholder-color: rgb(255, 255, 255, 0.5);
+    --input-slider-color: hsl(201deg, 5%, 31%);
+    --input-accent-color: hsl(210deg, 75%, 62%);
+    --input-handle-color: hsl(210deg, 35%, 45%);
     --error-color: hsl(0deg, 100%, 70%);
     --section-color: hsl(163deg, 42%, 45%);
     --link-color: hsl(210deg, 86%, 75%);
@@ -54,21 +57,21 @@
     cursor: default;
   }
   ::-webkit-scrollbar-button {
-    background-color: #666;
+    background-color: hsl(201deg, 5%, 40%);
   }
   ::-webkit-scrollbar-track {
-    background-color: #646464;
+    background-color: hsl(201deg, 5%, 39%);
   }
   ::-webkit-scrollbar-track-piece {
-    background-color: #444;
+    background-color: hsl(201deg, 5%, 27%);
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #666;
+    background-color: hsl(201deg, 5%, 40%);
   }
   ::-webkit-scrollbar-corner {
-    background-color: #646464;
+    background-color: hsl(201deg, 5%, 39%);
   }
   ::-webkit-resizer {
-    background-color: #666;
+    background-color: hsl(201deg, 5%, 40%);
   }
 } /**/
