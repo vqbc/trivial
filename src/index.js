@@ -118,7 +118,6 @@
     }
     $(".dark-toggle").click(() => {
       if (!JSON.parse(localStorage.getItem("darkTheme"))) {
-        console.log("Test");
         $("#stylesheet-link").after(
           `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
         );
