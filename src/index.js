@@ -532,8 +532,8 @@
         break;
       case "iTest":
         switch (year) {
-          case 2006:
-          case 2007:
+          case "2006":
+          case "2007":
             diff =
               num < 5
                 ? 1
@@ -565,7 +565,7 @@
                 ? 7.5
                 : 8;
             break;
-          case 2008:
+          case "2008":
             diff =
               num < 8
                 ? 1
@@ -661,7 +661,7 @@
             : 5.5;
         break;
       default:
-        diff = -1;
+        diff = 0;
         break;
     }
     return diff;
@@ -1568,7 +1568,6 @@
     }
 
     if (clickedTimes === clickedTimesThen) {
-      console.log("Test");
       $(".loading-notice").remove();
       serifText();
       changeName();
