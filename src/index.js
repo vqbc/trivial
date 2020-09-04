@@ -1103,6 +1103,7 @@
     });
   });
 
+  // Buttons
   $(".page-container").on("click", "#single-button", async () => {
     clearProblem();
 
@@ -1610,6 +1611,7 @@
     directLinks();
   });
 
+  // Serif toggle
   $(".page-container").on("click", "#input-serif", () => {
     $(".article-text").toggleClass("serif-text");
   });
