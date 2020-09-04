@@ -5,24 +5,25 @@
   --subtitle-color: #444;
   --body-color: #f3f3f3;
   --page-container-color: #fcfcfc;
-  --page-container-box-shadow: 0 5px 20px rgb(0, 10, 26, 0.2);
+  --page-container-box-shadow: 0 5px 20px hsl(217deg, 100%, 5%, 20%);
   --item-color: white;
+  --button-3d-shadow: 3px solid hsl(0deg, 0%, 0%, 10%);
   --main-button-color: hsl(189deg, 44%, 48%);
   --main-active-button-color: hsl(189deg, 44%, 57%);
   --main-button-focus-color: hsl(189deg, 44%, 75%);
-  --main-box-shadow: 0 2px 10px rgb(0, 10, 26, 0.2);
-  --main-button-focus-box-shadow: 0 4px 10px rgb(0, 10, 26, 0.2);
+  --main-box-shadow: 0 2px 10px hsl(217deg, 100%, 5%, 20%);
+  --main-button-focus-box-shadow: 0 4px 10px hsl(217deg, 100%, 5%, 20%);
   --secondary-button-color: hsl(183deg, 44%, 48%);
   --secondary-active-button-color: hsl(183deg, 44%, 57%);
   --secondary-button-focus-color: hsl(183deg, 44%, 75%);
   --input-button-color: hsl(177deg, 44%, 48%);
   --input-button-focus-color: hsl(177deg, 44%, 75%);
   --input-focus-color: #ccc;
-  --input-box-shadow: 0 2px 5px rgb(0, 10, 26, 0.2);
-  --input-hover-box-shadow: 0 3px 5px rgb(0, 10, 26, 0.2);
-  --button-text-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
-  --main-text-shadow: 0 2px 3px rgb(0, 0, 0, 0.4);
-  --placeholder-color: rgb(0, 0, 0, 0.4);
+  --input-box-shadow: 0 2px 5px hsl(217deg, 100%, 5%, 20%);
+  --input-hover-box-shadow: 0 3px 5px hsl(217deg, 100%, 5%, 20%);
+  --button-text-shadow: 0 1px 2px hsl(0deg, 0%, 0%, 40%);
+  --main-text-shadow: 0 2px 3px hsl(0deg, 0%, 0%, 40%);
+  --placeholder-color: hsl(0deg, 0%, 0%, 40%);
   --input-slider-color: hsl(217deg, 15%, 90%);
   --input-accent-color: hsl(210deg, 80%, 67%);
   --input-handle-color: hsl(210deg, 40%, 50%);
@@ -85,7 +86,7 @@ body {
   text-shadow: var(--button-text-shadow);
   background: var(--main-button-color);
   border: none;
-  border-bottom: 3px solid rgb(0, 0, 0, 0.1);
+  border-bottom: var(--button-3d-shadow);
   box-shadow: var(--main-box-shadow);
   transition: all 0.1s;
 }
@@ -137,7 +138,7 @@ body {
   text-shadow: var(--button-text-shadow);
   background: var(--input-button-color);
   border: none;
-  border-bottom: 3px solid rgb(0, 0, 0, 0.1);
+  border-bottom: var(--button-3d-shadow);
   box-shadow: var(--input-box-shadow);
   transition: all 0.1s;
 }
