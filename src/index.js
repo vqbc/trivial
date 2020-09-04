@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 (() => {
   var allPages = [];
   var allProblems = [];
