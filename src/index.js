@@ -661,7 +661,7 @@
             : 5.5;
         break;
       default:
-        diff = 0;
+        diff = -1;
         break;
     }
     return diff;
@@ -1192,7 +1192,7 @@
         invalid = !response;
       }
     }
-    fakeTex();
+    serifText();
     fixLinks();
     collapseSolutions();
     directLinks();
@@ -1313,7 +1313,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
-      fakeTex();
+      serifText();
       if ($("#input-name").val())
         $("#batch-header").html($("#input-name").val());
       else
@@ -1408,7 +1408,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
-      fakeTex();
+      serifText();
       changeName();
       fixLinks();
       collapseSolutions();
@@ -1567,8 +1567,9 @@
     }
 
     if (clickedTimes === clickedTimesThen) {
+      console.log("Test");
       $(".loading-notice").remove();
-      fakeTex();
+      serifText();
       changeName();
       fixLinks();
       collapseSolutions();
@@ -1607,6 +1608,10 @@
     await addArticle(randomTheorem);
     fixLinks();
     directLinks();
+  });
+
+  $(".page-container").on("click", "#input-serif", () => {
+    $(".article-text").toggleClass("serif-text");
   });
 
   // Clears things
@@ -1676,7 +1681,7 @@
     });
   }
 
-  function fakeTex() {
+  function serifText() {
     if ($("#input-serif").prop("checked")) {
       $(".article-text").addClass("serif-text");
     }
