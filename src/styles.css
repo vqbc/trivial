@@ -7,7 +7,7 @@
   --page-container-color: #fcfcfc;
   --page-container-box-shadow: 0 5px 20px hsl(217deg, 100%, 5%, 20%);
   --item-color: white;
-  --button-3d-shadow: 3px solid hsl(0deg, 0%, 0%, 10%);
+  --button-3d-shadow: hsl(0deg, 0%, 0%, 10%);
   --main-button-color: hsl(189deg, 44%, 48%);
   --main-active-button-color: hsl(189deg, 44%, 57%);
   --main-button-focus-color: hsl(189deg, 44%, 75%);
@@ -86,7 +86,7 @@ body {
   text-shadow: var(--button-text-shadow);
   background: var(--main-button-color);
   border: none;
-  border-bottom: var(--button-3d-shadow);
+  border-bottom: 3px solid var(--button-3d-shadow);
   box-shadow: var(--main-box-shadow);
   transition: all 0.1s;
 }
@@ -138,7 +138,7 @@ body {
   text-shadow: var(--button-text-shadow);
   background: var(--input-button-color);
   border: none;
-  border-bottom: var(--button-3d-shadow);
+  border-bottom: 3px solid var(--button-3d-shadow);
   box-shadow: var(--input-box-shadow);
   transition: all 0.1s;
 }
@@ -554,7 +554,7 @@ footer {
   height: 1.2em;
   margin-left: 0.6rem;
   padding: 2px;
-  border: 2px solid #e1e4e9;
+  border: 2px solid var(--input-slider-color);
   border-radius: 0.3rem;
 }
 

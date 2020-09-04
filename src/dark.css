@@ -7,7 +7,7 @@
     --body-color: hsl(201deg, 8%, 12%);
     --page-container-color: hsl(201deg, 8%, 15%);
     --item-color: hsl(201deg, 8%, 18%);
-    --button-3d-shadow: 3px solid hsl(0deg, 0%, 0%, 20%);
+    --button-3d-shadow: hsl(0deg, 0%, 0%, 20%);
     --main-button-color: hsl(189deg, 39%, 43%);
     --main-active-button-color: hsl(189deg, 39%, 52%);
     --main-button-focus-color: hsl(189deg, 39%, 70%);
