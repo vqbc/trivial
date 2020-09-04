@@ -39,7 +39,7 @@
   }
 
   .tagify__dropdown__wrapper {
-    --tagify-dd-bg-color: #333;
+    --tagify-dd-bg-color: hsl(201deg, 8%, 20%);
     --tagify-dd-color-primary: hsl(210deg, 41%, 44%);
   }
 
