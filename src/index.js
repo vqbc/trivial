@@ -1314,7 +1314,14 @@
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
       fakeTex();
-      changeName();
+      if ($("#input-name").val())
+        $("#batch-header").html($("#input-name").val());
+      else
+        $("#batch-header").html(
+          `${$("#input-singleyear").val()} ${$(
+            "#input-singletest"
+          ).val()} Problems`
+        );
       fixLinks();
       collapseSolutions();
       directLinks();
@@ -1719,7 +1726,6 @@
   function collapseSolutions() {
     $("#solutions-header").click(() => {
       $("#solutions-section").toggleClass("section-collapsed");
-      $("footer").toggleClass("footer-fixed");
     });
   }
 
