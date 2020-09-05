@@ -1,11 +1,11 @@
 (() => {
-  var allPages = [];
-  var allProblems = [];
-  var categoryPages = [];
-  var theoremPages = [];
-  var testsList = `AMC 8, AMC 10A, AMC 10B, AMC 12A, AMC 12B, AIME I, AIME II,
+  let allPages = [];
+  let allProblems = [];
+  let categoryPages = [];
+  let theoremPages = [];
+  let testsList = `AMC 8, AMC 10A, AMC 10B, AMC 12A, AMC 12B, AIME I, AIME II,
     USAJMO, USAMO, IMO, AJHSME, AHSME, AMC 10, AMC 12, AIME`;
-  var problemOptions = `<input class="input-multi input-multi-left"
+  let problemOptions = `<input class="input-multi input-multi-left"
     id="input-subjects"
     placeholder="Subjects, e.g. Olympiad Algebra Problems"
     data-whitelist="(All Subjects),
@@ -52,7 +52,7 @@
     </label>
     <input class="input-range" id="input-diff"></input>
   </div>`;
-  var batchOptions = `<input class="input-field input-field-top input-field-left"
+  let batchOptions = `<input class="input-field input-field-top input-field-left"
       id="input-name" type="text" placeholder='Batch name (optional)'/>
     <input class="input-field input-field-top input-field-right"
       id="input-break" type="number" min="1" max="50"
@@ -77,7 +77,7 @@
         </label>
       </div>
     </div>`;
-  var notes = `<div class="notes">
+  let notes = `<div class="notes">
     <h3 id="notes-header">Notes</h3>
     <ul id="notes-text">
       <li>
@@ -95,18 +95,29 @@
         for the tests included under AMC Tests and various less common tests.
       </li>
       <li>
-        The 30-question AHSME was replaced by the AMC 10 and AMC 12 while the
-        AIME was split into the AIME I and AIME II in 2000. The AMC 10 and
-        AMC 12 were similarly split into two A and B tests in 2002.
-      </li>
-      <li>
         AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
         (The AJHSME is included as the AMC 8 tests before 1999.)
       </li>
+      <li>
+        Historical notes:
+        <ul>
+          <li>
+            The AHSME was introduced in its 30-question form in 1974. The AIME
+            was introduced in 1983. The AJHSME was introduced in 1985. USAJMO
+            problems are available since 2010. All other major exams predate
+            1974. 
+          </li>
+          <li>
+            The 30-question AHSME was replaced by the AMC 10 and AMC 12 while the
+            AIME was split into the AIME I and AIME II in 2000. The AMC 10 and
+            AMC 12 were similarly split into two A and B tests in 2002.
+          </li>
+        </ul>
+      </li>
     <ul>
   </div>`;
-  var clickedTimes = 0;
-  var allPagesLoaded = false;
+  let clickedTimes = 0;
+  let allPagesLoaded = false;
 
   // Dark theme toggle
   (() => {
@@ -183,7 +194,7 @@
     const json = await response.json();
 
     if (typeof json.parse !== "undefined") {
-      var problemText = json.parse.text["*"];
+      let problemText = json.parse.text["*"];
       $("#problem-text").html(getProblem(problemText));
       $("#solutions-text").html(getSolutions(problemText));
       $("#article-header").html(titleCleanup(pagename));
@@ -237,7 +248,7 @@
     const json = await response.json();
 
     if (typeof json.parse !== "undefined") {
-      var problemText = json.parse.text["*"];
+      let problemText = json.parse.text["*"];
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
       $(".aops-link").attr(
@@ -661,7 +672,7 @@
             : 5.5;
         break;
       default:
-        diff = 0;
+        diff = -1;
         break;
     }
     return diff;
@@ -848,7 +859,7 @@
     );
     collapseNotes();
 
-    var inputSingleTest = document.querySelector("#input-singletest");
+    let inputSingleTest = document.querySelector("#input-singletest");
     new Tagify(inputSingleTest, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -882,7 +893,7 @@
     );
     collapseNotes();
 
-    var inputSubjects = document.querySelector("#input-subjects");
+    let inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -890,7 +901,7 @@
         maxItems: 100,
       },
     });
-    var inputTests = document.querySelector("#input-tests");
+    let inputTests = document.querySelector("#input-tests");
     new Tagify(inputTests, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -967,7 +978,7 @@
     );
     collapseNotes();
 
-    var inputSingleTest = document.querySelector("#input-singletest");
+    let inputSingleTest = document.querySelector("#input-singletest");
     new Tagify(inputSingleTest, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -999,7 +1010,7 @@
     allPagesWarnAC();
     collapseNotes();
 
-    var inputProblems = document.querySelector("#input-problems");
+    let inputProblems = document.querySelector("#input-problems");
     new Tagify(inputProblems, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -1031,7 +1042,7 @@
     );
     collapseNotes();
 
-    var inputSubjects = document.querySelector("#input-subjects");
+    let inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -1039,7 +1050,7 @@
         maxItems: 100,
       },
     });
-    var inputTests = document.querySelector("#input-tests");
+    let inputTests = document.querySelector("#input-tests");
     new Tagify(inputTests, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -1092,7 +1103,7 @@
     allPagesWarnAC();
     collapseNotes();
 
-    var inputFind = document.querySelector("#input-find");
+    let inputFind = document.querySelector("#input-find");
     new Tagify(inputFind, {
       maxTags: 1,
       originalInputValueFormat: (values) => values.map((e) => e.value),
@@ -1360,9 +1371,9 @@
         const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
         const json = await response.json();
 
-        var problemText = json.parse.text["*"];
-        var problemProblem = getProblem(problemText);
-        var problemSolutions = getSolutions(problemText);
+        let problemText = json.parse.text["*"];
+        let problemProblem = getProblem(problemText);
+        let problemSolutions = getSolutions(problemText);
 
         if (
           problemProblem &&
@@ -1455,9 +1466,9 @@
         response = await fetch(`${apiEndpoint}?${params}&origin=*`);
         json = await response.json();
 
-        var problemText = json.parse.text["*"];
-        var problemProblem = getProblem(problemText);
-        var problemSolutions = getSolutions(problemText);
+        let problemText = json.parse.text["*"];
+        let problemProblem = getProblem(problemText);
+        let problemSolutions = getSolutions(problemText);
 
         if (
           problemProblem &&
