@@ -1327,12 +1327,14 @@
       $(".loading-notice").remove();
       serifText();
       if ($("#input-name").val())
-        $("#batch-header").html($("#input-name").val());
+        $("#batch-header").html(sanitize($("#input-name").val()));
       else
         $("#batch-header").html(
-          `${$("#input-singleyear").val()} ${$(
-            "#input-singletest"
-          ).val()} Problems`
+          sanitize(
+            `${$("#input-singleyear").val()} ${$(
+              "#input-singletest"
+            ).val()} Problems`
+          )
         );
       fixLinks();
       collapseSolutions();
@@ -1701,7 +1703,7 @@
 
   function changeName() {
     let name = $("#input-name").val();
-    if (name) $("#batch-header").html(name);
+    if (name) $("#batch-header").html(sanitize(name));
   }
 
   function fixLinks() {
