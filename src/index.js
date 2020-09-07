@@ -253,7 +253,9 @@
       $("#article-header").html(titleCleanup(pagename));
       $(".aops-link").attr(
         "href",
-        `https://artofproblemsolving.com/wiki/index.php/${pagename}`
+        `https://artofproblemsolving.com/wiki/index.php/${underscores(
+          pagename
+        )}`
       );
     } else {
       $(".article-text").html(
