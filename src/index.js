@@ -124,7 +124,7 @@
   let clickedTimes = 0;
   let allPagesLoaded = false;
 
-  // Dark theme toggle
+  // Toggles settings
   (() => {
     if (JSON.parse(localStorage.getItem("darkTheme")) === true) {
       $("#stylesheet-link").after(
