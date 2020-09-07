@@ -133,7 +133,10 @@
       $("#dark-toggle").text("Use light theme");
     }
     if (JSON.parse(localStorage.getItem("serifFont")) === true) {
-      $("#serif-toggle").text("Use LaTeX problem font");
+      $("#serif-toggle").text("Use default problem font");
+    }
+    if (JSON.parse(localStorage.getItem("mathJaXDisabled")) === true) {
+      $("#mathjax-toggle").text("Turn on MathJaX");
     }
     $("#dark-toggle").click(() => {
       if (!JSON.parse(localStorage.getItem("darkTheme"))) {
