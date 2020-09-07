@@ -452,7 +452,8 @@ tags > span {
 /* In-article or inline styling */
 .serif-text {
   font-size: 1.05em;
-  font-family: "Computer Modern Serif";
+  font-family: MJXZERO, MJXTEX;
+  line-height: 1.4;
 }
 
 a {
@@ -522,7 +523,16 @@ img.latexcenter {
   margin-bottom: 1em;
 }
 
-.error {
+.MathJax {
+  font-size: inherit !important;
+}
+
+.katex {
+  font: normal 1em "Computer Modern Serif";
+}
+
+.error,
+.katex-error {
   color: var(--error-color);
 } /**/
 
@@ -538,7 +548,11 @@ footer {
   font-style: italic;
 }
 
-.dark-toggle {
+.footer-line {
+  margin: 0.4em 0;
+}
+
+.toggle-link {
   cursor: pointer;
 } /**/
 

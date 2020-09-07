@@ -12,6 +12,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.15.3/tagify.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    />
     <link href="src/fonts.css" rel="stylesheet" />
     <link id="stylesheet-link" href="src/styles.css" rel="stylesheet" />
     <link
@@ -63,6 +67,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.15.3/tagify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          noundefined: {
+            color: "",
+          },
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
   </head>
   <body>
     <div class="page-container">
@@ -96,20 +119,27 @@
         </div>
       </main>
       <footer>
-        <span class="noprint"><a class="dark-toggle">Switch theme</a> |</span>
-        Content retrieved from the
-        <a href="https://artofproblemsolving.com/wiki/index.php/"
-          >Art of Problem Solving Wiki</a
-        >
-        | ©&nbsp;2020 Andrew Chang |
-        <span class="noprint">
-          Contact me via
-          <a href="mailto:andrewggchang@gmail.com">email</a> or Discord
-          (Banandru#3714)
-        </span>
-        <span class="printonly">
-          <a href="https://vqbc.github.io/trivial/">vqbc.github.io/trivial</a>
-        </span>
+        <p class="footer-line noprint">
+          Settings:
+          <a class="toggle-link" id="dark-toggle">Use dark theme</a> |
+          <a class="toggle-link" id="serif-toggle">Use LaTeX problem font</a> |
+          <a class="toggle-link" id="mathjax-toggle">Turn off MathJaX</a>
+        </p>
+        <p class="footer-line">
+          Content retrieved from the
+          <a href="https://artofproblemsolving.com/wiki/index.php/"
+            >Art of Problem Solving Wiki</a
+          >
+          | ©&nbsp;2020 Andrew Chang |
+          <span class="noprint">
+            Contact me via
+            <a href="mailto:andrewggchang@gmail.com">email</a> or Discord
+            (Banandru#3714)
+          </span>
+          <span class="printonly">
+            <a href="https://vqbc.github.io/trivial/">vqbc.github.io/trivial</a>
+          </span>
+        </p>
       </footer>
     </div>
     <script type="module" src="src/index.js"></script>

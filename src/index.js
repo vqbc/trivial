@@ -95,6 +95,11 @@
         for the tests included under AMC Tests and various less common tests.
       </li>
       <li>
+        Turning off MathJaX uses the original raster images from AoPS for LaTeX,
+        which makes them blurrier but prevents some bugs with pages like 2019
+        AMC 10A #4.
+      </li>
+      <li>
         AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
         (The AJHSME is included as the AMC 8 tests before 1999.)
       </li>
@@ -125,16 +130,41 @@
       $("#stylesheet-link").after(
         `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
       );
+      $("#dark-toggle").text("Use light theme");
     }
-    $(".dark-toggle").click(() => {
+    if (JSON.parse(localStorage.getItem("serifFont")) === true) {
+      $("#serif-toggle").text("Use LaTeX problem font");
+    }
+    $("#dark-toggle").click(() => {
       if (!JSON.parse(localStorage.getItem("darkTheme"))) {
         $("#stylesheet-link").after(
           `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
         );
         localStorage.setItem("darkTheme", true);
+        $("#dark-toggle").text("Use light theme");
       } else {
         $("#dark-stylesheet-link").remove();
         localStorage.setItem("darkTheme", false);
+        $("#dark-toggle").text("Use dark theme");
+      }
+    });
+    $("#serif-toggle").click(() => {
+      $(".article-text").toggleClass("serif-text");
+      if (!JSON.parse(localStorage.getItem("serifFont"))) {
+        localStorage.setItem("serifFont", true);
+        $("#serif-toggle").text("Use default problem font");
+      } else {
+        localStorage.setItem("serifFont", false);
+        $("#serif-toggle").text("Use LaTeX problem font");
+      }
+    });
+    $("#mathjax-toggle").click(() => {
+      if (!JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
+        localStorage.setItem("mathJaXDisabled", true);
+        $("#mathjax-toggle").text("Turn on MathJaX");
+      } else {
+        localStorage.setItem("mathJaXDisabled", false);
+        $("#mathjax-toggle").text("Turn off MathJaX");
       }
     });
   })();
@@ -194,14 +224,17 @@
     const json = await response.json();
 
     if (typeof json.parse !== "undefined") {
-      let problemText = json.parse.text["*"];
+      let problemText = latexer(json.parse.text["*"]);
       $("#problem-text").html(getProblem(problemText));
       $("#solutions-text").html(getSolutions(problemText));
       $("#article-header").html(titleCleanup(pagename));
       $(".aops-link").attr(
         "href",
-        `https://artofproblemsolving.com/wiki/index.php/${pagename}`
+        `https://artofproblemsolving.com/wiki/index.php/${underscores(
+          pagename
+        )}`
       );
+      MathJax.typeset();
       return [
         (getProblem(problemText) && getSolutions(problemText) ? 1 : 0) -
           problemText.includes("Redirect to"),
@@ -248,7 +281,8 @@
     const json = await response.json();
 
     if (typeof json.parse !== "undefined") {
-      let problemText = json.parse.text["*"];
+      let problemText = latexer(json.parse.text["*"]);
+
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
       $(".aops-link").attr(
@@ -257,6 +291,7 @@
           pagename
         )}`
       );
+      MathJax.typeset();
     } else {
       $(".article-text").html(
         `<p class="error">The page you specified does not exist.</p>`
@@ -767,6 +802,8 @@
   const sanitize = (string) =>
     string.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
+  const unsanitize = (string) => string.replace(/&gt;/g, ">");
+
   const titleCleanup = (string) =>
     string
       .replace(/_/g, " ")
@@ -774,6 +811,23 @@
       .replace("%27", "'");
 
   const underscores = (string) => string.replace(/ /g, "_");
+
+  const latexer = (html) => {
+    if (!JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
+      let images = html.match(/<img (?:.*?) class="latex\w*?" (?:.*?)>/g);
+      if (images) {
+        for (let image of images) {
+          if (!image.includes("[asy]")) {
+            html = html.replace(
+              image,
+              unsanitize(image.match(/alt="(.*?)"/)[1])
+            );
+          }
+        }
+      }
+    }
+    return html;
+  };
 
   // Nav elements
   $("#single-problem").click(() => {
@@ -1248,7 +1302,7 @@
         response = await fetch(`${apiEndpoint}?${params}&origin=*`);
         json = await response.json();
 
-        let problemText = json.parse.text["*"];
+        let problemText = latexer(json.parse.text["*"]);
         let problemProblem = getProblem(problemText);
         let problemSolutions = getSolutions(problemText);
 
@@ -1287,7 +1341,7 @@
           response = await fetch(`${apiEndpoint}?${params}&origin=*`);
           json = await response.json();
 
-          problemText = json.parse.text["*"];
+          problemText = latexer(json.parse.text["*"]);
           problemProblem = getProblem(problemText);
           problemSolutions = getSolutions(problemText);
 
@@ -1327,6 +1381,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
+      MathJax.typeset();
       serifText();
       if ($("#input-name").val())
         $("#batch-header").html(sanitize($("#input-name").val()));
@@ -1375,7 +1430,7 @@
         const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
         const json = await response.json();
 
-        let problemText = json.parse.text["*"];
+        let problemText = latexer(json.parse.text["*"]);
         let problemProblem = getProblem(problemText);
         let problemSolutions = getSolutions(problemText);
 
@@ -1424,6 +1479,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
+      MathJax.typeset();
       serifText();
       changeName();
       fixLinks();
@@ -1470,7 +1526,7 @@
         response = await fetch(`${apiEndpoint}?${params}&origin=*`);
         json = await response.json();
 
-        let problemText = json.parse.text["*"];
+        let problemText = latexer(json.parse.text["*"]);
         let problemProblem = getProblem(problemText);
         let problemSolutions = getSolutions(problemText);
 
@@ -1508,7 +1564,7 @@
           response = await fetch(`${apiEndpoint}?${params}&origin=*`);
           json = await response.json();
 
-          problemText = json.parse.text["*"];
+          problemText = latexer(json.parse.text["*"]);
           problemProblem = getProblem(problemText);
           problemSolutions = getSolutions(problemText);
 
@@ -1536,7 +1592,6 @@
           problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
         }
         console.log(problems);
-
         addProblems(problems);
       }
     }
@@ -1584,6 +1639,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
+      MathJax.typeset();
       serifText();
       changeName();
       fixLinks();
@@ -1623,11 +1679,6 @@
     await addArticle(randomTheorem);
     fixLinks();
     directLinks();
-  });
-
-  // Serif toggle
-  $(".page-container").on("click", "#input-serif", () => {
-    $(".article-text").toggleClass("serif-text");
   });
 
   // Clears things
@@ -1698,7 +1749,7 @@
   }
 
   function serifText() {
-    if ($("#input-serif").prop("checked")) {
+    if (JSON.parse(localStorage.getItem("serifFont")) === true) {
       $(".article-text").addClass("serif-text");
     }
   }
