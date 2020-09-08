@@ -451,7 +451,6 @@ tags > span {
 
 /* In-article or inline styling */
 .serif-text {
-  font-size: 1.05em;
   font-family: MJXZERO, MJXTEX;
   line-height: 1.4;
 }
