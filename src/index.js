@@ -81,6 +81,10 @@
     <h3 id="notes-header">Notes</h3>
     <ul id="notes-text">
       <li>
+        Subject and test options default to accepting any subjects/tests if no
+        specific filters are applied.
+      </li>
+      <li>
         The script preloads a list of all pages in alphabetical order when the
         site is loaded, for use when a random page is selected from all
         subjects. Because it takes around ten seconds to fully load, trying to
@@ -126,7 +130,11 @@
 
   // Toggles settings
   (() => {
-    if (JSON.parse(localStorage.getItem("darkTheme")) === true) {
+    if (
+      JSON.parse(localStorage.getItem("darkTheme")) === true ||
+      (JSON.parse(localStorage.getItem("darkTheme")) == null &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
       $("#dark-toggle").text("Use light theme");
     }
     if (JSON.parse(localStorage.getItem("serifFont")) === true) {
@@ -204,7 +212,7 @@
 
   // Adds things
   async function addProblem(pagename) {
-    $("main").append(
+    $(".notes").before(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
       <a href="" class="aops-link">
@@ -251,7 +259,7 @@
   }
 
   function addBatch() {
-    $("main").append(
+    $(".notes").before(
       `<div class="problem-section">
       <h2 class="section-header" id="batch-header">Problem Batch</h2>
       <div class="article-text" id="batch-text"></div>
@@ -264,7 +272,7 @@
   }
 
   async function addArticle(pagename) {
-    $("main").append(
+    $(".notes").before(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
       <a href="" class="aops-link">
@@ -346,21 +354,15 @@
     let pages = [];
     let fullPages = [];
 
-    let noSubjects = false;
-    let noTests = false;
-
     if (!subjects[0] && !tests[0]) {
-      noSubjects = true;
-      noTests = true;
-      return [pages, noSubjects, noTests];
+      subjects[0] = "(All Subjects)";
+      tests[0] = "(All Tests)";
     }
     if (!subjects[0]) {
-      noSubjects = true;
-      return [pages, noSubjects, noTests];
+      subjects[0] = "(All Subjects)";
     }
     if (!tests[0]) {
-      noTests = true;
-      return [pages, noSubjects, noTests];
+      tests[0] = "(All Tests)";
     }
 
     if (subjects.includes("(All Subjects)")) {
@@ -402,7 +404,7 @@
         }
       }
     }
-    return [pages, noSubjects, noTests];
+    return pages;
   }
 
   function matchesOptions(
@@ -1190,37 +1192,10 @@
     allPagesWarn();
     clearProblem();
 
-    let [pages, noSubjects, noTests] = await getPages();
+    let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
 
-    if (noSubjects && noTests) {
-      await addProblem("Error");
-      $(".aops-link").remove();
-      $("#solutions-section").remove();
-      $(".article-text").html(
-        `<p class="error">
-          Please enter a subject and test.
-        </p>`
-      );
-    } else if (noSubjects) {
-      await addProblem("Error");
-      $(".aops-link").remove();
-      $("#solutions-section").remove();
-      $(".article-text").html(
-        `<p class="error">
-          Please enter a subject.
-        </p>`
-      );
-    } else if (noTests) {
-      await addProblem("Error");
-      $(".aops-link").remove();
-      $("#solutions-section").remove();
-      $(".article-text").html(
-        `<p class="error">
-          Please enter a test.
-        </p>`
-      );
-    } else if (pages.length === 0) {
+    if (pages.length === 0) {
       await addProblem("Error");
       $(".aops-link").remove();
       $("#solutions-section").remove();
@@ -1603,30 +1578,9 @@
     addBatch();
     allPagesWarn();
 
-    let [pages, noSubjects, noTests] = await getPages();
+    let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
-    if (noSubjects && noTests) {
-      $(".article-text").html(
-        `<p class="error">
-          Please enter a subject and test.
-        </p>`
-      );
-      $("#batch-header").html("Error");
-    } else if (noSubjects) {
-      $(".article-text").html(
-        `<p class="error">
-          Please enter a subject.
-        </p>`
-      );
-      $("#batch-header").html("Error");
-    } else if (noTests) {
-      $(".article-text").html(
-        `<p class="error">
-          Please enter a test.
-        </p>`
-      );
-      $("#batch-header").html("Error");
-    } else if (pages.length === 0) {
+    if (pages.length === 0) {
       $(".article-text").html(
         `<p class="error">
           No problems could be found meeting those requirements.
@@ -1689,16 +1643,16 @@
   function clearOptions() {
     $(".options-input").remove();
     $(".error").remove();
-    $(".notes").remove();
     $(".problem-section").remove();
+    $(".notes").remove();
   }
 
   function clearAll() {
     $("#secondary-button-container").remove();
     $(".options-input").remove();
     $(".error").remove();
-    $(".notes").remove();
     $(".problem-section").remove();
+    $(".notes").remove();
   }
 
   // Active buttons
@@ -1715,7 +1669,7 @@
   // Warnings
   function allPagesWarn() {
     if (!allPagesLoaded && $("#allpages-error").length === 0) {
-      $(".notes").after(`<p class="error" id="allpages-error">
+      $(".options-input").after(`<p class="error" id="allpages-error">
           Page index not done loading, please try again in ${allPagesLoadWait()}
           seconds to get newer problems.
         </p>`);

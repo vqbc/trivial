@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Trivial AoPS Wiki Reader</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="A modern AoPS Wiki reader for searching problems, reading solutions & articles, creating problem sets, and more."
@@ -27,32 +29,6 @@
       name="twitter:image"
       content="https://vqbc.github.io/trivial/icons/favicon-192x192.png"
     />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.15.3/tagify.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-    />
-    <link href="src/fonts.css" rel="stylesheet" />
-    <link id="stylesheet-link" href="src/styles.css" rel="stylesheet" />
-    <script>
-      if (JSON.parse(localStorage.getItem("darkTheme")) === true) {
-        let darkStyles = document.createElement("link");
-        let styles = document.querySelector("#stylesheet-link");
-        darkStyles.id = "dark-stylesheet-link";
-        darkStyles.href = "src/dark.css";
-        darkStyles.rel = "stylesheet";
-        styles.after(darkStyles);
-      }
-    </script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -72,6 +48,46 @@
     />
     <link rel="manifest" href="icons/site.webmanifest" />
     <meta name="theme-color" content="#3f8899" />
+  </head>
+  <body>
+    <script>
+      if (
+        JSON.parse(localStorage.getItem("darkTheme")) ||
+        (JSON.parse(localStorage.getItem("darkTheme")) == null &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.body.style = "background: hsl(201deg, 8%, 12%)";
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.15.3/tagify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    />
+    <link href="src/fonts.css" rel="stylesheet" />
+    <link id="stylesheet-link" href="src/styles.css" rel="stylesheet" />
+    <script>
+      if (
+        JSON.parse(localStorage.getItem("darkTheme")) ||
+        (JSON.parse(localStorage.getItem("darkTheme")) == null &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        let darkStyles = document.createElement("link");
+        let styles = document.querySelector("#stylesheet-link");
+        darkStyles.id = "dark-stylesheet-link";
+        darkStyles.href = "src/dark.css";
+        darkStyles.rel = "stylesheet";
+        styles.after(darkStyles);
+        document.body.removeAttribute("style");
+      }
+    </script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-176118017-1"
@@ -119,8 +135,6 @@
       async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
     ></script>
-  </head>
-  <body>
     <div class="page-container">
       <header>
         <h1 class="header">
