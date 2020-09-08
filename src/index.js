@@ -144,6 +144,7 @@
       $("#mathjax-toggle").text("Turn on MathJaX");
     }
     $("#dark-toggle").click(() => {
+      document.body.removeAttribute("style");
       if (!JSON.parse(localStorage.getItem("darkTheme"))) {
         $("#stylesheet-link").after(
           `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
