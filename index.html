@@ -88,6 +88,16 @@
       }
     </script>
     <div class="page-container">
+      <script>
+        if (
+          JSON.parse(localStorage.getItem("darkTheme")) ||
+          (JSON.parse(localStorage.getItem("darkTheme")) == null &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.querySelector(".page-container").style =
+            "background: hsl(201deg, 8%, 15%)";
+        }
+      </script>
       <header>
         <h1 class="header">
           Trivial.
