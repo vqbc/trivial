@@ -55,7 +55,7 @@
   let batchOptions = `<input class="input-field input-field-top input-field-left"
       id="input-name" type="text" placeholder='Batch name (optional)'/>
     <input class="input-field input-field-top input-field-right"
-      id="input-break" type="number" min="1" max="50"
+      id="input-break" type="number" min="1" max="40"
       placeholder='Page break every n problems (optional)'/>
     <div class="input-container checkbox-container">
       <div class="checkbox-wrap">
@@ -997,7 +997,7 @@
         <input class="input-field input-field-top input-field-left"
           id="input-name" type="text" placeholder='Batch name (optional)'/>
         <input class="input-field input-field-top input-field-right"
-          id="input-break" type="number" min="1" max="50"
+          id="input-break" type="number" min="1" max="40"
           placeholder='Page break every n problems (optional)'/>
         <div class="input-container checkbox-container">
           <div class="checkbox-wrap">
@@ -1138,8 +1138,8 @@
     $("#input-number").ionRangeSlider({
       grid: true,
       min: 0,
-      max: 50,
-      from: 25,
+      max: 40,
+      from: 20,
     });
   });
 

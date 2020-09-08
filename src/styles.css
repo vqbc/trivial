@@ -308,6 +308,10 @@ tags > span {
   border-radius: 0 !important;
 }
 
+.irs--flat .irs-bar--single {
+  border-radius: 0;
+}
+
 .irs--flat .irs-bar,
 .irs--flat .irs-handle > i:first-child,
 .irs--flat .irs-from,
@@ -329,6 +333,11 @@ tags > span {
 .irs--flat .irs-max {
   padding-top: 2px;
   font-size: 12px;
+}
+
+.js-irs-2 .irs-grid {
+  /* basically a bad nth-child selector */
+  left: 0.66% !important;
 }
 
 .irs-grid-text {
