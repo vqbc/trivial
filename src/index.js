@@ -127,9 +127,6 @@
   // Toggles settings
   (() => {
     if (JSON.parse(localStorage.getItem("darkTheme")) === true) {
-      $("#stylesheet-link").after(
-        `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
-      );
       $("#dark-toggle").text("Use light theme");
     }
     if (JSON.parse(localStorage.getItem("serifFont")) === true) {
