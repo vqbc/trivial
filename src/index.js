@@ -79,18 +79,19 @@
         specific filters are applied.
       </li>
       <li>
-        The script preloads a list of all pages in alphabetical order when the
-        site is loaded, for use when a random page is selected from all
-        subjects. Because it takes around ten seconds to fully load, trying to
-        get a problem before then will only give older problems early in
-        alphabetical order.
+        A list of all pages in alphabetical order is preloaded when the
+        site is opened, for choosing a random page from all subjects. Because it
+        takes around ten seconds to fully load, trying to get problems before
+        then will only give older problems early in alphabetical order.
       </li>
       <li>
-        Difficulty levels will likely be more inaccurate for earlier years,
-        because of changes in competition difficulty and problem design over
-        time. They are intended to be an approximation and group problems based
-        on test and problem number. Difficulty levels are currently available
-        for the tests included under AMC Tests and various less common tests.
+        Difficulty levels will likely be inaccurate for earlier years and are
+        only intended to be an approximation and group problems based on test
+        and problem number. Difficulty levels are currently available for the
+        tests included under AMC Tests and various less common tests, based on
+        <a
+          href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
+        >AoPS Wiki ratings</a>.
       </li>
       <li>
         Turning off MathJaX uses the original raster images from AoPS for LaTeX,
@@ -106,9 +107,8 @@
         <ul>
           <li>
             The AHSME was introduced in its 30-question form in 1974. The AIME
-            was introduced in 1983. The AJHSME was introduced in 1985. USAJMO
-            problems are available since 2010. All other major exams predate
-            1974. 
+            was introduced in 1983, and the AJHSME in 1985. USAJMO problems are
+            available since 2010. All other major exams predate 1974. 
           </li>
           <li>
             The 30-question AHSME was replaced by the AMC 10 and AMC 12 while
