@@ -390,6 +390,7 @@ tags > span {
 
 #notes-header::after {
   position: absolute;
+  top: 5px;
   right: 1rem;
   display: inline-block;
   width: 9px;
@@ -399,7 +400,7 @@ tags > span {
   border-style: solid;
   border-width: 3px 3px 0 0;
   border-radius: 2px;
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
   content: "";
 }
 
@@ -408,8 +409,8 @@ tags > span {
 }
 
 .notes-collapsed #notes-header::after {
-  top: 5px;
-  transform: rotate(-45deg);
+  top: 0;
+  transform: rotate(135deg);
 } /**/
 
 /* Problem sections */
@@ -439,7 +440,7 @@ tags > span {
 
 #solutions-header::after {
   position: absolute;
-  top: calc(50% - 7px);
+  top: calc(50% - 2px);
   right: 14px;
   display: inline-block;
   width: 9px;
@@ -449,7 +450,7 @@ tags > span {
   border-style: solid;
   border-width: 3px 3px 0 0;
   border-radius: 2px;
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
   content: "";
 }
 
@@ -458,8 +459,8 @@ tags > span {
 }
 
 .section-collapsed #solutions-header::after {
-  top: calc(50% - 2px);
-  transform: rotate(-45deg);
+  top: calc(50% - 7px);
+  transform: rotate(135deg);
 } /**/
 
 /* In-article or inline styling */
@@ -537,7 +538,21 @@ img.latexcenter {
 }
 
 .MathJax {
+  display: inline-block;
+  max-width: 100%;
   font-size: inherit !important;
+}
+
+mjx-math {
+  white-space: initial;
+}
+
+mjx-mtext {
+  line-height: 1;
+}
+
+mjx-box > mjx-mtext {
+  line-height: 0;
 }
 
 .katex {
