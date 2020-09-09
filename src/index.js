@@ -268,15 +268,15 @@
   }
 
   async function addArticle(pagename) {
-    $(".notes").before(
-      `<div class="problem-section">
+    let html = `<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
       <a href="" class="aops-link">
         (View on the AoPS Wiki)
       </a>
       <div class="article-text" id="full-text"></div>
-    </div>`
-    );
+    </div>`;
+    if ($(".notes").length) $(".notes").before(html);
+    else $("#secondary-button-container").after(html);
 
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
@@ -1610,6 +1610,7 @@
 
     let randomTheorem =
       theoremPages[Math.floor(Math.random() * theoremPages.length)];
+    console.log(randomTheorem);
     await addArticle(randomTheorem);
     fixLinks();
     directLinks();
