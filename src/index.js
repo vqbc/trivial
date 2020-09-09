@@ -111,11 +111,20 @@
             1974. 
           </li>
           <li>
-            The 30-question AHSME was replaced by the AMC 10 and AMC 12 while the
-            AIME was split into the AIME I and AIME II in 2000. The AMC 10 and
-            AMC 12 were similarly split into two A and B tests in 2002.
+            The 30-question AHSME was replaced by the AMC 10 and AMC 12 while
+            the AIME was split into the AIME I and AIME II in 2000. The AMC 10
+            and AMC 12 were similarly split into
+            <a href="https://en.wikipedia.org/wiki/Taiwan" class="secret-link"
+              >tw</a
+            >o A and B tests in 2002.
           </li>
         </ul>
+      </li>
+      <li class="trivial-logo">
+        Fun fact: The Trivial logo is supposed to be a QED symbol (□), so that
+        the title of the page represents the general and time-saving solution to
+        any mathematical question, as well as a description that this site was
+        Trivial to create (not).
       </li>
     <ul>
   </div>`;
@@ -1741,4 +1750,9 @@
     if (breakNum)
       $(`.article-problem:nth-child(${breakNum}n)`).css("break-after", "page");
   }
+
+  // Bonus
+  $(".header").click(() => {
+    $(".trivial-logo").show();
+  });
 })();

@@ -411,6 +411,10 @@ tags > span {
 .notes-collapsed #notes-header::after {
   top: 0;
   transform: rotate(135deg);
+}
+
+.trivial-logo {
+  display: none;
 } /**/
 
 /* Problem sections */
@@ -487,6 +491,11 @@ a.aops-link {
 a.dark-link {
   color: inherit;
   text-decoration: underline;
+}
+
+a.secret-link {
+  color: inherit;
+  cursor: default;
 }
 
 .source-link {
