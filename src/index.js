@@ -94,8 +94,8 @@
       </li>
       <li>
         Turning off MathJaX uses the original raster images from AoPS for LaTeX,
-        which makes them blurrier but prevents some bugs with pages like 2019
-        AMC 10A #4.
+        which makes them blurrier and makes justified text impossible, but
+        prevents some bugs with pages like 2019 AMC 10A #4.
       </li>
       <li>
         AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
@@ -134,16 +134,16 @@
   // Toggles settings
   (() => {
     if (
-      JSON.parse(localStorage.getItem("darkTheme")) === true ||
+      JSON.parse(localStorage.getItem("darkTheme")) ||
       (JSON.parse(localStorage.getItem("darkTheme")) == null &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       $("#dark-toggle").text("Use light theme");
     }
-    if (JSON.parse(localStorage.getItem("serifFont")) === true) {
+    if (JSON.parse(localStorage.getItem("serifFont"))) {
       $("#serif-toggle").text("Use default problem font");
     }
-    if (JSON.parse(localStorage.getItem("mathJaXDisabled")) === true) {
+    if (JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
       $("#mathjax-toggle").text("Turn on MathJaX");
     }
     $("#dark-toggle").click(() => {
@@ -172,6 +172,7 @@
       }
     });
     $("#mathjax-toggle").click(() => {
+      $(".article-text").toggleClass("mathjax-text");
       if (!JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
         localStorage.setItem("mathJaXDisabled", true);
         $("#mathjax-toggle").text("Turn on MathJaX");
@@ -1693,8 +1694,11 @@
   }
 
   function serifText() {
-    if (JSON.parse(localStorage.getItem("serifFont")) === true) {
+    if (JSON.parse(localStorage.getItem("serifFont"))) {
       $(".article-text").addClass("serif-text");
+    }
+    if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
+      $(".article-text").addClass("mathjax-text");
     }
   }
 

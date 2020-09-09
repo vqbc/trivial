@@ -473,6 +473,10 @@ tags > span {
   line-height: 1.4;
 }
 
+.mathjax-text {
+  text-align: justify;
+}
+
 a {
   color: var(--link-color);
   text-decoration: none;
