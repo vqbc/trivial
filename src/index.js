@@ -88,8 +88,8 @@
         Difficulty levels will likely be inaccurate for earlier years and are
         only intended to be an approximation and group problems based on test
         and problem number. Difficulty levels are currently available for the
-        tests included under AMC Tests and various less common tests, based on
-        <a
+        tests included under AMC Tests and most other tests on the AoPS Wiki,
+        based on <a
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
         >AoPS Wiki ratings</a>.
       </li>
