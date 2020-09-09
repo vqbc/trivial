@@ -370,6 +370,10 @@ tags > span {
   padding-left: 1rem;
 }
 
+.checkbox-container-small {
+  flex: 25%;
+}
+
 .checkbox-wrap {
   margin-right: var(--horizontal-item-spacing);
 }

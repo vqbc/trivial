@@ -70,12 +70,6 @@
           Hide question sources when printed?
         </label>
       </div>
-      <div class="checkbox-wrap">
-        <input type="checkbox" checked class="input-check" id="input-serif"/>
-        <label class="checkbox-label">
-          Use a LaTeX-style serif font?
-        </label>
-      </div>
     </div>`;
   let notes = `<div class="notes">
     <h3 id="notes-header">Notes</h3>
@@ -937,15 +931,7 @@
     $("#secondary-button-container").after(
       `<div class="options-input" id="random-input">
         ${problemOptions}
-        <div class="input-container checkbox-container input-container-bottom">
-          <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-serif"/>
-            <label class="checkbox-label">
-              Use a LaTeX-style serif font?
-            </label>
-          </div>
-        </div>
-        <button class="input-button" id="random-button">
+        <button class="input-button input-button-full" id="random-button">
           View Random
         </button>
       </div>
@@ -1001,19 +987,11 @@
         <input class="input-field input-field-top input-field-right"
           id="input-break" type="number" min="1" max="40"
           placeholder='Page break every n problems (optional)'/>
-        <div class="input-container checkbox-container">
-          <div class="checkbox-wrap">
-          </div>
+        <div class="input-container checkbox-container checkbox-container-small">
           <div class="checkbox-wrap">
             <input type="checkbox" checked class="input-check" id="input-hide"/>
             <label class="checkbox-label">
               Hide question sources when printed?
-            </label>
-          </div>
-          <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-serif"/>
-            <label class="checkbox-label">
-              Use a LaTeX-style serif font?
             </label>
           </div>
         </div>
