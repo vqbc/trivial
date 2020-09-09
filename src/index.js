@@ -1173,6 +1173,7 @@
         ).val()} Problems/Problem ${$("#input-singlenum").val()}`
       )
     );
+    serifText();
     fixLinks();
     collapseSolutions();
     directLinks();
@@ -1598,6 +1599,7 @@
     clearProblem();
 
     await addArticle(sanitize($("#input-find").val()));
+    serifText();
     fixLinks();
     directLinks();
   });
@@ -1622,6 +1624,7 @@
       theoremPages[Math.floor(Math.random() * theoremPages.length)];
     console.log(randomTheorem);
     await addArticle(randomTheorem);
+    serifText();
     fixLinks();
     directLinks();
   });
