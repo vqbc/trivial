@@ -248,6 +248,7 @@
           pagename
         )}`
       );
+      mathJaxFormat();
       MathJax.typeset();
       return [
         (getProblem(problemText) && getSolutions(problemText) ? 1 : 0) -
@@ -305,6 +306,7 @@
           pagename
         )}`
       );
+      mathJaxFormat();
       MathJax.typeset();
     } else {
       $(".article-text").html(
@@ -1347,6 +1349,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
+      mathJaxFormat();
       MathJax.typeset();
       serifText();
       if ($("#input-name").val())
@@ -1445,6 +1448,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
+      mathJaxFormat();
       MathJax.typeset();
       serifText();
       changeName();
@@ -1584,6 +1588,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
+      mathJaxFormat();
       MathJax.typeset();
       serifText();
       changeName();
@@ -1708,6 +1713,14 @@
   function changeName() {
     let name = $("#input-name").val();
     if (name) $("#batch-header").html(sanitize(name));
+  }
+
+  function mathJaxFormat() {
+    $(".article-text").each(function () {
+      let articleText = $(this).html();
+      articleText = articleText.replace(/\\overarc/g, "\\overparen");
+      $(this).html(articleText);
+    });
   }
 
   function fixLinks() {

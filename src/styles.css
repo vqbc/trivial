@@ -473,10 +473,6 @@ tags > span {
   line-height: 1.4;
 }
 
-.mathjax-text {
-  text-align: justify;
-}
-
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -572,8 +568,18 @@ mjx-box > mjx-mtext {
   font: normal 1em "Computer Modern Serif";
 }
 
+mjx-merror {
+  font-style: italic;
+  background: none;
+}
+
+mjx-merror mjx-utext {
+  font-family: MJXZERO, MJXTEX;
+}
+
 .error,
-.katex-error {
+.katex-error,
+mjx-merror {
   color: var(--error-color);
 } /**/
 
@@ -622,6 +628,12 @@ footer {
 } /**/
 
 /* Breakpoint layouts */
+@media (min-width: 1000px) {
+  .mathjax-text p {
+    text-align: justify;
+  }
+}
+
 @media (max-width: 1500px) {
   .page-container {
     width: 1200px;
