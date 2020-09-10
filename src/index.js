@@ -172,7 +172,6 @@
       }
     });
     $("#mathjax-toggle").click(() => {
-      $(".article-text").toggleClass("mathjax-text");
       if (!JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
         localStorage.setItem("mathJaXDisabled", true);
         $("#mathjax-toggle").text("Turn on MathJaX");
