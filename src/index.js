@@ -1718,7 +1718,9 @@
   function mathJaxFormat() {
     $(".article-text").each(function () {
       let articleText = $(this).html();
-      articleText = articleText.replace(/\\overarc/g, "\\overparen");
+      articleText = articleText
+        .replace(/\\overarc/g, "\\overparen")
+        .replace(/\\congruent/g, "\\cong");
       $(this).html(articleText);
     });
   }
