@@ -64,6 +64,11 @@ body {
   font: bold 2em "Computer Modern Bright";
 }
 
+.header > svg {
+  position: relative;
+  top: 1px;
+}
+
 .subtitle {
   margin-top: 0;
   color: var(--subtitle-color);
