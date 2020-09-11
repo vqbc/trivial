@@ -263,6 +263,10 @@
       $(".aops-link").remove();
       $("#solutions-section").remove();
     }
+    serifText();
+    fixLinks();
+    collapseSolutions();
+    directLinks();
   }
 
   function addBatch() {
@@ -315,6 +319,9 @@
       $("#article-header").html("Error");
       $(".aops-link").remove();
     }
+    serifText();
+    fixLinks();
+    directLinks();
   }
 
   // Gets and checks pages
@@ -1175,10 +1182,6 @@
         ).val()} Problems/Problem ${$("#input-singlenum").val()}`
       )
     );
-    serifText();
-    fixLinks();
-    collapseSolutions();
-    directLinks();
   });
 
   $(".page-container").on("click", "#random-button", async () => {
@@ -1228,10 +1231,6 @@
         invalid = !response;
       }
     }
-    serifText();
-    fixLinks();
-    collapseSolutions();
-    directLinks();
   });
 
   $(".page-container").on("click", "#batch-button", async () => {
@@ -1604,9 +1603,6 @@
     clearProblem();
 
     await addArticle(sanitize($("#input-find").val()));
-    serifText();
-    fixLinks();
-    directLinks();
   });
 
   $(".page-container").on("click", "#theorem-button", async () => {
@@ -1629,9 +1625,6 @@
       theoremPages[Math.floor(Math.random() * theoremPages.length)];
     console.log(randomTheorem);
     await addArticle(randomTheorem);
-    serifText();
-    fixLinks();
-    directLinks();
   });
 
   // Clears things
@@ -1705,9 +1698,11 @@
     if (JSON.parse(localStorage.getItem("serifFont")))
       $(".article-text").addClass("serif-text");
 
-    if (!JSON.parse(localStorage.getItem("mathJaxDisabled")))
+    if (!JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
       $(".article-text").addClass("mathjax-text");
-    else $(".article-text").removeClass("mathjax-text");
+    } else {
+      $(".article-text").removeClass("mathjax-text");
+    }
   }
 
   function changeName() {
@@ -1749,8 +1744,6 @@
         } else {
           await addArticle(pagename);
         }
-        fixLinks();
-        directLinks();
       }
     });
   }
