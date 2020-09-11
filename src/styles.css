@@ -208,6 +208,7 @@ body {
   font: 1em "Computer Modern Sans";
   border: none;
   box-shadow: var(--input-box-shadow);
+  -webkit-appearance: none;
 }
 
 .input-field:focus {
