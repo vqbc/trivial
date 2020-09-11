@@ -507,7 +507,8 @@ a.secret-link {
   font-weight: normal;
 }
 
-code {
+code,
+pre {
   font-family: "Computer Modern Typewriter";
 }
 
