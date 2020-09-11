@@ -474,7 +474,7 @@ tags > span {
 
 /* In-article or inline styling */
 .serif-text {
-  font-family: "MathJax_Main";
+  font-family: MathJax_Main;
   line-height: 1.4;
 }
 
