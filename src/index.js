@@ -8,8 +8,7 @@
   let problemOptions = `<input class="input-multi input-multi-left"
     id="input-subjects"
     placeholder="Subjects, e.g. Olympiad Algebra Problems"
-    data-whitelist="(All Subjects),
-    3D Geometry Problems,
+    data-whitelist="3D Geometry Problems,
     Introductory Algebra Problems,
     Introductory Combinatorics Problems,
     Introductory Geometry Problems,
@@ -33,7 +32,7 @@
   <input class="input-multi"
     id="input-tests"
     placeholder="Tests, e.g. AMC 10"
-    data-whitelist="(All Tests), (AMC Tests), AHSME, AMC 8, AMC 10,
+    data-whitelist="(AMC Tests), AHSME, AMC 8, AMC 10,
     AMC 12, AIME, USAJMO, USAMO, Canadian MO, IMO">
   </input>
   <div class="input-container input-container-left">
@@ -250,6 +249,10 @@
       );
       mathJaxFormat();
       MathJax.typeset();
+      serifText();
+      fixLinks();
+      directLinks();
+      collapseSolutions();
       return [
         (getProblem(problemText) && getSolutions(problemText) ? 1 : 0) -
           problemText.includes("Redirect to"),
@@ -263,10 +266,6 @@
       $(".aops-link").remove();
       $("#solutions-section").remove();
     }
-    serifText();
-    fixLinks();
-    collapseSolutions();
-    directLinks();
   }
 
   function addBatch() {
