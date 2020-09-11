@@ -1702,12 +1702,12 @@
   }
 
   function serifText() {
-    if (JSON.parse(localStorage.getItem("serifFont"))) {
+    if (JSON.parse(localStorage.getItem("serifFont")))
       $(".article-text").addClass("serif-text");
-    }
-    if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
+
+    if (!JSON.parse(localStorage.getItem("mathJaxDisabled")))
       $(".article-text").addClass("mathjax-text");
-    }
+    else $(".article-text").removeClass("mathjax-text");
   }
 
   function changeName() {

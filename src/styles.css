@@ -507,6 +507,7 @@ a.secret-link {
   font-weight: normal;
 }
 
+.article-text h1,
 .article-text h2,
 h3 {
   font-size: 1em;
@@ -515,6 +516,7 @@ h3 {
   text-transform: uppercase;
 }
 
+.article-text h1,
 .article-text h2,
 .article-text h3 {
   font-size: 1.05em;
@@ -541,8 +543,7 @@ h3 {
   display: none;
 }
 
-img.latex,
-img.latexcenter {
+img {
   max-width: 100%;
   height: auto;
 }
@@ -633,7 +634,7 @@ footer {
 } /**/
 
 /* Breakpoint layouts */
-@media (min-width: 1000px) {
+@media (min-width: 1201px) {
   .mathjax-text p {
     text-align: justify;
   }
@@ -733,6 +734,10 @@ footer {
   .page-container,
   .problem-section {
     box-shadow: none;
+  }
+
+  .mathjax-text p {
+    text-align: justify;
   }
 
   a {
