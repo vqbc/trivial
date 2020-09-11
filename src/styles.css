@@ -64,9 +64,14 @@ body {
   font: bold 2em "Computer Modern Bright";
 }
 
-.header > svg {
+.logo {
   position: relative;
   top: 1px;
+  transition: 0.5s;
+}
+
+.header:hover .logo {
+  transform: rotateY(1turn);
 }
 
 .subtitle {
