@@ -121,7 +121,7 @@
         </ul>
       </li>
       <li class="trivial-logo">
-        Fun fact: The Trivial logo is supposed to be a QED symbol (□), so that
+        The Trivial logo is supposed to be a QED symbol (□), so that
         the title of the page represents the general and time-saving solution to
         any mathematical question, as well as a description that this site was
         Trivial to create (not).
@@ -130,6 +130,7 @@
   </div>`;
   let clickedTimes = 0;
   let allPagesLoaded = false;
+  let subtitleClicked = 0;
 
   // Toggles settings
   (() => {
@@ -1775,5 +1776,18 @@
   // Bonus
   $(".header").click(() => {
     $(".trivial-logo").show();
+  });
+
+  $(".subtitle").click(() => {
+    subtitleClicked++;
+    let text =
+      subtitleClicked % 4 === 1
+        ? "Alcumus, but you don't get internet points"
+        : subtitleClicked % 4 === 2
+        ? "Brilliant, but you don't learn anything useful"
+        : subtitleClicked % 4 === 3
+        ? "The AoPS Wiki, but you waste time trying to find the other easter eggs"
+        : "An AoPS Wiki Reader for Studying";
+    $(".subtitle").html(text);
   });
 })();
