@@ -1,0 +1,27 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Computer Modern Typewriter";
+  font-style: normal;
+  src: url("cmuntt.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Computer Modern Typewriter";
+  font-style: normal;
+  src: url("cmuntb.woff") format("woff");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Computer Modern Typewriter";
+  font-style: italic;
+  src: url("cmunit.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Computer Modern Typewriter";
+  font-style: italic;
+  src: url("cmuntx.woff") format("woff");
+}

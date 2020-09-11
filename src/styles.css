@@ -507,6 +507,10 @@ a.secret-link {
   font-weight: normal;
 }
 
+code {
+  font-family: "Computer Modern Typewriter";
+}
+
 .article-text h1,
 .article-text h2,
 h3 {
