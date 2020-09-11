@@ -67,11 +67,6 @@ body {
 .logo {
   position: relative;
   top: 1px;
-  transition: 0.5s;
-}
-
-.header:hover .logo {
-  transform: rotateY(1turn);
 }
 
 .subtitle {
