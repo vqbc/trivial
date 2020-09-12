@@ -2,3 +2,4 @@
 .codesandbox/
 node_modules
 .prettierrc
+package-lock.json
