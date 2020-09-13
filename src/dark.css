@@ -50,7 +50,7 @@
     --tagify-dd-color-primary: hsl(210deg, 41%, 44%);
   }
 
-  input {
+  .input-field {
     background: var(--item-color);
   }
 
