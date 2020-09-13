@@ -82,4 +82,26 @@
   ::-webkit-resizer {
     background-color: hsl(201deg, 5%, 40%);
   }
+
+  .CtxtMenu_InfoContent::-webkit-scrollbar {
+    all: unset;
+  }
+  .CtxtMenu_InfoContent::-webkit-scrollbar-button {
+    background-color: initial;
+  }
+  .CtxtMenu_InfoContent::-webkit-scrollbar-track {
+    background-color: initial;
+  }
+  .CtxtMenu_InfoContent::-webkit-scrollbar-track-piece {
+    background-color: initial;
+  }
+  .CtxtMenu_InfoContent::-webkit-scrollbar-thumb {
+    background-color: initial;
+  }
+  .CtxtMenu_InfoContent::-webkit-scrollbar-corner {
+    background-color: initial;
+  }
+  .CtxtMenu_InfoContent::-webkit-resizer {
+    background-color: initial;
+  }
 } /**/
