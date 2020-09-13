@@ -1394,8 +1394,8 @@
         let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
         let params = `action=parse&page=${currentProblem}&format=json`;
 
-        const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-        const json = await response.json();
+        let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        let json = await response.json();
 
         let problemText = latexer(json.parse.text["*"]);
         let problemProblem = getProblem(problemText);
@@ -1412,6 +1412,40 @@
               computeTest(currentProblem),
               computeNumber(currentProblem),
               computeYear(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+
+          $(".loading-bar").css(
+            "width",
+            `${((problemIndex + 1) / numProblems) * 100}%`
+          );
+        } else if (problemText.includes("Redirect to")) {
+          console.log("Redirect problem, going there instead...");
+
+          let redirHref = $($.parseHTML(problemText))
+            .find(".redirectText a")
+            .attr("href");
+          let redirPage = redirHref
+            .replace("/wiki/index.php/", "")
+            .replace(/_/g, " ");
+          console.log(redirPage);
+
+          params = `action=parse&page=${redirPage}&format=json`;
+          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+          json = await response.json();
+
+          problemText = latexer(json.parse.text["*"]);
+          problemProblem = getProblem(problemText);
+          problemSolutions = getSolutions(problemText);
+
+          problems.push({
+            title: redirPage,
+            difficulty: computeDifficulty(
+              computeTest(redirPage),
+              computeNumber(redirPage),
+              computeYear(redirPage)
             ),
             problem: problemProblem,
             solutions: problemSolutions,

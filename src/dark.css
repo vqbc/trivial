@@ -39,6 +39,12 @@
     --tag-text-color--edit: #ddd;
   }
 
+  .tagify__input::before,
+  .tagify__input::after {
+    color: var(--placeholder-color-focus);
+    opacity: 1;
+  }
+
   .tagify__dropdown__wrapper {
     --tagify-dd-bg-color: hsl(201deg, 8%, 20%);
     --tagify-dd-color-primary: hsl(210deg, 41%, 44%);
