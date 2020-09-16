@@ -711,8 +711,9 @@ footer {
 
 /* Print styling */
 @media print {
-  /* Smaller */
+  /* Font fixes */
   body {
+    color: black;
     font-size: 11.5pt;
   }
 
