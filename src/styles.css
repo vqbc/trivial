@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+  --text-color: #222;
   --header-color: #222;
   --secondary-color: #333;
   --subtitle-color: #444;
@@ -40,8 +41,8 @@ html {
 }
 
 body {
-  font-size: 1.1rem;
-  font-family: "Computer Modern Sans";
+  color: var(--text-color);
+  font: 1.1rem "Computer Modern Sans";
   background: var(--body-color);
 }
 
@@ -516,16 +517,9 @@ pre {
 .article-text h1,
 .article-text h2,
 h3 {
-  font-size: 1em;
-  font-family: "Computer Modern Bright";
+  font: bold 1.05em "Computer Modern Bright";
   letter-spacing: 0.05em;
   text-transform: uppercase;
-}
-
-.article-text h1,
-.article-text h2,
-.article-text h3 {
-  font-size: 1.05em;
   border-bottom: 1px solid #aaa;
 }
 
@@ -731,8 +725,7 @@ footer {
     margin: 0 0 1rem;
     padding: 0;
     color: inherit;
-    font-size: 2rem;
-    font-family: "Computer Modern Sans Demi-Condensed";
+    font: bold 2rem "Computer Modern Sans Demi-Condensed";
     text-shadow: none;
     background: none;
   }

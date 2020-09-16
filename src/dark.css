@@ -1,6 +1,7 @@
 /* Dark theme */
 @media screen {
   :root {
+    --text-color: #ddd;
     --header-color: #ddd;
     --secondary-color: #ccc;
     --subtitle-color: #bbb;
@@ -26,9 +27,8 @@
     --link-color: hsl(210deg, 86%, 75%);
   }
 
-  body,
   .input-field {
-    color: #ddd;
+    color: var(--text-color);
   }
 
   .tagify {
@@ -36,7 +36,7 @@
     --placeholder-color-focus: rgb(255, 255, 255, 0.3);
     --tag-bg: #bbb;
     --tag-hover: #abb;
-    --tag-text-color--edit: #ddd;
+    --tag-text-color--edit: var(--text-color);
   }
 
   .tagify__input::before,
