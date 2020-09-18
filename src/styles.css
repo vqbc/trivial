@@ -168,7 +168,6 @@ body {
 .options-input {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 2rem;
