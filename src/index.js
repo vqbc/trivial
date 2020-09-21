@@ -143,13 +143,19 @@
     if (JSON.parse(localStorage.getItem("serifFont"))) {
       $("#serif-toggle").text("Use default problem font");
     }
-    if (JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
+    if (JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
       $("#mathjax-toggle").text("Turn on MathJaX");
     }
     $("#dark-toggle").click(() => {
       document.body.removeAttribute("style");
       document.querySelector(".page-container").removeAttribute("style");
-      if (!JSON.parse(localStorage.getItem("darkTheme"))) {
+      if (
+        !(
+          JSON.parse(localStorage.getItem("darkTheme")) ||
+          (JSON.parse(localStorage.getItem("darkTheme")) == null &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        )
+      ) {
         $("#stylesheet-link").after(
           `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
         );
@@ -172,11 +178,11 @@
       }
     });
     $("#mathjax-toggle").click(() => {
-      if (!JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
-        localStorage.setItem("mathJaXDisabled", true);
+      if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
+        localStorage.setItem("mathJaxDisabled", true);
         $("#mathjax-toggle").text("Turn on MathJaX");
       } else {
-        localStorage.setItem("mathJaXDisabled", false);
+        localStorage.setItem("mathJaxDisabled", false);
         $("#mathjax-toggle").text("Turn off MathJaX");
       }
     });
@@ -829,7 +835,7 @@
   const underscores = (string) => string.replace(/ /g, "_");
 
   const latexer = (html) => {
-    if (!JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
+    if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
       let images = html.match(/<img (?:.*?) class="latex\w*?" (?:.*?)>/g);
       if (images) {
         for (let image of images) {
@@ -1731,7 +1737,7 @@
     if (JSON.parse(localStorage.getItem("serifFont")))
       $(".article-text").addClass("serif-text");
 
-    if (!JSON.parse(localStorage.getItem("mathJaXDisabled"))) {
+    if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
       $(".article-text").addClass("mathjax-text");
     } else {
       $(".article-text").removeClass("mathjax-text");
