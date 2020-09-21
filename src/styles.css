@@ -4,6 +4,7 @@
   --header-color: #222;
   --secondary-color: #333;
   --subtitle-color: #444;
+  --hr-color: #aaa;
   --body-color: #f3f3f3;
   --page-container-color: #fcfcfc;
   --page-container-box-shadow: 0 5px 20px hsl(217deg, 100%, 5%, 20%);
@@ -519,7 +520,7 @@ h3 {
   font: bold 1.05em "Computer Modern Bright";
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid var(--hr-color);
 }
 
 .batch-solutions-text h2:not(.problem-heading),
