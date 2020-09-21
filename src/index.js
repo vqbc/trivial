@@ -1754,7 +1754,8 @@
       let articleText = $(this).html();
       articleText = articleText
         .replace(/\\overarc/g, "\\overparen")
-        .replace(/\\congruent/g, "\\cong");
+        .replace(/\\congruent/g, "\\cong")
+        .replace(/<pre>\s+?([\s\S]*?)<\/pre>/g, "$1");
       $(this).html(articleText);
     });
   }

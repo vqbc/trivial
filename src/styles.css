@@ -548,6 +548,20 @@ img {
   height: auto;
 }
 
+.wikitable {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wikitable tr:first-child > * {
+  border-bottom: 1px solid var(--hr-color);
+}
+
+.wikitable th,
+.wikitable td {
+  padding: 0.1em 0.5em;
+}
+
 .article-text > *:last-child {
   margin-bottom: 1em;
 }
