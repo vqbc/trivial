@@ -143,9 +143,13 @@
     if (JSON.parse(localStorage.getItem("serifFont"))) {
       $("#serif-toggle").text("Use default problem font");
     }
+    if (JSON.parse(localStorage.getItem("unjustifyText"))) {
+      $("#justify-toggle").text("Justify text");
+    }
     if (JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
       $("#mathjax-toggle").text("Turn on MathJaX");
     }
+
     $("#dark-toggle").click(() => {
       document.body.removeAttribute("style");
       document.querySelector(".page-container").removeAttribute("style");
@@ -167,6 +171,7 @@
         $("#dark-toggle").text("Use dark theme");
       }
     });
+
     $("#serif-toggle").click(() => {
       $(".article-text").toggleClass("serif-text");
       if (!JSON.parse(localStorage.getItem("serifFont"))) {
@@ -177,6 +182,18 @@
         $("#serif-toggle").text("Use LaTeX problem font");
       }
     });
+
+    $("#justify-toggle").click(() => {
+      $(".article-text").toggleClass("unjustify-text");
+      if (!JSON.parse(localStorage.getItem("unjustifyText"))) {
+        localStorage.setItem("unjustifyText", true);
+        $("#justify-toggle").text("Justify text");
+      } else {
+        localStorage.setItem("unjustifyText", false);
+        $("#justify-toggle").text("Unjustify text");
+      }
+    });
+
     $("#mathjax-toggle").click(() => {
       if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
         localStorage.setItem("mathJaxDisabled", true);
@@ -255,7 +272,7 @@
       );
       mathJaxFormat();
       MathJax.typeset();
-      serifText();
+      customText();
       fixLinks();
       directLinks();
       collapseSolutions();
@@ -324,7 +341,7 @@
       $("#article-header").html("Error");
       $(".aops-link").remove();
     }
-    serifText();
+    customText();
     fixLinks();
     directLinks();
   }
@@ -1355,7 +1372,7 @@
       $(".loading-notice").remove();
       mathJaxFormat();
       MathJax.typeset();
-      serifText();
+      customText();
       if ($("#input-name").val())
         $("#batch-header").html(sanitize($("#input-name").val()));
       else
@@ -1488,7 +1505,7 @@
       $(".loading-notice").remove();
       mathJaxFormat();
       MathJax.typeset();
-      serifText();
+      customText();
       changeName();
       fixLinks();
       collapseSolutions();
@@ -1628,7 +1645,7 @@
       $(".loading-notice").remove();
       mathJaxFormat();
       MathJax.typeset();
-      serifText();
+      customText();
       changeName();
       fixLinks();
       collapseSolutions();
@@ -1733,9 +1750,12 @@
     });
   }
 
-  function serifText() {
+  function customText() {
     if (JSON.parse(localStorage.getItem("serifFont")))
       $(".article-text").addClass("serif-text");
+
+    if (JSON.parse(localStorage.getItem("unjustifyText")))
+      $(".article-text").addClass("unjustify-text");
 
     if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
       $(".article-text").addClass("mathjax-text");
