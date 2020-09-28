@@ -143,8 +143,8 @@
     if (JSON.parse(localStorage.getItem("serifFont"))) {
       $("#serif-toggle").text("Use default problem font");
     }
-    if (JSON.parse(localStorage.getItem("unjustifyText"))) {
-      $("#justify-toggle").text("Justify text");
+    if (JSON.parse(localStorage.getItem("justifyText"))) {
+      $("#justify-toggle").text("Unjustify text");
     }
     if (JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
       $("#mathjax-toggle").text("Turn on MathJaX");
@@ -184,13 +184,13 @@
     });
 
     $("#justify-toggle").click(() => {
-      $(".article-text").toggleClass("unjustify-text");
-      if (!JSON.parse(localStorage.getItem("unjustifyText"))) {
-        localStorage.setItem("unjustifyText", true);
-        $("#justify-toggle").text("Justify text");
-      } else {
-        localStorage.setItem("unjustifyText", false);
+      $(".article-text").toggleClass("justify-text");
+      if (!JSON.parse(localStorage.getItem("justifyText"))) {
+        localStorage.setItem("justifyText", true);
         $("#justify-toggle").text("Unjustify text");
+      } else {
+        localStorage.setItem("justifyText", false);
+        $("#justify-toggle").text("Justify text");
       }
     });
 
@@ -1754,8 +1754,8 @@
     if (JSON.parse(localStorage.getItem("serifFont")))
       $(".article-text").addClass("serif-text");
 
-    if (JSON.parse(localStorage.getItem("unjustifyText")))
-      $(".article-text").addClass("unjustify-text");
+    if (JSON.parse(localStorage.getItem("justifyText")))
+      $(".article-text").addClass("justify-text");
 
     if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
       $(".article-text").addClass("mathjax-text");

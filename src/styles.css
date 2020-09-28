@@ -649,7 +649,7 @@ footer {
 
 /* Breakpoint layouts */
 @media (min-width: 1201px) {
-  .mathjax-text:not(.unjustify-text) p {
+  .justify-text p {
     text-align: justify;
   }
 }
@@ -750,7 +750,7 @@ footer {
     box-shadow: none;
   }
 
-  .mathjax-text:not(.unjustify-text) p {
+  .justify-text p {
     text-align: justify;
   }
 
