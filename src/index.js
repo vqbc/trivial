@@ -52,10 +52,10 @@
     <input class="input-range" id="input-diff"></input>
   </div>`;
   let batchOptions = `<input class="input-field input-field-top input-field-left"
-      id="input-name" type="text" placeholder='Batch name (optional)'/>
+      id="input-name" type="text" placeholder="Batch name (optional)"/>
     <input class="input-field input-field-top input-field-right"
       id="input-break" type="number" min="1" max="40"
-      placeholder='Page break every n problems (optional)'/>
+      placeholder="Page break every n problems (optional)"/>
     <div class="input-container checkbox-container">
       <div class="checkbox-wrap">
         <input type="checkbox" checked class="input-check" id="input-sort"/>
@@ -1024,10 +1024,10 @@
     $("#secondary-button-container").after(
       `<div class="options-input" id="batch-input">
         <input class="input-field input-field-top input-field-left"
-          id="input-name" type="text" placeholder='Batch name (optional)'/>
+          id="input-name" type="text" placeholder="Batch name (optional)"/>
         <input class="input-field input-field-top input-field-right"
           id="input-break" type="number" min="1" max="40"
-          placeholder='Page break every n problems (optional)'/>
+          placeholder="Page break every n problems (optional)"/>
         <div class="input-container checkbox-container checkbox-container-small">
           <div class="checkbox-wrap">
             <input type="checkbox" checked class="input-check" id="input-hide"/>
@@ -1835,9 +1835,9 @@
     subtitleClicked++;
     let text =
       subtitleClicked % 4 === 1
-        ? "Alcumus, but you don't get internet points"
+        ? "Alcumus, but you don’t get internet points"
         : subtitleClicked % 4 === 2
-        ? "Brilliant, but you don't learn anything useful"
+        ? "Brilliant, but you don’t learn anything useful"
         : subtitleClicked % 4 === 3
         ? "The AoPS Wiki, but you waste time trying to find the other easter eggs"
         : "An AoPS Wiki Reader for Studying";
