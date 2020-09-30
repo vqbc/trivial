@@ -141,7 +141,7 @@
       $("#dark-toggle").text("Use light theme");
     }
     if (JSON.parse(localStorage.getItem("serifFont"))) {
-      $("#serif-toggle").text("Use default problem font");
+      $("#serif-toggle").text("Use sans-serif problem font");
     }
     if (JSON.parse(localStorage.getItem("justifyText"))) {
       $("#justify-toggle").text("Unjustify text");
@@ -176,10 +176,10 @@
       $(".article-text").toggleClass("serif-text");
       if (!JSON.parse(localStorage.getItem("serifFont"))) {
         localStorage.setItem("serifFont", true);
-        $("#serif-toggle").text("Use default problem font");
+        $("#serif-toggle").text("Use sans-serif problem font");
       } else {
         localStorage.setItem("serifFont", false);
-        $("#serif-toggle").text("Use LaTeX problem font");
+        $("#serif-toggle").text("Use serif problem font");
       }
     });
 
