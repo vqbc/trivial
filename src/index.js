@@ -847,7 +847,8 @@
     string
       .replace(/_/g, " ")
       .replace("Problems/Problem ", "#")
-      .replace("%27", "’");
+      .replace("%27", "'")
+      .replace("'", "’");
 
   const underscores = (string) => string.replace(/ /g, "_");
 
