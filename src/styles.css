@@ -478,10 +478,10 @@ tags > span {
 .article-text {
   font-size: 1.12rem;
 }
+
 .serif-text {
   font-family: "Palatino", "Palatino Linotype", "Book Antiqua", MathJax_Main;
-  font-size-adjust: 0.74;
-  line-height: 1.32;
+  font-size: 1.06rem;
 }
 
 a {
@@ -513,17 +513,19 @@ a.secret-link {
   font-weight: normal;
 }
 
+.mw-parser-output > p:first-child {
+  margin-top: 0.6em;
+}
+
 code,
 pre {
   font-family: "Computer Modern Typewriter";
-  font-size-adjust: initial;
 }
 
 .article-text h1,
 .article-text h2,
 h3 {
   font: bold 1.16rem "Computer Modern Bright";
-  font-size-adjust: initial;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--hr-color);
