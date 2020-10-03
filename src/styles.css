@@ -516,6 +516,7 @@ a.secret-link {
 code,
 pre {
   font-family: "Computer Modern Typewriter";
+  font-size-adjust: initial;
 }
 
 .article-text h1,
@@ -589,10 +590,6 @@ mjx-box > mjx-mtext {
   line-height: 0;
 }
 
-.katex {
-  font: normal 1em "Computer Modern Serif";
-}
-
 mjx-merror {
   font-style: italic;
   background: none;
@@ -603,7 +600,6 @@ mjx-merror mjx-utext {
 }
 
 .error,
-.katex-error,
 mjx-merror {
   color: var(--error-color);
 } /**/
