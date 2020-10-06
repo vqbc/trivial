@@ -480,9 +480,8 @@ tags > span {
 }
 
 .serif-text {
-  font: 1.06rem "Palatino", "Palatino Linotype", "Book Antiqua", MathJax_Main,
-    serif;
-  line-height: 1.4;
+  font: 1.06rem / 1.4 "Palatino", "Palatino Linotype", "Book Antiqua",
+    MathJax_Main, serif;
 }
 
 .justify-text p {
