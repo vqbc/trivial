@@ -43,7 +43,7 @@ html {
 
 body {
   color: var(--text-color);
-  font: 1.1rem "Computer Modern Sans";
+  font: 1.1rem "Computer Modern Sans", sans-serif;
   background: var(--body-color);
 }
 
@@ -63,7 +63,7 @@ body {
 .header {
   margin-bottom: 0;
   color: var(--header-color);
-  font: bold 2em "Computer Modern Bright";
+  font: bold 2em "Computer Modern Bright", sans-serif;
 }
 
 .logo {
@@ -74,7 +74,7 @@ body {
 .subtitle {
   margin-top: 0;
   color: var(--subtitle-color);
-  font: italic 1.5em "Computer Modern Bright";
+  font: italic 1.5em "Computer Modern Bright", sans-serif;
 } /**/
 
 /* Big top buttons */
@@ -89,7 +89,7 @@ body {
   margin: 0 1%;
   padding: 0.7rem 0.6rem 0.5rem;
   color: white;
-  font: bold 1.1em "Computer Modern Bright";
+  font: bold 1.1em "Computer Modern Bright", sans-serif;
   text-shadow: var(--button-text-shadow);
   background: var(--main-button-color);
   border: none;
@@ -141,7 +141,7 @@ body {
   margin-left: var(--horizontal-item-spacing);
   padding: 0.3rem var(--horizontal-item-spacing);
   color: white;
-  font: bold 1em "Computer Modern Bright";
+  font: bold 1em "Computer Modern Bright", sans-serif;
   text-shadow: var(--button-text-shadow);
   background: var(--input-button-color);
   border: none;
@@ -206,7 +206,7 @@ body {
   flex: 1 0 30%;
   min-width: 0;
   padding: 0.3em 0.6em;
-  font: 1em "Computer Modern Sans";
+  font: 1em "Computer Modern Sans", sans-serif;
   border: none;
   box-shadow: var(--input-box-shadow);
   -webkit-appearance: none;
@@ -307,7 +307,7 @@ tags > span {
 
 /* Range slider thingy */
 .irs {
-  font-family: "Computer Modern Bright";
+  font-family: "Computer Modern Bright", sans-serif;
 }
 
 .irs--flat .irs-line {
@@ -429,7 +429,7 @@ tags > span {
   margin: -0.5rem -2rem 0;
   padding: 0.6rem 1rem 0.3rem;
   color: white;
-  font-family: "Computer Modern Bright";
+  font-family: "Computer Modern Bright", sans-serif;
   text-shadow: var(--main-text-shadow);
   background: var(--section-color);
 }
@@ -480,7 +480,8 @@ tags > span {
 }
 
 .serif-text {
-  font: 1.06rem "Palatino", "Palatino Linotype", "Book Antiqua", MathJax_Main;
+  font: 1.06rem "Palatino", "Palatino Linotype", "Book Antiqua", MathJax_Main,
+    serif;
   line-height: 1.4;
 }
 
@@ -519,13 +520,13 @@ a.secret-link {
 
 code,
 pre {
-  font-family: "Computer Modern Typewriter";
+  font-family: "Computer Modern Typewriter", monospace;
 }
 
 .article-text h1,
 .article-text h2,
 h3 {
-  font: bold 1.16rem "Computer Modern Bright";
+  font: bold 1.16rem "Computer Modern Bright", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--hr-color);
@@ -743,7 +744,7 @@ footer {
     margin: 0 0 1rem;
     padding: 0;
     color: inherit;
-    font: bold 2rem "Computer Modern Sans Demi-Condensed";
+    font: bold 2rem "Computer Modern Sans Demi-Condensed", sans-serif;
     text-shadow: none;
     background: none;
   }
