@@ -485,6 +485,10 @@ tags > span {
   line-height: 1.4;
 }
 
+.justify-text p {
+  text-align: justify;
+}
+
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -652,12 +656,6 @@ footer {
 } /**/
 
 /* Breakpoint layouts */
-@media (min-width: 1201px) {
-  .justify-text p {
-    text-align: justify;
-  }
-}
-
 @media (max-width: 1500px) {
   .page-container {
     width: 1200px;
@@ -752,10 +750,6 @@ footer {
   .page-container,
   .problem-section {
     box-shadow: none;
-  }
-
-  .justify-text p {
-    text-align: justify;
   }
 
   a {
