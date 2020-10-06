@@ -4,7 +4,7 @@
   "description": "A modern AoPS Wiki reader for searching problems, creating problem sets, reading solutions, and more.",
   "icons": [
     {
-      "src": "/icons/favicon-192x192.png",
+      "src": "icons/favicon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     }
