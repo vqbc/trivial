@@ -954,6 +954,7 @@
       ${notes}`
     );
     collapseNotes();
+    directLinks();
 
     let inputSingleTest = document.querySelector("#input-singletest");
     new Tagify(inputSingleTest, {
@@ -980,6 +981,7 @@
       ${notes}`
     );
     collapseNotes();
+    directLinks();
 
     let inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
@@ -1057,6 +1059,7 @@
       ${notes}`
     );
     collapseNotes();
+    directLinks();
 
     let inputSingleTest = document.querySelector("#input-singletest");
     new Tagify(inputSingleTest, {
@@ -1089,6 +1092,7 @@
     );
     allPagesWarnAC();
     collapseNotes();
+    directLinks();
 
     let inputProblems = document.querySelector("#input-problems");
     new Tagify(inputProblems, {
@@ -1121,6 +1125,7 @@
       ${notes}`
     );
     collapseNotes();
+    directLinks();
 
     let inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
@@ -1182,6 +1187,7 @@
     );
     allPagesWarnAC();
     collapseNotes();
+    directLinks();
 
     let inputFind = document.querySelector("#input-find");
     new Tagify(inputFind, {
@@ -1790,7 +1796,7 @@
   }
 
   async function directLinks() {
-    $(".article-text a").click(async function (event) {
+    $(".article-text a, #notes-text a").click(async function (event) {
       let href = $(this).attr("href");
       if (href.includes("artofproblemsolving.com/wiki/")) {
         event.preventDefault();
