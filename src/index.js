@@ -1064,6 +1064,7 @@
     );
     collapseNotes();
     directLinks();
+    hideToggle();
 
     let inputSingleTest = document.querySelector("#input-singletest");
     new Tagify(inputSingleTest, {
@@ -1097,6 +1098,7 @@
     allPagesWarnAC();
     collapseNotes();
     directLinks();
+    hideToggle();
 
     let inputProblems = document.querySelector("#input-problems");
     new Tagify(inputProblems, {
@@ -1130,6 +1132,7 @@
     );
     collapseNotes();
     directLinks();
+    hideToggle();
 
     let inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
@@ -1823,9 +1826,15 @@
   }
 
   function hideLinks() {
-    if ($("#input-hide").prop("checked")) {
+    if ($("#input-hide").prop("checked"))
       $("#batch-text .source-link").addClass("noprint");
-    }
+    else $("#batch-text .source-link").removeClass("noprint");
+  }
+
+  function hideToggle() {
+    $("#input-hide").change(() => {
+      $("#batch-text .source-link").toggleClass("noprint");
+    });
   }
 
   function collapseSolutions() {
