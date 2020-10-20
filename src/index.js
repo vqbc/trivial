@@ -1384,16 +1384,15 @@
       mathJaxFormat();
       MathJax.typeset();
       customText();
-      if ($("#input-name").val())
-        $("#batch-header").html(sanitize($("#input-name").val()));
-      else
-        $("#batch-header").html(
-          sanitize(
+      let name = $("#input-name").val()
+        ? sanitize($("#input-name").val())
+        : sanitize(
             `${$("#input-singleyear").val()} ${$(
               "#input-singletest"
             ).val()} Problems`
-          )
-        );
+          );
+      $("#batch-header").html(name);
+      document.title = name;
       fixLinks();
       collapseSolutions();
       directLinks();
@@ -1777,7 +1776,10 @@
 
   function changeName() {
     let name = $("#input-name").val();
-    if (name) $("#batch-header").html(sanitize(name));
+    if (name) {
+      $("#batch-header").html(sanitize(name));
+      document.title = sanitize(name);
+    }
   }
 
   function mathJaxFormat() {

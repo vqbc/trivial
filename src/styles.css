@@ -546,7 +546,7 @@ h3 {
   break-inside: avoid;
 }
 
-.article-text dl, /* redirect disclaimers etc */
+.article-text dl:first-child, /* redirect disclaimers etc */
 .article-text .toc,
 .article-text .mw-editsection,
 .article-text p:empty,
@@ -557,6 +557,12 @@ h3 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+img.latexcenter {
+  display: block;
+  text-align: center;
+  padding: 10px;
 }
 
 .wikitable {
