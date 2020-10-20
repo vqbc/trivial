@@ -546,7 +546,8 @@ h3 {
   break-inside: avoid;
 }
 
-.article-text dl:first-child, /* redirect disclaimers etc */
+.article-text dl:first-child,
+.article-text .problem-heading + dl, /* redirect disclaimers etc */
 .article-text .toc,
 .article-text .mw-editsection,
 .article-text p:empty,
