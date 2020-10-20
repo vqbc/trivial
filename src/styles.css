@@ -561,8 +561,9 @@ img {
 
 img.latexcenter {
   display: block;
-  text-align: center;
+  margin: auto;
   padding: 10px;
+  text-align: center;
 }
 
 .wikitable {
