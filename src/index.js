@@ -1780,8 +1780,9 @@
     $(".article-text").each(function () {
       let articleText = $(this).html();
       articleText = articleText
-        .replace(/\\overarc/g, "\\overparen")
         .replace(/\\congruent/g, "\\cong")
+        .replace(/\\overarc/g, "\\overparen")
+        .replace(/\\textdollar/g, "\\$")
         .replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
       $(this).html(articleText);
     });
