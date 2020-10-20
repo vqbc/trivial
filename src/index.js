@@ -264,6 +264,8 @@
       $("#problem-text").html(getProblem(problemText));
       $("#solutions-text").html(getSolutions(problemText));
       $("#article-header").html(titleCleanup(pagename));
+      document.title = titleCleanup(pagename);
+
       $(".aops-link").attr(
         "href",
         `https://artofproblemsolving.com/wiki/index.php/${underscores(
@@ -326,6 +328,8 @@
 
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
+      document.title = titleCleanup(pagename);
+
       $(".aops-link").attr(
         "href",
         `https://artofproblemsolving.com/wiki/index.php/${underscores(

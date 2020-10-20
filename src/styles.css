@@ -731,6 +731,16 @@ footer {
     font-size: 11.5pt;
   }
 
+  .serif-text,
+  .MathJax {
+    font-size: 11pt !important;
+  }
+
+  .article-text h1,
+  .article-text h2 {
+    font-size: 12pt;
+  }
+
   img.latex {
     transform: scale(0.9);
   } /**/
