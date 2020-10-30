@@ -848,10 +848,9 @@
   const unsanitize = (string) => string.replace(/&gt;/g, ">");
 
   const titleCleanup = (string) =>
-    string
+    decodeURI(string)
       .replace(/_/g, " ")
       .replace("Problems/Problem ", "#")
-      .replace("%27", "'")
       .replace("'", "’");
 
   const underscores = (string) => string.replace(/ /g, "_");
