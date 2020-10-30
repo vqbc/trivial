@@ -783,6 +783,10 @@ footer {
   } /**/
 
   /* Footer */
+  .page-container {
+    min-height: initial;
+  }
+
   .footer-fixed {
     position: fixed;
     bottom: 0;
