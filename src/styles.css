@@ -609,7 +609,7 @@ mjx-merror {
 }
 
 mjx-merror mjx-utext {
-  font-family: MJXZERO, MJXTEX;
+  font-family: MJXZERO, MJXTEX, serif;
 }
 
 .error,
@@ -766,10 +766,6 @@ footer {
   .page-container,
   .problem-section {
     box-shadow: none;
-  }
-
-  a {
-    color: inherit;
   } /**/
 
   /* Hide things */
