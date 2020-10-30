@@ -1407,7 +1407,6 @@
   $(".page-container").on("click", "#problems-button", async () => {
     async function makeBatch() {
       let problems = [];
-      let inputProblems = $("#input-problems");
       let problemTitles = inputProblems
         .val()
         .split(",")
@@ -1512,7 +1511,18 @@
 
     addBatch();
     allPagesWarn();
-    await makeBatch();
+
+    let inputProblems = $("#input-problems");
+    if (!inputProblems.val()) {
+      $(".article-text").html(
+        `<p class="error">
+          No problems were entered.
+        </p>`
+      );
+      $("#batch-header").html("Error");
+    } else {
+      await makeBatch();
+    }
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
