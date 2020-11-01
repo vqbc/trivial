@@ -5,7 +5,8 @@
   --secondary-color: #333;
   --subtitle-color: #444;
   --hr-color: #aaa;
-  --body-color: #f3f3f3;
+  --body-color: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8cGF0aCBkPSJNMjggMEwyOCAzNEwwIDUwTDAgODRMMjggMTAwTDU2IDg0TDU2IDUwTDI4IDM0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8L3N2Zz4="),
+    linear-gradient(#f3f3f3, #f3f3f3);
   --page-container-color: #fcfcfc;
   --page-container-box-shadow: 0 5px 20px hsl(217deg, 100%, 5%, 20%);
   --item-color: white;
