@@ -284,9 +284,10 @@
         problemText,
       ];
     } else {
-      $(".article-text").html(
+      $(".article-text").before(
         `<p class="error">The page you specified does not exist.</p>`
       );
+      $(".article-text").remove();
       $("#article-header").html("Error");
       $(".aops-link").remove();
       $("#solutions-section").remove();
@@ -339,9 +340,10 @@
       mathJaxFormat();
       MathJax.typeset();
     } else {
-      $(".article-text").html(
+      $(".article-text").before(
         `<p class="error">The page you specified does not exist.</p>`
       );
+      $(".article-text").remove();
       $("#article-header").html("Error");
       $(".aops-link").remove();
     }
@@ -1227,13 +1229,13 @@
     console.log(`${pages.length} total problems retrieved.`);
 
     if (pages.length === 0) {
-      await addProblem("Error");
-      $(".aops-link").remove();
-      $("#solutions-section").remove();
-      $(".article-text").html(
-        `<p class="error">
-          No problems could be found meeting those requirements.
-        </p>`
+      $(".notes").before(
+        `<div class="problem-section">
+          <h2 class="section-header" id="article-header">Error</h2>
+          <p class="error">
+            No problems could be found meeting those requirements.
+          </p>
+        </div>`
       );
     } else {
       let invalid = true;
@@ -1513,12 +1515,14 @@
 
     let inputProblems = $("#input-problems");
     if (!inputProblems.val()) {
-      $(".article-text").html(
+      $(".article-text").before(
         `<p class="error">
           No problems were entered.
         </p>`
       );
+      $(".article-text").remove();
       $("#batch-header").html("Error");
+      $("#solutions-section").html("Error");
     } else {
       await makeBatch();
     }
@@ -1653,12 +1657,14 @@
     let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
     if (pages.length === 0) {
-      $(".article-text").html(
+      $(".article-text").before(
         `<p class="error">
           No problems could be found meeting those requirements.
         </p>`
       );
+      $(".article-text").remove();
       $("#batch-header").html("Error");
+      $("#solutions-section").html("Error");
     } else {
       await makeBatch();
     }
