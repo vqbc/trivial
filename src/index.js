@@ -817,10 +817,16 @@
   }
 
   function addProblems(problems) {
-    let problemIndex = 0;
-    for (let problem of problems) {
+    let problemList = problems.map((e) => titleCleanup(e.title)).join(", ");
+    $("#batch-text")
+      .before(`<a id="copy-problems" data-clipboard-text="${problemList}">
+        Copy problem list (can paste in Choose Problems)
+      </a>`);
+    new ClipboardJS("#copy-problems");
+
+    for (let [index, problem] of problems.entries()) {
       $("#batch-text").append(`<div class="article-problem">
-        <h2 class="problem-heading">Problem ${problemIndex + 1}
+        <h2 class="problem-heading">Problem ${index + 1}
           <span class="source-link">
             (<a href="https://artofproblemsolving.com/wiki/index.php/${underscores(
               problem.title
@@ -831,7 +837,7 @@
 
       $("#solutions-text").append(`<div class="article-problem">
         <h2 class="problem-heading">
-          Problem ${problemIndex + 1}
+          Problem ${index + 1}
           <span class="source-link">
             (<a href="https://artofproblemsolving.com/wiki/index.php/${underscores(
               problem.title
@@ -839,7 +845,6 @@
           </span>
         </h2>${problem.solutions}
       </div>`);
-      problemIndex++;
     }
   }
 

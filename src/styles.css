@@ -31,8 +31,10 @@
   --input-accent-color: hsl(210deg, 80%, 67%);
   --input-handle-color: hsl(210deg, 40%, 50%);
   --error-color: hsl(0deg, 80%, 50%);
+  --error-hover-color: hsl(0deg, 80%, 65%);
   --section-color: hsl(163deg, 47%, 50%);
-  --link-color: hsl(210deg, 86%, 53%);
+  --link-color: hsl(210deg, 80%, 50%);
+  --link-hover-color: hsl(210deg, 80%, 59%);
   --vertical-item-spacing: 0.5rem;
   --horizontal-item-spacing: 0.6rem;
 } /**/
@@ -491,13 +493,23 @@ tags > span {
 a {
   color: var(--link-color);
   text-decoration: none;
+  transition: all 0.1s;
+}
+
+a:hover {
+  color: var(--link-hover-color);
 }
 
 a.new {
   color: var(--error-color); /* redlinks */
 }
 
-a.aops-link {
+a.new:hover {
+  color: var(--error-hover-color);
+}
+
+a.aops-link,
+a#copy-problems {
   display: inline-block;
   margin-top: 1em;
   font-style: italic;
@@ -634,7 +646,8 @@ footer {
   margin: 0.4em 0;
 }
 
-.toggle-link {
+.toggle-link,
+#copy-problems {
   cursor: pointer;
 } /**/
 
