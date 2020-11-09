@@ -790,6 +790,7 @@ footer {
   .notes,
   .error,
   a.aops-link,
+  a#copy-problems,
   .section-collapsed,
   #solutions-header::after,
   .noprint {
