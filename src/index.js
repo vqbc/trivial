@@ -1722,6 +1722,7 @@
   }
 
   function clearOptions() {
+    document.title = "Trivial AoPS Wiki Reader";
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
@@ -1729,6 +1730,7 @@
   }
 
   function clearAll() {
+    document.title = "Trivial AoPS Wiki Reader";
     $("#secondary-button-container").remove();
     $(".options-input").remove();
     $(".error").remove();
@@ -1802,6 +1804,8 @@
     if (name) {
       $("#batch-header").html(sanitize(name));
       document.title = sanitize(name);
+    } else {
+      document.title = "Problem Batch";
     }
   }
 
