@@ -264,7 +264,7 @@
       $("#problem-text").html(getProblem(problemText));
       $("#solutions-text").html(getSolutions(problemText));
       $("#article-header").html(titleCleanup(pagename));
-      document.title = titleCleanup(pagename);
+      document.title = titleCleanup(pagename) + " | Trivial AoPS Wiki Reader";
 
       $(".aops-link").attr(
         "href",
@@ -329,7 +329,7 @@
 
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
-      document.title = titleCleanup(pagename);
+      document.title = titleCleanup(pagename) + " | Trivial AoPS Wiki Reader";
 
       $(".aops-link").attr(
         "href",
@@ -1401,7 +1401,7 @@
             ).val()} Problems`
           );
       $("#batch-header").html(name);
-      document.title = name;
+      document.title = name + " | Trivial AoPS Wiki Reader";
       fixLinks();
       collapseSolutions();
       directLinks();
@@ -1803,9 +1803,9 @@
     let name = $("#input-name").val();
     if (name) {
       $("#batch-header").html(sanitize(name));
-      document.title = sanitize(name);
+      document.title = sanitize(name) + " | Trivial AoPS Wiki Reader";
     } else {
-      document.title = "Problem Batch";
+      document.title = "Problem Batch | Trivial AoPS Wiki Reader";
     }
   }
 
