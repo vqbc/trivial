@@ -828,7 +828,7 @@
       $("#batch-text").append(`<div class="article-problem">
         <h2 class="problem-heading">Problem ${index + 1}
           <span class="source-link">
-            (<a href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+            (<a class="source-link-a" href="https://artofproblemsolving.com/wiki/index.php/${underscores(
               problem.title
             )}">${titleCleanup(problem.title)}</a>)
           </span>
@@ -839,7 +839,7 @@
         <h2 class="problem-heading">
           Problem ${index + 1}
           <span class="source-link">
-            (<a href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+            (<a class="source-link-a" href="https://artofproblemsolving.com/wiki/index.php/${underscores(
               problem.title
             )}">${titleCleanup(problem.title)}</a>)
           </span>

@@ -277,7 +277,7 @@ tags > span {
 }
 
 .input-field .tagify__input {
-  margin: 3px;
+  margin: 6px 3px 0;
 }
 
 .tagify__input:empty::before {
@@ -523,6 +523,16 @@ a.dark-link {
 a.secret-link {
   color: inherit;
   cursor: default;
+}
+
+.article-text a:not(.source-link-a) {
+  color: inherit;
+  border-bottom: 1px solid var(--link-color);
+}
+
+.article-text a:not(.source-link-a):hover {
+  color: var(--link-hover-color);
+  border-bottom-color: var(--link-hover-color);
 }
 
 .source-link {
