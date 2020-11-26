@@ -264,7 +264,7 @@
       $("#problem-text").html(getProblem(problemText));
       $("#solutions-text").html(getSolutions(problemText));
       $("#article-header").html(titleCleanup(pagename));
-      document.title = titleCleanup(pagename) + " | Trivial AoPS Wiki Reader";
+      document.title = titleCleanup(pagename) + " - Trivial AoPS Wiki Reader";
 
       $(".aops-link").attr(
         "href",
@@ -329,7 +329,7 @@
 
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
-      document.title = titleCleanup(pagename) + " | Trivial AoPS Wiki Reader";
+      document.title = titleCleanup(pagename) + " - Trivial AoPS Wiki Reader";
 
       $(".aops-link").attr(
         "href",
@@ -1191,7 +1191,7 @@
       `<div class="options-input" id="find-input">
         <input class="input-field" id="input-find" type="text"
         placeholder="e.g. Heron's Formula"
-        data-whitelist="${allPages.toString()}">
+        data-whitelist="${allPages.toString().replace(/'/g, "’")}">
         <button class="input-button" id="find-button">
           View Article
         </button>
@@ -1401,7 +1401,7 @@
             ).val()} Problems`
           );
       $("#batch-header").html(name);
-      document.title = name + " | Trivial AoPS Wiki Reader";
+      document.title = name + " - Trivial AoPS Wiki Reader";
       fixLinks();
       collapseSolutions();
       directLinks();
@@ -1691,7 +1691,7 @@
   $(".page-container").on("click", "#find-button", async () => {
     clearProblem();
 
-    await addArticle(sanitize($("#input-find").val()));
+    await addArticle(sanitize($("#input-find").val()).replace(/’/g, "'"));
   });
 
   $(".page-container").on("click", "#theorem-button", async () => {
@@ -1803,9 +1803,9 @@
     let name = $("#input-name").val();
     if (name) {
       $("#batch-header").html(sanitize(name));
-      document.title = sanitize(name) + " | Trivial AoPS Wiki Reader";
+      document.title = sanitize(name) + " - Trivial AoPS Wiki Reader";
     } else {
-      document.title = "Problem Batch | Trivial AoPS Wiki Reader";
+      document.title = "Problem Batch - Trivial AoPS Wiki Reader";
     }
   }
 
