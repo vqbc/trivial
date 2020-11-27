@@ -608,6 +608,18 @@ img.latexcenter {
   margin-bottom: 1em;
 }
 
+.article-text:not(.mathjax-text) .mathjax-container {
+  display: none;
+}
+
+.mathjax-text .fallback-container:not(.fallback-live) {
+  display: none;
+}
+
+.mathjax-text .mathjax-broken {
+  display: none;
+}
+
 .MathJax {
   display: inline-block;
   max-width: 100%;

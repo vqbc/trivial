@@ -94,8 +94,8 @@
       </li>
       <li>
         Turning off MathJaX uses the original raster images from AoPS for LaTeX,
-        which makes them blurrier and makes justified text impossible, but
-        prevents some bugs with pages like 2019 AMC 10A #4.
+        which makes them blurrier, but prevents some bugs with pages like 2019
+        AMC 10A #4.
       </li>
       <li>
         AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
@@ -195,6 +195,7 @@
     });
 
     $("#mathjax-toggle").click(() => {
+      $(".article-text").toggleClass("mathjax-text");
       if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
         localStorage.setItem("mathJaxDisabled", true);
         $("#mathjax-toggle").text("Turn on MathJaX");
@@ -274,6 +275,7 @@
       );
       mathJaxFormat();
       MathJax.typeset();
+      mathJaxFallback();
       customText();
       fixLinks();
       directLinks();
@@ -339,6 +341,7 @@
       );
       mathJaxFormat();
       MathJax.typeset();
+      mathJaxFallback();
     } else {
       $(".article-text").before(
         `<p class="error">The page you specified does not exist.</p>`
@@ -863,16 +866,19 @@
   const underscores = (string) => string.replace(/ /g, "_");
 
   const latexer = (html) => {
-    if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
-      let images = html.match(/<img (?:.*?) class="latex\w*?" (?:.*?)>/g);
-      if (images) {
-        for (let image of images) {
-          if (!image.includes("[asy]")) {
-            html = html.replace(
-              image,
-              unsanitize(image.match(/alt="(.*?)"/)[1])
-            );
-          }
+    let images = html.match(/<img (?:.*?) class="latex\w*?" (?:.*?)>/g);
+    images = [...new Set(images)];
+
+    if (images) {
+      for (let image of images) {
+        if (!image.includes("[asy]")) {
+          html = html.replaceAll(
+            image,
+            `<span class="fallback-container">$&</span>
+            <span class="mathjax-container">
+              ${unsanitize(image.match(/alt="(.*?)"/)[1])}
+            </span>`
+          );
         }
       }
     }
@@ -1392,6 +1398,7 @@
       $(".loading-notice").remove();
       mathJaxFormat();
       MathJax.typeset();
+      mathJaxFallback();
       customText();
       let name = $("#input-name").val()
         ? sanitize($("#input-name").val())
@@ -1536,6 +1543,7 @@
       $(".loading-notice").remove();
       mathJaxFormat();
       MathJax.typeset();
+      mathJaxFallback();
       customText();
       changeName();
       fixLinks();
@@ -1678,6 +1686,7 @@
       $(".loading-notice").remove();
       mathJaxFormat();
       MathJax.typeset();
+      mathJaxFallback();
       customText();
       changeName();
       fixLinks();
@@ -1818,6 +1827,16 @@
         .replace(/\\textdollar/g, "\\$")
         .replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
       $(this).html(articleText);
+    });
+  }
+
+  function mathJaxFallback() {
+    $("mjx-merror").each(function () {
+      $(this).closest(".mathjax-container").addClass("mathjax-broken");
+      $(this)
+        .closest(".mathjax-container")
+        .prev(".fallback-container")
+        .addClass("fallback-live");
     });
   }
 
