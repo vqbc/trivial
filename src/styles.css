@@ -35,6 +35,8 @@
   --section-color: hsl(163deg, 47%, 50%);
   --link-color: hsl(210deg, 80%, 50%);
   --link-hover-color: hsl(210deg, 80%, 59%);
+  --text-button-color: hsl(177deg, 54%, 43%);
+  --text-button-hover-color: hsl(177deg, 54%, 50%);
   --vertical-item-spacing: 0.5rem;
   --horizontal-item-spacing: 0.6rem;
 } /**/
@@ -165,7 +167,7 @@ body {
 
 .input-button-full {
   width: 100%;
-  margin-left: auto;
+  margin-left: 0;
 } /**/
 
 /* Problem options input */
@@ -189,6 +191,10 @@ body {
 
 .input-container:focus {
   outline: 2px solid var(--input-focus-color);
+}
+
+.input-container-full {
+  flex: 1 0 100%;
 }
 
 .input-container-bottom {
@@ -608,6 +614,11 @@ img.latexcenter {
   margin-bottom: 1em;
 }
 
+.mathjax-container,
+.fallback-container {
+  display: inline-block;
+}
+
 .article-text:not(.mathjax-text) .mathjax-container {
   display: none;
 }
@@ -672,9 +683,20 @@ footer {
   margin: 0.4em 0;
 }
 
+.settings {
+  font-style: normal;
+}
+
 .toggle-link,
 #copy-problems {
+  color: var(--text-button-color);
+  font: 600 1.1rem "Computer Modern Bright", sans-serif;
   cursor: pointer;
+}
+
+.toggle-link:hover,
+#copy-problems:hover {
+  color: var(--text-button-hover-color);
 } /**/
 
 /* Loading bar */

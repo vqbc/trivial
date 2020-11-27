@@ -93,6 +93,10 @@
         >AoPS Wiki ratings</a>.
       </li>
       <li>
+        Copied problem lists can be pasted into inputs for multiple problems,
+        such as the Choose Problems main input.
+      </li>
+      <li>
         Turning off MathJaX uses the original raster images from AoPS for LaTeX,
         which makes them blurrier, but prevents some bugs with pages like 2019
         AMC 10A #4.
@@ -138,16 +142,16 @@
       (JSON.parse(localStorage.getItem("darkTheme")) == null &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
-      $("#dark-toggle").text("Use light theme");
+      $("#dark-toggle").text("Dark theme");
     }
     if (JSON.parse(localStorage.getItem("serifFont"))) {
-      $("#serif-toggle").text("Use sans-serif problem font");
+      $("#serif-toggle").text("Serif problem font");
     }
     if (JSON.parse(localStorage.getItem("justifyText"))) {
-      $("#justify-toggle").text("Unjustify text");
+      $("#justify-toggle").text("Justified text");
     }
     if (JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
-      $("#mathjax-toggle").text("Turn on MathJaX");
+      $("#mathjax-toggle").text("MathJax off");
     }
 
     $("#dark-toggle").click(() => {
@@ -164,11 +168,11 @@
           `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
         );
         localStorage.setItem("darkTheme", true);
-        $("#dark-toggle").text("Use light theme");
+        $("#dark-toggle").text("Dark theme");
       } else {
         $("#dark-stylesheet-link").remove();
         localStorage.setItem("darkTheme", false);
-        $("#dark-toggle").text("Use dark theme");
+        $("#dark-toggle").text("Light theme");
       }
     });
 
@@ -176,10 +180,10 @@
       $(".article-text").toggleClass("serif-text");
       if (!JSON.parse(localStorage.getItem("serifFont"))) {
         localStorage.setItem("serifFont", true);
-        $("#serif-toggle").text("Use sans-serif problem font");
+        $("#serif-toggle").text("Serif problem font");
       } else {
         localStorage.setItem("serifFont", false);
-        $("#serif-toggle").text("Use serif problem font");
+        $("#serif-toggle").text("Sans problem font");
       }
     });
 
@@ -187,10 +191,10 @@
       $(".article-text").toggleClass("justify-text");
       if (!JSON.parse(localStorage.getItem("justifyText"))) {
         localStorage.setItem("justifyText", true);
-        $("#justify-toggle").text("Unjustify text");
+        $("#justify-toggle").text("Justified text");
       } else {
         localStorage.setItem("justifyText", false);
-        $("#justify-toggle").text("Justify text");
+        $("#justify-toggle").text("Unjustified text");
       }
     });
 
@@ -198,10 +202,10 @@
       $(".article-text").toggleClass("mathjax-text");
       if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
         localStorage.setItem("mathJaxDisabled", true);
-        $("#mathjax-toggle").text("Turn on MathJaX");
+        $("#mathjax-toggle").text("MathJax off");
       } else {
         localStorage.setItem("mathJaxDisabled", false);
-        $("#mathjax-toggle").text("Turn off MathJaX");
+        $("#mathjax-toggle").text("MathJax on");
       }
     });
   })();
@@ -823,7 +827,7 @@
     let problemList = problems.map((e) => titleCleanup(e.title)).join(", ");
     $("#batch-text")
       .before(`<a id="copy-problems" data-clipboard-text="${problemList}">
-        Copy problem list (can paste in Choose Problems)
+        (Copy problem list)
       </a>`);
     new ClipboardJS("#copy-problems");
 
@@ -1097,7 +1101,7 @@
       `<div class="options-input" id="problems-input">
         ${batchOptions}
         <input class="input-field" id="input-problems" type="text"
-        placeholder="e.g. 2018 AMC 12B #24"
+        placeholder="Problems, e.g. 2018 AMC 12B #24"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
@@ -1130,13 +1134,18 @@
       `<div class="options-input" id="ranbatch-input">
         ${batchOptions}
         ${problemOptions}
-        <div class="input-container">
-        <label class="range-label">
-          Number of problems:
-        </label>
+        <div class="input-container input-container-full">
+          <label class="range-label">
+            Number of problems:
+          </label>
           <input class="input-range" id="input-number"/>
         </div>
-        <button class="input-button input-button-full" id="ranbatch-button">
+        <input class="input-field" id="input-problems" type="text"
+        placeholder="Always include these problems (optional)"
+        data-whitelist="${sortProblems(allProblems)
+          .map((e) => titleCleanup(e))
+          .toString()}">
+        <button class="input-button" id="ranbatch-button">
           Make Random
         </button>
       </div>
@@ -1161,6 +1170,14 @@
         enabled: 0,
         maxItems: 100,
       },
+    });
+    let inputProblems = document.querySelector("#input-problems");
+    new Tagify(inputProblems, {
+      originalInputValueFormat: (values) => values.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
+      enforceWhitelist: true,
     });
 
     $("#input-years").ionRangeSlider({
@@ -1196,8 +1213,8 @@
     $("#secondary-button-container").after(
       `<div class="options-input" id="find-input">
         <input class="input-field" id="input-find" type="text"
-        placeholder="e.g. Heron's Formula"
-        data-whitelist="${allPages.toString().replace(/'/g, "’")}">
+        placeholder="Title, e.g. Heron's Formula"
+        data-whitelist="${allPages.toString()}">
         <button class="input-button" id="find-button">
           View Article
         </button>
@@ -1309,7 +1326,7 @@
         </div>`
       );
 
-      for (let [problemIndex, currentProblem] of problemTitles.entries()) {
+      for (let currentProblem of problemTitles) {
         if (clickedTimes !== clickedTimesThen) break;
         console.log(currentProblem);
 
@@ -1339,7 +1356,7 @@
 
           $(".loading-bar").css(
             "width",
-            `${((problemIndex + 1) / numProblems) * 100}%`
+            `${(problems.length / numProblems) * 100}%`
           );
         } else if (problemText.includes("Redirect to")) {
           console.log("Redirect problem, going there instead...");
@@ -1373,7 +1390,7 @@
 
           $(".loading-bar").css(
             "width",
-            `${((problemIndex + 1) / numProblems) * 100}%`
+            `${(problems.length / numProblems) * 100}%`
           );
         } else {
           console.log("Invalid problem, skipping...");
@@ -1426,6 +1443,11 @@
         .map((e) => e.replace("#", "Problems/Problem "));
       let numProblems = problemTitles.length;
 
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params;
+      let response;
+      let json;
+
       $("#batch-header").after(
         `<div class="loading-notice">
           <div class="loading-text">Loading problems…</div>
@@ -1435,15 +1457,13 @@
         </div>`
       );
 
-      for (let [problemIndex, currentProblem] of problemTitles.entries()) {
+      for (let currentProblem of problemTitles) {
         if (clickedTimes !== clickedTimesThen) break;
         console.log(currentProblem);
 
-        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-        let params = `action=parse&page=${currentProblem}&format=json`;
-
-        let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-        let json = await response.json();
+        params = `action=parse&page=${currentProblem}&format=json`;
+        response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        json = await response.json();
 
         let problemText = latexer(json.parse.text["*"]);
         let problemProblem = getProblem(problemText);
@@ -1467,7 +1487,7 @@
 
           $(".loading-bar").css(
             "width",
-            `${((problemIndex + 1) / numProblems) * 100}%`
+            `${(problems.length / numProblems) * 100}%`
           );
         } else if (problemText.includes("Redirect to")) {
           console.log("Redirect problem, going there instead...");
@@ -1501,7 +1521,7 @@
 
           $(".loading-bar").css(
             "width",
-            `${((problemIndex + 1) / numProblems) * 100}%`
+            `${(problems.length / numProblems) * 100}%`
           );
         } else {
           console.log("Invalid problem, skipping...");
@@ -1556,12 +1576,14 @@
 
   $(".page-container").on("click", "#ranbatch-button", async () => {
     async function makeBatch() {
-      let inputNumber = $("#input-number");
       let numProblems = Math.min(inputNumber.data().from, pages.length);
       let randomPage;
       let pageIndex;
       let problems = [];
-      let getIndex = 0;
+      let problemTitles = inputProblems
+        .val()
+        .split(",")
+        .map((e) => e.replace("#", "Problems/Problem "));
 
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
       let params;
@@ -1577,8 +1599,80 @@
         </div>`
       );
 
+      if (inputProblems.val())
+        for (let currentProblem of problemTitles) {
+          if (clickedTimes !== clickedTimesThen) break;
+          console.log(currentProblem);
+
+          params = `action=parse&page=${currentProblem}&format=json`;
+          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+          json = await response.json();
+
+          let problemText = latexer(json.parse.text["*"]);
+          let problemProblem = getProblem(problemText);
+          let problemSolutions = getSolutions(problemText);
+
+          if (
+            problemProblem &&
+            problemSolutions &&
+            clickedTimes === clickedTimesThen
+          ) {
+            problems.push({
+              title: currentProblem,
+              difficulty: computeDifficulty(
+                computeTest(currentProblem),
+                computeNumber(currentProblem),
+                computeYear(currentProblem)
+              ),
+              problem: problemProblem,
+              solutions: problemSolutions,
+            });
+
+            $(".loading-bar").css(
+              "width",
+              `${(problems.length / numProblems) * 100}%`
+            );
+          } else if (problemText.includes("Redirect to")) {
+            console.log("Redirect problem, going there instead...");
+
+            let redirHref = $($.parseHTML(problemText))
+              .find(".redirectText a")
+              .attr("href");
+            let redirPage = redirHref
+              .replace("/wiki/index.php/", "")
+              .replace(/_/g, " ");
+            console.log(redirPage);
+
+            params = `action=parse&page=${redirPage}&format=json`;
+            response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+            json = await response.json();
+
+            problemText = latexer(json.parse.text["*"]);
+            problemProblem = getProblem(problemText);
+            problemSolutions = getSolutions(problemText);
+
+            problems.push({
+              title: redirPage,
+              difficulty: computeDifficulty(
+                computeTest(redirPage),
+                computeNumber(redirPage),
+                computeYear(redirPage)
+              ),
+              problem: problemProblem,
+              solutions: problemSolutions,
+            });
+
+            $(".loading-bar").css(
+              "width",
+              `${(problems.length / numProblems) * 100}%`
+            );
+          } else {
+            console.log("Invalid problem, skipping...");
+          }
+        }
+
       while (
-        getIndex < numProblems &&
+        problems.length < numProblems &&
         pages.length !== 0 &&
         clickedTimes === clickedTimesThen
       ) {
@@ -1611,8 +1705,10 @@
           });
 
           pages.splice(pageIndex, 1);
-          getIndex++;
-          $(".loading-bar").css("width", `${(getIndex / numProblems) * 100}%`);
+          $(".loading-bar").css(
+            "width",
+            `${(problems.length / numProblems) * 100}%`
+          );
         } else if (problemText.includes("Redirect to")) {
           console.log("Redirect problem, going there instead...");
 
@@ -1644,8 +1740,10 @@
           });
 
           pages.splice(pageIndex, 1);
-          getIndex++;
-          $(".loading-bar").css("width", `${(getIndex / numProblems) * 100}%`);
+          $(".loading-bar").css(
+            "width",
+            `${(problems.length / numProblems) * 100}%`
+          );
         } else {
           console.log("Invalid problem, skipping...");
         }
@@ -1666,6 +1764,9 @@
 
     addBatch();
     allPagesWarn();
+
+    let inputNumber = $("#input-number");
+    let inputProblems = $("#input-problems");
 
     let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
@@ -1700,7 +1801,7 @@
   $(".page-container").on("click", "#find-button", async () => {
     clearProblem();
 
-    await addArticle(sanitize($("#input-find").val()).replace(/’/g, "'"));
+    await addArticle(sanitize($("#input-find").val()));
   });
 
   $(".page-container").on("click", "#theorem-button", async () => {

@@ -27,15 +27,15 @@
 }
 
 @font-face {
-  font-weight: normal;
-  font-family: "Computer Modern Bright Semibold";
+  font-weight: 600;
+  font-family: "Computer Modern Bright";
   font-style: normal;
   src: url("bright-semi.woff2") format("woff2");
 }
 
 @font-face {
-  font-weight: normal;
-  font-family: "Computer Modern Bright Semibold";
+  font-weight: 600;
+  font-family: "Computer Modern Bright";
   font-style: italic;
   src: url("bright-semiitalic.woff2") format("woff2");
 }
