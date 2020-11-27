@@ -626,6 +626,10 @@ img.latexcenter {
   font-size: 1.05rem !important;
 }
 
+mjx-container:focus {
+  outline: none;
+}
+
 mjx-math {
   white-space: initial;
 }
