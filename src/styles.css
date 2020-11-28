@@ -35,8 +35,8 @@
   --section-color: hsl(163deg, 47%, 50%);
   --link-color: hsl(210deg, 80%, 50%);
   --link-hover-color: hsl(210deg, 80%, 59%);
-  --text-button-color: hsl(177deg, 54%, 43%);
-  --text-button-hover-color: hsl(177deg, 54%, 50%);
+  --text-button-color: hsl(177deg, 63%, 43%);
+  --text-button-hover-color: hsl(177deg, 63%, 48%);
   --vertical-item-spacing: 0.6rem;
   --horizontal-item-spacing: 0.6rem;
 } /**/

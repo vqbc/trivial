@@ -137,12 +137,11 @@
 
   // Toggles settings
   (() => {
-    if (
-      JSON.parse(localStorage.getItem("darkTheme")) ||
-      (JSON.parse(localStorage.getItem("darkTheme")) == null &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
+    if (JSON.parse(localStorage.getItem("darkTheme"))) {
       $("#dark-toggle").text("Dark theme");
+    }
+    if (JSON.parse(localStorage.getItem("darkTheme")) == false) {
+      $("#dark-toggle").text("Light theme");
     }
     if (JSON.parse(localStorage.getItem("serifFont"))) {
       $("#serif-toggle").text("Serif problem font");
@@ -157,22 +156,24 @@
     $("#dark-toggle").click(() => {
       document.body.removeAttribute("style");
       document.querySelector(".page-container").removeAttribute("style");
-      if (
-        !(
-          JSON.parse(localStorage.getItem("darkTheme")) ||
-          (JSON.parse(localStorage.getItem("darkTheme")) == null &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        )
-      ) {
+      if (JSON.parse(localStorage.getItem("darkTheme"))) {
+        if (!window.matchMedia("(prefers-color-scheme: dark)").matches)
+          $("#dark-stylesheet-link").remove();
+
+        localStorage.removeItem("darkTheme");
+        $("#dark-toggle").text("System theme");
+      } else if (JSON.parse(localStorage.getItem("darkTheme")) === null) {
+        $("#dark-stylesheet-link").remove();
+
+        localStorage.setItem("darkTheme", false);
+        $("#dark-toggle").text("Light theme");
+      } else {
         $("#stylesheet-link").after(
           `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
         );
+
         localStorage.setItem("darkTheme", true);
         $("#dark-toggle").text("Dark theme");
-      } else {
-        $("#dark-stylesheet-link").remove();
-        localStorage.setItem("darkTheme", false);
-        $("#dark-toggle").text("Light theme");
       }
     });
 
