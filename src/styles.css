@@ -694,7 +694,7 @@ footer {
 .text-button {
   display: inline-block;
   color: var(--text-button-color);
-  font: 600 1.1rem "Computer Modern Bright", sans-serif;
+  font: 600 1em "Computer Modern Bright", sans-serif;
   cursor: pointer;
 }
 
