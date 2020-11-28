@@ -97,7 +97,7 @@
         such as the Choose Problems main input.
       </li>
       <li>
-        Turning off MathJaX uses the original raster images from AoPS for LaTeX,
+        Turning off MathJax uses the original raster images from AoPS for LaTeX,
         which makes them blurrier, but prevents some bugs with pages like 2019
         AMC 10A #4.
       </li>
