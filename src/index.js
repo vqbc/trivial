@@ -825,19 +825,20 @@
 
   function addProblems(problems) {
     let problemList = problems.map((e) => titleCleanup(e.title)).join(", ");
-    $("#batch-text")
-      .before(`<a id="copy-problems" data-clipboard-text="${problemList}">
+    $("#batch-text").before(`<span class="text-button" id="copy-problems"
+        data-clipboard-text="${problemList}">
         (Copy problem list)
-      </a>`);
+      </span>`);
     new ClipboardJS("#copy-problems");
 
     for (let [index, problem] of problems.entries()) {
       $("#batch-text").append(`<div class="article-problem">
         <h2 class="problem-heading">Problem ${index + 1}
           <span class="source-link">
-            (<a class="source-link-a" href="https://artofproblemsolving.com/wiki/index.php/${underscores(
-              problem.title
-            )}">${titleCleanup(problem.title)}</a>)
+            (<a class="source-link-a"
+              href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+                problem.title
+              )}">${titleCleanup(problem.title)}</a>)
           </span>
         </h2>${problem.problem}
       </div>`);
@@ -846,9 +847,10 @@
         <h2 class="problem-heading">
           Problem ${index + 1}
           <span class="source-link">
-            (<a class="source-link-a" href="https://artofproblemsolving.com/wiki/index.php/${underscores(
-              problem.title
-            )}">${titleCleanup(problem.title)}</a>)
+            (<a class="source-link-a"
+              href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+                problem.title
+              )}">${titleCleanup(problem.title)}</a>)
           </span>
         </h2>${problem.solutions}
       </div>`);

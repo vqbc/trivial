@@ -515,10 +515,14 @@ a.new:hover {
 }
 
 a.aops-link,
-a#copy-problems {
+#copy-problems {
   display: inline-block;
   margin-top: 1em;
   font-style: italic;
+}
+
+#copy-problems:active {
+  transform: translateY(1px);
 }
 
 a.dark-link {
@@ -687,15 +691,14 @@ footer {
   font-style: normal;
 }
 
-.toggle-link,
-#copy-problems {
+.text-button {
+  display: inline-block;
   color: var(--text-button-color);
   font: 600 1.1rem "Computer Modern Bright", sans-serif;
   cursor: pointer;
 }
 
-.toggle-link:hover,
-#copy-problems:hover {
+.text-button:hover {
   color: var(--text-button-hover-color);
 } /**/
 
@@ -845,7 +848,7 @@ footer {
   .notes,
   .error,
   a.aops-link,
-  a#copy-problems,
+  #copy-problems,
   .section-collapsed,
   #solutions-header::after,
   .noprint {
