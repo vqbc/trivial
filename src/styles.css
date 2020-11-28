@@ -37,7 +37,7 @@
   --link-hover-color: hsl(210deg, 80%, 59%);
   --text-button-color: hsl(177deg, 54%, 43%);
   --text-button-hover-color: hsl(177deg, 54%, 50%);
-  --vertical-item-spacing: 0.5rem;
+  --vertical-item-spacing: 0.6rem;
   --horizontal-item-spacing: 0.6rem;
 } /**/
 
@@ -91,7 +91,7 @@ body {
 
 .button {
   flex: 1;
-  margin: 0 1%;
+  margin: 0 0.7%;
   padding: 0.7rem 0.6rem 0.5rem;
   color: white;
   font: bold 1.1em "Computer Modern Bright", sans-serif;
@@ -768,13 +768,20 @@ footer {
     max-height: initial;
   }
 
+  .tagify.input-field,
+  .input-field-single,
+  .input-field-top {
+    margin-bottom: var(--vertical-item-spacing);
+  }
+
   .input-field-right,
   .input-container-left {
     margin-right: 0;
   }
 
-  .input-field-top {
-    margin-bottom: var(--horizontal-item-spacing);
+  .input-button {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
