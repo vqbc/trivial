@@ -70,6 +70,9 @@
         </label>
       </div>
     </div>`;
+  let replaceButton = `<span class="text-button replace-problem">
+    (Replace problem)
+  </span>`;
   let notes = `<div class="notes">
     <h3 id="notes-header">Notes</h3>
     <ul id="notes-text">
@@ -824,7 +827,7 @@
     return afterHTML;
   }
 
-  function addProblems(problems) {
+  function addProblems(problems, addReplace) {
     let problemList = problems.map((e) => titleCleanup(e.title)).join(", ");
     $("#batch-text").before(`<span class="text-button" id="copy-problems"
         data-clipboard-text="${problemList}">
@@ -833,18 +836,20 @@
     new ClipboardJS("#copy-problems");
 
     for (let [index, problem] of problems.entries()) {
-      $("#batch-text").append(`<div class="article-problem">
+      $("#batch-text").append(`<div class="article-problem"
+        index="${index + 1}" difficulty="${problem.difficulty}">
         <h2 class="problem-heading">Problem ${index + 1}
           <span class="source-link">
             (<a class="source-link-a"
               href="https://artofproblemsolving.com/wiki/index.php/${underscores(
                 problem.title
               )}">${titleCleanup(problem.title)}</a>)
-          </span>
+          </span>${addReplace ? replaceButton : ``}
         </h2>${problem.problem}
       </div>`);
 
-      $("#solutions-text").append(`<div class="article-problem">
+      $("#solutions-text").append(`<div class="article-problem" 
+        index="${index + 1}" difficulty="${problem.difficulty}">
         <h2 class="problem-heading">
           Problem ${index + 1}
           <span class="source-link">
@@ -1402,7 +1407,7 @@
 
       if (clickedTimes === clickedTimesThen) {
         console.log(problems);
-        addProblems(problems);
+        addProblems(problems, false);
       }
     }
 
@@ -1537,7 +1542,7 @@
         }
         console.log(problems);
 
-        addProblems(problems);
+        addProblems(problems, false);
       }
     }
 
@@ -1757,7 +1762,7 @@
           problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
         }
         console.log(problems);
-        addProblems(problems);
+        addProblems(problems, true);
       }
     }
 
@@ -1791,6 +1796,7 @@
       mathJaxFormat();
       MathJax.typeset();
       mathJaxFallback();
+      replaceProblems();
       customText();
       changeName();
       fixLinks();
@@ -1829,7 +1835,135 @@
     await addArticle(randomTheorem);
   });
 
-  // Clears things
+  // Replace problems
+  async function replaceProblems() {
+    $(".replace-problem").click(async function () {
+      let replacedProblem = $(this).closest(".article-problem");
+      let replacedIndex = replacedProblem.attr("index");
+      let replacedDifficulty = replacedProblem.attr("difficulty");
+
+      let pages = await getPages();
+      console.log(`${pages.length} total problems retrieved.`);
+      let pageIndex;
+      let randomPage;
+      let matchingProblem = false;
+      let newProblem;
+
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params;
+      let response;
+      let json;
+
+      while (!newProblem) {
+        while (!matchingProblem) {
+          pageIndex = Math.floor(Math.random() * pages.length);
+          randomPage = pages[pageIndex];
+          console.log(randomPage);
+
+          matchingProblem =
+            computeDifficulty(
+              computeTest(randomPage),
+              computeNumber(randomPage),
+              computeYear(randomPage)
+            ) == replacedDifficulty;
+        }
+
+        params = `action=parse&page=${randomPage}&format=json`;
+        response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        json = await response.json();
+
+        let problemText = latexer(json.parse.text["*"]);
+        let problemProblem = getProblem(problemText);
+        let problemSolutions = getSolutions(problemText);
+
+        if (problemProblem && problemSolutions) {
+          newProblem = {
+            title: randomPage,
+            difficulty: computeDifficulty(
+              computeTest(randomPage),
+              computeNumber(randomPage),
+              computeYear(randomPage)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          };
+
+          pages.splice(pageIndex, 1);
+        } else if (problemText.includes("Redirect to")) {
+          console.log("Redirect problem, going there instead...");
+
+          let redirHref = $($.parseHTML(problemText))
+            .find(".redirectText a")
+            .attr("href");
+          let redirPage = redirHref
+            .replace("/wiki/index.php/", "")
+            .replace(/_/g, " ");
+          console.log(redirPage);
+
+          params = `action=parse&page=${redirPage}&format=json`;
+          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+          json = await response.json();
+
+          problemText = latexer(json.parse.text["*"]);
+          problemProblem = getProblem(problemText);
+          problemSolutions = getSolutions(problemText);
+
+          newProblem = {
+            title: redirPage,
+            difficulty: computeDifficulty(
+              computeTest(redirPage),
+              computeNumber(redirPage),
+              computeYear(redirPage)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          };
+
+          pages.splice(pageIndex, 1);
+        } else {
+          console.log("Invalid problem, skipping...");
+        }
+
+        $(`#batch-text .article-problem:nth-child(${replacedIndex})`)
+          .replaceWith(`<div class="article-problem"
+        index="${replacedIndex}" difficulty="${replacedDifficulty}">
+        <h2 class="problem-heading">Problem ${replacedIndex}
+          <span class="source-link">
+            (<a class="source-link-a"
+              href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+                newProblem.title
+              )}">${titleCleanup(newProblem.title)}</a>)
+          </span>${replaceButton}
+        </h2>${newProblem.problem}
+      </div>`);
+
+        $(`#solutions-text .article-problem:nth-child(${replacedIndex})`)
+          .replaceWith(`<div class="article-problem" 
+        index="${replacedIndex}" difficulty="${replacedDifficulty}">
+        <h2 class="problem-heading">
+          Problem ${replacedIndex}
+          <span class="source-link">
+            (<a class="source-link-a"
+              href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+                newProblem.title
+              )}">${titleCleanup(newProblem.title)}</a>)
+          </span>
+        </h2>${newProblem.solutions}
+      </div>`);
+
+        mathJaxFormat();
+        MathJax.typeset();
+        mathJaxFallback();
+        replaceProblems();
+        fixLinks();
+        directLinks();
+        hideLinks();
+        breakSets();
+      }
+    });
+  }
+
+  // Clear things
   function clearProblem() {
     $(".problem-section").remove();
   }

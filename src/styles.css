@@ -170,6 +170,19 @@ body {
   margin-left: 0;
 } /**/
 
+/* Text buttons */
+.text-button {
+  display: inline-block;
+  color: var(--text-button-color);
+  font: 600 1em "Computer Modern Bright", sans-serif;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.text-button:hover {
+  color: var(--text-button-hover-color);
+} /**/
+
 /* Problem options input */
 .options-input {
   display: flex;
@@ -549,6 +562,25 @@ a.secret-link {
   font-weight: normal;
 }
 
+.replace-problem {
+  display: none;
+  font-size: 0.9em;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0;
+}
+
+.article-problem:hover .replace-problem {
+  display: inline-block;
+  opacity: 1;
+  animation: 0.1s show;
+}
+
+.replace-problem:active {
+  transform: translateY(1px);
+}
+
 .mw-parser-output > p:first-child {
   margin-top: 0.6em;
 }
@@ -689,17 +721,6 @@ footer {
 
 .settings {
   font-style: normal;
-}
-
-.text-button {
-  display: inline-block;
-  color: var(--text-button-color);
-  font: 600 1em "Computer Modern Bright", sans-serif;
-  cursor: pointer;
-}
-
-.text-button:hover {
-  color: var(--text-button-hover-color);
 } /**/
 
 /* Loading bar */
@@ -795,11 +816,19 @@ footer {
   }
 }
 
-@media (max-width: 550px) {
-  #single-button {
-    flex: 1 0 100%;
-    margin-top: var(--vertical-item-spacing);
-    margin-left: 0;
+@media (max-width: 500px) {
+  .source-link {
+    display: inline-block;
+  }
+} /**/
+
+/* Animations */
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 } /**/
 
