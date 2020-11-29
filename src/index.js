@@ -800,7 +800,7 @@
     let after = $(htmlParsed)
       .children()
       .first()
-      .nextUntil(":header:not(:contains('Problem')), table")
+      .nextUntil(":header:not(:contains('Problem'))")
       .addBack()
       .not(".toc")
       .not(":header:contains('Problem')");
