@@ -53,7 +53,7 @@
     <script>
       if (
         JSON.parse(localStorage.getItem("darkTheme")) ||
-        (JSON.parse(localStorage.getItem("darkTheme")) == null &&
+        (JSON.parse(localStorage.getItem("darkTheme")) === null &&
           window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
         document.body.style = "background: hsl(201deg, 8%, 12%)";
@@ -90,7 +90,7 @@
     <script>
       if (
         JSON.parse(localStorage.getItem("darkTheme")) ||
-        (JSON.parse(localStorage.getItem("darkTheme")) == null &&
+        (JSON.parse(localStorage.getItem("darkTheme")) === null &&
           window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
         let darkStyles = document.createElement("link");
@@ -105,7 +105,7 @@
       <script>
         if (
           JSON.parse(localStorage.getItem("darkTheme")) ||
-          (JSON.parse(localStorage.getItem("darkTheme")) == null &&
+          (JSON.parse(localStorage.getItem("darkTheme")) === null &&
             window.matchMedia("(prefers-color-scheme: dark)").matches)
         ) {
           document.querySelector(".page-container").style =
