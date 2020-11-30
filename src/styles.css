@@ -519,14 +519,6 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-a.new {
-  color: var(--error-color); /* redlinks */
-}
-
-a.new:hover {
-  color: var(--error-hover-color);
-}
-
 a.aops-link,
 #copy-problems {
   display: inline-block;
@@ -556,6 +548,15 @@ a.secret-link {
 .article-text a:not(.source-link-a):hover {
   color: var(--link-hover-color);
   border-bottom-color: var(--link-hover-color);
+}
+
+.article-text a.new {
+  border-bottom-color: var(--error-color); /* redlinks */
+}
+
+.article-text a.new:hover {
+  color: var(--error-hover-color);
+  border-bottom-color: var(--error-hover-color);
 }
 
 .source-link {
