@@ -1810,7 +1810,7 @@
   $(".page-container").on("click", "#find-button", async () => {
     clearProblem();
 
-    await addArticle(sanitize($("#input-find").val()));
+    await addArticle(sanitize($("#input-find").val()).replace(/’/g, "'"));
   });
 
   $(".page-container").on("click", "#theorem-button", async () => {
