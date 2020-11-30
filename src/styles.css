@@ -679,7 +679,7 @@ img.latexcenter {
   font-size: 1.05rem !important;
 }
 
-mjx-container:focus {
+mjx-container:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -707,6 +707,14 @@ mjx-merror mjx-utext {
 .error,
 mjx-merror {
   color: var(--error-color);
+}
+
+a:focus,
+.text-button:focus,
+mjx-container:focus {
+  border-radius: 2px;
+  outline: none;
+  box-shadow: inset 0 0 0 1.5px var(--placeholder-color);
 }
 
 ::selection {
