@@ -229,7 +229,7 @@
       if (validProblem(page.title)) allProblems.push(page.title);
     }
 
-    while (typeof json.continue !== "undefined") {
+    while (json?.continue) {
       paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
       response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
       json = await response.json();
@@ -268,7 +268,7 @@
     const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
     const json = await response.json();
 
-    if (typeof json.parse !== "undefined") {
+    if (json?.parse) {
       let problemText = latexer(json.parse.text["*"]);
       $("#problem-text").html(getProblem(problemText));
       $("#solutions-text").html(getSolutions(problemText));
@@ -334,7 +334,7 @@
     const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
     const json = await response.json();
 
-    if (typeof json.parse !== "undefined") {
+    if (json?.parse) {
       let problemText = latexer(json.parse.text["*"]);
 
       $(".article-text").html(problemText);
@@ -442,9 +442,9 @@
           let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
           let json = await response.json();
 
-          if (typeof json.query.categorymembers[0] !== "undefined") {
+          if (json.query.categorymembers?.[0]) {
             addPagesFromJSON(json.query.categorymembers);
-            while (typeof json.continue !== "undefined") {
+            while (json?.continue) {
               paramsContinue =
                 params + `&cmcontinue=${json.continue.cmcontinue}`;
               response = await fetch(
@@ -2081,7 +2081,7 @@
   function fixLinks() {
     $(".article-text a").each(function () {
       let href = $(this).attr("href");
-      if (typeof href !== "undefined" && href.charAt(0) === "/")
+      if (href && href.charAt(0) === "/")
         $(this).attr("href", `https://artofproblemsolving.com${href}`);
     });
   }
