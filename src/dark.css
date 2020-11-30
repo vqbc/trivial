@@ -21,6 +21,7 @@
     --input-button-focus-color: hsl(177deg, 39%, 70%);
     --input-focus-color: hsl(201deg, 5%, 33%);
     --placeholder-color: hsl(0deg, 0%, 100%, 50%);
+    --range-label-hover-color: hsl(0deg, 0%, 100%, 60%);
     --input-slider-color: hsl(201deg, 5%, 31%);
     --input-accent-color: hsl(210deg, 70%, 62%);
     --input-handle-color: hsl(210deg, 35%, 45%);

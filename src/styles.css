@@ -27,6 +27,7 @@
   --button-text-shadow: 0 1px 2px hsl(0deg, 0%, 0%, 40%);
   --main-text-shadow: 0 2px 3px hsl(0deg, 0%, 0%, 40%);
   --placeholder-color: hsl(0deg, 0%, 0%, 40%);
+  --range-label-hover-color: hsl(0deg, 0%, 0%, 30%);
   --input-slider-color: hsl(217deg, 15%, 90%);
   --input-accent-color: hsl(210deg, 80%, 67%);
   --input-handle-color: hsl(210deg, 40%, 50%);
@@ -533,6 +534,10 @@ a.aops-link,
 a.dark-link {
   color: inherit;
   text-decoration: underline;
+}
+
+a.dark-link:hover {
+  color: var(--range-label-hover-color);
 }
 
 a.secret-link {
