@@ -6,24 +6,10 @@
 }
 
 @font-face {
-  font-weight: bold;
-  font-family: "Computer Modern Bright";
-  font-style: normal;
-  src: url("bright-bold.woff2") format("woff2");
-}
-
-@font-face {
   font-weight: normal;
   font-family: "Computer Modern Bright";
   font-style: italic;
   src: url("bright-italic.woff2") format("woff2");
-}
-
-@font-face {
-  font-weight: bold;
-  font-family: "Computer Modern Bright";
-  font-style: italic;
-  src: url("bright-bolditalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -38,4 +24,18 @@
   font-family: "Computer Modern Bright";
   font-style: italic;
   src: url("bright-semiitalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Computer Modern Bright";
+  font-style: normal;
+  src: url("bright-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Computer Modern Bright";
+  font-style: italic;
+  src: url("bright-bolditalic.woff2") format("woff2");
 }

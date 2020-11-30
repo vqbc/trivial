@@ -6,17 +6,17 @@
 }
 
 @font-face {
-  font-weight: bold;
-  font-family: "Computer Modern Typewriter";
-  font-style: normal;
-  src: url("typewriter-bold.woff2") format("woff2");
-}
-
-@font-face {
   font-weight: normal;
   font-family: "Computer Modern Typewriter";
   font-style: italic;
   src: url("typewriter-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Computer Modern Typewriter";
+  font-style: normal;
+  src: url("typewriter-bold.woff2") format("woff2");
 }
 
 @font-face {
