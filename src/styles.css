@@ -712,9 +712,8 @@ mjx-merror {
 a:focus,
 .text-button:focus,
 mjx-container:focus {
-  border-radius: 2px;
-  outline: none;
-  box-shadow: inset 0 0 0 1.5px var(--placeholder-color);
+  outline: 1.5px solid var(--placeholder-color);
+  outline-offset: 2px;
 }
 
 ::selection {
