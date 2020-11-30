@@ -701,6 +701,10 @@ mjx-merror mjx-utext {
 .error,
 mjx-merror {
   color: var(--error-color);
+}
+
+::selection {
+  background: hsl(201deg, 80%, 70%, 35%);
 } /**/
 
 /* Main and footer */
