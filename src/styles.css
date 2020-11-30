@@ -513,7 +513,7 @@ tags > span {
 a {
   color: var(--link-color);
   text-decoration: none;
-  transition: all 0.1s;
+  transition: color 0.1s, border-bottom-color 0.1s;
 }
 
 a:hover {
@@ -545,7 +545,7 @@ a.secret-link {
   cursor: default;
 }
 
-.article-text a:not(.source-link-a) {
+.article-text a:not(.source-link-a):not(.image) {
   color: inherit;
   border-bottom: 1px solid var(--link-color);
 }
