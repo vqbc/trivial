@@ -2063,6 +2063,7 @@
         .replace(/\\congruent/g, "\\cong")
         .replace(/\\overarc/g, "\\overparen")
         .replace(/\\textdollar/g, "\\$")
+        .replace(/\\underarc/g, "\\underparen")
         .replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
       $(this).html(articleText);
     });
