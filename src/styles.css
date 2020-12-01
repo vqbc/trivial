@@ -734,6 +734,10 @@ mjx-container:focus {
 
 .CtxtMenu_InfoTitle {
   font: 600 1.3rem "Computer Modern Bright", sans-serif;
+}
+
+.CtxtMenu_InfoSignature > input {
+  font-family: "Computer Modern Sans", sans-serif;
 } /**/
 
 /* Main and footer */
