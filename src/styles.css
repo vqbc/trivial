@@ -720,6 +720,22 @@ mjx-container:focus {
   background: hsl(201deg, 80%, 70%, 35%);
 } /**/
 
+/* MathJax menus */
+.CtxtMenu_Menu {
+  border-radius: 0;
+  box-shadow: var(--input-box-shadow);
+}
+
+.CtxtMenu_Info {
+  border: 1px solid #bbb;
+  border-radius: 0;
+  box-shadow: var(--main-box-shadow);
+}
+
+.CtxtMenu_InfoTitle {
+  font: 600 1.3rem "Computer Modern Bright", sans-serif;
+} /**/
+
 /* Main and footer */
 main {
   flex: 1 0 auto;
