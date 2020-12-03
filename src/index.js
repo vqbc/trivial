@@ -216,7 +216,7 @@
 
   // Loads pages
   (async () => {
-    console.log("Preloading all wiki pages, allow around 10 seconds...");
+    console.log("Preloading all wiki pages, allow around 15 seconds...");
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=query&list=allpages&aplimit=max&format=json`;
     let paramsContinue;
@@ -239,13 +239,15 @@
       }
     }
     allPagesLoaded = true;
-    console.log("Finished loading Special:AllPages.");
+    console.log(
+      `Finished loading Special:AllPages (${allPages.length} pages).`
+    );
 
     allProblems = sortProblems(allProblems);
   })();
 
   const allPagesLoadWait = () =>
-    Math.round(10 - (allPages.length / 12500) * 10);
+    Math.round(15 - (allPages.length / 13000) * 15);
 
   // Adds things
   async function addProblem(pagename) {
