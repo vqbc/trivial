@@ -1092,6 +1092,8 @@
     );
     collapseNotes();
     directLinks();
+    nameLive();
+    breakLive();
     hideToggle();
 
     let inputSingleTest = document.querySelector("#input-singletest");
@@ -1126,6 +1128,8 @@
     allPagesWarnAC();
     collapseNotes();
     directLinks();
+    nameLive();
+    breakLive();
     hideToggle();
 
     let inputProblems = document.querySelector("#input-problems");
@@ -1165,6 +1169,8 @@
     );
     collapseNotes();
     directLinks();
+    nameLive();
+    breakLive();
     hideToggle();
 
     let inputSubjects = document.querySelector("#input-subjects");
@@ -2064,6 +2070,12 @@
     }
   }
 
+  function nameLive() {
+    $("#input-name").change(() => {
+      changeName();
+    });
+  }
+
   function mathJaxFormat() {
     $(".article-text").each(function () {
       let articleText = $(this).html();
@@ -2140,8 +2152,16 @@
 
   function breakSets() {
     let breakNum = $("#input-break").val();
-    if (breakNum)
+    if (breakNum) {
+      $(`.article-problem`).css("break-after", "");
       $(`.article-problem:nth-child(${breakNum}n)`).css("break-after", "page");
+    }
+  }
+
+  function breakLive() {
+    $("#input-break").change(() => {
+      breakSets();
+    });
   }
 
   // Bonus
