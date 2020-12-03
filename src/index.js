@@ -2152,14 +2152,22 @@
 
   $(".subtitle").click(() => {
     subtitleClicked++;
-    let text =
-      subtitleClicked % 4 === 1
-        ? "Alcumus, but you don’t get internet points"
-        : subtitleClicked % 4 === 2
-        ? "Brilliant, but you don’t learn anything useful"
-        : subtitleClicked % 4 === 3
-        ? "The AoPS Wiki, but you waste time trying to find the other easter eggs"
-        : "An AoPS Wiki Reader for Studying";
+    let text;
+    switch (subtitleClicked % 4) {
+      case 0:
+        text = "An AoPS Wiki Reader for Studying";
+        break;
+      case 1:
+        text = "Alcumus, but you don’t get internet points";
+        break;
+      case 2:
+        text = "Brilliant, but you don’t learn anything useful";
+        break;
+      case 3:
+        text =
+          "The AoPS Wiki, but you waste time trying to find the other easter eggs";
+        break;
+    }
     $(".subtitle").html(text);
   });
 })();
