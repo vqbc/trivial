@@ -626,8 +626,9 @@ h3 {
   display: none;
 }
 
-img {
-  max-width: 100%;
+img,
+.thumbinner {
+  max-width: 100% !important;
   height: auto;
 }
 

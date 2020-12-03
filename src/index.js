@@ -865,7 +865,11 @@
 
   // Formatting
   const sanitize = (string) =>
-    string.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    string
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
 
   const unsanitize = (string) => string.replace(/&gt;/g, ">");
 
@@ -1221,7 +1225,7 @@
       `<div class="options-input" id="find-input">
         <input class="input-field" id="input-find" type="text"
         placeholder="Title, e.g. Heron's Formula"
-        data-whitelist="${allPages.toString()}">
+        data-whitelist="${sanitize(allPages.toString())}">
         <button class="input-button" id="find-button">
           View Article
         </button>
@@ -2085,12 +2089,16 @@
       if (href && href.charAt(0) === "/")
         $(this).attr("href", `https://artofproblemsolving.com${href}`);
     });
+
+    $("a.image").each(function () {
+      $(this).removeAttr("href");
+    });
   }
 
   async function directLinks() {
     $(".article-text a, #notes-text a").click(async function (event) {
       let href = $(this).attr("href");
-      if (href.includes("artofproblemsolving.com/wiki/")) {
+      if (href && href.includes("artofproblemsolving.com/wiki/")) {
         event.preventDefault();
         let pagename = href.replace(
           "https://artofproblemsolving.com/wiki/index.php/",
