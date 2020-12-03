@@ -792,7 +792,6 @@
           }
       }
     });
-    console.log("Finished sorting problem index.");
     return sorted;
   };
 
