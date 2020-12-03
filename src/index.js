@@ -1813,7 +1813,11 @@
   $(".page-container").on("click", "#find-button", async () => {
     clearProblem();
 
-    await addArticle(sanitize($("#input-find").val()).replace(/’/g, "'"));
+    await addArticle(
+      sanitize($("#input-find").val())
+        .replace(/&quot;/g, `"`)
+        .replace(/’/g, "'")
+    );
   });
 
   $(".page-container").on("click", "#theorem-button", async () => {
