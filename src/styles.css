@@ -628,7 +628,7 @@ h3 {
 
 img,
 .thumbinner {
-  max-width: 100% !important;
+  max-width: 100% !important; /* override inline widths */
   height: auto;
 }
 
@@ -683,7 +683,7 @@ table.floatright {
 .MathJax {
   display: inline-block;
   max-width: 100%;
-  font-size: 1.05rem !important; /* Override MathJax inline styles */
+  font-size: 1.05rem !important; /* override MathJax inline styles */
 }
 
 mjx-container:focus:not(:focus-visible) {
