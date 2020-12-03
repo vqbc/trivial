@@ -2060,6 +2060,7 @@
     $(".article-text").each(function () {
       let articleText = $(this).html();
       articleText = articleText
+        .replace(/\\bold/g, "\\mathbf")
         .replace(/\\congruent/g, "\\cong")
         .replace(/\\overarc/g, "\\overparen")
         .replace(/\\textdollar/g, "\\$")
