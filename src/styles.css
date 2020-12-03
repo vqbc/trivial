@@ -639,6 +639,18 @@ img.latexcenter {
   text-align: center;
 }
 
+.thumbcaption {
+  font-size: 0.95em;
+  font-style: italic;
+}
+
+div.tright,
+div.floatright,
+table.floatright {
+  float: right;
+  clear: right;
+}
+
 .wikitable {
   border-collapse: collapse;
   border-spacing: 0;
