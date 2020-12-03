@@ -655,12 +655,6 @@ img.latexcenter {
 .article-text > *:last-child {
   margin-bottom: 1em;
 }
-
-.mathjax-container,
-.fallback-container {
-  display: inline-block;
-}
-
 .article-text:not(.mathjax-text) .mathjax-container {
   display: none;
 }
@@ -676,7 +670,7 @@ img.latexcenter {
 .MathJax {
   display: inline-block;
   max-width: 100%;
-  font-size: 1.05rem !important;
+  font-size: 1.05rem !important; /* Override MathJax inline styles */
 }
 
 mjx-container:focus:not(:focus-visible) {
@@ -872,12 +866,12 @@ footer {
 /* Print styling */
 @media print {
   /* Font fixes */
-  body {
+  body,
+  .article-text {
     color: black;
-    font-size: 11.5pt;
+    font-size: 11pt;
   }
 
-  .serif-text,
   .MathJax {
     font-size: 11pt !important;
   }
@@ -904,6 +898,11 @@ footer {
   .page-container,
   .problem-section {
     box-shadow: none;
+  }
+
+  footer a {
+    color: inherit;
+    border-bottom: 1px solid var(--link-color);
   } /**/
 
   /* Hide things */

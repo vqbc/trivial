@@ -886,10 +886,9 @@
         if (!image.includes("[asy]")) {
           html = html.replaceAll(
             image,
-            `<span class="fallback-container">$&</span>
-            <span class="mathjax-container">
-              ${unsanitize(image.match(/alt="(.*?)"/)[1])}
-            </span>`
+            `<span class="fallback-container">$&</span><span class="mathjax-container">${unsanitize(
+              image.match(/alt="(.*?)"/)[1]
+            )}</span>`
           );
         }
       }
