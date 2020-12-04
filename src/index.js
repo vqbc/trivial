@@ -859,7 +859,9 @@
                 problem.title
               )}">${titleCleanup(problem.title)}</a>)
           </span>
-        </h2>${problem.solutions}
+        </h2>${problem.problem}
+        <div class="solutions-divider">Solutions</div>
+        ${problem.solutions}
       </div>`);
     }
   }

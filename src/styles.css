@@ -605,12 +605,32 @@ h3 {
   border-bottom: 1px solid var(--hr-color);
 }
 
-.batch-solutions-text h2:not(.problem-heading),
-.batch-solutions-text h3,
+.article-text:not(.batch-solutions-text) h1,
+.article-text:not(.batch-solutions-text) h2,
+.problem-heading {
+  margin-top: 1.8em;
+}
+
 #full-text h3 {
   letter-spacing: initial;
   text-transform: initial;
   border: none;
+}
+
+.batch-solutions-text h2:not(.problem-heading),
+.batch-solutions-text h3 {
+  font-size: 1.1rem;
+  font-family: inherit;
+  letter-spacing: initial;
+  text-transform: initial;
+  border: none;
+}
+
+.solutions-divider {
+  margin: 1em 0;
+  font: 600 italic 1.2rem "Computer Modern Bright", sans-serif;
+  letter-spacing: 0.02em;
+  border-bottom: 1px dashed var(--hr-color);
 }
 
 .article-problem {
