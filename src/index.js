@@ -101,8 +101,7 @@
       </li>
       <li>
         Turning off MathJax uses the original raster images from AoPS for LaTeX,
-        which makes them blurrier, but prevents some bugs with pages like 2019
-        AMC 10A #4.
+        which makes them blurrier, but prevents some potential rendering bugs.
       </li>
       <li>
         AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
@@ -874,7 +873,13 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
 
-  const unsanitize = (string) => string.replace(/&gt;/g, ">");
+  const sanitizeLatex = (string) => {
+    console.log(string);
+    return string
+      .replace(/&lt;/g, "\\lt")
+      .replace(/&gt;/g, "\\gt")
+      .replace(/(?!^)\$(?!$)/g, "\\$$");
+  };
 
   const titleCleanup = (string) =>
     decodeURI(string)
@@ -885,7 +890,6 @@
   const underscores = (string) => string.replace(/ /g, "_");
 
   const latexer = (html) => {
-    html = html.replace(/([^"])\$([^"])(?=.*?\$")/g, "$1\\$$$2");
     console.log(html);
 
     let images = html.match(/<img (?:.*?) class="latex\w*?" (?:.*?)>/g);
@@ -894,12 +898,14 @@
     if (images) {
       for (let image of images) {
         if (!image.includes("[asy]")) {
+          console.log(sanitizeLatex(image.match(/alt="(.*?)"/)[1]));
           html = html.replaceAll(
             image,
-            `<span class="fallback-container">$&</span><span class="mathjax-container">${unsanitize(
+            `<span class="fallback-container">$&</span><span class="mathjax-container">${sanitizeLatex(
               image.match(/alt="(.*?)"/)[1]
             )}</span>`
           );
+          console.log(html);
         }
       }
     }
