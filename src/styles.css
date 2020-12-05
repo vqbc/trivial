@@ -619,7 +619,7 @@ h3 {
 
 .batch-solutions-text h2:not(.problem-heading),
 .batch-solutions-text h3 {
-  font-size: 1.1rem;
+  font-size: 1.05em;
   font-family: inherit;
   letter-spacing: initial;
   text-transform: initial;
@@ -627,8 +627,7 @@ h3 {
 }
 
 .solutions-divider {
-  margin: 1em 0;
-  font: 600 italic 1.2rem "Computer Modern Bright", sans-serif;
+  font: 600 italic 1.25rem "Computer Modern Bright", sans-serif;
   letter-spacing: 0.02em;
   border-bottom: 1px dashed var(--hr-color);
 }
