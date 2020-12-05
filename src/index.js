@@ -874,7 +874,6 @@
       .replace(/>/g, "&gt;");
 
   const sanitizeLatex = (string) => {
-    console.log(string);
     return string
       .replace(/&lt;/g, "\\lt")
       .replace(/&gt;/g, "\\gt")
@@ -890,22 +889,18 @@
   const underscores = (string) => string.replace(/ /g, "_");
 
   const latexer = (html) => {
-    console.log(html);
-
     let images = html.match(/<img (?:.*?) class="latex\w*?" (?:.*?)>/g);
     images = [...new Set(images)];
 
     if (images) {
       for (let image of images) {
         if (!image.includes("[asy]")) {
-          console.log(sanitizeLatex(image.match(/alt="(.*?)"/)[1]));
           html = html.replaceAll(
             image,
             `<span class="fallback-container">$&</span><span class="mathjax-container">${sanitizeLatex(
               image.match(/alt="(.*?)"/)[1]
             )}</span>`
           );
-          console.log(html);
         }
       }
     }
