@@ -545,12 +545,18 @@ a.secret-link {
   cursor: default;
 }
 
-.article-text a:not(.source-link-a):not(.image) {
+.article-text a[title],
+.article-text a.external {
   color: inherit;
   border-bottom: 1px solid var(--link-color);
 }
 
-.article-text a:not(.source-link-a):hover {
+.article-text .thumb a {
+  border-bottom: none;
+}
+
+.article-text a[title]:hover,
+.article-text a.external:hover {
   color: var(--link-hover-color);
   border-bottom-color: var(--link-hover-color);
 }
