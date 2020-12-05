@@ -2110,7 +2110,10 @@
     $(".article-text a").each(function () {
       let href = $(this).attr("href");
       if (href && href.charAt(0) === "/")
-        $(this).attr("href", `https://artofproblemsolving.com${href}`);
+        $(this).attr({
+          href: `https://artofproblemsolving.com${href}`,
+          title: "",
+        });
     });
 
     $("a.image").each(function () {
