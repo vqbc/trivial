@@ -497,7 +497,7 @@ tags > span {
   transform: rotate(135deg);
 } /**/
 
-/* In-article or inline styling */
+/* Article text container */
 .article-text {
   font-size: 1.12rem;
 }
@@ -508,8 +508,9 @@ tags > span {
 
 .justify-text p {
   text-align: justify;
-}
+} /**/
 
+/* Links */
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -591,16 +592,7 @@ a.secret-link {
 
 .replace-problem:active {
   transform: translateY(1px);
-}
-
-.mw-parser-output > p:first-child {
-  margin-top: 0.6em;
-}
-
-code,
-pre {
-  font-family: "Computer Modern Typewriter", monospace;
-}
+} /**/
 
 .article-text h1,
 .article-text h2,
@@ -640,6 +632,17 @@ h3 {
 
 .article-problem {
   break-inside: avoid;
+}
+
+/* Misc */
+.mw-parser-output > p:first-child,
+.mw-parser-output > h2:first-child {
+  margin-top: 0.6em;
+}
+
+code,
+pre {
+  font-family: "Computer Modern Typewriter", monospace;
 }
 
 .article-text dl:first-child,
@@ -690,9 +693,7 @@ table.floatright {
   padding: 0.1em 0.5em;
 }
 
-.article-text > *:last-child {
-  margin-bottom: 1em;
-}
+/* MathJax */
 .article-text:not(.mathjax-text) .mathjax-container {
   display: none;
 }
@@ -739,8 +740,9 @@ mjx-merror mjx-utext {
 .error,
 mjx-merror {
   color: var(--error-color);
-}
+} /**/
 
+/* Element states */
 a:focus,
 .text-button:focus,
 mjx-container:focus {
