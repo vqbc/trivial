@@ -339,7 +339,7 @@
       let problemText = latexer(json.parse.text["*"]);
 
       if (problemText.includes("Redirect to")) {
-        console.log("Redirect problem, going there instead...");
+        console.log("Redirect page, going there instead...");
 
         let redirHref = $($.parseHTML(problemText))
           .find(".redirectText a")
