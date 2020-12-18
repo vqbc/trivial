@@ -332,11 +332,30 @@
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
 
-    const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-    const json = await response.json();
+    let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+    let json = await response.json();
 
     if (json?.parse) {
       let problemText = latexer(json.parse.text["*"]);
+
+      if (problemText.includes("Redirect to")) {
+        console.log("Redirect problem, going there instead...");
+
+        let redirHref = $($.parseHTML(problemText))
+          .find(".redirectText a")
+          .attr("href");
+        let redirPage = redirHref
+          .replace("/wiki/index.php/", "")
+          .replace(/_/g, " ");
+        console.log(redirPage);
+        pagename = redirPage;
+
+        params = `action=parse&page=${redirPage}&format=json`;
+        response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        json = await response.json();
+        problemText = latexer(json.parse.text["*"]);
+      }
+
       problemText = $($.parseHTML(problemText))
         .children()
         .not(".toc")
