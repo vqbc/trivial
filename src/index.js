@@ -283,7 +283,7 @@
         )}`
       );
       mathJaxFormat();
-      MathJax.typeset();
+      MathJax.typesetPromise();
       mathJaxFallback();
       customText();
       fixLinks();
@@ -376,7 +376,7 @@
         )}`
       );
       mathJaxFormat();
-      MathJax.typeset();
+      MathJax.typesetPromise();
       mathJaxFallback();
     } else {
       $(".article-text").before(
@@ -1469,7 +1469,7 @@
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
       mathJaxFormat();
-      MathJax.typeset();
+      MathJax.typesetPromise();
       mathJaxFallback();
       customText();
       let name = $("#input-name").val()
@@ -1617,7 +1617,7 @@
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
       mathJaxFormat();
-      MathJax.typeset();
+      MathJax.typesetPromise();
       mathJaxFallback();
       customText();
       changeName();
@@ -1841,7 +1841,7 @@
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
       mathJaxFormat();
-      MathJax.typeset();
+      MathJax.typesetPromise();
       mathJaxFallback();
       replaceProblems();
       customText();
@@ -2004,7 +2004,7 @@
       </div>`);
 
         mathJaxFormat();
-        MathJax.typeset();
+        MathJax.typesetPromise();
         mathJaxFallback();
         replaceProblems();
         fixLinks();
