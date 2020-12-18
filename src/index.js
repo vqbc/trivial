@@ -1862,7 +1862,6 @@
     }
     theoremPages = theoremPages.filter((e) => e !== "H\ufffdlder's Inequality");
 
-    console.log(theoremPages);
     let randomTheorem =
       theoremPages[Math.floor(Math.random() * theoremPages.length)];
     console.log(randomTheorem);
