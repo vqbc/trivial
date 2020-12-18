@@ -1175,7 +1175,6 @@
       dropdown: {
         enabled: 0,
       },
-      enforceWhitelist: true,
     });
   });
 
@@ -1232,7 +1231,6 @@
       dropdown: {
         enabled: 0,
       },
-      enforceWhitelist: true,
     });
 
     $("#input-years").ionRangeSlider({
@@ -1497,6 +1495,7 @@
         .split(",")
         .map((e) => e.replace("#", "Problems/Problem "));
       let numProblems = problemTitles.length;
+      let invalidProblems = 0;
 
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
       let params;
@@ -1542,7 +1541,7 @@
 
           $(".loading-bar").css(
             "width",
-            `${(problems.length / numProblems) * 100}%`
+            `${((problems.length + invalidProblems) / numProblems) * 100}%`
           );
         } else if (problemText.includes("Redirect to")) {
           console.log("Redirect problem, going there instead...");
@@ -1576,10 +1575,11 @@
 
           $(".loading-bar").css(
             "width",
-            `${(problems.length / numProblems) * 100}%`
+            `${((problems.length + invalidProblems) / numProblems) * 100}%`
           );
         } else {
           console.log("Invalid problem, skipping...");
+          invalidProblems++;
         }
       }
 
@@ -1598,7 +1598,6 @@
     clearProblem();
 
     addBatch();
-    allPagesWarn();
 
     let inputProblems = $("#input-problems");
     if (!inputProblems.val()) {
