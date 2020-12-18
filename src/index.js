@@ -337,6 +337,14 @@
 
     if (json?.parse) {
       let problemText = latexer(json.parse.text["*"]);
+      problemText = $($.parseHTML(problemText))
+        .children()
+        .not(".toc")
+        .map(function () {
+          return this.outerHTML;
+        })
+        .get()
+        .join("");
 
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
@@ -804,11 +812,13 @@
       .addBack()
       .not(".toc")
       .not(":header:contains('Problem')");
-    let afterHTML = "";
 
-    after.each(function () {
-      afterHTML += this.outerHTML;
-    });
+    let afterHTML = $(after)
+      .map(function () {
+        return this.outerHTML;
+      })
+      .get()
+      .join("");
     return afterHTML;
   }
 
@@ -819,11 +829,13 @@
       .filter(":header:contains('Solution')")
       .nextUntil(":header:not(:contains('Solution')), table")
       .addBack(":header:contains(' Solution'), :header:contains('Solution ')");
-    let afterHTML = "";
 
-    after.each(function () {
-      afterHTML += this.outerHTML;
-    });
+    let afterHTML = $(after)
+      .map(function () {
+        return this.outerHTML;
+      })
+      .get()
+      .join("");
     return afterHTML;
   }
 
@@ -1848,7 +1860,9 @@
       for (let page of json.query.categorymembers)
         theoremPages.push(page.title);
     }
+    theoremPages = theoremPages.filter((e) => e !== "H\ufffdlder's Inequality");
 
+    console.log(theoremPages);
     let randomTheorem =
       theoremPages[Math.floor(Math.random() * theoremPages.length)];
     console.log(randomTheorem);
@@ -2131,12 +2145,8 @@
           ""
         );
         clearProblem();
-        if (validProblem(pagename)) {
-          await addProblem(pagename);
-          collapseSolutions();
-        } else {
-          await addArticle(pagename);
-        }
+        if (validProblem(pagename)) await addProblem(pagename);
+        else await addArticle(pagename);
       }
     });
   }

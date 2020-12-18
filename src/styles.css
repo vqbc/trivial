@@ -635,8 +635,7 @@ h3 {
 }
 
 /* Misc */
-.mw-parser-output > p:first-child,
-.mw-parser-output > h2:first-child {
+#full-text > *:first-child {
   margin-top: 0.6em;
 }
 
