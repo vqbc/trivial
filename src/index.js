@@ -56,7 +56,7 @@
     <input class="input-field input-field-top input-field-right"
       id="input-break" type="number" min="1" max="40"
       placeholder="Page break every n problems (optional)"/>
-    <div class="input-container checkbox-container">n 
+    <div class="input-container checkbox-container"> 
       <div class="checkbox-wrap">
         <input type="checkbox" checked class="input-check" id="input-sort"/>
         <label class="checkbox-label">
