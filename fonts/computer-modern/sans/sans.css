@@ -1,41 +1,41 @@
 @font-face {
   font-weight: normal;
-  font-family: "Computer Modern Sans";
+  font-family: "Latin Modern Sans";
   font-style: normal;
   src: url("sans-regular.woff2") format("woff2");
 }
 
 @font-face {
   font-weight: normal;
-  font-family: "Computer Modern Sans";
+  font-family: "Latin Modern Sans";
   font-style: italic;
   src: url("sans-italic.woff2") format("woff2");
 }
 
 @font-face {
   font-weight: bold;
-  font-family: "Computer Modern Sans";
+  font-family: "Latin Modern Sans";
   font-style: normal;
   src: url("sans-bold.woff2") format("woff2");
 }
 
 @font-face {
   font-weight: bold;
-  font-family: "Computer Modern Sans";
+  font-family: "Latin Modern Sans";
   font-style: italic;
   src: url("sans-bolditalic.woff2") format("woff2");
 }
 
 @font-face {
   font-weight: normal;
-  font-family: "Computer Modern Sans Demi-Condensed";
+  font-family: "Latin Modern Sans Demi-Condensed";
   font-style: normal;
   src: url("sans-demi.woff2") format("woff2");
 }
 
 @font-face {
   font-weight: normal;
-  font-family: "Computer Modern Sans Demi-Condensed";
+  font-family: "Latin Modern Sans Demi-Condensed";
   font-style: italic;
   src: url("sans-demiitalic.woff2") format("woff2");
 }

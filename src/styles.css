@@ -49,7 +49,7 @@ html {
 
 body {
   color: var(--text-color);
-  font: 1.1rem / 1.35 "Computer Modern Sans", sans-serif;
+  font: 1.1rem / 1.35 "Latin Modern Sans", sans-serif;
   background: var(--body-color);
 }
 
@@ -229,7 +229,7 @@ body {
   flex: 1 0 30%;
   min-width: 0;
   padding: 0.3em 0.6em;
-  font: 1em "Computer Modern Sans", sans-serif;
+  font: 1em "Latin Modern Sans", sans-serif;
   border: none;
   box-shadow: var(--input-box-shadow);
   -webkit-appearance: none;
@@ -771,7 +771,7 @@ mjx-container:focus {
 }
 
 .CtxtMenu_InfoSignature > input {
-  font-family: "Computer Modern Sans", sans-serif;
+  font-family: "Latin Modern Sans", sans-serif;
 } /**/
 
 /* Main and footer */
@@ -930,7 +930,7 @@ footer {
     margin: 0 0 1rem;
     padding: 0;
     color: inherit;
-    font: 2rem "Computer Modern Sans Demi-Condensed", sans-serif;
+    font: 2rem "Latin Modern Sans Demi-Condensed", sans-serif;
     text-shadow: none;
     background: none;
   }
