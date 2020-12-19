@@ -32,3 +32,10 @@
   font-style: normal;
   src: url("sans-demi.woff2") format("woff2");
 }
+
+@font-face {
+  font-weight: normal;
+  font-family: "Computer Modern Sans Demi-Condensed";
+  font-style: italic;
+  src: url("sans-demiitalic.woff2") format("woff2");
+}

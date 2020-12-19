@@ -49,7 +49,7 @@ html {
 
 body {
   color: var(--text-color);
-  font: 1.1rem "Computer Modern Sans", sans-serif;
+  font: 1.1rem / 1.3 "Computer Modern Sans", sans-serif;
   background: var(--body-color);
 }
 
@@ -552,7 +552,8 @@ a.secret-link {
   border-bottom: 1px solid var(--link-color);
 }
 
-.article-text .thumb a {
+.article-text .thumb a,
+.article-text a.image {
   border-bottom: none;
 }
 
