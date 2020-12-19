@@ -49,7 +49,7 @@ html {
 
 body {
   color: var(--text-color);
-  font: 1.1rem / 1.3 "Computer Modern Sans", sans-serif;
+  font: 1.1rem / 1.35 "Computer Modern Sans", sans-serif;
   background: var(--body-color);
 }
 
@@ -503,7 +503,7 @@ tags > span {
 }
 
 .serif-text {
-  font: 1.06rem / 1.4 "TeX Gyre Pagella", serif;
+  font: 1.08rem / 1.4 "TeX Gyre Pagella", serif;
 }
 
 .justify-text p {
