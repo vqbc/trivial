@@ -906,8 +906,8 @@
 
   const sanitizeLatex = (string) => {
     return string
-      .replace(/&lt;/g, "\\lt")
-      .replace(/&gt;/g, "\\gt")
+      .replace(/&lt;/g, "\\lt ")
+      .replace(/&gt;/g, "\\gt ")
       .replace(/(?!^)\$(?!$)/g, "\\$$");
   };
 
