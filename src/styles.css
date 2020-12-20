@@ -143,7 +143,6 @@ body {
 
 /* Input buttons */
 .input-button {
-  height: 1.9em;
   margin-left: var(--horizontal-item-spacing);
   padding: 0.3rem var(--horizontal-item-spacing);
   color: white;
@@ -647,7 +646,6 @@ pre {
 
 .article-text dl:first-child,
 .article-text .problem-heading + dl, /* redirect disclaimers etc */
-.article-text .toc,
 .article-text .mw-editsection,
 .article-text p:empty,
 .article-text p > br:only-child {

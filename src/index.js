@@ -359,6 +359,7 @@
       problemText = $($.parseHTML(problemText))
         .children()
         .not(".toc")
+        .not("table:contains('Word of the Week')")
         .map(function () {
           return this.outerHTML;
         })
@@ -1462,28 +1463,40 @@
 
     addBatch();
     allPagesWarn();
-    await makeBatch();
+    let inputSingleTest = $("#input-singletest");
+    if (!inputSingleTest.val()) {
+      $(".article-text").before(
+        `<p class="error">
+          No test was entered.
+        </p>`
+      );
+      $(".article-text").remove();
+      $("#batch-header").html("Error");
+      $("#solutions-section").remove();
+    } else {
+      await makeBatch();
 
-    if (clickedTimes === clickedTimesThen) {
-      $(".loading-notice").remove();
-      mathJaxFormat();
-      MathJax.typesetPromise();
-      mathJaxFallback();
-      customText();
-      let name = $("#input-name").val()
-        ? sanitize($("#input-name").val())
-        : sanitize(
-            `${$("#input-singleyear").val()} ${$(
-              "#input-singletest"
-            ).val()} Problems`
-          );
-      $("#batch-header").html(name);
-      document.title = name + " - Trivial AoPS Wiki Reader";
-      fixLinks();
-      collapseSolutions();
-      directLinks();
-      hideLinks();
-      breakSets();
+      if (clickedTimes === clickedTimesThen) {
+        $(".loading-notice").remove();
+        mathJaxFormat();
+        MathJax.typesetPromise();
+        mathJaxFallback();
+        customText();
+        let name = $("#input-name").val()
+          ? sanitize($("#input-name").val())
+          : sanitize(
+              `${$("#input-singleyear").val()} ${$(
+                "#input-singletest"
+              ).val()} Problems`
+            );
+        $("#batch-header").html(name);
+        document.title = name + " - Trivial AoPS Wiki Reader";
+        fixLinks();
+        collapseSolutions();
+        directLinks();
+        hideLinks();
+        breakSets();
+      }
     }
   });
 
@@ -1608,7 +1621,7 @@
       );
       $(".article-text").remove();
       $("#batch-header").html("Error");
-      $("#solutions-section").html("Error");
+      $("#solutions-section").remove();
     } else {
       await makeBatch();
     }
