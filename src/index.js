@@ -2325,7 +2325,7 @@
   $(".subtitle").click(() => {
     subtitleClicked++;
     let text;
-    switch (subtitleClicked % 4) {
+    switch (subtitleClicked % 5) {
       case 0:
         text = "An AoPS Wiki Reader for Studying";
         break;
@@ -2336,6 +2336,9 @@
         text = "Brilliant, but you don’t learn anything useful";
         break;
       case 3:
+        text = "Wikiwand, but without ads everywhere";
+        break;
+      case 4:
         text =
           "The AoPS Wiki, but you waste time trying to find the other easter eggs";
         break;
