@@ -225,11 +225,13 @@
       paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
       response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
       json = await response.json();
+
       for (let page of json.query.allpages) {
         if (page.title.charAt(0) !== "/") allPages.push(page.title);
         if (validProblem(page.title)) allProblems.push(page.title);
       }
     }
+
     allPagesLoaded = true;
     console.log(
       `Finished loading Special:AllPages (${allPages.length} pages).`
@@ -275,7 +277,7 @@
           pagename
         )}`
       );
-      KatexFallback();
+      katexFallback();
       customText();
       fixLinks();
       directLinks();
@@ -294,6 +296,14 @@
       $(".aops-link").remove();
       $("#solutions-section").remove();
     }
+  }
+
+  function addSearch() {
+    $(".notes").before(
+      `<div class="results-container">
+      <span class="results-counter"></span>
+    </div>`
+    );
   }
 
   function addBatch() {
@@ -367,7 +377,7 @@
           pagename
         )}`
       );
-      KatexFallback();
+      katexFallback();
     } else {
       $(".article-text").before(
         `<p class="error">The page you specified does not exist.</p>`
@@ -988,6 +998,9 @@
         <button type="button" class="button secondary-button" id="find-nav">
           Choose an Article
         </button>
+        <button type="button" class="button secondary-button" id="search-nav">
+          Search Articles
+        </button>
         <button type="button" class="button secondary-button" id="theorem-button">
           Random Theorem
         </button>
@@ -1294,6 +1307,24 @@
     });
   });
 
+  $(".page-container").on("click", "#search-nav", () => {
+    clearOptions();
+    activeSecondaryButton("search-nav");
+
+    $("#secondary-button-container").after(
+      `<div class="options-input" id="search-input">
+        <input class="input-field" id="input-search" type="text"
+        placeholder="Keywords, e.g. Cauchy">
+        <button class="input-button" id="search-button">
+          Search Pages
+        </button>
+      </div>
+      ${notes}`
+    );
+    collapseNotes();
+    directLinks();
+  });
+
   // Buttons
   $(".page-container").on("click", "#single-button", async () => {
     clearProblem();
@@ -1396,11 +1427,7 @@
         let problemProblem = getProblem(problemText);
         let problemSolutions = getSolutions(problemText);
 
-        if (
-          problemProblem &&
-          problemSolutions &&
-          clickedTimes === clickedTimesThen
-        ) {
+        if (problemProblem && problemSolutions) {
           problems.push({
             title: currentProblem,
             difficulty: computeDifficulty(
@@ -1482,7 +1509,7 @@
 
       if (clickedTimes === clickedTimesThen) {
         $(".loading-notice").remove();
-        KatexFallback();
+        katexFallback();
         customText();
         let name = $("#input-name").val()
           ? sanitize($("#input-name").val())
@@ -1538,11 +1565,7 @@
         let problemProblem = getProblem(problemText);
         let problemSolutions = getSolutions(problemText);
 
-        if (
-          problemProblem &&
-          problemSolutions &&
-          clickedTimes === clickedTimesThen
-        ) {
+        if (problemProblem && problemSolutions) {
           problems.push({
             title: currentProblem,
             difficulty: computeDifficulty(
@@ -1630,7 +1653,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
-      KatexFallback();
+      katexFallback();
       customText();
       changeName();
       fixLinks();
@@ -1679,11 +1702,7 @@
           let problemProblem = getProblem(problemText);
           let problemSolutions = getSolutions(problemText);
 
-          if (
-            problemProblem &&
-            problemSolutions &&
-            clickedTimes === clickedTimesThen
-          ) {
+          if (problemProblem && problemSolutions) {
             problems.push({
               title: currentProblem,
               difficulty: computeDifficulty(
@@ -1755,11 +1774,7 @@
         let problemProblem = getProblem(problemText);
         let problemSolutions = getSolutions(problemText);
 
-        if (
-          problemProblem &&
-          problemSolutions &&
-          clickedTimes === clickedTimesThen
-        ) {
+        if (problemProblem && problemSolutions) {
           problems.push({
             title: randomPage,
             difficulty: computeDifficulty(
@@ -1852,7 +1867,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
-      KatexFallback();
+      katexFallback();
       replaceProblems();
       customText();
       changeName();
@@ -1874,9 +1889,112 @@
     );
   });
 
+  $(".page-container").on("click", "#search-button", async () => {
+    async function addResults(searchResults) {
+      let resultsNum = searchResults.length;
+      let loadedTimes = 0;
+
+      $(".results-counter").html(`${resultsNum} results found`);
+
+      for (let i = 0; i < resultsNum && i < 20; i++) addResult();
+      loadedTimes++;
+      if (searchResults[0])
+        $(".results-container")
+          .after(`<span class="text-button" id="load-results">Load more…</span>
+        </span>`);
+
+      $("#load-results").click(() => {
+        for (let i = 0; i < resultsNum - loadedTimes * 20 && i < 20; i++)
+          addResult();
+        loadedTimes++;
+        if (!searchResults[0]) $("#load-results").remove();
+
+        directLinks();
+      });
+    }
+
+    const addResult = () => {
+      $(".results-container").append(`<div class="search-result">
+          <h2 class="result-title">
+            <a class="result-link" href="${searchResults[0].url}">
+              ${searchResults[0].title}
+            </a>
+          </h2>
+          <p class="result-snippet">${searchResults[0].snippet}</p>
+        </div>`);
+      searchResults.splice(0, 1);
+    };
+
+    const enterResult = (page) => {
+      if (
+        page.snippet.indexOf("#REDIRECT") +
+          page.snippet.indexOf("#redirect") +
+          page.title.indexOf("\ufffd") ===
+        -3
+      ) {
+        searchResults.push({
+          url: `https://artofproblemsolving.com/wiki/index.php/${encodeURI(
+            underscores(page.title)
+          )}`,
+          title: titleCleanup(page.title),
+          snippet: page.snippet,
+        });
+      }
+    };
+
+    clickedTimes++;
+    let clickedTimesThen = clickedTimes;
+    clearProblem();
+
+    let searchResults = [];
+    let search = $("#input-search").val();
+
+    if (!search) {
+      $(".notes").before(
+        `<div class="problem-section">
+          <h2 class="section-header" id="article-header">Error</h2>
+          <p class="error">
+            No search terms were entered.
+          </p>
+        </div>`
+      );
+    } else {
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params = `action=query&list=search&srwhat=text&srsearch=${search}&srlimit=max&srqiprofile=wsum_inclinks_pv&format=json`;
+
+      let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+      let json = await response.json();
+
+      if (clickedTimes === clickedTimesThen)
+        for (let page of json.query.search) {
+          enterResult(page);
+        }
+
+      while (json?.continue) {
+        paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
+        response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
+        json = await response.json();
+
+        for (let page of json.query.search) {
+          enterResult(page);
+        }
+      }
+      console.log(searchResults);
+
+      if (clickedTimes === clickedTimesThen) {
+        addSearch();
+        await addResults(searchResults);
+        directLinks();
+      }
+    }
+  });
+
   $(".page-container").on("click", "#theorem-button", async () => {
     clearOptions();
     activeSecondaryButton("theorem-button");
+
+    $("#secondary-button-container").after(`
+      ${notes}`);
 
     if (!theoremPages[0]) {
       console.log("Loading theorems...");
@@ -2013,7 +2131,7 @@
         </h2>${newProblem.solutions}
       </div>`);
 
-        KatexFallback();
+        katexFallback();
         replaceProblems();
         fixLinks();
         directLinks();
@@ -2026,6 +2144,8 @@
   // Clear things
   function clearProblem() {
     $(".problem-section").remove();
+    $(".results-container").remove();
+    $("#load-results").remove();
   }
 
   function clearOptions() {
@@ -2033,6 +2153,8 @@
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
+    $(".results-container").remove();
+    $("#load-results").remove();
     $(".notes").remove();
   }
 
@@ -2042,6 +2164,8 @@
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
+    $(".results-container").remove();
+    $("#load-results").remove();
     $(".notes").remove();
   }
 
@@ -2122,7 +2246,7 @@
     });
   }
 
-  function KatexFallback() {
+  function katexFallback() {
     $(".katex-error").each(function () {
       $(this).closest(".katex-container").addClass("katex-broken");
       $(this)
@@ -2148,19 +2272,21 @@
   }
 
   async function directLinks() {
-    $(".article-text a, #notes-text a").click(async function (event) {
-      let href = $(this).attr("href");
-      if (href && href.includes("artofproblemsolving.com/wiki/")) {
-        event.preventDefault();
-        let pagename = href.replace(
-          "https://artofproblemsolving.com/wiki/index.php/",
-          ""
-        );
-        clearProblem();
-        if (validProblem(pagename)) await addProblem(pagename);
-        else await addArticle(pagename);
+    $(".range-label a, .article-text a, #notes-text a, a.result-link").click(
+      async function (event) {
+        let href = $(this).attr("href");
+        if (href && href.includes("artofproblemsolving.com/wiki/")) {
+          event.preventDefault();
+          let pagename = href.replace(
+            "https://artofproblemsolving.com/wiki/index.php/",
+            ""
+          );
+          clearProblem();
+          if (validProblem(pagename)) await addProblem(pagename);
+          else await addArticle(pagename);
+        }
       }
-    });
+    );
   }
 
   function hideLinks() {

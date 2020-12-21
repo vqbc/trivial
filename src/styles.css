@@ -4,6 +4,7 @@
   --header-color: #222;
   --secondary-color: #333;
   --subtitle-color: #444;
+  --minor-color: #666;
   --hr-color: #aaa;
   --body-color: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8cGF0aCBkPSJNMjggMEwyOCAzNEwwIDUwTDAgODRMMjggMTAwTDU2IDg0TDU2IDUwTDI4IDM0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8L3N2Zz4="),
     linear-gradient(#f3f3f3, #f3f3f3);
@@ -594,6 +595,36 @@ a.secret-link {
   transform: translateY(1px);
 } /**/
 
+/* Search */
+#search-input {
+  margin-bottom: 1rem;
+}
+
+#search-input + .problem-section,
+#search-input + .notes {
+  margin-top: 2rem;
+}
+
+.results-counter {
+  color: var(--minor-color);
+  font-style: italic;
+}
+
+.search-result {
+  margin: 1em 0;
+}
+
+.result-title {
+  margin: 0;
+  font: 600 1.2rem "Computer Modern Bright", sans-serif;
+}
+
+.result-snippet {
+  margin: 0;
+  font: normal 0.9rem "Fira Mono", monospace;
+} /**/
+
+/* Headings */
 .article-text h1,
 .article-text h2,
 h3 {
@@ -632,7 +663,7 @@ h3 {
 
 .article-problem {
   break-inside: avoid;
-}
+} /**/
 
 /* Misc */
 #full-text > *:first-child {
@@ -641,7 +672,7 @@ h3 {
 
 code,
 pre {
-  font-family: "Computer Modern Typewriter", monospace;
+  font-family: "Fira Sans", monospace;
 }
 
 .article-text dl:first-child,
