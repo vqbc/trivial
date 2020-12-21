@@ -2336,7 +2336,7 @@
         text = "Brilliant, but you don’t learn anything useful";
         break;
       case 3:
-        text = "Wikiwand, but without ads everywhere";
+        text = "Wikiwand, but you don't scroll through ads everywhere";
         break;
       case 4:
         text =
