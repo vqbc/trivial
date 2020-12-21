@@ -1971,13 +1971,14 @@
         }
 
       while (json?.continue) {
-        paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
+        let paramsContinue = params + `&sroffset=${json.continue.sroffset}`;
         response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
         json = await response.json();
 
         for (let page of json.query.search) {
           enterResult(page);
         }
+        console.log(searchResults);
       }
       console.log(searchResults);
 
