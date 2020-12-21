@@ -1978,7 +1978,6 @@
         for (let page of json.query.search) {
           enterResult(page);
         }
-        console.log(searchResults);
       }
       console.log(searchResults);
 
