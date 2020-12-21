@@ -1947,7 +1947,7 @@
     clearProblem();
 
     let searchResults = [];
-    let search = $("#input-search").val();
+    let search = $("#input-search").val().replace(/’/g, "'");
 
     if (!search) {
       $(".notes").before(
