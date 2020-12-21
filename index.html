@@ -68,6 +68,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.21.5/tagify.min.css"
     />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+    />
+    <link
       href="fonts/tex-gyre-pagella/texgyrepagella-regular.woff2"
       rel="preload"
       as="font"
@@ -161,8 +165,8 @@
             Unjustified text
           </span>
           |
-          <span class="text-button" id="mathjax-toggle" tabindex="0">
-            MathJax on
+          <span class="text-button" id="katex-toggle" tabindex="0">
+            KaTeX on
           </span>
         </p>
         <p class="footer-line">
@@ -186,18 +190,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.21.5/tagify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
-    <script>
-      MathJax = {
-        tex: {
-          packages: { "[-]": ["noundefined"] },
-          inlineMath: [
-            ["$", "$"],
-            ["\\(", "\\)"],
-          ],
-        },
-      };
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-chtml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/copy-tex.min.js"></script>
     <script type="module" src="src/index.js"></script>
     <script
       async

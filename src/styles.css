@@ -691,53 +691,25 @@ table.floatright {
   padding: 0.1em 0.5em;
 }
 
-/* MathJax */
-.article-text:not(.mathjax-text) .mathjax-container {
-  display: none;
-}
-
-.mathjax-text .fallback-container:not(.fallback-live) {
-  display: none;
-}
-
-.mathjax-text .mathjax-broken {
-  display: none;
-}
-
-.MathJax {
-  display: inline-block;
-  max-width: 100%;
-  font-size: 1.05rem !important; /* override MathJax inline styles */
-}
-
-mjx-container:focus:not(:focus-visible) {
-  outline: none;
-}
-
-mjx-math {
-  white-space: initial;
-}
-
-mjx-mtext {
-  line-height: 1;
-}
-
-mjx-box > mjx-mtext {
-  line-height: 0;
-}
-
-mjx-merror {
-  font-style: italic;
-  background: none;
-}
-
-mjx-merror mjx-utext {
-  font-family: MJXZERO, MJXTEX, serif;
-}
-
-.error,
-mjx-merror {
+.error {
   color: var(--error-color);
+} /**/
+
+/* KaTeX */
+.article-text:not(.katex-text) .katex-container {
+  display: none;
+}
+
+.katex-text .fallback-container:not(.fallback-live) {
+  display: none;
+}
+
+.katex-text .katex-broken {
+  display: none;
+}
+
+.katex {
+  font-size: 1em;
 } /**/
 
 /* Element states */
@@ -750,26 +722,6 @@ mjx-container:focus {
 
 ::selection {
   background: hsl(201deg, 80%, 70%, 35%);
-} /**/
-
-/* MathJax menus */
-.CtxtMenu_Menu {
-  border-radius: 0;
-  box-shadow: var(--input-box-shadow);
-}
-
-.CtxtMenu_Info {
-  border: 1px solid #bbb;
-  border-radius: 0;
-  box-shadow: var(--main-box-shadow);
-}
-
-.CtxtMenu_InfoTitle {
-  font: 600 1.3rem "Computer Modern Bright", sans-serif;
-}
-
-.CtxtMenu_InfoSignature > input {
-  font-family: "Latin Modern Sans", sans-serif;
 } /**/
 
 /* Main and footer */
@@ -908,10 +860,6 @@ footer {
   .article-text {
     color: black;
     font-size: 11pt;
-  }
-
-  .MathJax {
-    font-size: 11pt !important;
   }
 
   .article-text h1,

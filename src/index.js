@@ -92,8 +92,9 @@
         such as the Choose Problems main input.
       </li>
       <li>
-        Turning off MathJax uses the original raster images from AoPS for LaTeX,
-        which makes them blurrier, but prevents some potential rendering bugs.
+        Turning off <a href="https://katex.org/">KaTeX</a> uses the original
+        raster images from AoPS for LaTeX, which makes them blurrier, but
+        prevents some potential rendering bugs.
       </li>
       <li>
         AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
@@ -144,7 +145,7 @@
       $("#justify-toggle").text("Justified text");
     }
     if (JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
-      $("#mathjax-toggle").text("MathJax off");
+      $("#katex-toggle").text("KaTeX off");
     }
 
     $("#dark-toggle").click(() => {
@@ -193,14 +194,14 @@
       }
     });
 
-    $("#mathjax-toggle").click(() => {
-      $(".article-text").toggleClass("mathjax-text");
+    $("#katex-toggle").click(() => {
+      $(".article-text").toggleClass("katex-text");
       if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
         localStorage.setItem("mathJaxDisabled", true);
-        $("#mathjax-toggle").text("MathJax off");
+        $("#katex-toggle").text("KaTeX off");
       } else {
         localStorage.setItem("mathJaxDisabled", false);
-        $("#mathjax-toggle").text("MathJax on");
+        $("#katex-toggle").text("KaTeX on");
       }
     });
   })();
@@ -274,9 +275,7 @@
           pagename
         )}`
       );
-      mathJaxFormat();
-      MathJax.typesetPromise();
-      mathJaxFallback();
+      KatexFallback();
       customText();
       fixLinks();
       directLinks();
@@ -368,9 +367,7 @@
           pagename
         )}`
       );
-      mathJaxFormat();
-      MathJax.typesetPromise();
-      mathJaxFallback();
+      KatexFallback();
     } else {
       $(".article-text").before(
         `<p class="error">The page you specified does not exist.</p>`
@@ -897,12 +894,23 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
 
-  const sanitizeLatex = (string) => {
-    return string
+  const formatLatex = (string) =>
+    string
+      .replace(/&#160;/g, " ")
+      .replace(/&#39;/g, "'")
+      .replace(/&amp;/g, "&")
+      .replace(/^\$|\$$|\\\[|\\\]/g, "")
       .replace(/&lt;/g, "\\lt ")
       .replace(/&gt;/g, "\\gt ")
-      .replace(/(?!^)\$(?!$)/g, "\\$$");
-  };
+      .replace(/(?!^)\$(?!$)/g, "\\$$")
+      .replace(/align\*/g, "aligned")
+      .replace(/eqnarray\*/g, "aligned")
+      .replace(/\\bold/g, "\\mathbf")
+      .replace(/\\congruent/g, "\\cong")
+      .replace(/\\overarc/g, "\\overparen")
+      .replace(/\\textdollar/g, "\\$")
+      .replace(/\\underarc/g, "\\underparen")
+      .replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
 
   const titleCleanup = (string) =>
     decodeURI(string)
@@ -919,11 +927,15 @@
     if (images) {
       for (let image of images) {
         if (!image.includes("[asy]")) {
+          let isDisplay = /alt="\\\[|\\begin/.test(image);
+          let imageLatex = formatLatex(image.match(/alt="(.*?)"/)[1]);
+          let renderedLatex = katex.renderToString(imageLatex, {
+            throwOnError: false,
+            displayMode: isDisplay,
+          });
           html = html.replaceAll(
             image,
-            `<span class="fallback-container">$&</span><span class="mathjax-container">${sanitizeLatex(
-              image.match(/alt="(.*?)"/)[1]
-            )}</span>`
+            `<span class="fallback-container">$&</span><span class="katex-container">${renderedLatex}</span>`
           );
         }
       }
@@ -1470,9 +1482,7 @@
 
       if (clickedTimes === clickedTimesThen) {
         $(".loading-notice").remove();
-        mathJaxFormat();
-        MathJax.typesetPromise();
-        mathJaxFallback();
+        KatexFallback();
         customText();
         let name = $("#input-name").val()
           ? sanitize($("#input-name").val())
@@ -1620,9 +1630,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
-      mathJaxFormat();
-      MathJax.typesetPromise();
-      mathJaxFallback();
+      KatexFallback();
       customText();
       changeName();
       fixLinks();
@@ -1844,9 +1852,7 @@
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
-      mathJaxFormat();
-      MathJax.typesetPromise();
-      mathJaxFallback();
+      KatexFallback();
       replaceProblems();
       customText();
       changeName();
@@ -2007,9 +2013,7 @@
         </h2>${newProblem.solutions}
       </div>`);
 
-        mathJaxFormat();
-        MathJax.typesetPromise();
-        mathJaxFallback();
+        KatexFallback();
         replaceProblems();
         fixLinks();
         directLinks();
@@ -2096,9 +2100,9 @@
       $(".article-text").addClass("justify-text");
 
     if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
-      $(".article-text").addClass("mathjax-text");
+      $(".article-text").addClass("katex-text");
     } else {
-      $(".article-text").removeClass("mathjax-text");
+      $(".article-text").removeClass("katex-text");
     }
   }
 
@@ -2118,25 +2122,11 @@
     });
   }
 
-  function mathJaxFormat() {
-    $(".article-text").each(function () {
-      let articleText = $(this).html();
-      articleText = articleText
-        .replace(/\\bold/g, "\\mathbf")
-        .replace(/\\congruent/g, "\\cong")
-        .replace(/\\overarc/g, "\\overparen")
-        .replace(/\\textdollar/g, "\\$")
-        .replace(/\\underarc/g, "\\underparen")
-        .replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
-      $(this).html(articleText);
-    });
-  }
-
-  function mathJaxFallback() {
-    $("mjx-merror").each(function () {
-      $(this).closest(".mathjax-container").addClass("mathjax-broken");
+  function KatexFallback() {
+    $(".katex-error").each(function () {
+      $(this).closest(".katex-container").addClass("katex-broken");
       $(this)
-        .closest(".mathjax-container")
+        .closest(".katex-container")
         .prev(".fallback-container")
         .addClass("fallback-live");
     });
