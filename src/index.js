@@ -1966,18 +1966,14 @@
       let json = await response.json();
 
       if (clickedTimes === clickedTimesThen)
-        for (let page of json.query.search) {
-          enterResult(page);
-        }
+        for (let page of json.query.search) enterResult(page);
 
       while (json?.continue) {
         let paramsContinue = params + `&sroffset=${json.continue.sroffset}`;
         response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
         json = await response.json();
 
-        for (let page of json.query.search) {
-          enterResult(page);
-        }
+        for (let page of json.query.search) enterResult(page);
       }
       console.log(searchResults);
 
