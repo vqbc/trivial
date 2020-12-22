@@ -2023,7 +2023,9 @@
       for (let page of json.query.categorymembers)
         theoremPages.push(page.title);
     }
-    theoremPages = theoremPages.filter((e) => e !== "H\ufffdlder's Inequality");
+    theoremPages = theoremPages.filter(
+      (e) => e !== "H\ufffdlder's Inequality" && e !== "Theorems"
+    );
 
     let randomTheorem =
       theoremPages[Math.floor(Math.random() * theoremPages.length)];
