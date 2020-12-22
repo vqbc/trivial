@@ -869,6 +869,17 @@ footer {
   }
 }
 
+@media (max-width: 600px) {
+  .article-text {
+    overflow-wrap: break-word;
+  }
+
+  .katex .base {
+    display: inline;
+    white-space: break-spaces;
+  }
+}
+
 @media (max-width: 500px) {
   .source-link {
     display: inline-block;
