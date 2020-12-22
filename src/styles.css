@@ -626,6 +626,7 @@ a.secret-link {
 .result-snippet {
   margin: 0;
   font: normal 0.88rem / 1.4 "Fira Mono", monospace;
+  overflow-wrap: break-word;
 } /**/
 
 /* Headings */
