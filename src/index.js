@@ -912,7 +912,7 @@
       .replace(/^\$|\$$|\\\[|\\\]/g, "")
       .replace(/&lt;/g, "\\lt ")
       .replace(/&gt;/g, "\\gt ")
-      .replace(/(?!^)\$(?!$)/g, "\\$$")
+      .replace(/\$/g, "\\$$")
       .replace(/align\*/g, "aligned")
       .replace(/eqnarray\*/g, "aligned")
       .replace(/\\bold/g, "\\mathbf")
@@ -939,6 +939,7 @@
         if (!image.includes("[asy]")) {
           let isDisplay = /alt="\\\[|\\begin/.test(image);
           let imageLatex = formatLatex(image.match(/alt="(.*?)"/)[1]);
+          console.log(imageLatex);
           let renderedLatex = katex.renderToString(imageLatex, {
             throwOnError: false,
             displayMode: isDisplay,
@@ -1886,6 +1887,7 @@
       sanitize($("#input-find").val())
         .replace(/&quot;/g, `"`)
         .replace(/’/g, "'")
+        .replace("#", "Problems/Problem ")
     );
   });
 
@@ -1947,7 +1949,10 @@
     clearProblem();
 
     let searchResults = [];
-    let search = $("#input-search").val().replace(/’/g, "'");
+    let search = $("#input-search")
+      .val()
+      .replace(/’/g, "'")
+      .replace("#", "Problems/Problem ");
 
     if (!search) {
       $(".notes").before(
