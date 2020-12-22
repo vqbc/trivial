@@ -1911,12 +1911,22 @@
   });
 
   $(".page-container").on("click", "#search-button", async () => {
-    async function addResults(searchResults) {
+    async function addResults(
+      originalSearch,
+      search,
+      searchResults,
+      pageExists
+    ) {
       let resultsNum = searchResults.length;
       let loadedTimes = 0;
 
       $(".results-counter").html(`${resultsNum} results found`);
-
+      if (pageExists)
+        $(".results-counter").append(
+          ` | Page <a href="https://artofproblemsolving.com/wiki/index.php/${encodeURI(
+            underscores(search)
+          )}">${originalSearch}</a> exists on the wiki`
+        );
       for (let i = 0; i < resultsNum && i < 10; i++) addResult();
       loadedTimes++;
       if (searchResults[0])
@@ -1968,8 +1978,9 @@
     clearProblem();
 
     let searchResults = [];
-    let search = $("#input-search")
-      .val()
+    let pageExists = false;
+    let originalSearch = $("#input-search").val();
+    let search = originalSearch
       .replace(/’/g, "'")
       .replace("#", "Problems/Problem ");
 
@@ -1984,12 +1995,17 @@
       );
     } else {
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params =
-        `action=query&list=search&srwhat=text&srsearch=${search}` +
-        `&srlimit=max&srqiprofile=wsum_inclinks_pv&format=json`;
 
+      let params = `action=parse&page=${search}&format=json`;
       let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
       let json = await response.json();
+      if (json?.parse) pageExists = true;
+
+      params =
+        `action=query&list=search&srwhat=text&srsearch=${search}` +
+        `&srlimit=max&srqiprofile=wsum_inclinks_pv&format=json`;
+      response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+      json = await response.json();
 
       if (clickedTimes === clickedTimesThen)
         for (let page of json.query.search) enterResult(page);
@@ -2005,7 +2021,7 @@
 
       if (clickedTimes === clickedTimesThen) {
         addSearch();
-        await addResults(searchResults);
+        await addResults(originalSearch, search, searchResults, pageExists);
         directLinks();
       }
     }
@@ -2298,21 +2314,19 @@
   }
 
   async function directLinks() {
-    $(".range-label a, .article-text a, #notes-text a, a.result-link").click(
-      async function (event) {
-        let href = $(this).attr("href");
-        if (href && href.includes("artofproblemsolving.com/wiki/")) {
-          event.preventDefault();
-          let pagename = href.replace(
-            "https://artofproblemsolving.com/wiki/index.php/",
-            ""
-          );
-          clearProblem();
-          if (validProblem(pagename)) await addProblem(pagename);
-          else await addArticle(pagename);
-        }
+    $("a:not(#aops-wiki-link):not(.aops-link)").click(async function (event) {
+      let href = $(this).attr("href");
+      if (href && href.includes("artofproblemsolving.com/wiki/")) {
+        event.preventDefault();
+        let pagename = href.replace(
+          "https://artofproblemsolving.com/wiki/index.php/",
+          ""
+        );
+        clearProblem();
+        if (validProblem(pagename)) await addProblem(pagename);
+        else await addArticle(pagename);
       }
-    );
+    });
   }
 
   function hideLinks() {
