@@ -1332,7 +1332,8 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="search-input">
-        <input class="input-field" id="input-search" type="text"
+        <input class="input-field input-field-single"
+        id="input-search" type="text"
         placeholder="Keywords, e.g. Cauchy">
         <button class="input-button" id="search-button">
           Search Pages
