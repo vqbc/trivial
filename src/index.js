@@ -201,8 +201,8 @@
     $("#katex-toggle").click(() => {
       settingsClicked += "4";
       if (settingsClicked === "1234" && $("#katex-toggle").length === 1)
-        $("#katex-toggle")
-          .after(`<span class="divider"> | </span><button class="text-button" id="fun-toggle" tabindex="0">
+        $("#katex-toggle").after(`<span class="divider"> | </span>
+          <button class="text-button" id="fun-toggle" tabindex="0">
             Made you click
           </button>`);
 
@@ -480,7 +480,9 @@
           console.log(`Loading category ${subject}...`);
           let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
           let pagename = subject;
-          let params = `action=query&list=categorymembers&cmtitle=Category:${pagename}&cmlimit=max&format=json`;
+          let params =
+            `action=query&list=categorymembers` +
+            `&cmtitle=Category:${pagename}&cmlimit=max&format=json`;
           let paramsContinue;
 
           let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
@@ -961,7 +963,8 @@
           });
           html = html.replaceAll(
             image,
-            `<span class="fallback-container">$&</span><span class="katex-container">${renderedLatex}</span>`
+            `<span class="fallback-container">$&</span>
+            <span class="katex-container">${renderedLatex}</span>`
           );
         }
       }
@@ -1980,7 +1983,9 @@
       );
     } else {
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params = `action=query&list=search&srwhat=text&srsearch=${search}&srlimit=max&srqiprofile=wsum_inclinks_pv&format=json`;
+      let params =
+        `action=query&list=search&srwhat=text&srsearch=${search}` +
+        `&srlimit=max&srqiprofile=wsum_inclinks_pv&format=json`;
 
       let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
       let json = await response.json();
@@ -2015,7 +2020,9 @@
     if (!theoremPages[0]) {
       console.log("Loading theorems...");
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params = `action=query&list=categorymembers&cmtitle=Category:Theorems&cmlimit=max&format=json`;
+      let params =
+        `action=query&list=categorymembers&cmtitle=Category:Theorems` +
+        `&cmlimit=max&format=json`;
 
       let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
       let json = await response.json();
