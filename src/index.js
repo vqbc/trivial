@@ -62,9 +62,9 @@
         </label>
       </div>
     </div>`;
-  let replaceButton = `<span class="text-button replace-problem">
+  let replaceButton = `<button class="text-button replace-problem">
     (Replace problem)
-  </span>`;
+  </button>`;
   let notes = `<div class="notes">
     <h3 id="notes-header">Notes</h3>
     <ul id="notes-text">
@@ -860,10 +860,10 @@
 
   function addProblems(problems, addReplace) {
     let problemList = problems.map((e) => titleCleanup(e.title)).join(", ");
-    $("#batch-text").before(`<span class="text-button" id="copy-problems"
+    $("#batch-text").before(`<button class="text-button" id="copy-problems"
         data-clipboard-text="${problemList}">
         (Copy problem list)
-      </span>`);
+      </button>`);
     new ClipboardJS("#copy-problems");
 
     for (let [index, problem] of problems.entries()) {
@@ -1898,15 +1898,15 @@
 
       $(".results-counter").html(`${resultsNum} results found`);
 
-      for (let i = 0; i < resultsNum && i < 20; i++) addResult();
+      for (let i = 0; i < resultsNum && i < 10; i++) addResult();
       loadedTimes++;
       if (searchResults[0])
-        $(".results-container")
-          .after(`<span class="text-button" id="load-results">Load more…</span>
-        </span>`);
+        $(".results-container").after(
+          `<button class="text-button" id="load-results">Load more…</button>`
+        );
 
       $("#load-results").click(() => {
-        for (let i = 0; i < resultsNum - loadedTimes * 20 && i < 20; i++)
+        for (let i = 0; i < resultsNum - loadedTimes * 10 && i < 10; i++)
           addResult();
         loadedTimes++;
         if (!searchResults[0]) $("#load-results").remove();

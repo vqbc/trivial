@@ -174,8 +174,11 @@ body {
 /* Text buttons */
 .text-button {
   display: inline-block;
+  padding: 0;
   color: var(--text-button-color);
   font: 600 1em "Computer Modern Bright", sans-serif;
+  background: none;
+  border: none;
   cursor: pointer;
   transition: all 0.1s;
 }
@@ -514,7 +517,8 @@ tags > span {
 a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.1s, border-bottom-color 0.1s;
+  transition: color 0.1s, border-bottom-color 0.1s, outline 0.1s,
+    outline-offset 0.1s;
 }
 
 a:hover {
@@ -616,12 +620,12 @@ a.secret-link {
 
 .result-title {
   margin: 0 0 0.2em;
-  font: 600 1.2rem "Computer Modern Bright", sans-serif;
+  font: 600 1.15rem "Computer Modern Bright", sans-serif;
 }
 
 .result-snippet {
   margin: 0;
-  font: normal 0.9rem / 1.5 "Fira Mono", monospace;
+  font: normal 0.88rem / 1.4 "Fira Mono", monospace;
 } /**/
 
 /* Headings */
@@ -666,10 +670,6 @@ h3 {
 } /**/
 
 /* Misc */
-#full-text > *:first-child {
-  margin-top: 0.6em;
-}
-
 code,
 pre {
   font-family: "Fira Sans", monospace;
