@@ -129,6 +129,7 @@
   let clickedTimes = 0;
   let allPagesLoaded = false;
   let subtitleClicked = 0;
+  let settingsClicked = "";
 
   // Toggles settings
   (() => {
@@ -149,6 +150,7 @@
     }
 
     $("#dark-toggle").click(() => {
+      settingsClicked = "1";
       document.body.removeAttribute("style");
       document.querySelector(".page-container").removeAttribute("style");
       if (JSON.parse(localStorage.getItem("darkTheme"))) {
@@ -173,6 +175,7 @@
     });
 
     $("#serif-toggle").click(() => {
+      settingsClicked += "2";
       $(".article-text").toggleClass("serif-text");
       if (!JSON.parse(localStorage.getItem("serifFont"))) {
         localStorage.setItem("serifFont", true);
@@ -184,6 +187,7 @@
     });
 
     $("#justify-toggle").click(() => {
+      settingsClicked += "3";
       $(".article-text").toggleClass("justify-text");
       if (!JSON.parse(localStorage.getItem("justifyText"))) {
         localStorage.setItem("justifyText", true);
@@ -195,6 +199,13 @@
     });
 
     $("#katex-toggle").click(() => {
+      settingsClicked += "4";
+      if (settingsClicked === "1234" && $("#katex-toggle").length === 1)
+        $("#katex-toggle")
+          .after(`<span class="divider"> | </span><button class="text-button" id="fun-toggle" tabindex="0">
+            Made you click
+          </button>`);
+
       $(".article-text").toggleClass("katex-text");
       if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
         localStorage.setItem("mathJaxDisabled", true);
@@ -203,6 +214,11 @@
         localStorage.setItem("mathJaxDisabled", false);
         $("#katex-toggle").text("KaTeX on");
       }
+
+      $("#fun-toggle").click(function () {
+        $(".divider").remove();
+        $(this).remove();
+      });
     });
   })();
 
@@ -939,7 +955,6 @@
         if (!image.includes("[asy]")) {
           let isDisplay = /alt="\\\[|\\begin/.test(image);
           let imageLatex = formatLatex(image.match(/alt="(.*?)"/)[1]);
-          console.log(imageLatex);
           let renderedLatex = katex.renderToString(imageLatex, {
             throwOnError: false,
             displayMode: isDisplay,
