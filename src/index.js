@@ -951,8 +951,7 @@
       .replace(/\\congruent/g, "\\cong")
       .replace(/\\overarc/g, "\\overparen")
       .replace(/\\textdollar/g, "\\$")
-      .replace(/\\underarc/g, "\\underparen")
-      .replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
+      .replace(/\\underarc/g, "\\underparen");
 
   const titleCleanup = (string) =>
     decodeURI(string)
@@ -963,6 +962,8 @@
   const underscores = (string) => string.replace(/ /g, "_");
 
   const latexer = (html) => {
+    html = html.replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
+
     let images = html.match(/<img (?:.*?) class="latex\w*?" (?:.*?)>/g);
     images = [...new Set(images)];
 
@@ -1066,20 +1067,20 @@
           placeholder="Test, e.g. AMC 10A"
           data-whitelist="${testsList}">
         </input>
-          <input class="input-field input-field-single"
+        <input class="input-field input-field-single"
           type="number"
           min="1974"
           max="2020"
           id="input-singleyear"
           placeholder="Year">
-          </input>
-          <input class="input-field input-field-single"
+        </input>
+        <input class="input-field input-field-single"
           type="number"
           min="1"
           max="30"
           id="input-singlenum"
           placeholder="#">
-          </input>
+        </input>
         <button class="input-button" id="single-button">
           View Problem
         </button>
@@ -1359,9 +1360,18 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="search-input">
+        <div class="input-container input-field-single input-container-bottom
+          input-container-left checkbox-container checkbox-container-smaller">
+          <div class="checkbox-wrap">
+            <input type="checkbox" class="input-check" id="input-problemsonly"/>
+            <label class="checkbox-label">
+              Only show problems
+            </label>
+          </div>
+        </div>
         <input class="input-field input-field-single"
-        id="input-search" type="text"
-        placeholder="Keywords, e.g. Cauchy">
+          id="input-search" type="text"
+          placeholder="Keywords, e.g. Cauchy">
         <button class="input-button" id="search-button">
           Search Pages
         </button>
@@ -2018,7 +2028,8 @@
         page.snippet.indexOf("#REDIRECT") +
           page.snippet.indexOf("#redirect") +
           page.title.indexOf("\ufffd") ===
-        -3
+          -3 &&
+        (validProblem(page.title) || !$("#input-problemsonly").prop("checked"))
       ) {
         searchResults.push({
           url: `https://artofproblemsolving.com/wiki/index.php/${encodeURI(

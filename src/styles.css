@@ -407,6 +407,10 @@ tags > span {
   flex: 25%;
 }
 
+.checkbox-container-smaller {
+  flex: 0 0 12em;
+}
+
 .checkbox-wrap {
   margin-right: var(--horizontal-item-spacing);
 }
@@ -677,7 +681,7 @@ h3 {
 /* Misc */
 code,
 pre {
-  font-family: "Fira Sans", monospace;
+  font-family: "Fira Mono", monospace;
 }
 
 .article-text dl:first-child,
@@ -856,7 +860,7 @@ footer {
   }
 
   .input-field-right,
-  .input-container-left {
+  .input-container-left:not(.checkbox-container-smaller) {
     margin-right: 0;
   }
 
@@ -887,6 +891,13 @@ footer {
 @media (max-width: 500px) {
   .source-link {
     display: inline-block;
+  }
+}
+
+@media (max-width: 410px) {
+  .checkbox-container-smaller {
+    flex: 100%;
+    margin-right: 0;
   }
 } /**/
 
