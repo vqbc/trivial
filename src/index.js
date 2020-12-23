@@ -6,8 +6,23 @@
   let testsList =
     `AMC 8, AMC 10A, AMC 10B, AMC 12A, AMC 12B, AIME I, AIME II, ` +
     `USAJMO, USAMO, IMO, AJHSME, AHSME, AMC 10, AMC 12, AIME`;
+  let batchOptions = `<input class="input-field"
+      id="input-name" type="text" placeholder="Batch name (optional)"/>
+    <input class="input-field input-flex-right"
+      id="input-break" type="number" min="1" max="40"
+      placeholder="Page break every n problems (optional)"/>
+    <div class="input-container checkbox-container input-right input-flex-full"> 
+      <div class="checkbox-wrap">
+        <input type="checkbox" checked class="input-check" id="input-sort"/>
+        <label class="checkbox-label">Sort questions by difficulty?</label>
+      </div>
+      <div class="checkbox-wrap">
+        <input type="checkbox" checked class="input-check" id="input-hide"/>
+        <label class="checkbox-label">Hide question sources when printed?</label>
+      </div>
+    </div>`;
   let problemOptions =
-    `<input class="input-multi input-multi-left"
+    `<input class="input-multi input-flex-full"
     id="input-subjects"
     placeholder="Subjects, e.g. Olympiad Algebra Problems"
     data-whitelist="3D Geometry Problems, Introductory Algebra Problems, ` +
@@ -21,19 +36,17 @@
     `Olympiad Geometry Problems, Olympiad Inequality Problems, ` +
     `Olympiad Number Theory Problems, Olympiad Trigonometry Problems">
   </input>
-  <input class="input-multi"
+  <input class="input-multi input-right input-flex-full"
     id="input-tests"
     placeholder="Tests, e.g. AMC 10"
     data-whitelist="(AMC Tests), AHSME, AMC 8, AMC 10,
     AMC 12, AIME, USAJMO, USAMO, Canadian MO, IMO">
   </input>
-  <div class="input-container input-container-left">
-    <label class="range-label">
-      Years allowed:
-    </label>
+  <div class="input-container input-flex-full">
+    <label class="range-label">Years allowed:</label>
     <input class="input-range" id="input-years"></input>
   </div>
-  <div class="input-container">
+  <div class="input-container input-right input-flex-full">
     <label class="range-label">
       <a
         class="dark-link"
@@ -43,25 +56,6 @@
     </label>
     <input class="input-range" id="input-diff"></input>
   </div>`;
-  let batchOptions = `<input class="input-field input-field-top input-field-left"
-      id="input-name" type="text" placeholder="Batch name (optional)"/>
-    <input class="input-field input-field-top input-field-right"
-      id="input-break" type="number" min="1" max="40"
-      placeholder="Page break every n problems (optional)"/>
-    <div class="input-container checkbox-container"> 
-      <div class="checkbox-wrap">
-        <input type="checkbox" checked class="input-check" id="input-sort"/>
-        <label class="checkbox-label">
-          Sort questions by difficulty?
-        </label>
-      </div>
-      <div class="checkbox-wrap">
-        <input type="checkbox" checked class="input-check" id="input-hide"/>
-        <label class="checkbox-label">
-          Hide question sources when printed?
-        </label>
-      </div>
-    </div>`;
   let replaceButton = `<button class="text-button replace-problem">
     (Replace problem)
   </button>`;
@@ -1061,20 +1055,20 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="single-input">
-        <input class="input-field input-field-single input-singletest"
+        <input class="input-field input-bottom input-flex-full"
           type="text"
           id="input-singletest"
           placeholder="Test, e.g. AMC 10A"
           data-whitelist="${testsList}">
         </input>
-        <input class="input-field input-field-single"
+        <input class="input-field input-bottom"
           type="number"
           min="1974"
           max="2020"
           id="input-singleyear"
           placeholder="Year">
         </input>
-        <input class="input-field input-field-single"
+        <input class="input-field input-bottom input-right"
           type="number"
           min="1"
           max="30"
@@ -1160,12 +1154,13 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="batch-input">
-        <input class="input-field input-field-top input-field-left"
+        <input class="input-field"
           id="input-name" type="text" placeholder="Batch name (optional)"/>
-        <input class="input-field input-field-top input-field-right"
+        <input class="input-field input-flex-right"
           id="input-break" type="number" min="1" max="40"
           placeholder="Page break every n problems (optional)"/>
-        <div class="input-container checkbox-container checkbox-container-small">
+        <div class="input-container checkbox-container checkbox-container-small
+        input-right input-flex-full">
           <div class="checkbox-wrap">
             <input type="checkbox" checked class="input-check" id="input-hide"/>
             <label class="checkbox-label">
@@ -1173,13 +1168,13 @@
             </label>
           </div>
         </div>
-        <input class="input-field input-field-single input-singletest"
+        <input class="input-field input-bottom input-singletest"
           type="text"
           id="input-singletest"
           placeholder="Test, e.g. AMC 10A"
           data-whitelist="${testsList}">
         </input>
-          <input class="input-field input-field-single"
+          <input class="input-field input-bottom input-right"
           type="number"
           min="1974"
           max="2020"
@@ -1216,8 +1211,8 @@
     $("#secondary-button-container").after(
       `<div class="options-input" id="problems-input">
         ${batchOptions}
-        <input class="input-field" id="input-problems" type="text"
-        placeholder="Problems, e.g. 2018 AMC 12B #24"
+        <input class="input-field input-bottom input-right" id="input-problems"
+        type="text" placeholder="Problems, e.g. 2018 AMC 12B #24"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
@@ -1251,14 +1246,14 @@
       `<div class="options-input" id="ranbatch-input">
         ${batchOptions}
         ${problemOptions}
-        <div class="input-container input-container-full">
+        <div class="input-container input-full">
           <label class="range-label">
             Number of problems:
           </label>
           <input class="input-range" id="input-number"/>
         </div>
-        <input class="input-field" id="input-problems" type="text"
-        placeholder="Always include these problems (optional)"
+        <input class="input-field input-bottom input-right" id="input-problems"
+        type="text" placeholder="Always include these problems (optional)"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
@@ -1330,8 +1325,8 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="find-input">
-        <input class="input-field" id="input-find" type="text"
-        placeholder="Title, e.g. Heron's Formula"
+        <input class="input-field input-bottom input-right" id="input-find"
+        type="text" placeholder="Title, e.g. Heron's Formula"
         data-whitelist="${sanitize(allPages.toString())}">
         <button class="input-button" id="find-button">
           View Article
@@ -1360,18 +1355,17 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="search-input">
-        <div class="input-container input-field-single input-container-bottom
-          input-container-left checkbox-container checkbox-container-smaller">
+        <div class="input-container checkbox-container
+          checkbox-container-smaller input-bottom input-flexer-full">
           <div class="checkbox-wrap">
             <input type="checkbox" class="input-check" id="input-problemsonly"/>
             <label class="checkbox-label">
-              Only show problems
+              Only show problems?
             </label>
           </div>
         </div>
-        <input class="input-field input-field-single"
-          id="input-search" type="text"
-          placeholder="Keywords, e.g. Cauchy">
+        <input class="input-field input-bottom input-right" id="input-search"
+          type="text" placeholder="Keywords, e.g. Cauchy">
         <button class="input-button" id="search-button">
           Search Pages
         </button>

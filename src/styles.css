@@ -271,7 +271,6 @@ input::placeholder {
   display: flex;
   flex-wrap: nowrap;
   max-height: 55px;
-  margin-bottom: var(--vertical-item-spacing);
   overflow-x: scroll;
   background: var(--item-color);
   border: none;
@@ -289,7 +288,6 @@ tags > span {
 }
 
 .tagify.input-field {
-  margin-bottom: 0;
   padding: 0;
   overflow-x: auto;
 }
@@ -325,10 +323,6 @@ tags > span {
 
 .input-multi {
   flex: 1 0 28%;
-}
-
-.input-multi-left {
-  margin-right: var(--horizontal-item-spacing);
 } /**/
 
 /* Range slider thingy */
@@ -408,7 +402,7 @@ tags > span {
 }
 
 .checkbox-container-smaller {
-  flex: 0 0 12em;
+  flex: 0 0 13em;
 }
 
 .checkbox-wrap {
@@ -418,6 +412,26 @@ tags > span {
 .checkbox-label {
   margin-bottom: 0;
   color: var(--secondary-color);
+} /**/
+
+/* Input positioning */
+.tagify,
+.input-field,
+.input-container {
+  margin-right: var(--horizontal-item-spacing);
+  margin-bottom: var(--vertical-item-spacing);
+}
+
+.input-right {
+  margin-right: 0;
+}
+
+.input-bottom {
+  margin-bottom: 0;
+}
+
+.input-full {
+  flex: 1 0 100%;
 } /**/
 
 /* Notes */
@@ -681,7 +695,7 @@ h3 {
 /* Misc */
 code,
 pre {
-  font-family: "Fira Mono", monospace;
+  font: 0.9rem "Fira Mono", monospace;
 }
 
 .article-text dl:first-child,
@@ -843,25 +857,23 @@ footer {
     margin: 0 0 0.75rem;
   }
 
-  .tagify:not(.input-field),
-  .input-container:not(.input-container-bottom) {
-    flex: 1 0 100%;
-  }
-
-  .tagify:not(.input-field) {
+  .tagify.input-multi {
     flex-wrap: wrap;
     max-height: initial;
   }
 
-  .tagify.input-field,
-  .input-field-single,
-  .input-field-top {
-    margin-bottom: var(--vertical-item-spacing);
+  .input-flex-full {
+    flex: 1 0 100%;
+    margin-right: 0;
+    margin-left: 0;
   }
 
-  .input-field-right,
-  .input-container-left:not(.checkbox-container-smaller) {
+  .input-flex-right {
     margin-right: 0;
+  }
+
+  .input-bottom {
+    margin-bottom: var(--vertical-item-spacing);
   }
 
   .input-button {
@@ -894,8 +906,8 @@ footer {
   }
 }
 
-@media (max-width: 410px) {
-  .checkbox-container-smaller {
+@media (max-width: 436px) {
+  .input-flexer-full {
     flex: 100%;
     margin-right: 0;
   }
