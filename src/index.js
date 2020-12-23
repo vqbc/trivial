@@ -2085,6 +2085,10 @@
       if (clickedTimes === clickedTimesThen) {
         addSearch();
         await addResults(originalSearch, search, searchResults, pageExists);
+
+        document.title =
+          `Search results for ${originalSearch}` +
+          " - Trivial AoPS Wiki Reader";
         directLinks();
       }
     }
@@ -2142,6 +2146,8 @@
 
       addHistoryContainer();
       await addItems(history);
+
+      document.title = "View history - Trivial AoPS Wiki Reader";
       directLinks();
       $("#clear-history").click(() => {
         localStorage.removeItem("pageHistory");
