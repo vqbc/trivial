@@ -88,7 +88,7 @@ body {
 /* Big top buttons */
 .button-container {
   display: flex;
-  gap: var(--vertical-item-spacing) 1.4%;
+  gap: var(--vertical-item-spacing) var(--button-spacing);
   justify-content: space-between;
   margin-bottom: 2rem;
 }
@@ -106,9 +106,9 @@ body {
   transition: all 0.1s;
 }
 
-@supports not (gap: 1.4%) {
+@supports not (gap: 1%) {
   .button {
-    margin: 0 0.7%;
+    margin: 0 calc(var(--button-spacing) / 2);
   }
 
   .button:first-child {
@@ -399,9 +399,7 @@ tags > span {
 } /**/
 
 /* Input positioning */
-@supports not (
-  gap: var(--vertical-item-spacing) var(--horizontal-item-spacing)
-) {
+@supports not (gap: 1%) {
   .tagify,
   .input-field,
   .input-container {
@@ -845,7 +843,8 @@ footer {
   }
 
   .button {
-    flex: 1 0 49%;
+    flex: 1 0 48%;
+    margin-left: 0;
   }
 
   .checkbox-container {
@@ -854,13 +853,17 @@ footer {
     margin-left: 0;
   }
 
-  @supports not (gap: 1.4%) {
-    .button {
+  @supports not (gap: 1%) {
+    .checkbox-container.input-bottom {
+      margin-bottom: var(--vertical-item-spacing);
+    }
+
+    .button:not(.button-flex-bottom) {
       margin: 0 0 var(--vertical-item-spacing);
     }
 
-    .button:last-child {
-      margin-bottom: 0;
+    .button:nth-child(odd):not(.button-flex-full) {
+      margin-right: var(--button-spacing);
     }
   }
 }
@@ -886,9 +889,7 @@ footer {
     margin-right: 0;
   }
 
-  @supports not (
-    gap: var(--vertical-item-spacing) var(--horizontal-item-spacing)
-  ) {
+  @supports not (gap: 1%) {
     .input-bottom {
       margin-bottom: var(--vertical-item-spacing);
     }

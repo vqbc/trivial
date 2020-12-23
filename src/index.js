@@ -988,10 +988,12 @@
 
     $("#main-button-container").after(
       `<div class="button-container" id="secondary-button-container">
-        <button type="button" class="button secondary-button" id="single-nav">
+        <button type="button" class="button secondary-button button-flex-bottom"
+          id="single-nav">
           Choose a Problem
         </button>
-        <button type="button" class="button secondary-button" id="random-nav">
+        <button type="button" class="button secondary-button button-flex-bottom"
+          id="random-nav">
           Random Problem
         </button>
       </div>`
@@ -1010,7 +1012,8 @@
         <button type="button" class="button secondary-button" id="problems-nav">
           Choose Problems
         </button>
-        <button type="button" class="button secondary-button" id="ranbatch-nav">
+        <button type="button" class="button secondary-button button-flex-bottom 
+        button-flex-full" id="ranbatch-nav">
           Random Problems
         </button>
       </div>`
@@ -1023,10 +1026,12 @@
 
     $("#main-button-container").after(
       `<div class="button-container" id="secondary-button-container">
-        <button type="button" class="button secondary-button" id="find-nav">
+        <button type="button" class="button secondary-button button-flex-bottom"
+        id="find-nav">
           Choose an Article
         </button>
-        <button type="button" class="button secondary-button" id="theorem-button">
+        <button type="button" class="button secondary-button button-flex-bottom"
+        id="theorem-button">
           Random Theorem
         </button>
       </div>`
@@ -1039,10 +1044,12 @@
 
     $("#main-button-container").after(
       `<div class="button-container" id="secondary-button-container">
-        <button type="button" class="button secondary-button" id="search-nav">
+        <button type="button" class="button secondary-button button-flex-bottom"
+        id="search-nav">
           Search All Pages
         </button>
-        <button type="button" class="button secondary-button" id="history-button">
+        <button type="button" class="button secondary-button button-flex-bottom"
+        id="history-button">
           View Page History
         </button>
       </div>`
