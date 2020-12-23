@@ -39,6 +39,7 @@
   --link-hover-color: hsl(210deg, 80%, 59%);
   --text-button-color: hsl(177deg, 63%, 43%);
   --text-button-hover-color: hsl(177deg, 63%, 48%);
+  --button-spacing: 1.4%;
   --vertical-item-spacing: 0.6rem;
   --horizontal-item-spacing: 0.6rem;
 } /**/
@@ -87,13 +88,13 @@ body {
 /* Big top buttons */
 .button-container {
   display: flex;
+  gap: var(--vertical-item-spacing) 1.4%;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
 
 .button {
   flex: 1;
-  margin: 0 0.7%;
   padding: 0.7rem 0.6rem 0.5rem;
   color: white;
   font: bold 1.1em "Computer Modern Bright", sans-serif;
@@ -105,12 +106,18 @@ body {
   transition: all 0.1s;
 }
 
-.button:first-child {
-  margin-left: 0;
-}
+@supports not (gap: 1.4%) {
+  .button {
+    margin: 0 0.7%;
+  }
 
-.button:last-child {
-  margin-right: 0;
+  .button:first-child {
+    margin-left: 0;
+  }
+
+  .button:last-child {
+    margin-right: 0;
+  }
 }
 
 .button:hover {
@@ -838,8 +845,30 @@ footer {
   }
 
   .button {
+    flex: 1 0 49%;
+  }
+
+  .checkbox-container {
     flex: 1 0 100%;
-    margin: 0 0 0.75rem;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @supports not (gap: 1.4%) {
+    .button {
+      margin: 0 0 var(--vertical-item-spacing);
+    }
+
+    .button:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .page-container {
+    width: 100%;
+    padding: 0 1rem;
   }
 
   .tagify.input-multi {
@@ -871,13 +900,6 @@ footer {
   }
 }
 
-@media (max-width: 800px) {
-  .page-container {
-    width: 100%;
-    padding: 0 1rem;
-  }
-}
-
 @media (max-width: 600px) {
   .article-text {
     overflow-wrap: break-word;
@@ -886,6 +908,10 @@ footer {
   .katex .base {
     display: inline;
     white-space: break-spaces;
+  }
+
+  .button {
+    flex: 1 0 100%;
   }
 }
 
