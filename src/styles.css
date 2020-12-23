@@ -144,7 +144,6 @@ body {
 
 /* Input buttons */
 .input-button {
-  margin-left: var(--horizontal-item-spacing);
   padding: 0.3rem var(--horizontal-item-spacing);
   color: white;
   font: bold 1em "Computer Modern Bright", sans-serif;
@@ -191,6 +190,7 @@ body {
 .options-input {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--vertical-item-spacing) var(--horizontal-item-spacing);
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 2rem;
@@ -200,7 +200,6 @@ body {
 .input-container {
   flex: 1 0 45%;
   box-sizing: border-box;
-  margin-bottom: var(--vertical-item-spacing);
   padding: 5px;
   background: var(--item-color);
   box-shadow: var(--input-box-shadow);
@@ -208,23 +207,6 @@ body {
 
 .input-container:focus {
   outline: 2px solid var(--input-focus-color);
-}
-
-.input-container-full {
-  flex: 1 0 100%;
-}
-
-.input-container-bottom {
-  margin-bottom: 0;
-}
-
-.input-container-left {
-  margin-right: var(--horizontal-item-spacing);
-}
-
-.input-field-top {
-  margin-right: var(--horizontal-item-spacing);
-  margin-bottom: var(--vertical-item-spacing);
 } /**/
 
 /* Direct input field */
@@ -245,11 +227,6 @@ body {
 
 input::placeholder {
   color: var(--placeholder-color);
-}
-
-.input-field.input-field-single:not(:nth-last-child(2)),
-.input-field-left {
-  margin-right: var(--horizontal-item-spacing);
 }
 
 .input-singletest {
@@ -415,11 +392,19 @@ tags > span {
 } /**/
 
 /* Input positioning */
-.tagify,
-.input-field,
-.input-container {
-  margin-right: var(--horizontal-item-spacing);
-  margin-bottom: var(--vertical-item-spacing);
+@supports not (
+  gap: var(--vertical-item-spacing) var(--horizontal-item-spacing)
+) {
+  .tagify,
+  .input-field,
+  .input-container {
+    margin-right: var(--horizontal-item-spacing);
+    margin-bottom: var(--vertical-item-spacing);
+  }
+
+  .input-button {
+    margin-left: var(--horizontal-item-spacing);
+  }
 }
 
 .input-right {
@@ -872,8 +857,12 @@ footer {
     margin-right: 0;
   }
 
-  .input-bottom {
-    margin-bottom: var(--vertical-item-spacing);
+  @supports not (
+    gap: var(--vertical-item-spacing) var(--horizontal-item-spacing)
+  ) {
+    .input-bottom {
+      margin-bottom: var(--vertical-item-spacing);
+    }
   }
 
   .input-button {
