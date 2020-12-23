@@ -1986,7 +1986,7 @@
         $(".results-notice").append(
           ` | Page <a href="https://artofproblemsolving.com/wiki/index.php/${encodeURI(
             underscores(search)
-          )}">${originalSearch}</a> exists on the wiki`
+          )}">${titleCleanup(originalSearch)}</a> exists on the wiki`
         );
       for (let i = 0; i < resultsNum && i < 10; i++) addResult();
       loadedTimes++;
