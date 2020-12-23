@@ -532,6 +532,10 @@ a.aops-link,
   font-style: italic;
 }
 
+#clear-history {
+  font-style: italic;
+}
+
 #copy-problems:active {
   transform: translateY(1px);
 }
@@ -599,7 +603,7 @@ a.secret-link {
   transform: translateY(1px);
 } /**/
 
-/* Search */
+/* Search and history */
 #search-input {
   margin-bottom: 1rem;
 }
@@ -609,12 +613,12 @@ a.secret-link {
   margin-top: 2rem;
 }
 
-.results-counter {
+.results-notice {
   color: var(--minor-color);
   font-style: italic;
 }
 
-.search-result {
+.result-item {
   margin: 1em 0;
 }
 

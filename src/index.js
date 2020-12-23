@@ -282,7 +282,11 @@
 
     if (json?.parse) {
       let problemText = latexer(json.parse.text["*"]);
-      $("#problem-text").html(getProblem(problemText));
+      let problemProblem = getProblem(problemText);
+
+      addHistory(pagename, problemProblem.substring(0, 140));
+
+      $("#problem-text").html(problemProblem);
       $("#solutions-text").html(getSolutions(problemText));
       $("#article-header").html(titleCleanup(pagename));
       document.title = titleCleanup(pagename) + " - Trivial AoPS Wiki Reader";
@@ -317,7 +321,15 @@
   function addSearch() {
     $(".notes").before(
       `<div class="results-container">
-      <span class="results-counter"></span>
+      <span class="results-notice"></span>
+    </div>`
+    );
+  }
+
+  function addHistoryContainer() {
+    $(".notes").before(
+      `<div class="results-container">
+      <button class="text-button" id="clear-history">(Clear history)</button>
     </div>`
     );
   }
@@ -382,6 +394,8 @@
         })
         .get()
         .join("");
+
+      addHistory(pagename, problemText.substring(0, 140));
 
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
@@ -1017,11 +1031,24 @@
         <button type="button" class="button secondary-button" id="find-nav">
           Choose an Article
         </button>
-        <button type="button" class="button secondary-button" id="search-nav">
-          Search Articles
-        </button>
         <button type="button" class="button secondary-button" id="theorem-button">
           Random Theorem
+        </button>
+      </div>`
+    );
+  });
+
+  $("#browse-pages").click(() => {
+    clearAll();
+    activeButton("browse-pages");
+
+    $("#main-button-container").after(
+      `<div class="button-container" id="secondary-button-container">
+        <button type="button" class="button secondary-button" id="search-nav">
+          Search All Pages
+        </button>
+        <button type="button" class="button secondary-button" id="history-button">
+          View Page History
         </button>
       </div>`
     );
@@ -1910,6 +1937,36 @@
     );
   });
 
+  $(".page-container").on("click", "#theorem-button", async () => {
+    clearOptions();
+    activeSecondaryButton("theorem-button");
+
+    $("#secondary-button-container").after(`
+      ${notes}`);
+
+    if (!theoremPages[0]) {
+      console.log("Loading theorems...");
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params =
+        `action=query&list=categorymembers&cmtitle=Category:Theorems` +
+        `&cmlimit=max&format=json`;
+
+      let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+      let json = await response.json();
+
+      for (let page of json.query.categorymembers)
+        theoremPages.push(page.title);
+    }
+    theoremPages = theoremPages.filter(
+      (e) => e !== "H\ufffdlder's Inequality" && e !== "Theorems"
+    );
+
+    let randomTheorem =
+      theoremPages[Math.floor(Math.random() * theoremPages.length)];
+    console.log(randomTheorem);
+    await addArticle(randomTheorem);
+  });
+
   $(".page-container").on("click", "#search-button", async () => {
     async function addResults(
       originalSearch,
@@ -1920,16 +1977,16 @@
       let resultsNum = searchResults.length;
       let loadedTimes = 0;
 
-      $(".results-counter").html(`${resultsNum} results found`);
+      $(".results-notice").html(`${resultsNum} results found`);
       if (pageExists)
-        $(".results-counter").append(
+        $(".results-notice").append(
           ` | Page <a href="https://artofproblemsolving.com/wiki/index.php/${encodeURI(
             underscores(search)
           )}">${originalSearch}</a> exists on the wiki`
         );
       for (let i = 0; i < resultsNum && i < 10; i++) addResult();
       loadedTimes++;
-      if (searchResults[0])
+      if (searchResults.length)
         $(".results-container").after(
           `<button class="text-button" id="load-results">Load more…</button>`
         );
@@ -1938,14 +1995,14 @@
         for (let i = 0; i < resultsNum - loadedTimes * 10 && i < 10; i++)
           addResult();
         loadedTimes++;
-        if (!searchResults[0]) $("#load-results").remove();
+        if (!searchResults.length) $("#load-results").remove();
 
         directLinks();
       });
     }
 
     const addResult = () => {
-      $(".results-container").append(`<div class="search-result">
+      $(".results-container").append(`<div class="result-item">
           <h2 class="result-title">
             <a class="result-link" href="${searchResults[0].url}">
               ${searchResults[0].title}
@@ -1953,7 +2010,7 @@
           </h2>
           <p class="result-snippet">${searchResults[0].snippet}</p>
         </div>`);
-      searchResults.splice(0, 1);
+      searchResults.shift();
     };
 
     const enterResult = (page) => {
@@ -1983,6 +2040,7 @@
     let search = originalSearch
       .replace(/’/g, "'")
       .replace("#", "Problems/Problem ");
+    search = search.charAt(0).toUpperCase() + search.slice(1);
 
     if (!search) {
       $(".notes").before(
@@ -2027,34 +2085,70 @@
     }
   });
 
-  $(".page-container").on("click", "#theorem-button", async () => {
+  $(".page-container").on("click", "#history-button", async () => {
+    async function addItems(history) {
+      let resultsNum = history.length;
+      let loadedTimes = 0;
+      for (let i = 0; i < resultsNum && i < 10; i++) addItem();
+      loadedTimes++;
+      if (history.length)
+        $(".results-container").after(
+          `<button class="text-button" id="load-results">Load more…</button>`
+        );
+
+      $("#load-results").click(() => {
+        for (let i = 0; i < resultsNum - loadedTimes * 10 && i < 10; i++)
+          addItem();
+        loadedTimes++;
+        if (!history.length) $("#load-results").remove();
+
+        directLinks();
+      });
+    }
+
+    const addItem = () => {
+      $(".results-container").append(`<div class="result-item">
+          <h2 class="result-title">
+            <a class="result-link" href="${history[0].url}">
+              ${history[0].title}
+            </a>
+          </h2>
+          <p class="result-snippet">${history[0].snippet}...</p>
+        </div>`);
+      history.shift();
+    };
+
     clearOptions();
-    activeSecondaryButton("theorem-button");
+    activeSecondaryButton("history-button");
 
     $("#secondary-button-container").after(`
       ${notes}`);
 
-    if (!theoremPages[0]) {
-      console.log("Loading theorems...");
-      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params =
-        `action=query&list=categorymembers&cmtitle=Category:Theorems` +
-        `&cmlimit=max&format=json`;
+    let history = JSON.parse(localStorage.getItem("pageHistory"));
 
-      let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-      let json = await response.json();
+    if (!history) {
+      $(".notes").before(
+        `<div class="results-container">
+        <div class="results-notice">No history yet…</div>
+      </div>`
+      );
+    } else {
+      console.log(history);
 
-      for (let page of json.query.categorymembers)
-        theoremPages.push(page.title);
+      addHistoryContainer();
+      await addItems(history);
+      directLinks();
+      $("#clear-history").click(() => {
+        localStorage.removeItem("pageHistory");
+
+        $(".results-container").remove();
+        $(".notes").before(
+          `<div class="results-container">
+            <div class="results-notice">No history yet…</div>
+          </div>`
+        );
+      });
     }
-    theoremPages = theoremPages.filter(
-      (e) => e !== "H\ufffdlder's Inequality" && e !== "Theorems"
-    );
-
-    let randomTheorem =
-      theoremPages[Math.floor(Math.random() * theoremPages.length)];
-    console.log(randomTheorem);
-    await addArticle(randomTheorem);
   });
 
   // Replace problems
@@ -2361,6 +2455,35 @@
     });
   }
 
+  // Enter pages into history
+  function addHistory(page, snippet) {
+    let history = JSON.parse(localStorage.getItem("pageHistory"));
+    let url = `https://artofproblemsolving.com/wiki/index.php/${encodeURI(
+      underscores(page)
+    )}`;
+    let cleanedPage = titleCleanup(page);
+    let sanitizedSnippet = sanitize(snippet);
+
+    if (history)
+      history.unshift({
+        url: url,
+        title: cleanedPage,
+        snippet: sanitizedSnippet,
+      });
+    else
+      history = [
+        {
+          url: url,
+          title: cleanedPage,
+          snippet: sanitizedSnippet,
+        },
+      ];
+    if (history.length > 50) history.shift();
+    history = [...new Map(history.map((item) => [item.title, item])).values()];
+
+    localStorage.setItem("pageHistory", JSON.stringify(history));
+  }
+
   // Bonus
   $(".header").click(() => {
     $(".trivial-logo").show();
@@ -2369,7 +2492,7 @@
   $(".subtitle").click(() => {
     subtitleClicked++;
     let text;
-    switch (subtitleClicked % 5) {
+    switch (subtitleClicked % 6) {
       case 0:
         text = "An AoPS Wiki Reader for Studying";
         break;
@@ -2383,6 +2506,10 @@
         text = "Wikiwand, but you don't scroll through ads everywhere";
         break;
       case 4:
+        text =
+          "A web browser, but in a browser tab and the only website you can use is AoPS";
+        break;
+      case 5:
         text =
           "The AoPS Wiki, but you waste time trying to find the other easter eggs";
         break;
