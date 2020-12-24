@@ -394,7 +394,7 @@
 
   async function addArticle(pagename, pushUrl) {
     $(".notes").before(`<div class="problem-section">
-      <h2 class="section-header" id="article-header">Article Text</h2>
+      <h2 class="section-header" id="article-header"></h2>
       <a href="" class="aops-link">
         (View on the AoPS Wiki)
       </a>
