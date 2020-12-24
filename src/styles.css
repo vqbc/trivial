@@ -910,9 +910,11 @@ footer {
     overflow-wrap: break-word;
   }
 
-  .katex .base {
-    display: inline;
-    white-space: break-spaces;
+  .katex-display {
+    max-width: 100%;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   .button {
