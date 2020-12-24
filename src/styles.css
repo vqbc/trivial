@@ -913,8 +913,7 @@ footer {
   .katex-display {
     max-width: 100%;
     height: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: auto hidden;
   }
 
   .button {
