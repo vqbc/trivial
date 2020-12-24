@@ -125,6 +125,9 @@
   let subtitleClicked = 0;
   let settingsClicked = "";
 
+  let searchParams = new URLSearchParams(location.search);
+  let urlPagename = searchParams.get("page");
+
   // Toggles settings
   (() => {
     if (JSON.parse(localStorage.getItem("darkTheme"))) {
@@ -141,6 +144,9 @@
     }
     if (JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
       $("#katex-toggle").text("KaTeX off");
+    }
+    if (JSON.parse(localStorage.getItem("tabLinksExternal"))) {
+      $("#links-toggle").text("New tab links: AoPS");
     }
 
     $("#dark-toggle").click(() => {
@@ -194,12 +200,6 @@
 
     $("#katex-toggle").click(() => {
       settingsClicked += "4";
-      if (settingsClicked === "1234" && $("#katex-toggle").length === 1)
-        $("#katex-toggle").after(`<span class="divider"> | </span>
-          <button class="text-button" id="fun-toggle" tabindex="0">
-            Made you click
-          </button>`);
-
       $(".article-text").toggleClass("katex-text");
       if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
         localStorage.setItem("mathJaxDisabled", true);
@@ -207,6 +207,47 @@
       } else {
         localStorage.setItem("mathJaxDisabled", false);
         $("#katex-toggle").text("KaTeX on");
+      }
+    });
+
+    $("#links-toggle").click(() => {
+      settingsClicked += "5";
+      if (settingsClicked === "12345" && $("#fun-toggle").length === 0)
+        $("#links-toggle").after(`<span class="divider"> | </span>
+          <button class="text-button" id="fun-toggle" tabindex="0">
+            Made you click
+          </button>`);
+
+      if (!JSON.parse(localStorage.getItem("tabLinksExternal"))) {
+        localStorage.setItem("tabLinksExternal", true);
+        $("#links-toggle").text("New tab links: AoPS");
+
+        $(".article-text a").each(function () {
+          $(this).attr({
+            href: $(this)
+              .attr("href")
+              .replace(
+                "?page=",
+                "https://artofproblemsolving.com/wiki/index.php/"
+              ),
+            title: "",
+          });
+        });
+      } else {
+        localStorage.setItem("tabLinksExternal", false);
+        $("#links-toggle").text("New tab links: Trivial");
+
+        $(".article-text a").each(function () {
+          $(this).attr({
+            href: $(this)
+              .attr("href")
+              .replace(
+                "https://artofproblemsolving.com/wiki/index.php/",
+                "?page="
+              ),
+            title: "",
+          });
+        });
       }
 
       $("#fun-toggle").click(function () {
@@ -254,7 +295,7 @@
     Math.round(15 - (allPages.length / 13000) * 15);
 
   // Adds things
-  async function addProblem(pagename) {
+  async function addProblem(pagename, pushUrl) {
     $(".notes").before(
       `<div class="problem-section">
       <h2 class="section-header" id="article-header">Problem Text</h2>
@@ -283,7 +324,17 @@
       $("#problem-text").html(problemProblem);
       $("#solutions-text").html(getSolutions(problemText));
       $("#article-header").html(titleCleanup(pagename));
+
       document.title = titleCleanup(pagename) + " - Trivial AoPS Wiki Reader";
+      if (pushUrl) {
+        history.pushState(
+          { page: pagename },
+          titleCleanup(pagename) + " - Trivial AoPS Wiki Reader",
+          "?page=" + underscores(pagename)
+        );
+        searchParams = new URLSearchParams(location.search);
+        urlPagename = searchParams.get("page");
+      }
 
       $(".aops-link").attr(
         "href",
@@ -341,16 +392,14 @@
     );
   }
 
-  async function addArticle(pagename) {
-    let html = `<div class="problem-section">
+  async function addArticle(pagename, pushUrl) {
+    $(".notes").before(`<div class="problem-section">
       <h2 class="section-header" id="article-header">Article Text</h2>
       <a href="" class="aops-link">
         (View on the AoPS Wiki)
       </a>
       <div class="article-text" id="full-text"></div>
-    </div>`;
-    if ($(".notes").length) $(".notes").before(html);
-    else $("#secondary-button-container").after(html);
+    </div>`);
 
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
@@ -393,7 +442,17 @@
 
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
+
       document.title = titleCleanup(pagename) + " - Trivial AoPS Wiki Reader";
+      if (pushUrl) {
+        history.pushState(
+          { page: pagename },
+          titleCleanup(pagename) + " - Trivial AoPS Wiki Reader",
+          "?page=" + underscores(pagename)
+        );
+        searchParams = new URLSearchParams(location.search);
+        urlPagename = searchParams.get("page");
+      }
 
       $(".aops-link").attr(
         "href",
@@ -972,8 +1031,8 @@
           });
           html = html.replaceAll(
             image,
-            `<span class="fallback-container">$&</span>
-            <span class="katex-container">${renderedLatex}</span>`
+            `<span class="fallback-container">$&</span>` +
+              `<span class="katex-container">${renderedLatex}</span>`
           );
         }
       }
@@ -1391,7 +1450,8 @@
       sanitize(
         `${$("#input-singleyear").val()} ${$(
           "#input-singletest"
-        ).val()} Problems/Problem ${$("#input-singlenum").val()}`
+        ).val()} Problems/Problem ${$("#input-singlenum").val()}`,
+        true
       )
     );
   });
@@ -1422,7 +1482,7 @@
 
         let randomPage = pages[Math.floor(Math.random() * pages.length)];
         console.log(randomPage);
-        [response, problemText] = await addProblem(randomPage);
+        [response, problemText] = await addProblem(randomPage, true);
 
         if (response < 0) {
           clearProblem();
@@ -1437,7 +1497,7 @@
             .replace(/_/g, " ");
           console.log(redirPage);
 
-          await addProblem(redirPage);
+          await addProblem(redirPage, true);
         }
 
         invalid = !response;
@@ -1944,7 +2004,8 @@
       sanitize($("#input-find").val())
         .replace(/&quot;/g, `"`)
         .replace(/’/g, "'")
-        .replace("#", "Problems/Problem ")
+        .replace("#", "Problems/Problem "),
+      true
     );
   });
 
@@ -1975,7 +2036,7 @@
     let randomTheorem =
       theoremPages[Math.floor(Math.random() * theoremPages.length)];
     console.log(randomTheorem);
-    await addArticle(randomTheorem);
+    await addArticle(randomTheorem, true);
   });
 
   $(".page-container").on("click", "#search-button", async () => {
@@ -2304,6 +2365,11 @@
 
   function clearOptions() {
     document.title = "Trivial AoPS Wiki Reader";
+    history.pushState(
+      {},
+      "Trivial AoPS Wiki Reader",
+      location.href.split("?page=")[0]
+    );
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
@@ -2314,6 +2380,11 @@
 
   function clearAll() {
     document.title = "Trivial AoPS Wiki Reader";
+    history.pushState(
+      {},
+      "Trivial AoPS Wiki Reader",
+      location.href.split("?page=")[0]
+    );
     $("#secondary-button-container").remove();
     $(".options-input").remove();
     $(".error").remove();
@@ -2412,12 +2483,19 @@
 
   function fixLinks() {
     $(".article-text a").each(function () {
-      let href = $(this).attr("href");
-      if (href && href.charAt(0) === "/")
-        $(this).attr({
-          href: `https://artofproblemsolving.com${href}`,
-          title: "",
-        });
+      let href = $(this).attr("href")?.split("#")[0];
+      if (href && href.charAt(0) === "/") {
+        if (JSON.parse(localStorage.getItem("tabLinksExternal")))
+          $(this).attr({
+            href: `https://artofproblemsolving.com${href}`,
+            title: "",
+          });
+        else
+          $(this).attr({
+            href: href.replace("/wiki/index.php/", "?page="),
+            title: "",
+          });
+      }
     });
 
     $("a.image").each(function () {
@@ -2428,15 +2506,18 @@
   async function directLinks() {
     $("a:not(#aops-wiki-link):not(.aops-link)").click(async function (event) {
       let href = $(this).attr("href");
-      if (href && href.includes("artofproblemsolving.com/wiki/")) {
+      if (
+        href &&
+        (href.includes("artofproblemsolving.com/wiki/") ||
+          href.includes("?page="))
+      ) {
         event.preventDefault();
-        let pagename = href.replace(
-          "https://artofproblemsolving.com/wiki/index.php/",
-          ""
-        );
+        let pagename = href
+          .replace("https://artofproblemsolving.com/wiki/index.php/", "")
+          .replace(/^\?page=/g, "");
         clearProblem();
-        if (validProblem(pagename)) await addProblem(pagename);
-        else await addArticle(pagename);
+        if (validProblem(pagename)) await addProblem(pagename, true);
+        else await addArticle(pagename, true);
       }
     });
   }
@@ -2501,6 +2582,32 @@
 
     localStorage.setItem("pageHistory", JSON.stringify(history));
   }
+
+  // Show article if query
+  (async () => {
+    if (urlPagename) {
+      $("#main-button-container").after(`${notes}`);
+      if (validProblem(urlPagename)) await addProblem(urlPagename, true);
+      else await addArticle(urlPagename, true);
+    }
+
+    window.onpopstate = async (event) => {
+      let newPagename = event.state?.page;
+
+      if (newPagename && newPagename !== urlPagename) {
+        if ($(".notes").length === 0) {
+          if ($("#secondary-button-container").length === 0)
+            $("#main-button-container").after(`${notes}`);
+          else $("#secondary-button-container").after(`${notes}`);
+        }
+
+        clearProblem();
+        if (validProblem(newPagename)) await addProblem(newPagename, false);
+        else await addArticle(newPagename, false);
+        urlPagename = newPagename;
+      }
+    };
+  })();
 
   // Bonus
   $(".header").click(() => {

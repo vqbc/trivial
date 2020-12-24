@@ -35,8 +35,8 @@
   --error-color: hsl(0deg, 80%, 50%);
   --error-hover-color: hsl(0deg, 80%, 65%);
   --section-color: hsl(163deg, 47%, 50%);
-  --link-color: hsl(210deg, 80%, 50%);
-  --link-hover-color: hsl(210deg, 80%, 59%);
+  --link-color: hsl(203deg, 80%, 50%);
+  --link-hover-color: hsl(203deg, 80%, 59%);
   --text-button-color: hsl(177deg, 63%, 43%);
   --text-button-hover-color: hsl(177deg, 63%, 48%);
   --button-spacing: 1.4%;
@@ -700,6 +700,10 @@ img,
 .thumbinner {
   max-width: 100% !important; /* override inline widths */
   height: auto;
+}
+
+img.latex {
+  display: inline-block;
 }
 
 img.latexcenter {
