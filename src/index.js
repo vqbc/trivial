@@ -1450,9 +1450,9 @@
       sanitize(
         `${$("#input-singleyear").val()} ${$(
           "#input-singletest"
-        ).val()} Problems/Problem ${$("#input-singlenum").val()}`,
-        true
-      )
+        ).val()} Problems/Problem ${$("#input-singlenum").val()}`
+      ),
+      true
     );
   });
 
