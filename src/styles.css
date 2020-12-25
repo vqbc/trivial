@@ -762,6 +762,20 @@ table.floatright {
 
 .katex {
   font-size: 1em;
+}
+
+.katex .base {
+  display: inline;
+  white-space: break-spaces;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+.katex-display .katex .base {
+  display: inline-block;
+  white-space: nowrap;
 } /**/
 
 /* Element states */
@@ -913,13 +927,6 @@ footer {
   .article-text {
     overflow-wrap: break-word;
   }
-
-  .katex-display {
-    max-width: 100%;
-    height: auto;
-    overflow: auto hidden;
-  }
-
   .button {
     flex: 1 0 100%;
   }

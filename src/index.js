@@ -222,7 +222,7 @@
         localStorage.setItem("tabLinksExternal", true);
         $("#links-toggle").text("New tab links: AoPS");
 
-        $(".article-text a").each(function () {
+        $("a:not(#aops-wiki-link):not(.aops-link)").each(function () {
           $(this).attr({
             href: $(this)
               .attr("href")
@@ -237,7 +237,7 @@
         localStorage.setItem("tabLinksExternal", false);
         $("#links-toggle").text("New tab links: Trivial");
 
-        $(".article-text a").each(function () {
+        $("a:not(#aops-wiki-link):not(.aops-link)").each(function () {
           $(this).attr({
             href: $(this)
               .attr("href")
@@ -2068,7 +2068,7 @@
           addResult();
         loadedTimes++;
         if (!searchResults.length) $("#load-results").remove();
-
+        fixLinks();
         directLinks();
       });
     }
@@ -2094,9 +2094,7 @@
         (validProblem(page.title) || !$("#input-problemsonly").prop("checked"))
       ) {
         searchResults.push({
-          url: `https://artofproblemsolving.com/wiki/index.php/${encodeURI(
-            underscores(page.title)
-          )}`,
+          url: `/wiki/index.php/${encodeURI(underscores(page.title))}`,
           title: titleCleanup(page.title),
           snippet: page.snippet,
         });
@@ -2157,6 +2155,7 @@
         document.title =
           `Search results for ${originalSearch}` +
           " - Trivial AoPS Wiki Reader";
+        fixLinks();
         directLinks();
       }
     }
@@ -2186,7 +2185,10 @@
     const addItem = () => {
       $(".results-container").append(`<div class="result-item">
           <h2 class="result-title">
-            <a class="result-link" href="${history[0].url}">
+            <a class="result-link" href="${history[0].url.replace(
+              "https://artofproblemsolving.com",
+              ""
+            )}">
               ${history[0].title}
             </a>
           </h2>
@@ -2216,6 +2218,7 @@
       await addItems(history);
 
       document.title = "View history - Trivial AoPS Wiki Reader";
+      fixLinks();
       directLinks();
       $("#clear-history").click(() => {
         localStorage.removeItem("pageHistory");
@@ -2482,9 +2485,9 @@
   }
 
   function fixLinks() {
-    $(".article-text a").each(function () {
+    $("a").each(function () {
       let href = $(this).attr("href")?.split("#")[0];
-      if (href && href.charAt(0) === "/") {
+      if (href && /^\/wiki\/index\.php\//.test(href)) {
         if (JSON.parse(localStorage.getItem("tabLinksExternal")))
           $(this).attr({
             href: `https://artofproblemsolving.com${href}`,
