@@ -137,7 +137,7 @@
       $("#dark-toggle").text("Light theme");
     }
     if (JSON.parse(localStorage.getItem("serifFont"))) {
-      $("#serif-toggle").text("Serif problem font");
+      $("#serif-toggle").text("Serif wiki font");
     }
     if (JSON.parse(localStorage.getItem("justifyText"))) {
       $("#justify-toggle").text("Justified text");
@@ -179,10 +179,10 @@
       $(".article-text").toggleClass("serif-text");
       if (!JSON.parse(localStorage.getItem("serifFont"))) {
         localStorage.setItem("serifFont", true);
-        $("#serif-toggle").text("Serif problem font");
+        $("#serif-toggle").text("Serif wiki font");
       } else {
         localStorage.setItem("serifFont", false);
-        $("#serif-toggle").text("Sans problem font");
+        $("#serif-toggle").text("Sans wiki font");
       }
     });
 
@@ -394,7 +394,7 @@
 
   async function addArticle(pagename, pushUrl) {
     $(".notes").before(`<div class="problem-section">
-      <h2 class="section-header" id="article-header">Article Text</h2>
+      <h2 class="section-header" id="article-header"></h2>
       <a href="" class="aops-link">
         (View on the AoPS Wiki)
       </a>
