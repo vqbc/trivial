@@ -741,6 +741,10 @@ table.floatright {
 
 .error {
   color: var(--error-color);
+}
+
+.frontlink {
+  font-family: "Computer Modern Bright", sans-serif; /* Main page */
 } /**/
 
 /* KaTeX */
