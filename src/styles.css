@@ -525,7 +525,7 @@ tags > span {
 a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.1s, border-bottom-color 0.1s, outline 0.1s,
+  transition: color 0.1s, text-decoration-color 0.1s, outline 0.1s,
     outline-offset 0.1s;
 }
 
@@ -565,27 +565,23 @@ a.secret-link {
 .article-text a[title],
 .article-text a.external {
   color: inherit;
-  border-bottom: 1px solid var(--link-color);
-}
-
-.article-text .thumb a,
-.article-text a.image {
-  border-bottom: none;
+  text-decoration: underline var(--link-color) 1px;
+  text-underline-offset: 3px;
 }
 
 .article-text a[title]:hover,
 .article-text a.external:hover {
   color: var(--link-hover-color);
-  border-bottom-color: var(--link-hover-color);
+  text-decoration-color: var(--link-hover-color);
 }
 
 .article-text a.new {
-  border-bottom-color: var(--error-color); /* redlinks */
+  text-decoration-color: var(--error-color); /* redlinks */
 }
 
 .article-text a.new:hover {
   color: var(--error-hover-color);
-  border-bottom-color: var(--error-hover-color);
+  text-decoration-color: var(--error-hover-color);
 }
 
 .source-link {
@@ -770,6 +766,7 @@ table.floatright {
 }
 
 .katex-display {
+  padding-top: 2px;
   overflow: auto hidden;
 }
 
@@ -990,7 +987,8 @@ footer {
 
   footer a {
     color: inherit;
-    border-bottom: 1px solid var(--link-color);
+    text-decoration: underline var(--link-color) 1px;
+    text-underline-offset: 3px;
   } /**/
 
   /* Hide things */
