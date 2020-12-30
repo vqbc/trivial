@@ -51,7 +51,7 @@ html {
 
 body {
   color: var(--text-color);
-  font: 1.1rem / 1.35 "Latin Modern Sans", sans-serif;
+  font: 1.1rem / 1.45 "Latin Modern Sans", sans-serif;
   background: var(--body-color);
 }
 
