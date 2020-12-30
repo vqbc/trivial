@@ -1010,7 +1010,7 @@
     decodeURI(string)
       .replace(/_/g, " ")
       .replace("Problems/Problem ", "#")
-      .replace("'", "’");
+      .replace(/'/g, "’");
 
   const underscores = (string) => string.replace(/ /g, "_");
 
@@ -2631,14 +2631,13 @@
         text = "Brilliant, but you don’t learn anything useful";
         break;
       case 3:
-        text = "Wikiwand, but you don't scroll through ads everywhere";
+        text = "Wikiwand, but you don’t scroll through ads everywhere";
         break;
       case 4:
         text = "A web browser, but you can only use AoPS";
         break;
       case 5:
-        text =
-          "A side project, but why didn't I just use React.js and not this spaghetti code";
+        text = "A side project, but why didn’t I just use React.js";
         break;
       case 6:
         text =
