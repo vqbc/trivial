@@ -2620,7 +2620,7 @@
   $(".subtitle").click(() => {
     subtitleClicked++;
     let text;
-    switch (subtitleClicked % 6) {
+    switch (subtitleClicked % 7) {
       case 0:
         text = "An AoPS Wiki Reader for Studying";
         break;
@@ -2634,10 +2634,13 @@
         text = "Wikiwand, but you don't scroll through ads everywhere";
         break;
       case 4:
-        text =
-          "A web browser, but in a browser tab and the only website you can use is AoPS";
+        text = "A web browser, but you can only use AoPS";
         break;
       case 5:
+        text =
+          "A side project, but why didn't I just use React.js and not this spaghetti code";
+        break;
+      case 6:
         text =
           "The AoPS Wiki, but you waste time trying to find the other easter eggs";
         break;
