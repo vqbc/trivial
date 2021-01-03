@@ -1002,9 +1002,12 @@
       .replace(/eqnarray\*/g, "aligned")
       .replace(/\\bold/g, "\\mathbf")
       .replace(/\\congruent/g, "\\cong")
-      .replace(/\\overarc/g, "\\overparen")
-      .replace(/\\textdollar/g, "\\$")
-      .replace(/\\underarc/g, "\\underparen");
+      .replace(/\\overarc/g, "\\overgroup")
+      .replace(/\\overparen/g, "\\overgroup")
+      .replace(/\\underarc/g, "\\undergroup")
+      .replace(/\\underparen/g, "\\undergroup")
+      .replace(/\\mathdollar/g, "\\$")
+      .replace(/\\textdollar/g, "\\$");
 
   const titleCleanup = (string) =>
     decodeURI(string)
@@ -2475,7 +2478,7 @@
   }
 
   function katexFallback() {
-    $(".katex-error").each(function () {
+    $(".katex-error, .text[style='color:#cc0000;'").each(function () {
       $(this).closest(".katex-container").addClass("katex-broken");
       $(this)
         .closest(".katex-container")
