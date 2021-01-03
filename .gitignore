@@ -1,4 +1,4 @@
 node_modules
-.prettierrc
 package-lock.json
+.prettierrc
 .vscode
