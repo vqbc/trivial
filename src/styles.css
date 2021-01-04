@@ -88,7 +88,7 @@ body {
 /* Big top buttons */
 .button-container {
   display: flex;
-  gap: var(--vertical-item-spacing) var(--button-spacing);
+  /* gap: var(--vertical-item-spacing) var(--button-spacing); */
   justify-content: space-between;
   margin-bottom: 2rem;
 }
@@ -106,7 +106,7 @@ body {
   transition: all 0.1s;
 }
 
-@supports not (gap: 1%) {
+@supports not (zzzgap: 1%) {
   .button {
     margin: 0 calc(var(--button-spacing) / 2);
   }
@@ -197,7 +197,7 @@ body {
 .options-input {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--vertical-item-spacing) var(--horizontal-item-spacing);
+  /* gap: var(--vertical-item-spacing) var(--horizontal-item-spacing); */
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 2rem;
@@ -399,7 +399,7 @@ tags > span {
 } /**/
 
 /* Input positioning */
-@supports not (gap: 1%) {
+@supports not (zzzgap: 1%) {
   .tagify,
   .input-field,
   .input-container {
@@ -872,7 +872,7 @@ footer {
     margin-left: 0;
   }
 
-  @supports not (gap: 1%) {
+  @supports not (zzzgap: 1%) {
     .checkbox-container.input-bottom {
       margin-bottom: var(--vertical-item-spacing);
     }
@@ -908,7 +908,7 @@ footer {
     margin-right: 0;
   }
 
-  @supports not (gap: 1%) {
+  @supports not (zzzgap: 1%) {
     .input-bottom {
       margin-bottom: var(--vertical-item-spacing);
     }
