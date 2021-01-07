@@ -1000,7 +1000,7 @@ footer {
   .error,
   a.aops-link,
   #copy-problems,
-  .replace-problem,
+  .article-problem:hover .replace-problem,
   .section-collapsed,
   #solutions-header::after,
   .noprint {
