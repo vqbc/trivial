@@ -924,8 +924,15 @@ footer {
   .article-text {
     overflow-wrap: break-word;
   }
+
   .button {
     flex: 1 0 100%;
+  }
+
+  @supports not (zzzgap: 1%) {
+    .button-flex-bottom:not(:last-child) {
+      margin-bottom: var(--vertical-item-spacing);
+    }
   }
 }
 
