@@ -2227,6 +2227,7 @@
               computeNumber(randomPage),
               computeYear(randomPage)
             ) == replacedDifficulty;
+          if (!matchingProblem) pages.splice(pageIndex, 1);
         }
 
         params = `action=parse&page=${randomPage}&format=json`;
@@ -2313,6 +2314,7 @@
       </div>`);
 
         katexFallback();
+        $(".replace-problem").off("click");
         replaceProblems();
         fixLinks();
         directLinks();
