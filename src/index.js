@@ -1010,11 +1010,10 @@
       .replace(/\\textdollar/g, "\\$");
 
   const titleCleanup = (string) =>
-    decodeURI(string)
+    decodeURIComponent(string)
       .replace(/_/g, " ")
       .replace("Problems/Problem ", "#")
       .replace(/'/g, "’");
-
   const underscores = (string) => string.replace(/ /g, "_");
 
   const latexer = (html) => {
@@ -1388,8 +1387,7 @@
           </div>
         </div>
         <input class="input-field input-bottom input-right" id="input-search"
-          type="text" placeholder="Keywords, e.g. Cauchy"
-          data-whitelist="${sanitize(allPages.toString())}">
+          type="text" placeholder="Keywords, e.g. Cauchy">
         <button class="input-button" id="search-button">
           Search Pages
         </button>
@@ -1408,6 +1406,7 @@
         enabled: 0,
         maxItems: 7,
       },
+      whitelist: allPages,
     });
   });
 
@@ -1979,10 +1978,13 @@
       $(".results-notice").html(`${resultsNum} results found`);
       if (pageExists)
         $(".results-notice").append(
-          ` | Page <a href="https://artofproblemsolving.com/wiki/index.php/${encodeURI(
+          ` | Page <a href="https://artofproblemsolving.com/wiki/index.php/${encodeURIComponent(
             underscores(search)
-          )}">${titleCleanup(originalSearch)}</a> exists on the wiki`
+          )}">${titleCleanup(
+            encodeURIComponent(originalSearch)
+          )}</a> exists on the wiki`
         );
+
       for (let i = 0; i < resultsNum && i < 10; i++) addResult();
       loadedTimes++;
       if (searchResults.length)
@@ -2021,7 +2023,7 @@
         (validProblem(page.title) || !$("#input-problemsonly").prop("checked"))
       ) {
         searchResults.push({
-          url: `/wiki/index.php/${encodeURI(underscores(page.title))}`,
+          url: `/wiki/index.php/${encodeURIComponent(underscores(page.title))}`,
           title: titleCleanup(page.title),
           snippet: page.snippet,
         });
@@ -2053,7 +2055,9 @@
     } else {
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
 
-      let params = `action=parse&page=${search}&format=json`;
+      let params = `action=parse&page=${encodeURIComponent(
+        underscores(search)
+      )}&format=json`;
       let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
       let json = await response.json();
       if (json?.parse) pageExists = true;
@@ -2182,6 +2186,7 @@
         localStorage.removeItem("pageHistory");
 
         $(".results-container").remove();
+        $("#load-results").remove();
         $(".notes").before(
           `<div class="results-container">
             <div class="results-notice">No history yet…</div>
@@ -2518,7 +2523,7 @@
   // Enter pages into history
   function addHistory(page, snippet) {
     let history = JSON.parse(localStorage.getItem("pageHistory"));
-    let url = `https://artofproblemsolving.com/wiki/index.php/${encodeURI(
+    let url = `https://artofproblemsolving.com/wiki/index.php/${encodeURIComponent(
       underscores(page)
     )}`;
     let cleanedPage = titleCleanup(page);
