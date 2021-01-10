@@ -1082,36 +1082,20 @@
     );
   });
 
-  $("#find-article").click(() => {
-    clearAll();
-    activeButton("find-article");
-
-    $("#main-button-container").after(
-      `<div class="button-container" id="secondary-button-container">
-        <button type="button" class="button secondary-button button-flex-bottom"
-        id="find-nav">
-          Choose an Article
-        </button>
-        <button type="button" class="button secondary-button button-flex-bottom"
-        id="theorem-button">
-          Random Theorem
-        </button>
-      </div>`
-    );
-  });
-
   $("#browse-pages").click(() => {
     clearAll();
     activeButton("browse-pages");
 
     $("#main-button-container").after(
       `<div class="button-container" id="secondary-button-container">
-        <button type="button" class="button secondary-button button-flex-bottom"
-        id="search-nav">
+        <button type="button" class="button secondary-button" id="search-nav">
           Search All Pages
         </button>
-        <button type="button" class="button secondary-button button-flex-bottom"
-        id="history-button">
+        <button type="button" class="button secondary-button" id="theorem-button">
+          Random Theorem
+        </button>
+        <button type="button" class="button secondary-button button-flex-bottom
+        button-flex-full" id="history-button">
           View Page History
         </button>
       </div>`
@@ -1388,36 +1372,6 @@
     });
   });
 
-  $(".page-container").on("click", "#find-nav", () => {
-    clearOptions();
-    activeSecondaryButton("find-nav");
-
-    $("#secondary-button-container").after(
-      `<div class="options-input" id="find-input">
-        <input class="input-field input-bottom input-right" id="input-find"
-        type="text" placeholder="Title, e.g. Heron's Formula"
-        data-whitelist="${sanitize(allPages.toString())}">
-        <button class="input-button" id="find-button">
-          View Article
-        </button>
-      </div>
-      ${notes}`
-    );
-    allPagesWarnAC();
-    collapseNotes();
-    directLinks();
-
-    let inputFind = document.querySelector("#input-find");
-    new Tagify(inputFind, {
-      maxTags: 1,
-      originalInputValueFormat: (values) => values.map((e) => e.value),
-      dropdown: {
-        enabled: 0,
-        maxItems: 7,
-      },
-    });
-  });
-
   $(".page-container").on("click", "#search-nav", () => {
     clearOptions();
     activeSecondaryButton("search-nav");
@@ -1434,15 +1388,27 @@
           </div>
         </div>
         <input class="input-field input-bottom input-right" id="input-search"
-          type="text" placeholder="Keywords, e.g. Cauchy">
+          type="text" placeholder="Keywords, e.g. Cauchy"
+          data-whitelist="${sanitize(allPages.toString())}">
         <button class="input-button" id="search-button">
           Search Pages
         </button>
       </div>
       ${notes}`
     );
+    allPagesWarnAC();
     collapseNotes();
     directLinks();
+
+    let inputSearch = document.querySelector("#input-search");
+    new Tagify(inputSearch, {
+      maxTags: 1,
+      originalInputValueFormat: (values) => values.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+        maxItems: 7,
+      },
+    });
   });
 
   // Buttons
@@ -2000,48 +1966,6 @@
     }
   });
 
-  $(".page-container").on("click", "#find-button", async () => {
-    clearProblem();
-
-    await addArticle(
-      sanitize($("#input-find").val())
-        .replace(/&quot;/g, `"`)
-        .replace(/’/g, "'")
-        .replace("#", "Problems/Problem "),
-      true
-    );
-  });
-
-  $(".page-container").on("click", "#theorem-button", async () => {
-    clearOptions();
-    activeSecondaryButton("theorem-button");
-
-    $("#secondary-button-container").after(`
-      ${notes}`);
-
-    if (!theoremPages[0]) {
-      console.log("Loading theorems...");
-      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params =
-        `action=query&list=categorymembers&cmtitle=Category:Theorems` +
-        `&cmlimit=max&format=json`;
-
-      let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-      let json = await response.json();
-
-      for (let page of json.query.categorymembers)
-        theoremPages.push(page.title);
-    }
-    theoremPages = theoremPages.filter(
-      (e) => e !== "H\ufffdlder's Inequality" && e !== "Theorems"
-    );
-
-    let randomTheorem =
-      theoremPages[Math.floor(Math.random() * theoremPages.length)];
-    console.log(randomTheorem);
-    await addArticle(randomTheorem, true);
-  });
-
   $(".page-container").on("click", "#search-button", async () => {
     async function addResults(
       originalSearch,
@@ -2111,7 +2035,8 @@
     let searchResults = [];
     let pageExists = false;
     let originalSearch = $("#input-search").val();
-    let search = originalSearch
+    let search = sanitize(originalSearch)
+      .replace(/&quot;/g, `"`)
       .replace(/’/g, "'")
       .replace("#", "Problems/Problem ");
     search = search.charAt(0).toUpperCase() + search.slice(1);
@@ -2162,6 +2087,36 @@
         directLinks();
       }
     }
+  });
+
+  $(".page-container").on("click", "#theorem-button", async () => {
+    clearOptions();
+    activeSecondaryButton("theorem-button");
+
+    $("#secondary-button-container").after(`
+      ${notes}`);
+
+    if (!theoremPages[0]) {
+      console.log("Loading theorems...");
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params =
+        `action=query&list=categorymembers&cmtitle=Category:Theorems` +
+        `&cmlimit=max&format=json`;
+
+      let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+      let json = await response.json();
+
+      for (let page of json.query.categorymembers)
+        theoremPages.push(page.title);
+    }
+    theoremPages = theoremPages.filter(
+      (e) => e !== "H\ufffdlder's Inequality" && e !== "Theorems"
+    );
+
+    let randomTheorem =
+      theoremPages[Math.floor(Math.random() * theoremPages.length)];
+    console.log(randomTheorem);
+    await addArticle(randomTheorem, true);
   });
 
   $(".page-container").on("click", "#history-button", async () => {
