@@ -2538,7 +2538,7 @@
           snippet: sanitizedSnippet,
         },
       ];
-    if (history.length > 50) history.shift();
+    if (history.length > 50) history.pop();
     history = [...new Map(history.map((item) => [item.title, item])).values()];
 
     localStorage.setItem("pageHistory", JSON.stringify(history));
