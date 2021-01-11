@@ -307,6 +307,10 @@ tags > span {
 
 .input-multi {
   flex: 1 0 28%;
+}
+
+.tagify--select .tagify__input {
+  width: auto;
 } /**/
 
 /* Range slider thingy */

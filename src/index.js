@@ -1400,10 +1400,9 @@
 
     let inputSearch = document.querySelector("#input-search");
     new Tagify(inputSearch, {
-      maxTags: 1,
+      mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
-        enabled: 0,
         maxItems: 7,
       },
       whitelist: allPages,
