@@ -931,7 +931,7 @@
     let after = $(htmlParsed)
       .children()
       .filter(":header:contains('Solution')")
-      .nextUntil(":header:not(:contains('Solution')), table")
+      .nextUntil(":header:contains('See also'), table")
       .addBack(":header:contains(' Solution'), :header:contains('Solution ')");
 
     let afterHTML = $(after)
