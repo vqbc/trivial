@@ -1014,7 +1014,8 @@
       .replace(/_/g, " ")
       .replace("Problems/Problem ", "#")
       .replace(/'/g, "’");
-  const underscores = (string) => string.replace(/ /g, "_");
+  const underscores = (string) =>
+    string.replace(/ /g, "_").replace(/%2F/g, "/");
 
   const latexer = (html) => {
     html = html.replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
