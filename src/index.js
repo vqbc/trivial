@@ -2480,9 +2480,13 @@
           href.includes("?page="))
       ) {
         event.preventDefault();
-        let pagename = href
-          .replace("https://artofproblemsolving.com/wiki/index.php/", "")
-          .replace(/^\?page=/g, "");
+        let pagename = decodeURIComponent(
+          href
+            .replace("https://artofproblemsolving.com/wiki/index.php/", "")
+            .replace(/^\?page=/g, "")
+            .replace(/_/g, " ")
+            .replace(/%/g, "%25")
+        );
         clearProblem();
         if (validProblem(pagename)) await addProblem(pagename, true);
         else await addArticle(pagename, true);
