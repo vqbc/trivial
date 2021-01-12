@@ -911,7 +911,8 @@
       .nextUntil(":header:not(:contains('Problem'))")
       .addBack()
       .not(".toc")
-      .not(":header:contains('Problem')");
+      .not(":header:contains('Problem')")
+      .not("p:last-child > br:first-child");
 
     let afterHTML = $(after)
       .map(function () {
