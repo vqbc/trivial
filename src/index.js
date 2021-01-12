@@ -1302,8 +1302,13 @@
           </label>
           <input class="input-range" id="input-number"/>
         </div>
-        <input class="input-field input-bottom input-right" id="input-problems"
+        <input class="input-field input-bottom" id="input-problems"
         type="text" placeholder="Always include these problems (optional)"
+        data-whitelist="${sortProblems(allProblems)
+          .map((e) => titleCleanup(e))
+          .toString()}">
+        <input class="input-field input-bottom input-right" id="input-skip"
+        type="text" placeholder="Skip these problems (optional)"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
@@ -1337,6 +1342,13 @@
     });
     let inputProblems = document.querySelector("#input-problems");
     new Tagify(inputProblems, {
+      originalInputValueFormat: (values) => values.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+      },
+    });
+    let inputSkip = document.querySelector("#input-skip");
+    new Tagify(inputSkip, {
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
@@ -1562,6 +1574,7 @@
           );
         } else {
           console.log("Invalid problem, skipping...");
+          pages.splice(pageIndex, 1);
         }
       }
 
@@ -1700,6 +1713,7 @@
           );
         } else {
           console.log("Invalid problem, skipping...");
+          pages.splice(pageIndex, 1);
           invalidProblems++;
         }
       }
@@ -1754,6 +1768,10 @@
       let pageIndex;
       let problems = [];
       let problemTitles = inputProblems
+        .val()
+        .split(",")
+        .map((e) => e.replace("#", "Problems/Problem "));
+      let skipProblems = inputSkip
         .val()
         .split(",")
         .map((e) => e.replace("#", "Problems/Problem "));
@@ -1837,6 +1855,7 @@
             );
           } else {
             console.log("Invalid problem, skipping...");
+            pages.splice(pageIndex, 1);
           }
         }
 
@@ -1845,9 +1864,16 @@
         pages.length !== 0 &&
         clickedTimes === clickedTimesThen
       ) {
-        pageIndex = Math.floor(Math.random() * pages.length);
-        randomPage = pages[pageIndex];
-        console.log(randomPage);
+        let blockedProblem = true;
+
+        while (blockedProblem) {
+          pageIndex = Math.floor(Math.random() * pages.length);
+          randomPage = pages[pageIndex];
+          console.log(randomPage);
+
+          blockedProblem = skipProblems.includes(randomPage);
+          if (blockedProblem) pages.splice(pageIndex, 1);
+        }
 
         params = `action=parse&page=${randomPage}&format=json`;
         response = await fetch(`${apiEndpoint}?${params}&origin=*`);
@@ -1911,6 +1937,7 @@
           );
         } else {
           console.log("Invalid problem, skipping...");
+          pages.splice(pageIndex, 1);
         }
       }
 
@@ -1932,6 +1959,7 @@
 
     let inputNumber = $("#input-number");
     let inputProblems = $("#input-problems");
+    let inputSkip = $("#input-skip");
 
     let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
@@ -2281,6 +2309,7 @@
           pages.splice(pageIndex, 1);
         } else {
           console.log("Invalid problem, skipping...");
+          pages.splice(pageIndex, 1);
         }
 
         $(`#batch-text .article-problem:nth-child(${replacedIndex})`)
