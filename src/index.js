@@ -519,10 +519,6 @@
     let pages = [];
     let fullPages = [];
 
-    if (!subjects[0] && !tests[0]) {
-      subjects[0] = "(All Subjects)";
-      tests[0] = "(All Tests)";
-    }
     if (!subjects[0]) {
       subjects[0] = "(All Subjects)";
     }
