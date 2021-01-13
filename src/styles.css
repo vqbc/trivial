@@ -880,8 +880,14 @@ footer {
     margin-right: 0;
   }
 
+  .input-button-flex-full {
+    flex: 1 0 100%;
+    margin-left: 0;
+  }
+
   @supports not (zzzgap: 1%) {
-    .checkbox-container.input-bottom {
+    .checkbox-container.input-bottom,
+    .input-flex-top {
       margin-bottom: var(--vertical-item-spacing);
     }
 

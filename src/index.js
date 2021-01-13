@@ -22,8 +22,7 @@
       </div>
     </div>`;
   let problemOptions =
-    `<input class="input-multi input-flex-full"
-    id="input-subjects"
+    `<input class="input-multi input-flex-full" id="input-subjects"
     placeholder="Subjects, e.g. Olympiad Algebra Problems"
     data-whitelist="3D Geometry Problems, Introductory Algebra Problems, ` +
     `Introductory Combinatorics Problems, Introductory Geometry Problems, ` +
@@ -36,8 +35,7 @@
     `Olympiad Geometry Problems, Olympiad Inequality Problems, ` +
     `Olympiad Number Theory Problems, Olympiad Trigonometry Problems">
   </input>
-  <input class="input-multi input-right input-flex-full"
-    id="input-tests"
+  <input class="input-multi input-right input-flex-full" id="input-tests"
     placeholder="Tests, e.g. AMC 10"
     data-whitelist="(AMC Tests), AHSME, AMC 8, AMC 10,
     AMC 12, AIME, USAJMO, USAMO, Canadian MO, IMO">
@@ -1302,17 +1300,19 @@
           </label>
           <input class="input-range" id="input-number"/>
         </div>
-        <input class="input-field input-bottom" id="input-problems"
-        type="text" placeholder="Always include these problems (optional)"
+        <input class="input-field input-bottom input-flex-top input-flex-full"
+        id="input-problems"
+        type="text" placeholder="Include these problems (optional)"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
-        <input class="input-field input-bottom input-right" id="input-skip"
+        <input class="input-field input-bottom input-right input-flex-top input-flex-full"
+        id="input-skip"
         type="text" placeholder="Skip these problems (optional)"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
-        <button class="input-button" id="ranbatch-button">
+        <button class="input-button input-button-flex-full" id="ranbatch-button">
           Make Random
         </button>
       </div>
