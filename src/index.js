@@ -2512,8 +2512,9 @@
             .replace(/^\?page=/g, "")
             .replace(/_/g, " ")
             .replace(/%/g, "%25")
-        );
+        ).replace(/%2F/g, "/");
         clearProblem();
+        console.log(pagename);
         if (validProblem(pagename)) await addProblem(pagename, true);
         else await addArticle(pagename, true);
       }
