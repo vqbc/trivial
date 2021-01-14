@@ -296,7 +296,7 @@
   async function addProblem(pagename, pushUrl) {
     $(".notes").before(
       `<div class="problem-section">
-      <h2 class="section-header" id="article-header">Problem Text</h2>
+      <h2 class="section-header" id="article-header"></h2>
       <a href="" class="aops-link">
         (View on the AoPS Wiki)
       </a>
@@ -317,7 +317,7 @@
       let problemText = latexer(json.parse.text["*"]);
       let problemProblem = getProblem(problemText);
 
-      addHistory(pagename, problemProblem.substring(0, 140));
+      addHistory(pagename, sourceCleanup(problemProblem).substring(0, 140));
 
       $("#problem-text").html(problemProblem);
       $("#solutions-text").html(getSolutions(problemText));
@@ -1030,13 +1030,30 @@
           html = html.replaceAll(
             image,
             `<span class="fallback-container">$&</span>` +
-              `<span class="katex-container">${renderedLatex}</span>`
+              `<katex class="katex-container">${renderedLatex}</katex>`
           );
         }
       }
     }
     return html;
   };
+
+  const sourceCleanup = (string) =>
+    string
+      .replace(
+        /<span class="fallback-container">.*?<\/span><katex class="katex-container">.*?<annotation encoding="application\/x-tex">(.*?)<\/annotation>.*?<\/katex>/gs,
+        "$$$1$$"
+      )
+      .replace(
+        /<span class="mw-headline" id="Problem">Problem<\/span><span class="mw-editsection"><span class="mw-editsection-bracket">\[<\/span><a href=".*?" title="Edit section: Problem">edit<\/a><span class="mw-editsection-bracket">\]<\/span><\/span><\/h2>/g,
+        ""
+      )
+      .replace(/<a.*?>/g, "")
+      .replace(/<\/a>/g, "")
+      .replace(/<dl>.*?<\/dl>/g, "")
+      .replace(/<img.*?>/g, "")
+      .replace(/<p>/g, "")
+      .replace(/<\/p>/g, "");
 
   // Nav elements
   $("#single-problem").click(() => {
