@@ -310,25 +310,49 @@
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
 
-    const response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-    const json = await response.json();
+    let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+    let json = await response.json();
+    let finalPage = pagename;
 
     if (json?.parse) {
       let problemText = latexer(json.parse.text["*"]);
       let problemProblem = getProblem(problemText);
+      let problemSolutions = getSolutions(problemText);
 
-      addHistory(pagename, sourceCleanup(problemProblem).substring(0, 140));
+      if (problemProblem && problemSolutions) {
+        finalPage = pagename;
+      } else if (problemText.includes("Redirect to")) {
+        console.log("Redirect problem, going there instead...");
+
+        let redirHref = $($.parseHTML(problemText))
+          .find(".redirectText a")
+          .attr("href");
+        let redirPage = redirHref
+          .replace("/wiki/index.php/", "")
+          .replace(/_/g, " ");
+        console.log(redirPage);
+
+        params = `action=parse&page=${redirPage}&format=json`;
+        response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        json = await response.json();
+        problemText = latexer(json.parse.text["*"]);
+        problemProblem = getProblem(problemText);
+        problemSolutions = getSolutions(problemText);
+        finalPage = redirPage;
+      }
+
+      addHistory(finalPage, sourceCleanup(problemProblem).substring(0, 140));
 
       $("#problem-text").html(problemProblem);
-      $("#solutions-text").html(getSolutions(problemText));
-      $("#article-header").html(titleCleanup(pagename));
+      $("#solutions-text").html(problemSolutions);
+      $("#article-header").html(titleCleanup(finalPage));
 
-      document.title = titleCleanup(pagename) + " - Trivial AoPS Wiki Reader";
+      document.title = titleCleanup(finalPage) + " - Trivial AoPS Wiki Reader";
       if (pushUrl) {
         history.pushState(
-          { page: pagename },
-          titleCleanup(pagename) + " - Trivial AoPS Wiki Reader",
-          "?page=" + underscores(pagename)
+          { page: finalPage },
+          titleCleanup(finalPage) + " - Trivial AoPS Wiki Reader",
+          "?page=" + underscores(finalPage)
         );
         searchParams = new URLSearchParams(location.search);
         urlPagename = searchParams.get("page");
@@ -337,7 +361,7 @@
       $(".aops-link").attr(
         "href",
         `https://artofproblemsolving.com/wiki/index.php/${underscores(
-          pagename
+          finalPage
         )}`
       );
       katexFallback();
@@ -346,8 +370,7 @@
       directLinks();
       collapseSolutions();
       return [
-        (getProblem(problemText) && getSolutions(problemText) ? 1 : 0) -
-          problemText.includes("Redirect to"),
+        getProblem(problemText) && getSolutions(problemText),
         problemText,
       ];
     } else {
@@ -1477,23 +1500,6 @@
         let randomPage = pages[Math.floor(Math.random() * pages.length)];
         console.log(randomPage);
         [response, problemText] = await addProblem(randomPage, true);
-
-        if (response < 0) {
-          clearProblem();
-          allPagesWarn();
-          console.log("Redirect problem, going there instead...");
-
-          let redirHref = $($.parseHTML(problemText))
-            .find(".redirectText a")
-            .attr("href");
-          let redirPage = redirHref
-            .replace("/wiki/index.php/", "")
-            .replace(/_/g, " ");
-          console.log(redirPage);
-
-          await addProblem(redirPage, true);
-        }
-
         invalid = !response;
       }
     }
