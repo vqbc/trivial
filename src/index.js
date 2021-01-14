@@ -1736,9 +1736,9 @@
       }
 
       if (clickedTimes === clickedTimesThen) {
-        if ($("#input-sort").prop("checked")) {
-          problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
-        }
+        if ($("#input-sort").prop("checked"))
+          problems.sort((a, b) => a.difficulty - b.difficulty);
+
         console.log(problems);
 
         addProblems(problems, false);
@@ -1959,9 +1959,9 @@
       }
 
       if (clickedTimes === clickedTimesThen) {
-        if ($("#input-sort").prop("checked")) {
-          problems.sort((a, b) => (a.difficulty > b.difficulty ? 1 : -1));
-        }
+        if ($("#input-sort").prop("checked"))
+          problems.sort((a, b) => a.difficulty - b.difficulty);
+
         console.log(problems);
         addProblems(problems, true);
       }
