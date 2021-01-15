@@ -651,7 +651,8 @@
     let diff;
     switch (test) {
       case "AMC 8":
-        diff = num < 13 ? 1 : num < 21 ? 1.5 : 2;
+        diff =
+          num < 7 ? 0.5 : num < 13 ? 1 : num < 17 ? 1.25 : num < 21 ? 1.5 : 2;
         break;
       case "AMC 10":
         diff =
@@ -659,6 +660,8 @@
             ? 1
             : num < 7
             ? 1.5
+            : num < 10
+            ? 1.75
             : num < 13
             ? 2
             : num < 17
@@ -673,8 +676,12 @@
         break;
       case "AMC 12":
         diff =
-          num < 6
+          num < 4
+            ? 1.25
+            : num < 6
             ? 1.5
+            : num < 9
+            ? 1.75
             : num < 11
             ? 2
             : num < 14
@@ -697,6 +704,8 @@
             ? 1
             : num < 7
             ? 1.5
+            : num < 10
+            ? 1.75
             : num < 13
             ? 2
             : num < 17
