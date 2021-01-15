@@ -369,10 +369,7 @@
       fixLinks();
       directLinks();
       collapseSolutions();
-      return [
-        getProblem(problemText) && getSolutions(problemText),
-        problemText,
-      ];
+      return getProblem(problemText) && getSolutions(problemText);
     } else {
       $(".article-text").before(
         `<p class="error">The page you specified does not exist.</p>`
@@ -1501,14 +1498,13 @@
     } else {
       let invalid = true;
       let response;
-      let problemText;
       while (invalid) {
         clearProblem();
         allPagesWarn();
 
         let randomPage = pages[Math.floor(Math.random() * pages.length)];
         console.log(randomPage);
-        [response, problemText] = await addProblem(randomPage, true);
+        response = await addProblem(randomPage, true);
         invalid = !response;
       }
     }
@@ -1590,11 +1586,11 @@
           problemSolutions = getSolutions(problemText);
 
           problems.push({
-            title: redirPage,
+            title: currentProblem,
             difficulty: computeDifficulty(
-              computeTest(redirPage),
-              computeNumber(redirPage),
-              computeYear(redirPage)
+              computeTest(currentProblem),
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
@@ -1729,11 +1725,11 @@
           problemSolutions = getSolutions(problemText);
 
           problems.push({
-            title: redirPage,
+            title: currentProblem,
             difficulty: computeDifficulty(
-              computeTest(redirPage),
-              computeNumber(redirPage),
-              computeYear(redirPage)
+              computeTest(currentProblem),
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
@@ -1871,11 +1867,11 @@
             problemSolutions = getSolutions(problemText);
 
             problems.push({
-              title: redirPage,
+              title: currentProblem,
               difficulty: computeDifficulty(
-                computeTest(redirPage),
-                computeNumber(redirPage),
-                computeYear(redirPage)
+                computeTest(currentProblem),
+                computeNumber(currentProblem),
+                computeYear(currentProblem)
               ),
               problem: problemProblem,
               solutions: problemSolutions,
@@ -1952,11 +1948,11 @@
           problemSolutions = getSolutions(problemText);
 
           problems.push({
-            title: redirPage,
+            title: randomPage,
             difficulty: computeDifficulty(
-              computeTest(redirPage),
-              computeNumber(redirPage),
-              computeYear(redirPage)
+              computeTest(randomPage),
+              computeNumber(randomPage),
+              computeYear(randomPage)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
@@ -2328,11 +2324,11 @@
           problemSolutions = getSolutions(problemText);
 
           newProblem = {
-            title: redirPage,
+            title: randomPage,
             difficulty: computeDifficulty(
-              computeTest(redirPage),
-              computeNumber(redirPage),
-              computeYear(redirPage)
+              computeTest(randomPage),
+              computeNumber(randomPage),
+              computeYear(randomPage)
             ),
             problem: problemProblem,
             solutions: problemSolutions,
