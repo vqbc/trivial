@@ -321,7 +321,7 @@
 
       if (problemProblem && problemSolutions) {
         finalPage = pagename;
-      } else if (problemText.includes("Redirect to")) {
+      } else if (problemText.includes("Redirect to:")) {
         console.log("Redirect problem, going there instead...");
 
         let redirHref = $($.parseHTML(problemText))
@@ -428,7 +428,7 @@
     if (json?.parse) {
       let problemText = latexer(json.parse.text["*"]);
 
-      if (problemText.includes("Redirect to")) {
+      if (problemText.includes("Redirect to:")) {
         console.log("Redirect page, going there instead...");
 
         let redirHref = $($.parseHTML(problemText))
@@ -1566,7 +1566,7 @@
             "width",
             `${(problems.length / numProblems) * 100}%`
           );
-        } else if (problemText.includes("Redirect to")) {
+        } else if (problemText.includes("Redirect to:")) {
           console.log("Redirect problem, going there instead...");
 
           let redirHref = $($.parseHTML(problemText))
@@ -1705,7 +1705,7 @@
             "width",
             `${((problems.length + invalidProblems) / numProblems) * 100}%`
           );
-        } else if (problemText.includes("Redirect to")) {
+        } else if (problemText.includes("Redirect to:")) {
           console.log("Redirect problem, going there instead...");
 
           let redirHref = $($.parseHTML(problemText))
@@ -1847,7 +1847,7 @@
               "width",
               `${(problems.length / numProblems) * 100}%`
             );
-          } else if (problemText.includes("Redirect to")) {
+          } else if (problemText.includes("Redirect to:")) {
             console.log("Redirect problem, going there instead...");
 
             let redirHref = $($.parseHTML(problemText))
@@ -1928,7 +1928,7 @@
             "width",
             `${(problems.length / numProblems) * 100}%`
           );
-        } else if (problemText.includes("Redirect to")) {
+        } else if (problemText.includes("Redirect to:")) {
           console.log("Redirect problem, going there instead...");
 
           let redirHref = $($.parseHTML(problemText))
@@ -2304,7 +2304,7 @@
           };
 
           pages.splice(pageIndex, 1);
-        } else if (problemText.includes("Redirect to")) {
+        } else if (problemText.includes("Redirect to:")) {
           console.log("Redirect problem, going there instead...");
 
           let redirHref = $($.parseHTML(problemText))
