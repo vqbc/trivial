@@ -1018,6 +1018,7 @@
       .replace(/&#160;/g, " ")
       .replace(/&#39;/g, "'")
       .replace(/&amp;/g, "&")
+      .replace(/&quot;/g, '"')
       .replace(/^\$|\$$|\\\[|\\\]/g, "")
       .replace(/&lt;/g, "\\lt ")
       .replace(/&gt;/g, "\\gt ")
