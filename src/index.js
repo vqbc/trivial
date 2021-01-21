@@ -456,7 +456,7 @@
         .get()
         .join("");
 
-      addHistory(pagename, problemText.substring(0, 140));
+      addHistory(pagename, sourceCleanup(problemText).substring(0, 140));
 
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
@@ -1078,8 +1078,11 @@
         /<span class="mw-headline" id="Problem">Problem<\/span><span class="mw-editsection"><span class="mw-editsection-bracket">\[<\/span><a href=".*?" title="Edit section: Problem">edit<\/a><span class="mw-editsection-bracket">\]<\/span><\/span><\/h2>/g,
         ""
       )
+      .replace(/<span class="mw-headline" id=".*?">(.*?)<\/span>/g, "$1")
+      .replace(/<span class="mw-editsection">.*?<\/span><\/span>/g, "")
       .replace(/<a.*?>/g, "")
       .replace(/<\/a>/g, "")
+      .replace(/<br.*?>/g, "")
       .replace(/<dl>.*?<\/dl>/g, "")
       .replace(/<img.*?>/g, "")
       .replace(/<p>/g, "")
