@@ -29,6 +29,7 @@
   --button-text-shadow: 0 1px 2px hsl(0deg, 0%, 0%, 40%);
   --main-text-shadow: 0 2px 3px hsl(0deg, 0%, 0%, 40%);
   --placeholder-color: hsl(0deg, 0%, 0%, 40%);
+  --range-grid-color: hsl(0deg, 0%, 0%, 10%);
   --range-label-hover-color: hsl(0deg, 0%, 0%, 30%);
   --input-slider-color: hsl(217deg, 15%, 90%);
   --input-accent-color: hsl(210deg, 80%, 67%);
@@ -354,6 +355,10 @@ tags > span {
 .js-irs-2 .irs-grid {
   /* basically a bad nth-child selector */
   left: 0.66% !important;
+}
+
+.irs--flat .irs-grid-pol {
+  background-color: var(--range-grid-color);
 }
 
 .irs-grid-text {

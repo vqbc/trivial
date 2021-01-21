@@ -23,6 +23,7 @@
     --input-button-focus-color: hsl(177deg, 39%, 70%);
     --input-focus-color: hsl(201deg, 5%, 33%);
     --placeholder-color: hsl(0deg, 0%, 100%, 50%);
+    --range-grid-color: hsl(0deg, 0%, 100%, 20%);
     --range-label-hover-color: hsl(0deg, 0%, 100%, 60%);
     --input-slider-color: hsl(201deg, 5%, 31%);
     --input-accent-color: hsl(210deg, 70%, 62%);
@@ -37,6 +38,7 @@
 
   .input-field {
     color: var(--text-color);
+    background: var(--item-color);
   }
 
   .tagify {
@@ -56,10 +58,6 @@
   .tagify__dropdown__wrapper {
     --tagify-dd-bg-color: hsl(201deg, 8%, 20%);
     --tagify-dd-color-primary: hsl(210deg, 41%, 44%);
-  }
-
-  .input-field {
-    background: var(--item-color);
   }
 
   img.latex,
