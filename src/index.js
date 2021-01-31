@@ -449,7 +449,7 @@
       problemText = $($.parseHTML(problemText))
         .children()
         .not(".toc")
-        .not("table:contains('Word of the Week')")
+        .not("table:first-child")
         .map(function () {
           return this.outerHTML;
         })
@@ -2420,6 +2420,7 @@
       "Trivial AoPS Wiki Reader",
       location.href.split("?page=")[0]
     );
+    urlPagename = "";
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
@@ -2435,6 +2436,7 @@
       "Trivial AoPS Wiki Reader",
       location.href.split("?page=")[0]
     );
+    urlPagename = "";
     $("#secondary-button-container").remove();
     $(".options-input").remove();
     $(".error").remove();

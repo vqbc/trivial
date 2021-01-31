@@ -36,11 +36,6 @@
     --text-button-hover-color: hsl(177deg, 44%, 67%);
   }
 
-  .input-field {
-    color: var(--text-color);
-    background: var(--item-color);
-  }
-
   .tagify {
     --placeholder-color: rgb(255, 255, 255, 0.5);
     --placeholder-color-focus: rgb(255, 255, 255, 0.3);
