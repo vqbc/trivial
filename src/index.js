@@ -46,11 +46,11 @@
   </div>
   <div class="input-container input-right input-flex-full">
     <label class="range-label">
-      <a
+      Difficulty<sup><a
         class="dark-link"
         href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-        >Difficulty</a
-      > range allowed:
+        >?</a
+      ></sup> range allowed:
     </label>
     <input class="input-range" id="input-diff"></input>
   </div>`;
