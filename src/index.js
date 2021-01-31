@@ -156,11 +156,13 @@
           $("#dark-stylesheet-link").remove();
 
         localStorage.removeItem("darkTheme");
+        $("meta[name='color-scheme']").attr("content", "light dark");
         $("#dark-toggle").text("System theme");
       } else if (JSON.parse(localStorage.getItem("darkTheme")) === null) {
         $("#dark-stylesheet-link").remove();
 
         localStorage.setItem("darkTheme", false);
+        $("meta[name='color-scheme']").attr("content", "light");
         $("#dark-toggle").text("Light theme");
       } else {
         $("#stylesheet-link").after(
@@ -168,6 +170,7 @@
         );
 
         localStorage.setItem("darkTheme", true);
+        $("meta[name='color-scheme']").attr("content", "dark");
         $("#dark-toggle").text("Dark theme");
       }
     });

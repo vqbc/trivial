@@ -43,6 +43,18 @@
     <link rel="manifest" href="icons/site.webmanifest" />
     <meta name="theme-color" content="hsl(191deg, 42%, 42%)" />
     <meta name="color-scheme" content="light dark" />
+    <script>
+      if (JSON.parse(localStorage.getItem("darkTheme"))) {
+        document
+          .querySelector("meta[name='color-scheme']")
+          .setAttribute("content", "dark");
+      }
+      if (JSON.parse(localStorage.getItem("darkTheme")) == false) {
+        document
+          .querySelector("meta[name='color-scheme']")
+          .setAttribute("content", "light");
+      }
+    </script>
   </head>
   <!--⢸⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⡷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⢸⠀⠀are ya coding,⠀⠀⡇⠢⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
