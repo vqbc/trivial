@@ -2030,7 +2030,7 @@
       );
       $(".article-text").remove();
       $("#batch-header").html("Error");
-      $("#solutions-section").html("Error");
+      $("#solutions-section").remove();
     } else {
       await makeBatch();
     }
