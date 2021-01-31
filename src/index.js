@@ -1068,6 +1068,10 @@
       .replace(/'/g, "’");
   const underscores = (string) =>
     string.replace(/ /g, "_").replace(/%2F/g, "/");
+  const capitalize = (string) => {
+    if (typeof string !== "string") return "";
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   const latexer = (html) => {
     html = html.replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
@@ -2062,10 +2066,10 @@
       $(".results-notice").html(`${resultsNum} results found`);
       if (pageExists)
         $(".results-notice").append(
-          ` | Page <a href="https://artofproblemsolving.com/wiki/index.php/${encodeURIComponent(
+          ` | <a href="https://artofproblemsolving.com/wiki/index.php/${encodeURIComponent(
             underscores(search)
-          )}">${titleCleanup(
-            encodeURIComponent(originalSearch)
+          )}">${capitalize(
+            titleCleanup(encodeURIComponent(originalSearch))
           )}</a> exists on the wiki`
         );
 
