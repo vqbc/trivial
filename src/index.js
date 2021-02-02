@@ -2399,7 +2399,9 @@
                 newProblem.title
               )}">${titleCleanup(newProblem.title)}</a>)
           </span>
-        </h2>${newProblem.solutions}
+        </h2>${problem.problem}
+        <div class="solutions-divider">Solution</div>
+        ${newProblem.solutions}
       </div>`);
 
         katexFallback();
