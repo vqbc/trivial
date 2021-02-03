@@ -2399,7 +2399,7 @@
                 newProblem.title
               )}">${titleCleanup(newProblem.title)}</a>)
           </span>
-        </h2>${problem.problem}
+        </h2>${newProblem.problem}
         <div class="solutions-divider">Solution</div>
         ${newProblem.solutions}
       </div>`);
