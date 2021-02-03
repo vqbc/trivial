@@ -596,6 +596,10 @@ a.secret-link {
   text-decoration-color: var(--error-hover-color);
 }
 
+a.mw-selflink {
+  color: inherit;
+}
+
 .source-link {
   font-weight: normal;
 }
@@ -731,6 +735,11 @@ div.floatright,
 table.floatright {
   float: right;
   clear: right;
+}
+
+table:first-child {
+  margin: auto;
+  margin-top: 1em;
 }
 
 .wikitable {

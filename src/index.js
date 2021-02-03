@@ -452,7 +452,7 @@
       problemText = $($.parseHTML(problemText))
         .children()
         .not(".toc")
-        .not("table:first-child")
+        .not("table:contains('Printable version')")
         .map(function () {
           return this.outerHTML;
         })
