@@ -65,12 +65,6 @@
         specific filters are applied.
       </li>
       <li>
-        A list of all pages in alphabetical order is preloaded when the
-        site is opened, for choosing a random page from all subjects. Because it
-        takes around ten seconds to fully load, trying to get problems before
-        then will only give older problems early in alphabetical order.
-      </li>
-      <li>
         Difficulty levels will likely be inaccurate for earlier years and are
         only intended to be an approximation and group problems based on test
         and problem number. Difficulty levels are currently available for the
@@ -84,7 +78,7 @@
         such as the Choose Problems main input.
       </li>
       <li>
-        Turning off <a href="https://katex.org/">KaTeX</a> uses the original
+        Turning off <a href="https://katex.org">KaTeX</a> uses the original
         raster images from AoPS for LaTeX, which makes them blurrier, but
         prevents some potential rendering bugs.
       </li>
@@ -119,7 +113,6 @@
     <ul>
   </div>`;
   let clickedTimes = 0;
-  let allPagesLoaded = false;
   let subtitleClicked = 0;
   let settingsClicked = "";
 
@@ -259,41 +252,13 @@
   })();
 
   // Loads pages
-  (async () => {
-    console.log("Preloading all wiki pages, allow around 15 seconds...");
-    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-    let params = `action=query&list=allpages&aplimit=max&format=json`;
-    let paramsContinue;
+  $.getJSON("data/allpages.json", function (json) {
+    allPages = json;
+  });
 
-    let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-    let json = await response.json();
-
-    for (let page of json.query.allpages) {
-      if (page.title.charAt(0) !== "/") allPages.push(page.title);
-      if (validProblem(page.title)) allProblems.push(page.title);
-    }
-
-    while (json?.continue) {
-      paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
-      response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
-      json = await response.json();
-
-      for (let page of json.query.allpages) {
-        if (page.title.charAt(0) !== "/") allPages.push(page.title);
-        if (validProblem(page.title)) allProblems.push(page.title);
-      }
-    }
-
-    allPagesLoaded = true;
-    console.log(
-      `Finished loading Special:AllPages (${allPages.length} pages).`
-    );
-
-    allProblems = sortProblems(allProblems);
-  })();
-
-  const allPagesLoadWait = () =>
-    Math.round(15 - (allPages.length / 13000) * 15);
+  $.getJSON("data/allproblems.json", function (json) {
+    allProblems = json;
+  });
 
   // Adds things
   async function addProblem(pagename, pushUrl) {
@@ -1351,7 +1316,6 @@
       </div>
       ${notes}`
     );
-    allPagesWarnAC();
     collapseNotes();
     directLinks();
     nameLive();
@@ -1485,7 +1449,6 @@
       </div>
       ${notes}`
     );
-    allPagesWarnAC();
     collapseNotes();
     directLinks();
 
@@ -1515,7 +1478,6 @@
   });
 
   $(".page-container").on("click", "#random-button", async () => {
-    allPagesWarn();
     clearProblem();
 
     let pages = await getPages();
@@ -1535,7 +1497,6 @@
       let response;
       while (invalid) {
         clearProblem();
-        allPagesWarn();
 
         let randomPage = pages[Math.floor(Math.random() * pages.length)];
         console.log(randomPage);
@@ -1652,7 +1613,6 @@
     clearProblem();
 
     addBatch();
-    allPagesWarn();
     let inputSingleTest = $("#input-singletest");
     if (!inputSingleTest.val()) {
       $(".article-text").before(
@@ -2018,7 +1978,6 @@
     clearProblem();
 
     addBatch();
-    allPagesWarn();
 
     let inputNumber = $("#input-number");
     let inputProblems = $("#input-problems");
@@ -2464,35 +2423,6 @@
   function activeSecondaryButton(buttonName) {
     $(".secondary-button").removeClass("secondary-button-active");
     $(`#${buttonName}`).addClass("secondary-button-active");
-  }
-
-  // Warnings
-  function allPagesWarn() {
-    if (!allPagesLoaded && $("#allpages-error").length === 0) {
-      $(".options-input").after(`<p class="error" id="allpages-error">
-          Page index not done loading, please try again in ${allPagesLoadWait()}
-          seconds to get newer problems.
-        </p>`);
-    } else if (!allPagesLoaded) {
-      $("#allpages-error").replaceWith(`<p class="error" id="allpages-error">
-          Page index not done loading, please try again in ${allPagesLoadWait()}
-          seconds to get newer problems.
-        </p>`);
-    } else {
-      $("#allpages-error").remove();
-    }
-  }
-
-  function allPagesWarnAC() {
-    if (!allPagesLoaded && $("#allpages-ac-error").length === 0) {
-      $("#secondary-button-container")
-        .after(`<p class="error" id="allpages-ac-error">
-          Page index not done loading, please reclick this section in
-          ${allPagesLoadWait()} seconds to refresh the autocomplete suggestions.
-        </p>`);
-    } else if (allPagesLoaded) {
-      $("#allpages-ac-error").remove();
-    }
   }
 
   // Formatting
