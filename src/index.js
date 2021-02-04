@@ -1789,7 +1789,6 @@
       let numProblems = Math.min(inputNumber.data().from, pages.length);
       let randomPage;
       let pageIndex;
-      let problems = [];
       let problemTitles = inputProblems
         .val()
         .split(",")
@@ -1984,6 +1983,7 @@
     let inputSkip = $("#input-skip");
 
     let pages = await getPages();
+    let problems = [];
     console.log(`${pages.length} total problems retrieved.`);
     if (pages.length === 0) {
       $(".article-text").before(
@@ -2001,7 +2001,7 @@
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
       katexFallback();
-      replaceProblems();
+      replaceProblems(problems);
       customText();
       changeName();
       fixLinks();
@@ -2244,98 +2244,84 @@
   });
 
   // Replace problems
-  async function replaceProblems() {
+  async function replaceProblems(problems) {
     $(".replace-problem").click(async function () {
-      let replacedProblem = $(this).closest(".article-problem");
-      let replacedIndex = replacedProblem.attr("index");
-      let replacedDifficulty = replacedProblem.attr("difficulty");
+      async function replace() {
+        let pageIndex;
+        let randomPage;
+        let newProblem;
 
-      let pages = await getPages();
-      console.log(`${pages.length} total problems retrieved.`);
-      let pageIndex;
-      let randomPage;
-      let matchingProblem = false;
-      let newProblem;
+        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+        let params;
+        let response;
+        let json;
 
-      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params;
-      let response;
-      let json;
-
-      while (!newProblem) {
-        while (!matchingProblem) {
+        while (!newProblem) {
           pageIndex = Math.floor(Math.random() * pages.length);
           randomPage = pages[pageIndex];
           console.log(randomPage);
 
-          matchingProblem =
-            computeDifficulty(
-              computeTest(randomPage),
-              computeNumber(randomPage),
-              computeYear(randomPage)
-            ) == replacedDifficulty;
-          if (!matchingProblem) pages.splice(pageIndex, 1);
-        }
-
-        params = `action=parse&page=${randomPage}&format=json`;
-        response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-        json = await response.json();
-
-        let problemText = latexer(json.parse.text["*"]);
-        let problemProblem = getProblem(problemText);
-        let problemSolutions = getSolutions(problemText);
-
-        if (problemProblem && problemSolutions) {
-          newProblem = {
-            title: randomPage,
-            difficulty: computeDifficulty(
-              computeTest(randomPage),
-              computeNumber(randomPage),
-              computeYear(randomPage)
-            ),
-            problem: problemProblem,
-            solutions: problemSolutions,
-          };
-
-          pages.splice(pageIndex, 1);
-        } else if (problemText.includes("Redirect to:")) {
-          console.log("Redirect problem, going there instead...");
-
-          let redirHref = $($.parseHTML(problemText))
-            .find(".redirectText a")
-            .attr("href");
-          let redirPage = redirHref
-            .replace("/wiki/index.php/", "")
-            .replace(/_/g, " ");
-          console.log(redirPage);
-
-          params = `action=parse&page=${redirPage}&format=json`;
+          params = `action=parse&page=${randomPage}&format=json`;
           response = await fetch(`${apiEndpoint}?${params}&origin=*`);
           json = await response.json();
 
-          problemText = latexer(json.parse.text["*"]);
-          problemProblem = getProblem(problemText);
-          problemSolutions = getSolutions(problemText);
+          let problemText = latexer(json.parse.text["*"]);
+          let problemProblem = getProblem(problemText);
+          let problemSolutions = getSolutions(problemText);
 
-          newProblem = {
-            title: randomPage,
-            difficulty: computeDifficulty(
-              computeTest(randomPage),
-              computeNumber(randomPage),
-              computeYear(randomPage)
-            ),
-            problem: problemProblem,
-            solutions: problemSolutions,
-          };
+          if (problemProblem && problemSolutions) {
+            newProblem = {
+              title: randomPage,
+              difficulty: computeDifficulty(
+                computeTest(randomPage),
+                computeNumber(randomPage),
+                computeYear(randomPage)
+              ),
+              problem: problemProblem,
+              solutions: problemSolutions,
+            };
 
-          pages.splice(pageIndex, 1);
-        } else {
-          console.log("Invalid problem, skipping...");
-          pages.splice(pageIndex, 1);
-        }
+            problems.push(newProblem);
+            pages.splice(pageIndex, 1);
+          } else if (problemText.includes("Redirect to:")) {
+            console.log("Redirect problem, going there instead...");
 
-        $(`#batch-text .article-problem:nth-child(${replacedIndex})`)
-          .replaceWith(`<div class="article-problem"
+            let redirHref = $($.parseHTML(problemText))
+              .find(".redirectText a")
+              .attr("href");
+            let redirPage = redirHref
+              .replace("/wiki/index.php/", "")
+              .replace(/_/g, " ");
+            console.log(redirPage);
+
+            params = `action=parse&page=${redirPage}&format=json`;
+            response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+            json = await response.json();
+
+            problemText = latexer(json.parse.text["*"]);
+            problemProblem = getProblem(problemText);
+            problemSolutions = getSolutions(problemText);
+
+            newProblem = {
+              title: randomPage,
+              difficulty: computeDifficulty(
+                computeTest(randomPage),
+                computeNumber(randomPage),
+                computeYear(randomPage)
+              ),
+              problem: problemProblem,
+              solutions: problemSolutions,
+            };
+
+            problems.push(newProblem);
+            pages.splice(pageIndex, 1);
+          } else {
+            console.log("Invalid problem, skipping...");
+            pages.splice(pageIndex, 1);
+          }
+
+          $(`#batch-text .article-problem:nth-child(${replacedIndex})`)
+            .replaceWith(`<div class="article-problem"
         index="${replacedIndex}" difficulty="${replacedDifficulty}">
         <h2 class="problem-heading">Problem ${replacedIndex}
           <span class="source-link">
@@ -2347,8 +2333,8 @@
         </h2>${newProblem.problem}
       </div>`);
 
-        $(`#solutions-text .article-problem:nth-child(${replacedIndex})`)
-          .replaceWith(`<div class="article-problem" 
+          $(`#solutions-text .article-problem:nth-child(${replacedIndex})`)
+            .replaceWith(`<div class="article-problem" 
         index="${replacedIndex}" difficulty="${replacedDifficulty}">
         <h2 class="problem-heading">
           Problem ${replacedIndex}
@@ -2363,14 +2349,36 @@
         ${newProblem.solutions}
       </div>`);
 
-        katexFallback();
-        $(".replace-problem").off("click");
-        replaceProblems();
-        fixLinks();
-        directLinks();
-        hideLinks();
-        breakSets();
+          katexFallback();
+          $(".replace-problem").off("click");
+          replaceProblems(problems);
+          fixLinks();
+          directLinks();
+          hideLinks();
+          breakSets();
+        }
       }
+      let replacedProblem = $(this).closest(".article-problem");
+      let replacedIndex = replacedProblem.attr("index");
+      let replacedDifficulty = replacedProblem.attr("difficulty");
+
+      let pages = await getPages();
+      pages = pages.filter((problem) => {
+        return (
+          computeDifficulty(
+            computeTest(problem),
+            computeNumber(problem),
+            computeYear(problem)
+          ) == replacedDifficulty &&
+          !problems.map((e) => e.title).includes(problem)
+        );
+      });
+      console.log(`${pages.length} total problems retrieved.`);
+      if (pages.length === 0) {
+        $(this).replaceWith(
+          `<span class="replace-notice">No replacements found</span>`
+        );
+      } else replace();
     });
   }
 

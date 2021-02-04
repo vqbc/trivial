@@ -193,6 +193,33 @@ body {
 
 .text-button:hover {
   color: var(--text-button-hover-color);
+}
+
+.replace-problem,
+.replace-notice {
+  display: none;
+  font-size: 0.9em;
+  font-style: italic;
+  letter-spacing: initial;
+  text-transform: initial;
+  opacity: 0;
+}
+
+.article-problem:hover .replace-problem,
+.article-problem:hover .replace-notice {
+  display: inline-block;
+  opacity: 1;
+  animation: 0.1s show;
+}
+
+.replace-problem:active {
+  transform: translateY(1px);
+}
+
+.replace-notice {
+  color: var(--minor-color);
+  font-weight: 600;
+  font-size: 0.9em;
 } /**/
 
 /* Problem options input */
@@ -602,25 +629,6 @@ a.mw-selflink {
 
 .source-link {
   font-weight: normal;
-}
-
-.replace-problem {
-  display: none;
-  font-size: 0.9em;
-  font-style: italic;
-  letter-spacing: 0;
-  text-transform: none;
-  opacity: 0;
-}
-
-.article-problem:hover .replace-problem {
-  display: inline-block;
-  opacity: 1;
-  animation: 0.1s show;
-}
-
-.replace-problem:active {
-  transform: translateY(1px);
 } /**/
 
 /* Search and history */
