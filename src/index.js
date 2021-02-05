@@ -1180,12 +1180,12 @@
 
     let inputSingleTest = document.querySelector("#input-singletest");
     new Tagify(inputSingleTest, {
+      mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
         maxItems: 100,
       },
-      maxTags: 1,
     });
   });
 
@@ -1289,12 +1289,12 @@
 
     let inputSingleTest = document.querySelector("#input-singletest");
     new Tagify(inputSingleTest, {
+      mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
         maxItems: 100,
       },
-      maxTags: 1,
     });
   });
 
