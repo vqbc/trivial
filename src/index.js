@@ -48,7 +48,7 @@
     <label class="range-label">
       Difficulty<sup><a
         class="dark-link"
-        href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
+        href="#difficulty-chart"
         >?</a
       ></sup> range allowed:
     </label>
@@ -66,12 +66,12 @@
       </li>
       <li>
         Difficulty levels will likely be inaccurate for earlier years and are
-        only intended to be an approximation and group problems based on test
-        and problem number. Difficulty levels are currently available for the
-        tests included under AMC Tests and most other tests on the AoPS Wiki,
-        based on <a
+        only intended to be group problems roughly based on test and problem
+        number. They are currently available for AMC Tests and most other tests
+        on the AoPS Wiki, based on <a
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-        >AoPS Wiki ratings</a>.
+        >AoPS Wiki ratings</a> — a chart of the main ones is given below:
+        <div id="difficulty-chart"></div>
       </li>
       <li>
         Copied problem lists can be pasted into inputs for multiple problems,
@@ -83,12 +83,13 @@
         prevents some potential rendering bugs.
       </li>
       <li>
-        AMC Tests refers to the AHSME, AMC 8/10/12, AIME, USAMO, and IMO.
-        (The AJHSME is included as the AMC 8 tests before 1999.)
+        AMC Tests refers to the AHSME, AJHSME/AMC 8, AMC 10 & 12, AIME, USAMO,
+        and the IMO (which the AMC program selects for but doesn’t administer).
       </li>
       <li>
         Historical notes:
         <ul>
+          <li>The AJHSME is included as the AMC 8 tests before 1999.</li>
           <li>
             The AHSME was introduced in its 30-question form in 1974. The AIME
             was introduced in 1983, and the AJHSME in 1985. USAJMO problems are
@@ -1159,7 +1160,7 @@
         <input class="input-field input-bottom"
           type="number"
           min="1974"
-          max="2020"
+          max="2021"
           id="input-singleyear"
           placeholder="Year">
         </input>
@@ -1176,6 +1177,7 @@
       </div>
       ${notes}`
     );
+    renderChart();
     collapseNotes();
     directLinks();
 
@@ -1203,6 +1205,7 @@
       </div>
       ${notes}`
     );
+    renderChart();
     collapseNotes();
     directLinks();
 
@@ -1227,9 +1230,9 @@
       type: "double",
       grid: true,
       min: 1974,
-      max: 2020,
+      max: 2021,
       from: 1974,
-      to: 2020,
+      to: 2021,
       prettify_enabled: false,
     });
     $("#input-diff").ionRangeSlider({
@@ -1272,7 +1275,7 @@
           <input class="input-field input-bottom input-right"
           type="number"
           min="1974"
-          max="2020"
+          max="2021"
           id="input-singleyear"
           placeholder="Year">
           </input>
@@ -1282,6 +1285,7 @@
       </div>
       ${notes}`
     );
+    renderChart();
     collapseNotes();
     directLinks();
     nameLive();
@@ -1317,6 +1321,7 @@
       </div>
       ${notes}`
     );
+    renderChart();
     collapseNotes();
     directLinks();
     nameLive();
@@ -1364,6 +1369,7 @@
       </div>
       ${notes}`
     );
+    renderChart();
     collapseNotes();
     directLinks();
     nameLive();
@@ -1405,9 +1411,9 @@
       type: "double",
       grid: true,
       min: 1974,
-      max: 2020,
+      max: 2021,
       from: 1974,
-      to: 2020,
+      to: 2021,
       prettify_enabled: false,
     });
     $("#input-diff").ionRangeSlider({
@@ -1450,6 +1456,7 @@
       </div>
       ${notes}`
     );
+    renderChart();
     collapseNotes();
     directLinks();
 
@@ -2147,6 +2154,8 @@
 
     $("#secondary-button-container").after(`
       ${notes}`);
+    renderChart();
+    collapseNotes();
 
     if (!theoremPages[0]) {
       console.log("Loading theorems...");
@@ -2212,6 +2221,8 @@
 
     $("#secondary-button-container").after(`
       ${notes}`);
+    renderChart();
+    collapseNotes();
 
     let history = JSON.parse(localStorage.getItem("pageHistory"));
 
@@ -2472,7 +2483,7 @@
   }
 
   function katexFallback() {
-    $(".katex-error, .text[style='color:#cc0000;'").each(function () {
+    $(".katex-error, .text[style='color:#cc0000;']").each(function () {
       $(this).closest(".katex-container").addClass("katex-broken");
       $(this)
         .closest(".katex-container")
@@ -2559,6 +2570,112 @@
     });
   }
 
+  // Insert chart
+  function renderChart() {
+    const options = {
+      $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+
+      description: "A simple bar chart with ranged data (aka Gantt Chart).",
+      data: {
+        values: [
+          {
+            Test: "AMC 8",
+            "Start difficulty": 0.25,
+            "End difficulty": 2,
+            Level: "Introductory",
+          },
+          {
+            Test: "AMC 10",
+            "Start difficulty": 1,
+            "End difficulty": 4.5,
+            Level: "Intermediate",
+          },
+          {
+            Test: "AMC 12",
+            "Start difficulty": 1.25,
+            "End difficulty": 5.5,
+            Level: "Intermediate",
+          },
+          {
+            Test: "AHSME",
+            "Start difficulty": 1,
+            "End difficulty": 5.5,
+            Level: "Intermediate",
+          },
+          {
+            Test: "AIME",
+            "Start difficulty": 3,
+            "End difficulty": 6.5,
+            Level: "Intermediate",
+          },
+          {
+            Test: "USAJMO",
+            "Start difficulty": 4,
+            "End difficulty": 7,
+            Level: "Olympiad",
+          },
+          {
+            Test: "USAMO",
+            "Start difficulty": 4,
+            "End difficulty": 8.5,
+            Level: "Olympiad",
+          },
+          {
+            Test: "IMO",
+            "Start difficulty": 4,
+            "End difficulty": 9.5,
+            Level: "Olympiad",
+          },
+        ],
+      },
+      mark: "bar",
+      encoding: {
+        y: {
+          field: "Test",
+          type: "ordinal",
+          sort: { order: null },
+          axis: { titleFontSize: 14, labelFontSize: 13 },
+        },
+        x: {
+          field: "Start difficulty",
+          type: "quantitative",
+          axis: {
+            tickMinStep: 1,
+            titleFontSize: 14,
+            labelFontSize: 13,
+            title: "Difficulty",
+          },
+        },
+        x2: { field: "End difficulty" },
+        color: {
+          type: "nominal",
+          field: "Level",
+          scale: {
+            domain: ["Introductory", "Intermediate", "Olympiad"],
+            range: ["#f58518", "#4c78a8", "#e45756"],
+          },
+          sort: { order: null },
+          legend: {
+            titleFontSize: 14,
+            labelFontSize: 13,
+          },
+        },
+      },
+
+      width: "container",
+      height: 200,
+      background: null,
+      config: {
+        font: "'Latin Modern Sans', sans-serif",
+      },
+    };
+
+    vegaEmbed("#difficulty-chart", options, {
+      actions: false,
+      renderer: "svg",
+    });
+  }
+
   // Enter pages into history
   function addHistory(page, snippet) {
     let history = JSON.parse(localStorage.getItem("pageHistory"));
@@ -2592,6 +2709,9 @@
   (async () => {
     if (urlPagename) {
       $("#main-button-container").after(`${notes}`);
+      renderChart();
+      collapseNotes();
+
       if (validProblem(urlPagename)) await addProblem(urlPagename, true);
       else await addArticle(urlPagename, true);
     }
@@ -2604,6 +2724,8 @@
           if ($("#secondary-button-container").length === 0)
             $("#main-button-container").after(`${notes}`);
           else $("#secondary-button-container").after(`${notes}`);
+          renderChart();
+          collapseNotes();
         }
 
         clearProblem();

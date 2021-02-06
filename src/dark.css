@@ -56,7 +56,13 @@
   }
 
   img.latex,
-  img.latexcenter {
+  img.latexcenter,
+  #difficulty-chart {
     filter: invert(1) hue-rotate(180deg);
+  }
+
+  .role-frame > g > path.background,
+  .role-axis-grid > line {
+    stroke: #bfbfbf !important;
   }
 } /**/

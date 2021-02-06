@@ -493,6 +493,14 @@ tags > span {
   transform: rotate(135deg);
 }
 
+#difficulty-chart {
+  display: block;
+}
+
+#difficulty-chart svg {
+  width: 100%;
+}
+
 .trivial-logo {
   display: none;
 } /**/
