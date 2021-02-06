@@ -2633,7 +2633,7 @@
         text = "Brilliant, but you don’t learn anything useful";
         break;
       case 3:
-        text = "Wikiwand, but you don’t scroll through ads everywhere";
+        text = "Wikiwand, but you don’t get ads everywhere";
         break;
       case 4:
         text = "A web browser, but you can only use AoPS";
