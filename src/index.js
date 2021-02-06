@@ -418,6 +418,7 @@
         .children()
         .not(".toc")
         .not("table:contains('Printable version')")
+        .not("pre:contains('<geogebra>')")
         .map(function () {
           return this.outerHTML;
         })
