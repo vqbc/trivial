@@ -2527,6 +2527,7 @@
   }
 
   async function directLinks() {
+    $("a:not(#aops-wiki-link):not(.aops-link)").off("click");
     $("a:not(#aops-wiki-link):not(.aops-link)").click(async function (event) {
       let href = $(this).attr("href");
       if (
@@ -2563,6 +2564,7 @@
   }
 
   function collapseSolutions() {
+    $("#solutions-header").off("click");
     $("#solutions-header").click(() => {
       $("#solutions-section").toggleClass("section-collapsed");
     });
