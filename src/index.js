@@ -4,6 +4,12 @@
 (() => {
   let allPages = [];
   let allProblems = [];
+  $.getJSON("data/allpages.json", (json) => {
+    allPages = json;
+  });
+  $.getJSON("data/allproblems.json", (json) => {
+    allProblems = json;
+  });
   let categoryPages = [];
   let theoremPages = [];
   let testsList =
@@ -254,15 +260,6 @@
       });
     });
   })();
-
-  // Loads pages
-  $.getJSON("data/allpages.json", function (json) {
-    allPages = json;
-  });
-
-  $.getJSON("data/allproblems.json", function (json) {
-    allProblems = json;
-  });
 
   // Adds things
   async function addProblem(pagename, pushUrl) {
@@ -2265,13 +2262,14 @@
         let pageIndex;
         let randomPage;
         let newProblem;
+        let giveUp = false;
 
         let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
         let params;
         let response;
         let json;
 
-        while (!newProblem) {
+        while (!newProblem && !giveUp) {
           pageIndex = Math.floor(Math.random() * pages.length);
           randomPage = pages[pageIndex];
           console.log(randomPage);
@@ -2333,44 +2331,46 @@
           } else {
             console.log("Invalid problem, skipping...");
             pages.splice(pageIndex, 1);
+            if (pages.length === 0) giveUp = true;
           }
+          if (newProblem) {
+            $(`#batch-text .article-problem:nth-child(${replacedIndex})`)
+              .replaceWith(`<div class="article-problem"
+                index="${replacedIndex}" difficulty="${newProblem.difficulty}">
+                <h2 class="problem-heading">Problem ${replacedIndex}
+                  <span class="source-link">
+                    (<a class="source-link-a"
+                      href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+                        newProblem.title
+                      )}">${titleCleanup(newProblem.title)}</a>)
+                  </span>${replaceButton}
+                </h2>${newProblem.problem}
+              </div>`);
 
-          $(`#batch-text .article-problem:nth-child(${replacedIndex})`)
-            .replaceWith(`<div class="article-problem"
-        index="${replacedIndex}" difficulty="${replacedDifficulty}">
-        <h2 class="problem-heading">Problem ${replacedIndex}
-          <span class="source-link">
-            (<a class="source-link-a"
-              href="https://artofproblemsolving.com/wiki/index.php/${underscores(
-                newProblem.title
-              )}">${titleCleanup(newProblem.title)}</a>)
-          </span>${replaceButton}
-        </h2>${newProblem.problem}
-      </div>`);
+            $(`#solutions-text .article-problem:nth-child(${replacedIndex})`)
+              .replaceWith(`<div class="article-problem" 
+                index="${replacedIndex}" difficulty="${newProblem.difficulty}">
+                <h2 class="problem-heading">
+                  Problem ${replacedIndex}
+                  <span class="source-link">
+                    (<a class="source-link-a"
+                      href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+                        newProblem.title
+                      )}">${titleCleanup(newProblem.title)}</a>)
+                  </span>
+                </h2>${newProblem.problem}
+                <div class="solutions-divider">Solution</div>
+                ${newProblem.solutions}
+              </div>`);
 
-          $(`#solutions-text .article-problem:nth-child(${replacedIndex})`)
-            .replaceWith(`<div class="article-problem" 
-        index="${replacedIndex}" difficulty="${replacedDifficulty}">
-        <h2 class="problem-heading">
-          Problem ${replacedIndex}
-          <span class="source-link">
-            (<a class="source-link-a"
-              href="https://artofproblemsolving.com/wiki/index.php/${underscores(
-                newProblem.title
-              )}">${titleCleanup(newProblem.title)}</a>)
-          </span>
-        </h2>${newProblem.problem}
-        <div class="solutions-divider">Solution</div>
-        ${newProblem.solutions}
-      </div>`);
-
-          katexFallback();
-          $(".replace-problem").off("click");
-          replaceProblems(problems);
-          fixLinks();
-          directLinks();
-          hideLinks();
-          breakSets();
+            katexFallback();
+            $(".replace-problem").off("click");
+            replaceProblems(problems);
+            fixLinks();
+            directLinks();
+            hideLinks();
+            breakSets();
+          }
         }
       }
       let replacedProblem = $(this).closest(".article-problem");
@@ -2378,22 +2378,31 @@
       let replacedDifficulty = replacedProblem.attr("difficulty");
 
       let pages = await getPages();
-      pages = pages.filter((problem) => {
-        return (
-          computeDifficulty(
-            computeTest(problem),
-            computeNumber(problem),
-            computeYear(problem)
-          ) == replacedDifficulty &&
-          !problems.map((e) => e.title).includes(problem)
+      pages = pages.filter(
+        (problem) => !problems.map((e) => e.title).includes(problem)
+      );
+      if ($("#input-sort").prop("checked"))
+        pages = pages.filter(
+          (problem) =>
+            computeDifficulty(
+              computeTest(problem),
+              computeNumber(problem),
+              computeYear(problem)
+            ) == replacedDifficulty
         );
-      });
+
       console.log(`${pages.length} total problems retrieved.`);
-      if (pages.length === 0) {
+      if (pages.length === 0)
         $(this).replaceWith(
           `<span class="replace-notice">No replacements found</span>`
         );
-      } else replace();
+      else {
+        await replace();
+        if (pages.length === 0)
+          $(this).replaceWith(
+            `<span class="replace-notice">No replacements found</span>`
+          );
+      }
     });
   }
 
