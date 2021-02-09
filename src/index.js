@@ -2363,6 +2363,15 @@
                 ${newProblem.solutions}
               </div>`);
 
+            let problemsList = $("#copy-problems")
+              .attr("data-clipboard-text")
+              .split(", ");
+            problemsList[replacedIndex - 1] = titleCleanup(newProblem.title);
+            $("#copy-problems").attr(
+              "data-clipboard-text",
+              problemsList.join(", ")
+            );
+
             katexFallback();
             $(".replace-problem").off("click");
             replaceProblems(problems);
