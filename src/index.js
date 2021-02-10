@@ -46,8 +46,8 @@
   </input>
   <input class="input-multi input-right input-flex-full" id="input-tests"
     placeholder="Tests, e.g. AMC 10"
-    data-whitelist="(AMC Tests), AHSME, AMC 8, AMC 10, AMC 12, AIME, USAJMO, ` +
-    `USAMO, Canadian MO, IMO">
+    data-whitelist="(AMC Tests),AHSME,AMC 8,AMC 10,AMC 12,AIME,USAJMO,USAMO,` +
+    `Canadian MO,IMO">
   </input>
   <div class="input-container input-flex-full">
     <label class="range-label">Years allowed:</label>
