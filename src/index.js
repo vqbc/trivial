@@ -2584,7 +2584,7 @@
     if (breakNum) {
       $(`.article-problem`).css("break-after", "");
       $(`.article-problem:nth-child(${breakNum}n)`).css("break-after", "page");
-    }
+    } else $(`.article-problem`).css("break-after", "");
   }
 
   function breakLive() {
@@ -2657,7 +2657,7 @@
           field: "Test",
           type: "ordinal",
           sort: { order: null },
-          axis: { titleFontSize: 14, labelFontSize: 13 },
+          axis: { titleFontSize: 14, labelFonFtSize: 13 },
         },
         x: {
           field: "Start difficulty",
