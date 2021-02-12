@@ -289,7 +289,6 @@
       let problemSolutions = getSolutions(problemText);
 
       if (problemProblem && problemSolutions) {
-        finalPage = pagename;
       } else if (problemText.includes("Redirect to:")) {
         console.log("Redirect problem, going there instead...");
 
@@ -310,18 +309,18 @@
         finalPage = redirPage;
       }
 
-      addHistory(finalPage, sourceCleanup(problemProblem).substring(0, 140));
+      addHistory(pagename, sourceCleanup(problemProblem).substring(0, 140));
 
       $("#problem-text").html(problemProblem);
       $("#solutions-text").html(problemSolutions);
-      $("#article-header").html(titleCleanup(finalPage));
+      $("#article-header").html(titleCleanup(pagename));
 
-      document.title = titleCleanup(finalPage) + " - Trivial AoPS Wiki Reader";
+      document.title = titleCleanup(pagename) + " - Trivial AoPS Wiki Reader";
       if (pushUrl) {
         history.pushState(
-          { page: finalPage },
-          titleCleanup(finalPage) + " - Trivial AoPS Wiki Reader",
-          "?page=" + underscores(finalPage)
+          { page: pagename },
+          titleCleanup(pagename) + " - Trivial AoPS Wiki Reader",
+          "?page=" + underscores(pagename)
         );
         searchParams = new URLSearchParams(location.search);
         urlPagename = searchParams.get("page");
@@ -2149,7 +2148,7 @@
   });
 
   $(".page-container").on("click", "#theorem-button", async () => {
-    clearOptions();
+    clearOptionsWithoutHistory();
     activeSecondaryButton("theorem-button");
 
     $("#secondary-button-container").after(`
@@ -2430,6 +2429,15 @@
       location.href.split("?page=")[0]
     );
     urlPagename = "";
+    $(".options-input").remove();
+    $(".error").remove();
+    $(".problem-section").remove();
+    $(".results-container").remove();
+    $("#load-results").remove();
+    $(".notes").remove();
+  }
+
+  function clearOptionsWithoutHistory() {
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
