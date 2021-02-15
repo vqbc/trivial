@@ -497,12 +497,13 @@ tags > span {
   transform: rotate(135deg);
 }
 
-#difficulty-chart {
-  display: block;
+#notes-text,
+#notes-text ul {
+  padding-inline-start: 2rem;
 }
 
-#difficulty-chart svg {
-  width: 100%;
+#difficulty-chart {
+  display: block;
 }
 
 .trivial-logo {
@@ -974,6 +975,11 @@ footer {
 
   .button {
     flex: 1 0 100%;
+  }
+
+  #notes-text,
+  #notes-text ul {
+    padding-inline-start: 1.5rem;
   }
 
   @supports not (zzzgap: 1%) {
