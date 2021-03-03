@@ -838,15 +838,19 @@ main {
 footer {
   padding-bottom: 1em;
   color: var(--secondary-color);
-  font-style: italic;
 }
 
 .footer-line {
   margin: 0.4em 0;
 }
 
-.settings {
-  font-style: normal;
+.disclaimer {
+  font-style: italic;
+}
+
+.siteinfo,
+.disclaimer {
+  text-align: right;
 } /**/
 
 /* Loading bar */
