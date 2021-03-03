@@ -224,6 +224,13 @@ body {
   color: var(--minor-color);
   font-weight: 600;
   font-size: 0.9em;
+}
+
+.footer-button {
+  margin: 0 0.2em;
+  font-size: 1.1em;
+  font-family: "Latin Modern Sans Demi-Condensed";
+  word-spacing: -0.15ch;
 } /**/
 
 /* Problem options input */
@@ -838,6 +845,7 @@ main {
 footer {
   padding-bottom: 1em;
   color: var(--secondary-color);
+  border-top: 1px solid var(--hr-color);
 }
 
 .footer-line {
