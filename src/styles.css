@@ -228,8 +228,7 @@ body {
 
 .footer-button {
   margin: 0 0.2em;
-  font-size: 1.1em;
-  font-family: "Latin Modern Sans Demi-Condensed";
+  font: normal 1.1em "Latin Modern Sans Demi-Condensed", sans-serif;
   word-spacing: -0.15ch;
 } /**/
 
