@@ -1018,6 +1018,7 @@
       .replace(/\$/g, "\\$$")
       .replace(/align\*/g, "aligned")
       .replace(/eqnarray\*/g, "aligned")
+      .replace(/{tabular}(\[\w\])*/g, "{array}")
       .replace(/\\bold/g, "\\mathbf")
       .replace(/\\congruent/g, "\\cong")
       .replace(/\\overarc/g, "\\overgroup")
