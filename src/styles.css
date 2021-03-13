@@ -1006,6 +1006,22 @@ footer {
   }
 }
 
+@media (max-width: 450px) {
+  .page-container {
+    box-shadow: none;
+  }
+
+  .problem-section {
+    padding: 0.5rem 0.8rem;
+    box-shadow: 0 0 5px hsl(217deg, 100%, 5%, 5%);
+  }
+
+  .section-header {
+    margin-right: -0.8rem;
+    margin-left: -0.8rem;
+  }
+}
+
 @media (max-width: 436px) {
   .input-flexer-full {
     flex: 100%;
