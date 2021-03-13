@@ -229,7 +229,7 @@ body {
 .footer-button {
   margin: 0 0.2em;
   font: normal 1.1em "Latin Modern Sans Demi-Condensed", sans-serif;
-  word-spacing: -0.15ch;
+  word-spacing: -0.17ch;
 } /**/
 
 /* Problem options input */
@@ -1096,6 +1096,13 @@ footer {
   #solutions-header::after,
   .noprint {
     display: none;
+  }
+
+  .nolinks-text a,
+  .nolinks-text a[title],
+  .nolinks-text a.external {
+    color: inherit;
+    text-decoration: none;
   } /**/
 
   /* Footer */

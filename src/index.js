@@ -122,6 +122,7 @@
       </li>
     <ul>
   </div>`;
+  let printLinks = true;
   let clickedTimes = 0;
   let subtitleClicked = 0;
   let settingsClicked = "";
@@ -216,11 +217,6 @@
 
     $("#links-toggle").click(() => {
       settingsClicked += "5";
-      if (settingsClicked === "12345" && $("#fun-toggle").length === 0)
-        $("#links-toggle").after(`<span class="divider"> | </span>
-          <button class="text-button" id="fun-toggle" tabindex="0">
-            Made you click
-          </button>`);
 
       if (!JSON.parse(localStorage.getItem("tabLinksExternal"))) {
         localStorage.setItem("tabLinksExternal", true);
@@ -230,7 +226,7 @@
           $(this).attr({
             href: $(this)
               .attr("href")
-              .replace(
+              ?.replace(
                 "?page=",
                 "https://artofproblemsolving.com/wiki/index.php/"
               ),
@@ -245,13 +241,31 @@
           $(this).attr({
             href: $(this)
               .attr("href")
-              .replace(
+              ?.replace(
                 "https://artofproblemsolving.com/wiki/index.php/",
                 "?page="
               ),
             title: "",
           });
         });
+      }
+    });
+
+    $("#print-toggle").click(() => {
+      settingsClicked += "6";
+      if (settingsClicked === "123456" && $("#fun-toggle").length === 0)
+        $("#print-toggle").after(`
+          <button class="text-button footer-button" id="fun-toggle" tabindex="0">
+            Made you click
+          </button>`);
+
+      $(".page-container").toggleClass("nolinks-text");
+      if (printLinks) {
+        printLinks = false;
+        $("#print-toggle").text("Print w/o links");
+      } else {
+        printLinks = true;
+        $("#print-toggle").text("Print w/ links");
       }
 
       $("#fun-toggle").click(function () {
