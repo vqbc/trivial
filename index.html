@@ -58,6 +58,31 @@
           .setAttribute("content", "light");
       }
     </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-176118017-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-176118017-1");
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WFF6RGS");
+    </script>
   </head>
   <!--⢸⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⡷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⢸⠀⠀are ya coding,⠀⠀⡇⠢⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -281,30 +306,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/4.17.0/vega-lite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/6.15.1/vega-embed.min.js"></script>
     <script src="src/index.js"></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-176118017-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-176118017-1");
-    </script>
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-WFF6RGS");
-    </script>
   </body>
 </html>
