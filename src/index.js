@@ -74,28 +74,32 @@
         specific filters are applied.
       </li>
       <li>
-        Difficulty levels will likely be inaccurate for earlier years and are
-        only intended to be group problems roughly based on test and problem
-        number. They are currently available for AMC Tests and most other tests
-        on the AoPS Wiki, based on <a
+        Difficulty levels group problems roughly based on test and problem
+        number, and will likely be inaccurate for earlier years. They are
+        available for AMC Tests and most other tests on the AoPS Wiki, based on
+        <a
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-        >AoPS Wiki ratings</a> — a chart of the main ones is given below:
+        >AoPS Wiki ratings</a>. A chart of the main ones is given below:
         <div id="difficulty-chart"></div>
       </li>
       <li>
         Copied problem lists can be pasted into inputs for multiple problems,
-        such as the Choose Problems main input.
+        such as in Choose Problems.
+      </li>
+      <li>
+        Except for light/dark theme, most settings only affect how
+        problems & articles are shown.
       </li>
       <li>
         Turning off <a href="https://katex.org">KaTeX</a> uses the original
-        raster images from AoPS for LaTeX, which makes them blurrier, but
-        prevents some potential rendering bugs.
+        raster images from AoPS for LaTeX snippets, which makes them blurrier
+        but prevents possible rendering bugs.
       </li>
       <li>
-        AMC Tests refers to the AHSME, AJHSME/AMC 8, AMC 10 & 12, AIME, USAMO,
-        and the IMO (which the AMC program selects for but doesn’t administer).
+        AMC Tests refers to tests from the AMC 8 to USAMO,
+        plus the IMO (which the AMC program selects for but doesn’t administer).
       </li>
-      <li>
+      <li>s
         Historical notes:
         <ul>
           <li>The AJHSME is included as the AMC 8 tests before 1999.</li>
@@ -139,7 +143,7 @@
       $("#dark-toggle").text("Light theme");
     }
     if (JSON.parse(localStorage.getItem("serifFont"))) {
-      $("#serif-toggle").text("Serif wiki font");
+      $("#serif-toggle").text("Serif font");
     }
     if (JSON.parse(localStorage.getItem("justifyText"))) {
       $("#justify-toggle").text("Justified text");
@@ -184,10 +188,10 @@
       $(".article-text").toggleClass("serif-text");
       if (!JSON.parse(localStorage.getItem("serifFont"))) {
         localStorage.setItem("serifFont", true);
-        $("#serif-toggle").text("Serif wiki font");
+        $("#serif-toggle").text("Serif font");
       } else {
         localStorage.setItem("serifFont", false);
-        $("#serif-toggle").text("Sans wiki font");
+        $("#serif-toggle").text("Sans font");
       }
     });
 
