@@ -45,6 +45,8 @@
   --link-hover-color: hsl(203deg, 80%, 59%);
   --text-button-color: hsl(177deg, 63%, 43%);
   --text-button-hover-color: hsl(177deg, 63%, 48%);
+  --correct-color: hsl(150deg, 50%, 50%);
+  --wrong-color: hsl(15deg, 80%, 50%);
   --button-spacing: 1.4%;
   --vertical-item-spacing: 0.6rem;
   --horizontal-item-spacing: 0.6rem;
@@ -564,6 +566,34 @@ tags > span {
 .section-collapsed #solutions-header::after {
   top: calc(50% - 7px);
   transform: rotate(135deg);
+} /**/
+
+/* Answer check */
+.answer-check {
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--hr-color);
+}
+
+.answer-options {
+  margin-bottom: 1.5rem;
+}
+
+#input-answer {
+  border-top: 1px solid #eee;
+}
+
+.feedback-item {
+  font: 600 1em "Computer Modern Bright", sans-serif;
+  line-height: 1.5;
+}
+
+.correct-feedback {
+  color: var(--correct-color);
+}
+
+.wrong-feedback {
+  color: var(--wrong-color);
 } /**/
 
 /* Article text container */

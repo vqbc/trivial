@@ -130,6 +130,7 @@
   let clickedTimes = 0;
   let subtitleClicked = 0;
   let settingsClicked = "";
+  let answerClicked = 0;
 
   let searchParams = new URLSearchParams(location.search);
   let urlPagename = searchParams.get("page");
@@ -355,6 +356,7 @@
       fixLinks();
       directLinks();
       collapseSolutions();
+      addAnswer(pagename.replace(/_/g, " "));
       return getProblem(problemText) && getSolutions(problemText);
     } else {
       $(".article-text").before(
@@ -477,6 +479,62 @@
     customText();
     fixLinks();
     directLinks();
+  }
+
+  async function addAnswer(pagename) {
+    answerClicked++;
+    let answerClickedThen = answerClicked;
+    console.log(pagename);
+    let answersTitle = `${pagename?.split(" Problems/Problem")[0]} Answer Key`;
+    console.log(answersTitle);
+    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+    let params = `action=parse&page=${answersTitle}&format=json`;
+
+    let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+    let json = await response.json();
+    let answerText = json.parse?.text["*"];
+    let problemNum = computeNumber(pagename);
+    let answer = $($.parseHTML(answerText))
+      ?.find("ol li")
+      ?.eq(problemNum - 1)
+      ?.text();
+    console.log(problemNum);
+    console.log(answer);
+    if (answer) {
+      if (answerClicked === answerClickedThen) {
+        $("#problem-text").after(`<div class="answer-check">
+        <div class="options-input answer-options">
+          <input class="input-field input-bottom input-right" id="input-answer"
+            type="text" placeholder="Enter answer (optional)"/>
+          <button class="input-button" id="answer-button">
+            Check Answer
+          </button>
+        </div>
+        <div class="answer-feedback"></div>
+      </div>`);
+
+        $("#answer-button").click(async function () {
+          let originalAnswer = $("#input-answer").val();
+          originalAnswer = originalAnswer.toUpperCase();
+          let finalAnswer = originalAnswer;
+          if (computeTest(pagename) === "AIME")
+            finalAnswer = originalAnswer.padStart(3, "0");
+          if (finalAnswer) {
+            if (finalAnswer === answer) {
+              $(".answer-feedback")
+                .prepend(`<div class="feedback-item correct-feedback">
+              ${originalAnswer} is correct! :>
+            </div>`);
+            } else {
+              $(".answer-feedback")
+                .prepend(`<div class="feedback-item wrong-feedback">
+              ${originalAnswer} is wrong :<
+            </div>`);
+            }
+          }
+        });
+      }
+    }
   }
 
   // Gets and checks pages
