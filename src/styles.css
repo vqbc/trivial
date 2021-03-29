@@ -91,13 +91,13 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--subtitle-color);
-  font: italic 1.5em "Computer Modern Bright", sans-serif;
+  font: italic 1.4em "Computer Modern Bright", sans-serif;
 }
 
 .tests-header {
   margin-top: 0.6rem;
   color: var(--minor-color);
-  font: normal 1.2em "Computer Modern Bright", sans-serif;
+  font: normal 1.1em "Computer Modern Bright", sans-serif;
 } /**/
 
 /* Big top buttons */

@@ -2854,7 +2854,7 @@
     let text;
     switch (subtitleClicked % 7) {
       case 0:
-        text = "An AoPS Wiki Reader for Studying";
+        text = "An AoPS Wiki Reader for Studying & Practicing";
         break;
       case 1:
         text = "Alcumus, but you don’t get internet points";
