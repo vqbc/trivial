@@ -1505,7 +1505,7 @@
       grid: true,
       min: 0,
       max: 40,
-      from: 20,
+      from: 5,
     });
   });
 
