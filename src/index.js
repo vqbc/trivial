@@ -399,6 +399,8 @@
   }
 
   async function addArticle(pagename, pushUrl) {
+    $(".error").remove();
+    $(".problem-section").remove();
     $(".notes").before(`<div class="problem-section">
       <h2 class="section-header" id="article-header"></h2>
       <a href="" class="aops-link">
@@ -1170,15 +1172,17 @@
     $("#main-button-container").after(
       `<div class="button-container" id="secondary-button-container">
         <button type="button" class="button secondary-button button-flex-bottom"
-          id="single-nav">
-          Choose a Problem
+          id="random-nav">
+          Random
         </button>
         <button type="button" class="button secondary-button button-flex-bottom"
-          id="random-nav">
-          Random Problem
+          id="single-nav">
+          Select
         </button>
+        <div class="secondary-spacer"></div>
       </div>`
     );
+    $("#random-nav").click();
   });
 
   $("#problem-batch").click(() => {
@@ -1187,38 +1191,20 @@
 
     $("#main-button-container").after(
       `<div class="button-container" id="secondary-button-container">
-        <button type="button" class="button secondary-button" id="batch-nav">
-          Choose a Test
+        <button type="button" class="button secondary-button" id="ranbatch-nav">
+          Random
         </button>
-        <button type="button" class="button secondary-button" id="problems-nav">
-          Choose Problems
+        <button type="button" class="button secondary-button" id="batch-nav">
+          Past Test
         </button>
         <button type="button" class="button secondary-button button-flex-bottom 
-        button-flex-full" id="ranbatch-nav">
-          Random Problems
+        button-flex-full" id="problems-nav">
+          Custom
         </button>
+        <div class="secondary-spacer"></div>
       </div>`
     );
-  });
-
-  $("#browse-pages").click(() => {
-    clearAll();
-    activeButton("browse-pages");
-
-    $("#main-button-container").after(
-      `<div class="button-container" id="secondary-button-container">
-        <button type="button" class="button secondary-button" id="search-nav">
-          Search All Pages
-        </button>
-        <button type="button" class="button secondary-button" id="theorem-button">
-          Random Theorem
-        </button>
-        <button type="button" class="button secondary-button button-flex-bottom
-        button-flex-full" id="history-button">
-          View Page History
-        </button>
-      </div>`
-    );
+    $("#ranbatch-nav").click();
   });
 
   $(".page-container").on("click", "#single-nav", () => {
@@ -1510,13 +1496,13 @@
   });
 
   $(".page-container").on("click", "#search-nav", () => {
-    clearOptions();
-    activeSecondaryButton("search-nav");
+    clearAll();
+    activeButton("search-nav");
 
-    $("#secondary-button-container").after(
+    $("#main-button-container").after(
       `<div class="options-input" id="search-input">
         <div class="input-container checkbox-container
-          checkbox-container-smaller input-bottom input-flexer-full">
+          checkbox-container-smaller input-flexer-full">
           <div class="checkbox-wrap">
             <input type="checkbox" class="input-check" id="input-problemsonly"/>
             <label class="checkbox-label">
@@ -1524,10 +1510,13 @@
             </label>
           </div>
         </div>
-        <input class="input-field input-bottom input-right" id="input-search"
+        <input class="input-field input-right input-end" id="input-search"
           type="text" placeholder="Keywords, e.g. Cauchy">
-        <button class="input-button" id="search-button">
+        <button class="input-button input-button-half input-button-left" id="search-button">
           Search Pages
+        </button>
+        <button class="input-button input-button-half" id="theorem-button">
+          Random Theorem
         </button>
       </div>
       ${notes}`
@@ -2225,14 +2214,6 @@
   });
 
   $(".page-container").on("click", "#theorem-button", async () => {
-    clearOptionsWithoutHistory();
-    activeSecondaryButton("theorem-button");
-
-    $("#secondary-button-container").after(`
-      ${notes}`);
-    renderChart();
-    collapseNotes();
-
     if (!theoremPages[0]) {
       console.log("Loading theorems...");
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -2292,10 +2273,10 @@
       history.shift();
     };
 
-    clearOptions();
-    activeSecondaryButton("history-button");
+    clearAll();
+    activeButton("history-button");
 
-    $("#secondary-button-container").after(`
+    $("#main-button-container").after(`
       ${notes}`);
     renderChart();
     collapseNotes();
@@ -2681,7 +2662,7 @@
   // Insert chart
   function renderChart() {
     const options = {
-      $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+      $schema: "https://vega.github.io/schema/vega-lite/v5.json",
 
       description: "A simple bar chart with ranged data (aka Gantt Chart).",
       data: {
