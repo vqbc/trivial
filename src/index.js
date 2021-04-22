@@ -17,10 +17,10 @@
     `USAJMO, USAMO, IMO, AJHSME, AHSME, AMC 10, AMC 12, AIME`;
   let batchOptions = `<input class="input-field"
       id="input-name" type="text" placeholder="Batch name (optional)"/>
-    <input class="input-field input-flex-right"
+    <input class="input-field"
       id="input-break" type="number" min="1" max="40"
       placeholder="Page break every n problems (optional)"/>
-    <div class="input-container checkbox-container input-right input-flex-full"> 
+    <div class="input-container checkbox-container input-flex-full"> 
       <div class="checkbox-wrap">
         <input type="checkbox" checked class="input-check" id="input-sort"/>
         <label class="checkbox-label">Sort questions by difficulty?</label>
@@ -44,7 +44,7 @@
     `Olympiad Geometry Problems, Olympiad Inequality Problems, ` +
     `Olympiad Number Theory Problems, Olympiad Trigonometry Problems">
   </input>
-  <input class="input-multi input-right input-flex-full" id="input-tests"
+  <input class="input-multi input-flex-full" id="input-tests"
     placeholder="Tests, e.g. AMC 10"
     data-whitelist="(AMC Tests),AHSME,AMC 8,AMC 10,AMC 12,AIME,USAJMO,USAMO,` +
     `Canadian MO,IMO">
@@ -53,7 +53,7 @@
     <label class="range-label">Years allowed:</label>
     <input class="input-range" id="input-years"></input>
   </div>
-  <div class="input-container input-right input-flex-full">
+  <div class="input-container input-flex-full">
     <label class="range-label">
       Difficulty<sup><a
         class="dark-link"
@@ -506,7 +506,7 @@
       if (answerClicked === answerClickedThen) {
         $("#problem-text").after(`<div class="answer-check">
         <div class="options-input answer-options">
-          <input class="input-field input-bottom input-right" id="input-answer"
+          <input class="input-field" id="input-answer"
             type="text" placeholder="Enter answer (optional)"/>
           <button class="input-button" id="answer-button">
             Check Answer
@@ -1171,11 +1171,11 @@
 
     $("#main-button-container").after(
       `<div class="button-container" id="secondary-button-container">
-        <button type="button" class="button secondary-button button-flex-bottom"
+        <button type="button" class="button secondary-button"
           id="random-nav">
           Random
         </button>
-        <button type="button" class="button secondary-button button-flex-bottom"
+        <button type="button" class="button secondary-button"
           id="single-nav">
           Select
         </button>
@@ -1197,7 +1197,7 @@
         <button type="button" class="button secondary-button" id="batch-nav">
           Past Test
         </button>
-        <button type="button" class="button secondary-button button-flex-bottom 
+        <button type="button" class="button secondary-button 
         button-flex-full" id="problems-nav">
           Custom
         </button>
@@ -1213,20 +1213,20 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="single-input">
-        <input class="input-field input-bottom input-flex-full"
+        <input class="input-field input-flex-full"
           type="text"
           id="input-singletest"
           placeholder="Test, e.g. AMC 10A"
           data-whitelist="${testsList}">
         </input>
-        <input class="input-field input-bottom"
+        <input class="input-field"
           type="number"
           min="1974"
           max="2021"
           id="input-singleyear"
           placeholder="Year">
         </input>
-        <input class="input-field input-bottom input-right"
+        <input class="input-field"
           type="number"
           min="1"
           max="30"
@@ -1316,11 +1316,10 @@
       `<div class="options-input" id="batch-input">
         <input class="input-field"
           id="input-name" type="text" placeholder="Batch name (optional)"/>
-        <input class="input-field input-flex-right"
-          id="input-break" type="number" min="1" max="40"
+        <input class="input-field" id="input-break" type="number" min="1" max="40"
           placeholder="Page break every n problems (optional)"/>
         <div class="input-container checkbox-container checkbox-container-small
-        input-right input-flex-full">
+        input-flex-full">
           <div class="checkbox-wrap">
             <input type="checkbox" checked class="input-check" id="input-hide"/>
             <label class="checkbox-label">
@@ -1328,18 +1327,11 @@
             </label>
           </div>
         </div>
-        <input class="input-field input-bottom input-singletest"
-          type="text"
-          id="input-singletest"
-          placeholder="Test, e.g. AMC 10A"
-          data-whitelist="${testsList}">
+        <input class="input-field input-singletest" id="input-singletest"
+          type="text" placeholder="Test, e.g. AMC 10A" data-whitelist="${testsList}">
         </input>
-          <input class="input-field input-bottom input-right"
-          type="number"
-          min="1974"
-          max="2021"
-          id="input-singleyear"
-          placeholder="Year">
+          <input class="input-field" type="number" min="1974" max="2021"
+          id="input-singleyear" placeholder="Year">
           </input>
         <button class="input-button" id="batch-button">
           View Test
@@ -1372,7 +1364,7 @@
     $("#secondary-button-container").after(
       `<div class="options-input" id="problems-input">
         ${batchOptions}
-        <input class="input-field input-bottom input-right" id="input-problems"
+        <input class="input-field" id="input-problems"
         type="text" placeholder="Problems, e.g. 2018 AMC 12B #24"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
@@ -1413,14 +1405,12 @@
           </label>
           <input class="input-range" id="input-number"/>
         </div>
-        <input class="input-field input-bottom input-flex-top input-flex-full"
-        id="input-problems"
+        <input class="input-field input-flex-full" id="input-problems"
         type="text" placeholder="Include these problems (optional)"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
-        <input class="input-field input-bottom input-right input-flex-top input-flex-full"
-        id="input-skip"
+        <input class="input-field input-flex-full" id="input-skip"
         type="text" placeholder="Skip these problems (optional)"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
@@ -1510,9 +1500,9 @@
             </label>
           </div>
         </div>
-        <input class="input-field input-right input-end" id="input-search"
+        <input class="input-field input-end" id="input-search"
           type="text" placeholder="Keywords, e.g. Cauchy">
-        <button class="input-button input-button-half input-button-left" id="search-button">
+        <button class="input-button input-button-half" id="search-button">
           Search Pages
         </button>
         <button class="input-button input-button-half" id="theorem-button">

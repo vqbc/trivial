@@ -103,9 +103,9 @@ body {
 /* Big top buttons */
 .button-container {
   display: flex;
-  /* gap: var(--vertical-item-spacing) var(--button-spacing); */
+  gap: var(--vertical-item-spacing) var(--button-spacing);
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .button {
@@ -124,22 +124,6 @@ body {
 
 .wide-button {
   flex-basis: calc(100% / 3 - 2 / 3 * var(--button-spacing));
-}
-
-@supports not (zzzgap: 1%) {
-  .button,
-  .secondary-spacer {
-    margin: 0 calc(var(--button-spacing) / 2);
-  }
-
-  .button:first-child {
-    margin-left: 0;
-  }
-
-  .button:last-child,
-  .secondary-spacer {
-    margin-right: 0;
-  }
 }
 
 .button:hover {
@@ -269,7 +253,7 @@ body {
 .options-input {
   display: flex;
   flex-wrap: wrap;
-  /* gap: var(--vertical-item-spacing) var(--horizontal-item-spacing); */
+  gap: var(--vertical-item-spacing) var(--horizontal-item-spacing);
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 2rem;
@@ -277,7 +261,7 @@ body {
 
 /* Input containers */
 .input-container {
-  flex: 1 0 45%;
+  flex: 45%;
   box-sizing: border-box;
   padding: 5px;
   background: var(--item-color);
@@ -290,7 +274,7 @@ body {
 
 /* Direct input field */
 .input-field {
-  flex: 1 0 30%;
+  flex: 30%;
   min-width: 0;
   padding: 0.3em 0.6em;
   color: var(--text-color);
@@ -311,17 +295,17 @@ input::placeholder {
 }
 
 .input-singletest {
-  flex: 1 0 30%;
+  flex: 30%;
 }
 
 #input-singleyear,
 #input-singlenum {
-  flex: 1 0 5%;
+  flex: 5%;
 }
 
 #input-name,
 #input-break {
-  flex: 1 0 20%;
+  flex: 20%;
 } /**/
 
 /* Tagify */
@@ -380,7 +364,7 @@ tags > span {
 }
 
 .input-multi {
-  flex: 1 0 28%;
+  flex: 28%;
 }
 
 .tagify--select .tagify__input {
@@ -500,46 +484,17 @@ tags > span {
 } /**/
 
 /* Input positioning */
-@supports not (zzzgap: 1%) {
-  .tagify,
-  .input-field,
-  .input-container {
-    margin-right: var(--horizontal-item-spacing);
-    margin-bottom: var(--vertical-item-spacing);
-  }
-
-  .input-button {
-    margin-left: var(--horizontal-item-spacing);
-  }
-}
-
-.input-right {
-  margin-right: 0;
-}
-
-.input-bottom {
-  margin-bottom: 0;
-}
-
 .input-end {
   flex: 60%;
 }
 
-.input-full {
-  flex: 1 0 100%;
-}
-
+.input-full,
 .input-button-full {
   flex: 100%;
-  margin-left: 0;
 }
 
 .input-button-half {
   flex: 48%;
-}
-
-.input-button-left {
-  margin-left: 0;
 } /**/
 
 /* Notes */
@@ -934,7 +889,7 @@ mjx-container:focus {
 
 /* Main and footer */
 main {
-  flex: 1 0 auto;
+  flex: auto;
   min-height: auto;
 }
 
@@ -1012,46 +967,16 @@ footer {
   }
 
   .button {
-    flex: 1 0 48%;
-    margin-left: 0;
+    flex: 48%;
   }
 
-  .checkbox-container {
-    flex: 1 0 100%;
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .input-flex-right {
-    margin-right: 0;
-  }
-
+  .checkbox-container,
   .input-button-flex-full {
-    flex: 1 0 100%;
-    margin-left: 0;
-  }
-
-  #single-nav {
-    margin-right: 0;
+    flex: 100%;
   }
 
   #single-nav + .secondary-spacer {
     display: none;
-  }
-
-  @supports not (zzzgap: 1%) {
-    .checkbox-container.input-bottom,
-    .input-flex-top {
-      margin-bottom: var(--vertical-item-spacing);
-    }
-
-    .button:not(.button-flex-bottom) {
-      margin: 0 0 var(--vertical-item-spacing);
-    }
-
-    .button:nth-child(odd):not(.button-flex-full) {
-      margin-right: var(--button-spacing);
-    }
   }
 }
 
@@ -1066,25 +991,9 @@ footer {
     max-height: initial;
   }
 
-  .input-flex-full {
-    flex: 1 0 100%;
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  @supports not (zzzgap: 1%) {
-    .input-bottom {
-      margin-bottom: var(--vertical-item-spacing);
-    }
-
-    .input-button-left {
-      margin-bottom: var(--vertical-item-spacing);
-    }
-  }
-
+  .input-flex-full,
   .input-button {
     flex: 100%;
-    margin-left: 0;
   }
 }
 
@@ -1094,23 +1003,12 @@ footer {
   }
 
   .button {
-    flex: 1 0 100%;
+    flex: 100%;
   }
 
   #notes-text,
   #notes-text ul {
     padding-inline-start: 1.5rem;
-  }
-
-  @supports not (zzzgap: 1%) {
-    .button-flex-bottom:not(:last-of-type) {
-      margin-bottom: var(--vertical-item-spacing);
-    }
-
-    .secondary-button,
-    .button:nth-child(odd):not(.button-flex-full) {
-      margin-right: 0;
-    }
   }
 }
 
