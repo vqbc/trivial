@@ -1123,26 +1123,13 @@
   }
 
   // Sorts
-  const sortProblems = (problems) => {
-    let sorted = problems.sort((a, b) => {
-      switch (Math.sign(computeYear(a) - computeYear(b))) {
-        case -1:
-          return -1;
-        case 1:
-          return 1;
-        case 0:
-          switch (computeTest(a).localeCompare(computeTest(b))) {
-            case -1:
-              return -1;
-            case 1:
-              return 1;
-            case 0:
-              return Math.sign(computeNumber(a) - computeNumber(b));
-          }
-      }
-    });
-    return sorted;
-  };
+  const sortProblems = (problems) =>
+    problems.sort(
+      (a, b) =>
+        Math.sign(computeYear(a) - computeYear(b)) ||
+        computeTest(a).localeCompare(computeTest(b)) ||
+        Math.sign(computeNumber(a) - computeNumber(b))
+    );
 
   // Splits and adds problem parts
   function getProblem(htmlString) {
@@ -1171,7 +1158,8 @@
       .children()
       .filter(":header:contains('Solution')")
       .nextUntil(":header:contains('See'), table")
-      .addBack(":header:contains(' Solution'), :header:contains('Solution ')");
+      .addBack(":header:contains(' Solution'), :header:contains('Solution ')")
+      .not("p:contains('The problems on this page are copyrighted by the')");
 
     let afterHTML = $(after)
       .map(function () {

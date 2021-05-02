@@ -27,26 +27,13 @@ let computeTest = (problem) =>
 let computeYear = (problem) => problem.match(/^\d{4}/)[0];
 let computeNumber = (problem) => problem.match(/\d+$/)[0];
 
-let sortProblems = (problems) => {
-  let sorted = problems.sort((a, b) => {
-    switch (Math.sign(computeYear(a) - computeYear(b))) {
-      case -1:
-        return -1;
-      case 1:
-        return 1;
-      case 0:
-        switch (computeTest(a).localeCompare(computeTest(b))) {
-          case -1:
-            return -1;
-          case 1:
-            return 1;
-          case 0:
-            return Math.sign(computeNumber(a) - computeNumber(b));
-        }
-    }
-  });
-  return sorted;
-};
+let sortProblems = (problems) =>
+  problems.sort(
+    (a, b) =>
+      Math.sign(computeYear(a) - computeYear(b)) ||
+      computeTest(a).localeCompare(computeTest(b)) ||
+      Math.sign(computeNumber(a) - computeNumber(b))
+  );
 
 console.log("Preloading all wiki pages, allow around 15 seconds...");
 let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
