@@ -133,7 +133,7 @@
   let answerClicked = 0;
 
   let searchParams = new URLSearchParams(location.search);
-  let urlPagename = searchParams.get("page");
+  let lastParam = searchParams.get("page") ?? searchParams.get("problems");
 
   // Toggles settings
   (() => {
@@ -342,7 +342,7 @@
           "?page=" + underscores(pagename)
         );
         searchParams = new URLSearchParams(location.search);
-        urlPagename = searchParams.get("page");
+        lastParam = searchParams.get("page");
       }
 
       $(".aops-link").attr(
@@ -356,7 +356,9 @@
       fixLinks();
       directLinks();
       collapseSolutions();
-      addAnswer(pagename.replace(/_/g, " "));
+
+      $(".answer-check").remove();
+      await addAnswer(pagename.replace(/_/g, " "));
       return getProblem(problemText) && getSolutions(problemText);
     } else {
       $(".article-text").before(
@@ -395,6 +397,30 @@
       <h2 class="section-header" id="solutions-header">Solutions</h2>
       <div class="article-text batch-solutions-text" id="solutions-text"></div>
     </div>`
+    );
+  }
+
+  function addUrlBatch() {
+    $(".notes").before(
+      `<div class="options-input" id="problems-input">
+        ${batchOptions}
+        <input class="input-field" id="input-problems"
+        type="text" placeholder="Problems, e.g. 2018 AMC 12B #24"
+        data-whitelist="${sortProblems(allProblems)
+          .map((e) => titleCleanup(e))
+          .toString()}">
+        <button class="input-button" id="problems-button">
+          View Problems
+        </button>
+      </div>
+      <div class="problem-section">
+        <h2 class="section-header" id="batch-header">Problem Batch</h2>
+        <div class="article-text" id="batch-text"></div>
+      </div>
+      <div class="problem-section section-collapsed" id="solutions-section">
+        <h2 class="section-header" id="solutions-header">Solutions</h2>
+        <div class="article-text batch-solutions-text" id="solutions-text"></div>
+      </div>`
     );
   }
 
@@ -460,7 +486,7 @@
           "?page=" + underscores(pagename)
         );
         searchParams = new URLSearchParams(location.search);
-        urlPagename = searchParams.get("page");
+        lastParam = searchParams.get("page");
       }
 
       $(".aops-link").attr(
@@ -481,6 +507,124 @@
     customText();
     fixLinks();
     directLinks();
+  }
+
+  async function fillBatch(pagenames, pushUrl) {
+    async function makeBatch() {
+      let problems = [];
+      let problemTitles = pagenames
+        .split("|")
+        .map((e) => e.replace(/_/g, " ").replace("#", "Problems/Problem "));
+      let numProblems = problemTitles.length;
+      let invalidProblems = 0;
+
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params;
+      let response;
+      let json;
+
+      $("#batch-header").after(
+        `<div class="loading-notice">
+          <div class="loading-text">Loading problems…</div>
+          <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+          </div>
+        </div>`
+      );
+
+      for (let currentProblem of problemTitles) {
+        console.log(currentProblem);
+
+        params = `action=parse&page=${currentProblem}&format=json`;
+        response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        json = await response.json();
+
+        let problemText = latexer(json.parse.text["*"]);
+        let problemProblem = getProblem(problemText);
+        let problemSolutions = getSolutions(problemText);
+
+        if (problemProblem && problemSolutions) {
+          problems.push({
+            title: currentProblem,
+            difficulty: computeDifficulty(
+              computeTest(currentProblem),
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+
+          $(".loading-bar").css(
+            "width",
+            `${((problems.length + invalidProblems) / numProblems) * 100}%`
+          );
+        } else if (problemText.includes("Redirect to:")) {
+          console.log("Redirect problem, going there instead...");
+
+          let redirHref = $($.parseHTML(problemText))
+            .find(".redirectText a")
+            .attr("href");
+          let redirPage = redirHref
+            .replace("/wiki/index.php/", "")
+            .replace(/_/g, " ");
+          console.log(redirPage);
+
+          params = `action=parse&page=${redirPage}&format=json`;
+          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+          json = await response.json();
+
+          problemText = latexer(json.parse.text["*"]);
+          problemProblem = getProblem(problemText);
+          problemSolutions = getSolutions(problemText);
+
+          problems.push({
+            title: currentProblem,
+            difficulty: computeDifficulty(
+              computeTest(currentProblem),
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+
+          $(".loading-bar").css(
+            "width",
+            `${((problems.length + invalidProblems) / numProblems) * 100}%`
+          );
+        } else {
+          console.log("Invalid problem, skipping...");
+          problemTitles.splice(pageIndex, 1);
+          invalidProblems++;
+        }
+      }
+
+      console.log(problems);
+
+      addProblems(problems, false);
+    }
+    await makeBatch();
+
+    if (pushUrl) {
+      history.pushState(
+        { problems: pagenames },
+        "Problem Batch - Trivial AoPS Wiki Reader",
+        "?problems=" + pagenames
+      );
+      searchParams = new URLSearchParams(location.search);
+      lastParam = searchParams.get("problems");
+    }
+
+    $(".loading-notice").remove();
+    katexFallback();
+    customText();
+    changeName();
+    fixLinks();
+    collapseSolutions();
+    directLinks();
+    hideLinks();
+    breakSets();
   }
 
   async function addAnswer(pagename) {
@@ -525,12 +669,12 @@
             if (finalAnswer === answer) {
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item correct-feedback">
-              ${originalAnswer} is correct! :>
+              ${originalAnswer} is correct! :)
             </div>`);
             } else {
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item wrong-feedback">
-              ${originalAnswer} is wrong :<
+              ${originalAnswer} is wrong :(
             </div>`);
             }
           }
@@ -1571,7 +1715,6 @@
 
   $(".page-container").on("click", "#batch-button", async () => {
     async function makeBatch() {
-      let problems = [];
       let problemTitles = sortProblems(allProblems).filter((e) =>
         e.includes(
           sanitize(
@@ -1661,11 +1804,19 @@
           );
         } else {
           console.log("Invalid problem, skipping...");
-          pages.splice(pageIndex, 1);
+          problemTitles.splice(pageIndex, 1);
         }
       }
 
       if (clickedTimes === clickedTimesThen) {
+        addHistoryBatch(
+          problems.map((e) => e.title),
+          sourceCleanup(problems[0].problem).substring(0, 140),
+          sanitize(
+            `${$("#input-singleyear").val()} ${$("#input-singletest").val()}`
+          )
+        );
+
         console.log(problems);
         addProblems(problems, false);
       }
@@ -1676,6 +1827,8 @@
     clearProblem();
 
     addBatch();
+
+    let problems = [];
     let inputSingleTest = $("#input-singletest");
     if (!inputSingleTest.val()) {
       $(".article-text").before(
@@ -1702,6 +1855,14 @@
             );
         $("#batch-header").html(name);
         document.title = name + " - Trivial AoPS Wiki Reader";
+
+        history.pushState(
+          { problems: problems.map((e) => underscores(e.title)).join("|") },
+          name + " - Trivial AoPS Wiki Reader",
+          "?problems=" + problems.map((e) => underscores(e.title)).join("|")
+        );
+        searchParams = new URLSearchParams(location.search);
+        lastParam = searchParams.get("problems");
         fixLinks();
         collapseSolutions();
         directLinks();
@@ -1713,7 +1874,6 @@
 
   $(".page-container").on("click", "#problems-button", async () => {
     async function makeBatch() {
-      let problems = [];
       let problemTitles = inputProblems
         .val()
         .split(",")
@@ -1799,7 +1959,7 @@
           );
         } else {
           console.log("Invalid problem, skipping...");
-          pages.splice(pageIndex, 1);
+          problemTitles.splice(pageIndex, 1);
           invalidProblems++;
         }
       }
@@ -1808,8 +1968,12 @@
         if ($("#input-sort").prop("checked"))
           problems.sort((a, b) => a.difficulty - b.difficulty);
 
-        console.log(problems);
+        addHistoryBatch(
+          problems.map((e) => e.title),
+          sourceCleanup(problems[0].problem).substring(0, 140)
+        );
 
+        console.log(problems);
         addProblems(problems, false);
       }
     }
@@ -1820,6 +1984,7 @@
 
     addBatch();
 
+    let problems = [];
     let inputProblems = $("#input-problems");
     if (!inputProblems.val()) {
       $(".article-text").before(
@@ -1833,6 +1998,15 @@
     } else {
       await makeBatch();
     }
+
+    let name = $("#input-name").val();
+    history.pushState(
+      { problems: problems.map((e) => underscores(e.title)).join("|") },
+      name + " - Trivial AoPS Wiki Reader",
+      "?problems=" + problems.map((e) => underscores(e.title)).join("|")
+    );
+    searchParams = new URLSearchParams(location.search);
+    lastParam = searchParams.get("problems");
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
@@ -2030,6 +2204,11 @@
         if ($("#input-sort").prop("checked"))
           problems.sort((a, b) => a.difficulty - b.difficulty);
 
+        addHistoryBatch(
+          problems.map((e) => e.title),
+          sourceCleanup(problems[0].problem).substring(0, 140)
+        );
+
         console.log(problems);
         addProblems(problems, true);
       }
@@ -2060,6 +2239,15 @@
     } else {
       await makeBatch();
     }
+
+    let name = $("#input-name").val();
+    history.pushState(
+      { problems: problems.map((e) => underscores(e.title)).join("|") },
+      name + " - Trivial AoPS Wiki Reader",
+      "?problems=" + problems.map((e) => underscores(e.title)).join("|")
+    );
+    searchParams = new URLSearchParams(location.search);
+    lastParam = searchParams.get("problems");
 
     if (clickedTimes === clickedTimesThen) {
       $(".loading-notice").remove();
@@ -2454,6 +2642,7 @@
         );
       else {
         await replace();
+        console.log(problems);
         if (pages.length === 0)
           $(this).replaceWith(
             `<span class="replace-notice">No replacements found</span>`
@@ -2476,7 +2665,7 @@
       "Trivial AoPS Wiki Reader",
       location.href.split("?page=")[0]
     );
-    urlPagename = "";
+    lastParam = "";
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
@@ -2501,7 +2690,7 @@
       "Trivial AoPS Wiki Reader",
       location.href.split("?page=")[0]
     );
-    urlPagename = "";
+    lastParam = "";
     $("#secondary-button-container").remove();
     $(".options-input").remove();
     $(".error").remove();
@@ -2784,21 +2973,61 @@
     localStorage.setItem("pageHistory", JSON.stringify(history));
   }
 
-  // Show article if query
+  function addHistoryBatch(problems, snippet, title) {
+    let history = JSON.parse(localStorage.getItem("pageHistory"));
+    let url = `?problems=${underscores(problems.join("|"))}`;
+    let cleanedPage =
+      title ??
+      problems
+        .map((e) => titleCleanup(e))
+        .join(", ")
+        .substring(0, 40) + "...";
+    let sanitizedSnippet = sanitize(snippet);
+
+    if (history)
+      history.unshift({
+        url: url,
+        title: cleanedPage,
+        snippet: sanitizedSnippet,
+      });
+    else
+      history = [
+        {
+          url: url,
+          title: cleanedPage,
+          snippet: sanitizedSnippet,
+        },
+      ];
+    if (history.length > 50) history.pop();
+    history = [...new Map(history.map((item) => [item.title, item])).values()];
+
+    localStorage.setItem("pageHistory", JSON.stringify(history));
+  }
+
+  // Show article/batch if query
   (async () => {
-    if (urlPagename) {
+    if (searchParams.get("page")) {
       $("#main-button-container").after(`${notes}`);
       renderChart();
       collapseNotes();
 
-      if (validProblem(urlPagename)) await addProblem(urlPagename, true);
-      else await addArticle(urlPagename, true);
+      if (validProblem(lastParam)) await addProblem(lastParam, true);
+      else await addArticle(lastParam, true);
+    } else if (searchParams.get("problems")) {
+      $("#main-button-container").after(`${notes}`);
+      renderChart();
+      collapseNotes();
+
+      addUrlBatch();
+      await fillBatch(lastParam, true);
     }
 
     window.onpopstate = async (event) => {
       let newPagename = event.state?.page;
+      let newProblems = event.state?.problems;
+      console.log(newProblems);
 
-      if (newPagename && newPagename !== urlPagename) {
+      if (newPagename && newPagename !== searchParams.get("page")) {
         if ($(".notes").length === 0) {
           if ($("#secondary-button-container").length === 0)
             $("#main-button-container").after(`${notes}`);
@@ -2810,7 +3039,17 @@
         clearProblem();
         if (validProblem(newPagename)) await addProblem(newPagename, false);
         else await addArticle(newPagename, false);
-        urlPagename = newPagename;
+        lastParam = newPagename;
+      } else if (newProblems && newProblems !== searchParams.get("problems")) {
+        console.log("Hi");
+        clearOptionsWithoutHistory();
+        $("#main-button-container").after(`${notes}`);
+        renderChart();
+        collapseNotes();
+
+        addUrlBatch();
+        await fillBatch(newProblems, false);
+        lastParam = newProblems;
       }
     };
   })();

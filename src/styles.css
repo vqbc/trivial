@@ -1097,8 +1097,10 @@ footer {
   /* Hide things */
   .header,
   .subtitle,
+  .tests-header,
   .button-container,
   .options-input,
+  .answer-check,
   .notes,
   .error,
   a.aops-link,
