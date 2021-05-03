@@ -16,6 +16,7 @@
   --page-container-color: #fcfcfc;
   --page-container-box-shadow: 0 5px 20px hsl(217deg, 100%, 5%, 20%);
   --item-color: white;
+  --item-disabled-color: #f7f7f7;
   --button-3d-shadow: hsl(0deg, 0%, 0%, 10%);
   --main-button-color: hsl(189deg, 44%, 48%);
   --main-active-button-color: hsl(189deg, 44%, 57%);
@@ -33,6 +34,7 @@
   --button-text-shadow: 0 1px 2px hsl(0deg, 0%, 0%, 40%);
   --main-text-shadow: 0 2px 3px hsl(0deg, 0%, 0%, 40%);
   --placeholder-color: hsl(0deg, 0%, 0%, 40%);
+  --placeholder-disabled-color: hsl(0deg, 0%, 0%, 20%);
   --range-grid-color: hsl(0deg, 0%, 0%, 10%);
   --range-label-hover-color: hsl(0deg, 0%, 0%, 30%);
   --input-slider-color: hsl(217deg, 15%, 90%);
@@ -602,7 +604,15 @@ tags > span {
 }
 
 #input-answer {
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#input-answer:disabled {
+  background: var(--item-disabled-color);
+}
+
+#input-answer:disabled::placeholder {
+  color: var(--placeholder-disabled-color);
 }
 
 .feedback-item {

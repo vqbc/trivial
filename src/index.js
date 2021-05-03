@@ -671,6 +671,7 @@
                 .prepend(`<div class="feedback-item correct-feedback">
               ${originalAnswer} is correct! :)
             </div>`);
+              $("#solutions-header").click();
             } else {
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item wrong-feedback">
@@ -678,6 +679,7 @@
             </div>`);
             }
           }
+          $("#input-answer").val("");
         });
       }
     }
@@ -2789,6 +2791,7 @@
     $("#solutions-header").off("click");
     $("#solutions-header").click(() => {
       $("#solutions-section").toggleClass("section-collapsed");
+      $("#input-answer").prop("disabled", true);
     });
   }
 
