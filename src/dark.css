@@ -40,6 +40,10 @@
     --link-hover-color: hsl(203deg, 86%, 80%);
     --text-button-color: hsl(177deg, 44%, 60%);
     --text-button-hover-color: hsl(177deg, 44%, 67%);
+    --correct-color: hsl(150deg, 45%, 45%);
+    --retry-color: hsl(190deg, 45%, 45%);
+    --blank-color: hsl(270deg, 45%, 45%);
+    --wrong-color: hsl(15deg, 75%, 45%);
   }
 
   .tagify {

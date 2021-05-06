@@ -131,6 +131,7 @@
   let subtitleClicked = 0;
   let settingsClicked = "";
   let answerClicked = 0;
+  let answerTries = 0;
 
   let searchParams = new URLSearchParams(location.search);
   let lastParam = searchParams.get("page") ?? searchParams.get("problems");
@@ -283,7 +284,7 @@
   // Adds things
   async function addProblem(pagename, pushUrl) {
     $(".notes").before(
-      `<div class="problem-section">
+      `<div class="problem-section" id="problem-section">
       <h2 class="section-header" id="article-header"></h2>
       <a href="" class="aops-link">
         (View on the AoPS Wiki)
@@ -356,6 +357,22 @@
       fixLinks();
       directLinks();
       collapseSolutions();
+
+      if ($(".practice-progress").length === 0) {
+        $("#problem-section").before(
+          `<div class="practice-progress progress-nobottom progress-hidden">
+          <div class="question-bar right-questions bar-hidden" style="flex-grow: 0">` +
+            `<span id="right-num">0</span> correct</div>
+          <div class="question-bar retry-questions bar-hidden" style="flex-grow: 0">` +
+            `<span id="retry-num">0</span> retry</div>
+          <div class="spacer-bar" style="flex-grow: 0"></div>
+          <div class="question-bar blank-questions bar-hidden" style="flex-grow: 0">` +
+            `<span id="blank-num">0</span> blank</div>
+          <div class="question-bar wrong-questions bar-hidden" style="flex-grow: 0">` +
+            `<span id="wrong-num">0</span> incorrect</div>
+        </div>`
+        );
+      }
 
       $(".answer-check").remove();
       await addAnswer(pagename.replace(/_/g, " "));
@@ -630,9 +647,8 @@
   async function addAnswer(pagename) {
     answerClicked++;
     let answerClickedThen = answerClicked;
-    console.log(pagename);
+    answerTries = 0;
     let answersTitle = `${pagename?.split(" Problems/Problem")[0]} Answer Key`;
-    console.log(answersTitle);
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${answersTitle}&format=json`;
 
@@ -644,8 +660,6 @@
       ?.find("ol li")
       ?.eq(problemNum - 1)
       ?.text();
-    console.log(problemNum);
-    console.log(answer);
     if (answer) {
       if (answerClicked === answerClickedThen) {
         $("#problem-text").after(`<div class="answer-check">
@@ -666,17 +680,42 @@
           if (computeTest(pagename) === "AIME")
             finalAnswer = originalAnswer.padStart(3, "0");
           if (finalAnswer) {
+            answerTries++;
             if (finalAnswer === answer) {
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item correct-feedback">
               ${originalAnswer} is correct! :)
             </div>`);
+              $(".progress-hidden").removeClass("progress-hidden");
+              if (answerTries == 1) {
+                $(".question-bar.right-questions").removeClass("bar-hidden");
+                $(".question-bar.right-questions").css(
+                  "flex-grow",
+                  parseInt(
+                    $(".question-bar.right-questions").css("flex-grow")
+                  ) + 1
+                );
+                $("#right-num").text(
+                  parseInt($(".question-bar.right-questions").css("flex-grow"))
+                );
+              } else {
+                $(".question-bar.retry-questions").removeClass("bar-hidden");
+                $(".question-bar.retry-questions").css(
+                  "flex-grow",
+                  parseInt(
+                    $(".question-bar.retry-questions").css("flex-grow")
+                  ) + 1
+                );
+                $("#retry-num").text(
+                  parseInt($(".question-bar.retry-questions").css("flex-grow"))
+                );
+              }
               $("#solutions-header").click();
             } else {
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item wrong-feedback">
               ${originalAnswer} is wrong :(
-            </div>`);
+              </div>`);
             }
           }
           $("#input-answer").val("");
@@ -1297,6 +1336,7 @@
       </div>`
     );
     $("#random-nav").click();
+    $("#random-input").after($(".practice-progress"));
   });
 
   $("#problem-batch").click(() => {
@@ -1381,6 +1421,7 @@
       </div>
       ${notes}`
     );
+    $("#random-input").after($(".practice-progress"));
     renderChart();
     collapseNotes();
     directLinks();
@@ -2792,6 +2833,29 @@
     $("#solutions-header").click(() => {
       $("#solutions-section").toggleClass("section-collapsed");
       $("#input-answer").prop("disabled", true);
+      if ($(".answer-check").length && !$(".correct-feedback").length) {
+        $(".progress-hidden").removeClass("progress-hidden");
+        $(".progress-nobottom").removeClass("progress-nobottom");
+        if (answerTries > 0) {
+          $(".question-bar.wrong-questions").removeClass("bar-hidden");
+          $(".question-bar.wrong-questions").css(
+            "flex-grow",
+            parseInt($(".question-bar.wrong-questions").css("flex-grow")) + 1
+          );
+          $("#wrong-num").text(
+            parseInt($(".question-bar.wrong-questions").css("flex-grow"))
+          );
+        } else {
+          $(".question-bar.blank-questions").removeClass("bar-hidden");
+          $(".question-bar.blank-questions").css(
+            "flex-grow",
+            parseInt($(".question-bar.blank-questions").css("flex-grow")) + 1
+          );
+          $("#blank-num").text(
+            parseInt($(".question-bar.blank-questions").css("flex-grow"))
+          );
+        }
+      }
     });
   }
 

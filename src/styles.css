@@ -29,8 +29,8 @@
   --input-button-color: hsl(177deg, 44%, 48%);
   --input-button-focus-color: hsl(177deg, 44%, 75%);
   --input-focus-color: #ccc;
-  --input-box-shadow: 0 2px 5px hsl(217deg, 100%, 5%, 20%);
-  --input-hover-box-shadow: 0 3px 5px hsl(217deg, 100%, 5%, 20%);
+  --secondary-box-shadow: 0 2px 5px hsl(217deg, 100%, 5%, 20%);
+  --secondary-hover-box-shadow: 0 3px 5px hsl(217deg, 100%, 5%, 20%);
   --button-text-shadow: 0 1px 2px hsl(0deg, 0%, 0%, 40%);
   --main-text-shadow: 0 2px 3px hsl(0deg, 0%, 0%, 40%);
   --placeholder-color: hsl(0deg, 0%, 0%, 40%);
@@ -48,6 +48,8 @@
   --text-button-color: hsl(177deg, 63%, 43%);
   --text-button-hover-color: hsl(177deg, 63%, 48%);
   --correct-color: hsl(150deg, 50%, 50%);
+  --retry-color: hsl(190deg, 50%, 50%);
+  --blank-color: hsl(270deg, 50%, 60%);
   --wrong-color: hsl(15deg, 80%, 50%);
   --button-spacing: 1.4%;
   --vertical-item-spacing: 0.6rem;
@@ -188,12 +190,12 @@ body {
   background: var(--input-button-color);
   border: none;
   border-bottom: 3px solid var(--button-3d-shadow);
-  box-shadow: var(--input-box-shadow);
+  box-shadow: var(--secondary-box-shadow);
   transition: all 0.1s;
 }
 
 .input-button:hover {
-  box-shadow: var(--input-hover-box-shadow);
+  box-shadow: var(--secondary-hover-box-shadow);
   transform: translateY(-1px);
   cursor: pointer;
 }
@@ -267,7 +269,7 @@ body {
   box-sizing: border-box;
   padding: 5px;
   background: var(--item-color);
-  box-shadow: var(--input-box-shadow);
+  box-shadow: var(--secondary-box-shadow);
 }
 
 .input-container:focus {
@@ -283,7 +285,7 @@ body {
   font: 1em "Latin Modern Sans", sans-serif;
   background: var(--item-color);
   border: none;
-  box-shadow: var(--input-box-shadow);
+  box-shadow: var(--secondary-box-shadow);
   -webkit-appearance: none;
 }
 
@@ -318,7 +320,7 @@ input::placeholder {
   overflow-x: scroll;
   background: var(--item-color);
   border: none;
-  box-shadow: var(--input-box-shadow);
+  box-shadow: var(--secondary-box-shadow);
   transition: none;
 }
 
@@ -592,6 +594,66 @@ tags > span {
   transform: rotate(135deg);
 } /**/
 
+/* Practice progress */
+.practice-progress {
+  display: none;
+  gap: 0 var(--horizontal-item-spacing);
+  justify-content: center;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+#random-input + .practice-progress {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.options-input + .practice-progress {
+  margin-top: -1rem;
+}
+
+.question-bar {
+  display: flex;
+  flex-basis: 0;
+  align-items: center;
+  padding-left: 0.8rem;
+  color: white;
+  font: 600 1em "Computer Modern Bright", sans-serif;
+  white-space: pre;
+  text-shadow: var(--button-text-shadow);
+  box-shadow: var(--secondary-box-shadow);
+}
+
+.right-questions {
+  min-width: 10ch;
+  background: var(--correct-color);
+}
+
+.retry-questions {
+  min-width: 8ch;
+  background: var(--retry-color);
+}
+
+.blank-questions {
+  min-width: 8ch;
+  background: var(--blank-color);
+}
+
+.wrong-questions {
+  min-width: 11ch;
+  background: var(--wrong-color);
+}
+
+.spacer-bar {
+  display: none;
+}
+
+#random-input + .progress-hidden,
+.bar-hidden,
+.progress-nobottom .spacer-bar {
+  display: none;
+} /**/
+
 /* Answer check */
 .answer-check {
   margin-bottom: 1.5rem;
@@ -604,7 +666,7 @@ tags > span {
 }
 
 #input-answer {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 5%);
 }
 
 #input-answer:disabled {
@@ -1025,6 +1087,16 @@ footer {
 @media (max-width: 500px) {
   .source-link {
     display: inline-block;
+  }
+
+  .practice-progress:not(.progress-nobottom) {
+    height: calc(4rem + var(--vertical-item-spacing));
+  }
+
+  .spacer-bar {
+    display: block;
+    flex-basis: 100%;
+    height: 0;
   }
 }
 
