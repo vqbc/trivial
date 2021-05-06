@@ -679,9 +679,9 @@
           let originalAnswer = $("#input-answer").val();
           originalAnswer = originalAnswer.toUpperCase();
           let finalAnswer = originalAnswer;
-          if (computeTest(pagename) === "AIME")
-            finalAnswer = originalAnswer.padStart(3, "0");
           if (finalAnswer) {
+            if (computeTest(pagename) === "AIME")
+              finalAnswer = originalAnswer.padStart(3, "0");
             answerTries++;
             if (finalAnswer === answer) {
               $(".answer-feedback")
