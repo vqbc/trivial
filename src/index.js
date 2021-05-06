@@ -132,6 +132,7 @@
   let settingsClicked = "";
   let answerClicked = 0;
   let answerTries = 0;
+  let progressUpdated = false;
 
   let searchParams = new URLSearchParams(location.search);
   let lastParam = searchParams.get("page") ?? searchParams.get("problems");
@@ -648,6 +649,7 @@
     answerClicked++;
     let answerClickedThen = answerClicked;
     answerTries = 0;
+    progressUpdated = false;
     let answersTitle = `${pagename?.split(" Problems/Problem")[0]} Answer Key`;
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${answersTitle}&format=json`;
@@ -686,31 +688,38 @@
                 .prepend(`<div class="feedback-item correct-feedback">
               ${originalAnswer} is correct! :)
             </div>`);
-              $(".progress-hidden").removeClass("progress-hidden");
-              if (answerTries == 1) {
-                $(".question-bar.right-questions").removeClass("bar-hidden");
-                $(".question-bar.right-questions").css(
-                  "flex-grow",
-                  parseInt(
-                    $(".question-bar.right-questions").css("flex-grow")
-                  ) + 1
-                );
-                $("#right-num").text(
-                  parseInt($(".question-bar.right-questions").css("flex-grow"))
-                );
-              } else {
-                $(".question-bar.retry-questions").removeClass("bar-hidden");
-                $(".question-bar.retry-questions").css(
-                  "flex-grow",
-                  parseInt(
-                    $(".question-bar.retry-questions").css("flex-grow")
-                  ) + 1
-                );
-                $("#retry-num").text(
-                  parseInt($(".question-bar.retry-questions").css("flex-grow"))
-                );
+              if (!progressUpdated) {
+                $(".progress-hidden").removeClass("progress-hidden");
+                progressUpdated = true;
+                if (answerTries == 1) {
+                  $(".question-bar.right-questions").removeClass("bar-hidden");
+                  $(".question-bar.right-questions").css(
+                    "flex-grow",
+                    parseInt(
+                      $(".question-bar.right-questions").css("flex-grow")
+                    ) + 1
+                  );
+                  $("#right-num").text(
+                    parseInt(
+                      $(".question-bar.right-questions").css("flex-grow")
+                    )
+                  );
+                } else {
+                  $(".question-bar.retry-questions").removeClass("bar-hidden");
+                  $(".question-bar.retry-questions").css(
+                    "flex-grow",
+                    parseInt(
+                      $(".question-bar.retry-questions").css("flex-grow")
+                    ) + 1
+                  );
+                  $("#retry-num").text(
+                    parseInt(
+                      $(".question-bar.retry-questions").css("flex-grow")
+                    )
+                  );
+                }
+                $("#solutions-header").click();
               }
-              $("#solutions-header").click();
             } else {
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item wrong-feedback">
@@ -2833,9 +2842,14 @@
     $("#solutions-header").click(() => {
       $("#solutions-section").toggleClass("section-collapsed");
       $("#input-answer").prop("disabled", true);
-      if ($(".answer-check").length && !$(".correct-feedback").length) {
+      if (
+        $(".answer-check").length &&
+        !$(".correct-feedback").length &&
+        !progressUpdated
+      ) {
         $(".progress-hidden").removeClass("progress-hidden");
         $(".progress-nobottom").removeClass("progress-nobottom");
+        progressUpdated = true;
         if (answerTries > 0) {
           $(".question-bar.wrong-questions").removeClass("bar-hidden");
           $(".question-bar.wrong-questions").css(
