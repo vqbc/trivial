@@ -1182,6 +1182,7 @@ footer {
   .tests-header,
   .button-container,
   .options-input,
+  #random-input + .practice-progress,
   .answer-check,
   .notes,
   .error,
