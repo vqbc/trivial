@@ -99,7 +99,7 @@
         AMC Tests refers to tests from the AMC 8 to USAMO,
         plus the IMO (which the AMC program selects for but doesn’t administer).
       </li>
-      <li>s
+      <li>
         Historical notes:
         <ul>
           <li>The AJHSME is included as the AMC 8 tests before 1999.</li>
