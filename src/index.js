@@ -676,7 +676,7 @@
       </div>`);
 
         $("#answer-button").click(async function () {
-          let originalAnswer = $("#input-answer").val();
+          let originalAnswer = sanitize($("#input-answer").val());
           originalAnswer = originalAnswer.toUpperCase();
           let finalAnswer = originalAnswer;
           if (finalAnswer) {
