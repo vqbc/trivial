@@ -361,29 +361,16 @@
 
       if ($(".practice-progress").length === 0) {
         $("#problem-section").before(
-          `<div class="practice-bars">
-          <div class="practice-progress progress-nobottom progress-hidden">
-            <div class="question-bar right-questions bar-hidden" style="flex-grow: 0">` +
-            `<span id="right-num">0</span> correct</div>
-            <div class="question-bar retry-questions bar-hidden" style="flex-grow: 0">` +
-            `<span id="retry-num">0</span> retry</div>
-            <div class="spacer-bar" style="flex-grow: 0"></div>
-            <div class="question-bar blank-questions bar-hidden" style="flex-grow: 0">` +
-            `<span id="blank-num">0</span> blank</div>
-            <div class="question-bar wrong-questions bar-hidden" style="flex-grow: 0">` +
-            `<span id="wrong-num">0</span> incorrect</div>
-          </div>
-          <div class="streak-bar streak-hidden">
-            <div class="question-bar right-questions bar-hidden" style="flex-grow: 0">` +
-            `<span id="right-num">0</span> correct</div>
-            <div class="question-bar retry-questions bar-hidden" style="flex-grow: 0">` +
-            `<span id="retry-num">0</span> retry</div>
-            <div class="spacer-bar" style="flex-grow: 0"></div>
-            <div class="question-bar blank-questions bar-hidden" style="flex-grow: 0">` +
-            `<span id="blank-num">0</span> blank</div>
-            <div class="question-bar wrong-questions bar-hidden" style="flex-grow: 0">` +
-            `<span id="wrong-num">0</span> incorrect</div>
-          </div>
+        `<div class="practice-progress progress-nobottom progress-hidden">
+          <div class="question-bar right-questions bar-hidden" style="flex-grow: 0">` +
+          `<span id="right-num">0</span> correct</div>
+          <div class="question-bar retry-questions bar-hidden" style="flex-grow: 0">` +
+          `<span id="retry-num">0</span> retry</div>
+          <div class="spacer-bar" style="flex-grow: 0"></div>
+          <div class="question-bar blank-questions bar-hidden" style="flex-grow: 0">` +
+          `<span id="blank-num">0</span> blank</div>
+          <div class="question-bar wrong-questions bar-hidden" style="flex-grow: 0">` +
+          `<span id="wrong-num">0</span> incorrect</div>
         </div>`
         );
       }
