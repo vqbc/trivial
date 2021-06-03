@@ -47,6 +47,7 @@
   --link-hover-color: hsl(203deg, 80%, 59%);
   --text-button-color: hsl(177deg, 63%, 43%);
   --text-button-hover-color: hsl(177deg, 63%, 48%);
+  --streak-color: hsl(50deg, 60%, 55%);
   --correct-color: hsl(150deg, 50%, 50%);
   --retry-color: hsl(190deg, 50%, 50%);
   --blank-color: hsl(270deg, 50%, 60%);
@@ -612,6 +613,7 @@ tags > span {
   margin-top: -1rem;
 }
 
+.streak-bar,
 .question-bar {
   display: flex;
   flex-basis: 0;
@@ -622,6 +624,13 @@ tags > span {
   white-space: pre;
   text-shadow: var(--button-text-shadow);
   box-shadow: var(--secondary-box-shadow);
+}
+
+.streak-bar {
+  min-width: 8ch;
+  font-style: italic;
+  background: var(--streak-color);
+  border: 2px solid rgb(0, 0, 0, 0.1);
 }
 
 .right-questions {
@@ -651,6 +660,14 @@ tags > span {
 #random-input + .progress-hidden,
 .bar-hidden,
 .progress-nobottom .spacer-bar {
+  display: none;
+}
+
+.hide-counters #random-input {
+  margin-bottom: 1.5rem;
+}
+
+.hide-counters #random-input + .practice-progress {
   display: none;
 } /**/
 

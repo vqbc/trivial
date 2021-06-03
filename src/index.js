@@ -132,6 +132,7 @@
   let settingsClicked = "";
   let answerClicked = 0;
   let answerTries = 0;
+  let streakCount = 0;
   let progressUpdated = false;
 
   let searchParams = new URLSearchParams(location.search);
@@ -156,6 +157,9 @@
     }
     if (JSON.parse(localStorage.getItem("tabLinksExternal"))) {
       $("#links-toggle").text("New tab links: AoPS");
+    }
+    if (JSON.parse(localStorage.getItem("countersHidden"))) {
+      $("#counter-toggle").text("Counters off");
     }
 
     $("#dark-toggle").click(() => {
@@ -260,11 +264,6 @@
 
     $("#print-toggle").click(() => {
       settingsClicked += "6";
-      if (settingsClicked === "123456" && $("#fun-toggle").length === 0)
-        $("#print-toggle").after(`
-          <button class="text-button footer-button" id="fun-toggle" tabindex="0">
-            Made you click
-          </button>`);
 
       $(".page-container").toggleClass("nolinks-text");
       if (printLinks) {
@@ -279,6 +278,24 @@
         $(".divider").remove();
         $(this).remove();
       });
+    });
+
+    $("#counter-toggle").click(() => {
+      settingsClicked += "7";
+      if (settingsClicked === "1234567" && $("#fun-toggle").length === 0)
+        $("#counter-toggle").after(`
+          <button class="text-button footer-button" id="fun-toggle" tabindex="0">
+            Made you click
+          </button>`);
+
+      $("main").toggleClass("hide-counters");
+      if (!JSON.parse(localStorage.getItem("countersHidden"))) {
+        localStorage.setItem("countersHidden", true);
+        $("#counter-toggle").text("Counters off");
+      } else {
+        localStorage.setItem("countersHidden", false);
+        $("#counter-toggle").text("Counters on");
+      }
     });
   })();
 
@@ -361,16 +378,18 @@
 
       if ($(".practice-progress").length === 0) {
         $("#problem-section").before(
-        `<div class="practice-progress progress-nobottom progress-hidden">
+          `<div class="practice-progress progress-nobottom progress-hidden">
+          <div class="streak-bar bar-hidden">` +
+            `<span id="streak-num">0</span> streak</div>
           <div class="question-bar right-questions bar-hidden" style="flex-grow: 0">` +
-          `<span id="right-num">0</span> correct</div>
+            `<span id="right-num">0</span> correct</div>
           <div class="question-bar retry-questions bar-hidden" style="flex-grow: 0">` +
-          `<span id="retry-num">0</span> retry</div>
+            `<span id="retry-num">0</span> retry</div>
           <div class="spacer-bar" style="flex-grow: 0"></div>
           <div class="question-bar blank-questions bar-hidden" style="flex-grow: 0">` +
-          `<span id="blank-num">0</span> blank</div>
+            `<span id="blank-num">0</span> blank</div>
           <div class="question-bar wrong-questions bar-hidden" style="flex-grow: 0">` +
-          `<span id="wrong-num">0</span> incorrect</div>
+            `<span id="wrong-num">0</span> incorrect</div>
         </div>`
         );
       }
@@ -684,6 +703,7 @@
               finalAnswer = originalAnswer.padStart(3, "0");
             answerTries++;
             if (finalAnswer === answer) {
+              streakCount++;
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item correct-feedback">
               ${originalAnswer} is correct! :)
@@ -692,6 +712,7 @@
                 $(".progress-hidden").removeClass("progress-hidden");
                 progressUpdated = true;
                 if (answerTries == 1) {
+                  $(".streak-bar").removeClass("bar-hidden");
                   $(".question-bar.right-questions").removeClass("bar-hidden");
                   $(".question-bar.right-questions").css(
                     "flex-grow",
@@ -705,6 +726,7 @@
                     )
                   );
                 } else {
+                  $(".streak-bar").removeClass("bar-hidden");
                   $(".question-bar.retry-questions").removeClass("bar-hidden");
                   $(".question-bar.retry-questions").css(
                     "flex-grow",
@@ -721,6 +743,7 @@
                 $("#solutions-header").click();
               }
             } else {
+              streakCount = 0;
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item wrong-feedback">
               ${originalAnswer} is wrong :(
@@ -728,6 +751,7 @@
             }
           }
           $("#input-answer").val("");
+          $("#streak-num").text(streakCount);
         });
       }
     }
@@ -2851,6 +2875,7 @@
         $(".progress-nobottom").removeClass("progress-nobottom");
         progressUpdated = true;
         if (answerTries > 0) {
+          $(".streak-bar").removeClass("bar-hidden");
           $(".question-bar.wrong-questions").removeClass("bar-hidden");
           $(".question-bar.wrong-questions").css(
             "flex-grow",
@@ -2860,6 +2885,9 @@
             parseInt($(".question-bar.wrong-questions").css("flex-grow"))
           );
         } else {
+          streakCount = 0;
+          $("#streak-num").text(streakCount);
+          $(".streak-bar").removeClass("bar-hidden");
           $(".question-bar.blank-questions").removeClass("bar-hidden");
           $(".question-bar.blank-questions").css(
             "flex-grow",
