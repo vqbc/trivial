@@ -26,8 +26,8 @@
         <label class="checkbox-label">Sort questions by difficulty?</label>
       </div>
       <div class="checkbox-wrap">
-        <input type="checkbox" checked class="input-check" id="input-hide"/>
-        <label class="checkbox-label">Hide question sources when printed?</label>
+        <input type="checkbox" class="input-check" id="input-hide"/>
+        <label class="checkbox-label">Hide question sources?</label>
       </div>
     </div>`;
   let problemOptions =
@@ -1509,9 +1509,9 @@
         <div class="input-container checkbox-container checkbox-container-small
         input-flex-full">
           <div class="checkbox-wrap">
-            <input type="checkbox" checked class="input-check" id="input-hide"/>
+            <input type="checkbox" class="input-check" id="input-hide"/>
             <label class="checkbox-label">
-              Hide question sources when printed?
+              Hide question sources?
             </label>
           </div>
         </div>
@@ -2851,13 +2851,13 @@
 
   function hideLinks() {
     if ($("#input-hide").prop("checked"))
-      $("#batch-text .source-link").addClass("noprint");
-    else $("#batch-text .source-link").removeClass("noprint");
+      $("#batch-text .source-link").addClass("source-link-hidden");
+    else $("#batch-text .source-link").removeClass("source-link-hidden");
   }
 
   function hideToggle() {
     $("#input-hide").change(() => {
-      $("#batch-text .source-link").toggleClass("noprint");
+      $("#batch-text .source-link").toggleClass("source-link-hidden");
     });
   }
 

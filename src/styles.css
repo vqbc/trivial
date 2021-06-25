@@ -789,6 +789,10 @@ a.mw-selflink {
 
 .source-link {
   font-weight: normal;
+}
+
+.source-link-hidden {
+  display: none;
 } /**/
 
 /* Search and history */
