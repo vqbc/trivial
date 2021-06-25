@@ -150,16 +150,16 @@
       $("#serif-toggle").text("Serif font");
     }
     if (JSON.parse(localStorage.getItem("justifyText"))) {
-      $("#justify-toggle").text("Justified text");
+      $("#justify-toggle").text("Justified");
     }
     if (JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
-      $("#katex-toggle").text("KaTeX off");
+      $("#katex-toggle").addClass("setting-off");
     }
     if (JSON.parse(localStorage.getItem("tabLinksExternal"))) {
       $("#links-toggle").text("New tab links: AoPS");
     }
     if (JSON.parse(localStorage.getItem("countersHidden"))) {
-      $("#counter-toggle").text("Counters off");
+      $("#counter-toggle").addClass("setting-off");
     }
 
     $("#dark-toggle").click(() => {
@@ -207,27 +207,54 @@
       $(".article-text").toggleClass("justify-text");
       if (!JSON.parse(localStorage.getItem("justifyText"))) {
         localStorage.setItem("justifyText", true);
-        $("#justify-toggle").text("Justified text");
+        $("#justify-toggle").text("Justified");
       } else {
         localStorage.setItem("justifyText", false);
-        $("#justify-toggle").text("Unjustified text");
+        $("#justify-toggle").text("Unjustified");
       }
     });
 
     $("#katex-toggle").click(() => {
       settingsClicked += "4";
       $(".article-text").toggleClass("katex-text");
-      if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
+      $("#katex-toggle").toggleClass("setting-off");
+      if (!JSON.parse(localStorage.getItem("mathJaxDisabled")))
         localStorage.setItem("mathJaxDisabled", true);
-        $("#katex-toggle").text("KaTeX off");
-      } else {
-        localStorage.setItem("mathJaxDisabled", false);
-        $("#katex-toggle").text("KaTeX on");
-      }
+      else localStorage.setItem("mathJaxDisabled", false);
+    });
+
+    $("#print-toggle").click(() => {
+      settingsClicked += "5";
+
+      $(".page-container").toggleClass("nolinks-text");
+      $("#print-toggle").toggleClass("setting-off");
+      if (printLinks) printLinks = false;
+      else printLinks = true;
+    });
+
+    $("#counter-toggle").click(() => {
+      settingsClicked += "6";
+
+      $("main").toggleClass("hide-counters");
+      $("#counter-toggle").toggleClass("setting-off");
+      if (!JSON.parse(localStorage.getItem("countersHidden")))
+        localStorage.setItem("countersHidden", true);
+      else localStorage.setItem("countersHidden", false);
     });
 
     $("#links-toggle").click(() => {
-      settingsClicked += "5";
+      settingsClicked += "7";
+
+      if (settingsClicked === "1234567" && $("#fun-toggle").length === 0)
+        $("#counter-toggle").after(`
+          <button class="text-button footer-button" id="fun-toggle" tabindex="0">
+            Made you click
+          </button>`);
+
+      $("#fun-toggle").click(function () {
+        $(".divider").remove();
+        $(this).remove();
+      });
 
       if (!JSON.parse(localStorage.getItem("tabLinksExternal"))) {
         localStorage.setItem("tabLinksExternal", true);
@@ -259,42 +286,6 @@
             title: "",
           });
         });
-      }
-    });
-
-    $("#print-toggle").click(() => {
-      settingsClicked += "6";
-
-      $(".page-container").toggleClass("nolinks-text");
-      if (printLinks) {
-        printLinks = false;
-        $("#print-toggle").text("Print w/o links");
-      } else {
-        printLinks = true;
-        $("#print-toggle").text("Print w/ links");
-      }
-
-      $("#fun-toggle").click(function () {
-        $(".divider").remove();
-        $(this).remove();
-      });
-    });
-
-    $("#counter-toggle").click(() => {
-      settingsClicked += "7";
-      if (settingsClicked === "1234567" && $("#fun-toggle").length === 0)
-        $("#counter-toggle").after(`
-          <button class="text-button footer-button" id="fun-toggle" tabindex="0">
-            Made you click
-          </button>`);
-
-      $("main").toggleClass("hide-counters");
-      if (!JSON.parse(localStorage.getItem("countersHidden"))) {
-        localStorage.setItem("countersHidden", true);
-        $("#counter-toggle").text("Counters off");
-      } else {
-        localStorage.setItem("countersHidden", false);
-        $("#counter-toggle").text("Counters on");
       }
     });
   })();

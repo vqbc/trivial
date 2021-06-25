@@ -252,6 +252,10 @@ body {
   margin: 0 0.2em;
   font: normal 1.1em "Latin Modern Sans Demi-Condensed", sans-serif;
   word-spacing: -0.25ch;
+}
+
+.setting-off {
+  text-decoration: line-through;
 } /**/
 
 /* Problem options input */
