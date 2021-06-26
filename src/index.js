@@ -35,14 +35,14 @@
     placeholder="Subjects, e.g. Olympiad Algebra Problems"
     data-whitelist="3D Geometry Problems, Introductory Algebra Problems, ` +
     `Introductory Combinatorics Problems, Introductory Geometry Problems, ` +
-    `Introductory Logic Problems, Introductory Number Theory Problems, ` +
-    `Introductory Probability Problems, Introductory Trigonometry Problems, ` +
-    `Intermediate Algebra Problems, Intermediate Combinatorics Problems, ` +
-    `Intermediate Geometry Problems, Intermediate Number Theory Problems, ` +
-    `Intermediate Probability Problems, Intermediate Trigonometry Problems, ` +
-    `Olympiad Algebra Problems, Olympiad Combinatorics Problems, ` +
-    `Olympiad Geometry Problems, Olympiad Inequality Problems, ` +
-    `Olympiad Number Theory Problems, Olympiad Trigonometry Problems">
+    `Introductory Number Theory Problems, Introductory Probability Problems, ` +
+    `Introductory Trigonometry Problems, Intermediate Algebra Problems, ` +
+    `Intermediate Combinatorics Problems, Intermediate Geometry Problems, ` +
+    `Intermediate Number Theory Problems, Intermediate Probability Problems, ` +
+    `Intermediate Trigonometry Problems, Olympiad Algebra Problems, ` +
+    `Olympiad Combinatorics Problems, Olympiad Geometry Problems, ` +
+    `Olympiad Inequality Problems, Olympiad Number Theory Problems, ` +
+    `Olympiad Trigonometry Problems">
   </input>
   <input class="input-multi input-flex-full" id="input-tests"
     placeholder="Tests, e.g. AMC 10"
