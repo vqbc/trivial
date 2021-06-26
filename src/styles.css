@@ -726,6 +726,7 @@ tags > span {
 
 .justify-text p {
   text-align: justify;
+  -webkit-hyphens: auto;
   hyphens: auto;
 } /**/
 
