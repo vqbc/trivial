@@ -150,16 +150,16 @@
       $("#serif-toggle").text("Serif font");
     }
     if (JSON.parse(localStorage.getItem("justifyText"))) {
-      $("#justify-toggle").text("Justified");
+      $("#justify-toggle").text("Justified text");
     }
     if (JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
-      $("#katex-toggle").addClass("setting-off");
+      $("#katex-toggle").text("KaTeX off");
     }
     if (JSON.parse(localStorage.getItem("tabLinksExternal"))) {
       $("#links-toggle").text("New tab links: AoPS");
     }
     if (JSON.parse(localStorage.getItem("countersHidden"))) {
-      $("#counter-toggle").addClass("setting-off");
+      $("#counter-toggle").text("Counters off");
     }
 
     $("#dark-toggle").click(() => {
@@ -207,45 +207,42 @@
       $(".article-text").toggleClass("justify-text");
       if (!JSON.parse(localStorage.getItem("justifyText"))) {
         localStorage.setItem("justifyText", true);
-        $("#justify-toggle").text("Justified");
+        $("#justify-toggle").text("Justified text");
       } else {
         localStorage.setItem("justifyText", false);
-        $("#justify-toggle").text("Unjustified");
+        $("#justify-toggle").text("Unjustified text");
       }
     });
 
     $("#katex-toggle").click(() => {
       settingsClicked += "4";
       $(".article-text").toggleClass("katex-text");
-      $("#katex-toggle").toggleClass("setting-off");
-      if (!JSON.parse(localStorage.getItem("mathJaxDisabled")))
+      if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
         localStorage.setItem("mathJaxDisabled", true);
-      else localStorage.setItem("mathJaxDisabled", false);
+        $("#katex-toggle").text("KaTeX off");
+      } else {
+        localStorage.setItem("mathJaxDisabled", false);
+        $("#katex-toggle").text("KaTeX on");
+      }
     });
 
     $("#print-toggle").click(() => {
       settingsClicked += "5";
 
       $(".page-container").toggleClass("nolinks-text");
-      $("#print-toggle").toggleClass("setting-off");
-      if (printLinks) printLinks = false;
-      else printLinks = true;
+      if (printLinks) {
+        printLinks = false;
+        $("#print-toggle").text("Print w/o links");
+      } else {
+        printLinks = true;
+        $("#print-toggle").text("Print w/ links");
+      }
     });
 
     $("#counter-toggle").click(() => {
       settingsClicked += "6";
 
-      $("main").toggleClass("hide-counters");
-      $("#counter-toggle").toggleClass("setting-off");
-      if (!JSON.parse(localStorage.getItem("countersHidden")))
-        localStorage.setItem("countersHidden", true);
-      else localStorage.setItem("countersHidden", false);
-    });
-
-    $("#links-toggle").click(() => {
-      settingsClicked += "7";
-
-      if (settingsClicked === "1234567" && $("#fun-toggle").length === 0)
+      if (settingsClicked === "12356" && $("#fun-toggle").length === 0)
         $("#counter-toggle").after(`
           <button class="text-button footer-button" id="fun-toggle" tabindex="0">
             Made you click
@@ -255,6 +252,22 @@
         $(".divider").remove();
         $(this).remove();
       });
+
+      $("main").toggleClass("hide-counters");
+      if (!JSON.parse(localStorage.getItem("countersHidden"))) {
+        localStorage.setItem("countersHidden", true);
+        $("#counter-toggle").text("Counters off");
+      } else {
+        localStorage.setItem("countersHidden", false);
+        $("#counter-toggle").text("Counters on");
+      }
+    });
+
+    $("#links-toggle").click(() => {
+      settingsClicked += "7";
+
+      if (settingsClicked === "1234567")
+        console.log("Congratulations! Go to https://discord.gg/vQRpemzUkG")
 
       if (!JSON.parse(localStorage.getItem("tabLinksExternal"))) {
         localStorage.setItem("tabLinksExternal", true);

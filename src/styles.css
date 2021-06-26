@@ -254,6 +254,10 @@ body {
   word-spacing: -0.25ch;
 }
 
+.hidden-button {
+  display: none;
+}
+
 .setting-off {
   text-decoration: line-through;
 } /**/
@@ -722,6 +726,7 @@ tags > span {
 
 .justify-text p {
   text-align: justify;
+  hyphens: auto;
 } /**/
 
 /* Links */
