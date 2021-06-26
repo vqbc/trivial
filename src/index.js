@@ -1485,7 +1485,7 @@
       grid: true,
       min: 1974,
       max: 2021,
-      from: 1974,
+      from: 2002,
       to: 2021,
       prettify_enabled: false,
     });
@@ -1656,7 +1656,7 @@
       grid: true,
       min: 1974,
       max: 2021,
-      from: 1974,
+      from: 2002,
       to: 2021,
       prettify_enabled: false,
     });
