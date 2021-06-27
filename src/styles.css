@@ -249,13 +249,18 @@ body {
 }
 
 .footer-button {
-  margin: 0 0.2em;
   font: normal 1.1em "Latin Modern Sans Demi-Condensed", sans-serif;
-  word-spacing: -0.25ch;
+  word-spacing: -0.2ch;
 }
 
 .hidden-button {
   display: none;
+}
+
+.settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.5em;
 }
 
 .setting-off {
