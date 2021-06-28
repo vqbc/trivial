@@ -267,7 +267,7 @@
       settingsClicked += "7";
 
       if (settingsClicked === "1234567")
-        console.log("Congratulations! Go to https://discord.gg/vQRpemzUkG")
+        console.log("Congratulations! Go to https://discord.gg/vQRpemzUkG");
 
       if (!JSON.parse(localStorage.getItem("tabLinksExternal"))) {
         localStorage.setItem("tabLinksExternal", true);
@@ -1494,8 +1494,8 @@
       grid: true,
       min: 0,
       max: 10,
-      from: 0,
-      to: 10,
+      from: 1,
+      to: 4.5,
       step: 0.5,
     });
   });
@@ -1665,8 +1665,8 @@
       grid: true,
       min: 0,
       max: 10,
-      from: 0,
-      to: 10,
+      from: 1,
+      to: 4.5,
       step: 0.5,
     });
     $("#input-number").ionRangeSlider({
