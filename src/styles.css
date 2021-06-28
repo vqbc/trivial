@@ -103,6 +103,10 @@ body {
   margin-top: 0.6rem;
   color: var(--minor-color);
   font: normal 1.1em "Computer Modern Bright", sans-serif;
+}
+
+.header-link {
+  cursor: pointer;
 } /**/
 
 /* Big top buttons */
