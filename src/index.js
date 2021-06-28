@@ -23,7 +23,7 @@
     <div class="input-container checkbox-container input-flex-full"> 
       <div class="checkbox-wrap">
         <input type="checkbox" checked class="input-check" id="input-sort"/>
-        <label class="checkbox-label">Sort questions by difficulty?</label>
+        <label class="checkbox-label">Sort by difficulty?</label>
       </div>
       <div class="checkbox-wrap">
         <input type="checkbox" class="input-check" id="input-hide"/>
