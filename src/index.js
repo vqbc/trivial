@@ -74,6 +74,18 @@
         specific filters are applied.
       </li>
       <li>
+        AMC Tests includes tests from the AMC 8 to USAMO, plus the IMO (which
+          the AMC program selects for but doesn’t administer).
+      </li>
+      <li>
+        Copied problem lists can be pasted into inputs for multiple problems,
+        such as in Choose Problems.
+      </li>
+      <li>
+        Except for the theme, settings only affect how problems & articles are
+        shown.
+      </li>
+      <li>
         Difficulty levels group problems roughly based on test and problem
         number, and will likely be inaccurate for earlier years. They are
         available for AMC Tests and most other tests on the AoPS Wiki, based on
@@ -81,23 +93,6 @@
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
         >AoPS Wiki ratings</a>. A chart of the main ones is given below:
         <div id="difficulty-chart"></div>
-      </li>
-      <li>
-        Copied problem lists can be pasted into inputs for multiple problems,
-        such as in Choose Problems.
-      </li>
-      <li>
-        Except for light/dark theme, most settings only affect how
-        problems & articles are shown.
-      </li>
-      <li>
-        Turning off <a href="https://katex.org">KaTeX</a> uses the original
-        raster images from AoPS for LaTeX snippets, which makes them blurrier
-        but prevents possible rendering bugs.
-      </li>
-      <li>
-        AMC Tests refers to tests from the AMC 8 to USAMO,
-        plus the IMO (which the AMC program selects for but doesn’t administer).
       </li>
       <li>
         Historical notes:
