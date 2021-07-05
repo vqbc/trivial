@@ -592,11 +592,11 @@ tags > span {
   break-before: page;
 }
 
-#solutions-header {
+.collapse-header {
   position: relative;
 }
 
-#solutions-header::after {
+.collapse-header::after {
   position: absolute;
   top: calc(50% - 2px);
   right: 14px;
@@ -612,11 +612,11 @@ tags > span {
   content: "";
 }
 
-.section-collapsed #solutions-text {
+.section-collapsed > *:not(h2) {
   display: none;
 }
 
-.section-collapsed #solutions-header::after {
+.section-collapsed .collapse-header::after {
   top: calc(50% - 7px);
   transform: rotate(135deg);
 } /**/
@@ -770,9 +770,9 @@ tags > span {
   text-align: center;
 }
 
-#anscheck-section.anscheck-scoreonly .feedback-item,
-#anscheck-section.anscheck-checkonly .feedback-answer,
-#anscheck-section:not(.anscheck-amcscore) #amc-score {
+#batchans-section.batchans-scoreonly .feedback-item,
+#batchans-section.batchans-checkonly .feedback-answer,
+#batchans-section:not(.batchans-amcscore) #amc-score {
   display: none;
 } /**/
 
@@ -1282,7 +1282,7 @@ footer {
   a.aops-link,
   #copy-problems,
   .article-problem:hover .replace-problem,
-  #anscheck-section,
+  #batchans-section,
   .section-collapsed,
   #solutions-header::after,
   .noprint {

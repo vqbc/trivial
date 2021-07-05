@@ -1,7 +1,8 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-(() => { // vQRpemzUkG
+(() => {
+  // vQRpemzUkG
   let allPages = [];
   let allProblems = [];
   $.getJSON("data/allpages.json?20210424", (json) => {
@@ -255,7 +256,7 @@
       <div class="article-text" id="problem-text"></div>
     </div>
     <div class="problem-section section-collapsed" id="solutions-section">
-      <h2 class="section-header" id="solutions-header">Solutions</h2>
+      <h2 class="section-header collapse-header" id="solutions-header">Solutions</h2>
       <div class="article-text" id="solutions-text"></div>
     </div>`
     );
@@ -376,7 +377,7 @@
       <div class="article-text" id="batch-text"></div>
     </div>
     <div class="problem-section section-collapsed" id="solutions-section">
-      <h2 class="section-header" id="solutions-header">Solutions</h2>
+      <h2 class="section-header collapse-header" id="solutions-header">Solutions</h2>
       <div class="article-text batch-solutions-text" id="solutions-text"></div>
     </div>`
     );
@@ -400,7 +401,7 @@
         <div class="article-text" id="batch-text"></div>
       </div>
       <div class="problem-section section-collapsed" id="solutions-section">
-        <h2 class="section-header" id="solutions-header">Solutions</h2>
+        <h2 class="section-header collapse-header" id="solutions-header">Solutions</h2>
         <div class="article-text batch-solutions-text" id="solutions-text"></div>
       </div>`
     );
@@ -729,10 +730,11 @@
       console.log(answer);
       if (answerClicked === answerClickedThen)
         if (answer) {
-          if ($("#anscheck-section").length === 0)
+          if ($("#batchans-section").length === 0)
             $("#solutions-section").before(
-              `<div class="problem-section section-collapsed" id="anscheck-section">
-              <h2 class="section-header" id="solutions-header">Answer Check
+              `<div class="problem-section" id="batchans-section">
+              <h2 class="section-header collapse-header" id="batchans-header">
+              Answer Check
                 <span class="header-minor">(opt.)</span></h2>
               <div class="answer-list"></div>
               <div class="options-input batchans-options">
@@ -768,6 +770,11 @@
             </div>`
             );
 
+          $("#batchans-header").off("click");
+          $("#batchans-header").click(() => {
+            $("#batchans-section").toggleClass("section-collapsed");
+          });
+
           if (answerClicked === answerClickedThen)
             $(".answer-list").append(`<div class="answer-box" index="${
               index + 1
@@ -784,31 +791,31 @@
       $(".feedback-item").remove();
 
       if ($("#score-only").prop("checked"))
-        $("#anscheck-section").addClass("anscheck-scoreonly");
+        $("#batchans-section").addClass("batchans-scoreonly");
       else if ($("#check-only").prop("checked"))
-        $("#anscheck-section").addClass("anscheck-checkonly");
-      else $("#anscheck-section").addClass("anscheck-showans");
+        $("#batchans-section").addClass("batchans-checkonly");
+      else $("#batchans-section").addClass("batchans-showans");
 
       if ($("#input-amc").prop("checked"))
-        $("#anscheck-section").addClass("anscheck-amcscore");
+        $("#batchans-section").addClass("batchans-amcscore");
 
       $("input[type=radio][name=input-feedback]").change(function () {
-        $("#anscheck-section").removeClass(
-          "anscheck-scoreonly anscheck-checkonly anscheck-showans"
+        $("#batchans-section").removeClass(
+          "batchans-scoreonly batchans-checkonly batchans-showans"
         );
         console.log(this.value);
         switch (this.value) {
           case "score-only":
-            $("#anscheck-section").addClass("anscheck-scoreonly");
+            $("#batchans-section").addClass("batchans-scoreonly");
           case "check-only":
-            $("#anscheck-section").addClass("anscheck-checkonly");
+            $("#batchans-section").addClass("batchans-checkonly");
           case "show-ans":
-            $("#anscheck-section").addClass("anscheck-showans");
+            $("#batchans-section").addClass("batchans-showans");
         }
       });
 
       $("#input-amc").change(() => {
-        $("#anscheck-section").toggleClass("anscheck-amcscore");
+        $("#batchans-section").toggleClass("batchans-amcscore");
       });
 
       let totalAnswers = $(".answer-box").length;
