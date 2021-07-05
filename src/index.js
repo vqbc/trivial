@@ -1,7 +1,7 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-(() => {
+(() => { // vQRpemzUkG
   let allPages = [];
   let allProblems = [];
   $.getJSON("data/allpages.json?20210424", (json) => {
@@ -23,11 +23,11 @@
     <div class="input-container checkbox-container input-flex-full"> 
       <div class="checkbox-wrap">
         <input type="checkbox" checked class="input-check" id="input-sort"/>
-        <label class="checkbox-label">Sort by difficulty?</label>
+        <label class="checkbox-label">Sort by difficulty</label>
       </div>
       <div class="checkbox-wrap">
         <input type="checkbox" class="input-check" id="input-hide"/>
-        <label class="checkbox-label">Hide question sources?</label>
+        <label class="checkbox-label">Hide question sources</label>
       </div>
     </div>`;
   let problemOptions =
@@ -147,18 +147,13 @@
     if (JSON.parse(localStorage.getItem("justifyText"))) {
       $("#justify-toggle").text("Justified text");
     }
-    if (JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
-      $("#katex-toggle").text("KaTeX off");
-    }
-    if (JSON.parse(localStorage.getItem("tabLinksExternal"))) {
-      $("#links-toggle").text("New tab links: AoPS");
-    }
     if (JSON.parse(localStorage.getItem("countersHidden"))) {
       $("#counter-toggle").text("Counters off");
     }
 
     $("#dark-toggle").click(() => {
       settingsClicked = "1";
+
       document.body.removeAttribute("style");
       document.querySelector(".page-container").removeAttribute("style");
       if (JSON.parse(localStorage.getItem("darkTheme"))) {
@@ -187,6 +182,7 @@
 
     $("#serif-toggle").click(() => {
       settingsClicked += "2";
+
       $(".article-text").toggleClass("serif-text");
       if (!JSON.parse(localStorage.getItem("serifFont"))) {
         localStorage.setItem("serifFont", true);
@@ -199,6 +195,7 @@
 
     $("#justify-toggle").click(() => {
       settingsClicked += "3";
+
       $(".article-text").toggleClass("justify-text");
       if (!JSON.parse(localStorage.getItem("justifyText"))) {
         localStorage.setItem("justifyText", true);
@@ -209,20 +206,8 @@
       }
     });
 
-    $("#katex-toggle").click(() => {
-      settingsClicked += "4";
-      $(".article-text").toggleClass("katex-text");
-      if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
-        localStorage.setItem("mathJaxDisabled", true);
-        $("#katex-toggle").text("KaTeX off");
-      } else {
-        localStorage.setItem("mathJaxDisabled", false);
-        $("#katex-toggle").text("KaTeX on");
-      }
-    });
-
     $("#print-toggle").click(() => {
-      settingsClicked += "5";
+      settingsClicked += "4";
 
       $(".page-container").toggleClass("nolinks-text");
       if (printLinks) {
@@ -235,9 +220,9 @@
     });
 
     $("#counter-toggle").click(() => {
-      settingsClicked += "6";
+      settingsClicked += "5";
 
-      if (settingsClicked === "12356" && $("#fun-toggle").length === 0)
+      if (settingsClicked === "12345" && $("#fun-toggle").length === 0)
         $("#counter-toggle").after(`
           <button class="text-button footer-button" id="fun-toggle" tabindex="0">
             Made you click
@@ -255,45 +240,6 @@
       } else {
         localStorage.setItem("countersHidden", false);
         $("#counter-toggle").text("Counters on");
-      }
-    });
-
-    $("#links-toggle").click(() => {
-      settingsClicked += "7";
-
-      if (settingsClicked === "1234567")
-        console.log("Congratulations! Go to https://discord.gg/vQRpemzUkG");
-
-      if (!JSON.parse(localStorage.getItem("tabLinksExternal"))) {
-        localStorage.setItem("tabLinksExternal", true);
-        $("#links-toggle").text("New tab links: AoPS");
-
-        $("a:not(#aops-wiki-link):not(.aops-link)").each(function () {
-          $(this).attr({
-            href: $(this)
-              .attr("href")
-              ?.replace(
-                "?page=",
-                "https://artofproblemsolving.com/wiki/index.php/"
-              ),
-            title: "",
-          });
-        });
-      } else {
-        localStorage.setItem("tabLinksExternal", false);
-        $("#links-toggle").text("New tab links: Trivial");
-
-        $("a:not(#aops-wiki-link):not(.aops-link)").each(function () {
-          $(this).attr({
-            href: $(this)
-              .attr("href")
-              ?.replace(
-                "https://artofproblemsolving.com/wiki/index.php/",
-                "?page="
-              ),
-            title: "",
-          });
-        });
       }
     });
   })();
@@ -661,6 +607,11 @@
     directLinks();
     hideLinks();
     breakSets();
+    addBatchAnswers(
+      pagenames
+        .split("|")
+        .map((e) => e.replace(/_/g, " ").replace("#", "Problems/Problem "))
+    );
   }
 
   async function addAnswer(pagename) {
@@ -754,6 +705,158 @@
         });
       }
     }
+  }
+
+  async function addBatchAnswers(pagenames) {
+    for (let [index, pagename] of pagenames.entries()) {
+      answerClicked++;
+      let answerClickedThen = answerClicked;
+      console.log(pagename);
+      let answersTitle = `${
+        pagename?.split(" Problems/Problem")[0]
+      } Answer Key`;
+      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+      let params = `action=parse&page=${answersTitle}&format=json`;
+
+      let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+      let json = await response.json();
+      let answerText = json.parse?.text["*"];
+      let problemNum = computeNumber(pagename);
+      let answer = $($.parseHTML(answerText))
+        ?.find("ol li")
+        ?.eq(problemNum - 1)
+        ?.text();
+      console.log(answer);
+      if (answerClicked === answerClickedThen)
+        if (answer) {
+          if ($("#anscheck-section").length === 0)
+            $("#solutions-section").before(
+              `<div class="problem-section section-collapsed" id="anscheck-section">
+              <h2 class="section-header" id="solutions-header">Answer Check
+                <span class="header-minor">(opt.)</span></h2>
+              <div class="answer-list"></div>
+              <div class="options-input batchans-options">
+                <div class="input-container checkbox-container
+                input-flexone-full">
+                  <div class="checkbox-wrap">
+                    <div class="radio-block">
+                      <input type="radio" name="input-feedback" id="score-only"
+                      value="score-only">
+                      <label class="checkbox-label">Only show score</label>
+                    </div>
+                    <div class="radio-block">
+                      <input type="radio" name="input-feedback" id="check-only"
+                      value="check-only">
+                      <label class="checkbox-label">Only mark questions</label>
+                    </div>
+                    <div class="radio-block">
+                      <input type="radio" name="input-feedback" id="show-ans"
+                      value="show-ans" checked>
+                      <label class="checkbox-label">Show correct answers</label>
+                    </div>
+                    <div class="radio-block">
+                      <input type="checkbox" class="input-check" id="input-amc"/>
+                      <label class="checkbox-label">Use AMC 10/12 scoring</label>
+                    </div>
+                  </div>
+                </div>
+                <button class="input-button input-button-flexone-full"
+                id="batchans-button">
+                  Check Answers
+                </button>
+              </div>
+            </div>`
+            );
+
+          if (answerClicked === answerClickedThen)
+            $(".answer-list").append(`<div class="answer-box" index="${
+              index + 1
+            }"
+            answer="${answer}" aime="${computeTest(pagename) === "AIME"}">
+            <span class="answer-num">${index + 1}</span>
+            <input class="input-field input-batchans" type="text"
+            placeholder="Enter answer"/>
+          </div>`);
+        }
+    }
+
+    $("#batchans-button").click(async () => {
+      $(".feedback-item").remove();
+
+      if ($("#score-only").prop("checked"))
+        $("#anscheck-section").addClass("anscheck-scoreonly");
+      else if ($("#check-only").prop("checked"))
+        $("#anscheck-section").addClass("anscheck-checkonly");
+      else $("#anscheck-section").addClass("anscheck-showans");
+
+      if ($("#input-amc").prop("checked"))
+        $("#anscheck-section").addClass("anscheck-amcscore");
+
+      $("input[type=radio][name=input-feedback]").change(function () {
+        $("#anscheck-section").removeClass(
+          "anscheck-scoreonly anscheck-checkonly anscheck-showans"
+        );
+        console.log(this.value);
+        switch (this.value) {
+          case "score-only":
+            $("#anscheck-section").addClass("anscheck-scoreonly");
+          case "check-only":
+            $("#anscheck-section").addClass("anscheck-checkonly");
+          case "show-ans":
+            $("#anscheck-section").addClass("anscheck-showans");
+        }
+      });
+
+      $("#input-amc").change(() => {
+        $("#anscheck-section").toggleClass("anscheck-amcscore");
+      });
+
+      let totalAnswers = $(".answer-box").length;
+      let rightAnswers = 0;
+      let blankAnswers = 0;
+      let wrongAnswers = 0;
+      $(".answer-box").each(function () {
+        let originalAnswer = sanitize($(this).find(".input-batchans").val());
+        originalAnswer = originalAnswer.toUpperCase();
+        let finalAnswer = originalAnswer;
+        if (finalAnswer) {
+          if ($(this).attr("aime") === "true")
+            finalAnswer = originalAnswer.padStart(3, "0");
+          if (finalAnswer === $(this).attr("answer")) {
+            $(this).append(
+              `<span class="feedback-item correct-feedback"><span class="feedback-icon">✓</span></span>`
+            );
+            rightAnswers++;
+          } else {
+            $(this).append(
+              `<span class="feedback-item wrong-feedback">
+                <span class="feedback-icon">✗</span>
+                <span class="feedback-answer">(${$(this).attr("answer")})</span>
+              </span>`
+            );
+            wrongAnswers++;
+          }
+        } else {
+          $(this).append(
+            `<span class="feedback-item blank-feedback">
+              <span class="feedback-icon">&#8202;&#8210;&#8202;</span>
+              <span class="feedback-answer">(${$(this).attr("answer")})</span>
+            </span>`
+          );
+          blankAnswers++;
+        }
+      });
+
+      if ($(".score-box").length === 0)
+        $(".batchans-options").after(
+          `<div class="score-box">
+              <p class="score-line" id="number-score"></p>
+              <p class="score-line" id="amc-score"></p>
+            </div>`
+        );
+      $("#number-score").text(`Correct: ${rightAnswers}/${totalAnswers}`);
+      $("#amc-score").text(`Score: ${rightAnswers * 6 + blankAnswers * 1.5}`);
+    });
   }
 
   // Gets and checks pages
@@ -1510,7 +1613,7 @@
           <div class="checkbox-wrap">
             <input type="checkbox" class="input-check" id="input-hide"/>
             <label class="checkbox-label">
-              Hide question sources?
+              Hide question sources
             </label>
           </div>
         </div>
@@ -1679,11 +1782,11 @@
     $("#main-button-container").after(
       `<div class="options-input" id="search-input">
         <div class="input-container checkbox-container
-          checkbox-container-smaller input-flexer-full">
+          checkbox-container-smaller input-flexino-full">
           <div class="checkbox-wrap">
             <input type="checkbox" class="input-check" id="input-problemsonly"/>
             <label class="checkbox-label">
-              Only show problems?
+              Show problems only
             </label>
           </div>
         </div>
@@ -1911,6 +2014,7 @@
         directLinks();
         hideLinks();
         breakSets();
+        addBatchAnswers(problems.map((e) => e.title));
       }
     }
   });
@@ -2061,6 +2165,7 @@
       directLinks();
       hideLinks();
       breakSets();
+      addBatchAnswers(problems.map((e) => e.title));
     }
   });
 
@@ -2303,6 +2408,7 @@
       directLinks();
       hideLinks();
       breakSets();
+      addBatchAnswers(problems.map((e) => e.title));
     }
   });
 
@@ -2767,12 +2873,6 @@
 
     if (JSON.parse(localStorage.getItem("justifyText")))
       $(".article-text").addClass("justify-text");
-
-    if (!JSON.parse(localStorage.getItem("mathJaxDisabled"))) {
-      $(".article-text").addClass("katex-text");
-    } else {
-      $(".article-text").removeClass("katex-text");
-    }
   }
 
   function changeName() {
@@ -2805,16 +2905,10 @@
     $("a").each(function () {
       let href = $(this).attr("href")?.split("#")[0];
       if (href && /^\/wiki\/index\.php\//.test(href)) {
-        if (JSON.parse(localStorage.getItem("tabLinksExternal")))
-          $(this).attr({
-            href: `https://artofproblemsolving.com${href}`,
-            title: "",
-          });
-        else
-          $(this).attr({
-            href: href.replace("/wiki/index.php/", "?page="),
-            title: "",
-          });
+        $(this).attr({
+          href: href.replace("/wiki/index.php/", "?page="),
+          title: "",
+        });
       }
     });
 

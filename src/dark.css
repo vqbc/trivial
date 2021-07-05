@@ -26,6 +26,7 @@
     --secondary-button-focus-color: hsl(183deg, 39%, 70%);
     --input-button-color: hsl(177deg, 39%, 43%);
     --input-button-focus-color: hsl(177deg, 39%, 70%);
+    --input-layer-color: hsl(201deg, 8%, 19%);
     --input-focus-color: hsl(201deg, 5%, 33%);
     --placeholder-color: hsl(0deg, 0%, 100%, 50%);
     --placeholder-disabled-color: hsl(0deg, 0%, 100%, 20%);

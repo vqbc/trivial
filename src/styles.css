@@ -15,7 +15,7 @@
     linear-gradient(#f3f3f3, #f3f3f3);
   --page-container-color: #fcfcfc;
   --page-container-box-shadow: 0 5px 20px hsl(217deg, 100%, 5%, 20%);
-  --item-color: white;
+  --item-color: #fefefe;
   --item-disabled-color: #f7f7f7;
   --button-3d-shadow: hsl(0deg, 0%, 0%, 10%);
   --main-button-color: hsl(189deg, 44%, 48%);
@@ -28,6 +28,7 @@
   --secondary-button-focus-color: hsl(183deg, 44%, 75%);
   --input-button-color: hsl(177deg, 44%, 48%);
   --input-button-focus-color: hsl(177deg, 44%, 75%);
+  --input-layer-color: #fff;
   --input-focus-color: #ccc;
   --secondary-box-shadow: 0 2px 5px hsl(217deg, 100%, 5%, 20%);
   --secondary-hover-box-shadow: 0 3px 5px hsl(217deg, 100%, 5%, 20%);
@@ -462,7 +463,7 @@ tags > span {
   text-align: center;
 } /**/
 
-/* Checkbox */
+/* Checkbox & radio */
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -484,6 +485,10 @@ tags > span {
 .checkbox-label {
   margin-bottom: 0;
   color: var(--secondary-color);
+}
+
+.radio-block {
+  display: inline-block;
 } /**/
 
 /* Advanced options (not currently used) */
@@ -570,6 +575,10 @@ tags > span {
   font-family: "Computer Modern Bright", sans-serif;
   text-shadow: var(--main-text-shadow);
   background: var(--section-color);
+}
+
+.header-minor {
+  font-size: 0.8em;
 }
 
 .problem-section {
@@ -699,7 +708,27 @@ tags > span {
   margin-bottom: 1.5rem;
 }
 
-#input-answer {
+.batchans-options {
+  margin: 1rem 0;
+}
+
+.answer-list {
+  margin-top: 1rem;
+}
+
+.answer-box {
+  margin: 0.5rem 0;
+}
+
+.answer-num {
+  display: inline-block;
+  min-width: 3ch;
+  font: 600 1.1em "Computer Modern Bright", sans-serif;
+}
+
+#input-answer,
+.input-batchans {
+  background: var(--input-layer-color);
   border-top: 1px solid rgba(0, 0, 0, 5%);
 }
 
@@ -711,17 +740,40 @@ tags > span {
   color: var(--placeholder-disabled-color);
 }
 
+.input-batchans {
+  width: min(23ch, calc(100% - 15ch));
+}
+
 .feedback-item {
   font: 600 1em "Computer Modern Bright", sans-serif;
   line-height: 1.5;
+}
+
+.feedback-icon {
+  font-family: "Inter", sans-serif;
 }
 
 .correct-feedback {
   color: var(--correct-color);
 }
 
+.blank-feedback {
+  color: var(--blank-color);
+}
+
 .wrong-feedback {
   color: var(--wrong-color);
+}
+
+.score-line {
+  font: 600 1.2em "Computer Modern Bright", sans-serif;
+  text-align: center;
+}
+
+#anscheck-section.anscheck-scoreonly .feedback-item,
+#anscheck-section.anscheck-checkonly .feedback-answer,
+#anscheck-section:not(.anscheck-amcscore) #amc-score {
+  display: none;
 } /**/
 
 /* Article text container */
@@ -956,15 +1008,8 @@ table:first-child {
 } /**/
 
 /* KaTeX */
-.article-text:not(.katex-text) .katex-container {
-  display: none;
-}
-
-.katex-text .fallback-container:not(.fallback-live) {
-  display: none;
-}
-
-.katex-text .katex-broken {
+.fallback-container:not(.fallback-live),
+.katex-broken {
   display: none;
 }
 
@@ -1058,6 +1103,11 @@ footer {
 @media (max-width: 1350px) {
   .page-container {
     width: 1125px;
+  }
+
+  .input-flexone-full,
+  .input-button-flexone-full {
+    flex: 100%;
   }
 }
 
@@ -1157,9 +1207,8 @@ footer {
 }
 
 @media (max-width: 436px) {
-  .input-flexer-full {
+  .input-flexino-full {
     flex: 100%;
-    margin-right: 0;
   }
 } /**/
 
@@ -1233,6 +1282,7 @@ footer {
   a.aops-link,
   #copy-problems,
   .article-problem:hover .replace-problem,
+  #anscheck-section,
   .section-collapsed,
   #solutions-header::after,
   .noprint {
