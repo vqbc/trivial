@@ -83,22 +83,16 @@
         such as in Choose Problems.
       </li>
       <li>
-        Except for the theme, settings only affect how problems & articles are
-        shown.
-      </li>
-      <li>
-        Difficulty levels group problems roughly based on test and problem
-        number, and will likely be inaccurate for earlier years. They are
-        available for AMC Tests and most other tests on the AoPS Wiki, based on
-        <a
+        Difficulty levels, revised from <a
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-        >AoPS Wiki ratings</a>. A chart of the main ones is given below:
+        >AoPS Wiki ratings</a>, group AMC (and other test) problems by test and
+        number and are less accurate for old exams.
         <div id="difficulty-chart"></div>
       </li>
       <li>
         Historical notes:
         <ul>
-          <li>The AJHSME is included as the AMC 8 tests before 1999.</li>
+          <li>AJHSME tests are counted as AMC 8 tests before 1999.</li>
           <li>
             The AHSME was introduced in its 30-question form in 1974. The AIME
             was introduced in 1983, and the AJHSME in 1985. USAJMO problems are
