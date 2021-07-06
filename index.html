@@ -160,6 +160,12 @@
       crossorigin="anonymous"
     />
     <link
+      href="fonts/computer-modern/sans/sans-italic.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
       href="fonts/computer-modern/sans/sans-bold.woff2"
       rel="preload"
       as="font"
@@ -256,30 +262,26 @@
         </div>
       </main>
       <footer>
-        <p class="footer-line disclaimer">
-          Pages from the
+        <p class="footer-line disclaimer printonly">
+          Using content from the
           <a
             id="aops-wiki-link"
             href="https://artofproblemsolving.com/wiki/index.php/"
             >AoPS Wiki</a
           >
-          | AMC problems by the
-          <a href="https://www.maa.org">MAA</a>
-          <span class="printonly"
-            >|
-            <a href="https://vqbc.github.io/trivial/">vqbc.github.io/trivial</a>
-          </span>
+          |
+          <a href="https://vqbc.github.io/trivial/">vqbc.github.io/trivial</a>
         </p>
-        <p class="footer-line siteinfo">
-          <span class="noprint">
-            <a href="https://vqbc.github.io/">Home</a> ⋅
-            <button class="link-button" id="dark-toggle" tabindex="0">
-              System theme
-            </button>
-            | <a href="https://github.com/vqbc/trivial">Github</a> ⋅
-            <a href="https://discord.gg/erHfKrn">Discord</a> ⋅
-            <a href="https://forms.gle/3ofW7BQ5g5UBmknH9">Contact</a>
-          </span>
+        <p class="footer-line siteinfo noprint">
+          <button class="text-button" id="dark-toggle" tabindex="0">
+            System theme
+          </button>
+          | <a href="https://vqbc.github.io/">Andrew Chang</a
+          ><span class="bullet"> ⋅ </span
+          ><span class="mobile-break"><br /></span>
+          <a href="https://github.com/vqbc/trivial">Github</a> ⋅
+          <a href="https://discord.gg/erHfKrn">Discord</a> ⋅
+          <a href="https://forms.gle/3ofW7BQ5g5UBmknH9">Contact</a>
         </p>
       </footer>
     </div>

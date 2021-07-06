@@ -1066,6 +1066,9 @@ main {
 footer {
   padding-bottom: 1em;
   color: var(--secondary-color);
+  font: 600 1em "Computer Modern Bright", sans-serif;
+  line-height: 1.5;
+  text-align: right;
   border-top: 1px solid var(--hr-color);
 }
 
@@ -1077,9 +1080,8 @@ footer {
   font-style: italic;
 }
 
-.siteinfo,
-.disclaimer {
-  text-align: right;
+.mobile-break {
+  display: none;
 } /**/
 
 /* Loading bar */
@@ -1201,6 +1203,14 @@ footer {
     flex-basis: 100%;
     height: 0;
   }
+
+  .bullet {
+    display: none;
+  }
+
+  .mobile-break {
+    display: inline;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1274,6 +1284,7 @@ footer {
 
   footer {
     margin: 0 2rem;
+    font: normal 1em "Latin Modern Sans", sans-serif;
   }
 
   footer a {

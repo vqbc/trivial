@@ -3069,7 +3069,7 @@
 
   function displaySettings() {
     $("#serif-toggle").click(() => {
-      settingsClicked += "2";
+      settingsClicked += "1";
 
       $(".article-text").toggleClass("serif-text");
       if (!JSON.parse(localStorage.getItem("serifFont"))) {
@@ -3082,7 +3082,7 @@
     });
 
     $("#justify-toggle").click(() => {
-      settingsClicked += "3";
+      settingsClicked += "2";
 
       $(".article-text").toggleClass("justify-text");
       if (!JSON.parse(localStorage.getItem("justifyText"))) {
@@ -3095,7 +3095,7 @@
     });
 
     $("#print-toggle").click(() => {
-      settingsClicked += "4";
+      settingsClicked += "3";
 
       $(".page-container").toggleClass("nolinks-text");
       if (printLinks) {
@@ -3108,9 +3108,9 @@
     });
 
     $("#counter-toggle").click(() => {
-      settingsClicked += "5";
+      settingsClicked += "4";
 
-      if (settingsClicked === "12345" && $("#fun-toggle").length === 0)
+      if (settingsClicked === "1234" && $("#fun-toggle").length === 0)
         $("#counter-toggle").after(`
           <button class="text-button footer-button" id="fun-toggle" tabindex="0">
             Made you click
