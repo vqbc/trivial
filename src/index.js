@@ -153,8 +153,6 @@
     }
 
     $("#dark-toggle").click(() => {
-      settingsClicked = "1";
-
       document.body.removeAttribute("style");
       document.querySelector(".page-container").removeAttribute("style");
       if (JSON.parse(localStorage.getItem("darkTheme"))) {
@@ -180,69 +178,6 @@
         $("#dark-toggle").text("Dark theme");
       }
     });
-
-    $("#serif-toggle").click(() => {
-      settingsClicked += "2";
-
-      $(".article-text").toggleClass("serif-text");
-      if (!JSON.parse(localStorage.getItem("serifFont"))) {
-        localStorage.setItem("serifFont", true);
-        $("#serif-toggle").text("Serif font");
-      } else {
-        localStorage.setItem("serifFont", false);
-        $("#serif-toggle").text("Sans font");
-      }
-    });
-
-    $("#justify-toggle").click(() => {
-      settingsClicked += "3";
-
-      $(".article-text").toggleClass("justify-text");
-      if (!JSON.parse(localStorage.getItem("justifyText"))) {
-        localStorage.setItem("justifyText", true);
-        $("#justify-toggle").text("Justified text");
-      } else {
-        localStorage.setItem("justifyText", false);
-        $("#justify-toggle").text("Unjustified text");
-      }
-    });
-
-    $("#print-toggle").click(() => {
-      settingsClicked += "4";
-
-      $(".page-container").toggleClass("nolinks-text");
-      if (printLinks) {
-        printLinks = false;
-        $("#print-toggle").text("Print w/o links");
-      } else {
-        printLinks = true;
-        $("#print-toggle").text("Print w/ links");
-      }
-    });
-
-    $("#counter-toggle").click(() => {
-      settingsClicked += "5";
-
-      if (settingsClicked === "12345" && $("#fun-toggle").length === 0)
-        $("#counter-toggle").after(`
-          <button class="text-button footer-button" id="fun-toggle" tabindex="0">
-            Made you click
-          </button>`);
-
-      $("#fun-toggle").click(function () {
-        $(".divider").remove();
-        $(this).remove();
-      });
-
-      $("main").toggleClass("hide-counters");
-      if (!JSON.parse(localStorage.getItem("countersHidden"))) {
-        localStorage.setItem("countersHidden", true);
-        $("#counter-toggle").text("Counters off");
-      } else {
-        localStorage.setItem("countersHidden", false);
-        $("#counter-toggle").text("Counters on");
-      }
-    });
   })();
 
   // Adds things
@@ -258,6 +193,36 @@
     <div class="problem-section section-collapsed" id="solutions-section">
       <h2 class="section-header collapse-header" id="solutions-header">Solutions</h2>
       <div class="article-text" id="solutions-text"></div>
+    </div>
+    <div class="display-settings">Display settings:
+          <button
+            class="text-button setting-button"
+            id="serif-toggle"
+            tabindex="0"
+          >
+            Sans font
+          </button> ⋅
+          <button
+            class="text-button setting-button"
+            id="justify-toggle"
+            tabindex="0"
+          >
+            Unjustified text
+          </button> ⋅
+          <button
+            class="text-button setting-button"
+            id="print-toggle"
+            tabindex="0"
+          >
+            Print w/ links
+          </button> ⋅
+          <button
+            class="text-button setting-button"
+            id="counter-toggle"
+            tabindex="0"
+          >
+            Counters on
+          </button>
     </div>`
     );
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -320,6 +285,7 @@
       customText();
       fixLinks();
       directLinks();
+      displaySettings();
       collapseSolutions();
 
       if ($(".practice-progress").length === 0) {
@@ -379,6 +345,36 @@
     <div class="problem-section section-collapsed" id="solutions-section">
       <h2 class="section-header collapse-header" id="solutions-header">Solutions</h2>
       <div class="article-text batch-solutions-text" id="solutions-text"></div>
+    </div>
+    <div class="display-settings">Display settings:
+          <button
+            class="text-button setting-button"
+            id="serif-toggle"
+            tabindex="0"
+          >
+            Sans font
+          </button> ⋅
+          <button
+            class="text-button setting-button"
+            id="justify-toggle"
+            tabindex="0"
+          >
+            Unjustified text
+          </button> ⋅
+          <button
+            class="text-button setting-button"
+            id="print-toggle"
+            tabindex="0"
+          >
+            Print w/ links
+          </button> ⋅
+          <button
+            class="text-button setting-button"
+            id="counter-toggle"
+            tabindex="0"
+          >
+            Counters on
+          </button>
     </div>`
     );
   }
@@ -403,6 +399,36 @@
       <div class="problem-section section-collapsed" id="solutions-section">
         <h2 class="section-header collapse-header" id="solutions-header">Solutions</h2>
         <div class="article-text batch-solutions-text" id="solutions-text"></div>
+      </div>
+      <div class="display-settings">Display settings:
+            <button
+              class="text-button setting-button"
+              id="serif-toggle"
+              tabindex="0"
+            >
+              Sans font
+            </button> ⋅
+            <button
+              class="text-button setting-button"
+              id="justify-toggle"
+              tabindex="0"
+            >
+              Unjustified text
+            </button> ⋅
+            <button
+              class="text-button setting-button"
+              id="print-toggle"
+              tabindex="0"
+            >
+              Print w/ links
+            </button> ⋅
+            <button
+              class="text-button setting-button"
+              id="counter-toggle"
+              tabindex="0"
+            >
+              Counters on
+            </button>
       </div>`
     );
   }
@@ -410,12 +436,43 @@
   async function addArticle(pagename, pushUrl) {
     $(".error").remove();
     $(".problem-section").remove();
+    $(".display-settings").remove();
     $(".notes").before(`<div class="problem-section">
       <h2 class="section-header" id="article-header"></h2>
       <a href="" class="aops-link">
         (View on the AoPS Wiki)
       </a>
       <div class="article-text" id="full-text"></div>
+    </div>
+    <div class="display-settings">Display settings:
+          <button
+            class="text-button setting-button"
+            id="serif-toggle"
+            tabindex="0"
+          >
+            Sans font
+          </button> ⋅
+          <button
+            class="text-button setting-button"
+            id="justify-toggle"
+            tabindex="0"
+          >
+            Unjustified text
+          </button> ⋅
+          <button
+            class="text-button setting-button"
+            id="print-toggle"
+            tabindex="0"
+          >
+            Print w/ links
+          </button> ⋅
+          <button
+            class="text-button setting-button"
+            id="counter-toggle"
+            tabindex="0"
+          >
+            Counters on
+          </button>
     </div>`);
 
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
@@ -490,6 +547,7 @@
     customText();
     fixLinks();
     directLinks();
+    displaySettings();
   }
 
   async function fillBatch(pagenames, pushUrl) {
@@ -606,6 +664,7 @@
     fixLinks();
     collapseSolutions();
     directLinks();
+    displaySettings();
     hideLinks();
     breakSets();
     addBatchAnswers(
@@ -2019,6 +2078,7 @@
         fixLinks();
         collapseSolutions();
         directLinks();
+        displaySettings();
         hideLinks();
         breakSets();
         addBatchAnswers(problems.map((e) => e.title));
@@ -2170,6 +2230,7 @@
       fixLinks();
       collapseSolutions();
       directLinks();
+      displaySettings();
       hideLinks();
       breakSets();
       addBatchAnswers(problems.map((e) => e.title));
@@ -2413,6 +2474,7 @@
       fixLinks();
       collapseSolutions();
       directLinks();
+      displaySettings();
       hideLinks();
       breakSets();
       addBatchAnswers(problems.map((e) => e.title));
@@ -2810,6 +2872,7 @@
   // Clear things
   function clearProblem() {
     $(".problem-section").remove();
+    $(".display-settings").remove();
     $(".results-container").remove();
     $("#load-results").remove();
   }
@@ -2825,6 +2888,7 @@
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
+    $(".display-settings").remove();
     $(".results-container").remove();
     $("#load-results").remove();
     $(".notes").remove();
@@ -2834,6 +2898,7 @@
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
+    $(".display-settings").remove();
     $(".results-container").remove();
     $("#load-results").remove();
     $(".notes").remove();
@@ -2851,6 +2916,7 @@
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
+    $(".display-settings").remove();
     $(".results-container").remove();
     $("#load-results").remove();
     $(".notes").remove();
@@ -2997,6 +3063,71 @@
             parseInt($(".question-bar.blank-questions").css("flex-grow"))
           );
         }
+      }
+    });
+  }
+
+  function displaySettings() {
+    $("#serif-toggle").click(() => {
+      settingsClicked += "2";
+
+      $(".article-text").toggleClass("serif-text");
+      if (!JSON.parse(localStorage.getItem("serifFont"))) {
+        localStorage.setItem("serifFont", true);
+        $("#serif-toggle").text("Serif font");
+      } else {
+        localStorage.setItem("serifFont", false);
+        $("#serif-toggle").text("Sans font");
+      }
+    });
+
+    $("#justify-toggle").click(() => {
+      settingsClicked += "3";
+
+      $(".article-text").toggleClass("justify-text");
+      if (!JSON.parse(localStorage.getItem("justifyText"))) {
+        localStorage.setItem("justifyText", true);
+        $("#justify-toggle").text("Justified text");
+      } else {
+        localStorage.setItem("justifyText", false);
+        $("#justify-toggle").text("Unjustified text");
+      }
+    });
+
+    $("#print-toggle").click(() => {
+      settingsClicked += "4";
+
+      $(".page-container").toggleClass("nolinks-text");
+      if (printLinks) {
+        printLinks = false;
+        $("#print-toggle").text("Print w/o links");
+      } else {
+        printLinks = true;
+        $("#print-toggle").text("Print w/ links");
+      }
+    });
+
+    $("#counter-toggle").click(() => {
+      settingsClicked += "5";
+
+      if (settingsClicked === "12345" && $("#fun-toggle").length === 0)
+        $("#counter-toggle").after(`
+          <button class="text-button footer-button" id="fun-toggle" tabindex="0">
+            Made you click
+          </button>`);
+
+      $("#fun-toggle").click(function () {
+        $(".divider").remove();
+        $(this).remove();
+      });
+
+      $("main").toggleClass("hide-counters");
+      if (!JSON.parse(localStorage.getItem("countersHidden"))) {
+        localStorage.setItem("countersHidden", true);
+        $("#counter-toggle").text("Counters off");
+      } else {
+        localStorage.setItem("countersHidden", false);
+        $("#counter-toggle").text("Counters on");
       }
     });
   }
