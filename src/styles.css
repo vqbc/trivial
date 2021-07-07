@@ -772,6 +772,10 @@ tags > span {
   text-align: center;
 }
 
+.amc-stats {
+  font: normal 0.8em "Latin Modern Sans", sans-serif;
+}
+
 #batchans-section.batchans-scoreonly .feedback-item,
 #batchans-section.batchans-checkonly .feedback-answer,
 #batchans-section:not(.batchans-amcscore) #amc-score {

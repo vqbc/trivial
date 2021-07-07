@@ -761,11 +761,10 @@
     }
   }
 
-  async function addBatchAnswers(pagenames) {
+  async function addBatchAnswers(pagenames, testName, testYear) {
     for (let [index, pagename] of pagenames.entries()) {
       answerClicked++;
       let answerClickedThen = answerClicked;
-      console.log(pagename);
       let answersTitle = `${
         pagename?.split(" Problems/Problem")[0]
       } Answer Key`;
@@ -915,7 +914,50 @@
             </div>`
         );
       $("#number-score").text(`Correct: ${rightAnswers}/${totalAnswers}`);
-      $("#amc-score").text(`Score: ${rightAnswers * 6 + blankAnswers * 1.5}`);
+      $("#amc-score").prepend(
+        `<span class="score-num">Score: ${
+          rightAnswers * 6 + blankAnswers * 1.5
+        }</span>`
+      );
+
+      let statTests = [
+        "AMC 8",
+        "AMC 10A",
+        "AMC 10B",
+        "AMC 12A",
+        "AMC 12B",
+        "AIME I",
+        "AIME II",
+      ];
+      if (testName && statTests.includes(testName)) {
+        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+        let params = `action=parse&page=AMC_historical_results&format=json`;
+
+        let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        let json = await response.json();
+        let statsText = json.parse?.text["*"];
+        let statsList = [];
+        $($.parseHTML(statsText))
+          .find(`h2:contains("${testYear}")`)
+          .nextAll(`h3:contains("${testName}")`)
+          .nextAll("ul")
+          .eq(0)
+          .children()
+          .each(function () {
+            let statsMatch = /floor|cutoff|roll|DHR|Distinction/i;
+            statName = $(this)
+              .text()
+              .replace("Distinguished Honor Roll", "DHR")
+              .replace("Honor roll", "Honor Roll");
+            if (statsMatch.test(statName)) {
+              statsList.push(statName);
+            }
+          });
+        console.log(statsList);
+        $(".score-num").after(
+          `<br/><span class="amc-stats">${statsList.join(", ")}</span>`
+        );
+      }
     });
   }
 
@@ -2055,9 +2097,7 @@
         let name = $("#input-name").val()
           ? sanitize($("#input-name").val())
           : sanitize(
-              `${$("#input-singleyear").val()} ${$(
-                "#input-singletest"
-              ).val()}`
+              `${$("#input-singleyear").val()} ${$("#input-singletest").val()}`
             );
         $("#batch-header").html(name);
         document.title = name + " - Trivial AoPS Wiki Reader";
@@ -2075,7 +2115,11 @@
         displaySettings();
         hideLinks();
         breakSets();
-        addBatchAnswers(problems.map((e) => e.title));
+        addBatchAnswers(
+          problems.map((e) => e.title),
+          $("#input-singletest").val(),
+          $("#input-singleyear").val()
+        );
       }
     }
   });
@@ -2876,7 +2920,7 @@
     history.pushState(
       {},
       "Trivial AoPS Wiki Reader",
-      location.href.split("?page=")[0]
+      location.href.split("?page=")[0].split("?problems=")[0]
     );
     lastParam = "";
     $(".options-input").remove();
@@ -2903,7 +2947,7 @@
     history.pushState(
       {},
       "Trivial AoPS Wiki Reader",
-      location.href.split("?page=")[0]
+      location.href.split("?page=")[0].split("?problems=")[0]
     );
     lastParam = "";
     $("#secondary-button-container").remove();
@@ -3343,7 +3387,6 @@
         else await addArticle(newPagename, false);
         lastParam = newPagename;
       } else if (newProblems && newProblems !== searchParams.get("problems")) {
-        console.log("Hi");
         clearOptionsWithoutHistory();
         $("#main-button-container").after(`${notes}`);
         renderChart();
