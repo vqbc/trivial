@@ -24,14 +24,14 @@
     "AMC 12B": { min: 2002, max: 2021 },
     "AIME I": { min: 2000, max: 2021 },
     "AIME II": { min: 2000, max: 2021 },
-    USAJMO: { min: 2010, max: 2020 },
+    USAJMO: { min: 2010, max: 2021 },
     USAMO: { min: 1974, max: 2020 },
     IMO: { min: 1974, max: 2020 },
-    AJHSME: { min: 1985, max: 2020 },
-    AHSME: { min: 1974, max: 2020 },
-    "AMC 10": { min: 2000, max: 2020 },
-    "AMC 12": { min: 2000, max: 2020 },
-    AIME: { min: 1983, max: 2020 },
+    AJHSME: { min: 1985, max: 1998 },
+    AHSME: { min: 1974, max: 1999 },
+    "AMC 10": { min: 2000, max: 2001 },
+    "AMC 12": { min: 2000, max: 2001 },
+    AIME: { min: 1983, max: 1999 },
   };
   let batchOptions = `<input class="input-field"
       id="input-name" type="text" placeholder="Batch name (optional)"/>
@@ -2093,7 +2093,6 @@
           );
         } else {
           console.log("Invalid problem, skipping...");
-          problemTitles.splice(pageIndex, 1);
         }
       }
 
@@ -2266,7 +2265,6 @@
           );
         } else {
           console.log("Invalid problem, skipping...");
-          problemTitles.splice(pageIndex, 1);
           invalidProblems++;
         }
       }
