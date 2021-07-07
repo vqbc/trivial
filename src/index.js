@@ -2057,7 +2057,7 @@
           : sanitize(
               `${$("#input-singleyear").val()} ${$(
                 "#input-singletest"
-              ).val()} Problems`
+              ).val()}`
             );
         $("#batch-header").html(name);
         document.title = name + " - Trivial AoPS Wiki Reader";
