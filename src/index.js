@@ -762,6 +762,9 @@
   }
 
   async function addBatchAnswers(pagenames, testName, testYear) {
+    let params = "";
+    let response = "";
+    let json = "";
     for (let [index, pagename] of pagenames.entries()) {
       answerClicked++;
       let answerClickedThen = answerClicked;
@@ -769,10 +772,13 @@
         pagename?.split(" Problems/Problem")[0]
       } Answer Key`;
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params = `action=parse&page=${answersTitle}&format=json`;
+      let newParams = `action=parse&page=${answersTitle}&format=json`;
 
-      let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-      let json = await response.json();
+      if (newParams !== params) {
+        params = newParams;
+        response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+        json = await response.json();
+      }
       let answerText = json.parse?.text["*"];
       let problemNum = computeNumber(pagename);
       let answer = $($.parseHTML(answerText))
