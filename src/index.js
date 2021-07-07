@@ -16,6 +16,23 @@
   let testsList =
     `AMC 8, AMC 10A, AMC 10B, AMC 12A, AMC 12B, AIME I, AIME II, ` +
     `USAJMO, USAMO, IMO, AJHSME, AHSME, AMC 10, AMC 12, AIME`;
+  let validYears = {
+    "AMC 8": { min: 1999, max: 2020 },
+    "AMC 10A": { min: 2002, max: 2021 },
+    "AMC 10B": { min: 2002, max: 2021 },
+    "AMC 12A": { min: 2002, max: 2021 },
+    "AMC 12B": { min: 2002, max: 2021 },
+    "AIME I": { min: 2000, max: 2021 },
+    "AIME II": { min: 2000, max: 2021 },
+    USAJMO: { min: 2010, max: 2020 },
+    USAMO: { min: 1974, max: 2020 },
+    IMO: { min: 1974, max: 2020 },
+    AJHSME: { min: 1985, max: 2020 },
+    AHSME: { min: 1974, max: 2020 },
+    "AMC 10": { min: 2000, max: 2020 },
+    "AMC 12": { min: 2000, max: 2020 },
+    AIME: { min: 1983, max: 2020 },
+  };
   let batchOptions = `<input class="input-field"
       id="input-name" type="text" placeholder="Batch name (optional)"/>
     <input class="input-field"
@@ -1636,6 +1653,7 @@
       </div>
       ${notes}`
     );
+    updateYear();
     renderChart();
     collapseNotes();
     directLinks();
@@ -1737,6 +1755,7 @@
       </div>
       ${notes}`
     );
+    updateYear();
     renderChart();
     collapseNotes();
     directLinks();
@@ -1928,14 +1947,30 @@
   $(".page-container").on("click", "#single-button", async () => {
     clearProblem();
 
-    await addProblem(
-      sanitize(
-        `${$("#input-singleyear").val()} ${$(
-          "#input-singletest"
-        ).val()} Problems/Problem ${$("#input-singlenum").val()}`
-      ),
-      true
-    );
+    if (
+      $("#input-singleyear").val() <
+        validYears[$("#input-singletest").val()].min ||
+      $("#input-singleyear").val() >
+        validYears[$("#input-singletest").val()].max
+    ) {
+      $(".notes").before(
+        `<div class="problem-section">
+          <h2 class="section-header" id="article-header">Error</h2>
+          <p class="error">
+          The given test is not available for that year.
+        </p>
+        </div>`
+      );
+    } else {
+      await addProblem(
+        sanitize(
+          `${$("#input-singleyear").val()} ${$(
+            "#input-singletest"
+          ).val()} Problems/Problem ${$("#input-singlenum").val()}`
+        ),
+        true
+      );
+    }
   });
 
   $(".page-container").on("click", "#random-button", async () => {
@@ -2083,8 +2118,7 @@
     addBatch();
 
     let problems = [];
-    let inputSingleTest = $("#input-singletest");
-    if (!inputSingleTest.val()) {
+    if (!$("#input-singletest").val()) {
       $(".article-text").before(
         `<p class="error">
           No test was entered.
@@ -2093,6 +2127,21 @@
       $(".article-text").remove();
       $("#batch-header").html("Error");
       $("#solutions-section").remove();
+    } else if (
+      $("#input-singleyear").val() <
+        validYears[$("#input-singletest").val()].min ||
+      $("#input-singleyear").val() >
+        validYears[$("#input-singletest").val()].max
+    ) {
+      $(".article-text").before(
+        `<p class="error">
+          The given test is not available for that year.
+        </p>`
+      );
+      $(".article-text").remove();
+      $("#batch-header").html("Error");
+      $("#solutions-section").remove();
+      $(".display-settings").remove();
     } else {
       await makeBatch();
 
@@ -3187,6 +3236,18 @@
   function breakLive() {
     $("#input-break").change(() => {
       breakSets();
+    });
+  }
+
+  // Update options
+  function updateYear() {
+    $("#input-singletest").change(function () {
+      let yearSelect = $(this).next("#input-singleyear");
+      let testName = $(this).val();
+      yearSelect.attr({
+        min: validYears[testName].min,
+        max: validYears[testName].max,
+      });
     });
   }
 
