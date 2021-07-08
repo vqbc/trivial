@@ -137,7 +137,6 @@
   let clickedTimes = 0;
   let subtitleClicked = 0;
   let settingsClicked = "";
-  let answerClicked = 0;
   let answerTries = 0;
   let streakCount = 0;
   let progressUpdated = false;
@@ -448,6 +447,8 @@
     $(".error").remove();
     $(".problem-section").remove();
     $(".display-settings").remove();
+    $(".results-container").remove();
+    $("#load-results").remove();
     $(".notes").before(`<div class="problem-section">
       <h2 class="section-header" id="article-header"></h2>
       <a href="" class="aops-link">
@@ -585,6 +586,7 @@
       );
 
       for (let currentProblem of problemTitles) {
+        if (clickedTimes !== clickedTimesThen) break;
         console.log(currentProblem);
 
         params = `action=parse&page=${currentProblem}&format=json`;
@@ -652,42 +654,48 @@
         }
       }
 
-      console.log(problems);
-
-      addProblems(problems, false);
+      if (clickedTimes === clickedTimesThen) {
+        console.log(problems);
+        addProblems(problems, false);
+      }
     }
+
+    clickedTimes++;
+    let clickedTimesThen = clickedTimes;
     await makeBatch();
 
-    if (pushUrl) {
-      history.pushState(
-        { problems: pagenames },
-        "Problem Batch - Trivial AoPS Wiki Reader",
-        "?problems=" + pagenames
-      );
-      searchParams = new URLSearchParams(location.search);
-      lastParam = searchParams.get("problems");
-    }
+    if (clickedTimes === clickedTimesThen) {
+      if (pushUrl) {
+        history.pushState(
+          { problems: pagenames },
+          "Problem Batch - Trivial AoPS Wiki Reader",
+          "?problems=" + pagenames
+        );
+        searchParams = new URLSearchParams(location.search);
+        lastParam = searchParams.get("problems");
+      }
 
-    $(".loading-notice").remove();
-    katexFallback();
-    customText();
-    changeName();
-    fixLinks();
-    collapseSolutions();
-    directLinks();
-    displaySettings();
-    hideLinks();
-    breakSets();
-    addBatchAnswers(
-      pagenames
-        .split("|")
-        .map((e) => e.replace(/_/g, " ").replace("#", "Problems/Problem "))
-    );
+      $(".loading-notice").remove();
+      katexFallback();
+      customText();
+      changeName();
+      fixLinks();
+      collapseSolutions();
+      directLinks();
+      displaySettings();
+      hideLinks();
+      breakSets();
+      addBatchAnswers(
+        pagenames
+          .split("|")
+          .map((e) => e.replace(/_/g, " ").replace("#", "Problems/Problem "))
+      );
+    }
   }
 
   async function addAnswer(pagename) {
-    answerClicked++;
-    let answerClickedThen = answerClicked;
+    clickedTimes++;
+    let clickedTimesThen = clickedTimes;
     answerTries = 0;
     progressUpdated = false;
     let answersTitle = `${pagename?.split(" Problems/Problem")[0]} Answer Key`;
@@ -703,7 +711,7 @@
       ?.eq(problemNum - 1)
       ?.text();
     if (answer) {
-      if (answerClicked === answerClickedThen) {
+      if (clickedTimes === clickedTimesThen) {
         $("#problem-text").after(`<div class="answer-check">
         <div class="options-input answer-options">
           <input class="input-field" id="input-answer"
@@ -723,12 +731,16 @@
             if (computeTest(pagename) === "AIME")
               finalAnswer = originalAnswer.padStart(3, "0");
             answerTries++;
-            if (finalAnswer === answer) {
+            if (
+              finalAnswer === answer ||
+              (pagename === "2012 AMC 12B Problems/Problem 12" &&
+                (finalAnswer === "D" || finalAnswer === "E"))
+            ) {
               streakCount++;
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item correct-feedback">
-              ${originalAnswer} is correct! :)
-            </div>`);
+                  ${originalAnswer} is correct! :)
+                </div>`);
               if (!progressUpdated) {
                 $(".progress-hidden").removeClass("progress-hidden");
                 progressUpdated = true;
@@ -782,9 +794,9 @@
     let params = "";
     let response = "";
     let json = "";
+    clickedTimes++;
+    let clickedTimesThen = clickedTimes;
     for (let [index, pagename] of pagenames.entries()) {
-      answerClicked++;
-      let answerClickedThen = answerClicked;
       let answersTitle = `${
         pagename?.split(" Problems/Problem")[0]
       } Answer Key`;
@@ -803,7 +815,7 @@
         ?.eq(problemNum - 1)
         ?.text();
       console.log(answer);
-      if (answerClicked === answerClickedThen)
+      if (clickedTimes === clickedTimesThen) {
         if (answer) {
           if ($("#batchans-section").length === 0)
             $("#solutions-section").before(
@@ -850,16 +862,15 @@
             $("#batchans-section").toggleClass("section-collapsed");
           });
 
-          if (answerClicked === answerClickedThen)
-            $(".answer-list").append(`<div class="answer-box" index="${
-              index + 1
-            }"
-            answer="${answer}" aime="${computeTest(pagename) === "AIME"}">
+          $(".answer-list").append(`<div class="answer-box" index="${index + 1}"
+            pagename="${pagename}" answer="${answer}"
+            aime="${computeTest(pagename) === "AIME"}">
             <span class="answer-num">${index + 1}</span>
             <input class="input-field input-batchans" type="text"
             placeholder="Enter answer"/>
           </div>`);
         }
+      }
     }
 
     $("#batchans-button").click(async () => {
@@ -904,7 +915,11 @@
         if (finalAnswer) {
           if ($(this).attr("aime") === "true")
             finalAnswer = originalAnswer.padStart(3, "0");
-          if (finalAnswer === $(this).attr("answer")) {
+          if (
+            finalAnswer === $(this).attr("answer") ||
+            ($(this).attr("pagename") === "2012 AMC 12B Problems/Problem 12" &&
+              (finalAnswer === "D" || finalAnswer === "E"))
+          ) {
             $(this).append(
               `<span class="feedback-item correct-feedback"><span class="feedback-icon">✓</span></span>`
             );
@@ -937,7 +952,7 @@
             </div>`
         );
       $("#number-score").text(`Correct: ${rightAnswers}/${totalAnswers}`);
-      $("#amc-score").prepend(
+      $("#amc-score").html(
         `<span class="score-num">Score: ${
           rightAnswers * 6 + blankAnswers * 1.5
         }</span>`
@@ -976,10 +991,10 @@
               statsList.push(statName);
             }
           });
-        console.log(statsList);
-        $(".score-num").after(
-          `<br/><span class="amc-stats">${statsList.join(", ")}</span>`
-        );
+        statsList = statsList.filter((e) => /\d/.test(e));
+        if ($(".amc-stats").length === 0)
+          $(".score-num").after(`<br/><span class="amc-stats"></span>`);
+        $(".amc-stats").text(`${statsList.join(", ")}`);
       }
     });
   }
@@ -2304,16 +2319,16 @@
       await makeBatch();
     }
 
-    let name = $("#input-name").val();
-    history.pushState(
-      { problems: problems.map((e) => underscores(e.title)).join("|") },
-      name + " - Trivial AoPS Wiki Reader",
-      "?problems=" + problems.map((e) => underscores(e.title)).join("|")
-    );
-    searchParams = new URLSearchParams(location.search);
-    lastParam = searchParams.get("problems");
-
     if (clickedTimes === clickedTimesThen) {
+      let name = $("#input-name").val();
+      history.pushState(
+        { problems: problems.map((e) => underscores(e.title)).join("|") },
+        name + " - Trivial AoPS Wiki Reader",
+        "?problems=" + problems.map((e) => underscores(e.title)).join("|")
+      );
+      searchParams = new URLSearchParams(location.search);
+      lastParam = searchParams.get("problems");
+
       $(".loading-notice").remove();
       katexFallback();
       customText();
@@ -2969,6 +2984,7 @@
   }
 
   function clearOptions() {
+    clickedTimes++;
     document.title = "Trivial AoPS Wiki Reader";
     history.pushState(
       {},
@@ -2986,6 +3002,7 @@
   }
 
   function clearOptionsWithoutHistory() {
+    clickedTimes++;
     $(".options-input").remove();
     $(".error").remove();
     $(".problem-section").remove();
@@ -2996,6 +3013,7 @@
   }
 
   function clearAll() {
+    clickedTimes++;
     document.title = "Trivial AoPS Wiki Reader";
     history.pushState(
       {},
