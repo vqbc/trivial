@@ -773,7 +773,8 @@ tags > span {
 }
 
 .amc-stats {
-  font: normal 0.8em "Latin Modern Sans", sans-serif;
+  margin-top: -1em;
+  font: normal 0.95em "Latin Modern Sans", sans-serif;
 }
 
 #batchans-section.batchans-scoreonly .feedback-item,

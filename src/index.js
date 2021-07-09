@@ -949,6 +949,7 @@
           `<div class="score-box">
               <p class="score-line" id="number-score"></p>
               <p class="score-line" id="amc-score"></p>
+              <p class="score-line amc-stats" id="amc-stats"></p>
             </div>`
         );
       $("#number-score").text(`Correct: ${rightAnswers}/${totalAnswers}`);
@@ -982,7 +983,7 @@
           .eq(0)
           .children()
           .each(function () {
-            let statsMatch = /floor|cutoff|roll|DHR|Distinction/i;
+            let statsMatch = /floor|cutoff|roll|DHR|Distinction|Median/i;
             statName = $(this)
               .text()
               .replace("Distinguished Honor Roll", "DHR")
@@ -992,9 +993,7 @@
             }
           });
         statsList = statsList.filter((e) => /\d/.test(e));
-        if ($(".amc-stats").length === 0)
-          $(".score-num").after(`<br/><span class="amc-stats"></span>`);
-        $(".amc-stats").text(`${statsList.join(", ")}`);
+        $("#amc-stats").text(`${statsList.join(", ")}`);
       }
     });
   }
