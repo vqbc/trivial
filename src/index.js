@@ -1111,6 +1111,7 @@
         }
       }
     }
+    pages = [...new Set(pages)];
     return pages;
   }
 
@@ -2489,7 +2490,9 @@
           if (blockedProblem) pages.splice(pageIndex, 1);
         }
         randomList.push(randomPage);
+        pages.splice(pageIndex, 1);
       }
+
       let paramsList = randomList.map(
         (currentProblem) => `action=parse&page=${currentProblem}&format=json`
       );
@@ -2520,7 +2523,6 @@
             solutions: problemSolutions,
           });
 
-          pages.splice(pageIndex, 1);
           $(".loading-bar").css(
             "width",
             `${(problems.length / numProblems) * 100}%`
@@ -2555,7 +2557,6 @@
             solutions: problemSolutions,
           });
 
-          pages.splice(pageIndex, 1);
           $(".loading-bar").css(
             "width",
             `${(problems.length / numProblems) * 100}%`
@@ -2573,6 +2574,7 @@
             if (blockedProblem) pages.splice(pageIndex, 1);
           }
           console.log(randomPage);
+          pages.splice(pageIndex, 1);
 
           params = `action=parse&page=${randomPage}&format=json`;
           response = await fetch(`${apiEndpoint}?${params}&origin=*`);
@@ -2592,7 +2594,6 @@
             problem: problemProblem,
             solutions: problemSolutions,
           });
-          pages.splice(pageIndex, 1);
         }
       }
 
