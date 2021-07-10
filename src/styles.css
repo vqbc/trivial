@@ -335,6 +335,7 @@ input::placeholder {
   border: none;
   box-shadow: var(--secondary-box-shadow);
   transition: none;
+  --tag-remove-btn-color: var(--text-color);
 }
 
 .tagify.tagify--focus {
