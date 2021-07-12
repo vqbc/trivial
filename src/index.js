@@ -568,13 +568,11 @@
       let problemTitles = pagenames
         .split("|")
         .map((e) => e.replace(/_/g, " ").replace("#", "Problems/Problem "));
+      let redirList = [];
       let numProblems = problemTitles.length;
       let invalidProblems = 0;
 
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params;
-      let response;
-      let json;
 
       $("#batch-header").after(
         `<div class="loading-notice">
@@ -629,25 +627,7 @@
             .replace("/wiki/index.php/", "")
             .replace(/_/g, " ");
           console.log(redirPage);
-
-          params = `action=parse&page=${redirPage}&format=json`;
-          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-          json = await response.json();
-
-          problemText = latexer(json.parse.text["*"]);
-          problemProblem = getProblem(problemText);
-          problemSolutions = getSolutions(problemText);
-
-          problems.push({
-            title: currentProblem,
-            difficulty: computeDifficulty(
-              computeTest(currentProblem),
-              computeNumber(currentProblem),
-              computeYear(currentProblem)
-            ),
-            problem: problemProblem,
-            solutions: problemSolutions,
-          });
+          redirList.push(redirPage);
 
           $(".loading-bar").css(
             "width",
@@ -655,9 +635,38 @@
           );
         } else {
           console.log("Invalid problem, skipping...");
-          problemTitles.splice(pageIndex, 1);
           invalidProblems++;
         }
+      }
+
+      paramsList = redirList.map(
+        (redirPage) => `action=parse&page=${redirPage}&format=json`
+      );
+      console.log(paramsList);
+      responseList = await Promise.all(
+        paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
+      );
+      console.log(responseList);
+      jsonList = await Promise.all(
+        responseList.map((response) => response.json())
+      );
+      console.log(jsonList);
+
+      for (let [index, currentProblem] of redirList.entries()) {
+        let problemText = latexer(jsonList[index].parse.text["*"]);
+        let problemProblem = getProblem(problemText);
+        let problemSolutions = getSolutions(problemText);
+
+        problems.push({
+          title: currentProblem,
+          difficulty: computeDifficulty(
+            computeTest(currentProblem),
+            computeNumber(currentProblem),
+            computeYear(currentProblem)
+          ),
+          problem: problemProblem,
+          solutions: problemSolutions,
+        });
       }
 
       if (clickedTimes === clickedTimesThen) {
@@ -2048,12 +2057,9 @@
           )
         )
       );
+      let redirList = [];
       let numProblems = problemTitles.length;
-
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params;
-      let response;
-      let json;
 
       $("#batch-header").after(
         `<div class="loading-notice">
@@ -2103,25 +2109,7 @@
             .replace("/wiki/index.php/", "")
             .replace(/_/g, " ");
           console.log(redirPage);
-
-          params = `action=parse&page=${redirPage}&format=json`;
-          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-          json = await response.json();
-
-          problemText = latexer(json.parse.text["*"]);
-          problemProblem = getProblem(problemText);
-          problemSolutions = getSolutions(problemText);
-
-          problems.push({
-            title: currentProblem,
-            difficulty: computeDifficulty(
-              computeTest(currentProblem),
-              computeNumber(currentProblem),
-              computeYear(currentProblem)
-            ),
-            problem: problemProblem,
-            solutions: problemSolutions,
-          });
+          redirList.push(redirPage);
 
           $(".loading-bar").css(
             "width",
@@ -2130,6 +2118,36 @@
         } else {
           console.log("Invalid problem, skipping...");
         }
+      }
+
+      paramsList = redirList.map(
+        (redirPage) => `action=parse&page=${redirPage}&format=json`
+      );
+      console.log(paramsList);
+      responseList = await Promise.all(
+        paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
+      );
+      console.log(responseList);
+      jsonList = await Promise.all(
+        responseList.map((response) => response.json())
+      );
+      console.log(jsonList);
+
+      for (let [index, currentProblem] of redirList.entries()) {
+        let problemText = latexer(jsonList[index].parse.text["*"]);
+        let problemProblem = getProblem(problemText);
+        let problemSolutions = getSolutions(problemText);
+
+        problems.push({
+          title: currentProblem,
+          difficulty: computeDifficulty(
+            computeTest(currentProblem),
+            computeNumber(currentProblem),
+            computeYear(currentProblem)
+          ),
+          problem: problemProblem,
+          solutions: problemSolutions,
+        });
       }
 
       if (clickedTimes === clickedTimesThen) {
@@ -2221,6 +2239,7 @@
         .val()
         .split(",")
         .map((e) => e.replace("#", "Problems/Problem "));
+      let redirList = [];
       let numProblems = problemTitles.length;
       let invalidProblems = 0;
 
@@ -2282,25 +2301,7 @@
             .replace("/wiki/index.php/", "")
             .replace(/_/g, " ");
           console.log(redirPage);
-
-          params = `action=parse&page=${redirPage}&format=json`;
-          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-          json = await response.json();
-
-          problemText = latexer(json.parse.text["*"]);
-          problemProblem = getProblem(problemText);
-          problemSolutions = getSolutions(problemText);
-
-          problems.push({
-            title: currentProblem,
-            difficulty: computeDifficulty(
-              computeTest(currentProblem),
-              computeNumber(currentProblem),
-              computeYear(currentProblem)
-            ),
-            problem: problemProblem,
-            solutions: problemSolutions,
-          });
+          redirList.push(redirPage);
 
           $(".loading-bar").css(
             "width",
@@ -2310,6 +2311,36 @@
           console.log("Invalid problem, skipping...");
           invalidProblems++;
         }
+      }
+
+      paramsList = redirList.map(
+        (redirPage) => `action=parse&page=${redirPage}&format=json`
+      );
+      console.log(paramsList);
+      responseList = await Promise.all(
+        paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
+      );
+      console.log(responseList);
+      jsonList = await Promise.all(
+        responseList.map((response) => response.json())
+      );
+      console.log(jsonList);
+
+      for (let [index, currentProblem] of redirList.entries()) {
+        let problemText = latexer(jsonList[index].parse.text["*"]);
+        let problemProblem = getProblem(problemText);
+        let problemSolutions = getSolutions(problemText);
+
+        problems.push({
+          title: currentProblem,
+          difficulty: computeDifficulty(
+            computeTest(currentProblem),
+            computeNumber(currentProblem),
+            computeYear(currentProblem)
+          ),
+          problem: problemProblem,
+          solutions: problemSolutions,
+        });
       }
 
       if (clickedTimes === clickedTimesThen) {
@@ -2377,6 +2408,7 @@
       let randomPage;
       let pageIndex;
       let randomList = [];
+      let redirList = [];
       let problemTitles = inputProblems
         .val()
         .split(",")
@@ -2445,25 +2477,7 @@
               .replace("/wiki/index.php/", "")
               .replace(/_/g, " ");
             console.log(redirPage);
-
-            params = `action=parse&page=${redirPage}&format=json`;
-            response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-            json = await response.json();
-
-            problemText = latexer(json.parse.text["*"]);
-            problemProblem = getProblem(problemText);
-            problemSolutions = getSolutions(problemText);
-
-            problems.push({
-              title: currentProblem,
-              difficulty: computeDifficulty(
-                computeTest(currentProblem),
-                computeNumber(currentProblem),
-                computeYear(currentProblem)
-              ),
-              problem: problemProblem,
-              solutions: problemSolutions,
-            });
+            redirList.push(redirPage);
 
             $(".loading-bar").css(
               "width",
@@ -2471,7 +2485,6 @@
             );
           } else {
             console.log("Invalid problem, skipping...");
-            pages.splice(pageIndex, 1);
           }
         }
       }
@@ -2537,25 +2550,7 @@
             .replace("/wiki/index.php/", "")
             .replace(/_/g, " ");
           console.log(redirPage);
-
-          params = `action=parse&page=${redirPage}&format=json`;
-          response = await fetch(`${apiEndpoint}?${params}&origin=*`);
-          json = await response.json();
-
-          problemText = latexer(json.parse.text["*"]);
-          problemProblem = getProblem(problemText);
-          problemSolutions = getSolutions(problemText);
-
-          problems.push({
-            title: randomPage,
-            difficulty: computeDifficulty(
-              computeTest(randomPage),
-              computeNumber(randomPage),
-              computeYear(randomPage)
-            ),
-            problem: problemProblem,
-            solutions: problemSolutions,
-          });
+          redirList.push(redirPage);
 
           $(".loading-bar").css(
             "width",
@@ -2595,6 +2590,36 @@
             solutions: problemSolutions,
           });
         }
+      }
+
+      paramsList = redirList.map(
+        (redirPage) => `action=parse&page=${redirPage}&format=json`
+      );
+      console.log(paramsList);
+      responseList = await Promise.all(
+        paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
+      );
+      console.log(responseList);
+      jsonList = await Promise.all(
+        responseList.map((response) => response.json())
+      );
+      console.log(jsonList);
+
+      for (let [index, currentProblem] of redirList.entries()) {
+        let problemText = latexer(jsonList[index].parse.text["*"]);
+        let problemProblem = getProblem(problemText);
+        let problemSolutions = getSolutions(problemText);
+
+        problems.push({
+          title: currentProblem,
+          difficulty: computeDifficulty(
+            computeTest(currentProblem),
+            computeNumber(currentProblem),
+            computeYear(currentProblem)
+          ),
+          problem: problemProblem,
+          solutions: problemSolutions,
+        });
       }
 
       if (clickedTimes === clickedTimesThen) {
