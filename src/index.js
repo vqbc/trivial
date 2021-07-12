@@ -1005,6 +1005,7 @@
         let json = await response.json();
         let statsText = json.parse?.text["*"];
         let statsList = [];
+        
         $($.parseHTML(statsText))
           .find(`h2:contains("${testYear}")`)
           .nextAll(`h3:contains("${testName}")`)
