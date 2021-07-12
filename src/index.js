@@ -126,9 +126,9 @@
         </ul>
       </li>
       <li class="trivial-logo">
-        The Trivial logo is supposed to be a QED symbol (□), so that
-        the title of the page represents the general and time-saving solution to
-        any mathematical question, as well as a description that this site was
+        The Trivial logo is supposed to be a QED symbol (□), so that the title
+        of the page represents the general and time-saving solution to any
+        mathematical question, as well as a description that this site was
         Trivial to create (not).
       </li>
     <ul>
@@ -937,6 +937,7 @@
       let rightAnswers = 0;
       let blankAnswers = 0;
       let wrongAnswers = 0;
+
       $(".answer-box").each(function () {
         let originalAnswer = sanitize($(this).find(".input-batchans").val());
         originalAnswer = originalAnswer.toUpperCase();
@@ -1005,7 +1006,7 @@
         let json = await response.json();
         let statsText = json.parse?.text["*"];
         let statsList = [];
-        
+
         $($.parseHTML(statsText))
           .find(`h2:contains("${testYear}")`)
           .nextAll(`h3:contains("${testName}")`)
