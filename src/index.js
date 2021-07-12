@@ -25,8 +25,8 @@
     "AIME I": { min: 2000, max: 2021 },
     "AIME II": { min: 2000, max: 2021 },
     USAJMO: { min: 2010, max: 2021 },
-    USAMO: { min: 1974, max: 2020 },
-    IMO: { min: 1974, max: 2020 },
+    USAMO: { min: 1972, max: 2020 },
+    IMO: { min: 1959, max: 2020 },
     AJHSME: { min: 1985, max: 1998 },
     AHSME: { min: 1974, max: 1999 },
     "AMC 10": { min: 2000, max: 2001 },
@@ -88,12 +88,11 @@
     <h3 id="notes-header">Notes</h3>
     <ul id="notes-text">
       <li>
-        Subject and test options default to accepting any subjects/tests if no
-        specific filters are applied.
+        If no specific subjects/tests are specified, all are included by default.
       </li>
       <li>
         AMC Tests includes tests from the AMC 8 to USAMO, plus the IMO (which
-          the AMC program selects for but doesn’t administer).
+        the AMC program selects for).
       </li>
       <li>
         Copied problem lists can be pasted into inputs for multiple problems,
@@ -102,10 +101,10 @@
       <li>
         Difficulty levels, revised from <a
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-        >AoPS Wiki ratings</a>, group AMC (and other test) problems by test and
+        >AoPS Wiki ratings</a>, group AMC and other test problems by test and
         number and are less accurate for old exams.
         <div id="difficulty-chart"></div>
-      </li>
+      </li><!--
       <li>
         Historical notes:
         <ul>
@@ -124,7 +123,7 @@
             >o A and B tests in 2002.
           </li>
         </ul>
-      </li>
+      </li>-->
       <li class="trivial-logo">
         The Trivial logo is supposed to be a QED symbol (□), so that the title
         of the page represents the general and time-saving solution to any
@@ -1119,6 +1118,7 @@
             }
           }
           categoryPages.push({ subject: subject, pages: fullPages });
+          console.log(`${fullPages.length} category pages retrieved.`);
         }
       }
     }
