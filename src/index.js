@@ -34,10 +34,10 @@
     AIME: { min: 1983, max: 1999 },
   };
   let batchOptions = `<input class="input-field"
-      id="input-name" type="text" placeholder="Batch name (optional)"/>
+      id="input-name" type="text" placeholder="Batch name"/>
     <input class="input-field"
       id="input-break" type="number" min="1" max="40"
-      placeholder="Page break every n problems (optional)"/>
+      placeholder="Page break every n problems"/>
     <div class="input-container checkbox-container input-flex-full"> 
       <div class="checkbox-wrap" id="sort-container">
         <input type="checkbox" checked class="input-check" id="input-sort"/>
@@ -71,10 +71,10 @@
     <h3 class="text-collapse-header" id="options-header">More Options</h3>
     <div class="options-input" id="more-options">
       <input class="input-field"
-        id="input-name" type="text" placeholder="Batch name (optional)"/>
+        id="input-name" type="text" placeholder="Batch name"/>
       <input class="input-field"
         id="input-break" type="number" min="1" max="40"
-        placeholder="Page break every n problems (optional)"/>
+        placeholder="Page break every n problems"/>
       <div class="input-container checkbox-container input-flex-full"> 
         <div class="checkbox-wrap" id="sort-container">
           <input type="checkbox" checked class="input-check" id="input-sort"/>
@@ -1920,12 +1920,12 @@
       $(".options-container").removeClass("text-collapsed");
     $("#more-options").append(`${yearFullOption}
       <input class="input-field input-flex-full" id="input-problems"
-      type="text" placeholder="Include these problems (optional)"
+      type="text" placeholder="Problems to always include"
       data-whitelist="${sortProblems(allProblems)
         .map((e) => titleCleanup(e))
         .toString()}">
       <input class="input-field input-flex-full" id="input-skip"
-      type="text" placeholder="Skip these problems (optional)"
+      type="text" placeholder="Problems to exclude"
       data-whitelist="${sortProblems(allProblems)
         .map((e) => titleCleanup(e))
         .toString()}">`);
