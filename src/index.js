@@ -39,7 +39,7 @@
       id="input-break" type="number" min="1" max="40"
       placeholder="Page break every n problems (optional)"/>
     <div class="input-container checkbox-container input-flex-full"> 
-      <div class="checkbox-wrap">
+      <div class="checkbox-wrap" id="sort-container">
         <input type="checkbox" checked class="input-check" id="input-sort"/>
         <label class="checkbox-label">Sort by difficulty</label>
       </div>
@@ -66,12 +66,36 @@
     placeholder="Tests, e.g. AMC 10"
     data-whitelist="(AMC Tests),AHSME,AMC 8,AMC 10,AMC 12,AIME,USAJMO,USAMO,` +
     `Canadian MO,IMO">
-  </input>
-  <div class="input-container input-flex-full">
+  </input>`;
+  let moreOptions = `<div class="options-container text-collapsed">
+    <h3 class="text-collapse-header" id="options-header">More Options</h3>
+    <div class="options-input" id="more-options">
+      <input class="input-field"
+        id="input-name" type="text" placeholder="Batch name (optional)"/>
+      <input class="input-field"
+        id="input-break" type="number" min="1" max="40"
+        placeholder="Page break every n problems (optional)"/>
+      <div class="input-container checkbox-container input-flex-full"> 
+        <div class="checkbox-wrap" id="sort-container">
+          <input type="checkbox" checked class="input-check" id="input-sort"/>
+          <label class="checkbox-label">Sort by difficulty</label>
+        </div>
+        <div class="checkbox-wrap">
+          <input type="checkbox" class="input-check" id="input-hide"/>
+          <label class="checkbox-label">Hide question sources</label>
+        </div>
+      </div>
+    </div>
+  </div>`;
+  let yearOption = `<div class="input-container input-flex-full">
     <label class="range-label">Years allowed:</label>
     <input class="input-range" id="input-years"></input>
-  </div>
-  <div class="input-container input-flex-full">
+  </div>`;
+  let yearFullOption = `<div class="input-container input-full">
+    <label class="range-label">Years allowed:</label>
+    <input class="input-range" id="input-years"></input>
+  </div>`;
+  let difficultyOption = `<div class="input-container input-flex-full">
     <label class="range-label">
       Difficulty<sup><a
         class="dark-link"
@@ -85,7 +109,7 @@
     (Replace problem)
   </button>`;
   let notes = `<div class="notes">
-    <h3 id="notes-header">Notes</h3>
+    <h3 class="text-collapse-header" id="notes-header">Notes</h3>
     <ul id="notes-text">
       <li>
         If no specific subjects/tests are specified, all are included by default.
@@ -297,7 +321,7 @@
       displaySettings();
       collapseSolutions();
 
-      if ($(".practice-progress").length === 0) {
+      if (!$(".practice-progress").length) {
         $("#problem-section").before(
           `<div class="practice-progress progress-nobottom progress-hidden">
           <div class="streak-bar bar-hidden">` +
@@ -845,7 +869,7 @@
 
       if (clickedTimes === clickedTimesThen) {
         if (answer) {
-          if ($("#batchans-section").length === 0)
+          if (!$("#batchans-section").length)
             $("#solutions-section").before(
               `<div class="problem-section" id="batchans-section">
               <h2 class="section-header collapse-header" id="batchans-header">
@@ -973,7 +997,7 @@
         }
       });
 
-      if ($(".score-box").length === 0)
+      if (!$(".score-box").length)
         $(".batchans-options").after(
           `<div class="score-box">
               <p class="score-line" id="number-score"></p>
@@ -1701,7 +1725,7 @@
     );
     updateYear();
     renderChart();
-    collapseNotes();
+    collapseText();
     directLinks();
 
     let inputSingleTest = document.querySelector("#input-singletest");
@@ -1721,7 +1745,7 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="random-input">
-        ${problemOptions}
+        ${problemOptions}${yearOption}${difficultyOption}
         <button class="input-button input-button-full" id="random-button">
           View Random
         </button>
@@ -1730,7 +1754,7 @@
     );
     $("#random-input").after($(".practice-progress"));
     renderChart();
-    collapseNotes();
+    collapseText();
     directLinks();
 
     let inputSubjects = document.querySelector("#input-subjects");
@@ -1771,24 +1795,18 @@
   });
 
   $(".page-container").on("click", "#batch-nav", () => {
+    let optionsUncollapsed;
+    if (
+      $(".options-container").length &&
+      !$(".options-container").hasClass("text-collapsed")
+    )
+      optionsUncollapsed = true;
+
     clearOptions();
     activeSecondaryButton("batch-nav");
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="batch-input">
-        <input class="input-field"
-          id="input-name" type="text" placeholder="Batch name (optional)"/>
-        <input class="input-field" id="input-break" type="number" min="1" max="40"
-          placeholder="Page break every n problems (optional)"/>
-        <div class="input-container checkbox-container checkbox-container-small
-        input-flex-full">
-          <div class="checkbox-wrap">
-            <input type="checkbox" class="input-check" id="input-hide"/>
-            <label class="checkbox-label">
-              Hide question sources
-            </label>
-          </div>
-        </div>
         <input class="input-field input-singletest" id="input-singletest"
           type="text" placeholder="Test, e.g. AMC 10A" data-whitelist="${testsList}">
         </input>
@@ -1799,11 +1817,15 @@
           View Test
         </button>
       </div>
+      ${moreOptions}
       ${notes}`
     );
+    $("#sort-container").remove();
+    if (optionsUncollapsed)
+      $(".options-container").removeClass("text-collapsed");
     updateYear();
     renderChart();
-    collapseNotes();
+    collapseText();
     directLinks();
     nameLive();
     breakLive();
@@ -1821,12 +1843,18 @@
   });
 
   $(".page-container").on("click", "#problems-nav", () => {
+    let optionsUncollapsed;
+    if (
+      $(".options-container").length &&
+      !$(".options-container").hasClass("text-collapsed")
+    )
+      optionsUncollapsed = true;
+
     clearOptions();
     activeSecondaryButton("problems-nav");
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="problems-input">
-        ${batchOptions}
         <input class="input-field" id="input-problems"
         type="text" placeholder="Problems, e.g. 2018 AMC 12B #24"
         data-whitelist="${sortProblems(allProblems)
@@ -1836,10 +1864,13 @@
           View Problems
         </button>
       </div>
+      ${moreOptions}
       ${notes}`
     );
+    if (optionsUncollapsed)
+      $(".options-container").removeClass("text-collapsed");
     renderChart();
-    collapseNotes();
+    collapseText();
     directLinks();
     nameLive();
     breakLive();
@@ -1855,37 +1886,47 @@
   });
 
   $(".page-container").on("click", "#ranbatch-nav", () => {
+    let optionsUncollapsed;
+    if (
+      $(".options-container").length &&
+      !$(".options-container").hasClass("text-collapsed")
+    )
+      optionsUncollapsed = true;
+
     clearOptions();
     activeSecondaryButton("ranbatch-nav");
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="ranbatch-input">
-        ${batchOptions}
-        ${problemOptions}
-        <div class="input-container input-full">
+        ${problemOptions}${difficultyOption}
+        <div class="input-container input-flex-full">
           <label class="range-label">
             Number of problems:
           </label>
           <input class="input-range" id="input-number"/>
         </div>
-        <input class="input-field input-flex-full" id="input-problems"
-        type="text" placeholder="Include these problems (optional)"
-        data-whitelist="${sortProblems(allProblems)
-          .map((e) => titleCleanup(e))
-          .toString()}">
-        <input class="input-field input-flex-full" id="input-skip"
-        type="text" placeholder="Skip these problems (optional)"
-        data-whitelist="${sortProblems(allProblems)
-          .map((e) => titleCleanup(e))
-          .toString()}">
-        <button class="input-button input-button-flex-full" id="ranbatch-button">
+        <button class="input-button input-button-full" id="ranbatch-button">
           Make Random
         </button>
       </div>
+      ${moreOptions}
       ${notes}`
     );
+    if (optionsUncollapsed)
+      $(".options-container").removeClass("text-collapsed");
+    $("#more-options").append(`${yearFullOption}
+      <input class="input-field input-flex-full" id="input-problems"
+      type="text" placeholder="Include these problems (optional)"
+      data-whitelist="${sortProblems(allProblems)
+        .map((e) => titleCleanup(e))
+        .toString()}">
+      <input class="input-field input-flex-full" id="input-skip"
+      type="text" placeholder="Skip these problems (optional)"
+      data-whitelist="${sortProblems(allProblems)
+        .map((e) => titleCleanup(e))
+        .toString()}">`);
     renderChart();
-    collapseNotes();
+    collapseText();
     directLinks();
     nameLive();
     breakLive();
@@ -1975,7 +2016,7 @@
       ${notes}`
     );
     renderChart();
-    collapseNotes();
+    collapseText();
     directLinks();
 
     let inputSearch = document.querySelector("#input-search");
@@ -2025,7 +2066,7 @@
     let pages = await getPages();
     console.log(`${pages.length} total problems retrieved.`);
 
-    if (pages.length === 0) {
+    if (!pages.length) {
       $(".notes").before(
         `<div class="problem-section">
           <h2 class="section-header" id="article-header">Error</h2>
@@ -2651,7 +2692,7 @@
     let pages = await getPages();
     let problems = [];
     console.log(`${pages.length} total problems retrieved.`);
-    if (pages.length === 0) {
+    if (!pages.length) {
       $(".article-text").before(
         `<p class="error">
           No problems could be found meeting those requirements.
@@ -2883,7 +2924,7 @@
     $("#main-button-container").after(`
       ${notes}`);
     renderChart();
-    collapseNotes();
+    collapseText();
 
     let history = JSON.parse(localStorage.getItem("pageHistory"));
 
@@ -2992,7 +3033,7 @@
           } else {
             console.log("Invalid problem, skipping...");
             pages.splice(pageIndex, 1);
-            if (pages.length === 0) giveUp = true;
+            if (!pages.length) giveUp = true;
           }
           if (newProblem) {
             $(`#batch-text .article-problem:nth-child(${replacedIndex})`)
@@ -3062,14 +3103,14 @@
         );
 
       console.log(`${pages.length} total problems retrieved.`);
-      if (pages.length === 0)
+      if (!pages.length)
         $(this).replaceWith(
           `<span class="replace-notice">No replacements found</span>`
         );
       else {
         await replace();
         console.log(problems);
-        if (pages.length === 0)
+        if (!pages.length)
           $(this).replaceWith(
             `<span class="replace-notice">No replacements found</span>`
           );
@@ -3095,6 +3136,7 @@
     );
     lastParam = "";
     $(".options-input").remove();
+    $("#options-header").remove();
     $(".error").remove();
     $(".problem-section").remove();
     $(".display-settings").remove();
@@ -3106,6 +3148,7 @@
   function clearOptionsWithoutHistory() {
     clickedTimes++;
     $(".options-input").remove();
+    $("#options-header").remove();
     $(".error").remove();
     $(".problem-section").remove();
     $(".display-settings").remove();
@@ -3125,6 +3168,7 @@
     lastParam = "";
     $("#secondary-button-container").remove();
     $(".options-input").remove();
+    $("#options-header").remove();
     $(".error").remove();
     $(".problem-section").remove();
     $(".display-settings").remove();
@@ -3145,9 +3189,12 @@
   }
 
   // Formatting
-  function collapseNotes() {
+  function collapseText() {
     $("#notes-header").click(() => {
-      $(".notes").toggleClass("notes-collapsed");
+      $(".notes").toggleClass("text-collapsed");
+    });
+    $("#options-header").click(() => {
+      $(".options-container").toggleClass("text-collapsed");
     });
   }
 
@@ -3321,9 +3368,10 @@
     $("#counter-toggle").click(() => {
       settingsClicked += "4";
 
-      if (settingsClicked === "1234" && $("#fun-toggle").length === 0)
+      if (settingsClicked === "1234" && !$("#fun-toggle").length)
         $("#counter-toggle").after(`
-          <button class="text-button footer-button" id="fun-toggle" tabindex="0">
+          <span class="divider"> ⋅ </span>
+          <button class="text-button setting-button" id="fun-toggle" tabindex="0">
             Made you click
           </button>`);
 
@@ -3541,14 +3589,14 @@
     if (searchParams.get("page")) {
       $("#main-button-container").after(`${notes}`);
       renderChart();
-      collapseNotes();
+      collapseText();
 
       if (validProblem(lastParam)) await addProblem(lastParam, true);
       else await addArticle(lastParam, true);
     } else if (searchParams.get("problems")) {
       $("#main-button-container").after(`${notes}`);
       renderChart();
-      collapseNotes();
+      collapseText();
 
       addUrlBatch();
       await fillBatch(lastParam, true);
@@ -3560,12 +3608,12 @@
       console.log(newProblems);
 
       if (newPagename && newPagename !== searchParams.get("page")) {
-        if ($(".notes").length === 0) {
-          if ($("#secondary-button-container").length === 0)
+        if (!$(".notes").length) {
+          if (!$("#secondary-button-container").length)
             $("#main-button-container").after(`${notes}`);
           else $("#secondary-button-container").after(`${notes}`);
           renderChart();
-          collapseNotes();
+          collapseText();
         }
 
         clearProblem();
@@ -3576,7 +3624,7 @@
         clearOptionsWithoutHistory();
         $("#main-button-container").after(`${notes}`);
         renderChart();
-        collapseNotes();
+        collapseText();
 
         addUrlBatch();
         await fillBatch(newProblems, false);

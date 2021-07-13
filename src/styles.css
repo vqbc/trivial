@@ -519,12 +519,12 @@ tags > span {
   flex: 48%;
 } /**/
 
-/* Notes */
-#notes-header {
+/* Notes, collapsed */
+.text-collapse-header {
   position: relative;
 }
 
-#notes-header::after {
+.text-collapse-header::after {
   position: absolute;
   top: 5px;
   right: 1rem;
@@ -540,11 +540,11 @@ tags > span {
   content: "";
 }
 
-.notes-collapsed #notes-text {
+.text-collapsed h3 ~ * {
   display: none;
 }
 
-.notes-collapsed #notes-header::after {
+.text-collapsed h3::after {
   top: 0;
   transform: rotate(135deg);
 }
