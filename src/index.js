@@ -50,7 +50,7 @@
     </div>`;
   let problemOptions =
     `<input class="input-multi input-flex-full" id="input-subjects"
-    placeholder="Subjects, e.g. Olympiad Algebra Problems"
+    placeholder="Subjects (any by default)"
     data-whitelist="3D Geometry Problems, Introductory Algebra Problems, ` +
     `Introductory Combinatorics Problems, Introductory Geometry Problems, ` +
     `Introductory Number Theory Problems, Introductory Probability Problems, ` +
@@ -63,9 +63,8 @@
     `Olympiad Trigonometry Problems">
   </input>
   <input class="input-multi input-flex-full" id="input-tests"
-    placeholder="Tests, e.g. AMC 10"
-    data-whitelist="(AMC Tests),AHSME,AMC 8,AMC 10,AMC 12,AIME,USAJMO,USAMO,` +
-    `Canadian MO,IMO">
+    placeholder="Tests (any by default)"
+    data-whitelist="(AMC Tests),AHSME,AMC 8,AMC 10,AMC 12,AIME,USAJMO,USAMO,IMO">
   </input>`;
   let moreOptions = `<div class="options-container text-collapsed">
     <h3 class="text-collapse-header" id="options-header">More Options</h3>
@@ -112,16 +111,8 @@
     <h3 class="text-collapse-header" id="notes-header">Tips</h3>
     <ul id="notes-text">
       <li>
-        If no specific subjects/tests are specified, all of them are included by
-        default.
-      </li>
-      <li>
-        AMC Tests includes tests from the AMC 8 to USAMO, plus the IMO (since
-        the AMC program selects for it).
-      </li>
-      <li>
-        Copied problem lists can be pasted into fields for multiple problems,
-        e.g. for a custom Problem Batch!
+        AMC Tests includes tests from the AMC 8 to USAMO, plus the IMO since
+        the AMC program selects for it.
       </li>
       <li>
         Difficulty levels are based on <a
@@ -129,7 +120,19 @@
         >AoPS Wiki ratings</a>. They’re just determined by test and problem
         number, and may be inaccurate for old exams.
         <div id="difficulty-chart"></div>
-      </li><!--
+      </li>
+      <li>
+        The different subjects are based on AoPS Wiki categories. They don’t
+        cover all the problems, so help fix this by adding categories on the
+        wiki!
+      </li>
+        <ul>
+          <li>You can do this by editing a page and adding
+          <code>[[Category:SUBJECT]]</code> to the bottom (just replace
+          <code>SUBJECT</code> with the actual subject, like Introductory
+          Geometry Problems).
+          </li>
+        </ul><!--
       <li>
         Historical notes:
         <ul>
@@ -417,7 +420,7 @@
       `<div class="options-input" id="problems-input">
         ${batchOptions}
         <input class="input-field" id="input-problems"
-        type="text" placeholder="Problems, e.g. 2018 AMC 12B #24"
+        type="text" placeholder="Enter problems"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
@@ -1526,7 +1529,7 @@
     $("#batch-text").before(
       `<button class="text-button" id="copy-problems"
         data-clipboard-text="${problemList}" title="This list can be copied into ` +
-        `fields for multiple problems, e.g. making a custom Problem Batch!">
+        `fields for multiple problems, such as making a custom Problem Batch.">
         (Copy problem list)
       </button>`
     );
@@ -1703,7 +1706,7 @@
         <input class="input-field input-flex-full"
           type="text"
           id="input-singletest"
-          placeholder="Test, e.g. AMC 10A"
+          placeholder="Exact test (e.g. AMC 10A)"
           data-whitelist="${testsList}">
         </input>
         <input class="input-field"
@@ -1811,7 +1814,7 @@
     $("#secondary-button-container").after(
       `<div class="options-input" id="batch-input">
         <input class="input-field input-singletest" id="input-singletest"
-          type="text" placeholder="Test, e.g. AMC 10A" data-whitelist="${testsList}">
+          type="text" placeholder="Exact test (e.g. AMC 10A)" data-whitelist="${testsList}">
         </input>
           <input class="input-field" type="number" min="1974" max="2021"
           id="input-singleyear" placeholder="Year">
@@ -1859,7 +1862,7 @@
     $("#secondary-button-container").after(
       `<div class="options-input" id="problems-input">
         <input class="input-field" id="input-problems"
-        type="text" placeholder="Problems, e.g. 2018 AMC 12B #24"
+        type="text" placeholder="Problems (paste problem lists here!)"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
@@ -1919,12 +1922,12 @@
       $(".options-container").removeClass("text-collapsed");
     $("#more-options").append(`${yearFullOption}
       <input class="input-field input-flex-full" id="input-problems"
-      type="text" placeholder="Problems to always include"
+      type="text" placeholder="Problems to always include (paste lists here!)"
       data-whitelist="${sortProblems(allProblems)
         .map((e) => titleCleanup(e))
         .toString()}">
       <input class="input-field input-flex-full" id="input-skip"
-      type="text" placeholder="Problems to exclude"
+      type="text" placeholder="Problems to exclude (paste lists here!)"
       data-whitelist="${sortProblems(allProblems)
         .map((e) => titleCleanup(e))
         .toString()}">`);
@@ -2008,7 +2011,7 @@
           </div>
         </div>
         <input class="input-field input-end" id="input-search"
-          type="text" placeholder="Keywords, e.g. Cauchy">
+          type="text" placeholder="Keywords (e.g. Cauchy)">
         <button class="input-button input-button-half" id="search-button">
           Search Pages
         </button>
@@ -3263,7 +3266,10 @@
         event.preventDefault();
         let pagename = decodeURIComponent(
           href
-            .replace("https://artofproblemsolving.com/wiki/index.php/", "")
+            .replace(
+              /https?:\/\/(www\.)?artofproblemsolving\.com\/wiki\/index\.php\//,
+              ""
+            )
             .replace(/^\?page=/g, "")
             .replace(/_/g, " ")
             .replace(/%/g, "%25")
