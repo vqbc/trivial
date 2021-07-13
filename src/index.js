@@ -33,21 +33,6 @@
     "AMC 12": { min: 2000, max: 2001 },
     AIME: { min: 1983, max: 1999 },
   };
-  let batchOptions = `<input class="input-field"
-      id="input-name" type="text" placeholder="Batch name"/>
-    <input class="input-field"
-      id="input-break" type="number" min="1" max="40"
-      placeholder="Page break every n problems"/>
-    <div class="input-container checkbox-container input-flex-full"> 
-      <div class="checkbox-wrap" id="sort-container">
-        <input type="checkbox" checked class="input-check" id="input-sort"/>
-        <label class="checkbox-label">Sort by difficulty</label>
-      </div>
-      <div class="checkbox-wrap">
-        <input type="checkbox" class="input-check" id="input-hide"/>
-        <label class="checkbox-label">Hide question sources</label>
-      </div>
-    </div>`;
   let problemOptions =
     `<input class="input-multi input-flex-full" id="input-subjects"
     placeholder="Subjects (any by default)"
@@ -70,7 +55,7 @@
     <h3 class="text-collapse-header" id="options-header">More Options</h3>
     <div class="options-input" id="more-options">
       <input class="input-field"
-        id="input-name" type="text" placeholder="Batch name"/>
+        id="input-name" type="text" placeholder="Custom title"/>
       <input class="input-field"
         id="input-break" type="number" min="1" max="40"
         placeholder="Page break every n problems"/>
@@ -418,16 +403,15 @@
   function addUrlBatch() {
     $(".notes").before(
       `<div class="options-input" id="problems-input">
-        ${batchOptions}
         <input class="input-field" id="input-problems"
-        type="text" placeholder="Enter problems"
+        type="text" placeholder="Problems (paste problem lists here!)"
         data-whitelist="${sortProblems(allProblems)
           .map((e) => titleCleanup(e))
           .toString()}">
         <button class="input-button" id="problems-button">
           View Problems
         </button>
-      </div>
+      </div>${moreOptions}
       <div class="problem-section">
         <h2 class="section-header" id="batch-header">Problem Batch</h2>
         <div class="article-text" id="batch-text"></div>
@@ -3605,9 +3589,9 @@
     } else if (searchParams.get("problems")) {
       $("#main-button-container").after(`${notes}`);
       renderChart();
+      addUrlBatch();
       collapseText();
 
-      addUrlBatch();
       await fillBatch(lastParam, true);
     }
 
