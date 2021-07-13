@@ -5,10 +5,10 @@
   // vQRpemzUkG
   let allPages = [];
   let allProblems = [];
-  $.getJSON("data/allpages.json?20210705", (json) => {
+  $.getJSON("data/allpages.json?20210713", (json) => {
     allPages = json;
   });
-  $.getJSON("data/allproblems.json?20210705", (json) => {
+  $.getJSON("data/allproblems.json?20210713", (json) => {
     allProblems = json;
   });
   let categoryPages = [];
