@@ -2532,7 +2532,7 @@
         }
       }
       while (
-        randomList.length < numProblems &&
+        randomList.length + problems.length < numProblems &&
         pages.length !== 0 &&
         clickedTimes === clickedTimesThen
       ) {
