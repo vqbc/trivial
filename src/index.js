@@ -109,24 +109,25 @@
     (Replace problem)
   </button>`;
   let notes = `<div class="notes">
-    <h3 class="text-collapse-header" id="notes-header">Notes</h3>
+    <h3 class="text-collapse-header" id="notes-header">Tips</h3>
     <ul id="notes-text">
       <li>
-        If no specific subjects/tests are specified, all are included by default.
+        If no specific subjects/tests are specified, all of them are included by
+        default.
       </li>
       <li>
-        AMC Tests includes tests from the AMC 8 to USAMO, plus the IMO (which
-        the AMC program selects for).
+        AMC Tests includes tests from the AMC 8 to USAMO, plus the IMO (since
+        the AMC program selects for it).
       </li>
       <li>
-        Copied problem lists can be pasted into inputs for multiple problems,
-        such as in Choose Problems.
+        Copied problem lists can be pasted into fields for multiple problems,
+        e.g. for a custom Problem Batch!
       </li>
       <li>
-        Difficulty levels, revised from <a
+        Difficulty levels are based on <a
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-        >AoPS Wiki ratings</a>, group AMC and other test problems by test and
-        number and are less accurate for old exams.
+        >AoPS Wiki ratings</a>. They’re just determined by test and problem
+        number, and may be inaccurate for old exams.
         <div id="difficulty-chart"></div>
       </li><!--
       <li>
@@ -1523,10 +1524,13 @@
 
   function addProblems(problems, addReplace) {
     let problemList = problems.map((e) => titleCleanup(e.title)).join(", ");
-    $("#batch-text").before(`<button class="text-button" id="copy-problems"
-        data-clipboard-text="${problemList}">
+    $("#batch-text").before(
+      `<button class="text-button" id="copy-problems"
+        data-clipboard-text="${problemList}" title="This list can be copied into ` +
+        `fields for multiple problems, e.g. making a custom Problem Batch!">
         (Copy problem list)
-      </button>`);
+      </button>`
+    );
     new ClipboardJS("#copy-problems");
 
     for (let [index, problem] of problems.entries()) {
@@ -1906,7 +1910,7 @@
           <input class="input-range" id="input-number"/>
         </div>
         <button class="input-button input-button-full" id="ranbatch-button">
-          Make Random
+          View Random
         </button>
       </div>
       ${moreOptions}
