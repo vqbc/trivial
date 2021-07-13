@@ -150,10 +150,9 @@
         </ul>
       </li>-->
       <li class="trivial-logo">
-        The Trivial logo is supposed to be a QED symbol (□), so that the title
-        of the page represents the general and time-saving solution to any
-        mathematical question, as well as a description that this site was
-        Trivial to create (not).
+        The Trivial logo is supposed to be a QED symbol (□) — the name Trivial
+        represents the general and time-saving solution to any mathematical
+        question, as well as how this site was (not) trivial to make.
       </li>
     <ul>
   </div>`;
