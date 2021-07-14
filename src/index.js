@@ -3251,10 +3251,10 @@
         let pagename = decodeURIComponent(
           href
             .replace(
-              /https?:\/\/(www\.)?artofproblemsolving\.com\/wiki\/index\.php\//,
+              /^https?:\/\/(www\.)?artofproblemsolving\.com\/wiki\/index\.php\//,
               ""
             )
-            .replace(/^\?page=/g, "")
+            .replace(/^\?page=/, "")
             .replace(/_/g, " ")
             .replace(/%/g, "%25")
         ).replace(/%2F/g, "/");
