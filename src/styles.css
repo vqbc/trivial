@@ -558,10 +558,6 @@ tags > span {
 #difficulty-chart {
   display: block;
   margin-top: 0.5rem;
-}
-
-.trivial-logo {
-  display: none;
 } /**/
 
 /* Problem sections */

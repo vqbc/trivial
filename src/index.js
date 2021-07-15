@@ -193,11 +193,6 @@
           </li>
         </ul>
       </li>-->
-      <li class="trivial-logo">
-        The Trivial logo is supposed to be a QED symbol (□) — the name Trivial
-        represents the general and time-saving solution to any mathematical
-        question, as well as how this site was (not) trivial to make.
-      </li>
     <ul>
   </div>`;
   let printLinks = true;
@@ -3588,7 +3583,8 @@
 
   // Bonus
   $(".header").click(() => {
-    $(".trivial-logo").show();
+    clearAll();
+    $(".button").removeClass("button-active");
   });
 
   $(".subtitle").click(() => {
