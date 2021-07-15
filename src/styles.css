@@ -1087,7 +1087,8 @@ footer {
   font-style: italic;
 }
 
-.mobile-break {
+.mobile-break,
+.mobile-settings-break {
   display: none;
 } /**/
 
@@ -1142,6 +1143,14 @@ footer {
 @media (max-width: 1050px) {
   .page-container {
     width: 90%;
+  }
+
+  .settings-divider {
+    display: none;
+  }
+
+  .mobile-settings-break {
+    display: inline;
   }
 }
 

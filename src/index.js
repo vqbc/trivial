@@ -92,6 +92,44 @@
   let replaceButton = `<button class="text-button replace-problem">
     (Replace problem)
   </button>`;
+  let displaySettingsText = `<div class="display-settings">
+    Display settings:
+    <button
+      class="text-button setting-button"
+      id="serif-toggle"
+      tabindex="0"
+    >
+      Sans font
+    </button> ⋅
+    <button
+      class="text-button setting-button"
+      id="justify-toggle"
+      tabindex="0"
+    >
+      Unjustified text
+    </button> ⋅
+    <button
+      class="text-button setting-button"
+      id="counter-toggle"
+      tabindex="0"
+    >
+      Counters on
+    </button>
+    <span class="settings-divider">|</span>
+    <span class="mobile-settings-break"><br /></span>
+    Print settings:
+    <button class="text-button setting-button" tabindex="0"
+    onclick="window.print()">
+      Print this page
+    </button> ⋅
+    <button
+      class="text-button setting-button"
+      id="print-toggle"
+      tabindex="0"
+    >
+      Links on
+    </button>
+  </div>`;
   let notes = `<div class="notes">
     <h3 class="text-collapse-header" id="notes-header">Tips</h3>
     <ul id="notes-text">
@@ -215,36 +253,7 @@
       <h2 class="section-header collapse-header" id="solutions-header">Solutions</h2>
       <div class="article-text" id="solutions-text"></div>
     </div>
-    <div class="display-settings">Display settings:
-          <button
-            class="text-button setting-button"
-            id="serif-toggle"
-            tabindex="0"
-          >
-            Sans font
-          </button> ⋅
-          <button
-            class="text-button setting-button"
-            id="justify-toggle"
-            tabindex="0"
-          >
-            Unjustified text
-          </button> ⋅
-          <button
-            class="text-button setting-button"
-            id="print-toggle"
-            tabindex="0"
-          >
-            Print w/ links
-          </button> ⋅
-          <button
-            class="text-button setting-button"
-            id="counter-toggle"
-            tabindex="0"
-          >
-            Counters on
-          </button>
-    </div>`
+    ${displaySettingsText}`
     );
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
@@ -367,36 +376,7 @@
       <h2 class="section-header collapse-header" id="solutions-header">Solutions</h2>
       <div class="article-text batch-solutions-text" id="solutions-text"></div>
     </div>
-    <div class="display-settings">Display settings:
-          <button
-            class="text-button setting-button"
-            id="serif-toggle"
-            tabindex="0"
-          >
-            Sans font
-          </button> ⋅
-          <button
-            class="text-button setting-button"
-            id="justify-toggle"
-            tabindex="0"
-          >
-            Unjustified text
-          </button> ⋅
-          <button
-            class="text-button setting-button"
-            id="print-toggle"
-            tabindex="0"
-          >
-            Print w/ links
-          </button> ⋅
-          <button
-            class="text-button setting-button"
-            id="counter-toggle"
-            tabindex="0"
-          >
-            Counters on
-          </button>
-    </div>`
+    ${displaySettingsText}`
     );
   }
 
@@ -420,36 +400,7 @@
         <h2 class="section-header collapse-header" id="solutions-header">Solutions</h2>
         <div class="article-text batch-solutions-text" id="solutions-text"></div>
       </div>
-      <div class="display-settings">Display settings:
-            <button
-              class="text-button setting-button"
-              id="serif-toggle"
-              tabindex="0"
-            >
-              Sans font
-            </button> ⋅
-            <button
-              class="text-button setting-button"
-              id="justify-toggle"
-              tabindex="0"
-            >
-              Unjustified text
-            </button> ⋅
-            <button
-              class="text-button setting-button"
-              id="print-toggle"
-              tabindex="0"
-            >
-              Print w/ links
-            </button> ⋅
-            <button
-              class="text-button setting-button"
-              id="counter-toggle"
-              tabindex="0"
-            >
-              Counters on
-            </button>
-      </div>`
+      ${displaySettingsText}`
     );
   }
 
@@ -466,36 +417,7 @@
       </a>
       <div class="article-text" id="full-text"></div>
     </div>
-    <div class="display-settings">Display settings:
-          <button
-            class="text-button setting-button"
-            id="serif-toggle"
-            tabindex="0"
-          >
-            Sans font
-          </button> ⋅
-          <button
-            class="text-button setting-button"
-            id="justify-toggle"
-            tabindex="0"
-          >
-            Unjustified text
-          </button> ⋅
-          <button
-            class="text-button setting-button"
-            id="print-toggle"
-            tabindex="0"
-          >
-            Print w/ links
-          </button> ⋅
-          <button
-            class="text-button setting-button"
-            id="counter-toggle"
-            tabindex="0"
-          >
-            Counters on
-          </button>
-    </div>`);
+    ${displaySettingsText}`);
 
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
@@ -1024,7 +946,8 @@
           .eq(0)
           .children()
           .each(function () {
-            let statsMatch = /floor|cutoff|roll|DHR|Distinction|Median/i;
+            let statsMatch =
+              /floor|cutoff|roll|DHR|Distinction|Median|Average/i;
             statName = $(this)
               .text()
               .replace("Distinguished Honor Roll", "DHR")
@@ -1034,7 +957,11 @@
             }
           });
         statsList = statsList.filter((e) => /\d/.test(e));
-        $("#amc-stats").text(`${statsList.join(", ")}`);
+        $("#amc-stats").html(
+          `${statsList.join(
+            ", "
+          )} <a href="?page=AMC_historical_results">(link)</a>`
+        );
       }
     });
   }
@@ -2277,9 +2204,6 @@
       let invalidProblems = 0;
 
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-      let params;
-      let response;
-      let json;
 
       $("#batch-header").after(
         `<div class="loading-notice">
@@ -3230,6 +3154,14 @@
           href: href.replace("/wiki/index.php/", "?page="),
           title: "",
         });
+      } else if (href && /^\/wiki\/index\.php/.test(href)) {
+        $(this).attr({
+          href: href.replace(
+            "/wiki/index.php",
+            "https://artofproblemsolving.com/wiki/index.php"
+          ),
+          title: "",
+        });
       }
     });
 
@@ -3239,8 +3171,10 @@
   }
 
   async function directLinks() {
-    $("a:not(#aops-wiki-link):not(.aops-link)").off("click");
-    $("a:not(#aops-wiki-link):not(.aops-link)").click(async function (event) {
+    $("a:not(#aops-wiki-link):not(.aops-link):not(.new)").off("click");
+    $("a:not(#aops-wiki-link):not(.aops-link):not(.new)").click(async function (
+      event
+    ) {
       let href = $(this).attr("href");
       if (
         href &&
@@ -3346,22 +3280,21 @@
     });
 
     $("#print-toggle").click(() => {
-      settingsClicked += "3";
 
       $(".page-container").toggleClass("nolinks-text");
       if (printLinks) {
         printLinks = false;
-        $("#print-toggle").text("Print w/o links");
+        $("#print-toggle").text("Links off");
       } else {
         printLinks = true;
-        $("#print-toggle").text("Print w/ links");
+        $("#print-toggle").text("Links on");
       }
     });
 
     $("#counter-toggle").click(() => {
-      settingsClicked += "4";
+      settingsClicked += "3";
 
-      if (settingsClicked === "1234" && !$("#fun-toggle").length)
+      if (settingsClicked === "123" && !$("#fun-toggle").length)
         $("#counter-toggle").after(`
           <span class="divider"> ⋅ </span>
           <button class="text-button setting-button" id="fun-toggle" tabindex="0">
