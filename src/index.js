@@ -33,19 +33,37 @@
     "AMC 12": { min: 2000, max: 2001 },
     AIME: { min: 1983, max: 1999 },
   };
-  let problemOptions =
-    `<input class="input-multi input-flex-full" id="input-subjects"
-    placeholder="Subjects (any by default)"
-    data-whitelist="3D Geometry Problems, Introductory Algebra Problems, ` +
-    `Introductory Combinatorics Problems, Introductory Geometry Problems, ` +
-    `Introductory Number Theory Problems, Introductory Probability Problems, ` +
-    `Introductory Trigonometry Problems, Intermediate Algebra Problems, ` +
-    `Intermediate Combinatorics Problems, Intermediate Geometry Problems, ` +
-    `Intermediate Number Theory Problems, Intermediate Probability Problems, ` +
-    `Intermediate Trigonometry Problems, Olympiad Algebra Problems, ` +
-    `Olympiad Combinatorics Problems, Olympiad Geometry Problems, ` +
-    `Olympiad Inequality Problems, Olympiad Number Theory Problems, ` +
-    `Olympiad Trigonometry Problems">
+  let whitelist = [
+    { value: "3D Geometry Problems", shortName: "3D Geo" },
+    { value: "Introductory Algebra Problems", shortName: "Intro Alg" },
+    { value: "Introductory Combinatorics Problems", shortName: "Intro Combo" },
+    { value: "Introductory Geometry Problems", shortName: "Intro Geo" },
+    { value: "Introductory Number Theory Problems", shortName: "Intro NT" },
+    { value: "Introductory Probability Problems", shortName: "Intro Prob" },
+    { value: "Introductory Trigonometry Problems", shortName: "Intro Trig" },
+    { value: "Intermediate Algebra Problems", shortName: "Int Alg" },
+    { value: "Intermediate Combinatorics Problems", shortName: "Int Combo" },
+    { value: "Intermediate Geometry Problems", shortName: "Int Geo" },
+    { value: "Intermediate Number Theory Problems", shortName: "Int NT" },
+    { value: "Intermediate Probability Problems", shortName: "Int Prob" },
+    { value: "Intermediate Trigonometry Problems", shortName: "Int Trig" },
+    { value: "Olympiad Algebra Problems", shortName: "Oly Alg" },
+    { value: "Olympiad Combinatorics Problems", shortName: "Oly Combo" },
+    { value: "Olympiad Geometry Problems", shortName: "Oly Geo" },
+    { value: "Olympiad Inequality Problems", shortName: "Oly Ineq" },
+    { value: "Olympiad Number Theory Problems", shortName: "Oly NT" },
+    { value: "Olympiad Trigonometry Problems", shortName: "Oly Trig" },
+  ];
+  function subjectTag(tagData) {
+    return `<tag title="${tagData.value}" contenteditable="false" spellcheck="false" tabindex="-1" class="tagify__tag " value="${tagData.value}">
+      <x title="" class="tagify__tag__removeBtn" role="button" aria-label="remove tag"></x>
+      <div>
+        <span class="tagify__tag-text">${tagData.shortName}</span>
+      </div>
+    </tag>`;
+  }
+  let problemOptions = `<input class="input-multi input-flex-full" id="input-subjects"
+    placeholder="Subjects (any by default)">
   </input>
   <input class="input-multi input-flex-full" id="input-tests"
     placeholder="Tests (any by default)"
@@ -134,8 +152,8 @@
     <h3 class="text-collapse-header" id="notes-header">Tips</h3>
     <ul id="notes-text">
       <li>
-        AMC Tests includes tests from the AMC 8 to USAMO, plus the IMO since
-        the AMC program selects for it.
+        AMC Tests includes all the other tests in the dropdown (including the
+        IMO since the AMC program selects for it).
       </li>
       <li id="difficulty-info">
         Difficulty levels are based on <a
@@ -1676,10 +1694,15 @@
 
     let inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
+      whitelist: whitelist,
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
         maxItems: 100,
+        mapValueTo: (e) => e.value.replace(" Problems", ""),
+      },
+      templates: {
+        tag: subjectTag,
       },
     });
     let inputTests = document.querySelector("#input-tests");
@@ -1851,10 +1874,15 @@
 
     let inputSubjects = document.querySelector("#input-subjects");
     new Tagify(inputSubjects, {
+      whitelist: whitelist,
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
         maxItems: 100,
+        mapValueTo: (e) => e.value.replace(" Problems", ""),
+      },
+      templates: {
+        tag: subjectTag,
       },
     });
     let inputTests = document.querySelector("#input-tests");
