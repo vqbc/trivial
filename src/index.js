@@ -83,7 +83,7 @@
     <label class="range-label">
       Difficulty<sup><a
         class="dark-link"
-        href="#difficulty-chart"
+        href="#difficulty-info"
         >?</a
       ></sup> range allowed:
     </label>
@@ -137,7 +137,7 @@
         AMC Tests includes tests from the AMC 8 to USAMO, plus the IMO since
         the AMC program selects for it.
       </li>
-      <li>
+      <li id="difficulty-info">
         Difficulty levels are based on <a
           href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
         >AoPS Wiki ratings</a>. They’re just determined by test and problem
@@ -3279,18 +3279,6 @@
       }
     });
 
-    $("#print-toggle").click(() => {
-
-      $(".page-container").toggleClass("nolinks-text");
-      if (printLinks) {
-        printLinks = false;
-        $("#print-toggle").text("Links off");
-      } else {
-        printLinks = true;
-        $("#print-toggle").text("Links on");
-      }
-    });
-
     $("#counter-toggle").click(() => {
       settingsClicked += "3";
 
@@ -3313,6 +3301,17 @@
       } else {
         localStorage.setItem("countersHidden", false);
         $("#counter-toggle").text("Counters on");
+      }
+    });
+
+    $("#print-toggle").click(() => {
+      $(".page-container").toggleClass("nolinks-text");
+      if (printLinks) {
+        printLinks = false;
+        $("#print-toggle").text("Links off");
+      } else {
+        printLinks = true;
+        $("#print-toggle").text("Links on");
       }
     });
   }
