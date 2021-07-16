@@ -2151,9 +2151,13 @@
         addHistoryBatch(
           problems.map((e) => e.title),
           sourceCleanup(problems[0].problem).substring(0, 140),
-          sanitize(
-            `${$("#input-singleyear").val()} ${$("#input-singletest").val()}`
-          ),
+          $("#input-name").val()
+            ? sanitize($("#input-name").val())
+            : sanitize(
+                `${$("#input-singleyear").val()} ${$(
+                  "#input-singletest"
+                ).val()}`
+              ),
           $("#input-singleyear").val(),
           $("#input-singletest").val()
         );
@@ -2357,7 +2361,8 @@
 
         addHistoryBatch(
           problems.map((e) => e.title),
-          sourceCleanup(problems[0].problem).substring(0, 140)
+          sourceCleanup(problems[0].problem).substring(0, 140),
+          $("#input-name").val()
         );
 
         console.log(problems);
@@ -2652,7 +2657,8 @@
 
         addHistoryBatch(
           problems.map((e) => e.title),
-          sourceCleanup(problems[0].problem).substring(0, 140)
+          sourceCleanup(problems[0].problem).substring(0, 140),
+          $("#input-name").val()
         );
 
         console.log(problems);
@@ -3049,11 +3055,45 @@
             let problemsList = $("#copy-problems")
               .attr("data-clipboard-text")
               .split(", ");
+            let oldProblemsList = problemsList;
+            let origOldProblemsList = oldProblemsList.map((e) =>
+              e.replace(/_/g, " ").replace("#", "Problems/Problem ")
+            );
             problemsList[replacedIndex - 1] = titleCleanup(newProblem.title);
             $("#copy-problems").attr(
               "data-clipboard-text",
               problemsList.join(", ")
             );
+            let origProblemsList = problemsList.map((e) =>
+              e.replace(/_/g, " ").replace("#", "Problems/Problem ")
+            );
+
+            let name = $("#input-name").val();
+            let pageHistory = JSON.parse(localStorage.getItem("pageHistory"));
+            let historyIndex = pageHistory.findIndex(
+              (e) =>
+                e.url ===
+                `?problems=${underscores(origOldProblemsList.join("|"))}`
+            );
+
+            pageHistory[historyIndex].url = `?problems=${underscores(
+              origProblemsList.join("|")
+            )}`;
+            pageHistory[historyIndex].title =
+              name ||
+              problemsList
+                .map((e) => titleCleanup(e))
+                .join(", ")
+                .substring(0, 40) + "...";
+            localStorage.setItem("pageHistory", JSON.stringify(pageHistory));
+
+            history.replaceState(
+              { problems: underscores(origProblemsList.join("|")) },
+              name + " - Trivial AoPS Wiki Reader",
+              "?problems=" + underscores(origProblemsList.join("|"))
+            );
+            searchParams = new URLSearchParams(location.search);
+            lastParam = searchParams.get("problems");
 
             katexFallback();
             $(".replace-problem").off("click");
@@ -3551,7 +3591,7 @@
       `?problems=${underscores(problems.join("|"))}` +
       (testYear ? `&testyear=${testYear}&testname=${testName}` : ``);
     let cleanedPage =
-      title ??
+      title ||
       problems
         .map((e) => titleCleanup(e))
         .join(", ")
