@@ -518,6 +518,7 @@
         .split("|")
         .map((e) => e.replace(/_/g, " ").replace("#", "Problems/Problem "));
       let redirList = [];
+      let redirIndex = [];
       let numProblems = problemTitles.length;
       let invalidProblems = 0;
 
@@ -577,6 +578,7 @@
             .replace(/_/g, " ");
           console.log(redirPage);
           redirList.push(redirPage);
+          redirIndex.push(index);
 
           $(".loading-bar").css(
             "width",
@@ -606,7 +608,7 @@
         let problemProblem = getProblem(problemText);
         let problemSolutions = getSolutions(problemText);
 
-        problems.push({
+        problems.splice(redirIndex[index], 0, {
           title: currentProblem,
           difficulty: computeDifficulty(
             computeTest(currentProblem),
@@ -2049,6 +2051,7 @@
         )
       );
       let redirList = [];
+      let redirIndex = [];
       let numProblems = problemTitles.length;
       let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
 
@@ -2101,6 +2104,7 @@
             .replace(/_/g, " ");
           console.log(redirPage);
           redirList.push(redirPage);
+          redirIndex.push(index);
 
           $(".loading-bar").css(
             "width",
@@ -2130,7 +2134,7 @@
           let problemProblem = getProblem(problemText);
           let problemSolutions = getSolutions(problemText);
 
-          problems.push({
+          problems.splice(redirIndex[index], 0, {
             title: currentProblem,
             difficulty: computeDifficulty(
               computeTest(currentProblem),
@@ -2243,6 +2247,7 @@
         .split(",")
         .map((e) => e.replace("#", "Problems/Problem "));
       let redirList = [];
+      let redirIndex = [];
       let numProblems = problemTitles.length;
       let invalidProblems = 0;
 
@@ -2302,6 +2307,7 @@
             .replace(/_/g, " ");
           console.log(redirPage);
           redirList.push(redirPage);
+          redirIndex.push(index);
 
           $(".loading-bar").css(
             "width",
@@ -2332,7 +2338,7 @@
           let problemProblem = getProblem(problemText);
           let problemSolutions = getSolutions(problemText);
 
-          problems.push({
+          problems.splice(redirIndex[index], 0, {
             title: currentProblem,
             difficulty: computeDifficulty(
               computeTest(currentProblem),
@@ -2411,6 +2417,7 @@
       let pageIndex;
       let randomList = [];
       let redirList = [];
+      let redirIndex = [];
       let problemTitles = inputProblems
         .val()
         .split(",")
@@ -2480,6 +2487,7 @@
               .replace(/_/g, " ");
             console.log(redirPage);
             redirList.push(redirPage);
+            redirIndex.push(index);
 
             $(".loading-bar").css(
               "width",
@@ -2613,16 +2621,28 @@
           let problemProblem = getProblem(problemText);
           let problemSolutions = getSolutions(problemText);
 
-          problems.push({
-            title: currentProblem,
-            difficulty: computeDifficulty(
-              computeTest(currentProblem),
-              computeNumber(currentProblem),
-              computeYear(currentProblem)
-            ),
-            problem: problemProblem,
-            solutions: problemSolutions,
-          });
+          if (redirIndex[index])
+            problems.splice(redirIndex[index], 0, {
+              title: currentProblem,
+              difficulty: computeDifficulty(
+                computeTest(currentProblem),
+                computeNumber(currentProblem),
+                computeYear(currentProblem)
+              ),
+              problem: problemProblem,
+              solutions: problemSolutions,
+            });
+          else
+            problems.push({
+              title: currentProblem,
+              difficulty: computeDifficulty(
+                computeTest(currentProblem),
+                computeNumber(currentProblem),
+                computeYear(currentProblem)
+              ),
+              problem: problemProblem,
+              solutions: problemSolutions,
+            });
         }
       }
 
