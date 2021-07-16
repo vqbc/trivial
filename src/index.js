@@ -205,6 +205,10 @@
 
   let searchParams = new URLSearchParams(location.search);
   let lastParam = searchParams.get("page") ?? searchParams.get("problems");
+  let testInfo = {
+    testYear: searchParams.get("testyear"),
+    testName: searchParams.get("testname"),
+  };
 
   // Toggles settings
   (() => {
@@ -507,7 +511,7 @@
     displaySettings();
   }
 
-  async function fillBatch(pagenames, pushUrl) {
+  async function fillBatch(pagenames, pushUrl, testYear, testName) {
     async function makeBatch() {
       let problems = [];
       let problemTitles = pagenames
@@ -629,7 +633,9 @@
         history.pushState(
           { problems: pagenames },
           "Problem Batch - Trivial AoPS Wiki Reader",
-          "?problems=" + pagenames
+          "?problems=" +
+            pagenames +
+            (testYear ? `&testyear=${testYear}&testname=${testName}` : ``)
         );
         searchParams = new URLSearchParams(location.search);
         lastParam = searchParams.get("problems");
@@ -648,7 +654,9 @@
       addBatchAnswers(
         pagenames
           .split("|")
-          .map((e) => e.replace(/_/g, " ").replace("#", "Problems/Problem "))
+          .map((e) => e.replace(/_/g, " ").replace("#", "Problems/Problem ")),
+        testName,
+        testYear
       );
     }
   }
@@ -2103,34 +2111,36 @@
         }
       }
 
-      paramsList = redirList.map(
-        (redirPage) => `action=parse&page=${redirPage}&format=json`
-      );
-      console.log(paramsList);
-      responseList = await Promise.all(
-        paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
-      );
-      console.log(responseList);
-      jsonList = await Promise.all(
-        responseList.map((response) => response.json())
-      );
-      console.log(jsonList);
+      if (redirList) {
+        paramsList = redirList.map(
+          (redirPage) => `action=parse&page=${redirPage}&format=json`
+        );
+        console.log(paramsList);
+        responseList = await Promise.all(
+          paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
+        );
+        console.log(responseList);
+        jsonList = await Promise.all(
+          responseList.map((response) => response.json())
+        );
+        console.log(jsonList);
 
-      for (let [index, currentProblem] of redirList.entries()) {
-        let problemText = latexer(jsonList[index].parse.text["*"]);
-        let problemProblem = getProblem(problemText);
-        let problemSolutions = getSolutions(problemText);
+        for (let [index, currentProblem] of redirList.entries()) {
+          let problemText = latexer(jsonList[index].parse.text["*"]);
+          let problemProblem = getProblem(problemText);
+          let problemSolutions = getSolutions(problemText);
 
-        problems.push({
-          title: currentProblem,
-          difficulty: computeDifficulty(
-            computeTest(currentProblem),
-            computeNumber(currentProblem),
-            computeYear(currentProblem)
-          ),
-          problem: problemProblem,
-          solutions: problemSolutions,
-        });
+          problems.push({
+            title: currentProblem,
+            difficulty: computeDifficulty(
+              computeTest(currentProblem),
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+        }
       }
 
       if (clickedTimes === clickedTimesThen) {
@@ -2139,7 +2149,9 @@
           sourceCleanup(problems[0].problem).substring(0, 140),
           sanitize(
             `${$("#input-singleyear").val()} ${$("#input-singletest").val()}`
-          )
+          ),
+          $("#input-singleyear").val(),
+          $("#input-singletest").val()
         );
 
         console.log(problems);
@@ -2195,9 +2207,17 @@
         document.title = name + " - Trivial AoPS Wiki Reader";
 
         history.pushState(
-          { problems: problems.map((e) => underscores(e.title)).join("|") },
+          {
+            problems: problems.map((e) => underscores(e.title)).join("|"),
+            testyear: $("#input-singleyear").val(),
+            testname: $("#input-singletest").val(),
+          },
           name + " - Trivial AoPS Wiki Reader",
-          "?problems=" + problems.map((e) => underscores(e.title)).join("|")
+          `?problems=${problems
+            .map((e) => underscores(e.title))
+            .join("|")}&testyear=${$("#input-singleyear").val()}&testname=${$(
+            "#input-singletest"
+          ).val()}`
         );
         searchParams = new URLSearchParams(location.search);
         lastParam = searchParams.get("problems");
@@ -2293,34 +2313,36 @@
         }
       }
 
-      paramsList = redirList.map(
-        (redirPage) => `action=parse&page=${redirPage}&format=json`
-      );
-      console.log(paramsList);
-      responseList = await Promise.all(
-        paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
-      );
-      console.log(responseList);
-      jsonList = await Promise.all(
-        responseList.map((response) => response.json())
-      );
-      console.log(jsonList);
+      if (redirList) {
+        paramsList = redirList.map(
+          (redirPage) => `action=parse&page=${redirPage}&format=json`
+        );
+        console.log(paramsList);
+        responseList = await Promise.all(
+          paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
+        );
+        console.log(responseList);
+        jsonList = await Promise.all(
+          responseList.map((response) => response.json())
+        );
+        console.log(jsonList);
 
-      for (let [index, currentProblem] of redirList.entries()) {
-        let problemText = latexer(jsonList[index].parse.text["*"]);
-        let problemProblem = getProblem(problemText);
-        let problemSolutions = getSolutions(problemText);
+        for (let [index, currentProblem] of redirList.entries()) {
+          let problemText = latexer(jsonList[index].parse.text["*"]);
+          let problemProblem = getProblem(problemText);
+          let problemSolutions = getSolutions(problemText);
 
-        problems.push({
-          title: currentProblem,
-          difficulty: computeDifficulty(
-            computeTest(currentProblem),
-            computeNumber(currentProblem),
-            computeYear(currentProblem)
-          ),
-          problem: problemProblem,
-          solutions: problemSolutions,
-        });
+          problems.push({
+            title: currentProblem,
+            difficulty: computeDifficulty(
+              computeTest(currentProblem),
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+        }
       }
 
       if (clickedTimes === clickedTimesThen) {
@@ -2572,34 +2594,36 @@
         }
       }
 
-      paramsList = redirList.map(
-        (redirPage) => `action=parse&page=${redirPage}&format=json`
-      );
-      console.log(paramsList);
-      responseList = await Promise.all(
-        paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
-      );
-      console.log(responseList);
-      jsonList = await Promise.all(
-        responseList.map((response) => response.json())
-      );
-      console.log(jsonList);
+      if (redirList) {
+        paramsList = redirList.map(
+          (redirPage) => `action=parse&page=${redirPage}&format=json`
+        );
+        console.log(paramsList);
+        responseList = await Promise.all(
+          paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
+        );
+        console.log(responseList);
+        jsonList = await Promise.all(
+          responseList.map((response) => response.json())
+        );
+        console.log(jsonList);
 
-      for (let [index, currentProblem] of redirList.entries()) {
-        let problemText = latexer(jsonList[index].parse.text["*"]);
-        let problemProblem = getProblem(problemText);
-        let problemSolutions = getSolutions(problemText);
+        for (let [index, currentProblem] of redirList.entries()) {
+          let problemText = latexer(jsonList[index].parse.text["*"]);
+          let problemProblem = getProblem(problemText);
+          let problemSolutions = getSolutions(problemText);
 
-        problems.push({
-          title: currentProblem,
-          difficulty: computeDifficulty(
-            computeTest(currentProblem),
-            computeNumber(currentProblem),
-            computeYear(currentProblem)
-          ),
-          problem: problemProblem,
-          solutions: problemSolutions,
-        });
+          problems.push({
+            title: currentProblem,
+            difficulty: computeDifficulty(
+              computeTest(currentProblem),
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+        }
       }
 
       if (clickedTimes === clickedTimesThen) {
@@ -3501,9 +3525,11 @@
     localStorage.setItem("pageHistory", JSON.stringify(history));
   }
 
-  function addHistoryBatch(problems, snippet, title) {
+  function addHistoryBatch(problems, snippet, title, testYear, testName) {
     let history = JSON.parse(localStorage.getItem("pageHistory"));
-    let url = `?problems=${underscores(problems.join("|"))}`;
+    let url =
+      `?problems=${underscores(problems.join("|"))}` +
+      (testYear ? `&testyear=${testYear}&testname=${testName}` : ``);
     let cleanedPage =
       title ??
       problems
@@ -3547,12 +3573,15 @@
       addUrlBatch();
       collapseText();
 
-      await fillBatch(lastParam, true);
+      console.log(testInfo);
+      await fillBatch(lastParam, true, testInfo.testYear, testInfo.testName);
     }
 
     window.onpopstate = async (event) => {
       let newPagename = event.state?.page;
       let newProblems = event.state?.problems;
+      let newTestYear = event.state?.testyear;
+      let newTestName = event.state?.testname;
       console.log(newProblems);
 
       if (newPagename && newPagename !== searchParams.get("page")) {
@@ -3575,8 +3604,9 @@
         collapseText();
 
         addUrlBatch();
-        await fillBatch(newProblems, false);
+        await fillBatch(newProblems, false, newTestYear, newTestName);
         lastParam = newProblems;
+        testInfo = { testYear: newTestYear, testName: newTestName };
       }
     };
   })();
