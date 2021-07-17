@@ -1766,7 +1766,7 @@
       ${notes}`
     );
     $("#sort-container").remove();
-    $("#input-hide").prop("checked", false);
+    $("#input-hide").prop("checked", true);
     if (optionsUncollapsed)
       $(".options-container").removeClass("text-collapsed");
     updateYear();
