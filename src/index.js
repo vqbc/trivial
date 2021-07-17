@@ -847,8 +847,7 @@
           });
 
           $(".answer-list").append(`<div class="answer-box" index="${index + 1}"
-            pagename="${pagename}" answer="${answer}"
-            aime="${computeTest(pagename) === "AIME"}">
+            pagename="${pagename}" answer="${answer}">
             <span class="answer-num">${index + 1}</span>
             <input class="input-field input-batchans" type="text"
             placeholder="Enter answer"/>
@@ -898,7 +897,7 @@
         originalAnswer = originalAnswer.toUpperCase();
         let finalAnswer = originalAnswer;
         if (finalAnswer) {
-          if ($(this).attr("aime") === "true")
+          if (computeTest($(this).attr("pagename")) === "AIME")
             finalAnswer = originalAnswer.padStart(3, "0");
           if (
             finalAnswer === $(this).attr("answer") ||
@@ -3103,6 +3102,104 @@
             directLinks();
             hideLinks();
             breakSets();
+
+            let answersTitle = `${
+              newProblem.title?.split(" Problems/Problem")[0]
+            } Answer Key`;
+            params = `action=parse&page=${answersTitle}&format=json`;
+            response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+            json = await response.json();
+
+            $(`.answer-box[index=${replacedIndex}]`).remove();
+
+            let answerText = json.parse?.text["*"];
+            let problemNum = computeNumber(newProblem.title);
+            let answer = $($.parseHTML(answerText))
+              ?.find("ol li")
+              ?.eq(problemNum - 1)
+              ?.text();
+            console.log(answer);
+            if (answer) {
+              if (!$("#batchans-section").length)
+                $("#solutions-section").before(
+                  `<div class="problem-section" id="batchans-section">
+                    <h2 class="section-header collapse-header" id="batchans-header">
+                    Answer Check
+                      <span class="header-minor">(opt.)</span></h2>
+                    <div class="answer-list"></div>
+                    <div class="options-input batchans-options">
+                      <div class="input-container checkbox-container
+                      input-flexone-full">
+                        <div class="checkbox-wrap">
+                          <div class="radio-block">
+                            <input type="radio" name="input-feedback" id="score-only"
+                            value="score-only">
+                            <label class="checkbox-label">Only show score</label>
+                          </div>
+                          <div class="radio-block">
+                            <input type="radio" name="input-feedback" id="check-only"
+                            value="check-only">
+                            <label class="checkbox-label">Only mark questions</label>
+                          </div>
+                          <div class="radio-block">
+                            <input type="radio" name="input-feedback" id="show-ans"
+                            value="show-ans" checked>
+                            <label class="checkbox-label">Show correct answers</label>
+                          </div>
+                          <div class="radio-block">
+                            <input type="checkbox" class="input-check" id="input-amc"/>
+                            <label class="checkbox-label">Use AMC 10/12 scoring</label>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="input-button input-button-flexone-full"
+                      id="batchans-button">
+                        Check Answers
+                      </button>
+                    </div>
+                  </div>`
+                );
+
+              $("#batchans-header").off("click");
+              $("#batchans-header").click(() => {
+                $("#batchans-section").toggleClass("section-collapsed");
+              });
+
+              if ($(`.answer-box[index=${replacedIndex}]`).length) {
+                $(`.answer-box[index=${replacedIndex}]`)
+                  .replaceWith(`<div class="answer-box" index="${replacedIndex}"
+                    pagename="${newProblem.title}" answer="${answer}">
+                    <span class="answer-num">${replacedIndex}</span>
+                    <input class="input-field input-batchans" type="text"
+                    placeholder="Enter answer"/>
+                  </div>`);
+              } else {
+                let answerIndex = replacedIndex;
+                while (
+                  answerIndex &&
+                  !$(`.answer-box[index=${answerIndex}]`).length
+                )
+                  answerIndex--;
+
+                if (answerIndex !== 0) {
+                  $(`.answer-box[index=${answerIndex}]`)
+                    .after(`<div class="answer-box" index="${replacedIndex}"
+                    pagename="${newProblem.title}" answer="${answer}">
+                    <span class="answer-num">${replacedIndex}</span>
+                    <input class="input-field input-batchans" type="text"
+                    placeholder="Enter answer"/>
+                  </div>`);
+                } else {
+                  $(".answer-list")
+                    .prepend(`<div class="answer-box" index="${replacedIndex}"
+                    pagename="${newProblem.title}" answer="${answer}">
+                    <span class="answer-num">${replacedIndex}</span>
+                    <input class="input-field input-batchans" type="text"
+                    placeholder="Enter answer"/>
+                  </div>`);
+                }
+              }
+            }
           }
         }
       }
