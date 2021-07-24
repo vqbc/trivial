@@ -955,6 +955,11 @@ h3 {
 } /**/
 
 /* Misc */
+u {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 1px;
+}
+
 code,
 pre {
   font: 0.9rem "Fira Mono", monospace;
