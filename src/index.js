@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 (() => {
-  // vQRpemzUkG
   let allPages = [];
   let allProblems = [];
   $.getJSON("data/allpages.json?20210819", (json) => {
@@ -132,20 +131,13 @@
       tabindex="0"
     >
       Counters on
-    </button>
-    <span class="settings-divider">|</span>
-    <span class="mobile-settings-break"><br /></span>
-    Print settings:
-    <button class="text-button setting-button" tabindex="0"
-    onclick="window.print()">
-      Print this page
     </button> ⋅
     <button
       class="text-button setting-button"
       id="print-toggle"
       tabindex="0"
     >
-      Links on
+      Links off
     </button>
   </div>`;
   let notes = `<div class="notes">
@@ -195,7 +187,14 @@
       </li>-->
     <ul>
   </div>`;
-  let printLinks = true;
+  let about = `<h2>Credits</h2>
+               <p>This site is designed and maintained by Andrew Chang:</p>
+               <p>Built using libraries jQuery, Tagify, Ion.RangeSlider, KaTeX, Clipboard.js, & Vega</p>
+               <p>Icons from Entypo by Daniel Bruce</p>
+               <p>Article and problem text from the AoPS Wiki</p>
+               <p>&amp; AMC problems copyright of the MAA</p>`;
+  let settings = ``;
+  let printLinks = false;
   let clickedTimes = 0;
   let subtitleClicked = 0;
   let settingsClicked = "";
@@ -632,8 +631,15 @@
 
     if (clickedTimes === clickedTimesThen) {
       if (pushUrl) {
+        console.log({
+          problems: pagenames,
+          ...(testName ? { testyear: testYear, testname: testName } : {}),
+        });
         history.pushState(
-          { problems: pagenames },
+          {
+            problems: pagenames,
+            ...(testName ? { testyear: testYear, testname: testName } : {}),
+          },
           "Problem Batch - Trivial AoPS Wiki Reader",
           "?problems=" +
             pagenames +
@@ -647,6 +653,11 @@
       katexFallback();
       customText();
       changeName();
+      if (testName) {
+        let name = sanitize(`${testYear} ${testName}`);
+        $("#batch-header").html(name);
+        document.title = name + " - Trivial AoPS Wiki Reader";
+      }
       fixLinks();
       collapseSolutions();
       directLinks();
@@ -3509,8 +3520,13 @@
       }
     });
 
+    if (printLinks) {
+      $(".page-container").addClass("links-text");
+      $("#print-toggle").text("Links on");
+    }
+
     $("#print-toggle").click(() => {
-      $(".page-container").toggleClass("nolinks-text");
+      $(".page-container").toggleClass("links-text");
       if (printLinks) {
         printLinks = false;
         $("#print-toggle").text("Links off");

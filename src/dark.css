@@ -28,6 +28,8 @@
     --input-button-focus-color: hsl(177deg, 39%, 70%);
     --input-layer-color: hsl(201deg, 8%, 19%);
     --input-focus-color: hsl(201deg, 5%, 33%);
+    --dialog-nav-color: hsl(201deg, 28%, 43%);
+    --dialog-nav-focus-color: hsl(201deg, 28%, 52%);
     --placeholder-color: hsl(0deg, 0%, 100%, 50%);
     --placeholder-disabled-color: hsl(0deg, 0%, 100%, 20%);
     --range-grid-color: hsl(0deg, 0%, 100%, 20%);

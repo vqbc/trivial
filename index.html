@@ -206,6 +206,97 @@
       }
     </script>
     <div class="page-container">
+      <div class="dialog-nav">
+        <button class="dialog-icon" tabindex="0" onclick="window.print()">
+          <svg
+            version="1.1"
+            id="Print"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 20 20"
+            enable-background="new 0 0 20 20"
+            xml:space="preserve"
+          >
+            <path
+              fill="currentColor"
+              d="M1.501,6h17c0.57,0,0.477-0.608,0.193-0.707C18.409,5.194,15.251,4,14.7,4H14V1H6v3H5.301
+	c-0.55,0-3.709,1.194-3.993,1.293S0.931,6,1.501,6z M19,7H1C0.45,7,0,7.45,0,8v5c0,0.551,0.45,1,1,1h2.283l-0.882,5H17.6l-0.883-5
+	H19c0.551,0,1-0.449,1-1V8C20,7.45,19.551,7,19,7z M4.603,17l1.198-7.003H14.2L15.399,17H4.603z"
+            />
+          </svg>
+        </button>
+        <!--<button class="dialog-icon" tabindex="0">
+          <svg
+            version="1.1"
+            id="Bar_graph"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 20 20"
+            enable-background="new 0 0 20 20"
+            xml:space="preserve"
+          >
+            <path
+              fill="currentColor"
+              d="M17,1h-2c-0.552,0-1,0.447-1,1v16.992h4V2C18,1.447,17.553,1,17,1z M11,7H9C8.448,7,8,7.447,8,8v10.992h4V8
+	C12,7.447,11.553,7,11,7z M5,13H3c-0.552,0-1,0.447-1,1v4.992h4V14C6,13.447,5.553,13,5,13z"
+            />
+          </svg>
+        </button>
+        <button class="dialog-icon" tabindex="0">
+          <svg
+            version="1.1"
+            id="Cog"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 20 20"
+            enable-background="new 0 0 20 20"
+            xml:space="preserve"
+          >
+            <path
+              fill="currentColor"
+              d="M16.783,10c0-1.049,0.646-1.875,1.617-2.443c-0.176-0.584-0.407-1.145-0.692-1.672
+	c-1.089,0.285-1.97-0.141-2.711-0.883c-0.741-0.74-0.968-1.621-0.683-2.711c-0.527-0.285-1.088-0.518-1.672-0.691
+	C12.074,2.57,11.047,3.215,10,3.215c-1.048,0-2.074-0.645-2.643-1.615C6.772,1.773,6.213,2.006,5.686,2.291
+	c0.285,1.09,0.059,1.971-0.684,2.711C4.262,5.744,3.381,6.17,2.291,5.885C2.006,6.412,1.774,6.973,1.6,7.557
+	C2.57,8.125,3.215,8.951,3.215,10c0,1.047-0.645,2.074-1.615,2.643c0.175,0.584,0.406,1.144,0.691,1.672
+	c1.09-0.285,1.971-0.059,2.711,0.682c0.741,0.742,0.969,1.623,0.684,2.711c0.527,0.285,1.087,0.518,1.672,0.693
+	c0.568-0.973,1.595-1.617,2.643-1.617c1.047,0,2.074,0.645,2.643,1.617c0.584-0.176,1.144-0.408,1.672-0.693
+	c-0.285-1.088-0.059-1.969,0.683-2.711c0.741-0.74,1.622-1.166,2.711-0.883c0.285-0.527,0.517-1.086,0.692-1.672
+	C17.429,11.873,16.783,11.047,16.783,10z M10,13.652c-2.018,0-3.653-1.635-3.653-3.652c0-2.018,1.636-3.654,3.653-3.654
+	c2.018,0,3.652,1.637,3.652,3.654C13.652,12.018,12.018,13.652,10,13.652z"
+            />
+          </svg>
+        </button>
+        <button class="dialog-icon" tabindex="0">
+          <svg
+            version="1.1"
+            id="Info_circled"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 20 20"
+            enable-background="new 0 0 20 20"
+            xml:space="preserve"
+          >
+            <path
+              fill="currentColor"
+              d="M10,0.4c-5.303,0-9.601,4.298-9.601,9.6c0,5.303,4.298,9.601,9.601,9.601c5.301,0,9.6-4.298,9.6-9.601
+	C19.6,4.698,15.301,0.4,10,0.4z M10.896,3.866c0.936,0,1.211,0.543,1.211,1.164c0,0.775-0.62,1.492-1.679,1.492
+	c-0.886,0-1.308-0.445-1.282-1.182C9.146,4.719,9.665,3.866,10.896,3.866z M8.498,15.75c-0.64,0-1.107-0.389-0.66-2.094l0.733-3.025
+	c0.127-0.484,0.148-0.678,0-0.678c-0.191,0-1.022,0.334-1.512,0.664L6.74,10.094c1.555-1.299,3.343-2.061,4.108-2.061
+	c0.64,0,0.746,0.756,0.427,1.92l-0.84,3.18c-0.149,0.562-0.085,0.756,0.064,0.756c0.192,0,0.82-0.232,1.438-0.719l0.362,0.486
+	C10.786,15.168,9.137,15.75,8.498,15.75z"
+            />
+          </svg>
+        </button>-->
+      </div>
       <script>
         if (
           JSON.parse(localStorage.getItem("darkTheme")) ||
@@ -286,21 +377,21 @@
           ><span class="bullet"> ⋅ </span
           ><span class="mobile-break"><br /></span>
           <a href="https://github.com/vqbc/trivial">Github</a> ⋅
-          <!-- <a href="https://discord.gg/erHfKrn">Discord</a> ⋅ -->
+          <a href="https://discord.gg/erHfKrn">Discord</a> ⋅
           <a href="https://forms.gle/3ofW7BQ5g5UBmknH9">Contact</a>
         </p>
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.4.0/tagify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.8.1/tagify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.18/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.18/contrib/copy-tex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.18/contrib/mhchem.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/contrib/copy-tex.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/contrib/mhchem.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/5.20.2/vega.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/5.1.0/vega-lite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/6.17.0/vega-embed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/5.21.0/vega.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/5.1.1/vega-lite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/6.19.1/vega-embed.min.js"></script>
     <script src="src/index.js"></script>
   </body>
 </html>
