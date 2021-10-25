@@ -4,10 +4,10 @@
 (() => {
   let allPages = [];
   let allProblems = [];
-  $.getJSON("data/allpages.json?20210819", (json) => {
+  $.getJSON("data/allpages.json?20211024", (json) => {
     allPages = json;
   });
-  $.getJSON("data/allproblems.json?20210819", (json) => {
+  $.getJSON("data/allproblems.json?20211024", (json) => {
     allProblems = json;
   });
   let categoryPages = [];
