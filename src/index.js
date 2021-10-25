@@ -260,12 +260,14 @@
     $(".notes").before(
       `<div class="problem-section" id="problem-section">
       <h2 class="section-header" id="article-header"></h2>
-      <a href="" class="aops-link">
-        View on the AoPS Wiki
-      </a> ⋅ <button class="text-button section-button" tabindex="0"
-      onclick="window.print()">
-        Print this page
-      </button>
+      <div class="section-options">
+        <a href="" class="aops-link">
+          View on the AoPS Wiki
+        </a> ⋅ <button class="text-button section-button" tabindex="0"
+        onclick="window.print()">
+          Print this page
+        </button>
+      </div>
       <div class="article-text" id="problem-text"></div>
     </div>
     <div class="problem-section section-collapsed" id="solutions-section">
@@ -431,12 +433,14 @@
     $("#load-results").remove();
     $(".notes").before(`<div class="problem-section">
       <h2 class="section-header" id="article-header"></h2>
-      <a href="" class="aops-link">
-        View on the AoPS Wiki
-      </a> ⋅ <button class="text-button section-button" tabindex="0"
-      onclick="window.print()">
-        Print this page
-      </button>
+      <div class="section-options">
+        <a href="" class="aops-link">
+          View on the AoPS Wiki
+        </a> ⋅ <button class="text-button section-button" tabindex="0"
+        onclick="window.print()">
+          Print this page
+        </button>
+      </div>
       <div class="article-text" id="full-text"></div>
     </div>
     ${displaySettingsText}`);
@@ -1477,14 +1481,16 @@
   function addProblems(problems, addReplace) {
     let problemList = problems.map((e) => titleCleanup(e.title)).join(", ");
     $("#batch-text").before(
-      `<button class="text-button section-button" id="copy-problems"
-        data-clipboard-text="${problemList}" title="This list can be copied into ` +
+      `<div class="section-options">
+        <button class="text-button section-button" id="copy-problems"
+          data-clipboard-text="${problemList}" title="This list can be copied into ` +
         `fields for multiple problems, such as making a custom Problem Batch.">
-        Copy problem list
-      </button> ⋅ <button class="text-button section-button" tabindex="0"
-      onclick="window.print()">
-        Print this page
-      </button>`
+          Copy problem list
+        </button> ⋅ <button class="text-button section-button" tabindex="0"
+        onclick="window.print()">
+          Print this page
+        </button>
+      </div>`
     );
     new ClipboardJS("#copy-problems");
 
