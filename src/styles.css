@@ -850,7 +850,7 @@ a:hover,
 }
 
 a.aops-link,
-#copy-problems {
+.section-button {
   display: inline-block;
   margin-top: 1em;
   font-style: italic;

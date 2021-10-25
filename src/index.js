@@ -261,8 +261,11 @@
       `<div class="problem-section" id="problem-section">
       <h2 class="section-header" id="article-header"></h2>
       <a href="" class="aops-link">
-        (View on the AoPS Wiki)
-      </a>
+        View on the AoPS Wiki
+      </a> ⋅ <button class="text-button section-button" tabindex="0"
+      onclick="window.print()">
+        Print this page
+      </button>
       <div class="article-text" id="problem-text"></div>
     </div>
     <div class="problem-section section-collapsed" id="solutions-section">
@@ -429,8 +432,11 @@
     $(".notes").before(`<div class="problem-section">
       <h2 class="section-header" id="article-header"></h2>
       <a href="" class="aops-link">
-        (View on the AoPS Wiki)
-      </a>
+        View on the AoPS Wiki
+      </a> ⋅ <button class="text-button section-button" tabindex="0"
+      onclick="window.print()">
+        Print this page
+      </button>
       <div class="article-text" id="full-text"></div>
     </div>
     ${displaySettingsText}`);
@@ -1471,10 +1477,13 @@
   function addProblems(problems, addReplace) {
     let problemList = problems.map((e) => titleCleanup(e.title)).join(", ");
     $("#batch-text").before(
-      `<button class="text-button" id="copy-problems"
+      `<button class="text-button section-button" id="copy-problems"
         data-clipboard-text="${problemList}" title="This list can be copied into ` +
         `fields for multiple problems, such as making a custom Problem Batch.">
-        (Copy problem list)
+        Copy problem list
+      </button> ⋅ <button class="text-button section-button" tabindex="0"
+      onclick="window.print()">
+        Print this page
       </button>`
     );
     new ClipboardJS("#copy-problems");
