@@ -667,6 +667,7 @@
         let name = sanitize(`${testYear} ${testName}`);
         $("#batch-header").html(name);
         document.title = name + " - Trivial AoPS Wiki Reader";
+        $("#input-hide").prop("checked", true);
       }
       fixLinks();
       collapseSolutions();

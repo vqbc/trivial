@@ -860,7 +860,11 @@ a.aops-link,
   font-style: italic;
 }
 
-#copy-problems:active {
+.section-options {
+  margin-bottom: -0.5em;
+}
+
+.section-button:active {
   transform: translateY(1px);
 }
 
