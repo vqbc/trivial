@@ -726,7 +726,9 @@
             if (
               finalAnswer === answer ||
               (pagename === "2012 AMC 12B Problems/Problem 12" &&
-                (finalAnswer === "D" || finalAnswer === "E"))
+                (finalAnswer === "D" || finalAnswer === "E")) ||
+              (pagename === "2015 AMC 10A Problems/Problem 20" &&
+                finalAnswer === "B")
             ) {
               streakCount++;
               $(".answer-feedback")
