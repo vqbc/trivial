@@ -1467,9 +1467,11 @@
     let htmlParsed = $.parseHTML(htmlString);
     let after = $(htmlParsed)
       .children()
-      .filter(":header:contains('Solution')")
+      .filter(":header:contains('Solution'),:header:contains('Diagram')")
       .nextUntil(":header:contains('See'), table")
-      .addBack(":header:contains(' Solution'), :header:contains('Solution ')")
+      .addBack(
+        ":header:contains(' Solution'), :header:contains('Solution '), :header:contains('Solution '), :header:contains('Diagram')"
+      )
       .not("p:contains('The problems on this page are copyrighted by the')");
 
     let afterHTML = $(after)
