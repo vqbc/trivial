@@ -1445,14 +1445,20 @@
   // Splits and adds problem parts
   function getProblem(htmlString) {
     let htmlParsed = $.parseHTML(htmlString);
+    console.log($(htmlParsed).children());
+    console.log($(htmlParsed).children().not(".toc"));
     let after = $(htmlParsed)
       .children()
+      .not(".toc")
+      .not("dl:first-child")
       .first()
       .nextUntil(":header:not(:contains('Problem'))")
       .addBack()
       .not(".toc")
-      .not(":header:contains('Problem')");
-    $(after).last("p").find("> br:first-child").remove();
+      .not("p:last-child > br:first-child");
+    after = $(after).not(
+      $(after).filter(":header:contains('Problem')").prevAll().addBack()
+    );
 
     let afterHTML = $(after)
       .map(function () {
