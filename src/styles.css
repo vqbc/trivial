@@ -345,6 +345,10 @@ input::placeholder {
   flex: 30%;
 }
 
+.input-singlever {
+  flex: 10%;
+}
+
 #input-singleyear,
 #input-singlenum {
   flex: 5%;
@@ -1166,6 +1170,10 @@ footer {
   .input-flexone-full,
   .input-button-flexone-full {
     flex: 100%;
+  }
+
+  .input-flexone-half {
+    flex: 48%;
   }
 }
 

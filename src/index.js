@@ -4,33 +4,25 @@
 (() => {
   let allPages = [];
   let allProblems = [];
-  $.getJSON("data/allpages.json?20211107", (json) => {
+  $.getJSON("data/allpages.json?20211124", (json) => {
     allPages = json;
   });
-  $.getJSON("data/allproblems.json?20211107", (json) => {
+  $.getJSON("data/allproblems.json?20211124", (json) => {
     allProblems = json;
   });
   let categoryPages = [];
   let theoremPages = [];
-  let testsList =
-    `AMC 8, AMC 10A, AMC 10B, AMC 12A, AMC 12B, AIME I, AIME II, ` +
-    `USAJMO, USAMO, IMO, AJHSME, AHSME, AMC 10, AMC 12, AIME`;
+  let testsList = `AMC 8, AMC 10, AMC 12, AIME, USAJMO, USAMO, IMO, AJHSME, AHSME`;
   let validYears = {
     "AMC 8": { min: 1999, max: 2020 },
-    "AMC 10A": { min: 2002, max: 2021 },
-    "AMC 10B": { min: 2002, max: 2021 },
-    "AMC 12A": { min: 2002, max: 2021 },
-    "AMC 12B": { min: 2002, max: 2021 },
-    "AIME I": { min: 2000, max: 2021 },
-    "AIME II": { min: 2000, max: 2021 },
+    "AMC 10": { min: 2000, max: 2021 },
+    "AMC 12": { min: 2000, max: 2021 },
+    AIME: { min: 1983, max: 2021 },
     USAJMO: { min: 2010, max: 2021 },
     USAMO: { min: 1972, max: 2020 },
     IMO: { min: 1959, max: 2020 },
     AJHSME: { min: 1985, max: 1998 },
     AHSME: { min: 1974, max: 1999 },
-    "AMC 10": { min: 2000, max: 2001 },
-    "AMC 12": { min: 2000, max: 2001 },
-    AIME: { min: 1983, max: 1999 },
   };
   let whitelist = [
     { value: "3D Geometry Problems", shortName: "3D Geo" },
@@ -1673,11 +1665,18 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="single-input">
-        <input class="input-field input-flex-full"
+        <input class="input-field input-singletest input-flexone-half"
           type="text"
           id="input-singletest"
-          placeholder="Exact test (e.g. AMC 10A)"
+          placeholder="Test"
           data-whitelist="${testsList}">
+        </input>
+        <input class="input-field input-flexone-half
+          input-singlever"
+          type="text"
+          id="input-singlever"
+          placeholder="Version (if appl.)"
+          data-whitelist="A,B,Fall A,Fall B,I,II">
         </input>
         <input class="input-field"
           type="number"
@@ -1706,6 +1705,16 @@
 
     let inputSingleTest = document.querySelector("#input-singletest");
     new Tagify(inputSingleTest, {
+      mode: "select",
+      originalInputValueFormat: (values) => values.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+        maxItems: 100,
+      },
+    });
+
+    let inputSingleVer = document.querySelector("#input-singlever");
+    new Tagify(inputSingleVer, {
       mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -1788,8 +1797,18 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="batch-input">
-        <input class="input-field input-singletest" id="input-singletest"
-          type="text" placeholder="Exact test (e.g. AMC 10A)" data-whitelist="${testsList}">
+        <input class="input-field input-singletest input-flexone-half"
+          type="text"
+          id="input-singletest"
+          placeholder="Test"
+          data-whitelist="${testsList}">
+        </input>
+        <input class="input-field input-flexone-half
+          input-singlever"
+          type="text"
+          id="input-singlever"
+          placeholder="Version (if appl.)"
+          data-whitelist="A,B,Fall A,Fall B,I,II">
         </input>
           <input class="input-field" type="number" min="1974" max="2021"
           id="input-singleyear" placeholder="Year">
@@ -1815,6 +1834,16 @@
 
     let inputSingleTest = document.querySelector("#input-singletest");
     new Tagify(inputSingleTest, {
+      mode: "select",
+      originalInputValueFormat: (values) => values.map((e) => e.value),
+      dropdown: {
+        enabled: 0,
+        maxItems: 100,
+      },
+    });
+
+    let inputSingleVer = document.querySelector("#input-singlever");
+    new Tagify(inputSingleVer, {
       mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -2036,11 +2065,25 @@
         </div>`
       );
     } else {
+      let preTest = "";
+      let postTest = "";
+      let version = $("#input-singlever").val();
+
+      if (version) {
+        if (version.split().length > 1) {
+          preTest = version.split(" ")[0] + " ";
+          postTest = version.split(" ")[1];
+        } else if (version === "I" || version === "II") {
+          postTest = " " + version;
+        } else {
+          postTest = version;
+        }
+      }
       await addProblem(
         sanitize(
-          `${$("#input-singleyear").val()} ${$(
+          `${$("#input-singleyear").val()} ${preTest}${$(
             "#input-singletest"
-          ).val()} Problems/Problem ${$("#input-singlenum").val()}`
+          ).val()}${postTest} Problems/Problem ${$("#input-singlenum").val()}`
         ),
         true
       );
@@ -2077,13 +2120,12 @@
   });
 
   $(".page-container").on("click", "#batch-button", async () => {
-    async function makeBatch() {
+    async function makeBatch(fullTest) {
+      console.log(fullTest);
       let problemTitles = sortProblems(allProblems).filter((e) =>
         e.includes(
           sanitize(
-            `${$("#input-singleyear").val()} ${$(
-              "#input-singletest"
-            ).val()} Problems/Problem `
+            `${$("#input-singleyear").val()} ${fullTest} Problems/Problem `
           )
         )
       );
@@ -2190,13 +2232,9 @@
           sourceCleanup(problems[0].problem).substring(0, 140),
           $("#input-name").val()
             ? sanitize($("#input-name").val())
-            : sanitize(
-                `${$("#input-singleyear").val()} ${$(
-                  "#input-singletest"
-                ).val()}`
-              ),
+            : sanitize(`${$("#input-singleyear").val()} ${fullTest}`),
           $("#input-singleyear").val(),
-          $("#input-singletest").val()
+          fullTest
         );
 
         console.log(problems);
@@ -2237,7 +2275,24 @@
       $("#solutions-section").remove();
       $(".display-settings").remove();
     } else {
-      await makeBatch();
+      let fullTest;
+      let preTest = "";
+      let postTest = "";
+      let version = $("#input-singlever").val();
+
+      if (version) {
+        if (version.split(" ").length > 1) {
+          preTest = version.split(" ")[0] + " ";
+          postTest = version.split(" ")[1];
+        } else if (version === "I" || version === "II") {
+          postTest = " " + version;
+        } else {
+          postTest = version;
+        }
+      }
+      fullTest = `${preTest}${$("#input-singletest").val()}${postTest}`;
+
+      await makeBatch(fullTest);
 
       if (clickedTimes === clickedTimesThen) {
         $(".loading-notice").remove();
@@ -2245,9 +2300,7 @@
         customText();
         let name = $("#input-name").val()
           ? sanitize($("#input-name").val())
-          : sanitize(
-              `${$("#input-singleyear").val()} ${$("#input-singletest").val()}`
-            );
+          : sanitize(`${$("#input-singleyear").val()} ${fullTest}`);
         $("#batch-header").html(name);
         document.title = name + " - Trivial AoPS Wiki Reader";
 
@@ -2255,14 +2308,14 @@
           {
             problems: problems.map((e) => underscores(e.title)).join("|"),
             testyear: $("#input-singleyear").val(),
-            testname: $("#input-singletest").val(),
+            testname: fullTest,
           },
           name + " - Trivial AoPS Wiki Reader",
           `?problems=${problems
             .map((e) => underscores(e.title))
-            .join("|")}&testyear=${$("#input-singleyear").val()}&testname=${$(
-            "#input-singletest"
-          ).val()}`
+            .join("|")}&testyear=${$(
+            "#input-singleyear"
+          ).val()}&testname=${fullTest}`
         );
         searchParams = new URLSearchParams(location.search);
         lastParam = searchParams.get("problems");
@@ -2274,7 +2327,7 @@
         breakSets();
         addBatchAnswers(
           problems.map((e) => e.title),
-          $("#input-singletest").val(),
+          fullTest,
           $("#input-singleyear").val()
         );
       }
@@ -3580,7 +3633,7 @@
   // Update options
   function updateYear() {
     $("#input-singletest").change(function () {
-      let yearSelect = $(this).next("#input-singleyear");
+      let yearSelect = $(this).nextAll("#input-singleyear");
       let testName = $(this).val();
       if (testName in validYears)
         yearSelect.attr({
