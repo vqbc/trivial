@@ -16,8 +16,18 @@
   let validYears = {
     "AMC 8": { min: 1999, max: 2020 },
     "AMC 10": { min: 2000, max: 2021 },
+    "AMC 10A": { min: 2002, max: 2021 },
+    "AMC 10B": { min: 2002, max: 2021 },
+    "AMC 10Fall A": { min: 2021, max: 2021 },
+    "AMC 10Fall B": { min: 2021, max: 2021 },
     "AMC 12": { min: 2000, max: 2021 },
+    "AMC 12A": { min: 2002, max: 2021 },
+    "AMC 12B": { min: 2002, max: 2021 },
+    "AMC 12Fall A": { min: 2021, max: 2021 },
+    "AMC 12Fall B": { min: 2021, max: 2021 },
     AIME: { min: 1983, max: 2021 },
+    AIMEI: { min: 2000, max: 2021 },
+    AIMEII: { min: 2000, max: 2021 },
     USAJMO: { min: 2010, max: 2021 },
     USAMO: { min: 1972, max: 2020 },
     IMO: { min: 1959, max: 2020 },
@@ -2051,10 +2061,16 @@
     clearProblem();
 
     if (
+      !(
+        $("#input-singletest").val() + $("#input-singlever").val() in
+        validYears
+      ) ||
       $("#input-singleyear").val() <
-        validYears[$("#input-singletest").val()].min ||
+        validYears[$("#input-singletest").val() + $("#input-singlever").val()]
+          .min ||
       $("#input-singleyear").val() >
-        validYears[$("#input-singletest").val()].max
+        validYears[$("#input-singletest").val() + $("#input-singlever").val()]
+          .max
     ) {
       $(".notes").before(
         `<div class="problem-section">
@@ -2070,7 +2086,7 @@
       let version = $("#input-singlever").val();
 
       if (version) {
-        if (version.split().length > 1) {
+        if (version.split(" ").length > 1) {
           preTest = version.split(" ")[0] + " ";
           postTest = version.split(" ")[1];
         } else if (version === "I" || version === "II") {
@@ -2259,11 +2275,16 @@
       $("#batch-header").html("Error");
       $("#solutions-section").remove();
     } else if (
-      $("#input-singletest").val() in validYears &&
-      ($("#input-singleyear").val() <
-        validYears[$("#input-singletest").val()].min ||
-        $("#input-singleyear").val() >
-          validYears[$("#input-singletest").val()].max)
+      !(
+        $("#input-singletest").val() + $("#input-singlever").val() in
+        validYears
+      ) ||
+      $("#input-singleyear").val() <
+        validYears[$("#input-singletest").val() + $("#input-singlever").val()]
+          .min ||
+      $("#input-singleyear").val() >
+        validYears[$("#input-singletest").val() + $("#input-singlever").val()]
+          .max
     ) {
       $(".article-text").before(
         `<p class="error">
@@ -3632,13 +3653,14 @@
 
   // Update options
   function updateYear() {
-    $("#input-singletest").change(function () {
+    $("#input-singletest, #input-singlever").change(function () {
       let yearSelect = $(this).nextAll("#input-singleyear");
-      let testName = $(this).val();
-      if (testName in validYears)
+      let testVer = $("#input-singlever").val();
+      let testName = $("#input-singletest").val();
+      if (testName + testVer in validYears)
         yearSelect.attr({
-          min: validYears[testName].min,
-          max: validYears[testName].max,
+          min: validYears[testName + testVer].min,
+          max: validYears[testName + testVer].max,
         });
     });
   }
