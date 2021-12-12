@@ -722,10 +722,6 @@ tags > span {
   display: none;
 }
 
-.hide-counters #random-input {
-  margin-bottom: 1.5rem;
-}
-
 .hide-counters #random-input + .practice-progress {
   display: none;
 } /**/
@@ -1230,6 +1226,10 @@ footer {
   .input-flex-full,
   .input-button {
     flex: 100%;
+  }
+
+  .input-flex-half {
+    flex: 48%;
   }
 }
 

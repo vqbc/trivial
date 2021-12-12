@@ -64,10 +64,10 @@
     </tag>`;
   }
   let problemOptions = `<input class="input-multi input-flex-full" id="input-subjects"
-    placeholder="Subjects (any by default)">
+    placeholder="Choose subjects">
   </input>
   <input class="input-multi input-flex-full" id="input-tests"
-    placeholder="Tests (any by default)"
+    placeholder="Choose tests"
     data-whitelist="(AMC Tests),AHSME,AMC 8,AMC 10,AMC 12,AIME,USAJMO,USAMO,IMO">
   </input>`;
   let moreOptions = `<div class="options-container text-collapsed">
@@ -91,20 +91,20 @@
     </div>
   </div>`;
   let yearOption = `<div class="input-container input-flex-full">
-    <label class="range-label">Years allowed:</label>
+    <label class="range-label">Years</label>
     <input class="input-range" id="input-years"></input>
   </div>`;
   let yearFullOption = `<div class="input-container input-full">
-    <label class="range-label">Years allowed:</label>
+    <label class="range-label">Years</label>
     <input class="input-range" id="input-years"></input>
   </div>`;
   let difficultyOption = `<div class="input-container input-flex-full">
     <label class="range-label">
-      Difficulty<sup><a
+      Difficulty range<sup><a
         class="dark-link"
         href="#difficulty-info"
         >?</a
-      ></sup> range allowed:
+      ></sup>
     </label>
     <input class="input-range" id="input-diff"></input>
   </div>`;
@@ -146,8 +146,10 @@
     <h3 class="text-collapse-header" id="notes-header">Tips</h3>
     <ul id="notes-text">
       <li>
-        AMC Tests includes all the other tests in the dropdown (including the
-        IMO since the AMC program selects for it).
+        If nothing is chosen for the tests option, problems from all tests, even
+        non-AMC ones, will be included. Choosing AMC Tests includes all the
+        other tests in the dropdown (with the IMO since the AMC program selects
+        for it).
       </li>
       <li id="difficulty-info">
         Difficulty levels are based on <a
@@ -278,6 +280,11 @@
     </div>
     ${displaySettingsText}`
     );
+
+    if (JSON.parse(localStorage.getItem("countersHidden"))) {
+      $("#counter-toggle").text("Counters off");
+    }
+
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
 
@@ -401,6 +408,10 @@
     </div>
     ${displaySettingsText}`
     );
+
+    if (JSON.parse(localStorage.getItem("countersHidden"))) {
+      $("#counter-toggle").text("Counters off");
+    }
   }
 
   function addUrlBatch() {
@@ -412,7 +423,7 @@
           .map((e) => titleCleanup(e))
           .toString()}">
         <button class="input-button" id="problems-button">
-          View Problems
+          Go!
         </button>
       </div>${moreOptions}
       <div class="problem-section">
@@ -425,6 +436,10 @@
       </div>
       ${displaySettingsText}`
     );
+
+    if (JSON.parse(localStorage.getItem("countersHidden"))) {
+      $("#counter-toggle").text("Counters off");
+    }
   }
 
   async function addArticle(pagename, pushUrl) {
@@ -446,6 +461,10 @@
       <div class="article-text" id="full-text"></div>
     </div>
     ${displaySettingsText}`);
+
+    if (JSON.parse(localStorage.getItem("countersHidden"))) {
+      $("#counter-toggle").text("Counters off");
+    }
 
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
@@ -1685,7 +1704,7 @@
           input-singlever"
           type="text"
           id="input-singlever"
-          placeholder="Version (if appl.)"
+          placeholder="Version"
           data-whitelist="A,B,Fall A,Fall B,I,II">
         </input>
         <input class="input-field"
@@ -1703,7 +1722,7 @@
           placeholder="#">
         </input>
         <button class="input-button" id="single-button">
-          View Problem
+          Go!
         </button>
       </div>
       ${notes}`
@@ -1742,7 +1761,7 @@
       `<div class="options-input" id="random-input">
         ${problemOptions}${yearOption}${difficultyOption}
         <button class="input-button input-button-full" id="random-button">
-          View Random
+          Go!
         </button>
       </div>
       ${notes}`
@@ -1792,6 +1811,8 @@
       to: 4.5,
       step: 0.5,
     });
+
+    $("#random-button").click();
   });
 
   $(".page-container").on("click", "#batch-nav", () => {
@@ -1807,24 +1828,24 @@
 
     $("#secondary-button-container").after(
       `<div class="options-input" id="batch-input">
-        <input class="input-field input-singletest input-flexone-half"
+        <input class="input-field input-singletest input-flex-half"
           type="text"
           id="input-singletest"
           placeholder="Test"
           data-whitelist="${testsList}">
         </input>
-        <input class="input-field input-flexone-half
+        <input class="input-field input-flex-half
           input-singlever"
           type="text"
           id="input-singlever"
-          placeholder="Version (if appl.)"
+          placeholder="Version"
           data-whitelist="A,B,Fall A,Fall B,I,II">
         </input>
           <input class="input-field" type="number" min="1974" max="2021"
           id="input-singleyear" placeholder="Year">
           </input>
         <button class="input-button" id="batch-button">
-          View Test
+          Go!
         </button>
       </div>
       ${moreOptions}
@@ -1882,7 +1903,7 @@
           .map((e) => titleCleanup(e))
           .toString()}">
         <button class="input-button" id="problems-button">
-          View Problems
+          Go!
         </button>
       </div>
       ${moreOptions}
@@ -1922,12 +1943,12 @@
         ${problemOptions}${difficultyOption}
         <div class="input-container input-flex-full">
           <label class="range-label">
-            Number of problems:
+            # of problems
           </label>
           <input class="input-range" id="input-number"/>
         </div>
         <button class="input-button input-button-full" id="ranbatch-button">
-          View Random
+          Go!
         </button>
       </div>
       ${moreOptions}
@@ -2013,6 +2034,8 @@
       max: 40,
       from: 5,
     });
+
+    $("#ranbatch-button").click();
   });
 
   $(".page-container").on("click", "#search-nav", () => {
@@ -2033,7 +2056,7 @@
         <input class="input-field input-end" id="input-search"
           type="text" placeholder="Keywords (e.g. Cauchy)">
         <button class="input-button input-button-half" id="search-button">
-          Search Pages
+          Search!
         </button>
         <button class="input-button input-button-half" id="theorem-button">
           Random Theorem
