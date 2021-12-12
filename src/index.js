@@ -3557,10 +3557,12 @@
       $("#solutions-section").toggleClass("section-collapsed");
       $("#input-answer").prop("disabled", true);
       if (
+        !JSON.parse(localStorage.getItem("countersHidden")) &&
         $(".answer-check").length &&
         !$(".correct-feedback").length &&
         !progressUpdated
       ) {
+        $("main").removeClass("hide-counters");
         $(".progress-hidden").removeClass("progress-hidden");
         $(".progress-nobottom").removeClass("progress-nobottom");
         progressUpdated = true;
