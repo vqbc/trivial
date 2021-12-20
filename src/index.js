@@ -189,6 +189,11 @@
           </li>
         </ul>
       </li>-->
+      <li>
+        More good resources can be found in collections like <a
+        href="https://artofproblemsolving.com/community/c2008407h2550333_handouts_list"
+        >this one</a> on AoPS which I recommend.
+      </li>
     <ul>
   </div>`;
   let about = `<h2>Credits</h2>
