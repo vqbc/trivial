@@ -156,8 +156,7 @@
       <li>
         If nothing is chosen for the tests option, problems from all tests, even
         non-AMC ones, will be included. Choosing AMC Tests includes all the
-        other tests in the dropdown (with the IMO since the AMC program selects
-        for it).
+        tests in the dropdown, counting the IMO as well.
       </li>
       <li>
         The different subjects are based on AoPS Wiki categories. They don’t
@@ -166,7 +165,7 @@
       </li>
         <ul>
           <li>You can do this by editing a page and adding
-          <code>[[Category:SUBJECT]]</code> to the bottom (just replace
+          <code>[[Category:SUBJECT]]</code> to the bottom (replace
           <code>SUBJECT</code> with the actual subject, like Introductory
           Geometry Problems).
           </li>
@@ -193,7 +192,7 @@
       <li>
         More good resources can be found in collections like <a
         href="https://artofproblemsolving.com/community/c2008407h2550333_handouts_list"
-        >this one</a> on AoPS which I recommend.
+        >this one</a> on AoPS. Check them out too!
       </li>
     <ul>
   </div>`;
