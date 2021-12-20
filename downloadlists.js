@@ -49,7 +49,7 @@ for (let page of json.query.allpages) {
 }
 
 while (json?.continue) {
-  console.log(`${Math.round((allPages.length / 13500) * 100)}% loaded...`);
+  console.log(`${Math.round((allPages.length / 14000) * 100)}% loaded...`);
   paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
   response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
   json = await response.json();
