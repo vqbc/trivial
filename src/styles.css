@@ -589,6 +589,10 @@ tags > span {
   padding-inline-start: 2rem;
 }
 
+.difficulty-info-hidden {
+  display: none;
+}
+
 #difficulty-chart {
   display: block;
   margin-top: 0.5rem;

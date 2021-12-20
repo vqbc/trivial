@@ -101,13 +101,21 @@
   let difficultyOption = `<div class="input-container input-flex-full">
     <label class="range-label">
       Difficulty range<sup><a
-        class="dark-link"
-        href="#difficulty-info"
+        class="dark-link" id="difficulty-link"
+        href="#"
         >?</a
       ></sup>
     </label>
     <input class="input-range" id="input-diff"></input>
   </div>`;
+  let difficultyChart = `
+      <div class="difficulty-info-hidden" id="difficulty-info">
+        Difficulty levels are based on <a
+          href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
+        >AoPS Wiki ratings</a>. They’re just determined by test and problem
+        number, and may be inaccurate for old exams.
+        <div id="difficulty-chart"></div>
+      </div>`;
   let replaceButton = `<button class="text-button replace-problem">
     (Replace problem)
   </button>`;
@@ -151,13 +159,6 @@
         other tests in the dropdown (with the IMO since the AMC program selects
         for it).
       </li>
-      <li id="difficulty-info">
-        Difficulty levels are based on <a
-          href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings"
-        >AoPS Wiki ratings</a>. They’re just determined by test and problem
-        number, and may be inaccurate for old exams.
-        <div id="difficulty-chart"></div>
-      </li>
       <li>
         The different subjects are based on AoPS Wiki categories. They don’t
         cover all the problems, so help fix this by adding categories on the
@@ -185,7 +186,7 @@
             and AMC 12 were similarly split into
             <a href="https://en.wikipedia.org/wiki/Taiwan" class="secret-link"
               >tw</a
-            >o A and B tests in 2002.
+            >o A and B tests in 2002.
           </li>
         </ul>
       </li>-->
@@ -1733,7 +1734,6 @@
       ${notes}`
     );
     updateYear();
-    renderChart();
     collapseText();
     directLinks();
 
@@ -1769,6 +1769,7 @@
           Go!
         </button>
       </div>
+      ${difficultyChart}
       ${notes}`
     );
     $("#random-input").after($(".practice-progress"));
@@ -1861,7 +1862,6 @@
     if (optionsUncollapsed)
       $(".options-container").removeClass("text-collapsed");
     updateYear();
-    renderChart();
     collapseText();
     directLinks();
     nameLive();
@@ -1916,7 +1916,6 @@
     );
     if (optionsUncollapsed)
       $(".options-container").removeClass("text-collapsed");
-    renderChart();
     collapseText();
     directLinks();
     nameLive();
@@ -1957,6 +1956,7 @@
         </button>
       </div>
       ${moreOptions}
+      ${difficultyChart}
       ${notes}`
     );
     if (optionsUncollapsed)
@@ -1972,7 +1972,6 @@
       data-whitelist="${sortProblems(allProblems)
         .map((e) => titleCleanup(e))
         .toString()}">`);
-    renderChart();
     collapseText();
     directLinks();
     nameLive();
@@ -2069,7 +2068,6 @@
       </div>
       ${notes}`
     );
-    renderChart();
     collapseText();
     directLinks();
 
@@ -3049,7 +3047,6 @@
 
     $("#main-button-container").after(`
       ${notes}`);
-    renderChart();
     collapseText();
 
     let history = JSON.parse(localStorage.getItem("pageHistory"));
@@ -3081,6 +3078,11 @@
         );
       });
     }
+  });
+
+  $(".page-container").on("click", "#difficulty-link", () => {
+    $("#difficulty-info").toggleClass("difficulty-info-hidden");
+    renderChart();
   });
 
   // Replace problems
@@ -3867,14 +3869,12 @@
   (async () => {
     if (searchParams.get("page")) {
       $("#main-button-container").after(`${notes}`);
-      renderChart();
       collapseText();
 
       if (validProblem(lastParam)) await addProblem(lastParam, true);
       else await addArticle(lastParam, true);
     } else if (searchParams.get("problems")) {
       $("#main-button-container").after(`${notes}`);
-      renderChart();
       addUrlBatch();
       collapseText();
 
@@ -3894,7 +3894,6 @@
           if (!$("#secondary-button-container").length)
             $("#main-button-container").after(`${notes}`);
           else $("#secondary-button-container").after(`${notes}`);
-          renderChart();
           collapseText();
         }
 
@@ -3905,7 +3904,6 @@
       } else if (newProblems && newProblems !== searchParams.get("problems")) {
         clearOptionsWithoutHistory();
         $("#main-button-container").after(`${notes}`);
-        renderChart();
         collapseText();
 
         addUrlBatch();
