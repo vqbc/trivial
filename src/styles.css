@@ -48,6 +48,7 @@
   --error-hover-color: hsl(0deg, 80%, 65%);
   --section-color: hsl(163deg, 47%, 50%);
   --link-color: hsl(203deg, 80%, 50%);
+  --link-blend-color: hsl(203deg, 80%, 15%);
   --link-hover-color: hsl(203deg, 80%, 59%);
   --text-button-color: hsl(177deg, 63%, 43%);
   --text-button-hover-color: hsl(177deg, 63%, 48%);
@@ -883,14 +884,16 @@ a.secret-link {
 }
 
 .article-text a[title],
-.article-text a.external {
-  color: inherit;
+.article-text a.external,
+.notes a {
+  color: var(--link-blend-color);
   text-decoration: underline var(--link-color) 1px;
   text-underline-offset: 3px;
 }
 
 .article-text a[title]:hover,
-.article-text a.external:hover {
+.article-text a.external:hover,
+.notes a:hover {
   color: var(--link-hover-color);
   text-decoration-color: var(--link-hover-color);
 }

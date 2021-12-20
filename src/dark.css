@@ -40,6 +40,7 @@
     --error-color: hsl(0deg, 75%, 70%);
     --section-color: hsl(163deg, 42%, 45%);
     --link-color: hsl(203deg, 86%, 75%);
+    --link-blend-color: hsl(203deg, 35%, 85%);
     --link-hover-color: hsl(203deg, 86%, 80%);
     --text-button-color: hsl(177deg, 44%, 60%);
     --text-button-hover-color: hsl(177deg, 44%, 67%);
