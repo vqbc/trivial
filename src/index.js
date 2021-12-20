@@ -202,7 +202,6 @@
                <p>Icons from Entypo by Daniel Bruce</p>
                <p>Article and problem text from the AoPS Wiki</p>
                <p>&amp; AMC problems copyright of the MAA</p>`;
-  let settings = ``;
   let printLinks = false;
   let clickedTimes = 0;
   let subtitleClicked = 0;
@@ -1471,8 +1470,6 @@
   // Splits and adds problem parts
   function getProblem(htmlString) {
     let htmlParsed = $.parseHTML(htmlString);
-    console.log($(htmlParsed).children());
-    console.log($(htmlParsed).children().not(".toc"));
     let after = $(htmlParsed)
       .children()
       .not(".toc")
