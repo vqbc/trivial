@@ -13,46 +13,46 @@
     --hr-color: #888;
     --body-background: fixed
         url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9ImhzbCgyMDFkZWcsIDglLCAxMyUpIiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD4KPHBhdGggZD0iTTI4IDBMMjggMzRMMCA1MEwwIDg0TDI4IDEwMEw1NiA4NEw1NiA1MEwyOCAzNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJoc2woMjAxZGVnLCA4JSwgMTMlKSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg=="),
-      linear-gradient(hsl(201deg, 8%, 12%), hsl(201deg, 8%, 12%));
-    --page-container-color: hsl(201deg, 8%, 15%);
-    --item-color: hsl(201deg, 8%, 18%);
-    --item-disabled-color: hsl(201deg, 8%, 17%);
-    --button-3d-shadow: hsl(0deg, 0%, 0%, 20%);
-    --main-button-color: hsl(189deg, 39%, 43%);
-    --main-active-button-color: hsl(189deg, 39%, 52%);
-    --main-button-focus-color: hsl(189deg, 39%, 70%);
-    --secondary-button-color: hsl(183deg, 39%, 43%);
-    --secondary-active-button-color: hsl(183deg, 39%, 52%);
-    --secondary-button-focus-color: hsl(183deg, 39%, 70%);
-    --input-button-color: hsl(177deg, 39%, 43%);
-    --input-button-focus-color: hsl(177deg, 39%, 70%);
-    --input-layer-color: hsl(201deg, 8%, 19%);
-    --input-focus-color: hsl(201deg, 5%, 33%);
-    --dialog-nav-color: hsl(201deg, 28%, 43%);
-    --dialog-nav-focus-color: hsl(201deg, 28%, 52%);
-    --placeholder-color: hsl(0deg, 0%, 100%, 50%);
-    --placeholder-disabled-color: hsl(0deg, 0%, 100%, 20%);
-    --range-grid-color: hsl(0deg, 0%, 100%, 20%);
-    --range-label-hover-color: hsl(0deg, 0%, 100%, 60%);
-    --input-slider-color: hsl(201deg, 5%, 31%);
-    --input-accent-color: hsl(210deg, 70%, 62%);
-    --input-handle-color: hsl(210deg, 35%, 45%);
-    --error-color: hsl(0deg, 75%, 70%);
-    --section-color: hsl(163deg, 42%, 45%);
-    --link-color: hsl(203deg, 86%, 75%);
-    --link-blend-color: hsl(203deg, 35%, 85%);
-    --link-hover-color: hsl(203deg, 86%, 80%);
-    --text-button-color: hsl(177deg, 44%, 60%);
-    --text-button-hover-color: hsl(177deg, 44%, 67%);
-    --correct-color: hsl(150deg, 45%, 45%);
-    --retry-color: hsl(190deg, 45%, 45%);
-    --blank-color: hsl(270deg, 45%, 45%);
-    --wrong-color: hsl(15deg, 75%, 45%);
+      linear-gradient(hsl(201deg 8% 12%), hsl(201deg 8% 12%));
+    --page-container-color: hsl(201deg 8% 15%);
+    --item-color: hsl(201deg 8% 18%);
+    --item-disabled-color: hsl(201deg 8% 17%);
+    --button-3d-shadow: hsl(0deg 0% 0% / 20%);
+    --main-button-color: hsl(189deg 39% 43%);
+    --main-active-button-color: hsl(189deg 39% 52%);
+    --main-button-focus-color: hsl(189deg 39% 70%);
+    --secondary-button-color: hsl(183deg 39% 43%);
+    --secondary-active-button-color: hsl(183deg 39% 52%);
+    --secondary-button-focus-color: hsl(183deg 39% 70%);
+    --input-button-color: hsl(177deg 39% 43%);
+    --input-button-focus-color: hsl(177deg 39% 70%);
+    --input-layer-color: hsl(201deg 8% 19%);
+    --input-focus-color: hsl(201deg 5% 33%);
+    --dialog-nav-color: hsl(201deg 28% 43%);
+    --dialog-nav-focus-color: hsl(201deg 28% 52%);
+    --placeholder-color: hsl(0deg 0% 100% / 50%);
+    --placeholder-disabled-color: hsl(0deg 0% 100% / 20%);
+    --range-grid-color: hsl(0deg 0% 100% / 20%);
+    --range-label-hover-color: hsl(0deg 0% 100% / 60%);
+    --input-slider-color: hsl(201deg 5% 31%);
+    --input-accent-color: hsl(210deg 70% 62%);
+    --input-handle-color: hsl(210deg 35% 45%);
+    --error-color: hsl(0deg 75% 70%);
+    --section-color: hsl(163deg 42% 45%);
+    --link-color: hsl(203deg 86% 75%);
+    --link-blend-color: hsl(203deg 35% 85%);
+    --link-hover-color: hsl(203deg 86% 80%);
+    --text-button-color: hsl(177deg 44% 60%);
+    --text-button-hover-color: hsl(177deg 44% 67%);
+    --correct-color: hsl(150deg 45% 45%);
+    --retry-color: hsl(190deg 45% 45%);
+    --blank-color: hsl(270deg 45% 45%);
+    --wrong-color: hsl(15deg 75% 45%);
   }
 
   .tagify {
-    --placeholder-color: rgb(255, 255, 255, 0.5);
-    --placeholder-color-focus: rgb(255, 255, 255, 0.3);
+    --placeholder-color: rgb(255 255 255 / 0.5);
+    --placeholder-color-focus: rgb(255 255 255 / 0.3);
     --tag-bg: #bbb;
     --tag-hover: #abb;
     --tag-text-color--edit: var(--text-color);
@@ -65,8 +65,8 @@
   }
 
   .tagify__dropdown__wrapper {
-    --tagify-dd-bg-color: hsl(201deg, 8%, 20%);
-    --tagify-dd-color-primary: hsl(210deg, 41%, 44%);
+    --tagify-dd-bg-color: hsl(201deg 8% 20%);
+    --tagify-dd-color-primary: hsl(210deg 41% 44%);
   }
 
   img.latex,

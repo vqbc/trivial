@@ -14,49 +14,49 @@
       url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8cGF0aCBkPSJNMjggMEwyOCAzNEwwIDUwTDAgODRMMjggMTAwTDU2IDg0TDU2IDUwTDI4IDM0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8L3N2Zz4="),
     linear-gradient(#f3f3f3, #f3f3f3);
   --page-container-color: #fcfcfc;
-  --page-container-box-shadow: 0 5px 20px hsl(217deg, 100%, 5%, 20%);
+  --page-container-box-shadow: 0 5px 20px hsl(217deg 100% 5% / 20%);
   --item-color: #fefefe;
   --item-disabled-color: #f7f7f7;
-  --button-3d-shadow: hsl(0deg, 0%, 0%, 10%);
-  --main-button-color: hsl(189deg, 44%, 48%);
-  --main-active-button-color: hsl(189deg, 44%, 57%);
-  --main-button-focus-color: hsl(189deg, 44%, 75%);
-  --main-box-shadow: 0 2px 10px hsl(217deg, 100%, 5%, 20%);
-  --main-button-focus-box-shadow: 0 4px 10px hsl(217deg, 100%, 5%, 20%);
-  --secondary-button-color: hsl(183deg, 33%, 63%);
-  --secondary-active-button-color: hsl(183deg, 44%, 48%);
-  --secondary-button-focus-color: hsl(183deg, 44%, 75%);
-  --input-button-color: hsl(177deg, 44%, 48%);
-  --input-button-focus-color: hsl(177deg, 44%, 75%);
+  --button-3d-shadow: hsl(0deg 0% 0% / 10%);
+  --main-button-color: hsl(189deg 44% 48%);
+  --main-active-button-color: hsl(189deg 44% 57%);
+  --main-button-focus-color: hsl(189deg 44% 75%);
+  --main-box-shadow: 0 2px 10px hsl(217deg 100% 5% / 20%);
+  --main-button-focus-box-shadow: 0 4px 10px hsl(217deg 100% 5% / 20%);
+  --secondary-button-color: hsl(183deg 33% 63%);
+  --secondary-active-button-color: hsl(183deg 44% 48%);
+  --secondary-button-focus-color: hsl(183deg 44% 75%);
+  --input-button-color: hsl(177deg 44% 48%);
+  --input-button-focus-color: hsl(177deg 44% 75%);
   --input-layer-color: #fff;
   --input-focus-color: #ccc;
-  --dialog-nav-color: hsl(201deg, 33%, 48%);
-  --dialog-nav-focus-color: hsl(201deg, 33%, 66%);
-  --secondary-box-shadow: 0 2px 5px hsl(217deg, 100%, 5%, 20%);
-  --secondary-hover-box-shadow: 0 3px 5px hsl(217deg, 100%, 5%, 20%);
-  --minor-box-shadow: 0 2px 5px hsl(217deg, 100%, 5%, 10%);
-  --button-text-shadow: 0 1px 2px hsl(0deg, 0%, 0%, 40%);
-  --main-text-shadow: 0 2px 3px hsl(0deg, 0%, 0%, 40%);
-  --placeholder-color: hsl(0deg, 0%, 0%, 40%);
-  --placeholder-disabled-color: hsl(0deg, 0%, 0%, 20%);
-  --range-grid-color: hsl(0deg, 0%, 0%, 10%);
-  --range-label-hover-color: hsl(0deg, 0%, 0%, 30%);
-  --input-slider-color: hsl(217deg, 15%, 90%);
-  --input-accent-color: hsl(210deg, 80%, 67%);
-  --input-handle-color: hsl(210deg, 40%, 50%);
-  --error-color: hsl(0deg, 80%, 50%);
-  --error-hover-color: hsl(0deg, 80%, 65%);
-  --section-color: hsl(163deg, 47%, 50%);
-  --link-color: hsl(203deg, 80%, 50%);
-  --link-blend-color: hsl(203deg, 80%, 15%);
-  --link-hover-color: hsl(203deg, 80%, 59%);
-  --text-button-color: hsl(177deg, 63%, 43%);
-  --text-button-hover-color: hsl(177deg, 63%, 48%);
-  --streak-color: hsl(50deg, 60%, 55%);
-  --correct-color: hsl(150deg, 50%, 50%);
-  --retry-color: hsl(190deg, 50%, 50%);
-  --blank-color: hsl(270deg, 50%, 60%);
-  --wrong-color: hsl(15deg, 80%, 50%);
+  --dialog-nav-color: hsl(201deg 33% 48%);
+  --dialog-nav-focus-color: hsl(201deg 33% 66%);
+  --secondary-box-shadow: 0 2px 5px hsl(217deg 100% 5% / 20%);
+  --secondary-hover-box-shadow: 0 3px 5px hsl(217deg 100% 5% / 20%);
+  --minor-box-shadow: 0 2px 5px hsl(217deg 100% 5% / 10%);
+  --button-text-shadow: 0 1px 2px hsl(0deg 0% 0% / 40%);
+  --main-text-shadow: 0 2px 3px hsl(0deg 0% 0% / 40%);
+  --placeholder-color: hsl(0deg 0% 0% / 40%);
+  --placeholder-disabled-color: hsl(0deg 0% 0% / 20%);
+  --range-grid-color: hsl(0deg 0% 0% / 10%);
+  --range-label-hover-color: hsl(0deg 0% 0% / 30%);
+  --input-slider-color: hsl(217deg 15% 90%);
+  --input-accent-color: hsl(210deg 80% 67%);
+  --input-handle-color: hsl(210deg 40% 50%);
+  --error-color: hsl(0deg 80% 50%);
+  --error-hover-color: hsl(0deg 80% 65%);
+  --section-color: hsl(163deg 47% 50%);
+  --link-color: hsl(203deg 80% 50%);
+  --link-blend-color: hsl(203deg 80% 15%);
+  --link-hover-color: hsl(203deg 80% 59%);
+  --text-button-color: hsl(177deg 63% 43%);
+  --text-button-hover-color: hsl(177deg 63% 48%);
+  --streak-color: hsl(50deg 60% 55%);
+  --correct-color: hsl(150deg 50% 50%);
+  --retry-color: hsl(190deg 50% 50%);
+  --blank-color: hsl(270deg 50% 60%);
+  --wrong-color: hsl(15deg 80% 50%);
   --button-spacing: 1.4%;
   --vertical-item-spacing: 0.6rem;
   --horizontal-item-spacing: 0.6rem;
@@ -694,7 +694,7 @@ tags > span {
   min-width: 8ch;
   font-style: italic;
   background: var(--streak-color);
-  border: 2px solid rgb(0, 0, 0, 0.1);
+  border: 2px solid rgb(0 0 0 / 0.1);
 }
 
 .right-questions {
@@ -763,7 +763,7 @@ tags > span {
 #input-answer,
 .input-batchans {
   background: var(--input-layer-color);
-  border-top: 1px solid rgba(0, 0, 0, 5%);
+  border-top: 1px solid rgb(0 0 0 / 5%);
 }
 
 #input-answer:disabled {
@@ -1103,7 +1103,7 @@ mjx-container:focus {
 }
 
 ::selection {
-  background: hsl(201deg, 80%, 70%, 35%);
+  background: hsl(201deg 80% 70% / 35%);
 } /**/
 
 /* Main and footer */
