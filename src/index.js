@@ -932,6 +932,7 @@
         }
       });
 
+      $("#input-amc").off("change");
       $("#input-amc").change(() => {
         $("#batchans-section").toggleClass("batchans-amcscore");
       });
