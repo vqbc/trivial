@@ -2139,6 +2139,8 @@
   });
 
   $(".page-container").on("click", "#random-button", async () => {
+    clickedTimes++;
+    let clickedTimesThen = clickedTimes;
     clearProblem();
 
     let pages = await getPages();
@@ -2155,13 +2157,14 @@
       );
     } else {
       let invalid = true;
-      let response;
+      let response = true;
       while (invalid) {
         clearProblem();
 
         let randomPage = pages[Math.floor(Math.random() * pages.length)];
         console.log(randomPage);
-        response = await addProblem(randomPage, true);
+        if (clickedTimes === clickedTimesThen)
+          response = await addProblem(randomPage, true);
         invalid = !response;
       }
     }
@@ -2580,14 +2583,15 @@
       let response;
       let json;
 
-      $("#batch-header").after(
-        `<div class="loading-notice">
+      if (clickedTimes === clickedTimesThen)
+        $("#batch-header").after(
+          `<div class="loading-notice">
           <div class="loading-text">Loading problems…</div>
           <div class="loading-bar-container">
             <div class="loading-bar"></div>
           </div>
         </div>`
-      );
+        );
 
       if (inputProblems.val()) {
         let paramsList = problemTitles.map(
