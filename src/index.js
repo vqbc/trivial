@@ -1786,8 +1786,7 @@
         tag: subjectTag,
       },
     });
-    let inputTests = document.querySelector("#input-tests");
-    new Tagify(inputTests, {
+    $("#input-tests").tagify({
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
@@ -1815,6 +1814,18 @@
     });
 
     $("#random-button").click();
+  });
+
+  $(".page-container").on("click", "#amc8-single", () => {
+    $("#single-problem").click();
+    $("#input-tests").data("tagify").addTags(["AMC 8"]);
+    $("#random-button").click();
+  });
+
+  $(".page-container").on("click", "#amc8-test", () => {
+    $("#problem-batch").click();
+    $("#input-tests").data("tagify").addTags(["AMC 8"]);
+    $("#ranbatch-button").click();
   });
 
   $(".page-container").on("click", "#batch-nav", () => {
@@ -1987,8 +1998,7 @@
         tag: subjectTag,
       },
     });
-    let inputTests = document.querySelector("#input-tests");
-    new Tagify(inputTests, {
+    $("#input-tests").tagify({
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,

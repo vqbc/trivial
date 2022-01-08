@@ -5,12 +5,12 @@
 /* Dark theme */
 @media screen {
   :root {
-    --text-color: #ddd;
-    --header-color: #ddd;
-    --secondary-color: #ccc;
-    --subtitle-color: #bbb;
-    --minor-color: #bbb;
-    --hr-color: #888;
+    --text-color: hsl(0 0% 87%);
+    --header-color: hsl(0 0% 87%);
+    --secondary-color: hsl(0 0% 83%);
+    --subtitle-color: hsl(0 0% 79%);
+    --minor-color: hsl(0 0% 72%);
+    --hr-color: hsl(0 0% 53%);
     --body-background: fixed
         url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9ImhzbCgyMDFkZWcsIDglLCAxMyUpIiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD4KPHBhdGggZD0iTTI4IDBMMjggMzRMMCA1MEwwIDg0TDI4IDEwMEw1NiA4NEw1NiA1MEwyOCAzNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJoc2woMjAxZGVnLCA4JSwgMTMlKSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg=="),
       linear-gradient(hsl(201deg 8% 12%), hsl(201deg 8% 12%));
@@ -18,6 +18,8 @@
     --item-color: hsl(201deg 8% 18%);
     --item-disabled-color: hsl(201deg 8% 17%);
     --button-3d-shadow: hsl(0deg 0% 0% / 20%);
+    --shortcut-button-color: hsl(175 55% 43%);
+    --shortcut-button-focus-color: hsl(175 55% 70%);
     --main-button-color: hsl(189deg 39% 43%);
     --main-active-button-color: hsl(189deg 39% 52%);
     --main-button-focus-color: hsl(189deg 39% 70%);
@@ -56,6 +58,7 @@
     --tag-bg: #bbb;
     --tag-hover: #abb;
     --tag-text-color--edit: var(--text-color);
+    --tag-remove-btn-color: var(--tag-text-color);
   }
 
   .tagify__input::before,
