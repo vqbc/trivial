@@ -1739,8 +1739,7 @@
     collapseText();
     directLinks();
 
-    let inputSingleTest = document.querySelector("#input-singletest");
-    new Tagify(inputSingleTest, {
+    $("#input-singletest").tagify({
       mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -1749,8 +1748,7 @@
       },
     });
 
-    let inputSingleVer = document.querySelector("#input-singlever");
-    new Tagify(inputSingleVer, {
+    $("#input-singlever").tagify({
       mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -1779,8 +1777,7 @@
     collapseText();
     directLinks();
 
-    let inputSubjects = document.querySelector("#input-subjects");
-    new Tagify(inputSubjects, {
+    $("#input-subjects").tagify({
       whitelist: whitelist,
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -1883,8 +1880,7 @@
     breakLive();
     hideToggle();
 
-    let inputSingleTest = document.querySelector("#input-singletest");
-    new Tagify(inputSingleTest, {
+    $("#input-singletest").tagify({
       mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -1893,8 +1889,7 @@
       },
     });
 
-    let inputSingleVer = document.querySelector("#input-singlever");
-    new Tagify(inputSingleVer, {
+    $("#input-singlever").tagify({
       mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -1937,8 +1932,7 @@
     breakLive();
     hideToggle();
 
-    let inputProblems = document.querySelector("#input-problems");
-    new Tagify(inputProblems, {
+    $("#input-problems").tagify({
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
@@ -1993,8 +1987,7 @@
     breakLive();
     hideToggle();
 
-    let inputSubjects = document.querySelector("#input-subjects");
-    new Tagify(inputSubjects, {
+    $("#input-subjects").tagify({
       whitelist: whitelist,
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -2013,15 +2006,13 @@
         maxItems: 100,
       },
     });
-    let inputProblems = document.querySelector("#input-problems");
-    new Tagify(inputProblems, {
+    $("#input-problems").tagify({
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
       },
     });
-    let inputSkip = document.querySelector("#input-skip");
-    new Tagify(inputSkip, {
+    $("#input-skip").tagify({
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
         enabled: 0,
@@ -2085,8 +2076,7 @@
     collapseText();
     directLinks();
 
-    let inputSearch = document.querySelector("#input-search");
-    new Tagify(inputSearch, {
+    $("#input-search").tagify({
       mode: "select",
       originalInputValueFormat: (values) => values.map((e) => e.value),
       dropdown: {
@@ -3703,6 +3693,17 @@
 
   // Update options
   function updateYear() {
+    $("#input-singletest, #input-singlever").off("change");
+    $("#input-singletest").change(function () {
+      let testName = $("#input-singletest").val();
+      if (testName in validVersions) {
+        $("#input-singlever").data("tagify").setDisabled(false);
+        $("#input-singlever").data("tagify").whitelist =
+          validVersions[testName];
+      } else {
+        $("#input-singlever").data("tagify").setDisabled(true);
+      }
+    });
     $("#input-singletest, #input-singlever").change(function () {
       let yearSelect = $(this).nextAll("#input-singleyear");
       let testVer = $("#input-singlever").val();

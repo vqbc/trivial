@@ -405,6 +405,7 @@ input::placeholder {
   flex-wrap: nowrap;
   max-height: 55px;
   overflow-x: scroll;
+  line-height: 1.1;
   background: var(--item-color);
   border: none;
   box-shadow: var(--secondary-box-shadow);
@@ -429,6 +430,7 @@ tags > span {
 .tagify__input {
   margin: 5px;
   padding: 2px 10px;
+  line-height: inherit;
 }
 
 .input-field .tagify__input {
@@ -441,6 +443,7 @@ tags > span {
 
 .tagify__tag {
   margin: 3px 0 3px 3px;
+  line-height: inherit;
 }
 
 .input-field .tagify__tag > div {
