@@ -13,6 +13,11 @@
   let categoryPages = [];
   let theoremPages = [];
   let testsList = `AMC 8, AMC 10, AMC 12, AIME, USAJMO, USAMO, IMO, AJHSME, AHSME`;
+  let validVersions = {
+    "AMC 10": ["A", "B", "Fall A", "Fall B"],
+    "AMC 12": ["A", "B", "Fall A", "Fall B"],
+    AIME: ["I", "II"],
+  };
   let validYears = {
     "AMC 8": { min: 1999, max: 2020 },
     "AMC 10": { min: 2000, max: 2021 },
@@ -1825,6 +1830,7 @@
 
   $(".page-container").on("click", "#amc8-test", () => {
     $("#problem-batch").click();
+    $("#input-tests").data("tagify").addTags(["AMC 8"]);
     $("#input-diff").data("ionRangeSlider").update({ from: 0, to: 2.5 });
     $("#input-number").data("ionRangeSlider").update({ from: 25 });
     $("#ranbatch-button").click();
