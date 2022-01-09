@@ -1825,7 +1825,8 @@
 
   $(".page-container").on("click", "#amc8-test", () => {
     $("#problem-batch").click();
-    $("#input-tests").data("tagify").addTags(["AMC 8"]);
+    $("#input-diff").data("ionRangeSlider").update({ from: 0, to: 2.5 });
+    $("#input-number").data("ionRangeSlider").update({ from: 25 });
     $("#ranbatch-button").click();
   });
 
