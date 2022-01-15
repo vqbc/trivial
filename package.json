@@ -10,7 +10,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.16.0",
-    "node-forge": "^0.10.0",
+    "node-forge": "^1.0.0",
     "parcel-bundler": "^1.12.5",
     "stylelint": "^14.0.1",
     "stylelint-config-rational-order": "^0.1.2",
