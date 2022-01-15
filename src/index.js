@@ -1490,10 +1490,8 @@
       .nextUntil(":header:not(:contains('Problem'))")
       .addBack()
       .not(".toc")
-      .not("p:last-child > br:first-child");
-    after = $(after).not(
-      $(after).filter(":header:contains('Problem')").prevAll().addBack()
-    );
+      .not("p:last-child > br:first-child")
+      .not(":header");
 
     let afterHTML = $(after)
       .map(function () {
