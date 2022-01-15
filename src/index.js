@@ -408,7 +408,10 @@
   function addBatch() {
     $(".notes").before(
       `<div class="problem-section">
-      <h2 class="section-header" id="batch-header">Problem Batch</h2>
+      <h2 class="section-header" id="batch-header">Problem Batch - ${new Date().toLocaleString(
+        "en-UK",
+        { year: "numeric", month: "short", day: "numeric" }
+      )}</h2>
       <div class="article-text" id="batch-text"></div>
     </div>
     <div class="problem-section section-collapsed" id="solutions-section">
@@ -436,7 +439,10 @@
         </button>
       </div>${moreOptions}
       <div class="problem-section">
-        <h2 class="section-header" id="batch-header">Problem Batch</h2>
+        <h2 class="section-header" id="batch-header">Problem Batch - ${new Date().toLocaleString(
+          "en-UK",
+          { year: "numeric", month: "short", day: "numeric" }
+        )}</h2>
         <div class="article-text" id="batch-text"></div>
       </div>
       <div class="problem-section section-collapsed" id="solutions-section">
