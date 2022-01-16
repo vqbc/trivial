@@ -1415,6 +1415,7 @@ footer {
   .button-container,
   .options-input,
   .options-container,
+  #difficulty-info,
   #random-input + .practice-progress,
   .answer-check,
   .notes,
