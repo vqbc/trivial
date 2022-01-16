@@ -408,7 +408,7 @@
   function addBatch() {
     $(".notes").before(
       `<div class="problem-section">
-      <h2 class="section-header" id="batch-header">Problem Batch - ${new Date().toLocaleString(
+      <h2 class="section-header" id="batch-header">Problem Set - ${new Date().toLocaleString(
         "en-UK",
         { year: "numeric", month: "short", day: "numeric" }
       )}</h2>
@@ -439,7 +439,7 @@
         </button>
       </div>${moreOptions}
       <div class="problem-section">
-        <h2 class="section-header" id="batch-header">Problem Batch - ${new Date().toLocaleString(
+        <h2 class="section-header" id="batch-header">Problem Set - ${new Date().toLocaleString(
           "en-UK",
           { year: "numeric", month: "short", day: "numeric" }
         )}</h2>
@@ -686,7 +686,7 @@
             problems: pagenames,
             ...(testName ? { testyear: testYear, testname: testName } : {}),
           },
-          "Problem Batch - Trivial AoPS Wiki Reader",
+          "Problem Set - Trivial AoPS Wiki Reader",
           "?problems=" +
             pagenames +
             (testYear ? `&testyear=${testYear}&testname=${testName}` : ``)
@@ -1528,7 +1528,7 @@
       `<div class="section-options">
         <button class="text-button section-button" id="copy-problems"
           data-clipboard-text="${problemList}" title="This list can be copied into ` +
-        `fields for multiple problems, such as making a custom Problem Batch.">
+        `fields for multiple problems, such as making a custom Problem Set.">
           Copy problem list
         </button> ⋅ <button class="text-button section-button" tabindex="0"
         onclick="window.print()">
@@ -3484,7 +3484,7 @@
       $("#batch-header").html(sanitize(name));
       document.title = sanitize(name) + " - Trivial AoPS Wiki Reader";
     } else {
-      document.title = "Problem Batch - Trivial AoPS Wiki Reader";
+      document.title = "Problem Set - Trivial AoPS Wiki Reader";
     }
   }
 

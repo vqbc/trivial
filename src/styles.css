@@ -133,7 +133,7 @@ body {
   font: italic 1.4em "Computer Modern Bright", sans-serif;
 }
 
-.tests-header {
+.intro-header {
   margin-top: 0.6rem;
   color: var(--minor-color);
   font: normal 1.1em "Computer Modern Bright", sans-serif;
@@ -1410,7 +1410,7 @@ footer {
   .dialog-nav,
   .header,
   .subtitle,
-  .tests-header,
+  .intro-header,
   .shortcut-container,
   .button-container,
   .options-input,
