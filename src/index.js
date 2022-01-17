@@ -377,7 +377,7 @@
 
       $(".answer-check").remove();
       await addAnswer(pagename.replace(/_/g, " "));
-      return getProblem(problemText) && getSolutions(problemText);
+      return problemProblem && problemSolutions;
     } else {
       $(".article-text").before(
         `<p class="error">The page you specified does not exist.</p>`
@@ -635,34 +635,36 @@
         }
       }
 
-      paramsList = redirList.map(
-        (redirPage) => `action=parse&page=${redirPage}&format=json`
-      );
-      console.log(paramsList);
-      responseList = await Promise.all(
-        paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
-      );
-      console.log(responseList);
-      jsonList = await Promise.all(
-        responseList.map((response) => response.json())
-      );
-      console.log(jsonList);
+      if (redirList[0]) {
+        paramsList = redirList.map(
+          (redirPage) => `action=parse&page=${redirPage}&format=json`
+        );
+        console.log(paramsList);
+        responseList = await Promise.all(
+          paramsList.map((params) => fetch(`${apiEndpoint}?${params}&origin=*`))
+        );
+        console.log(responseList);
+        jsonList = await Promise.all(
+          responseList.map((response) => response.json())
+        );
+        console.log(jsonList);
 
-      for (let [index, currentProblem] of redirList.entries()) {
-        let problemText = latexer(jsonList[index].parse.text["*"]);
-        let problemProblem = getProblem(problemText);
-        let problemSolutions = getSolutions(problemText);
+        for (let [index, currentProblem] of redirList.entries()) {
+          let problemText = latexer(jsonList[index].parse.text["*"]);
+          let problemProblem = getProblem(problemText);
+          let problemSolutions = getSolutions(problemText);
 
-        problems.splice(redirIndex[index], 0, {
-          title: currentProblem,
-          difficulty: computeDifficulty(
-            computeTest(currentProblem),
-            computeNumber(currentProblem),
-            computeYear(currentProblem)
-          ),
-          problem: problemProblem,
-          solutions: problemSolutions,
-        });
+          problems.splice(redirIndex[index], 0, {
+            title: currentProblem,
+            difficulty: computeDifficulty(
+              computeTest(currentProblem),
+              computeNumber(currentProblem),
+              computeYear(currentProblem)
+            ),
+            problem: problemProblem,
+            solutions: problemSolutions,
+          });
+        }
       }
 
       if (clickedTimes === clickedTimesThen) {
@@ -1611,7 +1613,10 @@
   };
 
   const latexer = (html) => {
-    html = html.replace(/<pre>\s+?(.*?)<\/pre>/gs, "$1");
+    html = html.replace(
+      /<pre>\s+?(.*?)<\/pre>/gs,
+      "<p style='white-space: pre-line;'>$1</p>"
+    );
 
     let images = html.match(/<img (?:.*?) class="latex\w*?" (?:.*?)>/g);
     images = [...new Set(images)];
@@ -2247,7 +2252,7 @@
         }
       }
 
-      if (redirList) {
+      if (redirList[0]) {
         paramsList = redirList.map(
           (redirPage) => `action=parse&page=${redirPage}&format=json`
         );
@@ -2471,7 +2476,7 @@
         }
       }
 
-      if (redirList) {
+      if (redirList[0]) {
         paramsList = redirList.map(
           (redirPage) => `action=parse&page=${redirPage}&format=json`
         );
@@ -2756,7 +2761,7 @@
         }
       }
 
-      if (redirList) {
+      if (redirList[0]) {
         paramsList = redirList.map(
           (redirPage) => `action=parse&page=${redirPage}&format=json`
         );
