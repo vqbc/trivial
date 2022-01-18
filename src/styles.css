@@ -430,6 +430,9 @@ tags > span {
 .tagify__input {
   margin: 5px;
   padding: 2px 10px;
+}
+
+.input-multi .tagify__input {
   line-height: inherit;
 }
 
