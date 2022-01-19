@@ -3039,7 +3039,7 @@
           addItem();
         loadedTimes++;
         if (!history.length) $("#load-results").remove();
-
+        fixLinks();
         directLinks();
       });
     }
@@ -3834,9 +3834,7 @@
   // Enter pages into history
   function addHistory(page, snippet) {
     let history = JSON.parse(localStorage.getItem("pageHistory"));
-    let url = `https://artofproblemsolving.com/wiki/index.php/${encodeURIComponent(
-      underscores(page)
-    )}`;
+    let url = `?page=${underscores(page)}`;
     let cleanedPage = titleCleanup(page);
     let sanitizedSnippet = sanitize(snippet);
 
