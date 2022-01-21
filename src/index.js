@@ -1828,17 +1828,18 @@
     $("#random-button").click();
   });
 
-  $(".page-container").on("click", "#amc8-single", () => {
+  $(".page-container").on("click", "#aime-single", () => {
     $("#single-problem").click();
-    $("#input-tests").data("tagify").addTags(["AMC 8"]);
+    $("#input-tests").data("tagify").addTags(["AIME"]);
+    $("#input-diff").data("ionRangeSlider").update({ from: 3, to: 6.5 });
     $("#random-button").click();
   });
 
-  $(".page-container").on("click", "#amc8-test", () => {
+  $(".page-container").on("click", "#aime-test", () => {
     $("#problem-batch").click();
-    $("#input-tests").data("tagify").addTags(["AMC 8"]);
-    $("#input-diff").data("ionRangeSlider").update({ from: 0, to: 2.5 });
-    $("#input-number").data("ionRangeSlider").update({ from: 25 });
+    $("#input-tests").data("tagify").addTags(["AIME"]);
+    $("#input-diff").data("ionRangeSlider").update({ from: 3, to: 6.5 });
+    $("#input-number").data("ionRangeSlider").update({ from: 15 });
     $("#ranbatch-button").click();
   });
 
