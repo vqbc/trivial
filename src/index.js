@@ -1546,9 +1546,9 @@
         <h2 class="problem-heading">Problem ${index + 1}
           <span class="source-link">
             (<a class="source-link-a"
-              href="https://artofproblemsolving.com/wiki/index.php/${underscores(
-                problem.title
-              )}">${titleCleanup(problem.title)}</a>)
+              href="?page=${underscores(problem.title)}">${titleCleanup(
+        problem.title
+      )}</a>)
           </span>${addReplace ? replaceButton : ``}
         </h2>${problem.problem}
       </div>`);
@@ -1559,9 +1559,9 @@
           Problem ${index + 1}
           <span class="source-link">
             (<a class="source-link-a"
-              href="https://artofproblemsolving.com/wiki/index.php/${underscores(
-                problem.title
-              )}">${titleCleanup(problem.title)}</a>)
+              href="?page=${underscores(problem.title)}">${titleCleanup(
+        problem.title
+      )}</a>)
           </span>
         </h2>${problem.problem}
         <div class="solutions-divider">Solution</div>
@@ -3188,7 +3188,7 @@
                 <h2 class="problem-heading">Problem ${replacedIndex}
                   <span class="source-link">
                     (<a class="source-link-a"
-                      href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+                      href="?page=${underscores(
                         newProblem.title
                       )}">${titleCleanup(newProblem.title)}</a>)
                   </span>${replaceButton}
@@ -3202,7 +3202,7 @@
                   Problem ${replacedIndex}
                   <span class="source-link">
                     (<a class="source-link-a"
-                      href="https://artofproblemsolving.com/wiki/index.php/${underscores(
+                      href="?page=${underscores(
                         newProblem.title
                       )}">${titleCleanup(newProblem.title)}</a>)
                   </span>
