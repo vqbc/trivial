@@ -403,7 +403,7 @@ input::placeholder {
 .tagify {
   display: flex;
   flex-wrap: nowrap;
-  max-height: 55px;
+  max-height: 57px;
   overflow-x: scroll;
   line-height: 1.1;
   background: var(--item-color);
@@ -444,7 +444,7 @@ tags > span {
   transition: none;
 }
 
-.tagify__tag {
+.tagify:not(.input-field) .tagify__tag {
   margin: 3px 0 3px 3px;
   line-height: inherit;
 }
