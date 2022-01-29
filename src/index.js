@@ -39,6 +39,17 @@
     AJHSME: { min: 1985, max: 1998 },
     AHSME: { min: 1974, max: 1999 },
   };
+  let validNums = {
+    "AMC 8": { min: 1, max: 25 },
+    "AMC 10": { min: 1, max: 25 },
+    "AMC 12": { min: 1, max: 25 },
+    AIME: { min: 1, max: 15 },
+    USAJMO: { min: 1, max: 6 },
+    USAMO: { min: 1, max: 6 },
+    IMO: { min: 1, max: 6 },
+    AJHSME: { min: 1, max: 25 },
+    AHSME: { min: 1, max: 30 },
+  };
   let whitelist = [
     { value: "3D Geometry Problems", shortName: "3D Geo" },
     { value: "Introductory Algebra Problems", shortName: "Intro Alg" },
@@ -1820,8 +1831,8 @@
       grid: true,
       min: 0,
       max: 10,
-      from: 1,
-      to: 4.5,
+      from: 0,
+      to: 10,
       step: 0.5,
     });
 
@@ -2043,8 +2054,8 @@
       grid: true,
       min: 0,
       max: 10,
-      from: 1,
-      to: 4.5,
+      from: 0,
+      to: 10,
       step: 0.5,
     });
     $("#input-number").ionRangeSlider({
@@ -3716,12 +3727,18 @@
     });
     $("#input-singletest, #input-singlever").change(function () {
       let yearSelect = $(this).nextAll("#input-singleyear");
+      let numSelect = $(this).nextAll("#input-singlenum");
       let testVer = $("#input-singlever").val();
       let testName = $("#input-singletest").val();
       if (testName + testVer in validYears)
         yearSelect.attr({
           min: validYears[testName + testVer].min,
           max: validYears[testName + testVer].max,
+        });
+      if (testName in validNums)
+        numSelect.attr({
+          min: validNums[testName].min,
+          max: validNums[testName].max,
         });
     });
   }
