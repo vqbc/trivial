@@ -19,7 +19,7 @@
     AIME: ["I", "II"],
   };
   let validYears = {
-    "AMC 8": { min: 1999, max: 2020 },
+    "AMC 8": { min: 1999, max: 2022 },
     "AMC 10": { min: 2000, max: 2021 },
     "AMC 10A": { min: 2002, max: 2021 },
     "AMC 10B": { min: 2002, max: 2021 },
@@ -30,12 +30,12 @@
     "AMC 12B": { min: 2002, max: 2021 },
     "AMC 12Fall A": { min: 2021, max: 2021 },
     "AMC 12Fall B": { min: 2021, max: 2021 },
-    AIME: { min: 1983, max: 2021 },
-    AIMEI: { min: 2000, max: 2021 },
-    AIMEII: { min: 2000, max: 2021 },
+    AIME: { min: 1983, max: 2022 },
+    AIMEI: { min: 2000, max: 2022 },
+    AIMEII: { min: 2000, max: 2022 },
     USAJMO: { min: 2010, max: 2021 },
-    USAMO: { min: 1972, max: 2020 },
-    IMO: { min: 1959, max: 2020 },
+    USAMO: { min: 1972, max: 2021 },
+    IMO: { min: 1959, max: 2021 },
     AJHSME: { min: 1985, max: 1998 },
     AHSME: { min: 1974, max: 1999 },
   };
@@ -1738,7 +1738,7 @@
         <input class="input-field"
           type="number"
           min="1974"
-          max="2021"
+          max="2022"
           id="input-singleyear"
           placeholder="Year">
         </input>
@@ -1821,9 +1821,9 @@
       type: "double",
       grid: true,
       min: 1974,
-      max: 2021,
-      from: 2002,
-      to: 2021,
+      max: 2022,
+      from: 2010,
+      to: 2022,
       prettify_enabled: false,
     });
     $("#input-diff").ionRangeSlider({
@@ -1880,7 +1880,7 @@
           placeholder="Version"
           data-whitelist="A,B,Fall A,Fall B,I,II">
         </input>
-          <input class="input-field" type="number" min="1974" max="2021"
+          <input class="input-field" type="number" min="1974" max="2022"
           id="input-singleyear" placeholder="Year">
           </input>
         <button class="input-button" id="batch-button">
@@ -2044,9 +2044,9 @@
       type: "double",
       grid: true,
       min: 1974,
-      max: 2021,
-      from: 2002,
-      to: 2021,
+      max: 2022,
+      from: 2010,
+      to: 2022,
       prettify_enabled: false,
     });
     $("#input-diff").ionRangeSlider({
