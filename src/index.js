@@ -779,7 +779,6 @@
               (pagename === "2015 AMC 10A Problems/Problem 20" &&
                 finalAnswer === "B")
             ) {
-              streakCount++;
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item correct-feedback">
                   ${originalAnswer} is correct! :)
@@ -788,6 +787,7 @@
                 $(".progress-hidden").removeClass("progress-hidden");
                 progressUpdated = true;
                 if (answerTries == 1) {
+                  streakCount++;
                   $(".streak-bar").removeClass("bar-hidden");
                   $(".question-bar.right-questions").removeClass("bar-hidden");
                   $(".question-bar.right-questions").css(
@@ -802,7 +802,6 @@
                     )
                   );
                 } else {
-                  $(".streak-bar").removeClass("bar-hidden");
                   $(".question-bar.retry-questions").removeClass("bar-hidden");
                   $(".question-bar.retry-questions").css(
                     "flex-grow",
@@ -3424,6 +3423,8 @@
       location.href.split("?page=")[0].split("?problems=")[0]
     );
     lastParam = "";
+    $("#difficulty-info").remove();
+    $(".options-container").remove();
     $(".options-input").remove();
     $("#options-header").remove();
     $(".error").remove();
@@ -3436,6 +3437,8 @@
 
   function clearOptionsWithoutHistory() {
     clickedTimes++;
+    $("#difficulty-info").remove();
+    $(".options-container").remove();
     $(".options-input").remove();
     $("#options-header").remove();
     $(".error").remove();
