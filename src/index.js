@@ -249,6 +249,7 @@
     }
     if (JSON.parse(localStorage.getItem("countersHidden"))) {
       $("#counter-toggle").text("Counters off");
+      $("main").addClass("hide-counters");
     }
 
     $("#dark-toggle").click(() => {
@@ -384,6 +385,8 @@
             `<span id="wrong-num">0</span> incorrect</div>
         </div>`
         );
+        if ($("#random-input").length)
+          $("#random-input").after($(".practice-progress"));
       }
 
       $(".answer-check").remove();
@@ -802,6 +805,7 @@
                     )
                   );
                 } else {
+                  $(".streak-bar").removeClass("bar-hidden");
                   $(".question-bar.retry-questions").removeClass("bar-hidden");
                   $(".question-bar.retry-questions").css(
                     "flex-grow",
@@ -2176,7 +2180,7 @@
     } else {
       let invalid = true;
       let response = true;
-      while (invalid) {
+      while (invalid && clickedTimes === clickedTimesThen) {
         clearProblem();
 
         let randomPage = pages[Math.floor(Math.random() * pages.length)];
