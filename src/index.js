@@ -782,6 +782,10 @@
               (pagename === "2015 AMC 10A Problems/Problem 20" &&
                 finalAnswer === "B")
             ) {
+              $("#input-answer").removeClass("glow");
+              void document.getElementById("input-answer").offsetWidth;
+              $("#input-answer").addClass("glow");
+
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item correct-feedback">
                   ${originalAnswer} is correct! :)
@@ -823,6 +827,11 @@
               }
             } else {
               streakCount = 0;
+
+              $("#input-answer").removeClass("shake");
+              void document.getElementById("input-answer").offsetWidth;
+              $("#input-answer").addClass("shake");
+
               $(".answer-feedback")
                 .prepend(`<div class="feedback-item wrong-feedback">
               ${originalAnswer} is wrong :(
