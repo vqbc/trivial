@@ -1363,47 +1363,47 @@ footer {
 
 @keyframes shake {
   0% {
-    transform: rotate(0deg);
+    transform: translate(-1px, 0);
   }
 
   10% {
-    transform: rotate(-1deg);
+    transform: translate(1px, 0);
   }
 
   20% {
-    transform: rotate(1deg);
+    transform: translate(0, 0);
   }
 
   30% {
-    transform: rotate(0deg);
+    transform: translate(-1px, 0);
   }
 
   40% {
-    transform: rotate(1deg);
+    transform: translate(1px, 0);
   }
 
   50% {
-    transform: rotate(-1deg);
+    transform: translate(0, 0);
   }
 
   60% {
-    transform: rotate(0deg);
+    transform: translate(-1px, 0);
   }
 
   70% {
-    transform: rotate(-1deg);
+    transform: translate(1px, 0);
   }
 
   80% {
-    transform: rotate(1deg);
+    transform: translate(0, 0);
   }
 
   90% {
-    transform: rotate(0deg);
+    transform: translate(-1px, 0);
   }
 
   100% {
-    transform: rotate(-1deg);
+    transform: translate(1px, 0);
   }
 }
 
