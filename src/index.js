@@ -757,13 +757,13 @@
     if (answer) {
       if (clickedTimes === clickedTimesThen) {
         $("#problem-text").after(`<div class="answer-check">
-        <div class="options-input answer-options">
+        <form class="options-input answer-options" onsubmit="return false">
           <input class="input-field" id="input-answer"
             type="text" placeholder="Enter answer (optional)"/>
-          <button class="input-button" id="answer-button">
+          <button type="submit" class="input-button" id="answer-button">
             Check Answer
           </button>
-        </div>
+        </form>
         <div class="answer-feedback"></div>
       </div>`);
 
