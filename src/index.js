@@ -4,10 +4,10 @@
 (() => {
   let allPages = [];
   let allProblems = [];
-  $.getJSON("data/allpages.json?20220325", (json) => {
+  $.getJSON("data/allpages.json?20220703", (json) => {
     allPages = json;
   });
-  $.getJSON("data/allproblems.json?20220325", (json) => {
+  $.getJSON("data/allproblems.json?20220703", (json) => {
     allProblems = json;
   });
   let categoryPages = [];
@@ -33,8 +33,8 @@
     AIME: { min: 1983, max: 2022 },
     AIMEI: { min: 2000, max: 2022 },
     AIMEII: { min: 2000, max: 2022 },
-    USAJMO: { min: 2010, max: 2021 },
-    USAMO: { min: 1972, max: 2021 },
+    USAJMO: { min: 2010, max: 2022 },
+    USAMO: { min: 1972, max: 2022 },
     IMO: { min: 1959, max: 2021 },
     AJHSME: { min: 1985, max: 1998 },
     AHSME: { min: 1974, max: 1999 },
