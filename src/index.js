@@ -163,7 +163,7 @@
       id="print-toggle"
       tabindex="0"
     >
-      Links off
+      Links unprinted
     </button>
   </div>`;
   let notes = `<div class="notes">
@@ -212,12 +212,6 @@
       </li>
     <ul>
   </div>`;
-  let about = `<h2>Credits</h2>
-               <p>This site is designed and maintained by Andrew Chang:</p>
-               <p>Built using libraries jQuery, Tagify, Ion.RangeSlider, KaTeX, Clipboard.js, & Vega</p>
-               <p>Icons from Entypo by Daniel Bruce</p>
-               <p>Article and problem text from the AoPS Wiki</p>
-               <p>&amp; AMC problems copyright of the MAA</p>`;
   let printLinks = false;
   let clickedTimes = 0;
   let subtitleClicked = 0;
@@ -345,11 +339,11 @@
       $("#solutions-text").html(problemSolutions);
       $("#article-header").html(titleCleanup(pagename));
 
-      document.title = titleCleanup(pagename) + " - Trivial AoPS Wiki Reader";
+      document.title = titleCleanup(pagename) + " - Trivial Math Practice";
       if (pushUrl) {
         history.pushState(
           { page: pagename },
-          titleCleanup(pagename) + " - Trivial AoPS Wiki Reader",
+          titleCleanup(pagename) + " - Trivial Math Practice",
           "?page=" + underscores(pagename)
         );
         searchParams = new URLSearchParams(location.search);
@@ -538,11 +532,11 @@
       $(".article-text").html(problemText);
       $("#article-header").html(titleCleanup(pagename));
 
-      document.title = titleCleanup(pagename) + " - Trivial AoPS Wiki Reader";
+      document.title = titleCleanup(pagename) + " - Trivial Math Practice";
       if (pushUrl) {
         history.pushState(
           { page: pagename },
-          titleCleanup(pagename) + " - Trivial AoPS Wiki Reader",
+          titleCleanup(pagename) + " - Trivial Math Practice",
           "?page=" + underscores(pagename)
         );
         searchParams = new URLSearchParams(location.search);
@@ -702,7 +696,7 @@
             problems: pagenames,
             ...(testName ? { testyear: testYear, testname: testName } : {}),
           },
-          "Problem Set - Trivial AoPS Wiki Reader",
+          "Problem Set - Trivial Math Practice",
           "?problems=" +
             pagenames +
             (testYear ? `&testyear=${testYear}&testname=${testName}` : ``)
@@ -718,7 +712,7 @@
       if (testName) {
         let name = sanitize(`${testYear} ${testName}`);
         $("#batch-header").html(name);
-        document.title = name + " - Trivial AoPS Wiki Reader";
+        document.title = name + " - Trivial Math Practice";
         $("#input-hide").prop("checked", true);
       }
       fixLinks();
@@ -2389,7 +2383,7 @@
           ? sanitize($("#input-name").val())
           : sanitize(`${$("#input-singleyear").val()} ${fullTest}`);
         $("#batch-header").html(name);
-        document.title = name + " - Trivial AoPS Wiki Reader";
+        document.title = name + " - Trivial Math Practice";
 
         history.pushState(
           {
@@ -2397,7 +2391,7 @@
             testyear: $("#input-singleyear").val(),
             testname: fullTest,
           },
-          name + " - Trivial AoPS Wiki Reader",
+          name + " - Trivial Math Practice",
           `?problems=${problems
             .map((e) => underscores(e.title))
             .join("|")}&testyear=${$(
@@ -2572,7 +2566,7 @@
       let name = $("#input-name").val();
       history.pushState(
         { problems: problems.map((e) => underscores(e.title)).join("|") },
-        name + " - Trivial AoPS Wiki Reader",
+        name + " - Trivial Math Practice",
         "?problems=" + problems.map((e) => underscores(e.title)).join("|")
       );
       searchParams = new URLSearchParams(location.search);
@@ -2873,7 +2867,7 @@
     let name = $("#input-name").val();
     history.pushState(
       { problems: problems.map((e) => underscores(e.title)).join("|") },
-      name + " - Trivial AoPS Wiki Reader",
+      name + " - Trivial Math Practice",
       "?problems=" + problems.map((e) => underscores(e.title)).join("|")
     );
     searchParams = new URLSearchParams(location.search);
@@ -3015,8 +3009,7 @@
         await addResults(originalSearch, search, searchResults, pageExists);
 
         document.title =
-          `Search results for ${originalSearch}` +
-          " - Trivial AoPS Wiki Reader";
+          `Search results for ${originalSearch}` + " - Trivial Math Practice";
         fixLinks();
         directLinks();
       }
@@ -3104,7 +3097,7 @@
       addHistoryContainer();
       await addItems(history);
 
-      document.title = "View history - Trivial AoPS Wiki Reader";
+      document.title = "View history - Trivial Math Practice";
       fixLinks();
       directLinks();
       $("#clear-history").click(() => {
@@ -3271,7 +3264,7 @@
 
             history.replaceState(
               { problems: underscores(origProblemsList.join("|")) },
-              name + " - Trivial AoPS Wiki Reader",
+              name + " - Trivial Math Practice",
               "?problems=" + underscores(origProblemsList.join("|"))
             );
             searchParams = new URLSearchParams(location.search);
@@ -3429,10 +3422,10 @@
 
   function clearOptions() {
     clickedTimes++;
-    document.title = "Trivial AoPS Wiki Reader";
+    document.title = "Trivial Math Practice";
     history.pushState(
       {},
-      "Trivial AoPS Wiki Reader",
+      "Trivial Math Practice",
       location.href.split("?page=")[0].split("?problems=")[0]
     );
     lastParam = "";
@@ -3464,10 +3457,10 @@
 
   function clearAll() {
     clickedTimes++;
-    document.title = "Trivial AoPS Wiki Reader";
+    document.title = "Trivial Math Practice";
     history.pushState(
       {},
-      "Trivial AoPS Wiki Reader",
+      "Trivial Math Practice",
       location.href.split("?page=")[0].split("?problems=")[0]
     );
     lastParam = "";
@@ -3515,9 +3508,9 @@
     let name = $("#input-name").val();
     if (name) {
       $("#batch-header").html(sanitize(name));
-      document.title = sanitize(name) + " - Trivial AoPS Wiki Reader";
+      document.title = sanitize(name) + " - Trivial Math Practice";
     } else {
-      document.title = "Problem Set - Trivial AoPS Wiki Reader";
+      document.title = "Problem Set - Trivial Math Practice";
     }
   }
 
@@ -3675,18 +3668,6 @@
     $("#counter-toggle").click(() => {
       settingsClicked += "3";
 
-      if (settingsClicked === "123" && !$("#fun-toggle").length)
-        $("#counter-toggle").after(`
-          <span class="divider"> ⋅ </span>
-          <button class="text-button setting-button" id="fun-toggle" tabindex="0">
-            Made you click
-          </button>`);
-
-      $("#fun-toggle").click(function () {
-        $(".divider").remove();
-        $(this).remove();
-      });
-
       $("main").toggleClass("hide-counters");
       if (!JSON.parse(localStorage.getItem("countersHidden"))) {
         localStorage.setItem("countersHidden", true);
@@ -3699,17 +3680,33 @@
 
     if (printLinks) {
       $(".page-container").addClass("links-text");
-      $("#print-toggle").text("Links on");
+      $("#print-toggle").text("Links printed");
     }
 
     $("#print-toggle").click(() => {
+      settingsClicked += "4";
+
+      if (settingsClicked === "1234" && !$("#fun-toggle").length) {
+        $("#print-toggle").after(`
+          <span class="divider"> ⋅ </span>
+          <button class="text-button setting-button" id="fun-toggle" tabindex="0">
+            Made you click
+          </button>`);
+        settingsClicked = "";
+      }
+
+      $("#fun-toggle").click(function () {
+        $(".divider").remove();
+        $(this).remove();
+      });
+
       $(".page-container").toggleClass("links-text");
       if (printLinks) {
         printLinks = false;
-        $("#print-toggle").text("Links off");
+        $("#print-toggle").text("Links unprinted");
       } else {
         printLinks = true;
-        $("#print-toggle").text("Links on");
+        $("#print-toggle").text("Links printed");
       }
     });
   }
@@ -3985,7 +3982,7 @@
     let text;
     switch (subtitleClicked % 7) {
       case 0:
-        text = "An AoPS Wiki Reader for Studying & Practicing";
+        text = "Studying & Practicing — AoPS Wiki Powered";
         break;
       case 1:
         text = "Alcumus, but you don’t get internet points";
