@@ -589,23 +589,13 @@ tags > span {
   display: inline-block;
 } /**/
 
-/* Advanced options (not currently used) */
-.advanced-options {
-  display: flex;
-  flex: 100%;
-  flex-wrap: wrap;
+/* More options header */
+#options-header {
+    margin-top: -0.5rem;
 }
 
-.advanced-options #input-break {
-  flex: 10%;
-}
-
-.advanced-options .checkbox-container {
-  flex: 25%;
-}
-
-.advanced-options .input-field {
-  flex: 20%;
+.text-collapsed > #options-header {
+    margin-bottom: 2.5rem;
 } /**/
 
 /* Input positioning */
