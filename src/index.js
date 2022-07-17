@@ -300,6 +300,11 @@
       $("#counter-toggle").text("Counters off");
     }
 
+    localStorage.setItem(
+      "numProblems",
+      JSON.parse(localStorage.getItem("numProblems")) + 1
+    );
+
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
 
@@ -432,6 +437,11 @@
     if (JSON.parse(localStorage.getItem("countersHidden"))) {
       $("#counter-toggle").text("Counters off");
     }
+
+    localStorage.setItem(
+      "numSets",
+      JSON.parse(localStorage.getItem("numSets")) + 1
+    );
   }
 
   function addUrlBatch() {
@@ -463,6 +473,11 @@
     if (JSON.parse(localStorage.getItem("countersHidden"))) {
       $("#counter-toggle").text("Counters off");
     }
+
+    localStorage.setItem(
+      "numSets",
+      JSON.parse(localStorage.getItem("numSets")) + 1
+    );
   }
 
   async function addArticle(pagename, pushUrl) {
@@ -488,6 +503,11 @@
     if (JSON.parse(localStorage.getItem("countersHidden"))) {
       $("#counter-toggle").text("Counters off");
     }
+
+    localStorage.setItem(
+      "numArticles",
+      JSON.parse(localStorage.getItem("numArticles")) + 1
+    );
 
     let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
@@ -769,6 +789,12 @@
             if (computeTest(pagename) === "AIME")
               finalAnswer = originalAnswer.padStart(3, "0");
             answerTries++;
+
+            if (answerTries == 1)
+              localStorage.setItem(
+                "numAnswered",
+                JSON.parse(localStorage.getItem("numAnswered")) + 1
+              );
             if (
               finalAnswer === answer ||
               (pagename === "2012 AMC 12B Problems/Problem 12" &&
@@ -802,6 +828,10 @@
                       $(".question-bar.right-questions").css("flex-grow")
                     )
                   );
+                  localStorage.setItem(
+                    "numCorrect",
+                    JSON.parse(localStorage.getItem("numCorrect")) + 1
+                  );
                 } else {
                   $(".streak-bar").removeClass("bar-hidden");
                   $(".question-bar.retry-questions").removeClass("bar-hidden");
@@ -815,6 +845,10 @@
                     parseInt(
                       $(".question-bar.retry-questions").css("flex-grow")
                     )
+                  );
+                  localStorage.setItem(
+                    "numRetry",
+                    JSON.parse(localStorage.getItem("numRetry")) + 1
                   );
                 }
                 $("#solutions-header").click();
@@ -3112,6 +3146,107 @@
         );
       });
     }
+  });
+
+  $(".page-container").on("click", "#stats-button", async () => {
+    clearAll();
+    activeButton("stats-button");
+
+    $("#main-button-container").after(`
+      ${notes}`);
+    collapseText();
+    $(".notes").before(
+      `<div class="problem-section" id="about-section">
+          <h2 class="section-header" id="about-header">Your Statistics</h2>
+          <div class="article-text" id="about-text">
+            <p class="list-head">
+              Total problems generated: <span id="num-problems"></span>
+            </p>
+            <ul class="list-indent">
+              <li class="list-minor">
+                Total problems answered: <span id="num-answered"></span>
+              </li>
+              <li class="list-minor">
+                Total problems correct on first try:
+                <span id="num-correct"></span>
+              </li>
+              <li class="list-minor">
+                Total problems correct on retry:
+                <span id="num-retry"></span>
+              </li>
+            </ul>
+            <p class="list-head">
+              Total problem sets generated: <span id="num-sets"></span>
+            </p>
+            <p class="list-head">
+              Total articles viewed: <span id="num-articles"></span>
+            </p>
+            <button class="text-button" id="clear-button">
+              ✗ Clear stats forever
+            </button>
+            <div class="stats-notes">
+              <p>
+                Per-user stats started being recorded from 17 July 2022 — if you
+                used Trivial for a while before then, add somewhere between a
+                few dozen and a few thousand to your numbers :)
+              </p>
+              <p class="brag">
+                Over 250,000 problems and problem sets have been generated using
+                Trivial!
+              </p>
+            </div>
+          </div>
+        </div>`
+    );
+
+    function refreshStats() {
+      $("#num-problems").text(
+        (0 + JSON.parse(localStorage.getItem("numProblems"))).toLocaleString(
+          "en-US"
+        )
+      );
+      $("#num-answered").text(
+        (0 + JSON.parse(localStorage.getItem("numAnswered"))).toLocaleString(
+          "en-US"
+        )
+      );
+      $("#num-correct").text(
+        (0 + JSON.parse(localStorage.getItem("numCorrect"))).toLocaleString(
+          "en-US"
+        )
+      );
+      $("#num-retry").text(
+        (0 + JSON.parse(localStorage.getItem("numRetry"))).toLocaleString(
+          "en-US"
+        )
+      );
+      $("#num-sets").text(
+        (0 + JSON.parse(localStorage.getItem("numSets"))).toLocaleString(
+          "en-US"
+        )
+      );
+      $("#num-articles").text(
+        (0 + JSON.parse(localStorage.getItem("numArticles"))).toLocaleString(
+          "en-US"
+        )
+      );
+    }
+
+    $("#clear-button").click(() => {
+      localStorage.setItem("numProblems", 0);
+      localStorage.setItem("numAnswered", 0);
+      localStorage.setItem("numCorrect", 0);
+      localStorage.setItem("numRetry", 0);
+      localStorage.setItem("numSets", 0);
+      localStorage.setItem("numArticles", 0);
+      refreshStats();
+    });
+
+    refreshStats();
+
+    document.title = "Statistics - Trivial Math Practice";
+    fixLinks();
+    directLinks();
   });
 
   $(".page-container").on("click", "#difficulty-link", () => {

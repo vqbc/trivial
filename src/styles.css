@@ -59,7 +59,7 @@
   --retry-color: hsl(190 50% 50%);
   --blank-color: hsl(270 50% 60%);
   --wrong-color: hsl(15 80% 50%);
-  --button-spacing: 1.4%;
+  --button-spacing: max(1.4%, 0.6rem);
   --vertical-item-spacing: 0.6rem;
   --horizontal-item-spacing: 0.6rem;
 } /**/
@@ -115,6 +115,12 @@ body {
 } /**/
 
 /* Main header */
+header {
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--hr-color);
+}
+
 .header {
   margin-bottom: 0;
   color: var(--header-color);
@@ -157,8 +163,11 @@ body {
 }
 
 .button {
+  display: flex;
   flex: 1;
-  flex-basis: calc(50% / 3 - 5 / 6 * var(--button-spacing));
+  flex-basis: calc((40% - 5 / 2 * var(--button-spacing)) / 3);
+  align-items: center;
+  justify-content: center;
   padding: 0.7rem 0.6rem 0.5rem;
   color: white;
   font: bold 1.1em "Computer Modern Bright", sans-serif;
@@ -171,7 +180,11 @@ body {
 }
 
 .wide-button {
-  flex-basis: calc(100% / 3 - 2 / 3 * var(--button-spacing));
+  flex-basis: calc((60% - 3 / 2 * var(--button-spacing)) / 2);
+}
+
+.button-icon {
+  display: none;
 }
 
 .button:hover {
@@ -289,6 +302,11 @@ body {
   color: var(--minor-color);
   font-weight: 600;
   font-size: 0.9em;
+}
+
+#clear-button {
+  font-size: 0.95em;
+  text-transform: uppercase;
 }
 
 .footer-button {
@@ -1061,6 +1079,12 @@ pre {
   font: 0.9rem "Fira Mono", monospace;
 }
 
+hr {
+  border-color: var(--hr-color);
+  border-style: solid;
+  border-top: none;
+}
+
 .article-text dl:first-child,
 .article-text .problem-heading + dl, /* redirect disclaimers etc */
 .article-text .mw-editsection,
@@ -1123,6 +1147,29 @@ table:first-child {
 
 .frontlink {
   font-family: "Computer Modern Bright", sans-serif; /* Main page */
+}
+
+.stats-notes {
+  margin-top: 1em;
+  border-top: 1px solid var(--hr-color);
+}
+
+.list-indent {
+  margin-top: -1em;
+  list-style: "⁃ ";
+  padding-inline-start: min(12vw, 2.5em);
+}
+
+.list-head {
+  font-weight: bold;
+}
+
+.list-minor {
+  font-style: italic;
+}
+
+.brag {
+  font-style: italic;
 } /**/
 
 /* KaTeX */
@@ -1240,6 +1287,14 @@ footer {
   .page-container {
     width: 1000px;
   }
+
+  .button-text {
+    display: none;
+  }
+
+  .button-icon {
+    display: block;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -1261,17 +1316,13 @@ footer {
     flex-wrap: wrap;
   }
 
-  .button {
+  .wide-button {
     flex: 48%;
   }
 
   .checkbox-container,
   .input-button-flex-full {
     flex: 100%;
-  }
-
-  #single-nav + .secondary-spacer {
-    display: none;
   }
 }
 
@@ -1301,9 +1352,17 @@ footer {
     overflow-wrap: break-word;
   }
 
-  .button,
+  .wide-button,
   .shortcut-button {
     flex: 100%;
+  }
+
+  .secondary-button {
+    flex: 1;
+  }
+
+  .secondary-spacer {
+    display: none;
   }
 
   #notes-text,
