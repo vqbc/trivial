@@ -3600,6 +3600,8 @@
     );
     lastParam = "";
     $("#secondary-button-container").remove();
+    $("#difficulty-info").remove();
+    $(".options-container").remove();
     $(".options-input").remove();
     $("#options-header").remove();
     $(".error").remove();
