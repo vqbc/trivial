@@ -58,7 +58,7 @@
   --correct-color: hsl(150 50% 50%);
   --retry-color: hsl(190 50% 50%);
   --blank-color: hsl(270 50% 60%);
-  --wrong-color: hsl(15 80% 50%);
+  --wrong-color: hsl(15 75% 60%);
   --button-spacing: max(1.4%, 0.6rem);
   --vertical-item-spacing: 0.6rem;
   --horizontal-item-spacing: 0.6rem;
@@ -591,11 +591,11 @@ tags > span {
 
 /* More options header */
 #options-header {
-    margin-top: -0.5rem;
+  margin-top: -0.5rem;
 }
 
 .text-collapsed > #options-header {
-    margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 } /**/
 
 /* Input positioning */
@@ -1158,6 +1158,34 @@ table:first-child {
   font-style: italic;
 }
 
+/* .list-answered::marker {
+  color: var(--minor-color);
+  font-family: "Inter", sans-serif;
+  content: "?  ";
+}
+
+.list-correct::marker {
+  color: var(--correct-color);
+  font-family: "Inter", sans-serif;
+  content: "✓  ";
+}
+
+.list-retry::marker {
+  color: var(--retry-color);
+  font-family: "Inter", sans-serif;
+  content: "↻  ";
+}
+
+.list-wrong::marker {
+  color: var(--wrong-color);
+  font-family: "Inter", sans-serif;
+  content: "✗  ";
+} */
+
+#stats-chart {
+  float: right;
+}
+
 .brag {
   font-style: italic;
 } /**/
@@ -1353,6 +1381,21 @@ footer {
 
   .secondary-spacer {
     display: none;
+  }
+
+  .list-head {
+    clear: both;
+  }
+
+  #stats-chart {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  #stats-chart svg > g {
+    width: 100% !important;
   }
 
   #notes-text,

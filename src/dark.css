@@ -49,7 +49,7 @@
     --correct-color: hsl(150 45% 45%);
     --retry-color: hsl(190 45% 45%);
     --blank-color: hsl(270 45% 45%);
-    --wrong-color: hsl(15 75% 45%);
+    --wrong-color: hsl(15 70% 55%);
   }
 
   .tagify {
@@ -78,8 +78,13 @@
     filter: invert(1) hue-rotate(180deg);
   }
 
-  .role-frame > g > path.background,
-  .role-axis-grid > line {
+  #difficulty-chart .mark-rect,
+  #difficulty-chart .mark-symbol {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  #difficulty-chart .role-frame > g > path.background,
+  #difficulty-chart .role-axis-grid > line {
     stroke: #bfbfbf !important;
   }
 } /**/

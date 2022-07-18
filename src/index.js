@@ -815,6 +815,11 @@
                 progressUpdated = true;
                 if (answerTries == 1) {
                   streakCount++;
+                  if (
+                    streakCount > JSON.parse(localStorage.getItem("numStreak"))
+                  )
+                    localStorage.setItem("numStreak", streakCount);
+
                   $(".streak-bar").removeClass("bar-hidden");
                   $(".question-bar.right-questions").removeClass("bar-hidden");
                   $(".question-bar.right-questions").css(
@@ -3159,20 +3164,29 @@
       `<div class="problem-section" id="about-section">
           <h2 class="section-header" id="about-header">Your Statistics</h2>
           <div class="article-text" id="about-text">
+              <div id="stats-chart"></div>
             <p class="list-head">
               Total problems generated: <span id="num-problems"></span>
             </p>
             <ul class="list-indent">
-              <li class="list-minor">
-                Total problems answered: <span id="num-answered"></span>
+              <li class="list-minor list-answered">
+                Total answered: <span id="num-answered"></span>
               </li>
-              <li class="list-minor">
-                Total problems correct on first try:
+              <li class="list-minor list-correct">
+                Total correct on first try:
                 <span id="num-correct"></span>
               </li>
-              <li class="list-minor">
-                Total problems correct on retry:
+              <li class="list-minor list-retry">
+                Total correct on retry:
                 <span id="num-retry"></span>
+              </li>
+              <li class="list-minor list-wrong">
+                Total given up on:
+                <span id="num-wrong"></span>
+              </li>
+              <li class="list-minor list-streak">
+                Longest streak:
+                <span id="num-streak"></span>
               </li>
             </ul>
             <p class="list-head">
@@ -3182,7 +3196,7 @@
               Total articles viewed: <span id="num-articles"></span>
             </p>
             <button class="text-button" id="clear-button">
-              ✗ Clear stats forever
+              <span class="feedback-icon">✗</span> Clear stats forever
             </button>
             <div class="stats-notes">
               <p>
@@ -3200,36 +3214,141 @@
     );
 
     function refreshStats() {
-      $("#num-problems").text(
-        (0 + JSON.parse(localStorage.getItem("numProblems"))).toLocaleString(
-          "en-US"
-        )
+      let numProblems = 0 + JSON.parse(localStorage.getItem("numProblems"));
+      let numAnswered = 0 + JSON.parse(localStorage.getItem("numAnswered"));
+      let numCorrect = 0 + JSON.parse(localStorage.getItem("numCorrect"));
+      let numRetry = 0 + JSON.parse(localStorage.getItem("numRetry"));
+      let numStreak = 0 + JSON.parse(localStorage.getItem("numStreak"));
+      let numSets = 0 + JSON.parse(localStorage.getItem("numSets"));
+      let numArticles = 0 + JSON.parse(localStorage.getItem("numArticles"));
+
+      $("#num-problems").text(numProblems.toLocaleString("en-US"));
+      $("#num-answered").text(numAnswered.toLocaleString("en-US"));
+      $("#num-correct").text(numCorrect).toLocaleString("en-US");
+      $("#num-retry").text(numRetry.toLocaleString("en-US"));
+      $("#num-wrong").text(
+        (numAnswered - numCorrect - numRetry).toLocaleString("en-US")
       );
-      $("#num-answered").text(
-        (0 + JSON.parse(localStorage.getItem("numAnswered"))).toLocaleString(
-          "en-US"
-        )
-      );
-      $("#num-correct").text(
-        (0 + JSON.parse(localStorage.getItem("numCorrect"))).toLocaleString(
-          "en-US"
-        )
-      );
-      $("#num-retry").text(
-        (0 + JSON.parse(localStorage.getItem("numRetry"))).toLocaleString(
-          "en-US"
-        )
-      );
-      $("#num-sets").text(
-        (0 + JSON.parse(localStorage.getItem("numSets"))).toLocaleString(
-          "en-US"
-        )
-      );
-      $("#num-articles").text(
-        (0 + JSON.parse(localStorage.getItem("numArticles"))).toLocaleString(
-          "en-US"
-        )
-      );
+      $("#num-streak").text(numStreak.toLocaleString("en-US"));
+      $("#num-sets").text(numSets.toLocaleString("en-US"));
+      $("#num-articles").text(numArticles.toLocaleString("en-US"));
+
+      const options = {
+        $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+        description: "A simple pie chart with labels.",
+        data: {
+          values: [
+            {
+              Answers: "Correct",
+              value: numCorrect,
+              text: numCorrect + "✓",
+              sortOrder: 1,
+            },
+            {
+              Answers: "Retry",
+              value: numRetry,
+              text: numRetry + "↻",
+              sortOrder: 2,
+            },
+            {
+              Answers: "Incorrect",
+              value: numAnswered - numCorrect - numRetry,
+              text: numAnswered - numCorrect - numRetry + "✗",
+              sortOrder: 3,
+            },
+          ],
+        },
+        encoding: {
+          theta: {
+            field: "value",
+            type: "quantitative",
+            stack: true,
+          },
+          color: {
+            field: "Answers",
+            type: "nominal",
+            legend: null,
+            scale: {
+              domain: ["Correct", "Retry", "Incorrect"],
+              range: [
+                "var(--correct-color)",
+                "var(--retry-color)",
+                "var(--wrong-color)",
+              ],
+            },
+            sort: { field: "sortOrder" },
+          },
+          order: {
+            field: "sortOrder",
+            type: "ordinal",
+          },
+        },
+        layer: [
+          {
+            mark: {
+              type: "arc",
+              innerRadius: 50,
+              outerRadius: 80,
+            },
+          },
+          {
+            mark: {
+              type: "text",
+              radius: 100,
+              fontSize: 15,
+              fontWeight: "bold",
+            },
+            encoding: {
+              text: {
+                field: "text",
+                type: "nominal",
+                sort: { field: "sortOrder" },
+              },
+            },
+          },
+          {
+            mark: {
+              type: "text",
+              fill: "var(--minor-color)",
+              align: "center",
+              baseline: "middle",
+              dy: -12,
+              fontSize: 16,
+            },
+            encoding: {
+              text: { value: "C+R" },
+            },
+          },
+          {
+            mark: {
+              type: "text",
+              fill: "var(--minor-color)",
+              align: "center",
+              baseline: "middle",
+              dy: 9,
+              font: "'Latin Modern Sans Demi-Condensed', sans-serif",
+              fontSize: 20,
+            },
+            encoding: {
+              text: {
+                value:
+                  (((numCorrect + numRetry) / numAnswered) * 100).toFixed(1) +
+                  "%",
+              },
+            },
+          },
+        ],
+        background: null,
+        config: {
+          font: "'Latin Modern Sans', 'Inter', sans-serif",
+        },
+      };
+
+      if (numAnswered > 0)
+        vegaEmbed("#stats-chart", options, {
+          actions: false,
+          renderer: "svg",
+        });
     }
 
     $("#clear-button").click(() => {
@@ -3957,7 +4076,7 @@
           field: "Test",
           type: "ordinal",
           sort: { order: null },
-          axis: { titleFontSize: 14, labelFonFtSize: 13 },
+          axis: { titleFontSize: 14, labelFontSize: 13 },
         },
         x: {
           field: "Start difficulty",
