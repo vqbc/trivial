@@ -274,6 +274,14 @@
     });
   })();
 
+  // Resets date
+  (() => {
+    if (localStorage.getItem("dateToday") !== new Date().toDateString()) {
+      localStorage.setItem("dateToday", new Date().toDateString());
+      localStorage.setItem("numToday", 0);
+    }
+  })();
+
   // Adds things
   async function addProblem(pagename, pushUrl) {
     $(".notes").before(
@@ -790,11 +798,16 @@
               finalAnswer = originalAnswer.padStart(3, "0");
             answerTries++;
 
-            if (answerTries == 1)
+            if (answerTries == 1) {
+              localStorage.setItem(
+                "numToday",
+                JSON.parse(localStorage.getItem("numToday")) + 1
+              );
               localStorage.setItem(
                 "numAnswered",
                 JSON.parse(localStorage.getItem("numAnswered")) + 1
               );
+            }
             if (
               finalAnswer === answer ||
               (pagename === "2012 AMC 12B Problems/Problem 12" &&
@@ -3169,9 +3182,9 @@
               Total problems generated: <span id="num-problems"></span>
             </p>
             <ul class="list-indent">
-              <li class="list-minor list-answered">
+              <li class="list list-answered">
                 Total answered: <span id="num-answered"></span>
-              </li>
+              <ul class="list-inner">
               <li class="list-minor list-correct">
                 Total correct on first try:
                 <span id="num-correct"></span>
@@ -3184,7 +3197,13 @@
                 Total given up on:
                 <span id="num-wrong"></span>
               </li>
-              <li class="list-minor list-streak">
+              </ul>
+              </li>
+              <li class="list list-today">
+                Answered today:
+                <span id="num-today"></span>
+              </li>
+              <li class="list list-streak">
                 Longest streak:
                 <span id="num-streak"></span>
               </li>
@@ -3218,17 +3237,18 @@
       let numAnswered = 0 + JSON.parse(localStorage.getItem("numAnswered"));
       let numCorrect = 0 + JSON.parse(localStorage.getItem("numCorrect"));
       let numRetry = 0 + JSON.parse(localStorage.getItem("numRetry"));
+      let numToday = 0 + JSON.parse(localStorage.getItem("numToday"));
       let numStreak = 0 + JSON.parse(localStorage.getItem("numStreak"));
       let numSets = 0 + JSON.parse(localStorage.getItem("numSets"));
       let numArticles = 0 + JSON.parse(localStorage.getItem("numArticles"));
+      let numWrong = numAnswered - numCorrect - numRetry;
 
       $("#num-problems").text(numProblems.toLocaleString("en-US"));
       $("#num-answered").text(numAnswered.toLocaleString("en-US"));
-      $("#num-correct").text(numCorrect).toLocaleString("en-US");
+      $("#num-correct").text(numCorrect.toLocaleString("en-US"));
       $("#num-retry").text(numRetry.toLocaleString("en-US"));
-      $("#num-wrong").text(
-        (numAnswered - numCorrect - numRetry).toLocaleString("en-US")
-      );
+      $("#num-wrong").text(numWrong.toLocaleString("en-US"));
+      $("#num-today").text(numToday.toLocaleString("en-US"));
       $("#num-streak").text(numStreak.toLocaleString("en-US"));
       $("#num-sets").text(numSets.toLocaleString("en-US"));
       $("#num-articles").text(numArticles.toLocaleString("en-US"));
@@ -3241,19 +3261,19 @@
             {
               Answers: "Correct",
               value: numCorrect,
-              text: numCorrect + "✓",
+              text: numCorrect ? numCorrect + "✓" : "",
               sortOrder: 1,
             },
             {
               Answers: "Retry",
               value: numRetry,
-              text: numRetry + "↻",
+              text: numRetry ? numRetry + "↻" : "",
               sortOrder: 2,
             },
             {
               Answers: "Incorrect",
-              value: numAnswered - numCorrect - numRetry,
-              text: numAnswered - numCorrect - numRetry + "✗",
+              value: numWrong,
+              text: numWrong ? numWrong + "✗" : "",
               sortOrder: 3,
             },
           ],

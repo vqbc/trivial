@@ -1147,7 +1147,12 @@ table:first-child {
 .list-indent {
   margin-top: -1em;
   list-style: "⁃ ";
-  padding-inline-start: min(12vw, 2.5em);
+  padding-inline-start: min(6vw, 2em);
+}
+
+.list-inner {
+  list-style: "⁃ ";
+  padding-inline-start: min(6vw, 2em);
 }
 
 .list-head {
@@ -1155,7 +1160,7 @@ table:first-child {
 }
 
 .list-minor {
-  font-style: italic;
+  font-size: 0.95em;
 }
 
 /* .list-answered::marker {
