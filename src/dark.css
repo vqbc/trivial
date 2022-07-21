@@ -57,8 +57,8 @@
     --placeholder-color-focus: hsl(0 0% 100% / 30%);
     --tag-bg: hsl(201 8% 25%);
     --tag-hover: hsl(190 10% 30%);
-    --tag-text-color: var(--minor-color);
-    --tag-text-color--edit: var(--minor-color);
+    --tag-text-color: hsl(0 0% 77%);
+    --tag-text-color--edit: var(--tag-text-color);
     --tag-remove-btn-color: var(--tag-text-color);
   }
 
