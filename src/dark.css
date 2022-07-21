@@ -36,7 +36,7 @@
     --placeholder-disabled-color: hsl(0 0% 100% / 20%);
     --range-grid-color: hsl(0 0% 100% / 20%);
     --range-label-hover-color: hsl(0 0% 100% / 60%);
-    --input-slider-color: hsl(201 5% 31%);
+    --input-slider-color: hsl(201 8% 31%);
     --input-accent-color: hsl(210 50% 57%);
     --input-handle-color: hsl(210 35% 43%);
     --error-color: hsl(0 75% 70%);
@@ -53,11 +53,12 @@
   }
 
   .tagify {
-    --placeholder-color: rgb(255 255 255 / 0.5);
-    --placeholder-color-focus: rgb(255 255 255 / 0.3);
-    --tag-bg: #bbb;
-    --tag-hover: #abb;
-    --tag-text-color--edit: var(--text-color);
+    --placeholder-color: hsl(0 0% 100% / 50%);
+    --placeholder-color-focus: hsl(0 0% 100% / 30%);
+    --tag-bg: hsl(201 8% 25%);
+    --tag-hover: hsl(190 10% 30%);
+    --tag-text-color: var(--minor-color);
+    --tag-text-color--edit: var(--minor-color);
     --tag-remove-btn-color: var(--tag-text-color);
   }
 
