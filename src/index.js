@@ -3332,11 +3332,11 @@
               fill: "var(--minor-color)",
               align: "center",
               baseline: "middle",
-              dy: -12,
+              dy: 12,
               fontSize: 16,
             },
             encoding: {
-              text: { value: "C+R" },
+              text: { value: "correct" },
             },
           },
           {
@@ -3345,7 +3345,8 @@
               fill: "var(--minor-color)",
               align: "center",
               baseline: "middle",
-              dy: 9,
+              dx: 1,
+              dy: -6,
               font: "'Latin Modern Sans Demi-Condensed', sans-serif",
               fontSize: 20,
             },
