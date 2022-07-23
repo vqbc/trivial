@@ -176,11 +176,11 @@
       </li>
       <li>
         The different subjects are based on AoPS Wiki categories. They don’t
-        cover all the problems, so help fix this by adding categories on the
-        wiki!
+        cover all the problems — you can help fix this by adding categories on
+        the wiki!
       </li>
         <ul>
-          <li>You can do this by editing a page and adding
+          <li>To add a category, edit any problem page and add
           <code>[[Category:SUBJECT]]</code> to the bottom (replace
           <code>SUBJECT</code> with the actual subject, like Introductory
           Geometry Problems).
@@ -206,9 +206,17 @@
         </ul>
       </li>-->
       <li>
-        More good resources can be found in collections like <a
+        For more math resources, Trivial has partnered with
+        <a href="https://www.primeri.org/">Primeri</a> as a shared nonprofit 
+        organization, with the goal of making resources to learn and practice
+        mathematics more accessible for all students. Other materials can also
+        be found in collections like <a
         href="https://artofproblemsolving.com/community/c2008407h2550333_handouts_list"
-        >this one</a> on AoPS. Check them out too!
+        >this one</a> on AoPS.
+      </li>
+      <li>
+        Join the <a href="https://discord.gg/VExpSZfkAE">Discord server</a> to
+        ask for help, discuss problems, and more!
       </li>
     <ul>
   </div>`;
