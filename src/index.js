@@ -136,7 +136,7 @@
     (Replace problem)
   </button>`;
   let displaySettingsText = `<div class="display-settings">
-    Display settings:
+    Settings:
     <button
       class="text-button setting-button"
       id="serif-toggle"
@@ -157,6 +157,13 @@
       tabindex="0"
     >
       Counters on
+    </button> ⋅
+    <button
+      class="text-button setting-button"
+      id="autogen-toggle"
+      tabindex="0"
+    >
+      Auto-generate on
     </button> ⋅
     <button
       class="text-button setting-button"
@@ -242,16 +249,6 @@
     }
     if (JSON.parse(localStorage.getItem("darkTheme")) == false) {
       $("#dark-toggle").text("Light theme");
-    }
-    if (JSON.parse(localStorage.getItem("serifFont"))) {
-      $("#serif-toggle").text("Serif font");
-    }
-    if (JSON.parse(localStorage.getItem("justifyText"))) {
-      $("#justify-toggle").text("Justified text");
-    }
-    if (JSON.parse(localStorage.getItem("countersHidden"))) {
-      $("#counter-toggle").text("Counters off");
-      $("main").addClass("hide-counters");
     }
 
     $("#dark-toggle").click(() => {
@@ -384,6 +381,7 @@
       displaySettings();
       collapseSolutions();
 
+      $("#random-input").addClass("random-input-active");
       if (!$(".practice-progress").length) {
         $("#problem-section").before(
           `<div class="practice-progress progress-nobottom progress-hidden">
@@ -1902,7 +1900,8 @@
       step: 0.5,
     });
 
-    $("#random-button").click();
+    if (!JSON.parse(localStorage.getItem("autogenOff")))
+      $("#random-button").click();
   });
 
   $(".page-container").on("click", "#aime-single", () => {
@@ -2131,7 +2130,8 @@
       from: 5,
     });
 
-    $("#ranbatch-button").click();
+    if (!JSON.parse(localStorage.getItem("autogenOff")))
+      $("#ranbatch-button").click();
   });
 
   $(".page-container").on("click", "#search-nav", () => {
@@ -3924,6 +3924,24 @@
   }
 
   function displaySettings() {
+    if (JSON.parse(localStorage.getItem("serifFont"))) {
+      $("#serif-toggle").text("Serif font");
+    }
+    if (JSON.parse(localStorage.getItem("justifyText"))) {
+      $("#justify-toggle").text("Justified text");
+    }
+    if (JSON.parse(localStorage.getItem("countersHidden"))) {
+      $("#counter-toggle").text("Counters off");
+      $("main").addClass("hide-counters");
+    }
+    if (JSON.parse(localStorage.getItem("autogenOff"))) {
+      $("#autogen-toggle").text("Auto-generate off");
+    }
+    if (printLinks) {
+      $(".page-container").addClass("links-text");
+      $("#print-toggle").text("Links printed");
+    }
+
     $("#serif-toggle").click(() => {
       settingsClicked += "1";
 
@@ -3963,15 +3981,22 @@
       }
     });
 
-    if (printLinks) {
-      $(".page-container").addClass("links-text");
-      $("#print-toggle").text("Links printed");
-    }
-
-    $("#print-toggle").click(() => {
+    $("#autogen-toggle").click(() => {
       settingsClicked += "4";
 
-      if (settingsClicked === "1234" && !$("#fun-toggle").length) {
+      if (!JSON.parse(localStorage.getItem("autogenOff"))) {
+        localStorage.setItem("autogenOff", true);
+        $("#autogen-toggle").text("Auto-generate off");
+      } else {
+        localStorage.setItem("autogenOff", false);
+        $("#autogen-toggle").text("Auto-generate on");
+      }
+    });
+
+    $("#print-toggle").click(() => {
+      settingsClicked += "5";
+
+      if (settingsClicked === "12345" && !$("#fun-toggle").length) {
         $("#print-toggle").after(`
           <span class="divider"> ⋅ </span>
           <button class="text-button setting-button" id="fun-toggle" tabindex="0">

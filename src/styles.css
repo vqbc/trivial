@@ -730,7 +730,7 @@ tags > span {
   margin-bottom: 1rem;
 }
 
-#random-input + .practice-progress {
+.random-input-active + .practice-progress {
   display: flex;
   flex-wrap: wrap;
 }
@@ -783,13 +783,13 @@ tags > span {
   display: none;
 }
 
-#random-input + .progress-hidden,
+.random-input-active + .progress-hidden,
 .bar-hidden,
 .progress-nobottom .spacer-bar {
   display: none;
 }
 
-.hide-counters #random-input + .practice-progress {
+.hide-counters .random-input-active + .practice-progress {
   display: none;
 } /**/
 
@@ -1627,7 +1627,7 @@ footer {
   .options-input,
   .options-container,
   #difficulty-info,
-  #random-input + .practice-progress,
+  .random-input-active + .practice-progress,
   .answer-check,
   .notes,
   .error,
