@@ -136,8 +136,8 @@
     (Replace problem)
   </button>`;
   let displaySettingsText = `<div class="display-settings">
-    Settings:
-    <button
+    <span class="settings-text">Settings</span
+    ><button
       class="text-button setting-button"
       id="serif-toggle"
       tabindex="0"

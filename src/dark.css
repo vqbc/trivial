@@ -10,6 +10,7 @@
     --secondary-color: hsl(0 0% 83%);
     --subtitle-color: hsl(0 0% 79%);
     --minor-color: hsl(0 0% 72%);
+    --divider-color: hsl(0 0% 58%);
     --hr-color: hsl(0 0% 53%);
     --body-background: fixed
         url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9ImhzbCgyMDFkZWcsIDglLCAxMyUpIiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD4KPHBhdGggZD0iTTI4IDBMMjggMzRMMCA1MEwwIDg0TDI4IDEwMEw1NiA4NEw1NiA1MEwyOCAzNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJoc2woMjAxZGVnLCA4JSwgMTMlKSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg=="),

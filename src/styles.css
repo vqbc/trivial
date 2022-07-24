@@ -4,12 +4,13 @@
 
 /* Variables */
 :root {
-  --text-color: #222;
-  --header-color: #222;
-  --secondary-color: #333;
-  --subtitle-color: #444;
-  --minor-color: #666;
-  --hr-color: #aaa;
+  --text-color: hsl(0 0% 13%);
+  --header-color: hsl(0 0% 13%);
+  --secondary-color: hsl(0 0% 20%);
+  --subtitle-color: hsl(0 0% 27%);
+  --minor-color: hsl(0 0% 40%);
+  --divider-color: hsl(0 0% 60%);
+  --hr-color: hsl(0 0% 67%);
   --body-background: fixed
       url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8cGF0aCBkPSJNMjggMEwyOCAzNEwwIDUwTDAgODRMMjggMTAwTDU2IDg0TDU2IDUwTDI4IDM0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8L3N2Zz4="),
     linear-gradient(#f3f3f3, #f3f3f3);
@@ -211,8 +212,7 @@ header {
   flex: 0 0 max(8rem, 15%);
   padding: 0.5rem 0.6rem 0.4rem;
   color: var(--subtitle-color);
-  font: bold 1.1em "Computer Modern Bright", sans-serif;
-  font-size: 1em;
+  font: bold 1em "Computer Modern Bright", sans-serif;
   text-transform: uppercase;
   text-shadow: none;
   background: none;
@@ -719,6 +719,14 @@ tags > span {
   padding: 0.5rem 2rem;
   background: var(--item-color);
   box-shadow: var(--secondary-box-shadow);
+}
+
+.settings-text {
+  margin-right: 0.5em;
+  padding-right: 0.5em;
+  color: var(--subtitle-color);
+  font: 600 1em "Computer Modern Bright", sans-serif;
+  border-right: 1px solid var(--divider-color);
 } /**/
 
 /* Practice progress */
@@ -1255,8 +1263,7 @@ footer {
   font-style: italic;
 }
 
-.mobile-break,
-.mobile-settings-break {
+.mobile-break {
   display: none;
 } /**/
 
@@ -1325,12 +1332,12 @@ footer {
     width: 90%;
   }
 
-  .settings-divider {
-    display: none;
-  }
-
-  .mobile-settings-break {
-    display: inline;
+  .settings-text {
+    display: block;
+    margin: 0 0 0.25em 0;
+    padding: 0.1em 0 0.15em;
+    border-right: none;
+    border-bottom: 1px solid var(--divider-color);
   }
 }
 
