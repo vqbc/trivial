@@ -229,6 +229,7 @@
   </div>`;
   let printLinks = false;
   let clickedTimes = 0;
+  let answerTimes = 0;
   let subtitleClicked = 0;
   let settingsClicked = "";
   let answerTries = 0;
@@ -767,6 +768,7 @@
 
   async function addAnswer(pagename) {
     clickedTimes++;
+    answerTimes++;
     let clickedTimesThen = clickedTimes;
     answerTries = 0;
     progressUpdated = false;
@@ -2226,6 +2228,7 @@
   $(".page-container").on("click", "#random-button", async () => {
     clickedTimes++;
     let clickedTimesThen = clickedTimes;
+    answerTimes = 0;
     clearProblem();
 
     let pages = await getPages();
@@ -2243,12 +2246,16 @@
     } else {
       let invalid = true;
       let response = true;
-      while (invalid && clickedTimes === clickedTimesThen) {
+      while (
+        invalid &&
+        clickedTimes === clickedTimesThen + answerTimes &&
+        answerTimes < 3
+      ) {
         clearProblem();
 
         let randomPage = pages[Math.floor(Math.random() * pages.length)];
         console.log(randomPage);
-        if (clickedTimes === clickedTimesThen)
+        if (clickedTimes === clickedTimesThen + answerTimes)
           response = await addProblem(randomPage, true);
         invalid = !response;
       }
