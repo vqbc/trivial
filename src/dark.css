@@ -87,6 +87,6 @@
 
   #difficulty-chart .role-frame > g > path.background,
   #difficulty-chart .role-axis-grid > line {
-    stroke: #bfbfbf !important;
+    stroke: hsl(0 0% 75%) !important;
   }
 } /**/

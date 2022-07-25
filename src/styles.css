@@ -13,11 +13,11 @@
   --hr-color: hsl(0 0% 67%);
   --body-background: fixed
       url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8cGF0aCBkPSJNMjggMEwyOCAzNEwwIDUwTDAgODRMMjggMTAwTDU2IDg0TDU2IDUwTDI4IDM0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmVmZWYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8L3N2Zz4="),
-    linear-gradient(#f3f3f3, #f3f3f3);
-  --page-container-color: #fcfcfc;
+    linear-gradient(hsl(0 0% 95%), hsl(0 0% 95%));
+  --page-container-color: hsl(0 0% 99%);
   --page-container-box-shadow: 0 5px 20px hsl(217 100% 5% / 20%);
-  --item-color: #fefefe;
-  --item-disabled-color: #f7f7f7;
+  --item-color: hsl(0 0% 99.5%);
+  --item-disabled-color: hsl(0 0% 97%);
   --button-3d-shadow: hsl(0 0% 0% / 10%);
   --shortcut-button-color: hsl(175 60% 48%);
   --shortcut-button-focus-color: hsl(175 60% 75%);
@@ -31,8 +31,8 @@
   --secondary-button-focus-color: hsl(183 44% 75%);
   --input-button-color: hsl(177 44% 48%);
   --input-button-focus-color: hsl(177 44% 75%);
-  --input-layer-color: #fff;
-  --input-focus-color: #ccc;
+  --input-layer-color: hsl(0 0% 100%);
+  --input-focus-color: hsl(0 0% 80%);
   --dialog-nav-color: hsl(201 33% 48%);
   --dialog-nav-focus-color: hsl(201 33% 66%);
   --secondary-box-shadow: 0 2px 5px hsl(217 100% 5% / 20%);
