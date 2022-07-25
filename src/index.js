@@ -4,10 +4,10 @@
 (() => {
   let allPages = [];
   let allProblems = [];
-  $.getJSON("/data/allpages.json?20220713", (json) => {
+  $.getJSON("/data/allpages.json?20220725", (json) => {
     allPages = json;
   });
-  $.getJSON("/data/allproblems.json?20220713", (json) => {
+  $.getJSON("/data/allproblems.json?20220725", (json) => {
     allProblems = json;
   });
   let categoryPages = [];
@@ -20,12 +20,12 @@
   };
   let validYears = {
     "AMC 8": { min: 1999, max: 2022 },
-    "AMC 10": { min: 2000, max: 2021 },
+    "AMC 10": { min: 2000, max: 2001 },
     "AMC 10A": { min: 2002, max: 2021 },
     "AMC 10B": { min: 2002, max: 2021 },
     "AMC 10Fall A": { min: 2021, max: 2021 },
     "AMC 10Fall B": { min: 2021, max: 2021 },
-    "AMC 12": { min: 2000, max: 2021 },
+    "AMC 12": { min: 2000, max: 2001 },
     "AMC 12A": { min: 2002, max: 2021 },
     "AMC 12B": { min: 2002, max: 2021 },
     "AMC 12Fall A": { min: 2021, max: 2021 },
@@ -35,7 +35,7 @@
     AIMEII: { min: 2000, max: 2022 },
     USAJMO: { min: 2010, max: 2022 },
     USAMO: { min: 1972, max: 2022 },
-    IMO: { min: 1959, max: 2021 },
+    IMO: { min: 1959, max: 2022 },
     AJHSME: { min: 1985, max: 1998 },
     AHSME: { min: 1974, max: 1999 },
   };
@@ -4052,6 +4052,7 @@
         $("#input-singlever").data("tagify").whitelist =
           validVersions[testName];
       } else {
+        $("#input-singlever").data("tagify").removeAllTags();
         $("#input-singlever").data("tagify").setDisabled(true);
       }
     });
