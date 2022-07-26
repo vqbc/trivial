@@ -4290,11 +4290,6 @@
   })();
 
   // Bonus
-  $(".header").click(() => {
-    clearAll();
-    $(".button").removeClass("button-active");
-  });
-
   $(".subtitle").click(() => {
     subtitleClicked++;
     let text;
