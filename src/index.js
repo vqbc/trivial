@@ -4284,6 +4284,7 @@
   })();
 
   // Bonus
+  /*
   $(".subtitle").click(() => {
     subtitleClicked++;
     let text;
@@ -4312,5 +4313,5 @@
         break;
     }
     $(".subtitle").html(text);
-  });
+  });*/
 })();
