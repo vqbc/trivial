@@ -406,7 +406,7 @@
       );
       $(".article-text").remove();
       $("#article-header").html("Error");
-      $(".aops-link").remove();
+      $(".section-options").remove();
       $("#solutions-section").remove();
     }
   }
@@ -585,7 +585,7 @@
       );
       $(".article-text").remove();
       $("#article-header").html("Error");
-      $(".aops-link").remove();
+      $(".section-options").remove();
     }
     customText();
     fixLinks();
