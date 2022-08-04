@@ -1,5 +1,6 @@
+import fetch from "node-fetch";
+import fs from "fs";
 (async () => {
-  let fs = require("fs");
   let allPages = [];
   let allProblems = [];
 
@@ -54,18 +55,20 @@
 
   allProblems = sortProblems(allProblems);
 
-  fs.writeFile(
-    "/data/allpages.json",
-    JSON.stringify(allPages, undefined, 2),
-    function (err) {
-      err || console.log("Allpages replaced.", data);
-    }
-  );
-  fs.writeFile(
-    "/data/allproblems.json",
-    JSON.stringify(allProblems, undefined, 2),
-    function (err) {
-      err || console.log("Allproblems replaced.", data);
-    }
-  );
+  try {
+    fs.writeFileSync(
+      "data/allpages.json",
+      JSON.stringify(allPages, undefined, 2)
+    );
+  } catch (err) {
+    console.error(err);
+  }
+  try {
+    fs.writeFileSync(
+      "data/allproblems.json",
+      JSON.stringify(allProblems, undefined, 2)
+    );
+  } catch (err) {
+    console.error(err);
+  }
 })();
