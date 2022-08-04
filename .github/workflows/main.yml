@@ -16,3 +16,9 @@ jobs:
         node-version: '18'
     - run: npm ci
     - run: node downloadlists.js
+    - run: |
+        git config --global user.name "vqbc"
+        git config --global user.email "andrewggchang@gmail.com"
+        git add -A
+        git commit -m "Update page lists"
+        git push
