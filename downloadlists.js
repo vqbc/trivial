@@ -1,4 +1,4 @@
-(() => {
+(async () => {
   let fs = require("fs");
   let allPages = [];
   let allProblems = [];
@@ -30,8 +30,8 @@
   let params = `action=query&list=allpages&aplimit=max&format=json`;
   let paramsContinue;
 
-  let response = fetch(`${apiEndpoint}?${params}&origin=*`);
-  let json = response.json();
+  let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+  let json = await response.json();
 
   for (let page of json.query.allpages) {
     if (page.title.charAt(0) !== "/") allPages.push(page.title);
@@ -41,8 +41,8 @@
   while (json?.continue) {
     console.log(`${Math.round((allPages.length / 14000) * 100)}% loaded...`);
     paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
-    response = fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
-    json = response.json();
+    response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
+    json = await response.json();
 
     for (let page of json.query.allpages) {
       if (page.title.charAt(0) !== "/") allPages.push(page.title);
