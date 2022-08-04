@@ -1,17 +1,6 @@
+let fs = require("fs");
 let allPages = [];
 let allProblems = [];
-
-function downloadObject(obj, filename) {
-  obj = JSON.stringify(obj, undefined, 4);
-
-  var blob = new Blob([obj], { type: "text/json" }),
-    a = document.createElement("a");
-
-  a.download = filename;
-  a.href = window.URL.createObjectURL(blob);
-  a.dataset.downloadurl = ["text/json", a.download, a.href].join(":");
-  a.click();
-}
 
 let validProblem = (problem) =>
   problem.includes("Problems/Problem") &&
@@ -64,5 +53,17 @@ console.log(`Finished loading Special:AllPages (${allPages.length} pages).`);
 
 allProblems = sortProblems(allProblems);
 
-downloadObject(allPages, "allpages.json");
-downloadObject(allProblems, "allproblems.json");
+fs.writeFile(
+  "/data/allpages.json",
+  JSON.stringify(allPages, undefined, 2),
+  function (err) {
+    err || console.log("Allpages replaced.", data);
+  }
+);
+fs.writeFile(
+  "/data/allproblems.json",
+  JSON.stringify(allProblems, undefined, 2),
+  function (err) {
+    err || console.log("Allproblems replaced.", data);
+  }
+);
