@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import fs from "fs";
+
 (async () => {
   let allPages = [];
   let allProblems = [];
