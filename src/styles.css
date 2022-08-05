@@ -945,7 +945,8 @@ a.secret-link {
 #about-text a,
 .notes a {
   color: var(--link-blend-color);
-  text-decoration: underline var(--link-color) 1px;
+  text-decoration: underline var(--link-color);
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
@@ -1594,7 +1595,8 @@ footer {
 
   footer a {
     color: inherit;
-    text-decoration: underline var(--link-color) 1px;
+    text-decoration: underline var(--link-color);
+    text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   } /**/
 
