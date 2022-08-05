@@ -119,7 +119,7 @@
       Difficulty range<sup><a
         class="dark-link" id="difficulty-link"
         href="#"
-        >?</a
+        >(?)</a
       ></sup>
     </label>
     <input class="input-range" id="input-diff"></input>

@@ -314,10 +314,6 @@ header {
 
 .hidden-button {
   display: none;
-}
-
-.setting-off {
-  text-decoration: line-through;
 } /**/
 
 /* Shortcuts */
@@ -899,7 +895,7 @@ tags > :is(tag, span) {
 a,
 .link-button {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration-line: none;
   transition: color 0.1s, text-decoration-color 0.1s, outline 0.1s,
     outline-offset 0.1s;
 }
@@ -929,11 +925,14 @@ a.aops-link,
 
 a.dark-link {
   color: inherit;
-  text-decoration: underline;
 }
 
 a.dark-link:hover {
   color: var(--range-label-hover-color);
+}
+
+#difficulty-link {
+  font-size: 0.85em;
 }
 
 a.secret-link {
@@ -945,7 +944,8 @@ a.secret-link {
 #about-text a,
 .notes a {
   color: var(--link-blend-color);
-  text-decoration: underline var(--link-color);
+  text-decoration-line: underline;
+  text-decoration-color: var(--link-color);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
@@ -1595,7 +1595,8 @@ footer {
 
   footer a {
     color: inherit;
-    text-decoration: underline var(--link-color);
+    text-decoration-line: underline;
+    text-decoration-color: var(--link-color);
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   } /**/
@@ -1627,7 +1628,7 @@ footer {
 
   .page-container:not(.links-text) :is(a, a[title], a.external) {
     color: inherit;
-    text-decoration: none;
+    text-decoration-line: none;
   } /**/
 
   /* Footer */
