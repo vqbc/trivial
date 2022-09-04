@@ -1031,12 +1031,15 @@
         originalAnswer = originalAnswer.toUpperCase();
         let finalAnswer = originalAnswer;
         if (finalAnswer) {
-          if (computeTest($(this).attr("pagename")) === "AIME")
+          let pagename = $(this).attr("pagename");
+          if (computeTest(pagename) === "AIME")
             finalAnswer = originalAnswer.padStart(3, "0");
           if (
             finalAnswer === $(this).attr("answer") ||
-            ($(this).attr("pagename") === "2012 AMC 12B Problems/Problem 12" &&
-              (finalAnswer === "D" || finalAnswer === "E"))
+            (pagename === "2012 AMC 12B Problems/Problem 12" &&
+              (finalAnswer === "D" || finalAnswer === "E")) ||
+            (pagename === "2015 AMC 10A Problems/Problem 20" &&
+              finalAnswer === "B")
           ) {
             $(this).append(
               `<span class="feedback-item correct-feedback"><span class="feedback-icon">✓</span></span>`
