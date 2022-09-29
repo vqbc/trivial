@@ -1903,6 +1903,48 @@
       $("#random-button").click();
   });
 
+    $(".page-container").on("click", "#amc8-single", () => {
+      $("#single-problem").click();
+      $("#input-tests").data("tagify").addTags(["AMC 8"]);
+      $("#random-button").click();
+    });
+
+    $(".page-container").on("click", "#amc8-test", () => {
+      $("#problem-batch").click();
+      $("#input-tests").data("tagify").addTags(["AMC 8"]);
+      $("#input-diff").data("ionRangeSlider").update({ from: 0, to: 2 });
+      $("#input-number").data("ionRangeSlider").update({ from: 25 });
+      $("#ranbatch-button").click();
+    });
+
+    $(".page-container").on("click", "#amc10-single", () => {
+      $("#single-problem").click();
+      $("#input-tests").data("tagify").addTags(["AMC 10"]);
+      $("#random-button").click();
+    });
+
+    $(".page-container").on("click", "#amc10-test", () => {
+      $("#problem-batch").click();
+      $("#input-tests").data("tagify").addTags(["AMC 10"]);
+      $("#input-diff").data("ionRangeSlider").update({ from: 1, to: 4.5 });
+      $("#input-number").data("ionRangeSlider").update({ from: 25 });
+      $("#ranbatch-button").click();
+    });
+
+    $(".page-container").on("click", "#amc12-single", () => {
+      $("#single-problem").click();
+      $("#input-tests").data("tagify").addTags(["AMC 12"]);
+      $("#random-button").click();
+    });
+
+    $(".page-container").on("click", "#amc12-test", () => {
+      $("#problem-batch").click();
+      $("#input-tests").data("tagify").addTags(["AMC 12"]);
+      $("#input-diff").data("ionRangeSlider").update({ from: 1, to: 5.5 });
+      $("#input-number").data("ionRangeSlider").update({ from: 25 });
+      $("#ranbatch-button").click();
+    });
+
   $(".page-container").on("click", "#aime-single", () => {
     $("#single-problem").click();
     $("#input-tests").data("tagify").addTags(["AIME"]);

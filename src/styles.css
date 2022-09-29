@@ -63,6 +63,8 @@
   --button-spacing: max(1.4%, 0.6rem);
   --vertical-item-spacing: 0.6rem;
   --horizontal-item-spacing: 0.6rem;
+  --vertical-small-item-spacing: 0.4rem;
+  --horizontal-small-item-spacing: 0.4rem;
 } /**/
 
 /* Container styles and sizing */
@@ -320,7 +322,7 @@ header {
 .shortcut-container {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--vertical-item-spacing) var(--horizontal-item-spacing);
+  gap: var(--vertical-small-item-spacing) var(--horizontal-small-item-spacing);
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
@@ -1318,6 +1320,10 @@ footer {
 }
 
 @media (max-width: 1000px) {
+  .shortcut-button {
+    flex: 48%;
+  }
+
   .button-container {
     flex-wrap: wrap;
   }
