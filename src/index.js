@@ -19,7 +19,7 @@
     AIME: ["I", "II"],
   };
   let validYears = {
-    "AMC 8": { min: 1999, max: 2022 },
+    "AMC 8": { min: 1999, max: 2023 },
     "AMC 10": { min: 2000, max: 2001 },
     "AMC 10A": { min: 2002, max: 2022 },
     "AMC 10B": { min: 2002, max: 2022 },
