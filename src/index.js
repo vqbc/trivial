@@ -31,7 +31,7 @@
     "AMC 12Fall A": { min: 2021, max: 2021 },
     "AMC 12Fall B": { min: 2021, max: 2021 },
     AIME: { min: 1983, max: 1999 },
-    AIMEI: { min: 2000, max: 2022 },
+    AIMEI: { min: 2000, max: 2023 },
     AIMEII: { min: 2000, max: 2022 },
     USAJMO: { min: 2010, max: 2022 },
     USAMO: { min: 1972, max: 2022 },
