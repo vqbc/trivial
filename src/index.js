@@ -1964,6 +1964,36 @@
     $("#ranbatch-button").click();
   });
 
+  $(".page-container").on("click", "#usajmo-single", () => {
+    $("#single-problem").click();
+    $("#input-tests").data("tagify").addTags(["USAJMO"]);
+    $("#input-diff").data("ionRangeSlider").update({ from: 5.5, to: 7 });
+    $("#random-button").click();
+  });
+
+  $(".page-container").on("click", "#usajmo-test", () => {
+    $("#problem-batch").click();
+    $("#input-tests").data("tagify").addTags(["USAJMO"]);
+    $("#input-diff").data("ionRangeSlider").update({ from: 5.5, to: 7 });
+    $("#input-number").data("ionRangeSlider").update({ from: 6 });
+    $("#ranbatch-button").click();
+  });
+
+  $(".page-container").on("click", "#usamo-single", () => {
+    $("#single-problem").click();
+    $("#input-tests").data("tagify").addTags(["USAMO"]);
+    $("#input-diff").data("ionRangeSlider").update({ from: 6.5, to: 8.5 });
+    $("#random-button").click();
+  });
+
+  $(".page-container").on("click", "#usamo-test", () => {
+    $("#problem-batch").click();
+    $("#input-tests").data("tagify").addTags(["USAMO"]);
+    $("#input-diff").data("ionRangeSlider").update({ from: 6.5, to: 8.5 });
+    $("#input-number").data("ionRangeSlider").update({ from: 6 });
+    $("#ranbatch-button").click();
+  });
+
   $(".page-container").on("click", "#batch-nav", () => {
     let optionsUncollapsed;
     if (
