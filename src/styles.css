@@ -388,7 +388,7 @@ header {
   background: var(--item-color);
   border: none;
   box-shadow: var(--secondary-box-shadow);
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .input-field:focus {
