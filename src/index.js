@@ -219,7 +219,7 @@
         <a href="https://discord.gg/VExpSZfkAE">Discord server</a> to
         ask for help, discuss problems, and more. Also, see <a
         href="https://www.tmasacademy.com/ace-the-amc10-12-free-book"
-        >this book</a> for more AMC 10/12 practice!
+        >Ritvik Rustagi’s book</a> for more AMC 10/12 practice!
       </li>
     <ul>
   </div>`;
