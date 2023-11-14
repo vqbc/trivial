@@ -4,7 +4,7 @@ import fs from "fs";
 (async () => {
   let allPages = [];
   let allProblems = [];
-  let numPages = 13000;
+  let numPages = 15000;
 
   let validProblem = (problem) =>
     problem.includes("Problems/Problem") &&
