@@ -41,7 +41,7 @@ import fs from "fs";
   }
 
   while (json?.continue) {
-    console.log(`${Math.round((allPages.length / 14000) * 100)}% loaded...`);
+    console.log(`${Math.round((allPages.length / 15000) * 100)}% loaded...`);
     paramsContinue = params + `&apcontinue=${json.continue.apcontinue}`;
     response = await fetch(`${apiEndpoint}?${paramsContinue}&origin=*`);
     json = await response.json();
