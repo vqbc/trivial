@@ -70,7 +70,7 @@ import fs from "fs";
     console.error(err);
   }
   try {
-    roundedLength = Math.ceil(allPages.length / 500) * 500;
+    let roundedLength = Math.ceil(allPages.length / 500) * 500;
     code = fs.readFileSync("downloadlists.js");
     code = code.replace(
       /let numPages = \d*?;/,
