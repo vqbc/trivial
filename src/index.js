@@ -217,7 +217,9 @@
         href="https://artofproblemsolving.com/community/c2008407h2550333_handouts_list"
         >this one</a> on AoPS, and join the
         <a href="https://discord.gg/VExpSZfkAE">Discord server</a> to
-        ask for help, discuss problems, and more!
+        ask for help, discuss problems, and more. Also, see <a
+        href="https://www.tmasacademy.com/ace-the-amc10-12-free-book"
+        >this book</a> for more AMC 10/12 practice!
       </li>
     <ul>
   </div>`;
