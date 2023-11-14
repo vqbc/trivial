@@ -7,7 +7,7 @@ import fs from "fs";
 
   let validProblem = (problem) =>
     problem.includes("Problems/Problem") &&
-    problem.match(/(\d{4} )(.*)( Problems)/) &&
+    problem.match(/^(\d{4} )(.*)( Problems)/) &&
     problem.match(/\d+$/);
 
   let computeTest = (problem) =>
