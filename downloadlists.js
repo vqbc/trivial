@@ -71,7 +71,7 @@ import fs from "fs";
   }
   try {
     let roundedLength = Math.ceil(allPages.length / 500) * 500;
-    let code = fs.readFileSync("downloadlists.js");
+    let code = fs.readFileSync("downloadlists.js", "utf8");
     code = code.replace(
       /let numPages = \d*?;/,
       `let numPages = ${roundedLength};`
