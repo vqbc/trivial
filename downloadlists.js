@@ -7,9 +7,7 @@ import fs from "fs";
   let numPages = 15000;
 
   let validProblem = (problem) =>
-    problem.includes("Problems/Problem") &&
-    problem.match(/^(\d{4} )(.*)( Problems)/) &&
-    problem.match(/\d+$/);
+    problem.match(/^(\d{4} )(.*)( Problems\/Problem )(\d+)$/);
 
   let computeTest = (problem) =>
     problem
