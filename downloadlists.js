@@ -4,12 +4,10 @@ import fs from "fs";
 (async () => {
   let allPages = [];
   let allProblems = [];
-  let numPages = 15000;
+  let numPages = 15500;
 
   let validProblem = (problem) =>
-    problem.includes("Problems/Problem") &&
-    problem.match(/^(\d{4} )(.*)( Problems)/) &&
-    problem.match(/\d+$/);
+    problem.match(/^\d{4} .* Problems\/Problem [A-Z]?\d+$/);
 
   let computeTest = (problem) =>
     problem
