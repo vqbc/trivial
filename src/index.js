@@ -3314,7 +3314,7 @@
                 few dozen and a few thousand to your numbers :)
               </p>
               <p class="brag">
-                Over 250,000 problems and problem sets have been generated using
+                Over two million problems and problem sets have been generated using
                 Trivial!
               </p>
             </div>
