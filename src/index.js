@@ -1807,7 +1807,7 @@
         <input class="input-field"
           type="number"
           min="1974"
-          max="2022"
+          max="2023"
           id="input-singleyear"
           placeholder="Year">
         </input>
@@ -1890,9 +1890,9 @@
       type: "double",
       grid: true,
       min: 1974,
-      max: 2022,
+      max: 2023,
       from: 2010,
-      to: 2022,
+      to: 2023,
       prettify_enabled: false,
     });
     $("#input-diff").ionRangeSlider({
@@ -2022,7 +2022,7 @@
           placeholder="Version"
           data-whitelist="A,B,Fall A,Fall B,I,II">
         </input>
-          <input class="input-field" type="number" min="1974" max="2022"
+          <input class="input-field" type="number" min="1974" max="2023"
           id="input-singleyear" placeholder="Year">
           </input>
         <button class="input-button" id="batch-button">
@@ -2186,9 +2186,9 @@
       type: "double",
       grid: true,
       min: 1974,
-      max: 2022,
+      max: 2023,
       from: 2010,
-      to: 2022,
+      to: 2023,
       prettify_enabled: false,
     });
     $("#input-diff").ionRangeSlider({
