@@ -4,7 +4,7 @@ import fs from "fs";
 (async () => {
   let allPages = [];
   let allProblems = [];
-  let numPages = 15500;
+  let numPages = 16000;
 
   let validProblem = (problem) =>
     problem.match(/^\d{4} .* Problems\/Problem [A-Z]?\d+$/);
