@@ -19,7 +19,7 @@
     AIME: ["I", "II"],
   };
   let validYears = {
-    "AMC 8": { min: 1999, max: 2024 },
+    "AMC 8": { min: 1999, max: 2025 },
     "AMC 10": { min: 2000, max: 2001 },
     "AMC 10A": { min: 2002, max: 2024 },
     "AMC 10B": { min: 2002, max: 2024 },
@@ -31,10 +31,10 @@
     "AMC 12Fall A": { min: 2021, max: 2021 },
     "AMC 12Fall B": { min: 2021, max: 2021 },
     AIME: { min: 1983, max: 1999 },
-    AIMEI: { min: 2000, max: 2024 },
-    AIMEII: { min: 2000, max: 2024 },
-    USAJMO: { min: 2010, max: 2024 },
-    USAMO: { min: 1972, max: 2024 },
+    AIMEI: { min: 2000, max: 2025 },
+    AIMEII: { min: 2000, max: 2025 },
+    USAJMO: { min: 2010, max: 2025 },
+    USAMO: { min: 1972, max: 2025 },
     IMO: { min: 1959, max: 2024 },
     AJHSME: { min: 1985, max: 1998 },
     AHSME: { min: 1974, max: 1999 },
