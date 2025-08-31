@@ -10,6 +10,7 @@
   $.getJSON("/data/allproblems.json", (json) => {
     allProblems = json;
   });
+  let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
   let categoryPages = [];
   let theoremPages = [];
   let testsList = `AMC 8, AMC 10, AMC 12, AIME, USAJMO, USAMO, IMO, AJHSME, AHSME`;
@@ -315,7 +316,6 @@
       JSON.parse(localStorage.getItem("numProblems")) + 1
     );
 
-    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
 
     let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
@@ -520,7 +520,6 @@
       JSON.parse(localStorage.getItem("numArticles")) + 1
     );
 
-    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${pagename}&format=json`;
 
     let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
@@ -605,8 +604,6 @@
       let redirIndex = [];
       let numProblems = problemTitles.length;
       let invalidProblems = 0;
-
-      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
 
       $("#batch-header").after(
         `<div class="loading-notice">
@@ -769,7 +766,6 @@
     answerTries = 0;
     progressUpdated = false;
     let answersTitle = `${pagename?.split(" Problems/Problem")[0]} Answer Key`;
-    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
     let params = `action=parse&page=${answersTitle}&format=json`;
 
     let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
@@ -900,8 +896,6 @@
   async function addBatchAnswers(pagenames, testName, testYear) {
     clickedTimes++;
     let clickedTimesThen = clickedTimes;
-
-    let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
 
     let testsList = pagenames.map(
       (pagename) => pagename?.split(" Problems/Problem")[0]
@@ -1096,7 +1090,6 @@
         "AIME II",
       ];
       if (testName && statTests.includes(testName)) {
-        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
         let params = `action=parse&page=AMC_historical_results&format=json`;
 
         let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
@@ -1198,7 +1191,7 @@
           );
         } else {
           console.log(`Loading category ${subject}...`);
-          let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
+
           let pagename = subject;
           let params =
             `action=query&list=categorymembers` +
@@ -2350,7 +2343,6 @@
       let redirList = [];
       let redirIndex = [];
       let numProblems = problemTitles.length;
-      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
 
       $("#batch-header").after(
         `<div class="loading-notice">
@@ -2568,8 +2560,6 @@
       let numProblems = problemTitles.length;
       let invalidProblems = 0;
 
-      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-
       $("#batch-header").after(
         `<div class="loading-notice">
           <div class="loading-text">Loading problems…</div>
@@ -2745,7 +2735,6 @@
         .split(",")
         .map((e) => e.replace("#", "Problems/Problem "));
 
-      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
       let params;
       let response;
       let json;
@@ -3119,8 +3108,6 @@
         </div>`
       );
     } else {
-      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
-
       let params = `action=parse&page=${encodeURIComponent(
         underscores(search)
       )}&format=json`;
@@ -3161,7 +3148,6 @@
   $(".page-container").on("click", "#theorem-button", async () => {
     if (!theoremPages[0]) {
       console.log("Loading theorems...");
-      let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
       let params =
         `action=query&list=categorymembers&cmtitle=Category:Theorems` +
         `&cmlimit=max&format=json`;
@@ -3493,7 +3479,6 @@
         let newProblem;
         let giveUp = false;
 
-        let apiEndpoint = "https://artofproblemsolving.com/wiki/api.php";
         let params;
         let response;
         let json;
