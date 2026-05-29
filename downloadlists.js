@@ -32,6 +32,8 @@ import fs from "fs";
   let paramsContinue;
 
   let response = await fetch(`${apiEndpoint}?${params}&origin=*`);
+  let text = await response.text();
+  console.log(text);
   let json = await response.json();
 
   for (let page of json.query.allpages) {
