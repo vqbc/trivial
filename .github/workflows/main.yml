@@ -2,7 +2,7 @@ name: Update page lists
 
 on:
   push:
-  branches: [test]
+    branches: [test]
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
