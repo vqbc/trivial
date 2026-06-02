@@ -18,6 +18,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - run: |
+          whoami
+          pwd
+          node -v
+          npm -v
+          npm config get cache
+          ls -ld .
+          ls -ld ~/.npm || true
       - run: npm ci
       - run: node downloadlists.js
       - run: |
