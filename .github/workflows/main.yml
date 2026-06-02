@@ -2,16 +2,19 @@ name: Update page lists
 
 on:
   push:
-  pull_request:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
 
+permissions:
+  contents: write
+
 jobs:
   test:
-    runs-on: ubuntu-24.04-arm
+    runs-on: [self-hosted, linux, x64, amcTrivial-AoPS-updater]
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "18"
       - run: npm ci
@@ -20,5 +23,9 @@ jobs:
           git config --global user.name "vqbc"
           git config --global user.email "andrewggchang@gmail.com"
           git add -A
-          git diff-index --quiet HEAD || git commit -m "Update page lists"
-          git push
+          if git diff --cached --quiet; then
+            echo "there is no page list changes to comit."
+          else
+            git commit -m "update page list"
+            git push
+          fi
