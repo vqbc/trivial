@@ -2,7 +2,6 @@ name: Update page lists
 
 on:
   push:
-    branches: [test]
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
@@ -18,16 +17,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: |
-          whoami
-          pwd
-          node -v
-          npm -v
-          npm config get cache
-          ls -ld .
-          ls -ld ~/.npm || true
-      - run: npm ci
-      - run: node downloadlists.js
       - run: |
           git config user.name "vqbc"
           git config user.email "andrewggchang@gmail.com"
