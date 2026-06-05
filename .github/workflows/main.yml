@@ -29,8 +29,8 @@ jobs:
       - run: npm ci
       - run: node downloadlists.js
       - run: |
-          git config --global user.name "vqbc"
-          git config --global user.email "andrewggchang@gmail.com"
+          git config user.name "vqbc"
+          git config user.email "andrewggchang@gmail.com"
           git add -A
           if git diff --cached --quiet; then
             echo "there is no page list changes to comit."
