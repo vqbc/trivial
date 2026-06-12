@@ -2,9 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-/* Dark theme */
+/* Dark theme. Rules are scoped to `html.dark` so the stylesheet can be
+ * bundled once and applied by toggling a class on the root element. */
 @media screen {
-  :root {
+  html.dark {
     --text-color: hsl(0 0% 87%);
     --header-color: hsl(0 0% 87%);
     --secondary-color: hsl(0 0% 83%);
@@ -53,7 +54,7 @@
     --wrong-color: hsl(15 70% 55%);
   }
 
-  .tagify {
+  html.dark .tagify {
     --placeholder-color: hsl(0 0% 100% / 50%);
     --placeholder-color-focus: hsl(0 0% 100% / 30%);
     --tag-bg: hsl(201 8% 25%);
@@ -63,30 +64,30 @@
     --tag-remove-btn-color: var(--tag-text-color);
   }
 
-  .tagify__input::before,
-  .tagify__input::after {
+  html.dark .tagify__input::before,
+  html.dark .tagify__input::after {
     color: var(--placeholder-color-focus);
     opacity: 1;
   }
 
-  .tagify__dropdown__wrapper {
+  html.dark .tagify__dropdown__wrapper {
     --tagify-dd-bg-color: hsl(201 8% 20%);
     --tagify-dd-color-primary: hsl(210 41% 44%);
   }
 
-  img.latex,
-  img.latexcenter,
-  #difficulty-chart {
+  html.dark img.latex,
+  html.dark img.latexcenter,
+  html.dark #difficulty-chart {
     filter: invert(1) hue-rotate(180deg);
   }
 
-  #difficulty-chart .mark-rect,
-  #difficulty-chart .mark-symbol {
+  html.dark #difficulty-chart .mark-rect,
+  html.dark #difficulty-chart .mark-symbol {
     filter: invert(1) hue-rotate(180deg);
   }
 
-  #difficulty-chart .role-frame > g > path.background,
-  #difficulty-chart .role-axis-grid > line {
+  html.dark #difficulty-chart .role-frame > g > path.background,
+  html.dark #difficulty-chart .role-axis-grid > line {
     stroke: hsl(0 0% 75%) !important;
   }
-} /**/
+}

@@ -1654,3 +1654,64 @@ footer {
     display: none;
   }
 } /**/
+
+/* React-port additions. Styles for components that replace what the
+ * legacy code built imperatively via jQuery. */
+
+.tag-select {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 2em;
+  padding: 0.25em;
+}
+
+.tag-select-placeholder {
+  width: 100%;
+  color: var(--placeholder-color);
+  text-align: center;
+}
+
+.tag-select-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  width: 100%;
+}
+
+.tag-select-chip {
+  padding: 0.25em 0.75em;
+  color: var(--text-color);
+  font: 0.95em "Latin Modern Sans", sans-serif;
+  background: var(--input-layer-color);
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.tag-select-chip:hover {
+  background: var(--input-focus-color);
+}
+
+.tag-select-chip-on {
+  color: white;
+  background: var(--main-button-color);
+}
+
+.tag-select-chip-on:hover {
+  background: var(--main-button-focus-color);
+}
+
+.range-slider-wrap {
+  width: 100%;
+  padding: 0 0.6em;
+}
+
+.range-readout {
+  margin-top: 0.4em;
+  color: var(--minor-color);
+  font: 0.9em "Latin Modern Sans", sans-serif;
+  text-align: center;
+}
+

@@ -85,29 +85,6 @@
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7985214603588506"
      crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <script>
-      if (
-        JSON.parse(localStorage.getItem("darkTheme")) ||
-        (JSON.parse(localStorage.getItem("darkTheme")) === null &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.body.style = "background: hsl(201deg 8% 12%)";
-      }
-    </script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.9.4/tagify.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.1/katex.min.css"
-    />
     <link
       href="/fonts/tex-gyre-pagella/pagella-regular.woff2"
       rel="preload"
@@ -175,161 +152,20 @@
       crossorigin="anonymous"
     />
     <link href="/src/fonts.css" rel="stylesheet" />
-    <link id="stylesheet-link" href="/src/styles.css" rel="stylesheet" />
+    <link href="/src/styles.css" rel="stylesheet" />
+    <link href="/src/dark.css" rel="stylesheet" />
     <script>
       if (
         JSON.parse(localStorage.getItem("darkTheme")) ||
         (JSON.parse(localStorage.getItem("darkTheme")) === null &&
           window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
-        let darkStyles = document.createElement("link");
-        let styles = document.querySelector("#stylesheet-link");
-        darkStyles.id = "dark-stylesheet-link";
-        darkStyles.href = "/src/dark.css";
-        darkStyles.rel = "stylesheet";
-        styles.after(darkStyles);
+        document.documentElement.classList.add("dark");
       }
     </script>
-    <div class="page-container">
-      <script>
-        if (
-          JSON.parse(localStorage.getItem("darkTheme")) ||
-          (JSON.parse(localStorage.getItem("darkTheme")) === null &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-          document.querySelector(".page-container").style =
-            "background: hsl(201deg 8% 15%)";
-        }
-      </script>
-      <header>
-        <h1 class="header">
-          <a href="/">Trivial.</a>
-          <svg width="15" height="30" viewBox="0 0 132.29 264.58" class="logo">
-            <title>
-              The Trivial logo is supposed to be a QED symbol (□) — the name<!--
-              --> Trivial represents the general and time-saving solution to<!--
-              --> any mathematical question, as well as how this site was<!--
-              --> (not) trivial to make.
-            </title>
-            <path
-              d="M 34.396002,2.1733e-6 V 264.58 L 0,227.522 V 24.022002 Z"
-              fill="#4499aa"
-            ></path>
-            <path
-              d="M 132.296,40.179 50.274971,0 V 264.58 L 132.296,202.596 Z"
-              fill="#44bbaa"
-            ></path>
-          </svg>
-        </h1>
-        <p class="subtitle">Studying & Practicing — AoPS Wiki Powered</p>
-      </header>
-      <main>
-        <div class="problem-section" id="about-section">
-          <h2 class="section-header" id="about-header">About Us</h2>
-          <div class="article-text" id="about-text">
-            <p>
-              Trivial is a site for unlimited problem practice and other
-              learning features, based on the vast database of the
-              <a
-                href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page"
-              >
-                Art of Problem Solving Wiki</a
-              >. We started it in 2020, after frustration at how inconvenient
-              and expensive preparing for exams like the AMC could be.
-            </p>
-            <p>
-              At its core, Trivial provides tools to efficiently get and
-              practice solving problems, either one-by-one or in sets. In
-              addition to the many options for filtering and finding problems,
-              there are also various helpful features loosely inspired by
-              resources like Alcumus and IXL, including answer checking and
-              problem streaks. For both problems and articles we have full
-              search and history functionality, plus a print-friendly layout.
-            </p>
-            <p>
-              People use Trivial for various purposes, whether it’s preparing
-              for large upcoming competitions like the AMC or sharpening math
-              skills over the summer. Tens of thousands of learners from over a
-              hundred countries have used Trivial — we hope you’ll find it
-              essential in your own studies!
-            </p>
-            <h3>Acknowledgements</h3>
-            <p>
-              This site is designed and maintained by
-              <a href="https://github.com/vqbc">Andi Chang</a> with help from
-              the Trivial team of volunteers on
-              <a href="https://github.com/vqbc/trivial">Github</a> and
-              <a href="https://discord.gg/VExpSZfkAE">Discord</a>, and built
-              using the libraries: <a href="https://jquery.com/">jQuery</a>,
-              <a href="https://github.com/yairEO/tagify">Tagify</a>,
-              <a href="http://ionden.com/a/plugins/ion.rangeSlider/"
-                >Ion.RangeSlider</a
-              >, <a href="https://katex.org/">KaTeX</a>,
-              <a href="https://clipboardjs.com/">Clipboard.js</a>, &
-              <a href="https://vega.github.io/vega/">Vega</a>, as well as icons
-              from <a href="http://www.entypo.com/">Entypo</a>. Please
-              <a href="https://forms.gle/3ofW7BQ5g5UBmknH9">contact us</a>
-              for any further inquiries.
-            </p>
-            <p>
-              Article and problem text obtained from the
-              <a
-                href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page"
-              >
-                Art of Problem Solving Wiki</a
-              >.
-            </p>
-            <p>
-              AMC problems are copyrighted by the
-              <a href="https://www.maa.org/">
-                Mathematical Association of America</a
-              >.
-            </p>
-          </div>
-        </div>
-      </main>
-      <footer>
-        <p class="footer-line disclaimer printonly">
-          Using content from the
-          <a
-            id="aops-wiki-link"
-            href="https://artofproblemsolving.com/wiki/index.php/"
-            >AoPS Wiki</a
-          >
-          |
-          <a href="https://amctrivial.com/">amctrivial.com</a>
-        </p>
-        <p class="footer-line siteinfo noprint">
-          <button class="text-button" id="dark-toggle" tabindex="0">
-            System theme
-          </button>
-          | <a href="/about">About</a><span class="bullet"> ⋅ </span
-          ><span class="mobile-break"><br /></span>
-          <a href="https://github.com/vqbc/trivial">Github</a> ⋅
-          <a href="https://discord.gg/VExpSZfkAE">Discord</a> ⋅
-          <a href="https://forms.gle/3ofW7BQ5g5UBmknH9">Contact</a><br />Made by
-          <a href="https://github.com/vqbc">Andi Chang</a>
-        </p>
-      </footer>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.9.8/jQuery.tagify.min.js"></script>
-    <!-- <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/contrib/copy-tex.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/contrib/mhchem.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/5.21.0/vega.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/5.2.0/vega-lite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/6.20.8/vega-embed.min.js"></script>
-    <script src="/src/index.js"></script>
+  </head>
+  <body>
+    <div id="root" class="page-container"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
