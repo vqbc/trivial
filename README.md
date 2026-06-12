@@ -8,4 +8,4 @@ The only parts of this project that will need regular manual updating are the [a
 
 ## License
 
-This project is copyrighted by Andrew Chang and licensed under the terms of the [Mozilla Public License v2.0](https://www.mozilla.org/en-US/MPL/2.0/).
+This project is copyrighted by Andi Chang and licensed under the terms of the [Mozilla Public License v2.0](https://www.mozilla.org/en-US/MPL/2.0/).
