@@ -60,21 +60,26 @@ export default function Tagify({
     onChangeRef.current = onChange;
   }, [onChange]);
 
-  const settings = useMemo(
-    () => ({
-      whitelist: normalizeWhitelist(whitelist),
-      mode,
+  // Build the settings object piecewise so we don't pass any `undefined`
+  // values to Tagify — that would overwrite its own defaults (notably
+  // the `templates.wrapper` template) and crash inside `parseTemplate`.
+  const settings = useMemo(() => {
+    const s = {
       placeholder,
       originalInputValueFormat: (vals) => vals.map((e) => e.value),
       dropdown: {
         enabled: dropdownEnabled,
         maxItems: dropdownMax,
-        mapValueTo: useLabels ? "label" : undefined,
       },
-      templates: useLabels ? { tag: subjectTagTemplate } : undefined,
-    }),
-    [whitelist, mode, placeholder, dropdownMax, dropdownEnabled, useLabels],
-  );
+    };
+    if (whitelist) s.whitelist = normalizeWhitelist(whitelist);
+    if (mode) s.mode = mode;
+    if (useLabels) {
+      s.dropdown.mapValueTo = "label";
+      s.templates = { tag: subjectTagTemplate };
+    }
+    return s;
+  }, [whitelist, mode, placeholder, dropdownMax, dropdownEnabled, useLabels]);
 
   // Mount once. Re-mount when settings actually change.
   useEffect(() => {
