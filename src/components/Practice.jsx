@@ -123,12 +123,12 @@ function RandomTab({ preset, hasProblem, onResult }) {
   }, [universe, subjects, tests, yearRange, diffRange, onResult]);
 
   useEffect(() => {
-    if (!problems) return;
+    if (!universe) return;
     if (!preset?.autoRun) return;
     if (autoRanRef.current) return;
     autoRanRef.current = true;
     go();
-  }, [problems, preset, go]);
+  }, [universe, preset, go]);
 
   const cls = `options-input ${hasProblem ? "random-input-active" : ""}`;
   return (

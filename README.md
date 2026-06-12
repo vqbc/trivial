@@ -4,7 +4,7 @@ This website provides tools for more efficiently getting and working with proble
 
 ## Maintenance
 
-The only parts of this project that will need regular manual updating are the [allpages.json](data/allpages.json) and [allproblems.json](data/allproblems.json) page lists for the wiki. To download updated copies that can then be committed, run [downloadlists.js](downloadlists.js) in the browser console.
+The only parts of this project that will need regular manual updating are the [allpages.json](public/data/allpages.json) and [allproblems.json](public/data/allproblems.json) page lists for the wiki. To download updated copies that can then be committed, run [downloadlists.js](downloadlists.js) with Node.
 
 ## License
 

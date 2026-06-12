@@ -100,11 +100,11 @@ async function fetchJson(url) {
 
   try {
     fs.writeFileSync(
-      "data/allpages.json",
+      "public/data/allpages.json",
       JSON.stringify(allPages, undefined, 2)
     );
     fs.writeFileSync(
-      "data/allproblems.json",
+      "public/data/allproblems.json",
       JSON.stringify(allProblems, undefined, 2)
     );
   } catch (err) {
