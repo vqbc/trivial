@@ -1,7 +1,7 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-import { AOPS_API } from "./constants.js";
+import { AOPS_API, DEFAULT_TESTS } from "./constants.js";
 import { latexer } from "./latex.js";
 import { getProblem, getSolutions } from "./parse.js";
 import {
@@ -52,7 +52,16 @@ export async function collectMatchingProblems({
   diffRange,
   universe,
 }) {
-  const args = [tests, yearRange[0], yearRange[1], diffRange[0], diffRange[1]];
+  // Empty test list defaults to "(AMC Tests)" so users who haven't
+  // touched the filter still get something useful.
+  const effectiveTests = tests.length === 0 ? DEFAULT_TESTS : tests;
+  const args = [
+    effectiveTests,
+    yearRange[0],
+    yearRange[1],
+    diffRange[0],
+    diffRange[1],
+  ];
   if (
     !subjects ||
     subjects.length === 0 ||

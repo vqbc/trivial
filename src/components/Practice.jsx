@@ -6,6 +6,7 @@ import "katex/dist/katex.min.css";
 import {
   SUBJECTS,
   TESTS,
+  TEST_WHITELIST,
   VALID_NUMS,
   VALID_VERSIONS,
   VALID_YEARS,
@@ -146,10 +147,10 @@ function RandomTab({ preset, hasProblem, onResult }) {
       <div className="input-container input-flex-full">
         <label className="range-label">Tests</label>
         <Tagify
-          whitelist={TESTS}
+          whitelist={TEST_WHITELIST}
           value={tests}
           onChange={setTests}
-          placeholder="Choose tests"
+          placeholder="Choose tests (defaults to (AMC Tests))"
         />
       </div>
       <RangeSlider

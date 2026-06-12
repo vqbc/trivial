@@ -17,6 +17,16 @@ export const TESTS = [
   "AHSME",
 ];
 
+// Tagify whitelist for Tests in Random Practice / Random Sets — adds
+// the legacy "(AMC Tests)" meta-token that expands to AHSME + AMC 8/
+// 10/12 + AIME + USAMO + IMO (see matchesOptions in lib/problems.js).
+// Select tabs use TESTS directly since "(AMC Tests)" isn't a real
+// single test.
+export const TEST_WHITELIST = ["(AMC Tests)", ...TESTS];
+
+// Filter default used when the user clears all tests.
+export const DEFAULT_TESTS = ["(AMC Tests)"];
+
 export const VALID_VERSIONS = {
   "AMC 10": ["A", "B", "Fall A", "Fall B"],
   "AMC 12": ["A", "B", "Fall A", "Fall B"],
