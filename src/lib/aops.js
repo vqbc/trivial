@@ -104,6 +104,23 @@ async function fetchParsed(page) {
   return response.json();
 }
 
+// Looks for a MediaWiki redirect marker (.redirectMsg / .redirectText)
+// in the response HTML and returns the decoded target page name, or
+// null if the page isn't a redirect. Handles both /wiki/Target and
+// /wiki/index.php/Target href styles.
+function extractRedirectTarget(html) {
+  const tmp = document.createElement("div");
+  tmp.innerHTML = html;
+  const anchor =
+    tmp.querySelector(".redirectMsg a") ??
+    tmp.querySelector(".redirectText a");
+  if (!anchor) return null;
+  const href = anchor.getAttribute("href") ?? "";
+  const match = href.match(/\/wiki\/(?:index\.php\/)?(.+)$/);
+  if (!match) return null;
+  return decodeURIComponent(match[1]).replace(/_/g, " ");
+}
+
 // Fetches a problem page from the AoPS wiki, following the redirect once
 // if needed. Returns null if the page doesn't exist.
 export async function fetchProblemPage(pagename) {
@@ -116,22 +133,15 @@ export async function fetchProblemPage(pagename) {
   let finalPage = pagename;
 
   const hasContent = problem && solutions;
-  const isRedirect = !hasContent && html.includes("Redirect to:");
-  if (isRedirect) {
-    const tmp = document.createElement("div");
-    tmp.innerHTML = html;
-    const redir = tmp.querySelector(".redirectText a");
-    if (redir) {
-      const redirPage = redir
-        .getAttribute("href")
-        .replace("/wiki/index.php/", "")
-        .replace(/_/g, " ");
-      json = await fetchParsed(redirPage);
+  if (!hasContent) {
+    const target = extractRedirectTarget(html);
+    if (target) {
+      json = await fetchParsed(target);
       if (json?.parse) {
         html = latexer(json.parse.text["*"]);
         problem = getProblem(html);
         solutions = getSolutions(html);
-        finalPage = redirPage;
+        finalPage = target;
       }
     }
   }
@@ -178,25 +188,21 @@ export async function fetchArticlePage(pagename) {
   let html = latexer(json.parse.text["*"]);
   let finalPage = pagename;
 
-  if (html.includes("Redirect to:")) {
-    const tmp = document.createElement("div");
-    tmp.innerHTML = html;
-    const redir = tmp.querySelector(".redirectText a");
-    if (redir) {
-      const redirPage = redir
-        .getAttribute("href")
-        .replace("/wiki/index.php/", "")
-        .replace(/_/g, " ");
-      json = await fetchParsed(redirPage);
-      if (json?.parse) {
-        html = latexer(json.parse.text["*"]);
-        finalPage = redirPage;
-      }
+  const target = extractRedirectTarget(html);
+  if (target) {
+    json = await fetchParsed(target);
+    if (json?.parse) {
+      html = latexer(json.parse.text["*"]);
+      finalPage = target;
     }
   }
 
-  const container = document.createElement("div");
-  container.innerHTML = html;
+  const root = document.createElement("div");
+  root.innerHTML = html;
+  // Descend into the MediaWiki .mw-parser-output wrapper if present so
+  // we iterate real content top-level nodes (matches the legacy
+  // $($.parseHTML(html)).children() behavior).
+  const container = root.querySelector(".mw-parser-output") ?? root;
   const body = Array.from(container.children)
     .filter((el) => {
       if (el.classList.contains("toc")) return false;
