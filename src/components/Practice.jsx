@@ -208,10 +208,10 @@ function RandomTab({ preset, hasProblem, onResult }) {
 }
 
 function SelectTab({ onResult }) {
-  const [test, setTest] = useState("AMC 10");
-  const [version, setVersion] = useState("A");
-  const [year, setYear] = useState(2024);
-  const [num, setNum] = useState(1);
+  const [test, setTest] = useState("");
+  const [version, setVersion] = useState("");
+  const [year, setYear] = useState(null);
+  const [num, setNum] = useState(null);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(null);
 
@@ -219,12 +219,30 @@ function SelectTab({ onResult }) {
   const nums = VALID_NUMS[test];
 
   useEffect(() => {
-    if (versions.length && !versions.includes(version)) setVersion(versions[0]);
-    if (!versions.length && version) setVersion("");
-  }, [test, versions, version]);
+    // Don't auto-fill a default version; only clear when the picked
+    // test no longer offers the currently selected version (e.g. user
+    // switches from AMC 10 to AMC 8).
+    if (version && !versions.includes(version)) setVersion("");
+  }, [versions, version]);
 
   const go = async () => {
     setError(null);
+    if (!test) {
+      setError("Choose a test.");
+      return;
+    }
+    if (versions.length && !version) {
+      setError("Choose a version.");
+      return;
+    }
+    if (year === null) {
+      setError("Enter a year.");
+      return;
+    }
+    if (num === null) {
+      setError("Enter a problem number.");
+      return;
+    }
     const yearsKey = `${test}${version || ""}`;
     const validYears = VALID_YEARS[yearsKey];
     if (!validYears || year < validYears.min || year > validYears.max) {
@@ -288,8 +306,10 @@ function SelectTab({ onResult }) {
         min={1974}
         max={YEAR_MAX}
         placeholder="Year"
-        value={year}
-        onChange={(e) => setYear(Number(e.target.value) || 0)}
+        value={year ?? ""}
+        onChange={(e) =>
+          setYear(e.target.value === "" ? null : Number(e.target.value))
+        }
       />
       <input
         id="input-singlenum"
@@ -298,8 +318,10 @@ function SelectTab({ onResult }) {
         min={nums?.min ?? 1}
         max={nums?.max ?? 40}
         placeholder="#"
-        value={num}
-        onChange={(e) => setNum(Number(e.target.value) || 0)}
+        value={num ?? ""}
+        onChange={(e) =>
+          setNum(e.target.value === "" ? null : Number(e.target.value))
+        }
       />
       <button
         type="button"

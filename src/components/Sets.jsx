@@ -240,9 +240,9 @@ function RandomBatchTab({ preset, options, onOptions, onRun }) {
 }
 
 function PastTestTab({ options, onOptions, onRun }) {
-  const [test, setTest] = useState("AMC 10");
-  const [version, setVersion] = useState("A");
-  const [year, setYear] = useState(2024);
+  const [test, setTest] = useState("");
+  const [version, setVersion] = useState("");
+  const [year, setYear] = useState(null);
   const [error, setError] = useState(null);
   const [problemsList, setProblemsList] = useState(null);
 
@@ -253,12 +253,26 @@ function PastTestTab({ options, onOptions, onRun }) {
   const versions = VALID_VERSIONS[test] ?? [];
 
   useEffect(() => {
-    if (versions.length && !versions.includes(version)) setVersion(versions[0]);
-    if (!versions.length && version) setVersion("");
-  }, [test, versions, version]);
+    // Clear the version only when the chosen test stops offering it.
+    // Don't auto-pick a default — the placeholder should stay visible
+    // until the user makes a choice.
+    if (version && !versions.includes(version)) setVersion("");
+  }, [versions, version]);
 
   const go = () => {
     setError(null);
+    if (!test) {
+      setError("Choose a test.");
+      return;
+    }
+    if (versions.length && !version) {
+      setError("Choose a version.");
+      return;
+    }
+    if (year === null) {
+      setError("Enter a year.");
+      return;
+    }
     const fullTest = fullTestName(test, version);
     const key = `${test}${version || ""}`;
     const valid = VALID_YEARS[key];
@@ -306,8 +320,10 @@ function PastTestTab({ options, onOptions, onRun }) {
           min={1974}
           max={YEAR_MAX}
           placeholder="Year"
-          value={year}
-          onChange={(e) => setYear(Number(e.target.value) || 0)}
+          value={year ?? ""}
+          onChange={(e) =>
+            setYear(e.target.value === "" ? null : Number(e.target.value))
+          }
         />
         <button
           type="button"
