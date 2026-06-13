@@ -176,25 +176,19 @@ function RandomBatchTab({ preset, options, onOptions, onRun }) {
   return (
     <>
       <div className="options-input" id="ranbatch-input">
-        <div className="input-container input-flex-full">
-          <label className="range-label">Subjects</label>
-          <Tagify
-            whitelist={SUBJECTS}
-            value={subjects}
-            onChange={setSubjects}
-            placeholder="Choose subjects (optional)"
-            useLabels
-          />
-        </div>
-        <div className="input-container input-flex-full">
-          <label className="range-label">Tests</label>
-          <Tagify
-            whitelist={TEST_WHITELIST}
-            value={tests}
-            onChange={setTests}
-            placeholder="Choose tests (defaults to (AMC Tests))"
-          />
-        </div>
+        <Tagify
+          whitelist={SUBJECTS}
+          value={subjects}
+          onChange={setSubjects}
+          placeholder="Choose subjects"
+          useLabels
+        />
+        <Tagify
+          whitelist={TEST_WHITELIST}
+          value={tests}
+          onChange={setTests}
+          placeholder="Choose tests"
+        />
         <RangeSlider
           label="Years"
           min={YEAR_MIN}
