@@ -73,6 +73,7 @@
   html.dark .tagify__dropdown__wrapper {
     --tagify-dd-bg-color: hsl(201 8% 20%);
     --tagify-dd-color-primary: hsl(210 41% 44%);
+    --tagify-dd-text-color: var(--text-color);
   }
 
   html.dark img.latex,
