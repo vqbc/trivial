@@ -135,14 +135,20 @@ export async function fetchProblemBatch(titles, { onProgress } = {}) {
     titles.map(async (title, i) => {
       const fetched = await fetchProblemPage(title);
       if (fetched && fetched.problem && fetched.solutions) {
+        // Sets.jsx passes underscored titles, but computeTest's regex
+        // needs the space-form ("2024 AMC 10A Problems/Problem 1").
+        // The wiki returns the resolved title with spaces; fall back
+        // to normalizing the input ourselves if that's missing.
+        const canonical =
+          fetched.finalPage ?? title.replace(/_/g, " ");
         results[i] = {
-          title: fetched.finalPage ?? title,
+          title: canonical,
           problem: fetched.problem,
           solutions: fetched.solutions,
           difficulty: computeDifficulty(
-            computeTest(title),
-            computeNumber(title),
-            computeYear(title),
+            computeTest(canonical),
+            computeNumber(canonical),
+            computeYear(canonical),
           ),
         };
       }
