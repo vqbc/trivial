@@ -1,10 +1,11 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AOPS_WIKI } from "../lib/constants.js";
 import { titleCleanup, underscores, sanitize, computeTest } from "../lib/problems.js";
 import { fetchAnswer } from "../lib/aops.js";
+import { useWikiLinkClicks } from "../lib/links.js";
 import { increment } from "../lib/stats.js";
 
 function isCorrect(pagename, normalized, answer) {
@@ -95,6 +96,7 @@ export default function ProblemDisplay({
   problem,
   solutions,
   onResult,
+  onNavigate,
 }) {
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [tries, setTries] = useState(0);
@@ -102,6 +104,10 @@ export default function ProblemDisplay({
   const [gaveUp, setGaveUp] = useState(false);
   const aopsHref = `${AOPS_WIKI}${underscores(pagename)}`;
   const title = titleCleanup(pagename);
+  const problemRef = useRef(null);
+  const solutionsRef = useRef(null);
+  useWikiLinkClicks(problemRef, onNavigate);
+  useWikiLinkClicks(solutionsRef, onNavigate);
 
   useEffect(() => {
     document.title = `${title} - Trivial Math Practice`;
@@ -162,6 +168,7 @@ export default function ProblemDisplay({
           </button>
         </div>
         <div
+          ref={problemRef}
           className="article-text"
           id="problem-text"
           dangerouslySetInnerHTML={{ __html: problem }}
@@ -182,6 +189,7 @@ export default function ProblemDisplay({
           Solutions
         </h2>
         <div
+          ref={solutionsRef}
           className="article-text"
           id="solutions-text"
           dangerouslySetInnerHTML={{ __html: solutions }}

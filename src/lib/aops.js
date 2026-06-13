@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { AOPS_API, DEFAULT_TESTS } from "./constants.js";
 import { latexer } from "./latex.js";
+import { rewriteWikiLinks } from "./links.js";
 import { getProblem, getSolutions } from "./parse.js";
 import {
   computeDifficulty,
@@ -117,8 +118,8 @@ export async function fetchProblemPage(pagename) {
 
   const html = latexer(json.parse.text["*"]);
   return {
-    problem: getProblem(html),
-    solutions: getSolutions(html),
+    problem: rewriteWikiLinks(getProblem(html)),
+    solutions: rewriteWikiLinks(getSolutions(html)),
     finalPage: json.parse.title ?? pagename,
   };
 }
@@ -187,7 +188,7 @@ export async function fetchArticlePage(pagename) {
     .map((el) => el.outerHTML)
     .join("");
 
-  return { html: body, finalPage };
+  return { html: rewriteWikiLinks(body), finalPage };
 }
 
 export async function fetchAnswer(pagename) {

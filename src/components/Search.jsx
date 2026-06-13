@@ -151,6 +151,18 @@ export default function Search() {
     }
   };
 
+  const loadInlineArticle = async (pick) => {
+    const result = await fetchArticlePage(pick);
+    if (!result) {
+      setError(`The page "${pick}" could not be loaded.`);
+      return;
+    }
+    const finalPage = result.finalPage ?? pick;
+    addHistory(finalPage, result.html);
+    increment("numArticles");
+    setTheorem({ pagename: finalPage, html: result.html });
+  };
+
   const onRandomTheorem = async () => {
     setError(null);
     setTheoremPending(true);
@@ -161,15 +173,7 @@ export default function Search() {
         return;
       }
       const pick = theorems[Math.floor(Math.random() * theorems.length)];
-      const result = await fetchArticlePage(pick);
-      if (!result) {
-        setError(`The page "${pick}" could not be loaded.`);
-        return;
-      }
-      const finalPage = result.finalPage ?? pick;
-      addHistory(finalPage, result.html);
-      increment("numArticles");
-      setTheorem({ pagename: finalPage, html: result.html });
+      await loadInlineArticle(pick);
     } finally {
       setTheoremPending(false);
     }
@@ -231,7 +235,11 @@ export default function Search() {
       </div>
       {error && <p className="error">{error}</p>}
       {theorem && (
-        <ArticleBody pagename={theorem.pagename} html={theorem.html} />
+        <ArticleBody
+          pagename={theorem.pagename}
+          html={theorem.html}
+          onNavigate={loadInlineArticle}
+        />
       )}
       {results && (
         <div className="results-container">

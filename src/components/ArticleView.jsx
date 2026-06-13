@@ -1,7 +1,7 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "katex/dist/katex.min.css";
 import { AOPS_WIKI } from "../lib/constants.js";
 import {
@@ -11,6 +11,7 @@ import {
 } from "../lib/problems.js";
 import { fetchArticlePage, fetchProblemPage } from "../lib/aops.js";
 import { addHistory } from "../lib/history.js";
+import { useWikiLinkClicks } from "../lib/links.js";
 import { increment } from "../lib/stats.js";
 import ProblemDisplay from "./ProblemDisplay.jsx";
 
@@ -21,9 +22,10 @@ function readPageFromUrl() {
   return decodeURIComponent(raw).replace(/_/g, " ");
 }
 
-export function ArticleBody({ pagename, html }) {
+export function ArticleBody({ pagename, html, onNavigate }) {
   const title = titleCleanup(pagename);
   const aopsHref = `${AOPS_WIKI}${underscores(pagename)}`;
+  const bodyRef = useRef(null);
 
   useEffect(() => {
     document.title = `${title} - Trivial Math Practice`;
@@ -31,6 +33,8 @@ export function ArticleBody({ pagename, html }) {
       document.title = "Trivial Math Practice";
     };
   }, [title]);
+
+  useWikiLinkClicks(bodyRef, onNavigate);
 
   return (
     <div className="problem-section" id="problem-section">
@@ -51,6 +55,7 @@ export function ArticleBody({ pagename, html }) {
         </button>
       </div>
       <div
+        ref={bodyRef}
         className="article-text"
         id="full-text"
         dangerouslySetInnerHTML={{ __html: html }}
@@ -87,6 +92,11 @@ export default function ArticleView() {
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
   }, []);
+
+  const onNavigate = (next) => {
+    window.history.pushState({}, "", `?page=${underscores(next)}`);
+    setPagename(next);
+  };
 
   useEffect(() => {
     if (!pagename) {
@@ -155,8 +165,15 @@ export default function ArticleView() {
         pagename={state.pagename}
         problem={state.problem}
         solutions={state.solutions}
+        onNavigate={onNavigate}
       />
     );
   }
-  return <ArticleBody pagename={state.pagename} html={state.html} />;
+  return (
+    <ArticleBody
+      pagename={state.pagename}
+      html={state.html}
+      onNavigate={onNavigate}
+    />
+  );
 }
