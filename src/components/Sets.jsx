@@ -283,50 +283,32 @@ function PastTestTab({ options, onOptions, onRun }) {
   return (
     <>
       <div className="options-input" id="batch-input">
-        <div className="input-container input-flex-half">
-          <label className="range-label">Test</label>
-          <select
-            className="input-field"
-            value={test}
-            onChange={(e) => setTest(e.target.value)}
-          >
-            {TESTS.map((t) => (
-              <option key={t} value={t}>
-                {t}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="input-container input-flex-half">
-          <label className="range-label">Version</label>
-          <select
-            className="input-field"
-            value={version}
-            onChange={(e) => setVersion(e.target.value)}
-            disabled={versions.length === 0}
-          >
-            {versions.length === 0 && <option value="">(none)</option>}
-            {versions.map((v) => (
-              <option key={v} value={v}>
-                {v}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="input-container input-flex-full">
-          <label className="range-label" htmlFor="input-singleyear">
-            Year
-          </label>
-          <input
-            id="input-singleyear"
-            className="input-field"
-            type="number"
-            min={1974}
-            max={YEAR_MAX}
-            value={year}
-            onChange={(e) => setYear(Number(e.target.value) || 0)}
-          />
-        </div>
+        <Tagify
+          mode="select"
+          whitelist={TESTS}
+          value={test ? [test] : []}
+          onChange={(arr) => setTest(arr[0] ?? "")}
+          placeholder="Test"
+          className="input-flex-half"
+        />
+        <Tagify
+          mode="select"
+          whitelist={versions}
+          value={version ? [version] : []}
+          onChange={(arr) => setVersion(arr[0] ?? "")}
+          placeholder="Version"
+          className="input-flex-half"
+        />
+        <input
+          id="input-singleyear"
+          className="input-field"
+          type="number"
+          min={1974}
+          max={YEAR_MAX}
+          placeholder="Year"
+          value={year}
+          onChange={(e) => setYear(Number(e.target.value) || 0)}
+        />
         <button
           type="button"
           className="input-button input-button-full"

@@ -265,66 +265,42 @@ function SelectTab({ onResult }) {
 
   return (
     <div className="options-input" id="single-input">
-      <div className="input-container input-flex-half">
-        <label className="range-label">Test</label>
-        <select
-          className="input-field"
-          id="input-singletest"
-          value={test}
-          onChange={(e) => setTest(e.target.value)}
-        >
-          {TESTS.map((t) => (
-            <option key={t} value={t}>
-              {t}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="input-container input-flex-half">
-        <label className="range-label">Version</label>
-        <select
-          className="input-field"
-          id="input-singlever"
-          value={version}
-          onChange={(e) => setVersion(e.target.value)}
-          disabled={versions.length === 0}
-        >
-          {versions.length === 0 && <option value="">(none)</option>}
-          {versions.map((v) => (
-            <option key={v} value={v}>
-              {v}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="input-container input-flex-half">
-        <label className="range-label" htmlFor="input-singleyear">
-          Year
-        </label>
-        <input
-          id="input-singleyear"
-          className="input-field"
-          type="number"
-          min={1974}
-          max={YEAR_MAX}
-          value={year}
-          onChange={(e) => setYear(Number(e.target.value) || 0)}
-        />
-      </div>
-      <div className="input-container input-flex-half">
-        <label className="range-label" htmlFor="input-singlenum">
-          Problem #
-        </label>
-        <input
-          id="input-singlenum"
-          className="input-field"
-          type="number"
-          min={nums?.min ?? 1}
-          max={nums?.max ?? 40}
-          value={num}
-          onChange={(e) => setNum(Number(e.target.value) || 0)}
-        />
-      </div>
+      <Tagify
+        mode="select"
+        whitelist={TESTS}
+        value={test ? [test] : []}
+        onChange={(arr) => setTest(arr[0] ?? "")}
+        placeholder="Test"
+        className="input-flexone-half"
+      />
+      <Tagify
+        mode="select"
+        whitelist={versions}
+        value={version ? [version] : []}
+        onChange={(arr) => setVersion(arr[0] ?? "")}
+        placeholder="Version"
+        className="input-flexone-half"
+      />
+      <input
+        id="input-singleyear"
+        className="input-field"
+        type="number"
+        min={1974}
+        max={YEAR_MAX}
+        placeholder="Year"
+        value={year}
+        onChange={(e) => setYear(Number(e.target.value) || 0)}
+      />
+      <input
+        id="input-singlenum"
+        className="input-field"
+        type="number"
+        min={nums?.min ?? 1}
+        max={nums?.max ?? 40}
+        placeholder="#"
+        value={num}
+        onChange={(e) => setNum(Number(e.target.value) || 0)}
+      />
       <button
         type="button"
         className="input-button input-button-full"
