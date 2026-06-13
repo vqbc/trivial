@@ -3,7 +3,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useMemo, useRef } from "react";
 import TagifyLib from "@yaireo/tagify";
-import "@yaireo/tagify/dist/tagify.css";
+// tagify.css is @imported at the top of styles.css so its defaults
+// load before our .tagify overrides.
 
 function normalizeWhitelist(whitelist) {
   if (!whitelist) return undefined;
