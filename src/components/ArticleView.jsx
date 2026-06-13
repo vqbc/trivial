@@ -21,7 +21,7 @@ function readPageFromUrl() {
   return decodeURIComponent(raw).replace(/_/g, " ");
 }
 
-function ArticleBody({ pagename, html }) {
+export function ArticleBody({ pagename, html }) {
   const title = titleCleanup(pagename);
   const aopsHref = `${AOPS_WIKI}${underscores(pagename)}`;
 

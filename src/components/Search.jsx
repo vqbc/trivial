@@ -4,7 +4,10 @@
 import { useEffect, useRef, useState } from "react";
 import { AOPS_API } from "../lib/constants.js";
 import { titleCleanup, underscores, validProblem } from "../lib/problems.js";
-import { fetchAllPages } from "../lib/aops.js";
+import { fetchAllPages, fetchArticlePage } from "../lib/aops.js";
+import { addHistory } from "../lib/history.js";
+import { increment } from "../lib/stats.js";
+import { ArticleBody } from "./ArticleView.jsx";
 import Tagify from "./Tagify.jsx";
 
 const PAGE_SIZE = 10;
@@ -75,6 +78,7 @@ export default function Search() {
   const [pageExists, setPageExists] = useState(false);
   const [shown, setShown] = useState(0);
   const [theoremPending, setTheoremPending] = useState(false);
+  const [theorem, setTheorem] = useState(null);
   const [pages, setPages] = useState(null);
   const reqIdRef = useRef(0);
 
@@ -118,6 +122,7 @@ export default function Search() {
 
   const onSearch = async () => {
     setError(null);
+    setTheorem(null);
     const original = query.trim();
     if (!original) {
       setError("No search terms were entered.");
@@ -147,6 +152,7 @@ export default function Search() {
   };
 
   const onRandomTheorem = async () => {
+    setError(null);
     setTheoremPending(true);
     try {
       const theorems = await fetchTheorems();
@@ -155,7 +161,15 @@ export default function Search() {
         return;
       }
       const pick = theorems[Math.floor(Math.random() * theorems.length)];
-      window.location.search = `?page=${encodeURIComponent(underscores(pick))}`;
+      const result = await fetchArticlePage(pick);
+      if (!result) {
+        setError(`The page "${pick}" could not be loaded.`);
+        return;
+      }
+      const finalPage = result.finalPage ?? pick;
+      addHistory(finalPage, result.html);
+      increment("numArticles");
+      setTheorem({ pagename: finalPage, html: result.html });
     } finally {
       setTheoremPending(false);
     }
@@ -216,6 +230,9 @@ export default function Search() {
         </button>
       </div>
       {error && <p className="error">{error}</p>}
+      {theorem && (
+        <ArticleBody pagename={theorem.pagename} html={theorem.html} />
+      )}
       {results && (
         <div className="results-container">
           <span className="results-notice">
