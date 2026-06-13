@@ -5,12 +5,17 @@ import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
 export default function RangeSlider({ min, max, step = 1, value, onChange, label }) {
+  // Single-value mode when `value` is a plain number; double-handle
+  // range when it's [low, high]. rc-slider's onChange returns the
+  // matching shape (number vs array), so we can pass onChange
+  // straight through.
+  const isRange = Array.isArray(value);
   return (
     <div className="input-container input-flex-full">
       <label className="range-label">{label}</label>
       <div className="range-slider-wrap">
         <Slider
-          range
+          range={isRange}
           min={min}
           max={max}
           step={step}
@@ -19,7 +24,7 @@ export default function RangeSlider({ min, max, step = 1, value, onChange, label
           allowCross={false}
         />
         <div className="range-readout">
-          {value[0]} – {value[1]}
+          {isRange ? `${value[0]} – ${value[1]}` : value}
         </div>
       </div>
     </div>

@@ -204,20 +204,13 @@ function RandomBatchTab({ preset, options, onOptions, onRun }) {
           value={diffRange}
           onChange={setDiffRange}
         />
-        <div className="input-container input-flex-full">
-          <label className="range-label" htmlFor="input-number">
-            # of problems
-          </label>
-          <input
-            id="input-number"
-            className="input-field"
-            type="number"
-            min={1}
-            max={40}
-            value={number}
-            onChange={(e) => setNumber(Number(e.target.value) || 0)}
-          />
-        </div>
+        <RangeSlider
+          label="# of problems"
+          min={1}
+          max={40}
+          value={number}
+          onChange={setNumber}
+        />
         <button
           type="button"
           className="input-button input-button-full"
