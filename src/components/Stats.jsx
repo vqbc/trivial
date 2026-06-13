@@ -203,11 +203,6 @@ export default function Stats() {
           <span className="feedback-icon">✗</span> Clear stats forever
         </button>
         <div className="stats-notes">
-          <p>
-            Per-user stats started being recorded from 17 July 2022 — if you
-            used Trivial for a while before then, add somewhere between a few
-            dozen and a few thousand to your numbers :)
-          </p>
           <p className="brag">
             Over two million problems and problem sets have been generated using
             Trivial!
