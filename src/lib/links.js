@@ -5,11 +5,21 @@ import { useEffect } from "react";
 
 const AOPS_ORIGIN = "https://artofproblemsolving.com";
 
+// Patterns that locate a wiki page name inside an href. We accept
+// both the relative form the wiki normally emits and the absolute
+// form it sometimes does, with or without `www.`.
+const WIKI_PAGE_PATTERNS = [
+  /^https?:\/\/(?:www\.)?artofproblemsolving\.com\/wiki\/index\.php\/(.+)$/,
+  /^\/wiki\/index\.php\/(.+)$/,
+];
+
 // Rewrites AoPS-wiki anchor hrefs in a fetched HTML fragment so they
-// route through the SPA instead of doing a full navigation. Mirrors
-// the legacy `fixLinks`: /wiki/index.php/Foo → ?page=Foo, any other
-// /wiki/index.php… link (e.g. ?action=edit) gets prefixed with the
-// AoPS origin, and image links get their href stripped so they don't
+// route through the SPA instead of doing a full navigation to AoPS.
+// Mirrors the legacy `fixLinks` + `directLinks` pair: any href that
+// points at a wiki *page* becomes `?page=Foo` (which the SPA picks up
+// via App's URL router and useWikiLinkClicks intercepts in place);
+// non-page wiki links (e.g. `?action=edit`) get absolutized so they
+// still work; image links get their href stripped so they don't
 // navigate at all.
 export function rewriteWikiLinks(html) {
   const div = document.createElement("div");
@@ -17,8 +27,9 @@ export function rewriteWikiLinks(html) {
   for (const a of div.querySelectorAll("a")) {
     const href = a.getAttribute("href");
     if (!href) continue;
-    if (/^\/wiki\/index\.php\//.test(href)) {
-      a.setAttribute("href", href.replace("/wiki/index.php/", "?page="));
+    const page = wikiPageFromHref(href);
+    if (page) {
+      a.setAttribute("href", `?page=${page}`);
       a.removeAttribute("title");
     } else if (/^\/wiki\/index\.php/.test(href)) {
       a.setAttribute("href", `${AOPS_ORIGIN}${href}`);
@@ -27,6 +38,14 @@ export function rewriteWikiLinks(html) {
   }
   for (const a of div.querySelectorAll("a.image")) a.removeAttribute("href");
   return div.innerHTML;
+}
+
+function wikiPageFromHref(href) {
+  for (const p of WIKI_PAGE_PATTERNS) {
+    const m = href.match(p);
+    if (m) return m[1];
+  }
+  return null;
 }
 
 // Decode a `?page=Foo_Bar` href back into the page name "Foo Bar".
