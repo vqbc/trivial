@@ -1706,14 +1706,54 @@ footer {
 }
 
 .range-slider-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   width: 100%;
-  padding: 0 0.6em;
+  padding: 0.6em 0.6em 0;
 }
 
 .range-readout {
-  margin-top: 0.4em;
+  margin-top: 0.6em;
   color: var(--minor-color);
   font: 0.9em "Latin Modern Sans", sans-serif;
   text-align: center;
+}
+
+/* rc-slider color overrides — match the legacy ionRangeSlider look
+ * (light-gray rail, accent-colored track, slightly darker handles).
+ * The library's defaults are baby blue on near-white, which clashes
+ * with the rest of the UI. */
+.rc-slider-rail {
+  background-color: var(--input-slider-color);
+}
+
+.rc-slider-track,
+.rc-slider-tracks {
+  background-color: var(--input-accent-color);
+}
+
+.rc-slider-handle {
+  width: 16px;
+  height: 16px;
+  margin-top: -6px;
+  background-color: var(--item-color);
+  border: 2px solid var(--input-handle-color);
+  opacity: 1;
+  box-shadow: var(--secondary-box-shadow);
+}
+
+.rc-slider-handle:hover,
+.rc-slider-handle:focus,
+.rc-slider-handle:focus-visible,
+.rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+  border-color: var(--input-handle-color);
+  box-shadow: 0 0 0 4px var(--input-focus-color);
+}
+
+.rc-slider-handle:active {
+  background-color: var(--input-handle-color);
+  border-color: var(--input-handle-color);
 }
 
