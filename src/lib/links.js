@@ -5,12 +5,19 @@ import { useEffect } from "react";
 
 const AOPS_ORIGIN = "https://artofproblemsolving.com";
 
-// Patterns that locate a wiki page name inside an href. We accept
-// both the relative form the wiki normally emits and the absolute
-// form it sometimes does, with or without `www.`.
+// Patterns that locate a wiki page name inside an href. AoPS's wiki
+// emits two forms: `/wiki/index.php?title=Foo` (query-string style,
+// the current default for almost all internal links) and
+// `/wiki/index.php/Foo` (path style, used in some older content).
+// Either form may also appear with an absolute origin. We capture
+// up to the first `&` or `#` so the title doesn't pick up extra
+// query params (e.g. `action=edit`) or a section anchor.
+const ORIGIN = String.raw`https?:\/\/(?:www\.)?artofproblemsolving\.com`;
 const WIKI_PAGE_PATTERNS = [
-  /^https?:\/\/(?:www\.)?artofproblemsolving\.com\/wiki\/index\.php\/(.+)$/,
-  /^\/wiki\/index\.php\/(.+)$/,
+  new RegExp(`^${ORIGIN}/wiki/index\\.php\\?title=([^&#]+)`),
+  new RegExp(`^${ORIGIN}/wiki/index\\.php/([^?#]+)`),
+  /^\/wiki\/index\.php\?title=([^&#]+)/,
+  /^\/wiki\/index\.php\/([^?#]+)/,
 ];
 
 // Rewrites AoPS-wiki anchor hrefs in a fetched HTML fragment so they
