@@ -342,15 +342,29 @@ function PastTestTab({ options, onOptions, onRun }) {
 }
 
 function CustomTab({ options, onOptions, onRun }) {
-  const [input, setInput] = useState("");
+  const [picks, setPicks] = useState([]);
+  const [universe, setUniverse] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchAllProblems().then((p) => {
+      if (!cancelled) setUniverse(p);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const problemWhitelist = useMemo(
+    () => (universe ? universe.map(titleCleanup) : []),
+    [universe],
+  );
 
   const go = () => {
-    const titles = input
-      .split(",")
-      .map((s) => s.trim())
-      .filter(Boolean)
-      .map((s) => s.replace("#", "Problems/Problem "))
-      .map(underscores);
+    const titles = picks
+      .map(expandCleanedTitle)
+      .map(underscores)
+      .filter(Boolean);
     if (titles.length === 0) return;
     onRun({
       titles,
@@ -365,19 +379,14 @@ function CustomTab({ options, onOptions, onRun }) {
   return (
     <>
       <div className="options-input" id="problems-input">
-        <div className="input-container input-flex-full">
-          <label className="range-label" htmlFor="input-problems">
-            Problems (comma-separated, e.g. <code>2024 AMC 10A #1, 2024 AMC 10A #2</code>)
-          </label>
-          <input
-            id="input-problems"
-            className="input-field"
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Paste problem list here"
-          />
-        </div>
+        <Tagify
+          value={picks}
+          onChange={setPicks}
+          whitelist={problemWhitelist}
+          placeholder="Problems (paste problem lists here!)"
+          dropdownMax={20}
+          dropdownEnabled={0}
+        />
         <button
           type="button"
           className="input-button input-button-full"
