@@ -98,55 +98,29 @@ export async function fetchCategoryPages(subject) {
   return titles;
 }
 
+// `redirects=1` makes MediaWiki resolve redirects server-side: the
+// response's `parse.title` is the target page's title and `parse.text`
+// is the target's content. Saves us a round trip and avoids brittle
+// HTML scraping of the redirect notice.
 async function fetchParsed(page) {
-  const params = `action=parse&page=${page}&format=json&origin=*`;
+  const params = `action=parse&page=${page}&redirects=1&format=json&origin=*`;
   const response = await fetch(`${AOPS_API}?${params}`);
   return response.json();
 }
 
-// Looks for a MediaWiki redirect marker (.redirectMsg / .redirectText)
-// in the response HTML and returns the decoded target page name, or
-// null if the page isn't a redirect. Handles both /wiki/Target and
-// /wiki/index.php/Target href styles.
-function extractRedirectTarget(html) {
-  const tmp = document.createElement("div");
-  tmp.innerHTML = html;
-  const anchor =
-    tmp.querySelector(".redirectMsg a") ??
-    tmp.querySelector(".redirectText a");
-  if (!anchor) return null;
-  const href = anchor.getAttribute("href") ?? "";
-  const match = href.match(/\/wiki\/(?:index\.php\/)?(.+)$/);
-  if (!match) return null;
-  return decodeURIComponent(match[1]).replace(/_/g, " ");
-}
-
-// Fetches a problem page from the AoPS wiki, following the redirect once
-// if needed. Returns null if the page doesn't exist.
+// Fetches a problem page from the AoPS wiki. `redirects=1` on the
+// underlying API call follows redirects server-side, so the returned
+// `finalPage` already reflects the resolved title.
 export async function fetchProblemPage(pagename) {
-  let json = await fetchParsed(pagename);
+  const json = await fetchParsed(pagename);
   if (!json?.parse) return null;
 
-  let html = latexer(json.parse.text["*"]);
-  let problem = getProblem(html);
-  let solutions = getSolutions(html);
-  let finalPage = pagename;
-
-  const hasContent = problem && solutions;
-  if (!hasContent) {
-    const target = extractRedirectTarget(html);
-    if (target) {
-      json = await fetchParsed(target);
-      if (json?.parse) {
-        html = latexer(json.parse.text["*"]);
-        problem = getProblem(html);
-        solutions = getSolutions(html);
-        finalPage = target;
-      }
-    }
-  }
-
-  return { problem, solutions, finalPage };
+  const html = latexer(json.parse.text["*"]);
+  return {
+    problem: getProblem(html),
+    solutions: getSolutions(html),
+    finalPage: json.parse.title ?? pagename,
+  };
 }
 
 // Fetches a batch of problem pages in parallel. Returns one entry per
@@ -179,23 +153,15 @@ export async function fetchProblemBatch(titles, { onProgress } = {}) {
 }
 
 // Fetches a non-problem wiki article (e.g. a theorem or category page).
-// Follows the redirect once, strips the TOC and AoPS printable-version
-// chrome, and returns the body HTML or null if the page doesn't exist.
+// The wiki resolves redirects server-side (see fetchParsed); we then
+// strip the TOC and AoPS printable-version chrome and return the body
+// HTML or null if the page doesn't exist.
 export async function fetchArticlePage(pagename) {
-  let json = await fetchParsed(pagename);
+  const json = await fetchParsed(pagename);
   if (!json?.parse) return null;
 
-  let html = latexer(json.parse.text["*"]);
-  let finalPage = pagename;
-
-  const target = extractRedirectTarget(html);
-  if (target) {
-    json = await fetchParsed(target);
-    if (json?.parse) {
-      html = latexer(json.parse.text["*"]);
-      finalPage = target;
-    }
-  }
+  const html = latexer(json.parse.text["*"]);
+  const finalPage = json.parse.title ?? pagename;
 
   const root = document.createElement("div");
   root.innerHTML = html;

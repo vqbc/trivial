@@ -114,10 +114,11 @@ function RandomTab({ preset, hasProblem, onResult }) {
         onResult(null);
         return;
       }
-      addHistory(pick, fetched.problem);
+      const finalPage = fetched.finalPage ?? pick;
+      addHistory(finalPage, fetched.problem);
       increment("numProblems");
-      window.history.pushState({}, "", `?page=${underscores(pick)}`);
-      onResult({ pagename: pick, ...fetched });
+      window.history.pushState({}, "", `?page=${underscores(finalPage)}`);
+      onResult({ pagename: finalPage, ...fetched });
     } finally {
       setPending(false);
     }
@@ -254,14 +255,15 @@ function SelectTab({ onResult }) {
         onResult(null);
         return;
       }
-      addHistory(pagename, fetched.problem);
+      const finalPage = fetched.finalPage ?? pagename;
+      addHistory(finalPage, fetched.problem);
       increment("numProblems");
       window.history.pushState(
         {},
         "",
-        `?page=${underscores(pagename)}`,
+        `?page=${underscores(finalPage)}`,
       );
-      onResult({ pagename, ...fetched });
+      onResult({ pagename: finalPage, ...fetched });
     } finally {
       setPending(false);
     }
