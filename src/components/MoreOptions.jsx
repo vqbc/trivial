@@ -59,7 +59,7 @@ export default function MoreOptions({
                 id="input-sort"
                 checked={value.sort}
                 onChange={(e) => set({ sort: e.target.checked })}
-              />
+              />{" "}
               <label className="checkbox-label" htmlFor="input-sort">
                 Sort by difficulty
               </label>
@@ -72,7 +72,7 @@ export default function MoreOptions({
               id="input-hide"
               checked={value.hideSource}
               onChange={(e) => set({ hideSource: e.target.checked })}
-            />
+            />{" "}
             <label className="checkbox-label" htmlFor="input-hide">
               Hide question sources
             </label>

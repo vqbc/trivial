@@ -37,9 +37,8 @@ function ProblemBlock({
       style={style}
     >
       <h2 className="problem-heading">
-        Problem {index + 1}
+        Problem {index + 1} {" "}
         <span className={sourceCls}>
-          {" "}
           (
           <a
             className="source-link-a"
