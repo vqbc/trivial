@@ -466,7 +466,6 @@ tags > :is(tag, span) {
 }
 
 .tagify:not(.input-field) .tagify__tag {
-  margin: 3px 0 3px 3px;
   line-height: inherit;
 }
 
@@ -1742,7 +1741,6 @@ footer {
   background-color: var(--item-color);
   border: 2px solid var(--input-handle-color);
   opacity: 1;
-  box-shadow: var(--secondary-box-shadow);
 }
 
 .rc-slider-handle:hover,
@@ -1750,7 +1748,7 @@ footer {
 .rc-slider-handle:focus-visible,
 .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
   border-color: var(--input-handle-color);
-  box-shadow: 0 0 0 4px var(--input-focus-color);
+  box-shadow: 0 0 0 3px var(--input-focus-color);
 }
 
 .rc-slider-handle:active {

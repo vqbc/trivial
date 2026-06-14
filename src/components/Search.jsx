@@ -198,7 +198,7 @@ export default function Search() {
               id="input-problemsonly"
               checked={problemsOnly}
               onChange={(e) => setProblemsOnly(e.target.checked)}
-            />
+            />{" "}
             <label className="checkbox-label" htmlFor="input-problemsonly">
               Show problems only
             </label>
