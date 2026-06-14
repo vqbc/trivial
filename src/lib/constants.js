@@ -24,8 +24,9 @@ export const TESTS = [
 // single test.
 export const TEST_WHITELIST = ["(AMC Tests)", ...TESTS];
 
-// Filter default used when the user clears all tests.
-export const DEFAULT_TESTS = ["(AMC Tests)"];
+// Filter default used when the user clears all tests — pulls from every
+// test (matchesOptions recognizes the "(All Tests)" meta-token).
+export const DEFAULT_TESTS = ["(All Tests)"];
 
 export const VALID_VERSIONS = {
   "AMC 10": ["A", "B", "Fall A", "Fall B"],

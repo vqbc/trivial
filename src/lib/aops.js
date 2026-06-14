@@ -53,8 +53,7 @@ export async function collectMatchingProblems({
   diffRange,
   universe,
 }) {
-  // Empty test list defaults to "(AMC Tests)" so users who haven't
-  // touched the filter still get something useful.
+  // Empty test list pulls from every test (see DEFAULT_TESTS).
   const effectiveTests = tests.length === 0 ? DEFAULT_TESTS : tests;
   const args = [
     effectiveTests,
