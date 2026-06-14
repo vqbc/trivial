@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header>
       <h1 className="header">
-        <a href="/">Trivial.</a>
+        <a href="/">Trivial.</a>{" "}
         <svg width="15" height="30" viewBox="0 0 132.29 264.58" className="logo">
           <title>
             The Trivial logo is supposed to be a QED symbol (□) — the name
