@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
 
 export default function RangeSlider({ min, max, step = 1, value, onChange, label }) {
   // Single-value mode when `value` is a plain number; double-handle

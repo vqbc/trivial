@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 @import "@yaireo/tagify/dist/tagify.css";
+@import "rc-slider/assets/index.css";
 
 /* Variables */
 :root {
