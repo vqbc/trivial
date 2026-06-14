@@ -92,7 +92,7 @@ export default function Home({ activeView, onNavigate }) {
           wide
           view="practice"
           activeView={activeView}
-          onClick={() => onNavigate("practice")}
+          onClick={() => onNavigate("practice", { autoRun: true })}
         />
         <MainButton
           id="problem-batch"
@@ -100,7 +100,7 @@ export default function Home({ activeView, onNavigate }) {
           wide
           view="sets"
           activeView={activeView}
-          onClick={() => onNavigate("sets")}
+          onClick={() => onNavigate("sets", { autoRun: true })}
         />
         <MainButton
           id="search-nav"
