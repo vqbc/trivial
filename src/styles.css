@@ -1722,10 +1722,10 @@ footer {
   text-align: center;
 }
 
-/* rc-slider color overrides — match the legacy ionRangeSlider look
- * (light-gray rail, accent-colored track, slightly darker handles).
- * The library's defaults are baby blue on near-white, which clashes
- * with the rest of the UI. */
+.range-slider-wrap {
+  width: auto;
+}
+
 .rc-slider-rail {
   background-color: var(--input-slider-color);
 }
