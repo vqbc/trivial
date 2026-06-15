@@ -8,7 +8,7 @@ function Bar({ kind, count, label }) {
       className={`question-bar ${kind} ${count === 0 ? "bar-hidden" : ""}`}
       style={{ flexGrow: count }}
     >
-      <span>{count}</span> {" "} {label}
+      {count} {" "} {label}
     </div>
   );
 }
