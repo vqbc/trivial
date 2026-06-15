@@ -21,11 +21,11 @@ jobs:
       - run: node downloadlists.js
       - run: |
           git config user.name "vqbc"
-          git config user.email "andrewggchang@gmail.com"
+          git config user.email "andi.chang.vq@gmail.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "there is no page list changes to comit."
+            echo "there are no page list changes to commit"
           else
-            git commit -m "update page list"
+            git commit -m "Update page lists"
             git push
           fi
