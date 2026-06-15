@@ -49,6 +49,101 @@ function MainButton({ id, label, icon, wide, activeView, view, onClick }) {
   );
 }
 
+// AMC is the year-round default since AMC 10/12 traffic is heavier.
+// AIME shortcuts only take over from Nov 21 (post-AMC, when AIME
+// qualification matters) through the end of February (after AIME II).
+function isAimeSeason(now = new Date()) {
+  const m = now.getMonth(); // 0 = Jan
+  if (m === 0 || m === 1) return true; // Jan, Feb
+  if (m === 10 && now.getDate() >= 21) return true; // Nov 21–30
+  if (m === 11) return true; // Dec
+  return false;
+}
+
+function AimeShortcuts({ onNavigate }) {
+  return (
+    <>
+      <button
+        className="shortcut-button"
+        onClick={() =>
+          onNavigate("practice", {
+            tests: ["AIME"],
+            diffRange: [3, 6.5],
+            autoRun: true,
+          })
+        }
+      >
+        AIME Training
+      </button>
+      <button
+        className="shortcut-button"
+        onClick={() =>
+          onNavigate("sets", {
+            tab: "random",
+            tests: ["AIME"],
+            diffRange: [3, 6.5],
+            number: 15,
+            autoRun: true,
+          })
+        }
+      >
+        AIME Mocks
+      </button>
+    </>
+  );
+}
+
+function AmcShortcuts({ onNavigate }) {
+  return (
+    <>
+      <button
+        className="shortcut-button"
+        onClick={() =>
+          onNavigate("practice", { tests: ["AMC 10"], autoRun: true })
+        }
+      >
+        AMC 10 Training
+      </button>
+      <button
+        className="shortcut-button"
+        onClick={() =>
+          onNavigate("practice", { tests: ["AMC 12"], autoRun: true })
+        }
+      >
+        AMC 12 Training
+      </button>
+      <button
+        className="shortcut-button"
+        onClick={() =>
+          onNavigate("sets", {
+            tab: "random",
+            tests: ["AMC 10"],
+            diffRange: [1, 4.5],
+            number: 25,
+            autoRun: true,
+          })
+        }
+      >
+        AMC 10 Mocks
+      </button>
+      <button
+        className="shortcut-button"
+        onClick={() =>
+          onNavigate("sets", {
+            tab: "random",
+            tests: ["AMC 12"],
+            diffRange: [1, 5.5],
+            number: 25,
+            autoRun: true,
+          })
+        }
+      >
+        AMC 12 Mocks
+      </button>
+    </>
+  );
+}
+
 export default function Home({ activeView, onNavigate }) {
   return (
     <>
@@ -58,32 +153,11 @@ export default function Home({ activeView, onNavigate }) {
       </p>
       <div className="shortcut-container">
         <div className="shortcut-text">Popular!</div>
-        <button
-          className="shortcut-button"
-          onClick={() =>
-            onNavigate("practice", {
-              tests: ["AIME"],
-              diffRange: [3, 6.5],
-              autoRun: true,
-            })
-          }
-        >
-          AIME Training
-        </button>
-        <button
-          className="shortcut-button"
-          onClick={() =>
-            onNavigate("sets", {
-              tab: "random",
-              tests: ["AIME"],
-              diffRange: [3, 6.5],
-              number: 15,
-              autoRun: true,
-            })
-          }
-        >
-          AIME Mocks
-        </button>
+        {isAimeSeason() ? (
+          <AimeShortcuts onNavigate={onNavigate} />
+        ) : (
+          <AmcShortcuts onNavigate={onNavigate} />
+        )}
       </div>
       <div className="button-container" id="main-button-container">
         <MainButton
