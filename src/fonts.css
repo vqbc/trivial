@@ -1,0 +1,11 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+/* Import fonts */
+@import "../fonts/computer-modern/bright/bright.css";
+@import "../fonts/computer-modern/sans/sans.css";
+@import "../fonts/fira-mono/fira.css";
+@import "../fonts/tex-gyre-pagella/pagella.css";
+@import "../fonts/inter/inter.css";
+/**/

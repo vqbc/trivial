@@ -1,0 +1,94 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+/* Dark theme. Rules are scoped to `html.dark` so the stylesheet can be
+ * bundled once and applied by toggling a class on the root element. */
+@media screen {
+  html.dark {
+    --text-color: hsl(0 0% 87%);
+    --header-color: hsl(0 0% 87%);
+    --secondary-color: hsl(0 0% 83%);
+    --subtitle-color: hsl(0 0% 79%);
+    --minor-color: hsl(0 0% 72%);
+    --divider-color: hsl(0 0% 58%);
+    --hr-color: hsl(0 0% 53%);
+    --body-background: fixed
+        url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9ImhzbCgyMDFkZWcsIDglLCAxMyUpIiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD4KPHBhdGggZD0iTTI4IDBMMjggMzRMMCA1MEwwIDg0TDI4IDEwMEw1NiA4NEw1NiA1MEwyOCAzNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJoc2woMjAxZGVnLCA4JSwgMTMlKSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg=="),
+      linear-gradient(hsl(201 8% 12%), hsl(201 8% 12%));
+    --page-container-color: hsl(201 8% 15%);
+    --item-color: hsl(201 8% 18%);
+    --item-disabled-color: hsl(201 8% 17%);
+    --button-3d-shadow: hsl(0 0% 0% / 20%);
+    --shortcut-button-color: hsl(175 55% 43%);
+    --shortcut-button-focus-color: hsl(175 55% 70%);
+    --main-button-color: hsl(189 39% 43%);
+    --main-active-button-color: hsl(189 39% 52%);
+    --main-button-focus-color: hsl(189 39% 70%);
+    --secondary-button-color: hsl(183 39% 43%);
+    --secondary-active-button-color: hsl(183 39% 52%);
+    --secondary-button-focus-color: hsl(183 39% 70%);
+    --input-button-color: hsl(177 39% 43%);
+    --input-button-focus-color: hsl(177 39% 70%);
+    --input-layer-color: hsl(201 8% 19%);
+    --input-focus-color: hsl(201 5% 33%);
+    --dialog-nav-color: hsl(201 28% 43%);
+    --dialog-nav-focus-color: hsl(201 28% 52%);
+    --placeholder-color: hsl(0 0% 100% / 50%);
+    --placeholder-disabled-color: hsl(0 0% 100% / 20%);
+    --range-grid-color: hsl(0 0% 100% / 20%);
+    --range-label-hover-color: hsl(0 0% 100% / 60%);
+    --input-slider-color: hsl(201 8% 31%);
+    --input-accent-color: hsl(210 50% 57%);
+    --input-handle-color: hsl(210 35% 43%);
+    --error-color: hsl(0 75% 70%);
+    --section-color: hsl(163 42% 45%);
+    --link-color: hsl(203 86% 75%);
+    --link-blend-color: hsl(203 35% 85%);
+    --link-hover-color: hsl(203 86% 80%);
+    --text-button-color: hsl(177 44% 60%);
+    --text-button-hover-color: hsl(177 44% 67%);
+    --correct-color: hsl(150 45% 45%);
+    --retry-color: hsl(190 45% 45%);
+    --blank-color: hsl(270 45% 45%);
+    --wrong-color: hsl(15 70% 55%);
+  }
+
+  html.dark .tagify {
+    --placeholder-color: hsl(0 0% 100% / 50%);
+    --placeholder-color-focus: hsl(0 0% 100% / 30%);
+    --tag-bg: hsl(201 8% 25%);
+    --tag-hover: hsl(190 10% 30%);
+    --tag-text-color: hsl(0 0% 77%);
+    --tag-text-color--edit: var(--tag-text-color);
+    --tag-remove-btn-color: var(--tag-text-color);
+  }
+
+  html.dark .tagify__input::before,
+  html.dark .tagify__input::after {
+    color: var(--placeholder-color-focus);
+    opacity: 1;
+  }
+
+  html.dark .tagify__dropdown__wrapper {
+    --tagify-dd-bg-color: hsl(201 8% 20%);
+    --tagify-dd-color-primary: hsl(210 41% 44%);
+    --tagify-dd-text-color: var(--text-color);
+  }
+
+  html.dark img.latex,
+  html.dark img.latexcenter,
+  html.dark #difficulty-chart {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  html.dark #difficulty-chart .mark-rect,
+  html.dark #difficulty-chart .mark-symbol {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  html.dark #difficulty-chart .role-frame > g > path.background,
+  html.dark #difficulty-chart .role-axis-grid > line {
+    stroke: hsl(0 0% 75%) !important;
+  }
+}

@@ -1,0 +1,171 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About - Trivial Math Practice</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Free AMC trainer and math learning: AMC practice problems, problem sets, mock tests with real questions from the AMC 8, AMC 10, AMC 12, AIME, and more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://amctrivial.com/" />
+    <meta property="og:title" content="Trivial Math Practice" />
+    <meta
+      property="og:description"
+      content="Free AMC trainer and math learning: AMC practice problems, problem sets, mock tests with real questions from the AMC 8, AMC 10, AMC 12, AIME, and more."
+    />
+    <meta
+      property="og:image"
+      content="https://amctrivial.com/icons/favicon-192x192.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Trivial Math Practice" />
+    <meta
+      name="twitter:description"
+      content="Free AMC trainer and math learning: AMC practice problems, problem sets, mock tests with real questions from the AMC 8, AMC 10, AMC 12, AIME, and more."
+    />
+    <meta
+      name="twitter:image"
+      content="https://amctrivial.com/icons/favicon-192x192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/icons/favicon-192x192.png"
+    />
+    <link rel="manifest" href="/icons/site.webmanifest" />
+    <meta name="theme-color" content="hsl(191deg 42% 42%)" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      if (JSON.parse(localStorage.getItem("darkTheme"))) {
+        document
+          .querySelector("meta[name='color-scheme']")
+          .setAttribute("content", "dark");
+      }
+      if (JSON.parse(localStorage.getItem("darkTheme")) == false) {
+        document
+          .querySelector("meta[name='color-scheme']")
+          .setAttribute("content", "light");
+      }
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-176118017-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-176118017-1");
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WFF6RGS");
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7985214603588506"
+     crossorigin="anonymous"></script>
+    <link
+      href="/fonts/tex-gyre-pagella/pagella-regular.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/tex-gyre-pagella/pagella-italic.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/tex-gyre-pagella/pagella-bold.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/computer-modern/bright/bright-regular.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/computer-modern/bright/bright-semi.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/computer-modern/bright/bright-semiitalic.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/computer-modern/sans/sans-regular.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/computer-modern/sans/sans-italic.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/computer-modern/sans/sans-bold.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/computer-modern/sans/sans-demi.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/fira-mono/fira-regular.woff2"
+      rel="preload"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link href="/src/fonts.css" rel="stylesheet" />
+    <link href="/src/styles.css" rel="stylesheet" />
+    <link href="/src/dark.css" rel="stylesheet" />
+    <script>
+      if (
+        JSON.parse(localStorage.getItem("darkTheme")) ||
+        (JSON.parse(localStorage.getItem("darkTheme")) === null &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root" class="page-container"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

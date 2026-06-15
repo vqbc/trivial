@@ -1,0 +1,44 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+@font-face {
+  font-weight: normal;
+  font-family: "Latin Modern Sans";
+  font-style: normal;
+  src: url("sans-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Latin Modern Sans";
+  font-style: italic;
+  src: url("sans-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Latin Modern Sans";
+  font-style: normal;
+  src: url("sans-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Latin Modern Sans";
+  font-style: italic;
+  src: url("sans-bolditalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Latin Modern Sans Demi-Condensed";
+  font-style: normal;
+  src: url("sans-demi.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Latin Modern Sans Demi-Condensed";
+  font-style: italic;
+  src: url("sans-demiitalic.woff2") format("woff2");
+}
