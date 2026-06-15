@@ -70,6 +70,9 @@ export const VALID_NUMS = {
 
 export const YEAR_MIN = 1959;
 export const YEAR_MAX = 2026;
+// Default lower bound for the Random year-range slider. The upper
+// bound defaults to the current year.
+export const DEFAULT_YEAR_MIN = 2010;
 export const DIFFICULTY_MIN = 0;
 export const DIFFICULTY_MAX = 10;
 

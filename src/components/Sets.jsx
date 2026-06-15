@@ -11,6 +11,7 @@ import {
   VALID_YEARS,
   YEAR_MIN,
   YEAR_MAX,
+  DEFAULT_YEAR_MIN,
   DIFFICULTY_MIN,
   DIFFICULTY_MAX,
 } from "../lib/constants.js";
@@ -86,7 +87,7 @@ function RandomBatchTab({ preset, options, onOptions, onRun }) {
   const [subjects, setSubjects] = useState(preset?.subjects ?? []);
   const [tests, setTests] = useState(preset?.tests ?? []);
   const [yearRange, setYearRange] = useState(
-    preset?.yearRange ?? [2010, YEAR_MAX - 2],
+    preset?.yearRange ?? [DEFAULT_YEAR_MIN, new Date().getFullYear()],
   );
   const [diffRange, setDiffRange] = useState(
     preset?.diffRange ?? [DIFFICULTY_MIN, DIFFICULTY_MAX],
