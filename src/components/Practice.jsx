@@ -1,7 +1,7 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-import { Suspense, lazy, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "katex/dist/katex.min.css";
 import {
   SUBJECTS,
@@ -28,8 +28,7 @@ import RangeSlider from "./RangeSlider.jsx";
 import Tagify from "./Tagify.jsx";
 import ProblemDisplay from "./ProblemDisplay.jsx";
 import SessionProgress from "./SessionProgress.jsx";
-
-const DifficultyChart = lazy(() => import("./DifficultyChart.jsx"));
+import { DifficultyHelpLink, DifficultyInfoPanel } from "./DifficultyInfo.jsx";
 
 const EMPTY_SESSION = {
   streak: 0,
@@ -160,19 +159,9 @@ function RandomTab({ preset, hasProblem, onResult }) {
         label={
           <>
             Difficulty range
-            <sup>
-              <a
-                className="dark-link"
-                id="difficulty-link"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setShowDifficultyInfo((v) => !v);
-                }}
-              >
-                (?)
-              </a>
-            </sup>
+            <DifficultyHelpLink
+              onClick={() => setShowDifficultyInfo((v) => !v)}
+            />
           </>
         }
         min={DIFFICULTY_MIN}
@@ -191,19 +180,7 @@ function RandomTab({ preset, hasProblem, onResult }) {
         {pending ? "Loading…" : universe ? "Go!" : "Loading problem list…"}
       </button>
       {error && <p className="error">{error}</p>}
-      {showDifficultyInfo && (
-        <div id="difficulty-info">
-          Difficulty levels are based on{" "}
-          <a href="https://artofproblemsolving.com/wiki/index.php/AoPS_Wiki:Competition_ratings">
-            AoPS Wiki ratings
-          </a>
-          . They’re just determined by test and problem number, and may be
-          inaccurate for old exams.
-          <Suspense fallback={<div id="difficulty-chart">Loading chart…</div>}>
-            <DifficultyChart />
-          </Suspense>
-        </div>
-      )}
+      {showDifficultyInfo && <DifficultyInfoPanel />}
     </div>
   );
 }

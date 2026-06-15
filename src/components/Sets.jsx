@@ -27,6 +27,7 @@ import RangeSlider from "./RangeSlider.jsx";
 import Tagify from "./Tagify.jsx";
 import BatchDisplay from "./BatchDisplay.jsx";
 import MoreOptions, { DEFAULT_MORE_OPTIONS } from "./MoreOptions.jsx";
+import { DifficultyHelpLink, DifficultyInfoPanel } from "./DifficultyInfo.jsx";
 
 function SecondaryNav({ tab, onTab }) {
   const cls = (id) =>
@@ -96,6 +97,7 @@ function RandomBatchTab({ preset, options, onOptions, onRun }) {
   const [universe, setUniverse] = useState(null);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(null);
+  const [showDifficultyInfo, setShowDifficultyInfo] = useState(false);
   const autoRanRef = useRef(false);
 
   useEffect(() => {
@@ -198,7 +200,14 @@ function RandomBatchTab({ preset, options, onOptions, onRun }) {
           onChange={setYearRange}
         />
         <RangeSlider
-          label="Difficulty range"
+          label={
+            <>
+              Difficulty range
+              <DifficultyHelpLink
+                onClick={() => setShowDifficultyInfo((v) => !v)}
+              />
+            </>
+          }
           min={DIFFICULTY_MIN}
           max={DIFFICULTY_MAX}
           step={0.5}
@@ -222,6 +231,7 @@ function RandomBatchTab({ preset, options, onOptions, onRun }) {
           {pending ? "Loading…" : universe ? "Go!" : "Loading problem list…"}
         </button>
         {error && <p className="error">{error}</p>}
+        {showDifficultyInfo && <DifficultyInfoPanel />}
       </div>
       <MoreOptions
         value={options}
