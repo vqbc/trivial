@@ -451,7 +451,6 @@ export default function Sets({ preset }) {
           problems,
           pool: pool ?? null,
           breakEvery: options.breakEvery,
-          hideSource: options.hideSource,
           testName: testName ?? null,
           testYear: testYear ?? null,
         });
@@ -527,7 +526,7 @@ export default function Sets({ preset }) {
           title={batch.title}
           problems={batch.problems}
           breakEvery={batch.breakEvery}
-          hideSource={batch.hideSource}
+          hideSource={options.hideSource}
           onReplace={batch.pool ? replaceProblem : null}
           testName={batch.testName}
           testYear={batch.testYear}
