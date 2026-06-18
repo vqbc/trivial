@@ -1,7 +1,6 @@
 name: Update page lists
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
