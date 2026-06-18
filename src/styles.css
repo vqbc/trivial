@@ -1402,7 +1402,7 @@ footer {
 }
 
 @media (max-width: 500px) {
-  .source-link {
+  .source-link:not(.source-link-hidden) {
     display: inline-block;
   }
 
