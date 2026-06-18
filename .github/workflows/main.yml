@@ -25,6 +25,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "There are no page list changes to commit."
           else
+            git pull --rebase
             git commit -m "Update page lists"
             git push
           fi
