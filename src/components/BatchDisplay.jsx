@@ -123,7 +123,7 @@ function ScoringOptions({ mode, amcScoring, onMode, onAmcScoring }) {
             value="score-only"
             checked={mode === "score-only"}
             onChange={() => onMode("score-only")}
-          />
+          />{" "}
           <label className="checkbox-label" htmlFor="score-only">
             Only show score
           </label>
@@ -136,7 +136,7 @@ function ScoringOptions({ mode, amcScoring, onMode, onAmcScoring }) {
             value="check-only"
             checked={mode === "check-only"}
             onChange={() => onMode("check-only")}
-          />
+          />{" "}
           <label className="checkbox-label" htmlFor="check-only">
             Only mark questions
           </label>
@@ -149,7 +149,7 @@ function ScoringOptions({ mode, amcScoring, onMode, onAmcScoring }) {
             value="show-ans"
             checked={mode === "show-ans"}
             onChange={() => onMode("show-ans")}
-          />
+          />{" "}
           <label className="checkbox-label" htmlFor="show-ans">
             Show correct answers
           </label>
@@ -161,7 +161,7 @@ function ScoringOptions({ mode, amcScoring, onMode, onAmcScoring }) {
             id="input-amc"
             checked={amcScoring}
             onChange={(e) => onAmcScoring(e.target.checked)}
-          />
+          />{" "}
           <label className="checkbox-label" htmlFor="input-amc">
             Use AMC 10/12 scoring
           </label>
