@@ -9,7 +9,7 @@ export const formatLatex = (string) =>
     .replace(/&#39;/g, "'")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
-    .replace(/^\$|\$$|\\\[|\\\]/g, "")
+    .replace(/^\$|\$$|\\\[|\\\]|\\\(|\\\)/g, "")
     .replace(/&lt;/g, "\\lt ")
     .replace(/&gt;/g, "\\gt ")
     .replace(/\$/g, "\\$$")
@@ -49,5 +49,17 @@ export function latexer(html) {
         `<katex class="katex-container">${renderedLatex}</katex>`,
     );
   }
+
+  // Some problems (e.g. 2017 AMC 10A #15 Solution 4) embed inline math
+  // as raw "\( ... \)" text instead of <img class="latex" ...>, so render
+  // those through KaTeX as well.
+  out = out.replace(/\\\(([\s\S]+?)\\\)/g, (_, latex) => {
+    const rendered = katex.renderToString(formatLatex(latex), {
+      throwOnError: false,
+      displayMode: false,
+    });
+    return `<katex class="katex-container">${rendered}</katex>`;
+  });
+
   return out;
 }
