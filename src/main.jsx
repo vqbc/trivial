@@ -3,8 +3,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-// tagify.css is @imported from styles.css so it loads before our
-// overrides without depending on Vite's bundle-ordering heuristics.
+// tagify.css, rc-slider, and katex.min.css are @imported from styles.css
+// so library defaults load before our overrides without depending on
+// Vite's bundle-ordering heuristics (KaTeX's .katex .base white-space
+// rule would otherwise override ours and stop answer choices wrapping).
 import "./styles.css";
 import "./dark.css";
 import App from "./App.jsx";

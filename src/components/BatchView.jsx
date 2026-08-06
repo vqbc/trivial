@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useState } from "react";
-import "katex/dist/katex.min.css";
 import { fetchProblemBatch } from "../lib/aops.js";
 import { addHistoryBatch } from "../lib/history.js";
 import { increment } from "../lib/stats.js";
