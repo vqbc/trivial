@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@yaireo/tagify": "^4.37.1",
+    "dompurify": "^3.2.6",
     "katex": "^0.17.0",
     "node-fetch": "^3.3.2",
     "rc-slider": "^11.1.9",

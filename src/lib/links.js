@@ -31,6 +31,12 @@ const WIKI_PAGE_PATTERNS = [
 export function rewriteWikiLinks(html) {
   const div = document.createElement("div");
   div.innerHTML = html;
+  for (const el of div.querySelectorAll("script,style,iframe,object,embed")) el.remove();
+  for (const el of div.querySelectorAll("*")) {
+    for (const attr of [...el.attributes]) {
+      if (attr.name.startsWith("on")) el.removeAttribute(attr.name);
+    }
+  }
   for (const a of div.querySelectorAll("a")) {
     const href = a.getAttribute("href");
     if (!href) continue;
