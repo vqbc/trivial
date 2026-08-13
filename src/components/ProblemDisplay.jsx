@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useRef, useState } from "react";
+import DOMPurify from "dompurify";
 import { AOPS_WIKI } from "../lib/constants.js";
 import { titleCleanup, underscores, sanitize, computeTest } from "../lib/problems.js";
 import { fetchAnswer } from "../lib/aops.js";
@@ -171,7 +172,7 @@ export default function ProblemDisplay({
           ref={problemRef}
           className="article-text"
           id="problem-text"
-          dangerouslySetInnerHTML={{ __html: problem }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(problem) }}
         />
         <AnswerCheck pagename={pagename} onAttempt={onAttempt} />
       </div>
@@ -192,7 +193,7 @@ export default function ProblemDisplay({
           ref={solutionsRef}
           className="article-text"
           id="solutions-text"
-          dangerouslySetInnerHTML={{ __html: solutions }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(solutions) }}
         />
       </div>
     </>
