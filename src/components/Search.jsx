@@ -3,7 +3,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useRef, useState } from "react";
 import { titleCleanup, underscores, validProblem } from "../lib/problems.js";
-import { aopsApi, fetchAllPages, fetchArticlePage } from "../lib/aops.js";
+import {
+  aopsApi,
+  fetchAllPages,
+  fetchArticlePage,
+  isBundledProblem,
+} from "../lib/aops.js";
 import { addHistory } from "../lib/history.js";
 import { increment } from "../lib/stats.js";
 import { ArticleBody } from "./ArticleView.jsx";
@@ -12,6 +17,7 @@ import Tagify from "./Tagify.jsx";
 const PAGE_SIZE = 10;
 
 async function checkPageExists(search) {
+  if (validProblem(search) && (await isBundledProblem(search))) return true;
   const params = `action=parse&page=${encodeURIComponent(
     underscores(search),
   )}&format=json&origin=*`;
@@ -148,6 +154,12 @@ export default function Search() {
   };
 
   const loadInlineArticle = async (pick) => {
+    // Problem links open the full problem view, which also handles
+    // bundled problems that aren't on the wiki API.
+    if (validProblem(pick)) {
+      window.location.href = `?page=${underscores(pick)}`;
+      return;
+    }
     const result = await fetchArticlePage(pick);
     if (!result) {
       setError(`The page "${pick}" could not be loaded.`);

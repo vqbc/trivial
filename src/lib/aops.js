@@ -183,6 +183,11 @@ async function fetchParsed(page) {
   return aopsApi(params);
 }
 
+// Problems served from the bundled archives rather than the wiki API.
+export async function isBundledProblem(pagename) {
+  return (await isTournamentProblem(pagename)) || isArchiveProblem(pagename);
+}
+
 // Fetches a problem page from the AoPS wiki. `redirects=1` on the
 // underlying API call follows redirects server-side, so the returned
 // `finalPage` already reflects the resolved title.
