@@ -2,9 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useRef, useState } from "react";
-import { AOPS_API } from "../lib/constants.js";
 import { titleCleanup, underscores, validProblem } from "../lib/problems.js";
-import { fetchAllPages, fetchArticlePage } from "../lib/aops.js";
+import { aopsApi, fetchAllPages, fetchArticlePage } from "../lib/aops.js";
 import { addHistory } from "../lib/history.js";
 import { increment } from "../lib/stats.js";
 import { ArticleBody } from "./ArticleView.jsx";
@@ -16,8 +15,7 @@ async function checkPageExists(search) {
   const params = `action=parse&page=${encodeURIComponent(
     underscores(search),
   )}&format=json&origin=*`;
-  const res = await fetch(`${AOPS_API}?${params}`);
-  const json = await res.json();
+  const json = await aopsApi(params);
   return Boolean(json?.parse);
 }
 
@@ -27,13 +25,12 @@ async function fetchAllSearchResults(search) {
       search,
     )}` + `&srlimit=max&srqiprofile=wsum_inclinks_pv&format=json&origin=*`;
   const out = [];
-  let url = `${AOPS_API}?${baseParams}`;
+  let params = baseParams;
   while (true) {
-    const res = await fetch(url);
-    const json = await res.json();
+    const json = await aopsApi(params);
     for (const page of json?.query?.search ?? []) out.push(page);
     if (!json?.continue) break;
-    url = `${AOPS_API}?${baseParams}&sroffset=${json.continue.sroffset}`;
+    params = `${baseParams}&sroffset=${json.continue.sroffset}`;
   }
   return out;
 }
@@ -45,8 +42,7 @@ async function fetchTheorems() {
   const params =
     `action=query&list=categorymembers&cmtitle=Category:Theorems` +
     `&cmlimit=max&format=json&origin=*`;
-  const res = await fetch(`${AOPS_API}?${params}`);
-  const json = await res.json();
+  const json = await aopsApi(params);
   theoremCache = (json?.query?.categorymembers ?? [])
     .map((p) => p.title)
     .filter((t) => t !== "H�lder's Inequality" && t !== "Theorems");

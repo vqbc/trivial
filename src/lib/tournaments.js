@@ -122,7 +122,7 @@ function category(difficulty, subject) {
 }
 
 // Tournament titles in a subject category ("Intermediate Geometry
-// Problems"), alongside fetchCategoryPages in lib/aops.js.
+// Problems"), alongside fetchArchiveCategoryPages in lib/aopsarchive.js.
 export async function fetchTournamentCategoryPages(subject) {
   const index = await fetchIndex();
   const titles = [];

@@ -76,7 +76,12 @@ function NotFound({ pagename }) {
         Error
       </h2>
       <p className="error">
-        The page <code>{pagename}</code> does not exist.
+        The page <code>{pagename}</code> couldn’t be loaded. It may not exist,
+        or the AoPS Wiki may be unreachable right now. Try{" "}
+        <a href={`${AOPS_WIKI}${underscores(pagename)}`}>
+          opening it on the AoPS Wiki
+        </a>
+        .
       </p>
     </div>
   );
