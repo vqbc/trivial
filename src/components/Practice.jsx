@@ -16,7 +16,12 @@ import {
   DIFFICULTY_MIN,
   DIFFICULTY_MAX,
 } from "../lib/constants.js";
-import { fullTestName, isTournamentTest, underscores } from "../lib/problems.js";
+import {
+  fullTestName,
+  isTournamentTest,
+  pickProblem,
+  underscores,
+} from "../lib/problems.js";
 import {
   collectMatchingProblems,
   fetchAllProblems,
@@ -107,7 +112,7 @@ function RandomTab({ preset, hasProblem, onResult }) {
         onResult(null);
         return;
       }
-      const pick = matches[Math.floor(Math.random() * matches.length)];
+      const pick = pickProblem(matches, tests);
       const fetched = await fetchProblemPage(underscores(pick));
       if (!fetched) {
         setError(`The page "${pick}" could not be loaded.`);
