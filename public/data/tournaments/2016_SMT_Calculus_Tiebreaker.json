@@ -1,0 +1,23 @@
+{
+  "test": "SMT Calculus Tiebreaker",
+  "year": 2016,
+  "name": "Calculus Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2016/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(x) = x + x(\\log x)^2\\). Find \\(x\\) such that \\(xf'(x) = 2f(x)\\).</p>",
+      "solutions": "<p>We note that \\(f'(x) = (1 + \\log x)^2\\), so the equation reduces to</p><p>\\[(1 + \\log x)^2 = 2(1 + (\\log x)^2)\\]</p><p>after canceling factors of \\(x\\). Factoring the difference as a square shows that the only solution occurs at \\(\\log x = 1\\), hence \\(x = \\boxed{e}\\).</p>",
+      "answer": "e"
+    },
+    "2": {
+      "problem": "<p>Compute \\[\\int_{-1}^{\\frac{\\sqrt{2}}{2}} \\sqrt{1 - x^2}\\, dx.\\]</p>",
+      "solutions": "<p><b>Solution 1.</b> Observe that \\(f(x) = \\sqrt{1-x^2}\\) is the equation of the unit circle, centered at the origin. We need to find the area under this circular arc. We can decompose this region into two pieces: 3/8 of a circle and a right triangle, as in the diagram below:</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2016_SMT_Calculus_Tiebreaker/2-fig1.png\" width=\"155\" alt=\"\"></p><p>Therefore, the area of this region is \\(\\boxed{\\frac{3\\pi}{8} + \\frac{1}{4}}\\).</p><p><b>Solution 2.</b> We apply the substitution \\(x = \\sin u\\). Then \\(dx = \\cos u\\, du\\), and our integral becomes \\[\\int_{-1}^{\\frac{\\sqrt{2}}{2}} \\sqrt{1-x^2}\\, dx = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{4}} \\sqrt{1-\\sin^2 u}\\cos u\\, du = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{4}} \\cos^2 u\\, du = \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{4}} \\frac{\\cos(2u)+1}{2}\\, du\\] \\[= \\left[\\frac{1}{4}\\sin(2u) + \\frac{u}{2}\\right]_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{4}} = \\left(\\frac{1}{4}+\\frac{\\pi}{8}\\right) - \\left(0-\\frac{\\pi}{4}\\right) = \\boxed{\\frac{3\\pi}{8}+\\frac{1}{4}}.\\]</p>",
+      "answer": "\\frac{3\\pi+2}{8}"
+    },
+    "3": {
+      "problem": "<p>An axis-aligned rectangle has vertices at \\((0,0)\\) and \\((2,2016)\\). Let \\(f(x,y)\\) be the maximum possible area of a circle with center at \\((x,y)\\) contained entirely within the rectangle. Compute the expected value of \\(f\\) over the rectangle.</p>",
+      "solutions": "<p>Consider the right triangle with vertices at \\((0,0)\\), \\((1,0)\\), and \\((1,1)\\). The integral of \\(f\\) over this region is \\[\\int_0^1 \\int_0^x \\pi y^2\\, dy\\, dx = \\frac{\\pi}{12}.\\]</p><p>Multiplying this by 8 due to symmetry gives us \\(\\frac{2\\pi}{3}\\). Now, the integral of \\(f\\) over the axis-aligned rectangle with top vertices at \\((0,1)\\) and \\((1,2015)\\) and bottom vertices on the axis is \\[\\int_0^1 \\int_1^{2015} \\pi x^2\\, dy\\, dx = \\frac{2014\\pi}{3}.\\]</p><p>Multiplying this by 2 due to symmetry gives us \\(\\frac{4028\\pi}{3}\\). The expected value of \\(f\\) is therefore \\[\\frac{4030\\pi}{3 \\cdot 2 \\cdot 2016} = \\boxed{\\frac{2015\\pi}{6048}}.\\]</p>",
+      "answer": "\\frac{2015\\pi}{6048}"
+    }
+  }
+}

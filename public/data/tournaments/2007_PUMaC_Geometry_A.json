@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Geometry A",
+  "year": 2007,
+  "name": "Geometry A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2007_GeometryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Triangle \\(ABC\\) has \\(AC = 3\\), \\(BC = 5\\), \\(AB = 7\\). A circle is drawn internally tangent to the circumcircle of \\(ABC\\) at \\(C\\), and tangent to \\(AB\\). Let \\(D\\) be its point of tangency with \\(AB\\). Find \\(BD - DA\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2007_PUMaC_Geometry_A/1-fig1.png\" width=\"239\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>\\(A\\), \\(B\\), \\(C\\), and \\(D\\) are all on a circle, and \\(ABCD\\) is a convex quadrilateral. If \\(AB = 13\\), \\(BC = 13\\), \\(CD = 37\\), and \\(AD = 47\\), what is the area of \\(ABCD\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Points \\(P_1\\), \\(P_2\\), \\(P_3\\), and \\(P_4\\) are \\((0,0)\\), \\((10,20)\\), \\((5,15)\\), and \\((12,-6)\\), respectively. For what point \\(P \\in \\mathbb{R}^2\\) is the sum of the distances from \\(P\\) to the other 4 points minimal?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Find \\(\\frac{area(CDF)}{area(CEF)}\\) in the figure.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2007_PUMaC_Geometry_A/4-fig1.png\" width=\"237\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>\\(A\\) and \\(B\\) are on a circle of radius 20 centered at \\(C\\), and \\(\\angle ACB = 60^\\circ\\). \\(D\\) is chosen so that \\(D\\) is also on the circle, \\(\\angle ACD = 160^\\circ\\), and \\(\\angle DCB = 100^\\circ\\). Let \\(E\\) be the intersection of lines \\(AC\\) and \\(BD\\). What is \\(DE\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>A sphere of radius \\(\\sqrt{85}\\) is centered at the origin in three dimensions. A tetrahedron with vertices at integer lattice points is inscribed inside the sphere. What is the maximum possible volume of this tetrahedron?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>A set of points \\(P_i\\) <i>covers</i> a polygon if for every point in the polygon, a line can be drawn inside the polygon to at least one \\(P_i\\). Points \\(A_1, A_2, \\ldots, A_n\\) in the plane form a 2007-gon, not necessarily convex. Find the minimum value of \\(n\\) such that for any such polygon, we can pick \\(n\\) points inside it that cover the polygon.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>What is the area of the region defined by \\(x^2 + 3y^2 \\le 4\\) and \\(y^2 + 3x^2 \\le 4\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>There are four spheres each of radius 1 whose centers form a triangular pyramid where each side has length 2. There is a 5th sphere which touches all four other spheres and has radius less than 1. What is its radius?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>In triangle \\(ABC\\) with \\(AB \\ne AC\\), points \\(N \\in CA\\), \\(M \\in AB\\), \\(P \\in BC\\), and \\(Q \\in BC\\) are chosen such that \\(MP \\parallel AC\\), \\(NQ \\parallel AB\\), \\(\\frac{BP}{AB} = \\frac{CQ}{AC}\\), and \\(A, M, Q, P, N\\) are concyclic. Find \\(\\angle BAC\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

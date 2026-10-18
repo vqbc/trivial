@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2003,
+  "name": "Individual Round: Geometry Subject Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2003/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>\\(AD\\) and \\(BC\\) are both perpendicular to \\(AB\\), and \\(CD\\) is perpendicular to \\(AC\\). If \\(AB = 4\\) and \\(BC = 3\\), find \\(CD\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_Geometry/1-fig1.png\" width=\"120\" alt=\"\"></p>",
+      "solutions": "<p>By Pythagoras in \\(\\triangle ABC\\), \\(AC = 5\\). But \\(\\angle CAD = 90^\\circ - \\angle BAC = \\angle ACB\\), so right triangles \\(CAD, BCA\\) are similar, and \\(CD/AC = BA/CB = 4/3 \\Rightarrow CD = 20/3\\).</p>",
+      "answer": "\\frac{20}{3}"
+    },
+    "2": {
+      "problem": "<p>As shown, \\(U\\) and \\(C\\) are points on the sides of triangle \\(MNH\\) such that \\(MU = s\\), \\(UN = 6\\), \\(NC = 20\\), \\(CH = s\\), \\(HM = 25\\). If triangle \\(UNC\\) and quadrilateral \\(MUCH\\) have equal areas, what is \\(s\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_Geometry/2-fig1.png\" width=\"353\" alt=\"\"></p>",
+      "solutions": "<p>Using brackets to denote areas, we have \\([MCH] = [UNC] + [MUCH] = 2[UNC]\\). On the other hand, triangles with equal altitudes have their areas in the same ratio as their bases, so \\[2 = \\frac{[MNH]}{[UNC]} = \\frac{[MNH]}{[MNC]} \\cdot \\frac{[MNC]}{[UNC]} = \\frac{NH}{NC} \\cdot \\frac{MN}{UN} = \\frac{s+20}{20} \\cdot \\frac{s+6}{6}.\\]</p><p>Clearing the denominator gives \\((s+20)(s+6) = 240\\), and solving the quadratic gives \\(s = 4\\) or \\(-30\\). Since \\(s &gt; 0\\), we must have \\(s = 4\\).</p>",
+      "answer": "4"
+    },
+    "3": {
+      "problem": "<p>A room is built in the shape of the region between two semicircles with the same center and parallel diameters. The farthest distance between two points with a clear line of sight is 12m. What is the area (in \\(m^2\\)) of the room?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_Geometry/3-fig1.png\" width=\"243\" alt=\"\"></p>",
+      "solutions": "<p>The maximal distance is as shown in the figure. Call the radii \\(R\\) and \\(r\\), \\(R &gt; r\\). Then \\(R^2 - r^2 = 6^2\\) by the Pythagorean theorem, so the area is \\((\\pi/2) \\cdot (R^2 - r^2) = 18\\pi\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_Geometry/3-fig2.png\" width=\"297\" alt=\"\"></p>",
+      "answer": "18\\pi"
+    },
+    "4": {
+      "problem": "<p>Farmer John is inside of an ellipse with reflective sides, given by the equation \\(x^2/a^2 + y^2/b^2 = 1\\), with \\(a &gt; b &gt; 0\\). He is standing at the point \\((3, 0)\\), and he shines a laser pointer in the \\(y\\)-direciton. The light reflects off the ellipse and proceeds directly toward Farmer Brown, traveling a distance of 10 before reaching him. Farmer John then spins around in a circle; wherever he points the laser, the light reflects off the wall and hits Farmer Brown. What is the ordered pair \\((a, b)\\)?</p>",
+      "solutions": "<p>The points where the farmers are standing must be the foci of the ellipse, so they are \\((3, 0)\\) and \\((-3, 0)\\). If the total distance traveled is 10, then \\(a\\) must be half of that, or 5, since the distance traveled by a ray reflecting off the wall from when it leaves one focus to when it reaches the other focus is \\(2a\\), the length of the major axis. If a focus is at \\(x = 3\\), then we have \\(3 = \\sqrt{a^2 - b^2} = \\sqrt{25 - b^2}\\), yielding \\(b = 4\\).</p>",
+      "answer": "(5, 4)"
+    },
+    "5": {
+      "problem": "<p>Consider a 2003-gon inscribed in a circle and a triangulation of it with diagonals intersecting only at vertices. What is the smallest possible number of obtuse triangles in the triangulation?</p>",
+      "solutions": "<p>By induction, it follows easily that any triangulation of an \\(n\\)-gon inscribed in a circle has \\(n-2\\) triangles. A triangle is obtuse unless it contains the center of the circle in its interior (in which case it is acute) or on one of its edges (in which case it is right). It is then clear that there are at most 2 non-obtuse triangles, and 2 is achieved when the center of the circle is on one of the diagonals of the triangulation. So the minimum number of obtuse triangles is \\(2001 - 2 = 1999\\).</p>",
+      "answer": "1999"
+    },
+    "6": {
+      "problem": "<p>Take a clay sphere of radius 13, and drill a circular hole of radius 5 through its center. Take the remaining “bead” and mold it into a new sphere. What is this sphere’s radius?</p>",
+      "solutions": "<p>Let \\(r\\) be the radius of the sphere. We take cross sections of the bead perpendicular to the line of the drill and compare them to cross sections of the sphere at the same distance from its center. At a height \\(h\\), the cross section of the sphere is a circle with radius \\(\\sqrt{r^2 - h^2}\\) and thus area \\(\\pi(r^2 - h^2)\\). At the same height, the cross section of the bead is an annulus with outer radius \\(\\sqrt{13^2 - h^2}\\) and inner radius 5, for an area of \\(\\pi(13^2 - h^2) - \\pi(5^2) = \\pi(12^2 - h^2)\\) (since \\(13^2 - 5^2 = 12^2\\)). Thus, if \\(r = 12\\), the sphere and the bead will have the same cross-sectional area \\(\\pi(12^2 - h^2)\\) for \\(|h| \\le 12\\) and 0 for \\(|h| &gt; 12\\). Since all the cross sections have the same area, the two clay figures then have the same volume. And certainly there is only one value of \\(r\\) for which the two volumes are equal, so \\(r = 12\\) is the answer.</p>",
+      "answer": "12"
+    },
+    "7": {
+      "problem": "<p>Let \\(RSTUV\\) be a regular pentagon. Construct an equilateral triangle \\(PRS\\) with point \\(P\\) inside the pentagon. Find the measure (in degrees) of angle \\(PTV\\).</p>",
+      "solutions": "<p>We have \\(\\angle PRV = \\angle SRV - \\angle SRP = 108^\\circ - 60^\\circ = 48^\\circ\\). Since \\(PR = RS = RV\\), triangle \\(PRV\\) is isosceles, so that \\(\\angle VPR = \\angle RVP = (180^\\circ - \\angle PRV)/2 = 66^\\circ\\). Likewise, we have \\(\\angle TPS = 66^\\circ\\), so that \\[\\angle TPV = 360^\\circ - (\\angle VPR + \\angle RPS + \\angle SPT) = 360^\\circ - (66^\\circ + 60^\\circ + 66^\\circ) = 168^\\circ.\\]</p><p>Finally, by symmetry, triangle \\(PTV\\) is isosceles (\\(PT = TV\\)), so \\(\\angle PTV = \\angle TVP = (180^\\circ - \\angle TPV)/2 = 6^\\circ\\). (See the figure.)</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_Geometry/7-fig1.png\" width=\"173\" alt=\"\"></p>",
+      "answer": "6"
+    },
+    "8": {
+      "problem": "<p>Let \\(ABC\\) be an equilateral triangle of side length 2. Let \\(\\omega\\) be its circumcircle, and let \\(\\omega_A, \\omega_B, \\omega_C\\) be circles congruent to \\(\\omega\\) centered at each of its vertices. Let \\(R\\) be the set of all points in the plane contained in exactly two of these four circles. What is the area of \\(R\\)?</p>",
+      "solutions": "<p>\\(\\omega_A, \\omega_B, \\omega_C\\) intersect at the circumcenter; thus, every point within the circumcircle, and no point outside of it, is in two or more circles. The area inside exactly two circles is shaded in the figure. The two intersection points of \\(\\omega_A\\) and \\(\\omega_B\\), together with \\(A\\), form the vertices of an equilateral triangle. As shown, this equilateral triangle cuts off a “lip” of \\(\\omega\\) (bounded by a \\(60^\\circ\\) arc of \\(\\omega\\) and the corresponding chord) and another, congruent lip of \\(\\omega_B\\) that is not part of the region of interest. By rotating the first lip to the position of the second, we can reassemble the equilateral triangle. Doing this for each of the 6 such triangles, we see that the desired area equals the area of a regular hexagon inscribed in \\(\\omega\\). The side length of this hexagon is \\((2/3) \\cdot (\\sqrt{3}/2) \\cdot 2 = 2\\sqrt{3}/3\\), so its area is \\(6 \\cdot (\\sqrt{3}/4) \\cdot (2\\sqrt{3}/3)^2 = 2\\sqrt{3}\\), and this is the answer.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_Geometry/8-fig1.png\" width=\"353\" alt=\"\"></p>",
+      "answer": "2\\sqrt{3}"
+    },
+    "9": {
+      "problem": "<p>In triangle \\(ABC\\), \\(\\angle ABC = 50^\\circ\\) and \\(\\angle ACB = 70^\\circ\\). Let \\(D\\) be the midpoint of side \\(BC\\). A circle is tangent to \\(BC\\) at \\(B\\) and is also tangent to segment \\(AD\\); this circle instersects \\(AB\\) again at \\(P\\). Another circle is tangent to \\(BC\\) at \\(C\\) and is also tangent to segment \\(AD\\); this circle intersects \\(AC\\) again at \\(Q\\). Find \\(\\angle APQ\\) (in degrees).</p>",
+      "solutions": "<p>Suppose the circles are tangent to \\(AD\\) at \\(E, F\\), respectively; then, by equal tangents, \\(DE = DB = DC = DF \\Rightarrow E = F\\) (as shown). So, by the Power of a Point Theorem, \\(AP \\cdot AB = AE^2 = AF^2 = AQ \\cdot AC \\Rightarrow AP/AQ = AC/AB \\Rightarrow \\triangle APQ \\sim \\triangle ACB\\), giving \\(\\angle APQ = \\angle ACB = 70^\\circ\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_Geometry/9-fig1.png\" width=\"299\" alt=\"\"></p>",
+      "answer": "70"
+    },
+    "10": {
+      "problem": "<p>Convex quadrilateral \\(MATH\\) is given with \\(HM/MT = 3/4\\), and \\(\\angle ATM = \\angle MAT = \\angle AHM = 60^\\circ\\). \\(N\\) is the midpoint of \\(MA\\), and \\(O\\) is a point on \\(TH\\) such that lines \\(MT, AH, NO\\) are concurrent. Find the ratio \\(HO/OT\\).</p>",
+      "solutions": "<p>Triangle \\(MAT\\) is equilateral, so \\(HM/AT = HM/MT = 3/4\\). Also, \\(\\angle AHM = \\angle ATM\\), so the quadrilateral is cyclic. Now, let \\(P\\) be the intersection of \\(MT, AH, NO\\). Extend \\(MH\\) and \\(NO\\) to intersect at point \\(Q\\). Then by Menelaus’s theorem, applied to triangle \\(AHM\\) and line \\(QNP\\), we have \\[\\frac{HQ}{QM} \\cdot \\frac{MN}{NA} \\cdot \\frac{AP}{PH} = 1,\\] while applying the same theorem to triangle \\(THM\\) and line \\(QPO\\) gives \\[\\frac{HQ}{QM} \\cdot \\frac{MP}{PT} \\cdot \\frac{TO}{OH} = 1.\\]</p><p>Combining gives \\(HO/OT = (MP/PT) \\cdot (AN/NM) \\cdot (HP/PA) = (MP/PA) \\cdot (HP/PT)\\) (because \\(AN/NM = 1\\)). But since \\(MATH\\) is cyclic, \\(\\triangle APT \\sim \\triangle MPH\\), so \\(MP/PA = HP/PT = HM/AT = 3/4\\), and the answer is \\((3/4)^2 = 9/16\\). (See figure.)</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_Geometry/10-fig1.png\" width=\"242\" alt=\"\"></p>",
+      "answer": "\\frac{9}{16}"
+    }
+  }
+}

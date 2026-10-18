@@ -1,0 +1,23 @@
+{
+  "test": "SMT Geometry Tiebreaker",
+  "year": 2016,
+  "name": "Geometry Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2016/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(\\angle BAC = 75^\\circ\\) and \\(\\angle ABC = 45^\\circ\\). If \\(BC = \\sqrt{3} + 1\\), what is the perimeter of \\(\\triangle ABC\\)?</p>",
+      "solutions": "<p>First, observe that \\(\\angle ACB = 180 - \\angle BAC - \\angle ABC = 180 - 75 - 45 = 60\\) degrees. Let \\(D\\) be the foot of the altitude from \\(A\\) to \\(BC\\). Note that \\(\\triangle ACD\\) is a 30-60-90 triangle and \\(\\triangle ABD\\) is a 45-45-90 triangle.</p><p>Let \\(x = CD\\). Then \\(BD = AD = x\\sqrt{3}\\) and \\(x + x\\sqrt{3} = CD + BD = BC = \\sqrt{3} + 1\\). It follows that \\(x = 1\\). Then \\(AC = 2CD = 2\\) and \\(AB = BD\\sqrt{2} = \\sqrt{6}\\), so the perimeter of \\(\\triangle ABC\\) is \\[AB + BC + AC = \\boxed{3 + \\sqrt{3} + \\sqrt{6}}.\\]</p>",
+      "answer": "3 + \\sqrt{3} + \\sqrt{6}"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABCD\\) be a square, and let \\(E\\) be a point external to \\(ABCD\\) such that \\(AE = CE = 9\\) and \\(BE = 8\\). Compute the side length of \\(ABCD\\).</p>",
+      "solutions": "<p>Draw the perpendicular from \\(E\\) to line \\(AB\\), intersecting at a point \\(F\\). Note that \\(BEF\\) is a 45-45-90 right triangle, so \\(EF = 4\\sqrt{2}\\). Using the Pythagorean Theorem on \\(\\triangle AEF\\) we have that \\(AF = \\sqrt{AE^2 - EF^2} = \\sqrt{81 - 32} = 7\\), so the side length of the square is \\(AB = AF - BF = \\boxed{7 - 4\\sqrt{2}}\\).</p>",
+      "answer": "7 - 4\\sqrt{2}"
+    },
+    "3": {
+      "problem": "<p>An ellipse lies in the \\(xy\\)-plane and is tangent to both the \\(x\\)-axis and \\(y\\)-axis. Given that one of the foci is at \\((9, 12)\\), compute the minimum possible distance between the two foci.</p>",
+      "solutions": "<p>Suppose that the other focus is at \\((x, y)\\). Consider the reflection of \\((9, 12)\\) across the \\(y\\)-axis, \\((-9, 12)\\). Recall that ellipses have the property that the total distance from one focus, to any point on the ellipse, to the other focus is equivalent to the length of the major axis of the ellipsis. Suppose the point on the ellipse which lies on the \\(y\\)-axis is \\(Y\\). Then \\(Y\\) is also the point where the sum of the distances from \\((-9, 12)\\) to \\(Y\\) and \\(Y\\) to \\((x, y)\\) is minimal, which only occurs when \\((-9, 12)\\), \\(Y\\), and \\((x, y)\\) are collinear, since the ellipse is tangent to the \\(y\\)-axis at \\(Y\\). Since the distance from \\((-9, 12)\\) to \\(Y\\) is equal to the distance from \\((9, 12)\\) to \\(Y\\), the distance from \\((-9, 12)\\) to \\((x, y)\\) is equal to the length of the major axis of the ellipsis. Similarly, the distance from \\((9, 12)\\) to \\((x, -y)\\) is equal to the length of the major axis of the ellipsis. Equating these values, we have</p><p>\\[\\begin{aligned}\n(x - (-9))^2 + (y - 12)^2 &amp;= (x - 9)^2 + (-y - 12)^2 \\\\\nx^2 + 18x + 9^2 + y^2 - 24y + 12^2 &amp;= x^2 - 18x + 9^2 + y^2 + 24y + 12^2 \\\\\n36x - 48y &amp;= 0 \\\\\n3x - 4y &amp;= 0\n\\end{aligned}\\]</p><p>Hence, the second focus of the ellipse must satisfy the equation \\(3x - 4y = 0\\). Finding the minimum possible distance between the two foci is equivalent to finding the distance from \\((9, 12)\\) to \\(3x - 4y = 0\\). To compute this value, we can find the line perpendiular to \\(3x - 4y = 0\\) and passing through \\((9, 12)\\), and find the intersection with the line \\(3x - 4y\\). Then, we can compute the distance from \\((9, 12)\\) to the intersection of the lines to obtain the answer. Alternatively, we can compute this value directly:</p><p>\\[\\frac{|3 \\cdot 9 - 4 \\cdot 12 + 0|}{\\sqrt{3^2 + 4^2}} = \\frac{|27 - 48|}{5} = \\boxed{\\frac{21}{5}}.\\]</p>",
+      "answer": "\\frac{21}{5}"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "test": "BMT General Tiebreaker",
+  "year": 2025,
+  "name": "General Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Aditya and Pico live 1000 meters apart, and they start walking toward each other’s houses at the same time. Pico walks at a constant speed of 65 meters per minute. Aditya walks at a constant speed of 60 meters per minute. How many minutes after they start walking will they meet? (Do NOT include any units in your answer.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>The minute hand of a circular clock reaches from the center of the clock to the edge, and the hour hand is half as long as the minute hand. The circumference of the clock is \\(24\\pi\\). What is the area of the triangle formed by the hour hand and minute hand at 4:30 AM?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>How many ways are there to place 3 identical \\(\\bigcirc\\) on a \\(3 \\times 3\\) tic-tac-toe board according to the following rules?</p><ul><li>Each \\(\\bigcirc\\) is in a different cell.</li><li>Not all three \\(\\bigcirc\\) are in the same row, column, or diagonal.</li></ul><p>\\[\\begin{array}{|c|c|c|}\n\\hline\n &amp; &amp; \\\\\n\\hline\n &amp; &amp; \\\\\n\\hline\n &amp; &amp; \\\\\n\\hline\n\\end{array}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Points \\(A\\) and \\(B\\) lie in the plane so that \\(AB = 1\\). Compute the area of the region of the plane consisting of all points \\(C\\) such that \\(\\angle ACB \\ge 60^\\circ\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Find the sum of all three-digit positive integers \\(N\\) such that \\(N\\) plus the reverse of \\(N\\) is a perfect cube. For example, the reverses of 245 and 370 are 542 and 073 = 73, respectively.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

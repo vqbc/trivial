@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Algebra",
+  "year": 2009,
+  "name": "Individual Round: Algebra Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2009/feb/alg/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(a\\) and \\(b\\) are positive integers such that \\(a^2 - b^4 = 2009\\), find \\(a+b\\).</p>",
+      "solutions": "<p>We can factor the equation as \\((a-b^2)(a+b^2) = 41 \\cdot 49\\), from which it is evident that \\(a = 45\\) and \\(b = 2\\) is a possible solution. By examining the factors of 2009, one can see that there are no other solutions.</p>",
+      "answer": "47"
+    },
+    "2": {
+      "problem": "<p>Let \\(S\\) be the sum of all the real coefficients of the expansion of \\((1+ix)^{2009}\\). What is \\(\\log_2(S)\\)?</p>",
+      "solutions": "<p>The sum of all the coefficients is \\((1+i)^{2009}\\), and the sum of the real coefficients is the real part of this, which is \\(\\frac{1}{2}\\left((1+i)^{2009} + (1-i)^{2009}\\right) = 2^{1004}\\). Thus \\(\\log_2(S) = 1004\\).</p>",
+      "answer": "1004"
+    },
+    "3": {
+      "problem": "<p>If \\(\\tan x + \\tan y = 4\\) and \\(\\cot x + \\cot y = 5\\), compute \\(\\tan(x+y)\\).</p>",
+      "solutions": "<p>We have \\(\\cot x + \\cot y = \\frac{\\tan x + \\tan y}{\\tan x \\tan y}\\), so \\(\\tan x \\tan y = \\frac{4}{5}\\). Thus, by the tan sum formula, \\(\\tan(x+y) = \\frac{\\tan x + \\tan y}{1-\\tan x \\tan y} = 20\\).</p>",
+      "answer": "20"
+    },
+    "4": {
+      "problem": "<p>Suppose \\(a, b\\) and \\(c\\) are integers such that the greatest common divisor of \\(x^2+ax+b\\) and \\(x^2+bx+c\\) is \\(x+1\\) (in the set of polynomials in \\(x\\) with integer coefficients), and the least common multiple of \\(x^2+ax+b\\) and \\(x^2+bx+c\\) is \\(x^3-4x^2+x+6\\). Find \\(a+b+c\\).</p>",
+      "solutions": "<p>Since \\(x+1\\) divides \\(x^2+ax+b\\) and the constant term is \\(b\\), we have \\(x^2+ax+b = (x+1)(x+b)\\), and similarly \\(x^2+bx+c = (x+1)(x+c)\\). Therefore, \\(a = b+1 = c+2\\). Furthermore, the least common multiple of the two polynomials is \\((x+1)(x+b)(x+b-1) = x^3-4x^2+x+6\\), so \\(b=-2\\). Thus \\(a=-1\\) and \\(c=-3\\), and \\(a+b+c=-6\\).</p>",
+      "answer": "-6"
+    },
+    "5": {
+      "problem": "<p>Let \\(a\\), \\(b\\), and \\(c\\) be the 3 roots of \\(x^3 - x + 1 = 0\\). Find \\(\\frac{1}{a+1} + \\frac{1}{b+1} + \\frac{1}{c+1}\\).</p>",
+      "solutions": "<p>We can substitute \\(x = y-1\\) to obtain a polynomial having roots \\(a+1, b+1, c+1\\), namely, \\((y-1)^3-(y-1)+1 = y^3-3y^2+2y+1\\). The sum of the reciprocals of the roots of this polynomial is, by Vieta’s formulas, \\(\\frac{2}{-1} = -2\\).</p>",
+      "answer": "-2"
+    },
+    "6": {
+      "problem": "<p>Let \\(x\\) and \\(y\\) be positive real numbers and \\(\\theta\\) an angle such that \\(\\theta \\ne \\frac{\\pi}{2}n\\) for any integer \\(n\\). Suppose</p><p>\\[\\frac{\\sin\\theta}{x} = \\frac{\\cos\\theta}{y}\\]</p><p>and</p><p>\\[\\frac{\\cos^4\\theta}{x^4} + \\frac{\\sin^4\\theta}{y^4} = \\frac{97\\sin 2\\theta}{x^3y+y^3x}.\\]</p><p>Compute \\(\\frac{x}{y} + \\frac{y}{x}\\).</p>",
+      "solutions": "<p>From the first relation, there exists a real number \\(k\\) such that \\(x = k\\sin\\theta\\) and \\(y = k\\cos\\theta\\). Then we have</p><p>\\[\\frac{\\cos^4\\theta}{\\sin^4\\theta} + \\frac{\\sin^4\\theta}{\\cos^4\\theta} = \\frac{194\\sin\\theta\\cos\\theta}{\\sin\\theta\\cos\\theta(\\cos^2\\theta+\\sin^2\\theta)} = 194.\\]</p><p>Notice that if \\(t = \\frac{x}{y} + \\frac{y}{x}\\) then \\((t^2-2)^2-2 = \\frac{\\cos^4\\theta}{\\sin^4\\theta} + \\frac{\\sin^4\\theta}{\\cos^4\\theta} = 194\\) and so \\(t = 4\\).</p>",
+      "answer": "4"
+    },
+    "7": {
+      "problem": "<p>Simplify the product</p><p>\\[\\prod_{m=1}^{100}\\prod_{n=1}^{100} \\frac{x^{n+m}+x^{n+m+2}+x^{2n+1}+x^{2m+1}}{x^{2n}+2x^{n+m}+x^{2m}}.\\]</p><p>Express your answer in terms of \\(x\\).</p>",
+      "solutions": "<p>We notice that the numerator and denominator of each term factors, so the product is equal to</p><p>\\[\\prod_{m=1}^{100}\\prod_{n=1}^{100} \\frac{(x^m+x^{n+1})(x^{m+1}+x^n)}{(x^m+x^n)^2}.\\]</p><p>Each term of the numerator cancels with a term of the denominator except for those of the form \\((x^m+x^{101})\\) and \\((x^{101}+x^n)\\) for \\(m,n=1,\\ldots,100\\), and the terms in the denominator which remain are of the form \\((x^1+x^n)\\) and \\((x^1+x^m)\\) for \\(m,n=1,\\ldots,100\\). Thus the product simplifies to</p><p>\\[\\left(\\prod_{m=1}^{100} \\frac{x^m+x^{101}}{x^1+x^m}\\right)^2.\\]</p><p>Reversing the order of the factors of the numerator, we find this is equal to</p><p>\\[\\left(\\prod_{m=1}^{100} \\frac{x^{101-m}+x^{101}}{x^1+x^m}\\right)^2 = \\left(\\prod_{m=1}^{100} x^{100-m}\\frac{x^1+x^{m+1}}{x^1+x^m}\\right)^2\\]</p><p>\\[= \\left(\\frac{x^1+x^{101}}{x^1+x^1}\\prod_{m=1}^{100} x^{100-m}\\right)^2\\]</p><p>\\[= (x^{\\frac{99\\cdot100}{2}})^2\\left(\\frac{1+x^{100}}{2}\\right)^2\\]</p><p>as desired.</p>",
+      "answer": "x^{9900}\\left(\\frac{1+x^{100}}{2}\\right)^2"
+    },
+    "8": {
+      "problem": "<p>If \\(a, b, x,\\) and \\(y\\) are real numbers such that \\(ax+by=3\\), \\(ax^2+by^2=7\\), \\(ax^3+by^3=16\\), and \\(ax^4+by^4=42\\), find \\(ax^5+by^5\\).</p>",
+      "solutions": "<p>We have \\(ax^3+by^3=16\\), so \\((ax^3+by^3)(x+y)=16(x+y)\\) and thus</p><p>\\[ax^4+by^4+xy(ax^2+by^2) = 16(x+y)\\]</p><p>It follows that</p><p>\\[42+7xy = 16(x+y) \\quad (1)\\]</p><p>From \\(ax^2+by^2=7\\), we have \\((ax^2+by^2)(x+y)=7(x+y)\\) so \\(ax^3+by^3+xy(ax+by)=7(x+y)\\). This simplifies to</p><p>\\[16+3xy = 7(x+y) \\quad (2)\\]</p><p>We can now solve for \\(x+y\\) and \\(xy\\) from (1) and (2) to find \\(x+y=-14\\) and \\(xy=-38\\). Thus we have \\((ax^4+by^4)(x+y)=42(x+y)\\), and so \\(ax^5+by^5+xy(ax^3+by^3)=42(x+y)\\). Finally, it follows that \\(ax^5+by^5=42(x+y)-16xy=20\\) as desired.</p>",
+      "answer": "20"
+    },
+    "9": {
+      "problem": "<p>Let \\(f(x) = x^4+14x^3+52x^2+56x+16\\). Let \\(z_1, z_2, z_3, z_4\\) be the four roots of \\(f\\). Find the smallest possible value of \\(|z_az_b+z_cz_d|\\) where \\(\\{a,b,c,d\\} = \\{1,2,3,4\\}\\).</p>",
+      "solutions": "<p>Note that \\(\\frac{1}{16}f(2x) = x^4+7x^3+13x^2+7x+1\\). Because the coefficients of this polynomial are symmetric, if \\(r\\) is a root of \\(f(x)\\) then \\(\\frac{4}{r}\\) is as well. Further, \\(f(-1)=-1\\) and \\(f(-2)=16\\) so \\(f(x)\\) has two distinct roots on \\((-2,0)\\) and two more roots on \\((-\\infty,-2)\\). Now, if \\(\\sigma\\) is a permutation of \\(\\{1,2,3,4\\}\\):</p><p>\\[|z_{\\sigma(1)}z_{\\sigma(2)}+z_{\\sigma(3)}z_{\\sigma(4)}| \\le \\frac{1}{2}(z_{\\sigma(1)}z_{\\sigma(2)}+z_{\\sigma(3)}z_{\\sigma(4)}+z_{\\sigma(4)}z_{\\sigma(3)}+z_{\\sigma(2)}z_{\\sigma(1)})\\]</p><p>Let the roots be ordered \\(z_1 \\le z_2 \\le z_3 \\le z_4\\), then by rearrangement the last expression is at least:</p><p>\\[\\frac{1}{2}(z_1z_4+z_2z_3+z_3z_2+z_4z_1)\\]</p><p>Since the roots come in pairs \\(z_1z_4 = z_2z_3 = 4\\), our expression is minimized when \\(\\sigma(1)=1, \\sigma(2)=4, \\sigma(3)=3, \\sigma(4)=2\\) and its minimum value is 8.</p>",
+      "answer": "8"
+    },
+    "10": {
+      "problem": "<p>Let \\(f(x) = 2x^3-2x\\). For what positive values of \\(a\\) do there exist distinct \\(b, c, d\\) such that \\((a, f(a))\\), \\((b, f(b))\\), \\((c, f(c))\\), \\((d, f(d))\\) is a rectangle?</p>",
+      "solutions": "<p>Say we have four points \\((a,f(a)), (b,f(b)), (c,f(c)), (d,f(d))\\) on the curve which form a rectangle. If we interpolate a cubic through these points, that cubic will be symmetric around the center of the rectangle. But the unique cubic through the four points is \\(f(x)\\), and \\(f(x)\\) has only one point of symmetry, the point \\((0,0)\\).</p><p>So every rectangle with all four points on \\(f(x)\\) is of the form \\((a,f(a)), (b,f(b)), (-a,f(-a)), (-b,f(-b))\\), and without loss of generality we let \\(a,b&gt;0\\). Then for any choice of \\(a\\) and \\(b\\) these points form a parallelogram, which is a rectangle if and only if the distance from \\((a,f(a))\\) to \\((0,0)\\) is equal to the distance from \\((b,f(b))\\) to \\((0,0)\\). Let \\(g(x) = x^2+(f(x))^2 = 4x^6-8x^4+5x^2\\), and consider \\(g(x)\\) restricted to \\(x \\ge 0\\). We are looking for all the values of \\(a\\) such that \\(g(x)=g(a)\\) has solutions other than \\(a\\).</p><p>Note that \\(g(x) = h(x^2)\\) where \\(h(x) = 4x^3-8x^2+5x\\). This polynomial \\(h(x)\\) has a relative maximum of \\(1\\) at \\(x=\\frac{1}{2}\\) and a relative minimum of \\(25/27\\) at \\(x=\\frac{5}{6}\\). Thus the polynomial \\(h(x)-h(1/2)\\) has the double root \\(1/2\\) and factors as \\((4x^2-4x+1)(x-1)\\), the largest possible value of \\(a^2\\) for which \\(h(x^2)=h(a^2)\\) is \\(a^2=1\\), or \\(a=1\\). The smallest such value is that which evaluates to \\(25/27\\) other than \\(5/6\\), which is similarly found to be \\(a^2=1/3\\), or \\(a=\\frac{\\sqrt3}{3}\\). Thus, for \\(a\\) in the range \\(\\frac{\\sqrt3}{3} \\le a \\le 1\\) the equation \\(g(x)=g(a)\\) has nontrivial solutions and hence an inscribed rectangle exists.</p>",
+      "answer": "\\left[\\frac{\\sqrt{3}}{3}, 1\\right]"
+    }
+  }
+}

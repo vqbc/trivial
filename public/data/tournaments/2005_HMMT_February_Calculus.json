@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Calculus",
+  "year": 2005,
+  "name": "Individual Round: Calculus Subject Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2005/feb/calc/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(x) = x^3 + ax + b\\), with \\(a \\neq b\\), and suppose the tangent lines to the graph of \\(f\\) at \\(x = a\\) and \\(x = b\\) are parallel. Find \\(f(1)\\).</p>",
+      "solutions": "<p>Since \\(f'(x) = 3x^2 + a\\), we must have \\(3a^2 + a = 3b^2 + a\\). Then \\(a^2 = b^2\\), and since \\(a \\neq b\\), \\(a = -b\\). Thus \\(f(1) = 1 + a + b = 1\\).</p>",
+      "answer": "1"
+    },
+    "2": {
+      "problem": "<p>A plane curve is parameterized by \\(x(t) = \\int_t^\\infty \\frac{\\cos u}{u}\\, du\\) and \\(y(t) = \\int_t^\\infty \\frac{\\sin u}{u}\\, du\\) for \\(1 \\le t \\le 2\\). What is the length of the curve?</p>",
+      "solutions": "<p>By the Second Fundamental Theorem of Calculus, \\(\\frac{dx}{dt} = -\\frac{\\cos t}{t}\\) and \\(\\frac{dy}{dt} = -\\frac{\\sin t}{t}\\). Therefore, the length of the curve is \\[\\int_1^2 \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\, dt = \\int_1^2 \\sqrt{\\frac{\\cos^2 t}{t^2} + \\frac{\\sin^2 t}{t^2}}\\, dt = \\int_1^2 \\frac{1}{t}\\, dt = [\\ln t]_1^2 = \\ln 2.\\]</p>",
+      "answer": "\\ln 2"
+    },
+    "3": {
+      "problem": "<p>Let \\(f : \\mathbb{R} \\to \\mathbb{R}\\) be a continuous function with \\(\\int_0^1 f(x) f'(x)\\, dx = 0\\) and \\(\\int_0^1 f(x)^2 f'(x)\\, dx = 18\\). What is \\(\\int_0^1 f(x)^4 f'(x)\\, dx\\)?</p>",
+      "solutions": "<p>\\[0 = \\int_0^1 f(x) f'(x)\\, dx = \\int_{f(0)}^{f(1)} u\\, du = \\frac{1}{2}\\left(f(1)^2 - f(0)^2\\right),\\] and \\[18 = \\int_0^1 f(x)^2 f'(x)\\, dx = \\int_{f(0)}^{f(1)} u^2\\, du = \\frac{1}{3}\\left(f(1)^3 - f(0)^3\\right).\\]</p><p>The first equation implies \\(f(0) = \\pm f(1)\\). The second equation shows that \\(f(0) \\neq f(1)\\), and in fact \\(54 = f(1)^3 - f(0)^3 = 2f(1)^3\\), so \\(f(1) = 3\\) and \\(f(0) = -3\\). Then \\[\\int_0^1 f(x)^4 f'(x)\\, dx = \\int_{f(0)}^{f(1)} u^4\\, du = \\frac{1}{5}\\left(f(1)^5 - f(0)^5\\right) = \\frac{1}{5}(243 + 243) = \\frac{486}{5}.\\]</p>",
+      "answer": "\\frac{486}{5}"
+    },
+    "4": {
+      "problem": "<p>Let \\(f : \\mathbb{R} \\to \\mathbb{R}\\) be a smooth function such that \\(f'(x)^2 = f(x) f''(x)\\) for all \\(x\\). Suppose \\(f(0) = 1\\) and \\(f^{(4)}(0) = 9\\). Find all possible values of \\(f'(0)\\).</p>",
+      "solutions": "<p>Let \\(f'(0) = a\\). Then the equation gives \\(f''(0) = a^2\\). Differentiating the given equation gives \\[2f'(x)f''(x) = f(x)f'''(x) + f'(x)f''(x),\\] or \\(f'(x)f''(x) = f(x)f'''(x)\\). Differentiating once more gives \\[f'(x)f'''(x) + f''(x)^2 = f(x)f^{(4)}(x) + f'(x)f'''(x)\\] or \\(f''(x)^2 = f(x)f^{(4)}(x)\\), giving \\(9 = f^{(4)}(0) = a^4\\). Thus \\(a = \\pm\\sqrt{3}\\). These are indeed both attainable by \\(f(x) = e^{\\pm x\\sqrt{3}}\\).</p><p><b>Alternative Solution.</b> Rewrite the given equation as \\(\\frac{f''(x)}{f'(x)} = \\frac{f'(x)}{f(x)}\\). Integrating both sides gives \\(\\ln f'(x) = \\ln f(x) + C_1\\), and exponentiating gives \\(f'(x) = Cf(x)\\). This has solution \\(f(x) = Ae^{Cx}\\) for constants \\(A\\) and \\(C\\). Since \\(f(0) = 1\\), \\(A = 1\\), and differentiating we find that \\(C^4 = f^{(4)}(0) = 9\\), yielding \\(f'(0) = C = \\pm\\sqrt{3}\\).</p>",
+      "answer": "\\pm\\sqrt{3}"
+    },
+    "5": {
+      "problem": "<p>Calculate \\[\\lim_{x \\to 0^+} \\left(x^{x^x} - x^x\\right).\\]</p>",
+      "solutions": "<p>We first calculate \\(\\lim_{x \\to 0^+} x^x\\): it is just \\(\\exp(\\lim_{x \\to 0^+} x \\ln x)\\). But \\[\\lim_{x \\to 0^+} x \\ln x = \\lim_{x \\to 0^+} \\frac{\\ln x}{1/x} = \\lim_{x \\to 0^+} \\frac{1/x}{-1/x^2} = \\lim_{x \\to 0^+} -x = 0\\] by L’Hôpital’s Rule. Therefore \\(\\lim_{x \\to 0^+} x^x = 1\\). Then \\(\\lim_{x \\to 0^+} x^{x^x} = 0^1 = 0\\), so \\(\\lim_{x \\to 0^+} \\left(x^{x^x} - x^x\\right) = -1\\).</p>",
+      "answer": "-1"
+    },
+    "6": {
+      "problem": "<p>The graph of \\(r = 2 + \\cos 2\\theta\\) and its reflection over the line \\(y = x\\) bound five regions in the plane. Find the area of the region containing the origin.</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2005_HMMT_February_Calculus/6-fig1.png\" width=\"278\" alt=\"\"></p><p>The original graph is closer to the origin than its reflection for \\(\\theta \\in \\left(\\frac{\\pi}{4}, \\frac{3\\pi}{4}\\right) \\cup \\left(\\frac{5\\pi}{4}, \\frac{7\\pi}{4}\\right)\\), and the region is symmetric about the origin. Therefore the area we wish to find is the polar integral \\[\\begin{aligned}\n4\\int_{\\pi/4}^{3\\pi/4} \\frac{1}{2}(2+\\cos 2\\theta)^2\\, d\\theta &amp;= 2\\int_{\\pi/4}^{3\\pi/4} (4 + 4\\cos 2\\theta + \\cos^2 2\\theta)\\, d\\theta \\\\\n&amp;= 2\\int_{\\pi/4}^{3\\pi/4} \\left(4 + 4\\cos 2\\theta + \\frac{1}{2}(1+\\cos 4\\theta)\\right) d\\theta \\\\\n&amp;= \\left[9\\theta + 4\\sin 2\\theta + \\frac{1}{4}\\sin 4\\theta\\right]_{\\pi/4}^{3\\pi/4} \\\\\n&amp;= \\left(\\frac{27\\pi}{4} - 4\\right) - \\left(\\frac{9\\pi}{4} + 4\\right) = \\frac{9\\pi}{2} - 8.\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{9\\pi}{2} - 8"
+    },
+    "7": {
+      "problem": "<p>Two ants, one starting at \\((-1, 1)\\), the other at \\((1, 1)\\), walk to the right along the parabola \\(y = x^2\\) such that their midpoint moves along the line \\(y = 1\\) with constant speed 1. When the left ant first hits the line \\(y = \\frac{1}{2}\\), what is its speed?</p>",
+      "solutions": "<p>When the left ant first hits the line \\(y = \\frac{1}{2}\\), the right ant hits the line \\(y = \\frac{3}{2}\\). The left ant is then at \\(\\left(-\\frac{\\sqrt{2}}{2}, \\frac{1}{2}\\right)\\), and the right ant is at \\(\\left(\\frac{\\sqrt{6}}{2}, \\frac{3}{2}\\right)\\). Let the left ant have velocity with components \\(v_x\\) and \\(v_y\\), the right ant velocity with components \\(w_x\\) and \\(w_y\\). Since \\(\\frac{dy}{dx} = 2x\\), \\(\\frac{v_y}{v_x} = -\\sqrt{2}\\) and \\(\\frac{w_y}{w_x} = \\sqrt{6}\\). Since the midpoint of the ants moves at speed 1 along the line \\(y = 1\\), \\(\\frac{1}{2}(v_x + w_x) = 1\\) and \\(\\frac{1}{2}(v_y + w_y) = 0\\). Therefore, \\(\\sqrt{2}v_x = -v_y = w_y = \\sqrt{6}w_x = \\sqrt{6}(2 - v_x)\\). Solving for \\(v_x\\) gives \\(\\frac{2\\sqrt{6}}{\\sqrt{6}+\\sqrt{2}} = 3 - \\sqrt{3}\\). Then the speed of the left ant is \\[\\sqrt{v_x^2 + v_y^2} = \\sqrt{v_x^2 + (-\\sqrt{2}v_x)^2} = \\sqrt{3}|v_x| = 3\\sqrt{3} - 3.\\]</p>",
+      "answer": "3\\sqrt{3} - 3"
+    },
+    "8": {
+      "problem": "<p>If \\(f\\) is a continuous real function such that \\(f(x-1) + f(x+1) \\ge x + f(x)\\) for all \\(x\\), what is the minimum possible value of \\(\\int_1^{2005} f(x)\\, dx\\)?</p>",
+      "solutions": "<p>Let \\(g(x) = f(x) - x\\). Then \\[g(x-1) + x - 1 + g(x+1) + x + 1 \\ge x + g(x) + x,\\] or \\(g(x-1) + g(x+1) \\ge g(x)\\). But now, \\[g(x+3) \\ge g(x+2) - g(x+1) \\ge -g(x).\\]</p><p>Therefore \\[\\begin{aligned}\n\\int_a^{a+6} g(x)\\, dx &amp;= \\int_a^{a+3} g(x)\\, dx + \\int_{a+3}^{a+6} g(x)\\, dx \\\\\n&amp;= \\int_a^{a+3} (g(x) + g(x+3))\\, dx \\ge 0.\n\\end{aligned}\\]</p><p>It follows that \\[\\int_1^{2005} g(x) = \\sum_{n=0}^{333} \\int_{6n+1}^{6n+7} g(x)\\, dx \\ge 0,\\] so that \\[\\int_1^{2005} f(x)\\, dx = \\int_1^{2005} (g(x) + x)\\, dx \\ge \\int_1^{2005} x\\, dx = \\left[\\frac{x^2}{2}\\right]_1^{2005} = \\frac{2005^2 - 1}{2} = 2010012.\\]</p><p>Equality holds for \\(f(x) = x\\).</p>",
+      "answer": "2010012"
+    },
+    "9": {
+      "problem": "<p>Compute \\[\\sum_{k=0}^{\\infty} \\frac{4}{(4k)!}.\\]</p>",
+      "solutions": "<p>This is the power series \\[4 + \\frac{4x^4}{4!} + \\frac{4x^8}{8!} + \\cdots\\] evaluated at \\(x = 1\\). But this power series can be written as the sum \\[\\left(1 + \\frac{x}{1!} + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\frac{x^4}{4!} + \\frac{x^5}{5!} + \\frac{x^6}{6!} + \\frac{x^7}{7!} + \\cdots\\right)\\] \\[+ \\left(1 - \\frac{x}{1!} + \\frac{x^2}{2!} - \\frac{x^3}{3!} + \\frac{x^4}{4!} - \\frac{x^5}{5!} + \\frac{x^6}{6!} - \\frac{x^7}{7!} + \\cdots\\right)\\] \\[+ 2\\left(1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\cdots\\right)\\] \\[= e^x + e^{-x} + 2\\cos x.\\]</p><p>It follows that the quantity is \\(e + 1/e + 2\\cos 1\\).</p>",
+      "answer": "e + \\frac{1}{e} + 2\\cos 1"
+    },
+    "10": {
+      "problem": "<p>Let \\(f : \\mathbb{R} \\to \\mathbb{R}\\) be a smooth function such that \\(f'(x) = f(1-x)\\) for all \\(x\\) and \\(f(0) = 1\\). Find \\(f(1)\\).</p>",
+      "solutions": "<p>Differentiating the given equation gives \\(f''(x) = -f(x)\\). This has solutions of the form \\(A\\cos(x) + B\\sin(x)\\). Since \\(f(0) = 1\\), \\(A = 1\\). Then \\(f'(x) = B\\cos(x) - \\sin(x)\\) and \\[\\begin{aligned}\nf(1-x) &amp;= \\cos(1-x) + B\\sin(1-x) \\\\\n&amp;= \\cos 1 \\cos x + \\sin 1 \\sin x + B\\sin 1 \\cos x - B\\cos 1 \\sin x \\\\\n&amp;= (\\cos 1 + B\\sin 1)\\cos x + (\\sin 1 - B\\cos 1)\\sin x.\n\\end{aligned}\\]</p><p>Therefore, \\(B = \\cos 1 + B\\sin 1\\) and \\(-1 = \\sin 1 - B\\cos 1\\), both of which yield as solutions \\[B = \\frac{\\cos 1}{1 - \\sin 1} = \\frac{1 + \\sin 1}{\\cos 1} = \\sec 1 + \\tan 1.\\]</p>",
+      "answer": "\\sec 1 + \\tan 1"
+    }
+  }
+}

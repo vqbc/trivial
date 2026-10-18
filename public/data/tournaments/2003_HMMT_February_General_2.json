@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 2",
+  "year": 2003,
+  "name": "General Test, Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2003/feb/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A compact disc has the shape of a circle of diameter 5 inches with a 1-inch-diameter circular hole in the center. Assuming the capacity of the CD is proportional to its area, how many inches would need to be added to the outer diameter to double the capacity?</p>",
+      "solutions": "<p>Doubling the capacity is equivalent to doubling the area, which is initially \\(\\pi\\left[\\left(\\frac{5}{2}\\right)^2 - \\left(\\frac{1}{2}\\right)^2\\right] = 6\\pi\\). Thus we want to achieve an area of \\(12\\pi\\), so if the new diameter is \\(d\\), we want \\(\\pi\\left[\\left(\\frac{d}{2}\\right)^2 - \\left(\\frac{1}{2}\\right)^2\\right] = 12\\pi \\Rightarrow d = 7\\). Thus we need to add 2 inches to the diameter.</p><p>\\(\\boxed{2}\\)</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>You have a list of real numbers, whose sum is 40. If you replace every number \\(x\\) on the list by \\(1 - x\\), the sum of the new numbers will be 20. If instead you had replaced every number \\(x\\) by \\(1 + x\\), what would the sum then be?</p>",
+      "solutions": "<p>Let \\(n\\) be the number of numbers on the list. If each initial number is replaced by its negative, the sum will then be \\(-40\\), and adding 1 to every number on this list increases the sum by \\(n\\), so \\(n - 40 = 20 \\Rightarrow n = 60\\). Then, if we had simply added 1 to each of the initial numbers (without negating first), the sum would increase to \\(40 + n = 40 + 60 = 100\\).</p><p>\\(\\boxed{100}\\)</p>",
+      "answer": "100"
+    },
+    "3": {
+      "problem": "<p>How many positive rational numbers less than \\(\\pi\\) have denominator at most 7 when written in lowest terms? (Integers have denominator 1.)</p>",
+      "solutions": "<p>We can simply list them. The table shows that there are \\(3+3+6+6+12+6+18=54\\).</p><p>\\[\\begin{array}{c|l}\n\\text{Denominator} &amp; \\text{Values} \\\\\n\\hline\n1 &amp; \\frac{1}{1},\\ \\frac{2}{1},\\ \\frac{3}{1} \\\\\n2 &amp; \\frac{1}{2},\\ \\frac{3}{2},\\ \\frac{5}{2} \\\\\n3 &amp; \\frac{1}{3},\\ \\frac{2}{3},\\ \\frac{4}{3},\\ \\frac{5}{3},\\ \\frac{7}{3},\\ \\frac{8}{3} \\\\\n4 &amp; \\frac{1}{4},\\ \\frac{3}{4},\\ \\frac{5}{4},\\ \\frac{7}{4},\\ \\frac{9}{4},\\ \\frac{11}{4} \\\\\n5 &amp; \\frac{1}{5},\\ \\frac{2}{5},\\ \\frac{3}{5},\\ \\frac{4}{5},\\ \\frac{6}{5},\\ \\frac{7}{5},\\ \\frac{8}{5},\\ \\frac{9}{5},\\ \\frac{11}{5},\\ \\frac{12}{5},\\ \\frac{13}{5},\\ \\frac{14}{5} \\\\\n6 &amp; \\frac{1}{6},\\ \\frac{5}{6},\\ \\frac{7}{6},\\ \\frac{11}{6},\\ \\frac{13}{6},\\ \\frac{17}{6} \\\\\n7 &amp; \\frac{1}{7},\\ \\frac{2}{7},\\ \\ldots,\\ \\frac{6}{7},\\ \\frac{8}{7},\\ \\frac{9}{7},\\ \\ldots,\\ \\frac{13}{7},\\ \\frac{15}{7},\\ \\frac{16}{7},\\ \\ldots,\\ \\frac{20}{7}\n\\end{array}\\]</p><p>\\(\\boxed{54}\\)</p>",
+      "answer": "54"
+    },
+    "4": {
+      "problem": "<p>In triangle \\(ABC\\) with area 51, points \\(D\\) and \\(E\\) trisect \\(AB\\) and points \\(F\\) and \\(G\\) trisect \\(BC\\). Find the largest possible area of quadrilateral \\(DEFG\\).</p>",
+      "solutions": "<p>Assume \\(E\\) is between \\(D\\) and \\(B\\), and \\(F\\) is between \\(G\\) and \\(B\\) (the alternative is to switch two points, say \\(D\\) and \\(E\\), which clearly gives a non-convex quadrilateral with smaller area). If two triangles have their bases on the same line and the same opposite vertex, then it follows from the \\(\\frac{1}{2}bh\\) formula that their areas are in the same ratio as their bases. In particular (brackets denote areas),</p><p>\\[\\frac{[DBG]}{[ABC]} = \\frac{[DBG]}{[ABG]} \\cdot \\frac{[ABG]}{[ABC]} = \\frac{DB}{AB} \\cdot \\frac{BG}{BC} = \\frac{2}{3} \\cdot \\frac{2}{3} = \\frac{4}{9},\\]</p><p>and similarly \\([EBF]/[ABC] = 1/9\\). Subtracting gives \\([DEFG]/[ABC] = 1/3\\), so the answer is \\([ABC]/3 = 17\\).</p><p>\\(\\boxed{17}\\)</p>",
+      "answer": "17"
+    },
+    "5": {
+      "problem": "<p>You are given a \\(10 \\times 2\\) grid of unit squares. Two different squares are adjacent if they share a side. How many ways can one mark exactly nine of the squares so that no two marked squares are adjacent?</p>",
+      "solutions": "<p>Since each row has only two squares, it is impossible for two marked squares to be in the same row. Therefore, exactly nine of the ten rows contain marked squares. Consider two cases:</p><p>Case 1: The first or last row is empty. These two cases are symmetrical, so assume without loss of generality that the first row is empty. There are two possibilities for the second row: either the first square is marked, or the second square is marked. Since the third row must contain a marked square, and it cannot be in the same column as the marked square in the second row, the third row is determined by the second. Similarly, all the remaining rows are determined. This leaves two possibilities if the first row is empty. Thus, there are four possibilities if the first or last row is empty.</p><p>Case 2: The empty row is not the first or last. Then, there are two blocks of (one or more) consecutive rows of marked squares. As above, the configuration of the rows in each of the two blocks is determined by the position of the marked square in the first of its rows. That makes \\(2 \\times 2 = 4\\) possible configurations. There are eight possibilities for the empty row, making a total of 32 possibilities in this case.</p><p>Together, there are 36 possible configurations of marked squares.</p><p>\\(\\boxed{36}\\)</p>",
+      "answer": "36"
+    },
+    "6": {
+      "problem": "<p>The numbers 112, 121, 123, 153, 243, 313, and 322 are among the rows, columns, and diagonals of a \\(3 \\times 3\\) square grid of digits (rows and diagonals read left-to-right, and columns read top-to-bottom). What 3-digit number completes the list?</p>",
+      "solutions": "<p>\\[\\begin{array}{|c|c|c|}\n\\hline\n1 &amp; 1 &amp; 2 \\\\\n\\hline\n5 &amp; 2 &amp; 4 \\\\\n\\hline\n3 &amp; 1 &amp; 3 \\\\\n\\hline\n\\end{array}\\]</p><p>The center digit is the middle digit of 4 numbers (hence at least 3 members of the above list), so it must be 2. The top-left digit begins at least 2 members of the above list, so it must be 1 or 3. If it is 3, then after placing 313 we see that we need three more numbers starting with 3, impossible; hence, it is 1. So 243 and 313 must (in some order) be the last row and the last column, and now it is easy to complete the grid as shown; the answer is 524.</p><p>\\(\\boxed{524}\\)</p>",
+      "answer": "524"
+    },
+    "7": {
+      "problem": "<p>Daniel and Scott are playing a game where a player wins as soon as he has two points more than his opponent. Both players start at par, and points are earned one at a time. If Daniel has a 60% chance of winning each point, what is the probability that he will win the game?</p>",
+      "solutions": "<p>Consider the situation after two points. Daniel has a \\(9/25\\) chance of winning, Scott, \\(4/25\\), and there is a \\(12/25\\) chance that the players will be tied. In the latter case, we revert to the original situation. In particular, after every two points, either the game returns to the original situation, or one player wins. If it is given that the game lasts \\(2k\\) rounds, then the players must be at par after \\(2(k-1)\\) rounds, and then Daniel wins with probability \\((9/25)/(9/25+4/25) = 9/13\\). Since this holds for any \\(k\\), we conclude that Daniel wins the game with probability \\(9/13\\).</p><p>\\(\\boxed{\\frac{9}{13}}\\)</p>",
+      "answer": "\\frac{9}{13}"
+    },
+    "8": {
+      "problem": "<p>If \\(x \\ge 0\\), \\(y \\ge 0\\) are integers, randomly chosen with the constraint \\(x + y \\le 10\\), what is the probability that \\(x + y\\) is even?</p>",
+      "solutions": "<p>For each \\(p \\le 10\\), if \\(x + y = p\\), \\(x\\) can range from 0 to \\(p\\), yielding \\(p+1\\) ordered pairs \\((x, y)\\). Thus there are a total of \\(1+2+3+\\cdots+11\\) allowable ordered pairs, but \\(1+3+5+\\cdots+11\\) of these pairs have an even sum. So the desired probability is</p><p>\\[\\frac{1+3+5+\\cdots+11}{1+2+3+\\cdots+11} = \\frac{6^2}{11 \\cdot 6} = \\frac{6}{11}.\\]</p><p>\\(\\boxed{\\frac{6}{11}}\\)</p>",
+      "answer": "\\frac{6}{11}"
+    },
+    "9": {
+      "problem": "<p>In a classroom, 34 students are seated in 5 rows of 7 chairs. The place at the center of the room is unoccupied. A teacher decides to reassign the seats such that each student will occupy a chair adjacent to his/her present one (i.e. move one desk forward, back, left or right). In how many ways can this reassignment be made?</p>",
+      "solutions": "<p>Color the chairs red and black in checkerboard fashion, with the center chair black. Then all 18 red chairs are initially occupied. Also notice that adjacent chairs have different colors. It follows that we need 18 black chairs to accommodate the reassignment, but there are only 17 of them. Thus, the answer is 0.</p><p>\\(\\boxed{0}\\)</p>",
+      "answer": "0"
+    },
+    "10": {
+      "problem": "<p>Several positive integers are given, not necessarily all different. Their sum is 2003. Suppose that \\(n_1\\) of the given numbers are equal to 1, \\(n_2\\) of them are equal to 2, …, \\(n_{2003}\\) of them are equal to 2003. Find the largest possible value of</p><p>\\[n_2 + 2n_3 + 3n_4 + \\cdots + 2002n_{2003}.\\]</p>",
+      "solutions": "<p>The sum of all the numbers is \\(n_1 + 2n_2 + \\cdots + 2003n_{2003}\\), while the number of numbers is \\(n_1 + n_2 + \\cdots + n_{2003}\\). Hence, the desired quantity equals</p><p>\\[(n_1 + 2n_2 + \\cdots + 2003n_{2003}) - (n_1 + n_2 + \\cdots + n_{2003})\\] \\[= (\\text{sum of the numbers}) - (\\text{number of numbers})\\] \\[= 2003 - (\\text{number of numbers}),\\]</p><p>which is maximized when the number of numbers is minimized. Hence, we should have just one number, equal to 2003, and then the specified sum is \\(2003 - 1 = 2002\\).</p><p>\\(\\boxed{2002}\\)</p><p><b>Comment.</b> On the day of the contest, a protest was lodged (successfully) on the grounds that the use of the words “several” and “their” in the problem statement implies there must be at least 2 numbers. Then the answer is 2001, and this maximum is achieved by any two numbers whose sum is 2003.</p>",
+      "answer": "2001"
+    }
+  }
+}

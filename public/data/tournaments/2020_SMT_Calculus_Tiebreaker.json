@@ -1,0 +1,23 @@
+{
+  "test": "SMT Calculus Tiebreaker",
+  "year": 2020,
+  "name": "Calculus Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2020/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[\\int_1^2 \\frac{x-1}{x^2 \\ln x + x} dx.\\]</p>",
+      "solutions": "<p>Notice that we can rewrite this as \\[\\int_1^2 \\frac{\\frac1x - \\frac{1}{x^2}}{\\ln x + \\frac1x} dx,\\] from which the \\(u\\)-substitution \\(u = \\ln x + \\frac1x\\) shows that the integral is just \\(\\ln(\\frac1x + \\ln x)\\). We get the answer by evaluating at the appropriate endpoints.</p>",
+      "answer": "\\ln\\left(\\frac{1}{2}+\\ln 2\\right)"
+    },
+    "2": {
+      "problem": "<p>Calculate \\[\\sum_{n=1}^{\\infty} \\frac{\\sin n + \\cos n}{n}.\\]</p>",
+      "solutions": "<p>Recall that power series tell us that \\(-\\log(1-z) = \\sum_{n=1}^{\\infty} \\frac{z^n}{n}\\), and recall that we can write \\(\\sin x\\) as \\(\\frac{1}{2i}(e^{ix} - e^{-ix})\\) and \\(\\cos x\\) as \\(\\frac12(e^{ix} + e^{-ix})\\). Combining these facts, we see that the infinite sum of the cosine portion is equal to \\(\\frac12(-\\ln(1-e^i) - \\ln(1-e^{-i})) = -\\frac12 \\ln((1-e^i)(1-e^{-i})) = -\\frac12 \\ln(2-2\\cos 1)\\). Similarly, we see that the sine portion of the infinite sum is \\(\\frac{1}{2i}(-\\ln(1-e^i) + \\ln(1-e^{-i})) = \\frac{1}{2i}\\ln(-e^{-i}) = \\frac{\\pi-1}{2}\\). Combining these two portions gives the desired answer.</p>",
+      "answer": "\\frac{\\pi-1}{2} - \\frac{1}{2}\\ln(2-2\\cos 1)"
+    },
+    "3": {
+      "problem": "<p>Let \\[y = \\sum_{n=0}^{\\infty} \\frac{n+x}{n!} \\cdot 2^n\\] describe a curve in the \\(xy\\) plane. Find the area under the curve from \\(x = 0\\) to \\(x = 2020\\).</p>",
+      "solutions": "<p>We note that this is the Taylor series evaluated at \\(z = 2\\) of \\[x \\sum_{n=0}^{\\infty} \\frac{z^n}{n} + \\sum_{n=1}^{\\infty} \\frac{z^n}{(n-1)!} = xe^2 + 2e^2 = xe^2 + 2e^2.\\] So, we calculate the area: \\[\\int_0^{2020} xe^2 + 2e^2 \\, dx = \\frac{2020^2 e^2}{2} + 4040 e^2 = (2040200 + 4040)e^2 = \\boxed{2044240e^2}\\]</p>",
+      "answer": "2044240e^2"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2015,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2015/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the real roots of \\(x^4 + 4x^3 + 6x^2 + 4x - 15\\).</p>",
+      "solutions": "<p>Note that \\(x^4 + 4x^3 + 6x^2 + 4x - 15 = (x+1)^4 - 2^4 = ((x+1)^2+4)((x+1)^2-4)\\). Thus, the roots of \\(x^4 + 4x^3 + 6x^2 + 4x - 15\\) are the roots of \\((x+1)^2 - 4\\), so the roots are \\(x = \\boxed{1, -3}\\).</p>",
+      "answer": "1, -3"
+    },
+    "2": {
+      "problem": "<p>Compute \\[\\sum_{m=1}^{2015} \\sum_{k=m-2015}^{m-2} \\frac{1}{m^2 + k^2 - 2mk - m + k}.\\]</p>",
+      "solutions": "<p>Note that the denominator of the fraction can be factored. Then, if we make the substitution \\(n = m - k\\), then the entire inner sum can be written without \\(m\\), and becomes a simple telescoping sum. The answer follows. \\[\\begin{aligned}\n\\sum_{m=1}^{2015} \\sum_{k=m-2015}^{m-2} \\frac{1}{m^2 + k^2 - 2mk - m + k} &amp;= \\sum_{m=1}^{2015} \\sum_{k=m-2015}^{m-2} \\frac{1}{(m-k)(m-k-1)} \\\\\n&amp;= \\sum_{m=1}^{2015} \\sum_{n=2}^{2015} \\frac{1}{n(n-1)} \\\\\n&amp;= 2015 \\sum_{n=2}^{2015} \\frac{1}{n(n-1)} \\\\\n&amp;= 2015 \\cdot \\frac{2014}{2015} \\\\\n&amp;= \\boxed{2014}.\n\\end{aligned}\\]</p>",
+      "answer": "2014"
+    },
+    "3": {
+      "problem": "<p>Find the minimal value of \\[\\left(\\frac{x+y}{x-y}\\right)^2 + \\left(\\frac{y+z}{y-z}\\right)^2 + \\left(\\frac{z+x}{z-x}\\right)^2\\] where \\(x \\ne y \\ne z\\) are real numbers.</p>",
+      "solutions": "<p>Set \\(a = \\frac{x+y}{x-y}\\), \\(b = \\frac{y+z}{y-z}\\), \\(c = \\frac{z+x}{z-x}\\). Observe that \\[(a+1)(b+1)(c+1) = \\frac{2x \\cdot 2y \\cdot 2z}{(x-y)(y-z)(z-x)} = \\frac{2y \\cdot 2z \\cdot 2x}{(x-y)(y-z)(z-x)} = (a-1)(b-1)(c-1).\\] This means that \\(ab + bc + ca = -1\\), so therefore \\(a^2 + b^2 + c^2 = (a+b+c)^2 + 2\\) and hence \\(a^2 + b^2 + c^2 \\ge \\boxed{2}\\).</p><p>Finally, we show that this is achievable: take \\(x = -1\\), \\(y = 0\\), \\(z = 1\\).</p>",
+      "answer": "2"
+    }
+  }
+}

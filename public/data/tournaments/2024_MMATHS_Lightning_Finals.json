@@ -1,0 +1,313 @@
+{
+  "test": "MMATHS Lightning Finals",
+  "year": 2024,
+  "name": "Lightning Finals",
+  "url": "https://yalemathcompetitions-files.s3.amazonaws.com/mmaths_2024_lightning_finals.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Froggie the Frog needs to find the smallest positive number of flies \\(n\\), such that \\(\\sqrt{1 + \\sqrt{1+n}}\\) is an integer. How many flies should he eat?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "8"
+    },
+    "2": {
+      "problem": "<p>Francis the Frog is jumping on a grid, starting at the origin. Every second, he jumps 1 unit up, down, left, or right with equal probability. If he is not at home home after exactly 11 seconds, a hawk will eat him. What is the probability Francis survives?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "3": {
+      "problem": "<p>There are 6 frogs, all of which can stick their tongues out infinitely (pretend they are 2D rays). What is the maximum amount of points possible where two tongues intersect?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "15"
+    },
+    "4": {
+      "problem": "<p>Kermit owns \\(\\log_3(2024) \\cdot \\log_{2024}(81)\\) collars. How many collars does Kermit own?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "5": {
+      "problem": "<p>There are 1,000,000,001 Frogs. Frog 1 is assigned the number \\(f_1 = 2\\). From then on, frog \\(n\\) is assigned \\(f_n = \\frac{2}{f_{n-1}}\\). What is the number assigned to the last frog?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "6": {
+      "problem": "<p>Willard the frog is hungry and wants to eat flies, but he’s so hungry that he is only 50% accurate with his tongue. If, any minute, there’s a 30% chance of a fly flying by, what is the expected value of the number of flies Willard has eaten after an hour?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9"
+    },
+    "7": {
+      "problem": "<p>Pepe’s backyard is shaped like a triangle. The side lengths are 10, 10, and 12 yards. What is the area of Pepe’s backyard?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "48"
+    },
+    "8": {
+      "problem": "<p>Freddy the frog has been ribbiting all his life. He wants to try out some new sounds, but he is limited by his phonetic abilities. In fact, he can only pronounce words that are some arrangement of the letters in RIBBIT (e.g. RIBBTI). How many different sounds can Freddy make?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "180"
+    },
+    "9": {
+      "problem": "<p>Frek the frog is at the bank of a pond with a line of 8 lily pads in front of him. He is trying to reach the 8th lily pad to reach his girlfriend Fiona. Each time Frek hops, he can hop to the next lily pad or to the one after it. How many different hop sequences can Frek take to reach Fiona?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "34"
+    },
+    "10": {
+      "problem": "<p>Froggy the frog is hopping on the coordinate plane. He starts at the origin and wants to get to \\((5,6)\\). He can only jump up one unit or right one unit. Given that he cannot jump on the point \\((2,3)\\) how many possible paths exist for Froggy?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "262"
+    },
+    "11": {
+      "problem": "<p>Frisco the Frog has 130 socks, each of which can be worn 130 times before it tears apart. If Frisco wears 2 socks every day, what is the maximum number of days Frisco can wear socks before running out?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "8450"
+    },
+    "12": {
+      "problem": "<p>Frisco has run out of socks! For his birthday, his friend Fresno the Frog buys him a new package of socks. However, the sock store he buys from packs extremely inconsistent packages, where each package contains \\(m\\) socks with probability \\(\\frac{1}{2^m}\\), for all integers \\(m \\ge 1\\). What is the probability that the number of socks in Fresno’s gift package is a multiple of three?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{7}"
+    },
+    "13": {
+      "problem": "<p>Francis the frog likes to eat flies. There are 4 species of flies with 2, 3, 5, and 7 flies each. Francis has an odd eating habit: if he eats a fly species, he has to eat the entire species. How many sets of species can Francis eat such that the total number of flies he eats is a nonzero even number?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "7"
+    },
+    "14": {
+      "problem": "<p>Fischer the Frog is playing a game involving flipping a coin. Every time the coin lands on heads, he gains 1 point. When the coin lands on tails, the game ends. What is the expected number of points Fischer will have when the game ends?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1"
+    },
+    "15": {
+      "problem": "<p>5 frogs are on the number line, on points 1, 2, 3, 4, and 5. Each turn, one frog that is one unit behind another frog hops 3 units to the right, landing in an empty space, until this is no longer possible. What is the minimum number of turns this process takes?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "16": {
+      "problem": "<p>Let \\(f(x) = x^{\\frac{x}{2}^{\\frac{x}{4}^{\\frac{x}{8}^{\\cdots}}}}\\). If \\(f(8) = 2^a\\), then what is \\(a\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "48"
+    },
+    "17": {
+      "problem": "<p>2024 frogs sit in a round table, each of them is either a truth-teller or a liar. Truth-tellers always tell the truth while liars always lie. If all of them say “There are at least 2 liars in the next 3 people on my right side,” how many truth-tellers are there?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1012"
+    },
+    "18": {
+      "problem": "<p>Frank the frog created a new home for his tadpoles. The home is an equilateral triangle with an area of \\(\\sqrt{3}\\) square feet. As a family tradition and for good luck, Frank must walk the perimeter of his home. How much must Frank walk, in feet?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6"
+    },
+    "19": {
+      "problem": "<p>A positive integer is froggy if it has at least 3 unique factors, and the sum of its 3 smallest factors is equal to 24. How many froggy numbers are less than 2025?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "20": {
+      "problem": "<p>Froggie and Frogbert have 10 cards, numbered 1 through 10. Froggie first draws two of the cards, without replacement. Then, Frogbert draws another two cards. What is the probability that Froggie’s lowest card is higher than Frogbert’s highest card?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{6}"
+    },
+    "21": {
+      "problem": "<p>In Frogtopia, there are chess boards ranging in size from 1 by 1 all the way up to 12 by 12, with no dimension being greater than 12 squares long, for a total of 144 different sized boards (the 4 by 7 board is considered different than the 7 by 4 board). Fischer the Frog has 1 copy of each distinct chess board, and attempts to tile them all with dominoes of length 2 and width 1. If he tiles each board with as many dominoes as he can, how many squares will be empty?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "36"
+    },
+    "22": {
+      "problem": "<p>Frogs love fries! Five Frogs serves fries in five portion sizes: 4, 5, 11, 14, and 15. What is the largest number of fries that cannot be made from these individual sizes?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "7"
+    },
+    "23": {
+      "problem": "<p>A frogblock is a \\(a \\times b \\times c\\) block with volume 12. What is the most frogblocks that can fit in a \\(12 \\times 11 \\times 2\\) box?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "22"
+    },
+    "24": {
+      "problem": "<p>Let \\(f(x) = \\sin^2(\\arccos(\\tan(x)))\\). Froggy wants to find \\(f\\left(\\frac{\\pi}{6}\\right)\\). Do it.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "25": {
+      "problem": "<p>Frodo is trying to climb the Hoppalachian mountains. For the first segment of his climb, he must climb up the hypotenuse of a right triangle 8 meters long and 6 meters high. If Frodo hops up the sloping path in perfect semicircles of radius 1, what is the total distance Frodo travels from start to finish?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5\\pi"
+    },
+    "26": {
+      "problem": "<p>Fatherine, Fatrick, and Fephen are each standing in the center of circular lily pads with radius 2 that are resting on a pond. They realize that the distance between any pair of them is 6. If you were to form a triangle with Fatherine, Fatrick, and Fephen as the vertices, find the area of the triangle that is taken up by water.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9\\sqrt{3} - 2\\pi"
+    },
+    "27": {
+      "problem": "<p>Frankie the frog is given \\(\\log_{12} 60 \\approx 1.647\\). He wants to find the integer closest to \\(\\log_5 60\\). Find it for him.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "28": {
+      "problem": "<p>After a long hike up the hypotenuse, Frodo gets hungry! Frodo encounters a neatly organized circle of 8 flies. Frodo finds that, whenever he eats a fly, the flies in adjacent positions fly away, and all other flies remain unmoved (they do not rearrange to fill in empty spots; for example, two flies that were originally four positions apart are not adjacent even if the three flies in between are no longer there). Frodo keeps randomly choosing a remaining fly to eat, until no flies remain. What is the probability Frodo eats exactly 3 flies?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{8}{15}"
+    },
+    "29": {
+      "problem": "<p>Fernanda the Frog uses a line of lily pads to hop from one bank of a river to the other. She has 3 red lily pads and 4 blue lily pads. How many ways can she line up her lily pads such that she never has to hop 3 red lily pads in a row? (Lily pads of the same color are indistinguishable.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "30"
+    },
+    "30": {
+      "problem": "<p>Frank gives \\(\\frac{1}{5}\\) of his candy to Fiona. After receiving candy from Frank, Fiona gives \\(\\frac{3}{7}\\) of her candy to Felicia. Now, the ratio of candy between Frank, Fiona, and Felicia is 1:2:3. What was the original ratio of candy between Frank, Fiona, and Felicia?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5:13:6"
+    },
+    "31": {
+      "problem": "<p>Frodo has reached the final and most intense stretch of the Hoppalachian mountains: 2024 miles of perfectly flat, horizontal land. Frodo must land EXACTLY 2024 meters ahead of his starting point, or else he falls off the cliff! If Frodo jumps in intervals of exactly \\(n\\) meters, how many unique positive integer values of \\(n\\) are possible?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "16"
+    },
+    "32": {
+      "problem": "<p>Two frogs, Freya and Franklin, are each thinking of a positive number. The sum of the squares of their two numbers is 7, and the product of their numbers is 1. What is the sum of the two numbers?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "33": {
+      "problem": "<p>Franklin the Frog lives at \\((0, 0)\\) and Trumbull the Toad lives at \\((4, 4)\\) on the coordinate plane. If Franklin starts walking to Trumbull’s house and Trumbull starts walking to Franklin’s house at the same time, where Franklin moves either one unit up or one unit to the right and Trumbull moves either one unit down or one unit to the left each minute. What is the probability that they walk into each other?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{35}{128}"
+    },
+    "34": {
+      "problem": "<p>Once Frodo reaches the top of the Hoppalachian mountains, he meets a wise old toad who gives him a riddle. He says: \\[2(3x-7) = x+1\\] What is \\(x\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "35": {
+      "problem": "<p>François the Frog is selling gourmet burgers. He pays \\(n^n\\) dollars for the \\(n\\)th burger’s ingredients, since he uses only the best. To recoup his costs, he sells the \\(n\\)th burger for \\((n+2)!\\) dollars. Assuming the only cost of each burger is the ingredients, and François only sells a burger if he can turn a profit, how many burgers should François sell?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5"
+    },
+    "36": {
+      "problem": "<p>In a coordinate plane, frogs are at points \\((-1,0)\\), \\((0,0)\\), and \\((1,0)\\). Every second, the leftmost frog hops forward one unit, and the rightmost frog hops forward 2 units (for example, after 1 second, the frogs will be at points \\((-1,1)\\), \\((0,0)\\), and \\((1,2)\\)). After how many seconds will the triangle formed by the frogs’ coordinates have an area of at least 2024?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1350"
+    },
+    "37": {
+      "problem": "<p>You just attended the annual Florida Froggerball match between Fort Lauderdale and Fort Myers! In Froggerball, points are scored from ribbits either worth one point or five points. Fort Myers won the game by three points, but scored four fewer five-point ribbits than Fort Lauderdale. If 91 total points were scored between the two points, what is the minimum number of one-point ribbits that Fort Myers scored?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "27"
+    },
+    "38": {
+      "problem": "<p>Fifteen frogs flip a fair coin. What is the expected number of subsets of five frogs who have the same flip?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3003}{16}"
+    },
+    "39": {
+      "problem": "<p>Federico the Frog lives in a cylindrical home with radius 9 and height 12. Francesca lives in a cone-shaped home with radius 24 and a height 50% greater than that of Federico’s cylindrical home. What is the ratio between the volume of Federico’s home to Francesca’s home? Express your answer as a common fraction.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{9}{32}"
+    },
+    "40": {
+      "problem": "<p>Fibonacci the Frog and Frobenius the Frog are playing a game where each of them roll a die where the frog who earns a greater score wins. As Fibonacci is a mean older brother to Frobenius, he gives himself an advantage by being able to roll a 12-sided die while only giving Frobenius an 8-sided die. However, to reduce the effect of the advantage, Fibonacci states that Frobenius’ score is 1 greater than the number he rolls on the 8-sided die. If their two scores are equal, then they roll again until a winner is determined. What is the probability that Fibonacci wins?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{13}{22}"
+    },
+    "41": {
+      "problem": "<p>If 3 frogs and 6 toads weigh 8 pounds more than 4 frogs and 2 toads, but 6 frogs and 3 toads weigh 7 pounds less than 4 frogs and 8 toads, and we assume all frogs weigh the same and that all toads weigh the same. Find the total weight of one frog and one toad in pounds.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "7"
+    },
+    "42": {
+      "problem": "<p>Fredward the Frog is telling the time. He has a beautiful digital clock, but the clock is missing a digit! Fredward the Frog currently sees the digits 06:_9, and is very sad that he does not know the time. However, after 1 minute passes, Fredward knows exactly what the time is! What time was it when Fredward the Frog initially looked at the clock?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6:59"
+    },
+    "43": {
+      "problem": "<p>Fitzgerald the Frog’s favorite set of numbers is the set of prime numbers less than 100 and Ferguson the Frog’s favorite set of numbers is the set of odd composite numbers less than 100. Find the absolute difference of the number of numbers between Fitzgerald’s set and Ferguson’s set.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "44": {
+      "problem": "<p>FFFGGFF the frog wants to change her name! She does not want two G’s to be adjacent in her new name. How many ways are there for her to rearrange the letters in her current name to form a new name?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "15"
+    },
+    "45": {
+      "problem": "<p>Felps the Frog and Finke the Frog start at the same point then start swimming away from each other. Felps the Frog starts swimming due south at 10 miles an hour, while Finke the Frog starts swimming east at 8 miles an hour. After half an hour, Felps the Frog turns 90 degrees to the right and swims at 12 miles an hour for an additional hour. At the same time, Finke the Frog turns 90 degrees to the right and swims at 15 miles an hour also for an additional hour. After these 90 minutes of swimming, how many miles apart are Felps and Finke?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2\\sqrt{89}"
+    },
+    "46": {
+      "problem": "<p>Alice is running from \\((6,0)\\) to \\((-6,0)\\). Bob stands at \\((0, 0)\\), and can only see up to \\(r\\) meters in any direction. Alice runs a total of \\(12 + 3\\pi\\) meters, and Bob never sees her. What is the largest possible value of \\(r\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6"
+    },
+    "47": {
+      "problem": "<p>After Fredward figures out the time, he forgets how to spell his name! He remembers exactly which letters are in his name, but does not remember the order. If Fredward guesses randomly, what is the probability Fredward spells his name correctly?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{10080}"
+    },
+    "48": {
+      "problem": "<p>Foward and Frant are having a hopping race around a track that lasts an hour. Foward is extremely confident and gives Frant a 6 minute head start and hops at a pace of 12 laps per hour. After 6 minutes has elapsed, Foward starts hopping at a pace of 20 laps per hour. However, because Frant realizes that Foward has started hopping, he speeds up but is only able to hop at a pace of 15 laps per hour. If Foward catches Frant before the race ends, how many minutes after the race started did it take for Foward to catch Frant? If not, how many laps was Foward behind Frant at the end of the race? You may express your answer as a decimal or a simplified fraction if necessary.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{102}{5}"
+    },
+    "49": {
+      "problem": "<p>Fanthony and Fandrew are painting a fence. Fanthony can paint one fence in 12 minutes, and Fandrew can paint one fence in 10 minutes. However, Fandrew is extra productive when he paints with Fanthony, and his fence-painting rate doubles when he is working with Fanthony (but Fanthony’s stays the same). How many fences can Fanthony and Fandrew paint, when working together, in one hour?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "17"
+    },
+    "50": {
+      "problem": "<p>Fern the frog has an infinite supply of red socks and yellow socks. Fern draws socks from her drawer at random until she has four of one color as she wears four socks at once. What is the expected number of socks that she needs to draw?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{93}{16}"
+    },
+    "51": {
+      "problem": "<p>Flannigan and Frogbert are playing a dice-rolling game, where they each roll four-sided dice. If Flannigan rolls a strictly higher number than Frogbert, then Flannigan wins. However, Flannigan cheats (like, a lot), and instead rolls four four-sided dice and takes the sum as his score, while Frogbert still only rolls one die. What is the probability Flannigan wins?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1023}{1024}"
+    },
+    "52": {
+      "problem": "<p>Forty-four frogs have four-hundred forty-four toes in total. If a frog has at most four feet, each with at most four toes, at most how many footless frogs can there be?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "16"
+    },
+    "53": {
+      "problem": "<p>Froggy the Frog is rolling a magical six-sided die. If he rolls a 1, the die disappears. Otherwise, the die turns into two dice and Froggy rolls both dice at once with the same conditions. What is the probability that eventually, all the dice disappear?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{5}"
+    },
+    "54": {
+      "problem": "<p>\\(\\log_{\\text{Frog}}(\\text{Frog}^{\\text{Frog}})\\) is four. What is Frog?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "55": {
+      "problem": "<p>Square A and Square B have sides parallel to the x and y-axes. Square A has sidelength 5 and its bottom left vertex is at \\((4,2)\\). Square B has sidelength 6 and its top right vertex is at \\((13,10)\\). Fregley the Frog throws a dart at the coordinate plane. Given that the dart lands at a point in the coordinate plane that lies inside at least one of the two squares, find the probability that this dart lands in the intersection of Square A and Square B.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{6}{55}"
+    },
+    "56": {
+      "problem": "<p>There are some amphibians blocking the road ahead. You need to pick one number that will satisfy all four frogs. The first frog requires a four-digit number. The second frog requires that your number be a fourth power. The toad requires your number to end in a one. The third frog requires your number contain a four. The fourth frog requires the tens and units digit to sum to fifteen.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4096"
+    },
+    "57": {
+      "problem": "<p>Four frogs sit on a log. Five flies pass them each by. A frog will independently jump at a fly with one-fourth chance. What is the expected number of frogs left on the log?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{243}{256}"
+    },
+    "58": {
+      "problem": "<p>Phrog the Frog has 2 liters of water at 45% salinity, and Tod the Toad has 1 liter of water at 15% salinity. What is the difference between the maximum and minimum salinity levels they could get in a 2.5L mixture in percent?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6"
+    },
+    "59": {
+      "problem": "<p>Four years ago (2020), Fred the Frog’s birthday, February 14th, fell on a Friday. What is the next year that it will be on a Friday? (Like a frog, remember to leap!)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2025"
+    },
+    "60": {
+      "problem": "<p>Francisco the Frog has a deck of 14 blue cards, 10 yellow cards, and 8 red cards. What is the probability that after he draws all of the yellow cards, that there are still at least two red cards remaining?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{28}{153}"
+    },
+    "61": {
+      "problem": "<p>Billy the frog can jump a positive integer number of meters every day, as long as for every 2 consecutive days, he jumps an odd number of meter in total. How many ways are there for Billy to jump 20 meters in 4 days?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "240"
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "test": "HMMT February Guts",
+  "year": 2017,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2017/feb/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A random number generator will always output \\(7\\). Sam uses this random number generator once. What is the expected value of the output?</p>",
+      "solutions": "<p>The only output is \\(7\\), so the expected value is \\(7\\).</p>",
+      "answer": "7"
+    },
+    "2": {
+      "problem": "<p>Let \\(A,B,C,D,E,F\\) be \\(6\\) points on a circle in that order. Let \\(X\\) be the intersection of \\(AD\\) and \\(BE\\), \\(Y\\) is the intersection of \\(AD\\) and \\(CF\\), and \\(Z\\) is the intersection of \\(CF\\) and \\(BE\\). \\(X\\) lies on segments \\(BZ\\) and \\(AY\\) and \\(Y\\) lies on segment \\(CZ\\). Given that \\(AX=3\\), \\(BX=2\\), \\(CY=4\\), \\(DY=10\\), \\(EZ=16\\), and \\(FZ=12\\), find the perimeter of triangle \\(XYZ\\).</p>",
+      "solutions": "<p>Let \\(XY=z\\), \\(YZ=x\\), and \\(ZX=y\\). By Power of a Point, we have that \\[3(z+10)=2(y+16), \\qquad 4(x+12)=10(z+3), \\qquad 12(x+4)=16(y+2).\\] Solving this system gives \\(XY=\\frac{11}{3}\\) and \\(YZ=\\frac{14}{3}\\) and \\(ZX=\\frac{9}{2}\\). Therefore, our answer if \\(XY+YZ+ZX=\\frac{77}{6}\\).</p>",
+      "answer": "\\frac{77}{6}"
+    },
+    "3": {
+      "problem": "<p>Find the number of pairs of integers \\((x,y)\\) such that \\(x^2+2y^2&lt;25\\).</p>",
+      "solutions": "<p>We do casework on \\(y\\).</p><p>If \\(y=0\\), we have \\(x^2&lt;25\\), so we get \\(9\\) values of \\(x\\). If \\(y=\\pm1\\), then \\(x^2&lt;23\\), so we still have \\(9\\) values of \\(x\\). If \\(y=\\pm2\\), we have \\(x^2&lt;17\\), so we have \\(9\\) values of \\(x\\). If \\(y=\\pm3\\), we have \\(x^2&lt;7\\), we get \\(5\\) values of \\(x\\).</p><p>Therefore, the final answer is \\(9+2(9+9+5)=55\\).</p>",
+      "answer": "55"
+    },
+    "4": {
+      "problem": "<p>Find the number of ordered triples of nonnegative integers \\((a,b,c)\\) that satisfy \\[(ab+1)(bc+1)(ca+1)=84.\\]</p>",
+      "solutions": "<p>The solutions are \\((0,1,83)\\) and \\((1,2,3)\\) up to permutation. First, we do the case where at least one of \\(a,b,c\\) is \\(0\\). WLOG, say \\(a=0\\). Then we have \\(1+bc=84 \\Longrightarrow bc=83\\). As \\(83\\) is prime, the only solution is \\((0,1,83)\\) up to permutation.</p><p>Otherwise, we claim that at least one of \\(a,b,c\\) is equal to \\(1\\). Otherwise, all are at least \\(2\\), so \\((1+ab)(1+bc)(1+ac) \\ge 5^3&gt;84\\). So WLOG, set \\(a=1\\). We now need \\((b+1)(c+1)(bc+1)=84\\). Now, WLOG, say \\(b \\le c\\). If \\(b=1\\), then \\(2(c+1)^2=42\\), which has no solution.</p><p>If \\(b \\ge 3\\), then \\[(b+1)(c+1)(bc+1) \\ge 4^2\\cdot10=160&gt;84.\\] So we need \\(b=2\\). Then we need \\((c+1)(2c+1)=21\\). Solving this gives \\(c=3\\), for the solution \\((1,2,3)\\).</p><p>Therefore, the answer is \\(6+6=12\\).</p>",
+      "answer": "12"
+    },
+    "5": {
+      "problem": "<p>Find the number of ordered triples of positive integers \\((a,b,c)\\) such that \\[6a+10b+15c=3000.\\]</p>",
+      "solutions": "<p>Note that \\(6a\\) must be a multiple of \\(5\\), so \\(a\\) must be a multiple of \\(5\\). Similarly, \\(b\\) must be a multiple of \\(3\\), and \\(c\\) must be a multiple of \\(2\\).</p><p>Set \\(a=5A\\), \\(b=3B\\), \\(c=2C\\). Then the equation reduces to \\(A+B+C=100\\). This has \\(\\binom{99}{2}=4851\\) solutions.</p>",
+      "answer": "4851"
+    },
+    "6": {
+      "problem": "<p>Let \\(ABCD\\) be a convex quadrilateral with \\(AC=7\\) and \\(BD=17\\). Let \\(M,P,N,Q\\) be the midpoints of sides \\(AB,BC,CD,DA\\) respectively. Compute \\(MN^2+PQ^2\\).</p>",
+      "solutions": "<p>\\(MPNQ\\) is a parallelogram whose side lengths are \\(3.5\\) and \\(8.5\\) so the sum of squares of its diagonals is \\[\\frac{7^2+17^2}{2}=169.\\]</p>",
+      "answer": "169"
+    },
+    "7": {
+      "problem": "<p>An ordered pair of sets \\((A,B)\\) is good if \\(A\\) is not a subset of \\(B\\) and \\(B\\) is not a subset of \\(A\\). How many ordered pairs of subsets of \\(\\{1,2,\\ldots,2017\\}\\) are good?</p>",
+      "solutions": "<p>Firstly, there are \\(4^{2017}\\) possible pairs of subsets, as each of the \\(2017\\) elements can be in neither subset, in \\(A\\) only, in \\(B\\) only, or in both.</p><p>Now let us count the number of pairs of subsets for which \\(A\\) is a subset of \\(B\\). Under these conditions, each of the \\(2017\\) elements could be in neither subset, in \\(B\\) only, or in both \\(A\\) and \\(B\\). So there are \\(3^{2017}\\) such pairs.</p><p>By symmetry, there are also \\(3^{2017}\\) pairs of subsets where \\(B\\) is a subset of \\(A\\). But this overcounts the pairs in which \\(A\\) is a subset of \\(B\\) and \\(B\\) is a subset of \\(A\\), i.e. \\(A=B\\). There are \\(2^{2017}\\) such subsets.</p><p>Thus, in total, there are \\(4^{2017}-2\\cdot3^{2017}+2^{2017}\\) good pairs of subsets.</p>",
+      "answer": "4^{2017}-2\\cdot3^{2017}+2^{2017}"
+    },
+    "8": {
+      "problem": "<p>You have \\(128\\) teams in a single elimination tournament. The Engineers and the Crimson are two of these teams. Each of the \\(128\\) teams in the tournament is equally strong, so during each match, each team has an equal probability of winning.</p><p>Now, the \\(128\\) teams are randomly put into the bracket.</p><p>What is the probability that the Engineers play the Crimson sometime during the tournament?</p>",
+      "solutions": "<p>There are \\(\\binom{128}{2}=127\\cdot64\\) pairs of teams. In each tournament, \\(127\\) of these pairs play.</p><p>By symmetry, the answer is \\[\\frac{127}{127\\cdot64}=\\frac{1}{64}.\\]</p>",
+      "answer": "\\frac{1}{64}"
+    },
+    "9": {
+      "problem": "<p>Jeffrey writes the numbers \\(1\\) and \\(100000000=10^8\\) on the blackboard. Every minute, if \\(x,y\\) are on the board, Jeffrey replaces them with \\[\\frac{x+y}{2} \\quad \\text{and} \\quad 2\\left(\\frac{1}{x}+\\frac{1}{y}\\right)^{-1}.\\] After \\(2017\\) minutes the two numbers are \\(a\\) and \\(b\\). Find \\(\\min(a,b)\\) to the nearest integer.</p>",
+      "solutions": "<p>Note that the product of the integers on the board is a constant. Indeed, we have that \\[\\frac{x+y}{2}\\cdot2\\left(\\frac{1}{x}+\\frac{1}{y}\\right)^{-1}=xy.\\] Therefore, we expect that the answer to the problem is approximately \\(\\sqrt{1\\cdot10^8}=10^4\\).</p><p>To be more rigorous, we have to show that the process indeed converges quickly enough. To show this, we bound the difference between the integers on the board at time \\(i\\). Say that at time \\(i\\), the integers on the board are \\(a_i&lt;b_i\\). Note that \\[\\begin{aligned}\nd_{i+1}=b_{i+1}-a_{i+1}\n&amp;=\\frac{a_i+b_i}{2}-2\\left(\\frac{1}{a_i}+\\frac{1}{b_i}\\right)^{-1} \\\\\n&amp;=\\frac{(a_i-b_i)^2}{2(a_i+b_i)} \\\\\n&amp;&lt;\\frac{b_i-a_i}{2}=\\frac{d_i}{2}.\n\\end{aligned}\\] The inequality at the end follows from that obvious fact that \\(b_i-a_i&lt;b_i+a_i\\). Therefore, \\(d_{i+1}\\le\\frac{d_i}{2}\\), so \\(d_{2017}&lt;\\frac{10^8}{2^{2017}}\\), which is extremely small. So the difference is essentially \\(0\\) at time \\(2017\\), which completes the argument.</p>",
+      "answer": "10000"
+    },
+    "10": {
+      "problem": "<p>Let \\(ABC\\) be a triangle in the plane with \\(AB=13\\), \\(BC=14\\), \\(AC=15\\). Let \\(M_n\\) denote the smallest possible value of \\((AP^n+BP^n+CP^n)^{\\frac{1}{n}}\\) over all points \\(P\\) in the plane. Find \\(\\lim_{n\\to\\infty}M_n\\).</p>",
+      "solutions": "<p>Let \\(R\\) denote the circumradius of triangle \\(ABC\\). As \\(ABC\\) is an acute triangle, it isn’t hard to check that for any point \\(P\\), we have either \\(AP\\ge R\\), \\(BP\\ge R\\), or \\(CP\\ge R\\). Also, note that if we choose \\(P=O\\) (the circumcenter) then \\((AP^n+BP^n+CP^n)=3\\cdot R^n\\). Therefore, we have the inequality \\[R\\le\\min_{P\\in\\mathbb{R}^2}(AP^n+BP^n+CP^n)^{\\frac{1}{n}}\\le(3R^n)^{\\frac{1}{n}}=R\\cdot3^{\\frac{1}{n}}.\\] Taking \\(n\\to\\infty\\) yields \\[R\\le\\lim_{n\\to\\infty}M_n\\le R\\] (as \\(\\lim_{n\\to\\infty}3^{\\frac{1}{n}}=1\\)), so the answer is \\(R=\\frac{65}{8}\\).</p>",
+      "answer": "\\frac{65}{8}"
+    },
+    "11": {
+      "problem": "<p>Consider the graph in \\(3\\)-space of \\[0=xyz(x+y)(y+z)(z+x)(x-y)(y-z)(z-x).\\] This graph divides \\(3\\)-space into \\(N\\) connected regions. What is \\(N\\)?</p>",
+      "solutions": "<p>Note that reflecting for each choice of sign for \\(x,y,z\\), we get new regions. Therefore, we can restrict to the case where \\(x,y,z&gt;0\\). In this case, the sign of the expression only depends on \\((x-y)(y-z)(z-x)\\). It is easy to see that for this expression, every one of the \\(3!=6\\) orderings for \\(\\{x,y,z\\}\\) contributes a region.</p><p>Therefore, our answer is \\(2^3\\cdot3!=48\\).</p>",
+      "answer": "48"
+    },
+    "12": {
+      "problem": "<p>In a certain college containing \\(1000\\) students, students may choose to major in exactly one of math, computer science, finance, or English. The diversity ratio \\(d(s)\\) of a student \\(s\\) is the defined as number of students in a different major from \\(s\\) divided by the number of students in the same major as \\(s\\) (including \\(s\\)). The diversity \\(D\\) of the college is the sum of all the diversity ratios \\(d(s)\\).</p><p>Determine all possible values of \\(D\\).</p>",
+      "solutions": "<p>It is easy to check that if \\(n\\) majors are present, the diversity is \\(1000(n-1)\\). Therefore, taking \\(n=1,2,3,4\\) gives us all possible answers.</p>",
+      "answer": "\\{0, 1000, 2000, 3000\\}"
+    },
+    "13": {
+      "problem": "<p>The game of Penta is played with teams of five players each, and there are five roles the players can play. Each of the five players chooses two of five roles they wish to play. If each player chooses their roles randomly, what is the probability that each role will have exactly two players?</p>",
+      "solutions": "<p>Consider a graph with five vertices corresponding to the roles, and draw an edge between two vertices if a player picks both roles. Thus there are exactly \\(5\\) edges in the graph, and we want to find the probability that each vertex has degree \\(2\\). In particular, we want to find the probability that the graph is composed entirely of cycles.</p><p>Thus there are two cases. The first case is when the graph is itself a \\(5\\)-cycle. There are \\(4!\\) ways to choose such a directed cycle (pick an arbitrary vertex \\(A\\) and consider a vertex it connects to, etc.), and thus \\(\\frac{4!}{2}=12\\) ways for the undirected graph to be a \\(5\\)-cycle. Now, there are \\(5!\\) ways to assign the edges in this cycle to people, giving a total contribution of \\(12\\cdot5!\\).</p><p>The second case is when the graph is composed of a \\(2\\)-cycle and a \\(3\\)-cycle, which only requires choosing the two vertices to be the \\(2\\)-cycle, and so there are \\(\\binom{5}{2}=10\\) ways. To assign the players to edges, there are \\(\\binom{5}{2}=10\\) ways to assign the players to the \\(2\\)-cycle. For the \\(3\\)-cycle, any of the \\(3!=6\\) permutations of the remaining \\(3\\) players work. The total contribution is \\(10\\cdot10\\cdot6\\).</p><p>Therefore, out answer is</p><p>\\[\\frac{12\\cdot120+10\\cdot10\\cdot6}{10^5}=\\frac{51}{2500}.\\]</p>",
+      "answer": "\\frac{51}{2500}"
+    },
+    "14": {
+      "problem": "<p>Mrs. Toad has a class of \\(2017\\) students, with unhappiness levels \\(1,2,\\ldots,2017\\) respectively. Today in class, there is a group project and Mrs. Toad wants to split the class in exactly \\(15\\) groups. The unhappiness level of a group is the average unhappiness of its members, and the unhappiness of the class is the sum of the unhappiness of all \\(15\\) groups. What’s the minimum unhappiness of the class Mrs. Toad can achieve by splitting the class into \\(15\\) groups?</p>",
+      "solutions": "<p>One can show that the optimal configuration is \\(\\{1\\},\\{2\\},\\ldots,\\{14\\},\\{15,\\ldots,2017\\}\\). This would give us an answer of \\(1+2+\\cdots+14+\\frac{15+2017}{2}=105+1016=1121\\).</p>",
+      "answer": "1121"
+    },
+    "15": {
+      "problem": "<p>Start by writing the integers \\(1,2,4,6\\) on the blackboard. At each step, write the smallest positive integer \\(n\\) that satisfies both of the following properties on the board.</p><ul><li>\\(n\\) is larger than any integer on the board currently.</li><li>\\(n\\) cannot be written as the sum of \\(2\\) distinct integers on the board.</li></ul><p>Find the \\(100\\)-th integer that you write on the board. Recall that at the beginning, there are already \\(4\\) integers on the board.</p>",
+      "solutions": "<p>The sequence goes</p><p>\\[1,2,4,6,9,12,17,20,25,\\ldots.\\]</p><p>Common differences are \\(5,3,5,3,5,3,\\ldots\\), starting from \\(12\\). Therefore, the answer is \\(12+47\\times8=388\\).</p>",
+      "answer": "388"
+    },
+    "16": {
+      "problem": "<p>Let \\(a\\) and \\(b\\) be complex numbers satisfying the two equations</p><p>\\[\\begin{aligned}\na^3-3ab^2&amp;=36\\\\\nb^3-3ba^2&amp;=28i.\n\\end{aligned}\\]</p><p>Let \\(M\\) be the maximum possible magnitude of \\(a\\). Find all \\(a\\) such that \\(|a|=M\\).</p>",
+      "solutions": "<p>Notice that</p><p>\\[\\begin{aligned}\n(a-bi)^3&amp;=a^3-3a^2bi-3ab^2+b^3i\\\\\n&amp;=(a^3-3ab^2)+(b^3-3ba^2)i\\\\\n&amp;=36+i(28i)\\\\\n&amp;=8\n\\end{aligned}\\]</p><p>so that \\(a-bi=2\\omega\\). Additionally</p><p>\\[\\begin{aligned}\n(a+bi)^3&amp;=a^3+3a^2bi-3ab^2-b^3i\\\\\n&amp;=(a^3-3ab^2)-(b^3-3ba^2)i\\\\\n&amp;=36-i(28i)\\\\\n&amp;=64.\n\\end{aligned}\\]</p><p>It follows that \\(a-bi=2\\omega\\) and \\(a+bi=4\\omega'\\) where \\(\\omega,\\omega'\\) are third roots of unity. So \\(a=\\omega+2\\omega'\\). From the triangle inequality \\(|a|\\le|\\omega|+|2\\omega'|=3\\), with equality when \\(\\omega\\) and \\(\\omega'\\) point in the same direction (and thus \\(\\omega=\\omega'\\)). It follows that \\(a=3,3\\omega,3\\omega^2\\), and so</p><p>\\[a=3,-\\frac{3}{2}+\\frac{3i\\sqrt{3}}{2},-\\frac{3}{2}-\\frac{3i\\sqrt{3}}{2}.\\]</p>",
+      "answer": "3, -\\frac{3}{2}+\\frac{3i\\sqrt{3}}{2}, -\\frac{3}{2}-\\frac{3i\\sqrt{3}}{2}"
+    },
+    "17": {
+      "problem": "<p>Sean is a biologist, and is looking at a string of length \\(66\\) composed of the letters \\(A,T,C,G\\). A substring of a string is a contiguous sequence of letters in the string. For example, the string \\(AGTC\\) has \\(10\\) substrings: \\(A,G,T,C,AG,GT,TC,AGT,GTC,AGTC\\). What is the maximum number of distinct substrings of the string Sean is looking at?</p>",
+      "solutions": "<p>Let’s consider the number of distinct substrings of length \\(\\ell\\). On one hand, there are obviously at most \\(4^\\ell\\) distinct substrings. On the other hand, there are \\(67-\\ell\\) substrings of length \\(\\ell\\) in a length \\(66\\) string. Therefore, the number of distinct substrings is at most</p><p>\\[\\sum_{\\ell=1}^{66}\\min(4^\\ell,67-\\ell)=2100.\\]</p><p>To show that this bound is achievable, one can do a construction using deBrujin sequences that we won’t elaborate on here.</p>",
+      "answer": "2100"
+    },
+    "18": {
+      "problem": "<p>Let \\(ABCD\\) be a quadrilateral with side lengths \\(AB=2\\), \\(BC=3\\), \\(CD=5\\), and \\(DA=4\\). What is the maximum possible radius of a circle inscribed in quadrilateral \\(ABCD\\)?</p>",
+      "solutions": "<p>Let the tangent lengths be \\(a,b,c,d\\) so that</p><p>\\[\\begin{aligned}\na+b&amp;=2\\\\\nb+c&amp;=3\\\\\nc+d&amp;=5\\\\\nd+a&amp;=4.\n\\end{aligned}\\]</p><p>Then \\(b=2-a\\) and \\(c=1+a\\) and \\(d=4-a\\). The radius of the inscribed circle of quadrilateral \\(ABCD\\) is given by</p><p>\\[r=\\sqrt{\\frac{abc+abd+acd+bcd}{a+b+c+d}}=\\sqrt{\\frac{-7a^2+16a+8}{7}}.\\]</p><p>This is clearly maximized when \\(a=\\frac{8}{7}\\) which leads to a radius of \\(\\sqrt{\\frac{120}{49}}=\\frac{2\\sqrt{30}}{7}\\).</p>",
+      "answer": "\\frac{2\\sqrt{30}}{7}"
+    },
+    "19": {
+      "problem": "<p>Find (in terms of \\(n\\ge1\\)) the number of terms with odd coefficients after expanding the product:</p><p>\\[\\prod_{1\\le i&lt;j\\le n}(x_i+x_j)\\]</p><p>e.g., for \\(n=3\\) the expanded product is given by \\(x_1^2x_2+x_1^2x_3+x_2^2x_3+x_2^2x_1+x_3^2x_1+x_3^2x_2+2x_1x_2x_3\\) and so the answer would be \\(6\\).</p>",
+      "solutions": "<p>Note that if we take (mod \\(2\\)), we get that</p><p>\\[\\prod_{1\\le i&lt;j\\le n}(x_i+x_j)\\equiv\\prod_{1\\le i&lt;j\\le n}(x_j-x_i)=\\det(M),\\]</p><p>where \\(M\\) is the matrix with \\(M_{ij}=x_i^{j-1}\\). This is called a Vandermonde determinant. Expanding this determinant using the formula</p><p>\\[\\det(M)=\\sum_\\sigma\\prod_{i=1}^n x_{\\sigma(i)}^{i-1},\\]</p><p>where the sum if over all \\(n!\\) permutations \\(\\sigma\\), gives the result.</p>",
+      "answer": "n!"
+    },
+    "20": {
+      "problem": "<p>For positive integers \\(a\\) and \\(N\\), let \\(r(a,N)\\in\\{0,1,\\ldots,N-1\\}\\) denote the remainder of \\(a\\) when divided by \\(N\\). Determine the number of positive integers \\(n\\le1000000\\) for which</p><p>\\[r(n,1000)&gt;r(n,1001).\\]</p>",
+      "solutions": "<p>Note that \\(0\\le r(n,1000)\\le999\\) and \\(0\\le r(n,1001)\\le1000\\). Consider the \\(\\binom{1000}{2}=499500\\) ways to choose pairs \\((i,j)\\) such that \\(i&gt;j\\). By the Chinese Remainder Theorem, there is exactly one \\(n\\) such that \\(1\\le n\\le1000\\cdot1001\\) such that \\(n\\equiv i\\pmod{1000}\\) and \\(n\\equiv j\\pmod{1001}\\). Finally, it is easy to check that none of the \\(n\\) in the range \\(1000001\\) to \\(1001000\\) satisfy the condition, so the answer is exactly \\(499500\\).</p>",
+      "answer": "499500"
+    },
+    "21": {
+      "problem": "<p>Let \\(P\\) and \\(A\\) denote the perimeter and area respectively of a right triangle with relatively prime integer side-lengths. Find the largest possible integral value of \\(\\frac{P^2}{A}\\).</p>",
+      "solutions": "<p>Assume WLOG that the side lengths of the triangle are pairwise coprime. Then they can be written as \\(m^2-n^2,2mn,m^2+n^2\\) for some coprime integers \\(m\\) and \\(n\\) where \\(m&gt;n\\) and \\(mn\\) is even. Then we obtain</p><p>\\[\\frac{P^2}{A}=\\frac{4m(m+n)}{n(m-n)}.\\]</p><p>But \\(n,m-n,m,m+n\\) are all pairwise coprime so for this to be an integer we need \\(n(m-n)\\mid4\\) and by checking each case we find that \\((m,n)=(5,4)\\) yields the maximum ratio of \\(45\\).</p>",
+      "answer": "45"
+    },
+    "22": {
+      "problem": "<p>Kelvin the Frog and \\(10\\) of his relatives are at a party. Every pair of frogs is either friendly or unfriendly. When \\(3\\) pairwise friendly frogs meet up, they will gossip about one another and end up in a fight (but stay friendly anyway). When \\(3\\) pairwise unfriendly frogs meet up, they will also end up in a fight. In all other cases, common ground is found and there is no fight. If all \\(\\binom{11}{3}\\) triples of frogs meet up exactly once, what is the minimum possible number of fights?</p>",
+      "solutions": "<p>Consider a graph \\(G\\) with \\(11\\) vertices – one for each of the frogs at the party – where two vertices are connected by an edge if and only if they are friendly. Denote by \\(d(v)\\) the number of edges emanating from \\(v\\); i.e. the number of friends frog \\(v\\) has. Note that \\(d(1)+d(2)+\\cdots+d(11)=2e\\), where \\(e\\) is the number of edges in this graph.</p><p>Focus on a single vertex \\(v\\), and choose two other vertices \\(u,w\\) such that \\(uv\\) is an edge but \\(wv\\) is not. There are then \\(d(v)\\) choices for \\(u\\) and \\(10-d(v)\\) choices for \\(w\\), so there are \\(d(v)(10-d(v))\\) sets of three frogs that include \\(v\\) and do not result in a fight. Each set, however, is counted twice – if \\(uw\\) is an edge, then we count this set both when we focus on \\(v\\) and when we focus on \\(w\\), and otherwise we count it when we focus on \\(v\\) and when we focus on \\(u\\). As such, there are a total of</p><p>\\[\\frac{1}{2}\\sum_v d(v)(10-d(v))\\]</p><p>sets of \\(3\\) frogs that do not result in a fight.</p><p>Note that \\(\\frac{d(v)+10-d(v)}{2}=5\\ge\\sqrt{d(v)(10-d(v))}\\Longrightarrow d(v)(10-d(v))\\le25\\) by AM-GM. Thus there are a maximum of</p><p>\\[\\frac{1}{2}\\sum_v d(v)(10-d(v))\\le\\frac{1}{2}(25\\cdot11)=\\frac{275}{2}\\]</p><p>sets of three frogs that do not result in a fight; since this number must be an integer, there are a maximum of \\(137\\) such sets. As there are a total of \\(\\binom{11}{3}=165\\) sets of \\(3\\) frogs, this results in a minimum \\(165-137=28\\) number of fights.</p><p>It remains to show that such an arrangement can be constructed. Set \\(d(1)=d(2)=\\cdots=d(10)=5\\) and \\(d(11)=4\\). Arrange these in a circle, and connect each to the nearest two clockwise neighbors; this gives each vertex \\(4\\) edges. To get the final edge for the first ten vertices, connect \\(1\\) to \\(10\\), \\(2\\) to \\(9\\), \\(3\\) to \\(8\\), \\(4\\) to \\(7\\), and \\(5\\) to \\(6\\). Thus \\(28\\) is constructable, and is thus the true minimum.</p>",
+      "answer": "28"
+    },
+    "23": {
+      "problem": "<p>Five points are chosen uniformly at random on a segment of length \\(1\\). What is the expected distance between the closest pair of points?</p>",
+      "solutions": "<p>Choose five points arbitrarily at \\(a_1,a_2,a_3,a_4,a_5\\) in increasing order. Then the intervals \\((a_2-x,a_2),(a_3-x,a_3),(a_4-x,a_4),(a_5-x,a_5)\\) must all be unoccupied. The probability that this happens is the same as doing the process in reverse: first defining these intervals, then choosing five random points none of which lie in the four intervals. This transformed process clearly has a \\((1-4x)^5\\) probability of success. It follows that the desired probability is</p><p>\\[\\int_0^{1/4}(1-4x)^5\\,dx=\\frac{1}{24}.\\]</p>",
+      "answer": "\\frac{1}{24}"
+    },
+    "24": {
+      "problem": "<p>At a recent math contest, Evan was asked to find \\(2^{2016}\\pmod p\\) for a given prime number \\(p\\) with \\(100&lt;p&lt;500\\). Evan has forgotten what the prime \\(p\\) was, but still remembers how he solved it:</p><ul><li>Evan first tried taking \\(2016\\) modulo \\(p-1\\), but got a value \\(e\\) larger than \\(100\\).</li><li>However, Evan noted that \\(e-\\frac{1}{2}(p-1)=21\\), and then realized the answer was \\(-2^{21}\\pmod p\\).</li></ul><p>What was the prime \\(p\\)?</p>",
+      "solutions": "<p>Answer is \\(p=211\\). Let \\(p=2d+1\\), \\(50&lt;d&lt;250\\). The information in the problem boils down to</p><p>\\[2016\\equiv d+21\\pmod{2d}.\\]</p><p>From this we can at least read off \\(d\\mid1995\\).</p><p>Now factor \\(1995=3\\cdot5\\cdot7\\cdot19\\). The values of \\(d\\) in this interval are \\(57,95,105,133\\). The prime values of \\(2d+1\\) are then \\(191\\) and \\(211\\). Of these, we take \\(211\\) since \\(\\left(\\frac{2}{191}\\right)=+1\\) while \\(\\left(\\frac{2}{211}\\right)=-1\\).</p><p>Also, this is (almost) a true story: the contest in question was the PUMaC \\(2016\\) Live Round.</p>",
+      "answer": "211"
+    },
+    "25": {
+      "problem": "<p>Find all real numbers \\(x\\) satisfying the equation \\(x^3-8=16\\sqrt[3]{x+1}\\).</p>",
+      "solutions": "<p>Let \\(f(x)=\\frac{x^3-8}{8}\\). Then \\(f^{-1}(x)=\\sqrt[3]{8x+8}=2\\sqrt[3]{x+1}\\), and so the given equation is equivalent to \\(f(x)=f^{-1}(x)\\). This implies \\(f(f(x))=x\\). However, as \\(f\\) is monotonically increasing, this implies that \\(f(x)=x\\). As a result, we have \\(\\frac{x^3-8}{8}=x\\implies x^3-8x-8=0\\implies(x+2)(x^2-2x-4)=0\\), and so \\(x=-2,1\\pm\\sqrt{5}\\).</p>",
+      "answer": "-2, 1-\\sqrt{5}, 1+\\sqrt{5}"
+    },
+    "26": {
+      "problem": "<p>Kelvin the Frog is hopping on a number line (extending to infinity in both directions). Kelvin starts at \\(0\\). Every minute, he has a \\(\\frac{1}{3}\\) chance of moving \\(1\\) unit left, a \\(\\frac{1}{3}\\) chance of moving \\(1\\) unit right and \\(\\frac{1}{3}\\) chance of getting eaten. Find the expected number of times Kelvin returns to \\(0\\) (not including the start) before getting eaten.</p>",
+      "solutions": "<p>First we compute probability that the mouse returns to \\(0\\) before being eaten. Then probability that it is at \\(0\\) in \\(2n\\) minutes without being eaten is given by \\(\\frac{1}{3^{2n}}\\binom{2n}{n}\\). Therefore, the overall expectation is given by \\[\\begin{aligned}\n\\sum_{n\\ge1}\\binom{2n}{n}9^{-n}\n&amp;=-1+\\sum_{n\\ge0}\\binom{2n}{n}9^{-n}\\\\\n&amp;=-1+\\frac{1}{\\sqrt{1-4/9}}=-1+\\frac{3}{\\sqrt{5}}=\\frac{3\\sqrt{5}-5}{5}\n\\end{aligned}\\] where we use the well known fact that \\[\\sum_{n\\ge0}\\binom{2n}{n}x^n=\\frac{1}{\\sqrt{1-4x}}.\\] for \\(x=\\frac{1}{9}\\).</p>",
+      "answer": "\\frac{3\\sqrt{5}-5}{5}"
+    },
+    "27": {
+      "problem": "<p>Find the smallest possible value of \\(x+y\\) where \\(x,y\\ge1\\) and \\(x\\) and \\(y\\) are integers that satisfy \\(x^2-29y^2=1\\)</p>",
+      "solutions": "<p>Continued fraction convergents to \\(\\sqrt{29}\\) are \\(5,\\frac{11}{2},\\frac{16}{3},\\frac{27}{5},\\frac{70}{13}\\) and you get \\(70^2-29\\cdot13^2=-1\\) so since \\[(70+13\\sqrt{29})^2=9801+1820\\sqrt{29}\\] the answer is \\(9801+1820=11621\\)</p>",
+      "answer": "11621"
+    },
+    "28": {
+      "problem": "<p>Let \\(\\ldots,a_{-1},a_0,a_1,a_2,\\ldots\\) be a sequence of positive integers satisfying the following relations: \\(a_n=0\\) for \\(n&lt;0\\), \\(a_0=1\\), and for \\(n\\ge1\\), \\[a_n=a_{n-1}+2(n-1)a_{n-2}+9(n-1)(n-2)a_{n-3}+8(n-1)(n-2)(n-3)a_{n-4}.\\] Compute \\[\\sum_{n\\ge0}\\frac{10^n a_n}{n!}.\\]</p>",
+      "solutions": "<p>Let \\(y=\\sum_{n\\ge0}\\frac{x^n a_n}{n!}\\). Then \\(y'=(1+2x+9x^2+8x^3)y\\) by definition. So \\(y=C\\exp(x+x^2+3x^3+2x^4)\\). Take \\(x=0\\) to get \\(C=1\\). Take \\(x=10\\) to get the answer.</p>",
+      "answer": "e^{23110}"
+    },
+    "29": {
+      "problem": "<p>Yang has the sequence of integers \\(1,2,\\ldots,2017\\). He makes \\(2016\\) <i>swaps</i> in order, where a swap changes the positions of two integers in the sequence. His goal is to end with \\(2,3,\\ldots,2017,1\\). How many different sequences of swaps can Yang do to achieve his goal?</p>",
+      "solutions": "<p>Let \\(n=2017\\). The problem is asking to write a cycle permutation of \\(n\\) integers as the product of \\(n-1\\) transpositions. Say that the transpositions Yang uses are \\((a_i,b_i)\\) (i.e. swapping the \\(a_i\\)-th integer in the sequence with the \\(b_i\\)-th integer in the sequence). Draw the graph with edges \\((a_i,b_i)\\). One can show that the result is a cycle if and only if the resulting graph is acyclic, so it must be a tree. There are \\(n^{n-2}\\) trees by Cayley’s formula, and for each tree, it can be made in \\((n-1)!\\) ways (any ordering of the edges). So the total number of ways to end with a cycle is \\(n^{n-2}\\cdot(n-1)!\\). By symmetry, each cycle can be made in the same number of ways, so in particular the cycle \\(2,3,\\ldots,n,1\\) can be made in \\[\\frac{n^{n-2}\\cdot(n-1)!}{(n-1)!}=n^{n-2}\\] ways.</p>",
+      "answer": "2017^{2015}"
+    },
+    "30": {
+      "problem": "<p>Consider an equilateral triangular grid \\(G\\) with \\(20\\) points on a side, where each row consists of points spaced \\(1\\) unit apart. More specifically, there is a single point in the first row, two points in the second row, \\(\\ldots\\), and \\(20\\) points in the last row, for a total of \\(210\\) points. Let \\(S\\) be a closed non-self-intersecting polygon which has \\(210\\) vertices, using each point in \\(G\\) exactly once. Find the sum of all possible values of the area of \\(S\\).</p>",
+      "solutions": "<p>Imagine deforming the triangle lattice such that now it looks like a lattice of \\(45\\)-\\(45\\)-\\(90\\) right triangles with legs of length \\(1\\). Note that by doing this, the area has multiplied by \\(\\frac{2}{\\sqrt{3}}\\), so we need to readjust out answer on the isosceles triangle lattice by a factor of \\(\\frac{\\sqrt{3}}{2}\\) at the end. By Pick’s Theorem, the area in the new lattice is given by \\(I+\\frac{P}{2}-1=0+105-1=104\\). Therefore, the answer is \\(104\\cdot\\frac{\\sqrt{3}}{2}=52\\sqrt{3}\\).</p>",
+      "answer": "52\\sqrt{3}"
+    },
+    "31": {
+      "problem": "<p>A baseball league has \\(6\\) teams. To decide the schedule for the league, for each pair of teams, a coin is flipped. If it lands head, they will play a game this season, in which one team wins and one team loses. If it lands tails, they don’t play a game this season. Define the <i>imbalance</i> of this schedule to be the minimum number of teams that will end up undefeated, i.e. lose \\(0\\) games. Find the expected value of the imbalance in this league.</p>",
+      "solutions": "<p>Let \\(n\\) denote the number of teams.</p><p><b>Lemma.</b> Given a connected graph \\(G\\), the imbalance of \\(G\\) is \\(1\\) iff \\(G\\) is a tree. Let’s just talk in terms of directed graphs and indegree/outdegree.</p><p><b>Proof.</b> If there is a cycle, direct the cycle such that it is a directed cycle. Then from this cycle, point all remaining edges outwards. If \\(G\\) is a tree, induct on the size. Take any leaf. If it wins its game, it is undefeated. Otherwise, it must lose to its neighbor. Then induct on the tree resulting after deleting the leaf.</p><p>Now the finish is a simple counting argument using expected values. Using Cayley’s formula, for each subset of vertices, we compute the probability that it is a maximal connected component and is a tree. This ends up being \\[2^{-\\binom{n}{2}}\\sum_{i=1}^{n}\\binom{n}{i}\\cdot i^{i-2}\\cdot2^{\\binom{n-i}{2}}.\\] This evaluates to \\(\\frac{5055}{2^{15}}\\) for \\(n=6\\).</p>",
+      "answer": "\\frac{5055}{2^{15}}"
+    },
+    "32": {
+      "problem": "<p>Let \\(a,b,c\\) be non-negative real numbers such that \\(ab+bc+ca=3\\). Suppose that \\[a^3b+b^3c+c^3a+2abc(a+b+c)=\\frac{9}{2}.\\] What is the minimum possible value of \\(ab^3+bc^3+ca^3\\)?</p>",
+      "solutions": "<p>Expanding the inequality \\[\\sum_{\\mathrm{cyc}}ab(b+c-2a)^2\\ge0\\] gives \\[\\left(\\sum_{\\mathrm{cyc}}ab^3\\right)+4\\left(\\sum_{\\mathrm{cyc}}a^3b\\right)-4\\left(\\sum_{\\mathrm{cyc}}a^2b^2\\right)-abc(a+b+c)\\ge0.\\] Using \\(\\left(\\sum_{\\mathrm{cyc}}a^3b\\right)+2abc(a+b+c)=\\frac{9}{2}\\) in the inequality above yields \\[\\left(\\sum_{\\mathrm{cyc}}ab^3\\right)-4(ab+bc+ca)^2\n\\ge\\left(\\sum_{\\mathrm{cyc}}ab^3\\right)-4\\left(\\sum_{\\mathrm{cyc}}a^2b^2\\right)-9abc(a+b+c)\\ge-18.\\] Since \\(ab+bc+ca=3\\), we have \\(\\sum_{\\mathrm{cyc}}ab^3\\ge18\\) as desired.</p><p>The equality occurs when \\((a,b,c)\\sim_{\\mathrm{cyc}}\\left(\\sqrt{\\frac{3}{2}},\\sqrt{6},0\\right)\\).</p>",
+      "answer": "18"
+    },
+    "34": {
+      "problem": "<p>(a) Can 1000 queens be placed on a \\(2017\\times2017\\) chessboard such that every square is attacked by some queen? A square is attacked by a queen if it lies in the same row, column, or diagonal as the queen.</p><p>(b) A \\(2017\\times2017\\) grid of squares originally contains a \\(0\\) in each square. At any step, Kelvin the Frog chooses two adjacent squares (two squares are adjacent if they share a side) and increments the numbers in both of them by \\(1\\). Can Kelvin make every square contain a different power of \\(2\\)?</p><p>(c) A <i>tournament</i> consists of single games between every pair of players, where each game has a winner and loser with no ties. A set of people is <i>dominated</i> if there exists a player who beats all of them. Does there exist a tournament in which every set of \\(2017\\) people is dominated?</p><p>(d) Every cell of a \\(19\\times19\\) grid is colored either red, yellow, green, or blue. Does there necessarily exist a rectangle whose sides are parallel to the grid, all of whose vertices are the same color?</p><p>(e) Does there exist a \\(c\\in\\mathbb{R}^+\\) such that \\(\\max(|A\\cdot A|,|A+A|)\\ge c|A|\\log^2|A|\\) for all finite sets \\(A\\subset\\mathbb{Z}\\)?</p><p>(f) Can the set \\(\\{1,2,\\ldots,1093\\}\\) be partitioned into \\(7\\) subsets such that each subset is sum-free (i.e. no subset contains \\(a,b,c\\) with \\(a+b=c\\))?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\text{NNYYYY}"
+    },
+    "35": {
+      "problem": "<p>(a) Does there exist a finite set of points, not all collinear, such that a line between any two points in the set passes through a third point in the set?</p><p>(b) Let \\(ABC\\) be a triangle and \\(P\\) be a point. The <i>isogonal conjugate</i> of \\(P\\) is the intersection of the reflection of line \\(AP\\) over the \\(A\\)-angle bisector, the reflection of line \\(BP\\) over the \\(B\\)-angle bisector, and the reflection of line \\(CP\\) over the \\(C\\)-angle bisector. Clearly the incenter is its own isogonal conjugate. Does there exist another point that is its own isogonal conjugate?</p><p>(c) Let \\(F\\) be a convex figure in a plane, and let \\(P\\) be the largest pentagon that can be inscribed in \\(F\\). Is it necessarily true that the area of \\(P\\) is at least \\(\\frac{3}{4}\\) the area of \\(F\\)?</p><p>(d) Is it possible to cut an equilateral triangle into \\(2017\\) pieces, and rearrange the pieces into a square?</p><p>(e) Let \\(ABC\\) be an acute triangle and \\(P\\) be a point in its interior. Let \\(D,E,F\\) lie on \\(BC,CA,AB\\) respectively so that \\(PD\\) bisects \\(\\angle BPC\\), \\(PE\\) bisects \\(\\angle CPA\\), and \\(PF\\) bisects \\(\\angle APB\\). Is it necessarily true that \\(AP+BP+CP\\ge2(PD+PE+PF)\\)?</p><p>(f) Let \\(P_{2018}\\) be the surface area of the \\(2018\\)-dimensional unit sphere, and let \\(P_{2017}\\) be the surface area of the \\(2017\\)-dimensional unit sphere. Is \\(P_{2018}&gt;P_{2017}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\text{NYYYYN}"
+    },
+    "36": {
+      "problem": "<p>(a) Does \\(\\sum_{i=1}^{p-1}\\frac{1}{i}\\equiv0\\pmod{p^2}\\) for all odd prime numbers \\(p\\)? (Note that \\(\\frac{1}{i}\\) denotes the number such that \\(i\\cdot\\frac{1}{i}\\equiv1\\pmod{p^2}\\))</p><p>(b) Do there exist \\(2017\\) positive perfect cubes that sum to a perfect cube?</p><p>(c) Does there exist a right triangle with rational side lengths and area \\(5\\)?</p><p>(d) A <i>magic square</i> is a \\(3\\times3\\) grid of numbers, all of whose rows, columns, and major diagonals sum to the same value. Does there exist a magic square whose entries are all prime numbers?</p><p>(e) Is \\(\\prod_p\\frac{p^2+1}{p^2-1}=\\frac{2^2+1}{2^2-1}\\cdot\\frac{3^2+1}{3^2-1}\\cdot\\frac{5^2+1}{5^2-1}\\cdot\\frac{7^2+1}{7^2-1}\\cdots\\) a rational number?</p><p>(f) Do there exist an infinite number of pairs of <i>distinct</i> integers \\((a,b)\\) such that \\(a\\) and \\(b\\) have the same set of prime divisors, and \\(a+1\\) and \\(b+1\\) also have the same set of prime divisors?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\text{NYYYYY}"
+    }
+  }
+}

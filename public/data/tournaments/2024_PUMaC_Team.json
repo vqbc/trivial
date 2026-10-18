@@ -1,0 +1,83 @@
+{
+  "test": "PUMaC Team",
+  "year": 2024,
+  "name": "Team Round",
+  "url": "https://pumac.princeton.edu/s/PUMaC_2024_Team_Round.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Justin chooses a number \\(n\\) uniformly at random from the set of integers between 90 and 99, inclusive. He then chooses a positive divisor \\(d\\) of \\(n\\) uniformly at random. Justin notices that \\(d\\) and \\(n/d\\) are relatively prime. If the probability that \\(n = 90\\) can be expressed as \\(a/b\\) for relatively prime positive integers \\(a\\) and \\(b\\), find \\(a+b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Let real number sequences \\(a_k\\) and \\(x_k\\) be defined for \\(1 \\le k \\le 7\\) and suppose that \\(a_1 = 1\\) and \\(a_{k+1} = a_k + x_k\\) for \\(1 \\le k \\le 7\\). Let \\(x_k\\) be chosen such that the quantity \\(S = \\sum_{k=1}^{7}(a_k^2 + x_k^2)\\) is minimized. Then \\(S = \\frac{m}{n}\\) for coprime positive integers \\(m\\) and \\(n\\). Find \\(m+n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Let \\(f(x) = x^2 - 3x + 1\\), and let \\(\\alpha_1, \\alpha_2, \\alpha_3, \\alpha_4\\) be the 4 roots of \\(f(f(x)) = x\\). Evaluate \\[\\lfloor 10\\alpha_1 \\rfloor + \\lfloor 10\\alpha_2 \\rfloor + \\lfloor 10\\alpha_3 \\rfloor + \\lfloor 10\\alpha_4 \\rfloor\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Consider the \\(100 \\times 100\\) grid of points with integer coordinates \\(S = \\{(x,y) \\in \\mathbb{Z}^2 \\mid 1 \\le x \\le 100, 1 \\le y \\le 100\\}\\). A set \\(C\\) is formed by selecting each point \\(p \\in S\\) with probability \\(\\frac12\\) uniformly at random. The <i>expansion</i> of \\(C\\) is defined as the set of points \\(q \\in S\\) such that \\(\\min_{p \\in C} d(q,p) \\le 1\\), where \\(d(q,p)\\) denotes the Euclidean distance between \\(q,p\\). If the expected size of the expansion of \\(C\\) can be written as \\(\\frac{A}{B}\\) for relatively prime positive integers \\(A, B\\), find \\(A+B\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>The <i>Minkowski sausage</i> is constructed as follows. \\(M_0\\) is the line segment from \\((0,0)\\) to \\((1,0)\\). \\(M_{i+1}\\) is constructed by replacing each segment in \\(M_i\\) with eight segments, each of length \\(1/4^{i+1}\\) (see figure below, where we have provided \\(M_0\\) through \\(M_3\\)).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2024_PUMaC_Team/5-fig1.png\" width=\"509\" alt=\"\"></p><p>Let \\(M_\\infty\\) be the limiting shape of \\(M_0, M_1, \\ldots\\). The area of the smallest convex polygon which encloses \\(M_\\infty\\) can be written as \\(\\frac{a}{b}\\) for relatively prime positive integers \\(a\\) and \\(b\\). Find \\(a+b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Ben has a square of side length 2. He wants to put a circle and equilateral triangle inside the square such that the circle and equilateral triangle do not overlap. The maximum possible sum of the areas of the circle and triangle is \\(\\frac{a\\pi + b\\sqrt{c} + d\\sqrt{e}}{f}\\), where \\(a, c, e, f\\) are positive integers, \\(b\\) and \\(d\\) are integers, \\(c\\) and \\(e\\) are square-free, and \\(\\gcd(a,b,d,f) = 1\\). Find \\(a+b+c+d+e+f\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Consider a regular 24-gon \\(\\mathcal{P}\\). A quadrilateral is said to be inscribed in \\(\\mathcal{P}\\) if its vertices are among those of \\(\\mathcal{P}\\). We consider two inscribed quadrilaterals equivalent if one can be obtained from the other via a rotation about the center of \\(\\mathcal{P}\\). How many distinct (i.e. not equivalent) quadrilaterals can be inscribed in \\(\\mathcal{P}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be a triangle. Let points \\(D\\) and \\(E\\) be on segment \\(BC\\) in the order \\(B, D, E, C\\) such that \\(\\angle BAD = \\angle DAE = \\angle EAC\\). Suppose also that \\(BD = F_{2024}\\), \\(DE = F_{2025}\\), \\(EC = F_{2027}\\), where \\(F_k\\) is the \\(k\\)th Fibonacci number where \\(F_1 = F_2 = 1\\). To the nearest degree, \\(\\angle BAC\\) is \\(n^\\circ\\). Find \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Define a sequence called the 2020-nacci sequence. It is defined as followed: If \\(n \\le 2020\\) then \\(S_n = 1\\), if \\(n &gt; 2020\\) then \\(S_n = \\sum_{i=n-2020}^{n-1} S_i\\). Find the last 2 digits of \\(S_{4040}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Suppose that \\(A\\) is a set of real numbers between 3 and 2024 inclusive such that for any \\(x, y \\in A\\) with \\(x \\ne y\\), we have \\(|x-y| &gt; \\frac{xy}{2+xy}\\). What is the largest possible size of \\(A\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "11": {
+      "problem": "<p>Austen has a regular icosahedron (20-sided polyhedron with all triangular faces). He randomly chooses 3 distinct points among the vertices and constructs the circle through these three points. The expected value of the total number of the icosahedron’s vertices that lie on this circle can be written as \\(m/n\\) for relatively prime positive integers \\(m\\) and \\(n\\). Find \\(m+n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "12": {
+      "problem": "<p>Find the number of positive integers \\(10 \\le n \\le 99\\) with last digit at most 5 such that the last two digits of \\(n^n\\) are the same as \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "13": {
+      "problem": "<p>Consider the square with vertices \\((0,0), (1,0), (1,1), (0,1)\\). The line segments from \\((t,0)\\) to \\((0,1-t)\\) are drawn for \\(0 \\le t \\le 1\\). The set of points inside the square but not on one of these line segments has area \\(\\frac{m}{n}\\) for coprime positive integers \\(m\\) and \\(n\\). Find \\(m+n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "14": {
+      "problem": "<p>What is the largest value for \\(m\\) for which I can find nonnegative integers \\(a_1, a_2, \\ldots, a_m &lt; 2024\\) such that for all indices \\(i &gt; j\\), 17 divides \\(\\binom{a_i}{a_j}\\)?</p><p><b>Note:</b> This should say “... nonnegative integers \\(a_1 &lt; a_2 &lt; \\cdots &lt; a_m &lt; 2024\\) ...”</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "15": {
+      "problem": "<p>There are 10 teams, named \\(T_1\\) through \\(T_{10}\\), participating in a draft in which there are 20 players available, named \\(P_1\\) through \\(P_{20}\\). Suppose each team independent of the others has uniform random preference on the 20 players. Team \\(T_1\\) will draft their favorite player, and then each subsequent team \\(T_2, \\ldots, T_{10}\\) draft their favorite player among the ones not already drafted. Each team drafts exactly one player. Given that \\(P_1\\) is among the 10 favorite players for each team, the probability that \\(P_1\\) is drafted can be written as \\(\\frac{m}{n}\\) where \\(m\\) and \\(n\\) are coprime positive integers. Find \\(m+n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

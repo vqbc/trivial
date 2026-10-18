@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2019,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2019/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>We can write 2019 as \\[2019 = a^4 + b^4 + c^4 + d^4 + e^4,\\] where \\(a\\), \\(b\\), \\(c\\), \\(d\\), and \\(e\\) are integers. Find the minimum value of \\(|a+b+c+d+e|\\), where \\(|x|\\) is the absolute value function.</p>",
+      "solutions": "<p>We can easily find \\(2019 = 1^4 + 2^4 + 3^4 + 5^4 + 6^4\\). There are 3 odd integers and 2 even integers, so we know the minimum value of \\(|a+b+c+d+e|\\) must be odd. We find that \\((a, b, c, d, e) = (1, 2, -3, 5, -6)\\) gives \\(|a+b+c+d+e| = 1\\), so the minimum value is \\(1\\).</p>",
+      "answer": "1"
+    },
+    "2": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\), and let \\(ABCDEFGH\\) be a regular octagon centered at \\(O\\) with \\(AO = 4T\\). Determine the area of the incircle of \\(ACEG\\).</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(1\\).</i></p>",
+      "solutions": "<p>Before receiving the value of \\(T\\), notice that the side length of \\(ACEG\\) is \\(AC = \\sqrt{2}AO = 4\\sqrt{2}T\\), since \\(AOC\\) is a 45-45-90 triangle. Then, the radius of the incircle is \\(\\frac{4\\sqrt{2}T}{2} = 2\\sqrt{2}T\\), so the area of the incircle is \\(8T^2\\pi\\). Since \\(T = 1\\), the answer is \\(8\\pi\\).</p>",
+      "answer": "8\\pi"
+    },
+    "3": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\), and let \\(N = \\frac{T}{\\pi}\\). Suppose a bag of 15 apples has \\(N\\) rotten apples. What is the probability that if I randomly pick apples from the bag without replacement, the \\(11^{th}\\) apple I draw is the last rotten one? Express your answer as a common fraction.</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(8\\pi\\).</i></p>",
+      "solutions": "<p>Before receiving the value of \\(T\\), notice that the probability that the \\(11^{th}\\) apple is the last rotten one is equivalent to the probability of a sequence of 15 letters, \\(N\\) of which are \"R\" and \\(15-N\\) of which are \"C\" (for rotten and clean), has the last R on the \\(11^{th}\\) slot. This probability is equal to number of ways to order 10 letters with \\(N-1\\) labeled \"R\", divided by the total number of ways to order the 15 letters. Thus, it is equal to \\[\\frac{\\binom{10}{N-1}}{\\binom{15}{N}}.\\] Since \\(T = 8\\pi\\), \\(N = 8\\), so our answer is \\[\\frac{\\binom{10}{7}}{\\binom{15}{8}} = \\frac{8}{429}.\\]</p>",
+      "answer": "\\frac{8}{429}"
+    },
+    "4": {
+      "problem": "<p>A cafeteria has 4 entrees and 5 desserts. How many different meals can Jung eat if he eats either 1 or 2 entrees and either 1 or 2 desserts?</p>",
+      "solutions": "<p>He has \\(\\left(\\binom{4}{1}+\\binom{4}{2}\\right)\\left(\\binom{5}{1}+\\binom{5}{2}\\right) = 150\\) options.</p>",
+      "answer": "150"
+    },
+    "5": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). Find the total number of positive integers \\(n \\le T\\) such that \\(n^4 + 5n^2 + 9\\) is not divisible by 5.</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(150\\).</i></p>",
+      "solutions": "<p>Before receiving \\(T\\): notice that \\(n^4 + 5n^2 + 9 = (n-1)(n+1)(n^2+1) + 5(n^2+2)\\), so if \\(n \\equiv \\pm 1 \\pmod 5\\), then either \\(5 \\mid (n-1)\\) or \\(5 \\mid (n+1)\\), and if \\(n \\equiv \\pm 2 \\pmod 5\\), then \\(5 \\mid (n^2+1)\\). However, if \\(5 \\mid n\\), then \\(n^4 + 5n^2 + 9\\) is not divisible by 5, so the answer is the number of multiples of 5 less than or equal to \\(T\\). \\(T = 150\\), so the answer is \\(\\frac{150}{5} = 30\\).</p>",
+      "answer": "30"
+    },
+    "6": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). In the diagram below, let \\(AB = BC = \\frac{T}{2}\\), and \\(BD = \\frac{T}{3}\\). Find the length of \\(DE\\). <img class=\"latexcenter\" src=\"/data/tournaments/2019_DMM_Relay/6-fig1.png\" width=\"209\" alt=\"\"></p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(30\\).</i></p>",
+      "solutions": "<p>Let \\(AD = m\\) and \\(DC = n\\). Before receiving the value of \\(T\\), we apply Stewart’s theorem on \\(\\triangle ABC\\) to find that \\[\\begin{aligned}\nAD \\cdot AC \\cdot DC + AC \\cdot BD^2 &amp;= DC \\cdot AB^2 + AD \\cdot BC^2 \\\\\n(m+n)\\left(mn + \\frac{T^2}{9}\\right) &amp;= \\frac{T^2}{4}(m+n) \\\\\nmn + \\frac{T^2}{9} &amp;= \\frac{T^2}{4} \\\\\nmn &amp;= \\frac{5T^2}{36}\n\\end{aligned}\\] By Power of a Point on \\(D\\), we see that \\(AD \\cdot DC = BD \\cdot DE\\), so \\[DE = \\frac{AD \\cdot DC}{BD} = \\frac{mn}{T/3} = \\frac{5T^2/36}{T/3} = \\frac{5T}{12}.\\] Since \\(T = 30\\), we get \\(DE = \\frac{150}{12} = \\frac{25}{2}\\).</p>",
+      "answer": "\\frac{25}{2}"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "HMMT November General",
+  "year": 2019,
+  "name": "General Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2019/nov/gen/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Dylan has a \\(100\\times 100\\) square, and wants to cut it into pieces of area at least \\(1\\). Each cut must be a straight line (not a line segment) and must intersect the interior of the square. What is the largest number of cuts he can make?</p>",
+      "solutions": "<p>Since each piece has area at least \\(1\\) and the original square has area \\(10000\\), Dylan can end up with at most \\(10000\\) pieces. There is initially \\(1\\) piece, so the number of pieces can increase by at most \\(9999\\). Each cut increases the number of pieces by at least \\(1\\), so Dylan can make at most \\(9999\\) cuts. Notice that this is achievable if Dylan makes \\(9999\\) vertical cuts spaced at increments of \\(\\frac{1}{100}\\) units.</p>",
+      "answer": "9999"
+    },
+    "2": {
+      "problem": "<p>Meghana writes two (not necessarily distinct) primes \\(q\\) and \\(r\\) in base \\(10\\) next to each other on a blackboard, resulting in the concatenation of \\(q\\) and \\(r\\) (for example, if \\(q = 13\\) and \\(r = 5\\), the number on the blackboard is now \\(135\\)). She notices that three more than the resulting number is the square of a prime \\(p\\). Find all possible values of \\(p\\).</p>",
+      "solutions": "<p>Trying \\(p = 2\\), we see that \\(p^2 - 3 = 1\\) is not the concatenation of two primes, so \\(p\\) must be odd. Then \\(p^2 - 3\\) is even. Since \\(r\\) is prime and determines the units digit of the concatenation of \\(q\\) and \\(r\\), \\(r\\) must be \\(2\\). Then \\(p^2\\) will have units digit \\(5\\), which means that \\(p\\) will have units digit \\(5\\). Since \\(p\\) is prime, we find that \\(p\\) can only be \\(5\\), and in this case, \\(p^2 - 3 = 22\\) allows us to set \\(q = r = 2\\) to satisfy the problem statement. So there is a valid solution when \\(p = 5\\), and this is the only possibility.</p>",
+      "answer": "5"
+    },
+    "3": {
+      "problem": "<p>Katie has a fair \\(2019\\)-sided die with sides labeled \\(1, 2, \\ldots, 2019\\). After each roll, she replaces her \\(n\\)-sided die with an \\((n+1)\\)-sided die having the \\(n\\) sides of her previous die and an additional side with the number she just rolled. What is the probability that Katie’s \\(2019^{\\text{th}}\\) roll is a \\(2019\\)?</p>",
+      "solutions": "<p>Since Katie’s original die is fair, the problem is perfectly symmetric. So on the \\(2019^{\\text{th}}\\) roll, each number is equally probable as any other. Therefore, the probability of rolling a \\(2019\\) is just \\(\\frac{1}{2019}\\).</p>",
+      "answer": "\\frac{1}{2019}"
+    },
+    "4": {
+      "problem": "<p>In \\(\\triangle ABC\\), \\(AB = 2019\\), \\(BC = 2020\\), and \\(CA = 2021\\). Yannick draws three regular \\(n\\)-gons in the plane of \\(\\triangle ABC\\) so that each \\(n\\)-gon shares a side with a distinct side of \\(\\triangle ABC\\) and no two of the \\(n\\)-gons overlap. What is the maximum possible value of \\(n\\)?</p>",
+      "solutions": "<p>If any \\(n\\)-gon is drawn on the same side of one side of \\(\\triangle ABC\\) as \\(\\triangle ABC\\) itself, it will necessarily overlap with another triangle whenever \\(n &gt; 3\\). Thus either \\(n = 3\\) or the triangles are all outside \\(ABC\\). The interior angle of a regular \\(n\\)-gon is \\(180^\\circ \\cdot \\frac{n-2}{n}\\), so we require \\[360^\\circ \\cdot \\frac{n - 2}{n} + \\max(\\angle A, \\angle B, \\angle C) &lt; 360^\\circ.\\] As \\(\\triangle ABC\\) is almost equilateral (in fact the largest angle is less than \\(60.1^\\circ\\)), each angle is approximately \\(60^\\circ\\), so we require \\[360 \\cdot \\frac{n - 2}{n} &lt; 300 \\implies n &lt; 12.\\] Hence the answer is \\(n = 11\\).</p>",
+      "answer": "11"
+    },
+    "5": {
+      "problem": "<p>Let \\(a, b, c\\) be positive real numbers such that \\(a \\le b \\le c \\le 2a\\). Find the maximum possible value of \\[\\frac{b}{a} + \\frac{c}{b} + \\frac{a}{c}.\\]</p>",
+      "solutions": "<p>Fix the values of \\(b, c\\). By inspecting the graph of \\[f(x) = \\frac{b}{x} + \\frac{x}{c},\\] we see that on any interval the graph attains its maximum at an endpoint. This argument applies when we fix any two variables, so it suffices to check boundary cases in which \\(b = a\\) or \\(b = c\\), and \\(c = b\\) or \\(c = 2a\\). All pairs of these conditions determine the ratio between \\(a, b, c\\), except \\(b = c\\) and \\(c = b\\), in which case the boundary condition on \\(a\\) tells us that \\(a = b\\) or \\(2a = b = c\\). In summary, these cases are \\[(a, b, c) \\in \\{(a, a, a), (a, a, 2a), (a, 2a, 2a)\\}.\\] The largest value achieved from any of these three is \\(\\frac{7}{2}\\).</p>",
+      "answer": "\\frac{7}{2}"
+    },
+    "6": {
+      "problem": "<p>Find all ordered pairs \\((a, b)\\) of positive integers such that \\(2a + 1\\) divides \\(3b - 1\\) and \\(2b + 1\\) divides \\(3a - 1\\).</p>",
+      "solutions": "<p>This is equivalent to the existence of nonnegative integers \\(c\\) and \\(d\\) such that \\(3b - 1 = c(2a + 1)\\) and \\(3a - 1 = d(2b + 1)\\). Then \\[cd = \\frac{(3b - 1)(3a - 1)}{(2a + 1)(2b + 1)} = \\frac{3a - 1}{2a + 1} \\cdot \\frac{3b - 1}{2b + 1} &lt; \\frac{3}{2} \\cdot \\frac{3}{2} = 2.25.\\] Neither \\(c\\) nor \\(d\\) can equal \\(0\\) since that would give \\(a = \\frac{1}{3}\\) or \\(b = \\frac{1}{3}\\), so \\(cd \\le 2.25\\) implies \\((c, d) \\in \\{(1, 1), (2, 1), (1, 2)\\}\\). Substituting \\((c, d)\\) back in gives three systems of equations and the three solutions: \\((2, 2), (12, 17), (17, 12)\\).</p>",
+      "answer": "(2, 2), (12, 17), (17, 12)"
+    },
+    "7": {
+      "problem": "<p>In Middle-Earth, nine cities form a \\(3\\) by \\(3\\) grid. The top left city is the capital of Gondor and the bottom right city is the capital of Mordor. How many ways can the remaining cities be divided among the two nations such that all cities in a country can be reached from its capital via the grid-lines without passing through a city of the other country?</p>",
+      "solutions": "<p>For convenience, we will center the grid on the origin of the coordinate plane and align the outer corners of the grid with the points \\((\\pm 1, \\pm 1)\\), so that \\((-1, 1)\\) is the capital of Gondor and \\((1, -1)\\) is the capital of Mordor.</p><p>We will use casework on which nation the city at \\((0, 0)\\) is part of. Assume that is belongs to Gondor. Then consider the sequence of cities at \\((1, 0), (1, 1), (0, 1)\\). If one of these belongs to Mordor, then all of the previous cities belong to Mordor, since Mordor must be connected. So we have \\(4\\) choices for which cities belong to Mordor. Note that this also makes all the other cities in the sequence connected to Gondor. Similarly, we have \\(4\\) (independent) choices for the sequence of cities \\((0, -1), (-1 -1), (-1, 0)\\). All of these choices keep \\((0, 0)\\) connected to Gondor except the choice that assigns all cities in both sequences to Mordor. Putting this together, the answer is \\(2(4 \\cdot 4 - 1) = 30\\).</p>",
+      "answer": "30"
+    },
+    "8": {
+      "problem": "<p>Compute the number of ordered pairs of integers \\((x, y)\\) such that \\(x^2 + y^2 &lt; 2019\\) and \\[x^2 + \\min(x, y) = y^2 + \\max(x, y).\\]</p>",
+      "solutions": "<p>We have \\[x^2 - y^2 = \\max(x, y) - \\min(x, y) = |x - y|\\] Now if \\(x \\ne y\\), we can divide by \\(x - y\\) to obtain \\(x + y = \\pm 1\\). Thus \\(x = y\\) or \\(x + y = \\pm 1\\).</p><p>If \\(x = y\\), we see that \\(2019 &gt; x^2 + y^2 = 2x^2\\), so we see that \\(-31 \\le x \\le 31\\). There are \\(63\\) ordered pairs in this case.</p><p>In the second case, note that \\(|x| \\ge |y|\\) since \\(x^2 - y^2 = |x - y| \\ge 0\\). Since \\(x + y = \\pm 1\\), we cannot have \\(xy &gt; 0\\), so either \\(x \\ge 0, y \\le 0\\), or \\(x \\le 0, y \\ge 0\\). In the first case, \\(x + y = 1\\); in the second case, \\(x + y = -1\\). Thus, the solutions for \\((x, y)\\) are of the form \\((k, 1 - k)\\) or \\((-k, k - 1)\\) for some \\(k &gt; 0\\). In either case, we must have \\(k^2 + (k - 1)^2 &lt; 2019\\), which holds true for any \\(1 \\le k \\le 32\\) but fails for \\(k = 33\\). There are a total of \\(32 \\cdot 2 = 64\\) solutions in this case.</p><p>In summary, there are a total of \\(63 + 64 = 127\\) integer solutions to the equation \\(x^2 + \\min(x, y) = y^2 + \\max(x, y)\\) with \\(x^2 + y^2 &lt; 2019\\).</p>",
+      "answer": "127"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABCD\\) be an isosceles trapezoid with \\(AD = BC = 255\\) and \\(AB = 128\\). Let \\(M\\) be the midpoint of \\(CD\\) and let \\(N\\) be the foot of the perpendicular from \\(A\\) to \\(CD\\). If \\(\\angle MBC = 90^\\circ\\), compute \\(\\tan \\angle NBM\\).</p>",
+      "solutions": "<p>Construct \\(P\\), the reflection of \\(A\\) over \\(CD\\). Note that \\(P\\), \\(M\\), and \\(B\\) are collinear. As \\(\\angle PNC = \\angle PBC = 90^\\circ\\), \\(PNBC\\) is cyclic. Thus, \\(\\angle NBM = \\angle NCP\\), so our desired tangent is \\(\\tan \\angle ACN = \\frac{AN}{CN}\\). Note that \\(NM = \\frac{1}{2}AB = 64\\). Since \\(\\triangle AND \\sim \\triangle MAD\\), \\[\\frac{255}{64 + ND} = \\frac{ND}{255}.\\] Solving, we find \\(ND = 225\\), which gives \\(AN = 120\\). Then we calculate \\(\\frac{AN}{CN} = \\frac{120}{128 + 225} = \\frac{120}{353}\\).</p>",
+      "answer": "\\frac{120}{353}"
+    },
+    "10": {
+      "problem": "<p>An <i>up-right path</i> between two lattice points \\(P\\) and \\(Q\\) is a path from \\(P\\) to \\(Q\\) that takes steps of \\(1\\) unit either up or to the right. A lattice point \\((x, y)\\) with \\(0 \\le x, y \\le 5\\) is chosen uniformly at random. Compute the expected number of up-right paths from \\((0, 0)\\) to \\((5, 5)\\) not passing through \\((x, y)\\).</p>",
+      "solutions": "<p>For a lattice point \\((x, y)\\), let \\(F(x, y)\\) denote the number of up-right paths from \\((0, 0)\\) to \\((5, 5)\\) that don’t pass through \\((x, y)\\), and let \\[S = \\sum_{0 \\le x \\le 5} \\sum_{0 \\le y \\le 5} F(x, y).\\] Our answer is \\(\\frac{S}{36}\\), as there are \\(36\\) lattice points \\((x, y)\\) with \\(0 \\le x, y \\le 5\\).</p><p>Notice that the number of up-right paths from \\((0, 0)\\) to \\((5, 5)\\) is \\(\\binom{10}{5} = 252\\) because each path consists of \\(10\\) steps, of which we can choose \\(5\\) to be to the right. Each of these paths passes through \\(11\\) lattice points \\((x, y)\\) with \\(0 \\le x, y \\le 5\\), so each path contributes \\(36 - 11 = 25\\) to the quantity we are counting in \\(S\\). Then \\(S = 25 \\cdot 252\\), so our answer is \\(\\frac{25 \\cdot 252}{36} = 175\\).</p>",
+      "answer": "175"
+    }
+  }
+}

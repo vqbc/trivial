@@ -2,7 +2,15 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useState } from "react";
-import { titleCleanup, underscores, sanitize, computeTest } from "../lib/problems.js";
+import {
+  titleCleanup,
+  underscores,
+  sanitize,
+  computeTest,
+  isTournamentTest,
+} from "../lib/problems.js";
+import { fetchAnswer } from "../lib/aops.js";
+import { inArchive } from "../lib/aopsarchive.js";
 import { AOPS_API } from "../lib/constants.js";
 
 const STAT_TESTS = new Set([
@@ -186,14 +194,27 @@ function BatchAnswerCheck({ problems, testName, testYear }) {
     setScored(false);
     setAmcStats(null);
 
+    // Tournament and bundled AoPS answers come from the archive data
+    // (lib/tournaments.js, lib/aopsarchive.js) rather than a wiki answer
+    // key.
+    const isBundled = (p) =>
+      isTournamentTest(computeTest(p.title)) || inArchive(p.title);
     const tests = [
-      ...new Set(problems.map((p) => p.title.split(" Problems/Problem")[0])),
+      ...new Set(
+        problems
+          .filter((p) => !isBundled(p))
+          .map((p) => p.title.split(" Problems/Problem")[0]),
+      ),
     ];
-    Promise.all(tests.map(loadAnswerKey)).then((jsons) => {
+    Promise.all([
+      Promise.all(tests.map(loadAnswerKey)),
+      Promise.all(problems.map((p) => (isBundled(p) ? fetchAnswer(p.title) : null))),
+    ]).then(([jsons, bundledAnswers]) => {
       if (cancelled) return;
       const byTest = {};
       jsons.forEach((json, i) => (byTest[tests[i]] = json));
-      const result = problems.map((p) => {
+      const result = problems.map((p, i) => {
+        if (isBundled(p)) return bundledAnswers[i];
         const test = p.title.split(" Problems/Problem")[0];
         const num = Number(p.title.match(/\d+$/)[0]);
         const text = byTest[test]?.parse?.text?.["*"];

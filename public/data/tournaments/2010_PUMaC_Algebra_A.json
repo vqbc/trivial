@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Algebra A",
+  "year": 2010,
+  "name": "Algebra A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2010_AlgebraA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the sum of the coefficients of the polynomial \\((63x-61)^4\\).</p>",
+      "solutions": "<p>The sum of the coefficients of \\(f(x) = (63x - 61)^4\\) is \\(f(1) = (63 - 61)^4 = 16\\).</p>",
+      "answer": "16"
+    },
+    "2": {
+      "problem": "<p>Calculate \\(\\displaystyle\\sum_{n=1}^{\\infty} \\left( \\lfloor \\sqrt[n]{2010} \\rfloor - 1 \\right)\\) where \\(\\lfloor x \\rfloor\\) is the largest integer less than or equal to \\(x\\).</p>",
+      "solutions": "<p>Just calculate it; note that for \\(n &gt; 10\\) we have \\(2^{10} &gt; 2010\\) so all those terms are zero. We get \\(2009 + 43 + 11 + 5 + 3 + 2 + 1 + 1 + 1 + 1 = 2077\\).</p>",
+      "answer": "2077"
+    },
+    "3": {
+      "problem": "<p>Let \\(S\\) be the sum of all real \\(x\\) such that \\(4^x = x^4\\). Find the nearest integer to \\(S\\).</p>",
+      "solutions": "<p>We immediately see two solutions, 2 and 4, and that there can be no more positive roots. There must be a negative root, however: let \\(f(x) = 4^x\\) and \\(g(x) = x^4\\); then \\(g(0) = 0\\) and \\(f(0) = 1\\), but \\(g\\) goes off to infinity as \\(x \\to -\\infty\\) and \\(f\\) goes to 0 as \\(x \\to \\infty\\). Plugging in \\(x = -1\\), we have \\(f(-1) = 1/4\\) and \\(g(x) = 1\\); plugging in \\(x = -1/2\\) we have \\(f(-1/2) = 1/2\\) and \\(g(-1/2) = 1/16\\). Therefore the root is between \\(-1/2\\) and \\(-1\\), and the nearest integer to the sum of the roots must be 5.</p>",
+      "answer": "5"
+    },
+    "4": {
+      "problem": "<p>Define \\(f(x) = x + \\sqrt{x + \\sqrt{x + \\sqrt{x + \\sqrt{x + \\ldots}}}}\\). Find the smallest integer \\(x\\) such that \\(f(x) \\ge 50\\sqrt{x}\\).</p>",
+      "solutions": "<p>Noting that \\((f(x) - x)^2 = f(x)\\), we can solve the quadratic equation for \\(f(x)\\) to get that \\[f(x) = x + \\frac{1}{2} \\pm \\sqrt{x + \\frac{1}{4}}.\\] We clearly have to take the positive root (we can notice, for example, that \\(f(1) &gt; 1\\)). The problem therefore reduces to finding the smallest integral \\(x\\) such that \\[x + \\frac{1}{2} + \\sqrt{x + \\frac{1}{4}} \\ge 50\\sqrt{x}.\\] It is simple to note that \\(x\\) has to be fairly large for this to be satisfied (after trying the trivial \\(x = 1\\)). For large \\(x\\), \\(\\sqrt{x + \\frac{1}{4}}\\) is very, very close to \\(\\sqrt{x}\\), so we can rewrite this as \\[x + \\frac{1}{2} \\ge 49\\sqrt{x}.\\] The above is again rewritten as \\[x^2 - 2400x + \\frac{1}{4} \\ge 0.\\] The smallest integer \\(x\\) satisfying the above is obviously 2400, and since the margin of error here is \\(\\frac{1}{4}\\), our previous approximation is justified.</p>",
+      "answer": "2400"
+    },
+    "5": {
+      "problem": "<p>Let \\(f(x) = 3x^3 - 5x^2 + 2x - 6\\). If the roots of \\(f\\) are given by \\(\\alpha\\), \\(\\beta\\), and \\(\\gamma\\), find</p><p>\\[\\left( \\frac{1}{\\alpha-2} \\right)^2 + \\left( \\frac{1}{\\beta-2} \\right)^2 + \\left( \\frac{1}{\\gamma-2} \\right)^2.\\]</p>",
+      "solutions": "<p>A polynomial with roots \\(\\alpha - 2\\), \\(\\beta - 2\\), and \\(\\gamma - 2\\) is given by \\[g(x) = f(x+2) = 3x^3 + 13x^2 + 18x + 2.\\] A polynomial with roots \\(1/(\\alpha-2)\\), \\(1/(\\beta-2)\\), and \\(1/(\\gamma-2)\\) is given by \\[h(x) = 2x^3 + 18x^2 + 13x + 3.\\] Since \\(a^2+b^2+c^2 = (a+b+c)^2 - 2(ab+bc+ca)\\), we can find the result by finding the elementary symmetric polynomials on the roots. Here, we have \\[\\frac{1}{\\alpha-2} + \\frac{1}{\\beta-2} + \\frac{1}{\\gamma-2} = -9\\] and \\[\\frac{1}{\\alpha-2}\\cdot\\frac{1}{\\beta-2} + \\frac{1}{\\beta-2}\\cdot\\frac{1}{\\gamma-2} + \\frac{1}{\\gamma-2}\\cdot\\frac{1}{\\alpha-2} = \\frac{13}{2},\\] so the desired sum is \\((-9)^2 - 2\\cdot\\frac{13}{2} = 81 - 13 = 68\\).</p>",
+      "answer": "68"
+    },
+    "6": {
+      "problem": "<p>Assume that \\(f(a+b) = f(a) + f(b) + ab\\), and that \\(f(75) - f(51) = 1230\\). Find \\(f(100)\\).</p>",
+      "solutions": "<p>One has that \\(f(0) = f(0) + f(0)\\), so \\(f(0) = 0\\). Moreover, \\(f(n+1) = f(n) + f(1) + n\\), so that \\[f(n) = \\sum_{i=0}^{n-1} (i + f(1)) = \\frac{n(n-1)}{2} + nf(1).\\] Plugging in \\(n = 75\\) and \\(n = 51\\), one gets \\(2775 - 1275 + 24f(1) = 1230\\), so \\(f(1) = -\\frac{45}{4}\\). Thus, \\(f(100) = 3825\\).</p>",
+      "answer": "3825"
+    },
+    "7": {
+      "problem": "<p>The expression \\(\\sin 2^\\circ \\sin 4^\\circ \\sin 6^\\circ \\cdots \\sin 90^\\circ\\) is equal to \\(p\\sqrt{5}/2^{50}\\), where \\(p\\) is an integer. Find \\(p\\).</p>",
+      "solutions": "<p>Let \\(\\omega\\) be the root of unity \\(e^{2\\pi i/90}\\), so we have \\[\\prod_{n=1}^{45} \\sin(2n^\\circ) = \\sum_{n=1}^{45} \\frac{\\omega^n - 1}{2i\\omega^{n/2}}.\\] By the symmetry of the sine (and the fact that \\(\\sin(90^\\circ) = 1\\)), \\[\\prod_{n=1}^{45} \\sin(2n^\\circ) = \\prod_{n=46}^{89} \\sin(2n^\\circ),\\] so \\[\\left| \\prod_{n=1}^{45} \\sin(2n^\\circ) \\right|^2 = \\sum_{n=1}^{89} \\frac{|\\omega^n - 1|}{2} = \\frac{90}{2^{89}},\\] where we’ve used the usual geometric series sum for roots of unity. The product is clearly positive and real, so it is equal to \\[\\frac{\\sqrt{45}}{2^{44}} = \\frac{3\\sqrt{5}}{2^{44}},\\] implying that \\(p = 3 \\cdot 2^6 = 192\\).</p>",
+      "answer": "192"
+    },
+    "8": {
+      "problem": "<p>Let \\(p\\) be a polynomial with integer coefficients such that \\(p(15) = 6\\), \\(p(22) = 1196\\), and \\(p(35) = 26\\). Find an integer \\(n\\) such that \\(p(n) = n + 82\\).</p>",
+      "solutions": "<p>Since \\(p(n) - n - 82 = 0\\), the polynomial \\(p(x) - x - 82\\) must factor to \\((x-n)q(x)\\), where \\(q(x)\\) is another polynomial. The polynomial \\(q\\) will have integer coefficients, because \\(p(x) - x - 82 = p(x) - p(n) + n - x\\), so if we let \\(p(x) = a_0 + a_1 x + a_2 x^2 + \\cdots + a_j x^j\\), we get \\[p(x) - x - 82 = (a_1 - 1)(x - n) + a_2(x^2 - n^2) + \\cdots + a_j(x^j - n^j).\\] Dividing through by \\(x - n\\) clearly leaves a polynomial with integer coefficients, since \\(x^i - n^i\\) is always divisible by \\(x - n\\). In particular, therefore, \\(q(15)\\) and \\(q(35)\\) are integers, so plugging in 15 and 35 we get that \\(15 - n\\) is divisible by \\(p(15) - 15 - 82 = -91\\) and \\(35 - n\\) is divisible by \\(p(35) - 35 - 82 = -91\\). Since the factors of 91 are just \\(\\pm 1\\), \\(\\pm 7\\), and \\(\\pm 13\\), we must have either \\(15 - n = -13 \\implies n = 28\\) or \\(15 - n = -7 \\implies n = 22\\). The latter case is ruled out because \\(p(22) = 116 \\ne 22 + 82\\).</p>",
+      "answer": "28"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2009,
+  "name": "Individual Round: Geometry Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2009/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A rectangular piece of paper with side lengths 5 by 8 is folded along the dashed lines shown below, so that the folded flaps just touch at the corners as shown by the dotted lines. Find the area of the resulting trapezoid.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_February_Geometry/1-fig1.png\" width=\"177\" alt=\"\"></p>",
+      "solutions": "<p>Drawing the perpendiculars from the point of intersection of the corners to the bases of the trapezoid, we see that we have similar \\(3\\)-\\(4\\)-\\(5\\) right triangles, and we can calculate that the length of the smaller base is \\(3\\). Thus the area of the trapezoid is \\(\\frac{8+3}{2}\\cdot 5 = 55/2\\).</p>",
+      "answer": "\\frac{55}{2}"
+    },
+    "2": {
+      "problem": "<p>The corner of a unit cube is chopped off such that the cut runs through the three vertices adjacent to the vertex of the chosen corner. What is the height of the cube when the freshly-cut face is placed on a table?</p>",
+      "solutions": "<p>The major diagonal has a length of \\(\\sqrt{3}\\). The volume of the pyramid is \\(1/6\\), and so its height \\(h\\) satisfies \\(\\frac{1}{3}\\cdot h\\cdot\\frac{\\sqrt{3}}{4}(\\sqrt{2})^2 = 1/6\\) since the freshly cut face is an equilateral triangle of side length \\(\\sqrt{2}\\). Thus \\(h = \\sqrt{3}/3\\), and the answer follows.</p>",
+      "answer": "\\frac{2\\sqrt{3}}{3}"
+    },
+    "3": {
+      "problem": "<p>Let \\(T\\) be a right triangle with sides having lengths \\(3\\), \\(4\\), and \\(5\\). A point \\(P\\) is called <i>awesome</i> if \\(P\\) is the center of a parallelogram whose vertices all lie on the boundary of \\(T\\). What is the area of the set of awesome points?</p>",
+      "solutions": "<p>The set of awesome points is the medial triangle, which has area \\(6/4 = 3/2\\).</p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "4": {
+      "problem": "<p>A <i>kite</i> is a quadrilateral whose diagonals are perpendicular. Let kite \\(ABCD\\) be such that \\(\\angle B = \\angle D = 90^\\circ\\). Let \\(M\\) and \\(N\\) be the points of tangency of the incircle of \\(ABCD\\) to \\(AB\\) and \\(BC\\) respectively. Let \\(\\omega\\) be the circle centered at \\(C\\) and tangent to \\(AB\\) and \\(AD\\). Construct another kite \\(AB'C'D'\\) that is similar to \\(ABCD\\) and whose incircle is \\(\\omega\\). Let \\(N'\\) be the point of tangency of \\(B'C'\\) to \\(\\omega\\). If \\(MN' \\parallel AC\\), then what is the ratio of \\(AB : BC\\)?</p>",
+      "solutions": "<p>Let’s focus on the right triangle \\(ABC\\) and the semicircle inscribed in it since the situation is symmetric about \\(AC\\). First we find the radius \\(a\\) of circle \\(O\\). Let \\(AB = x\\) and \\(BC = y\\). Drawing the radii \\(OM\\) and \\(ON\\), we see that \\(AM = x - a\\) and \\(\\triangle AMO \\sim \\triangle ABC\\). In other words, \\[\\frac{AM}{MO} = \\frac{AB}{BC}\\] \\[\\frac{x-a}{a} = \\frac{x}{y}\\] \\[a = \\frac{xy}{x+y}.\\]</p><p>Now we notice that the situation is homothetic about \\(A\\). In particular, \\[\\triangle AMO \\sim \\triangle ONC \\sim \\triangle CN'C'.\\]</p><p>Also, \\(CB\\) and \\(CN'\\) are both radii of circle \\(C\\). Thus, when \\(MN' \\parallel AC'\\), we have \\[AM = CN' = CB\\] \\[x - a = y\\] \\[a = \\frac{xy}{x+y} = x-y\\] \\[x^2 - xy - y^2 = 0\\] \\[x = \\frac{y}{2} \\pm \\sqrt{\\frac{y^2}{4}+y^2}\\] \\[\\frac{AB}{BC} = \\frac{x}{y} = \\frac{1+\\sqrt{5}}{2}.\\]</p>",
+      "answer": "\\frac{1+\\sqrt{5}}{2}"
+    },
+    "5": {
+      "problem": "<p>Circle \\(B\\) has radius \\(6\\sqrt{7}\\). Circle \\(A\\), centered at point \\(C\\), has radius \\(\\sqrt{7}\\) and is contained in \\(B\\). Let \\(L\\) be the locus of centers \\(C\\) such that there exists a point \\(D\\) on the boundary of \\(B\\) with the following property: if the tangents from \\(D\\) to circle \\(A\\) intersect circle \\(B\\) again at \\(X\\) and \\(Y\\), then \\(XY\\) is also tangent to \\(A\\). Find the area contained by the boundary of \\(L\\).</p>",
+      "solutions": "<p>The conditions imply that there exists a triangle such that \\(B\\) is the circumcircle and \\(A\\) is the incircle for the position of \\(A\\). The distance between the circumcenter and incenter is given by \\(\\sqrt{(R-2r)R}\\), where \\(R\\), \\(r\\) are the circumradius and inradius, respectively. Thus the locus of \\(C\\) is a circle concentric to \\(B\\) with radius \\(2\\sqrt{42}\\). The conclusion follows.</p>",
+      "answer": "168\\pi"
+    },
+    "6": {
+      "problem": "<p>Let \\(ABC\\) be a triangle in the coordinate plane with vertices on lattice points and with \\(AB = 1\\). Suppose the perimeter of \\(ABC\\) is less than \\(17\\). Find the largest possible value of \\(1/r\\), where \\(r\\) is the inradius of \\(ABC\\).</p>",
+      "solutions": "<p>Let \\(a\\) denote the area of the triangle, \\(r\\) the inradius, and \\(p\\) the perimeter. Then \\(a = rp/2\\), so \\(r = 2a/p &gt; 2a/17\\). Notice that \\(a = h/2\\) where \\(h\\) is the height of the triangle from \\(C\\) to \\(AB\\), and \\(h\\) is an integer since the vertices are lattice points. Thus we first guess that the inradius is minimized when \\(h=1\\) and the area is \\(1/2\\). In this case, we can now assume WLOG that \\(A = (0,0)\\), \\(B = (1,0)\\), and \\(C = (n+1, 1)\\) for some nonnegative integer \\(n\\). The perimeter of \\(ABC\\) is \\(\\sqrt{n^2+2n+2} + \\sqrt{n^2+1} + 1\\). Since \\(n=8\\) yields a perimeter greater than \\(17\\), the required triangle has \\(n=7\\) and inradius \\(r = 1/p = \\frac{1}{1+5\\sqrt{2}+\\sqrt{65}}\\) which yields the answer of \\(1/r = 1+5\\sqrt{2}+\\sqrt{65}\\). We can now verify that this is indeed minimal over all \\(h\\) by noting that its perimeter is greater than \\(17/2\\), which is the upper bound in the case \\(h \\ge 2\\).</p>",
+      "answer": "1+5\\sqrt{2}+\\sqrt{65}"
+    },
+    "7": {
+      "problem": "<p>In triangle \\(ABC\\), \\(D\\) is the midpoint of \\(BC\\), \\(E\\) is the foot of the perpendicular from \\(A\\) to \\(BC\\), and \\(F\\) is the foot of the perpendicular from \\(D\\) to \\(AC\\). Given that \\(BE = 5\\), \\(EC = 9\\), and the area of triangle \\(ABC\\) is \\(84\\), compute \\(|EF|\\).</p>",
+      "solutions": "<p>There are two possibilities for the triangle \\(ABC\\) based on whether \\(E\\) is between \\(B\\) and \\(C\\) or not. We first consider the former case.</p><p>We find from the area and the Pythagorean theorem that \\(AE = 12\\), \\(AB = 13\\), and \\(AC = 15\\). We can then use Stewart’s theorem to obtain \\(AD = 2\\sqrt{37}\\).</p><p>Since the area of \\(\\triangle ADC\\) is half that of \\(ABC\\), we have \\(\\frac{1}{2}AC \\cdot DF = 42\\), so \\(DF = 14/5\\). Also, \\(DC = 14/2 = 7\\) so \\(ED = 9 - 7 = 2\\).</p><p>Notice that \\(AEDF\\) is a cyclic quadrilateral. By Ptolemy’s theorem, we have \\(EF \\cdot 2\\sqrt{37} = (28/5)\\cdot 12 + 2\\cdot(54/5)\\). Thus \\(EF = \\frac{6\\sqrt{37}}{5}\\) as desired.</p><p>The latter case is similar.</p>",
+      "answer": "\\frac{6\\sqrt{37}}{5},\\ \\frac{21}{205}\\sqrt{7585}"
+    },
+    "8": {
+      "problem": "<p>Triangle \\(ABC\\) has side lengths \\(AB = 231\\), \\(BC = 160\\), and \\(AC = 281\\). Point \\(D\\) is constructed on the opposite side of line \\(AC\\) as point \\(B\\) such that \\(AD = 178\\) and \\(CD = 153\\). Compute the distance from \\(B\\) to the midpoint of segment \\(AD\\).</p>",
+      "solutions": "<p>Note that \\(\\angle ABC\\) is right since \\[BC^2 = 160^2 = 50\\cdot 512 = (AC-AB)\\cdot(AC+AB) = AC^2 - AB^2.\\]</p><p>Construct point \\(B'\\) such that \\(ABCB'\\) is a rectangle, and construct \\(D'\\) on segment \\(B'C\\) such that \\(AD = AD'\\). Then \\[B'D'^2 = AD'^2 - AB'^2 = AD^2 - BC^2 = (AD-BC)(AD+BC) = 18\\cdot 338 = 78^2.\\]</p><p>It follows that \\(CD' = B'C - B'D' = 153 = CD\\); thus, points \\(D\\) and \\(D'\\) coincide, and \\(AB \\parallel CD\\). Let \\(M\\) denote the midpoint of segment \\(AD\\), and denote the orthogonal projections \\(M\\) to lines \\(AB\\) and \\(BC\\) by \\(P\\) and \\(Q\\) respectively. Then \\(Q\\) is the midpoint of \\(BC\\) and \\(AP = 39\\), so \\(PB = AB - AP = 192\\) and \\[BM = PQ = \\sqrt{80^2+192^2} = 16\\sqrt{5^2+12^2} = 208.\\]</p>",
+      "answer": "208"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB = 16\\) and \\(AC = 5\\). Suppose the bisectors of angles \\(\\angle ABC\\) and \\(\\angle BCA\\) meet at point \\(P\\) in the triangle’s interior. Given that \\(AP = 4\\), compute \\(BC\\).</p>",
+      "solutions": "<p>As the incenter of triangle \\(ABC\\), point \\(P\\) has many properties. Extend \\(AP\\) past \\(P\\) to its intersection with the circumcircle of triangle \\(ABC\\), and call this intersection \\(M\\). Now observe that \\[\\angle PBM = \\angle PBC + \\angle CBM = \\angle PBC + \\angle CAM = \\beta + \\alpha = 90 - \\gamma,\\] where \\(\\alpha\\), \\(\\beta\\), and \\(\\gamma\\) are the half-angles of triangle \\(ABC\\). Since \\[\\angle BMP = \\angle BMA = \\angle BCA = 2\\gamma,\\] it follows that \\(BM = MP = CM\\). Let \\(Q\\) denote the intersection of \\(AM\\) and \\(BC\\), and observe that \\(\\triangle AQB \\sim \\triangle CQM\\) and \\(\\triangle AQC \\sim \\triangle BQM\\); some easy algebra gives \\[AM/BC = (AB\\cdot AC + BM\\cdot CM)/(AC\\cdot CM + AB\\cdot BM).\\]</p><p>Writing \\((a,b,c,d,x) = (BC,AC,AB,MP,AP)\\), this is \\((x+d)/a = (bc+d^2)/((b+c)d)\\). Ptolemy’s theorem applied to \\(ABCD\\) gives \\(a(d+x) = d(b+c)\\). Multiplying the two gives \\((d+x)^2 = bc+d^2\\). We easily solve for \\(d = (bc-x^2)/(2x) = 8\\) and \\(a = d(b+c)/(d+x) = 14\\).</p>",
+      "answer": "14"
+    },
+    "10": {
+      "problem": "<p>Points \\(A\\) and \\(B\\) lie on circle \\(\\omega\\). Point \\(P\\) lies on the extension of segment \\(AB\\) past \\(B\\). Line \\(\\ell\\) passes through \\(P\\) and is tangent to \\(\\omega\\). The tangents to \\(\\omega\\) at points \\(A\\) and \\(B\\) intersect \\(\\ell\\) at points \\(D\\) and \\(C\\) respectively. Given that \\(AB = 7\\), \\(BC = 2\\), and \\(AD = 3\\), compute \\(BP\\).</p>",
+      "solutions": "<p>Say that \\(\\ell\\) be tangent to \\(\\omega\\) at point \\(T\\). Observing equal tangents, write \\[CD = CT + DT = BC + AD = 5.\\]</p><p>Let the tangents to \\(\\omega\\) at \\(A\\) and \\(B\\) intersect each other at \\(Q\\). Working from Menelaus applied to triangle \\(CDQ\\) and line \\(AB\\) gives \\[-1 = \\frac{DA}{AQ}\\cdot\\frac{QB}{BC}\\cdot\\frac{CP}{PD} = \\frac{DA}{BC}\\cdot\\frac{CP}{PC+CD} = \\frac{3}{2}\\cdot\\frac{CP}{PC+5},\\] from which \\(PC = 10\\). By power of a point, \\(PT^2 = AP\\cdot BP\\), or \\(12^2 = BP\\cdot(BP+7)\\), from which \\(BP = 9\\).</p>",
+      "answer": "9"
+    }
+  }
+}

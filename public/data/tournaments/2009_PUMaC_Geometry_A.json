@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry A",
+  "year": 2009,
+  "name": "Geometry A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2009_GeometryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A rectangular piece of paper \\(ABCD\\) has sides of lengths \\(AB = 1\\), \\(BC = 2\\). The rectangle is folded in half such that \\(AD\\) coincides with \\(BC\\) and \\(EF\\) is the folding line. Then fold the paper along a line \\(BM\\) such that the corner \\(A\\) falls on line \\(EF\\). How large, in degrees, is \\(\\angle ABM\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_A/1-fig1.png\" width=\"335\" alt=\"\"></p>",
+      "solutions": "<p>Construct \\(NG \\perp BC\\) at \\(G\\). Triangles \\(ABM\\), \\(NBM\\), \\(NBG\\) are all congruent. Hence \\(\\angle ABM = 30^\\circ\\).</p>",
+      "answer": "30^\\circ"
+    },
+    "2": {
+      "problem": "<p>Tetrahedron \\(ABCD\\) havs sides of lengths, in increasing order, \\(7, 13, 18, 27, 36, 41\\). If \\(AB = 41\\), then what is the length of \\(CD\\)?</p>",
+      "solutions": "<p>By triangle inequality, \\(AB + DB &gt; 41\\), and \\(AC + CB &gt; 41\\). Hence, one of the pairs \\(AD, DB\\) and \\(\\{AC, CB\\}\\) must be \\(\\{18, 27\\}\\), the other pair contains \\(36\\). WLOG, let \\(AC = 27\\), \\(CB = 18\\). Then \\(DB \\ne 36\\), otherwise, \\(CD &gt; 18\\). Hence \\(AD = 36\\), \\(CD = 13\\).</p>",
+      "answer": "13"
+    },
+    "3": {
+      "problem": "<p>A polygon is called concave if it has at least one angle strictly greater than \\(180^\\circ\\). What is the maximum number of symmetries that an 11-sided concave polygon can have?</p>",
+      "solutions": "<p>An 11-gon can have only axes passing through a vertex and an opposite side. If it had exactly 2 such axes, they would have to be perpendicular and the polygon would have an even number of sides. If it had exactly 3 axes, each would have to be at an angle of \\(60^\\circ\\) with the next one, and the number of sides of the polygon would be a multiple of 3. Since our polygon has a concave angle, any number of axes of symmetry above 3 would imply at least 12 sides.</p>",
+      "answer": "1"
+    },
+    "4": {
+      "problem": "<p>In the following diagram (not to scale), \\(A, B, C, D\\) are four consecutive vertices of an 18-sided regular polygon with center \\(O\\). Let \\(P\\) be the midpoint of \\(AC\\) and \\(Q\\) be the midpoint of \\(DO\\). Find \\(\\angle OPQ\\) in degrees.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_A/4-fig1.png\" width=\"369\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(R\\) be the midpoint of \\(AO\\). Connect \\(RP\\), \\(RQ\\). Then \\(RP = RO = OQ = RQ\\). Hence triangle \\(PQR\\) is isosceles, then some simple calculation yields \\(\\angle OPQ = \\angle RPQ - \\angle RPO = 50^\\circ - 20^\\circ = 30^\\circ\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_A/4-fig2.png\" width=\"300\" alt=\"\"></p>",
+      "answer": "30^\\circ"
+    },
+    "5": {
+      "problem": "<p>Lines \\(l\\) and \\(m\\) are perpendicular. Line \\(l\\) partitions a convex polygon into two parts of equal area, and partitions the projection of the polygon onto \\(m\\) into two line segments of length \\(a\\) and \\(b\\) respectively. Determine the maximum value of \\(\\left\\lfloor \\frac{1000a}{b} \\right\\rfloor\\). (The floor notation \\(\\lfloor x \\rfloor\\) denotes largest integer not exceeding \\(x\\))</p>",
+      "solutions": "<p>The greatest possible value of the ratio is \\((1 + \\sqrt{2})\\). Let \\(A\\) and \\(B\\) be vertices of the convex polygon on different sides of \\(l\\) so that their distance from \\(l\\) is maximal on each side. Let \\(K\\) and \\(L\\) be the intersections of \\(l\\) with the sides of the polygon. Define the points \\(K_1\\) and \\(L_1\\) on extension of \\(AK\\), \\(AL\\) respectively such that \\(K_1L_1\\) is parallel to \\(l\\). Since the polygon is convex, the part of the polygon on \\(A\\)’s side contains \\(AKL\\), and the part of the polygon on \\(B\\)’s side is contained in \\(K_1KLL_1\\). Therefore \\([K_1KLL_1] \\ge [AKL]\\). Let \\(M\\), \\(N\\) be foot of perpendicular from \\(A\\), \\(B\\) to line \\(l\\) respectively, then \\[\\frac{[AKL]}{[K_1L_1]} \\le \\frac{1}{2} \\implies \\frac{AM}{AM+BN} \\le \\frac{1}{\\sqrt{2}}\\] \\[\\implies \\frac{AM}{BN} \\le \\frac{1}{\\sqrt{2}-1} = 1+\\sqrt{2}\\]</p><p>Equality is obtained when the polygon is a triangle with \\(l\\) parallel to one side.</p>",
+      "answer": "2414"
+    },
+    "6": {
+      "problem": "<p>Consider the solid with 4 triangles and 4 regular hexagons as faces, where each triangle borders 3 hexagons, and all the sides are of length 1. Compute the <i>square</i> of the volume of the solid. Express your result in reduced fraction and concatenate the numerator with the denominator (e.g., if you think that the square is \\(\\frac{1734}{274}\\), then you would submit 1734274).</p>",
+      "solutions": "<p>Extend the edges that are common to two hexagons. We obtain a regular tetrahedron of side length 3. Hence the volume of original solid is a regular tetrahedron of side length 3 minus volume of 4 regular tetrahedrons of side length 1. The volume is \\[\\frac{1}{3} \\times \\frac{9\\sqrt{3}}{4} \\times \\sqrt{6} \\times \\frac{27-4}{27} = \\frac{23\\sqrt{2}}{12}.\\]</p>",
+      "answer": "52972"
+    },
+    "7": {
+      "problem": "<p>You are given a convex pentagon \\(ABCDE\\) with \\(AB = BC\\), \\(CD = DE\\), \\(\\angle ABC = 150^\\circ\\), \\(\\angle BCD = 165^\\circ\\), \\(\\angle CDE = 30^\\circ\\), \\(BD = 6\\). Find the area of this pentagon. Round your answer to the nearest integer if necessary.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_A/7-fig1.png\" width=\"323\" alt=\"\"></p>",
+      "solutions": "<p>The condition \\(\\angle BCD = 165^\\circ\\) is not necessary. The following proof works with any other angle \\(x\\) instead of \\(165^\\circ\\).</p><p>Denote \\(AB = BC = a\\), \\(CD = DE = b\\), \\(AC = p\\) and \\(CE = q\\). We first compute \\(pq\\): apply Cosine Rule in triangle \\(ABC\\) and \\(CDE\\) respectively, we get \\[p^2 = a^2 + a^2 - 2a^2\\cos\\angle ABC = 2a^2(1-\\cos 150^\\circ) = 2a^2(1+\\cos 30^\\circ)\\] \\[q^2 = b^2 + b^2 - 2b^2\\cos\\angle CDE = 2b^2(1-\\cos 30^\\circ)\\]</p><p>Then \\[p^2q^2 = 4a^2b^2(1-\\cos^2 30^\\circ) = a^2b^2 \\implies pq = ab\\]</p><p>By Sine Rule, the area of the pentagon is \\[[ABC] + [CDE] + [ACE] = \\frac{1}{2}a^2 \\sin 150^\\circ + \\frac{1}{2}b^2 \\sin 30^\\circ + \\frac{1}{2}pq \\sin(x - 15^\\circ - 75^\\circ)\\] \\[= \\frac{1}{4}(a^2+b^2-2ab\\sin(90^\\circ-x))\\] \\[= \\frac{1}{4}(a^2+b^2-2ab\\cos x)\\]</p><p>The last expression is exactly \\(\\frac{1}{4}BD^2 = 9\\) by applying Cosine Rule to triangle \\(BCD\\).</p>",
+      "answer": "9"
+    },
+    "8": {
+      "problem": "<p>Consider \\(\\triangle ABC\\) and a point \\(M\\) in its interior so that \\(\\angle MAB = 10^\\circ\\), \\(\\angle MBA = 20^\\circ\\), \\(\\angle MCA = 30^\\circ\\) and \\(\\angle MAC = 40^\\circ\\). What is \\(\\angle MBC\\)?</p>",
+      "solutions": "<p><b>Solution 1.</b></p><p>Choose point \\(X\\) on \\(BC\\) such that \\(\\angle XAM = 10^\\circ\\) and \\(\\angle XAC = 30^\\circ\\). Choose point \\(Y\\) on \\(AC\\) such that \\(\\angle YBM = 20^\\circ\\) and \\(Y \\ne A\\). Let the intersection of \\(AX\\) and \\(BY\\) be \\(Z\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_A/8-fig1.png\" width=\"289\" alt=\"\"></p><p>By construction, \\(\\angle ABM = \\angle ZBM\\) and \\(\\angle BAM = \\angle ZAM\\), therefore \\(M\\) is the incenter of Triangle \\(ABZ\\). Hence \\(\\angle BMZ = 90^\\circ + \\frac{1}{2}\\angle BAZ = 100^\\circ = \\angle BMC\\). This shows that points \\(M, Z, C\\) are collinear.</p><p>Since \\(ZM\\) bisects \\(\\angle AZB\\), we have \\(\\angle AZY = \\angle CZY = 60^\\circ\\), also \\(\\angle ZAC = \\angle ZCA = 30^\\circ\\), hence \\(\\triangle AZY \\cong \\triangle CZY\\). Therefore \\(BY\\) is the perpendicular bisector of \\(AC \\implies \\angle CBY = \\angle ABY = 40^\\circ \\implies \\angle MBC = \\angle MBZ + \\angle CBY = 60^\\circ\\)</p><p><b>Solution 2.</b></p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_A/8-fig2.png\" width=\"201\" alt=\"\"></p><p>Set up rectangular coordinates s.t. \\(M = (0,0)\\), \\(A = (0,1)\\). Then \\[BA: y = \\tan 80^\\circ x + 1\\] \\[CA: y = -\\tan 50^\\circ x + 1\\] \\[BM: y = \\tan 60^\\circ x + 1\\] \\[CM: y = -\\tan 20^\\circ x + 1\\]</p><p>The y-coordinates of \\(B\\) and \\(C\\) are thus \\(\\tan 20^\\circ/(\\tan 20^\\circ - \\tan 50^\\circ)\\) and \\(\\tan 60^\\circ/(\\tan 60^\\circ - \\tan 80^\\circ)\\) respectively.</p><p>We conjecture that these two y-coordinates are equal. To prove this, notice that \\[\\frac{\\tan 20^\\circ}{\\tan 20^\\circ - \\tan 50^\\circ} = \\frac{\\tan 60^\\circ}{\\tan 60^\\circ - \\tan 80^\\circ} \\iff \\tan 20^\\circ \\tan 80^\\circ = \\tan 60^\\circ \\tan 50^\\circ\\] \\[\\iff \\tan 20^\\circ \\tan 40^\\circ \\tan 80^\\circ = \\tan 60^\\circ.\\]</p><p>Last equality is true by the triple angle formula \\[\\tan x \\times \\tan(60^\\circ - x) \\times \\tan(60^\\circ + x) = \\tan(3x)\\]</p><p>Hence \\(AM \\perp BC\\), \\(\\angle MBC = 90^\\circ - \\angle MAB - \\angle MBA = 60^\\circ\\).</p>",
+      "answer": "60^\\circ"
+    }
+  }
+}

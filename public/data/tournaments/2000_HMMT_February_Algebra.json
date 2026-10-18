@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Algebra",
+  "year": 2000,
+  "name": "Algebra",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2000/feb/alg/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many integers \\(x\\) satisfy \\(|x| + 5 &lt; 7\\) and \\(|x - 3| &gt; 2\\)?</p>",
+      "solutions": "<p>The only integers that satisfy \\(|x| + 5 &lt; 7\\) are the ones that satisfy \\(|x| &lt; 2\\) – namely, \\(-1, 0, 1\\). The integers that satisfy \\(|x - 3| &gt; 2\\) are \\(6, 7, 8, \\ldots\\) and \\(0, -1, -2, \\ldots\\). So, the integers that satisfy both are \\(0, -1\\), and there are \\(\\mathbf{2}\\) of them.</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>Evaluate \\(2000^3 - 1999 \\cdot 2000^2 - 1999^2 \\cdot 2000 + 1999^3\\).</p>",
+      "solutions": "<p>\\(2000^3 - 1999 \\cdot 2000^2 - 1999^2 \\cdot 2000 + 1999^3\\) can be factored into \\((2000-1999)2000^2 + 1999^2(-2000+1999)\\), which reduces to \\(2000^2 - 1999^2\\). This factors into \\((2000+1999)(2000-1999)\\) which is equal to \\(\\mathbf{3999}\\).</p>",
+      "answer": "3999"
+    },
+    "3": {
+      "problem": "<p>Five students take a test on which any integer score from \\(0\\) to \\(100\\) inclusive is possible. What is the largest possible difference between the median and the mean of the scores?</p>",
+      "solutions": "<p>Let the scores be \\(a, b, c, d, e\\), where \\(0 \\le a \\le b \\le c \\le d \\le e \\le 100\\). So, the mean is \\(\\frac{1}{5}(a+b+c+d+e)\\), and the median is \\(c\\). So, we want to maximize \\(\\frac{1}{5}(a+b+c+d+e) - c\\). To do this, we must maximize \\(d\\) and \\(e\\) and minimize or maximize \\(c\\). One way to do this is to let \\(a = b = c = 0\\) and \\(d = e = 100\\), so the difference between the mean and the median is \\(\\frac{1}{5}(0+0+0+100+100) - 0 = \\frac{200}{5} = 40\\). If we maximize \\(c\\), then \\(c = d = e = 100\\), and then the mean is \\(\\frac{1}{5}(0+0+100+100+100) = 60\\), and the median is \\(60\\), with a difference of \\(40\\) as well.</p>",
+      "answer": "40"
+    },
+    "4": {
+      "problem": "<p>What is the fewest number of multiplications required to reach \\(x^{2000}\\) from \\(x\\), using only previously generated powers of \\(x\\)? For example, \\(x \\to x^2 \\to x^4 \\to x^8 \\to x^{16} \\to x^{32} \\to x^{64} \\to x^{128} \\to x^{256} \\to x^{512} \\to x^{1024} \\to x^{1536} \\to x^{1792} \\to x^{1920} \\to x^{1984} \\to x^{2000}\\) uses \\(15\\) multiplications.</p>",
+      "solutions": "<p>A shortest path is \\(x \\to x^2 \\to x^4 \\to x^8 \\to x^{12} \\to x^{24} \\to x^{25} \\to x^{50} \\to x^{100} \\to x^{200} \\to x^{400} \\to x^{800} \\to x^{1600} \\to x^{2000}\\), using \\(\\mathbf{13}\\) multiplications.</p>",
+      "answer": "13"
+    },
+    "5": {
+      "problem": "<p>A jacket was originally priced $100. The price was reduced by \\(10\\%\\) three times and increased by \\(10\\%\\) four times in some order. To the nearest cent, what was the final price?</p>",
+      "solutions": "<p>The price starts at $100. Clearly, the order of price changes does not matter. It is reduced by \\(10\\%\\) three times (\\(\\textdollar 100 \\to \\textdollar 90 \\to \\textdollar 81 \\to \\textdollar 72.90\\)), and the new price is \\(\\textdollar 72.90\\). It is increased by \\(10\\%\\) four times (\\(\\textdollar 72.90 \\to \\textdollar 80.19 \\to \\textdollar 88.209 \\to \\textdollar 97.0299 \\to \\textdollar 106.73289\\)), and the new price is \\(\\textdollar 106.73289\\). Rounded to the nearest cent, this is \\(\\mathbf{\\textdollar 106.73}\\).</p>",
+      "answer": "\\$106.73"
+    },
+    "6": {
+      "problem": "<p>Barbara, Edward, Abhinav, and Alex took turns writing this test. Working alone, they could finish it in \\(10\\), \\(9\\), \\(11\\), and \\(12\\) days, respectively. If only one person works on the test per day, and nobody works on it unless everyone else has spent at least as many days working on it, how many days (an integer) did it take to write this test?</p>",
+      "solutions": "<p>Every day Edward works, he gets \\(\\frac{1}{9}\\) of the test done. Similarly, every day Barbara works, she gets \\(\\frac{1}{10}\\) of the test done, every day Abhinav works, he gets \\(\\frac{1}{11}\\) of the test done, and every day Alex works, he gets \\(\\frac{1}{12}\\) of the test done. So, after \\(4\\) days (after everyone has worked on the test one day), they have completed \\(\\frac{1}{9} + \\frac{1}{10} + \\frac{1}{11} + \\frac{1}{12} = 38.535\\%\\) of the test. After \\(8\\) days, they have completed twice that, or \\(77.0707\\%\\) of the test. After Edward, Barbara, and Abhinav each work one more day, the test will be complete in the minimum amount of time, so the test will take \\(\\mathbf{11 \\text{ days}}\\) to complete. If the least efficient workers work after the 8th day, the test still takes \\(11\\) days to complete.</p>",
+      "answer": "11"
+    },
+    "7": {
+      "problem": "<p>A number \\(n\\) is called multiplicatively perfect if the product of all the positive divisors of \\(n\\) is \\(n^2\\). Determine the number of positive multiplicatively perfect numbers less than \\(100\\).</p>",
+      "solutions": "<p>All multiplicatively perfect numbers have exactly \\(4\\) distinct positive divisors, or \\(1\\). So, we must look for numbers that are either</p><ul><li>\\(1\\)</li><li>a product of two distinct primes</li><li>a cube of a prime</li></ul><p>Numbers satisfying one of these conditions less than \\(100\\) are: \\(1, 6, 8, 10, 14, 15, 21, 22, 26, 27, 33, 34, 35, 38, 39, 46, 51, 55, 57, 58, 62, 65, 69, 74, 77, 82, 85, 86, 87, 91, 93, 94, 95\\). There are \\(\\mathbf{33}\\) of these.</p>",
+      "answer": "33"
+    },
+    "8": {
+      "problem": "<p>A man has three daughters. The product of their ages is \\(168\\), and he remembers that the sum of their ages is the number of trees in his yard. He counts the trees but cannot determine any of their ages. What are all possible ages of his oldest daughter?</p>",
+      "solutions": "<p>\\(168 = 2^3 \\cdot 3 \\cdot 7\\). There are only \\(2\\) combinations of these whose sums allow indistinguishability of the ages. If there are \\(27\\) trees, \\(2, 4, 21\\) and \\(1, 12, 14\\) years are possible. If there are \\(21\\) trees, \\(2, 7, 12\\) and \\(3, 4, 14\\) are possible. So, the possible ages of the oldest daughter are \\(\\mathbf{12, 14, 21}\\).</p>",
+      "answer": "12, 14, 21"
+    },
+    "9": {
+      "problem": "<p>\\(\\frac{a}{c} = \\frac{b}{d} = \\frac{3}{4}\\), \\(\\sqrt{a^2+c^2} - \\sqrt{b^2+d^2} = 15\\). Find \\(ac + bd - ad - bc\\).</p>",
+      "solutions": "<p>We can view these conditions as a geometry diagram as seen below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Algebra/9-fig1.png\" width=\"261\" alt=\"\"></p><p>So, we know that \\(\\frac{e}{f} = \\frac{3}{4}\\) (since \\(e = a - b = \\frac{3}{4}c - \\frac{3}{4}d = \\frac{3}{4}f\\)) and we know that \\(\\sqrt{e^2+f^2} = 15\\) (since this is \\(\\sqrt{a^2+c^2} - \\sqrt{b^2+d^2}\\)). Also, note that \\(ac + bd - ad - bc = (a-b)(c-d) = ef\\). So, solving for \\(e\\) and \\(f\\), we find that \\(e^2+f^2 = 225\\), so \\(16e^2+16f^2 = 3600\\), so \\((4e)^2+(4f)^2 = 3600\\), so \\((3f)^2+(4f)^2 = 3600\\), so \\(f^2(3^2+4^2) = 3600\\), so \\(25f^2 = 3600\\), so \\(f^2 = 144\\) and \\(f = 12\\). Thus, \\(e = \\frac{3}{4} \\cdot 12 = 9\\). Therefore, \\(ef = 9 \\cdot 12 = \\mathbf{108}\\).</p>",
+      "answer": "108"
+    },
+    "10": {
+      "problem": "<p>Find the smallest positive integer \\(a\\) such that \\(x^4 + a^2\\) is not prime for any integer \\(x\\).</p>",
+      "solutions": "<p>\\(a = 1\\) clearly does not work, since if \\(x = 1\\), then \\(x^4+a^2 = 2\\), which is prime. \\(a = 2\\) clearly does not work, since if \\(x = 1\\), then \\(x^4+a^2 = 5\\), which is also prime. Here is a table for \\(a\\)’s and values of \\(x\\) that show they do not work:</p><p>\\[\\begin{array}{ccc}\na &amp; x &amp; a^4+x^2 \\\\\n3 &amp; 10 &amp; 10009 \\\\\n4 &amp; 1 &amp; 17 \\\\\n5 &amp; 2 &amp; 41 \\\\\n6 &amp; 1 &amp; 37 \\\\\n7 &amp; 20 &amp; 160049\n\\end{array}\\]</p><p>So, let us consider \\(a = 8\\) – i.e. the sum \\(x^4+64\\). This is the same as \\((x^2+8)^2 - 16x^2 = (x^2+4x+8)(x^2-4x+8)\\) by the difference of squares. This is clearly not prime for any integer \\(x\\). So, the answer is \\(\\mathbf{a = 8}\\).</p>",
+      "answer": "8"
+    }
+  }
+}

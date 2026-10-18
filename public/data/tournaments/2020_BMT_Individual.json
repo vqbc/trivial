@@ -1,0 +1,133 @@
+{
+  "test": "BMT Individual",
+  "year": 2020,
+  "name": "Individual Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2020/individual-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Justin throws a standard six-sided die three times in a row and notes the number of dots on the top face after each roll. How many different sequences of outcomes could he get?</p>",
+      "solutions": "<p>There are \\(6\\) possible outcomes each time Justin rolls the die. Since he rolls it three times, there are \\(6^3 = \\boxed{216}\\) different sequences of outcomes.</p>",
+      "answer": "216"
+    },
+    "2": {
+      "problem": "<p>Let \\(m\\) be the answer to this question. What is the value of \\(2m - 5\\)?</p>",
+      "solutions": "<p>We must have that \\(m = 2m - 5\\), so \\(m = \\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "3": {
+      "problem": "<p>At Zoom University, people’s faces appear as circles on a rectangular screen. The radius of one’s face is directly proportional to the square root of the area of the screen it is displayed on. Haydn’s face has a radius of \\(2\\) on a computer screen with area \\(36\\). What is the radius of his face on a \\(16 \\times 9\\) computer screen?</p>",
+      "solutions": "<p>We want to find the radius of Haydn’s face on a computer screen with area \\(16 \\times 9 = 144\\). On this screen, his face has a radius of \\(\\frac{2}{\\sqrt{36}} \\cdot \\sqrt{144} = \\boxed{4}\\).</p>",
+      "answer": "4"
+    },
+    "4": {
+      "problem": "<p>Let \\(a\\), \\(b\\), and \\(c\\) be integers that satisfy \\(2a + 3b = 52\\), \\(3b + c = 41\\), and \\(bc = 60\\). Find \\(a + b + c\\).</p>",
+      "solutions": "<p>First, note that \\(c = \\frac{60}{b}\\) from the third equation; we substitute this expression for \\(c\\) into the second. Then \\(3b + \\frac{60}{b} = 41\\). We multiply this equation by \\(b\\) to get \\(3b^2 + 60 = 41b\\). Subtracting \\(41b\\) from both sides and using the quadratic formula to solve for \\(b\\), we get that \\(b = 12\\) or \\(\\frac{5}{3}\\). Since \\(b\\) is an integer, \\(b\\) must equal \\(12\\). Plugging \\(b\\) into the first two equations gives us \\(a = 8\\) and \\(c = 5\\), so \\(a + b + c = \\boxed{25}\\).</p>",
+      "answer": "25"
+    },
+    "5": {
+      "problem": "<p>A Yule log is shaped like a right cylinder with height \\(10\\) and diameter \\(5\\). Freya cuts it parallel to its bases into \\(9\\) right cylindrical slices. After Freya cut it, the combined surface area of the slices of the Yule log increased by \\(a\\pi\\). Compute \\(a\\).</p>",
+      "solutions": "<p>In order to create the \\(9\\) slices, Freya makes \\(8\\) cuts, each of which is parallel to the bases of the cylinder. Each cut creates two new surfaces, which are circles with diameter \\(5\\). The increase in surface area, therefore, is \\(16 \\left( \\frac{\\pi \\cdot 5^2}{4} \\right) = 100\\pi\\), and our answer is \\(\\boxed{100}\\).</p>",
+      "answer": "100"
+    },
+    "6": {
+      "problem": "<p>Haydn picks two different integers between \\(1\\) and \\(100\\), inclusive, uniformly at random. The probability that their product is divisible by \\(4\\) can be expressed in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m + n\\).</p>",
+      "solutions": "<p>If the first integer is congruent to \\(1\\) or \\(3 \\pmod 4\\), then the second must be a multiple of \\(4\\). This case occurs with probability \\(\\frac{1}{2} \\cdot \\frac{25}{99} = \\frac{25}{198}\\). If the first integer is congruent to \\(2 \\pmod 4\\), the only requirement for the second integer is that it be even, which occurs with probability \\(\\frac{1}{4} \\cdot \\frac{49}{99} = \\frac{49}{396}\\). Finally, if the first integer is a multiple of \\(4\\), the product is guaranteed to be a multiple of \\(4\\) (probability \\(\\frac{1}{4}\\) of this case happening). Hence, the total probability is \\(\\frac{25}{198} + \\frac{49}{396} + \\frac{1}{4} = \\frac{1}{2}\\), and our answer is \\(\\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "7": {
+      "problem": "<p>A square has coordinates at \\((0,0), (4,0), (0,4)\\), and \\((4,4)\\). Rohith is interested in circles of radius \\(r\\) centered at the point \\((1,2)\\). There is a range of radii \\(a &lt; r &lt; b\\) where Rohith’s circle intersects the square at exactly \\(6\\) points, where \\(a\\) and \\(b\\) are positive real numbers. Then \\(b - a\\) can be written in the form \\(m + \\sqrt{n}\\), where \\(m\\) and \\(n\\) are integers. Compute \\(m + n\\).</p>",
+      "solutions": "<p>After some experimentation, we can find that circles of radius \\(2\\) and radius \\(\\sqrt{5}\\) create \\(4\\) points of intersection and that circles with \\(r &lt; 2\\) and \\(r &gt; \\sqrt{5}\\) produce at most \\(4\\) points of intersection. The range \\(2 &lt; r &lt; \\sqrt{5}\\) produces two intersections on the \\(x\\)- and \\(y\\)-axes and two more intersections on the top side of the square, so \\(b - a = \\sqrt{5} - 2\\), and our answer is \\(\\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "8": {
+      "problem": "<p>By default, iPhone passcodes consist of four base-10 digits. However, Freya decided to be unconventional and use hexadecimal (base-16) digits instead of base-10 digits! (Recall that \\(10_{16} = 16_{10}\\).) She sets her passcode such that exactly two of the hexadecimal digits are prime. How many possible passcodes could she have set?</p>",
+      "solutions": "<p>There are \\(6\\) prime numbers less than \\(16\\): \\(2, 3, 5, 7, B = 11_{10}\\), and \\(D = 13_{10}\\). Therefore, there are \\(16 - 6 = 10\\) non-prime numbers less than \\(16\\). There are \\(\\binom{4}{2} = 6\\) ways to choose which two hexadecimal digits are prime, so she can set a total of \\(6 \\cdot 6^2 \\cdot 10^2 = \\boxed{21600}\\) possible passcodes.</p>",
+      "answer": "21600"
+    },
+    "9": {
+      "problem": "<p>A circle \\(C\\) with radius \\(3\\) has an equilateral triangle inscribed in it. Let \\(D\\) be a circle lying outside the equilateral triangle, tangent to \\(C\\), and tangent to the equilateral triangle at the midpoint of one of its sides. The radius of \\(D\\) can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m + n\\).</p>",
+      "solutions": "<p>The altitude of the equilateral triangle is \\(3 \\cdot \\frac{3}{2} = \\frac{9}{2}\\), and the radius of the largest circle that can be inscribed in the region outside of the triangle has its center on the extension of the altitude. Its radius is half the difference of the diameter and the altitude, which is \\(\\frac{1}{2} \\left( 6 - \\frac{9}{2} \\right) = \\frac{3}{4}\\), and our answer is \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "10": {
+      "problem": "<p>Given that \\(p\\) and \\(p^4 + 34\\) are both prime numbers, compute \\(p\\).</p>",
+      "solutions": "<p>By Fermat’s Little Theorem, \\(5\\) divides \\(p^4+34\\) for all \\(p\\) not divisible by \\(5\\). So if \\(p^4+34\\) is prime, then \\(5\\mid p\\), but if \\(p\\) is prime, it must equal \\(\\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "11": {
+      "problem": "<p>Equilateral triangle \\(ABC\\) has side length 2. A semicircle is drawn with diameter \\(\\overline{BC}\\) such that it lies outside the triangle, and minor arc \\(\\widehat{BC}\\) is drawn so that it is part of a circle centered at \\(A\\). The area of the “lune” that is inside the semicircle but outside sector \\(ABC\\) can be expressed in the form \\(\\sqrt{p} - \\frac{q\\pi}{r}\\), where \\(p\\), \\(q\\), and \\(r\\) are positive integers such that \\(q\\) and \\(r\\) are relatively prime. Compute \\(p+q+r\\). <img class=\"latexcenter\" src=\"/data/tournaments/2020_BMT_Individual/11-fig1.png\" width=\"218\" alt=\"\"></p>",
+      "solutions": "<p>The desired area is the sum of the areas of triangle \\(ABC\\) and the semicircle, minus the area of sector \\(ABC\\). This area is equal to \\(\\sqrt{3} + \\frac{\\pi}{2} - \\frac{1}{6}(4\\pi) = \\sqrt{3} - \\frac{\\pi}{6}\\), and our answer is \\(\\boxed{10}\\).</p>",
+      "answer": "10"
+    },
+    "12": {
+      "problem": "<p>Compute the remainder when \\(98!\\) is divided by \\(101\\).</p>",
+      "solutions": "<p>Let the remainder be \\(0 \\le x \\le 100\\). By Wilson’s Theorem, \\(100! \\equiv -1 \\pmod{101}\\), so \\(100 \\cdot 99 \\cdot 98! \\equiv 100 \\cdot 99 \\cdot x \\equiv -1 \\pmod{101}\\). Since \\(100 \\equiv -1 \\pmod{101}\\) and \\(99 \\equiv -2 \\pmod{101}\\), it remains to solve for \\(x\\) such that \\(2x \\equiv -1 \\equiv 100 \\pmod{101}\\) which gives \\(\\boxed{50}\\).</p>",
+      "answer": "50"
+    },
+    "13": {
+      "problem": "<p>Sheila is making a regular-hexagon-shaped sign with side length 1. Let \\(ABCDEF\\) be the regular hexagon, and let \\(R, S, T\\) and \\(U\\) be the midpoints of \\(FA, BC, CD\\) and \\(EF\\), respectively. Sheila splits the hexagon into four regions of equal width: trapezoids \\(ABSR, RSCF, FCTU\\), and \\(UTDE\\). She then paints the middle two regions gold. The fraction of the total hexagon that is gold can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m+n\\). <img class=\"latexcenter\" src=\"/data/tournaments/2020_BMT_Individual/13-fig1.png\" width=\"222\" alt=\"\"></p>",
+      "solutions": "<p>We can split the hexagon into 24 equilateral triangles with side length \\(\\frac{1}{2}\\). Note that the gold region is an area consisting of exactly 14 triangles. Then the fraction that is painted is \\(\\frac{14}{24} = \\frac{7}{12}\\), and our answer is \\(\\boxed{19}\\).</p>",
+      "answer": "19"
+    },
+    "14": {
+      "problem": "<p>Let \\(B\\), \\(M\\), and \\(T\\) be the three roots of the equation \\(x^3+20x^2-18x-19=0\\). What is the value of \\(|(B+1)(M+1)(T+1)|\\)?</p>",
+      "solutions": "<p>Notice that \\((B+1)\\), \\((M+1)\\), and \\((T+1)\\) are the roots of the polynomial \\((x-1)^3+20(x-1)^2-18(x-1)-19\\). To find \\((B+1)(M+1)(T+1)\\), we need to find the constant term of that polynomial according to Vieta’s Formulas. Expanding, we get that the constant term of \\((x-1)^3+20(x-1)^2-18(x-1)-19\\) is \\(-1+20+18-19=18\\), so the desired product is \\(\\boxed{18}\\).</p>",
+      "answer": "18"
+    },
+    "15": {
+      "problem": "<p>The graph of the degree 2021 polynomial \\(P(x)\\), which has real coefficients and leading coefficient 1, meets the \\(x\\)-axis at the points \\((1,0), (2,0), (3,0), \\ldots, (2020,0)\\) and nowhere else. The mean of all possible values of \\(P(2021)\\) can be written in the form \\(a!/b\\), where \\(a\\) and \\(b\\) are positive integers and \\(a\\) is as small as possible. Compute \\(a+b\\).</p>",
+      "solutions": "<p>Since \\(P(x)\\) has degree 2021 and has real roots \\(1, 2, \\ldots, 2020\\), the 2021st root must also be real and hence be an element of the set \\(\\{1, 2, \\ldots, 2020\\}\\). That is, one of the numbers \\(1, 2, \\cdots, 2020\\) is a double root. Let this double root be \\(r\\). Then \\[P(x) = (x-1)(x-2)\\cdots(x-2020)\\cdot(x-r),\\] so \\[P(2021) = 2020\\cdot 2019 \\cdot 2018 \\cdots 1 \\cdot (2021-r) = 2020! \\cdot (2021-r).\\] Because \\(r\\) is taken from \\(\\{1,2,\\cdots,2020\\}\\), the average of the possible values of \\(P(2021)\\) is \\[\\frac{1}{2020}\\sum_{r=1}^{2020} 2020!\\cdot(2021-r) = \\frac{1}{2020}\\cdot 2020!\\cdot(2020+2019+\\cdots+2+1) = \\frac{1}{2020}\\cdot 2020! \\cdot \\frac{2020\\cdot 2021}{2} = \\frac{2021!}{2}.\\] Hence, we have \\(a=2021\\) and \\(b=2\\), and \\(a+b=2021+2=\\boxed{2023}\\).</p>",
+      "answer": "2023"
+    },
+    "16": {
+      "problem": "<p>The triangle with side lengths 3, 5, and \\(k\\) has area 6 for two distinct values of \\(k\\): \\(x\\) and \\(y\\). Compute \\(|x^2-y^2|\\).</p>",
+      "solutions": "<p>Let \\(A(k)\\) denote the area of the triangle in terms of \\(k\\). By Heron’s formula, \\[A(k) = \\sqrt{\\left(\\frac{8+k}{2}\\right)\\left(\\frac{2+k}{2}\\right)\\left(\\frac{-2+k}{2}\\right)\\left(\\frac{8-k}{2}\\right)} = \\frac{\\sqrt{(64-k^2)(k^2-4)}}{4}.\\] In order to exploit the symmetry of the numerator, we can plug in \\(k\\) and \\(\\sqrt{64-(k^2-4)} = \\sqrt{68-k^2}\\) to see that \\(A(k) = A(\\sqrt{68-k^2})\\). Since \\(x=4\\) satisfies \\(A(x)=6\\), \\(A(4) = A(2\\sqrt{13}) = 6\\), and \\(|x^2-y^2| = \\boxed{36}\\).</p>",
+      "answer": "36"
+    },
+    "17": {
+      "problem": "<p>Shrek throws 5 balls into 5 empty bins, where each ball’s target is chosen uniformly at random. After Shrek throws the balls, the probability that there is exactly one empty bin can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m+n\\).</p>",
+      "solutions": "<p>In order to have exactly one empty bin, we must have 1 bin with 2 balls and 3 bins with 1 ball. There are 5 ways to choose the empty bin, 4 ways to choose the bin with 2 balls, and \\(\\binom{5}{2}=10\\) ways to choose the 2 balls that go into one bin. Moreover, there are \\(3!=6\\) ways to throw the remaining balls into distinct bins. There are \\(5^5\\) total outcomes, so the desired probability is \\(\\frac{5\\cdot 4\\cdot 10\\cdot 6}{5^5} = \\frac{48}{125}\\), and our answer is \\(\\boxed{173}\\).</p>",
+      "answer": "173"
+    },
+    "18": {
+      "problem": "<p>Let \\(x\\) and \\(y\\) be integers between 0 and 5, inclusive. For the system of modular congruences \\[\\begin{cases} x+3y \\equiv 1 \\pmod{2} \\\\ 4x+5y \\equiv 2 \\pmod{3} \\end{cases},\\] find the sum of all distinct possible values of \\(x+y\\).</p>",
+      "solutions": "<p>The first equation reduces to \\(x+3y = x+(y+2y) \\equiv x+y \\equiv 1 \\pmod{2}\\), so \\(x\\) and \\(y\\) are of different parities. The second equation similarly reduces to \\(x+2y \\equiv 2 \\pmod{3}\\). By the Chinese Remainder Theorem, we want solutions \\((x,y) \\pmod 6\\), and we get that \\(y \\equiv x+1 \\pmod 6\\). Thus, our sum becomes \\(1+3+5+7+9 = \\boxed{25}\\).</p>",
+      "answer": "25"
+    },
+    "19": {
+      "problem": "<p>Alice is standing on the circumference of a large circular room of radius 10. There is a circular pillar in the center of the room of radius 5 that blocks Alice’s view. The total area in the room Alice can see can be expressed in the form \\(\\frac{m\\pi}{n} + p\\sqrt{q}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers and \\(p\\) and \\(q\\) are integers such that \\(q\\) is square-free. Compute \\(m+n+p+q\\). (Note that the pillar is not included in the total area of the room.)</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2020_BMT_Individual/19-fig1.png\" width=\"386\" alt=\"\"></p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2020_BMT_Individual/19-fig2.png\" width=\"311\" alt=\"\"></p><p>The region is composed of a \\(120^\\circ\\) sector of the annulus plus two \\(60^\\circ\\) sectors with radius 10, minus two 30-60-90 triangles of side lengths \\(5, 5\\sqrt{3}\\), and \\(10\\) (see diagram). The area of the annulus sector is \\(\\frac{120}{360}\\pi(10^2-5^2) = 25\\pi\\), the total area of the two triangles is \\(2 \\cdot \\frac{25\\sqrt{3}}{2} = 25\\sqrt{3}\\), and the total area of the \\(60^\\circ\\) sectors is \\(2 \\cdot \\frac{60}{360} \\cdot \\pi \\cdot 10^2 = \\frac{100\\pi}{3}\\). Adding and subtracting in the right order gives an area of \\[25\\pi - 25\\sqrt{3} + \\frac{100\\pi}{3} = \\frac{175\\pi}{3} - 25\\sqrt{3}\\] and thus our final answer is \\(\\boxed{156}\\).</p>",
+      "answer": "156"
+    },
+    "20": {
+      "problem": "<p>Compute the number of positive integers \\(n \\le 1890\\) such that \\(n\\) leaves an odd remainder when divided by all of 2, 3, 5, and 7.</p>",
+      "solutions": "<p>There are \\(1 \\cdot 1 \\cdot 2 \\cdot 3 = 6\\) possible combinations of remainders when divided by 2, 3, 5, 7. By the Chinese Remainder Theorem, there are 6 values of \\(n\\) every block of \\(\\operatorname{lcm}(2,3,5,7) = 210\\). Up to \\(210 \\cdot 9 = 1890\\), there are \\(6 \\cdot 9 = \\boxed{54}\\) values of \\(n\\).</p>",
+      "answer": "54"
+    },
+    "21": {
+      "problem": "<p>Let \\(P\\) be the probability that the product of 2020 real numbers chosen independently and uniformly at random from the interval \\([-1,2]\\) is positive. The value of \\(2P-1\\) can be written in the form \\(\\left(\\frac{m}{n}\\right)^b\\), where \\(m,n\\) and \\(b\\) are positive integers such that \\(m\\) and \\(n\\) are relatively prime and \\(b\\) is as large as possible. Compute \\(m+n+b\\).</p>",
+      "solutions": "<p><b>Solution 1:</b> We require that an even number of real numbers are negative (or equivalently, positive), which occurs with probability \\[\\frac{1}{3^{2020}} + \\binom{2020}{2}\\frac{2^2}{3^{2020}} + \\cdots + \\binom{2020}{2020}\\frac{2^{2020}}{3^{2020}}.\\] Observe that the binomial expansion of \\[\\left(\\frac{1}{3} + \\frac{2}{3}\\right)^{2020}\\] contains this sum; by symmetry, adding \\[\\left(\\frac{1}{3} - \\frac{2}{3}\\right)^{2020}\\] produces twice the desired sum. Simplifying, we get that \\(P = \\frac{1}{2} + \\frac{1}{2\\cdot 3^{2020}}\\), so \\(2P-1 = \\frac{1}{3^{2020}}\\), and our answer is \\(\\boxed{2024}\\).</p><p><b>Solution 2:</b> Let \\(P_n\\) be the product after selecting \\(n\\) numbers, and let \\(p_n\\) be the probability that \\(P_n\\) is positive. There are two cases when \\(P_n &gt; 0\\): either \\(P_{n-1} &gt; 0\\) and the \\(n\\)th number is positive, or \\(P_{n-1} &lt; 0\\) and the \\(n\\)th number is negative. This gives \\[p_n = \\frac{2}{3} \\cdot p_{n-1} + \\frac{1}{3} \\cdot (1-p_{n-1}) = \\frac{1}{3} p_{n-1} + \\frac{1}{3} \\implies 2p_n - 1 = \\frac{2}{3} \\cdot p_{n-1} - \\frac{1}{3} = \\frac{1}{3}(2p_{n-1} - 1).\\] Noting that \\(P_0 = 1\\) means that \\(2p_0 - 1 = 1\\), we get \\(2p_{2020} - 1 = \\frac{1}{3^{2020}}\\), and our answer is \\(\\boxed{2024}\\).</p>",
+      "answer": "2024"
+    },
+    "22": {
+      "problem": "<p>Three lights are placed horizontally on a line on the ceiling. All the lights are initially off. Every second, Neil picks one of the three lights uniformly at random to switch: if it is off, he switches it on; if it is on, he switches it off. When a light is switched, any lights directly to the left or right of that light also get turned on (if they were off) or off (if they were on). The expected number of lights that are on after Neil has flipped switches three times can be expressed in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m+n\\).</p>",
+      "solutions": "<p>By symmetry, the probability that the rightmost light is on is the same as the probability that the leftmost light is on. The leftmost light changes state if either it or the middle light is switched, which happens with probability \\(\\frac{2}{3}\\). The probability that it is on after three seconds is then \\(\\left(\\frac{2}{3}\\right)^3 + 3\\cdot\\frac{2}{3}\\cdot\\left(\\frac{1}{3}\\right)^2 = \\frac{14}{27}\\). Further, the middle light changes state no matter what. Now the expected number of lights on after three seconds, by linearity of expectation, is \\(\\frac{14}{27}+1+\\frac{14}{27} = \\frac{55}{27}\\) and our answer is \\(\\boxed{82}\\).</p>",
+      "answer": "82"
+    },
+    "23": {
+      "problem": "<p>Circle \\(\\Gamma\\) has radius 10, center \\(O\\), and diameter \\(\\overline{AB}\\). Point \\(C\\) lies on \\(\\Gamma\\) such that \\(AC = 12\\). Let \\(P\\) be the circumcenter of \\(\\triangle AOC\\). Line \\(\\overleftrightarrow{AP}\\) intersects \\(\\Gamma\\) at \\(Q\\), where \\(Q\\) is different from \\(A\\). Then the value of \\(\\frac{AP}{AQ}\\) can be expressed in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m+n\\).</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2020_BMT_Individual/23-fig1.png\" width=\"300\" alt=\"\"></p><p>Note that \\(\\triangle AOC\\) is isosceles, with \\(AO = CO = 10\\) and \\(AC = 12\\). Then draw the altitude of \\(\\triangle AOC\\) from \\(\\overline{AC}\\), and using the Law of Sines, deduce that \\(AP\\), which is the circumradius of \\(\\triangle AOC\\), is \\(\\frac{25}{4}\\). To find \\(AQ\\), observe that since \\(\\triangle AOP\\) and \\(\\triangle AOC\\) are isosceles (two sides are circumradii), and \\(\\angle PAO \\cong \\angle POA \\cong \\angle POC \\cong \\angle ABC\\) since \\(\\angle AOC\\) is an exterior angle to isosceles triangle \\(\\triangle BOC\\). Then since \\(\\angle ABC \\cong \\angle BAQ\\), and \\(\\triangle ABC\\) and \\(\\triangle BAQ\\) are both right (they are both inscribed in a semicircle), they’re congruent, so \\(AQ = BC = \\sqrt{20^2 - 12^2} = 16\\) by the Pythagorean Theorem. Then \\(\\frac{AP}{AQ} = \\frac{25/4}{16} = \\frac{25}{64}\\), and our answer is \\(\\boxed{89}\\).</p>",
+      "answer": "89"
+    },
+    "24": {
+      "problem": "<p>Let \\(N\\) be the number of non-empty subsets \\(T\\) of \\(S = \\{1, 2, 3, 4, \\ldots, 2020\\}\\) satisfying \\(\\max(T) &gt; 1000\\). Compute the largest integer \\(k\\) such that \\(3^k\\) divides \\(N\\).</p>",
+      "solutions": "<p>There are \\(2^{2020}\\) subsets of \\(S\\), and \\(2^{1000}\\) subsets of \\(S' = \\{1,2,\\cdots,1000\\}\\). The subsets of \\(S'\\) are precisely the subsets of \\(S\\) that don’t have \\(\\max(T) &gt; 1000\\), so we have \\[N = 2^{2020} - 2^{1000} = 2^{1000}(2^{1020} - 1).\\] Now by Euler’s theorem (noting that \\(\\varphi(27) = 18\\)), \\[2^{18} \\equiv 1 \\pmod{27} \\implies 2^{1008} \\equiv 1 \\pmod{27} \\implies 2^{1020} \\equiv 4096 \\equiv 19 \\pmod{27}.\\] It follows that \\(2^{1020} - 1 \\equiv 18 \\pmod{27}\\), so \\(k = \\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "25": {
+      "problem": "<p>Let \\(f : \\mathbb{R}^+ \\to \\mathbb{R}^+\\) be a function such that for all \\(x, y \\in \\mathbb{R}^+\\), \\(f(x)f(y) = f(xy) + f\\left(\\frac{x}{y}\\right)\\), where \\(\\mathbb{R}^+\\) represents the positive real numbers. Given that \\(f(2) = 3\\), compute the last two digits of \\(f\\left(2^{2^{2020}}\\right)\\).</p>",
+      "solutions": "<p>Observe that, setting \\(x = y\\), we have \\[f(x)^2 = f(x^2) + f(1).\\] Also, setting \\(x = 2\\) and \\(y = 1\\) gives \\[f(2)f(1) = f(2) + f(2),\\] so \\(3f(1) = 6\\) and \\(f(1) = 2\\). It follows that \\(f(x)^2 = f(x^2) + 2\\), so \\(f(x^2) = f(x)^2 - 2\\). Using this recurrence, we find that \\[\\begin{aligned}\nf\\left(2^{2^0}\\right) &amp;= 3 \\equiv 3 \\pmod{100} \\\\\nf\\left(2^{2^1}\\right) &amp;= 7 \\equiv 7 \\pmod{100} \\\\\nf\\left(2^{2^2}\\right) &amp;= 47 \\equiv 47 \\pmod{100} \\\\\nf\\left(2^{2^3}\\right) &amp;= 2207 \\equiv 7 \\pmod{100} \\\\\nf\\left(2^{2^4}\\right) &amp;\\equiv 7^2 - 2 = 47 \\pmod{100} \\\\\nf\\left(2^{2^5}\\right) &amp;\\equiv 47^2 - 2 \\equiv 7 \\pmod{100} \\\\\n&amp;\\vdots\n\\end{aligned}\\] For \\(a\\) even, \\(f\\left(2^{2^a}\\right) \\equiv 47 \\pmod{100}\\). In particular, for \\(a = 2020\\), we find that the last two digits of \\(f\\left(2^{2^{2020}}\\right)\\) are \\(\\boxed{47}\\). For good measure, we show that a function \\(f\\) satisfying the criteria presented in the problem statement exists. We note that for \\(a, x, y &gt; 0\\), we have \\[\\left(x^a + x^{-a}\\right)\\left(y^a + y^{-a}\\right) = (xy)^a + \\left(\\frac{x}{y}\\right)^a + \\left(\\frac{y}{x}\\right)^a + \\left(\\frac{1}{xy}\\right)^a = (xy)^a + (xy)^{-a} + \\left(\\frac{x}{y}\\right)^a + \\left(\\frac{x}{y}\\right)^{-a},\\] so the function \\[f(x) = x^a + x^{-a}\\] satisfies the given functional equation whenever \\(a\\) is positive (\\(a\\) could be negative as well, but since \\(a\\) and \\(-a\\) yield the same function \\(f\\), we can assume just as well that \\(a &gt; 0\\)). Now we need only solve for \\(a\\) such that \\(f(2) = 3\\). This gives \\[3 = 2^a + 2^{-a} \\implies (2^a)^2 - 3(2^a) + 1 = 0 \\implies 2^a = \\frac{3 \\pm \\sqrt{5}}{2}.\\] Only one of these roots makes \\(a &gt; 0\\), so we have \\[a = \\log_2 \\frac{3 + \\sqrt{5}}{2} = 2\\log_2\\varphi,\\] where \\(\\varphi\\) is the golden ratio. Hence, the function \\[f(x) = x^{2\\log_2\\varphi} + x^{-2\\log_2\\varphi} = \\varphi^{2\\log_2 x} + \\varphi^{-2\\log_2 x}\\] satisfies all of the given conditions. This suggests an interesting relationship between the given function and the Fibonacci numbers that enthusiastic contestants are urged to pursue.</p>",
+      "answer": "47"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2005,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2005/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A1 One side of a triangle has length 45. How many ordered pairs of positive integers \\((b, c)\\) are there so that the triangle with side lengths \\(b, c, 45\\) is right and the side of length 45 is a leg of the right triangle?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Let \\(n = \\text{TNYWR}\\). Now calculate the area of a regular \\(n-3\\)-gon with sidelength \\(1\\).</p><p><i>Note: no official answer was published for Problem 1 (the previous problem). As printed its answer works out to \\(14\\), but the relay was evidently written for \\(15\\), which makes the polygon here a regular 12-gon.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Present \\(\\text{TNYWR}\\) in the form \\(\\frac{12}{a-\\sqrt{b}}\\), where \\(a\\) and \\(b\\) are possitive integers. Find the number of possitive integers between 1 and \\(25(b-a)\\) that are relatively prime with 2005.</p><p><i>Note: no official answer was published for Problem 2 (the previous problem). With the value the relay intends (\\(n = 15\\), a regular 12-gon of side 1), its answer is \\(6 + 3\\sqrt{3}\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Find the last non-zero digit of \\(25!\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Let \\(n = \\text{TNYWR} - 1\\). If \\(f(x)\\) is a polynomial of degree \\(n\\) with \\(f(i) = i(i+1)(i+2)\\) for \\(n = 0, 1, \\ldots, n\\), find \\(f(n+1)\\).</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(4\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Let \\(n = \\text{TNYWR}\\). You and your friends set up a marble race down a \\(d\\) meter long hill. Assume you have \\(n\\) marbles with constant speeds \\(\\{1, 2, 3, \\ldots, n\\}\\) in meters per second. Calculate the average time delay between consecutive marbles reaching the bottom of the hill.</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(120\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

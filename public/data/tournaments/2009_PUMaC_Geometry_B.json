@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry B",
+  "year": 2009,
+  "name": "Geometry B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2009_GeometryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find \\(100\\) times the area of a regular dodecagon inscribed in a unit circle. Round your answer to the nearest integer if necessary.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_B/1-fig1.png\" width=\"253\" alt=\"\"></p>",
+      "solutions": "<p>The area of the dodecagon is \\[12 \\times \\frac{1}{2} \\times 1^2 \\times \\sin 30^\\circ = 3.\\] Hence \\(100\\) times the area is \\(100 \\times 3 = \\boxed{300}\\).</p>",
+      "answer": "300"
+    },
+    "2": {
+      "problem": "<p>A triangle has sides of lengths \\(5\\), \\(6\\), \\(7\\). What is \\(60\\) times the square of the radius of the inscribed circle?</p>",
+      "solutions": "<p>Use Heron’s Formula, and then the area of the triangle is \\[\\sqrt{9 \\times (9-5) \\times (9-6) \\times (9-7)} = 6\\sqrt{6}.\\] Hence the radius of the incircle is \\[\\frac{2 \\times 6\\sqrt{6}}{5+6+7} = \\frac{2\\sqrt{6}}{3}.\\] Therefore \\(60\\) times the square of the radius is \\(60 \\times \\left(\\frac{2\\sqrt{6}}{3}\\right)^2 = \\boxed{160}\\).</p>",
+      "answer": "160"
+    },
+    "3": {
+      "problem": "<p>A rectangular piece of paper \\(ABCD\\) has sides of lengths \\(AB = 1\\), \\(BC = 2\\). The rectangle is folded in half such that \\(AD\\) coincides with \\(BC\\) and \\(EF\\) is the folding line. Then fold the paper along a line \\(BM\\) such that the corner \\(A\\) falls on line \\(EF\\). How large, in degrees, is \\(\\angle ABM\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_B/3-fig1.png\" width=\"335\" alt=\"\"></p>",
+      "solutions": "<p>Construct \\(NG \\perp BC\\) at \\(G\\). Triangles \\(ABM\\), \\(NBM\\), \\(NBG\\) are all congruent. Hence \\(\\angle ABM = \\boxed{30^\\circ}\\).</p>",
+      "answer": "30^\\circ"
+    },
+    "4": {
+      "problem": "<p>Tetrahedron \\(ABCD\\) has sides of lengths, in increasing order, \\(7\\), \\(13\\), \\(18\\), \\(27\\), \\(36\\), \\(41\\). If \\(AB = 41\\), then what is the length of \\(CD\\)?</p>",
+      "solutions": "<p>By the triangle inequality, \\(AB + DB &gt; 41\\), and \\(AC + CB &gt; 41\\). Hence one of the pairs \\(\\{AD, DB\\}\\) and \\(\\{AC, CB\\}\\) must be \\(\\{18, 27\\}\\), and the other pair contains \\(36\\). WLOG, let \\(AC = 27\\), \\(CB = 18\\). Then \\(DB \\ne 36\\), otherwise \\(CD &gt; 18\\). Hence \\(AD = 36\\), \\(CD = \\boxed{13}\\).</p>",
+      "answer": "13"
+    },
+    "5": {
+      "problem": "<p>A polygon is called concave if it has at least one angle strictly greater than \\(180^\\circ\\). What is the maximum number of symmetries that an 11-sided concave polygon can have? (A <i>symmetry</i> of a polygon is a way to rotate or reflect the plane that leaves the polygon unchanged.)</p>",
+      "solutions": "<p>An 11-gon can have only axes passing through a vertex and an opposite side. If it had exactly \\(2\\) such axes, they would have to be perpendicular and the polygon would have an even number of sides. If it had exactly \\(3\\) axes, each would have to be at an angle of \\(60^\\circ\\) with the next one, and the number of sides of the polygon would be a multiple of \\(3\\). Since our polygon has a concave angle, any number of axes of symmetry above \\(3\\) would imply at least \\(12\\) sides. Hence the maximum number of symmetries is \\(\\boxed{1}\\).</p>",
+      "answer": "1"
+    },
+    "6": {
+      "problem": "<p>In the following diagram (not to scale), \\(A\\), \\(B\\), \\(C\\), \\(D\\) are four consecutive vertices of an 18-sided regular polygon with center \\(O\\). Let \\(P\\) be the midpoint of \\(AC\\) and \\(Q\\) be the midpoint of \\(DO\\). Find \\(\\angle OPQ\\) in degrees.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_B/6-fig1.png\" width=\"351\" alt=\"\"></p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Geometry_B/6-fig2.png\" width=\"318\" alt=\"\"></p><p>Let \\(R\\) be the midpoint of \\(AO\\). Connect \\(RP\\), \\(RQ\\). Then \\(RP = RO = OQ = RQ\\). Hence triangle \\(PQR\\) is isosceles, then some simple calculation yields \\(\\angle OPQ = \\angle RPQ - \\angle RPO = 50^\\circ - 20^\\circ = \\boxed{30^\\circ}\\).</p>",
+      "answer": "30^\\circ"
+    },
+    "7": {
+      "problem": "<p>Lines \\(l\\) and \\(m\\) are perpendicular. Line \\(l\\) partitions a convex polygon into two parts of equal area, and partitions the projection of the polygon onto \\(m\\) into two line segments of length \\(a\\) and \\(b\\) respectively. Determine the maximum value of \\(\\left\\lfloor \\frac{1000a}{b} \\right\\rfloor\\). (The floor notation \\(\\lfloor x \\rfloor\\) denotes largest integer not exceeding \\(x\\).)</p>",
+      "solutions": "<p>The greatest possible value of the ratio is \\(1+\\sqrt{2}\\). Let \\(A\\) and \\(B\\) be vertices of the convex polygon on different sides of \\(l\\) so that their distance from \\(l\\) is maximal on each side. Let \\(K\\) and \\(L\\) be the intersections of \\(l\\) with the sides of the polygon. Define the points \\(K_1\\) and \\(L_1\\) on the extension of \\(AK\\), \\(AL\\) respectively such that \\(K_1L_1\\) is parallel to \\(l\\). Since the polygon is convex, the part of the polygon on \\(A\\)’s side contains \\(AKL\\), and the part of the polygon on \\(B\\)’s side is contained in \\(K_1KLL_1\\). Therefore \\([K_1KLL_1] \\ge [AKL]\\). Let \\(M\\), \\(N\\) be the feet of the perpendiculars from \\(A\\), \\(B\\) to line \\(l\\) respectively, then \\[\\frac{[AKL]}{[AK_1L_1]} \\le \\frac{1}{2} \\implies \\frac{AM}{AM+BN} \\le \\frac{1}{\\sqrt{2}}\\] \\[\\implies \\frac{AM}{BN} \\le \\frac{1}{\\sqrt{2}-1} = 1+\\sqrt{2}.\\] Equality is obtained when the polygon is a triangle with \\(l\\) parallel to one side. Since \\(1000(1+\\sqrt{2}) \\approx 2414.2\\), the maximum value is \\(\\boxed{2414}\\).</p>",
+      "answer": "2414"
+    },
+    "8": {
+      "problem": "<p>Consider the solid with \\(4\\) triangles and \\(4\\) regular hexagons as faces, where each triangle borders \\(3\\) hexagons, and all the sides are of length \\(1\\). Compute the <i>square</i> of the volume of the solid. Express your result in reduced fraction and concatenate the numerator with the denominator (e.g., if you think that the square is \\(\\frac{1734}{274}\\), then you would submit \\(1734274\\)).</p>",
+      "solutions": "<p>Extend the edges that are common to two hexagons. We obtain a regular tetrahedron of side length \\(3\\). Hence the volume of the original solid is the volume of a regular tetrahedron of side length \\(3\\) minus the volume of \\(4\\) regular tetrahedra of side length \\(1\\). The volume is \\[\\frac{1}{3} \\times \\frac{9\\sqrt{3}}{4} \\times \\sqrt{6} \\times \\frac{27-4}{27} = \\frac{23\\sqrt{2}}{12}.\\] The square of the volume is \\(\\left(\\frac{23\\sqrt{2}}{12}\\right)^2 = \\frac{529 \\times 2}{144} = \\frac{529}{72}\\), so the answer is \\(\\boxed{52972}\\).</p>",
+      "answer": "52972"
+    }
+  }
+}

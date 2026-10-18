@@ -1,0 +1,63 @@
+{
+  "test": "HMMT November Team",
+  "year": 2009,
+  "name": "Team Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2009/nov/team/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<h3>Down the Infinite Corridor</h3><p>Consider an isosceles triangle \\(T\\) with base 10 and height 12. Define a sequence \\(\\omega_1, \\omega_2, \\dots\\) of circles such that \\(\\omega_1\\) is the incircle of \\(T\\) and \\(\\omega_{i+1}\\) is tangent to \\(\\omega_i\\) and both legs of the isosceles triangle for \\(i &gt; 1\\).</p><p>Find the radius of \\(\\omega_1\\).</p>",
+      "solutions": "<p>Using the Pythagorean theorem, we see that the legs of \\(T\\) each have length 13. Let \\(r\\) be the radius of \\(\\omega_1\\). We can divide \\(T\\) into three triangles, each with two vertices at vertices of \\(T\\) and one vertex at the center of \\(\\omega_1\\). These triangles all have height \\(r\\) and have bases 13, 13, and 10. Thus their total area is \\(\\frac{13r}{2} + \\frac{13r}{2} + \\frac{10r}{2} = 18r\\). However, \\(T\\) has height 12 and base 10, so its area is 60. Thus \\(18r = 60\\), so \\(r = \\frac{10}{3}\\).</p>",
+      "answer": "\\frac{10}{3}"
+    },
+    "2": {
+      "problem": "<p>Find the ratio of the radius of \\(\\omega_{i+1}\\) to the radius of \\(\\omega_i\\).</p>",
+      "solutions": "<p>Let \\(r_i\\) be the radius of \\(\\omega_i\\), and \\(h_i\\) be the distance from the top vertex of \\(T\\) to the center of \\(\\omega_i\\). By similar triangles, \\(\\frac{r_i}{h_i} = \\frac{5}{13}\\). Also \\(h_{i+1} = h_i - r_i - r_{i+1}\\). Thus \\(\\frac{r_{i+1}}{r_i} = \\frac{h_{i+1}}{h_i} = 1 - \\frac{r_i + r_{i+1}}{h_i} = 1 - \\frac{5}{13}\\left(1 + \\frac{r_{i+1}}{r_i}\\right)\\). Solving for \\(\\frac{r_{i+1}}{r_i}\\) gives \\(\\frac{r_{i+1}}{r_i} = \\frac{1 - 5/13}{1 + 5/13} = \\frac{4}{9}\\).</p>",
+      "answer": "\\frac{4}{9}"
+    },
+    "3": {
+      "problem": "<p>Find the total area contained in all the circles.</p>",
+      "solutions": "<p>Using the notation from the previous solution, the area contained in the \\(i\\)th circle is equal to \\(\\pi r_i^2\\). Since the radii form a geometric sequence, the areas do as well. Specifically, the areas form a sequence with initial term \\(\\pi \\cdot \\frac{100}{9}\\) and common ratio \\(\\frac{16}{81}\\), so their sum is then \\(\\pi \\cdot \\frac{\\frac{100}{9}}{\\frac{65}{81}} = \\frac{180\\pi}{13}\\).</p>",
+      "answer": "\\frac{180\\pi}{13}"
+    },
+    "4": {
+      "problem": "<h3>Bouncy Balls</h3><p>In the following problems, you will consider the trajectories of balls moving and bouncing off of the boundaries of various containers. The balls are small enough that you can treat them as points. Let us suppose that a ball starts at a point \\(X\\), strikes a boundary (indicated by the line segment \\(AB\\)) at \\(Y\\), and then continues, moving along the ray \\(YZ\\). Balls always bounce in such a way that \\(\\angle XYA = \\angle BYZ\\). This is indicated in the above diagram.</p><div style=\"text-align: center\"><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_November_Team/4-fig1.png\" width=\"460\" alt=\"\"></p></div><p>Balls bounce off of boundaries in the same way light reflects off of mirrors - if the ball hits the boundary at point \\(P\\), the trajectory after \\(P\\) is the reflection of the trajectory before \\(P\\) through the perpendicular to the boundary at \\(P\\).</p><p>A ball inside a rectangular container of width 7 and height 12 is launched from the lower-left vertex of the container. It first strikes the right side of the container after traveling a distance of \\(\\sqrt{53}\\) (and strikes no other sides between its launch and its impact with the right side).</p><p>Find the height at which the ball first contacts the right side.</p>",
+      "solutions": "<p>Let \\(h\\) be this height. Then, using the Pythagorean theorem, we see that \\(h^2 + 7^2 = 53\\), so \\(h = 2\\).</p>",
+      "answer": "2"
+    },
+    "5": {
+      "problem": "<p>How many times does the ball bounce before it returns to a vertex? (The final contact with a vertex does not count as a bounce.)</p>",
+      "solutions": "<p>Every segment the ball traverses between bounces takes it 7 units horizontally and 2 units up. Thus, after 5 bounces it has traveled up 10 units, and the final segment traversed takes it directly to the upper right vertex of the rectangle.</p>",
+      "answer": "5"
+    },
+    "6": {
+      "problem": "<p>Now a ball is launched from a vertex of an equilateral triangle with side length 5. It strikes the opposite side after traveling a distance of \\(\\sqrt{19}\\).</p><p>Find the distance from the ball’s point of first contact with a wall to the nearest vertex.</p>",
+      "solutions": "<div style=\"text-align: center\"><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_November_Team/6-fig1.png\" width=\"311\" alt=\"\"></p></div><p>Consider the diagram above, where \\(M\\) is the midpoint of \\(BC\\). Then \\(AM\\) is perpendicular to \\(BC\\) since \\(ABC\\) is equilateral, so by the Pythagorean theorem \\(AM = \\frac{5\\sqrt{3}}{2}\\). Then, using the Pythagorean theorem again, we see that \\(MY = \\frac{1}{2}\\), so that \\(BY = 2\\).</p>",
+      "answer": "2"
+    },
+    "7": {
+      "problem": "<p>How many times does the ball bounce before it returns to a vertex? (The final contact with a vertex does not count as a bounce.)</p>",
+      "solutions": "<p>The key idea is that, instead of reflecting the line \\(AY\\) off of \\(BC\\), we will reflect \\(ABC\\) about \\(BC\\) and extend \\(AY\\) beyond \\(\\triangle ABC\\). We keep doing this until the extension of \\(AY\\) hits a vertex of one of our reflected triangles. This is illustrated in the diagram below:</p><div style=\"text-align: center\"><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_November_Team/7-fig1.png\" width=\"401\" alt=\"\"></p></div><p>We can calculate that the line \\(AY\\) has slope \\(\\frac{\\frac{3\\sqrt{3}}{2}}{\\frac{7}{2}} = \\frac{3\\sqrt{3}}{7}\\), so that (as indicated in the diagram), \\(AY\\) first intersects a vertex at the point \\(\\left(\\frac{35}{2}, \\frac{15\\sqrt{3}}{2}\\right)\\). To get there, it has to travel through 2 horizontal lines, 1 upward sloping line, and 4 downward sloping lines, so it bounces \\(2 + 1 + 4 = 7\\) times total.</p>",
+      "answer": "7"
+    },
+    "8": {
+      "problem": "<p>In this final problem, a ball is again launched from the vertex of an equilateral triangle with side length 5.</p><p>In how many ways can the ball be launched so that it will return again to a vertex for the first time after 2009 bounces?</p>",
+      "solutions": "<p>We will use the same idea as in the previous problem. We first note that every vertex of a triangle can be written uniquely in the form \\(a(5, 0) + b\\left(\\frac{5}{2}, \\frac{5\\sqrt{3}}{2}\\right)\\), where \\(a\\) and \\(b\\) are non-negative integers. Furthermore, if a ball ends at \\(a(5, 0) + b\\left(\\frac{5}{2}, \\frac{5\\sqrt{3}}{2}\\right)\\), then it bounces off of a wall \\(2(a + b) - 3\\) times. Therefore, the possible directions that you can launch the ball in correspond to solutions to \\(2(a+b)-3 = 2009\\), or \\(a+b = 1006\\). However, if \\(a\\) and \\(b\\) have a common factor, say, \\(k\\), then the ball will pass through the vertex corresponding to \\(\\frac{a}{k}\\) and \\(\\frac{b}{k}\\) before it passes through the vertex corresponding to \\(a\\) and \\(b\\). Therefore, we must discount all such pairs \\(a, b\\). This corresponds to when \\(a\\) is even or \\(a = 503\\), so after removing these we are left with 502 remaining possible values of \\(a\\), hence 502 possible directions in which to launch the ball.</p>",
+      "answer": "502"
+    },
+    "9": {
+      "problem": "<h3>Super Mario 64!</h3><p>Mario is once again on a quest to save Princess Peach. Mario enters Peach’s castle and finds himself in a room with 4 doors. This room is the first in a sequence of 2 indistinguishable rooms. In each room, 1 door leads to the next room in the sequence (or, for the second room, into Bowser’s level), while the other 3 doors lead to the first room.</p><p>Suppose that in every room, Mario randomly picks a door to walk through. What is the expected number of doors (not including Mario’s initial entrance to the first room) through which Mario will pass before he reaches Bowser’s level?</p>",
+      "solutions": "<p>Let \\(E_i\\) be the expected number of doors through which Mario will pass in the future if he is currently in room \\(i\\) for \\(i = 1, 2, 3\\) (we will set \\(E_3 = 0\\)). We claim that \\(E_i = 1 + \\frac{3}{4}E_1 + \\frac{1}{4}E_{i+1}\\). Indeed, the 1 at the beginning comes from the fact that we need to pass through a door to leave the room, the \\(\\frac{3}{4}E_1\\) comes from the fact that there is a \\(\\frac{3}{4}\\) chance of ending up in room 1, and the \\(\\frac{1}{4}E_{i+1}\\) corresponds to the fact that there is a \\(\\frac{1}{4}\\) chance of ending up in \\(E_{i+1}\\). Using this, we get \\(E_1 = 1 + \\frac{3}{4}E_1 + \\frac{1}{4}E_2\\), or \\(E_1 = 4 + E_2\\). We also get \\(E_2 = 1 + \\frac{3}{4}E_1\\). Solving this system of equations yields \\(E_1 = 20\\).</p>",
+      "answer": "20"
+    },
+    "10": {
+      "problem": "<p>Suppose that instead there are 6 rooms with 4 doors. In each room, 1 door leads to the next room in the sequence (or, for the last room, Bowser’s level), while the other 3 doors lead to the first room. Now what is the expected number of doors through which Mario will pass before he reaches Bowser’s level?</p>",
+      "solutions": "<p>This problem works in the same general way as the last problem, but it can be more succinctly solved using the general formula, which is provided below in the solution to the next problem.</p>",
+      "answer": "5460"
+    },
+    "11": {
+      "problem": "<p>In general, if there are \\(d\\) doors in every room (but still only 1 correct door) and \\(r\\) rooms, the last of which leads into Bowser’s level, what is the expected number of doors through which Mario will pass before he reaches Bowser’s level?</p>",
+      "solutions": "<p>Let \\(E_i\\) be the expected number of doors through which Mario will pass in the future if he is currently in room \\(i\\) for \\(i = 1, 2, \\dots, r + 1\\) (we will set \\(E_{r+1} = 0\\)). We claim that \\(E_i = 1 + \\frac{d-1}{d}E_1 + \\frac{1}{d}E_{i+1}\\). This is because, as before, there is a \\(\\frac{d-1}{d}\\) chance of ending up in room 1, and a \\(\\frac{1}{d}\\) chance of ending up in room \\(i + 1\\). Note that we can re-write this equation as \\(d E_i = d + (d - 1)E_1 + E_{i+1}\\).</p><p>We can solve this system of equation as follows: let \\(E_1 = E_i + c_i\\). Then we can re-write each equation as \\(d E_1 - d \\cdot c_i = d + (d - 1)E_1 + E_1 - c_{i+1}\\), so \\(c_{i+1} = d \\cdot c_i + d\\), and \\(c_1 = 0\\). We can then see that \\(c_i = d\\frac{d^{i-1}-1}{d-1}\\) (either by finding the pattern or by using more advanced techniques, such as those given at <a class=\"external\" href=\"http://en.wikipedia.org/wiki/Recurrence_relation\">http://en.wikipedia.org/wiki/Recurrence_relation</a>). Solving for \\(E_1\\) using \\(E_1 = E_r + c_r\\) and \\(E_r = 1 + \\frac{d-1}{d}E_1\\), we get \\(E_1 = \\frac{d(d^r-1)}{d-1}\\).</p>",
+      "answer": "\\frac{d(d^r - 1)}{d - 1}"
+    }
+  }
+}

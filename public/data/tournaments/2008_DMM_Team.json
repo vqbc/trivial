@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2008,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2008/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>\\(ABCD\\) is a convex quadrilateral such that \\(AB = 20\\), \\(BC = 24\\), \\(CD = 7\\), \\(DA = 15\\), and \\(\\angle DAB\\) is a right angle. What is the area of \\(ABCD\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "234"
+    },
+    "2": {
+      "problem": "<p>A triangular number is one that can be written in the form \\(1 + 2 + \\cdots + n\\) for some positive number \\(n\\). \\(1\\) is clearly both triangular and square. What is the next largest number that is both triangular and square?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "36"
+    },
+    "3": {
+      "problem": "<p>Find the last (i.e. rightmost) three digits of \\(9^{2008}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "721"
+    },
+    "4": {
+      "problem": "<p>When expressing numbers in a base \\(b \\ge 11\\), you use letters to represent digits greater than 9. For example, \\(A\\) represents 10 and \\(B\\) represents 11, so that the number 110 in base 10 is \\(A0\\) in base 11. What is the smallest positive integer that has four digits when written in base 10, has at least one letter in its base 12 representation, and no letters in its base 16 representation?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1030"
+    },
+    "5": {
+      "problem": "<p>A fly starts from the point \\((0, 16)\\), then flies straight to the point \\((8, 0)\\), then straight to the point \\((0, -4)\\), then straight to the point \\((-2, 0)\\), and so on, spiraling to the origin, each time intersecting the coordinate axes at a point half as far from the origin as its previous intercept. If the fly flies at a constant speed of 2 units per second, how many seconds will it take the fly to reach the origin?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "8\\sqrt{5}"
+    },
+    "6": {
+      "problem": "<p>A line segment is divided into two unequal lengths so that the ratio of the length of the short part to the length of the long part is the same as the ratio of the length of the long part to the length of the whole line segment. Let \\(D\\) be this ratio. Compute: \\[D^{-1} + D^{\\left[D^{-1} + D^{\\left(D^{-1} + D^{2}\\right)}\\right]}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "7": {
+      "problem": "<p>Let \\(f(x) = 4x + 2\\). Find the ordered pair of integers \\((P, Q)\\) such that their greatest common divisor is 1, \\(P\\) is positive, and for any two real numbers \\(a\\) and \\(b\\), the sentence: \\[\\text{``}Pa + Qb \\ge 0\\text{''}\\] is true if and only if the following sentence is true: \\[\\text{``For all real numbers } x\\text{, if } |f(x) - 6| &lt; b\\text{, then } |x - 1| &lt; a\\text{.''}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "(4, -1)"
+    },
+    "8": {
+      "problem": "<p>Call a rectangle “simple” if all four of its vertices have integers as both of their coordinates and it has one vertex at the origin. How many simple rectangles are there whose area is less than or equal to 6?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "84"
+    },
+    "9": {
+      "problem": "<p>A square is divided into eight congruent triangles by the diagonals and the perpendicular bisectors of its sides. How many ways are there to color the triangles red and blue if two ways that are reflections or rotations of each other are considered the same?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "43"
+    },
+    "10": {
+      "problem": "<p>In chess, a knight can move by jumping to any square whose center is \\(\\sqrt{5}\\) units away from the center of the square that it is currently on. For example, a knight on the square marked by the horse in the diagram below can move to any of the squares marked with an “X” and to no other squares. How many ways are there for a knight on the square marked with the horse in the diagram to move to the square with a circle in exactly four moves?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2008_DMM_Team/10-fig1.png\" width=\"292\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "54"
+    }
+  }
+}

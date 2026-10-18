@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 2",
+  "year": 2002,
+  "name": "Individual General Test: Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2002/feb/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The squares of a chessboard are numbered from left to right and top to bottom (so that the first row reads \\(1, 2, \\ldots, 8\\), the second reads \\(9, 10, \\ldots, 16\\), and so forth). The number 1 is on a black square. How many black squares contain odd numbers?</p>",
+      "solutions": "<p>\\(\\boxed{16}\\). The black squares in the \\(n\\)th row contain odd numbers when \\(n\\) is odd and even numbers when \\(n\\) is even; thus there are four rows where the black squares contain odd numbers, and each such row contributes four black squares.</p>",
+      "answer": "16"
+    },
+    "2": {
+      "problem": "<p>You are in a completely dark room with a drawer containing 10 red, 20 blue, 30 green, and 40 khaki socks. What is the smallest number of socks you must randomly pull out in order to be sure of having at least one of each color?</p>",
+      "solutions": "<p>\\(\\boxed{91}\\). The maximum number of socks that can be pulled out without representing every color is \\(20 + 30 + 40 = 90\\), so 91 is the minimum needed to ensure that this doesn’t happen.</p>",
+      "answer": "91"
+    },
+    "3": {
+      "problem": "<p>Solve for \\(x\\) in \\(3 = \\sqrt{x + \\sqrt{x + \\sqrt{x + \\cdots}}}\\).</p>",
+      "solutions": "<p>\\(\\boxed{6}\\). Squaring both sides and subtracting \\(x\\) from both sides, we get \\(9 - x = 3\\), or \\(x = 6\\).</p>",
+      "answer": "6"
+    },
+    "4": {
+      "problem": "<p>Dan is holding one end of a 26 inch long piece of light string that has a heavy bead on it with each hand (so that the string lies along two straight lines). If he starts with his hands together at the start and leaves his hands at the same height, how far does he need to pull his hands apart so that the bead moves upward by 8 inches?</p>",
+      "solutions": "<p>After he pulls the bead is 5 inches below his hands, and it is 13 inches from each hand. Using the Pythagorean theorem, his hands must be \\(2 \\cdot 12 = \\boxed{24}\\) inches apart.</p>",
+      "answer": "24"
+    },
+    "5": {
+      "problem": "<p>A square and a regular hexagon are drawn with the same side length. If the area of the square is \\(\\sqrt{3}\\), what is the area of the hexagon?</p>",
+      "solutions": "<p>The hexagon is composed of six equilateral triangles each of side length \\(\\sqrt[4]{3}\\) (with base \\(b = \\sqrt[4]{3}\\) and height \\(\\frac{\\sqrt{3}}{2}b\\)), so the total area is \\(\\boxed{\\frac{9}{2}}\\).</p>",
+      "answer": "\\frac{9}{2}"
+    },
+    "6": {
+      "problem": "<p>Nine nonnegative numbers have average 10. What is the greatest possible value for their median?</p>",
+      "solutions": "<p>\\(\\boxed{18}\\). If the median is \\(m\\), then the five highest numbers are all at least \\(m\\), so the sum of all the numbers is at least \\(5m\\). Thus \\(90 \\ge 5m \\Rightarrow m \\le 18\\). Conversely, we can achieve \\(m = 18\\) by taking four 0’s and five 18’s.</p>",
+      "answer": "18"
+    },
+    "7": {
+      "problem": "<p>\\(p\\) and \\(q\\) are primes such that the numbers \\(p + q\\) and \\(p + 7q\\) are both squares. Find the value of \\(p\\).</p>",
+      "solutions": "<p>\\(\\boxed{2}\\). Writing \\(x^2 = p + q, y^2 = p + 7q\\), we have \\(6q = y^2 - x^2 = (y - x)(y + x)\\). Since \\(6q\\) is even, one of the factors \\(y - x, y + x\\) is even, and then the other is as well; thus \\(6q\\) is divisible by \\(4 \\Rightarrow q\\) is even \\(\\Rightarrow q = 2\\) and \\(6q = 12\\). We may assume \\(x, y\\) are both taken to be positive; then we must have \\(y - x = 2, y + x = 6 \\Rightarrow x = 2\\), so \\(p + 2 = 2^2 = 4 \\Rightarrow p = 2\\) also.</p>",
+      "answer": "2"
+    },
+    "8": {
+      "problem": "<p>Two fair coins are simultaneously flipped. This is done repeatedly until at least one of the coins comes up heads, at which point the process stops. What is the probability that the other coin also came up heads on this last flip?</p>",
+      "solutions": "<p>\\(\\boxed{1/3}\\). Let the desired probability be \\(p\\). There is a \\(1/4\\) chance that both coins will come up heads on the first toss. Otherwise, both can come up heads simultaneously only if both are tails on the first toss, and then the process restarts as if from the beginning; thus this situation occurs with probability \\(p/4\\). Thus \\(p = 1/4 + p/4\\); solving, \\(p = 1/3\\).</p><p><b>Alternate Solution.</b> The desired event is equivalent to both coins coming up tails for \\(n\\) successive turns (for some \\(n \\ge 0\\)), then both coins coming up heads. For any fixed value of \\(n\\), the probability of this occurring is \\(1/4^{n+1}\\). Since all these events are disjoint, the total probability is \\(1/4 + 1/4^2 + 1/4^3 + \\cdots = 1/3\\).</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "9": {
+      "problem": "<p>\\(A\\) and \\(B\\) are two points on a circle with center \\(O\\), and \\(C\\) lies outside the circle, on ray \\(AB\\). Given that \\(AB = 24, BC = 28, OA = 15\\), find \\(OC\\).</p>",
+      "solutions": "<p>\\(\\boxed{41}\\). Let \\(M\\) be the midpoint of \\(AB\\); then \\(\\triangle OMB\\) is a right triangle with \\(OB = 15, MB = 12\\), so \\(OM = 9\\). Now \\(\\triangle OMC\\) is a right triangle with \\(OM = 9, MC = 40\\), so \\(OC = 41\\).</p>",
+      "answer": "41"
+    },
+    "10": {
+      "problem": "<p>How many four-digit numbers are there in which at least one digit occurs more than once?</p>",
+      "solutions": "<p>\\(\\boxed{4464}\\). There are 9000 four-digit numbers altogether. If we consider how many four-digit numbers have all their digits distinct, there are 9 choices for the first digit (since we exclude leading zeroes), and then 9 remaining choices for the second digit, then 8 for the third, and 7 for the fourth, for a total of \\(9 \\cdot 9 \\cdot 8 \\cdot 7 = 4536\\). Thus the remaining \\(9000 - 4536 = 4464\\) numbers have a repeated digit.</p>",
+      "answer": "4464"
+    }
+  }
+}

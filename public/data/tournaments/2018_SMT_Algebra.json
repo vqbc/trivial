@@ -1,0 +1,58 @@
+{
+  "test": "SMT Algebra",
+  "year": 2018,
+  "name": "Algebra Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2018/algebra-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>At the grocery store, 3 avocados and 2 pineapples cost $8.80, while 5 avocados and 3 pineapples cost $14.00. How much do 1 avocado and 1 pineapple cost in dollars?</p>",
+      "solutions": "<p>Since 3 avocados and 2 pineapples cost $8.80, 6 avocados and 4 pineapples cost $17.60. Subtracting away the cost of 5 avocados and 3 pineapples, we have that 1 avocado and 1 pineapple cost \\(17.60 - 14.00 = \\boxed{3.60}\\) dollars.</p>",
+      "answer": "3.60"
+    },
+    "2": {
+      "problem": "<p>Let \\(a, b, c, d\\) be an increasing sequence of numbers such that \\(a, b, c\\) forms a geometric sequence and \\(b, c, d\\) forms an arithmetic sequence. Given that \\(a = 8\\) and \\(d = 24\\), what is \\(b\\)?</p>",
+      "solutions": "<p>Let \\(r\\) be the common ratio so that \\(b = ar\\) and \\(c = ar^2\\). Then \\(d - c = c - b\\) or \\(d = 2c - b = 2ar^2 - ar\\). Plugging in the values for \\(a\\) and \\(d\\), we get the quadratic \\(16r^2 - 8r - 24 = 0\\). Factoring, we get \\(8(r+1)(2r-3) = 0\\). Because the sequence is increasing, \\(r\\) must be positive, so \\(r = \\frac{3}{2}\\). Therefore, the answer is \\(b = 8 \\cdot \\frac{3}{2} = \\boxed{12}\\).</p>",
+      "answer": "12"
+    },
+    "3": {
+      "problem": "<p>Given that the roots of the polynomial \\(x^3 - 7x^2 + 13x - 7 = 0\\) are \\(r, s, t\\), compute the value of \\(\\frac{1}{r} + \\frac{1}{s} + \\frac{1}{t}\\).</p>",
+      "solutions": "<p><b>Solution 1.</b> Vieta’s formulas give us the relations \\(r+s+t=7\\), \\(rs+st+rt=13\\) and \\(rst=7\\). If we write the fraction over a single denominator, we find \\[\\frac{1}{r} + \\frac{1}{s} + \\frac{1}{t} = \\frac{rs+st+rt}{rst} = \\boxed{\\frac{13}{7}}.\\]</p><p><b>Solution 2.</b> Notice that we can factorize \\(x^3 - 7x^2 + 13x - 7\\) into \\((x-1)(x^2-6x+7)\\). The roots are therefore \\(1, 3\\pm\\sqrt{2}\\), allowing us to compute \\[\\frac{1}{r} + \\frac{1}{s} + \\frac{1}{t} = \\frac{1}{1} + \\frac{1}{3+\\sqrt2} + \\frac{1}{3-\\sqrt2} = 1 + \\frac{3-\\sqrt2+3+\\sqrt2}{9-2} = \\boxed{\\frac{13}{7}}.\\]</p>",
+      "answer": "\\frac{13}{7}"
+    },
+    "4": {
+      "problem": "<p>Find all possible pairs of integers \\((m, n)\\) which satisfy \\(m^2 + 2m - 35 = 2^n\\).</p>",
+      "solutions": "<p>Factoring, we have \\((m+7)(m-5) = 2^n\\). We observe that \\(m+7\\) and \\(m-5\\) are 12 apart, and also observe that the only powers of 2 which differ by 12 are 4 and 16, so \\(n = 2+4=6\\). There are two cases:</p><p>(a) \\(m+7=16\\) and \\(m-5=4\\), which gives us \\(m=9\\).</p><p>(b) \\(m+7=-4\\) and \\(m-5=-16\\), which gives us \\(m=-11\\).</p><p>The answer is therefore \\(\\boxed{(9,6), (-11,6)}\\).</p>",
+      "answer": "(9, 6), (-11, 6)"
+    },
+    "5": {
+      "problem": "<p>Let \\(a_1, a_2, a_3, a_4, a_5, \\ldots\\) be a geometric progression with positive ratio such that \\(a_1 &gt; 1\\) and \\((a_{1357})^3 = a_{34}\\). Find the smallest integer \\(n\\) such that \\(a_n &lt; 1\\).</p>",
+      "solutions": "<p>Let \\(r\\) be the ratio between the terms. The \\(n\\)-th term of the sequence can therefore be written as \\(a_n = a_1 r^{n-1}\\). This allows us to write \\[(a_{1357})^3 = a_{34} \\implies (a_1 r^{1356})^3 = a_1 r^{33} \\implies a_1^2 r^{4035} = 1.\\]</p><p>Since \\(a_1 &gt; 1\\), we must have \\(0 &lt; r &lt; 1\\), so the geometric progression is decreasing. However, the above equation also gives \\[a_1^2 r^{4035} = (a_1 r^{2017})(a_1 r^{2018}) = a_{2018}a_{2019} = 1.\\]</p><p>Because the sequence is decreasing, we must have \\(a_{2018} &gt; 1 &gt; a_{2019}\\), which gives us the answer \\(\\boxed{2019}\\).</p>",
+      "answer": "2019"
+    },
+    "6": {
+      "problem": "<p>Let \\(a_k = \\pm 1\\) for all integers \\(1 \\le k \\le 2018\\). The sum \\[\\sum_{1 \\le i &lt; j \\le 2018} a_i a_j\\] can take on both positive and negative values. Find the smallest positive value of the sum.</p>",
+      "solutions": "<p>Observe that: \\[\\begin{aligned}\n2\\sum_{1\\le i&lt;j\\le 2018} a_ia_j &amp;= (a_1+a_2+\\cdots+a_{2018})^2 - (a_1^2+a_2^2+\\cdots+a_{2018}^2) \\\\\n&amp;= (a_1+a_2+\\cdots+a_{2018})^2 - 2018\n\\end{aligned}\\]</p><p>Because \\(a_k = \\pm 1\\), we know that \\(a_1+a_2+\\cdots+a_{2018}\\) is an integer between \\(-2018\\) and \\(2018\\) inclusive. Furthermore, there are an even number of terms, each of which is odd, so this sum is even.</p><p>Therefore, the minimum positive integer value of \\((a_1+a_2+\\cdots+a_{2018})^2 - 2018\\) is \\(46^2-2018=98\\), obtained when \\(a_1+a_2+\\cdots+a_{2018}=\\pm 46\\). This can be attained when \\(a_1=a_2=\\cdots=a_{46}=1\\) and the rest of the terms \\(a_{47},a_{48},\\ldots,a_{2018}\\) contain an equal number of 1’s and -1’s.</p><p>Therefore, the least positive value is \\(\\frac{98}{2}=\\boxed{49}\\).</p>",
+      "answer": "49"
+    },
+    "7": {
+      "problem": "<p>Let \\(x, y, z\\) be non-negative real numbers satisfying \\(xyz = \\frac{2}{3}\\). Compute the minimum value of \\[x^2 + 6xy + 18y^2 + 12yz + 4z^2.\\]</p>",
+      "solutions": "<p>We first complete the square and rewrite our equation as \\[(x+3y)^2 + (3y+2z)^2.\\]</p><p>We then substitute \\(a = x\\), \\(b = 3y\\), and \\(c = 2z\\) to minimize the equivalent sum \\[(a+b)^2 + (b+c)^2\\] under the condition \\(abc = 6xyz = 4\\). Applying AM-GM gives us \\[(a+b)^2 + (b+c)^2 \\ge 2(a+b)(b+c).\\]</p><p>We can apply AM-GM again to \\(a+b\\) and \\(b+c\\) individually via \\[a+b = \\frac{a}{2} + \\frac{a}{2} + b \\ge 3\\sqrt[3]{\\frac{a^2b}{4}}\\] \\[b+c = b + \\frac{c}{2} + \\frac{c}{2} \\ge 3\\sqrt[3]{\\frac{bc^2}{4}}\\] to get \\[(a+b)^2 + (b+c)^2 \\ge 2(a+b)(b+c) \\ge 18\\sqrt[3]{\\frac{(abc)^2}{16}} = \\boxed{18}\\]</p><p>Note that equality holds when \\(a=2b=c\\), so \\(a=c=2\\), and \\(b=1\\), or equivalently when \\(x=2\\), \\(y=\\frac{1}{3}\\), and \\(z=1\\).</p>",
+      "answer": "18"
+    },
+    "8": {
+      "problem": "<p>Define \\(\\{x\\} = x - \\lfloor x \\rfloor\\), where \\(\\lfloor x \\rfloor\\) denotes the largest integer not exceeding \\(x\\). If \\(|x| \\le 8\\), find the number of real solutions to the equation \\[\\{x\\} + \\{x^2\\} = 1.\\]</p>",
+      "solutions": "<p>Since \\(\\{x\\}+\\{x^2\\}=1\\), the value \\(x\\) must satisfy \\(x+x^2=n\\) for some integer \\(n\\). The quadratic equation then gives us \\[x = \\frac{-1\\pm\\sqrt{1+4n}}{2}.\\]</p><p>If we consider when \\(0\\le x\\le 8\\), then we must have \\(\\frac{-1+\\sqrt{1+4n}}{2} \\le 8\\). Solving the inequality, we find that \\(x\\) satisfies the equation when \\(0\\le n\\le 72\\), giving us 73 possibilities. Likewise, when \\(-8\\le x&lt;0\\), we must have \\(\\frac{-1-\\sqrt{1+4n}}{2} \\ge -8\\), which has solutions when \\(0\\le n\\le 56\\), for a total of 57 possibilities.</p><p>Since \\(\\{x\\}+\\{x^2\\}&lt;2\\), we must also eliminate the cases when \\(\\{x\\}+\\{x^2\\}=0\\), which happens only when \\(-8\\le x\\le 8\\) is an integer, for a total of 17 possibilities.</p><p>Therefore, the total number of solutions is \\(73+57-17=\\boxed{113}\\).</p>",
+      "answer": "113"
+    },
+    "9": {
+      "problem": "<p>Let \\((a, b, c, d, e)\\) be an integer solution to the system of equations \\[\\begin{aligned}\na+d &amp;= 12 \\\\\nb+ad+e &amp;= 57 \\\\\nc+bd+ae &amp;= 134 \\\\\ncd+be &amp;= 156 \\\\\nce &amp;= 72\n\\end{aligned}\\] Find all possible values of \\(b+d\\).</p>",
+      "solutions": "<p>After much careful consideration, we notice that the first, second, and third equations contain \\(a,b,c\\), the second, third, and fourth equations contain \\(ad,bd,cd\\), and the third, fourth, and fifth equations contain \\(ae,be,ce\\). We also have \\(d\\) and \\(e\\) terms. This suggests that the system of equations was constructed somehow using the product \\[(1+a+b+c)(1+d+e).\\]</p><p>This looks suspiciously like the factorization of the polynomial \\[(x^3+ax^2+bx+c)(x^2+dx+e).\\]</p><p>In fact, if we expand this polynomial, we get the (semi-magical) \\[x^5+(a+d)x^4+(b+ad+e)x^3+(c+bd+ae)x^2+(cd+be)x+ce.\\]</p><p>Plugging our values in from our system of equations, we realize that the desired solutions are the different factorizations of the polynomial \\[x^5+12x^4+57x^3+134x^2+156x+72=(x+2)^3(x+3)^2\\] into the product of a cubic and a quadratic. We can do this in three ways, leading to the solutions \\[\\begin{aligned}\n[(x+2)^3][(x+3)^2] &amp;= (x^3+6x^2+12x+8)(x^2+6x+9) \\implies (6,12,8,6,9) \\\\\n[(x+2)^2(x+3)][(x+2)(x+3)] &amp;= (x^3+7x^2+16x+12)(x^2+5x+6) \\implies (7,16,12,5,6) \\\\\n[(x+2)(x+3)^2][(x+2)^2] &amp;= (x^3+8x^2+21x+18)(x^2+4x+4) \\implies (8,21,18,4,4)\n\\end{aligned}\\]</p><p>Therefore, the three possible values of \\(b+d\\) are \\(\\boxed{18, 21, 25}\\).</p>",
+      "answer": "18, 21, 25"
+    },
+    "10": {
+      "problem": "<p>Let \\(a_1, \\ldots, a_{2018}\\) be the roots of the polynomial \\[x^{2018}+x^{2017}+\\cdots+x^2+x-1345=0.\\] Compute \\[\\sum_{n=1}^{2018} \\frac{1}{1-a_n}.\\]</p>",
+      "solutions": "<p>We begin by defining \\(b_n=\\frac{1}{1-a_n}\\). Rearranging gives us \\(a_n=\\frac{b_n-1}{b_n}\\). Since we know \\(-1346+\\sum_{k=0}^{2018} a_n^k=0\\) for all \\(1\\le n\\le 2018\\), we can substitute \\(b_n\\) in to get a new polynomial \\[\\sum_{k=0}^{2018}\\left(\\frac{b_n-1}{b_n}\\right)^k-1346=0 \\implies \\sum_{k=0}^{2018}(b_n)^{2018-k}(b_n-1)^k-1346b_n^{2018}=0\\] where we have multiplied both sides by \\(b_n^{2018}\\) which is nonzero because \\(a_n\\ne 1\\). This is true for all \\(1\\le n\\le 2018\\), so \\(b_n\\) are in fact the roots of the polynomial \\[\\sum_{k=0}^{2018}x^{2018-k}(x-1)^k-1346x^{2018}=0.\\]</p><p>By Vieta’s it is enough to calculate the coefficients of \\(x^{2018}\\) and \\(x^{2017}\\) in the polynomial to compute the sum of the roots. We see that the coefficient of \\(x^{2018}\\) is \\(2019-1346=673\\) and the coefficient of \\(x^{2017}\\) is \\(-1-2-\\cdots-2018=-\\frac{2018\\cdot 2019}{2}\\), which gives us the answer \\(\\frac{2018\\cdot 2019}{2\\cdot 673}=\\boxed{3027}\\).</p>",
+      "answer": "3027"
+    }
+  }
+}

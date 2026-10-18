@@ -1,0 +1,173 @@
+{
+  "test": "HMMT November Guts",
+  "year": 2014,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2014/nov/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Solve for \\(x\\) in the equation \\(20 \\cdot 14 + x = 20 + 14 \\cdot x\\).</p>",
+      "solutions": "<p>By inspection, \\(20 + 14 \\cdot 20 = 20 \\cdot 14 + 20\\). Alternatively, one can simply compute \\(x = \\frac{20 \\cdot 14 - 20}{14 - 1} = 20\\).</p>",
+      "answer": "20"
+    },
+    "2": {
+      "problem": "<p>Find the area of a triangle with side lengths 14, 48, and 50.</p>",
+      "solutions": "<p>Note that this is a multiple of the 7-24-25 right triangle. The area is therefore \\[\\frac{14(48)}{2} = 336.\\]</p>",
+      "answer": "336"
+    },
+    "3": {
+      "problem": "<p>Victoria wants to order at least 550 donuts from Dunkin’ Donuts for the HMMT 2014 November contest. However, donuts only come in multiples of twelve. Assuming every twelve donuts cost \\(\\textdollar 7.49\\), what is the minimum amount Victoria needs to pay, in dollars? (Because HMMT is affiliated with MIT, the purchase is tax exempt. Moreover, because of the size of the order, there is no delivery fee.)</p>",
+      "solutions": "<p>The smallest multiple of 12 larger than 550 is \\(552 = 12 \\cdot 46\\). So the answer is \\(46 \\cdot \\textdollar 7.49\\). To make the multiplication easier, we can write this as \\(46 \\cdot (\\textdollar 7.5 - \\textdollar 0.01) = \\textdollar 345 - \\textdollar 0.46 = \\textdollar 344.54\\).</p><p>Note: this is the actual cost of donuts at the 2014 HMMT November contest.</p>",
+      "answer": "344.54"
+    },
+    "4": {
+      "problem": "<p>How many two-digit prime numbers have the property that both digits are also primes?</p>",
+      "solutions": "<p>When considering the 16 two-digit numbers with 2, 3, 5, and 7 as digits, we find that only 23, 37, 53, and 73 have this property.</p>",
+      "answer": "4"
+    },
+    "5": {
+      "problem": "<p>Suppose that \\(x, y, z\\) are real numbers such that \\[x = y + z + 2, \\quad y = z + x + 1, \\quad \\text{and} \\quad z = x + y + 4.\\] Compute \\(x + y + z\\).</p>",
+      "solutions": "<p>Adding all three equations gives \\[x + y + z = 2(x + y + z) + 7,\\] from which we find that \\(x + y + z = -7\\).</p>",
+      "answer": "-7"
+    },
+    "6": {
+      "problem": "<p>In the octagon \\(COMPUTER\\) exhibited below, all interior angles are either \\(90^\\circ\\) or \\(270^\\circ\\) and we have \\(CO = OM = MP = PU = UT = TE = 1\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2014_HMMT_November_Guts/6-fig1.png\" width=\"300\" alt=\"\"></p><p>Point \\(D\\) (not to scale in the diagram) is selected on segment \\(RE\\) so that polygons \\(COMPUTED\\) and \\(CDR\\) have the same area. Find \\(DR\\).</p>",
+      "solutions": "<p>The area of the octagon \\(COMPUTER\\) is equal to 6. So, the area of \\(CDR\\) must be 3. So, we have the equation \\(\\frac{1}{2} * CD * DR = [CDR] = 3\\). And from \\(CD = 3\\), we have \\(DR = 2\\).</p>",
+      "answer": "2"
+    },
+    "7": {
+      "problem": "<p>Let \\(ABCD\\) be a quadrilateral inscribed in a circle with diameter \\(\\overline{AD}\\). If \\(AB = 5\\), \\(AC = 6\\), and \\(BD = 7\\), find \\(CD\\).</p>",
+      "solutions": "<p>We have \\(AD^2 = AB^2 + BD^2 = AC^2 + CD^2\\), so \\(CD = \\sqrt{AB^2 + BD^2 - AC^2} = \\sqrt{38}\\).</p>",
+      "answer": "\\sqrt{38}"
+    },
+    "8": {
+      "problem": "<p>Find the number of digits in the decimal representation of \\(2^{41}\\).</p>",
+      "solutions": "<p>Noticing that \\(2^{10} = 1024 \\approx 1000\\) allows for a good estimate. Alternatively, the number of decimal digits of \\(n\\) is given by \\(\\lfloor \\log_{10}(n) \\rfloor + 1\\). Using \\(\\log_{10}(2) \\approx 0.31\\) also gives the correct answer. The exact value of \\(2^{41}\\) is 2199023255552.</p>",
+      "answer": "13"
+    },
+    "9": {
+      "problem": "<p>Let \\(f\\) be a function from the nonnegative integers to the positive reals such that \\(f(x+y) = f(x) \\cdot f(y)\\) holds for all nonnegative integers \\(x\\) and \\(y\\). If \\(f(19) = 524288k\\), find \\(f(4)\\) in terms of \\(k\\).</p>",
+      "solutions": "<p>The given condition implies \\(f(mn) = f(m)^n\\), so \\[f(4)^{19} = f(4 \\cdot 19) = f(19 \\cdot 4) = f(19)^4\\] and it follows that \\(f(4) = 16k^{4/19}\\).</p>",
+      "answer": "16k^{4/19}"
+    },
+    "10": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(CA = CB = 5\\) and \\(AB = 8\\). A circle \\(\\omega\\) is drawn such that the interior of triangle \\(ABC\\) is completely contained in the interior of \\(\\omega\\). Find the smallest possible area of \\(\\omega\\).</p>",
+      "solutions": "<p>We need to contain the interior of \\(\\overline{AB}\\), so the diameter is at least 8. This bound is sharp because the circle with diameter \\(\\overline{AB}\\) contains all of \\(ABC\\). Hence the minimal area is \\(16\\pi\\).</p>",
+      "answer": "16\\pi"
+    },
+    "11": {
+      "problem": "<p>How many integers \\(n\\) in the set \\(\\{4, 9, 14, 19, \\ldots, 2014\\}\\) have the property that the sum of the decimal digits of \\(n\\) is even?</p>",
+      "solutions": "<p>We know that 2014 does not qualify the property. So, we’ll consider \\(\\{4, 9, 14, \\ldots, 2009\\}\\) instead. Now, we partition this set into 2 sets: \\(\\{4, 14, 24, \\ldots, 2004\\}\\) and \\(\\{9, 19, 29, \\ldots, 2009\\}\\).</p><p>For each so the first and second set are basically \\(x4\\) and \\(x9\\), where \\(x = 0, 1, 2, \\ldots, 200\\), respectively. And we know that for each value of \\(x\\), \\(x\\) must be either even or odd, which makes <i>exactly</i> one of \\(\\{x4, x9\\}\\) has even sum of decimal digits. Therefore, there are in total of 201 such numbers.</p>",
+      "answer": "201"
+    },
+    "12": {
+      "problem": "<p>Sindy writes down the positive integers less than 200 in increasing order, but skips the multiples of 10. She then alternately places \\(+\\) and \\(-\\) signs before each of the integers, yielding an expression \\(+1 - 2 + 3 - 4 + 5 - 6 + 7 - 8 + 9 - 11 + 12 - \\cdots - 199\\). What is the value of the resulting expression?</p>",
+      "solutions": "<p>Group the numbers into \\((1 - 2 + 3 - 4 + \\ldots + 18 - 19) + (21 - 22 + \\ldots + 38 - 39) + \\ldots + (181 - 182 + \\ldots + 198 - 199)\\). We can easily show that each group is equal to \\(-10\\), and so the answer is \\(-100\\).</p>",
+      "answer": "-100"
+    },
+    "13": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB = AC = \\frac{25}{14}BC\\). Let \\(M\\) denote the midpoint of \\(\\overline{BC}\\) and let \\(X\\) and \\(Y\\) denote the projections of \\(M\\) onto \\(\\overline{AB}\\) and \\(\\overline{AC}\\), respectively. If the areas of triangle \\(ABC\\) and quadrilateral \\(AXMY\\) are both positive integers, find the minimum possible sum of these areas.</p>",
+      "solutions": "<p>By similar triangles, one can show that \\([AXMY] = 2 \\cdot [AMX] = (\\frac{24}{25})^2 \\cdot 2[ABM] = (\\frac{24}{25})^2 \\cdot [ABC]\\). Thus the answer is \\(25^2 + 24^2 = 1201\\).</p>",
+      "answer": "1201"
+    },
+    "14": {
+      "problem": "<p>How many ways can the eight vertices of a three-dimensional cube be colored red and blue such that no two points connected by an edge are both red? Rotations and reflections of a given coloring are considered distinct.</p>",
+      "solutions": "<p>We do casework on \\(R\\), the number of red vertices. Let the cube be called \\(ABCDEFGH\\), with opposite faces \\(ABCD\\) and \\(EFGH\\), such that \\(A\\) is directly above \\(E\\).</p><ul><li><u>\\(R = 0\\)</u>: There is one such coloring, which has only blue vertices.</li><li><u>\\(R = 1\\)</u>: There are 8 ways to choose the red vertex, and all other vertices must be blue. There are 8 colorings in this case.</li><li><u>\\(R = 2\\)</u>: Any pair not an edge works, so the answer is \\(\\binom{8}{2} - 12 = 16\\).</li><li><u>\\(R = 3\\)</u>: Each face \\(ABCD\\) and \\(EFGH\\) has at most two red spots. Assume WLOG \\(ABCD\\) has exactly two and \\(EFGH\\) has exactly one (multiply by 2 at the end). There are two ways to pick those in \\(ABCD\\) (two opposite corners), and two ways after that to pick \\(EFGH\\). Hence the grand total for this subcase is \\(2 \\cdot 2 \\cdot 2 = 8\\).</li><li><u>\\(R = 4\\)</u>: There are only two ways to do this.</li></ul><p>Hence, the sum is 35.</p>",
+      "answer": "35"
+    },
+    "15": {
+      "problem": "<p>Carl is on a vertex of a regular pentagon. Every minute, he randomly selects an adjacent vertex (each with probability \\(\\frac{1}{2}\\)) and walks along the edge to it. What is the probability that after 10 minutes, he ends up where he had started?</p>",
+      "solutions": "<p>Let A denote a clockwise move and B denote a counterclockwise move. We want to have some combination of 10 A’s and B’s, with the number of A’s and the number of B’s differing by a multiple of 5. We have \\(\\binom{10}{0} + \\binom{10}{5} + \\binom{10}{10} = 254\\). Hence the answer is \\(\\frac{254}{2^{10}} = \\frac{127}{512}\\).</p>",
+      "answer": "\\frac{127}{512}"
+    },
+    "16": {
+      "problem": "<p>A particular coin has a \\(\\frac{1}{3}\\) chance of landing on heads (H), \\(\\frac{1}{3}\\) chance of landing on tails (T), and \\(\\frac{1}{3}\\) chance of landing vertically in the middle (M). When continuously flipping this coin, what is the probability of observing the continuous sequence HMMT before HMT?</p>",
+      "solutions": "<p>For a string of coin flips \\(S\\), let \\(P_S\\) denote the probability of flipping \\(HMMT\\) before \\(HMT\\) if \\(S\\) is the starting sequence of flips. We know that the desired probability, \\(p\\), is \\(\\frac{1}{3}P_H + \\frac{1}{3}P_M + \\frac{1}{3}P_T\\). Now, using conditional probability, we find that \\[\\begin{aligned}\nP_H &amp;= \\frac{1}{3}P_{HH} + \\frac{1}{3}P_{HM} + \\frac{1}{3}P_{HT} \\\\\n&amp;= \\frac{1}{3}P_H + \\frac{1}{3}P_{HM} + \\frac{1}{3}P_T.\n\\end{aligned}\\] We similarly find that \\[\\begin{aligned}\nP_M = P_T &amp;= \\frac{1}{3}P_H + \\frac{1}{3}P_M + \\frac{1}{3}P_T \\\\\nP_{HM} &amp;= \\frac{1}{3}P_{HMM} + \\frac{1}{3}P_H \\\\\nP_{HMM} &amp;= \\frac{1}{3} + \\frac{1}{3}P_M + \\frac{1}{3}P_H.\n\\end{aligned}\\] Solving gives \\(P_H = P_M = P_T = \\frac{1}{4}\\). Thus, \\(p = \\frac{1}{4}\\).</p>",
+      "answer": "\\frac{1}{4}"
+    },
+    "17": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB = AC = 5\\) and \\(BC = 6\\). Denote by \\(\\omega\\) the circumcircle of \\(ABC\\). We draw a circle \\(\\Omega\\) which is externally tangent to \\(\\omega\\) as well as to the lines \\(AB\\) and \\(AC\\) (such a circle is called an <i>A-mixtilinear excircle</i>). Find the radius of \\(\\Omega\\).</p>",
+      "solutions": "<p>Let \\(M\\) be the midpoint of \\(BC\\). Let \\(D\\) be the point diametrically opposite \\(A\\) on the circumcircle, and let the A-mixtilinear excircle be tangent to lines \\(AB\\) and \\(AC\\) at \\(X\\) and \\(Y\\). Let \\(O\\) be the center of the \\(A\\)-mixtilinear excircle.</p><p>Notice that \\(\\triangle AOX \\sim \\triangle ABM\\). If we let \\(x\\) be the desired radius, we have \\[\\frac{x + AD}{x} = \\frac{5}{3}.\\] We can compute \\(\\frac{AD}{5} = \\frac{5}{4}\\) since \\(\\triangle ADB \\sim \\triangle ABM\\), we derive \\(AD = \\frac{25}{4}\\). From here it follows that \\(x = \\frac{75}{8}\\).</p>",
+      "answer": "\\frac{75}{8}"
+    },
+    "18": {
+      "problem": "<p>For any positive integer \\(x\\), define \\(\\text{Accident}(x)\\) to be the set of ordered pairs \\((s, t)\\) with \\(s \\in \\{0, 2, 4, 5, 7, 9, 11\\}\\) and \\(t \\in \\{1, 3, 6, 8, 10\\}\\) such that \\(x + s - t\\) is divisible by 12. For any nonnegative integer \\(i\\), let \\(a_i\\) denote the number of \\(x \\in \\{0, 1, \\ldots, 11\\}\\) for which \\(|\\text{Accident}(x)| = i\\). Find \\[a_0^2 + a_1^2 + a_2^2 + a_3^2 + a_4^2 + a_5^2.\\]</p>",
+      "solutions": "<p>Modulo twelve, the first set turns out to be \\(\\{-1 \\cdot 7, 0 \\cdot 7, \\ldots, 5 \\cdot 7\\}\\) and the second set turns out to be \\(\\{6 \\cdot 7, \\ldots, 10 \\cdot 7\\}\\). We can eliminate the factor of 7 and shift to reduce the problem to \\(s \\in \\{0, 1, \\ldots, 6\\}\\) and \\(t \\in \\{7, \\ldots, 11\\}\\). With this we can easily compute \\((a_0, a_1, a_2, a_3, a_4, a_5) = (1, 2, 2, 2, 2, 3)\\). Therefore, the answer is 26.</p><p>It turns out that the choice of the sets correspond to the twelve keys of a piano in an octave. The first set gives the locations of the white keys, while the second set gives the location of the black keys. Steps of seven then correspond to perfect fifths. See, for example:</p><ul><li>http://en.wikipedia.org/wiki/Music_and_mathematics</li><li>http://en.wikipedia.org/wiki/Guerino_Mazzola</li></ul>",
+      "answer": "26"
+    },
+    "19": {
+      "problem": "<p>Let a sequence \\(\\{a_n\\}_{n=0}^\\infty\\) be defined by \\(a_0 = \\sqrt{2}, a_1 = 2\\), and \\(a_{n+1} = a_n a_{n-1}^2\\) for \\(n \\ge 1\\). The sequence of remainders when \\(a_0, a_1, a_2, \\ldots\\) are divided by 2014 is eventually periodic with some minimal period \\(p\\) (meaning that \\(a_m = a_{m+p}\\) for all sufficiently large integers \\(m\\), and \\(p\\) is the smallest such positive integer). Find \\(p\\).</p>",
+      "solutions": "<p>Let \\(a_n = 2^{b_n}\\), so notice \\(b_1 = 1, b_2 = 2\\), and \\(b_{n+1} = b_n + 2b_{n-1}\\) for \\(n \\ge 1\\), so by inspection \\(b_n = 2^{n-1}\\) for all \\(n\\); thus \\(a_n = 2^{2^{n-1}}\\). \\(2014 = 2 \\cdot 19 \\cdot 53\\) so we just want to find the lcm of the eventual periods of \\(2^n \\pmod{\\text{ord}_{19}(2)}\\) and \\(\\text{ord}_{53}(2)\\). These orders divide 18 and 52 respectively, and we can manually check \\(\\text{ord}_9(2) = 6\\) and \\(\\text{ord}_{13}(2) = 12\\). The lcm of these is 12, so to show the answer is 12, it suffices to show that \\(13 \\mid \\text{ord}_{53}(2)\\). This is true since \\(2^4 \\not\\equiv 1\\pmod{53}\\). So, the answer is \\(\\boxed{12}\\).</p>",
+      "answer": "12"
+    },
+    "20": {
+      "problem": "<p>Determine the number of sequences of sets \\(S_1, S_2, \\ldots, S_{999}\\) such that \\[S_1 \\subseteq S_2 \\subseteq \\cdots \\subseteq S_{999} \\subseteq \\{1, 2, \\ldots, 999\\}.\\] Here \\(A \\subseteq B\\) means that all elements of \\(A\\) are also elements of \\(B\\).</p>",
+      "solutions": "<p>The idea is to look at each element individually, rather than each subset. For each \\(k \\in \\{1, 2, \\ldots, 999\\}\\), there are 1000 choices for the first subset in the chain that contains \\(k\\). This count includes the possibility that \\(k\\) doesn’t appear in any of the subsets. If \\(S_i\\) is the first subset containing \\(k\\), for some \\(i \\in \\{1, 2, \\ldots, 999\\}\\), then \\(k\\) is also in \\(S_j\\), for all \\(i &lt; j \\le 999\\). As a result, picking the first subset that contains \\(k\\) uniquely determines the appearance of \\(k\\) in all the subsets. It follows that there are \\(1000^{999}\\) such subset chains.</p>",
+      "answer": "1000^{999}"
+    },
+    "21": {
+      "problem": "<p>If you flip a fair coin 1000 times, what is the expected value of the product of the number of heads and the number of tails?</p>",
+      "solutions": "<p>We solve the problem for \\(n\\) coins. We want to find \\[E(n) = \\sum_{k=0}^n \\frac{1}{2^n}\\binom{n}{k}k(n-k).\\] We present three methods for evaluating this sum.</p><p><b>Method 1</b>: Discard the terms \\(k = 0\\), \\(k = n\\). Since \\(\\binom{n}{k}k(n-k) = n(n-1)\\binom{n-2}{k-1}\\) by the factorial definition, we may rewrite the sum as \\[E(n) = \\frac{n(n-1)}{2^n} \\cdot \\sum_{k=1}^{n-1}\\binom{n-2}{k-1}.\\] But clearly \\(\\sum_{k=1}^{n-1}\\binom{n-2}{k-1} = 2^{n-2}\\), so the answer is \\(\\frac{n(n-1)}{4}\\).</p><p><b>Method 2</b>: Let \\(\\mathbb{E}[\\cdot]\\) denote expected value. Using linearity of expectation, we want to find the expected value of \\[\\mathbb{E}[X(n-X)] = n\\mathbb{E}[X] - \\mathbb{E}[X^2]\\] where \\(X\\) is the number of heads. Moreover, we have \\[\\text{Var}(X) = \\mathbb{E}[X^2] - \\mathbb{E}[X]^2.\\] The variance of each individual coin flip is \\(\\frac{1}{4}\\), so \\(\\text{Var}(X) = \\frac{n}{4}\\). Hence \\(\\mathbb{E}[X^2] = \\frac{1}{4}n^2 + \\frac{n}{4}\\). Consequently \\[\\mathbb{E}[X(n-X)] = n \\cdot \\frac{n}{2} - \\left(\\frac{1}{4}n^2 + \\frac{n}{4}\\right) = \\frac{n(n-1)}{4}.\\]</p><p><b>Method 3</b>: Differentiating the binomial theorem, we obtain \\[\\frac{\\partial}{\\partial x}\\frac{\\partial}{\\partial y}(x+y)^n = \\sum_{k=0}^n \\frac{\\partial}{\\partial x}\\frac{\\partial}{\\partial y}\\binom{n}{k}x^k y^{n-k} = \\sum_{k=0}^n \\binom{n}{k}k(n-k)x^{k-1}y^{n-k-1}.\\] We also know that \\[\\frac{\\partial}{\\partial x}\\frac{\\partial}{\\partial y}(x+y)^n = n(n-1)(x+y)^{n-2}.\\] Plugging in \\(x = y = 1\\), we find that \\(E(n) = \\frac{n(n-1)}{4}\\).</p>",
+      "answer": "249750"
+    },
+    "22": {
+      "problem": "<p>Evaluate the infinite sum \\[\\sum_{n=2}^\\infty \\log_2 \\left(\\frac{1 - \\frac{1}{n}}{1 - \\frac{1}{n+1}}\\right).\\]</p>",
+      "solutions": "<p>Using the identity \\(\\log_2(\\frac{a}{b}) = \\log_2 a - \\log_2 b\\), the sum becomes \\[\\sum_{n=2}^\\infty \\log_2 \\left(\\frac{n-1}{n}\\right) - \\sum_{n=2}^\\infty \\log_2 \\left(\\frac{n}{n+1}\\right).\\] Most of the terms cancel out, except the \\(\\log_2(\\frac{1}{2})\\) term from the first sum. Therefore, the answer is \\(-1\\).</p>",
+      "answer": "-1"
+    },
+    "23": {
+      "problem": "<p>Seven little children sit in a circle. The teacher distributes pieces of candy to the children in such a way that the following conditions hold.</p><ul><li>Every little child gets at least one piece of candy.</li><li>No two little children have the same number of pieces of candy.</li><li>The numbers of candy pieces given to any two adjacent little children have a common factor other than 1.</li><li>There is no prime dividing every little child’s number of candy pieces.</li></ul><p>What is the smallest number of pieces of candy that the teacher must have ready for the little children?</p>",
+      "solutions": "<p>An optimal arrangement is 2-6-3-9-12-4-8.</p><p>Note that at least two prime factors must appear. In addition, any prime factor that appears must appear in at least two non-prime powers unless it is not used as a common factor between any two adjacent little children. Thus with the distinctness condition we easily see that, if we are to beat 44, 5 and 7 cannot be included. More comparison shows that 12 or something higher cannot be avoided, so this is optimal.</p>",
+      "answer": "44"
+    },
+    "24": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB = 13, BC = 14,\\) and \\(CA = 15\\). We construct isosceles right triangle \\(ACD\\) with \\(\\angle ADC = 90^\\circ\\), where \\(D, B\\) are on the same side of line \\(AC\\), and let lines \\(AD\\) and \\(CB\\) meet at \\(F\\). Similarly, we construct isosceles right triangle \\(BCE\\) with \\(\\angle BEC = 90^\\circ\\), where \\(E, A\\) are on the same side of line \\(BC\\), and let lines \\(BE\\) and \\(CA\\) meet at \\(G\\). Find \\(\\cos\\angle AGF\\).</p>",
+      "solutions": "<p>We see that \\(\\angle GAF = \\angle GBF = 45^\\circ\\), hence quadrilateral \\(GFBA\\) is cyclic. Consequently \\(\\angle AGF + \\angle FBA = 180^\\circ\\). So \\(\\cos\\angle AGF = -\\cos\\angle FBA\\). One can check directly that \\(\\cos\\angle CBA = \\frac{5}{13}\\) (say, by the Law of Cosines).</p>",
+      "answer": "-\\frac{5}{13}"
+    },
+    "25": {
+      "problem": "<p>What is the smallest positive integer \\(n\\) which cannot be written in any of the following forms?</p><ul><li>\\(n = 1 + 2 + \\cdots + k\\) for a positive integer \\(k\\).</li><li>\\(n = p^k\\) for a prime number \\(p\\) and integer \\(k\\).</li><li>\\(n = p + 1\\) for a prime number \\(p\\).</li><li>\\(n = pq\\) for some distinct prime numbers \\(p\\) and \\(q\\)</li></ul>",
+      "solutions": "<p>The first numbers which are neither of the form \\(p^k\\) nor \\(pq\\) are \\(12, 18, 20, 24, 28, 30, 36, 40, \\ldots\\). Of these \\(12, 18, 20, 24, 30\\) are of the form \\(p + 1\\) and \\(28, 36\\) are triangular. Hence the answer is 40.</p>",
+      "answer": "40"
+    },
+    "26": {
+      "problem": "<p>Consider a permutation \\((a_1, a_2, a_3, a_4, a_5)\\) of \\(\\{1, 2, 3, 4, 5\\}\\). We say the tuple \\((a_1, a_2, a_3, a_4, a_5)\\) is <i>flawless</i> if for all \\(1 \\le i &lt; j &lt; k \\le 5\\), the sequence \\((a_i, a_j, a_k)\\) is <i>not</i> an arithmetic progression (in that order). Find the number of flawless 5-tuples.</p>",
+      "solutions": "<p>We do casework on the position of 3.</p><ul><li>If \\(a_1 = 3\\), then the condition is that 4 must appear after 5 and 2 must appear after 1. It is easy to check there are six ways to do this.</li><li>If \\(a_2 = 3\\), then there are no solutions; since there must be an index \\(i \\ge 3\\) with \\(a_i = 6 - a_1\\).</li><li>If \\(a_3 = 3\\), then 3 we must have \\(\\{\\{a_1, a_2\\}, \\{a_4, a_5\\}\\} = \\{\\{1, 5\\}, \\{2, 4\\}\\}\\). It’s easy to see there are \\(2^3 = 8\\) such assignments.</li><li>The case \\(a_4 = 3\\) is the same as \\(a_2 = 3\\), for zero solutions.</li><li>The case \\(a_5 = 3\\) is the same as \\(a_1 = 3\\), for six solutions.</li></ul><p>Hence, the total is \\(6 + 8 + 6 = 20\\).</p>",
+      "answer": "20"
+    },
+    "27": {
+      "problem": "<p>In triangle \\(ABC\\), let the parabola with focus \\(A\\) and directrix \\(BC\\) intersect sides \\(AB\\) and \\(AC\\) at \\(A_1\\) and \\(A_2\\), respectively. Similarly, let the parabola with focus \\(B\\) and directrix \\(CA\\) intersect sides \\(BC\\) and \\(BA\\) at \\(B_1\\) and \\(B_2\\), respectively. Finally, let the parabola with focus \\(C\\) and directrix \\(AB\\) intersect sides \\(CA\\) and \\(CB\\) at \\(C_1\\) and \\(C_2\\), respectively.</p><p>If triangle \\(ABC\\) has sides of length 5, 12, and 13, find the area of the triangle determined by lines \\(A_1 C_2\\), \\(B_1 A_2\\) and \\(C_1 B_2\\).</p>",
+      "solutions": "<p>By the definition of a parabola, we get \\(AA_1 = A_1 B \\sin B\\) and similarly for the other points. So \\(\\frac{AB_2}{AB} = \\frac{AC_1}{AC}\\), giving \\(B_2 C_1 \\parallel BC\\), and similarly for the other sides. So \\(DEF\\) (WLOG, in that order) is similar to \\(ABC\\). It suffices to scale after finding the length of \\(EF\\), which is \\[B_2 C_1 - B_2 F - E C_1\\] The parallel lines also give us \\(B_2 A_1 F \\sim BAC\\) and so forth, so expanding out the ratios from these similarities in terms of sines eventually gives \\[\\frac{EF}{BC} = \\frac{2\\prod_{cyc}\\sin A + \\sum_{cyc}\\sin A\\sin B - 1}{\\prod_{cyc}(1 + \\sin A)}\\] Plugging in, squaring the result, and multiplying by \\(K_{ABC} = 30\\) gives the answer.</p>",
+      "answer": "\\frac{6728}{3375}"
+    },
+    "28": {
+      "problem": "<p>Let \\(x\\) be a complex number such that \\(x + x^{-1}\\) is a root of the polynomial \\(p(t) = t^3 + t^2 - 2t - 1\\). Find all possible values of \\(x^7 + x^{-7}\\).</p>",
+      "solutions": "<p>Since \\(x + x^{-1}\\) is a root, \\[\\begin{aligned}\n0 &amp;= (x + x^{-1})^3 + (x + x^{-1})^2 - 2(x + x^{-1}) - 1 \\\\\n&amp;= x^3 + x^{-3} + 3x + 3x^{-1} + x^2 + 2 + x^{-2} - 2x - 2x^{-1} - 1 \\\\\n&amp;= x^3 + x^{-3} + x^2 + x^{-2} + x + x^{-1} + 1 \\\\\n&amp;= x^{-3}(1 + x + x^2 + \\cdots + x^6).\n\\end{aligned}\\] Since \\(x \\ne 0\\), the above equality holds only if \\(x\\) is a primitive seventh root of unity, i.e. \\(x^7 = 1\\) and \\(x \\ne 1\\). Therefore, the only possible value of \\(x^7 + x^{-7}\\) is \\(1 + 1 = 2\\).</p>",
+      "answer": "2"
+    },
+    "29": {
+      "problem": "<p>Let \\(\\omega\\) be a fixed circle with radius 1, and let \\(BC\\) be a fixed chord of \\(\\omega\\) such that \\(BC = 1\\). The locus of the incenter of \\(ABC\\) as \\(A\\) varies along the circumference of \\(\\omega\\) bounds a region \\(\\mathcal{R}\\) in the plane. Find the area of \\(\\mathcal{R}\\).</p>",
+      "solutions": "<p>We will make use of the following lemmas.</p><p><b>Lemma 1</b>: If \\(ABC\\) is a triangle with incenter \\(I\\), then \\(\\angle BIC = 90 + \\frac{A}{2}\\).</p><p><i>Proof</i>: Consider triangle \\(BIC\\). Since \\(I\\) is the intersection of the angle bisectors, \\(\\angle IBC = \\frac{B}{2}\\) and \\(\\angle ICB = \\frac{C}{2}\\). It follows that \\(\\angle BIC = 180 - \\frac{B}{2} - \\frac{C}{2} = 90 + \\frac{A}{2}\\).</p><p><b>Lemma 2</b>: If \\(A\\) is on major arc \\(BC\\), then the circumcenter of \\(\\triangle BIC\\) is the midpoint of minor arc \\(BC\\), and vice-versa.</p><p><i>Proof</i>: Let \\(M\\) be the midpoint of minor arc \\(BC\\). It suffices to show that \\(\\angle BMC + 2\\angle BIC = 360^\\circ\\), since \\(BM = MC\\). This follows from Lemma 1 and the fact that \\(\\angle BMC = 180 - \\angle A\\). The other case is similar.</p><p>Let \\(O\\) be the center of \\(\\omega\\). Since \\(BC\\) has the same length as a radius, \\(\\triangle OBC\\) is equilateral. We now break the problem into cases depending on the location of \\(A\\).</p><p><u>Case 1</u>: If \\(A\\) is on major arc \\(BC\\), then \\(\\angle A = 30^\\circ\\) by inscribed angles. If \\(M\\) is the midpoint of minor arc \\(BC\\), then \\(\\angle BMC = 150^\\circ\\). Therefore, if \\(I\\) is the incenter of \\(\\triangle ABC\\), then \\(I\\) traces out a circular segment bounded by \\(BC\\) with central angle \\(150^\\circ\\), on the same side of \\(BC\\) as \\(A\\).</p><p><u>Case 2</u>: A similar analysis shows that \\(I\\) traces out a circular segment bounded by \\(BC\\) with central angle \\(30^\\circ\\), on the other side of \\(BC\\).</p><p>The area of a circular segment of angle \\(\\theta\\) (in radians) is given by \\(\\frac{1}{2}\\theta R^2 - \\frac{1}{2}R^2\\sin\\theta\\), where \\(R\\) is the radius of the circular segment. By the Law of Cosines, since \\(BC = 1\\), we also have that \\(2R^2 - 2R^2\\cos\\theta = 1\\). Computation now gives the desired answer.</p>",
+      "answer": "\\pi\\left(\\frac{3-\\sqrt{3}}{3}\\right) - 1"
+    },
+    "30": {
+      "problem": "<p>Suppose we keep rolling a fair 2014-sided die (whose faces are labelled \\(1, 2, \\ldots, 2014\\)) until we obtain a value less than or equal to the previous roll. Let \\(E\\) be the expected number of times we roll the die. Find the nearest integer to \\(100E\\).</p>",
+      "solutions": "<p>Let \\(n = 2014\\). Let \\(p_k\\) denote the probability the sequence has length at least \\(k\\). We observe that \\[p_k = \\frac{\\binom{n}{k}}{n^k}\\] since every sequence of \\(k\\) rolls can be sorted in exactly one way. Now the answer is \\[\\sum_{k \\ge 0} p_k = \\left(1 + \\frac{1}{n}\\right)^n.\\] As \\(n \\to \\infty\\), this approaches \\(e\\). Indeed, one can check from here that the answer is 272.</p>",
+      "answer": "272"
+    },
+    "31": {
+      "problem": "<p>Flat Albert and his buddy Mike are watching the game on Sunday afternoon. Albert is drinking lemonade from a two-dimensional cup which is an isosceles triangle whose height and base measure 9cm and 6cm; the opening of the cup corresponds to the base, which points upwards. Every minute after the game begins, the following takes place: if \\(n\\) minutes have elapsed, Albert stirs his drink vigorously and takes a sip of height \\(\\frac{1}{n^2}\\text{ cm}\\). Shortly afterwards, while Albert is busy watching the game, Mike adds cranberry juice to the cup until it’s once again full in an attempt to create Mike’s cranberry lemonade. Albert takes sips precisely every minute, and his first sip is exactly one minute after the game begins.</p><p>After an infinite amount of time, let \\(A\\) denote the amount of cranberry juice that has been poured (in square centimeters). Find the integer nearest \\(\\frac{27}{\\pi^2}A\\).</p>",
+      "solutions": "<p>Let \\(A_0 = \\frac{1}{2}(6)(9) = 27\\) denote the area of Albert’s cup; since area varies as the square of length, at time \\(n\\) Mike adds \\[A\\left(1 - \\left(1 - \\frac{1}{9n^2}\\right)^2\\right)\\] whence in all, he adds \\[A_0 \\sum_{n=1}^\\infty \\left(\\frac{2}{9n^2} - \\frac{1}{81n^4}\\right) = \\frac{2A_0 \\zeta(2)}{9} - \\frac{A_0 \\zeta(4)}{81} = 6\\zeta(2) - \\frac{1}{3}\\zeta(4)\\] where \\(\\zeta\\) is the Riemann zeta function. Since \\(\\zeta(2) = \\frac{\\pi^2}{6}\\) and \\(\\zeta(4) = \\frac{\\pi^4}{90}\\), we find that \\(A = \\pi^2 - \\frac{\\pi^4}{270}\\), so \\(\\frac{27A}{\\pi^2} = 27 - \\frac{\\pi^2}{10}\\), which gives an answer 26.</p><p>Note that while the value of \\(\\zeta(2)\\) is needed to reasonable precision, we only need the fact that \\(0.5 &lt; \\frac{9}{\\pi^2}\\zeta(4) &lt; 1.5\\) in order to obtain a sufficiently accurate approximation. This is not hard to obtain because the terms of the expansion \\(\\zeta(4)\\) decrease rapidly.</p>",
+      "answer": "26"
+    },
+    "32": {
+      "problem": "<p>Let \\(f(x) = x^2 - 2\\), and let \\(f^n\\) denote the function \\(f\\) applied \\(n\\) times. Compute the remainder when \\(f^{24}(18)\\) is divided by 89.</p>",
+      "solutions": "<p>Let \\(L_n\\) denote the Lucas numbers given by \\(L_0 = 2\\), \\(L_1 = 1\\), and \\(L_{n+2} = L_{n+1} + L_n\\). Note that \\(L_n^2 - 2 = L_{2n}\\) when \\(n\\) is even (one can show this by induction, or explicitly using \\(L_n = (\\frac{1+\\sqrt{5}}{2})^n + (\\frac{1-\\sqrt{5}}{2})^n\\)). So, \\(f^{24}(L_6) = L_{3 \\cdot 2^{25}}\\).</p><p>Now note that since \\(89 \\equiv 4\\pmod 5\\), we have \\(5^{\\frac{p-1}{2}} \\equiv 1\\pmod{89}\\) so \\(L_{89} = (\\frac{1+\\sqrt{5}}{2})^p + (\\frac{1-\\sqrt{5}}{2})^p \\equiv L_1\\pmod{89}\\) and similarly \\(L_{90} \\equiv L_2\\), so the sequence \\(L_n\\pmod{89}\\) is periodic with period 88. (Alternatively, reason by analog of Fermat’s little theorem, since we can substitute an integer residue for \\(\\sqrt{5}\\).)</p><p>We have \\(3 \\cdot 2^{25} \\equiv 3 \\cdot 2^5 \\equiv 8\\pmod{11}\\) and \\(\\equiv 0\\pmod 8\\), so \\(L_{3 \\cdot 2^{25}} \\equiv L_8\\pmod{89}\\). Computing \\(L_8 = 47\\) gives the answer.</p>",
+      "answer": "47"
+    },
+    "33": {
+      "problem": "<p>How many ways can you remove one tile from a \\(2014 \\times 2014\\) grid such that the resulting figure can be tiled by \\(1 \\times 3\\) and \\(3 \\times 1\\) rectangles?</p>",
+      "solutions": "<p>Number the rows and columns of the grid from 0 to 2013, thereby assigning an ordered pair to each tile. We claim that a tile \\((i, j)\\) may be selected if and only if \\(i \\equiv j \\equiv 0\\pmod 3\\); call such a square good.</p><p>First, let us show that this condition is sufficient. Observe that any such square \\(s\\) is the corner of a canonical \\(4 \\times 4\\) square \\(S\\) whose vertices are all good. Then the sides of \\(S\\) partition the board into nine distinct regions. It’s easy to see that all of them can be suitably tiled.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2014_HMMT_November_Guts/33-fig1.png\" width=\"284\" alt=\"\"></p><p>Now we show that only good squares can be removed. Let \\(\\omega\\) be a non-real cube root of unity. In the tile with coordinates \\((i, j)\\), place the complex number \\(\\omega^{i+j}\\). Note that any \\(1 \\times 3\\) or \\(3 \\times 1\\) rectangle placed on the grid must cover three squares with sum \\(1 + \\omega + \\omega^2 = 0\\). Now, note that the sum of the numbers on the whole \\(2014 \\times 2014\\) grid, including the removed tile, is \\[\\sum_{k=0}^{2013}\\sum_{l=0}^{2013}\\omega^{k+l} = \\left(\\sum_{k=0}^{2013}\\omega^k\\right)^2\\] which can be simplified to 1 using the identity \\(1 + \\omega + \\omega^2 = 0\\). Therefore, it is necessary that \\(i + j \\equiv 0\\pmod 3\\). By placing the complex number \\(\\omega^{i-j}\\) instead of \\(\\omega^{i+j}\\), the same calculations show that \\(i - j \\equiv 0\\pmod 3\\) is necessary. This can only occur if \\(i \\equiv j \\equiv 0\\pmod 3\\).</p><p>Hence the answer is exactly the set of good squares, of which there are \\(672^2 = 451584\\).</p>",
+      "answer": "451584"
+    }
+  }
+}

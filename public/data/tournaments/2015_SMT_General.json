@@ -1,0 +1,133 @@
+{
+  "test": "SMT General",
+  "year": 2015,
+  "name": "General Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2015/general-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Given a rectangle with area 6 and perimeter 10, compute the length of the shorter side of the rectangle.</p>",
+      "solutions": "<p>The rectangle has sides of length \\(\\boxed{2}\\) and 3.</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>A garden contains 210 daisies and some number of roses. Each daisy contains two petals and two leaves, while each rose contains four petals and one leaf. There are 672 petals in the garden. Compute the number of leaves in the garden.</p>",
+      "solutions": "<p>There are \\((672-420)/4=63\\) roses and hence \\((210)(2)+(63)(1)=\\boxed{483}\\) leaves.</p>",
+      "answer": "483"
+    },
+    "3": {
+      "problem": "<p>\\(ABCD\\) is a square with side length 12. There is a point \\(X\\) on \\(AB\\) such that \\(AX = 4\\), and a point \\(Y\\) on \\(BC\\) such that \\(CY = 5\\). Compute the area of \\(\\triangle BXY\\).</p>",
+      "solutions": "<p>We have a right triangle with legs 8 and 7, giving us an area of \\(\\boxed{28}\\).</p>",
+      "answer": "28"
+    },
+    "4": {
+      "problem": "<p>A triangle with side lengths 6, 10, and 14 has area \\(x\\). A triangle with side lengths 9, 15, and 21 has area \\(y\\). Compute \\(\\frac{x}{y}\\).</p>",
+      "solutions": "<p>The two triangles are similar with side lengths in the ratio of \\(\\frac{2}{3}\\). Therefore, their area is in ratio \\(\\left(\\frac{2}{3}\\right)^2=\\boxed{\\frac{4}{9}}\\).</p>",
+      "answer": "\\frac{4}{9}"
+    },
+    "5": {
+      "problem": "<p>In a Super Smash Brothers tournament, \\(\\frac{1}{2}\\) of the contestants play as Fox, \\(\\frac{1}{3}\\) of the contestants play as Falco, and \\(\\frac{1}{6}\\) of the contestants play as Peach. Given that there were 40 more people who played either Fox or Falco than who played Peach, how many contestants attended the tournament?</p>",
+      "solutions": "<p>Let \\(x\\) denote the number of contestants in the tournament. Then \\(\\frac{1}{2}x+\\frac{1}{3}x-\\frac{1}{6}x=40\\). Thus, \\(\\frac{2}{3}x=40\\) and hence \\(x=\\boxed{60}\\) contestants attended the tournament.</p>",
+      "answer": "60"
+    },
+    "6": {
+      "problem": "<p>Lynnelle really loves peanut butter, but unfortunately she cannot afford to buy her own. Her roommate Jane also likes peanut butter, and Jane just bought a 100mL jar. Lynnelle has decided to steal some peanut butter from Jane’s jar every day immediately after Jane eats, but to make sure Jane doesn’t notice Lynnelle never steals more than 20mL and never steals so much that the amount remaining in the jar is more than halved. For example, if 50mL of peanut butter remains in the jar then Lynnelle will steal 20mL that day (since half of 50mL is 25mL, and Lynelle will steal at most 20mL in one day), and if 8mL remains then Lynnelle will steal 4mL that day (leaving 4mL, half of 8mL). If Jane eats a constant 10mL of peanut butter each day (or the rest of the jar, if the jar has less than 10mL in it) until the jar is empty, compute the amount Lynnelle steals (in mL).</p>",
+      "solutions": "<p>We can step through one day at a time. Before Jane eats any Lynnelle can’t steal any. The first day, Jane will eat 10mL, and Lynnelle can then steal 20mL, leaving 70mL. The second day, Jane will eat 10mL, leaving 60, and Lynnelle can steal 20mL, leaving 40. The next day, Jane eats another 10mL leaving 30, and Lynnelle steals 15mL, leaving 15. The next day Jane eats 10mL leaving 5, and Lynnelle steals 2.5mL, leaving 2.5. Finally, the next day Jane will finish the jar. At this point Lynnelle will have stolen \\(20+20+15+2.5=\\boxed{57.5}\\).</p>",
+      "answer": "57.5"
+    },
+    "7": {
+      "problem": "<p>Compute the number of ways 6 girls and 5 boys can line up if all 11 people are distinguishable and no two girls stand next to each other.</p>",
+      "solutions": "<p>Note that the lineup must be GBGBGBGBGBG. There are \\(6!\\cdot 5!=\\boxed{86400}\\) ways that they can line up.</p>",
+      "answer": "86400"
+    },
+    "8": {
+      "problem": "<p>The line \\(y=x+2015\\) intersects the parabola \\(y=x^2\\) at two points, \\((a,b)\\) and \\((c,d)\\). Compute \\(a+c\\).</p>",
+      "solutions": "<p>Note that \\(a\\) and \\(c\\) satisfy the equation \\(x^2-x-2015=0\\). By the quadratic formula, the two solutions are \\(\\frac{1+\\sqrt{(-1)^2-4(1)(-2015)}}{2(1)}\\) and \\(\\frac{1-\\sqrt{(-1)^2-4(1)(-2015)}}{2(1)}\\). Therefore, the two solutions sum to be \\(\\frac{1}{2}+\\frac{1}{2}=\\boxed{1}\\).</p>",
+      "answer": "1"
+    },
+    "9": {
+      "problem": "<p>Ted wants to plot a sad face on his graphing calculator. He decides to represent the mouth with a downwards-opening parabola of the form \\(y = -x^2+bx+c\\). It should be centered directly below the eyes, which are drawn at \\((0,5)\\) and \\((6,5)\\), and should pass through the point \\((2,0)\\) because that is Ted’s favorite point. Compute the equation Ted should use for the parabola.</p>",
+      "solutions": "<p>Since it is centered directly below the points \\((0,5)\\) and \\((6,5)\\), the parabola should have an axis of \\(x=3\\). The axis of a parabola of the form \\(y=ax^2+bx+c\\) is \\(x=-\\frac{b}{2a}\\). Since \\(a=-1\\), this gives \\(b=6\\). Next, plugging in the point \\((2,0)\\), we get \\(c=-8\\). Thus, the desired equation is \\(\\boxed{y=-x^2+6x-8}\\).</p>",
+      "answer": "y = -x^2 + 6x - 8"
+    },
+    "10": {
+      "problem": "<p>Consider a unit square \\(ABCD\\). Let \\(E\\) be the midpoint of \\(BC\\) and \\(F\\) the intersection of \\(AC\\) and \\(DE\\). Compute the area of triangle \\(ADF\\).</p>",
+      "solutions": "<p><b>Solution 1.</b> Since \\(AD\\) and \\(BC\\) are parallel, \\(\\angle DAC = \\angle ECD\\) and \\(\\angle ADE = \\angle BCA\\) so triangles \\(ADF\\) and \\(CEF\\) are similar. Since \\(E\\) is the midpoint of \\(BC\\), \\(\\frac{AF}{FC} = \\frac{AD}{EC} = \\frac{2}{1}\\). Thus, the ratio of the area of triangle \\(ADF\\) to the area of triangle \\(CDF\\) is \\(2:1\\) and hence the area of \\(ADF\\) is \\(\\frac{2}{3}\\) the area of triangle \\(ACD\\). The triangle \\(ACD\\) has area \\(\\frac{1}{2}\\) since it is half the unit square so triangle \\(ADF\\) has area \\(\\frac{2}{3} \\cdot \\frac{1}{2} = \\frac{1}{3}\\).</p><p><b>Solution 2.</b> The line \\(AC\\) has equation \\(y = -x + 1\\) and \\(DE\\) has equation \\(y = \\frac{1}{2}x\\). Therefore \\(AC\\) and \\(DE\\) intersect when \\(-x + 1 = \\frac{1}{2}x\\) so \\(x = \\frac{2}{3}\\). Thus, triangle \\(ADF\\) has base \\(AD = 1\\) and height \\(\\frac{2}{3}\\) and hence area \\(\\frac{1}{3}\\).</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "11": {
+      "problem": "<p>Tyrant Tal, a super genius, wants to create an army of Tals. He and his clones can clone themselves, but the process takes an entire hour. Additionally, once the clone is created, it must wait 2 hours before creating its own clones. Hence, at the end of the first hour, there could be 2 Tals (the original and 1 clone), and a clone created during the fifth hour can clone itself during the eighth hour. Compute the maximum possible size of his army after 10 hours (Tyrant Tal starts by himself and is a part of his own army).</p>",
+      "solutions": "<p>First, note that to maximize the size of the army, a clone should clone itself whenever it is possible. If we let \\(a_i\\) denote the maximum possible size of the army after \\(i\\) hours, we note that \\(a_0 = 1\\). In the first hour, Tyrant Tal clones himself so \\(a_1 = 2\\) and in the second and third hours, only Tyrant Tal clones himself because none of his clones are able to clone themselves yet. Thus, \\(a_2 = 3\\) and \\(a_3 = 4\\).</p><p>Now, to compute \\(a_i\\) for \\(i &gt; 3\\) we can use the following recurrence relation: \\(a_i = (a_{i-1} - a_{i-3}) + 2a_{i-3} = a_{i-1} + a_{i-3}\\). The quantity \\(a_{i-1} - a_{i-3}\\) represents the number of clones that have not waited 2 hours yet so they cannot clone themselves. The quantity \\(a_{i-3}\\) represents the number of clones that are able to clone themself, so we add 2 times \\(a_{i-3}\\). Using this recurrence relation, we are able to compute the maximum possible size of Tyrant Tal’s army:</p><p>\\[\\begin{array}{c|c|c|c|c|c|c|c|c|c|c}\na_0 &amp; a_1 &amp; a_2 &amp; a_3 &amp; a_4 &amp; a_5 &amp; a_6 &amp; a_7 &amp; a_8 &amp; a_9 &amp; a_{10} \\\\\n\\hline\n1 &amp; 2 &amp; 3 &amp; 4 &amp; 6 &amp; 9 &amp; 13 &amp; 19 &amp; 28 &amp; 41 &amp; 60\n\\end{array}\\]</p><p>Thus, after 10 hours, the maximum size of Tyrant Tal’s army is \\(a_{10} = 60\\).</p>",
+      "answer": "60"
+    },
+    "12": {
+      "problem": "<p>An integer \\(n\\) is <i>almost square</i> if there exists a perfect square \\(k^2\\) such that \\(|n - k^2| = 1\\) and \\(k\\) is a positive integer. How many positive integers less than or equal to 2015 are almost square?</p>",
+      "solutions": "<p>First, there are \\(\\lfloor \\sqrt{2015} \\rfloor = 44\\) perfect squares less than 2015. For each perfect square \\(1, 4, 9, \\ldots\\) there are 2 almost square integers corresponding to the perfect square. However, we’ve included 0, so there are \\(44 \\cdot 2 - 1 = 87\\) positive almost square integers less than or equal to 2015.</p>",
+      "answer": "87"
+    },
+    "13": {
+      "problem": "<p>Two perpendicular lines have slopes that add up to 1. What are their slopes?</p>",
+      "solutions": "<p>Let \\(x\\) denote the slope of one of the lines. Then the other line has slope \\(-\\frac{1}{x}\\). Thus, \\[x - \\frac{1}{x} = 1\\] \\[x^2 - 1 = x\\] \\[x^2 - x - 1 = 0\\]</p><p>Thus, \\(x = \\frac{1 \\pm \\sqrt{5}}{2}\\), so the two slopes are \\(\\frac{1+\\sqrt{5}}{2}, \\frac{1-\\sqrt{5}}{2}\\).</p>",
+      "answer": "\\frac{1+\\sqrt{5}}{2}, \\frac{1-\\sqrt{5}}{2}"
+    },
+    "14": {
+      "problem": "<p>A certain high school has exactly 1000 lockers, numbered from 1 to 1000, all initially closed. Mark first opens every locker whose number has exactly 3 factors, starting with locker 4. Matt then opens every locker whose number is a power of 2, starting with locker 1. If Matt encounters a locker that Mark has already opened, he leaves it open. Compute the number of lockers that will be open when both Mark and Matt finish.</p>",
+      "solutions": "<p>Numbers with exactly three factors must be squares of primes (so the factors are 1, \\(p\\), and \\(p^2\\)). Between 1 and 1000 there are 11 such numbers: \\(2^2, 3^2, 5^2, 7^2, 11^2, 13^2, 17^2, 19^2, 23^2, 29^2, 31^2\\). Furthermore, there are 10 powers of 2 between 1 and 1000: \\(2^0, 2^1, \\ldots, 2^9\\). The number 4 is in each list, so there are a total of 20 distinct lockers that Mark and Matt will open.</p>",
+      "answer": "20"
+    },
+    "15": {
+      "problem": "<p>Find the unique \\(x &gt; 0\\) such that \\(\\sqrt{x} + \\sqrt{x + \\sqrt{x}} = 1\\).</p>",
+      "solutions": "<p>We solve \\[\\sqrt{x} + \\sqrt{x + \\sqrt{x}} = 1\\] \\[\\sqrt{x + \\sqrt{x}} = 1 - \\sqrt{x}\\] \\[x + \\sqrt{x} = (1 - \\sqrt{x})^2\\] \\[x + \\sqrt{x} = 1 + x - 2\\sqrt{x}\\] \\[3\\sqrt{x} = 1\\] \\[x = \\frac{1}{9}\\]</p>",
+      "answer": "\\frac{1}{9}"
+    },
+    "16": {
+      "problem": "<p>A 4 inch by 3 inch rectangular sandwich is cut in half diagonally. A circular tomato slice can be placed on one of the sandwich halves so that it is tangent to each of the three edges of the sandwich. Compute the tomato’s radius in inches.</p>",
+      "solutions": "<p>Drawing the three angle bisectors of the triangle and the three line segments from the center of the circle to the tangent points, we split up the area of the triangle into three smaller triangles, \\(\\frac{1}{2}(3)(4) = \\frac{1}{2}(3)(r) + \\frac{1}{2}(4)(r) + \\frac{1}{2}(5)(r) = 6r\\). Thus \\(r = 1\\).</p>",
+      "answer": "1"
+    },
+    "17": {
+      "problem": "<p>Jordan is throwing darts at a 10 inch radius dart board. Unfortunately, Jordan’s aim is very bad. He only hits the board one third of the time and the distribution of his darts is uniformly random. Assuming that the dart is extremely small and the radius of the bullseye is 5 inches, compute the probability Jordan will make at least one bullseye in 2 shots.</p>",
+      "solutions": "<p>First, we calculate the probability that Jordan will not get a bullseye on any single shot. This can either happen if he misses the board, or hits the board off the bullseye, which occurs with probability \\(\\frac{2}{3} + \\left(\\frac{1}{3}\\right)\\left(1 - \\frac{5^2}{10^2}\\right) = \\frac{11}{12}\\). Since Jordan can either get no bullseyes on either shot or get at least one bullseye during the two shots, the desired probability equals \\[1 - \\left(\\frac{11}{12}\\right)^2 = \\frac{23}{144}.\\]</p>",
+      "answer": "\\frac{23}{144}"
+    },
+    "18": {
+      "problem": "<p>In a certain right triangle, dropping an altitude to the hypotenuse divides the hypotenuse into two segments of length 2 and 3 respectively. What is the area of the triangle?</p>",
+      "solutions": "<p>Denote the right triangle \\(ABC\\) with hypotenuse \\(BC\\). Let \\(D\\) be the intersection of the altitude and \\(BC\\) and let \\(CD = 2\\) and \\(BD = 3\\). Triangle \\(ACD\\) is similar to triangle \\(ABC\\) so \\(\\frac{AC}{CD} = \\frac{BC}{AC}\\). Thus, \\(AC = \\sqrt{BC \\cdot CD} = \\sqrt{5 \\cdot 2} = \\sqrt{10}\\). Triangle \\(ABD\\) is similar to triangle \\(ABC\\) so \\(\\frac{AB}{BD} = \\frac{BC}{AB}\\). Thus, \\(AB = \\sqrt{BC \\cdot BD} = \\sqrt{5 \\cdot 3} = \\sqrt{15}\\). Therefore, the area of \\(ABC\\) is \\[\\frac{1}{2} \\cdot \\sqrt{10} \\cdot \\sqrt{15} = \\frac{5\\sqrt{6}}{2}.\\]</p>",
+      "answer": "\\frac{5\\sqrt{6}}{2}"
+    },
+    "19": {
+      "problem": "<p>Suppose you have 15 circles of radius 1. Compute the side length of the smallest equilateral triangle that could possibly contain all the circles, if you are free to arrange them in any shape, provided they don’t overlap.</p>",
+      "solutions": "<p>We solve the more general question where we wish to pack \\(\\frac{N^2+N}{2}\\) circles. The densest packing of a triangular number of congruent circles is to place them in a triangle-like shape, with one in the first row, two in the second, etc. Then, the minimum bounding equilateral triangle will be tangent to all the outer circles, of which there are \\(N\\) per side. The distance between the centers of any two circles is 2. The distance between the center of one of the vertex circles and the closest vertex of the bounding triangle is 2, as can be seen by considering the \\(30\\)–\\(60\\)–\\(90\\) triangle formed by the radius perpendicular to one of the triangle sides. Then the length of that side from the vertex is \\(\\sqrt{3}\\) and so the total length of the side is \\(2\\sqrt{3}+2(N-1)\\). Since \\(15 = \\frac{5^2+5}{2}\\), plugging in \\(N=5\\) gives us the answer \\(\\boxed{2\\sqrt{3}+8}\\).</p>",
+      "answer": "2\\sqrt{3}+8"
+    },
+    "20": {
+      "problem": "<p>Andy has two identical cups, the first one is full of water and the second one is empty. He pours half the water from the first cup into the second, then a third of the water in the second into the first, then a fourth of the water from the first into the second and so on. Compute the fraction of the water in the first cup right before the 2015th transfer.</p>",
+      "solutions": "<p>Let the fraction of the water in the first cup after the \\(i\\)th be \\(a_i\\) and the fraction of the water in the second cup at time \\(i\\) be \\(b_i\\). We first show inductively that after an odd number of water transfers, both cups are half filled. Initially, we have \\(a_0 = 1\\) and \\(b_0 = 0\\). The first transfer transfers half the water from the first cup into the second so \\(a_1 = b_1 = \\frac{1}{2}\\). Now, suppose inductively that \\(a_{2k-1} = b_{2k-1} = \\frac{1}{2}\\). Then the \\(2k\\)th transfer will transfer \\(\\frac{1}{2k+1}\\) of the water in the second cup into the first. Thus, \\(a_{2k} = \\left(1+\\frac{1}{2k+1}\\right)\\cdot\\frac{1}{2}\\) and \\(b_{2k} = \\left(1-\\frac{1}{2k+1}\\right)\\cdot\\frac{1}{2}\\). Next, the \\(2k+1\\)th transfer will transfer \\(\\frac{1}{2k+2}\\) of the water in the first cup into the second cup. Thus, \\[\\begin{aligned}\na_{2k+1} &amp;= \\left(1-\\frac{1}{2k+2}\\right)\\cdot\\left(1+\\frac{1}{2k+1}\\right)\\cdot\\frac{1}{2} \\\\\n&amp;= \\frac{2k+1}{2k+2}\\cdot\\frac{2k+2}{2k+1}\\cdot\\frac{1}{2} \\\\\n&amp;= \\frac{1}{2}\n\\end{aligned}\\] Since \\(a_i+b_i = 1\\) for all \\(i\\), it follows that \\(b_{2k+1} = \\frac{1}{2}\\) also. Thus, by induction, after any odd number of water transfers, both cups are half filled.</p><p>So after the 2013th transfer, both cups are half filled. Next, the 2014th transfer will pour back \\(\\frac{1}{2}\\cdot\\frac{1}{2015}\\) of the water from the second cup into the first, so there is \\(\\boxed{\\frac{1008}{2015}}\\) of the water in the first cup just before the 2015th transfer.</p>",
+      "answer": "\\frac{1008}{2015}"
+    },
+    "21": {
+      "problem": "<p>Let \\(f(x) = ax^2+bx+c\\) where \\(a \\ne 0\\). Find \\(d\\), where \\(0 &lt; d &lt; 1\\), such that \\(f(0) = 2014\\), \\(f(d^2) = 2015\\), \\(f(d) = 2016\\), and the sum of the roots of \\(f\\) is 0.</p>",
+      "solutions": "<p>The sum of the roots of a quadratic is \\(-\\frac{b}{2a}\\), so the sum of the roots of \\(f\\) equals 0 if and only if \\(b = 0\\). Now, the three values of \\(f\\) give us \\[\\begin{aligned}\nc &amp;= 2014 \\\\\nad^4+bd^2+c &amp;= 2015 \\\\\nad^2+bd+c &amp;= 2016\n\\end{aligned}\\] Subtracting the first equation from the second two and substituting \\(b = 0\\), we obtain \\[\\begin{aligned}\nad^4 &amp;= 1 \\\\\nad^2 &amp;= 2\n\\end{aligned}\\] Dividing equation one by equation two, we get that \\[d^2 = \\frac{1}{2}\\] Therefore, it follows that \\(d = \\pm\\frac{1}{\\sqrt{2}}\\). Since we want \\(0 &lt; d &lt; 1\\), we conclude that \\(d = \\boxed{\\frac{1}{\\sqrt{2}}}\\).</p>",
+      "answer": "\\frac{1}{\\sqrt{2}}"
+    },
+    "22": {
+      "problem": "<p>A positive integer \\(n &gt; 1\\) is called <i>multiplicatively perfect</i> if the product of its proper divisors (divisors excluding the number itself) is \\(n\\). For example, 6 is multiplicatively perfect since \\(6 = 1 \\times 2 \\times 3\\). Compute the number of multiplicatively perfect integers less than 100.</p>",
+      "solutions": "<p>Let \\(n &gt; 1\\) be a multiplicatively perfect integer. Then we can write it in the form \\(n = mp\\) where \\(m\\) is any integer (possibly 1) and \\(p\\) is prime. If \\(m = 1\\), then \\(n\\) is prime and its only proper divisor is 1 so it cannot be multiplicatively perfect.</p><p>Next, suppose \\(m = p\\). Then \\(n = p^2\\) for some prime \\(p\\) and its proper divisors are 1 and \\(p\\). However, the product of 1 and \\(p\\) cannot equal \\(p^2\\), so it follows that \\(m \\ne p\\). Since \\(m \\ne 1\\) and \\(m \\ne p\\), the proper divisors of \\(n\\) must contain at least \\(1, m,\\) and \\(p\\). Since \\(1 \\times m \\times p = n\\) already, \\(n\\) cannot have any other proper divisors, or else the product would be greater than \\(n\\).</p><p>If \\(r\\) is a proper divisor of \\(m\\), then it is also a proper divisor of \\(n\\). Since we reasoned that the only proper divisors of \\(n\\) are \\(1, m, p\\), it follows that either \\(r = 1\\) or \\(r = p\\) (\\(r \\ne m\\) since \\(r\\) is a proper divisor of \\(m\\)). Therefore, the only proper divisors of \\(m\\) are 1 or \\(p\\) so there are only two possibilities. Either \\(m = p^2\\) or \\(m = q\\) for some prime \\(q \\ne p\\). Thus, \\(n\\) is multiplicatively perfect if and only if \\(n = p^3\\) or \\(n = pq\\) for distinct primes \\(p, q\\).</p><p>Counting all integers \\(1 &lt; n &lt; 100\\) of the form \\(p^3\\) or \\(pq\\) gives us \\(\\boxed{32}\\) multiplicatively perfect numbers less than 100.</p>",
+      "answer": "32"
+    },
+    "23": {
+      "problem": "<p>Consider a unit cube and a plane that slices through it. The plane passes through the midpoints of two adjacent edges on the top face, two on the bottom face, and the center of the cube. Compute the area of the cross section.</p>",
+      "solutions": "<p>Draw the cube to see that the cross-section must be a regular hexagon. To see this you can note that by symmetry the plane must intersect the two vertical edges of the cube at their midpoints. This defines all 6 vertices of the hexagon and it remains to draw them to see that it is regular. One side of the hexagon lies in the top face of the cube between the points on the edges that the plane passes through. The side length is thus \\(\\sqrt{2}/2\\). The area of the hexagon is thus \\(6 \\times \\frac{(\\sqrt{2}/2)^2\\sqrt{3}}{4} = \\boxed{\\frac{3\\sqrt{3}}{4}}\\), 6 times the area of one equilateral triangle of the same side length.</p>",
+      "answer": "\\frac{3\\sqrt{3}}{4}"
+    },
+    "24": {
+      "problem": "<p>There are four seats arranged in a circle and a person is sitting on one of the seats. He rolls a standard six-sided die 6 times. For each roll of the die, if it lands on 4, he moves one seat clockwise. Otherwise, he moves \\(k\\) seats counterclockwise where \\(k\\) is the number he rolled. Compute the probability that he ends up on the same seat he originally started on.</p>",
+      "solutions": "<p>First, note that for each roll of the die, he has an equal probability of moving to any of the remaining seats. Let \\(p_n\\) be the probability that he returns to his seat after \\(n\\) rolls. Then \\(p_{n+1} = \\frac{1}{3}(1-p_n)\\) and \\(p_1 = 0\\). Therefore, we compute: \\[\\begin{aligned}\np_1 &amp;= 0 \\\\\np_2 &amp;= \\frac{1}{3} \\\\\np_3 &amp;= \\frac{2}{9} \\\\\np_4 &amp;= \\frac{7}{27} \\\\\np_5 &amp;= \\frac{20}{81} \\\\\np_6 &amp;= \\boxed{\\frac{61}{243}}\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{61}{243}"
+    },
+    "25": {
+      "problem": "<p>Let the sequence \\(a\\) be defined as \\(a_0 = 2\\), \\(a_n = 1+a_0 \\cdot a_1 \\cdot \\ldots \\cdot a_{n-1}\\).</p><p>Calculate \\(\\sum_{i=0}^{2015} \\frac{1}{a_i}\\). Give your answer in terms of \\(a_{2016}\\).</p>",
+      "solutions": "<p>Observe that the sequence follows the recurrence relation \\(\\frac{a_n-2}{a_n-1}+\\frac{1}{a_n} = \\frac{a_{n+1}-2}{a_{n+1}-1}\\). Then \\(\\frac{1}{a_n} = \\frac{a_{n+1}-2}{a_{n+1}-1}-\\frac{a_n-2}{a_n-1}\\). The middle terms in the sum cancel, leaving just \\(\\sum_{i=0}^{2015}\\frac{1}{a_i} = \\frac{a_{2016}-2}{a_{2016}-1}-\\frac{a_0-2}{a_0-1} = \\boxed{\\frac{a_{2016}-2}{a_{2016}-1}}\\).</p>",
+      "answer": "\\frac{a_{2016}-2}{a_{2016}-1}"
+    }
+  }
+}

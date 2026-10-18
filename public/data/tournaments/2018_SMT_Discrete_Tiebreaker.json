@@ -1,0 +1,23 @@
+{
+  "test": "SMT Discrete Tiebreaker",
+  "year": 2018,
+  "name": "Discrete Math Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2018/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Positive integer \\(n\\) has 6 factors including \\(n\\) and 1. Suppose that the 3rd largest factor of \\(n\\), including \\(n\\), is 55. Compute \\(n\\).</p>",
+      "solutions": "<p>Since \\(n\\) has 6 factors, \\(n\\) must be written in the form \\(ab^2\\) for some primes \\(a, b\\), as this is the only way to express a number with \\((1+1)(2+1) = 2 \\cdot 3 = 6\\) factors. Because 55 is a factor of \\(n\\), we must have either \\(a = 5, b = 11\\) or \\(a = 11, b = 5\\). Note that in the second case, \\(n = 11 \\cdot 5^2 = 275\\), which would result in 55 being the 2nd largest factor of \\(n\\). Hence, we must have \\(a = 5, b = 11\\), resulting in \\(x = 5 \\cdot 11^2 = \\boxed{605}\\).</p>",
+      "answer": "605"
+    },
+    "2": {
+      "problem": "<p>How many 5 digit numbers \\(n\\) exist such that each \\(n\\) is divisible by 9 and <i>none</i> of the digits of \\(n\\) are divisible by 9?</p>",
+      "solutions": "<p>For each number of digits (e.g. 1-digit numbers, 2-digit numbers, and so on), we consider how many numbers \\(n\\) do not have 0 or 9 as a digit and are divisible by 9, and how many numbers \\(n\\) do not have 0 or 9 as a digit and are not divisible by 9.</p><ul><li>For 1-digit numbers \\(n\\), there are exactly 8 numbers without a 0 or a 9, none of which are divisible by 9. Hence, there are 0 1-digit numbers divisible by 9 and 8 1-digit numbers not divisible by 9.</li><li>For 2-digit numbers \\(n\\), any \\(n\\) divisible by 9 can be formed by taking a 1-digit number \\(m\\) not divisible by 9 and adding the unique digit that will form a number divisible by 9. The remaining numbers will not be divisible by 9. Hence, there are 8 2-digit numbers divisible by 9 and \\(7 \\cdot 8 + 0 = 56\\) 2-digit numbers not divisible by 9.</li><li>For 3-digit numbers \\(n\\), we can take any of the 56 2-digit numbers not divisible by 9 and add a digit to form a 3-digit number divisible by 9. The remaining numbers will not be divisible by 9. Hence, there are 56 3-digit numbers divisible by 9, and \\(7 \\cdot 56 + 8 \\cdot 8 = 456\\) 3-digit numbers not divisible by 9.</li><li>For 4-digit numbers \\(n\\), we can take any of the 456 3-digit numbers not divisible by 9 and add a digit to form a 4-digit number divisible by 9. The remaining numbers will not be divisible by 9. Hence, there are 456 4-digit numbers divisible by 9, and \\(7 \\cdot 456 + 8 \\cdot 56 = 3640\\) 4-digit numbers not divisible by 9.</li><li>For 5-digit numbers \\(n\\), we can take any of the 3640 4-digit numbers not divisible by 9 to form a 5-digit number divisible by 9. The remaining numbers will not be divisible by 9. Hence, there are 3640 5-digit numbers are divisible by 9.</li></ul><p>We conclude that there are \\(\\boxed{3640}\\) numbers which satisfy the problem’s conditions.</p>",
+      "answer": "3640"
+    },
+    "3": {
+      "problem": "<p>A string \\(t\\) is <i>regular</i> if it consists of \\(n\\) ‘(’ characters followed by \\(n\\) ‘)’ characters where \\(n \\ge 1\\) (i.e. ‘()’, “(())”, “((()))”, etc.). Define \\(f(s)\\) to be the number of ways that we can remove characters from a string \\(s\\) to form a regular string. For example, \\(f(\\text{``(())''}) = 5\\), since we can either remove no characters to obtain the regular string “(())”, or we can remove 2 characters 4 different ways to obtain the regular string “()”. Compute the sum of \\(f(s)\\) over all strings \\(s\\) of length 10 formed by using ‘(’ and ‘)’ characters.</p>",
+      "solutions": "<p>Rather than computing \\(f(s)\\) for each string \\(s\\) individually, we instead count how many times each regular string appears in a string of length 10 formed by using ‘(’ and ‘)’ characters.</p><p>For a regular string \\(t\\) of length \\(2n\\) where \\(1 \\le n \\le 5\\), we first choose which of the ten positions will contain \\(t\\)’s characters. This can be done in \\(\\binom{10}{2n}\\) ways. The remaining characters can be assigned in \\(2^{10-2n}\\) ways, so \\(t\\) is counted \\(\\binom{10}{2n}2^{10-2n}\\) times over all possible strings. Summing over all \\(n\\), we find that the answer is \\[\\binom{10}{2}2^8 + \\binom{10}{4}2^6 + \\binom{10}{6}2^4 + \\binom{10}{8}2^2 + \\binom{10}{10}2^0 = \\boxed{28501}.\\]</p>",
+      "answer": "28501"
+    }
+  }
+}

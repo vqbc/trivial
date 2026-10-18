@@ -1,0 +1,58 @@
+{
+  "test": "HMMT November Team",
+  "year": 2013,
+  "name": "Team Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2013/nov/team/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Tim the Beaver can make three different types of geometrical figures: squares, regular hexagons, and regular octagons. Tim makes a random sequence \\(F_0, F_1, F_2, F_3, \\ldots\\) of figures as follows:</p><ul><li>\\(F_0\\) is a square.</li><li>For every positive integer \\(i\\), \\(F_i\\) is randomly chosen to be one of the 2 figures <i>distinct from</i> \\(F_{i-1}\\) (each chosen with equal probability \\(\\frac{1}{2}\\)).</li><li>Tim takes 4 seconds to make squares, 6 to make hexagons, and 8 to make octagons. He makes one figure after another, with no breaks in between.</li></ul><p>Suppose that exactly 17 seconds after he starts making \\(F_0\\), Tim is making a figure with \\(n\\) sides. What is the expected value of \\(n\\)?</p>",
+      "solutions": "<p>We write \\(F_i = n\\) as shorthand for ”the \\(i\\)th figure is an \\(n\\)-sided polygon.”</p><p>If \\(F_1 = 8\\), the \\(F_2 = 6\\) or \\(F_2 = 4\\). If \\(F_2 = 6\\), Tim is making a 6-gon at time 13 (probability contribution 1/4). If \\(F_2 = 4\\), \\(F_3 = 6\\) or \\(F_3 = 8\\) will take the time 13 mark (1/8 contribution each).</p><p>If \\(F_1 = 6\\), \\(F_2 = 8\\) or \\(F_2 = 4\\). If \\(F_2 = 8\\), it takes the 13 mark (1/4 contribution). If \\(F_2 = 4\\), \\(F_3 = 6\\) or \\(F_3 = 8\\) will take the 13 mark (1/8 contribution each).</p><p>Thus, the expected value of the number of sides at time 13 is \\(0(4) + (\\frac{1}{4} + \\frac{1}{8} + \\frac{1}{8})(6) + (\\frac{1}{8} + \\frac{1}{4} + \\frac{1}{8})(8) = 7\\).</p>",
+      "answer": "7"
+    },
+    "2": {
+      "problem": "<p>Gary plays the following game with a fair \\(n\\)-sided die whose faces are labeled with the positive integers between 1 and \\(n\\), inclusive: if \\(n = 1\\), he stops; otherwise he rolls the die, and starts over with a \\(k\\)-sided die, where \\(k\\) is the number his \\(n\\)-sided die lands on. (In particular, if he gets \\(k = 1\\), he will stop rolling the die.) If he starts out with a 6-sided die, what is the expected number of rolls he makes?</p>",
+      "solutions": "<p>If we let \\(a_n\\) be the expected number of rolls starting with an \\(n\\)-sided die, we see immediately that \\(a_1 = 0\\), and \\(a_n = 1 + \\frac{1}{n}\\sum_{i=1}^n a_i\\) for \\(n &gt; 1\\). Thus \\(a_2 = 2\\), and for \\(n \\ge 3\\), \\(a_n = 1 + \\frac{1}{n}a_n + \\frac{n-1}{n}(a_{n-1} - 1)\\), or \\(a_n = a_{n-1} + \\frac{1}{n-1}\\). Thus \\(a_n = 1 + \\sum_{i=1}^{n-1}\\frac{1}{i}\\) for \\(n \\ge 2\\), so \\(a_6 = 1 + \\frac{60+30+20+15+12}{60} = \\frac{197}{60}\\).</p>",
+      "answer": "\\frac{197}{60}"
+    },
+    "3": {
+      "problem": "<p>The digits \\(1, 2, 3, 4, 5, 6\\) are randomly chosen (without replacement) to form the three-digit numbers \\(M = \\overline{ABC}\\) and \\(N = \\overline{DEF}\\). For example, we could have \\(M = 413\\) and \\(N = 256\\). Find the expected value of \\(M \\cdot N\\).</p>",
+      "solutions": "<p>By linearity of expectation and symmetry, \\[\\mathbb{E}[MN] = \\mathbb{E}[(100A + 10B + C)(100D + 10E + F)] = 111^2 \\cdot \\mathbb{E}[AD].\\] Since \\[\\mathbb{E}[AD] = \\frac{(1 + 2 + 3 + 4 + 5 + 6)^2 - (1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2)}{6 \\cdot 5} = \\frac{350}{30},\\] our answer is \\(111 \\cdot 35 \\cdot 37 = 111 \\cdot 1295 = 143745\\).</p>",
+      "answer": "143745"
+    },
+    "4": {
+      "problem": "<p>Consider triangle \\(ABC\\) with side lengths \\(AB = 4\\), \\(BC = 7\\), and \\(AC = 8\\). Let \\(M\\) be the midpoint of segment \\(AB\\), and let \\(N\\) be the point on the interior of segment \\(AC\\) that also lies on the circumcircle of triangle \\(MBC\\). Compute \\(BN\\).</p>",
+      "solutions": "<p>Let \\(\\angle BAC = \\theta\\). Then, \\(\\cos\\theta = \\frac{4^2 + 8^2 - 7^2}{2 \\cdot 4 \\cdot 8}\\). Since \\(AM = \\frac{4}{2} = 2\\), and power of a point gives \\(AM \\cdot AB = AN \\cdot AC\\), we have \\(AN = \\frac{2 \\cdot 4}{8} = 1\\), so \\(NC = 8 - 1 = 7\\). Law of cosines on triangle \\(BAN\\) gives \\[BN^2 = 4^2 + 1^2 - 2 \\cdot 4 \\cdot 1 \\cdot \\frac{4^2 + 8^2 - 7^2}{2 \\cdot 4 \\cdot 8} = 17 - \\frac{16 + 15}{8} = 15 - \\frac{15}{8} = \\frac{105}{8},\\] so \\(BN = \\frac{\\sqrt{210}}{4}\\).</p>",
+      "answer": "\\frac{\\sqrt{210}}{4}"
+    },
+    "5": {
+      "problem": "<p>In triangle \\(ABC\\), \\(\\angle BAC = 60^\\circ\\). Let \\(\\omega\\) be a circle tangent to segment \\(AB\\) at point \\(D\\) and segment \\(AC\\) at point \\(E\\). Suppose \\(\\omega\\) intersects segment \\(BC\\) at points \\(F\\) and \\(G\\) such that \\(F\\) lies in between \\(B\\) and \\(G\\). Given that \\(AD = FG = 4\\) and \\(BF = \\frac{1}{2}\\), find the length of \\(CG\\).</p>",
+      "solutions": "<p>Let \\(x = CG\\). First, by power of a point, \\(BD = \\sqrt{BF(BF+FG)} = \\frac{3}{2}\\), and \\(CE = \\sqrt{x(x+4)}\\). By the law of cosines, we have \\[(x + \\frac{9}{2})^2 = (\\frac{11}{2})^2 + (4 + \\sqrt{x(x+4)})^2 - \\frac{11}{2}(4 + \\sqrt{x(x+4)}),\\] which rearranges to \\(2(5x - 4) = 5\\sqrt{x(x+4)}\\). Squaring and noting \\(x &gt; \\frac{4}{5}\\) gives \\((5x - 16)(15x - 4) = 0 \\implies x = \\frac{16}{5}\\).</p>",
+      "answer": "\\frac{16}{5}"
+    },
+    "6": {
+      "problem": "<p>Points \\(A, B, C\\) lie on a circle \\(\\omega\\) such that \\(BC\\) is a diameter. \\(AB\\) is extended past \\(B\\) to point \\(B'\\) and \\(AC\\) is extended past \\(C\\) to point \\(C'\\) such that line \\(B'C'\\) is parallel to \\(BC\\) and tangent to \\(\\omega\\) at point \\(D\\). If \\(B'D = 4\\) and \\(C'D = 6\\), compute \\(BC\\).</p>",
+      "solutions": "<p>Let \\(x = AB\\) and \\(y = AC\\), and define \\(t &gt; 0\\) such that \\(BB' = tx\\) and \\(CC' = ty\\). Then \\(10 = B'C' = (1+t)\\sqrt{x^2+y^2}\\), \\(4^2 = t(1+t)x^2\\), and \\(6^2 = t(1+t)y^2\\) (by power of a point), so \\(52 = 4^2 + 6^2 = t(1+t)(x^2+y^2)\\) gives \\(\\frac{13}{25} = \\frac{52}{10^2} = \\frac{t(1+t)}{(1+t)^2} = \\frac{t}{1+t} \\implies t = \\frac{13}{12}\\). Hence \\(BC = \\sqrt{x^2+y^2} = \\frac{10}{1+t} = \\frac{10}{25/12} = \\frac{24}{5}\\).</p>",
+      "answer": "\\frac{24}{5}"
+    },
+    "7": {
+      "problem": "<p>In equilateral triangle \\(ABC\\), a circle \\(\\omega\\) is drawn such that it is tangent to all three sides of the triangle. A line is drawn from \\(A\\) to point \\(D\\) on segment \\(BC\\) such that \\(AD\\) intersects \\(\\omega\\) at points \\(E\\) and \\(F\\). If \\(EF = 4\\) and \\(AB = 8\\), determine \\(|AE - FD|\\).</p>",
+      "solutions": "<p>Without loss of generality, \\(A, E, F, D\\) lie in that order. Let \\(x = AE\\), \\(y = DF\\). By power of a point, \\(x(x+4) = 4^2 \\implies x = 2\\sqrt{5}-2\\), and \\(y(y+4) = (x+4+y)^2 - (4\\sqrt{3})^2 \\implies y = \\frac{48 - (x+4)^2}{2(x+2)} = \\frac{12 - (1+\\sqrt{5})^2}{\\sqrt{5}}\\). It readily follows that \\(x - y = \\frac{4}{\\sqrt{5}} = \\frac{4\\sqrt{5}}{5}\\).</p>",
+      "answer": "\\frac{4}{\\sqrt{5}}"
+    },
+    "8": {
+      "problem": "<p>Define the sequence \\(\\{x_i\\}_{i\\ge 0}\\) by \\(x_0 = x_1 = x_2 = 1\\) and \\(x_k = \\frac{x_{k-1} + x_{k-2} + 1}{x_{k-3}}\\) for \\(k &gt; 2\\). Find \\(x_{2013}\\).</p>",
+      "solutions": "<p>We have \\(x_3 = \\frac{1+1+1}{1} = 3\\), \\(x_4 = \\frac{3+1+1}{1} = 5\\), \\(x_5 = \\frac{5+3+1}{1} = 9\\), \\(x_6 = \\frac{9+5+1}{3} = 5\\). By the symmetry of our recurrence (or just further computation—it doesn’t matter much), \\(x_7 = 3\\) and \\(x_8 = x_9 = x_{10} = 1\\), so our sequence has period 8. Thus \\(x_{2013} = x_{13} = x_5 = 9\\).</p>",
+      "answer": "9"
+    },
+    "9": {
+      "problem": "<p>For an integer \\(n \\ge 0\\), let \\(f(n)\\) be the smallest possible value of \\(|x + y|\\), where \\(x\\) and \\(y\\) are integers such that \\(3x - 2y = n\\). Evaluate \\(f(0) + f(1) + f(2) + \\cdots + f(2013)\\).</p>",
+      "solutions": "<p>First, we can use \\(3x - 2y = n\\) to get \\(x = \\frac{n+2y}{3}\\). Thus \\(|x+y| = |\\frac{n+5y}{3}|\\). Given a certain \\(n\\), the only restriction on \\(y\\) is that \\(3 \\mid n + 2y \\iff 3 \\mid n + 5y\\). Hence the set of possible \\(x + y\\) equals the set of integers of the form \\(\\frac{n+5y}{3}\\), which in turn equals the set of integers congruent to \\(3^{-1}n \\equiv 2n \\pmod 5\\). (Prove this!)</p><p>Thus \\(f(n) = |x + y|\\) is minimized when \\(x + y\\) equals the <i>least absolute remainder</i> \\((2n)_5\\) when \\(2n\\) is divided by 5, i.e. the number between \\(-2\\) and 2 (inclusive) congruent to \\(2n\\) modulo 5. We immediately find \\(f(n) = f(n + 5m)\\) for all integers \\(m\\), and the following initial values of \\(f\\): \\(f(0) = |(0)_5| = 0\\); \\(f(1) = |(2)_5| = 2\\); \\(f(2) = |(4)_5| = 1\\); \\(f(3) = |(6)_5| = 1\\); and \\(f(4) = |(8)_5| = 2\\).</p><p>Since \\(2013 = 403 \\cdot 5 - 2\\), it follows that \\(f(0) + f(1) + \\cdots + f(2013) = 403[f(0) + f(1) + \\cdots + f(4)] - f(2014) = 403 \\cdot 6 - 2 = 2416\\).</p>",
+      "answer": "2416"
+    },
+    "10": {
+      "problem": "<p>Let \\(\\omega = \\cos\\frac{2\\pi}{727} + i\\sin\\frac{2\\pi}{727}\\). The imaginary part of the complex number \\[\\prod_{k=8}^{13}\\left(1 + \\omega^{3^{k-1}} + \\omega^{2\\cdot 3^{k-1}}\\right)\\] is equal to \\(\\sin\\alpha\\) for some angle \\(\\alpha\\) between \\(-\\frac{\\pi}{2}\\) and \\(\\frac{\\pi}{2}\\), inclusive. Find \\(\\alpha\\).</p>",
+      "solutions": "<p>Note that \\(727 = 3^6 - 2\\). Our product telescopes to \\(\\frac{1-\\omega^{3^{13}}}{1-\\omega^{3^7}} = \\frac{1-\\omega^{12}}{1-\\omega^6} = 1 + \\omega^6\\), which has imaginary part \\(\\sin\\frac{12\\pi}{727}\\), giving \\(\\alpha = \\frac{12\\pi}{727}\\).</p>",
+      "answer": "\\frac{12\\pi}{727}"
+    }
+  }
+}

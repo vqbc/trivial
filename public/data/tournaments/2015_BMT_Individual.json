@@ -1,0 +1,108 @@
+{
+  "test": "BMT Individual",
+  "year": 2015,
+  "name": "Individual Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2015/IS2015.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The boba shop sells four different types of milk tea, and William likes to get tea each weekday. If William refuses to have the same type of tea on successive days, how many different combinations could he get, Monday through Friday?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Suppose we list the decimal representations of the positive even numbers from left to right. Determine the \\(2015^{\\text{th}}\\) digit in the list.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>A quadrilateral \\(ABCD\\) has a right angle at \\(\\angle ABC\\) and satisfies \\(AB = 12\\), \\(BC = 9\\), \\(CD = 20\\), and \\(DA = 25\\). Determine \\(BD^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>A train traveling at 80 mph begins to cross a 1 mile long bridge. At this moment, a man begins to walk from the front of the train to the back of the train at a speed of 5 mph. The man reaches the back of the train as soon as the train is completely off the bridge. What is the length of the train (as a fraction of a mile)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Find the number of ways to partition a set of 10 elements, \\(S = \\{1, 2, 3, \\ldots, 10\\}\\) into two parts; that is, the number of <u>unordered</u> pairs \\(\\{P, Q\\}\\) such that \\(P \\cup Q = S\\) and \\(P \\cap Q = \\emptyset\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>An integer-valued function \\(f\\) satisfies \\(f(2) = 4\\) and \\(f(mn) = f(m)f(n)\\) for all integers \\(m\\) and \\(n\\). If \\(f\\) is an increasing function, determine \\(f(2015)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>In \\(\\triangle ABC\\), \\(m\\angle B = 46^\\circ\\) and \\(m\\angle C = 48^\\circ\\). A circle is inscribed in \\(\\triangle ABC\\) and the points of tangency are connected to form \\(\\triangle PQR\\). What is the measure of the largest angle in \\(\\triangle PQR\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>An integer is between 0 and 999999 (inclusive) is chosen, and the digits of its decimal representation are summed. What is the probability that the sum will be 19?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>The number \\(2^{29}\\) has a 9-digit decimal representation that contains all but one of the 10 (decimal) digits. Determine which digit is missing.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>We have 10 boxes of different sizes, each one big enough to contain all the smaller boxes when put side by side. We may nest the boxes however we want (and how deeply we want), as long as we put smaller boxes in larger ones. At the end, all boxes should be directly or indirectly nested in the largest box. How many ways can we nest the boxes?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "11": {
+      "problem": "<p>Let \\(r\\), \\(s\\), and \\(t\\) be the three roots of the equation \\(8x^3 + 1001x + 2008 = 0\\). Find \\[(r+s)^3 + (s+t)^3 + (t+r)^3.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "12": {
+      "problem": "<p>How many possible arrangements of bishops are there on a \\(8 \\times 8\\) chessboard such that no bishop threatens a square on which another lies and the maximum number of bishops are used? (Note that a bishop threatens any square along a diagonal containing its square.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "13": {
+      "problem": "<p>On a \\(2 \\times 40\\) chessboard colored black and white in the standard alternating pattern, 20 rooks are placed randomly on the black squares. The expected number of white squares with only rooks as neighbors can be expressed as \\(\\frac{a}{b}\\), where \\(a\\) and \\(b\\) are coprime positive integers. What is \\(a + b\\)? (Two squares are said to be neighbors if they share an edge.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "14": {
+      "problem": "<p>Determine \\[\\left| \\prod_{k=1}^{10} \\left( e^{\\frac{i\\pi}{2^k}} + 1 \\right) \\right|.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "15": {
+      "problem": "<p>Recall that an icosahedron is a 3-dimensional solid characterized by its 20 congruent faces, each of which is an equilateral triangle. Determine the number of rigid rotations that preserve the symmetry of the icosahedron. (Each vertex moves to the location of another vertex.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "16": {
+      "problem": "<p>A binary decision tree is a list of \\(n\\) yes/no questions, together with instructions for the order in which they should be asked (without repetition). For instance, if \\(n = 3\\), there are 12 possible binary decision trees, one of which asks question 2 first, then question 3 (followed by question 1) if the answer was yes or question 1 (followed by question 3) if the answer was no.</p><p>Determine the greatest possible \\(k\\) such that \\(2^k\\) divides the number of binary decision trees on \\(n = 13\\) questions.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "17": {
+      "problem": "<p>A circle intersects square \\(ABCD\\) at points \\(A\\), \\(E\\), and \\(F\\), where \\(E\\) lies on \\(AB\\) and \\(F\\) lies on \\(AD\\), such that \\(AE + AF = 2(BE + DF)\\). If the square and the circle each have area 1, determine the area of the union of the circle and square.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "18": {
+      "problem": "<p>Evaluate \\[\\sum_{n=1}^{\\infty} \\frac{1}{(2n-1)(3n-1)}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "19": {
+      "problem": "<p>It is known that 4 people A, B, C, and D each have a \\(\\frac{1}{3}\\) probability of telling the truth. Suppose that</p><ul><li>A makes a statement.</li><li>B makes a statement about the truthfulness of A’s statement.</li><li>C makes a statement about the truthfulness of B’s statement.</li><li>D says that C says that B says that A was telling the truth.</li></ul><p>What is the probability that A was actually telling the truth?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "20": {
+      "problem": "<p>Let \\(a\\) and \\(b\\) be real numbers for which the equation \\[2x^4 + 2ax^3 + bx^2 + 2ax + 2 = 0\\] has at least one real solution. For all such pairs \\((a, b)\\), find the minimum value of \\(8a^2 + b^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

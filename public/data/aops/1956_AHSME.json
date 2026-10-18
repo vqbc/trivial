@@ -1,0 +1,256 @@
+{
+  "test": "1956 AHSME",
+  "year": 1956,
+  "problems": {
+    "1": {
+      "problem": "<p>The value of \\(x + x(x^x)\\) when \\(x = 2\\) is:</p><p>\\(\\textbf{(A)}\\ 10 \\qquad\\textbf{(B)}\\ 16 \\qquad\\textbf{(C)}\\ 18 \\qquad\\textbf{(D)}\\ 36 \\qquad\\textbf{(E)}\\ 64\\)</p>",
+      "solutions": "<p>Simple substitution yields</p><p>\\[2 + 2(2^2) = 2 + 2(4) = 10\\]</p><p>Therefore, the answer is \\(\\boxed{(A) 10}\\)</p>",
+      "answer": "A"
+    },
+    "2": {
+      "problem": "<p>Mr. Jones sold two pipes at \\(\\textdollar{ 1.20}\\) each. Based on the cost, his profit on one was</p><p>\\(20\\)% and his loss on the other was \\(20\\)%. On the sale of the pipes, he:</p><p>\\(\\textbf{(A)}\\ \\text{broke even}\\qquad\n\\textbf{(B)}\\ \\text{lost }4\\text{ cents}\n\\qquad\\textbf{(C)}\\ \\text{gained }4\\text{ cents}\\qquad \\\\\n\\textbf{(D)}\\ \\text{lost }10\\text{ cents}\\qquad\n\\textbf{(E)}\\ \\text{gained }10\\text{ cents}\\)</p>",
+      "solutions": "<p>For the first pipe, we are told that his profit was 20%. In other words, he sold the pipe for 120% or \\(\\frac{6}{5}\\) of its original value. This tells us that the original price was \\(\\frac{5}{6}\\cdot1.20 = \\textdollar 1.00\\).</p><p>For the second pipe, we are told that his loss was 20%. In other words, he sold the pipe for 80% or \\(\\frac{4}{5}\\) of its original value. This tells us that the original price was \\(\\frac{5}{4}\\cdot1.20 = \\textdollar 1.50\\).</p><p>Thus, his total cost was \\(\\textdollar 2.50\\) and his total revenue was \\(\\textdollar 2.40\\).</p><p>Therefore, he \\(\\boxed{\\textbf{(D)}\\ \\text{lost }10\\text{ cents}}\\).</p>",
+      "answer": "D"
+    },
+    "3": {
+      "problem": "<p>The distance light travels in one year is approximately \\(5,870,000,000,000\\) miles. The distance light travels in \\(100\\) years is:</p><p>\\(\\textbf{(A)}\\ 587 * 10^8\\text{ miles}\\qquad\n\\textbf{(B)}\\ 587 * 10^{10}\\text{ miles}\\qquad\n\\textbf{(C)}\\ 587*10^{-10}\\text{ miles} \\\\\n\\textbf{(D)}\\ 587 * 10^{12} \\text{ miles} \\qquad\n\\textbf{(E)}\\ 587* 10^{ - 12} \\text{ miles}\\)</p>",
+      "solutions": "<p>The distance light travels in one year can also be written as \\(587\\cdot10^{10}\\). In 100 years, light will travel \\((587\\cdot10^{10})\\cdot100=587\\cdot10^{12}\\).</p><p>Therefore, our answer is  \\(\\boxed{\\textbf{(D) }587\\cdot10^{12}}\\).</p>",
+      "answer": "D"
+    },
+    "4": {
+      "problem": "<p>A man has \\(\\textdollar{10,000 }\\) to invest. He invests \\(\\textdollar{4000}\\) at 5% and \\(\\textdollar{3500}\\) at 4%. In order to have a yearly income of \\(\\textdollar{500}\\), he must invest the remainder at:</p><p>\\(\\textbf{(A)}\\ 6\\%\\qquad\\textbf{(B)}\\ 6.1\\%\\qquad\\textbf{(C)}\\ 6.2\\%\\qquad\\textbf{(D)}\\ 6.3\\%\\qquad\\textbf{(E)}\\ 6.4\\%\\)</p>",
+      "solutions": "<p>The man currently earns \\(4000 \\cdot \\frac{5}{1000} + 3500 \\cdot \\frac{4}{1000} = 340\\) dollars. So, we need to find the value of \\(x\\) such that</p><p>\\[2500 \\cdot \\frac{x}{1000} = 160.\\]</p><p>Solving, we get \\(x = \\boxed{\\textbf{(E) }6.4\\%.}\\)</p>",
+      "answer": "E"
+    },
+    "5": {
+      "problem": "<p>A nickel is placed on a table. The number of nickels which can be placed around it, each tangent to it and to two others is:</p><p>\\(\\textbf{(A)}\\ 4 \\qquad\\textbf{(B)}\\ 5 \\qquad\\textbf{(C)}\\ 6 \\qquad\\textbf{(D)}\\ 8 \\qquad\\textbf{(E)}\\ 12\\)</p>",
+      "solutions": "<p>Arranging the nickels in a hexagonal fashion, we see that only \\(\\boxed{\\textbf{(C) }6}\\) nickels can be placed around the central nickel.</p>",
+      "answer": "C"
+    },
+    "6": {
+      "problem": "<p>In a group of cows and chickens, the number of legs was 14 more than twice the number of heads. The number of cows was:</p><p>\\(\\textbf{(A)}\\ 5 \\qquad\\textbf{(B)}\\ 7 \\qquad\\textbf{(C)}\\ 10 \\qquad\\textbf{(D)}\\ 12 \\qquad\\textbf{(E)}\\ 14\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Let there be \\(x\\) cows and \\(y\\) chickens. Then, there are \\(4x+2y\\) legs and \\(x+y\\) heads. Writing the equation:</p><p>\\[4x+2y=14+2(x+y)\\]</p><p>\\[4x+2y=14+2x+2y\\]</p><p>\\[2x=14\\]</p><p>\\[x=\\boxed{\\textbf{(B) }7}\\]</p>",
+      "answer": "B"
+    },
+    "7": {
+      "problem": "<p>The roots of the equation \\(ax^2 + bx + c = 0\\) will be reciprocal if:</p><p>\\(\\textbf{(A)}\\ a = b \\qquad\\textbf{(B)}\\ a = bc \\qquad\\textbf{(C)}\\ c = a \\qquad\\textbf{(D)}\\ c = b \\qquad\\textbf{(E)}\\ c = ab\\)</p>",
+      "solutions": "<p>Dividing both sides of the equation by \\(a\\quad(a\\neq0)\\) gives \\(x^2+\\frac{b}{a}x+\\frac{c}{a}\\).</p><p>Letting \\(r\\) and \\(s\\) be the respective roots to this quadratic, \\(r=\\frac{1}{s} \\Rightarrow rs=1\\).</p><p>From Vieta’s, \\(rs=\\frac{c}{a}\\), so \\(\\frac{c}{a}=1\\Rightarrow\\boxed{\\text{(C) }c=a}\\)</p>",
+      "answer": "C"
+    },
+    "8": {
+      "problem": "<p>If \\(8\\cdot2^x = 5^{y + 8}\\), then when \\(y = - 8,x =\\)</p><p>\\(\\textbf{(A)}\\ - 4 \\qquad\\textbf{(B)}\\ - 3 \\qquad\\textbf{(C)}\\ 0 \\qquad\\textbf{(D)}\\ 4 \\qquad\\textbf{(E)}\\ 8\\)</p>",
+      "solutions": "<p>Simple substitution yields</p><p>\\[8 \\cdot 2^{x} = 5^{0}\\]</p><p>Reducing the equation gives</p><p>\\[8 \\cdot 2^{x} = 1\\]</p><p>Dividing by 8 gives</p><p>\\[2^{x}=\\frac{1}{8}\\]</p><p>This simply gives that \\(x=-3\\). Therefore, the answer is \\(\\boxed{(B) -3}\\).</p>",
+      "answer": "B"
+    },
+    "9": {
+      "problem": "<p>When you simplify \\(\\left[ \\sqrt [3]{\\sqrt [6]{a^9}} \\right]^4\\left[ \\sqrt [6]{\\sqrt [3]{a^9}} \\right]^4\\), the result is:</p><p>\\(\\textbf{(A)}\\ a^{16} \\qquad\\textbf{(B)}\\ a^{12} \\qquad\\textbf{(C)}\\ a^8 \\qquad\\textbf{(D)}\\ a^4 \\qquad\\textbf{(E)}\\ a^2\\)</p>",
+      "solutions": "<p>This simplifies to</p><p>\\[(a^{\\frac{9}{6}/3})^4 \\cdot (a^{\\frac{9}{3}/6})^4 = (a^{\\frac{1}{2}})^4 \\cdot (a^{\\frac{1}{2}})^4 = (a^2)(a^2) = \\boxed{a^4}\\]</p><p>The answer is \\(\\boxed{\\textbf{(D)}}.\\)</p>",
+      "answer": "D"
+    },
+    "10": {
+      "problem": "<p>A circle of radius \\(10\\) inches has its center at the vertex \\(C\\) of an equilateral triangle \\(ABC\\) and passes through the other two vertices. The side \\(AC\\) extended through \\(C\\) intersects the circle at \\(D\\). The number of degrees of angle \\(ADB\\) is:</p><p>\\(\\text{(A)} 15 \\quad  \\text{(B)}30 \\quad \\text{(C)}60 \\quad \\text{(D)}90 \\quad \\text{(E)}120\\)</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/aops/1956_AHSME/10-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(ABC\\) is an equilateral triangle, so ∠\\(C\\) must be \\(60\\)°. Since \\(D\\) is on the circle and ∠\\(ADB\\) contains arc \\(AB\\), we know that ∠\\(D\\) is \\(30\\)° \\(\\implies \\boxed{B}\\).</p>",
+      "answer": "B"
+    },
+    "11": {
+      "problem": "<p>The expression \\(1 - \\frac {1}{1 + \\sqrt {3}} + \\frac {1}{1 - \\sqrt {3}}\\) equals:</p><p>\\(\\textbf{(A)}\\ 1-\\sqrt{3}\\qquad \\textbf{(B)}\\ 1\\qquad \\textbf{(C)}\\ -\\sqrt{3}\\qquad \\textbf{(D)}\\ \\sqrt{3}\\qquad \\textbf{(E)}\\ 1+\\sqrt{3}\\)</p>",
+      "solutions": "<p>We can combine the second and third terms using the rules of arithmetic: We have \\(-\\frac{1}{1 + \\sqrt {3}} + \\frac{1}{1 - \\sqrt {3}} = \\frac{-(1 - \\sqrt{3}) + (1 + \\sqrt{3})}{(1 - \\sqrt{3})(1 + \\sqrt{3})} = \\frac{2\\sqrt{3}}{1 - 3} = -\\sqrt{3}\\).</p><p>Therefore the entire expression is equal to \\(1 - \\sqrt{3}\\), so our answer is \\(\\boxed{\\textbf{A}}\\) and we are done.</p>",
+      "answer": "A"
+    },
+    "12": {
+      "problem": "<p>If \\(x^{ - 1} - 1\\) is divided by \\(x - 1\\) the quotient is:</p><p>\\(\\textbf{(A)}\\ 1\\qquad \\textbf{(B)}\\ \\frac{1}{x-1}\\qquad \\textbf{(C)}\\ \\frac{-1}{x-1}\\qquad \\textbf{(D)}\\ \\frac{1}{x}\\qquad \\textbf{(E)}\\ -\\frac{1}{x}\\)</p>",
+      "solutions": "<p>We write \\(x^{-1} - 1 = \\frac{1}{x} - 1 = \\frac{1-x}{1} = -\\frac{1}{x}(x - 1)\\). This means that our answer is \\(\\boxed{\\textbf{(E)}}\\), and we are done.</p>",
+      "answer": "E"
+    },
+    "13": {
+      "problem": "<p>Given two positive integers \\(x\\) and \\(y\\) with \\(x &lt; y\\). The percent that \\(x\\) is less than \\(y\\) is:</p><p>\\(\\textbf{(A)}\\ \\frac{100(y-x)}{x}\\qquad \\textbf{(B)}\\ \\frac{100(x-y)}{x}\\qquad \\textbf{(C)}\\ \\frac{100(y-x)}{y}\\qquad \\\\ \\textbf{(D)}\\ 100(y-x)\\qquad \\textbf{(E)}\\ 100(x - y)\\)</p>",
+      "solutions": "<p>Suppose that \\(x\\) is \\(p\\) percent less than \\(y\\). Then \\(x = \\frac{100 - p}{100}y\\), so that \\(y - x = \\frac{p}{100}y\\). Solving for \\(p\\), we get \\(p = \\frac{100(y-x)}{y}\\), or \\(\\boxed{\\textbf{(C)}}\\).</p>",
+      "answer": "C"
+    },
+    "14": {
+      "problem": "<p>The points \\(A,B,C\\) are on a circle \\(O\\). The tangent line at \\(A\\) and the secant \\(BC\\) intersect at \\(P, B\\) lying between \\(C\\) and \\(P\\). If \\(\\overline{BC} = 20\\) and \\(\\overline{PA} = 10\\sqrt {3}\\), then \\(\\overline{PB}\\) equals:</p><p>\\(\\textbf{(A)}\\ 5 \\qquad\\textbf{(B)}\\ 10 \\qquad\\textbf{(C)}\\ 10\\sqrt {3} \\qquad\\textbf{(D)}\\ 20 \\qquad\\textbf{(E)}\\ 30\\)</p>",
+      "solutions": "<p>Because \\(PA\\) is a tangent line, angle \\(\\angle OAP\\) is a right angle. Drop a perpendicular from \\(O\\) to \\(BC\\) at \\(E.\\) We find that \\(BE = EC = 10.\\)</p><p>Let \\(AR = r\\) and \\(PE = a\\). We now have a system of equations.</p><p>\\[(10\\sqrt{3})^2+r^2=PR^2\\]</p><p>\\[(\\sqrt{r^2-10^2})^2+PE^2=r^2-10^2+PE^2=PR^2\\]</p><p>Set them equal to each other and solve.</p><p>\\[(10\\sqrt{3})^2+r^2=r^2-10^2+PE^2\\]</p><p>\\[(10\\sqrt{3})^2=-10^2+PE^2\\]</p><p>\\[400=PE^2\\]</p><p>\\[20=PE\\]</p><p>We know \\(BE = 10\\), so \\(PE = 20 - 10 = 10\\), which is \\(\\boxed{B}\\).</p><p>~Revised by MC413551</p>",
+      "answer": "B"
+    },
+    "15": {
+      "problem": "<p>The root(s) of \\(\\frac {15}{x^2 - 4} - \\frac {2}{x - 2} = 1\\) is (are):</p><p>\\(\\textbf{(A)}\\ -5\\text{ and }3\\qquad\n\\textbf{(B)}\\ \\pm 2\\qquad\n\\textbf{(C)}\\ 2\\text{ only}\\qquad\n\\textbf{(D)}\\ -3\\text{ and }5\\qquad\n\\textbf{(E)}\\ 3\\text{ only}\\)</p>",
+      "solutions": "<p>Use a common denominator: \\(\\frac{15 - 2(x+2)}{x^2-4} = 1\\). After moving the \\(1\\) to the left side, notice that you can factor the numerator:</p><p>\\[\\frac{(x-5)(x+3)}{x^2-4} = 0\\]</p><p>The roots of this equation are \\(\\boxed{\\textbf{(D)} \\quad -3, 5}.\\)</p>",
+      "answer": "A"
+    },
+    "16": {
+      "problem": "<p>The sum of three numbers is \\(98\\). The ratio of the first to the second is \\(\\frac {2}{3}\\), and the ratio of the second to the third is \\(\\frac {5}{8}\\). The second number is:</p><p>\\(\\textbf{(A)}\\ 15 \\qquad\\textbf{(B)}\\ 20 \\qquad\\textbf{(C)}\\ 30 \\qquad\\textbf{(D)}\\ 32 \\qquad\\textbf{(E)}\\ 33\\)</p>",
+      "solutions": "<p>Let the \\(3\\) numbers be \\(a,\\) \\(b,\\) and \\(c\\). We see that</p><p>\\[a+b+c = 98\\]</p><p>and</p><p>\\[\\frac{a}{b} = \\frac{2}{3} \\Rrightarrow 3a = 2b\\]</p><p>\\[\\frac{b}{c} = \\frac{5}{8} \\Rrightarrow 8b = 5c\\]</p><p>Writing \\(a\\) and \\(c\\) in terms of \\(b\\) we have \\(a = \\frac{2}{3} b\\) and \\(c = \\frac{8}{5} b\\). Substituting in the sum, we have</p><p>\\[\\frac{2}{3} b + b + \\frac{8}{5} b = 98\\]</p><p>\\[\\frac{49}{15} b = 98\\]</p><p>\\[b = 98 \\cdot \\frac{15}{49} \\Rrightarrow b = 30\\]</p><p>\\(\\boxed{C}\\)</p><p>~JustinLee2017</p>",
+      "answer": "C"
+    },
+    "17": {
+      "problem": "<p>The fraction \\(\\frac {5x - 11}{2x^2 + x - 6}\\) was obtained by adding the two fractions \\(\\frac {A}{x + 2}\\) and \\(\\frac {B}{2x - 3}\\). The values of \\(A\\) and \\(B\\) must be, respectively:</p><p>\\(\\textbf{(A)}\\ 5x,-11\\qquad\\textbf{(B)}\\ -11,5x\\qquad\\textbf{(C)}\\ -1,3\\qquad\\textbf{(D)}\\ 3,-1\\qquad\\textbf{(E)}\\ 5,-11\\)</p>",
+      "solutions": "<p>This is essentially asking for the partial fraction decomposition of \\[\\frac{5x-11}{2x^2 + x - 6}\\]</p><p>Looking at \\(A\\) and \\(B\\), we can write</p><p>\\[A(2x-3) + B(x+2) = 5x-11\\] . Substituting \\(x= -2\\), we get</p><p>\\[A(-4-3) + B(0) = -21 \\Rrightarrow A = 3\\]</p><p>Substituting \\(x = \\frac{3}{2}\\), we get</p><p>\\[A(0) + B(\\frac{7}{2}) = \\frac{15}{2} - \\frac{22}{2} \\Rrightarrow B = -1\\]</p><p>Thus, our answer is \\(\\boxed{D}\\)</p><p>~JustinLee2017</p>",
+      "answer": "D"
+    },
+    "18": {
+      "problem": "<p>If \\(10^{2y} = 25\\), then \\(10^{ - y}\\) equals:</p><p>\\(\\textbf{(A)}\\ -\\frac{1}{5}\\qquad\n\\textbf{(B)}\\ \\frac{1}{625}\\qquad\n\\textbf{(C)}\\ \\frac{1}{50}\\qquad\n\\textbf{(D)}\\ \\frac{1}{25}\\qquad\n\\textbf{(E)}\\ \\frac{1}{5}\\)</p>",
+      "solutions": "<p>If \\(10^{2y}=(10^{y})^2 = 25\\), then \\(10^y = 5\\) and \\(10^{-y} = \\boxed{\\textbf{(E)} \\quad \\frac{1}{5}}.\\)</p>",
+      "answer": "E"
+    },
+    "19": {
+      "problem": "<p>Two candles of the same height are lighted at the same time. The first is consumed in \\(4\\) hours and the second in \\(3\\) hours. Assuming that each candle burns at a constant rate, in how many hours after being lighted was the first candle twice the height of the second?</p><p>\\(\\textbf{(A)}\\ \\frac{3}{4}\\qquad\\textbf{(B)}\\ 1\\frac{1}{2}\\qquad\\textbf{(C)}\\ 2\\qquad\\textbf{(D)}\\ 2\\frac{2}{5}\\qquad\\textbf{(E)}\\ 2\\frac{1}{2}\\)</p>",
+      "solutions": "<p>In \\(x\\) hours, the height of the first candle is \\(1 - \\frac{x}{4}\\) and the height of the second candle is \\(1 - \\frac{x}{3}\\) Essentially, we are solving the equation</p><p>\\[1 - \\frac{x}{4} = 2(1 - \\frac{x}{3})\\] .</p><p>\\(- \\frac{x}{4} = 1 - \\frac{2x}{3}\\) | \\(-1\\)</p><p>\\(- 3x = 12 - 8x\\) | \\(\\cdot 12\\)</p><p>\\(5x = 12\\) | \\(+8x\\)</p><p>\\(x = \\frac{12}{5}\\) | \\(/5\\)</p><p>\\(x = \\boxed{\\textbf{(D)} \\quad 2 \\frac{2}{5}}\\) hours.</p>",
+      "answer": "D"
+    },
+    "20": {
+      "problem": "<p>If \\((0.2)^x = 2\\) and \\(\\log 2 = 0.3010\\), then the value of \\(x\\) to the nearest tenth is:</p><p>\\(\\textbf{(A)}\\ - 10.0 \\qquad\\textbf{(B)}\\ - 0.5 \\qquad\\textbf{(C)}\\ - 0.4 \\qquad\\textbf{(D)}\\ - 0.2 \\qquad\\textbf{(E)}\\ 10.0\\)</p>",
+      "solutions": "<p>Taking reciprocals of the first condition yields \\(5^x=\\frac{1}{2}\\). Then \\(5^x\\cdot2^x=\\frac{1}{2}\\cdot2^x\\), so \\(10^x=2^{x-1}\\). Taking base \\(10\\) log of both sides results in \\(x=(x-1)\\log 2\\), so</p><p>\\[x=\\frac{\\log2}{\\log2-1}\\approx{0.3}{-0.7}=-\\frac{3}{7}\\approx-0.429\\]</p><p>Thus \\(\\boxed{\\textbf{(C)}}\\) is correct.</p><p>~eevee9406 <a class=\"external\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Eevee9406\">https://artofproblemsolving.com/wiki/index.php/User:Eevee9406</a></p>",
+      "answer": "C"
+    },
+    "21": {
+      "problem": "<p>If each of two intersecting lines intersects a hyperbola and neither line is tangent to the hyperbola, then the possible number of points of intersection with the hyperbola is:</p><p>\\(\\textbf{(A)}\\ 2\\qquad\n\\textbf{(B)}\\ 2\\text{ or }3\\qquad\n\\textbf{(C)}\\ 2\\text{ or }4\\qquad\n\\textbf{(D)}\\ 3\\text{ or }4\\qquad\n\\textbf{(E)}\\ 2,3,\\text{ or }4\\)</p>",
+      "solutions": "<p>Consider the hyperbola \\(x^2-y^2=1\\). It is possible for the two intersecting lines to intersect the hyperbola at 2 points if one of them has a slope of 1 and only intersects one part of the hyperbola and the other line doesn’t intersect the hyperbola at all (Ex. \\(y=x+3,\\, x=0.\\)). If the second line is instead \\(x=4\\), it intersects the hyperbola twice, so the lines can intersect the hyperbola 3 times. Finally, if both lines intersect the hyperbola twice, such as \\(y=2x-4\\) and \\(y=3x-6\\), the lines can intersect the hyperbola 4 times. So the answer is \\(\\textbf{(E)}\\ 2,3,\\text{ or } 4\\)</p>",
+      "answer": "E"
+    },
+    "22": {
+      "problem": "<p>Jones covered a distance of \\(50\\) miles on his first trip. On a later trip he traveled \\(300\\) miles while going three times as fast. His new time compared with the old time was:</p><p>\\(\\textbf{(A)}\\ \\text{three times as much} \\qquad\n\\textbf{(B)}\\ \\text{twice as much} \\qquad\n\\textbf{(C)}\\ \\text{the same} \\\\\n\\textbf{(D)}\\ \\text{half as much} \\qquad\n\\textbf{(E)}\\ \\text{a third as much}\\)</p>",
+      "solutions": "<p>WLOG Jones travels at \\(50\\) miles per hour. Then, it took him \\(1\\) hour to travel \\(50\\) miles at \\(50\\) miles per hour.</p><p>On his second trip, he travels \\(300\\) miles at \\(150\\) miles per hour, which takes \\(\\boxed{\\textbf{(B)}\\ \\text{twice as much}}\\) time as before.</p><p>~coolmath34</p>",
+      "answer": "B"
+    },
+    "23": {
+      "problem": "<p>About the equation \\(ax^2 - 2x\\sqrt {2} + c = 0\\), with \\(a\\) and \\(c\\) real constants, we are told that the discriminant is zero. The roots are necessarily:</p><p>\\(\\textbf{(A)}\\ \\text{equal and integral}\\qquad\n\\textbf{(B)}\\ \\text{equal and rational}\\qquad\n\\textbf{(C)}\\ \\text{equal and real} \\\\\n\\textbf{(D)}\\ \\text{equal and irrational} \\qquad\n\\textbf{(E)}\\ \\text{equal and imaginary}\\)</p>",
+      "solutions": "<p>Plugging into the quadratic formula, we get</p><p>\\[x = \\frac{2\\sqrt{2} \\pm \\sqrt{8-4ac}}{2a}.\\]</p><p>The discriminant is equal to 0, so this simplifies to \\(x = \\frac{2\\sqrt{2}}{2a}=\\frac{\\sqrt{2}}{a}.\\) Because we are given that \\(a\\) is real, \\(x\\) is always real, and the answer is \\(\\boxed{\\textbf{(C)}}.\\)</p><p>~cxsmi <a class=\"external\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\">https://artofproblemsolving.com/wiki/index.php/User:Cxsmi</a> (significant edits)</p>",
+      "answer": "C"
+    },
+    "24": {
+      "problem": "<p>In the figure \\(\\overline{AB} = \\overline{AC}\\), \\(\\angle BAD = 30^{\\circ}\\), and \\(\\overline{AE} = \\overline{AD}\\).</p><p><img class=\"latexcenter\" src=\"/data/aops/1956_AHSME/24-fig1.png\" width=\"504\" alt=\"\"></p><p>The angle CDE equals:</p><p>\\(\\textbf{(A)}\\ 7\\frac{1}{2}^{\\circ}\\qquad\n\\textbf{(B)}\\ 10^{\\circ}\\qquad\n\\textbf{(C)}\\ 12\\frac{1}{2}^{\\circ}\\qquad\n\\textbf{(D)}\\ 15^{\\circ}\\qquad\n\\textbf{(E)}\\ 20^{\\circ}\\)</p>",
+      "solutions": "<p>Let \\(x = \\angle CDE\\) and let \\(\\angle DAE = a\\).</p><p>First, consider the large isosceles triangle \\(\\triangle ABC\\), where \\(AB = AC\\). The vertex angle is:</p><p>\\[\\angle BAC = \\angle BAD + \\angle DAE = 30^\\circ + a\\]</p><p>Since the sum of angles in \\(\\triangle ABC\\) is \\(180^\\circ\\) and the base angles \\(\\angle ABC\\) and \\(\\angle BCA\\) are equal:</p><p>\\[\\angle BCA = \\frac{180^\\circ - (30^\\circ + a)}{2} = 75^\\circ - \\frac{a}{2}\\]</p><p>Next, consider the smaller isosceles triangle \\(\\triangle ADE\\), where \\(AD = AE\\). The vertex angle is \\(\\angle DAE = a\\). Since the base angles \\(\\angle ADE\\) and \\(\\angle DEA\\) are equal:</p><p>\\[\\angle ADE = \\angle DEA = \\frac{180^\\circ - a}{2} = 90^\\circ - \\frac{a}{2}\\]</p><p>Now, look at the angles along line segment \\(AC\\) at vertex \\(E\\), or by using the exterior angle theorem on \\(\\triangle DEC\\). The exterior angle \\(\\angle DEA\\) to \\(\\triangle DEC\\) is equal to the sum of its two opposite interior angles:</p><p>\\[\\angle DEA = \\angle CDE + \\angle BCA\\]</p><p>Substituting the expressions we found for \\(\\angle DEA\\) and \\(\\angle BCA\\):</p><p>\\[90^\\circ - \\frac{a}{2} = x + \\left(75^\\circ - \\frac{a}{2}\\right)\\]</p><p>Subtracting \\(75^\\circ - \\frac{a}{2}\\) from both sides gives:</p><p>\\[x = 90^\\circ - 75^\\circ = 15^\\circ\\]</p><p>Thus, \\(\\angle CDE = 15^\\circ\\), which corresponds to \\(\\mathbf{(D)}\\).</p>",
+      "answer": "D"
+    },
+    "25": {
+      "problem": "<p>The sum of all numbers of the form \\(2k + 1\\), where \\(k\\) takes on integral values from \\(1\\) to \\(n\\) is:</p><p>\\(\\textbf{(A)}\\ n^2\\qquad\\textbf{(B)}\\ n(n+1)\\qquad\\textbf{(C)}\\ n(n+2)\\qquad\\textbf{(D)}\\ (n+1)^2\\qquad\\textbf{(E)}\\ (n+1)(n+2)\\)</p>",
+      "solutions": "<p>The sum of the odd integers \\(2k-1\\) from \\(1\\) to \\(n\\) is \\(n^2\\). However, in this problem, the sum is instead \\(2k+1\\), starting at \\(3\\) rather than \\(1\\). To rewrite this, we note that \\(2k-1\\) is \\(2\\) less than \\(2k+1\\) for every \\(k\\) we add, so for \\(n\\) \\(k\\)’s, we subtract \\(2n\\), giving us \\(n^2+2n\\),which factors as \\(n(n+2) \\implies \\boxed{\\text{(C)} n(n+2)}\\).</p>",
+      "answer": "C"
+    },
+    "26": {
+      "problem": "<p>Which one of the following combinations of given parts does not determine the indicated triangle?</p><p>\\(\\textbf{(A)}\\ \\text{base angle and vertex angle; isosceles triangle} \\\\\n\\textbf{(B)}\\ \\text{vertex angle and the base; isosceles triangle} \\\\\n\\textbf{(C)}\\ \\text{the radius of the circumscribed circle; equilateral triangle} \\\\\n\\textbf{(D)}\\ \\text{one arm and the radius of the inscribed circle; right triangle} \\\\\n\\textbf{(E)}\\ \\text{two angles and a side opposite one of them; scalene triangle}\\)</p>",
+      "solutions": "<p>Let’s look at each answer choice one by one. For choice A, you can swap the base and vertex angles to obtain a different isosceles triangle, so these two criteria alone are not enough. \\(\\boxed{A}\\) is our answer.</p><p>-coolmath34</p>",
+      "answer": "A"
+    },
+    "27": {
+      "problem": "<p>If an angle of a triangle remains unchanged but each of its two including sides is doubled, then the area is multiplied by:</p><p>\\(\\textbf{(A)}\\ 2 \\qquad\\textbf{(B)}\\ 3 \\qquad\\textbf{(C)}\\ 4 \\qquad\\textbf{(D)}\\ 6 \\qquad\\textbf{(E)}\\ \\text{more than }6\\)</p>",
+      "solutions": "<p>Let the angle be \\(\\theta\\) and the sides around it be \\(a\\) and \\(b\\). The area of the triangle can be written as \\[A =\\frac{a \\cdot b \\cdot \\sin(\\theta)}{2}\\]</p><p>The doubled sides have length \\(2a\\) and \\(2b\\), while the angle is still \\(\\theta\\). Thus, the area is</p><p>\\[\\frac{2a \\cdot 2b \\cdot \\sin(\\theta)}{2}\\]</p><p>\\[\\Rrightarrow  \\frac{4ab \\sin \\theta}{2} = 4A\\]</p><p>\\[\\boxed {C}\\]</p><p>~JustinLee2017</p>",
+      "answer": "C"
+    },
+    "28": {
+      "problem": "<p>Mr. J left his entire estate to his wife, his daughter, his son, and the cook. His daughter and son got half the estate, sharing in the ratio of \\(4\\) to \\(3\\). His wife got twice as much as the son. If the cook received a bequest of \\(\\textdollar{500}\\), then the entire estate was:</p><p>\\(\\textbf{(A)}\\ \\textdollar{3500}\\qquad\n\\textbf{(B)}\\ \\textdollar{5500}\\qquad\n\\textbf{(C)}\\ \\textdollar{6500}\\qquad\n\\textbf{(D)}\\ \\textdollar{7000}\\qquad\n\\textbf{(E)}\\ \\textdollar{7500}\\)</p>",
+      "solutions": "<p>The wife, daughter, son, and cook received estates in the ratio \\(6:4:3:1.\\) The estate is worth \\(6+4+3+1 = 14\\) units of \\(\\textdollar 500.,\\) which is \\(\\boxed{\\textbf{(D)}\\ \\textdollar{7000}.}\\)</p><p>~coolmath34</p>",
+      "answer": "D"
+    },
+    "29": {
+      "problem": "<p>The points of intersection of \\(xy = 12\\) and \\(x^2 + y^2 = 25\\) are joined in succession. The resulting figure is:</p><p>\\(\\textbf{(A)}\\ \\text{a straight line}\\qquad\n\\textbf{(B)}\\ \\text{an equilateral triangle}\\qquad\n\\textbf{(C)}\\ \\text{a parallelogram} \\\\\n\\textbf{(D)}\\ \\text{a rectangle} \\qquad\n\\textbf{(E)}\\ \\text{a square}\\)</p>",
+      "solutions": "<p>Graphing both equations, we see that the graphs intersect at \\((-4, -3),\\) \\((-3, -4),\\) \\((3, 4),\\) and \\((4, 3).\\) These points form a rectangle, so the answer is \\(\\boxed{\\textbf{(D)}}.\\)</p><p>~coolmath34</p>",
+      "answer": "D"
+    },
+    "30": {
+      "problem": "<p>If the altitude of an equilateral triangle is \\(\\sqrt {6}\\), then the area is:</p><p>\\(\\textbf{(A)}\\ 2\\sqrt{2}\\qquad\\textbf{(B)}\\ 2\\sqrt{3}\\qquad\\textbf{(C)}\\ 3\\sqrt{3}\\qquad\\textbf{(D)}\\ 6\\sqrt{2}\\qquad\\textbf{(E)}\\ 12\\)</p>",
+      "solutions": "<p>Drawing the altitude, we see that is opposite the \\(60^{\\circ}\\) angle in a \\(30-60-90\\) triangle. Thus, we find that the shortest leg of that triangle is \\(\\sqrt{\\frac{6}{3}} = \\sqrt{2}\\), and the side of the equilateral triangle is then \\(2\\sqrt{2}\\). Thus, the area is</p><p>\\[\\frac{(2\\sqrt 2)^2 \\cdot \\sqrt{3}}{4}\\]</p><p>\\[= \\frac{8 \\sqrt{3}}{4}\\]</p><p>\\[= 2 \\sqrt {3}\\]</p><p>\\(\\boxed{B}\\)</p><p>~JustinLee2017</p>",
+      "answer": "B"
+    },
+    "31": {
+      "problem": "<p>In our number system the base is ten. If the base were changed to four you would count as follows: \\(1,2,3,10,11,12,13,20,21,22,23,30,\\ldots\\) The twentieth number would be:</p><p>\\(\\textbf{(A)}\\ 20 \\qquad\\textbf{(B)}\\ 38 \\qquad\\textbf{(C)}\\ 44 \\qquad\\textbf{(D)}\\ 104 \\qquad\\textbf{(E)}\\ 110\\)</p>",
+      "solutions": "<p>The \\(20^{\\text{th}}\\) number will be the value of \\(20_{10}\\) in base \\(4\\). Thus, we see</p><p>\\[20_{10} = (1) \\cdot 4^2 + (1) \\cdot 4^1 + 0 \\cdot 4^0\\]</p><p>\\[= 110_{4}\\]</p><p>\\(\\boxed{E}\\)</p><p>~JustinLee2017</p>",
+      "answer": "E"
+    },
+    "32": {
+      "problem": "<p>George and Henry started a race from opposite ends of the pool. After a minute and a half, they passed each other in the center of the pool. If they lost no time in turning and maintained their respective speeds, how many minutes after starting did they pass each other the second time?</p><p>\\(\\textbf{(A)}\\ 3\\qquad\n\\textbf{(B)}\\ 4\\frac{1}{2}\\qquad\n\\textbf{(C)}\\ 6\\qquad\n\\textbf{(D)}\\ 7\\frac{1}{2}\\qquad\n\\textbf{(E)}\\ 9\\)</p>",
+      "solutions": "<p>Because it took George and Henry \\(1 \\frac{1}{2}\\) minutes to meet each other, it took each of them \\(1 \\frac{1}{2}\\) minutes to travel half the length of the pool. In order for them to meet again, each of them needs to travel \\(1 \\frac{1}{2}\\) lengths of the pool, which takes \\(\\boxed{\\textbf{(B)} \\quad 4\\frac{1}{2}}\\) minutes.</p><p>-coolmath34</p>",
+      "answer": "B"
+    },
+    "33": {
+      "problem": "<p>The number \\(\\sqrt {2}\\) is equal to:</p><p>\\(\\textbf{(A)}\\ \\text{a rational fraction} \\qquad\n\\textbf{(B)}\\ \\text{a finite decimal} \\qquad\n\\textbf{(C)}\\ 1.41421 \\\\\n\\textbf{(D)}\\ \\text{an infinite repeating decimal} \\qquad\n\\textbf{(E)}\\ \\text{an infinite non - repeating decimal}\\)</p>",
+      "solutions": "<p>\\(2\\) is not a perfect square, so \\(\\sqrt{2}\\) is irrational. The answer is \\(\\boxed{\\textbf{(E)}\\ \\text{an infinite non - repeating decimal}}.\\)</p><p>~coolmath34</p>",
+      "answer": "E"
+    },
+    "34": {
+      "problem": "<p>If \\(n\\) is any whole number, \\(n^2(n^2 - 1)\\) is always divisible by</p><p>\\(\\textbf{(A)}\\ 12\\qquad\n\\textbf{(B)}\\ 24\\qquad\n\\textbf{(C)}\\ \\text{any multiple of }12\\qquad\n\\textbf{(D)}\\ 12-n\\qquad\n\\textbf{(E)}\\ 12\\text{ and }24\\)</p>",
+      "solutions": "<p>Suppose \\(n\\) is even. So, we have \\(n^2(n+1)(n-1).\\) Out of these three numbers, at least one of them is going to be a multiple of 3. \\(n^2\\) is also a multiple of 4. Therefore, this expression is always divisible by \\(\\boxed{\\textbf{(A)} \\quad 12}.\\)</p><p>-coolmath34</p>",
+      "answer": "A"
+    },
+    "35": {
+      "problem": "<p>A rhombus is formed by two radii and two chords of a circle whose radius is \\(16\\) feet. The area of the rhombus in square feet is:</p><p>\\(\\textbf{(A)}\\ 128\\qquad\n\\textbf{(B)}\\ 128\\sqrt{3}\\qquad\n\\textbf{(C)}\\ 256\\qquad\n\\textbf{(D)}\\ 512\\qquad\n\\textbf{(E)}\\ 512\\sqrt{3}\\)</p>",
+      "solutions": "<p>Let \\(r = 16\\text{ ft}\\) be the radius of the circle.</p><p>The rhombus consists of two radii and two chords, so all four sides equal \\(r = 16\\). The diagonal connecting the center to the circle’s edge is also a radius of length \\(r = 16\\).</p><p>This diagonal splits the rhombus into two congruent equilateral triangles with side length \\(s = 16\\).</p><p>\\[\\text{Area} = 2 \\cdot \\left(\\frac{\\sqrt{3}}{4} s^2\\right) = \\frac{\\sqrt{3}}{2} (16)^2 = 128\\sqrt{3}\\text{ sq ft}\\]</p><p>This corresponds to \\(\\mathbf{(B)}\\).</p>",
+      "answer": "B"
+    },
+    "36": {
+      "problem": "<p>If the sum \\(1 + 2 + 3 + \\cdots + K\\) is a perfect square \\(N^2\\) and if \\(N\\) is less than \\(100\\), then the possible values for \\(K\\) are:</p><p>\\(\\textbf{(A)}\\ \\text{only }1\\qquad\n\\textbf{(B)}\\ 1\\text{ and }8\\qquad\n\\textbf{(C)}\\ \\text{only }8\\qquad\n\\textbf{(D)}\\ 8\\text{ and }49\\qquad\n\\textbf{(E)}\\ 1,8,\\text{ and }49\\)</p>",
+      "solutions": "<p>We can plug in 1, 8, and 49 to see which works.</p><p>\\(1 = 1 = 1^2\\)</p><p>\\(1 + 2 + 3 + \\cdots + 8 = \\frac{8 \\cdot 9}{2} = 36 = 6^2\\)</p><p>\\(1 + 2 + 3 + \\cdots + 49 = \\frac{49 \\cdot 50}{2} = 1225 = 45^2\\)</p><p>All of these values produce a perfect square for \\(1 + 2 + \\cdots + K,\\) so the answer is \\(\\boxed{\\textbf{(E)}}.\\)</p><p>-coolmath34</p>",
+      "answer": "E"
+    },
+    "37": {
+      "problem": "<p>On a map whose scale is \\(400\\) miles to an inch and a half, a certain estate is represented by a rhombus having a \\(60^{\\circ}\\) angle. The diagonal opposite \\(60^{\\circ}\\) is \\(\\frac {3}{16}\\) in. The area of the estate in square miles is:</p><p>\\(\\textbf{(A)}\\ \\frac{2500}{\\sqrt{3}}\\qquad \\textbf{(B)}\\ \\frac{1250}{\\sqrt{3}}\\qquad \\textbf{(C)}\\ 1250\\qquad \\textbf{(D)}\\ \\frac{5625\\sqrt{3}}{2}\\qquad \\textbf{(E)}\\ 1250\\sqrt{3}\\)</p>",
+      "solutions": "<p>When we construct the diagram, we can see that the rhombus is made up of two equilateral triangles. The short diagonal in the rhombus is one side of both equilateral triangles, so we can simply scale the length up and find the area that way.</p><p>We know that the scale is \\(400\\) miles to \\(\\frac{3}{2}\\) inches, so we simply divide by \\(8\\) to find that the short diagonal of the estate is \\(50\\) miles.</p><p>When plugged into the formula, we get \\(2*50^2\\frac{\\sqrt{3}}{4}\\) (we have two congruent triangles to work with), which converts to \\(\\boxed{\\textbf{(E) }1250\\sqrt{3}}\\) square miles.</p>",
+      "answer": "E"
+    },
+    "38": {
+      "problem": "<p>In a right triangle with sides \\(a\\) and \\(b\\), and hypotenuse \\(c\\), the altitude drawn on the hypotenuse is \\(x\\). Then:</p><p>\\(\\textbf{(A)}\\ ab = x^2 \\qquad\n\\textbf{(B)}\\ \\frac {1}{a} + \\frac {1}{b} = \\frac {1}{x} \\qquad\n\\textbf{(C)}\\ a^2 + b^2 = 2x^2 \\\\\n\\textbf{(D)}\\ \\frac {1}{x^2} = \\frac {1}{a^2} + \\frac {1}{b^2} \\qquad\n\\textbf{(E)}\\ \\frac {1}{x} = \\frac {b}{a}\\)</p>",
+      "solutions": "<p>The area of this triangle can be expressed in two ways; the first being \\(\\frac{ab}{2}\\) (as this is a right triangle), and the second being \\(\\frac{cx}{2}\\). But by the Pythagorean Theorem, \\(c=\\sqrt{a^2+b^2}\\). Thus a second way of finding the area of the triangle is \\(\\frac{x\\sqrt{a^2+b^2}}{2}\\). By setting them equal to each other we get \\(x=\\frac{ab}{\\sqrt{a^2+b^2}}\\), and we can observe that the correct answer is \\(\\boxed{\\textbf{(D) \\ }}\\).</p><p>~anduran</p>",
+      "answer": "D"
+    },
+    "39": {
+      "problem": "<p>The hypotenuse \\(c\\) and one arm \\(a\\) of a right triangle are consecutive integers. The square of the second arm is:</p><p>\\(\\textbf{(A)}\\ ca\\qquad\n\\textbf{(B)}\\ \\frac{c}{a}\\qquad\n\\textbf{(C)}\\ c+a\\qquad\n\\textbf{(D)}\\ c-a\\qquad\n\\textbf{(E)}\\ \\text{none of these}\\)</p>",
+      "solutions": "<p>The sides of the triangle are \\(a,\\) \\(\\sqrt{c^2-a^2},\\) and \\(c.\\) We know that the hypotenuse and one leg are consecutive integers, so we can rewrite the side lengths as \\(a,\\) \\(\\sqrt{2a+1},\\) and \\(a+1.\\)</p><p>Squaring the middle length gets \\(2a + 1 = a + c,\\) so the answer is \\(\\boxed{\\textbf{(C)}}.\\)</p><p>-coolmath34</p>",
+      "answer": "C"
+    },
+    "40": {
+      "problem": "<p>If \\(V = gt + V_0\\) and \\(S = \\frac {1}{2}gt^2 + V_0t\\), then \\(t\\) equals:</p><p>\\(\\textbf{(A)}\\ \\frac{2S}{V+V_0}\\qquad\n\\textbf{(B)}\\ \\frac{2S}{V-V_0}\\qquad\n\\textbf{(C)}\\ \\frac{2S}{V_0-V}\\qquad\n\\textbf{(D)}\\ \\frac{2S}{V}\\qquad\n\\textbf{(E)}\\ 2S-V\\)</p>",
+      "solutions": "<p>Solve for \\(t\\) in the first equation:</p><p>\\[V - V_0 = gt\\]</p><p>\\[t = \\frac{V - V_0}{g}\\]</p><p>Then use the second equation to solve for \\(g:\\)</p><p>\\[2(S - V_0 t) = gt^2\\]</p><p>\\[g = \\frac{2(S - V_0 t)}{t^2}\\]</p><p>Plug in \\(g\\) in \\(t\\) to get \\(\\boxed{\\textbf{(A)}}.\\) -coolmath34</p>",
+      "answer": "A"
+    },
+    "41": {
+      "problem": "<p>The equation \\(3y^2 + y + 4 = 2(6x^2 + y + 2)\\) where \\(y = 2x\\) is satisfied by:</p><p>\\(\\textbf{(A)}\\ \\text{no value of }x \\qquad\n\\textbf{(B)}\\ \\text{all values of }x \\qquad\n\\textbf{(C)}\\ x = 0\\text{ only} \\\\\n\\textbf{(D)}\\ \\text{all integral values of }x\\text{ only} \\qquad\n\\textbf{(E)}\\ \\text{all rational values of }x\\text{ only}\\)</p>",
+      "solutions": "<p>Start by plugging in \\(y=2x:\\)</p><p>\\[12x^2 + 2x + 4 = 12x^2 + 4x + 4\\]</p><p>The only value that can satisfy this equation is \\(x=0\\) meaning the answer is \\(\\boxed{\\textbf{(C)}}.\\)</p><p>-samcool</p>",
+      "answer": "C"
+    },
+    "42": {
+      "problem": "<p>The equation \\(\\sqrt {x + 4} - \\sqrt {x - 3} + 1 = 0\\) has:</p><p>\\(\\textbf{(A)}\\ \\text{no root} \\qquad\n\\textbf{(B)}\\ \\text{one real root} \\\\\n\\textbf{(C)}\\ \\text{one real root and one imaginary root} \\\\\n\\textbf{(D)}\\ \\text{two imaginary roots} \\qquad\n\\qquad\\textbf{(E)}\\ \\text{two real roots}\\)</p>",
+      "solutions": "<p>Simplify.</p><p>\\[\\sqrt {x + 4} = \\sqrt{x-3} -1\\]</p><p>\\[x + 4 = x - 3 -2\\sqrt{x-3} + 1\\]</p><p>\\[6 = -2\\sqrt{x-3}\\]</p><p>We don’t need to solve any further. The square root term is negative, therefore there will be no real roots. The answer is \\(\\boxed{A}.\\)</p><p>-coolmath34</p>",
+      "answer": "A"
+    },
+    "43": {
+      "problem": "<p>The number of scalene triangles having all sides of integral lengths, and perimeter less than \\(13\\) is:</p><p>\\(\\textbf{(A)}\\ 1 \\qquad\\textbf{(B)}\\ 2 \\qquad\\textbf{(C)}\\ 3 \\qquad\\textbf{(D)}\\ 4 \\qquad\\textbf{(E)}\\ 18\\)</p>",
+      "solutions": "<p>We can write all possible triangles adding up to 12 or less</p><p>\\[(2, 4, 5)=11\\]</p><p>\\[(3, 4, 5)=12\\]</p><p>\\[(2, 3, 4)=9\\]</p><p>This leaves \\(\\boxed{\\textbf{(C)} \\quad 3}\\) scalene triangles.</p><p>-coolmath34</p><p>-rubslul</p><p>(If you see any cases I missed out, edit them in.)</p><h2><span class=\"mw-headline\" id=\"Video_Solution\">Video Solution</span></h2><p><a class=\"external\" href=\"https://youtu.be/LYFaYLiLTXE\">https://youtu.be/LYFaYLiLTXE</a></p><p>~Lucas</p>",
+      "answer": "C"
+    },
+    "44": {
+      "problem": "<p>If \\(x &lt; a &lt; 0\\) means that \\(x\\) and \\(a\\) are numbers such that \\(x\\) is less than \\(a\\) and \\(a\\) is less than zero, then:</p><p>\\(\\textbf{(A)}\\ x^2 &lt; ax &lt; 0 \\qquad\n\\textbf{(B)}\\ x^2 &gt; ax &gt; a^2 \\qquad\n\\textbf{(C)}\\ x^2 &lt; a^2 &lt; 0 \\\\\n\\textbf{(D)}\\ x^2 &gt; ax\\text{ but }ax &lt; 0 \\qquad\n\\textbf{(E)}\\ x^2 &gt; a^2\\text{ but }a^2 &lt; 0\\)</p>",
+      "solutions": "<p>Note that since \\(x\\) and \\(a\\) are negative, \\(x^2, a^2,\\) and \\(ax\\) are all positive. Hence the only correct answer is \\(\\boxed{B}\\).</p>",
+      "answer": "B"
+    },
+    "45": {
+      "problem": "<p>A wheel with a rubber tire has an outside diameter of \\(25\\) in. When the radius has been decreased a quarter of an inch, the number of revolutions in one mile will:</p><p>\\(\\text{(A)}\\ \\text{be increased about }2\\% \\qquad \\\\ \\text{(B)}\\ \\text{be increased about }1\\%  \\\\ \\text{(C)}\\ \\text{be increased about }20\\%\\qquad \\\\ \\text{(D)}\\ \\text{be increased about }\\frac{1}{2}\\%\\qquad \\\\ \\text{(E)}\\ \\text{remain the same}\\)</p>",
+      "solutions": "<p>Let \\(r_1\\) be the initial radius of the wheel and \\(r_2\\) be the decreased radius.</p><p>Since the initial outside diameter is \\(25\\text{ in.}\\), the initial radius is \\(r_1 = 12.5\\text{ in.}\\)</p><p>When the radius is decreased by \\(\\frac{1}{4}\\text{ in.} = 0.25\\text{ in.}\\), the new radius is:</p><p>\\[r_2 = 12.5 - 0.25 = 12.25\\text{ in.}\\]</p><p>The number of revolutions \\(N\\) needed to cover a fixed distance \\(D\\) (such as one mile) is inversely proportional to the circumference of the wheel \\(C = 2\\pi r\\):</p><p>\\[N = \\frac{D}{2\\pi r}\\]</p><p>Let \\(N_1\\) and \\(N_2\\) be the initial and new number of revolutions, respectively. The ratio of the new number of revolutions to the initial number is:</p><p>\\[\\frac{N_2}{N_1} = \\frac{r_1}{r_2} = \\frac{12.5}{12.25} = \\frac{1250}{1225} = \\frac{50}{49}\\]</p><p>The relative increase in the number of revolutions is:</p><p>\\[\\frac{N_2 - N_1}{N_1} = \\frac{N_2}{N_1} - 1 = \\frac{50}{49} - 1 = \\frac{1}{49} \\approx 0.0204 = 2.04\\%\\]</p><p>Thus, the number of revolutions will be increased by about \\(2\\%\\), which corresponds to \\(\\textbf{(A)}\\).</p>",
+      "answer": "A"
+    },
+    "46": {
+      "problem": "<p>For the equation \\(\\frac {1 + x}{1 - x} = \\frac {N + 1}{N}\\) to be true where \\(N\\) is positive, \\(x\\) can have:</p><p>\\(\\textbf{(A)}\\ \\text{any positive value less than }1 \\qquad \\\\\n\\textbf{(B)}\\ \\text{any value less than }1 \\\\\n\\textbf{(C)}\\ \\text{the value zero only}\\qquad \\\\\n\\textbf{(D)}\\ \\text{any non-negative value}\\qquad \\\\\n\\textbf{(E)}\\ \\text{any value}\\)</p>",
+      "solutions": "<p>Solve the equation for \\(x\\) in terms of \\(N\\) by cross-multiplying:</p><p>\\[N(1 + x) = (N + 1)(1 - x)\\]</p><p>\\[N + Nx = N - Nx + 1 - x\\]</p><p>\\[2Nx + x = 1\\]</p><p>\\[x(2N + 1) = 1 \\implies x = \\frac{1}{2N + 1}\\]</p><p>Since \\(N &gt; 0\\), we have \\(2N + 1 &gt; 1\\), which implies:</p><p>\\[0 &lt; \\frac{1}{2N + 1} &lt; 1\\]</p><p>Thus, \\(x\\) can be any positive value less than \\(1\\), which corresponds to \\(\\mathbf{(A)}\\).</p>",
+      "answer": "A"
+    },
+    "47": {
+      "problem": "<p>An engineer said he could finish a highway section in \\(3\\) days with his present supply of a certain type of machine. However, with \\(3\\) more of these machines the job could be done in \\(2\\) days. If the machines all work at the same rate, how many days would it take to do the job with one machine?</p><p>\\(\\textbf{(A)}\\ 6 \\qquad\n\\textbf{(B)}\\ 12 \\qquad\n\\textbf{(C)}\\ 15 \\qquad\n\\textbf{(D)}\\ 18 \\qquad\n\\textbf{(E)}\\ 36\\)</p><p>Solution</p>",
+      "solutions": "<p>In 1 day, \\(x\\) machines can do \\(\\frac {1}{3}\\) of the job , and \\(x + 3\\) machines\\(\\frac {1}{2}\\) of the job. So  \\(3\\) machines can do \\(\\frac {1}{2} -\\frac {1}{3}=\\frac {1}{6}\\) of the job in 1 day, and 1 machine can do\\(\\frac {1}{18}\\) of the job in 1 day. Hence, **18** days are needed for 1 machine to complete the job;</p>",
+      "answer": "D"
+    },
+    "48": {
+      "problem": "<p>If \\(p\\) is a positive integer, then \\(\\frac {3p + 25}{2p - 5}\\) can be a positive integer, if and only if \\(p\\) is:</p><p>\\(\\textbf{(A)}\\ \\text{at least }3\\qquad\n\\textbf{(B)}\\ \\text{at least }3\\text{ and no more than }35\\qquad \\\\\n\\textbf{(C)}\\ \\text{no more than }35 \\qquad\n\\textbf{(D)}\\ \\text{equal to }35 \\qquad\n\\textbf{(E)}\\ \\text{equal to }3\\text{ or }35\\)</p>",
+      "solutions": "<p>Lets begin by noticing that:</p><p>\\[\\frac{3p+25}{2p-5} = 1 + \\frac{p+30}{2p-5}\\]</p><p>Therefore, in order for \\(\\frac{3p+25}{2p-5}\\) to be a positive integer, \\(\\frac{p+30}{2p-5}\\) must be a non-negative integer. Since the bottom the the fraction is an odd number, we can multiply the top of \\(\\frac{p+30}{2p-5}\\) by 2 without changing whether it is an integer or not. Therefore, in order for \\(\\frac{3p+25}{2p-5}\\) to be an integer, \\(\\frac{2p+60}{2p-5} = 1 + \\frac{65}{2p-5}\\) must also be an integer. As a result, \\(2p-5\\) must be a factor of 65, or \\(p = 3, 5, 9, 35\\). Therefore \\(p\\) must be at least 3, and less than or equal to 35. So the answer which best fits these constraints is \\(\\boxed{\\textbf{(B)}}\\).</p>",
+      "answer": "B"
+    },
+    "49": {
+      "problem": "<p>Triangle \\(PAB\\) is formed by three tangents to circle \\(O\\) and \\(\\angle APB = 40^{\\circ}\\); then \\(\\angle AOB\\) equals:</p><p>\\(\\textbf{(A)}\\ 45^{\\circ}\\qquad \\textbf{(B)}\\ 50^{\\circ}\\qquad \\textbf{(C)}\\ 55^{\\circ}\\qquad \\textbf{(D)}\\ 60^{\\circ}\\qquad \\textbf{(E)}\\ 70^{\\circ}\\)</p>",
+      "solutions": "<p>First, from triangle \\(ABO\\), \\(\\angle AOB = 180^\\circ - \\angle BAO - \\angle ABO\\). Note that \\(AO\\) bisects \\(\\angle BAT\\) (to see this, draw radii from \\(O\\) to \\(AB\\) and \\(AT,\\) creating two congruent right triangles), so \\(\\angle BAO = \\angle BAT/2\\). Similarly, \\(\\angle ABO = \\angle ABR/2\\).</p><p>Also, \\(\\angle BAT = 180^\\circ - \\angle BAP\\), and \\(\\angle ABR = 180^\\circ - \\angle ABP\\). Hence,</p><p>\\(\\angle AOB = 180^\\circ - \\angle BAO - \\angle ABO =\n 180^\\circ - \\frac{\\angle BAT}{2} - \\frac{\\angle ABR}{2} =\n 180^\\circ - \\frac{180^\\circ - \\angle BAP}{2} - \\frac{180^\\circ - \\angle ABP}{2}=\n \\frac{\\angle BAP + \\angle ABP}{2}.\\)</p><p>Finally, from triangle \\(ABP\\), \\(\\angle BAP + \\angle ABP = 180^\\circ - \\angle APB = 180^\\circ - 40^\\circ = 140^\\circ\\), so \\[\\angle AOB = \\frac{\\angle BAP + \\angle ABP}{2} = \\frac{140^\\circ}{2} = \\boxed{70^\\circ}.\\]</p>",
+      "answer": "E"
+    },
+    "50": {
+      "problem": "<p>In \\(\\triangle ABC, \\overline{CA} = \\overline{CB}\\). On \\(CB\\) square \\(BCDE\\) is constructed away from the triangle. If \\(x\\) is the number of degrees in \\(\\angle DAB\\), then</p><p>\\(\\textbf{(A)}\\ x\\text{ depends upon }\\triangle ABC \\qquad \\textbf{(B)}\\ x\\text{ is independent of the triangle} \\\\ \\textbf{(C)}\\ x\\text{ may equal }\\angle CAD \\qquad \\\\ \\textbf{(D)}\\ x\\text{ can never equal }\\angle CAB \\\\ \\textbf{(E)}\\ x\\text{ is greater than }45^{\\circ}\\text{ but less than }90^{\\circ}\\)</p>",
+      "solutions": "<p>Let \\(\\angle CAB = \\angle CBA = A\\), so \\(\\angle ACB = 180^\\circ - 2A\\).</p><p>Since \\(BCDE\\) is a square built on side \\(CB\\), we have \\(CD = CB = CA\\) and \\(\\angle BCD = 90^\\circ\\). Thus, \\(\\triangle ACD\\) is isosceles with \\(CA = CD\\).</p><p>The vertex angle of \\(\\triangle ACD\\) is:</p><p>\\[\\angle ACD = \\angle ACB + \\angle BCD = (180^\\circ - 2A) + 90^\\circ = 270^\\circ - 2A\\]</p><p>In isosceles \\(\\triangle ACD\\), the base angle \\(\\angle CAD\\) is:</p><p>\\[\\angle CAD = \\frac{180^\\circ - (270^\\circ - 2A)}{2} = \\frac{2A - 90^\\circ}{2} = A - 45^\\circ\\]</p><p>Since \\(\\angle DAB = \\angle CAB - \\angle CAD\\), we find:</p><p>\\[x = A - (A - 45^\\circ) = 45^\\circ\\]</p><p>Since \\(x = 45^\\circ\\) is constant, \\(x\\) is independent of \\(\\triangle ABC\\), which corresponds to \\(\\mathbf{(B)}\\).</p>",
+      "answer": "B"
+    }
+  }
+}

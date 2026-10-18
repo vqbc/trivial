@@ -1,0 +1,23 @@
+{
+  "test": "SMT Calculus Tiebreaker",
+  "year": 2018,
+  "name": "Calculus Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2018/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(f(x) = \\frac{g(x)}{x}\\) where \\(g(2) = 4\\) and \\(g'(2) = 8\\), compute \\(f'(2)\\).</p>",
+      "solutions": "<p>We use the quotient rule to compute \\[f'(x) = \\frac{g'(x) \\cdot x - g(x) \\cdot 1}{x^2}\\] \\[f'(2) = \\frac{8 \\cdot 2 - 4 \\cdot 1}{2^2} = \\frac{16 - 4}{4} = \\boxed{3}.\\]</p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>Compute \\[\\lim_{n \\to 1} \\sum_{k=1}^{25} \\frac{n^k - 1}{\\ln(n)}.\\]</p>",
+      "solutions": "<p>We begin by applying L’Hopital’s Rule to each term in the sum \\[\\lim_{n \\to 1} \\frac{n^k - 1}{\\ln(n)} = \\lim_{n \\to 1} \\frac{k n^{k-1}}{1/n} = k.\\] If we swap the limit and finite sum in our original problem, we can then compute \\[\\lim_{n \\to 1} \\sum_{k=1}^{25} \\frac{n^k - 1}{\\ln(n)} = \\sum_{k=1}^{25} \\lim_{n \\to 1} \\frac{n^k - 1}{\\ln(n)} = \\sum_{k=1}^{25} k = \\frac{(25)(26)}{2} = \\boxed{325}.\\]</p>",
+      "answer": "325"
+    },
+    "3": {
+      "problem": "<p>Compute \\[\\int_0^\\pi \\sin^{10}(x) \\, dx.\\]</p>",
+      "solutions": "<p>We first compute \\[\\int_0^\\pi \\sin^2(x) \\, dx = \\int_0^\\pi \\frac{1 - \\cos(2x)}{2} \\, dx = \\left( \\frac{x}{2} - \\frac{\\sin(2x)}{4} \\right) \\Big|_0^\\pi = \\frac{\\pi}{2}.\\] Now note that \\(d(-\\cos(x)) = \\sin(x)\\), which allows us to integrate by parts and compute \\[\\int_0^\\pi \\sin^n(x) \\, dx = \\int_0^\\pi \\sin^{n-1}(x) d(-\\cos(x)) \\, dx\\] \\[= -\\sin^{n-1}(x) \\cos(x) \\Big|_0^\\pi - \\int_0^\\pi (n-1) \\sin^{n-2}(x)(-\\cos^2(x)) \\, dx\\] \\[= 0 + (n-1) \\int_0^\\pi \\sin^{n-2}(x)(1 - \\sin^2(x)) \\, dx\\] \\[= (n-1) \\int_0^\\pi \\sin^{n-2}(x) \\, dx - (n-1) \\int_0^\\pi \\sin^n(x) \\, dx.\\] Rearranging gives us \\[\\int_0^\\pi \\sin^n(x) \\, dx = \\frac{n-1}{n} \\int_0^\\pi \\sin^{n-2}(x) \\, dx.\\] This gives us a recursive relation between the integrals. From above, when \\(n = 2\\), we have \\(\\int_0^\\pi \\sin^2(x) \\, dx = \\frac{\\pi}{2}\\). Therefore, when \\(n = 10\\), we have \\[\\frac{\\pi}{2} \\cdot \\frac{3}{4} \\cdot \\frac{5}{6} \\cdot \\frac{7}{8} \\cdot \\frac{9}{10} = \\boxed{\\frac{63\\pi}{256}}.\\]</p>",
+      "answer": "\\frac{63\\pi}{256}"
+    }
+  }
+}

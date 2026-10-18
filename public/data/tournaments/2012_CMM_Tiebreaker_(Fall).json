@@ -1,0 +1,28 @@
+{
+  "test": "CMM Tiebreaker (Fall)",
+  "year": 2012,
+  "name": "Tiebreaker Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_72a2233060184f0797bbfe9a81146e39.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\([n] = \\{1, 2, 3, \\ldots, n\\}\\) and for any set \\(S\\), let \\(P(S)\\) be the set of non-empty subsets of \\(S\\). What is the last digit of \\(|P(P([2013]))|\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "7"
+    },
+    "2": {
+      "problem": "<p>Find all continuous functions \\(f : \\mathbb{R} \\to \\mathbb{R}\\) such that \\[f(x + f(y)) = f(x+y) + y,\\] for all \\(x, y \\in \\mathbb{R}\\). No proof is required for this problem.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "f(x) = \\frac{1+\\sqrt{5}}{2}x \\text{ for all } x; \\text{ and } f(x) = \\frac{1-\\sqrt{5}}{2}x \\text{ for all } x"
+    },
+    "3": {
+      "problem": "<p>For a positive integer \\(n\\), let \\(\\sigma(n)\\) be the sum of the divisors of \\(n\\) (for example, \\(\\sigma(10) = 1 + 2 + 5 + 10 = 18\\)). For how many \\(n \\in \\{1, 2, \\ldots, 100\\}\\) do we have \\[\\sigma(n) &lt; n + \\sqrt{n}?\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "26"
+    },
+    "4": {
+      "problem": "<p>A lattice point \\((x, y, z) \\in \\mathbb{Z}^3\\) can be <i>seen from the origin</i> if the line from the origin does not contain any other lattice point \\((x', y', z')\\) with \\((x')^2 + (y')^2 + (z')^2 &lt; x^2 + y^2 + z^2\\). Let \\(p\\) be the probability that a randomly selected point on the cubic lattice \\(\\mathbb{Z}^3\\) can be seen from the origin. Given that \\[\\frac{1}{p} = \\sum_{n=i}^{\\infty} \\frac{k}{n^s}\\] for some integers \\(i, k\\), and \\(s\\), find \\(i, k\\) and \\(s\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "i = k = 1,\\ s = 3"
+    }
+  }
+}

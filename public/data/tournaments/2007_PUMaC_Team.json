@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Team",
+  "year": 2007,
+  "name": "Team",
+  "url": "https://pumac.princeton.edu/s/TeamAB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\[\\begin{aligned}\nx + y + z + w &amp;= 20 \\\\\ny + 2z - 3w &amp;= 28 \\\\\nx - 2y + z &amp;= 36 \\\\\n-7x - y + 5z + 3w &amp;= 84\n\\end{aligned}\\] then what is \\((x, y, z, w)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Find the biggest non-integer \\(x\\) such that \\((x + 2)^2 + (x + 3)^3 + (x + 4)^4 = 2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>In triangle \\(ABC\\), let \\(O\\) and \\(I_A\\) be the centers of the circumcircle and the circle tangent to \\(AB\\) and \\(AC\\) and externally tangent to \\(BC\\), and let \\(R\\) and \\(R_A\\) be their radii. Find \\(\\frac{I_A A \\cdot I_A B \\cdot I_A C}{R \\cdot R_A^2}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Find all \\(x\\) such that \\(6^x + 27^{x-1} = 8^x - 1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Integers \\(x_1, x_2, \\ldots, x_{100}\\) satisfy \\[\\frac{1}{\\sqrt{x_1}} + \\frac{1}{\\sqrt{x_2}} + \\cdots + \\frac{1}{\\sqrt{x_{100}}} = 20.\\] Find \\(\\prod_{i \\ne j} (x_i - x_j)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>If integers \\(a\\), \\(b\\), \\(c\\), and \\(d\\) satisfy \\(bc + ad = ac + 2bd = 1\\), find all possible values of \\(\\frac{a^2+c^2}{b^2+d^2}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>In triangle \\(ABC\\), \\(Q\\) and \\(R\\) are points on segments \\(AC\\) and \\(AB\\), respectively, and \\(P\\) is the intersection of \\(CR\\) and \\(BQ\\). If \\(AR = RB = CP\\) and \\(CQ = PQ\\), find \\(\\angle BRC\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Find the biggest \\(n &lt; 2007\\) such that there exists a partition of the integers from \\(1\\) to \\(n\\) into two sets the sums of the squares of whose elements are equal.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Find \\(p + r\\) if \\(p\\) and \\(q\\) are primes and \\(r\\) is a positive integer such that \\[(r^2 + pr + 1)(r^2 + (p^2 - q)r - p) = pq.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>If \\(x\\), \\(y\\), and \\(z\\) are real numbers such that \\(x^2 + z^2 = 1\\) and \\(y^2 + 2y(x + z) = 6\\), find the maximum value of \\(y(z - x)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

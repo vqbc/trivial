@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Number Theory B",
+  "year": 2008,
+  "name": "Number Theory B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2008_NumberTheoryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the remainder, in base 10, when \\(24_7 + 364_7 + 43_7 + 12_7 + 3_7 + 1_7\\) is divided by 6?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>How many zeros are there at the end of \\(792!\\) when written in base 10?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "196"
+    },
+    "3": {
+      "problem": "<p>Find all integral solutions to \\(x^y - y^x = 1\\).</p>",
+      "solutions": "<p>The solutions \\((2, 1)\\) and \\((3, 2)\\) must be given; \\((x, 0)\\) for \\(x \\neq 0\\) may also be. If both \\(x\\) and \\(y\\) are greater than \\(3\\) and not equal, we have \\(|x^y - y^x| &gt; 2\\) for analytic reasons. Thus one of \\(x\\) and \\(y\\) is \\(1\\) or \\(2\\), so you can check that the two given are the only solutions.</p><p>In some versions of the test, the word “positive” was included; therefore the third solution (with \\(y = 0\\)) was optional. Credit was given to any contestants who answered either version correctly, that is, who gave either all three answers or just the first two.</p>",
+      "answer": "(2, 1) \\text{ and } (3, 2)"
+    },
+    "4": {
+      "problem": "<p>Find the largest integer \\(n\\), where \\(2009^n\\) divides \\(2008^{2009^{2010}} + 2010^{2009^{2008}}\\).</p>",
+      "solutions": "<p>Using the binomial theorem: \\[\\begin{aligned}\nA &amp;= (2009-1)^{2009^{2010}} = -1 + 2009 \\cdot 2009^{2010} + R_1 \\\\\nB &amp;= (2009+1)^{2009^{2008}} = 1 + 2009 \\cdot 2009^{2008} + R_2\n\\end{aligned}\\] \\(R_1\\) is divisible by \\(2009^{2010}\\) and \\(R_2\\) is divisible by \\(2009^{2010}\\). \\(A + B \\equiv 2009^{2009} \\pmod{2009^{2010}}\\), so \\(n = 2009\\).</p>",
+      "answer": "2009"
+    },
+    "5": {
+      "problem": "<p>How many integers \\(n\\) are there such that \\(0 \\le n \\le 720\\) and \\(n^2 \\equiv 1 \\pmod{720}\\)?</p>",
+      "solutions": "<p>\\(720 = 16 \\cdot 9 \\cdot 5\\). There are two solutions mod \\(5\\) and mod \\(9\\), and there are \\(4\\) mod \\(16\\), and so, by the Chinese Remainder Theorem, there are \\(16\\) solutions mod \\(720\\). But the numbers \\(1, 2, \\ldots, 720\\) form a complete residue system mod \\(720\\), so there are \\(16\\) solutions in all.</p>",
+      "answer": "16"
+    },
+    "6": {
+      "problem": "<p>\\(f(n)\\) is the sum of all integers less than \\(n\\) and relatively prime to \\(n\\). Find all integers \\(n\\) such that there exist integers \\(k\\) and \\(l\\) such that \\(f(n^k) = n^l\\).</p>",
+      "solutions": "<p>Let \\(\\varphi(n)\\) denote the number of positive integers less than \\(n\\) that are relatively prime to \\(n\\). It is clear that \\(2f(n) = n\\varphi(n)\\), and so we need either \\(\\varphi(n) = 1\\) or \\(\\varphi(n) = 2\\), and one can check that \\(2, 3, 4,\\) and \\(6\\) are the only solutions to this. Moreover, for those values of \\(n\\), we have \\(f(n) = n\\) (except \\(2\\), where we have \\(f(2) = 1\\)).</p>",
+      "answer": "2, 3, 4, 6"
+    },
+    "7": {
+      "problem": "<p>In this problem, we consider only polynomials with integer coeffients. Call two polynomials \\(p\\) and \\(q\\) <i>really close</i> if \\(p(2k+1) \\equiv q(2k+1) \\pmod{2^{10}}\\) for all \\(k \\in \\mathbb{Z}^+\\). Call a polynomial \\(p\\) <i>partial credit</i> if no polynomial of lesser degree is <i>really close</i> to it. What is the maximum possible degree of partial credit?</p>",
+      "solutions": "<p>Suppose we have a polynomial \\(p(n)\\) that has the maximum possible degree of partial credit. Consider \\(q(x) = (x-1)(x-3)(x-5)(x-7)(x-9)(x-11)\\). Observe that for all odd integers \\(x\\), \\(q(x)\\) is the product of six consecutive even integers, and thus is divisible by \\(2 \\cdot 4 \\cdot 6 \\cdot 8 \\cdot 10 \\cdot 12\\). Note that the power of two dividing \\(2 \\cdot 4 \\cdot 6 \\cdot 8 \\cdot 10 \\cdot 12\\) is \\(2^{10}\\). Thus we conclude that \\(q(2k+1) \\equiv 0 \\pmod{2^{10}}\\). Now if \\(p(n)\\) has degree six or larger, let its leading term be \\(an^\\ell\\). Then \\(p(n)\\) and \\(p(n) - an^{\\ell-6}q(n)\\) are really close, but the latter has lesser degree. Thus the maximum possible degree is at most five.</p><p>Consider \\(p(x) = (x-1)(x-3)(x-5)(x-7)(x-9)\\). This is a polynomial of degree five. I claim that this polynomial is partial credit. Suppose for sake of contradiction that there exists a polynomial \\(q\\) of degree four or less such that \\(p(2k+1) \\equiv q(2k+1) \\pmod{2^{10}}\\) for all \\(k\\). We know \\(q(1)\\) is divisible by \\(1024\\). We may add a multiple of \\(1024\\) to \\(q(x)\\) so that \\(q(1) = 0\\) and \\(q\\) is still really close to \\(p\\). Thus \\(q(x) = (x-1)r(x)\\). Now consider \\(q(3)\\). It is divisible by \\(1024\\), so \\(r(3)\\) is divisible by \\(512\\). Now adding a multiple of \\(512\\) to \\(r(x)\\) does not change the residue class of \\(q(x)\\) modulo \\(1024\\) for \\(x\\) odd. Thus we may assume that \\(r(3) = 0\\). Hence we get \\(q(x) = (x-1)(x-3)s(x)\\). Similarly, we find \\(s(5)\\) is divisible by \\(128\\), and adding multiples of \\(128\\) to \\(s(x)\\) does not change the residue class of \\(q(x)\\) modulo \\(1024\\) for odd values of \\(x\\). Hence WLOG \\(q(x) = (x-1)(x-3)(x-5)h(x)\\). Iterating this argument, we find \\(q(x) = (x-1)(x-3)(x-5)(x-7)(x-9)k(x)\\) for some polynomial \\(k(x)\\). Since \\(q\\) has degree less than five, we conclude that \\(k\\) is the zero polynomial. Thus we see that \\(p\\) is really close to zero. But this is clearly false since the largest power of two dividing \\(p(11) = (-2)(-4)(-6)(-8)(-10)\\) is \\(2^8\\). Thus we have a contradiction. Hence no such polynomial \\(q\\) exists, and thus we conclude that \\(p\\) is in fact partial credit.</p>",
+      "answer": "5"
+    },
+    "8": {
+      "problem": "<p>What is the largest integer which cannot be expressed as \\(2008x + 2009y + 2010z\\) for some positive integers \\(x, y,\\) and \\(z\\)?</p>",
+      "solutions": "<p>The largest number that cannot be a positive linear combination of \\(1004\\) and \\(1005\\) is \\(1004 \\cdot 1005 - 1004 - 1005 = 1007011\\), so the smallest even number that cannot be written as the sum of \\(2008\\) and \\(2010\\) is \\(2007022\\). Then the largest number that we can’t get is \\(2009031\\), as every larger number you can make it even by subtracting \\(2009\\) if necessary and write that as the sum of multiples of \\(2008\\) and \\(2010\\).</p>",
+      "answer": "2016031"
+    },
+    "9": {
+      "problem": "<p>Find all sets of three primes \\(p\\), \\(q\\), and \\(r\\) such that \\(p + q = r\\) and \\((r-p)(q-p) - 27p\\) is a perfect square.</p>",
+      "solutions": "<p>It is easy to see that \\(q &gt; p\\) and that one of \\(p\\) and \\(q\\) is two, so \\(p = 2\\). We then have \\(q(q-2) - 54 = x^2\\), so \\((q-1)^2 - x^2 = 55\\). Thus, since the prime factorization of \\(55\\) is \\(5 \\cdot 11\\), we have either \\(q - 1 = 8\\) and \\(x = 3\\), or \\(q - 1 = 28\\) and \\(x = 27\\). Only \\(q = 29\\) has the solution be only primes.</p>",
+      "answer": "2, 29, 31"
+    },
+    "10": {
+      "problem": "<p>What is the smallest number \\(n\\) such that you can choose \\(n\\) distinct odd integers \\(a_1, a_2, \\ldots a_n\\), none of them \\(1\\), with \\(\\frac{1}{a_1} + \\frac{1}{a_2} + \\ldots + \\frac{1}{a_n} = 1\\)?</p>",
+      "solutions": "<p>You can check that the answer is not less than \\(8\\), as \\(\\frac{1}{3} + \\frac{1}{5} + \\frac{1}{7} + \\frac{1}{9} + \\frac{1}{11} + \\frac{1}{13} + \\frac{1}{15} &lt; 1\\). You also can check that it is not \\(8\\), as the sum is, once you normalize denominators, the sum of odd numbers over an odd number. Thus, we need to show that \\(9\\) works. To see that \\(9\\) works, you can choose \\(3, 5, 7, 9, 11, 15, 35, 45, 231\\) as the \\(a_i\\).</p>",
+      "answer": "9"
+    }
+  }
+}

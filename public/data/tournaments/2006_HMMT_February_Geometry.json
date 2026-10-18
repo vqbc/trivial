@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2006,
+  "name": "Geometry Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2006/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Octagon \\(ABCDEFGH\\) is equiangular. Given that \\(AB = 1\\), \\(BC = 2\\), \\(CD = 3\\), \\(DE = 4\\), and \\(EF = FG = 2\\), compute the perimeter of the octagon.</p>",
+      "solutions": "<p>Extend sides \\(AB, CD, EF, GH\\) to form a rectangle: let \\(X\\) be the intersection of lines \\(GH\\) and \\(AB\\); \\(Y\\) that of \\(AB\\) and \\(CD\\); \\(Z\\) that of \\(CD\\) and \\(EF\\); and \\(W\\) that of \\(EF\\) and \\(GH\\).</p><p>As \\(BC = 2\\), we have \\(BY = YC = \\sqrt{2}\\). As \\(DE = 4\\), we have \\(DZ = ZE = 2\\sqrt{2}\\). As \\(FG = 2\\), we have \\(FW = WG = \\sqrt{2}\\).</p><p>We can compute the dimensions of the rectangle: \\(WX = YZ = YC + CD + DZ = 3 + 3\\sqrt{2}\\), and \\(XY = ZW = ZE + EF + FW = 2 + 3\\sqrt{2}\\). Thus, \\(HX = XA = XY - AB - BY = 1+2\\sqrt{2}\\), and so \\(AH = \\sqrt{2}HX = 4+\\sqrt{2}\\), and \\(GH = WX - WG - HX = 2\\).</p><p>The perimeter of the octagon can now be computed by adding up all its sides.</p>",
+      "answer": "20+\\sqrt{2}"
+    },
+    "2": {
+      "problem": "<p>Suppose \\(ABC\\) is a scalene right triangle, and \\(P\\) is the point on hypotenuse \\(\\overline{AC}\\) such that \\(\\angle ABP = 45^\\circ\\). Given that \\(AP = 1\\) and \\(CP = 2\\), compute the area of \\(ABC\\).</p>",
+      "solutions": "<p>Notice that \\(\\overline{BP}\\) bisects the right angle at \\(B\\). Thus, we write \\(AB = 2x\\), \\(BC = x\\). By the Pythagorean theorem, \\(5x^2 = 9\\), from which the area \\(\\frac{1}{2}(x)(2x) = x^2 = \\frac{9}{5}\\).</p>",
+      "answer": "\\frac{9}{5}"
+    },
+    "3": {
+      "problem": "<p>Let \\(A\\), \\(B\\), \\(C\\), and \\(D\\) be points on a circle such that \\(AB = 11\\) and \\(CD = 19\\). Point \\(P\\) is on segment \\(AB\\) with \\(AP = 6\\), and \\(Q\\) is on segment \\(CD\\) with \\(CQ = 7\\). The line through \\(P\\) and \\(Q\\) intersects the circle at \\(X\\) and \\(Y\\). If \\(PQ = 27\\), find \\(XY\\).</p>",
+      "solutions": "<p>Suppose \\(X, P, Q, Y\\) lie in that order. Let \\(PX = x\\) and \\(QY = y\\). By power of a point from \\(P\\), \\(x\\cdot(27+y) = 30\\), and by power of a point from \\(Q\\), \\(y\\cdot(27+x) = 84\\). Subtracting the first from the second, \\(27\\cdot(y-x) = 54\\), so \\(y = x+2\\). Now, \\(x\\cdot(29+x) = 30\\), and we find \\(x = 1, -30\\). Since \\(-30\\) makes no sense, we take \\(x=1\\) and obtain \\(XY = 1+27+3 = 31\\).</p>",
+      "answer": "31"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABC\\) be a triangle such that \\(AB = 2, CA = 3\\), and \\(BC = 4\\). A semicircle with its diameter on \\(\\overline{BC}\\) is tangent to \\(\\overline{AB}\\) and \\(\\overline{AC}\\). Compute the area of the semicircle.</p>",
+      "solutions": "<p>Let \\(O\\), \\(D\\), and \\(E\\) be the midpoint of the diameter and the points of tangency with \\(\\overline{AB}\\) and \\(\\overline{AC}\\) respectively. Then \\([ABC] = [AOB] + [AOC] = \\frac{1}{2}(AB+AC)r\\), where \\(r\\) is the radius of the semicircle. Now by Heron’s formula, \\([ABC] = \\sqrt{\\frac{9}{2}\\cdot\\frac{1}{2}\\cdot\\frac{3}{2}\\cdot\\frac{5}{2}} = \\frac{3\\sqrt{15}}{4}\\). We solve for \\(r = \\frac{3\\sqrt{15}}{10}\\) and compute \\(\\frac{1}{2}\\pi r^2 = \\frac{27\\pi}{40}\\).</p>",
+      "answer": "\\frac{27\\pi}{40}"
+    },
+    "5": {
+      "problem": "<p>Triangle \\(ABC\\) has side lengths \\(AB = 2\\sqrt{5}\\), \\(BC = 1\\), and \\(CA = 5\\). Point \\(D\\) is on side \\(AC\\) such that \\(CD = 1\\), and \\(F\\) is a point such that \\(BF = 2\\) and \\(CF = 3\\). Let \\(E\\) be the intersection of lines \\(AB\\) and \\(DF\\). Find the area of \\(CDEB\\).</p>",
+      "solutions": "<p>Draw segment \\(AF\\). Then notice \\(AF = 4\\), and we have a right triangle. Now draw line \\(CE\\), let it intersect \\(AF\\) at \\(G\\). By Ceva, \\(FG = \\frac{4}{3}\\) and \\(AG = \\frac{8}{3}\\). Using mass points we find that \\(\\frac{AE}{EB} = 6\\) so \\(\\frac{[AEF]}{[BEF]} = 6\\), and since \\([ABF] = 4\\), \\([BEF] = \\frac{4}{7}\\).</p><p>It’s easy to see that \\([CDF] = \\frac{1}{5}[ACF] = \\frac{6}{5}\\), so \\[[BCDE] = [CDF] - [BEF] = \\frac{6}{5} - \\frac{4}{7} = \\frac{22}{35}.\\]</p>",
+      "answer": "\\frac{22}{35}"
+    },
+    "6": {
+      "problem": "<p>A circle of radius \\(t\\) is tangent to the hypotenuse, the incircle, and one leg of an isosceles right triangle with inradius \\(r = 1 + \\sin\\frac{\\pi}{8}\\). Find \\(rt\\).</p>",
+      "solutions": "<p>The distance between the point of tangency of the two circles and the nearest vertex of the triangle is seen to be both \\(r\\left(\\csc\\frac{\\pi}{8} - 1\\right)\\) and \\(t\\left(\\csc\\frac{\\pi}{8} + 1\\right)\\), so \\[rt = \\frac{r^2\\left(\\csc\\frac{\\pi}{8} - 1\\right)}{\\csc\\frac{\\pi}{8} + 1} = \\frac{\\left(1+\\sin\\frac{\\pi}{8}\\right)^2\\left(1-\\sin\\frac{\\pi}{8}\\right)}{1+\\sin\\frac{\\pi}{8}} = 1 - \\sin^2\\frac{\\pi}{8}\\] \\[= \\frac{1}{2} + \\frac{1-2\\sin^2\\frac{\\pi}{8}}{2} = \\frac{1}{2} + \\frac{\\cos\\frac{\\pi}{4}}{2} = \\frac{1}{2} + \\frac{\\sqrt{2}}{4} = \\frac{2+\\sqrt{2}}{4}.\\]</p>",
+      "answer": "\\frac{2+\\sqrt{2}}{4}"
+    },
+    "7": {
+      "problem": "<p>Suppose \\(ABCD\\) is an isosceles trapezoid in which \\(\\overline{AB} \\parallel \\overline{CD}\\). Two mutually externally tangent circles \\(\\omega_1\\) and \\(\\omega_2\\) are inscribed in \\(ABCD\\) such that \\(\\omega_1\\) is tangent to \\(\\overline{AB}, \\overline{BC}\\), and \\(\\overline{CD}\\) while \\(\\omega_2\\) is tangent to \\(\\overline{AB}, \\overline{DA}\\), and \\(\\overline{CD}\\). Given that \\(AB = 1, CD = 6\\), compute the radius of either circle.</p>",
+      "solutions": "<p>Let the radius of both circles be \\(r\\), and let \\(\\omega_1\\) be centered at \\(O_1\\). Let \\(\\omega_1\\) be tangent to \\(\\overline{AB}, \\overline{BC}\\), and \\(\\overline{CD}\\) at \\(P, Q\\), and \\(R\\) respectively. Then, by symmetry, \\(PB = \\frac{1}{2} - r\\) and \\(RC = 3-r\\). By equal tangents from \\(B\\) and \\(C\\), \\(BQ = \\frac{1}{2}-r\\) and \\(QC = 3-r\\). Now, \\(\\angle BO_1C\\) is right because \\(m\\angle O_1BC+m\\angle BCO_1 = \\frac{1}{2}(m\\angle PBC+m\\angle BCR)=90^\\circ\\). Since \\(\\overline{O_1Q}\\perp\\overline{BC}\\), \\(r^2 = O_1Q^2 = BQ\\cdot QC = \\left(\\frac{1}{2}-r\\right)(3-r) = r^2-\\frac{7}{2}r+\\frac{3}{2}\\). Solving, we find \\(r = \\frac{3}{7}\\).</p>",
+      "answer": "\\frac{3}{7}"
+    },
+    "8": {
+      "problem": "<p>Triangle \\(ABC\\) has a right angle at \\(B\\). Point \\(D\\) lies on side \\(BC\\) such that \\(3\\angle BAD = \\angle BAC\\). Given \\(AC = 2\\) and \\(CD = 1\\), compute \\(BD\\).</p>",
+      "solutions": "<p>Let \\(BD = x\\). We reflect \\(D\\) over \\(AB\\) to \\(D'\\). Then \\(DD' = 2x\\), but \\(AD\\) bisects \\(\\angle CAD'\\), so \\(4x = AD' = AD\\). Also, \\(AD = \\sqrt{x^2+AB^2} = \\sqrt{x^2+AC^2-BC^2} = \\sqrt{x^2+4-(x+1)^2} = \\sqrt{3-2x}\\). We have the quadratic \\(16x^2 = 3-2x\\) which gives \\(x = 3/8\\).</p>",
+      "answer": "\\frac{3}{8}"
+    },
+    "9": {
+      "problem": "<p>Four spheres, each of radius \\(r\\), lie inside a regular tetrahedron with side length 1 such that each sphere is tangent to three faces of the tetrahedron and to the other three spheres. Find \\(r\\).</p>",
+      "solutions": "<p>Let \\(O\\) be the center of the sphere that is tangent to the faces \\(ABC\\), \\(ABD\\), and \\(BCD\\). Let \\(P\\), \\(Q\\) be the feet of the perpendiculars from \\(O\\) to \\(ABC\\) and \\(ABD\\) respectively. Let \\(R\\) be the foot of the perpendicular from \\(P\\) to \\(AB\\). Then \\(OPRQ\\) is a quadrilateral such that \\(\\angle P\\), \\(\\angle Q\\) are right angles and \\(OP = OQ = r\\). Also, \\(\\angle R\\) is the dihedral angle between faces \\(ABC\\) and \\(ABD\\), so \\(\\cos\\angle R = 1/3\\). We can then compute \\(QR = \\sqrt{2}r\\), so \\(BR = \\sqrt{6}r\\). Hence, \\(1 = AB = 2(\\sqrt{6}r) + 2r = 2r(\\sqrt{6}+1)\\), so \\(r = (\\sqrt{6}-1)/10\\).</p>",
+      "answer": "\\frac{\\sqrt{6}-1}{10}"
+    },
+    "10": {
+      "problem": "<p>Triangle \\(ABC\\) has side lengths \\(AB = 65\\), \\(BC = 33\\), and \\(AC = 56\\). Find the radius of the circle tangent to sides \\(AC\\) and \\(BC\\) and to the circumcircle of triangle \\(ABC\\).</p>",
+      "solutions": "<p>Let \\(\\Gamma\\) be the circumcircle of triangle \\(ABC\\), and let \\(E\\) be the center of the circle tangent to \\(\\Gamma\\) and the sides \\(AC\\) and \\(BC\\). Notice that \\(\\angle C = 90^\\circ\\) because \\(33^2+56^2=65^2\\). Let \\(D\\) be the second intersection of line \\(CE\\) with \\(\\Gamma\\), so that \\(D\\) is the midpoint of the arc \\(AB\\) away from \\(C\\). Because \\(\\angle BCD = 45^\\circ\\), one can easily calculate \\(CD = \\frac{89\\sqrt{2}}{2}\\). The power of \\(E\\) with respect to \\(\\Gamma\\) is both \\(r(65-r)\\) and \\(r\\sqrt{2}\\cdot\\left(\\frac{89\\sqrt{2}}{2} - r\\sqrt{2}\\right) = r(89-2r)\\), so \\(r = 89-65 = 24\\).</p>",
+      "answer": "24"
+    }
+  }
+}

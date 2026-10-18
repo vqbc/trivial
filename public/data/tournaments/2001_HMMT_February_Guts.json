@@ -1,0 +1,268 @@
+{
+  "test": "HMMT February Guts",
+  "year": 2001,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2001/feb/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>January 3, 1911 was an <i>odd date</i> as its abbreviated representation, 1/3/1911, can be written using only odd digits (note all four digits are written for the year). To the nearest month, how many months will have elapsed between the most recent odd date and the next odd date (today is 3/3/2001, an even date).</p>",
+      "solutions": "<p>The most recent odd date was 11/19/1999 (November has 30 days, but the assumption that it has 31 days does not change the answer), and the next odd date will be 1/1/3111. From 11/19/1999 to 1/1/2000 is about 1 month. From 2000 to 3111 is 1111 years, or \\(12 \\cdot 1111 = 13332\\) months, so the total number of months is \\(\\boxed{13333}\\).</p>",
+      "answer": "13333"
+    },
+    "2": {
+      "problem": "<p>Ken is the best sugar cube retailer in the nation. Trevor, who loves sugar, is coming over to make an order. Ken knows Trevor cannot afford more than 127 sugar cubes, but might ask for any number of cubes less than or equal to that. Ken prepares seven cups of cubes, with which he can satisfy any order Trevor might make. How many cubes are in the cup with the most sugar?</p>",
+      "solutions": "<p>The only way to fill seven cups to satisfy the above condition is to use a binary scheme, so the cups must contain \\(1, 2, 4, 8, 16, 32\\), and \\(\\boxed{64}\\) cubes of sugar.</p>",
+      "answer": "64"
+    },
+    "3": {
+      "problem": "<p>Find the number of triangulations of a general convex 7-gon into 5 triangles by 4 diagonals that do not intersect in their interiors.</p>",
+      "solutions": "<p>Define the Catalan numbers by \\(C(n) = \\frac{1}{n+1}\\binom{2n}{n}\\). The current solution is the \\(C(\\text{number of triangles}) = C(5) = \\boxed{42}\\).</p>",
+      "answer": "42"
+    },
+    "4": {
+      "problem": "<p>Find \\(\\displaystyle\\prod_{n=2}^{\\infty} \\left(1 - \\frac{1}{n^2}\\right)\\).</p>",
+      "solutions": "<p>\\[\\prod_{n=2}^{\\infty} \\left(1 - \\frac{1}{n^2}\\right) = \\prod_{n=2}^{\\infty} \\frac{n^2-1}{n^2} = \\prod_{n=2}^{\\infty} \\frac{(n-1)(n+1)}{n \\cdot n} = \\frac{1\\cdot 3}{2\\cdot 2} \\cdot \\frac{2\\cdot 4}{3\\cdot 3} \\cdot \\frac{3\\cdot 5}{4\\cdot 4} \\cdot \\frac{4\\cdot 6}{5\\cdot 5} \\cdot \\frac{5\\cdot 7}{6\\cdot 6} \\cdots = \\frac{1\\cdot 2\\cdot 3\\cdot 3\\cdot 4\\cdot 4\\cdot 5\\cdot 5 \\cdots}{2\\cdot 2\\cdot 3\\cdot 3\\cdot 4\\cdot 4\\cdot 5\\cdot 5 \\cdots} = \\boxed{\\frac{1}{2}}.\\]</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "6": {
+      "problem": "<p>Six students taking a test sit in a row of seats with aisles only on the two sides of the row. If they finish the test at random times, what is the probability that some student will have to pass by another student to get to an aisle?</p>",
+      "solutions": "<p>The probability \\(p\\) that <i>no</i> student will have to pass by another student to get to an aisle is the probability that the first student to leave is one of the students on the end, the next student to leave is on one of the ends of the remaining students, etc.: \\(p = \\frac{2}{6}\\cdot\\frac{2}{5}\\cdot\\frac{2}{4}\\cdot\\frac{2}{3}\\), so the desired probability is \\(1-p = \\boxed{\\frac{43}{45}}\\).</p>",
+      "answer": "\\frac{43}{45}"
+    },
+    "7": {
+      "problem": "<p>Suppose \\(a\\), \\(b\\), \\(c\\), \\(d\\), and \\(e\\) are objects that we can multiply together, but the multiplication doesn’t necessarily satisfy the associative law, i.e. \\((xy)z\\) does not necessarily equal \\(x(yz)\\). How many different ways are there to interpret the product \\(abcde\\)?</p>",
+      "solutions": "<p>\\(C(\\text{number of letters} - 1) = C(4) = \\boxed{14}\\).</p>",
+      "answer": "14"
+    },
+    "8": {
+      "problem": "<p>Compute \\(1 \\cdot 2 + 2 \\cdot 3 + \\cdots + (n-1)n\\).</p>",
+      "solutions": "<p>Let \\(S = 1\\cdot 2 + 2\\cdot 3 + \\cdots + (n-1)n\\). We know \\(\\sum_{i=1}^n i = \\frac{n(n+1)}{2}\\) and \\(\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}\\). So \\(S = 1(1+1) + 2(2+1) + \\cdots + (n-1)n = (1^2+2^2+\\cdots+(n-1)^2) + (1+2+\\cdots+(n-1)) = \\frac{(n-1)n(2n-1)}{6} + \\frac{(n-1)n}{2} = \\boxed{\\frac{(n-1)n(n+1)}{3}}\\).</p><p>We can also arrive at the solution by realizing that \\(\\sum_{i=1}^n i^2 = \\sum_{i=1}^n i + \\sum_{i=2}^n i + \\sum_{i=3}^n i + \\cdots + \\sum_{i=n}^n i = n\\sum_{i=1}^n i - \\left(\\sum_{i=1}^{1} i + \\sum_{i=1}^{2} i + \\cdots + \\sum_{i=1}^{n-1} i\\right) = n\\cdot\\frac{n(n+1)}{2} - \\left(\\frac{1\\cdot 2}{2} + \\frac{2\\cdot 3}{2} + \\cdots + \\frac{(n-1)n}{2}\\right) = n\\cdot\\frac{n(n+1)}{2} - \\frac{1}{2}S\\), so \\(S = \\frac{(n-1)n(n+1)}{3}\\).</p>",
+      "answer": "\\frac{(n-1)n(n+1)}{3}"
+    },
+    "9": {
+      "problem": "<p>Suppose \\(x\\) satisfies \\(x^3 + x^2 + x + 1 = 0\\). What are all possible values of \\(x^4 + 2x^3 + 2x^2 + 2x + 1\\)?</p>",
+      "solutions": "<p>\\(x^4+2x^3+2x^2+2x+1 = (x+1)(x^3+x^2+x+1) = \\boxed{0}\\) is the only possible solution.</p>",
+      "answer": "0"
+    },
+    "10": {
+      "problem": "<p>Two concentric circles have radii \\(r\\) and \\(R &gt; r\\). Three new circles are drawn so that they are each tangent to the big two circles and tangent to the other two new circles. Find \\(\\frac{R}{r}\\).</p>",
+      "solutions": "<p>The centers of the three new circles form a triangle. The diameter of the new circles is \\(R-r\\), so the side length of the triangle is \\(R-r\\). Call the center of the concentric circle \\(O\\), two vertices of the triangle \\(A\\) and \\(B\\), and \\(AB\\)’s midpoint \\(D\\). \\(OA\\) is the average of \\(R\\) and \\(r\\), namely \\(\\frac{R+r}{2}\\). Using the law of sines on triangle \\(DAO\\), we get \\(\\frac{\\sin(30)}{AD} = \\frac{\\sin(90)}{AO} \\Rightarrow R = 3r\\), so \\(\\frac{R}{r} = \\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "11": {
+      "problem": "<p>12 points are placed around the circumference of a circle. How many ways are there to draw 6 non-intersecting chords joining these points in pairs?</p>",
+      "solutions": "<p>\\(C(\\text{number of chords}) = C(6) = \\boxed{132}\\).</p>",
+      "answer": "132"
+    },
+    "13": {
+      "problem": "<p>Find the number of real zeros of \\(x^3 - x^2 - x + 2\\).</p>",
+      "solutions": "<p>Let \\(f(x) = x^3-x^2-x+2\\), so \\(f'(x) = 3x^2-2x-1\\). The slope is zero when \\(3x^2-2x-1=0\\), where \\(x=-\\frac{1}{3}\\) and \\(x=1\\). Now \\(f\\left(\\frac{1}{3}\\right) &gt; 0\\) and \\(f(1) &gt; 0\\), so there are no zeros between \\(x=-\\frac{1}{3}\\) and \\(x=1\\). Since \\(\\lim_{x\\to+\\infty} f(x) &gt; 0\\), there are no zeros for \\(x&gt;1\\). Since \\(\\lim_{x\\to-\\infty} f(x) &lt; 0\\), there is one zero for \\(x&lt;-\\frac{1}{3}\\), for a total of \\(\\boxed{1}\\) zero.</p>",
+      "answer": "1"
+    },
+    "14": {
+      "problem": "<p>Find the exact value of \\(1 + \\frac{1}{1+\\frac{2}{1+\\frac{1}{1+\\frac{2}{1+\\cdots}}}}\\).</p>",
+      "solutions": "<p>Let \\(x\\) be what we are trying to find. \\(x - 1 = \\frac{1}{1+\\frac{2}{1+\\frac{1}{1+\\frac{2}{1+\\cdots}}}} \\Rightarrow \\frac{1}{x-1} - 1 = \\frac{2}{1+\\frac{1}{1+\\frac{2}{1+\\cdots}}} \\Rightarrow \\frac{2}{\\frac{1}{x-1}-1} = x \\Rightarrow x^2 - 2 = 0\\), so \\(x = \\boxed{\\sqrt{2}}\\) since \\(x &gt; 0\\).</p>",
+      "answer": "\\sqrt{2}"
+    },
+    "15": {
+      "problem": "<p>A beaver walks from \\((0,0)\\) to \\((4,4)\\) in the plane, walking one unit in the positive \\(x\\) direction or one unit in the positive \\(y\\) direction at each step. Moreover, he never goes to a point \\((x,y)\\) with \\(y &gt; x\\). How many different paths can he walk?</p>",
+      "solutions": "<p>\\(C(4) = \\boxed{14}\\).</p>",
+      "answer": "14"
+    },
+    "16": {
+      "problem": "<p>After walking so much that his feet get really tired, the beaver staggers so that, at each step, his coordinates change by either \\((+1,+1)\\) or \\((+1,-1)\\). Now he walks from \\((0,0)\\) to \\((8,0)\\) without ever going below the \\(x\\)-axis. How many such paths are there?</p>",
+      "solutions": "<p>\\(C(4) = \\boxed{14}\\).</p>",
+      "answer": "14"
+    },
+    "17": {
+      "problem": "<p>Frank and Joe are playing ping pong. For each game, there is a 30% chance that Frank wins and a 70% chance Joe wins. During a match, they play games until someone wins a total of 21 games. What is the expected value of number of games played per match?</p>",
+      "solutions": "<p>The expected value of the ratio of Frank’s to Joe’s score is \\(3:7\\), so Frank is expected to win 9 games for each of Joe’s 21. Thus the expected number of games in a match is \\(\\boxed{30}\\).</p>",
+      "answer": "30"
+    },
+    "18": {
+      "problem": "<p>Find the largest prime factor of \\(-x^{10} - x^8 - x^6 - x^4 - x^2 - 1\\), where \\(x = 2i\\), \\(i = \\sqrt{-1}\\).</p>",
+      "solutions": "<p>\\(\\boxed{13}\\).</p>",
+      "answer": "13"
+    },
+    "19": {
+      "problem": "<p>Calculate \\(\\displaystyle\\sum_{n=1}^{2001} n^3\\).</p>",
+      "solutions": "<p>\\[\\sum_{n=1}^{2001} n^3 = \\left(\\sum_{n=1}^{2001} n\\right)^2 = \\left(\\frac{2001\\cdot 2002}{2}\\right)^2 = \\boxed{4012013006001}.\\]</p>",
+      "answer": "4012013006001"
+    },
+    "21": {
+      "problem": "<p>Evaluate \\(\\displaystyle\\sum_{i=1}^{\\infty} \\frac{(i+1)(i+2)(i+3)}{(-2)^i}\\).</p>",
+      "solutions": "<p>This is the power series of \\(\\frac{6}{(1+x)^4}\\) expanded about \\(x=0\\) and evaluated at \\(x=-\\frac{1}{2}\\), so the solution is \\(\\boxed{96}\\).</p>",
+      "answer": "96"
+    },
+    "22": {
+      "problem": "<p>A man is standing on a platform and sees his train move such that after \\(t\\) seconds it is \\(2t^2 + d_0\\) feet from his original position, where \\(d_0\\) is some number. Call the smallest (constant) speed at which the man have to run so that he catches the train \\(v\\). In terms of \\(n\\), find the \\(n\\)th smallest value of \\(d_0\\) that makes \\(v\\) a perfect square.</p>",
+      "solutions": "<p>The train’s distance from the man’s original position is \\(t^2 + d_0\\), and the man’s distance from his original position if he runs at speed \\(v\\) is \\(vt\\) at time \\(t\\). We need to find where \\(t^2 + d_0 = vt\\) has a solution. Note that this is a quadratic equation with discriminant \\(D = \\sqrt{v^2 - 4d_0}\\), so it has solutions for real \\(D\\), i.e. where \\(v \\ge \\sqrt{4d_0}\\), so \\(4d_0\\) must be a perfect square. This happens when \\(4d_0\\) is an even power of 2: the smallest value is \\(2^0\\), the second smallest is \\(2^2\\), the third smallest is \\(2^4\\), and in general the \\(n\\)th smallest is \\(\\boxed{2^{2(n-1)}}\\), or \\(\\boxed{4^{n-1}}\\).</p>",
+      "answer": "4^{n-1}"
+    },
+    "23": {
+      "problem": "<p>Alice, Bob, and Charlie each pick a 2-digit number at random. What is the probability that all of their numbers’ tens’ digits are different from each others’ tens’ digits and all of their numbers’ ones’ digits are different from each others’ ones’ digits?</p>",
+      "solutions": "<p>\\(\\frac{9}{10}\\cdot\\frac{8}{10}\\cdot\\frac{8}{9}\\cdot\\frac{7}{9} = \\boxed{\\frac{112}{225}}\\).</p>",
+      "answer": "\\frac{112}{225}"
+    },
+    "24": {
+      "problem": "<p>Square \\(ABCD\\) has side length 1. A dilation is performed about point \\(A\\), creating square \\(AB'C'D'\\). If \\(BC' = 29\\), determine the area of triangle \\(BDC'\\).</p>",
+      "solutions": "<p>\\(29^2 - 2\\cdot\\frac{1}{2}(29)\\left(\\frac{29}{2}\\right) - \\frac{1}{2} = \\boxed{420}\\).</p>",
+      "answer": "420"
+    },
+    "26": {
+      "problem": "<p>A circle with center at \\(O\\) has radius 1. Points \\(P\\) and \\(Q\\) outside the circle are placed such that \\(PQ\\) passes through \\(O\\). Tangent lines to the circle through \\(P\\) hit the circle at \\(P_1\\) and \\(P_2\\), and tangent lines to the circle through \\(Q\\) hit the circle at \\(Q_1\\) and \\(Q_2\\). If \\(\\angle P_1PP_2 = 45^\\circ\\) and \\(\\angle Q_1QQ_2 = 30^\\circ\\), find the minimum possible length of arc \\(P_2Q_2\\).</p>",
+      "solutions": "<p>\\((45-30)^\\circ = \\boxed{\\frac{\\pi}{12}}\\).</p>",
+      "answer": "\\frac{\\pi}{12}"
+    },
+    "27": {
+      "problem": "<p>Mona has 12 match sticks of length 1, and she has to use them to make regular polygons, with each match being a side or a fraction of a side of a polygon, and no two matches overlapping or crossing each other. What is the smallest total area of the polygons Mona can make?</p>",
+      "solutions": "<p>\\(4\\cdot\\frac{\\sqrt{3}}{4} = \\boxed{\\sqrt{3}}\\).</p>",
+      "answer": "\\sqrt{3}"
+    },
+    "28": {
+      "problem": "<p>How many different combinations of 4 marbles can be made from 5 indistinguishable red marbles, 4 indistinguishable blue marbles, and 2 indistinguishable black marbles?</p>",
+      "solutions": "<p>\\(5+4+3 = \\boxed{12}\\).</p>",
+      "answer": "12"
+    },
+    "29": {
+      "problem": "<p>Count the number of sequences \\(a_1, a_2, a_3, a_4, a_5\\) of integers such that \\(a_i \\le 1\\) for all \\(i\\) and all partial sums (\\(a_1\\), \\(a_1+a_2\\), etc.) are non-negative.</p>",
+      "solutions": "<p>\\(C(\\text{length}+1) = C(6) = \\boxed{132}\\).</p>",
+      "answer": "132"
+    },
+    "31": {
+      "problem": "<p>If two fair dice are tossed, what is the probability that their sum is divisible by 5?</p>",
+      "solutions": "<p>\\(\\boxed{\\frac{1}{4}}\\).</p>",
+      "answer": "\\frac{1}{4}"
+    },
+    "32": {
+      "problem": "<p>Count the number of permutations \\(a_1a_2\\ldots a_7\\) of 1234567 with longest decreasing subsequence of length at most two (i.e. there does not exist \\(i &lt; j &lt; k\\) such that \\(a_i &gt; a_j &gt; a_k\\)).</p>",
+      "solutions": "<p>\\(C(7) = \\boxed{429}\\).</p>",
+      "answer": "429"
+    },
+    "34": {
+      "problem": "<p>Find all the values of \\(m\\) for which the zeros of \\(2x^2 - mx - 8\\) differ by \\(m-1\\).</p>",
+      "solutions": "<p>\\(\\boxed{6, -\\frac{10}{3}}\\).</p>",
+      "answer": "6, -\\frac{10}{3}"
+    },
+    "35": {
+      "problem": "<p>Find the largest integer that divides \\(m^5 - 5m^3 + 4m\\) for all \\(m \\ge 5\\).</p>",
+      "solutions": "<p>\\(5! = \\boxed{120}\\).</p>",
+      "answer": "120"
+    },
+    "36": {
+      "problem": "<p>Count the number of sequences \\(1 \\le a_1 \\le a_2 \\le \\cdots \\le a_5\\) of integers with \\(a_i \\le i\\) for all \\(i\\).</p>",
+      "solutions": "<p>\\(C(\\text{number of terms}) = C(5) = \\boxed{42}\\).</p>",
+      "answer": "42"
+    },
+    "37": {
+      "problem": "<p>Alex and Bob have 30 matches. Alex picks up somewhere between one and six matches (inclusive), then Bob picks up somewhere between one and six matches, and so on. The player who picks up the last match wins. How many matches should Alex pick up at the beginning to guarantee that he will be able to win?</p>",
+      "solutions": "<p>\\(\\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "38": {
+      "problem": "<p>The cafeteria in a certain laboratory is open from noon until 2 in the afternoon every Monday for lunch. Two professors eat 15 minute lunches sometime between noon and 2. What is the probability that they are in the cafeteria simultaneously on any given Monday?</p>",
+      "solutions": "<p>\\(\\boxed{\\frac{15}{64}}\\).</p>",
+      "answer": "\\frac{15}{64}"
+    },
+    "39": {
+      "problem": "<p>What is the remainder when \\(2^{2001}\\) is divided by \\(2^7 - 1\\)?</p>",
+      "solutions": "<p>\\(2^{2001 \\pmod{7}} = 2^6 = \\boxed{64}\\).</p>",
+      "answer": "64"
+    },
+    "40": {
+      "problem": "<p>A product of five primes is of the form \\(ABC{,}ABC\\), where \\(A\\), \\(B\\), and \\(C\\) represent digits. If one of the primes is 491, find the product \\(ABC{,}ABC\\).</p>",
+      "solutions": "<p>\\(491\\cdot 1001\\cdot 2 = \\boxed{982{,}982}\\).</p>",
+      "answer": "982{,}982"
+    },
+    "41": {
+      "problem": "<p>If \\(\\left(a + \\frac{1}{a}\\right)^2 = 3\\), find \\(\\left(a + \\frac{1}{a}\\right)^3\\) in terms of \\(a\\).</p>",
+      "solutions": "<p>\\(\\boxed{0}\\).</p>",
+      "answer": "0"
+    },
+    "42": {
+      "problem": "<p>Solve \\(x = \\sqrt{x - \\frac{1}{x}} + \\sqrt{1 - \\frac{1}{x}}\\) for \\(x\\).</p>",
+      "solutions": "<p>\\(\\boxed{\\frac{1+\\sqrt{5}}{2}}\\).</p>",
+      "answer": "\\frac{1+\\sqrt{5}}{2}"
+    },
+    "43": {
+      "problem": "<p>When a single number is added to each member of the seqence 20, 50, 100, the sequence becomes expressable as \\(x, ax, a^2x\\). Find \\(a\\).</p>",
+      "solutions": "<p>\\(\\boxed{\\frac{5}{3}}\\).</p>",
+      "answer": "\\frac{5}{3}"
+    },
+    "44": {
+      "problem": "<p>Through a point in the interior of a triangle \\(ABC\\), three lines are drawn, one parallel to each side. These lines divide the sides of the triangle into three regions each. Let \\(a\\), \\(b\\), and \\(c\\) be the lengths of the sides opposite \\(\\angle A\\), \\(\\angle B\\), and \\(\\angle C\\), respectively, and let \\(a'\\), \\(b'\\), and \\(c'\\) be the lengths of the middle regions of the sides opposite \\(\\angle A\\), \\(\\angle B\\), and \\(\\angle C\\), respectively. Find the numerical value of \\(a'/a + b'/b + c'/c\\).</p>",
+      "solutions": "<p>\\(\\boxed{1}\\).</p>",
+      "answer": "1"
+    },
+    "45": {
+      "problem": "<p>A stacking of circles in the plane consists of a base, or some number of unit circles centered on the \\(x\\)-axis in a row without overlap or gaps, and circles above the \\(x\\)-axis that must be tangent to two circles below them (so that if the ends of the base were secured and gravity were applied from below, then nothing would move). How many stackings of circles in the plane have 4 circles in the base?</p>",
+      "solutions": "<p>\\(C(4) = \\boxed{14}\\).</p>",
+      "answer": "14"
+    },
+    "47": {
+      "problem": "<p>For the sequence of numbers \\(n_1, n_2, n_3, \\ldots\\), the relation \\(n_i = 2n_{i-1} + a\\) holds for all \\(i &gt; 1\\). If \\(n_2 = 5\\) and \\(n_8 = 257\\), what is \\(n_5\\)?</p>",
+      "solutions": "<p>\\(\\boxed{33}\\).</p>",
+      "answer": "33"
+    },
+    "48": {
+      "problem": "<p>What is the smallest positive integer \\(x\\) for which \\(x^2 + x + 41\\) is not a prime?</p>",
+      "solutions": "<p>\\(\\boxed{40}\\).</p>",
+      "answer": "40"
+    },
+    "49": {
+      "problem": "<p>If \\(\\frac{1}{9}\\) of 60 is 5, what is \\(\\frac{1}{20}\\) of 80?</p>",
+      "solutions": "<p>In base 15, \\(\\boxed{6}\\).</p>",
+      "answer": "6"
+    },
+    "50": {
+      "problem": "<p>The Fibonacci sequence \\(F_1, F_2, F_3, \\ldots\\) is defined by \\(F_1 = F_2 = 1\\) and \\(F_{n+2} = F_{n+1} + F_n\\). Find the least positive integer \\(t\\) such that for all \\(n &gt; 0\\), \\(F_n = F_{n+t}\\).</p>",
+      "solutions": "<p>\\(\\boxed{60}\\).</p>",
+      "answer": "60"
+    },
+    "51": {
+      "problem": "<p>Some people like to write with larger pencils than others. Ed, for instance, likes to write with the longest pencils he can find. However, the halls of MIT are of limited height \\(L\\) and width \\(L\\). What is the longest pencil Ed can bring through the halls so that he can negotiate a square turn?</p>",
+      "solutions": "<p>\\(\\boxed{3L}\\).</p>",
+      "answer": "3L"
+    },
+    "52": {
+      "problem": "<p>Find all ordered pairs \\((m,n)\\) of integers such that \\(231m^2 = 130n^2\\).</p>",
+      "solutions": "<p>The unique solution is \\(\\boxed{(0,0)}\\).</p>",
+      "answer": "(0,0)"
+    },
+    "53": {
+      "problem": "<p>Find the sum of the infinite series \\(\\frac{1}{3^2-1^2}\\left(\\frac{1}{1^2}-\\frac{1}{3^2}\\right) + \\frac{1}{5^2-3^2}\\left(\\frac{1}{3^2}-\\frac{1}{5^2}\\right) + \\frac{1}{7^2-5^2}\\left(\\frac{1}{5^2}-\\frac{1}{7^2}\\right) + \\cdots\\).</p>",
+      "solutions": "<p>\\(1 - \\frac{1}{3} + \\frac{1}{3} - \\frac{1}{5} + \\cdots = \\boxed{1}\\).</p>",
+      "answer": "1"
+    },
+    "54": {
+      "problem": "<p>The set of points \\((x_1, x_2, x_3, x_4)\\) in \\(\\mathbb{R}^4\\) such that \\(x_1 \\ge x_2 \\ge x_3 \\ge x_4\\) is a cone (or hypercone, if you insist). Into how many regions is this cone sliced by the hyperplanes \\(x_i - x_j = 1\\) for \\(1 \\le i &lt; j \\le n\\)?</p>",
+      "solutions": "<p>\\(C(4) = \\boxed{14}\\).</p>",
+      "answer": "14"
+    },
+    "55": {
+      "problem": "<p>How many multiples of 7 between \\(10^6\\) and \\(10^9\\) are perfect squares?</p>",
+      "solutions": "<p>\\(\\left[\\sqrt{\\frac{10^9}{7^2}}\\right] - \\left[\\sqrt{\\frac{10^6}{7^2}}\\right] = 4517 - 142 = \\boxed{4375}\\).</p>",
+      "answer": "4375"
+    },
+    "56": {
+      "problem": "<p>A triangle has sides of length 888, 925, and \\(x &gt; 0\\). Find the value of \\(x\\) that minimizes the area of the circle circumscribed about the triangle.</p>",
+      "solutions": "<p>\\(\\boxed{259}\\).</p>",
+      "answer": "259"
+    },
+    "57": {
+      "problem": "<p>Let \\(x = 2001^{1002} - 2001^{-1002}\\) and \\(y = 2001^{1002} + 2001^{-1002}\\). Find \\(x^2 - y^2\\).</p>",
+      "solutions": "<p>\\(\\boxed{-4}\\).</p>",
+      "answer": "-4"
+    },
+    "58": {
+      "problem": "<p>Let \\((x,y)\\) be a point in the cartesian plane, \\(x, y &gt; 0\\). Find a formula in terms of \\(x\\) and \\(y\\) for the minimal area of a right triangle with hypotenuse passing through \\((x,y)\\) and legs contained in the \\(x\\) and \\(y\\) axes.</p>",
+      "solutions": "<p>\\(\\boxed{2xy}\\).</p>",
+      "answer": "2xy"
+    },
+    "59": {
+      "problem": "<p>Trevor and Edward play a game in which they take turns adding or removing beans from a pile. On each turn, a player must either add or remove the largest perfect square number of beans that is in the heap. The player who empties the pile wins. For example, if Trevor goes first with a pile of 5 beans, he can either add 4 to make the total 9, or remove 4 to make the total 1, and either way Edward wins by removing all the beans. There is no limit to how large the pile can grow; it just starts with some finite number of beans in it, say fewer than 1000.</p><p>Before the game begins, Edward dispatches a spy to find out how many beans will be in the opening pile, call this \\(n\\), then “graciously” offers to let Trevor go first. Knowing that the first player is more likely to win, but not knowing \\(n\\), Trevor logically but unwisely accepts, and Edward goes on to win the game. Find a number \\(n\\) less than 1000 that would prompt this scenario, assuming both players are perfect logicians. A correct answer is worth the nearest integer to \\(\\log_2(n-4)\\) points.</p>",
+      "solutions": "<p>The correct answers are 0 (worth imaginary points), 5 (worth 0 points), 20 (4 points), 29, 45 (5 points), 80 (6 points), 101, 116, 135, 145, 165, 173 (7 points), 236, 257 (8 points), 397, 404, 445, 477, 540, 565, 580, 629, 666 (9 points), 836, 845, 885, 909, 944, 949, 954, 975 (10 points). This game is called Epstein’s Put-or-Take-a-Square game. It is unknown whether or not these numbers (or the first player’s win positions) have positive density.</p>",
+      "answer": "0, 5, 20, 29, 45, 80, 101, 116, 135, 145, 165, 173, 236, 257, 397, 404, 445, 477, 540, 565, 580, 629, 666, 836, 845, 885, 909, 944, 949, 954, 975"
+    }
+  }
+}

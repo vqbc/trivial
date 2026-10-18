@@ -1,0 +1,23 @@
+{
+  "test": "BMT Algebra Tiebreaker",
+  "year": 2025,
+  "name": "Algebra Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Aditya and Pico live 1000 meters apart, and they start walking toward each other’s houses at the same time. Pico walks at a constant speed of 65 meters per minute. Aditya walks at a constant speed of 60 meters per minute. How many minutes after they start walking will they meet? (Do NOT include any units in your answer.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Let \\(a\\) and \\(b\\) be real numbers such that \\(a+b=16\\) and \\(a^3-b^3=ab^2-a^2b+2048\\). Compute \\(ab^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>A trading card store only sells small and large packs of cards, which cost $11 and $18, respectively. Each small pack has the same number of cards, each large pack has the same number of cards, and a large pack has more cards than a small pack. The greatest number of cards that can be bought with $38 is 48, and the greatest number of cards that can be bought with $56 is 75. What is the greatest number of cards that can be bought with $202? In each scenario, not all the money needs to be spent.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

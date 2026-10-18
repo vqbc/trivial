@@ -1,0 +1,58 @@
+{
+  "test": "HMMT November General 2",
+  "year": 2008,
+  "name": "General Test Part 2 (Theme Round)",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2008/nov/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<h3>Triangular Areas</h3><p>Triangles have many properties. Calculate some things about their area.</p><p>A triangle has sides of length 9, 40, and 41. What is its area?</p>",
+      "solutions": "<p>Observe that \\(9^2 + 40^2 = 41^2\\), so this triangle is right and therefore has area \\(\\frac{1}{2} \\cdot 9 \\cdot 40 = 180\\).</p>",
+      "answer": "180"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABC\\) be a triangle, and let \\(M\\) be the midpoint of side \\(AB\\). If \\(AB\\) is 17 units long and \\(CM\\) is 8 units long, find the maximum possible value of the area of \\(ABC\\).</p>",
+      "solutions": "<p>Let \\(h\\) be the length of the altitude from \\(C\\) to \\(AB\\). Observe that \\(K = \\frac{1}{2} \\cdot h \\cdot AB \\le \\frac{1}{2} \\cdot CM \\cdot AB = 68\\) and that equality is achieved when \\(CM \\perp AB\\).</p>",
+      "answer": "68"
+    },
+    "3": {
+      "problem": "<p>Let \\(DEF\\) be a triangle and \\(H\\) the foot of the altitude from \\(D\\) to \\(EF\\). If \\(DE = 60\\), \\(DF = 35\\), and \\(DH = 21\\), what is the difference between the minimum and the maximum possible values for the area of \\(DEF\\)?</p>",
+      "solutions": "<p>Observe that the two possible configurations come from \\(DEF\\) obtuse and \\(DEF\\) acute. In either case, we have that \\(HF = \\sqrt{35^2 - 21^2} = 28\\) and \\(EH = \\sqrt{60^2 - 21^2} = 9\\sqrt{39}\\). This means that \\(HF - EH\\), so in the two cases the values of \\(EF\\) are \\(FH + EH\\) and \\(EH - FH\\). The difference in area is hence \\(\\frac{1}{2} \\cdot 2 \\cdot FH \\cdot DH = 28 \\cdot 21 = 588\\).</p>",
+      "answer": "588"
+    },
+    "4": {
+      "problem": "<p>Right triangle \\(XYZ\\), with hypotenuse \\(YZ\\), has an incircle of radius \\(\\frac{3}{8}\\) and one leg of length 3. Find the area of the triangle.</p>",
+      "solutions": "<p>Let the other leg have length \\(x\\). Then the tangents from \\(Y\\) and \\(Z\\) to the incircle have length \\(x - \\frac{3}{8}\\) and \\(3 - \\frac{3}{8}\\). So the hypotenuse has length \\(x + \\frac{9}{4}\\), the semiperimeter of the triangle is \\(x + \\frac{21}{8}\\), and the area of the triangle is \\(\\frac{3}{8}(x + \\frac{21}{8})\\). But the area can also be calculated as \\(\\frac{3x}{2}\\). Setting these expressions equal, we find \\(x = \\frac{7}{8}\\) and the area is \\(\\frac{21}{16}\\).</p>",
+      "answer": "\\frac{21}{16}"
+    },
+    "5": {
+      "problem": "<p>A triangle has altitudes of length 15, 21, and 35. Find its area.</p>",
+      "solutions": "<p>If \\(A\\) is the area of the triangle, the sides are \\(\\frac{2A}{15}\\), \\(\\frac{2A}{21}\\), and \\(\\frac{2A}{35}\\). So the triangle is similar to a \\(\\frac{1}{15}\\), \\(\\frac{1}{21}\\), \\(\\frac{1}{35}\\) triangle, which is similar to a 3, 5, 7 triangle. Let the sides be \\(3k\\), \\(5k\\), and \\(7k\\). Then the angle between the sides of length \\(3k\\) and \\(7k\\) is \\(120^\\circ\\), so the area is \\(\\frac{15\\sqrt{3}}{4}k^2\\). But the area can also be calculated as \\(\\frac{(3k)(35)}{2} = \\frac{105k}{2}\\). Setting these values equal, \\(k = \\frac{14\\sqrt{3}}{3}\\) and the area is \\(245\\sqrt{3}\\).</p>",
+      "answer": "245\\sqrt{3}"
+    },
+    "6": {
+      "problem": "<h3>Chessboards</h3><p>Joe B. is playing with some chess pieces on a \\(6 \\times 6\\) chessboard. Help him find out some things.</p><p>Joe B. first places the black king in one corner of the board. In how many of the 35 remaining squares can he place a white bishop so that it does not check the black king?</p>",
+      "solutions": "<p>Any square not on the diagonal containing the corner is a possible location, and there are \\(36 - 6 = 30\\) such squares.</p>",
+      "answer": "30"
+    },
+    "7": {
+      "problem": "<p>Joe B. then places a white king in the opposite corner of the board. How many total ways can he place one black bishop and one white bishop so that neither checks the king of the opposite color?</p>",
+      "solutions": "<p>Observe that either both bishops are on the diagonal containing both kings or neither are. If both are on the diagonal, each of the \\(\\binom{4}{2} = 6\\) choices of pairs of squares yields one possible configuration, so there are 6 possibilities in this case. Off the diagonal, any pair of locations works, giving \\(30 \\cdot 29 = 870\\) possibilities in this case. Summing, we obtain \\(870 + 6 = 876\\) total possibilities.</p>",
+      "answer": "876"
+    },
+    "8": {
+      "problem": "<p>Joe B. now clears the board. How many ways can he place 3 white rooks and 3 black rooks on the board so that no two rooks of <b>opposite</b> color can attack each other?</p>",
+      "solutions": "<p>Consider first placing the white rooks. They will occupy either 3 columns and 1 row, 3 columns and 2 rows, 3 columns and 3 rows, 2 rows and 2 columns, 2 columns and 3 rows, or 1 column and 3 rows. First note that placing the black rooks is impossible in the second, third, and fifth cases. The first case can happen in \\(4 \\cdot 4\\) ways, and each leads to a unique way to place the black rooks. In the fourth case, we can choose the row with 2 rooks in 4 ways, place the rooks in \\(\\binom{4}{2}\\) ways, choose the column of the other rook in 2 ways, and place it in 3 ways, for a total of \\(4 \\cdot \\binom{4}{2} \\cdot 2 \\cdot 3 = 144\\) ways to place the white rooks in this configuration; the black rooks can then be placed in any of 4 possible locations, and there are 4 ways to do this, leading to 576 possibilities in this case. Finally, the sixth case is analogous to the first, giving 16 possibilities. Summing, we find \\(16 + 576 + 16 = 608\\) total placements.</p>",
+      "answer": "608"
+    },
+    "9": {
+      "problem": "<p>Joe B. is frustrated with chess. He breaks the board, leaving a \\(4 \\times 4\\) board, and throws 3 black knights and 3 white kings at the board. Miraculously, they all land in distinct squares! What is the expected number of checks in the resulting position? (Note that a knight can administer multiple checks and a king can be checked by multiple knights.)</p>",
+      "solutions": "<p>We first compute the expected number of checks between a single knight-king pair. If the king is located at any of the 4 corners, the knight has 2 possible checks. If the king is located in one of the 8 squares on the side of the board but not in the corner, the knight has 3 possible checks. If the king is located in any of the 4 central squares, the knight has 4 possible checks. Summing up, \\(4 \\cdot 2 + 8 \\cdot 3 + 4 \\cdot 4 = 48\\) of the \\(16 \\cdot 15\\) knight-king positions yield a single check, so each pair yields \\(\\frac{48}{16 \\cdot 15} = \\frac{1}{5}\\) expected checks. Now, note that each of the 9 knight-king pairs is in each of \\(16 \\cdot 15\\) possible positions with equal probability, so by linearity of expectation the answer is \\(9 \\cdot \\frac{1}{5} = \\frac{9}{5}\\).</p>",
+      "answer": "\\frac{9}{5}"
+    },
+    "10": {
+      "problem": "<p>Suppose that at some point Joe B. has placed 2 black knights on the original board, but gets bored of chess. He now decides to cover the 34 remaining squares with 17 dominos so that no two overlap and the dominos cover the entire rest of the board. For how many initial arrangements of the two pieces is this possible?</p>",
+      "solutions": "<p>Color the squares of the board red and blue in a checkerboard pattern, and observe that any domino will cover exactly one red square and one blue square. Therefore, if the two knights cover squares of the same color, this is impossible. We now claim that it is always possible if they cover squares of opposite colors, which will give an answer of \\(18^2 = 324\\). Consider the rectangle \\(R\\) with the knights at its corners. Because the knights cover differently colored squares, \\(R\\) must have one side length odd and one side length even. Therefore, the 4 lines bounding \\(R\\) cut the original board into \\(R\\) and up to 8 other rectangles, which can be put together into rectangles with at least one side even. These rectangles can be tiled, and it is easy to see that \\(R\\) can be tiled, proving the claim.</p>",
+      "answer": "324"
+    }
+  }
+}

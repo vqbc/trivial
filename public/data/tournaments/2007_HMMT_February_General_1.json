@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 1",
+  "year": 2007,
+  "name": "General Test, Part 1",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2007/feb/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Michael has 16 white socks, 3 blue socks, and 6 red socks in a drawer. Ever the lazy college student, he has overslept and is late for his favorite team’s season-opener. Because he is now in such a rush to get from Harvard to Foxborough, he randomly takes socks from the drawer (one at a time) until he has a pair of the same color. What is the largest number of socks he could possibly withdraw in this fashion?</p>",
+      "solutions": "<p>It is possible for him to begin with three socks of different colors, but an instance of the Pigeon Hole Principle is that among any four objects of three types some two are the same type.</p>",
+      "answer": "4"
+    },
+    "2": {
+      "problem": "<p>Rectangle \\(ABCD\\) has side lengths \\(AB = 12\\) and \\(BC = 5\\). Let \\(P\\) and \\(Q\\) denote the midpoints of segments \\(AB\\) and \\(DP\\), respectively. Determine the area of triangle \\(CDQ\\).</p>",
+      "solutions": "<p>Note that \\([CDP] = \\frac{1}{2} \\cdot 5 \\cdot 12 = 30\\), while the area of triangle \\(CDQ\\) is half of the area of triangle \\(CDP\\).</p>",
+      "answer": "15"
+    },
+    "3": {
+      "problem": "<p>\\(A\\), \\(B\\), \\(C\\), and \\(D\\) are points on a circle, and segments \\(\\overline{AC}\\) and \\(\\overline{BD}\\) intersect at \\(P\\), such that \\(AP = 8\\), \\(PC = 1\\), and \\(BD = 6\\). Find \\(BP\\), given that \\(BP &lt; DP\\).</p>",
+      "solutions": "<p>Same as Geometry #2.</p>",
+      "answer": "2"
+    },
+    "4": {
+      "problem": "<p>Let \\(a\\) and \\(b\\) be integer solutions to \\(17a + 6b = 13\\). What is the smallest possible positive value for \\(a - b\\)?</p>",
+      "solutions": "<p>First group as \\(17(a-b) + 23b = 13\\). Taking this equation modulo 23, we get \\(-6(a-b) \\equiv -10 \\pmod{23}\\). Since \\(-4\\) is an inverse of \\(-6\\) modulo 23, then we multiply to get \\((a-b) \\equiv 17 \\pmod{23}\\). Therefore, the smallest possible positive value for \\((a-b)\\) is 17. This can be satisfied by \\(a = 5\\), \\(b = -12\\).</p>",
+      "answer": "17"
+    },
+    "5": {
+      "problem": "<p>Find the smallest positive integer that is twice a perfect square and three times a perfect cube.</p>",
+      "solutions": "<p>Let \\(n\\) be such a number. If \\(n\\) is divisible by 2 and 3 exactly \\(e_2\\) and \\(e_3\\) times, then \\(e_2\\) is odd and a multiple of three, and \\(e_3\\) is even and one more than a multiple of three. The smallest possible exponents are \\(n_2 = 3\\) and \\(n_3 = 4\\). The answer is then \\(2^3 \\cdot 3^4 = 648\\).</p>",
+      "answer": "648"
+    },
+    "6": {
+      "problem": "<p>The positive integer \\(n\\) is such that the numbers \\(2^n\\) and \\(5^n\\) start with the same digit when written in decimal notation; determine this common leading digit.</p>",
+      "solutions": "<p>Note \\(1 = 1^2 &lt; 2^2 &lt; 3^2 &lt; 10 &lt; 4^2 &lt; \\cdots &lt; 9^2 &lt; 10^2 = 100\\). Divide \\(2^n\\) and \\(5^n\\) by 10 repeatedly until each is reduced to a decimal number less than 10 but at least 1; call the resulting numbers \\(x\\) and \\(y\\). Since \\((5^n)(2^n) = 10^n\\), either \\(xy = 1\\) or \\(xy = 10\\). Because \\(2^n\\) and \\(5^n\\) begin with the same digit, \\(x\\) and \\(y\\) are bounded by the same pair of adjacent integers. It follows that either \\(x = y = 1\\) or \\(3 \\le x, y &lt; 4\\). Because \\(n\\) is positive, neither \\(2^n\\) nor \\(5^n\\) is a perfect power of 10, so the former is impossible.</p>",
+      "answer": "3"
+    },
+    "7": {
+      "problem": "<p>Jack, Jill, and John play a game in which each randomly picks and then replaces a card from a standard 52 card deck, until a spades card is drawn. What is the probability that Jill draws the spade? (Jack, Jill, and John draw in that order, and the game repeats if no spade is drawn.)</p>",
+      "solutions": "<p>Same as Combo #3.</p>",
+      "answer": "\\frac{12}{37}"
+    },
+    "8": {
+      "problem": "<p>Determine the largest positive integer \\(n\\) such that there exist positive integers \\(x, y, z\\) so that \\[n^2 = x^2 + y^2 + z^2 + 2xy + 2yz + 2zx + 3x + 3y + 3z - 6\\]</p>",
+      "solutions": "<p>The given equation rewrites as \\(n^2 = (x+y+z+1)^2 + (x+y+z+1) - 8\\). Writing \\(r = x+y+z+1\\), we have \\(n^2 = r^2 + r - 8\\). Clearly, one possibility is \\(n = r = 8\\), which is realized by \\(x = y = 1, z = 6\\). On the other hand, for \\(r &gt; 8\\), we have \\(r^2 &lt; r^2 + r - 8 &lt; (r+1)^2\\).</p>",
+      "answer": "8"
+    },
+    "9": {
+      "problem": "<p>I have four distinct rings that I want to wear on my right hand hand (five distinct fingers.) One of these rings is a Canadian ring that must be worn on a finger by itself, the rest I can arrange however I want. If I have two or more rings on the same finger, then I consider different orders of rings along the same finger to be different arrangements. How many different ways can I wear the rings on my fingers?</p>",
+      "solutions": "<p>First we pick the finger for the Canadian ring. This gives a multiplicative factor of 5. For distributing the remaining 3 rings among 4 fingers, they can either be all on the same finger (\\(4 \\cdot 3!\\) ways), all on different fingers (\\(\\binom{4}{3} \\cdot 3!\\) ways), or two on one finger and one on another (\\(4 \\cdot \\binom{3}{2} \\cdot 2! \\cdot 3\\) ways.) Therefore, I have \\(5 \\cdot (24 + 24 + 72) = 600\\) choices.</p>",
+      "answer": "600"
+    },
+    "10": {
+      "problem": "<p>\\(\\alpha_1, \\alpha_2, \\alpha_3\\), and \\(\\alpha_4\\) are the complex roots of the equation \\(x^4 + 2x^3 + 2 = 0\\). Determine the unordered set \\[\\{\\alpha_1\\alpha_2 + \\alpha_3\\alpha_4, \\alpha_1\\alpha_3 + \\alpha_2\\alpha_4, \\alpha_1\\alpha_4 + \\alpha_2\\alpha_3\\}.\\]</p>",
+      "solutions": "<p>Same as Algebra #9.</p>",
+      "answer": "\\{1 \\pm \\sqrt{5}, -2\\}"
+    }
+  }
+}

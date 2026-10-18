@@ -1,0 +1,173 @@
+{
+  "test": "HMMT November Guts",
+  "year": 2008,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2008/nov/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the sum of all solutions for \\(x\\): \\[\\begin{aligned}\nxy &amp;= 1 \\\\\nx + y &amp;= 3\n\\end{aligned}\\]</p>",
+      "solutions": "<p>Substitute \\(3 - x\\) in for \\(y\\) into the first equation: \\[x(3 - x) = 1 \\iff x^2 - 3x + 1 = 0\\] This equation has two distinct roots, each of which corresponds to a possible solution \\(x\\). The sum of the roots of the quadratic equation \\(ax^2 + bx + c = 0\\) is \\(\\frac{-b}{a}\\), which in this case is 3.</p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>Evaluate the sum \\[1 - 2 + 3 - 4 + \\dots + 2007 - 2008.\\]</p>",
+      "solutions": "<p>Every odd integer term can be paired with the next even integer, and this pair sums to \\(-1\\). There are 1004 such pairs, so the total sum is \\(-1004\\).</p>",
+      "answer": "-1004"
+    },
+    "3": {
+      "problem": "<p>What is the largest \\(x\\) such that \\(x^2\\) divides \\(24 \\cdot 35 \\cdot 46 \\cdot 57\\)?</p>",
+      "solutions": "<p>We factor the product as \\(2^4 \\cdot 3^2 \\cdot 5 \\cdot 7 \\cdot 19 \\cdot 23\\). If \\(x^2\\) divides this product, \\(x\\) can have at most 2 factors of 2, 1 factor of 3, and no factors of any other prime. So \\(2^2 \\cdot 3 = 12\\) is the largest value of \\(x\\).</p>",
+      "answer": "12"
+    },
+    "4": {
+      "problem": "<p>What is the smallest prime divisor of \\(5^{7^{10^{7^{10}}}} + 1\\)?</p>",
+      "solutions": "<p>Notice that 5 to any power is odd, so this number is even. Then 2 is a prime divisor. It also happens to be the smallest prime.</p>",
+      "answer": "2"
+    },
+    "5": {
+      "problem": "<p>What is the sum of all integers \\(x\\) such that \\(|x + 2| \\le 10\\)?</p>",
+      "solutions": "<p>The inequality \\(|x + 2| \\le 10\\) holds if and only if \\(x + 2 \\le 10\\) and \\(x + 2 \\ge -10\\). So \\(x\\) must be in the range \\(-12 \\le x \\le 8\\). If we add up the integers in this range, each positive integer cancels with its additive inverse, so the sum is equal to \\(-12 - 11 - 10 - 9 = -42\\).</p>",
+      "answer": "-42"
+    },
+    "6": {
+      "problem": "<p>Sarah is deciding whether to visit Russia or Washington, DC for the holidays. She makes her decision by rolling a regular 6-sided die. If she gets a 1 or 2, she goes to DC. If she rolls a 3, 4, or 5, she goes to Russia. If she rolls a 6, she rolls again. What is the probability that she goes to DC?</p>",
+      "solutions": "<p>On each roll, the probability that Sarah decides to go to Russia is \\(3/2\\) times the probability she decides to go to DC. So, the total probability that she goes to Russia is \\(3/2\\) times the total probability that she goes to DC. Since these probabilities sum to 1 (they are the only two eventual outcomes) Sarah goes to DC with probability \\(\\frac{2}{5}\\) and Russia with probability \\(\\frac{3}{5}\\).</p>",
+      "answer": "\\frac{2}{5}"
+    },
+    "7": {
+      "problem": "<p>Compute \\(2009^2 - 2008^2\\).</p>",
+      "solutions": "<p>Factoring this product with difference of squares, we find it equals: \\[(2009 + 2008)(2009 - 2008) = (4017)(1) = 4017.\\]</p>",
+      "answer": "4017"
+    },
+    "8": {
+      "problem": "<p>Alice rolls two octahedral dice with the numbers \\(2, 3, 4, 5, 6, 7, 8, 9\\). What’s the probability the two dice sum to 11?</p>",
+      "solutions": "<p>No matter what comes up on the first die, there is exactly one number that could appear on the second die to make the sum 11, because 2 can be paired with 9, 3 with 8, and so on. So, there is a \\(\\frac{1}{8}\\) chance of getting the correct number on the second die.</p>",
+      "answer": "\\frac{1}{8}"
+    },
+    "9": {
+      "problem": "<p>Let \\(a_0 = \\frac{6}{7}\\), and \\[a_{n+1} = \\begin{cases}\n2a_n &amp; \\text{if } a_n &lt; \\frac{1}{2} \\\\\n2a_n - 1 &amp; \\text{if } a_n \\ge \\frac{1}{2}.\n\\end{cases}\\] Find \\(a_{2008}\\).</p>",
+      "solutions": "<p>We calculate the first few \\(a_i\\): \\[a_1 = \\frac{5}{7}, \\quad a_2 = \\frac{3}{7}, \\quad a_3 = \\frac{6}{7} = a_0\\] So this sequence repeats every three terms, so \\(a_{2007} = a_0 = \\frac{6}{7}\\). Then \\(a_{2008} = \\frac{5}{7}\\).</p>",
+      "answer": "\\frac{5}{7}"
+    },
+    "10": {
+      "problem": "<p>Find the sum of all positive integers \\(n\\) such that \\(n\\) divides \\(n^2 + n + 2\\).</p>",
+      "solutions": "<p>Since \\(n\\) always divides \\(n^2 + n\\), the only \\(n\\) that work are divisors of 2, because if \\(n\\) divides \\(a\\) and \\(n\\) divides \\(b\\), then \\(n\\) divides \\(a + b\\). So the solutions are 1 and 2 which sum to 3.</p>",
+      "answer": "3"
+    },
+    "11": {
+      "problem": "<p>Al has a rectangle of integer side lengths \\(a\\) and \\(b\\), and area 1000. What is the smallest perimeter it could have?</p>",
+      "solutions": "<p>To minimize the sum of the side lengths, we need to keep the height and width as close as possible, because the square has the smallest perimeter of all rectangles with a fixed area. So, 40 and 25 multiply to 1000 and are as close as possible - the 40x25 rectangle has perimeter 130.</p>",
+      "answer": "130"
+    },
+    "12": {
+      "problem": "<p>Solve the following system of equations for \\(w\\). \\[\\begin{aligned}\n2w + x + y + z &amp;= 1 \\\\\nw + 2x + y + z &amp;= 2 \\\\\nw + x + 2y + z &amp;= 2 \\\\\nw + x + y + 2z &amp;= 1\n\\end{aligned}\\]</p>",
+      "solutions": "<p>Add all the equations together to find that \\(5x + 5y + 5z + 5w = 6\\), or \\(x + y + z + w = \\frac{6}{5}\\). We can now subtract this equation from the first equation to see that \\(w = -\\frac{1}{5}\\).</p>",
+      "answer": "-\\frac{1}{5}"
+    },
+    "13": {
+      "problem": "<p>Find the number of distinct primes dividing \\(1 \\cdot 2 \\cdot 3 \\cdots 9 \\cdot 10\\).</p>",
+      "solutions": "<p>A prime divides this product if and only if it divides one of the multiplicands, so prime divisors of this product must be less than 10. There are 4 primes less than 10, namely, 2, 3, 5, and 7.</p>",
+      "answer": "4"
+    },
+    "14": {
+      "problem": "<p>You have a \\(2 \\times 3\\) grid filled with integers between 1 and 9. The numbers in each row and column are distinct, the first row sums to 23, and the columns sum to 14, 16, and 17 respectively.</p><div style=\"text-align: center\"><p>\\[\\begin{tabular}{|c|c|c|c|}\n\\hline\n&amp; 14 &amp; 16 &amp; 17 \\\\ \\hline\n23 &amp; $a$ &amp; $b$ &amp; $c$ \\\\ \\hline\n&amp; $x$ &amp; $y$ &amp; $z$ \\\\ \\hline\n\\end{tabular}\\]</p></div><p>What is \\(x + 2y + 3z\\)?</p>",
+      "solutions": "<p>The sum of all 6 numbers is \\(14 + 16 + 17 = 47\\), so \\(x + y + z = 47 - 23 = 24\\). If three distinct digits sum to 24, they must be 7, 8, and 9, because any other triple of digits would have a smaller sum. So, we try placing these digits in for \\(x\\), \\(y\\), and \\(z\\), and the only arrangement that does not force equal digits in any row or column is \\(x = 8, y = 7, z = 9\\). In this case, \\(x + 2y + 3z = 49\\).</p>",
+      "answer": "49"
+    },
+    "15": {
+      "problem": "<p>A cat is going up a stairwell with ten stairs. However, instead of walking up the stairs one at a time, the cat jumps, going either two or three stairs up at each step (though if necessary, it will just walk the last step). How many different ways can the cat go from the bottom to the top?</p>",
+      "solutions": "<p>The number of ways for the cat to get to the \\(i\\)th step is the number of ways for the cat to get to step \\(i - 2\\) plus the number of ways to get to step \\(i - 3\\), because for each way to get to step \\(i\\), we can undo the last move the cat made to go back to one of these two steps. The cat can get to step 1 in 0 ways, to step 2 in 1 way, and to step 3 in 1 way. Now we repeatedly use our formula for calculating the number of ways to get to the \\(i\\)th step to see that the cat gets to:</p><div style=\"text-align: center\"><p>\\[\\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}\n\\emph{Step} &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 \\\\ \\hline\nNumber of ways &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 7\n\\end{tabular}\\]</p></div><p>So our answer is \\(5 + 7 = 12\\).</p>",
+      "answer": "12"
+    },
+    "16": {
+      "problem": "<p>If \\(p\\) and \\(q\\) are positive integers and \\(\\frac{2008}{2009} &lt; \\frac{p}{q} &lt; \\frac{2009}{2010}\\), what is the minimum value of \\(p\\)?</p>",
+      "solutions": "<p>By multiplying out the fraction inequalities, we find that \\(2008q + 1 \\le 2009p\\) and \\(2010p \\le 2009q\\). Adding 2009 times the first inequality to 2008 times the second, we find that \\(2008 \\cdot 2009q + 4017 \\le 2008 \\cdot 2009q + p\\), or \\(p \\ge 4017\\). This minimum is attained when \\(\\frac{p}{q} = \\frac{4017}{4019}\\).</p>",
+      "answer": "4017"
+    },
+    "17": {
+      "problem": "<p>Determine the last two digits of \\(17^{17}\\), written in base 10.</p>",
+      "solutions": "<p>We are asked to find the remainder when \\(17^{17}\\) is divided by 100. Write the power as \\((7 + 10)^{17}\\) and expand with the binomial theorem: \\[(7 + 10)^{17} = 7^{17} + 17 \\cdot 7^{16} \\cdot 10 + \\dots\\] We can ignore terms with more than one factor of 10 because these terms are divisible by 100, so adding them does not change the last two digits. Now, \\(7^4 = 2401\\), which has remainder 1 mod 100, so \\(7^{17}\\) has last two digits 07 and \\(7^{16} \\cdot 10\\) has last two digits 70. We add these together.</p>",
+      "answer": "77"
+    },
+    "18": {
+      "problem": "<p>Find the coefficient of \\(x^6\\) in the expansion of \\[(x + 1)^6 \\cdot \\sum_{i=0}^6 x^i.\\]</p>",
+      "solutions": "<p>Each term of \\((x + 1)^6\\) can be multiplied by a unique power \\(x^i\\), \\(0 \\le i \\le 6\\) to get a sixth degree term. So the answer is the sum of the coefficients of the terms of \\((x + 1)^6\\), which is the same as substituting \\(x = 1\\) into this power to get \\(2^6 = 64\\).</p>",
+      "answer": "64"
+    },
+    "19": {
+      "problem": "<p>Let \\(P\\) be a polynomial with \\(P(1) = P(2) = \\dots = P(2007) = 0\\) and \\(P(0) = 2009!\\). \\(P(x)\\) has leading coefficient 1 and degree 2008. Find the largest root of \\(P(x)\\).</p>",
+      "solutions": "<p>\\(P(0)\\) is the constant term of \\(P(x)\\), which is the product of all the roots of the polynomial, because its degree is even. So the product of all 2008 roots is \\(2009!\\) and the product of the first 2007 is \\(2007!\\), which means the last root is \\(\\frac{2009!}{2007!} = 2009 \\cdot 2008 = 4034072\\).</p>",
+      "answer": "4034072"
+    },
+    "20": {
+      "problem": "<p>You have a die with faces labelled 1 through 6. On each face, you draw an arrow to an adjacent face, such that if you start on a face and follow the arrows, after 6 steps you will have passed through every face once and will be back on your starting face. How many ways are there to draw the arrows so that this is true?</p>",
+      "solutions": "<p>There are 4 choices for where to go from face 1. Consider the 4 faces adjacent to 1. We can visit either 1, 2, or 3 of them before visiting the face opposite 1. If we only visit one of these adjacent faces, we have 4 choices for which one, then we visit face 6, opposite face 1, then we visit the remaining 3 faces in one of two orders - for a total of 8 ways. If we visit 2 adjacent faces first, there is 8 choices for these two faces, then 2 choices for the path back from face 6 to face 1. Lastly, there are 8 ways to visit three of the adjacent faces before visiting the opposite face. These choices give 32 total.</p>",
+      "answer": "32"
+    },
+    "21": {
+      "problem": "<p>Call a number <i>overweight</i> if it has at least three positive integer divisors (including 1 and the number), and call a number <i>obese</i> if it has at least four positive integer divisors (including 1 and the number). How many positive integers between 1 and 200 are overweight, but not obese?</p>",
+      "solutions": "<p>A positive integer is overweight, but not obese, if it has exactly 3 factors - this can only happen if that integer is the square of a prime. (If two primes, \\(p\\) and \\(q\\), divide the number, then \\(p\\), \\(q\\), \\(pq\\), and 1 all divide it, making it at least obese). So, the integers less than 200 which are squares of a prime are the squares of 2, 3, 5, 7, 11, and 13.</p>",
+      "answer": "6"
+    },
+    "22": {
+      "problem": "<p>Sandra the Maverick has 5 pairs of shoes in a drawer, each pair a different color. Every day for 5 days, Sandra takes two shoes out and throws them out the window. If they are the same color, she treats herself to a practice problem from a past HMMT. What is the expected value (average number) of practice problems she gets to do?</p>",
+      "solutions": "<p>On any given day, there is a \\(\\frac{1}{9}\\) chance that the second shoe that Sandra chooses makes a pair with the first shoe she chose. Thus the average number of problems she does in a day is \\(\\frac{1}{9}\\), so, by the linearity of expectation, she does \\(\\frac{5}{9}\\) problems total, on average.</p>",
+      "answer": "\\frac{5}{9}"
+    },
+    "23": {
+      "problem": "<p>If \\(x\\) and \\(y\\) are real numbers such that \\(\\frac{(x-4)^2}{4} + \\frac{y^2}{9} = 1\\), find the largest possible value of \\(\\frac{x^2}{4} + \\frac{y^2}{9}\\).</p>",
+      "solutions": "<p>The first equation is an ellipse with major axis parallel to the y-axis. If the second expression is set equal to a certain value \\(c\\), then it is also the equation of an ellipse with major axis parallel to the y-axis; further, it is similar to the first ellipse. So the largest value of \\(c\\) occurs when both ellipse are tangent on the x-axis, at \\(x = 6, y = 0\\), which gives 9 as the largest value of \\(c\\).</p>",
+      "answer": "9"
+    },
+    "24": {
+      "problem": "<p>Let \\(f(x) = \\frac{1}{1-x}\\). Let \\(f^{k+1}(x) = f(f^k(x))\\), with \\(f^1(x) = f(x)\\). What is \\(f^{2008}(2008)\\)?</p>",
+      "solutions": "<p>Notice that, if \\(x \\ne 0, 1\\), then \\(f^2(x) = \\frac{1}{1-\\frac{1}{1-x}} = \\frac{x-1}{x}\\), which means that \\(f^3(x) = \\frac{1}{1-\\frac{x-1}{x}} = x\\). So \\(f^n\\) is periodic with period \\(n = 3\\), which means that \\(f^{2007}(x) = x\\) so \\(f^{2008}(2008) = f(2008) = -\\frac{1}{2007}\\).</p>",
+      "answer": "-\\frac{1}{2007}"
+    },
+    "25": {
+      "problem": "<p>Evaluate the sum \\[\\cos\\left(\\frac{2\\pi}{18}\\right) + \\cos\\left(\\frac{4\\pi}{18}\\right) + \\dots + \\cos\\left(\\frac{34\\pi}{18}\\right).\\]</p>",
+      "solutions": "<p>If \\(k &lt; 18\\), then we can pair \\(\\cos\\left(\\frac{k\\pi}{18}\\right)\\) with \\(\\cos\\left(\\frac{(18-k)\\pi}{18}\\right)\\), and these two terms sum to 0. If \\(k &gt; 18\\), then the pair \\(\\cos\\left(\\frac{k\\pi}{18}\\right)\\) and \\(\\cos\\left(\\frac{(36-k)\\pi}{18}\\right)\\) also sums to 0. So, the only term in this series that is left over is \\(\\cos\\left(\\frac{18\\pi}{18}\\right) = -1\\).</p>",
+      "answer": "-1"
+    },
+    "26": {
+      "problem": "<p>John M. is sitting at \\((0, 0)\\), looking across the aisle at his friends sitting at \\((i, j)\\) for each \\(1 \\le i \\le 10\\) and \\(0 \\le j \\le 5\\). Unfortunately, John can only see a friend if the line connecting them doesn’t pass through any other friend. How many friends can John see?</p>",
+      "solutions": "<p>The simplest method is to draw a picture and count which friends he can see. John can see the friend on point \\((i, j)\\) if and only if \\(i\\) and \\(j\\) are relatively prime.</p>",
+      "answer": "36"
+    },
+    "27": {
+      "problem": "<p>\\(ABCDE\\) is a regular pentagon inscribed in a circle of radius 1. What is the area of the set of points inside the circle that are farther from \\(A\\) than they are from any other vertex?</p>",
+      "solutions": "<p>Draw the perpendicular bisectors of all the sides and diagonals of the pentagon with one endpoint at \\(A\\). These lines all intersect in the center of the circle, because they are the set of points equidistant from two points on the circle. Now, a given point is farther from \\(A\\) than from point \\(X\\) if it is on the \\(X\\) side of the perpendicular bisector of segment \\(AX\\). So, we want to find the area of the set of all points which are separated from \\(A\\) by all of these perpendicular bisectors, which turns out to be a single \\(72^\\circ\\) sector of the circle, which has area \\(\\frac{\\pi}{5}\\).</p>",
+      "answer": "\\frac{\\pi}{5}"
+    },
+    "28": {
+      "problem": "<p>Johnny the grad student is typing all the integers from 1 to \\(\\infty\\), in order. The 2 on his computer is broken however, so he just skips any number with a 2. What’s the 2008th number he types?</p>",
+      "solutions": "<p>Write 2008 in base 9 as 2671, and interpret the result as a base 10 number such that the base 9 digits \\(2, 3, \\dots, 8\\) correspond to the base 10 digits \\(3, 4, \\dots, 9\\). This gives an answer of 3781.</p>",
+      "answer": "3781"
+    },
+    "29": {
+      "problem": "<p>Let \\(p(x)\\) be the polynomial of degree 4 with roots \\(1, 2, 3, 4\\) and leading coefficient 1. Let \\(q(x)\\) be the polynomial of degree 4 with roots \\(1, \\frac{1}{2}, \\frac{1}{3}\\), and \\(\\frac{1}{4}\\) and leading coefficient 1. Find \\(\\lim_{x\\to 1} \\frac{p(x)}{q(x)}\\).</p>",
+      "solutions": "<p>Consider the polynomial \\(f(x) = x^4 q(\\frac{1}{x})\\) — it has the same roots, 1, 2, 3, and 4, as \\(p(x)\\). But this polynomial also has the same coefficients as \\(q(x)\\), just in reverse order. Its leading coefficient is \\(q(0) = 1 \\cdot \\frac{1}{2} \\cdot \\frac{1}{3} \\cdot \\frac{1}{4} = \\frac{1}{24}\\). So \\(f(x)\\) is \\(p(x)\\) scaled by \\(\\frac{1}{24}\\), which means that \\(p(x)/f(x)\\) goes to 24 as \\(x\\) goes to 1, and \\(f(x)/q(x)\\) goes to \\(-1\\).</p>",
+      "answer": "-24"
+    },
+    "30": {
+      "problem": "<p>Alice has an equilateral triangle \\(ABC\\) of area 1. Put \\(D\\) on \\(BC\\), \\(E\\) on \\(CA\\), and \\(F\\) on \\(AB\\), with \\(BD = DC\\), \\(CE = 2EA\\), and \\(2AF = FB\\). Note that \\(AD, BE\\), and \\(CF\\) pass through a single point \\(M\\). What is the area of triangle \\(EMC\\)?</p>",
+      "solutions": "<p>Triangles \\(ACF\\) and \\(BCF\\) share a height, so the ratio of their areas is \\(AF/BF = 1/2\\). By the same method, the ratio of the areas of \\(AMF\\) and \\(BMF\\) is \\(1/2\\). So, the ratio of the areas of \\(ACM\\) and \\(BCM\\) is also \\(1/2\\). Similarly, the ratio of the areas of \\(ABM\\) and \\(BCM\\) is \\(1/2\\). But the sum of the areas of \\(ACM, BCM\\), and \\(ABM\\) is 1, so the area of \\(ACM\\) is \\(\\frac{1}{4}\\). Then the area of \\(EMC\\) is \\(2/3\\) the area of \\(ACM\\), because they share heights, so their areas are in the same ratio as their bases. The area of \\(EMC\\) is then \\(\\frac{2 \\cdot 1}{3 \\cdot 4} = \\frac{1}{6}\\).</p>",
+      "answer": "\\frac{1}{6}"
+    },
+    "31": {
+      "problem": "<p>Find the sum of all primes \\(p\\) for which there exists a prime \\(q\\) such that \\(p^2 + pq + q^2\\) is a square.</p>",
+      "solutions": "<p>3 and 5 both work, because \\(3^2 + 3 \\cdot 5 + 5^2 = 49\\). Now, say \\(p^2 + pq + q^2 = k^2\\), for a positive integer \\(k\\). Then \\((p + q)^2 - k^2 = pq\\), or: \\[(p + q + k)(p + q - k) = pq\\] Since \\(p + q + k\\) is a divisor of \\(pq\\), and it is greater than \\(p\\) and \\(q\\), \\(p + q + k = pq\\). Then \\(p + q - k = 1\\). So: \\[2p + 2q = pq + 1 \\iff pq - 2p - 2q + 4 = 3 \\iff (p - 2)(q - 2) = 3\\] This shows that one of \\(p\\) and \\(q\\) is 3 and the other is 5.</p>",
+      "answer": "8"
+    },
+    "32": {
+      "problem": "<p>Pirate ships Somy and Lia are having a tough time. At the end of the year, they are both one pillage short of the minimum required for maintaining membership in the Pirate Guild, so they decide to pillage each other to bring their counts up. Somy by tradition only pillages \\(28 \\cdot 3^k\\) coins for integers \\(k\\), and Lia by tradition only pillages \\(82 \\cdot 3^j\\) coins for integers \\(j\\). Note that each pillage can have a different \\(k\\) or \\(j\\). Soma and Lia work out a system where Somy pillages Lia \\(n\\) times, Lia pillages Somy \\(n\\) times, and after both sets of pillages Somy and Lia are financially even.</p><p>What is the smallest \\(n\\) can be?</p>",
+      "solutions": "<p>Clearly, \\(n = 1\\) cannot be achieved, because \\(28 \\cdot 3^k\\) is never a multiple of 82. However, two pillages is enough: Somy pillages 28 and \\(28 \\cdot 81\\) from Lia, and Lia pillages 81 and \\(81 \\cdot 27\\) from Somy. As is easily checked, both pillage \\(28 \\cdot 82\\).</p>",
+      "answer": "2"
+    },
+    "33": {
+      "problem": "<p>The polynomial \\(ax^2 - bx + c\\) has two distinct roots \\(p\\) and \\(q\\), with \\(a, b\\), and \\(c\\) positive integers and with \\(0 &lt; p, q &lt; 1\\). Find the minimum possible value of \\(a\\).</p>",
+      "solutions": "<p>Let \\(x\\) and \\(y\\) be the roots. Then: \\[\\frac{b}{a} = x + y &lt; 2 \\implies b &lt; 2a\\] \\[\\frac{c}{a} = xy &lt; 1 \\implies c &lt; a \\implies a &gt; 1\\] \\[b^2 &gt; 4ac &gt; 4c^2 \\implies b &gt; 2c\\] Evaluated at 1, the polynomial must be greater than 0, so \\(a + c &gt; b\\). Then: \\[2c &lt; b &lt; a + c\\] \\[2c + 1 \\le b \\le a + c - 1\\] \\[a \\ge c + 2 \\ge 3\\] If \\(a = 3\\), then \\(c = 1\\) and \\(b = 3\\), by the above bounds, but this polynomial has complex roots. Similarly, if \\(a = 4\\), then \\(c = 1\\) and \\(b\\) is forced to be either 3 or 4, again giving either 0 or 1 distinct real roots. So \\(a \\ge 5\\). But the polynomial \\(5x^2 - 5x + 1\\) satisfies the condition, so 5 is the answer.</p>",
+      "answer": "5"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2016,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2016/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many ordered triples of integers \\((a, b, c)\\) where \\(1 \\le a, b, c \\le 10\\) are such that for every natural number, the equation \\((a+n)x^2 + (b+2n)x + c + n = 0\\) has at least one real root?</p>",
+      "solutions": "<p>The equation has roots if \\((b+2n)^2 - 4(a+n)(c+n) = b^2 - 4ac + 4n(b-a-c) \\ge 0\\). If \\(b - a - c \\ge 0\\) then \\(b^2 \\ge (a+c)^2 \\ge 4ac\\). If \\(b - a - c &lt; 0\\), then for some large enough \\(n\\), then \\(b^2 - 4ac + 4n(b-a-c) &lt; 0\\). Hence it is enough to find \\(b \\ge a + c\\).</p><p>The number of solutions \\(a + c \\le i\\) is equal to the number of solutions to \\(a' + c' + d' = i - 2\\) where \\(a', c', d' \\ge 0\\) which is \\(\\binom{i}{2} = \\frac{i(i-1)}{2}\\). \\(\\sum_{i=1}^{10} \\frac{i(i-1)}{2} = \\boxed{165}\\).</p>",
+      "answer": "165"
+    },
+    "2": {
+      "problem": "<p>Find the smallest integer \\(n\\) such that we can cut a \\(n \\times n\\) grid into 5 rectangles with distinct side lengths in \\(\\{1, 2, 3 \\ldots, 10\\}\\). Every value is used exactly once.</p>",
+      "solutions": "<p>We can bound the \\(n\\) by using minimum area. So we have \\(1(2) + 3(4) + 5(6) + 7(8) + 9(10) = 190\\) and \\(1(10) + 2(9) + 3(8) + 4(7) + 5(6) = 110\\). So \\(11 \\le n \\le 13\\). Using a rotating flower shape, we can see that \\(\\boxed{11}\\) works.</p>",
+      "answer": "11"
+    },
+    "3": {
+      "problem": "<p>A plane is flying at constant altitude along a circle of radius 12 miles with center at a point \\(A\\). The speed of the aircraft is \\(v\\). At some moment in time, a missile is fired at the aircraft from the point \\(A\\), which has speed \\(v\\) and is guided so that its velocity vector always points towards the aircraft. How far does the missile travel before colliding with the aircraft?</p>",
+      "solutions": "<p>Call the point \\(B\\) the point on the original circle at which the aircraft is positioned when the missile is fired. We claim that the path of the missile is a circle with radius that has \\(AB\\) tangent to it. Let \\(P\\) be some arbitrary point along the path of the aircraft. Call the intersection of \\(PA\\) with the new circle be point \\(M\\). Then \\(\\angle PAB\\) is half the measure of the arc \\(MA\\). Since the missile and aircraft is the same speed, they should travel equal distance in equal times, so \\(PB = AM\\). Since the measure of \\(PB\\) is the measure of \\(\\angle PAB\\), the radius of the smaller circle is half the radius of the larger. Hence the missile travels half the circumference of the circle or \\(\\boxed{6\\pi}\\).</p>",
+      "answer": "6\\pi"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "BMT Algebra",
+  "year": 2018,
+  "name": "Algebra Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2018/ALSP18.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>An airplane accelerates at 10 mph per second, and decelerates at 15 mph/sec. Given that its takeoff speed is 180 mph, and the pilots want enough runway length to safely decelerate to a stop from any speed below takeoff speed, what’s the shortest length that the runway can be allowed to be? Assume the pilots always use maximum acceleration when accelerating. Please give your answer in miles.</p>",
+      "solutions": "<p>In the worst case, where the plane is just shy of takeoff speed before decelerating, the average speed of the plane will be 90 mph. It takes 18 seconds to accelerate all the way, and 12 seconds to decelerate. Therefore, it spends 30 seconds at an average of 90 miles per hour, or \\(\\frac{90}{3600}\\) miles per second, which means that it travels \\(30 \\times \\frac{90}{3600} = \\frac{3}{4}\\) miles in this worst case, so this is our answer.</p>",
+      "answer": "\\frac{3}{4}"
+    },
+    "2": {
+      "problem": "<p>If there is only 1 complex solution to the equation \\[8x^3 + 12x^2 + kx + 1 = 0\\] what is \\(k\\)?</p>",
+      "solutions": "<p>Note that \\(8(x+\\frac{1}{2})^3\\) is equal to the polynomial above. Note that \\(-\\frac{1}{2}\\) must be the root since that is the cube root of \\(-\\frac{1}{8}\\).</p>",
+      "answer": "6"
+    },
+    "3": {
+      "problem": "<p>If \\(f\\) is a polynomial, and \\(f(-2) = 3\\), \\(f(-1) = -3 = f(1)\\), \\(f(2) = 6\\), and \\(f(3) = 5\\), then what is the minimum possible degree of \\(f\\)?</p>",
+      "solutions": "<p>Using the division algorithm, we find that \\[f(x) = (x^2-1)g(x) - 3\\] for some polynomial \\(g\\). It remains to prove that \\(g\\) is a quadratic polynomial. To do this, we see that, plugging in \\(-2, 2\\), and \\(3\\), we have \\[g(2) = 3, g(-2) = 2, g(3) = 1\\] Obviously, \\(g\\) is not constant, and we have \\[\\frac{g(2)-g(-2)}{2-(-2)} = \\frac{1}{4} \\ne -2 = \\frac{g(2)-g(3)}{2-3}\\] so \\(g\\) is not linear either. Therefore, \\(g\\) is quadratic and the answer is \\(\\boxed{4}\\).</p>",
+      "answer": "4"
+    },
+    "4": {
+      "problem": "<p>Find \\[\\sum_{i=1}^{i=2016} i(i+1)(i+2) \\pmod{2018}\\]</p>",
+      "solutions": "<p>Let \\(u_i = i(i+1)(i+2)\\). then \\(iu_{i+1} = (i+3)u_i\\), so \\(iu_{i+1} - (i-1)u_i = 4u_i\\). Summing both sides as \\(i\\) ranges from \\(1\\) to \\(n\\), we have \\[nu_{n+1} = 4\\sum_{i=1}^{i=n} i(i+1)(i+2)\\] Calling the sum (RHS) \\(S_n\\) and putting \\(n = 2016\\), we have \\[S_{2018} = \\frac{2016 \\cdot 2017 \\cdot 2018 \\cdot 2019}{4} = 0 \\pmod{2018}\\]</p>",
+      "answer": "0"
+    },
+    "5": {
+      "problem": "<p>Find the product of all values of \\(d\\) such that \\(x^3 + 2x^2 + 3x + 4 = 0\\) and \\(x^2 + dx + 3 = 0\\) have a common root.</p>",
+      "solutions": "<p><b>Solution 1.</b> If you haven’t encountered the notion of eliminant before, that’s okay. Here’s how you’d proceed: Let \\(x+k\\) be the factor corresponding to a common root. Then \\[x^3+2x^2+3x+4 = (x+k)(x^2+lx+m)\\] \\[x^2+dx+3 = (x+k)(x+n)\\] for some \\(l, m, n\\). Now \\[(x^3+2x^2+3x+4)(x+n) = (x^2+dx+3)(x^2+lx+m)\\] Equate like powers of \\(x\\) to get a system of equations to solve for \\(l,m,n\\); find the determinant of the coefficient matrix of this system, and set it equal to zero. This will give you a polynomial equation in \\(d\\): the constant term divided by the coefficient of the cubic term will yield the required quantity. The determinant turns out to be \\[\\begin{vmatrix} 1 &amp; 0 &amp; 1 &amp; d-2 \\\\ d &amp; 1 &amp; 2 &amp; 0 \\\\ 3 &amp; d &amp; 3 &amp; -4 \\\\ 0 &amp; 3 &amp; 4 &amp; 0 \\end{vmatrix}\\] The cubic term appears only in the term containing the product \\((d)(d)(d-2)\\), hence its coefficient is \\(-4\\). Cofactor-expanding via the last column, we look for terms not containing \\(d\\) to speed up the calculation: we get \\(-(-4)\\begin{vmatrix} 1 &amp; 2 \\\\ 3 &amp; 4 \\end{vmatrix} - (-2)\\left(-3\\begin{vmatrix} 1 &amp; 2 \\\\ 3 &amp; 4 \\end{vmatrix}\\right) = -8 + 12 = 4\\). The answer is thus \\(-4/(-4) = \\boxed{1}\\).</p><p>*Note that there is a way to do this and get a determinant of lower order (cf method of Bezout/Cauchy), but I give what I feel is the intuitively fastest way.</p><p><b>Solution 2.</b> Alternatively, one can use long division to compute that \\[x^3+2x^2+3x+4 = (x+(2-d))(x^2+3x+3)+d(d-2)x+3d-2\\] So they share a root if and only if the root divides \\(d(d-2)x+3d-2\\), or if the root is \\[\\frac{2-3d}{d(d-2)}\\] Plugging that in the quadratic and setting it to 0, we have \\[(2-3d)^2+d^2(2-3d)(d-2)+3d^2(d-2)^2=0\\] Notice that the \\(d^4\\) terms cancel out, and we see that the coefficient of \\(d^3\\) is \\(-4\\) and the constant term is \\(4\\), so the answer is \\(\\frac{4}{4} = \\boxed{1}\\) as desired.</p>",
+      "answer": "1"
+    },
+    "6": {
+      "problem": "<p>Let \\(x, y, z \\in \\mathbb{R}\\) and \\[7x^2 + 7y^2 + 7z^2 + 9xyz = 12\\] The minimum value of \\(x^2 + y^2 + z^2\\) can be expressed as \\(\\frac{a}{b}\\) where \\(a, b \\in \\mathbb{Z}\\), \\(\\gcd(a,b) = 1\\). What is \\(a + b\\)?</p>",
+      "solutions": "<p>First note that \\[7x^2+7y^2+7z^2 = 12-9xyz\\] where the RHS is minimum when \\(xyz\\) is maximum; by AM-GM we know that \\(xyz\\) attains its maximum value when \\(x=y=z\\). Setting \\(x=y=z\\), (and dividing off both sides by a factor of 3) we get \\[3x^3+7x^2-4=0\\] Note that \\(x=-1\\) is a solution. The LHS thus factors: we have \\[(x+1)(x+2)(3x-2)=0\\] Substituting \\(x=y=z=-1, -2, 2/3\\) into \\(x^2+y^2+z^2\\), the minimum value is found to be \\(\\frac{4}{3}\\), so the answer is \\(4+3=\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "7": {
+      "problem": "<p>Let \\[h_n := \\sum_{k=0}^{k=n} \\binom{n}{k} \\frac{2^{k+1}}{k+1}\\] Find \\[\\sum_{n=0}^{\\infty} \\frac{h_n}{n!}.\\]</p>",
+      "solutions": "<p>\\[\\sum_{k=0}^{k=n} \\binom{n}{k}\\frac{2^{k+1}}{k+1} = \\frac{1}{n+1}\\sum_{k=0}^{k=n}\\binom{n+1}{k+1}2^{k+1} = \\frac{3^{n+1}-1}{n+1}\\] \\[\\sum_{n=0}^{\\infty} \\frac{h_n}{n!} = \\sum_{n=0}^{\\infty}\\frac{3^{n+1}}{(n+1)!} - \\sum_{n=0}^{\\infty}\\frac{1}{(n+1)!} = (e^3-1)-(e-1) = e^3-e\\]</p>",
+      "answer": "e^3 - e"
+    },
+    "8": {
+      "problem": "<p>Compute \\[\\sum_{k=1}^{1009} (-1)^{k+1} \\binom{2018-k}{k-1} 2^{2019-2k}\\]</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n\\sum_{k=1}^{[n/2]+1} (-1)^{k+1}\\binom{n-k}{k-1}2^{n-2k+1} &amp;= \\text{coefficient of } x^n \\text{ in } \\sum_{k=1} x^{2k-1}(2x-1)^{n-k} &amp; (1)\\\\\n&amp;= \\text{coefficient of } x^n \\text{ in } \\frac{x(2x-1)^{n-1}}{1-\\frac{x^2}{2x-1}} &amp; (2)\\\\\n&amp;= \\text{coefficient of } x^n \\text{ in } \\frac{-x(2x-1)^n}{(x-1)^2} &amp; (3)\\\\\n&amp;= \\text{coefficient of } x^n \\text{ in } \\frac{-x(x+(x-1))^n}{(x-1)^2} &amp; (4)\\\\\n&amp;= \\text{coefficient of } x^n \\text{ in } n\\frac{x^n}{1-x} &amp; (5)\\\\\n&amp;= n &amp; (6)\n\\end{aligned}\\] Hence, putting \\(n=2018\\), we get \\[\\sum_{k=1}^{1009}(-1)^{k+1}\\binom{2018-k}{k-1}2^{2019-2k} = \\boxed{2018}\\]</p>",
+      "answer": "2018"
+    },
+    "9": {
+      "problem": "<p>Suppose \\[\\frac{1}{3}\\frac{(x+1)(x-3)}{(x+2)(x-4)} + \\frac{1}{4}\\frac{(x+3)(x-5)}{(x+4)(x-6)} - \\frac{2}{11}\\frac{(x+5)(x-7)}{(x+6)(x-8)} = \\frac{53}{132}\\] Also, suppose \\(x &gt; 0\\). Then \\(x\\) can be written as \\(a + \\sqrt{b}\\) where \\(a, b\\) are integers. Find \\(a+b\\).</p>",
+      "solutions": "<p>Put \\(x = y+1\\) and substitute. Then \\[\\frac{1}{3}\\left(\\frac{y^2-4}{y^2-9}\\right) + \\frac{1}{4}\\left(\\frac{y^2-16}{y^2-25}\\right) - \\frac{2}{11}\\left(\\frac{y^2-36}{y^2-49}\\right) = \\frac{53}{132}\\] Also note that \\[\\frac{1}{3} + \\frac{1}{4} - \\frac{2}{11} = \\frac{53}{132}\\] Subtracting the above equations we get \\[\\frac{1}{y^2-9} + \\frac{1}{y^2-25} - \\frac{2}{y^2-49} = 0\\] ie \\[\\left(\\frac{1}{y^2-9} - \\frac{1}{y^2-49}\\right) + \\left(\\frac{1}{y^2-25} - \\frac{1}{y^2-49}\\right) = 0\\] thus \\[\\frac{5}{y^2-9} = \\frac{-3}{y^2-25}\\] \\(\\therefore y^2 = 19\\) so \\(x = 1+\\sqrt{19}\\) (since \\(x&gt;0\\)). Thus \\(a=1, b=19\\), so \\(a+b=\\boxed{20}\\).</p>",
+      "answer": "20"
+    },
+    "10": {
+      "problem": "<p>Let \\(a,b,c\\) be the roots of the equation \\(x^3 - 2018x + 2018 = 0\\). Let \\(q\\) be the smallest positive integer for which there exists an integer \\(p\\), \\(0 &lt; p \\le q\\), such that \\[\\frac{a^{p+q}+b^{p+q}+c^{p+q}}{p+q} = \\left(\\frac{a^p+b^p+c^p}{p}\\right)\\left(\\frac{a^q+b^q+c^q}{q}\\right)\\] Find \\(p^2+q^2\\).</p>",
+      "solutions": "<p>Observe that \\(a+b+c=0\\). Now, we get \\((1+ax)(1+bx)(1+cx) = 1-2018x^2-2018x^3\\). Take (formal) natural log of both sides; expanding as a series and equating coefficients of like powers of \\(x\\), we get \\(-\\frac{a^2+b^2+c^2}{2} = -2018\\), \\(\\frac{a^3+b^3+c^3}{3} = -2018\\), \\(-\\frac{a^4+b^4+c^4}{4} = -\\frac{(2018^2)}{2}\\), and \\(\\frac{a^5+b^5+c^5}{5} = -2018^2\\).</p><p>So we find that the required \\(p, q\\) are \\(2, 3\\). Thus \\(p^2+q^2 = \\boxed{13}\\).</p>",
+      "answer": "13"
+    }
+  }
+}

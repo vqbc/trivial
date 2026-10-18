@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 2",
+  "year": 2008,
+  "name": "Individual Round: General Test, Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2008/feb/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Four students from Harvard, one of them named Jack, and five students from MIT, one of them named Jill, are going to see a Boston Celtics game. However, they found out that only 5 tickets remain, so 4 of them must go back. Suppose that at least one student from each school must go see the game, and at least one of Jack and Jill must go see the game, how many ways are there of choosing which 5 people can see the game?</p>",
+      "solutions": "<p>Let us count the number of ways of distributing the tickets so that one of the conditions is violated. There is 1 way to give all the tickets to MIT students, and \\(\\binom{7}{5}\\) ways to give all the tickets to the 7 students other than Jack and Jill. Therefore, the total number of valid ways is \\(\\binom{9}{5} - 1 - \\binom{7}{5} = 104\\).</p>",
+      "answer": "104"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABC\\) be an equilateral triangle. Let \\(\\Omega\\) be a circle inscribed in \\(ABC\\) and let \\(\\omega\\) be a circle tangent externally to \\(\\Omega\\) as well as to sides \\(AB\\) and \\(AC\\). Determine the ratio of the radius of \\(\\Omega\\) to the radius of \\(\\omega\\).</p>",
+      "solutions": "<p>Same as Geometry Test problem 2.</p>",
+      "answer": "3"
+    },
+    "3": {
+      "problem": "<p>A \\(3\\times 3\\times 3\\) cube composed of 27 unit cubes rests on a horizontal plane. Determine the number of ways of selecting two distinct unit cubes (order is irrelevant) from a \\(3\\times 3\\times 1\\) block with the property that the line joining the centers of the two cubes makes a \\(45^\\circ\\) angle with the horizontal plane.</p>",
+      "solutions": "<p>Same as Combinatorics Test problem 1.</p>",
+      "answer": "60"
+    },
+    "4": {
+      "problem": "<p>Suppose that \\(a,b,c,d\\) are real numbers satisfying \\(a\\ge b\\ge c\\ge d\\ge 0\\), \\(a^2+d^2=1\\), \\(b^2+c^2=1\\), and \\(ac+bd=1/3\\). Find the value of \\(ab-cd\\).</p>",
+      "solutions": "<p>We have \\[(ab-cd)^2 = (a^2+d^2)(b^2+c^2) - (ac+bd)^2 = (1)(1) - \\left(\\frac{1}{3}\\right)^2 = \\frac{8}{9}.\\]</p><p>Since \\(a\\ge b\\ge c\\ge d\\ge 0\\), \\(ab-cd\\ge 0\\), so \\(ab-cd = \\frac{2\\sqrt{2}}{3}\\).</p><p><i>Comment:</i> Another way to solve this problem is to use the trigonometric substitutions \\(a=\\sin\\theta\\), \\(b=\\sin\\phi\\), \\(c=\\cos\\phi\\), \\(d=\\cos\\theta\\).</p>",
+      "answer": "\\frac{2\\sqrt{2}}{3}"
+    },
+    "5": {
+      "problem": "<p>Kermit the frog enjoys hopping around the infinite square grid in his backyard. It takes him 1 Joule of energy to hop one step north or one step south, and 1 Joule of energy to hop one step east or one step west. He wakes up one morning on the grid with 100 Joules of energy, and hops till he falls asleep with 0 energy. How many different places could he have gone to sleep?</p>",
+      "solutions": "<p>Same as Combinatorics Test problem 4.</p>",
+      "answer": "10201"
+    },
+    "6": {
+      "problem": "<p>Determine all real numbers \\(a\\) such that the inequality \\(|x^2+2ax+3a|\\le 2\\) has exactly one solution in \\(x\\).</p>",
+      "solutions": "<p>Same as Algebra Test problem 3.</p>",
+      "answer": "1, 2"
+    },
+    "7": {
+      "problem": "<p>A <i>root of unity</i> is a complex number that is a solution to \\(z^n=1\\) for some positive integer \\(n\\). Determine the number of roots of unity that are also roots of \\(z^2+az+b=0\\) for some integers \\(a\\) and \\(b\\).</p>",
+      "solutions": "<p>Same as Algebra Test problem 6.</p>",
+      "answer": "8"
+    },
+    "8": {
+      "problem": "<p>A piece of paper is folded in half. A second fold is made such that the angle marked below has measure \\(\\phi\\) (\\(0^\\circ &lt; \\phi &lt; 90^\\circ\\)), and a cut is made as shown below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2008_HMMT_February_General_2/8-fig1.png\" width=\"495\" alt=\"\"></p><p>When the piece of paper is unfolded, the resulting hole is a polygon. Let \\(O\\) be one of its vertices. Suppose that all the other vertices of the hole lie on a circle centered at \\(O\\), and also that \\(\\angle XOY = 144^\\circ\\), where \\(X\\) and \\(Y\\) are the the vertices of the hole adjacent to \\(O\\). Find the value(s) of \\(\\phi\\) (in degrees).</p>",
+      "solutions": "<p>Same as Geometry Test problem 5.</p>",
+      "answer": "81^\\circ"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABC\\) be a triangle, and \\(I\\) its incenter. Let the incircle of \\(ABC\\) touch side \\(BC\\) at \\(D\\), and let lines \\(BI\\) and \\(CI\\) meet the circle with diameter \\(AI\\) at points \\(P\\) and \\(Q\\), respectively. Given \\(BI=6, CI=5, DI=3\\), determine the value of \\((DP/DQ)^2\\).</p>",
+      "solutions": "<p>Same as Geometry Test problem 9.</p>",
+      "answer": "\\frac{75}{64}"
+    },
+    "10": {
+      "problem": "<p>Determine the number of 8-tuples of nonnegative integers \\((a_1,a_2,a_3,a_4,b_1,b_2,b_3,b_4)\\) satisfying \\(0\\le a_k\\le k\\), for each \\(k=1,2,3,4\\), and \\(a_1+a_2+a_3+a_4+2b_1+3b_2+4b_3+5b_4=19\\).</p>",
+      "solutions": "<p>Same as Combinatorics Test problem 10.</p>",
+      "answer": "1540"
+    }
+  }
+}

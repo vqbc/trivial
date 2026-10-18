@@ -1,0 +1,173 @@
+{
+  "test": "HMMT November Guts",
+  "year": 2009,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2009/nov/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(f(x) = x/(x + 1)\\), what is \\(f(f(f(f(2009))))\\)?</p>",
+      "solutions": "<p>\\(f(f(x)) = \\frac{(x/(x+1))}{(x/(x+1))+1} = x/(2x + 1)\\), \\(f(f(f(f(x)))) = x/(4x + 1) = \\frac{2009}{8037}\\).</p>",
+      "answer": "\\frac{2009}{8037}"
+    },
+    "2": {
+      "problem": "<p>A knight begins on the lower-left square of a standard chessboard. How many squares could the knight end up at after exactly 2009 legal knight’s moves? (A knight’s move is 2 squares either horizontally or vertically, followed by 1 square in a direction perpendicular to the first.)</p>",
+      "solutions": "<p>The knight goes from a black square to a white square on every move, or vice versa, so after 2009 moves he must be on a square whose color is opposite of what he started on. So he can only land on half the squares after 2009 moves. Note that he can access any of the 32 squares (there are no other parity issues) because any single jump can also be accomplished in 3 jumps, so with 2009 jumps, he can land on any of the squares of the right color.</p>",
+      "answer": "32"
+    },
+    "3": {
+      "problem": "<p>Consider a square, inside which is inscribed a circle, inside which is inscribed a square, inside which is inscribed a circle, and so on, with the outermost square having side length 1. Find the difference between the sum of the areas of the squares and the sum of the areas of the circles.</p>",
+      "solutions": "<div style=\"text-align: center\"><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_November_Guts/3-fig1.png\" width=\"235\" alt=\"\"></p></div><p>The ratio of the area of each square and the circle immediately inside it is \\(\\frac{4}{\\pi}\\). The total sum of the areas of the squares is \\(1 + \\frac{1}{2} + \\frac{1}{4} + \\dots = 2\\). Difference in area is then \\(2 - 2 \\cdot \\frac{\\pi}{4} = 2 - \\frac{\\pi}{2}\\).</p>",
+      "answer": "2 - \\frac{\\pi}{2}"
+    },
+    "4": {
+      "problem": "<p>A cube has side length 1. Find the product of the lengths of the diagonals of this cube (a diagonal is a line between two vertices that is not an edge).</p>",
+      "solutions": "<p>There are 12 diagonals that go along a face and 4 that go through the center of the cube, so the answer is \\(\\sqrt{2}^{12} \\cdot \\sqrt{3}^4 = 576\\).</p>",
+      "answer": "576"
+    },
+    "5": {
+      "problem": "<p>Tanks has a pile of 5 blue cards and 5 red cards. Every morning, he takes a card and throws it down a well. What is the probability that the first card he throws down and the last card he throws down are the same color?</p>",
+      "solutions": "<p>Once he has thrown the first card down the well, there are 9 remaining cards, and only 4 have the same color as the card that was thrown down. Therefore, the probability that the last card he throws down has the same color is \\(\\frac{4}{9}\\).</p>",
+      "answer": "\\frac{4}{9}"
+    },
+    "6": {
+      "problem": "<p>Find the last two digits of \\(1032^{1032}\\). Express your answer as a two-digit number.</p>",
+      "solutions": "<p>The last two digits of \\(1032^{1032}\\) is the same as the last two digits of \\(32^{1032}\\). The last two digits of \\(32^n\\) repeat with a period of four as \\(32, 24, 68, 76, 32, 24, 68, 76, \\dots\\).</p>",
+      "answer": "76"
+    },
+    "7": {
+      "problem": "<p>A <i>computer program</i> is a function that takes in 4 bits, where each bit is either a 0 or a 1, and outputs TRUE or FALSE. How many computer programs are there?</p>",
+      "solutions": "<p>The function has \\(2^4\\) inputs and 2 outputs for each possible input, so the answer is \\(2^{2^4} = 2^{16} = 65536\\).</p>",
+      "answer": "65536"
+    },
+    "8": {
+      "problem": "<p>The angles of a convex \\(n\\)-sided polygon form an arithmetic progression whose common difference (in degrees) is a non-zero integer. Find the largest possible value of \\(n\\) for which this is possible. (A polygon is convex if its interior angles are all less than \\(180^\\circ\\).)</p>",
+      "solutions": "<p>The exterior angles form an arithmetic sequence too (since they are each \\(180^\\circ\\) minus the corresponding interior angle). The sum of this sequence must be \\(360^\\circ\\). Let the smallest exterior angle be \\(x\\) and the common difference be \\(d\\). The sum of the exterior angles is then \\(x + (x + a) + (x + 2a) + \\dots + (x + (n - 1)a) = \\frac{n(n-1)}{2}\\cdot a + nx\\). Setting this to 360, and using \\(nx &gt; 0\\), we get \\(n(n - 1) &lt; 720\\), so \\(n \\le 27\\).</p>",
+      "answer": "27"
+    },
+    "9": {
+      "problem": "<p>Daniel wrote all the positive integers from 1 to \\(n\\) inclusive on a piece of paper. After careful observation, he realized that the sum of all the digits that he wrote was exactly 10,000. Find \\(n\\).</p>",
+      "solutions": "<p>Let \\(S(n)\\) denote the sum of the digits of \\(n\\), and let \\(f(x) = \\sum_{n=0}^x S(n)\\). (We may add \\(n = 0\\) because \\(S(0) = 0\\).) Observe that: \\[f(99) = \\sum_{a=0}^9 \\left(\\sum_{b=0}^9 (a + b)\\right) = 10\\sum_{b=0}^9 b + 10\\sum_{a=0}^9 a = 900\\] If \\(a\\) is an integer between 1 and 9 inclusive, then: \\[\\sum_{n=100a}^{100a+99} S(n) = \\sum_{n=100a}^{100a+99} (a + S(n - 100a)) = 100a + f(99) = 100a + 900\\] Summing, we get: \\[f(100a + 99) = \\sum_{n=0}^a (100a + 900) = 900(a + 1) + 50a(a + 1)\\] This formula can be used to find benchmarks. However, it turns out that this formula alone will suffice, as things turn out rather nicely: \\[\\begin{aligned}\n900(a + 1) + 50a(a + 1) &amp;= 10000 \\\\\n50a^2 + 950a + 900 &amp;= 10000 \\\\\n50a^2 + 950a - 9100 &amp;= 0 \\\\\n50(a + 26)(a - 7) &amp;= 0 \\\\\na &amp;= 7\n\\end{aligned}\\] Therefore \\(f(799) = 10000\\), and our answer is 799.</p>",
+      "answer": "799"
+    },
+    "10": {
+      "problem": "<p>Admiral Ackbar needs to send a 5-character message through hyperspace to the Rebels. Each character is a lowercase letter, and the same letter may appear more than once in a message. When the message is beamed through hyperspace, the characters come out in a random order. Ackbar chooses his message so that the Rebels have at least a \\(\\frac{1}{2}\\) chance of getting the same message he sent. How many distinct messages could he send?</p>",
+      "solutions": "<p>If there is more than one distinct letter sent in the message, then there will be at most a \\(1/5\\) chance of transmitting the right message. So the message must consist of one letter repeated five times, so there are 26 possible messages.</p>",
+      "answer": "26"
+    },
+    "11": {
+      "problem": "<p>Lily and Sarah are playing a game. They each choose a real number at random between -1 and 1. They then add the squares of their numbers together. If the result is greater than or equal to 1, Lily wins, and if the result is less than 1, Sarah wins. What is the probability that Sarah wins?</p>",
+      "solutions": "<p>If we let \\(x\\) denote Lily’s choice of number and \\(y\\) denote Sarah’s, then all possible outcomes are represented by the square with vertices \\((-1, -1)\\), \\((-1, 1)\\), \\((1, -1)\\), and \\((1, 1)\\). Sarah wins if \\(x^2 + y^2 \\le 1\\), which is the area inside the unit circle. Since this has an area of \\(\\pi\\) and the entire square has an area of 4, the probability that Sarah wins is \\(\\frac{\\pi}{4}\\).</p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "12": {
+      "problem": "<p>Let \\(\\omega\\) be a circle of radius 1 centered at \\(O\\). Let \\(B\\) be a point on \\(\\omega\\), and let \\(l\\) be the line tangent to \\(\\omega\\) at \\(B\\). Let \\(A\\) be on \\(l\\) such that \\(\\angle AOB = 60^\\circ\\). Let \\(C\\) be the foot of the perpendicular from \\(B\\) to \\(OA\\). Find the length of line segment \\(OC\\).</p>",
+      "solutions": "<p>We have \\(OC/OB = \\cos(60^\\circ)\\). Since \\(OB = 1\\), \\(OC = \\frac{1}{2}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "13": {
+      "problem": "<p>8 students are practicing for a math contest, and they divide into pairs to take a practice test. In how many ways can they be split up?</p>",
+      "solutions": "<p>We create the pairs one at a time. The first person has 7 possible partners. Set this pair aside. Of the remaining six people, pick a person. He or she has 5 possible partners. Set this pair aside. Of the remaining four people, pick a person. He or she has 3 possible partners. Set this pair aside. Then the last two must be partners. So there are \\(7 \\cdot 5 \\cdot 3 = 105\\) possible groupings. Alternatively, we can consider the \\(8!\\) permutations of the students in a line, where the first two are a pair, the next two are a pair, etc. Given a grouping, there are \\(4!\\) ways to arrange the four pairs in order, and in each pair, 2 ways to order the students. So our answer is \\(\\frac{8!}{4! 2^4} = 7 \\cdot 5 \\cdot 3 = 105\\).</p>",
+      "answer": "105"
+    },
+    "14": {
+      "problem": "<p>Let \\(f(x) = x^4 + ax^3 + bx^2 + cx + d\\) be a polynomial whose roots are all negative integers. If \\(a + b + c + d = 2009\\), find \\(d\\).</p>",
+      "solutions": "<p>Call the roots \\(-x_1, -x_2, -x_3\\), and \\(-x_4\\). Then \\(f(x)\\) must factor as \\((x + x_1)(x + x_2)(x + x_3)(x + x_4)\\). If we evaluate \\(f\\) at 1, we get \\((1 + x_1)(1 + x_2)(1 + x_3)(1 + x_4) = a + b + c + d + 1 = 2009 + 1 = 2010\\). \\(2010 = 2 \\cdot 3 \\cdot 5 \\cdot 67\\). \\(d\\) is the product of the four roots, so \\(d = (-1) \\cdot (-2) \\cdot (-4) \\cdot (-66) = 528\\).</p>",
+      "answer": "528"
+    },
+    "15": {
+      "problem": "<p>The curves \\(x^2 + y^2 = 36\\) and \\(y = x^2 - 7\\) intersect at four points. Find the sum of the squares of the \\(x\\)-coordinates of these points.</p>",
+      "solutions": "<p>If we use the system of equations to solve for \\(y\\), we get \\(y^2 + y - 29 = 0\\) (since \\(x^2 = y + 7\\)). The sum of the roots of this equation is \\(-1\\). Combine this with \\(x^2 = y + 7\\) to see that the sum of the square of the possible values of \\(x\\) is \\(2 \\cdot (-1 + 7 \\cdot 2) = 26\\).</p>",
+      "answer": "26"
+    },
+    "16": {
+      "problem": "<p>Pick a random digit in the decimal expansion of \\(\\frac{1}{99999}\\). What is the probability that it is 0?</p>",
+      "solutions": "<p>The decimal expansion of \\(\\frac{1}{99999}\\) is \\(0.\\overline{00001}\\).</p>",
+      "answer": "\\frac{4}{5}"
+    },
+    "17": {
+      "problem": "<p>A circle passes through the points \\((2, 0)\\) and \\((4, 0)\\) and is tangent to the line \\(y = x\\). Find the sum of all possible values for the \\(y\\)-coordinate of the center of the circle.</p>",
+      "solutions": "<p>First, we see that the \\(x\\) coordinate must be 3. Let the \\(y\\) coordinate be \\(y\\). Now, we see that the radius is \\(r = \\sqrt{1 + y^2}\\). The line from the center of the circle to the point of tangency with the line \\(x = y\\) is perpendicular to the line \\(x = y\\). Hence, the distance from the center of the circle to the line \\(x = y\\) is \\(d = \\sqrt{2}(3 - y)\\). Letting \\(r = d\\) we see that the two possible values for \\(y\\) are 1 and \\(-7\\), which sum to \\(-6\\).</p>",
+      "answer": "-6"
+    },
+    "18": {
+      "problem": "<p>Let \\(f\\) be a function that takes in a triple of integers and outputs a real number. Suppose that \\(f\\) satisfies the equations \\[\\begin{aligned}\nf(a, b, c) &amp;= \\frac{f(a+1, b, c) + f(a-1, b, c)}{2} \\\\\nf(a, b, c) &amp;= \\frac{f(a, b+1, c) + f(a, b-1, c)}{2} \\\\\nf(a, b, c) &amp;= \\frac{f(a, b, c+1) + f(a, b, c-1)}{2}\n\\end{aligned}\\] for all integers \\(a, b, c\\). What is the minimum number of triples at which we need to evaluate \\(f\\) in order to know its value everywhere?</p>",
+      "solutions": "<p>Note that if we have the value of \\(f\\) at the 8 points: \\((0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1), (0, 1, 1), (1, 0, 1), (1, 1, 0), (1, 1, 1)\\), we can calculate the value for any triple of points because we have that \\(f(a+1, b, c) - (a, b, c)\\) constant for any \\(a\\), if \\(b\\) and \\(c\\) are fixed (and similarly for the other coordinates). To see why we cannot do this with less points, notice that we need to determine what the value of these 8 points anyways, and there is no \"more efficient\" way to determine them all in fewer evaluations.</p>",
+      "answer": "8"
+    },
+    "19": {
+      "problem": "<p>You are trapped in ancient Japan, and a giant enemy crab is approaching! You must defeat it by cutting off its two claws and six legs and attacking its weak point for massive damage. You cannot cut off any of its claws until you cut off at least three of its legs, and you cannot attack its weak point until you have cut off all of its claws and legs. In how many ways can you defeat the giant enemy crab? (Note that the legs are distinguishable, as are the claws.)</p>",
+      "solutions": "<p>The answer is given by \\(6! 2! \\binom{5}{2}\\), because we can cut off the claws and legs in any order and there are \\(\\binom{5}{2}\\) ways to decide when to cut off the two claws (since we can do it at any time among the last 5 cuts).</p>",
+      "answer": "14400"
+    },
+    "20": {
+      "problem": "<p>Consider an equilateral triangle and a square both inscribed in a unit circle such that one side of the square is parallel to one side of the triangle. Compute the area of the convex heptagon formed by the vertices of both the triangle and the square.</p>",
+      "solutions": "<div style=\"text-align: center\"><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_November_Guts/20-fig1.png\" width=\"223\" alt=\"\"></p></div><p>Consider the diagram above. We see that the shape is a square plus 3 triangles. The top and bottom triangles have base \\(\\sqrt{2}\\) and height \\(\\frac{1}{2}(\\sqrt{3} - \\sqrt{2})\\), and the triangle on the side has the same base and height \\(1 - \\frac{\\sqrt{2}}{2}\\). Adding their areas, we get the answer.</p>",
+      "answer": "\\frac{3+\\sqrt{3}}{2}"
+    },
+    "21": {
+      "problem": "<p>Let \\(f(x) = x^2 + 2x + 1\\). Let \\(g(x) = f(f(\\cdots f(x)))\\), where there are \\(2009\\) \\(f\\)s in the expression for \\(g(x)\\). Then \\(g(x)\\) can be written as \\[g(x) = x^{2^{2009}} + a_{2^{2009}-1} x^{2^{2009}-1} + \\dots + a_1 x + a_0,\\] where the \\(a_i\\) are constants. Compute \\(a_{2^{2009}-1}\\).</p>",
+      "solutions": "<p>\\(f(x) = (x + 1)^2\\), so \\(f(x^n + cx^{n-1} + \\dots) = (x^n + cx^{n-1} + \\dots + 1)^2 = x^{2n} + 2cx^{2n-1} + \\dots\\). Applying the preceding formula repeatedly shows us that the coefficient of the term of second highest degree in the polynomial doubles each time, so after 2009 applications of \\(f\\) it is \\(2^{2009}\\).</p>",
+      "answer": "2^{2009}"
+    },
+    "22": {
+      "problem": "<p>Five cards labeled A, B, C, D, and E are placed consecutively in a row. How many ways can they be re-arranged so that no card is moved more than one position away from where it started? (Not moving the cards at all counts as a valid re-arrangement.)</p>",
+      "solutions": "<p>The only things we can do is leave cards where they are or switch them with adjacent cards. There is 1 way to leave them all where they are, 4 ways to switch just one adjacent pair, and 3 ways to switch two different adjacent pairs, for 8 possibilities total.</p>",
+      "answer": "8"
+    },
+    "23": {
+      "problem": "<p>Let \\(a_0, a_1, \\dots\\) be a sequence such that \\(a_0 = 3\\), \\(a_1 = 2\\), and \\(a_{n+2} = a_{n+1} + a_n\\) for all \\(n \\ge 0\\). Find \\[\\sum_{n=0}^8 \\frac{a_n}{a_{n+1}a_{n+2}}.\\]</p>",
+      "solutions": "<p>We can re-write \\(\\frac{a_n}{a_{n+1}a_{n+2}}\\) as \\(\\frac{a_{n+2}-a_{n+1}}{a_{n+1}a_{n+2}} = \\frac{1}{a_{n+1}} - \\frac{1}{a_{n+2}}\\). We can thus re-write the sum as \\[\\left(\\frac{1}{a_1} - \\frac{1}{a_2}\\right) + \\left(\\frac{1}{a_2} - \\frac{1}{a_3}\\right) + \\left(\\frac{1}{a_3} - \\frac{1}{a_4}\\right) + \\dots + \\left(\\frac{1}{a_9} - \\frac{1}{a_{10}}\\right) = \\frac{1}{a_1} - \\frac{1}{a_{10}} = \\frac{1}{2} - \\frac{1}{212} = \\frac{105}{212}.\\]</p>",
+      "answer": "\\frac{105}{212}"
+    },
+    "24": {
+      "problem": "<p>Penta chooses 5 of the vertices of a unit cube. What is the maximum possible volume of the figure whose vertices are the 5 chosen points?</p>",
+      "solutions": "<p>Label the vertices of the cube \\(A\\), \\(B\\), \\(C\\), \\(D\\), \\(E\\), \\(F\\), \\(G\\), \\(H\\), such that \\(ABCD\\) is the top face of the cube, \\(E\\) is directly below \\(A\\), \\(F\\) is directly below \\(B\\), \\(G\\) is directly below \\(C\\), and \\(H\\) is directly below \\(D\\). We can obtain a volume of \\(\\frac{1}{2}\\) by taking the vertices \\(A\\), \\(B\\), \\(C\\), \\(F\\), and \\(H\\). To compute the volume of \\(ACBFH\\), we will instead compute the volume of the parts of the cube that are not part of \\(ABCFH\\). This is just the three tetrahedrons \\(CFGH\\), \\(AEFH\\), and \\(ACDH\\), which each have volume \\(\\frac{1}{6}\\) (by using the \\(\\frac{1}{3}bh\\) formula for the area of a pyramid). Therefore, the volume not contained in \\(ACBFH\\) is \\(3 \\cdot \\frac{1}{6} = \\frac{1}{2}\\), so the volume contained in \\(ACBFH\\) is \\(1 - \\frac{1}{2} = \\frac{1}{2}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "25": {
+      "problem": "<p>Find all solutions to \\(x^4 + 2x^3 + 2x^2 + 2x + 1 = 0\\) (including non-real solutions).</p>",
+      "solutions": "<p>We can factor the polynomial as \\((x + 1)^2(x^2 + 1)\\).</p>",
+      "answer": "-1, i, -i"
+    },
+    "26": {
+      "problem": "<p>In how many ways can the positive integers from 1 to 100 be arranged in a circle such that the sum of every two integers placed opposite each other is the same? (Arrangements that are rotations of each other count as the same.) Express your answer in the form \\(a! \\cdot b^c\\).</p>",
+      "solutions": "<p>Split the integers up into pairs of the form \\((x, 101 - x)\\). In the top half of the circle, exactly one element from each pair occurs, and there are thus \\(50!\\) ways to arrange them, and also \\(2^{50}\\) ways to decide whether the larger or smaller number in each pair occurs in the top half of the circle. We then need to divide by 100 since rotations are not considered distinct, so we get \\(\\frac{50! 2^{50}}{100} = 49! \\cdot 2^{49}\\).</p>",
+      "answer": "49! \\cdot 2^{49}"
+    },
+    "27": {
+      "problem": "<p>\\(ABCD\\) is a regular tetrahedron of volume 1. Maria glues regular tetrahedra \\(A'BCD\\), \\(AB'CD\\), \\(ABC'D\\), and \\(ABCD'\\) to the faces of \\(ABCD\\). What is the volume of the tetrahedron \\(A'B'C'D'\\)?</p>",
+      "solutions": "<p>Consider the tetrahedron with vertices at \\(W = (1, 0, 0), X = (0, 1, 0), Y = (0, 0, 1)\\), and \\(Z = (1, 1, 1)\\). This tetrahedron is similar to \\(ABCD\\). It has center \\(O = (\\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2})\\). We can construct a tetrahedron \\(W'X'Y'Z'\\) in the same way that \\(A'B'C'D'\\) was constructed by letting \\(W'\\) be the reflection of \\(W\\) across \\(XYZ\\) and so forth. Then we see that \\(Z' = (-\\frac{1}{3}, -\\frac{1}{3}, -\\frac{1}{3})\\), so \\(OZ'\\) has length \\(\\frac{5}{6}\\sqrt{3}\\), whereas \\(OZ\\) has length \\(\\frac{1}{2}\\sqrt{3}\\). We thus see that \\(W'X'Y'Z'\\) has a side length \\(\\frac{\\frac{5}{6}}{\\frac{1}{2}} = \\frac{5}{3}\\) that of \\(WXYZ\\), so by similarity the same is true of \\(A'B'C'D'\\) and \\(ABCD\\). In particular, the volume of \\(A'B'C'D'\\) is \\(\\left(\\frac{5}{3}\\right)^3\\) that of \\(ABCD\\), so it is \\(\\frac{125}{27}\\).</p>",
+      "answer": "\\frac{125}{27}"
+    },
+    "28": {
+      "problem": "<p>Six men and their wives are sitting at a round table with 12 seats. These men and women are very jealous — no man will allow his wife to sit next to any man except for himself, and no woman will allow her husband to sit next to any woman except for herself. In how many distinct ways can these 12 people be seated such that these conditions are satisfied? (Rotations of a valid seating are considered distinct.)</p>",
+      "solutions": "<p>Think of this problem in terms of “blocks” of men and women, that is, groups of men and women sitting together. Each block must contain at least two people; otherwise you have a man sitting next to two women (or vice-versa).</p><p>We will define the notation \\([a_1, b_1, a_2, b_2, \\dots]\\) to mean a seating arrangement consisting of, going in order, \\(a_1\\) men, \\(b_1\\) women, \\(a_2\\) men, \\(b_2\\) women, and so on.</p><p>Split the problem into three cases, each based on the number of blocks of men and women:</p><p><i>Case 1:</i> One block of each, \\([6, 6]\\).</p><p>There are 12 ways to choose the seats where the men sit, and \\(6!\\) ways to arrange those men. The two women on either side of the men are uniquely determined by the men they sit next to. There are \\(4!\\) ways to arrange the other four women. This gives \\(6! \\cdot 288\\) ways.</p><p><i>Case 2:</i> Two blocks of each.</p><p>The arrangement is \\([a, b, c, d]\\), where \\(a + c = b + d = 6\\). There are five distinct block schematics: \\([2, 2, 4, 4]\\), \\([2, 3, 4, 3]\\), \\([2, 4, 4, 2]\\), \\([3, 2, 3, 4]\\), and \\([3, 3, 3, 3]\\). (The others are rotations of one of the above.)</p><p>For each of these, there are \\(6!\\) ways to arrange the men. In addition, four women are uniquely determined because they sit next to a man. There are 2 ways to arrange the other two women. Each of the first four possible block schematics gives 12 distinct rotations, while the fifth one gives 6. This gives \\(6!(2)(12 + 12 + 12 + 12 + 6) = 6! \\cdot 108\\) ways.</p><p><i>Case 3:</i> Three blocks of each, \\([2, 2, 2, 2, 2, 2]\\).</p><p>There are 4 ways to choose where the men sit and \\(6!\\) ways to arrange those men. Each placement of men will uniquely determine the placement of each women. This gives \\(6! \\cdot 4\\) ways.</p><p>Then we have a grand total of \\(6! \\cdot (288 + 108 + 4) = 6! \\cdot 400 = 288000\\) seating arrangements.</p>",
+      "answer": "288000"
+    },
+    "29": {
+      "problem": "<p>For how many integer values of \\(b\\) does there exist a polynomial function with integer coefficients such that \\(f(2) = 2010\\) and \\(f(b) = 8\\)?</p>",
+      "solutions": "<p>We can take \\(f(x) = -\\frac{2002}{d}(x - b) + 2010\\) for all divisors \\(d\\) of \\(-2002\\). To see that we can’t get any others, note that \\(b - 2\\) must divide \\(f(b) - f(2)\\), so \\(b - 2\\) divides \\(-2002\\) (this is because \\(b - 2\\) divides \\(b^n - 2^n\\) and hence any sum of numbers of the form \\(b^n - 2^n\\)).</p>",
+      "answer": "32"
+    },
+    "30": {
+      "problem": "<p>Regular hexagon \\(ABCDEF\\) has side length 2. A laser beam is fired inside the hexagon from point \\(A\\) and hits \\(\\overline{BC}\\) at point \\(G\\). The laser then reflects off \\(\\overline{BC}\\) and hits the midpoint of \\(\\overline{DE}\\). Find \\(BG\\).</p>",
+      "solutions": "<div style=\"text-align: center\"><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_November_Guts/30-fig1.png\" width=\"422\" alt=\"\"></p></div><p>Look at the diagram below, in which points \\(J, K, M, T\\), and \\(X\\) have been defined. \\(M\\) is the midpoint of \\(\\overline{DE}\\), \\(BCJK\\) is a rhombus with \\(J\\) lying on the extension of \\(\\overline{CD}\\), \\(T\\) is the intersection of lines \\(CD\\) and \\(GM\\) when extended, and \\(X\\) is on \\(\\overline{JT}\\) such that \\(\\overline{XM} \\parallel \\overline{JK}\\).</p><p>It can be shown that \\(m\\angle MDX = m\\angle MXD = 60^\\circ\\), so \\(\\triangle DMX\\) is equilateral, which yields \\(XM = 1\\). The diagram indicates that \\(JX = 5\\). One can show by angle-angle similarity that \\(\\triangle TXM \\sim \\triangle TJK\\), which yields \\(TX = 5\\).</p><p>One can also show by angle-angle similarity that \\(\\triangle TJK \\sim \\triangle TCG\\), which yields the proportion \\(\\frac{TJ}{JK} = \\frac{TC}{CG}\\). We know everything except \\(CG\\), which we can solve for. This yields \\(CG = \\frac{8}{5}\\), so \\(BG = \\frac{2}{5}\\).</p>",
+      "answer": "\\frac{2}{5}"
+    },
+    "31": {
+      "problem": "<p>There are two buildings facing each other, each 5 stories high. How many ways can Kevin string ziplines between the buildings so that:</p><ul style=\"list-style-type: none\"><li>(a) each zipline starts and ends in the middle of a floor.</li><li>(b) ziplines can go up, stay flat, or go down, but can’t touch each other (this includes touching at their endpoints).</li></ul><p>Note that you can’t string a zipline between two floors of the same building.</p>",
+      "solutions": "<p>Associate with each configuration of ziplines a path in the plane as follows: Suppose there are \\(k\\) ziplines. Let \\(a_0, \\dots, a_k\\) be the distances between consecutive ziplines on the left building (\\(a_0\\) is the floor on which the first zipline starts, and \\(a_k\\) is the distance from the last zipline to the top of the building). Define \\(b_0, \\dots, b_k\\) analogously for the right building. The path in the plane consists of starting at \\((0, 0)\\) and going a distance \\(a_0\\) to the right, \\(b_0\\) up, \\(a_1\\) to the right, \\(b_1\\) up, etc. We thus go from \\((0, 0)\\) to \\((5, 5)\\) while traveling only up and to the right between integer coordinates. We can check that there is exactly one configuration of ziplines for each such path, so the answer is the number of paths from \\((0, 0)\\) to \\((5, 5)\\) where you only travel up and to the right. This is equal to \\(\\binom{10}{5} = 252\\), since there are 10 total steps to make, and we must choose which 5 of them go to the right.</p>",
+      "answer": "252"
+    },
+    "32": {
+      "problem": "<p>A circle \\(\\omega_1\\) of radius 15 intersects a circle \\(\\omega_2\\) of radius 13 at points \\(P\\) and \\(Q\\). Point \\(A\\) is on line \\(PQ\\) such that \\(P\\) is between \\(A\\) and \\(Q\\). \\(R\\) and \\(S\\) are the points of tangency from \\(A\\) to \\(\\omega_1\\) and \\(\\omega_2\\), respectively, such that the line \\(AS\\) does not intersect \\(\\omega_1\\) and the line \\(AR\\) does not intersect \\(\\omega_2\\). If \\(PQ = 24\\) and \\(\\angle RAS\\) has a measure of \\(90^\\circ\\), compute the length of \\(AR\\).</p>",
+      "solutions": "<p>Let \\(O_1\\) be the center of \\(\\omega_1\\) and \\(O_2\\) be the center of \\(\\omega_2\\). Then \\(O_1 O_2\\) and \\(PQ\\) are perpendicular. Let their point of intersection be \\(X\\). Using the Pythagorean theorem, the fact that \\(PQ = 24\\), and our knowledge of the radii of the circles, we can compute that \\(O_1 X = 9\\) and \\(O_2 X = 5\\), so \\(O_1 O_2 = 14\\). Let \\(SO_1\\) and \\(RO_2\\) meet at \\(Y\\). Then \\(SARY\\) is a square, say of side length \\(s\\). Then \\(O_1 Y = s - 15\\) and \\(O_2 Y = s - 13\\). So, \\(O_1 O_2 Y\\) is a right triangle with sides 14, \\(s - 15\\), and \\(s - 13\\). By the Pythagorean theorem, \\((s - 13)^2 + (s - 15)^2 = 14^2\\). We can write this as \\(2s^2 - 4 \\cdot 14s + 198 = 0\\), or \\(s^2 - 28s + 99 = 0\\). The quadratic formula then gives \\(s = \\frac{28 \\pm \\sqrt{388}}{2} = 14 \\pm \\sqrt{97}\\). Since \\(14 - \\sqrt{97} &lt; 15\\) and \\(Y O_1 &gt; 15\\), we can discard the root of \\(14 - \\sqrt{97}\\), and the answer is therefore \\(14 + \\sqrt{97}\\).</p>",
+      "answer": "14 + \\sqrt{97}"
+    },
+    "33": {
+      "problem": "<p>Compute \\[\\sum_{n=2009}^\\infty \\frac{1}{\\binom{n}{2009}}.\\] Note that \\(\\binom{n}{k}\\) is defined as \\(\\frac{n!}{k!(n-k)!}\\).</p>",
+      "solutions": "<p>Observe that \\[\\begin{aligned}\n\\frac{k+1}{k}\\left(\\frac{1}{\\binom{n-1}{k}} - \\frac{1}{\\binom{n}{k}}\\right) &amp;= \\frac{k+1}{k} \\frac{\\binom{n}{k} - \\binom{n-1}{k}}{\\binom{n}{k}\\binom{n-1}{k}} \\\\\n&amp;= \\frac{k+1}{k} \\frac{\\binom{n-1}{k-1}}{\\binom{n}{k}\\binom{n-1}{k}} \\\\\n&amp;= \\frac{k+1}{k} \\frac{(n-1)! k! k! (n-k-1)! (n-k)!}{n! (n-1)! (k-1)! (n-k)!} \\\\\n&amp;= \\frac{k+1}{k} \\frac{k \\cdot k! (n-k-1)!}{n!} \\\\\n&amp;= \\frac{(k+1)!(n-k-1)!}{n!} \\\\\n&amp;= \\frac{1}{\\binom{n}{k+1}}\n\\end{aligned}\\] Now apply this with \\(k = 2008\\) and sum across all \\(n\\) from 2009 to \\(\\infty\\). We get \\[\\sum_{n=2009}^\\infty \\frac{1}{\\binom{n}{2009}} = \\frac{2009}{2008} \\sum_{n=2009}^\\infty \\left(\\frac{1}{\\binom{n-1}{2008}} - \\frac{1}{\\binom{n}{2008}}\\right).\\] All terms from the sum on the right-hand-side cancel, except for the initial \\(\\frac{1}{\\binom{2008}{2008}}\\), which is equal to 1, so we get \\(\\sum_{n=2009}^\\infty \\frac{1}{\\binom{n}{2009}} = \\frac{2009}{2008}\\).</p>",
+      "answer": "\\frac{2009}{2008}"
+    }
+  }
+}

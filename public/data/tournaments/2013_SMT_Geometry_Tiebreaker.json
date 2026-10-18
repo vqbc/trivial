@@ -1,0 +1,23 @@
+{
+  "test": "SMT Geometry Tiebreaker",
+  "year": 2013,
+  "name": "Geometry Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2013/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A circle of radius 2 is inscribed in equilateral triangle \\(ABC\\). The altitude from \\(A\\) to \\(BC\\) intersects the circle at a point \\(D\\) not on \\(BC\\). \\(BD\\) intersects the circle at a point \\(E\\) distinct from \\(D\\). Find the length of \\(BE\\).</p>",
+      "solutions": "<p>We can find the side length of the triangle as follows: Since the triangle is equilateral, the segment from the center of the circle to a vertex (say \\(A\\)) bisects the angle. Also, the segment from the center to an adjacent point of tangency (say the perpendicular to \\(AC\\)) creates a right angle. So we get a 30-60-90 triangle, which tells us that the side length of the triangle is \\(4\\sqrt{3}\\).</p><p>Next, we call the point of intersection of \\(AD\\) and \\(BC\\) point \\(F\\). Consider triangle \\(DBF\\). Using the Pythagorean theorem, \\(BD = 2\\sqrt{7}\\). By power of a point, \\(BE \\cdot BD = BF^2\\). So \\(BE = \\frac{BF^2}{BD} = \\frac{12}{2\\sqrt{7}} = \\boxed{\\frac{6}{\\sqrt{7}}}\\).</p>",
+      "answer": "\\frac{6}{\\sqrt{7}}"
+    },
+    "2": {
+      "problem": "<p>Points \\(A\\), \\(B\\), and \\(C\\) lie on a circle of radius 5 such that \\(AB = 6\\) and \\(AC = 8\\). Find the smaller of the two possible values of \\(BC\\).</p>",
+      "solutions": "<p>Fix segment \\(AB\\), and let \\(C\\) and \\(D\\) be the two points on the circle 8 units from \\(A\\), where \\(C\\) is closer to \\(B\\) than \\(D\\). Observe that \\(BD\\) is a diameter (and hence \\(BD = 10\\)) because a 6-8-10 inscribed right triangle must be possible.</p><p>Next, we see that \\(CD\\) can be calculated by drawing the diameter that goes through \\(A\\), intersecting the opposite side of the circle at point \\(E\\). Note that \\(CD \\perp AE\\). Moreover, \\(ACE\\) and \\(ADE\\) are right, since they are inscribed in semicircles, and \\(EC = ED = 6\\) by the Pythagorean Theorem.</p><p>Computing the area of quadrilateral \\(ACED\\) two different ways, we get \\[\\frac{1}{2} \\cdot AE \\cdot CD = 5 \\cdot CD = \\frac{1}{2} \\cdot AC \\cdot CE + \\frac{1}{2} \\cdot AD \\cdot DE = 48 \\implies CD = \\frac{48}{5}.\\]</p><p>Finally, since \\(BCD\\) is a right triangle with \\(CD = \\left(\\frac{2}{5}\\right)24\\) and \\(BD = \\left(\\frac{2}{5}\\right)25\\), we conclude that \\[BC = \\left(\\frac{2}{5}\\right)7 = \\boxed{\\frac{14}{5}}.\\]</p>",
+      "answer": "\\frac{14}{5}"
+    },
+    "3": {
+      "problem": "<p>In quadrilateral \\(ABCD\\), diagonals \\(AC\\) and \\(BD\\) intersect at \\(E\\). If \\(AB = BE = 5\\), \\(EC = CD = 7\\), and \\(BC = 11\\), compute \\(AE\\).</p>",
+      "solutions": "<p><b>Solution 1.</b> First, notice that length \\(AE\\) is completely determined by the fact that \\(AB = BE\\) and by the lengths of \\(AB\\), \\(BC\\) and \\(EC\\). Thus, we only consider the triangle \\(ABC\\). First, drop altitude \\(BH\\) and note that since \\(ABE\\) is isoceles, \\(EH = \\frac{1}{2}AE\\). Now, using Pythagoras twice, we have \\[\\begin{aligned}\nBH^2 &amp;= 5^2 - EH^2 \\\\\nBH^2 &amp;= 11^2 - (7+EH)^2.\n\\end{aligned}\\] Setting these two equations to be equal, we can thus solve the equation \\(25 = 72 - 14EH\\).</p><p>Therefore, \\(AE = 2EH = \\boxed{\\frac{47}{7}}\\).</p><p><b>Solution 2.</b> Since \\(\\angle AEB \\cong \\angle DEC\\), we have \\(\\triangle AEB \\sim \\triangle DEC\\) by SAS. Hence, \\(\\frac{AE}{DE} = \\frac{BE}{CE} \\implies \\frac{AE}{BE} = \\frac{DE}{CE}\\). Additionally, \\(\\angle BEC \\cong \\angle AED\\), so \\(\\triangle BEC \\sim \\triangle AED\\) by SAS again.</p><p>Now, we do some angle-chasing. Since \\(\\angle BAE \\cong \\angle CDE\\) and \\(\\angle EAD \\cong \\angle EBC\\), \\(\\angle ABC\\) and \\(\\angle ADC\\) are supplementary. Hence, \\(ABCD\\) is cyclic.</p><p>Let \\(AE = 5x\\), so \\(DE = 7x\\) since \\(\\frac{AE}{DE} = \\frac{BE}{CE} = \\frac{5}{7}\\). Also, note that \\(AD = x \\cdot BC = 11x\\) because \\(\\frac{AD}{BC} = \\frac{AE}{BE} = \\frac{5x}{5} = x\\).</p><p>Now, Ptolemy’s Theorem gives us \\[\\begin{aligned}\n5 \\cdot 7 + 11 \\cdot 11x &amp;= (5x+7)(7x+5) \\\\\n\\implies 121x + 35 &amp;= 35x^2 + 74x + 35 \\\\\n\\implies 121x &amp;= 35x^2 + 74x \\\\\n\\implies 47x &amp;= 35x^2 \\\\\n\\implies x &amp;= \\frac{47}{35}\n\\end{aligned}\\] because \\(x &gt; 0\\).</p><p>Hence, report \\(5x = \\boxed{\\frac{47}{7}}\\).</p>",
+      "answer": "\\frac{47}{7}"
+    }
+  }
+}

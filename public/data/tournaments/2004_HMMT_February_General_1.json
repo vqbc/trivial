@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 1",
+  "year": 2004,
+  "name": "Individual Round: General Test, Part 1",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2004/feb/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>There are 1000 rooms in a row along a long corridor. Initially the first room contains 1000 people and the remaining rooms are empty. Each minute, the following happens: for each room containing more than one person, someone in that room decides it is too crowded and moves to the next room. All these movements are simultaneous (so nobody moves more than once within a minute). After one hour, how many different rooms will have people in them?</p>",
+      "solutions": "<p>We can prove by induction on \\(n\\) that the following pattern holds for \\(0 \\le n \\le 499\\): after \\(2n\\) minutes, the first room contains \\(1000-2n\\) people and the next \\(n\\) rooms each contain 2 people, and after \\(2n+1\\) minutes, the first room contains \\(1000-(2n+1)\\) people, the next \\(n\\) rooms each contain 2 people, and the next room after that contains 1 person. So, after 60 minutes, we have one room with 940 people and 30 rooms with 2 people each.</p>",
+      "answer": "31"
+    },
+    "2": {
+      "problem": "<p>What is the largest whole number that is equal to the product of its digits?</p>",
+      "solutions": "<p>Suppose the number \\(n\\) has \\(k+1\\) digits, the first of which is \\(d\\). Then the number is at least \\(d \\cdot 10^k\\). On the other hand, each of the digits after the first is at most 9, so the product of the digits is at most \\(d \\cdot 9^k\\). Thus, if \\(n\\) equals the product of its digits, then \\[d \\cdot 10^k \\le n \\le d \\cdot 9^k\\] which forces \\(k=0\\), i.e., the number has only one digit. So \\(n=9\\) is clearly the largest possible value.</p>",
+      "answer": "9"
+    },
+    "3": {
+      "problem": "<p>Suppose \\(f\\) is a function that assigns to each real number \\(x\\) a value \\(f(x)\\), and suppose the equation \\[f(x_1+x_2+x_3+x_4+x_5) = f(x_1)+f(x_2)+f(x_3)+f(x_4)+f(x_5) - 8\\] holds for all real numbers \\(x_1, x_2, x_3, x_4, x_5\\). What is \\(f(0)\\)?</p>",
+      "solutions": "<p>Plug in \\(x_1=x_2=x_3=x_4=x_5=0\\). Then the equation reads \\(f(0) = 5f(0) - 8\\), so \\(4f(0)=8\\), so \\(f(0)=2\\).</p>",
+      "answer": "2"
+    },
+    "4": {
+      "problem": "<p>How many ways can you mark 8 squares of an \\(8 \\times 8\\) chessboard so that no two marked squares are in the same row or column, and none of the four corner squares is marked? (Rotations and reflections are considered different.)</p>",
+      "solutions": "<p>In the top row, you can mark any of the 6 squares that is not a corner. In the bottom row, you can then mark any of the 5 squares that is not a corner and not in the same column as the square just marked. Then, in the second row, you have 6 choices for a square not in the same column as either of the two squares already marked; then there are 5 choices remaining for the third row, and so on down to 1 for the seventh row, in which you make the last mark. Thus, altogether, there are \\(6 \\cdot 5 \\cdot (6 \\cdot 5 \\cdots 1) = 30 \\cdot 6! = 30 \\cdot 720 = 21600\\) possible sets of squares.</p>",
+      "answer": "21600"
+    },
+    "5": {
+      "problem": "<p>A rectangle has perimeter 10 and diagonal \\(\\sqrt{15}\\). What is its area?</p>",
+      "solutions": "<p>If the sides are \\(x\\) and \\(y\\), we have \\(2x+2y=10\\), so \\(x+y=5\\), and \\(\\sqrt{x^2+y^2}=\\sqrt{15}\\), so \\(x^2+y^2=15\\). Squaring the first equation gives \\(x^2+2xy+y^2=25\\), and subtracting the second equation gives \\(2xy=10\\), so the area is \\(xy=5\\).</p>",
+      "answer": "5"
+    },
+    "6": {
+      "problem": "<p>Find the ordered quadruple of digits \\((A, B, C, D)\\), with \\(A &gt; B &gt; C &gt; D\\), such that \\[\\begin{array}{r}\nABCD \\\\\n-\\ DCBA \\\\\n=\\ BDAC\n\\end{array}\\]</p>",
+      "solutions": "<p>Since \\(D &lt; A\\), when \\(A\\) is subtracted from \\(D\\) in the ones’ column, there will be a borrow from \\(C\\) in the tens’ column. Thus, \\(D+10-A=C\\). Next, consider the subtraction in the tens’ column, \\((C-1)-B\\). Since \\(C&lt;B\\), there will be a borrow from the hundreds’ column, so \\((C-1+10)-B=A\\). In the hundreds’ column, \\(B-1 \\ge C\\), so we do not need to borrow from \\(A\\) in the thousands’ column. Thus, \\((B-1)-C=D\\) and \\(A-D=B\\). We thus have a system of four equations in four variables \\(A, B, C, D\\), and solving by standard methods (e.g. substitution) produces \\((A, B, C, D) = (7, 6, 4, 1)\\).</p>",
+      "answer": "(7, 6, 4, 1)"
+    },
+    "7": {
+      "problem": "<p>Let \\(ACE\\) be a triangle with a point \\(B\\) on segment \\(AC\\) and a point \\(D\\) on segment \\(CE\\) such that \\(BD\\) is parallel to \\(AE\\). A point \\(Y\\) is chosen on segment \\(AE\\), and segment \\(CY\\) is drawn. Let \\(X\\) be the intersection of \\(CY\\) and \\(BD\\). If \\(CX=5\\), \\(XY=3\\), what is the ratio of the area of trapezoid \\(ABDE\\) to the area of triangle \\(BCD\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_General_1/7-fig1.png\" width=\"175\" alt=\"\"></p>",
+      "solutions": "<p>Draw the altitude from \\(C\\) to \\(AE\\), intersecting line \\(BD\\) at \\(K\\) and line \\(AE\\) at \\(L\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_General_1/7-fig2.png\" width=\"175\" alt=\"\"></p><p>Then \\(CK\\) is the altitude of triangle \\(BCD\\), so triangles \\(CKX\\) and \\(CLY\\) are similar. Since \\(CY/CX = 8/5\\), \\(CL/CK = 8/5\\). Also triangles \\(CKB\\) and \\(CLA\\) are similar, so that \\(CA/CB = 8/5\\), and triangles \\(BCD\\) and \\(ACE\\) are similar, so that \\(AE/BD = 8/5\\). The area of \\(ACE\\) is \\((1/2)(AE)(CL)\\), and the area of \\(BCD\\) is \\((1/2)(BD)(CK)\\), so the ratio of the area of \\(ACE\\) to the area of \\(BCD\\) is \\(64/25\\). Therefore, the ratio of the area of \\(ABDE\\) to the area of \\(BCD\\) is \\(39/25\\).</p>",
+      "answer": "\\frac{39}{25}"
+    },
+    "8": {
+      "problem": "<p>You have a \\(10 \\times 10\\) grid of squares. You write a number in each square as follows: you write \\(1, 2, 3, \\ldots, 10\\) from left to right across the top row, then \\(11, 12, \\ldots, 20\\) across the second row, and so on, ending with a 100 in the bottom right square. You then write a second number in each square, writing \\(1, 2, \\ldots, 10\\) in the first column (from top to bottom), then \\(11, 12, \\ldots, 20\\) in the second column, and so forth.</p><p>When this process is finished, how many squares will have the property that their two numbers sum to 101?</p>",
+      "solutions": "<p>The number in the \\(i\\)th row, \\(j\\)th column will receive the numbers \\(10(i-1)+j\\) and \\(10(j-1)+i\\), so the question is how many pairs \\((i,j)\\) \\((1 \\le i,j \\le 10)\\) will have \\[101 = [10(i-1)+j]+[10(j-1)+i] \\iff 121 = 11i+11j = 11(i+j).\\] Now it is clear that this is achieved by the ten pairs \\((1,10), (2,9), (3,8), \\ldots, (10,1)\\) and no others.</p>",
+      "answer": "10"
+    },
+    "9": {
+      "problem": "<p>Urn \\(A\\) contains 4 white balls and 2 red balls. Urn \\(B\\) contains 3 red balls and 3 black balls. An urn is randomly selected, and then a ball inside of that urn is removed. We then repeat the process of selecting an urn and drawing out a ball, without returning the first ball. What is the probability that the first ball drawn was red, given that the second ball drawn was black?</p>",
+      "solutions": "<p>This is a case of conditional probability; the answer is the probability that the first ball is red and the second ball is black, divided by the probability that the second ball is black.</p><p>First, we compute the numerator. If the first ball is drawn from Urn \\(A\\), we have a probability of \\(2/6\\) of getting a red ball, then a probability of \\(1/2\\) of drawing the second ball from Urn \\(B\\), and a further probability of \\(3/6\\) of drawing a black ball. If the first ball is drawn from Urn \\(B\\), we have probability \\(3/6\\) of getting a red ball, then \\(1/2\\) of drawing the second ball from Urn \\(B\\), and \\(3/5\\) of getting a black ball. So our numerator is \\[\\frac{1}{2}\\left(\\frac{2}{6}\\cdot\\frac{1}{2}\\cdot\\frac{3}{6} + \\frac{3}{6}\\cdot\\frac{1}{2}\\cdot\\frac{3}{5}\\right) = \\frac{7}{60}.\\]</p><p>We similarly compute the denominator: if the first ball is drawn from Urn \\(A\\), we have a probability of \\(1/2\\) of drawing the second ball from Urn \\(B\\), and \\(3/6\\) of drawing a black ball. If the first ball is drawn from Urn \\(B\\), then we have probability \\(3/6\\) that it is red, in which case the second ball will be black with probability \\((1/2)\\cdot(3/5)\\), and probability \\(3/6\\) that the first ball is black, in which case the second is black with probability \\((1/2)\\cdot(2/5)\\). So overall, our denominator is \\[\\frac{1}{2}\\left(\\frac{1}{2}\\cdot\\frac{3}{6} + \\frac{3}{6}\\left[\\frac{1}{2}\\cdot\\frac{3}{5}+\\frac{1}{2}\\cdot\\frac{2}{5}\\right]\\right) = \\frac{1}{4}.\\]</p><p>Thus, the desired conditional probability is \\((7/60)/(1/4) = 7/15\\).</p>",
+      "answer": "\\frac{7}{15}"
+    },
+    "10": {
+      "problem": "<p>A floor is tiled with equilateral triangles of side length 1, as shown. If you drop a needle of length 2 somewhere on the floor, what is the largest number of triangles it could end up intersecting? (Only count the triangles whose interiors are met by the needle – touching along edges or at corners doesn’t qualify.)</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_General_1/10-fig1.png\" width=\"287\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(L\\) be the union of all the lines of the tiling. Imagine walking from one end of the needle to the other. We enter a new triangle precisely when we cross one of the lines of the tiling. Therefore, the problem is equivalent to maximizing the number of times the needle crosses \\(L\\). Now, the lines of the tiling each run in one of three directions. It is clear that the needle cannot cross more than three lines in any given direction, since the lines are a distance \\(\\sqrt{3}/2\\) apart and the needle would therefore have to be of length greater than \\(3\\sqrt{3}/2 &gt; 2\\). Moreover, it cannot cross three lines in each of two different directions. To see this, notice that its endpoints would have to lie in either the two light-shaded regions or the two dark-shaded regions shown, but the closest two points of such opposite regions are at a distance of 2 (twice the length of a side of a triangle), so the needle cannot penetrate both regions.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_General_1/10-fig2.png\" width=\"249\" alt=\"\"></p><p>Therefore, the needle can cross at most three lines in one direction and two lines in each of the other two directions, making for a maximum of \\(3+2+2=7\\) crossings and \\(7+1=8\\) triangles intersected. The example shows that 8 is achievable, as long as the needle has length greater than \\(\\sqrt{3}&lt;2\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_General_1/10-fig3.png\" width=\"187\" alt=\"\"></p>",
+      "answer": "8"
+    }
+  }
+}

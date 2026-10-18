@@ -1,0 +1,23 @@
+{
+  "test": "SMT Geometry Tiebreaker",
+  "year": 2018,
+  "name": "Geometry Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2018/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Point \\(E\\) is on side \\(CD\\) of rectangle \\(ABCD\\) such that \\(\\frac{CE}{DE} = \\frac{2}{5}\\). If the area of triangle \\(BCE\\) is 30, what is the area of rectangle \\(ABCD\\)?</p>",
+      "solutions": "<p>Since \\(\\frac{CE}{DE} = \\frac{2}{5}\\), let \\(CE = 2x\\) and \\(DE = 5x\\). Because the area of \\(BCE\\) is 30, we have \\[\\frac{2x \\cdot BC}{2} = x \\cdot BC = 30.\\]</p><p>The area of rectangle \\(ABCD\\) is therefore \\[CD \\cdot BC = (DE + CE) \\cdot BC = 7x \\cdot BC = 7 \\cdot 30 = \\boxed{210}.\\]</p>",
+      "answer": "210"
+    },
+    "2": {
+      "problem": "<p>What is the largest possible height of a right cylinder with radius 3 that can fit in a cube with side length 12?</p>",
+      "solutions": "<p>The height of the largest cylinder is maximized when we place the cylinder along the space diagonal of the cube. Consider the cross section obtained by taking the plane containing the points where the top of the cylinder hits cube. This gives us an equilateral triangle with a circle of radius 3 inscribed. It follows that the distance from the incenter to a vertex is 6 and the side length of the triangle is \\(6\\sqrt{3}\\).</p><p>Next, consider the pyramid that is chopped off of the cube when we take this cross section. Note that the bottom face is the equilateral triangle of side length \\(6\\sqrt{3}\\) and the other three faces are 45-45-90 triangles. The legs of these triangles have side length \\(\\frac{6\\sqrt{3}}{\\sqrt{2}} = 3\\sqrt{6}\\). We then can calculate the height of the triangle to the bottom face using the Pythagorean Theorem: \\(\\sqrt{(3\\sqrt{6})^2 - 6^2} = \\sqrt{54-36} = 3\\sqrt{2}\\).</p><p>Finally, note that the bottom of the cylinder is symmetrical, so the height of the cylinder can be obtained by subtracting twice the height of the pyramid from the space diagonal, giving us an answer is \\(\\boxed{12\\sqrt{3} - 6\\sqrt{2}}\\).</p>",
+      "answer": "12\\sqrt{3} - 6\\sqrt{2}"
+    },
+    "3": {
+      "problem": "<p>A triangle has side lengths of 7, 8, and 9. Find the radius of the largest possible semicircle inscribed in the triangle.</p>",
+      "solutions": "<p>We first find the area of the triangle using Heron’s formula. The semiperimeter \\(s\\) is \\(s = \\frac{7+8+9}{2} = 12\\), which gives us \\[A = \\sqrt{12(12-7)(12-8)(12-9)} = 12\\sqrt{5}.\\]</p><p>Since the triangle is acute, an inscribed semicircle with a diameter on a side of the triangle will lie tangent to the other two sides. Therefore, the sides will be perpendicular to the radius of the semicircle. Thus, the original triangle can therefore be split into two smaller triangles with bases \\(s_1, s_2\\) and height \\(r\\) where \\(s_1, s_2\\) are two of the sides of the triangle and \\(r\\) is the radius of the semicircle. Recalculating the area of the triangle in this manner gives us \\[A = \\frac{r}{2}(s_1+s_2) = 12\\sqrt{5}.\\]</p><p>The radius is maximized when \\(s_1+s_2\\) is minimized, which occurs when \\(s_1+s_2 = 7+8=15\\).</p><p>Plugging this in and solving for \\(r\\) gives us the answer \\(r = \\boxed{\\frac{8\\sqrt{5}}{5}}\\).</p>",
+      "answer": "\\frac{8\\sqrt{5}}{5}"
+    }
+  }
+}

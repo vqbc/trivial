@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Combinatorics B",
+  "year": 2007,
+  "name": "Combinatorics B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2007_CombinatoricsB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Bob and Bill’s history class has 32 people in it, but only 30 people are allowed per class. Two people will be randomly selected for transfer to a random one of two history classes. What is the probability that Bob and Bill are both transferred, and that they are placed in the same class? Write your answer as a fraction in lowest terms.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>In how many distinguishable ways can 10 distinct pool balls be formed into a pyramid (6 on the bottom, 3 in the middle, one on top), assuming that all rotations of the pyramid are indistinguishable?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>An \\(80 \\times 80\\) grid is colored orange and black. A square is black if and only if either the square below it or the square to the left of it is black, but not both (If there is no such square, consider it as if it were orange). The only exception is the bottom left square, which is black. Consider the diagonal from the upper left to the lower right. How many black squares does this diagonal have?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>A cube is formed from \\(n^3\\) (\\(n \\ge 2\\)) unit cubes, each painted white on five randomly selected sides. This cube is dipped into paint remover and broken into the original unit cubes. What is the expected number of these unit cubes with exactly four sides painted white?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Find the sum of all three digit numbers (written in base 10) such that the leading digit is the sum of other two digits. Express your answer in base 10.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Take the square with vertices \\((0,0)\\), \\((1,0)\\), \\((0,1)\\), and \\((1,1)\\). Choose a random point in this square and draw the line segment from it to \\((0,0)\\). Choose a second random point in this square and draw the line segment from it to \\((1,0)\\). What is the probability that the two line segments intersect?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Tom is searching for the 6 books he needs in a random pile of 30 books. What is the expected number of books must he examine before finding all 6 books he needs?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Find the minimum number \\(n\\) such that for any coloring of the integers from 1 to \\(n\\) into two colors, one can find monochromatic \\(a\\), \\(b\\), \\(c\\), and \\(d\\) (not necessarily distinct) such that \\(a + b + c = d\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>How many subsets of \\(\\{1, 2, \\ldots, 10\\}\\) are there that don’t contain 2 consecutive integers?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Bob, having little else to do, rolls a fair 6-sided die until the sum of his rolls is greater than or equal to 700. What is the expected number of rolls needed? Any answer within .0001 of the correct answer will be accepted.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

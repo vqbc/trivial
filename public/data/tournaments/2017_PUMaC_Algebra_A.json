@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Algebra A",
+  "year": 2017,
+  "name": "Algebra A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2017_Algebra_A.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(a \\diamond b = ab - 4(a+b) + 20\\). Evaluate \\[1 \\diamond (2 \\diamond (3 \\diamond (\\cdots (99 \\diamond 100) \\cdots))).\\]</p>",
+      "solutions": "<p>Note that \\(a \\diamond b = (a-4)(b-4)+4\\), so \\(4 \\diamond b = a \\diamond 4 = 4\\) for any \\(a, b\\). Since a 4 appears in the expression, the answer is \\(\\boxed{4}\\).</p>",
+      "answer": "4"
+    },
+    "2": {
+      "problem": "<p>Suppose \\(z^3 = 2+2i\\), where \\(i = \\sqrt{-1}\\). The product of all possible values of the real part of \\(z\\) can be written in the form \\(\\frac{p}{q}\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p+q\\).</p>",
+      "solutions": "<p>Let \\(w = z + \\overline{z}\\). Then, we have \\[w^3 = (z+\\overline{z})^3 = z^3 + 3z\\overline{z}(z+\\overline{z}) + \\overline{z}^3 = (2+2i) + 3|z|^2 w + (2-2i) = 4 + 6w,\\] so the product of all possible values of \\(w\\) is 4. Since the real part of \\(z\\) is \\(\\frac{w}{2}\\), the answer is \\(\\frac{1}{2}\\), which gives \\(\\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "3": {
+      "problem": "<p>Let \\(\\Gamma\\) be the maximum possible value of \\(a+3b+9c\\) among all triples \\((a,b,c)\\) of positive real numbers such that \\[\\log_{30}(a+b+c) = \\log_8(3a) = \\log_{27}(3b) = \\log_{125}(3c).\\] If \\(\\Gamma = \\frac{p}{q}\\) where \\(p\\) and \\(q\\) are relatively prime positive integers, then find \\(p+q\\).</p>",
+      "solutions": "<p>Suppose \\[\\log_{30}(a+b+c) = \\log_8(3a) = \\log_{27}(3b) = \\log_{125}(3c) = x\\] for some \\(x\\), so \\(2^x 3^x 5^x = a+b+c\\), \\(2^{3x} = 3a\\), \\(3^{3x} = 3b\\), and \\(5^{3x} = 3c\\). Then, \\[(a+b+c)^3 = 2^{3x}3^{3x}5^{3x} = 27abc,\\] so equality holds in AM-GM, so \\(a=b=c=\\frac{1}{3}\\). Therefore, the maximum possible value of \\(a+3b+9c\\) is the only possible value, which is \\(\\frac{1}{3}+1+3=\\frac{13}{3}\\), making our final answer \\(\\boxed{16}\\).</p>",
+      "answer": "16"
+    },
+    "4": {
+      "problem": "<p>Let \\(a_1, a_2, \\ldots\\) be a sequence of <b>positive</b> real numbers such that \\(a_n = 11a_{n-1} - n\\) for all \\(n&gt;1\\). The smallest possible value of \\(a_1\\) can be written as \\(\\frac{p}{q}\\), where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p+q\\)?</p>",
+      "solutions": "<p>Let \\(b_n = a_{n+1} - a_n\\). Then, we have \\[\\begin{aligned}\nb_n &amp;= 10a_n - (n+1) \\\\\n&amp;= 10(11a_{n-1}-n) - (n+1) \\\\\n&amp;= 11(10a_{n-1}-n) - 1 \\\\\n&amp;= 11b_{n-1} - 1.\n\\end{aligned}\\] Therefore, if \\(b_1 &lt; \\frac{1}{10}\\), then the sequence \\(b_1, b_2, \\ldots\\) is decreasing, and in fact becomes arbitrarily small, which means that the sequence \\(a_1, a_2, \\ldots\\) becomes arbitrarily small as well. Therefore, \\(b_1 \\ge \\frac{1}{10}\\), so we have \\(a_2 - a_1 \\ge \\frac{1}{10}\\), or equivalently \\(a_1 \\ge \\frac{21}{100}\\). Since the sequence \\(a_1, a_2, \\ldots\\) is increasing if \\(a_1 = \\frac{21}{100}\\) (because \\(b_n = \\frac{1}{10}\\) for all \\(n\\)), our answer is \\(\\boxed{121}\\).</p>",
+      "answer": "121"
+    },
+    "5": {
+      "problem": "<p>Let \\(f_0(x) = x\\), and for each \\(n \\ge 0\\), let \\(f_{n+1}(x) = f_n(x^2(3-2x))\\). Find the smallest real number that is at least as large as \\[\\sum_{n=0}^{2017} f_n(a) + \\sum_{n=0}^{2017} f_n(1-a)\\] for all \\(a \\in [0,1]\\).</p>",
+      "solutions": "<p>If \\(a+b=1\\), then \\(a^3+b^3 = a^2-ab+b^2\\) and \\(a^2+2ab+b^2=1\\), so \\[a^2(3-2a) + b^2(3-2b) = a^2 + 2(a^2+b^2-(a^3+b^3)) + b^2 = a^2+2ab+b^2 = 1.\\] Therefore, by induction, \\(f_n(a) + f_n(b) = 1\\) for all \\(n\\), so the sum is always \\(\\boxed{2018}\\).</p>",
+      "answer": "2018"
+    },
+    "6": {
+      "problem": "<p>Together, Kenneth and Ellen pick a real number \\(a\\). Kenneth subtracts \\(a\\) from every thousandth root of unity (that is, the thousand complex numbers \\(\\omega\\) for which \\(\\omega^{1000}=1\\)) then inverts each, then sums the results. Ellen inverts every thousandth root of unity, then subtracts \\(a\\) from each, and then sums the results. They are surprised to find that they actually got the same answer! How many possible values of \\(a\\) are there?</p>",
+      "solutions": "<p>Let \\(\\xi\\) be a primitive thousandth root of unity, meaning 1000 is the least positive integer \\(n\\) for which \\(\\xi^n=1\\), so that \\(\\{\\xi^k \\mid 0 \\le k &lt; 1000\\}\\) are the thousand thousandth roots of unity. Then, Kenneth’s answer is \\[\\sum_{k=0}^{999} \\frac{1}{\\xi^k - a} = \\frac{-1000a^{999}}{a^{1000}-1}\\] because \\(\\{\\xi^k - a \\mid 0 \\le k &lt; 1000\\}\\) is the set of roots of the polynomial \\((x+a)^{1000}-1\\). Similarly, Ellen’s answer is \\[\\sum_{k=0}^{999} \\left(\\frac{1}{\\xi^k} - a\\right) = -1000a,\\] because \\(\\{\\xi^k \\mid 0 \\le k &lt; 1000\\}\\) is the set of roots of the polynomial \\(x^{1000}-1\\). These answers are equal iff \\[a^{1001} - a^{999} - a = 0.\\] By Descartes’ rule of signs, this equation has one positive solution and one negative solution. Since \\(0\\) is also a solution, there are \\(\\boxed{3}\\) possible real values of \\(a\\).</p><p><i>Note: The use of the word “surprised” in the problem statement led to the interpretation that \\(a=0\\) would not be a possible value, as the outcome would certainly not be surprising in that instance. Therefore, \\(2\\) was also accepted for this problem.</i></p>",
+      "answer": "3"
+    },
+    "7": {
+      "problem": "<p>The sum \\[\\sum_{k=0}^{\\infty} \\frac{2^k}{5^{2^k}+1}\\] can be written in the form \\(\\frac{p}{q}\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p+q\\).</p>",
+      "solutions": "<p>Let \\(\\Xi = \\sum_{k=0}^{\\infty} \\frac{2^k}{5^{2^k}+1}\\). Note that \\[\\frac{2^k}{5^{2^k}+1} = \\frac{2^k}{5^{2^k}} \\cdot \\frac{1}{1+5^{-2^k}} = \\sum_{n=0}^{\\infty} (-1)^n \\frac{2^k}{5^{(n+1)2^k}}.\\] Therefore, we have \\[\\Xi = \\sum_{k=0}^{\\infty} \\sum_{n=0}^{\\infty} \\frac{2^k}{5^{(n+1)2^k}} = \\sum_{N=1}^{\\infty} \\frac{1}{5^N} \\sum_{N=(n+1)2^k} (-1)^n 2^k.\\] Given any \\(N \\in \\mathbb{N}\\), let \\(N = a2^m\\) where \\(a\\) and \\(m\\) are non-negative integers and \\(a\\) is odd. Then, for fixed \\(N\\), we have \\[\\sum_{N=(n+1)2^k} (-1)^n 2^k = \\sum_{k=0}^{m} (-1)^{a2^{m-k}-1} 2^k = 2^m - \\sum_{k=0}^{m-1} 2^k = 1.\\] Therefore, \\[\\Xi = \\sum_{N=1}^{\\infty} \\frac{1}{5^N} = \\frac{1}{4},\\] giving us an answer of \\(\\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "8": {
+      "problem": "<p>Let \\[\\frac{p}{q} = \\cfrac{2017}{2 - \\cfrac{1}{3 - \\cfrac{2}{2 - \\cfrac{1}{2 - \\cfrac{1}{3 - \\cfrac{2}{2 - \\cfrac{1}{2 - \\cfrac{1}{2 - \\cfrac{2}{3 - \\cfrac{1}{2 - \\cdots}}}}}}}}}}\\] where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p+q\\).</p>",
+      "solutions": "<p>Let \\(a_1, a_2, a_3, \\ldots\\) be a sequence of real numbers, and define the sequence \\(b_0, b_1, b_2, \\ldots\\) of real numbers inductively by \\(b_0 = 1\\) and \\(b_n = a_n b_{n-1}\\) for all \\(n &gt; 0\\). We will show by induction on \\(N\\) that \\[\\sum_{n=0}^{N} b_n = \\left\\langle \\frac{1}{1}, \\frac{-a_1}{1+a_1}, \\ldots, \\frac{-a_N}{1+a_N} \\right\\rangle,\\] where \\(\\langle \\cdot \\rangle\\) denotes a continued fraction, e.g. \\[\\left\\langle \\frac{1}{2}, \\frac{-3}{4}, \\frac{5}{6} \\right\\rangle = \\cfrac{1}{2 + \\cfrac{-3}{4 + \\cfrac{5}{6}}}.\\]</p><p>If \\(N=0\\), then the result is clear, so we may assume \\(N&gt;0\\). Define the sequence \\(c_0, c_1, c_2, \\ldots\\) inductively by \\(c_0=1\\) and \\(c_n = a_{n+1}c_{n-1}\\) for all \\(n&gt;0\\). By the inductive hypothesis, we may assume that \\[\\sum_{n=0}^{N-1} c_n = \\left\\langle \\frac{1}{1}, \\frac{-a_2}{1+a_2}, \\ldots, \\frac{-a_N}{1+a_N} \\right\\rangle.\\] Let \\[x = \\left\\langle \\frac{-a_2}{1+a_2}, \\ldots, \\frac{-a_N}{1+a_N} \\right\\rangle,\\] so that \\[\\begin{aligned}\n\\sum_{n=0}^{N} b_n &amp;= 1 + a_1 \\sum_{n=0}^{N-1} c_n \\\\\n&amp;= 1 + \\frac{a_1}{1+x} \\\\\n&amp;= \\frac{1}{1 - \\frac{a_1}{1+a_1+x}} \\\\\n&amp;= \\left\\langle \\frac{1}{1}, \\frac{-a_1}{1+a_1}, \\ldots, \\frac{-a_N}{1+a_N} \\right\\rangle,\n\\end{aligned}\\] as claimed.</p><p>Therefore, when \\(\\sum_{n \\ge 0} b_n\\) converges, the infinite continued fraction (taking \\(N \\to \\infty\\)) is well-defined. Now, we can write \\[\\frac{1}{1-\\frac{p}{2017q}} = \\left\\langle \\frac{1}{1}, \\frac{-1}{2}, \\frac{-1}{3}, \\frac{-2}{2}, \\frac{-1}{2}, \\frac{-1}{3}, \\frac{-2}{2}, \\frac{-1}{2}, \\frac{-1}{2}, \\frac{-2}{3}, \\frac{-1}{2}, \\ldots \\right\\rangle = \\left\\langle \\frac{1}{1}, \\frac{-1}{2}, \\frac{-1/2}{3/2}, \\frac{-1}{2}, \\frac{-1}{2}, \\frac{-1/2}{3/2}, \\frac{-1}{2}, \\frac{-1}{2}, \\frac{-1}{2}, \\frac{-1/2}{3/2}, \\frac{-1}{2}, \\ldots \\right\\rangle,\\] so the corresponding sequence is \\(\\{a_n\\}_{n&gt;0} = [1, 1/2, 1, 1, 1/2, 1, 1, 1, 1/2, 1, 1, \\ldots]\\) and \\[\\sum_{n=0}^{N} b_n = \\frac{2}{1} + \\frac{3}{2} + \\frac{4}{4} + \\frac{5}{8} + \\frac{6}{16} + \\ldots = 6.\\] We then find \\[\\frac{p}{2017q} = \\frac{5}{6} \\longrightarrow p+q = \\boxed{10091}.\\]</p>",
+      "answer": "10091"
+    }
+  }
+}

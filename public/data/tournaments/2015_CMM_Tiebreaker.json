@@ -1,0 +1,28 @@
+{
+  "test": "CMM Tiebreaker",
+  "year": 2015,
+  "name": "Tiebreaker Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_a2b4772f11194cf8a10e79dcb0156c12.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Call a positive integer \\(x\\) <i>\\(n\\)-cube-invariant</i> if the last \\(n\\) digits of \\(x\\) are equal to the last \\(n\\) digits of \\(x^3\\). For example, \\(1\\) is \\(n\\)-cube invariant for any integer \\(n\\). How many \\(2015\\)-cube-invariant numbers \\(x\\) are there such that \\(x &lt; 10^{2015}\\)?</p>",
+      "solutions": "<p>\\(14\\). The equation \\(x \\equiv x^3 \\pmod{10^n}\\) implies \\(10^n \\mid x(x-1)(x+1)\\), and then the Chinese remainder theorem gives you \\(3\\) possible values mod \\(5^n\\) but \\(5\\) possible values mod \\(2^n\\) – in particular, the nontrivial ones mod \\(2^n\\) are \\(2^{n-1} \\pm 1\\).</p>",
+      "answer": "14"
+    },
+    "2": {
+      "problem": "<p>Let \\(a_1 = 1, a_2 = 1\\), and for \\(n \\ge 2\\), let \\[a_{n+1} = \\frac{1}{n} a_n + a_{n-1}\\] What is \\(a_{12}\\)?</p>",
+      "solutions": "<p>\\(\\frac{693}{256}\\). This would normally be a very difficult problem, but trying out the first few terms gives \\(a_3 = 3/2, a_4 = 3/2, a_5 = 15/8, a_6 = 15/8\\). If we suppose \\(a_{2k} = a_{2k-1}\\), then we get \\[a_{2k+1} = \\frac{2k+1}{2k} a_{2k-1}\\] \\[a_{2k+2} = \\frac{1}{2k+1} a_{2k+1} + a_{2k-1} = \\frac{2k+1}{2k} a_{2k-1} = a_{2k+1}\\] Which confirms that the trend holds forever. Also, we now get that \\(a_{12} = a_{11} = \\frac{3 \\cdot 5 \\cdot 7 \\cdot 9 \\cdot 11}{2 \\cdot 4 \\cdot 6 \\cdot 8 \\cdot 10} = \\frac{693}{256}\\).</p>",
+      "answer": "\\frac{693}{256}"
+    },
+    "3": {
+      "problem": "<p>Define an <i>\\(n\\)-digit pair cycle</i> to be a number with \\(n^2 + 1\\) digits between \\(1\\) and \\(n\\) with every possible pair of consecutive digits. For instance, \\(11221\\) is a \\(2\\)-digit pair cycle since it contains the consecutive digits \\(11, 12, 22\\), and \\(21\\). How many \\(3\\)-digit pair cycles exist?</p>",
+      "solutions": "<p>\\(216\\).</p><p>Every number from \\(1\\) to \\(n\\) must appear \\(n\\) times (excluding the last digit) in order for each consecutive pair to appear. The first time the digit appears, it can be followed by any of the \\(n\\) other numbers. The next time, there are only \\(n-1\\) choices, and so on. Therefore, for each number, there are \\(n!\\) choices, independent of how the other numbers are chosen. Multiplying gives \\((n!)^n\\) total combinations, or \\(6^3 = \\mathbf{216}\\) in our case.</p>",
+      "answer": "216"
+    },
+    "4": {
+      "problem": "<p>The following number is the product of the divisors of \\(n\\). \\[46{,}656{,}000{,}000\\] What is \\(n\\)?</p>",
+      "solutions": "<p>\\(60\\). In general, the product of the divisors of \\(n\\) is \\(n^{\\#\\text{ of divisors of } n}\\). \\(60\\) has \\(12\\) divisors and \\(60^6 = 46{,}656{,}000{,}000\\).</p>",
+      "answer": "60"
+    }
+  }
+}

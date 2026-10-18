@@ -1,0 +1,123 @@
+{
+  "test": "PUMaC Team",
+  "year": 2011,
+  "name": "Team Round",
+  "url": "https://pumac.princeton.edu/s/PUMaC2011_Team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The following is a normal addition where each letter represents a (distinct) digit: \\[GOT + TO + GO + TO = TOP.\\] This certainly does not have a unique solution. However, you discover suddenly that \\(G = 2\\) and \\(P \\notin \\{4, 7\\}\\). Then what is the numeric value of the expression \\(GOT \\times TO\\)?</p>",
+      "solutions": "<p>Observe that the first digit of the 3-digit number \\(GOT\\) changes when we add three 2-digit numbers. Furthermore, one of the 2-digit numbers starts with a \\(2\\), and so we add at most \\(29+98+98=225\\) to \\(GOT\\). This means \\(T\\) is either \\(3\\), \\(4\\), or \\(5\\). But then, \\(TO\\) is at most \\(59\\), and so in fact we add at most \\(59+59+29=147\\) to \\(GOT\\). So in fact \\(T\\) is either \\(3\\) or \\(4\\). So \\(GOT\\) is something of the form \\(2\\_3\\) or \\(2\\_4\\). Some calculator bashing now yields \\((G,O,T,P) = (2,6,3,1)\\), so \\(GOT \\times TO = 9468\\).</p>",
+      "answer": "9468"
+    },
+    "2": {
+      "problem": "<p>A <b>strobogrammatic</b> number reads the same upside down, e.g. \\(619\\). On the other hand, a <b>triangular number</b> is a number of the form \\(n(n+1)/2\\) for some \\(n \\in \\mathbb{N}\\), e.g. \\(15\\) (therefore, the \\(i^{\\text{th}}\\) triangular number \\(T_i\\) is the sum of \\(1\\) through \\(i\\)). Let \\(a\\) be the third strobogrammatic prime number. Let \\(b\\) be the smaller number of the <b>smallest</b> pair of triangular numbers whose sum and difference are also triangular numbers. What is the value of \\(ab\\)?</p>",
+      "solutions": "<p>The only digits which mean something meaningful upside down are \\(1,6,8,9,0\\). A prime can end with only \\(1\\) out of this list, so all strobogrammatic primes start and end with \\(1\\). Clearly, \\(11\\) is the first. Checking the three-digit numbers now, \\(101\\) and \\(181\\) are the next two, so \\(a=181\\). Enumerating the triangular numbers yields \\(1,3,6,10,15,21,28,36\\) etc. Clearly, \\(21-15\\) and \\(21+15\\) are both in the list, so \\(b=15\\). Therefore, \\(ab=2715\\).</p>",
+      "answer": "2715"
+    },
+    "3": {
+      "problem": "<p>A positive integer \\(m\\) is said to be <b>palindromic</b> in base \\(\\ell\\) if, when written in base \\(\\ell\\), its digits are the same front-to-back and back-to-front. For \\(j,k \\in \\mathbb{N}\\), let \\(\\mu(j,k)\\) be the smallest base-10 integer that is palindromic in base \\(j\\) as well as in base \\(k\\), and let \\(\\nu(j,k) := (j+k)\\cdot \\mu(j,k)\\). Find the value of \\(\\nu(5,9)\\).</p>",
+      "solutions": "<p>This one is hard to solve, so leave it blank for now.</p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>For any \\(n \\in \\mathbb{N}\\) such that \\(1 &lt; n &lt; 10\\), define the sequence \\(X_{n,1}, X_{n,2}, \\ldots\\) by \\(X_{n,1} = n\\), and for \\(r \\ge 2\\), \\(X_{n,r}\\) is the smallest number \\(k \\in \\mathbb{N}\\) larger than \\(X_{n,r-1}\\) such that \\(k\\) and the sum of digits of \\(k\\) are <i>both</i> powers of \\(n\\). For instance, \\(X_{3,1}=3\\), \\(X_{3,2}=9\\), \\(X_{3,3}=27\\), and so on. Concatenate \\(X_{2,2}\\) with \\(X_{2,4}\\), and write down the answer.</p>",
+      "solutions": "<p>It is clear that \\(X_{2,2}=4\\) and \\(X_{2,3}=8\\). A little more checking yields \\(X_{2,4}=512\\), so we are looking for \\(4512\\).</p>",
+      "answer": "4512"
+    },
+    "6": {
+      "problem": "<p>Find positive integers \\(x,y,z\\) satisfying the following properties: \\(y\\) is obtained by subtracting \\(93\\) from \\(x\\), and \\(z\\) is obtained by subtracting \\(183\\) from \\(y\\); furthermore, \\(x\\), \\(y\\) and \\(z\\) in their base-10 representations contain precisely all the digits from \\(1\\) through \\(9\\) once (i.e. concatenating \\(x\\), \\(y\\) and \\(z\\) yields a valid 9-digit Sudoku answer). Obviously, write down the concatenation of \\(x\\), \\(y\\) and \\(z\\).</p>",
+      "solutions": "<p>You can possibly choose to leave this one blank as well, but if you are curious and have time, then you can figure it out with a bit of casework. Denoting \\(x\\) as \\(100x_1+10x_2+x_3\\) and similarly for \\(y\\) and \\(z\\) as well, observe that we know \\(\\{x_i,y_i,z_i\\}\\) for \\(i\\in\\{1,2,3\\}\\) all represent different digits. From the first condition we get either \\(100x_1+10(x_2-9)+(x_3-3)=100y_1+10y_2+y_3\\), \\(100(x_1-1)+10x_2+(x_3+7)=100y_1+10y_2+y_3\\), or \\(100(x_1-1)+10(x_2-1)+(x_3-3)=100y_1+10y_2+y_3\\), and similarly for the second condition. Now, doing a bit of casework yields the unique solution \\((819,726,543)\\).</p>",
+      "answer": "819726543"
+    },
+    "7": {
+      "problem": "<p>Find the <b>largest</b> pair of two-digit consecutive prime numbers \\(a\\) and \\(b\\) (with \\(a&lt;b\\)) such that the sum of the digits of \\(a\\) plus the sum of the digits of \\(b\\) is also a prime number. Write the concatenation of \\(a\\) and \\(b\\).</p>",
+      "solutions": "<p>There are only so many pairs you have to check! Starting with the largest consecutive pair of primes \\((89,97)\\), we easily see that the solution has to be \\((47,53)\\).</p>",
+      "answer": "4753"
+    },
+    "8": {
+      "problem": "<p>Suppose you have a strip of \\(2n+1\\) squares, with \\(n\\) frogs on the \\(n\\) squares on the left, and \\(n\\) toads on the \\(n\\) squares on the right. A move consists either of a toad or a frog sliding to an adjacent square if it is vacant, or of a toad or a frog jumping one square over another one and landing on the next square if it is vacant. For instance, the starting position</p><p>\\[\\begin{array}{ccccccccccc} F &amp; F &amp; F &amp; F &amp; F &amp; &amp; T &amp; T &amp; T &amp; T &amp; T \\end{array}\\]</p><p>has the position</p><p>\\[\\begin{array}{ccccccccccc} F &amp; F &amp; F &amp; F &amp; &amp; F &amp; T &amp; T &amp; T &amp; T &amp; T \\end{array}\\]</p><p>or the position</p><p>\\[\\begin{array}{ccccccccccc} F &amp; F &amp; F &amp; F &amp; F &amp; T &amp; T &amp; &amp; T &amp; T &amp; T \\end{array}\\]</p><p>as results of valid first moves. What is the minimum number of moves needed to swap the toads with the frogs if \\(n=5\\)? How about \\(n=6\\)? Concatenate your answers.</p>",
+      "solutions": "<p>This can be solved using induction, but it is hard, so it’s better to leave it blank for now.</p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Let \\(w\\) be the largest number such that \\(w\\), \\(2w\\) and \\(3w\\) together contain every digit from \\(1\\) through \\(9\\) exactly once. Let \\(x\\) be the smallest integer with the property that its first \\(5\\) multiples contain the digit \\(9\\). A <b>Leyland number</b> is an integer of the form \\(m^n+n^m\\) for integers \\(m,n&gt;1\\). Let \\(y\\) be the fourth Leyland number. A <b>Pillai prime</b> is a prime number \\(p\\) for which there is an integer \\(n&gt;0\\) such that \\(n! \\equiv -1 \\pmod{p}\\), but \\(p \\not\\equiv 1 \\pmod{n}\\). Let \\(z\\) be the fourth Pillai prime. Concatenate \\(w\\), \\(x\\), \\(y\\) and \\(z\\) in that order to obtain a permutation of \\(1,\\cdots,9\\). Write down this permutation.</p>",
+      "solutions": "<p>It is not too hard to see that \\(x\\) has to be \\(98\\). Checking Leyland numbers one by one, observe that the list goes \\(8,17,32,54,\\ldots\\), and so \\(y=54\\). Now, \\(w\\) is clearly a 3-digit number, and since it’s a large 3-digit number which is still 3-digit when multiplied by \\(3\\), it follows that the first digit of \\(w\\) is \\(3\\) and the second digit is less than \\(4\\). Therefore, \\(2w\\) and \\(3w\\) start with \\(6\\) and \\(9\\) respectively, and so \\(w\\) cannot contain \\(6,9,5,4,8\\) (the last few because of this clue). Therefore, the second digit of \\(w\\) must be \\(2\\) or \\(1\\). It’s now routine to check that \\(w\\) must be \\(327\\). This leaves the digits \\(1\\) and \\(6\\) for \\(z\\), and since it is a prime, it must be \\(61\\). Therefore, \\((w,x,y,z) = (327,98,54,61)\\).</p>",
+      "answer": "327985461"
+    },
+    "10": {
+      "problem": "<p>A <b>hoax number</b> \\(k \\in \\mathbb{N}\\) is one for which the sum of its digits (in base \\(10\\)) equals the sum of the digits of its distinct prime factors (in base \\(10\\)). For instance, the distinct prime factors of \\(22\\) are \\(2\\) and \\(11\\), and we have \\(2+2=2+(1+1)\\). In fact, \\(22\\) is the first hoax number. What is the second?</p>",
+      "solutions": "<p>A brute force check in this case works. We get the second hoax number to be \\(58\\).</p>",
+      "answer": "58"
+    },
+    "11": {
+      "problem": "<p>Let \\(a\\), \\(b\\) and \\(c\\) be distinct 2-digit numbers satisfying the following properties:</p><ul><li>\\(a\\) is the <b>largest</b> integer expressible as \\(a=x^y=y^x\\), for distinct integers \\(x\\) and \\(y\\).</li><li>\\(b\\) is the <b>smallest</b> integer which has three partitions into three parts, which all give the same product (which turns out to be \\(1200\\)) when multiplied.</li><li>\\(c\\) is the <b>largest</b> number that is the sum of the digits of its cube.</li></ul><p>Concatenate \\(a\\), \\(b\\) and \\(c\\), and write down the resulting 6-digit prime number.</p>",
+      "solutions": "<p>It is well known that \\(a=16\\) (in fact, it is the <i>only</i> integer expressible as both \\(x^y\\) and \\(y^x\\) for distinct \\(x\\) and \\(y\\)). For \\(b\\), factor \\(1200=2^4\\cdot 3\\cdot 5^2\\). A simple check gives you \\(39=24+10+5=25+8+6=20+15+4\\). Finally, since \\(c\\) cannot contain the digits \\(5,8,1,6,3,9\\) (because of the previous clue), it follows that \\(c\\) is a 2-digit number using two digits from \\(\\{2,4,7\\}\\). Since the whole thing is prime, \\(c\\) ends with \\(7\\). Checking \\(27\\) and \\(47\\), it is clear that only \\(27\\) is the sum of the digits of its cube \\(19683\\). So the 6-digit prime number must be \\(163927\\).</p>",
+      "answer": "163927"
+    },
+    "12": {
+      "problem": "<p>Suppose \\(N = \\underline{a}\\,\\underline{b}\\,\\underline{c}\\,\\underline{d}\\) is a 4-digit number with digits \\(a\\), \\(b\\), \\(c\\) and \\(d\\), such that \\(N = a \\cdot b \\cdot c \\cdot d^7\\). Find \\(N\\).</p>",
+      "solutions": "<p>If \\(d \\ge 4\\), then \\(d^7\\) already has \\(5\\) digits. Therefore, \\(d \\in \\{1,2\\}\\). But obviously \\(d \\ne 1\\), because then \\(abc\\) can be at most \\(9^3=729\\), which is not \\(4\\) digits. Therefore, \\(d=2\\) or \\(d=3\\). If \\(d=3\\), \\(N\\) is a multiple of \\(2187\\). There are only four 4-digit multiples, and it is easy to check that they do not satisfy the conditions. So \\(d=2\\). The multiples of \\(128\\) that end in \\(2\\) are the \\(4\\pmod 5\\) multiples. A quick check now yields \\(6912 = 6\\cdot 9\\cdot 1\\cdot 2^7\\).</p>",
+      "answer": "6912"
+    },
+    "13": {
+      "problem": "<p>What is the smallest number expressible as the sum of \\(2\\), \\(3\\), \\(4\\), or \\(5\\) <b>distinct</b> primes?</p>",
+      "solutions": "<p>If you have time, brute force this! If not, you can leave this clue blank.</p>",
+      "answer": null
+    },
+    "14": {
+      "problem": "<p>For some \\(a,b,c \\in \\mathbb{N}\\), let the polynomial</p><p>\\[p(x) = x^5 - 252x^4 + ax^3 - bx^2 + cx - 62604360\\]</p><p>have five distinct roots that are positive integers. Four of these are 2-digit numbers, while the last one is single-digit. Concatenate all five roots in <b>decreasing</b> order, and write down the result.</p>",
+      "solutions": "<p>This can be solved with enough time by factoring \\(62604360\\) cleverly, and finding which combinations add to \\(252\\). If you try it that way, a good first step may be to figure out what the one-digit factor is. If all else fails, don’t fill this in yet.</p>",
+      "answer": null
+    },
+    "15": {
+      "problem": "<p>Gene, Ashwath and Cosmin together have \\(2511\\) math books. Gene now buys as many math books as he already has, and Cosmin sells off half his math books. This leaves them with \\(2919\\) books in total. After this, Ashwath suddenly sells off all his books to buy a private jet, leaving Gene and Cosmin with a total of \\(2184\\) books. How many books did Gene, Ashwath and Cosmin have to begin with? Concatenate the three answers (in the order Gene, Ashwath, Cosmin) and write down the result.</p>",
+      "solutions": "<p>This is just a simultaneous equations problem! Denoting by \\(G\\), \\(A\\) and \\(C\\) the original number of books, you get</p><p>\\[\\begin{aligned}\nG+A+C&amp;=2511,\\\\\n2G+A+C/2&amp;=2919,\\\\\n2G+C/2&amp;=2184.\n\\end{aligned}\\]</p><p>Solving this system yields \\((G,A,C)=(864,735,912)\\).</p>",
+      "answer": "864735912"
+    },
+    "16": {
+      "problem": "<p>A <b>regular octahedron</b> is a convex polyhedron composed of eight congruent faces, each of which is an equilateral triangle; four of them meet at each vertex. For instance, the following diagram depicts a regular octahedron:</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2011_PUMaC_Team/16-fig1.png\" width=\"91\" alt=\"\"></p><p>Let \\(\\mathcal{T}\\) be a regular octahedron of edge length \\(28\\). What is the total surface area of \\(\\mathcal{T}\\), rounded to the nearest integer?</p>",
+      "solutions": "<p>Each face of \\(\\mathcal{T}\\) is an equilateral triangle of side \\(28\\), so its area is \\(\\sqrt{3}\\cdot 28^2/4 \\approx 339.48\\). Therefore, the total surface area of the whole figure is \\(339.48 \\times 8 \\approx 2716\\) square units. This gives the result.</p>",
+      "answer": "2716"
+    },
+    "17": {
+      "problem": "<p>Evaluate the value of the expression</p><p>\\[\\sum_{k=T_{24}+1}^{T_{25}} k,\\]</p><p>where \\(T_i\\) denotes the \\(i^{\\text{th}}\\) triangular number (the sum of the integers from \\(1\\) through \\(i\\)).</p>",
+      "solutions": "<p>Observe that \\(T_{25}-T_{24}=25\\). Therefore, the given sum is just \\(T_{24}+1+T_{24}+2+\\ldots+T_{24}+25=25\\cdot T_{24}+T_{25}=(24\\cdot 25\\cdot 25)/2+(25\\cdot 26)/2=7500+325=7825\\).</p>",
+      "answer": "7825"
+    },
+    "18": {
+      "problem": "<p>Suppose \\(r\\) and \\(s\\) are consecutive multiples of \\(9\\) satisfying the following properties:</p><ul><li>\\(r\\) is the smallest positive integer that can be written as the sum of \\(3\\) positive squares in \\(3\\) <b>different</b> ways.</li><li>\\(s\\) is the smallest 2-digit number that is a Woodall number as well as a base-10 Harshad number. A <b>Woodall number</b> is any number of the form \\(n\\cdot 2^n-1\\) for some \\(n\\in\\mathbb{N}\\). A <b>base-10 Harshad number</b> is divisible by the sum of its digits in base 10.</li></ul><p>Concatenate \\(r\\) and \\(s\\) and write down the result.</p>",
+      "solutions": "<p>Even if \\(s\\) is hard to figure out, \\(r\\) is not; take all the multiples of \\(9\\) in order, and check the property. At \\(54\\), we get \\(54=3^2+3^2+6^2=7^2+2^2+1^2=5^2+5^2+2^2\\). Therefore, \\(s\\) must be \\(63\\), so we are looking for \\(5463\\).</p>",
+      "answer": "5463"
+    },
+    "19": {
+      "problem": "<p>For any \\(k \\in \\mathbb{N}\\), let \\(\\varphi_p(k)\\) denote the sum of the distinct prime factors of \\(k\\). Suppose \\(N\\) is the largest integer less than \\(50000\\) satisfying \\(\\varphi_p(N) = \\varphi_p(N+1)\\), where the common value turns out to be a meager \\(55\\). What is \\(N\\)?</p>",
+      "solutions": "<p>This is pretty hard, so leave it blank for now.</p>",
+      "answer": null
+    },
+    "20": {
+      "problem": "<p>The \\(n^{\\text{th}}\\) \\(s\\)-gonal number \\(P(s,n)\\) is defined as</p><p>\\[P(s,n) = (s-3)T_{n-1} + T_n,\\]</p><p>where \\(T_i\\) is the \\(i^{\\text{th}}\\) triangular number (recall that the \\(i^{\\text{th}}\\) triangular number is the sum of the numbers \\(1\\) through \\(i\\)). Find the least \\(N\\) such that \\(N\\) is both a \\(34\\)-gonal number, <i>and</i> a \\(163\\)-gonal number.</p>",
+      "solutions": "<p>This is also fairly hard, so leave it blank.</p>",
+      "answer": null
+    },
+    "21": {
+      "problem": "<p>A <b>biprime</b> is a positive integer that is the product of precisely two (not necessarily distinct) primes. A <b>cluster</b> of biprimes is an ordered triple \\((m,m+1,m+2)\\) of consecutive integers that are biprimes. There are precisely three clusters of biprimes below \\(100\\). Denote these by, say,</p><p>\\[\\{(p,p+1,p+2),(q,q+1,q+2),(r,r+1,r+2)\\},\\]</p><p>and add the condition that \\(p+2&lt;q&lt;r-2\\) to fix the three clusters. Interestingly, \\(p+1\\) and \\(q\\) are both multiples of \\(17\\). Concatenate \\(q\\) with \\(p+1\\) in that order, and write down the result.</p>",
+      "solutions": "<p>The multiples of \\(17\\) hint gives it away. \\((33,34,35)\\) is clearly a cluster, as \\(33=3\\cdot 11\\), \\(34=2\\cdot 17\\), \\(35=5\\cdot 7\\). So, \\(p+1=34\\). Now, \\(85,86,87\\) is also a cluster, so \\(q=85\\). So we are looking for \\(8534\\).</p>",
+      "answer": "8534"
+    },
+    "22": {
+      "problem": "<p>Find the least positive integer \\(m\\) (written in base 10 as \\(m=\\underline{a}\\,\\underline{b}\\,\\underline{c}\\), with digits \\(a,b,c\\)), such that \\(m=(b+c)^a\\).</p>",
+      "solutions": "<p>We have \\(100a+10b+c=(b+c)^a\\). Since this is the least positive integer, we may as well try \\(a=2\\) (\\(a=1\\) would not work, because then the number of digits don’t add up). If \\(200+10b+c=(b+c)^2\\), then the square has to be either \\(225\\), \\(256\\) or \\(289\\). Clearly the last one fits the bill, and so we are looking for \\(289\\).</p>",
+      "answer": "289"
+    },
+    "23": {
+      "problem": "<p>Let \\(\\mathfrak{X}\\) be a set containing \\(32\\) elements, and \\(\\mathfrak{Y} \\subseteq \\mathfrak{X}\\) be a subset containing \\(29\\) elements. How many 2-element subsets of \\(\\mathfrak{X}\\) are there which have nonempty intersection with \\(\\mathfrak{Y}\\)?</p>",
+      "solutions": "<p>These 2-element subsets will have intersections of size either \\(1\\) or \\(2\\) with \\(\\mathfrak{Y}\\). The number of ways to have a size-1 intersection is to pick something from \\(\\mathfrak{Y}\\) and something from \\(\\mathfrak{X}-\\mathfrak{Y}\\), which is a total of \\(29\\cdot 3\\). Similarly, the number of ways to have a size-2 intersection is to choose two things from \\(\\mathfrak{Y}\\), which is a total of \\(29\\cdot 28/2\\). Therefore, we get \\(493\\) possible subsets.</p>",
+      "answer": "493"
+    },
+    "24": {
+      "problem": "<p>Find a positive integer \\(\\mathfrak{K} &lt; 196\\), which is a strange twin of the number \\(196\\), in the sense that \\(\\mathfrak{K}^2\\) shares the same digits as \\(196^2\\), and \\(\\mathfrak{K}^3\\) shares the same digits as \\(196^3\\).</p>",
+      "solutions": "<p>This may be a bit tricky to check with a calculator, so leave this out for now!</p>",
+      "answer": null
+    }
+  }
+}

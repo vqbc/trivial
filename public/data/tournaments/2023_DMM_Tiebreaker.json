@@ -1,0 +1,23 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2023,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2023/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Consider the polynomial \\[p(x) = x^3 + x^2 - 1.\\] Let \\(r_1\\), \\(r_2\\), and \\(r_3\\) be the roots of of \\(p(x)\\). Find the value of \\[r_1^4 + r_2^4 + r_3^4.\\]</p>",
+      "solutions": "<p>We rearrange the expression into \\[(r_1^4 - 1) + (r_2^4 - 1) + (r_3^4 - 1) + 3.\\] This allows us to use the fact \\[x^4 - 1 = (x-1)(x^3+x^2+x+1).\\] Note that the roots \\(r_i\\) satisfy \\[r_i + 2 = r_i^3 + r_i^2 - 1 + (r_i + 2) = r_i^3 + r_i^2 + r_i + 1.\\] Then our desired quantity is \\[\\begin{aligned}\n(r_1^4-1) + (r_2^4-1) + (r_3^4-1) + 3 &amp;= (r_1-1)(r_1+2) + (r_2-1)(r_2+2) + (r_3-1)(r_3+2) + 3 \\\\\n&amp;= r_1^2 + r_1 - 2 + r_2^2 + r_2 - 2 + r_3^2 + r_3 - 2 + 3 \\\\\n&amp;= (r_1^2+r_2^2+r_3^2) + (r_1+r_2+r_3) - 3.\n\\end{aligned}\\] Using Vieta’s formulas, we know \\[r_1 + r_2 + r_3 = -\\frac{1}{1} = -1\\] \\[r_1 r_2 + r_1 r_3 + r_2 r_3 = \\frac{0}{1} = 0.\\] This also lets us determine \\[r_1^2 + r_2^2 + r_3^2 = (-1)^2 - 2(0) = 1.\\] Thus, our desired answer is \\[(1) + (-1) - 3 = \\boxed{-3}\\]</p>",
+      "answer": "-3"
+    },
+    "2": {
+      "problem": "<p>Calvin has 10 courses he wishes to take, each numbered 1,2,...,10. However, course 1 serves as a prerequisite to course 2, course 3 is a prerequisite for course 4, etc.. In how many different orders can Calvin take the courses given that he can only take one course at a time and that the prerequisite conditions must be satisfied for all courses (i.e. course 1 must be taken before course 2)?</p><p>Please answer with a specific number, not a formula.</p>",
+      "solutions": "<p>First, we think about ordering the courses with no restrictions, for which there are \\(10!\\). To account for our ordering restrictions, note that for the restriction of Course 1 before Course 2, exactly half of the permutations have this ordering. The five restrictions are independent of each other, thus our answer is \\(10!/2^5 = \\boxed{113400}\\)</p>",
+      "answer": "113400"
+    },
+    "3": {
+      "problem": "<p>You have 4 6-sided dice. One die has \\(\\sin^2(e)\\) on half of the faces and 0 on the other half. The other 3 dice are identical, each has \\(\\cos^2(e)\\) on one face and 0 on every other face. You roll each die once, what is the expected value of the sum of all the dice?</p>",
+      "solutions": "<p>The expected value of the first die is \\(\\frac{1}{2}\\sin^2(e)\\). The expected value of one of the other three dice is \\(\\frac{1}{6}\\cos^2(e)\\). Thus, our answer is \\[\\frac{1}{2}\\sin^2(e) + 3 \\cdot \\frac{1}{6}\\cos^2(e) = \\frac{1}{2}\\left(\\cos^2(e) + \\sin^2(e)\\right) = \\boxed{\\frac{1}{2}}\\]</p>",
+      "answer": "\\frac{1}{2}"
+    }
+  }
+}

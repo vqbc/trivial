@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2023,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2023/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Michelle has 10 of her students standing in a row. In how many ways can she pick a nonempty subset of students for a class activity such that for each pair of adjacent students in the row, at most one of them is picked?</p>",
+      "solutions": "<p>Let Let \\(S_n\\) be the number of ways to pick a subset of students for general \\(n\\), including the empty set. We case on the first student. If the first student is picked, the second student cannot be picked, and there are \\(S_{n-2}\\) ways to pick the remaining students.</p><p>If the first student is not picked, there are \\(S_{n-1}\\) ways to pick the remaining students. Thus, our recurrence is \\(S_n = S_{n-1} + S_{n-2}\\). Note that \\(S_0 = 1\\) and \\(S_1 = 2\\). Continuing this relation yields \\(S_{10} = 144\\). Excluding the empty set gives us \\(\\boxed{143}\\) ways.</p>",
+      "answer": "143"
+    },
+    "2": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). Find the smallest integer \\(n\\) such that \\(n \\ge T\\) and \\(17(17^n - 3^n - 7)\\) is divisible by 2023?</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(143\\).</i></p>",
+      "solutions": "<p>\\(2023 = 7 \\cdot 17^2\\). Therefore we need to figure out when \\(17^n - 3^n - 7\\) is divisible by \\(7 \\cdot 17\\). This is true when \\(17^n - 3^n - 7\\) is divisible by both 7 and 17. Taking mod 7, we get \\(17^n - 3^n - 7 \\equiv 3^n - 3^n - 7 \\equiv 0 \\pmod{7}\\). Taking mod 17, we get \\(17^n - 3^n - 7 \\equiv -3^n - 7 \\pmod{17}\\). In order for this to equal zero, \\(3^n \\equiv -7 \\pmod{17}\\). We note that \\(3^3 \\equiv 27 \\equiv -7 \\pmod{17}\\), and also \\(3^{16}\\) is the smallest order of 3 that is equal to 1 mod 17. By Fermat’s Little Theorem, the remainder is periodic with period 16. So we get any \\(n\\) of the form \\(3 + 16k\\), \\(\\forall k \\in \\mathbb{Z}^+\\) works. Since \\(T = 143\\), our answer is \\(n = \\boxed{147}\\).</p>",
+      "answer": "147"
+    },
+    "3": {
+      "problem": "<p>Let \\(T\\) be the smallest perfect square that is greater than or equal to TNYWR. Find the positive integer \\(i\\) satisfying \\[i \\le \\sum_{k=1}^{T} \\frac{1}{\\sqrt{k}} &lt; i + 1\\]</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(147\\).</i></p>",
+      "solutions": "<p>Since \\(TNYWR = 147\\), \\(T = 169\\). Note that \\[2(\\sqrt{k+1} - \\sqrt{k}) = \\frac{2}{\\sqrt{k+1} + \\sqrt{k}} &lt; \\frac{1}{\\sqrt{k}}\\] Therefore \\[\\sum_{k=1}^{T} \\frac{1}{\\sqrt{k}} &gt; 2 \\sum_{k=1}^{T} (\\sqrt{k+1} - \\sqrt{k}) = 2(\\sqrt{170} - \\sqrt{1}) &gt; 24\\] To prove the upper bound, consider \\[2(\\sqrt{k} - \\sqrt{k-1}) = \\frac{2}{\\sqrt{k} + \\sqrt{k-1}} &gt; \\frac{1}{\\sqrt{k}}\\] Therefore \\[\\sum_{k=1}^{T} \\frac{1}{\\sqrt{k}} &lt; 1 + 2 \\sum_{k=2}^{T} (\\sqrt{k} - \\sqrt{k-1}) = 1 + 2(\\sqrt{170} - 1) &lt; 25\\] So, \\(i = \\boxed{24}\\).</p>",
+      "answer": "24"
+    },
+    "4": {
+      "problem": "<p>The chess players Akshar and Rishabh are playing a series that can last up to 15 games. A game either results in a win (1 point to the winner, 0 to the loser) or a draw (half a point to each). The series ends when the player with fewer total points can no longer theoretically catch up to the player with more total points, or when 15 games are complete. How many pairs of total points \\((x, y)\\), where \\(x\\) is Akshar’s total points and \\(y\\) is Rishabh’s total points, are possible once the series ends?</p>",
+      "solutions": "<p>First, we consider the case in which Akshar and Rishabh tie the series. This corresponds to the pair \\((x, y) = (7.5, 7.5)\\). Now, assume Akshar wins the series. We will multiply by 2 at the end to account for the pairs where Rishabh wins.</p><p>If Akshar is at 7.5 points, Rishabh can come back to tie the series. Thus, if at any point he has 8 or 8.5 points, Rishabh can no longer catch up. These cases occur if Akshar draws a game when at 7.5 points (to get 8 points), if he wins a game when at 7 points (to get 8 points), or if he wins a game when at 7.5 points (to get 8.5 points).</p><p>If Akshar is at 8 points, Rishabh can have \\(0, 1, 2, 3, 4, 5, 6\\) or \\(7\\) points. If Akshar is at 8.5 points, Rishabh can have \\(0.5, 1.5, 2.5, 3.5, 4.5, 5.5\\) or \\(6.5\\) points. Thus, there are 15 pairs \\((x, y)\\) if Akshar wins. We multiply this total by 2 to account for Rishabh winning and add 1 for the case where they tie. Thus, our answer is \\(2 \\cdot 15 + 1 = \\boxed{31}\\).</p>",
+      "answer": "31"
+    },
+    "5": {
+      "problem": "<p>Let \\(T\\) be the quotient when TNYWR is divided by 3 (i.e. \\(\\left\\lfloor \\frac{TNYWR}{3} \\right\\rfloor\\)). Kevin’s favorite polynomial is \\[P(x) = x^4 - Tx^3 + Tx - 1.\\] Let \\(a &lt; b &lt; c &lt; d\\) be the roots of \\(P(x)\\). Find the value of \\[b^a + b^c + d^a + d^c.\\]</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(31\\).</i></p>",
+      "solutions": "<p>First, \\(T = 10\\). Note that \\(k(1) = 0\\) and \\(k(-1) = 0\\). Then long dividing \\(k(x)\\) by \\(x^2 - 1\\) gives us \\[x^4 - 10x^3 + 10x - 1 = (x^2 - 1)(x^2 - 10x + 1).\\] Now consider the equation \\[x^2 - 10x + 1 = 0.\\] Dividing by \\(x\\) and moving the constant over gives us \\[x + \\frac{1}{x} = 10.\\] This implies its roots are reciprocals of each other. Call them \\(r\\) and \\(\\frac{1}{r}\\), where \\(r &gt; \\frac{1}{r}\\). Since \\[9 + \\frac{1}{9} &lt; 10,\\] we know \\(r &gt; 9\\), which tells us \\(\\frac{1}{r} &lt; 1\\). This lets us determine that the roots of \\(k(x)\\) satisfy \\[-1 &lt; \\frac{1}{r} &lt; 1 &lt; r,\\] so our desired expression is \\[\\left(\\frac{1}{r}\\right)^{-1} + \\left(\\frac{1}{r}\\right)^{1} + (r)^{-1} + (r)^{1} = 2\\left(r + \\frac{1}{r}\\right).\\] Since we know \\(r\\) satisfies \\[r + \\frac{1}{r} = 10,\\] our answer is \\(2 \\cdot 10 = \\boxed{20}\\).</p>",
+      "answer": "20"
+    },
+    "6": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). In 2-dimensional space, the area enclosed by the graph \\(\\frac{x^2+y^2}{|x-y|} &lt; T\\) can be expressed as \\(a\\pi\\). Find \\(a\\).</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(20\\).</i></p>",
+      "solutions": "<p>Consider \\(x - y &gt; 0\\) and \\(x - y &lt; 0\\) as separate cases, in which we can remove the absolute value sign from the equation. This gives us two cases: \\(x^2 + y^2 &lt; T(x - y) \\Leftrightarrow (x - T/2)^2 + (y + T/2)^2 &lt; T^2/2\\), and \\(x^2 + y^2 &lt; T(y - x) \\Leftrightarrow (x + T/2)^2 + (y - T/2)^2 &lt; T^2/2\\). The two cases are circles centered at \\((T/2, -T/2)\\) and \\((-T/2, T/2)\\) that have radii \\(T/\\sqrt{2}\\), and neither intersect each other because they are tangent at \\((0,0)\\) (and we can check that the whole circles lie completely above and below the line \\(y = x\\) respectively). This means the total area is \\(T^2\\pi\\). Since \\(T = 20\\), our answer is \\(\\boxed{400}\\pi\\).</p>",
+      "answer": "400"
+    }
+  }
+}

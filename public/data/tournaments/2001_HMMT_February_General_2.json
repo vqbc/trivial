@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 2",
+  "year": 2001,
+  "name": "General Test, Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2001/feb/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A circle of radius 3 crosses the center of a square of side length 2. Find the difference between the areas of the nonoverlapping portions of the figures.</p>",
+      "solutions": "<p>Call the area of the square \\(s\\), the area of the circle \\(c\\), and the area of the overlapping portion \\(x\\). The area of the circle not overlapped by the square is \\(c - x\\) and the are of the square not overlapped by the circle is \\(s - x\\), so the difference between these two is \\((c - x) - (s - x) = c - s = \\boxed{9\\pi^2 - 4}\\).</p>",
+      "answer": "9\\pi^2 - 4"
+    },
+    "2": {
+      "problem": "<p>Call three sides of an opaque cube adjacent if someone can see them all at once. Draw a plane through the centers of each triple of adjacent sides of a cube with edge length 1. Find the volume of the closed figure bounded by the resulting planes.</p>",
+      "solutions": "<p>The volume of the figure is half the volume of the cube (which can be seen by cutting the cube into 8 equal cubes and realizing that the planes cut each of these cubes in half), namely \\(\\boxed{\\frac{1}{2}}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "3": {
+      "problem": "<p>Find \\(x\\) if \\(x^{x^{x^{\\cdot^{\\cdot^{\\cdot}}}}} = 2\\).</p>",
+      "solutions": "<p>\\(\\sqrt{2}^{\\sqrt{2}^{\\sqrt{2}^{\\cdot^{\\cdot^{\\cdot}}}}} = 2^{\\frac{1}{2}2^{\\frac{1}{2}2^{\\cdot^{\\cdot^{\\cdot}}}}} = 2^{1^{1^{\\cdot^{\\cdot^{\\cdot}}}}} = 2\\), so \\(x = \\boxed{\\sqrt{2}}\\).</p>",
+      "answer": "\\sqrt{2}"
+    },
+    "4": {
+      "problem": "<p>Some students are taking a math contest, in which each student takes one of four tests. One third of the students take one test, one fourth take another test, one fifth take the next test, and 26 students take the last test. How many students are taking the contest in total?</p>",
+      "solutions": "<p>Call the total number of students \\(n\\). We know \\(n = \\frac{n}{3} + \\frac{n}{4} + \\frac{n}{5} + 26\\), so \\(n = \\boxed{120}\\).</p>",
+      "answer": "120"
+    },
+    "5": {
+      "problem": "<p>What is the area of a square inscribed in a semicircle of radius 1, with one of its sides flush with the diameter of the semicircle?</p>",
+      "solutions": "<p>Call the center of the semicircle \\(O\\), a point of contact of the square and the circular part of the semicircle \\(A\\), the closer vertex of the square on the diameter \\(B\\), and the side length of the square \\(x\\). We know \\(OA = 1\\), \\(AB = x\\), \\(OB = \\frac{x}{2}\\), and \\(\\angle ABO\\) is right. By the Pythagorean theorem, \\(x^2 = \\boxed{\\frac{4}{5}}\\).</p>",
+      "answer": "\\frac{4}{5}"
+    },
+    "6": {
+      "problem": "<p>You take a wrong turn on the way to MIT and end up in Transylvania, where 99% of the inhabitants are vampires and the rest are regular humans. For obvious reasons, you want to be able to figure out who’s who. On average, nine-tenths of the vampires are correctly identified as vampires and nine-tenths of humans are correct identified as humans. What is the probability that someone identified as a human is actually a human?</p>",
+      "solutions": "<p>Consider a sample of 1000 inhabitants. On average, 990 are vampires and 10 are people. 99 vampires are identified as human and 9 humans are identified as human. So out of the 108 who pass, only \\(\\boxed{\\frac{1}{12}}\\) are human.</p>",
+      "answer": "\\frac{1}{12}"
+    },
+    "7": {
+      "problem": "<p>A real number \\(x\\) is randomly chosen in the interval \\(\\left[-15\\frac{1}{2}, 15\\frac{1}{2}\\right]\\). Find the probability that the closest integer to \\(x\\) is odd.</p>",
+      "solutions": "<p>By using a graphical method, we can see that, for real \\(x\\) on \\(\\left[-n - \\frac{1}{2}, n + \\frac{1}{2}\\right]\\), \\(n\\) an even integer, the probability that the closest integer to \\(x\\) is odd is \\(\\frac{n}{2n+1}\\). The desired probability is \\(\\boxed{\\left(\\frac{15}{31}\\right)}\\).</p>",
+      "answer": "\\left(\\frac{15}{31}\\right)"
+    },
+    "8": {
+      "problem": "<p>A point on a circle inscribed in a square is 1 and 2 units from the two closest sides of the square. Find the area of the square.</p>",
+      "solutions": "<p>Call the point in question \\(A\\), the center of the circle \\(O\\), and its radius \\(r\\). Consider a right triangle \\(BOA\\) with hypotenuse \\(OA\\): \\(OA\\) has length \\(r\\), and \\(BO\\) and \\(BA\\) have lengths \\(r - 1\\) and \\(r - 2\\). By the Pythagorean theorem, \\((r - 1)^2 + (r - 2)^2 = r^2 \\Rightarrow r^2 - 6r + 5 = 0 \\Rightarrow r = 5\\) since \\(r &gt; 4\\). The area of the square is \\((2r)^2 = \\boxed{100}\\).</p>",
+      "answer": "100"
+    },
+    "9": {
+      "problem": "<p>Two circles are concentric. The area of the ring between them is \\(A\\). In terms of \\(A\\), find the length of the longest chord contained entirely within the ring.</p>",
+      "solutions": "<p>Let the radii of the circles be \\(r\\) and \\(R &gt; r\\), so \\(A = \\pi(R^2 - r^2)\\). By the Pythagorean theorem, the length of the chord is \\(2\\sqrt{R^2 - r^2} = \\boxed{2\\sqrt{\\frac{A}{\\pi}}}\\).</p>",
+      "answer": "2\\sqrt{\\frac{A}{\\pi}}"
+    },
+    "10": {
+      "problem": "<p>Find the volume of the tetrahedron with vertices \\((5, 8, 10)\\), \\((10, 10, 17)\\), \\((4, 45, 46)\\), \\((2, 5, 4)\\).</p>",
+      "solutions": "<p>Each vertex \\((x, y, z)\\) obeys \\(x + y = z + 3\\), so all the vertices are coplanar and the volume of the tetrahedron is \\(\\boxed{0}\\).</p>",
+      "answer": "0"
+    }
+  }
+}

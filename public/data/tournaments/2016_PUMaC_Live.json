@@ -1,0 +1,143 @@
+{
+  "test": "PUMaC Live",
+  "year": 2016,
+  "name": "Live Round",
+  "url": "https://pumac.princeton.edu/s/PUMaC2016_Live_Round.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(x - y = x^2 - y^2 = 12\\), what is \\(x+y\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABCD\\) be a rectangle of side lengths 3 and 4. Imagine folding the rectangle over the diagonal \\(BD\\). The area of the new shape can be written with integers \\(a, b\\) in the form \\(\\frac{a}{b}\\), where \\(\\gcd(a,b)=1\\). What is \\(a+b\\)? (If there is overlapping area, it should only be considered once.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>A flea hops around the edge of a circular table that has a circumference of 2016 cm. The length of the flea’s hop is \\(n\\) cm, where \\(n\\) is an integer between 1 and 2016, inclusive, and the flea repeatedly hops around the circumference in length \\(n\\) cm circular arcs. Find the sum of all \\(n\\) for which the flea needs exactly 2016 hops to return to its starting point for the first time.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "580608"
+    },
+    "4": {
+      "problem": "<p>Let \\(a_1 = a_2 = \\cdots = a_{100} = 1\\) and for \\(n &gt; 100\\), \\(a_n = a_{n-100} + a_{n-99}\\). For \\(n \\ge 1\\), let \\(d_n = a_{n+1} - a_n\\). If \\(d_k = 1\\) and \\(d_{k+2} = 2016\\), compute \\(k\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6436"
+    },
+    "5": {
+      "problem": "<p>Heesu draws an equilateral triangle \\(ABC\\) with side 1 m on a large piece of paper, then throws a dart at it. The dart lies within 1 m of two of \\(A\\), \\(B\\), or \\(C\\) (it could be inside or outside the triangle). The probability that it lies within 1 m of all three vertices given it lies within 1 m of two can be expressed in the form \\(\\frac{a}{a+\\pi}\\), where \\(a = b\\pi - c\\sqrt{d}\\). What is \\(b+c+d\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5"
+    },
+    "6": {
+      "problem": "<p>Compute the largest positive integer \\(n\\) for which there are exactly three two-digit positive integers \\(k\\) such that \\(\\frac{n}{k}\\) is a two-digit positive integer.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "7056"
+    },
+    "7": {
+      "problem": "<p>A <i>flashlight</i> with angle measure \\(\\theta\\) is a device that can be positioned at any point \\(P\\) on the coordinate plane and it illuminates everything in some angle of measure \\(\\theta\\) from vertex \\(P\\). Flashlights of angle measure \\(60^\\circ\\) are positioned at \\((0,0)\\) and \\((0,2)\\) so that they shine directly at each other. Let \\(R\\) be the region of the plane where a flashlight of angle measure \\(135^\\circ\\) could be positioned so that every flashlight is illuminated by every other flashlight. The area of \\(R\\) can be written in reduced form as \\(\\frac{a\\sqrt{b}-c\\pi}{d}\\). Compute \\(a+b+c+d\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>A random sequence is generated as follows: \\(a_0 = 1\\), and for each \\(k\\), \\(a_k\\) is a random multiple of \\(a_{k-1}\\) such that \\(a_k\\) is a divisor of 2016 (for convention, note that \\(n\\) is both a multiple and a divisor of \\(n\\)). (For example, \\(a_1\\) is randomly chosen among all divisors of 2016 that are multiples of 1.) If the expected number of factors of \\(a_3\\) is \\(\\frac{m}{n}\\), compute \\(m+n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "7351"
+    },
+    "10": {
+      "problem": "<p>For what positive value \\(k\\) does the equation \\(\\ln x = kx^2\\) have exactly one solution?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{2e}"
+    },
+    "12": {
+      "problem": "<p>What is the sum of all the real parts of the solutions to the complex equation \\(z^2 + \\overline{z} = 0\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "13": {
+      "problem": "<p>An <i>arithmo-geometric sequence</i> is a sequence of integers \\(a_0, a_1, a_2, \\ldots\\) such that \\(a_0 = 0\\) and for every positive integer \\(k\\), \\(a_{2k-2}, a_{2k-1}, a_{2k}\\) form an arithmetic sequence and \\(a_{2k-1}, a_{2k}, a_{2k+1}\\) form a geometric sequence. Compute the number of arithmo-geometric sequences containing 2016.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "12"
+    },
+    "14": {
+      "problem": "<p>How many tetrahedra have side lengths of 2,3,4,5,6,7?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5"
+    },
+    "15": {
+      "problem": "<p>Triangle \\(ABC\\) has circumradius 201 and inradius 6. Three circles of radius \\(\\frac{p}{q}\\), where \\(p\\) and \\(q\\) are relatively prime positive integers, meet at exactly one point, and each is tangent to two distinct sides of triangle \\(ABC\\). Find \\(p+q\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3433"
+    },
+    "16": {
+      "problem": "<p>Let \\(a\\) and \\(b\\) be integers such that \\(1 \\le a \\le 20\\) and \\(1 \\le b \\le 16\\). Suppose a valid Pin (Princeton identification number) is any 3 digit number that does not start with 0. If \\(a\\) and \\(b\\) are randomly chosen, the probability that \\(ab\\) is a Pin in reduced form is \\(\\frac{m}{n}\\). What is \\(m+n\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "109"
+    },
+    "17": {
+      "problem": "<p>How many integer solutions are there between 0 and 90 inclusive to the equation \\[x^3 + 64x^2 - x + 27 \\equiv 0 \\pmod{91}?\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "18": {
+      "problem": "<p>Compute the sum of the four smallest positive integers \\(k\\) such that there is a pair of points with nonnegative integer \\(x\\)-coordinates on the parabola \\(y = \\frac{1}{k}x^2 + 2x\\) such that the distance between the two points is rational.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "31"
+    },
+    "19": {
+      "problem": "<p>We are given a circle and a square in the plane with radius \\(r\\) and side length \\(s\\), respectively. Let \\(X\\) be the locus of points that is a midpoint between some point inside the circle and some point inside the square. If the minimum value of \\([X]/rs\\), where \\([X]\\) is the area of region \\(X\\), can be written as \\(\\frac{a+\\sqrt{\\pi}}{b}\\), find \\(a+b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "21": {
+      "problem": "<p>Compute \\[\\int_0^{2016} \\frac{x-1008}{x^2-2016x-2017}\\, dx.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "23": {
+      "problem": "<p>What is \\(2^{2016} \\pmod{211}\\) in reduced form?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "71"
+    },
+    "24": {
+      "problem": "<p>Imagine a paper cutout in the shape of an equilateral triangle that has three other equilateral triangles that each share a distinct side of the original triangle. This shape can be folded up into a tetrahedron. How many such shapes in 2D are there that fold into a tetrahedron? Valid shapes must consist of a tessellation of equal sized equilateral triangles, and two shapes are considered the same (and shouldn’t be counted separately) if they can be rotated or flipped to match.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "25": {
+      "problem": "<p>Suppose that \\(\\triangle ABC\\) has side lengths \\(AB=2013\\), \\(AC=2015\\) and \\(BC=1007\\). Let \\(P\\) be a point inside \\(\\triangle ABC\\). Let \\(X\\) and \\(Y\\) be the feet of the perpendiculars from \\(P\\) to \\(AB\\) and \\(AC\\) respectively. Suppose that \\(\\angle BPX = \\angle CPY\\). Let the perpendicular bisector of \\(XY\\) intersect segment \\(BC\\) at \\(Q\\). If \\(\\left(\\frac{BQ}{QC}\\right)^2 = \\frac{a}{b}\\) where \\(a,b\\) are coprime positive integers, find \\(a+b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "26": {
+      "problem": "<p>Rem and Ram play a game on a large 2016-by-2016 chessboard. First, they randomly choose a cell to put their Subaru in, then randomly choose who goes first. Rem is allowed to move their Subaru up, down, left, or right by 1 square, while Ram is allowed to move their Subaru up 1 right 2 or up 2 right 1 (like a knight moving towards the upper-right). They play until Ram cannot make a move: if the piece is in the upper-right corner, then Rem wins; otherwise, Ram wins. The probability that Rem wins can be expressed in the form \\(\\frac{p}{q}\\), where \\((p,q)=1\\). Find \\(p+q\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6047"
+    },
+    "27": {
+      "problem": "<p>David adds 448 \\(2\\times 2\\times 2\\) cubes to a \\(8\\times 8\\times 8\\) cube to form a \\(16\\times 16\\times 16\\) cube. If the \\(8\\times 8\\times 8\\) cube is colored differently on each face but the \\(2\\times 2\\times 2\\) cubes are indistinguishable upon rotation and reflection and from each other, how many ways can David do this?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "125"
+    },
+    "28": {
+      "problem": "<p>Let \\(f\\) be the cubic polynomial defined as \\[f(x) = 64\\frac{(x-1)(x-2)(x-3)}{(4-1)(4-2)(4-3)} + 27\\frac{(x-1)(x-2)(x-4)}{(3-1)(3-2)(3-4)} + 8\\frac{(x-1)(x-3)(x-4)}{(2-1)(2-3)(2-4)} + \\frac{(x-2)(x-3)(x-4)}{(1-2)(1-3)(1-4)}.\\] What is the remainder when \\(f(1738)\\) is divided by 1000?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "272"
+    },
+    "29": {
+      "problem": "<p>Let the sequences \\(a_1, a_2, a_3, \\ldots\\) and \\(b_1, b_2, b_3, \\ldots\\) be defined by \\(a_1 = \\frac{1}{7}\\), \\(b_1 = \\frac{1}{3}\\) and \\(a_{i+1} = a_i b_i\\), \\(b_{i+1} = \\frac{2a_ib_i}{a_i - b_i + 1}\\). If \\(a_{100} = \\frac{p}{q}\\) where \\(p, q\\) are coprime positive integers, find the remainder when \\(p+q\\) is divided by 100.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6"
+    },
+    "30": {
+      "problem": "<p>Given an \\(n\\)-dimensional hyper-rectangle with side lengths \\(s_1, s_2, \\ldots, s_n\\), define the <i>content</i> of the hypercube to be the product \\(s_1 s_2 \\cdots s_n\\) (so, in particular, a 0-dimensional hypercube, or point, has content 1), and define the <i>gumption</i> of the hypercube to be the sum of the contents of every \\(m\\)-dimensional hypercube that makes up its boundary, for \\(0 \\le m \\le n\\). For instance, a cube with side lengths 1, 2, and 3 has content \\(1 \\times 2 \\times 3 = 6\\) and gumption \\(6 + 2(1\\times 2 + 1 \\times 3 + 2\\times 3) + 4(1+2+3) + 8 = 60\\), since it contains 1 3-dimensional cube, 6 2-dimensional squares, 12 1-dimensional edges, and 8 0-dimensional points.</p><p>Alice draws an \\(n\\)-dimensional hypercube with integer side lengths and \\(n \\ge 2\\). She makes sure to write down its gumption, 1008, but she forgets to label her drawing with the lengths of each side. Hoping to figure out what they were, she passes the picture to Bob, a perfect mathematician, who merely glances at the gumption and the dimension before confidently declaring that he knows what all of the side lengths were. What was \\(n\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5"
+    },
+    "32": {
+      "problem": "<p>Consider the curves in 3-space with equations \\(x^n+y^n+z^n=1\\) for \\(n \\in \\mathbb{N}\\). Denote \\(A_{2k}\\) the area of the surface using \\(n=2k\\). What is \\[\\lim_{k\\to\\infty} A_{2k}?\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "24"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "BMT Geometry Tiebreaker",
+  "year": 2025,
+  "name": "Geometry Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The minute hand of a circular clock reaches from the center of the clock to the edge, and the hour hand is half as long as the minute hand. The circumference of the clock is \\(24\\pi\\). What is the area of the triangle formed by the hour hand and minute hand at 4:30 AM?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Points \\(A\\) and \\(B\\) lie in the plane so that \\(AB = 1\\). Compute the area of the region of the plane consisting of all points \\(C\\) such that \\(\\angle ACB \\ge 60^\\circ\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>In triangle \\(\\triangle ABC\\) with circumcircle \\(\\omega\\), point \\(M\\) is the midpoint of side \\(\\overline{BC}\\) and \\(AB &lt; AC\\). Line \\(\\overleftrightarrow{AM}\\) intersects \\(\\omega\\) at \\(D \\ne A\\). Let \\(X\\) and \\(Y\\) be points on \\(\\omega\\) such that \\(\\overline{BX}\\) and \\(\\overline{CY}\\) bisect \\(\\overline{AM}\\). Given \\(AM = 40\\), \\(MD = 10\\), and \\(BX = 50\\), find \\(CY\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

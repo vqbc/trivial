@@ -1,0 +1,23 @@
+{
+  "test": "BMT Discrete Tiebreaker",
+  "year": 2025,
+  "name": "Discrete Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many ways are there to place 3 identical \\(\\bigcirc\\) on a \\(3 \\times 3\\) tic-tac-toe board according to the following rules?</p><ul><li>Each \\(\\bigcirc\\) is in a different cell.</li><li>Not all three \\(\\bigcirc\\) are in the same row, column, or diagonal.</li></ul><p>\\[\\begin{array}{|c|c|c|}\n\\hline\n &amp; &amp; \\\\\n\\hline\n &amp; &amp; \\\\\n\\hline\n &amp; &amp; \\\\\n\\hline\n\\end{array}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Find the sum of all three-digit positive integers \\(N\\) such that \\(N\\) plus the reverse of \\(N\\) is a perfect cube. For example, the reverses of \\(245\\) and \\(370\\) are \\(542\\) and \\(073 = 73\\), respectively.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>A subset \\(T\\) of \\(S = \\{1, 2, \\ldots, 2025\\}\\) is <i>generational</i> if for every integer \\(1 \\le j \\le 2025\\), there exist integers \\(c_1, c_2, \\ldots, c_{2025}\\) such that \\[\\sum_{n \\in T} n c_n \\equiv j \\pmod{2025}.\\]</p><p>What is the size of the largest subset \\(T\\) that is <b>not</b> generational?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

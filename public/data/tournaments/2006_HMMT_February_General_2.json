@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 2",
+  "year": 2006,
+  "name": "Individual Round: General Test, Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2006/feb/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Larry can swim from Harvard to MIT (with the current of the Charles River) in 40 minutes, or back (against the current) in 45 minutes. How long does it take him to <i>row</i> from Harvard to MIT, if he rows the return trip in 15 minutes? (Assume that the speed of the current and Larry’s swimming and rowing speeds relative to the current are all constant.) Express your answer in the format mm:ss.</p>",
+      "solutions": "<p>Let the distance between Harvard and MIT be 1, and let \\(c, s, r\\) denote the speeds of the current and Larry’s swimming and rowing, respectively. Then we are given \\[s+c = \\frac{1}{40} = \\frac{9}{360}, \\quad s-c = \\frac{1}{45} = \\frac{8}{360}, \\quad r-c = \\frac{1}{15} = \\frac{24}{360},\\] so \\[r+c = (s+c) - (s-c) + (r-c) = \\frac{9-8+24}{360} = \\frac{25}{360},\\] and it takes Larry \\(360/25 = 14.4\\) minutes, or 14:24, to row from Harvard to MIT.</p>",
+      "answer": "14:24"
+    },
+    "2": {
+      "problem": "<p>Find \\[\\frac{2^2}{2^2-1} \\cdot \\frac{3^2}{3^2-1} \\cdot \\frac{4^2}{4^2-1} \\cdots \\frac{2006^2}{2006^2-1}.\\]</p>",
+      "solutions": "<p>\\[\\prod_{k=2}^{2006} \\frac{k^2}{k^2-1} = \\prod_{k=2}^{2006} \\frac{k^2}{(k-1)(k+1)} = \\prod_{k=2}^{2006} \\frac{k}{k-1} \\prod_{k=2}^{2006} \\frac{k}{k+1} = \\frac{2006}{1} \\cdot \\frac{2}{2007} = \\frac{4012}{2007}.\\]</p>",
+      "answer": "\\frac{4012}{2007}"
+    },
+    "3": {
+      "problem": "<p>Let \\(C\\) be the unit circle. Four distinct, smaller congruent circles \\(C_1, C_2, C_3, C_4\\) are internally tangent to \\(C\\) such that \\(C_i\\) is externally tangent to \\(C_{i-1}\\) and \\(C_{i+1}\\) for \\(i = 1, \\ldots, 4\\) where \\(C_5\\) denotes \\(C_1\\) and \\(C_0\\) represents \\(C_4\\). Compute the radius of \\(C_1\\).</p>",
+      "solutions": "<p>Let \\(O\\) and \\(O'\\) be the centers of \\(C\\) and \\(C_1\\) respectively, and let \\(C_1\\) be tangent to \\(C, C_2, C_4\\) at \\(P, Q,\\) and \\(R\\) respectively. Observe that \\(QORO'\\) is a square and that \\(P, O',\\) and \\(O\\) are collinear. Thus, if \\(r\\) is the desired radius, \\(1 = r + OO' = r + r\\sqrt{2}\\), so that \\(r = \\frac{1}{\\sqrt{2}+1} = \\sqrt{2}-1\\).</p>",
+      "answer": "\\sqrt{2}-1"
+    },
+    "4": {
+      "problem": "<p>Vernonia High School has 85 seniors, each of whom plays on at least one of the school’s three varsity sports teams: football, baseball, and lacrosse. It so happens that 74 are on the football team; 26 are on the baseball team; 17 are on both the football and lacrosse teams; 18 are on both the baseball and football teams; and 13 are on both the baseball and lacrosse teams. Compute the number of seniors playing all three sports, given that twice this number are members of the lacrosse team.</p>",
+      "solutions": "<p>Suppose that \\(n\\) seniors play all three sports and that \\(2n\\) are on the lacrosse team. Then, by the principle of inclusion-exclusion, \\(85 = (74+26+2n) - (17+18+13) + (n) = 100+2n-48+n = 52+3n\\). It is easily seen that \\(n = 11\\).</p>",
+      "answer": "11"
+    },
+    "5": {
+      "problem": "<p>If \\(a, b\\) are nonzero real numbers such that \\(a^2 + b^2 = 8ab\\), find the value of \\(\\left| \\frac{a+b}{a-b} \\right|\\).</p>",
+      "solutions": "<p>Note that \\[\\left| \\frac{a+b}{a-b} \\right| = \\sqrt{\\frac{(a+b)^2}{(a-b)^2}} = \\sqrt{\\frac{a^2+b^2+2ab}{a^2+b^2-2ab}} = \\sqrt{\\frac{10ab}{6ab}} = \\frac{\\sqrt{15}}{3}.\\]</p>",
+      "answer": "\\frac{\\sqrt{15}}{3}"
+    },
+    "6": {
+      "problem": "<p>Octagon \\(ABCDEFGH\\) is equiangular. Given that \\(AB = 1\\), \\(BC = 2\\), \\(CD = 3\\), \\(DE = 4\\), and \\(EF = FG = 2\\), compute the perimeter of the octagon.</p>",
+      "solutions": "<p>Extend sides \\(AB, CD, EF, GH\\) to form a rectangle: let \\(X\\) be the intersection of lines \\(GH\\) and \\(AB\\); \\(Y\\) that of \\(AB\\) and \\(CD\\); \\(Z\\) that of \\(CD\\) and \\(EF\\); and \\(W\\) that of \\(EF\\) and \\(GH\\).</p><p>As \\(BC = 2\\), we have \\(BY = YC = \\sqrt{2}\\). As \\(DE = 4\\), we have \\(DZ = ZE = 2\\sqrt{2}\\). As \\(FG = 2\\), we have \\(FW = WG = \\sqrt{2}\\).</p><p>We can compute the dimensions of the rectangle: \\(WX = YZ = YC + CD + DZ = 3+3\\sqrt{2}\\), and \\(XY = ZW = ZE + EF + FW = 2+3\\sqrt{2}\\). Thus, \\(HX = XA = XY - AB - BY = 1+2\\sqrt{2}\\), and so \\(AH = \\sqrt{2}HX = 4+\\sqrt{2}\\), and \\(GH = WX - WG - HX = 2\\).</p><p>The perimeter of the octagon can now be computed by adding up all its sides.</p>",
+      "answer": "20+\\sqrt{2}"
+    },
+    "7": {
+      "problem": "<p>What is the smallest positive integer \\(n\\) such that \\(n^2\\) and \\((n+1)^2\\) both contain the digit 7 but \\((n+2)^2\\) does not?</p>",
+      "solutions": "<p>The last digit of a square is never 7. No two-digit squares begin with 7. There are no 3-digit squares beginning with the digits 17, 27, 37, or 47. In fact, the smallest square containing the digit 7 is \\(576 = 24^2\\). Checking the next few numbers, we see that \\(25^2 = 625\\), \\(26^2 = 676\\), \\(27^2 = 729\\), \\(28^2 = 784\\), and \\(29^2 = 841\\), so the answer is 27.</p>",
+      "answer": "27"
+    },
+    "8": {
+      "problem": "<p>Six people, all of different weights, are trying to build a human pyramid: that is, they get into the formation \\[\\begin{array}{ccccc}\n &amp; &amp; A &amp; &amp; \\\\\n &amp; B &amp; &amp; C &amp; \\\\\nD &amp; &amp; E &amp; &amp; F\n\\end{array}\\] We say that someone not in the bottom row is “supported by” each of the two closest people beneath her or him. How many different pyramids are possible, if nobody can be supported by anybody of lower weight?</p>",
+      "solutions": "<p>Without loss of generality, let the weights of the people be 1, 2, 3, 4, 5, and 6. Clearly we must have \\(A = 1\\). Then, equally clearly, either \\(B\\) or \\(C\\) must be 2.</p><p>Suppose \\(B = 2\\): Then either \\(C\\) or \\(D\\) must be 3. If \\(C = 3\\), we have \\(3! = 6\\) possibilities to fill the bottom row. If \\(D = 3\\), then \\(C = 4\\) and we have \\(2! = 2\\) possibilities to fill \\(E\\) and \\(F\\). Altogether there are \\(6+2 = 8\\) possibilities in this case.</p><p>Suppose \\(C = 2\\): then, similarly, there are 8 possibilities here.</p><p>Altogether there are \\(8+8 = 16\\) possibilities.</p>",
+      "answer": "16"
+    },
+    "9": {
+      "problem": "<p>Tim has a working analog 12-hour clock with two hands that run continuously (instead of, say, jumping on the minute). He also has a clock that runs really slow—at half the correct rate, to be exact. At noon one day, both clocks happen to show the exact time. At any given instant, the hands on each clock form an angle between \\(0^\\circ\\) and \\(180^\\circ\\) inclusive. At how many times during that day are the angles on the two clocks equal?</p>",
+      "solutions": "<p>A tricky thing about this problem may be that the angles on the two clocks might be reversed and would still count as being the same (for example, both angles could be \\(90^\\circ\\), but the hour hand may be ahead of the minute hand on one clock and behind on the other).</p><p>Let \\(x\\), \\(-12 \\le x &lt; 12\\), denote the number of hours since noon. If we take \\(0^\\circ\\) to mean upwards to the “XII” and count angles clockwise, then the hour and minute hands of the correct clock are at \\(30x^\\circ\\) and \\(360x^\\circ\\), and those of the slow clock are at \\(15x^\\circ\\) and \\(180x^\\circ\\), of course after removing multiples of \\(360^\\circ\\) and possibly flipping sign; we are looking for solutions to \\[330x^\\circ \\equiv 165x^\\circ \\pmod{360^\\circ} \\text{ or } 330x^\\circ \\equiv -165x^\\circ \\pmod{360^\\circ}.\\] In other words, \\[360 \\mid 165x \\quad \\text{or} \\quad 360 \\mid 495x.\\] Or, better yet, \\[\\frac{165}{360}x = \\frac{11}{24}x \\quad \\text{and/or} \\quad \\frac{495}{360}x = \\frac{11}{8}x\\] must be an integer. Now \\(x\\) is any <i>real</i> number in the range \\([-12, 12)\\), so \\(11x/8\\) ranges in \\([-16.5, 16.5)\\), an interval that contains 33 integers. For any value of \\(x\\) such that \\(11x/24\\) is an integer, of course \\(11x/8 = 3 \\times (11x/24)\\) is also an integer, so the answer is just 33.</p>",
+      "answer": "33"
+    },
+    "10": {
+      "problem": "<p>Fifteen freshmen are sitting in a circle around a table, but the course assistant (who remains standing) has made only six copies of today’s handout. No freshman should get more than one handout, and any freshman who does not get one should be able to read a neighbor’s. If the freshmen are distinguishable but the handouts are not, how many ways are there to distribute the six handouts subject to the above conditions?</p>",
+      "solutions": "<p>Suppose that you are one of the freshmen; then there’s a \\(6/15\\) chance that you’ll get one of the handouts. We may ask, given that you do get a handout, how many ways are there to distribute the rest? We need only multiply the answer to that question by \\(15/6\\) to answer the original question.</p><p>Going clockwise around the table from you, one might write down the sizes of the gaps between people with handouts. There are six such gaps, each of size 0–2, and the sum of their sizes must be \\(15-6=11\\). So the gap sizes are either \\(1,1,1,2,2,2\\) in some order, or \\(0,1,2,2,2,2\\) in some order. In the former case, \\(\\frac{6!}{3!3!} = 20\\) orders are possible; in the latter, \\(\\frac{6!}{1!1!4!} = 30\\) are. Altogether, then, there are \\(20+30 = 50\\) possibilities.</p><p>Multiplying this by \\(15/6\\), or \\(5/2\\), gives 125.</p>",
+      "answer": "125"
+    }
+  }
+}

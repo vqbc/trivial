@@ -1,0 +1,58 @@
+{
+  "test": "SMT Algebra",
+  "year": 2013,
+  "name": "Algebra Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2013/algebra-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Nick is a runner, and his goal is to complete four laps around a circuit at an average speed of 10 mph. If he completes the first three laps at a constant speed of only 9 mph, what speed does he need to maintain in miles per hour on the fourth lap to achieve his goal?</p>",
+      "solutions": "<p>Let \\(d\\) be the length of one lap in miles. Then he needs to complete the four laps in \\(\\frac{4d}{10} = \\frac{2d}{5}\\) hours. He has already spent \\(\\frac{3d}{9} = \\frac{d}{3}\\) hours on the first three laps, so he has \\(\\frac{2d}{5} - \\frac{d}{3} = \\frac{d}{15}\\) hours left. Therefore, he must maintain a speed of \\(\\boxed{15}\\) mph on the final lap.</p>",
+      "answer": "15"
+    },
+    "2": {
+      "problem": "<p>A tree has 10 pounds of apples at dawn. Every afternoon, a bird comes and eats \\(x\\) pounds of apples. Overnight, the amount of food on the tree increases by 10%. What is the maximum value of \\(x\\) such that the bird can sustain itself indefinitely on the tree without the tree running out of food?</p>",
+      "solutions": "<p>After removing \\(x\\) from 10, and then increasing that amount by 10%, we must end up with at least the amount we started with, 10 pounds. That is, the maximum value of \\(x\\) must satisfy \\(\\frac{11}{10}(10-x) = 10\\). Solving for \\(x\\), we get that \\(x = \\boxed{\\frac{10}{11}}\\).</p>",
+      "answer": "\\frac{10}{11}"
+    },
+    "3": {
+      "problem": "<p>Karl likes the number 17. His favorite polynomials are monic quadratics with integer coefficients such that 17 is a root of the quadratic and the roots differ by no more than 17. Compute the sum of the coefficients of all of Karl’s favorite polynomials. (A monic quadratic is a quadratic polynomial whose \\(x^2\\) term has a coefficient of 1.)</p>",
+      "solutions": "<p>All of Karl’s favorite quadratics take the form \\((x-r)(x-17)\\), where \\(0 \\le r \\le 34\\). The sum of the coefficients of any polynomial can be determined by evaluating the polynomial at \\(x=1\\). This gives \\(16r - 16\\). Then \\[\\sum_{r=0}^{34} (16r-16) = 16 \\cdot \\frac{34 \\cdot 35}{2} - 16 \\cdot 35 = \\boxed{8960}.\\]</p>",
+      "answer": "8960"
+    },
+    "4": {
+      "problem": "<p>Given that \\(f(x) + 2f(8-x) = x^2\\) for all real \\(x\\), compute \\(f(2)\\).</p>",
+      "solutions": "<p>Substituting \\(x=2\\), we get that \\(f(2) + 2f(6) = 4\\). Substituting \\(x=6\\), we get that \\(f(6)+2f(2)=36\\). Solving for \\(f(2)\\) and \\(f(6)\\) gives us that \\(f(6) = -\\frac{28}{3}\\) and \\(f(2) = \\boxed{\\frac{68}{3}}\\).</p>",
+      "answer": "\\frac{68}{3}"
+    },
+    "5": {
+      "problem": "<p>For exactly two real values of \\(b\\), \\(b_1\\) and \\(b_2\\), the line \\(y = bx - 17\\) intersects the parabola \\(y = x^2 + 2x + 3\\) at exactly one point. Compute \\(b_1^2 + b_2^2\\).</p>",
+      "solutions": "<p>We have that \\(b\\) is a valid number if and only if \\((x^2+2x+3)-(bx-17) = x^2+(2-b)x+20\\) has exactly one real root. This means that \\(2-b = \\pm 2\\sqrt{20}\\), so \\(b = 2 \\pm 2\\sqrt{20}\\). \\(b_1^2+b_2^2\\) is therefore \\(2(2^2) + 2(2\\sqrt{20})^2 = 8+160=\\boxed{168}\\).</p>",
+      "answer": "168"
+    },
+    "6": {
+      "problem": "<p>Compute the largest root of \\(x^4 - x^3 - 5x^2 + 2x + 6\\).</p>",
+      "solutions": "<p>Note that \\(x^4-x^3-5x^2+2x+6 = (x^4-5x^2+6)-x(x^2-2) = (x^2-2)(x^2-3)-x(x^2-2) = (x^2-2)(x^2-x-3)\\). The two largest candidate roots are therefore \\(\\sqrt{2}\\) and \\(\\frac{1+\\sqrt{13}}{2}\\). Note that \\(\\sqrt{13}&gt;3\\), so \\(\\frac{1+\\sqrt{13}}{2} &gt; 2 &gt; \\sqrt{2}\\), so therefore the largest root is \\(\\boxed{\\frac{1+\\sqrt{13}}{2}}\\).</p>",
+      "answer": "\\frac{1+\\sqrt{13}}{2}"
+    },
+    "7": {
+      "problem": "<p>Find all real \\(x\\) that satisfy \\(\\sqrt[3]{20x+\\sqrt[3]{20x+13}} = 13\\).</p>",
+      "solutions": "<p>Observe that \\(f(a) = \\sqrt[3]{20x+a}\\) is an increasing function in \\(a\\), so the only way that \\(f(f(a)) = a\\) can be true is if \\(f(a) = a\\). Solving \\(\\sqrt[3]{20x+13} = 13\\), we obtain \\(x = \\boxed{\\frac{546}{5}}\\).</p>",
+      "answer": "\\frac{546}{5}"
+    },
+    "8": {
+      "problem": "<p>Find the sum of all real \\(x\\) such that \\[\\frac{4x^2 + 15x + 17}{x^2 + 4x + 12} = \\frac{5x^2 + 16x + 18}{2x^2 + 5x + 13}.\\]</p>",
+      "solutions": "<p>Let \\(f(x) = 4x^2+15x+17\\), \\(g(x) = x^2+4x+12\\), and \\(h(x) = x^2+x+1\\). Then, the given equation becomes \\[\\frac{f(x)}{g(x)} = \\frac{f(x)+h(x)}{g(x)+h(x)}\\] \\[\\implies f(x)g(x) + f(x)h(x) = f(x)g(x) + g(x)h(x)\\] \\[\\implies f(x)h(x) = g(x)h(x).\\] Since \\(h(x) &gt; 0\\) for all real \\(x\\), we may divide through by \\(h(x)\\) to get \\[f(x) = g(x)\\] \\[\\implies 4x^2+15x+17 = x^2+4x+12\\] \\[\\implies 3x^2+11x+5 = 0.\\] The discriminant of this quadratic is \\[11^2 - 4 \\cdot 3 \\cdot 5 = 61 &gt; 0,\\] so it has two real roots. By Vieta’s, the sum of these roots is \\(\\boxed{-\\frac{11}{3}}\\).</p>",
+      "answer": "-\\frac{11}{3}"
+    },
+    "9": {
+      "problem": "<p>Let \\(a = -\\sqrt{3}+\\sqrt{5}+\\sqrt{7}\\), \\(b = \\sqrt{3}-\\sqrt{5}+\\sqrt{7}\\), \\(c = \\sqrt{3}+\\sqrt{5}-\\sqrt{7}\\). Evaluate \\[\\frac{a^4}{(a-b)(a-c)} + \\frac{b^4}{(b-c)(b-a)} + \\frac{c^4}{(c-a)(c-b)}.\\]</p>",
+      "solutions": "<p>Putting everything over a common denominator, we can rewrite the expression as \\[\\frac{a^4(b-c) - b^4(a-c) + c^4(a-b)}{(a-b)(a-c)(b-c)} = \\frac{a^4b - ab^4 - a^4c + ac^4 + b^4c - bc^4}{(a-b)(a-c)(b-c)}.\\] Notice that if \\(a=b\\), the numerator becomes \\(a^5 - a^5 - a^4c + ac^4 + a^4c - ac^4 = 0\\); similarly if \\(a=c\\) or \\(b=c\\). This means that the numerator is in fact divisible by \\((a-b)(a-c)(b-c)\\). Factoring, we find that the above expression is equal to \\[\\frac{(a-b)(b-c)(a-c)(a^2+b^2+c^2+ab+bc+ac)}{(a-b)(b-c)(a-c)} = a^2+b^2+c^2+ab+bc+ac\\] as long as the original expression was well-defined. But we have \\[a^2+b^2+c^2+ab+bc+ac = \\frac{1}{2}\\left((a+b)^2+(b+c)^2+(c+a)^2\\right)\\] and plugging in the given values of \\(a,b,c\\) gives \\[\\frac{1}{2}\\left((2\\sqrt{7})^2+(2\\sqrt{3})^2+(2\\sqrt{5})^2\\right) = 2(7+3+5) = \\boxed{30}.\\]</p>",
+      "answer": "30"
+    },
+    "10": {
+      "problem": "<p>Given a complex number \\(z\\) such that \\(z^{13} = 1\\), find all possible values of \\(z+z^3+z^4+z^9+z^{10}+z^{12}\\).</p>",
+      "solutions": "<p>First of all, if \\(z=1\\), then the expression is simply equal to \\(\\boxed{6}\\). Otherwise, let \\(\\omega = z+z^3+z^4+z^9+z^{10}+z^{12}\\). We find that \\[\\omega^2 = z^2+z^6+z^8+z^5+z^7+z^{11}+2(z^4+z^5+z^{10}+z^{11}+1+z^7+z^{12}+1+z^2+1+z+z^3+z^6+z^8+z^9).\\] Applying the identity \\(z+z^2+z^3+\\cdots+z^{12} = -1\\), we arrive at \\(\\omega^2 = -1-\\omega+2(3-1) = 3-\\omega\\), and the solutions to the quadratic are \\(\\omega = \\boxed{\\frac{-1\\pm\\sqrt{13}}{2}}\\).</p>",
+      "answer": "6, \\frac{-1\\pm\\sqrt{13}}{2}"
+    }
+  }
+}

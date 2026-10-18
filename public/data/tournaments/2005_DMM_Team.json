@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2005,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2005/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the sum of the seventeenth powers of the seventeen roots of the seventeeth degree polynomial equation \\(x^{17} - 17x + 17 = 0\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Four identical spherical cows, each of radius 17 meters, are arranged in a tetrahedral pyramid (their centers are the vertices of a regular tetrahedron, and each one is tangent to the other three). The pyramid of cows is put on the ground, with three of them laying on it. What is the distance between the ground and the top of the topmost cow?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>If \\(a_n\\) is the last digit of \\(\\sum_{i=1}^n i\\), what would the value of \\(\\sum_1^{1000} a_i\\) be?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>If there are 15 teams to play in a tournament, 2 teams per game, in how many ways can the tournament be organized if each team is to participate in exactly 5 games against different opponents?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>For \\(n = 20\\) and \\(k = 6\\), calculate \\[2^k \\binom{n}{0}\\binom{n}{k} - 2^{k-1}\\binom{n}{1}\\binom{n-1}{k-1} + 2^{k-2}\\binom{n}{2}\\binom{n-2}{k-2} + \\cdots + (-1)^k \\binom{n}{k}\\binom{n-k}{0}\\] where \\(\\binom{n}{k}\\) is the number of ways to choose \\(k\\) things from a set of \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Given a function \\(f(x) = ax^2 + b\\), with \\(a,b\\) real numbers such that \\(f(f(f(x))) = -128x^8 + \\frac{128}{3}x^6 - \\frac{16}{22}x^2 + \\frac{23}{102}\\), find \\(b^a\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Simplify the following fraction: \\(\\frac{(2^3-1)(3^3-1)\\cdots(100^3-1)}{(2^3+1)(3^3+1)\\cdots(100^3+1)}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Simplify the following expression: \\[\\frac{\\sqrt{3+\\sqrt{5}}+\\sqrt{3-\\sqrt{5}}}{\\sqrt{3-\\sqrt{8}}} - \\frac{4}{\\sqrt{8-2\\sqrt{15}}}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Suppose that \\(p(x)\\) is a polynomial of degree 100 such that \\(p(k) = k2^{k-1}, k = 1,2,3\\ldots,100\\). What is the value of \\(p(101)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Find all 17 real solutions \\((w,x,y,z)\\) to the following system of equalities: \\[\\begin{aligned}\n2w + w^2x &amp;= x \\\\\n2x + x^2y &amp;= y \\\\\n2y + y^2z &amp;= z \\\\\n-2z + z^2w &amp;= w.\n\\end{aligned}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

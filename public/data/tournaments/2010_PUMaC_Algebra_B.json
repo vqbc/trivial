@@ -1,0 +1,43 @@
+{
+  "test": "PUMaC Algebra B",
+  "year": 2010,
+  "name": "Algebra B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2010_AlgebraB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let the operation \\(\\star\\) be defined by \\(x\\star y = y^x - xy\\). Calculate \\((3\\star4) - (4\\star3)\\).</p>",
+      "solutions": "<p>We have \\[(3\\star 4) - (4\\star 3) = (64-12) - (81-12) = \\boxed{-17}.\\]</p>",
+      "answer": "-17"
+    },
+    "2": {
+      "problem": "<p>Let \\(p(x) = x^2+x+1\\). Find the fourth smallest prime \\(q\\) such that \\(p(n)\\) is divisible by \\(q\\) for some integer \\(n\\).</p>",
+      "solutions": "<p>One can check that there are roots mod \\(3\\), \\(7\\), \\(13\\), and \\(19\\), and no others for smaller primes, so the fourth smallest such prime is \\(\\boxed{19}\\).</p>",
+      "answer": "19"
+    },
+    "3": {
+      "problem": "<p>Write \\[\\frac{1}{\\sqrt[5]{2}-1} = a + b\\sqrt[5]{2} + c\\sqrt[5]{4} + d\\sqrt[5]{8} + e\\sqrt[5]{16},\\] with \\(a\\), \\(b\\), \\(c\\), \\(d\\), and \\(e\\) integers. Find \\(a^2+b^2+c^2+d^2+e^2\\).</p>",
+      "solutions": "<p>By multiplying both sides by \\(\\sqrt[5]{2}-1\\) and noting that the numbers \\(1\\), \\(\\sqrt[5]{2}=2^{1/5}\\), \\(\\sqrt[5]{4}=2^{2/5}\\), \\(\\sqrt[5]{8}=2^{3/5}\\), and \\(\\sqrt[5]{16}=2^{4/5}\\) are all linearly independent over \\(\\mathbb{Q}\\), we can set up five equations for five unknowns, whose solution is \\(a=b=c=d=e=1\\). Hence \\(a^2+b^2+c^2+d^2+e^2 = \\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "4": {
+      "problem": "<p>Let \\(S\\) be the sum of all real \\(x\\) such that \\(4^x = x^4\\). Find the nearest integer to \\(S\\).</p>",
+      "solutions": "<p>We immediately see two solutions, \\(2\\) and \\(4\\), and that there can be no more positive roots. There must be a negative root, however: let \\(f(x)=4^x\\) and \\(g(x)=x^4\\); then \\(g(0)=0\\) and \\(f(0)=1\\), but \\(g\\) goes off to infinity as \\(x\\to-\\infty\\) and \\(f\\) goes to \\(0\\) as \\(x\\to\\infty\\). Plugging in \\(x=-1\\), we have \\(f(-1)=1/4\\) and \\(g(-1)=1\\); plugging in \\(x=-1/2\\) we have \\(f(-1/2)=1/2\\) and \\(g(-1/2)=1/16\\). Therefore the root is between \\(-1/2\\) and \\(-1\\), and the nearest integer to the sum of the roots must be \\(\\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "6": {
+      "problem": "<p>Define \\[f(x) = x + \\sqrt{x+\\sqrt{x+\\sqrt{x+\\sqrt{x+\\cdots}}}}.\\] Find the smallest integer \\(x\\) such that \\(f(x) \\ge 50\\sqrt{x}\\).</p>",
+      "solutions": "<p>Noting that \\((f(x)-x)^2 = f(x)\\), we can solve the quadratic equation for \\(f(x)\\) to get that \\[f(x) = x + \\frac{1}{2} \\pm \\sqrt{x+\\frac{1}{4}}.\\] We clearly have to take the positive root (we can notice, for example, that \\(f(1)&gt;1\\)). The problem therefore reduces to finding the smallest integer \\(x\\) such that \\[x + \\frac{1}{2} + \\sqrt{x+\\frac14} \\ge 50\\sqrt{x}.\\] It is simple to note that \\(x\\) has to be fairly large for this to be satisfied (after trying the trivial \\(x=1\\)). For large \\(x\\), \\(\\sqrt{x+\\frac14}\\) is very, very close to \\(\\sqrt{x}\\), so we can rewrite this as \\[x + \\frac12 \\ge 49\\sqrt{x}.\\] The above is again rewritten as \\[x^2 - 2400x + \\frac14 \\ge 0.\\] The smallest integer \\(x\\) satisfying the above is obviously \\(\\boxed{2400}\\), and since the margin of error here is \\(\\frac14\\), our previous approximation is justified.</p><p>Of note is that this problem is cooked: the value \\(x=0\\) is also a valid solution. We accepted either solution.</p>",
+      "answer": "2400"
+    },
+    "7": {
+      "problem": "<p>Let \\(f\\) be a function such that \\(f(x) + f(x+1) = 2^x\\) and \\(f(0) = 2010\\). Find the last two digits of \\(f(2010)\\).</p>",
+      "solutions": "<p>We have the sequence of equations \\[\\begin{aligned}\nf(x) + f(x+1) &amp;= 2^x \\\\\nf(x+1) + f(x+2) &amp;= 2^{x+1} = 2\\cdot 2^x \\\\\n&amp;\\ \\ \\vdots \\\\\nf(x+n-1) + f(x+n) &amp;= 2^{x+n-1} = 2^{n-1}\\cdot 2^x.\n\\end{aligned}\\] Adding and subtracting alternate lines, we get a telescoping sum: \\[f(x) + (-1)^{n+1} f(x+n) = 2^x \\sum_{k=0}^{n-1} 2^k(-1)^k = 2^x \\sum_{k=0}^{n-1} (-2)^k = 2^x \\left(\\frac{1-(-2)^n}{3}\\right).\\] Plug in \\(x=0\\) and \\(n=2010\\), so \\[f(2010) = \\frac{2^{2010}-1}{3} + 2010.\\] The last two digits of \\(2^{2010}\\) are \\(24\\) (using Euler’s theorem with \\(n=25\\), we have \\(2^{20}\\equiv 1\\pmod{25}\\), so \\(2^{2000}\\equiv 1\\pmod{25}\\), so \\(2^{2010}\\equiv 2^{10}\\pmod{25}\\), so \\(2^{2010}\\equiv 24\\pmod{100}\\)). Therefore the expression \\((2^{2010}-1)/3\\) has last digits \\(41\\), so overall the last two digits are \\(\\boxed{51}\\).</p>",
+      "answer": "51"
+    },
+    "8": {
+      "problem": "<p>The expression \\(\\sin 2^\\circ \\sin 4^\\circ \\sin 6^\\circ \\cdots \\sin 90^\\circ\\) is equal to \\(p\\sqrt5/2^{50}\\), where \\(p\\) is an integer. Find \\(p\\).</p>",
+      "solutions": "<p>Let \\(\\omega\\) be the root of unity \\(e^{2\\pi i/90}\\), so we have \\[\\prod_{n=1}^{45} \\sin(2n^\\circ) = \\sum_{n=1}^{45} \\frac{\\omega^n - 1}{2i\\omega^{n/2}}.\\] By the symmetry of the sine (and the fact that \\(\\sin(90^\\circ)=1\\)), \\[\\prod_{n=1}^{45} \\sin(2n^\\circ) = \\prod_{n=46}^{89} \\sin(2n^\\circ),\\] so \\[\\left|\\prod_{n=1}^{45} \\sin(2n^\\circ)\\right|^2 = \\sum_{n=1}^{89} \\frac{|\\omega^n-1|}{2} = \\frac{90}{2^{89}},\\] where we’ve used the usual geometric series sum for roots of unity. The product is clearly positive and real, so it is equal to \\[\\frac{\\sqrt{45}}{2^{44}} = \\frac{3\\sqrt5}{2^{44}},\\] implying that \\(p = 3\\cdot 2^6 = \\boxed{192}\\).</p>",
+      "answer": "192"
+    }
+  }
+}

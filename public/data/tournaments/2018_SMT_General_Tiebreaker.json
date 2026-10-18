@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2018,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2018/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Connie owns a small farm and grows mangos and pineapples. After one harvest she increased her mango supply by 50% but also sold half of her pineapples. Given that she has a net loss of 10 fruit after the harvest, and that she has the same number of mangos as pineapples after the harvest, how much fruit did she initially have?</p>",
+      "solutions": "<p>Let \\(x\\) be Connie’s initial number of mangos and \\(y\\) be her initial number of pineapples. After the harvest, she will have \\(\\frac{3}{2}x\\) mangos and \\(\\frac{1}{2}y\\) pineapples. This gives us the equation \\(3x = y\\), since her mango and pineapple counts are the same after the harvest. On the other hand, Connie has 10 fewer pieces of fruit after the harvest, which gives us the equation \\(x + y - 10 = \\frac{3}{2}x + \\frac{1}{2}y\\). Multiplying both sides of this equation by 2 and moving the variables to one side gives us \\(y - x = 20\\). Solving this system of equations yields \\(x = 10\\) and \\(y = 30\\), so Connie initially had \\(10 + 30 = \\boxed{40}\\) fruits.</p>",
+      "answer": "40"
+    },
+    "2": {
+      "problem": "<p>Three identical circles of radius 3 lie externally tangent to each other. A fourth, larger circle is drawn around the other three circles so that the smaller three circles are internally tangent to the larger circle. Compute the radius of the larger circle.</p>",
+      "solutions": "<p>Let \\(A\\), \\(B\\), \\(C\\) be the centers of the three smaller circles, and let \\(O\\) be the center of the larger circle. Note that the radius of the larger circle is simply \\(3 + OA\\). Because the three smaller circles are tangent to each other, we have \\(AB = AC = BC = 3 \\cdot 2 = 6\\), so \\(\\triangle ABC\\) is an equilateral triangle. Now if we let \\(D\\) be the midpoint of \\(AB\\), we can see that \\(ADO\\) is a 30-60-90 triangle. This gives us the ratio \\(\\frac{\\sqrt{3}}{2} = \\frac{3}{OA}\\), which we solve to get \\(OA = 2\\sqrt{3}\\). Therefore, the radius of the larger circle is \\(\\boxed{3 + 2\\sqrt{3}}\\).</p>",
+      "answer": "3 + 2\\sqrt{3}"
+    },
+    "3": {
+      "problem": "<p>How many ways are there to partition 11 into a sum of an odd number of odd positive integers? Order does not matter, so \\(11 = 3 + 3 + 5\\) and \\(11 = 3 + 5 + 3\\) should be counted only once.</p>",
+      "solutions": "<p>We proceed by casework on the number of integers we use.</p><ul><li>If we only use 1 number, the only way is 11 itself.</li><li>If we use 3 numbers, we have \\(11 = 9+1+1\\), \\(11 = 7+3+1\\), \\(11 = 5+5+1\\), and \\(11 = 5+3+3\\) for a total of 4 ways.</li><li>If we use 5 numbers, we have 3 ways: \\(11 = 7+1+1+1+1\\), \\(11 = 3+3+3+1+1\\) and \\(11 = 5+3+1+1+1\\).</li><li>If we use 7 numbers, we have 2 ways: \\(11 = 5+1+1+1+1+1+1\\) and \\(11 = 3+3+1+1+1+1+1\\).</li><li>If we use 9 numbers, we have only 1 way: \\(11 = 3+1+1+\\cdots+1\\).</li><li>If we use 11 numbers, we have only 1 way: \\(11 = 1+1+\\cdots+1\\).</li></ul><p>Therefore, the total number of partitions is \\(1+4+3+2+1+1 = \\boxed{12}\\).</p>",
+      "answer": "12"
+    }
+  }
+}

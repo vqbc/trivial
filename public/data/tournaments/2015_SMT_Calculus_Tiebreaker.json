@@ -1,0 +1,23 @@
+{
+  "test": "SMT Calculus Tiebreaker",
+  "year": 2015,
+  "name": "Calculus Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2015/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\(\\int_0^1 x^{29} \\ln x \\, dx\\).</p>",
+      "solutions": "<p>Integration by parts gives that \\(\\int x^{29} \\ln x \\, dx = \\frac{x^{30}(30\\ln x - 1)}{900}\\) - evaluating gives us \\(\\boxed{-\\frac{1}{900}}\\).</p>",
+      "answer": "-\\frac{1}{900}"
+    },
+    "2": {
+      "problem": "<p>Compute \\(\\int_{-\\pi}^{\\pi} |x - \\sin x| \\, dx\\).</p>",
+      "solutions": "<p>\\(\\int_{-\\pi}^{\\pi} |x - \\sin x| \\, dx = 2\\int_0^{\\pi} (x - \\sin x) \\, dx = \\boxed{\\pi^2 - 4}\\).</p>",
+      "answer": "\\pi^2 - 4"
+    },
+    "3": {
+      "problem": "<p>Compute: \\[\\sum_{k=0}^{\\infty} \\frac{(k+1)^3}{k!}.\\]</p>",
+      "solutions": "<p>It is obvious that this sum should be some version of the exponential function. It can be resolved as derivatives of the exponential by noticing: \\[(k+1)^3 = 1 + 7k + 6k(k-1) + k(k-1)(k-2)\\]</p><p>Inserting this we can see that these represent 0 to 3 derivatives of the exponential function evaluated at 1. The result follows.</p>",
+      "answer": "15e"
+    }
+  }
+}

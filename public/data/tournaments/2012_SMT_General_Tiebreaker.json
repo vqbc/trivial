@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2012,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2012/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\(1^2 - 2^2 + 3^2 - \\cdots - 18^2 + 19^2 - 20^2\\).</p>",
+      "solutions": "<p>Note that \\((2n+1)^2 - (2n+2)^2 = -4n - 3\\). Therefore, the sum is equivalent to \\[\\sum_{i=0}^{9} -2i-3 = -2(9)(10) - 30 = \\boxed{-210}.\\]</p>",
+      "answer": "-210"
+    },
+    "2": {
+      "problem": "<p>Reimu and Marisa are playing a game with 2012 coins. Reimu flips all 2012 coins, and then is permitted to flip any subset of the 2012 coins exactly once more. After this, Reimu pays Marisa $2 for every head on the table, whereas Marisa pays Reimu $1 for every tail on the table. Who is more likely to earn a profit, and what is the expected profit for that person, in dollars?</p>",
+      "solutions": "<p>We compute the expected profit for a game using 1 coin and then multiply this by 2012. We are allowed to do this by linearity of expectation. If Reimu flips the coin and gets a tail, then she receives $1 guaranteed. If Reimu flips the coin and gets a head instead, she then reflips the coin and gets $1 with probability \\(\\frac{1}{2}\\) and loses $2 with probability \\(\\frac{1}{2}\\). Therefore, Reimu expects to win \\(1\\left(\\frac{1}{2}+\\frac{1}{4}\\right) - 2\\left(\\frac{1}{4}\\right) = 0.25\\) dollars. Multiplying by 2012, Reimu expects to win $503.</p>",
+      "answer": "\\text{Reimu}, \\$503"
+    },
+    "3": {
+      "problem": "<p>We define \\(n\\) to be a squarefree integer if, for every prime \\(p\\), \\(p^2\\) does not divide \\(n\\). Let \\(f(n)\\) be the sum of the reciprocals of all the divisors of \\(n\\). We define \\(n\\) to be an amazing integer if \\(f(n) = 2\\). How many squarefree amazing integers are there?</p>",
+      "solutions": "<p>Note that \\(f(n) = \\frac{\\sigma(n)}{n} = \\prod_{i=1}^{k} \\frac{p_i+1}{p_i}\\). In order for \\(f(n)\\) to be integral, the only primes that can divide \\(n\\) are 2 and 3, since those are the only consecutive primes. Note that \\(f(6) = 2\\), but 1, 2, and 3 do not satisfy this constraint. Therefore, there is exactly \\(\\boxed{1}\\) squarefree amazing integer.</p>",
+      "answer": "1"
+    }
+  }
+}

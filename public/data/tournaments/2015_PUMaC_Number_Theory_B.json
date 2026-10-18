@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory B",
+  "year": 2015,
+  "name": "Number Theory B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2015_NumberTheoryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the remainder when \\[\\sum_{k=0}^{100} 10^k\\] is divided by \\(9\\)?</p>",
+      "solutions": "<p>The sum of the digits of the expression is \\(101\\), so by the rule for remainder modulo \\(9\\), the answer is \\(101 \\pmod{9}\\), or \\(\\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>What is the 22nd positive integer \\(n\\) such that \\(22^n\\) ends in a \\(2\\)? (when written in base \\(10\\)).</p>",
+      "solutions": "<p>The last digits of the powers of \\(22\\) cycle \\(2, 4, 8, 6, 2, 4, 8, 6, \\ldots\\). The answer is thus the 22nd term of the arithmetic sequence \\(1, 5, 9, \\ldots\\), which is \\(\\boxed{85}\\).</p>",
+      "answer": "85"
+    },
+    "3": {
+      "problem": "<p>What is the sum of all positive integers \\(n\\) such that \\(\\operatorname{lcm}(2n, n^2) = 14n - 24\\)?</p>",
+      "solutions": "<p>\\(\\operatorname{lcm}(2n, n^2)\\) is \\(n^2\\) when \\(n\\) is even and \\(2n^2\\) when \\(n\\) is odd. Solving the equation \\(n^2 = 14n - 24\\), we get \\(n = 2\\) and \\(n = 12\\), both of which are even and thus yield solutions. Solving \\(2n^2 = 14n - 24\\), we get \\(n = 3\\) and \\(n = 4\\), of which only \\(n = 3\\) works, because it is odd. Thus, our answer is \\(2 + 3 + 12 = \\boxed{17}\\).</p>",
+      "answer": "17"
+    },
+    "4": {
+      "problem": "<p>A circle with radius \\(1\\) and center \\((0, 1)\\) lies on the coordinate plane. Ariel stands at the origin and rolls a ball of paint at an angle of \\(35\\) degrees relative to the positive \\(x\\)-axis (counting degrees counterclockwise). The ball repeatedly bounces off the circle and leaves behind a trail of paint where it rolled. After the ball of paint returns to the origin, the paint has traced out a star with \\(n\\) points on the circle. What is \\(n\\)?</p>",
+      "solutions": "<p>The ball of paint bounces off the circle such that the angle between two consecutive bounces that is centered at the origin is \\(2 \\cdot 35 = 70\\) degree as usual. Therefore, the paint keeps bouncing until it hits the first multiple of \\(360^\\circ\\) that is also a multiple of \\(70^\\circ\\). Therefore, the number of unique intersections with the circle is \\[\\frac{\\operatorname{lcm}(360, 70)}{70} = \\frac{360 \\cdot 7}{10 \\cdot 7} = \\boxed{36}.\\]</p>",
+      "answer": "36"
+    },
+    "5": {
+      "problem": "<p>Given that there are \\(24\\) primes between \\(3\\) and \\(100\\), inclusive, what is the number of ordered pairs \\((p, a)\\) with \\(p\\) prime, \\(3 \\le p &lt; 100\\), and \\(1 \\le a &lt; p\\) such that \\(p \\mid (a^{p-2} - a)\\)?</p>",
+      "solutions": "<p>By Fermat’s Little Theorem, \\(a^{p-1} \\equiv 1 \\pmod{p}\\). This means that \\(a^{p-2} \\equiv a^{-1} \\pmod{p}\\), so \\[0 \\equiv a^{p-2} - a \\equiv a^{-1} - a \\pmod{p} \\implies a^2 \\equiv 1 \\pmod{p}.\\] Clearly the only solutions are \\(a = 1, p - 1\\), so for each prime \\(p\\) there are exactly two solutions of the form \\((p, a)\\). Hence there are \\(\\boxed{48}\\) solutions total.</p>",
+      "answer": "48"
+    },
+    "6": {
+      "problem": "<p>What is the largest positive integer \\(n\\) less than \\(10{,}000\\) such that in base \\(4\\), \\(n\\) and \\(3n\\) have the same number of digits; in base \\(8\\), \\(n\\) and \\(7n\\) have the same number of digits; and in base \\(16\\), \\(n\\) and \\(15n\\) have the same number of digits? Express your answer in base \\(10\\).</p>",
+      "solutions": "<p>The conditions are basically stating that in each of the three bases, \\(n\\) must appear “alphabetically” before \\(1111\\ldots\\). Let \\(k_4\\), \\(k_8\\), and \\(k_{16}\\) be the largest positive integers such that \\(4^{k_4} &lt; n\\), \\(8^{k_8} &lt; n\\), and \\(16^{k_{16}} &lt; n\\). Then \\(n &lt; 2 \\cdot 4^{k_4}\\), \\(n &lt; 2 \\cdot 8^{k_8}\\), and \\(n &lt; 2 \\cdot 16^{k_{16}}\\). In other words, \\(n &lt; 2^{2k_4 + 1}\\), \\(n &lt; 2^{3k_8 + 1}\\), and \\(n &lt; 2^{4k_{16} + 1}\\), but \\(n &gt; 2^{2k_4}\\), \\(n &gt; 2^{3k_8}\\), and \\(n &gt; 2^{4k_{16}}\\). It follows that the greatest power of \\(2\\) that is less than \\(n\\) must be \\(2^{12k}\\) for some integer \\(k\\) (because \\(12\\) is the least common multiple of \\(2\\), \\(3\\), and \\(4\\)). The largest such \\(k\\) can be \\(1\\) if \\(n\\) is to be less than \\(10{,}000\\). From here it is easy to see that the largest possible value of \\(n\\) is the smallest of \\(1111_{16}\\), \\(11111_8\\), and \\(1111111_4\\), and that is \\(1111_{16} = \\boxed{4369}\\).</p>",
+      "answer": "4369"
+    },
+    "7": {
+      "problem": "<p>What is the smallest positive integer \\(n\\) such that \\(20 \\equiv n^{15} \\pmod{29}\\)?</p>",
+      "solutions": "<p>By Fermat’s Little Theorem, \\(a^{28} \\equiv 1 \\pmod{29}\\) for all positive integers \\(a\\) that are not multiples of \\(29\\). It follows that \\(a^{14} \\equiv \\pm 1 \\pmod{29}\\), so \\(a^{15} \\equiv \\pm a \\pmod{29}\\) for all such \\(a\\). Thus, if \\(a^{15} \\equiv 20 \\pmod{29}\\), then \\(\\pm a \\equiv 20 \\pmod{29}\\). We know that \\(9^{14} = 3^{28} \\equiv 1 \\pmod{29}\\), so \\(9^{15} \\equiv 9 \\pmod{29}\\). Next we try \\(a = 20\\), and we find that \\(20^{14} \\equiv 49^{14} \\equiv 7^{28} \\equiv 1 \\pmod{29}\\), and so \\(20^{15} \\equiv 20 \\pmod{29}\\). Therefore, the smallest such \\(a\\) is \\(\\boxed{20}\\).</p>",
+      "answer": "20"
+    },
+    "8": {
+      "problem": "<p>Given a positive integer \\(k\\), let \\(f(k)\\) be the sum of the \\(k\\)-th powers of the primitive roots of \\(73\\). For how many positive integers \\(k &lt; 2015\\) is \\(f(k)\\) divisible by \\(73\\)?</p><p><i>Note: A primitive root \\(r\\) of a prime \\(p\\) is an integer \\(1 \\le r &lt; p\\) such that the smallest positive integer \\(k\\) such that \\(r^k \\equiv 1 \\pmod{p}\\) is \\(k = p - 1\\).</i></p>",
+      "solutions": "<p>Denote \\(S_d^k\\) to be the sum of the \\(k\\)-th powers of the residues of order \\(d\\) modulo \\(p = 73\\). Now, for any primitive root \\(r\\) of \\(p\\), we have: \\[\\operatorname{ord}_p(r^k) = \\frac{\\operatorname{ord}_p(r)}{\\gcd(k, p - 1)} = \\frac{p - 1}{\\gcd(k, p - 1)} = d_k\\]</p><p>Furthermore, the number of residues of \\(p\\) of order \\(d\\) is: \\[n_d = \\phi(d)\\]</p><p>Now, since \\(d_k\\) is independent of the primitive root \\(r\\), \\(S_1^k\\) is equal to a sum of \\(n_{p-1}\\) residues of order \\(d_k\\). More specifically, due to symmetry within the group \\(\\mathbb{Z}/p\\mathbb{Z}\\), each residue or order \\(d_k\\) is represented in the sum the same number of times. Then, we have: \\[S_1^k = \\frac{n_{p-1}}{n_{d_k}} \\cdot S_{d_k} = \\frac{\\phi(p - 1)}{\\phi\\left(\\frac{p-1}{\\gcd(k, p-1)}\\right)} \\cdot S_{d_k} = \\phi(\\gcd(k, p - 1)) \\cdot S_{d_k}\\]</p><p>Clearly, \\(p \\nmid \\phi(\\gcd(k, p-1)) &lt; p\\), so \\(p \\mid S_{d_k}\\). We now present a lemma:</p><p><u>Lemma 1:</u> For some \\(d \\mid p - 1\\), \\(S_d \\equiv 0 \\pmod{p}\\) iff \\(d\\) is divisible by a perfect square. Furthermore, if \\(d = q_1 q_2 \\ldots q_m\\) is square-free, then we have that \\(S_d \\equiv (-1)^m\\).</p><p><i>Proof:</i> We prove by induction. For \\(d = 1\\), it is clear that \\(S_1 = 1 = (-1)^0\\). Now, assume this is true for all \\(d' &lt; d\\). Let \\(x\\) be a residue of order \\(d\\) modulo \\(p\\). Clearly, \\(p \\mid x^{d-1} + x^{d-2} + \\ldots + x + 1\\), as \\(p \\mid x^d - 1\\) and \\(p \\nmid x - 1\\). But, we have: \\[x^{d-1} + x^{d-2} + \\ldots + x + 1 = \\sum_{d' \\mid d} S_{d'} \\equiv 0 \\pmod{p}\\]</p><p>If \\(d\\) is square-free, we write \\(d = q_1 q_2 \\ldots q_m\\). Then, we have: \\[S_d \\equiv -\\sum_{d' \\mid d, d' \\ne d} S_{d'} \\equiv (-1)\\left(\\sum_{i=0}^{m-1} (-1)^i \\binom{m}{i}\\right) \\equiv (-1)\\left(-(-1)^m \\binom{m}{m}\\right) \\equiv (-1)^m \\pmod{p}\\]</p><p>Otherwise, we write \\(d = q_1^{\\alpha_1} q_2^{\\alpha_2} \\ldots q_m^{\\alpha_m}\\) and \\(e = q_1 q_2 \\ldots q_m &lt; d\\). Then, we have: \\[S_d \\equiv -\\sum_{d' \\mid d, d' \\ne d} S_{d'} \\equiv -\\sum_{e' \\mid e} S_{e'} \\equiv (-1)\\left(\\sum_{i=0}^{m} (-1)^i \\binom{m}{i}\\right) \\equiv 0 \\pmod{p}\\]</p><p>As desired. \\(\\square\\)</p><p>This means that \\(k\\) satisfies the condition iff \\(d_k\\) is divisible by a perfect square. Since \\(p - 1 = 72 = 2^3 \\cdot 3^2\\), \\(d_k\\) is square-free iff \\(2^2 \\cdot 3 = 12 \\mid k\\), so \\(k\\) satisfies the condition iff \\(12 \\nmid k\\). There are \\(2014 - \\left\\lfloor \\frac{2014}{12} \\right\\rfloor = \\boxed{1847}\\) such \\(k\\).</p>",
+      "answer": "1847"
+    }
+  }
+}

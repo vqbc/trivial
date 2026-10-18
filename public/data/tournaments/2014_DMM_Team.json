@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2014,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2014/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Steven has just learned about polynomials and he is struggling with the following problem: expand \\((1-2x)^7\\) as \\(a_0 + a_1 x + \\cdots + a_7 x^7\\). Help Steven solve this problem by telling him what \\(a_1 + a_2 + \\cdots + a_7\\) is.</p>",
+      "solutions": "<p>Notice \\(a_0 = 1\\) by the binomial theorem. Then, when \\(x = 1\\), we have \\[(1-2)^7 = a_0 + a_1 + \\cdots + a_7\\] so \\(a_0 + a_1 + \\cdots + a_7 = -1\\). Hence, \\(a_1 + a_2 + \\cdots + a_7 = \\boxed{-2}\\).</p>",
+      "answer": "-2"
+    },
+    "2": {
+      "problem": "<p>Each element of the set \\(\\{2, 3, 4, \\ldots, 100\\}\\) is colored. A number has the same color as any divisor of it. What is the maximum number of colors?</p>",
+      "solutions": "<p>Notice \\(2\\) and \\(3\\) should have the same color since both of them divide \\(6\\). In this way, any prime number less than \\(50\\) should have the same color, since we can always find a number less than \\(100\\) such that it’s the product of \\(2\\) and the prime number, so they should have the same color with \\(2\\). Hence, any composite number from the set should also have the same color with \\(2\\), since they must divide prime numbers less than \\(11\\). Thus, numbers can have different colors can only be prime numbers greater than \\(50\\), which includes \\(\\{53, 59, 61, 67, 71, 73, 79, 83, 89, 97\\}\\). Hence, the maximum number of colors should be \\(\\boxed{11}\\).</p>",
+      "answer": "11"
+    },
+    "3": {
+      "problem": "<p>Fuchsia is selecting 24 balls out of 3 boxes. One box contains blue balls, one red balls and one yellow balls. They each have a hundred balls. It is required that she takes at least one ball from each box and that the numbers of balls selected from each box are distinct. In how many ways can she select the 24 balls?</p>",
+      "solutions": "<p>Let the number of blue balls be \\(x\\), red balls be \\(y\\), and yellow balls be \\(z\\), so \\(x + y + z = 24\\). Let \\(x' = x - 1\\), \\(y' = y - 1\\), and \\(z' = z - 1\\), so \\(x' + y' + z' = 21\\). Since \\(x, y, z\\) must be at least \\(1\\), \\(x', y', z'\\) must be at least \\(0\\). Then, by stars and bars, we have a total of \\(\\binom{23}{2} = 253\\) ways.</p><p>When exactly two numbers of balls are the same, the case could be from \\((1, 1, 22)\\) to \\((11, 11, 2)\\) except for \\((8, 8, 8)\\). Hence, there are \\(10 \\cdot 3 = 30\\) cases with exactly two numbers the same and \\(1\\) case with three numbers the same. Thus, there are \\(253 - 30 - 1 = \\boxed{222}\\) ways.</p>",
+      "answer": "222"
+    },
+    "4": {
+      "problem": "<p>Find the perfect square that can be written in the form \\(\\overline{abcd} - \\overline{dcba}\\) where \\(a, b, c, d\\) are non zero digits and \\(b &lt; c\\). \\(\\overline{abcd}\\) is the number in base 10 with digits \\(a, b, c, d\\) written in this order.</p>",
+      "solutions": "<p>We have \\[(1000a + 100b + 10c + d) - (1000d + 100c + 10b + a) = x^2.\\] Hence, we can have \\[9 \\cdot (111(a-d) - 10(c-b)) = x^2.\\] Since \\(9\\) is a perfect square, we should have \\(111(a-d) - 10(c-b)\\) a perfect square. Since \\(a, b, c, d\\) are nonzero digits and \\(b &lt; c\\), we have \\(0 &lt; a - d &lt; 9\\) and \\(0 &lt; c - b &lt; 9\\).</p><p>Since a perfect square always ends with \\(1, 4, 5, 6, 9\\), we have \\(a - d\\) to be either \\(1, 4, 5\\), or \\(6\\).</p><p>When \\(a - d\\) is equal to \\(1\\), we have \\(c - d = 3\\) such that \\(x^2 = 9 \\cdot 81\\), so \\(x^2 = 729\\).</p><p>When \\(a - d\\) is equal to \\(4, 5\\), or \\(6\\), there is no such \\(c\\) and \\(d\\).</p><p>Hence, the perfect square is \\(\\boxed{729}\\).</p>",
+      "answer": "729"
+    },
+    "5": {
+      "problem": "<p>Steven has 100 boxes labeled from 1 to 100. Every box contains at most 10 balls. The number of balls in boxes labeled with consecutive numbers differ by 1. The boxes labeled \\(1, 4, 7, 10, \\ldots, 100\\) have a total of \\(301\\) balls. What is the maximum number of balls Steven can have?</p>",
+      "solutions": "<p>Since we want maximum number of balls, the balls in the interval \\(2\\) boxes should be \\(10\\) and \\(9\\) each, which results in the balls with an interval of \\(3\\) being \\(9\\) and \\(10\\), or \\(9\\) and \\(8\\). The number of balls in boxes labeled \\(1, 4, 7, \\ldots, 100\\) will be the greatest when they contain \\(9\\) and \\(10\\) balls alternatively. In this way, the number of balls will be \\(323\\), with \\(17\\) boxes with \\(10\\) balls and \\(17\\) boxes with \\(9\\) balls. Notice that we can substitute boxes with \\(10\\) balls with \\(8\\) balls to reduce the total number of balls by \\(2\\). Since there are \\(17\\) boxes with \\(10\\) balls, we can substitute \\(11\\) of them to reduce the number of balls by \\(22\\) and end up having \\(301\\) balls. Hence, filling the intervals with \\(10\\) and \\(9\\) each is possible. In this way, we have the maximum number of balls to be \\(19 \\cdot 33 + 301 = \\boxed{928}\\).</p>",
+      "answer": "928"
+    },
+    "6": {
+      "problem": "<p>In acute \\(\\triangle ABC\\), \\(AB = 4\\). Let \\(D\\) be the point on \\(BC\\) such that \\(\\angle BAD = \\angle CAD\\). Let \\(AD\\) intersect the circumcircle of \\(\\triangle ABC\\) at \\(X\\). Let \\(\\Gamma\\) be the circle through \\(D\\) and \\(X\\) that is tangent to \\(AB\\) at \\(P\\). If \\(AP = 6\\), compute \\(AC\\).</p>",
+      "solutions": "<p>Since \\(A, B, C, X\\) are on \\(\\Gamma\\), we have \\(\\angle ABD = \\angle AXC\\). Also, since \\(\\angle BAD = \\angle XAC\\), we have \\(\\triangle ABD \\sim \\triangle AXC\\). Hence, we have \\(AC = \\frac{AD \\cdot AX}{AB}\\). Since \\(AP\\) is tangent to \\(AB\\), we have \\(AD \\cdot AX = AP^2 = 36\\), so \\(AC = \\frac{36}{4} = \\boxed{9}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2014_DMM_Team/6-fig1.png\" width=\"297\" alt=\"\"></p>",
+      "answer": "9"
+    },
+    "7": {
+      "problem": "<p>Consider a \\(15 \\times 15\\) square decomposed into unit squares. Conisder a coloring of the vertices of the unit squares into two colors, red and blue such that there are \\(133\\) red vertices. Out of these \\(133\\), two vertices are vertices of the big square and \\(32\\) of them are located on the sides of the big square. The sides of the unit squares are colored into three colors. If both endpoints of a side are colored red then the side is colored red. If both endpoints of a side are colored blue then the side is colored blue. Otherwise the side is colored green. If we have \\(196\\) green sides, how many blue sides do we have?</p>",
+      "solutions": "<p>Since there are \\(256\\) vertices in total and \\(133\\) of them are red, the remaining \\(123\\) are blue. Since there are \\(4\\) vertices on the vertices of the big square and \\(2\\) of them are red, the remaining \\(2\\) are blue. Since there are \\(56\\) vertices on the sides of the big square and \\(32\\) of them are red, the remaining \\(24\\) are blue. Hence, the blue vertices inside the square is \\(123 - 2 - 24 = 97\\).</p><p>A blue side connects \\(2\\) blue vertices and a green side connects \\(1\\) blue vertex. A blue vertex on the vertices of the big square connects \\(2\\) vertices, on the sides of the big square connects \\(3\\) vertices, and inside the big square connects \\(4\\) vertices. Let the number of blue sides be \\(x\\). We have \\[2x + 196 = 2 \\cdot 2 + 24 \\cdot 3 + 97 \\cdot 4.\\] Hence, we have \\(x = \\boxed{134}\\).</p>",
+      "answer": "134"
+    },
+    "8": {
+      "problem": "<p>Carl has 10 piles of rocks, each pile with a different number of rocks. He notices that he can redistribute the rocks in any pile to the other 9 piles to make the other 9 piles have the same number of rocks. What is the minimum number of rocks in the biggest pile?</p>",
+      "solutions": "<p>Since each pile has a different number of rocks, if a pile can be redistributed to other \\(9\\) piles, it should give the greatest \\(0\\), the second greatest \\(1\\), etc. In this way, the number of rocks should be at least \\(1 + 2 + \\cdots + 8 = 36\\). Hence, the number of rocks should be \\(36, 37, \\ldots, 45\\), with \\(9\\) piles of \\(45\\) rocks after redistribution, so the minimum number of rocks in the biggest pile is \\(\\boxed{45}\\).</p>",
+      "answer": "45"
+    },
+    "9": {
+      "problem": "<p>Suppose that Tony picks a random integer between 1 and 6 inclusive such that the probability that he picks a number is directly proportional to the the number itself. Danny picks a number between 1 and 7 inclusive using the same rule as Tony. What is the probability that Tony’s number is greater than Danny’s number?</p>",
+      "solutions": "<p>The probability Tony picks number \\(x\\) is \\(\\frac{x}{21}\\). The probability Danny picks number \\(y\\) is \\(\\frac{y}{28}\\). When Tony picks number \\(x\\), Danny should pick any integer between \\(1\\) and \\(7\\) that is less than \\(x\\), so the probability that Tony’s number is greater than Danny’s number is \\[\\sum_{i=1}^{6} \\sum_{j=1}^{i-1} \\left( \\frac{x}{21} \\cdot \\frac{y}{28} \\right) = \\frac{1 \\cdot 0 + 2 \\cdot 1 + 3 \\cdot 3 + 4 \\cdot 6 + 5 \\cdot 10 + 6 \\cdot 15}{21 \\cdot 28}\\] \\[= \\frac{175}{588}\\] \\[= \\boxed{\\frac{25}{84}}.\\]</p>",
+      "answer": "\\frac{25}{84}"
+    },
+    "10": {
+      "problem": "<p>Mike wrote on the board the numbers \\(1, 2, \\ldots, n\\). At every step, he chooses two of these numbers, deletes them and replaces them with the least prime factor of their sum. He does this until he is left with the number 101 on the board. What is the minimum value of \\(n\\) for which this is possible?</p>",
+      "solutions": "<p>Since two odd numbers have a sum of even number, they will end up leaving a \\(2\\). Hence, to get \\(101\\), we must choose an odd number, and other odd numbers will form a \\(2\\). Then, we add even number to get prime numbers continuously to get \\(101\\).</p><p>Notice that when \\(n = 17\\), the maximum it can get is at most \\(17 + (2 + 4 + 6 + \\cdots + 16) = 89\\), which is less than \\(101\\). Hence, \\(n \\ge 17\\).</p><p>Consider the case when \\(n = 18\\), we have</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2014_DMM_Team/10-fig1.png\" width=\"450\" alt=\"\"></p><p>Hence, we have \\(n = \\boxed{18}\\) to be the minimum.</p>",
+      "answer": "18"
+    }
+  }
+}

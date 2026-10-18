@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2009,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2009/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the lowest positive angle \\(\\theta\\) that satisfies the equation \\(\\sqrt{1+\\cos\\theta} = \\sin\\theta + \\cos\\theta\\), expressed in degrees.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "30^\\circ"
+    },
+    "2": {
+      "problem": "<p>Let \\(n\\) be two times the tens digit of TNYWR. Find the coefficient of the \\(x^{n-1}y^{n+1}\\) term in the expansion of \\(\\left(2x + \\frac{y}{2} + 3\\right)^{2n}\\).</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(30^\\circ\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "198"
+    },
+    "3": {
+      "problem": "<p>Let \\(k\\) be TNYWR, and let \\(n = k/2\\). Find the smallest integer \\(m\\) greater than \\(n\\) such that 15 divides \\(m\\) and 12 divides the number of positive integer factors of \\(m\\).</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(198\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "150"
+    },
+    "4": {
+      "problem": "<p>Six werewolves are trapped in a regular hexagonal pen where all side lengths are 2. Each werewolf is tied to a different corner with a leash of length 1. What is the area in the pen that no werewolf can reach?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6\\sqrt{3} - 2\\pi"
+    },
+    "5": {
+      "problem": "<p>Let \\(k\\) be TNYWR and let \\(m = (k+2\\pi)/\\sqrt{3}\\). You have a fair die with \\(m\\) faces, numbered 1 through \\(m\\). You continue to roll that die until you get a 1. Let \\(n\\) be the total number of times you roll the die (including the last). What is the probability that \\(n\\) is odd? Report your answer as a fraction in lowest terms.</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(6\\sqrt{3} - 2\\pi\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{6}{11}"
+    },
+    "6": {
+      "problem": "<p>Let \\(k\\) be the numerator of TNYWR, and let \\(a, b\\) be real numbers such that \\(a+b = 1\\) and \\(a^2+b^2 = k\\). Find \\((a^3 + b^3)/(a^4 + b^4)\\).</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(\\frac{6}{11}\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{17}{47}"
+    }
+  }
+}

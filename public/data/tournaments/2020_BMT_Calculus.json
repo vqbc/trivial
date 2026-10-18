@@ -1,0 +1,58 @@
+{
+  "test": "BMT Calculus",
+  "year": 2020,
+  "name": "Calculus Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2020/calculus-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\[f(x) = \\frac{x^{2020}}{2020} + 2020!.\\]</p><p>Compute \\(f''(1)\\).</p>",
+      "solutions": "<p>Since \\(f'(x) = x^{2019}\\), \\(f''(x) = 2019x^{2018}\\); therefore, \\(f''(1) = \\boxed{2019}\\).</p>",
+      "answer": "2019"
+    },
+    "2": {
+      "problem": "<p>Compute the integral \\[\\int_{-20}^{20} (20 - |x|) \\, dx.\\]</p>",
+      "solutions": "<p>We have \\[\\begin{aligned}\n\\int_{-20}^{20} (20-|x|)\\,dx &amp;= 2\\int_0^{20} (20-x)\\,dx \\\\\n&amp;= 2\\int_0^{20} x\\,dx \\\\\n&amp;= \\left[x^2\\right]_0^{20} \\\\\n&amp;= \\boxed{400}.\n\\end{aligned}\\]</p>",
+      "answer": "400"
+    },
+    "3": {
+      "problem": "<p>Suppose \\(f: \\mathbb{R} \\to \\mathbb{R}\\) is a differentiable function defined by \\[f(x) = f'(2)x^2 + x.\\]</p><p>Then \\(f(2)\\) can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m + n\\).</p>",
+      "solutions": "<p>Taking the derivative on both sides gives us \\[\\begin{aligned}\nf'(x) &amp;= 2f'(2)x + 1 \\\\\nf'(2) &amp;= 2f'(2) \\cdot 2 + 1 \\\\\n3f'(2) &amp;= -1 \\\\\nf'(2) &amp;= -\\frac{1}{3} \\\\\nf(2) &amp;= 4f'(2) + 2 \\\\\n&amp;= -\\frac{4}{3} + 2 \\\\\n&amp;= \\frac{2}{3},\n\\end{aligned}\\]</p><p>and our answer is \\(\\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "4": {
+      "problem": "<p>If \\(a\\) is a positive real number such that the region of finite area bounded by the curve \\(y = x^2 + 2020\\), the line tangent to that curve at \\(x = a\\), and the \\(y\\)-axis has area 2020, compute \\(a^3\\).</p>",
+      "solutions": "<p>Taking the derivative of \\(f(x) = x^2 + 2020\\), we have \\(f'(x) = 2x\\), so \\(f'(a) = 2a\\). Then the tangent line at \\(x = a\\) to \\(f(x)\\) has slope \\(2a\\). Let the tangent line be \\(g(x) = 2ax + c\\), then we must have \\(f(a) = g(a)\\), giving \\(2a^2 + c = a^2 + 2020\\), so \\(c = 2020 - a^2\\). Then the tangent line has equation \\(y = 2ax - a^2 + 2020\\), so the area of that region is \\[\\begin{aligned}\n2020 &amp;= \\int_0^a (x^2 - 2ax + a^2)\\,dx \\\\\n&amp;= \\int_0^a (x-a)^2\\,dx \\\\\n&amp;= \\frac{a^3}{3} \\\\\na^3 &amp;= \\boxed{6060}.\n\\end{aligned}\\]</p>",
+      "answer": "6060"
+    },
+    "5": {
+      "problem": "<p>Suppose that a parallelogram has a vertex at the origin of the 2-dimensional plane, and two of its sides are vectors from the origin to the points \\((10, y)\\), and \\((x, 10)\\), where \\(x, y \\in [0, 10]\\) are chosen uniformly at random. The probability that the parallelogram’s area is at least 50 is \\(\\ln(\\sqrt{a}) + \\frac{b}{c}\\), where \\(a\\), \\(b\\), and \\(c\\) are positive integers such that \\(b\\) and \\(c\\) are relatively prime and \\(a\\) is as small as possible. Compute \\(a + b + c\\).</p>",
+      "solutions": "<p>The parallelogram’s area is given by the determinant of the matrix \\(\\begin{bmatrix} 10 &amp; y \\\\ x &amp; 10 \\end{bmatrix}\\) which is equal to \\(100 - xy\\). It thus suffices to find the probability that \\(xy \\le 50\\) given \\(x, y \\in [0, 10]\\). This simplifies to \\(y \\le \\frac{50}{x}\\). Then if \\(xy \\le 50\\) then either \\(x &lt; 5\\), with probability \\(\\frac{1}{2}\\) by symmetry, or \\(xy &gt; 50\\) given \\(x \\ge 5\\), and this probability is \\(\\frac{1}{100}\\int_5^{10} \\frac{50}{x}\\,dx\\) (we divide by 100 to normalize the probability, since the integral computes the area). This integral evaluates to \\(\\frac{1}{100}(50\\ln(2)) = \\frac{\\ln(2)}{2}\\), so the total probability is \\(\\frac{1}{2} + \\frac{\\ln(2)}{2} = \\frac{1 + \\ln(2)}{2}\\), and therefore our answer is \\(\\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "6": {
+      "problem": "<p>For some \\(a &gt; 1\\), the curves \\(y = a^x\\) and \\(y = \\log_a(x)\\) are tangent to each other at exactly one point. Compute \\(|\\ln(\\ln(a))|\\).</p>",
+      "solutions": "<p>Since the functions \\(a^x\\) and \\(\\log_a(x)\\) are inverses, by symmetry their point of tangency occurs on the line \\(y = x\\). Let the intersection point be \\((z, z)\\); at this point, again by symmetry, \\(a^z = \\log_a(z)\\), and \\[\\frac{d}{dz}a^z = a^z\\ln(a) = \\frac{d}{dz}\\log_a(z) = \\frac{1}{z\\ln(a)} = 1.\\]</p><p>Substituting \\(a^z = \\log_a(z)\\) into \\(a^z\\ln(a) = 1\\), we obtain \\(\\ln(a)\\log_a(z) = 1\\), so \\(\\ln(z) = 1\\), so \\(z = e\\). Substituting \\(z = e\\) back into the equation \\(\\frac{1}{z\\ln(a)} = 1\\), we have \\(\\frac{1}{e\\ln(a)} = 1\\), so \\(a = e^{1/e}\\), and \\(|\\ln(\\ln(a))| = \\boxed{1}\\) as desired.</p>",
+      "answer": "1"
+    },
+    "7": {
+      "problem": "<p>The limit \\[\\lim_{n\\to\\infty} n^2 \\int_0^{1/n} x^{x+1}\\,dx\\]</p><p>can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m + n\\).</p>",
+      "solutions": "<p>Let \\(h = \\frac{1}{n}\\), so \\[\\begin{aligned}\n\\lim_{n\\to\\infty} n^2\\int_0^{1/n} x^{x+1}\\,dx &amp;= \\lim_{h\\to0^+} \\frac{\\int_0^h x^{x+1}\\,dx}{h^2} \\\\\n&amp;= \\lim_{h\\to0^+} \\frac{\\frac{d}{dh}\\int_0^h x^{x+1}\\,dx}{\\frac{d}{dh}h^2} \\\\\n&amp;= \\lim_{h\\to0^+} \\frac{h^{h+1} - 0^1}{2h} \\\\\n&amp;= \\frac{1}{2} \\lim_{h\\to0^+} h^h \\\\\n&amp;= \\frac{1}{2} \\exp\\left(\\lim_{h\\to0^+} \\ln(h^h)\\right) \\\\\n&amp;= \\frac{1}{2} \\exp\\left(\\lim_{h\\to0^+} h\\ln(h)\\right) \\\\\n&amp;= \\frac{1}{2} \\exp\\left(\\lim_{h\\to0^+} \\frac{\\ln(h)}{1/h}\\right) \\\\\n&amp;= \\frac{1}{2} \\exp\\left(\\lim_{h\\to0^+} \\frac{\\frac{d}{dh}\\ln(h)}{\\frac{d}{dh}\\frac{1}{h}}\\right) \\\\\n&amp;= \\frac{1}{2} \\exp\\left(\\lim_{h\\to0^+} \\frac{1/h}{-1/h^2}\\right) \\\\\n&amp;= \\frac{1}{2} \\exp\\left(\\lim_{h\\to0^+} -h\\right) \\\\\n&amp;= \\frac{1}{2} \\exp(0) \\\\\n&amp;= \\frac{1}{2},\n\\end{aligned}\\]</p><p>and our answer is \\(\\boxed{3}\\). Here, the statements used to go from line 2 to line 3, and from line 8 to line 9, are derived using L’Hopital’s rule, and the rest is algebraic manipulation.</p>",
+      "answer": "3"
+    },
+    "8": {
+      "problem": "<p>The summation \\[\\sum_{a=1}^{\\infty}\\sum_{b=1}^{\\infty} \\frac{1}{a^2b + 2ab + ab^2}\\]</p><p>can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m + n\\).</p>",
+      "solutions": "<p>We have \\[\\begin{aligned}\n\\frac{1}{a^2b + 2ab + ab^2} &amp;= \\frac{1}{ab(a+b+2)} \\\\\n&amp;= \\frac{1}{ab}\\int_0^1 x^{a+b+1}\\,dx \\\\\n\\sum_{a=1}^{\\infty}\\sum_{b=1}^{\\infty} \\frac{1}{a^2b + 2ab + ab^2} &amp;= \\sum_{a=1}^{\\infty}\\sum_{b=1}^{\\infty} \\frac{1}{ab}\\int_0^1 x^{a+b+1}\\,dx \\\\\n&amp;= \\int_0^1 x\\left(\\sum_{a=1}^{\\infty}\\sum_{b=1}^{\\infty} \\frac{x^{a+b}}{ab}\\right)dx \\qquad \\text{(Interchange integral and summation.)} \\\\\n&amp;= \\int_0^1 x\\left(\\sum_{a=1}^{\\infty} \\frac{x^a}{a}\\right)\\left(\\sum_{b=1}^{\\infty} \\frac{x^b}{b}\\right)dx \\\\\n&amp;= \\int_0^1 x\\left(\\sum_{a=1}^{\\infty} \\frac{x^a}{a}\\right)^2 dx \\\\\n&amp;= \\int_0^1 x\\ln(1-x)^2\\,dx \\qquad \\text{(Taylor series of } \\ln(1-x)\\text{.)} \\\\\n&amp;= \\int_0^1 (1-x)\\ln(x)^2\\,dx \\qquad \\text{(Use the transformation } x \\to 1-x\\text{.)} \\\\\n&amp;= \\frac{7}{4}. \\qquad \\text{(Using integration by parts.)}\n\\end{aligned}\\]</p><p>And so our answer is \\(\\boxed{11}\\).</p>",
+      "answer": "11"
+    },
+    "9": {
+      "problem": "<p>Let \\(f: \\mathbb{R}_{&gt;0} \\to \\mathbb{R}\\) (where \\(\\mathbb{R}_{&gt;0}\\) is the set of all positive real numbers) be differentiable and satisfy the equation \\[f(y) - f(x) = \\frac{x^x}{y^y} f\\left(\\frac{y^y}{x^x}\\right)\\]</p><p>for all real \\(x, y &gt; 0\\). Furthermore, \\(f'(1) = 1\\). Compute \\(\\frac{f(2020^2)}{f(2020)}\\).</p>",
+      "solutions": "<p>Set \\(x = y = 1\\); we obtain \\(f(1) = 0\\). Applying the definition of a derivative, \\[\\begin{aligned}\nf'(x) &amp;= \\lim_{h\\to 0} \\frac{f(x+h) - f(x)}{h} \\\\\n&amp;= \\lim_{h\\to 0} \\frac{\\frac{x^x}{(x+h)^{x+h}} f\\left(\\frac{(x+h)^{x+h}}{x^x}\\right)}{h} \\qquad \\text{(Since } \\lim_{h\\to 0} \\frac{x^x}{(x+h)^{x+h}} = 1\\text{.)} \\\\\n&amp;= \\lim_{h\\to 0} \\frac{f\\left(\\frac{(x+h)^{x+h}}{x^x}\\right)}{h} \\\\\n&amp;= \\lim_{h\\to 0} \\frac{f\\left(\\frac{(x+h)^{x+h}}{x^x}\\right) - f(1)}{h} \\qquad \\text{(Since } f(1) = 0\\text{.)} \\\\\nf'(1) &amp;= \\lim_{h\\to 0} \\frac{f\\left(\\frac{(x+h)^{x+h}}{x^x}\\right) - f(1)}{\\frac{(x+h)^{x+h}}{x^x} - 1} \\\\\n&amp;= 1 \\\\\n\\lim_{h\\to 0}\\left(\\frac{(x+h)^{x+h}}{x^x} - 1\\right) &amp;= \\lim_{h\\to 0}\\left(f\\left(\\frac{(x+h)^{x+h}}{x^x}\\right) - f(1)\\right) \\\\\nf'(x) &amp;= \\lim_{h\\to 0} \\frac{\\frac{(x+h)^{x+h}}{x^x} - 1}{h}\n\\end{aligned}\\]</p><p>This limit is nontrivial, but possible to evaluate. \\[\\begin{aligned}\nf'(x) &amp;= \\lim_{h\\to 0} \\frac{\\frac{(x+h)^{x+h}}{x^x} - 1}{h} \\\\\n&amp;= \\lim_{h\\to 0} \\frac{x^{-x}(x+h)^{x+h} - 1}{h} \\\\\n&amp;= \\lim_{h\\to 0} \\frac{\\frac{d}{dh}\\left[x^{-x}(x+h)^{x+h} - 1\\right]}{\\frac{d}{dh}h} \\\\\n&amp;= \\lim_{h\\to 0} x^{-x}(x+h)^{x+h}(\\ln(x+h) + 1) \\\\\n&amp;= x^{-x}(x+0)^{x+0}(\\ln(x+0) + 1) \\\\\n&amp;= \\ln(x) + 1\n\\end{aligned}\\]</p><p>Now that we obtain \\(f'(x) = \\ln(x) + 1\\), we integrate to find \\(f(x)\\): \\[\\begin{aligned}\n\\int (\\ln(x) + 1)\\,dx &amp;= \\int \\ln(x)\\,dx + \\int dx \\\\\n&amp;= x\\ln(x) - \\int dx + \\int dx \\\\\n&amp;= x\\ln(x) + C\n\\end{aligned}\\]</p><p>where \\(C\\) is some constant and \\(\\int \\ln(x)\\,dx\\) is evaluated by integration by parts, where \\(u = \\log(x)\\) (so \\(du = \\frac{1}{x}\\,dx\\)) and \\(dv = dx\\) (so \\(v = x\\)).</p><p>Using the initial condition \\(f(1) = [x\\ln(x) + C]_{x=1} = 1\\ln(1) + C = C = 0\\), we obtain \\(f(x) = x\\ln(x)\\) and \\(\\frac{f(2020^2)}{f(2020)} = \\frac{2020^2\\cdot\\ln(2020^2)}{2020\\cdot\\ln(2020)} = \\boxed{4040}\\).</p>",
+      "answer": "4040"
+    },
+    "10": {
+      "problem": "<p>The integral \\[\\int_0^{\\pi/2} \\frac{x}{\\tan(x)}\\,dx\\]</p><p>can be written in the form \\(a^b\\pi\\ln c\\), where \\(a\\), \\(b\\), and \\(c\\) are integers such that \\(c\\) is as small as possible. Compute \\(a + b + c\\).</p>",
+      "solutions": "<p>Using the Feynman trick (differentiate under the integral sign), we rewrite the integral as \\[\\begin{aligned}\nI(a) &amp;= \\int_0^{\\pi/2} \\frac{\\arctan(a\\tan(x))}{\\tan(x)}\\,dx \\\\\nI'(a) &amp;= \\int_0^{\\pi/2} \\frac{1}{1 + a^2\\tan^2(x)}\\,dx \\\\\n&amp;= \\int_0^{\\pi/2} \\frac{\\sec^2(x)}{(1+a^2\\tan^2(x))(1+\\tan^2(x))}\\,dx \\\\\n&amp;= \\frac{1}{a^2-1}\\int_0^{\\pi/2} \\left(\\frac{a^2\\sec^2(x)}{1+a^2\\tan^2(x)} - \\frac{\\sec^2(x)}{1+\\tan^2(x)}\\right)dx \\\\\n&amp;= \\frac{1}{a^2-1}\\left[a\\arctan(a\\tan(x)) - x\\right]_0^{\\pi/2} \\\\\n&amp;= \\frac{\\pi}{2}\\cdot\\frac{1}{a+1} \\\\\nI(a) &amp;= \\frac{\\pi}{2}\\ln(a+1) + C \\\\\nI(0) &amp;= \\int_0^{\\pi/2} \\frac{\\arctan(0)}{\\tan(x)}\\,dx \\\\\n&amp;= 0 \\\\\n&amp;= C \\\\\n\\int_0^{\\pi/2} \\frac{x}{\\tan(x)}\\,dx &amp;= I(1) \\\\\n&amp;= \\frac{\\pi}{2}\\ln(2) + C \\\\\n&amp;= \\frac{\\pi}{2}\\ln(2),\n\\end{aligned}\\]</p><p>which is equal to \\(2^{-1}\\pi\\ln 2\\) (and is the only way to represent our answer in the given form). Our answer, therefore, is \\(2 + (-1) + 2 = \\boxed{3}\\).</p>",
+      "answer": "3"
+    }
+  }
+}

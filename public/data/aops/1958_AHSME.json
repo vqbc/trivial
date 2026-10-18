@@ -1,0 +1,256 @@
+{
+  "test": "1958 AHSME",
+  "year": 1958,
+  "problems": {
+    "1": {
+      "problem": "<p>The value of \\([2 - 3(2 - 3)^{-1}]^{-1}\\) is:</p><p>\\(\\textbf{(A)}\\ 5\\qquad\n\\textbf{(B)}\\ -5\\qquad\n\\textbf{(C)}\\ \\frac{1}{5}\\qquad\n\\textbf{(D)}\\ -\\frac{1}{5}\\qquad\n\\textbf{(E)}\\ \\frac{5}{3}\\)</p>",
+      "solutions": "<p>\\(\\frac{1}{2-3(-1)}=\\frac{1}{5}\\), so the answer is \\(\\boxed{\\text{C}}\\).</p>",
+      "answer": "C"
+    },
+    "2": {
+      "problem": "<p>If \\(\\frac {1}{x} - \\frac {1}{y} = \\frac {1}{z}\\), then \\(z\\) equals:</p><p>\\(\\textbf{(A)}\\ y - x\\qquad \\textbf{(B)}\\ x - y\\qquad \\textbf{(C)}\\ \\frac {y - x}{xy}\\qquad \\textbf{(D)}\\ \\frac {xy}{y - x}\\qquad \\textbf{(E)}\\ \\frac {xy}{x - y}\\)</p>",
+      "solutions": "<p>\\(\\frac{1}{x}-\\frac{1}{y}=\\frac{1}{z}\\)</p><p>\\(\\frac{y}{xy}-\\frac{x}{xy}=\\frac{1}{z}\\)</p><p>\\(\\frac{y-x}{xy}=\\frac{1}{z}\\)</p><p>\\(\\frac{1}{\\frac{y-x}{xy}}=\\frac{1}{\\frac{1}{z}}\\)</p><p>\\(\\frac{xy}{y-x}=z\\)</p><p>The answer is therefore \\(\\boxed{\\text{D}}\\).</p>",
+      "answer": "D"
+    },
+    "3": {
+      "problem": "<p>Of the following expressions the one equal to \\(\\frac{a^{-1}b^{-1}}{a^{-3} - b^{-3}}\\) is:</p><p>\\(\\textbf{(A)}\\ \\frac{a^2b^2}{b^2 - a^2}\\qquad\n\\textbf{(B)}\\ \\frac{a^2b^2}{b^3 - a^3}\\qquad\n\\textbf{(C)}\\ \\frac{ab}{b^3 - a^3}\\qquad\n\\textbf{(D)}\\ \\frac{a^3 - b^3}{ab}\\qquad\n\\textbf{(E)}\\ \\frac{a^2b^2}{a - b}\\)</p>",
+      "solutions": "<p>\\(\\frac{a^{-1}b^{-1}}{a^{-3} - b^{-3}} =  \\frac{\\frac{1}{ab}}{\\frac{1}{a^{3}}-\\frac{1}{b^{3}}} =  \\frac{\\frac{1}{ab}}{\\frac{1}{a^{3}}-\\frac{1}{b^{3}}}\\cdot\\frac{a^{3}b^{3}}{a^{3}b^{3}} = \\frac{a^{2}b^{2}}{b^{3}-a^{3}}\\), \\(\\boxed{\\text{B}}\\).</p>",
+      "answer": "B"
+    },
+    "4": {
+      "problem": "<p>In the expression \\(\\frac{x + 1}{x - 1}\\) each \\(x\\) is replaced by \\(\\frac{x + 1}{x - 1}\\). The resulting expression, evaluated for \\(x = \\frac{1}{2}\\), equals:</p><p>\\(\\textbf{(A)}\\ 3\\qquad\n\\textbf{(B)}\\ -3\\qquad\n\\textbf{(C)}\\ 1\\qquad\n\\textbf{(D)}\\ -1\\qquad\n\\textbf{(E)}\\ \\text{none of these}\\)</p>",
+      "solutions": "<p>When \\(x=\\frac{1}{2}\\), \\(\\frac{x+1}{x-1}=-3\\), substituting \\(-3\\) for \\(x\\) in the original equation we get:</p><p>\\(\\frac{-3+1}{-3-1}=\\frac{-2}{-4}=\\frac{1}{2}\\implies \\boxed{\\mathbf{(E)}\\text{ None of these}}\\).</p>",
+      "answer": "E"
+    },
+    "5": {
+      "problem": "<p>The expression \\(2 + \\sqrt{2} + \\frac{1}{2 + \\sqrt{2}} + \\frac{1}{\\sqrt{2} - 2}\\)  equals:</p><p>\\(\\textbf{(A)}\\ 2\\qquad\n\\textbf{(B)}\\ 2 - \\sqrt{2}\\qquad\n\\textbf{(C)}\\ 2 + \\sqrt{2}\\qquad\n\\textbf{(D)}\\ 2\\sqrt{2}\\qquad\n\\textbf{(E)}\\ \\frac{\\sqrt{2}}{2}\\)</p>",
+      "solutions": "<p>To make this problem easier to solve, lets get the radicals out of the denominator. For \\(\\frac{1}{2 + \\sqrt2}\\), we will multiply the numerator and denominator by \\(2- \\sqrt2\\) so,</p><p>\\(\\frac{1}{2 + \\sqrt2} \\cdot \\frac{2 - \\sqrt2}{2 - \\sqrt2} \\Rightarrow \\frac{2 - \\sqrt2}{2}\\).</p><p>Now, the other fraction we need to get the radical out of the denominator is \\(\\frac{1}{\\sqrt2 - 2}\\). Here, we will  multiply by the conjugate again, \\(\\sqrt2 + 2\\). So that simplifies to</p><p>\\(\\frac{1}{\\sqrt2 - 2} \\cdot \\frac{\\sqrt2 + 2}{\\sqrt2 + 2} \\Rightarrow \\frac{\\sqrt2 + 2}{-2}\\).</p><p>So now our simplified equation is</p><p>\\(2 + \\sqrt2 + \\frac{2- \\sqrt2}{2} + \\frac{\\sqrt2 + 2}{-2} \\Rightarrow 2+ \\sqrt2 + \\frac{2 - \\sqrt2}{2} - \\frac{\\sqrt2 +2}{2}\\)</p><p>Bringing everything to the same denominator and combining like terms, we get</p><p>\\(\\frac{4 + 2\\sqrt2 + 2 - \\sqrt2 - \\sqrt2 - 2}{2} \\Rightarrow \\frac{4}{2} \\Rightarrow 2 \\Rightarrow \\boxed{A}\\)</p>",
+      "answer": "A"
+    },
+    "6": {
+      "problem": "<p>The arithmetic mean between \\(\\frac {x + a}{x}\\) and \\(\\frac {x - a}{x}\\), when \\(x \\not = 0\\), is:</p><p>\\(\\textbf{(A)}\\ {2}\\text{, if }{a \\not = 0}\\qquad \\textbf{(B)}\\ 1\\qquad \\textbf{(C)}\\ {1}\\text{, only if }{a = 0}\\qquad \\textbf{(D)}\\ \\frac {a}{x}\\qquad \\textbf{(E)}\\ x\\)</p>",
+      "solutions": "<p>We have \\(\\frac{1}{2}\\cdot \\left(\\frac{x + a}{x} + \\frac{x - a}{x}\\right) = \\frac{2}{2} = \\boxed{\\text{(B) }{1}}\\).</p>",
+      "answer": "B"
+    },
+    "7": {
+      "problem": "<p>A straight line joins the points \\((-1,1)\\) and \\((3,9)\\). Its \\(x\\)-intercept is:</p><p>\\(\\textbf{(A)}\\ -\\frac{3}{2}\\qquad\n\\textbf{(B)}\\ -\\frac{2}{3}\\qquad\n\\textbf{(C)}\\ \\frac{2}{5}\\qquad\n\\textbf{(D)}\\ 2\\qquad\n\\textbf{(E)}\\ 3\\)</p>",
+      "solutions": "<p>The slope of the line is \\(\\frac{ \\Delta y }{ \\Delta x} = \\frac{9-1}{3-(-1)} = 2\\). Using the formula for the point-slope form of a line, we have \\(y-y_1 = m(x-x_1)\\), so \\(y-1=2(x-(-1)) \\to y-1=2(x+1)\\).</p><p>The x-intercept is the x-value when \\(y=0\\), so we substitute 0 for y:</p><p>\\[0-1=2x+2\\]</p><p>\\[-1=2x+2\\]</p><p>\\[2x = -3\\]</p><p>\\[x = -\\frac{3}{2} \\to \\boxed{\\text{(A)}}\\]</p>",
+      "answer": "A"
+    },
+    "8": {
+      "problem": "<p>Which of these five numbers \\(\\sqrt{\\pi^2},\\,\\sqrt[3]{.8},\\,\\sqrt[4]{.00016},\\,\\sqrt[3]{-1}\\cdot \\sqrt{(.09)^{-1}}\\), is (are) rational:</p><p>\\(\\textbf{(A)}\\ \\text{none}\\qquad\n\\textbf{(B)}\\ \\text{all}\\qquad\n\\textbf{(C)}\\ \\text{the first and fourth}\\qquad\n\\textbf{(D)}\\ \\text{only the fourth}\\qquad\n\\textbf{(E)}\\ \\text{only the first}\\)</p>",
+      "solutions": "<p>\\(\\sqrt{\\pi^2}=\\pi\\) is not rational, so eliminate choices \\((B)\\), \\((C)\\), and \\((E)\\). Note that \\((-1)^3 = (-1)\\), so \\(\\sqrt[3]{-1}=-1\\) is rational. We have found one rational number, so we can eliminate choice \\((A)\\). The answer is \\(\\boxed{ \\text{(D)}}\\).</p>",
+      "answer": "D"
+    },
+    "9": {
+      "problem": "<p>A value of \\(x\\) satisfying the equation \\(x^2 + b^2 = (a - x)^2\\) is:</p><p>\\(\\textbf{(A)}\\ \\frac{b^2 + a^2}{2a}\\qquad\n\\textbf{(B)}\\ \\frac{b^2 - a^2}{2a}\\qquad\n\\textbf{(C)}\\ \\frac{a^2 - b^2}{2a}\\qquad\n\\textbf{(D)}\\ \\frac{a - b}{2}\\qquad\n\\textbf{(E)}\\ \\frac{a^2 - b^2}{2}\\)</p>",
+      "solutions": "<p>Solve for x:</p><p>\\[x^2+b^2=(a-x)^2\\]</p><p>\\[x^2+b^2=x^2-2ax+a^2\\]</p><p>\\[b^2=-2ax+a^2\\]</p><p>\\[2ax=a^2-b^2\\]</p><p>\\[x=\\frac{a^2-b^2}{2a} \\to \\boxed{\\text{(C)}}\\]</p>",
+      "answer": "C"
+    },
+    "10": {
+      "problem": "<p>For what real values of \\(k\\), other than \\(k = 0\\), does the equation \\(x^2 + kx + k^2 = 0\\) have real roots?</p><p>\\(\\textbf{(A)}\\ {k &lt; 0}\\qquad\n\\textbf{(B)}\\ {k &gt; 0} \\qquad\n\\textbf{(C)}\\ {k \\ge 1} \\qquad\n\\textbf{(D)}\\ \\text{all values of }{k}\\qquad\n\\textbf{(E)}\\ \\text{no values of }{k}\\)</p>",
+      "solutions": "<p>An expression of the form \\(ax^2+bx+c\\) has at least one real root when \\(b^2-4ac \\geq 0\\).</p><p>Substituting \\(k\\) for \\(b\\) and \\(k^2\\) for \\(c\\), we have</p><p>\\[k^2-4k^2 \\geq 0\\]</p><p>\\[-3k^2 \\geq 0\\]</p><p>but the range of \\(-3k^2\\) is \\((-\\infty,0]\\), so the answer is \\(\\boxed{\\text{(E)}}\\)</p>",
+      "answer": "E"
+    },
+    "11": {
+      "problem": "<p>The number of roots satisfying the equation \\(\\sqrt{5 - x} = x\\sqrt{5 - x}\\) is:</p><p>\\(\\textbf{(A)}\\ \\text{unlimited}\\qquad\n\\textbf{(B)}\\ 3\\qquad\n\\textbf{(C)}\\ 2\\qquad\n\\textbf{(D)}\\ 1\\qquad\n\\textbf{(E)}\\ 0\\)</p>",
+      "solutions": "<p>Solve the equation for x.</p><p>\\[\\sqrt{5-x}=x\\sqrt{5-x}\\]</p><p>\\[x\\sqrt{5-x} - \\sqrt{5-x} = 0\\]</p><p>\\[(x-1)\\sqrt{5-x}=0\\]</p><p>\\[x=1,5\\]</p><p>There are two solutions \\(\\to \\boxed{\\textbf{(C)}}\\)</p>",
+      "answer": "C"
+    },
+    "12": {
+      "problem": "<p>If \\(P = \\frac{s}{(1 + k)^n}\\) then \\(n\\) equals:</p><p>\\(\\textbf{(A)}\\ \\frac{\\log{\\left(\\frac{s}{P}\\right)}}{\\log{(1 + k)}}\\qquad\n\\textbf{(B)}\\ \\log{\\left(\\frac{s}{P(1 + k)}\\right)}\\qquad\n\\textbf{(C)}\\ \\log{\\left(\\frac{s - P}{1 + k}\\right)}\\qquad \\\\\n\\textbf{(D)}\\ \\log{\\left(\\frac{s}{P}\\right)} + \\log{(1 + k)}\\qquad\n\\textbf{(E)}\\ \\frac{\\log{(s)}}{\\log{(P(1 + k))}}\\)</p>",
+      "solutions": "<p>\\[P=\\frac{s}{(1+k)^n}\\]</p><p>\\[(1+k)^n=\\frac{s}{P}\\]</p><p>Take the \\(\\log\\) of each side.</p><p>\\[n \\log(1+k) = \\log\\left(\\frac{s}{P}\\right)\\]</p><p>\\[n = \\frac{\\log\\left(\\frac{s}{P}\\right)}{\\log(1+k)} \\to \\boxed{\\text{(A)}}\\]</p>",
+      "answer": "A"
+    },
+    "13": {
+      "problem": "<p>The sum of two numbers is \\(10\\); their product is \\(20\\). The sum of their reciprocals is:</p><p>\\(\\textbf{(A)}\\ \\frac{1}{10}\\qquad\n\\textbf{(B)}\\ \\frac{1}{2}\\qquad\n\\textbf{(C)}\\ 1\\qquad\n\\textbf{(D)}\\ 2\\qquad\n\\textbf{(E)}\\ 4\\)</p>",
+      "solutions": "<p>\\(x+y=10\\)</p><p>\\(xy=20\\)</p><p>\\(\\frac1x+\\frac1y=\\frac{y}{xy}+\\frac{x}{xy}=\\frac{x+y}{xy}=\\frac{10}{20}=\\boxed{\\frac12\\textbf{ (B)}}\\)</p><p>(Which is a lot easier than finding the roots of \\(x^2-10x+20\\).)</p>",
+      "answer": "B"
+    },
+    "14": {
+      "problem": "<p>At a dance party a group of boys and girls exchange dances as follows: The first boy dances with \\(5\\) girls, a second boy dances with \\(6\\) girls, and so on, the last boy dancing with all the girls. If \\(b\\) represents the number of boys and \\(g\\) the number of girls, then:</p><p>\\(\\textbf{(A)}\\ b = g\\qquad\n\\textbf{(B)}\\ b = \\frac{g}{5}\\qquad\n\\textbf{(C)}\\ b = g - 4\\qquad\n\\textbf{(D)}\\ b = g - 5\\qquad \\\\\n\\textbf{(E)}\\ \\text{It is impossible to determine a relation between }{b}\\text{ and }{g}\\text{ without knowing }{b + g.}\\)</p>",
+      "solutions": "<p>After inspection, we notice a general pattern: the \\(nth\\) boy dances with \\(n + 4\\) girls. Since the last boy dances with all the girls, there must be four more girls than guys.</p><p>Therefore, the equation that relates them is \\(\\boxed{(C) b = g - 4}\\)</p>",
+      "answer": "C"
+    },
+    "15": {
+      "problem": "<p>A quadrilateral is inscribed in a circle. If an angle is inscribed into each of the four segments outside the quadrilateral, the sum of these four angles, expressed in degrees, is:</p><p>\\(\\textbf{(A)}\\ 1080\\qquad\n\\textbf{(B)}\\ 900\\qquad\n\\textbf{(C)}\\ 720\\qquad\n\\textbf{(D)}\\ 540\\qquad\n\\textbf{(E)}\\ 360\\)</p>",
+      "solutions": "<p>\\(\\boxed{}\\)</p>",
+      "answer": "D"
+    },
+    "16": {
+      "problem": "<p>The area of a circle inscribed in a regular hexagon is \\(100\\pi\\). The area of hexagon is:</p><p>\\(\\textbf{(A)}\\ 600\\qquad\n\\textbf{(B)}\\ 300\\qquad\n\\textbf{(C)}\\ 200\\sqrt{2}\\qquad\n\\textbf{(D)}\\ 200\\sqrt{3}\\qquad\n\\textbf{(E)}\\ 120\\sqrt{5}\\)</p>",
+      "solutions": "<p>We can split the hexagon into 6 equilateral triangles. If the area of the circle is \\(100pi\\), then the radius is \\(10\\). The radius is equal to the height of one of the equilateral triangles. Using \\(sin60 = \\frac{\\sqrt3}{2}\\), we get the hypotenuse is \\(\\frac{20\\sqrt{3}}{3}\\), which is also equal to the side length. Using the hexagon formula (or going back to the equilateral triangle formula \\(\\cdot 6\\)), we get</p><p>\\(\\frac{6}{4} \\cdot s^2\\sqrt{3} \\Rightarrow\\) \\(\\frac{6}{4} \\cdot (\\frac{20\\sqrt3}{3})^2 \\cdot \\sqrt3 \\Rightarrow\\) \\(\\frac{6}{4} \\cdot \\frac{20\\sqrt3}{3} \\cdot \\frac{20\\sqrt3}{3} \\cdot \\sqrt3 \\Rightarrow\\) \\(\\boxed{200\\sqrt3}\\)</p>",
+      "answer": "D"
+    },
+    "17": {
+      "problem": "<p>If \\(x\\) is positive and \\(\\log{x} \\ge \\log{2} + \\frac{1}{2}\\log{x}\\), then:</p><p>\\(\\textbf{(A)}\\ {x}\\text{ has no minimum or maximum value}\\qquad \\\\\n\\textbf{(B)}\\ \\text{the maximum value of }{x}\\text{ is }{1}\\qquad \\\\\n\\textbf{(C)}\\ \\text{the minimum value of }{x}\\text{ is }{1}\\qquad \\\\\n\\textbf{(D)}\\ \\text{the maximum value of }{x}\\text{ is }{4}\\qquad \\\\\n\\textbf{(E)}\\ \\text{the minimum value of }{x}\\text{ is }{4}\\)</p>",
+      "solutions": "<p>\\(\\boxed{E}\\)</p>",
+      "answer": "E"
+    },
+    "18": {
+      "problem": "<p>The area of a circle is doubled when its radius \\(r\\) is increased by \\(n\\). Then \\(r\\) equals:</p><p>\\(\\textbf{(A)}\\ n(\\sqrt{2} + 1)\\qquad\n\\textbf{(B)}\\ n(\\sqrt{2} - 1)\\qquad\n\\textbf{(C)}\\ n\\qquad\n\\textbf{(D)}\\ n(2 - \\sqrt{2})\\qquad\n\\textbf{(E)}\\ \\frac{n\\pi}{\\sqrt{2} + 1}\\)</p>",
+      "solutions": "<p>Since the new circle has twice the area of the original circle, its radius is \\(\\sqrt{2}\\) times the old radius. Thus,</p><p>\\[r + n = r\\sqrt{2}\\]</p><p>\\[n = r\\sqrt{2} - r\\]</p><p>\\[n = r(\\sqrt{2} - 1)\\]</p><p>\\[r = \\frac{n}{\\sqrt{2} - 1}\\]</p><p>Rationalizing the denominator yields</p><p>\\[r = \\frac{n}{\\sqrt{2} - 1} *  \\frac{\\sqrt{2} + 1}{\\sqrt{2} + 1} = n(\\sqrt{2} + 1)\\]</p><p>Therefore, the answer is \\(\\boxed{(A)}\\)</p>",
+      "answer": "A"
+    },
+    "19": {
+      "problem": "<p>The sides of a right triangle are \\(a\\) and \\(b\\) and the hypotenuse is \\(c\\). A perpendicular from the vertex divides \\(c\\) into segments \\(r\\) and \\(s\\), adjacent respectively to \\(a\\) and \\(b\\). If \\(a : b = 1 : 3\\), then the ratio of \\(r\\) to \\(s\\) is:</p><p>\\(\\textbf{(A)}\\ 1 : 3\\qquad\n\\textbf{(B)}\\ 1 : 9\\qquad\n\\textbf{(C)}\\ 1 : 10\\qquad\n\\textbf{(D)}\\ 3 : 10\\qquad\n\\textbf{(E)}\\ 1 : \\sqrt{10}\\)</p>",
+      "solutions": "<p>Let the triangle be triangle \\(ABC\\) with \\(A\\) opposite to side \\(a\\), and define \\(B\\) and \\(C\\) similarly. Call the base of the perpendicular \\(D\\) and say it has length \\(x\\).</p><p>We know the area of triangle \\(ABC\\), denoted as \\([ABC],\\) is \\(\\frac{ab}{2} = \\frac{cx}{2} = \\frac{(r+s)x}{2}.\\) So, \\(x = \\frac{ab}{r+s}.\\)</p><p>Now, by simple angle chasing that \\(\\triangle BCD \\sim \\triangle CDA \\sim ACB.\\) So, \\[\\frac{AC}{CB} = \\frac{CD}{BD}.\\] Plugging in our variables for the side lenghts: \\[\\frac{b}{a} = \\frac{x}{r} = \\frac{\\frac{ab}{r+s}}{r}.\\]</p><p>We now get that \\(br = \\frac{a^2b}{r+s},\\) so \\(r = \\frac{a^2}{r+s}.\\) Similarly, we get that \\(s = \\frac{b^2}{r+s}.\\) So, \\[\\frac{r}{s} =  \\frac{\\frac{a^2}{r+s}}{\\frac{b^2}{r+s}} = \\frac{a^2}{b^2} = \\boxed{\\textbf{(B)}\\ 1 : 9}\\]</p><p>\\(\\boxed{}\\)</p><p>~Makethan</p>",
+      "answer": "B"
+    },
+    "20": {
+      "problem": "<p>If \\(4^x - 4^{x - 1} = 24\\), then \\((2x)^x\\)  equals:</p><p>\\(\\textbf{(A)}\\ 5\\sqrt{5}\\qquad\n\\textbf{(B)}\\ \\sqrt{5}\\qquad\n\\textbf{(C)}\\ 25\\sqrt{5}\\qquad\n\\textbf{(D)}\\ 125\\qquad\n\\textbf{(E)}\\ 25\\)</p>",
+      "solutions": "<p>We could rewrite \\(4ˆx - 4ˆ(x-1) = 24\\) as <span style=\"border: 1px solid; padding: 0 0.2em\"></span>$</p>",
+      "answer": "C"
+    },
+    "21": {
+      "problem": "<p>In the accompanying figure \\(\\overline{CE}\\) and \\(\\overline{DE}\\) are equal chords of a circle with center \\(O\\). Arc \\(AB\\) is a quarter-circle. Then the ratio of the area of triangle \\(CED\\) to the area of triangle \\(AOB\\) is:</p><p><img class=\"latexcenter\" src=\"/data/aops/1958_AHSME/21-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\textbf{(A)}\\ \\sqrt {2} : 1\\qquad \\textbf{(B)}\\ \\sqrt {3} : 1\\qquad \\textbf{(C)}\\ 4 : 1\\qquad \\textbf{(D)}\\ 3 : 1\\qquad \\textbf{(E)}\\ 2 : 1\\)</p>",
+      "solutions": "<p>Draw \\(OE\\). Since triangles \\(AOB\\), \\(COE\\), and \\(DOE\\) are congruent, you can fit triangle \\(AOE\\) twice in \\(CED\\). Thus, our answer is \\((E)2:1\\). \\(\\boxed{}\\)</p>",
+      "answer": "E"
+    },
+    "22": {
+      "problem": "<p>A particle is placed on the parabola \\(y = x^2- x -6\\) at a point \\(P\\) whose \\(y\\)-coordinate is \\(6\\). It is allowed to roll along the parabola until it reaches the nearest point \\(Q\\) whose \\(y\\)-coordinate is \\(-6\\). The horizontal distance traveled by the particle (the numerical value of the difference in the \\(x\\)-coordinates of \\(P\\) and \\(Q\\)) is:</p><p>\\(\\textbf{(A)}\\ 5\\qquad\n\\textbf{(B)}\\ 4\\qquad\n\\textbf{(C)}\\ 3\\qquad\n\\textbf{(D)}\\ 2\\qquad\n\\textbf{(E)}\\ 1\\)</p>",
+      "solutions": "<p>Setting \\(y=6\\) in the equation of the parabola gives \\(x^2-x-6=6\\), so \\(x^2-x-12=0\\), which factors as \\((x-4)(x+3)=0\\). Thus \\(x=4\\) or \\(x=-3\\).</p><p>Setting \\(y=-6\\) gives \\(x^2-x-6=-6\\), so \\(x^2-x=0\\), which factors as \\(x(x-1)=0\\). Thus \\(x=0\\) or \\(x=1\\).</p><p>The parabola has its vertex at \\(x=\\tfrac{1}{2}\\), which is the point of minimum \\(y\\)-value. Since the particle rolls continuously along the curve, it cannot jump past the vertex; so starting from \\(P=(4,6)\\), it first reaches \\(y=-6\\) at \\(Q=(1,-6)\\), a horizontal distance of \\(4-1=3\\). Likewise, starting from \\(P=(-3,6)\\), it first reaches \\(y=-6\\) at \\(Q=(0,-6)\\), again a horizontal distance of \\(3\\).</p><p>Therefore, the horizontal distance traveled is \\(\\boxed{\\textbf{(C) } 3}\\).</p>",
+      "answer": "C"
+    },
+    "23": {
+      "problem": "<p>If, in the expression \\(x^2 - 3\\), \\(x\\) increases or decreases by a positive amount of \\(a\\), the expression changes by an amount:</p><p>\\(\\textbf{(A)}\\ {\\pm 2ax + a^2}\\qquad\n\\textbf{(B)}\\ {2ax \\pm a^2}\\qquad\n\\textbf{(C)}\\ {\\pm a^2 - 3} \\qquad\n\\textbf{(D)}\\ {(x + a)^2 - 3}\\qquad\\\\\n\\textbf{(E)}\\ {(x - a)^2 - 3}\\)</p>",
+      "solutions": "<p>Let us represent the increase or decrease in \\(x\\) by \\((x \\pm a)\\)</p><p>Thus our original expression becomes</p><p>\\[(x \\pm a)^2 - 3\\]</p><p>\\[x^2 \\pm 2ax + a^2 - 3\\]</p><p>The absolute difference between these two expressions is \\(\\pm 2ax + a^2\\).</p><p>Therefore, the answer is \\(\\boxed{(A)}\\)</p>",
+      "answer": "A"
+    },
+    "24": {
+      "problem": "<p>A man travels \\(m\\) feet due north at \\(2\\) minutes per mile. He returns due south to his starting point at \\(2\\) miles per minute. The average rate in miles per hour for the entire trip is:</p><p>\\(\\textbf{(A)}\\ 75\\qquad\n\\textbf{(B)}\\ 48\\qquad\n\\textbf{(C)}\\ 45\\qquad\n\\textbf{(D)}\\ 24\\qquad\\\\\n\\textbf{(E)}\\ \\text{impossible to determine without knowing the value of }{m}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>The man’s rate initially is \\(\\frac{1 \\text{mi}}{2 \\text{min}}*\\frac{60 \\text{min}}{1 \\text{hr}}=30 \\text{m/h}\\). Velocity final: \\(\\frac{2 \\text{mi}}{1 \\text{min}}*\\frac{60 \\text{min}}{1 \\text{hr}}=120 \\text{m/h}\\). The formula for calculating the average rate over a round trip is: \\(\\frac{2v_1 v_2}{v_1 + v_2}\\). Plugging stuff in gives \\(\\boxed{B) 48}\\) Note that \\(m\\) cancels out and does not matter in this situation. Also the answer is almost never weird long answers like option E</p>",
+      "answer": "B"
+    },
+    "25": {
+      "problem": "<p>If \\(\\log_{k}{x}\\cdot \\log_{5}{k} = 3\\), then \\(x\\) equals:</p><p>\\(\\textbf{(A)}\\ k^6\\qquad\n\\textbf{(B)}\\ 5k^3\\qquad\n\\textbf{(C)}\\ k^3\\qquad\n\\textbf{(D)}\\ 243\\qquad\n\\textbf{(E)}\\ 125\\)</p>",
+      "solutions": "<p>125. Rearrange the equation into \\[\\log_{5}{k}\\cdot\\log_{k}{x} = 3\\] which is just \\[\\log_{5}{x} = 3\\] and x is 125.</p>",
+      "answer": "E"
+    },
+    "26": {
+      "problem": "<p>A set of \\(n\\) numbers has the sum \\(s\\). Each number of the set is increased by \\(20\\), then multiplied by \\(5\\), and then decreased by \\(20\\). The sum of the numbers in the new set thus obtained is:</p><p>\\(\\textbf{(A)}\\ s + 20n\\qquad\n\\textbf{(B)}\\ 5s + 80n\\qquad\n\\textbf{(C)}\\ s\\qquad\n\\textbf{(D)}\\ 5s\\qquad\n\\textbf{(E)}\\ 5s + 4n\\)</p>",
+      "solutions": "<p>\\(\\boxed{}\\)</p>",
+      "answer": "B"
+    },
+    "27": {
+      "problem": "<p>The points \\((2,-3)\\), \\((4,3)\\), and \\((5, k/2)\\) are on the same straight line. The value(s) of \\(k\\) is (are):</p><p>\\(\\textbf{(A)}\\ 12\\qquad\n\\textbf{(B)}\\ -12\\qquad\n\\textbf{(C)}\\ \\pm 12\\qquad\n\\textbf{(D)}\\ {12}\\text{ or }{6}\\qquad\n\\textbf{(E)}\\ {6}\\text{ or }{6\\frac{2}{3}}\\)</p>",
+      "solutions": "<p>First find the slope. Then use the point-slope formula to find the equation of the line. Then substitute 5 for x to find y. \\(\\text{(A)}12\\)</p>",
+      "answer": "A"
+    },
+    "28": {
+      "problem": "<p>A \\(16\\)-quart radiator is filled with water. Four quarts are removed and replaced with pure antifreeze liquid. Then four quarts of the mixture are removed and replaced with pure antifreeze. This is done a third and a fourth time. The fractional part of the final mixture that is water is:</p><p>\\(\\textbf{(A)}\\ \\frac{1}{4}\\qquad\n\\textbf{(B)}\\ \\frac{81}{256}\\qquad\n\\textbf{(C)}\\ \\frac{27}{64}\\qquad\n\\textbf{(D)}\\ \\frac{37}{64}\\qquad\n\\textbf{(E)}\\ \\frac{175}{256}\\)</p>",
+      "solutions": "<p>Every time the process is done, \\(\\frac{3}{4}\\) of the mixture is replaced with antifreeze. That means that \\(\\frac{3}{4}\\) of the water is replaced by antifreeze, and the amount of water in the mixture after the fourth time is \\(\\left(\\frac{3}{4}\\right)^4 = \\boxed{\\textbf{(B) }\\frac{81}{256}}\\).</p>",
+      "answer": "B"
+    },
+    "29": {
+      "problem": "<p>In a general triangle \\(ADE\\) (as shown) lines \\(\\overline{EB}\\) and \\(\\overline{EC}\\) are drawn. Which of the following angle relations is true?</p><p><img class=\"latexcenter\" src=\"/data/aops/1958_AHSME/29-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\textbf{(A)}\\ x + z = a + b\\qquad \\textbf{(B)}\\ y + z = a + b\\qquad \\textbf{(C)}\\ m + x = w + n\\qquad \\\\\n\\textbf{(D)}\\ x + z + n = w + c + m\\qquad \\textbf{(E)}\\ x + y + n = a + b + m\\)</p>",
+      "solutions": "<p>\\(\\boxed{}\\)</p>",
+      "answer": "E"
+    },
+    "30": {
+      "problem": "<p>If \\(xy = b\\) and \\(\\frac{1}{x^2} + \\frac{1}{y^2} = a\\), then \\((x + y)^2\\) equals:</p><p>\\(\\textbf{(A)}\\ (a + 2b)^2\\qquad\n\\textbf{(B)}\\ a^2 + b^2\\qquad\n\\textbf{(C)}\\ b(ab + 2)\\qquad\n\\textbf{(D)}\\ ab(b + 2)\\qquad\n\\textbf{(E)}\\ \\frac{1}{a} + 2b\\)</p>",
+      "solutions": "<p>\\(\\boxed{}\\)</p>",
+      "answer": "C"
+    },
+    "31": {
+      "problem": "<p>The altitude drawn to the base of an isosceles triangle is \\(8\\), and the perimeter \\(32\\). The area of the triangle is:</p><p>\\(\\textbf{(A)}\\ 56\\qquad\n\\textbf{(B)}\\ 48\\qquad\n\\textbf{(C)}\\ 40\\qquad\n\\textbf{(D)}\\ 32\\qquad\n\\textbf{(E)}\\ 24\\)</p>",
+      "solutions": "<p>Consider the half of the triangle that is left of the altitude. Using the information given in the problem, we can determine that this is a right triangle with one leg of length 8 whose other two sides sum to 16. Through either setting the other leg as \\(x\\) and the hypotenuse as \\(16-x\\) and using the Pythagorean Theorem, or by recognizing this \\(6-8-10\\) triangle, we find that the other leg has length 6. So the triangle’s total area is \\(\\frac12 bh = \\frac{96}{2}=48\\), and our answer is \\(\\boxed{E}\\).</p>",
+      "answer": "B"
+    },
+    "32": {
+      "problem": "<p>With $ \\(1000\\) a rancher is to buy steers at $ \\(25\\) each and cows at $ \\(26\\) each. If the number of steers \\(s\\) and the number of cows \\(c\\) are both positive integers, then:</p><p>\\(\\textbf{(A)}\\ \\text{this problem has no solution}\\qquad\\\\\n\\textbf{(B)}\\ \\text{there are two solutions with }{s}\\text{ exceeding }{c}\\qquad \\\\\n\\textbf{(C)}\\ \\text{there are two solutions with }{c}\\text{ exceeding }{s}\\qquad \\\\\n\\textbf{(D)}\\ \\text{there is one solution with }{s}\\text{ exceeding }{c}\\qquad \\\\\n\\textbf{(E)}\\ \\text{there is one solution with }{c}\\text{ exceeding }{s}\\)</p>",
+      "solutions": "<p>\\(\\boxed{}\\)</p>",
+      "answer": "E"
+    },
+    "33": {
+      "problem": "<p>For one root of \\(ax^2 + bx + c = 0\\) to be double the other, the coefficients \\(a,\\,b,\\,c\\) must be related as follows:</p><p>\\(\\textbf{(A)}\\ 4b^2 = 9c\\qquad\n\\textbf{(B)}\\ 2b^2 = 9ac\\qquad\n\\textbf{(C)}\\ 2b^2 = 9a\\qquad \\\\\n\\textbf{(D)}\\ b^2 - 8ac = 0\\qquad\n\\textbf{(E)}\\ 9b^2 = 2ac\\)</p>",
+      "solutions": "<p>\\(\\boxed{B}\\)</p>",
+      "answer": "B"
+    },
+    "34": {
+      "problem": "<p>The numerator of a fraction is \\(6x + 1\\), then denominator is \\(7 - 4x\\), and \\(x\\) can have any value between \\(-2\\) and \\(2\\), both included. The values of \\(x\\) for which the numerator is greater than the denominator are:</p><p>\\(\\textbf{(A)}\\ \\frac{3}{5} &lt; x \\le 2\\qquad\n\\textbf{(B)}\\ \\frac{3}{5} \\le x \\le 2\\qquad\n\\textbf{(C)}\\ 0 &lt; x \\le 2\\qquad \\\\\n\\textbf{(D)}\\ 0 \\le x \\le 2\\qquad\n\\textbf{(E)}\\ -2 \\le x \\le 2\\)</p>",
+      "solutions": "<p>\\(\\boxed{}\\)</p>",
+      "answer": "A"
+    },
+    "35": {
+      "problem": "<p>A triangle is formed by joining three points whose coordinates are integers. If the \\(x\\)-coordinate and the \\(y\\)-coordinate each have a value of \\(1\\), then the area of the triangle, in square units:</p><p>\\(\\textbf{(A)}\\ \\text{must be an integer}\\qquad\n\\textbf{(B)}\\ \\text{may be irrational}\\qquad\n\\textbf{(C)}\\ \\text{must be irrational}\\qquad\n\\textbf{(D)}\\ \\text{must be rational}\\qquad \\\\\n\\textbf{(E)}\\ \\text{will be an integer only if the triangle is equilateral.}\\)</p>",
+      "solutions": "<p>\\(\\boxed{}\\)</p>",
+      "answer": "D"
+    },
+    "36": {
+      "problem": "<p>The sides of a triangle are \\(30\\), \\(70\\), and \\(80\\) units. If an altitude is dropped upon the side of length \\(80\\), the larger segment cut off on this side is:</p><p>\\(\\textbf{(A)}\\ 62\\qquad\n\\textbf{(B)}\\ 63\\qquad\n\\textbf{(C)}\\ 64\\qquad\n\\textbf{(D)}\\ 65\\qquad\n\\textbf{(E)}\\ 66\\)</p>",
+      "solutions": "<p>Let the shorter segment be \\(x\\) and the altitude be \\(y\\). The larger segment is then \\(80-x\\).  By the Pythagorean Theorem , \\[30^2-y^2=x^2 \\qquad(1)\\]</p><p>and \\[(80-x)^2=70^2-y^2 \\qquad(2)\\]</p><p>Adding \\((1)\\) and \\((2)\\) and simplifying gives \\(x=15\\). Therefore, the answer is \\(80-15=\\boxed{\\textbf{(D)}~65}\\)</p><p>~megaboy6679</p>",
+      "answer": "D"
+    },
+    "37": {
+      "problem": "<p>The first term of an arithmetic series of consecutive integers is \\(k^2 + 1\\). The sum of \\(2k + 1\\) terms of this series may be expressed as:</p><p>\\(\\textbf{(A)}\\ k^3 + (k + 1)^3\\qquad\n\\textbf{(B)}\\ (k - 1)^3 + k^3\\qquad\n\\textbf{(C)}\\ (k + 1)^3\\qquad \\\\\n\\textbf{(D)}\\ (k + 1)^2\\qquad\n\\textbf{(E)}\\ (2k + 1)(k + 1)^2\\)</p>",
+      "solutions": "<p>\\(Option A\\)</p>",
+      "answer": "A"
+    },
+    "38": {
+      "problem": "<p>Let \\(r\\) be the distance from the origin to a point \\(P\\) with coordinates \\(x\\) and \\(y\\). Designate the ratio \\(\\frac{y}{r}\\) by \\(s\\) and the ratio \\(\\frac{x}{r}\\)  by \\(c\\). Then the values of \\(s^2 - c^2\\) are limited to the numbers:</p><p>\\(\\textbf{(A)}\\ \\text{less than }{-1}\\text{ are greater than }{+1}\\text{, both excluded}\\qquad\\\\\n\\textbf{(B)}\\ \\text{less than }{-1}\\text{ are greater than }{+1}\\text{, both included}\\qquad \\\\\n\\textbf{(C)}\\ \\text{between }{-1}\\text{ and }{+1}\\text{, both excluded}\\qquad \\\\\n\\textbf{(D)}\\ \\text{between }{-1}\\text{ and }{+1}\\text{, both included}\\qquad \\\\\n\\textbf{(E)}\\ {-1}\\text{ and }{+1}\\text{ only}\\)</p>",
+      "solutions": "<p>\\(\\boxed{}\\)</p>",
+      "answer": "D"
+    },
+    "39": {
+      "problem": "<p>We may say concerning the solution of \\(|x|^2 + |x| - 6 =0\\) that:</p><p>\\(\\textbf{(A)}\\ \\text{there is only one root}\\qquad\n\\textbf{(B)}\\ \\text{the sum of the roots is }{+1}\\qquad\n\\textbf{(C)}\\ \\text{the sum of the roots is }{0}\\qquad \\\\\n\\textbf{(D)}\\ \\text{the product of the roots is }{+4}\\qquad\n\\textbf{(E)}\\ \\text{the product of the roots is }{-6}\\)</p>",
+      "solutions": "<p>Note that for all roots \\(x\\), \\(-x\\) will also be a root. Therefore, the sum of all of the roots will be \\(0\\), making the answer \\(\\boxed{C}\\)</p><p>We can find all roots \\(x\\) by setting \\(|x| = y\\). This gives us the equation \\(y^2+y-6=0\\), which has the solutions \\(y=-3, 2\\). However, \\(|x|\\) cannot equal \\(-3\\), so the roots for \\(x\\) are \\(2\\) and \\(-2\\). The sum of the two roots is \\(0\\), making the answer \\(\\boxed{C}\\).</p>",
+      "answer": "C"
+    },
+    "40": {
+      "problem": "<p>Given \\(a_0 = 1\\), \\(a_1 = 3\\), and the general relation \\(a_n^2 - a_{n - 1}a_{n + 1} = (-1)^n\\) for \\(n \\ge 1\\). Then \\(a_3\\) equals:</p><p>\\(\\textbf{(A)}\\ \\frac{13}{27}\\qquad\n\\textbf{(B)}\\ 33\\qquad\n\\textbf{(C)}\\ 21\\qquad\n\\textbf{(D)}\\ 10\\qquad\n\\textbf{(E)}\\ -17\\)</p>",
+      "solutions": "<p>Using the recursive definition, we find that \\(a_3=33\\).</p><h2><span class=\"mw-headline\" id=\"Sidenote\">Sidenote</span></h2><p>All the terms in the sequence \\(a_n\\) are integers. In fact, the sequence \\(a_n\\) satisfies the recursion \\(a_n=3a_{n-1}+a_{n-2}\\) (Prove it!).</p>",
+      "answer": "B"
+    },
+    "41": {
+      "problem": "<p>The roots of \\(Ax^2 + Bx + C = 0\\) are \\(r\\) and \\(s\\). For the roots of \\(x^2+px +q =0\\)</p><p>to be \\(r^2\\) and \\(s^2\\), \\(p\\) must equal:</p><p>\\(\\textbf{(A)}\\ \\frac{B^2 - 4AC}{A^2}\\qquad\n\\textbf{(B)}\\ \\frac{B^2 - 2AC}{A^2}\\qquad\n\\textbf{(C)}\\ \\frac{2AC - B^2}{A^2}\\qquad \\\\\n\\textbf{(D)}\\ B^2 - 2C\\qquad\n\\textbf{(E)}\\ 2C - B^2\\)</p>",
+      "solutions": "<p>By Vieta’s, \\(r + s = -\\frac{B}{A}\\), \\(rs = \\frac{C}{A}\\), and \\(r^2 + s^2 = -p\\). Note that \\((r+s)^2 = r^2 + s^2 + 2rs\\).</p><p>Therefore, \\((r + s)^2 - 2rs = r^2 + s^2\\), or \\(-\\left(\\frac{B}{A}\\right)^2 - \\frac{2C}{A} = -p\\).</p><p>Simplifying, \\(\\frac{B^2 - 2CA}{A^2} = -p\\).</p><p>Finally, multiply both sides by \\(-1\\) to get \\(p = \\frac{2CA - B^2}{A^2}\\), making the answer \\(\\boxed{C}\\).</p>",
+      "answer": "C"
+    },
+    "42": {
+      "problem": "<p>In a circle with center \\(O\\), chord \\(\\overline{AB}\\) equals chord \\(\\overline{AC}\\). Chord \\(\\overline{AD}\\) cuts \\(\\overline{BC}\\) in \\(E\\). If \\(AC = 12\\) and \\(AE = 8\\), then \\(AD\\) equals:</p><p>\\(\\textbf{(A)}\\ 27\\qquad\n\\textbf{(B)}\\ 24\\qquad\n\\textbf{(C)}\\ 21\\qquad\n\\textbf{(D)}\\ 20\\qquad\n\\textbf{(E)}\\ 18\\)</p>",
+      "solutions": "<p>Let \\(X\\) be a point on \\(BC\\) so \\(AX \\perp BC\\). Let \\(AX = h\\), \\(EX = \\sqrt{64 - h^2}\\) and \\(BX = \\sqrt{144 - h^2}\\). \\(CE = CX - EX = \\sqrt{144 - h^2} - \\sqrt{64 - h^2}\\). Using Power of a Point on \\(E\\), \\((BE)(EC) = (AE)(ED)\\) (there isn’t much information about the circle so I wanted to use PoP).</p><p>\\[(\\sqrt{144 - h^2} - \\sqrt{64 - h^2})(\\sqrt{144 - h^2} + \\sqrt{64 - h^2}) = 8(ED)\\]</p><p>\\[(144 - h^2) - (64 - h^2) = 8(ED)\\]</p><p>\\[80 = 8(ED)\\]</p><p>\\[ED = 10\\]</p><p>Adding up \\(AD\\) and \\(ED\\) we get \\(\\boxed{E}\\).</p>",
+      "answer": "E"
+    },
+    "43": {
+      "problem": "<p>\\(\\overline{AB}\\) is the hypotenuse of a right triangle \\(ABC\\). Median \\(\\overline{AD}\\) has length \\(7\\) and median \\(\\overline{BE}\\) has length \\(4\\). The length of \\(\\overline{AB}\\) is:</p><p>\\(\\textbf{(A)}\\ 10\\qquad\n\\textbf{(B)}\\ 5\\sqrt{3}\\qquad\n\\textbf{(C)}\\ 5\\sqrt{2}\\qquad\n\\textbf{(D)}\\ 2\\sqrt{13}\\qquad\n\\textbf{(E)}\\ 2\\sqrt{15}\\)</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/aops/1958_AHSME/43-fig1.png\" width=\"590\" alt=\"\"></p><p>By the Pythagorean Theorem, \\((2x)^2+y^2=BE^2\\), and \\(x^2+(2y)^2=AD^2\\).</p><p>Plugging in, \\(4x^2+y^2=16\\), and \\(x^2+4y^2=49\\).</p><p>Adding the equations, \\(5x^2+5y^2=65\\), and dividing by \\(5\\), \\(x^2+y^2=13\\).</p><p>Note that the length \\(AB^2\\) is equal to \\((2x)^2+(2y)^2=4x^2+4y^2=4(x^2+y^2)\\).</p><p>Therefore, the answer is \\(\\sqrt{4(13)}=2\\sqrt{13}\\) \\(\\boxed{D}\\)</p>",
+      "answer": "D"
+    },
+    "44": {
+      "problem": "<p>Given the true statements: (1) If \\(a\\) is greater than \\(b\\), then \\(c\\) is greater than \\(d\\) (2) If \\(c\\) is less than \\(d\\), then \\(e\\) is greater than \\(f\\). A valid conclusion is:</p><p>\\(\\textbf{(A)}\\ \\text{If }{a}\\text{ is less than }{b}\\text{, then }{e}\\text{ is greater than }{f}\\qquad \\\\\n\\textbf{(B)}\\ \\text{If }{e}\\text{ is greater than }{f}\\text{, then }{a}\\text{ is less than }{b}\\qquad \\\\\n\\textbf{(C)}\\ \\text{If }{e}\\text{ is less than }{f}\\text{, then }{a}\\text{ is greater than }{b}\\qquad \\\\\n\\textbf{(D)}\\ \\text{If }{a}\\text{ is greater than }{b}\\text{, then }{e}\\text{ is less than }{f}\\qquad \\\\\n\\textbf{(E)}\\ \\text{none of these}\\)</p>",
+      "solutions": "<p>(A) is not valid because \\(a&lt;b\\) does not imply \\(c\\le d\\) (The inverse of Statement 1 is not necessarily true).</p><p>(B) is not valid because \\(e&gt;f\\) does not imply \\(c&lt;d\\) (The converse of Statement 2 is not necessarily true either).</p><p>In (C), \\(e&lt;f\\) does imply \\(c\\ge d\\) (contrapositive of Statement 2) but this does not tell us anything about \\(a\\) and \\(b\\).</p><p>In (D), \\(a&gt;b\\) does imply \\(c&gt;d\\), but the inverse of Statement 2 (\\(e\\le f\\)) is not necessarily true.</p><p>So the answer is \\(\\boxed{\\textbf{(E) } \\text{None of these}}\\). (Incidentally, the wording of this problem appears to be wrongly assuming that \\(x\\not&lt;y\\) implies \\(x&gt;y\\) (and vice versa) when in reality \\(x\\) and \\(y\\) could be equal. However, this does not change the fact that none of the four choices follow logically from the given statements.)</p>",
+      "answer": "E"
+    },
+    "45": {
+      "problem": "<p>A check is written for \\(x\\) dollars and \\(y\\) cents, \\(x\\) and \\(y\\) both two-digit numbers. In error it is cashed for \\(y\\) dollars and \\(x\\) cents, the incorrect amount exceeding the correct amount by \\(\\textdollar 17.82\\). Then:</p><p>\\(\\textbf{(A)}\\ {x}\\text{ cannot exceed }{70}\\qquad \\\\\n\\textbf{(B)}\\ {y}\\text{ can equal }{2x}\\qquad\\\\\n\\textbf{(C)}\\ \\text{the amount of the check cannot be a multiple of }{5}\\qquad \\\\\n\\textbf{(D)}\\ \\text{the incorrect amount can equal twice the correct amount}\\qquad \\\\\n\\textbf{(E)}\\ \\text{the sum of the digits of the correct amount is divisible by }{9}\\)</p>",
+      "solutions": "<p>The correct total number of cents is \\(100x+y\\). Due to the error, it is cashed \\(100y+x\\) cents. We have \\(100y+x-100x-y=1782\\). Simplifying, we have \\(y-x=18\\). Looking at the answer choices:</p><p>A:  \\(y=89, x=71\\) is a counterexample</p><p>B:  Then \\(y=36, x=18\\), correct.</p><p>C:  As long as \\(y\\) is a multiple of 5, the original amount is a multiple of 5. A counterexample is \\(x=15, y=33\\).</p><p>D:  Then the correct amount is 17.82, and the incorrect amount is 35.64. Obviously incorrect.</p><p>E:  This is not fixed. A counterexample is \\(x=11,y=29\\).</p><p>Therefore, the correct answer is \\(\\boxed{\\textbf{(B)}\\ {y}\\text{ can equal }{2x}\\qquad\\\\}\\)</p><p>–Ethanol 2012</p><p>btw please point out any mistakes I made cuz it’s the first time I made a solution</p>",
+      "answer": "B"
+    },
+    "46": {
+      "problem": "<p>For values of \\(x\\) less than \\(1\\) but greater than \\(-4\\), the expression \\(\\frac{x^2 - 2x + 2}{2x - 2}\\) has:</p><p>\\(\\textbf{(A)}\\ \\text{no maximum or minimum value}\\qquad \\\\\n\\textbf{(B)}\\ \\text{a minimum value of }{+1}\\qquad \\\\\n\\textbf{(C)}\\ \\text{a maximum value of }{+1}\\qquad \\\\\n\\textbf{(D)}\\ \\text{a minimum value of }{-1}\\qquad \\\\\n\\textbf{(E)}\\ \\text{a maximum value of }{-1}\\)</p>",
+      "solutions": "<p>From \\(\\frac{x^2 - 2x + 2}{2x - 2}\\), we can further factor \\(\\frac{x^2 - 2x + 2}{2(x - 1)}\\) and then \\(\\frac{(x-1)^{2}+1}{2(x - 1)}\\) and finally \\(\\frac{x-1}{2}+\\frac{1}{2x-2}\\). Using \\(AM-GM\\), we can see that \\(\\frac{x-1}{2}=\\frac{1}{2x-2}\\). From there, we can get that \\(2=2 \\cdot (x-1)^{2}\\).</p><p>From there, we get that \\(x\\) is either \\(2\\) or \\(0\\). Substituting both of them in, you get that if \\(x=2\\), then the value is \\(1\\). If you plug in the value of \\(x=0\\), you get the value of \\(-1\\). So the answer is \\(\\textbf{(E)}\\)</p><p>Solution by: the_referee</p>",
+      "answer": "E"
+    },
+    "47": {
+      "problem": "<p>\\(ABCD\\) is a rectangle (see the accompanying diagram) with \\(P\\) any point on \\(\\overline{AB}\\). \\(\\overline{PS} \\perp \\overline{BD}\\) and \\(\\overline{PR} \\perp \\overline{AC}\\). \\(\\overline{AF} \\perp \\overline{BD}\\) and \\(\\overline{PQ} \\perp \\overline{AF}\\). Then \\(PR + PS\\) is equal to:</p><p><img class=\"latexcenter\" src=\"/data/aops/1958_AHSME/47-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\textbf{(A)}\\ PQ\\qquad\n\\textbf{(B)}\\ AE\\qquad\n\\textbf{(C)}\\ PT + AT\\qquad\n\\textbf{(D)}\\ AF\\qquad\n\\textbf{(E)}\\ EF\\)</p>",
+      "solutions": "<p>Step I: Since \\(\\overline{\\rm PQ}\\) and \\(\\overline{\\rm BD}\\) are both perpendicular to \\(\\overline{\\rm AF}\\), \\(\\overline{\\rm PQ} || \\overline{\\rm BD}\\). Thus, \\(\\angle APQ = \\angle ABD\\). Also, \\(\\angle ABD\\) = \\(\\angle CAB\\) because \\(ABCD\\) is a rectangle. Thus, \\(\\angle APQ = \\angle ABD = \\angle CAB\\). Since \\(\\angle APQ = \\angle CAB\\), \\(\\triangle APT\\) is isosceles with \\(PT = AT\\).</p><p>Step II: \\(\\angle ATQ\\) and \\(\\angle PTR\\) are vertical angles and are congruent. Thus, by HL congruence, \\(\\triangle ATQ \\cong \\triangle PTR\\), so \\(AQ = PR\\).</p><p>Step III: We also know that \\(PSFQ\\) is a rectangle, since \\(\\overline{\\rm PS} \\perp \\overline{\\rm BD}\\), \\(\\overline{\\rm BF} \\perp \\overline{\\rm AF}\\), and \\(\\overline{\\rm PQ} \\perp \\overline{\\rm AF}\\).</p><p>Step IV: Since \\(PSFQ\\) is a rectangle, \\(QF = PS\\). We also found earlier that \\(AQ = PR\\). Thus, \\(PR + PS = AQ + QF = AF\\).</p><p>Our answer is \\(PR + PS = \\boxed{D) AF}\\)</p><p>~lovesummer</p>",
+      "answer": "D"
+    },
+    "48": {
+      "problem": "<p>Diameter \\(\\overline{AB}\\) of a circle with center \\(O\\) is \\(10\\) units. \\(C\\) is a point \\(4\\) units from \\(A\\), and on \\(\\overline{AB}\\). \\(D\\) is a point \\(4\\) units from \\(B\\), and on \\(\\overline{AB}\\). \\(P\\) is any point on the circle. Then the broken-line path from \\(C\\) to \\(P\\) to \\(D\\):</p><p>\\(\\textbf{(A)}\\ \\text{has the same length for all positions of }{P}\\qquad\\\\\n\\textbf{(B)}\\ \\text{exceeds }{10}\\text{ units for all positions of }{P}\\qquad \\\\\n\\textbf{(C)}\\ \\text{cannot exceed }{10}\\text{ units}\\qquad \\\\\n\\textbf{(D)}\\ \\text{is shortest when }{\\triangle CPD}\\text{ is a right triangle}\\qquad \\\\\n\\textbf{(E)}\\ \\text{is longest when }{P}\\text{ is equidistant from }{C}\\text{ and }{D}.\\)</p>",
+      "solutions": "<p>If \\(P\\) is on \\(A\\), then the length is 10, eliminating answer choice \\((B)\\).</p><p>If \\(P\\) is equidistant from \\(C\\) and \\(D\\), the length is \\(2\\sqrt{1^2+5^2}=2\\sqrt{26}&gt;10\\), eliminating \\((A)\\) and \\((C)\\).</p><p>If triangle \\(CDP\\) is right, then angle \\(CDP\\) is right or angle \\(DCP\\) is right. Assume that angle \\(DCP\\) is right. Triangle \\(APB\\) is right, so \\(CP=\\sqrt{4*6}=\\sqrt{24}\\). Then, \\(DP=\\sqrt{28}\\), so the length we are looking for is \\(\\sqrt{24}+\\sqrt{28}&gt;10\\), eliminating \\((D)\\).</p><p>Thus, our answer is \\((E)\\). \\(\\boxed{}\\)</p><p>Note: Say you are not convinced that \\(\\sqrt{24}+\\sqrt{28}&gt;10\\). We can prove this as follows.</p><p>Start by simplifying the equation: \\(\\sqrt{6}+\\sqrt{7}&gt;5\\).</p><p>Square both sides: \\(6+2\\sqrt{42}+7&gt;25\\).</p><p>Simplify: \\(\\sqrt{42}&gt;6\\)</p><p>Square both sides again: \\(42&gt;36\\). From here, we can just reverse our steps to get \\(\\sqrt{24}+\\sqrt{28}&gt;10\\).</p>",
+      "answer": "E"
+    },
+    "49": {
+      "problem": "<p>In the expansion of \\((a + b)^n\\) there are \\(n + 1\\) dissimilar terms. The number of dissimilar terms in the expansion of \\((a + b + c)^{10}\\) is:</p><p>\\(\\textbf{(A)}\\ 11\\qquad\n\\textbf{(B)}\\ 33\\qquad\n\\textbf{(C)}\\ 55\\qquad\n\\textbf{(D)}\\ 66\\qquad\n\\textbf{(E)}\\ 132\\)</p>",
+      "solutions": "<p>Expand the binomial \\(((a+b)+c)^n\\) with the binomial theorem. We have:</p><p>\\[\\sum\\limits_{k=0}^{10} \\binom{10}{k} (a+b)^k c^{10-k}\\]</p><p>So for each iteration of the summation operator, we add k+1 dissimilar terms. Therefore our answer is:</p><p>\\[\\sum\\limits_{k=0}^{10} k+1 = \\frac{11(1+11)}{2} = 66 \\to \\boxed{\\textbf{D}}\\]</p><h2><span class=\"mw-headline\" id=\"Solution_2_(Stars_and_Bars)\">Solution 2 (Stars and Bars)</span></h2><p>Each term in the expansion of \\((a+b+c)^{10}\\) will have the form \\(a^i \\times b^j \\times c^k\\), where \\(0\\le i, j, k\\le 10\\) and \\(a+b+c=10\\). So, we need to find the number of triplets of nonnegative integers \\((a, b, c)\\) such that \\(a+b+c=10\\). Using Stars and Bars, this value is \\(\\binom{12}{2}=66\\).</p>",
+      "answer": "D"
+    },
+    "50": {
+      "problem": "<p>In this diagram a scheme is indicated for associating all the points of segment \\(\\overline{AB}\\) with those of segment \\(\\overline{A'B'}\\), and reciprocally. To described this association scheme analytically, let \\(x\\) be the distance from a point \\(P\\) on \\(\\overline{AB}\\) to \\(D\\) and let \\(y\\) be the distance from the associated point \\(P'\\) of \\(\\overline{A'B'}\\) to \\(D'\\). Then for any pair of associated points, if \\(x = a,\\, x + y\\) equals:</p><p><img class=\"latexcenter\" src=\"/data/aops/1958_AHSME/50-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\textbf{(A)}\\ 13a\\qquad \\textbf{(B)}\\ 17a - 51\\qquad \\textbf{(C)}\\ 17 - 3a\\qquad \\textbf{(D)}\\ \\frac {17 - 3a}{4}\\qquad \\textbf{(E)}\\ 12a - 34\\)</p>",
+      "solutions": "<p>\\(\\boxed{}\\)</p>",
+      "answer": "C"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2018,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2018/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let a \\(p\\)-coin be a coin that lands on heads with probability \\(p\\). So, a fair coin is a \\(\\frac{1}{2}\\)-coin and a rigged coin that lands on heads \\(75\\) percent of the time is a \\(\\frac{3}{4}\\)-coin. Joe flips a \\(\\frac{12}{23}\\)-coin until it lands heads. What is the expected number of tails that he flips?</p>",
+      "solutions": "<p>Since the probability of heads is \\(\\frac{12}{23}\\) and the probability of heads is \\(\\frac{11}{23}\\), the expected number of tails is</p><p>\\[\\begin{aligned}\n&amp;\\frac{12}{23} \\cdot 0 + \\frac{11}{23} \\cdot \\frac{12}{23} \\cdot 1 + \\left(\\frac{11}{23}\\right)^2 \\cdot \\frac{12}{23} \\cdot 2 + \\left(\\frac{11}{23}\\right)^3 \\cdot \\frac{12}{23} \\cdot 3 + \\cdots \\\\\n&amp;= \\left(\\frac{11}{23} \\cdot \\frac{12}{23} + \\left(\\frac{11}{23}\\right)^2 \\cdot \\frac{12}{23} + \\left(\\frac{11}{23}\\right)^3 \\cdot \\frac{12}{23} + \\cdots\\right) + \\left(\\left(\\frac{11}{23}\\right)^2 \\cdot \\frac{12}{23} + \\left(\\frac{11}{23}\\right)^3 \\cdot \\frac{12}{23} + \\cdots\\right) + \\cdots \\\\\n&amp;= \\frac{12}{23} \\cdot \\left(\\frac{\\frac{11}{23}}{1-\\frac{11}{23}} + \\frac{\\left(\\frac{11}{23}\\right)^2}{1-\\frac{11}{23}} + \\cdots\\right) \\\\\n&amp;= \\frac{12}{23} \\cdot \\frac{23}{12} \\cdot \\frac{\\frac{11}{23}}{1-\\frac{11}{23}} \\\\\n&amp;= \\boxed{\\frac{11}{12}}\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{11}{12}"
+    },
+    "2": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). \\(T\\) should be of the form \\(\\frac{a}{b}\\). Let \\(c = a \\cdot b\\). Take the equation \\[4^x + c = y^2.\\] This equation has two integer solutions, \\((x_1, y_1)\\) and \\((x_2, y_2)\\). What is \\((x_1+x_2, y_1+y_2)\\)?</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(\\frac{11}{12}\\).</i></p>",
+      "solutions": "<p>\\(T=\\frac{11}{12}\\). Since \\(c = 11 \\cdot 12 = 132\\), we have \\(4(4^{x-1}+33) = y^2\\). Hence, \\(\\left(\\frac{y}{2}\\right)^2 - (2^{x-1})^2 = 33\\), so \\(\\left(\\frac{y}{2}+2^{x-1}\\right)\\left(\\frac{y}{2}-2^{x-1}\\right) = 33\\). Since \\(33 = 11 \\cdot 3 = 33 \\cdot 1\\), we have</p><p>\\[\\begin{cases} \\frac{y}{2}+2^{x-1} = 11 \\\\ \\frac{y}{2}-2^{x-1} = 3 \\end{cases}\n\\qquad\n\\begin{cases} \\frac{y}{2}+2^{x-1} = 33 \\\\ \\frac{y}{2}-2^{x-1} = 1 \\end{cases}\\]</p><p>Hence, we have</p><p>\\[\\begin{cases} x_1 = 3 \\\\ y_1 = 14 \\end{cases}\n\\qquad\n\\begin{cases} x_2 = 5 \\\\ y_2 = 34 \\end{cases}\\]</p><p>Thus, \\((x_1+x_2, y_1+y_2) = \\boxed{(8, 48)}\\).</p>",
+      "answer": "(8, 48)"
+    },
+    "3": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). \\(T\\) should be of the form \\((a,b)\\). How many lattice points are on the interior of triangle formed by the points \\((a,0)\\), \\((0,b)\\), and \\((a,b)\\)?</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\((8, 48)\\).</i></p>",
+      "solutions": "<p>\\(T=(8,48)\\). There are \\(8+8+48=64\\) lattice points on the boundary of the triangle, and the triangle has an area of \\(\\frac{1}{2} \\cdot 8 \\cdot 48 = 192\\). By Pick’s Theorem, the number of lattice points on the interior of the triangle is \\(192+1-\\frac{64}{2} = \\boxed{161}\\).</p>",
+      "answer": "161"
+    },
+    "4": {
+      "problem": "<p>Triangle \\(ABC\\) has side lengths \\(AB=6\\), \\(BC=8\\), and \\(CA=10\\). Let \\(O\\) be the center of the circumcircle of \\(ABC\\). If circle \\(\\Gamma\\) passes through points \\(A\\), \\(B\\), and \\(O\\), and intersects segment \\(BC\\) at point \\(D\\), find \\(BD\\). Express your answer as a common fraction.</p>",
+      "solutions": "<p>Note that \\(AB^2+BC^2=CA^2\\), so \\(\\triangle ABC\\) is a right triangle. Hence, \\(O\\) is the midpoint of \\(BC\\), so \\(AO=BO=5\\), and the area of \\(\\triangle ABO\\) is half of the area of \\(\\triangle ABC\\), which is \\(12\\). Let the radius of circle \\(\\Gamma\\) be \\(r\\). We have \\(3^2+(4-r)^2=r^2\\), so \\(r=\\frac{25}{8}\\). Hence, \\(BD = 2 \\cdot \\left(4-\\frac{25}{8}\\right) = \\boxed{\\frac{7}{4}}\\).</p>",
+      "answer": "\\frac{7}{4}"
+    },
+    "5": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\), rounded to the nearest integer. Jung is an explorer, and one day finds himself on vertex \\(J\\) of the cube shown below. (One day, Bermuda, an evil demon, decides to mess with Jung and cuts off the vertex opposite the face he currently standing on. So, the cube now becomes a solid with \\(3\\) square faces, \\(3\\) pentagonal faces, and \\(1\\) triangular face. Bermuda haunts the triangle, so Jung now shudders with fear when he thinks about walking on the edges of the triangle. [can be deleted lol]) If Jung takes \\(T\\) steps, how many possible paths can he take without walking on the edges of Bermuda’s blue triangle?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2018_DMM_Relay/5-fig1.png\" width=\"353\" alt=\"\"></p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(\\frac{7}{4}\\).</i></p>",
+      "solutions": "<p>\\(T=2\\). Note that Jung he can take any path with \\(2\\) steps without walking on the edges of the triangle. Since there are \\(3\\) directions to walk from one vertex, there are \\(3 \\cdot 3 = \\boxed{9}\\) paths.</p>",
+      "answer": "9"
+    },
+    "6": {
+      "problem": "<p>Let \\(T = \\text{TYNWR}\\). Let \\(f(x) = x^3+ax^2+Tx-90\\), where \\(a\\) is an integer. The roots of this polynomial are integers \\(r_1\\), \\(r_2\\), and \\(r_3\\), with \\(r_1&lt;r_2&lt;r_3\\). What is the area of the triangle with side lengths \\(r_1+13\\), \\(r_2+12\\), \\(r_3+11\\)?</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(9\\).</i></p>",
+      "solutions": "<p>\\(T=9\\). By Vieta’s Theorem, we have \\(r_1r_2r_3=90\\), \\(r_1r_2+r_1r_3+r_2r_3=9\\). Note that \\(r_1\\), \\(r_2\\), and \\(r_3\\) cannot all be positive, otherwise \\(r_1r_2+r_1r_3+r_2r_3\\) will be too large. Hence, \\(r_1\\) and \\(r_2\\) should be negative. Test the case when \\(r_3=2\\), then we have \\(r_1r_2=45\\) and \\(r_1r_2+2(r_1+r_2)=9\\), so \\(r_1+r_2=-18\\). Hence, we have \\(r_1=-15\\), \\(r_2=-3\\), and \\(r_3=2\\). In this way, the side lengths of the triangle are \\(13\\), \\(14\\) and \\(15\\). Hence, the area of the triangle is \\(\\frac{1}{2} \\cdot 14 \\cdot 12 = \\boxed{84}\\).</p>",
+      "answer": "84"
+    }
+  }
+}

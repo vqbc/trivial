@@ -1,0 +1,58 @@
+{
+  "test": "SMT Algebra",
+  "year": 2011,
+  "name": "Algebra Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2011/algebra-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(a, b \\in \\mathbb{C}\\) such that \\(a+b = a^2+b^2 = \\frac{2\\sqrt{3}}{3}i\\). Compute \\(|\\operatorname{Re}(a)|\\).</p>",
+      "solutions": "<p>From \\(a+b = \\frac{2\\sqrt{3}}{3}i\\) we can let \\(a = \\frac{\\sqrt{3}}{3}i + x\\) and \\(b = \\frac{\\sqrt{3}}{3}i - x\\). Then \\(a^2+b^2 = 2\\left(\\left(\\frac{\\sqrt{3}}{3}i\\right)^2+x^2\\right) = 2\\left(x^2-\\frac13\\right) = \\frac{2\\sqrt{3}}{3}i\\). So \\(x^2 = \\frac{1+\\sqrt{3}i}{3} = \\frac23 e^{i\\pi/3}\\), \\(x = \\pm\\sqrt{\\frac23}\\cdot\\frac{\\sqrt3+i}{2}\\). Since \\(|\\operatorname{Re}(a)| = |\\operatorname{Re}(x)|\\), the answer is \\(\\frac{\\sqrt2}{\\sqrt3}\\cdot\\frac{\\sqrt3}{2} = \\frac{1}{\\sqrt2}\\).</p>",
+      "answer": "\\frac{1}{\\sqrt{2}}"
+    },
+    "2": {
+      "problem": "<p>Consider the curves \\(x^2+y^2=1\\) and \\(2x^2+2xy+y^2-2x-2y=0\\). These curves intersect at two points, one of which is \\((1,0)\\). Find the other one.</p>",
+      "solutions": "<p>From the first equation, we get \\(y^2 = 1-x^2\\). Plugging this into the second one, we are left with \\[2x^2 \\pm 2x\\sqrt{1-x^2} + 1 - x^2 - 2x \\mp 2\\sqrt{1-x^2} = 0 \\Rightarrow (x-1)^2 = \\mp 2\\sqrt{1-x^2}(x-1)\\] \\[\\Rightarrow x-1 = \\mp 2\\sqrt{1-x^2} \\text{ assuming } x \\ne 1\\] \\[\\Rightarrow x^2-2x+1 = 4-4x^2 \\Rightarrow 5x^2-2x-3=0\\]</p><p>The quadratic formula yields that \\(x = \\frac{2\\pm8}{10} = 1, -\\frac35\\) (we said that \\(x\\ne1\\) above but we see that it is still valid). If \\(x=1\\), the first equation forces \\(y=0\\) and we easily see that this solves the second equation. If \\(x=-\\frac35\\), then clearly \\(y\\) must be positive or else the second equation will sum five positive terms. Therefore \\(y = \\sqrt{1-\\frac{9}{25}} = \\sqrt{\\frac{16}{25}} = \\frac45\\). Hence the other point is \\(\\left(-\\frac35, \\frac45\\right)\\).</p>",
+      "answer": "\\left(-\\frac{3}{5}, \\frac{4}{5}\\right)"
+    },
+    "3": {
+      "problem": "<p>If \\(r\\), \\(s\\), \\(t\\), and \\(u\\) denote the roots of the polynomial \\(f(x) = x^4+3x^3+3x+2\\), find \\[\\frac{1}{r^2}+\\frac{1}{s^2}+\\frac{1}{t^2}+\\frac{1}{u^2}.\\]</p>",
+      "solutions": "<p>First notice that the polynomial \\[g(x) = x^4\\left(\\frac{1}{x^4}+\\frac{3}{x^3}+\\frac{3}{x}+2\\right) = 2x^4+3x^3+3x+1\\] is a polynomial with roots \\(\\frac1r, \\frac1s, \\frac1t, \\frac1u\\). Therefore, it is sufficient to find the sum of the squares of the roots of \\(g(x)\\), which we will denote as \\(r_1\\) through \\(r_4\\). Now, note that \\[r_1^2+r_2^2+r_3^2+r_4^2 = (r_1+r_2+r_3+r_4)^2 - (r_1r_2+r_1r_3+r_1r_4+r_2r_3+r_2r_4+r_3r_4) = \\left(-\\frac{a_3}{a_4}\\right)^2 - \\frac{a_2}{a_4}\\] by Vieta’s Theorem, where \\(a_n\\) denotes the coefficient of \\(x^n\\) in \\(g(x)\\). Plugging in values, we get that our answer is \\(\\left(-\\frac32\\right)^2 - 0 = \\frac94\\).</p>",
+      "answer": "\\frac{9}{4}"
+    },
+    "4": {
+      "problem": "<p>Find the 2011th-smallest \\(x\\), with \\(x&gt;1\\), that satisfies the following relation: \\[\\sin(\\ln x) + 2\\cos(3\\ln x)\\sin(2\\ln x) = 0.\\]</p>",
+      "solutions": "<p>Set \\(y = \\ln x\\), and observe that \\[2\\cos(3y)\\sin(2y) = \\sin(3y+2y) - \\sin(3y-2y) = \\sin(5y) - \\sin(y),\\] so that the equation in question is simply \\[\\sin(5y) = 0.\\] The solutions are therefore \\[\\ln x = y = \\frac{n\\pi}{5} \\implies x = e^{n\\pi/5} \\text{ for all } n \\in \\mathbb{N}.\\]</p>",
+      "answer": "e^{2011\\pi/5}"
+    },
+    "5": {
+      "problem": "<p>Find the remainder when \\((x+2)^{2011} - (x+1)^{2011}\\) is divided by \\(x^2+x+1\\).</p>",
+      "solutions": "<p>The standard method is to use the third root of unity \\(\\omega\\), \\(\\omega^2+\\omega+1=0\\). Let \\((x+2)^{2011}-(x+1)^{2011} = (x^2+x+1)Q(x)+ax+b\\) and substitute \\(x=\\omega\\). Then \\(a\\omega+b = (\\omega+2)^{2011}-(\\omega+1)^{2011}\\). Note that \\(\\omega+2\\) has size \\(\\sqrt3\\) and argument \\(\\pi/6\\), so \\((\\omega+2)^6=-3^3\\). Also \\(\\omega+1\\) has magnitude 1 and argument \\(\\pi/3\\), so \\((\\omega+1)^6=1\\). Using this and \\(2011=6\\cdot335+1\\), we get that \\(a\\omega+b = (-3^{1005}-1)\\omega+(-2\\cdot3^{1005}-1)\\).</p><p>Another solution is to note that \\((x+2)^2 \\equiv x^2+4x+4 \\equiv -3x^2 \\pmod{x^2+x+1}\\) and \\((x+1)^2 \\equiv x^2+2x+1 \\equiv x \\pmod{x^2+x+1}\\). Then we have \\(x^3 \\equiv 1 \\pmod{x^2+x+1}\\) and we can proceed by using periodicity.</p>",
+      "answer": "(-3^{1005}-1)x + (-2\\cdot3^{1005}-1)"
+    },
+    "6": {
+      "problem": "<p>There are 2011 positive numbers with both their sum and the sum of their reciprocals equal to 2012. Let \\(x\\) be one of these numbers. Find the maximum of \\(x+x^{-1}\\).</p>",
+      "solutions": "<p>Let \\(y_1, y_2, \\cdots, y_{2010}\\) be the 2010 numbers distinct from \\(x\\). Then \\(y_1+y_2+\\cdots+y_{2010} = 2012-x\\) and \\(\\frac{1}{y_1}+\\frac{1}{y_2}+\\cdots+\\frac{1}{y_{2010}} = 2012-\\frac1x\\). Applying the Cauchy–Schwarz inequality gives \\[\\left(\\sum_{i=1}^{2010} y_i\\right)\\left(\\sum_{i=1}^{2010}\\frac{1}{y_i}\\right) = (2012-x)\\left(2012-\\frac1x\\right) \\ge 2010^2\\] so \\(2012^2 - 2012(x+x^{-1}) + 1 - 2010^2 \\ge 0\\), \\(x+x^{-1} \\le 8045/2012\\).</p>",
+      "answer": "\\frac{8045}{2012}"
+    },
+    "7": {
+      "problem": "<p>Let \\(P(x)\\) be a polynomial of degree 2011 such that \\(P(1)=0\\), \\(P(2)=1\\), \\(P(4)=2\\), \\(\\ldots\\), and \\(P(2^{2011}) = 2011\\). Compute the coefficient of the \\(x^1\\) term in \\(P(x)\\).</p>",
+      "solutions": "<p>We analyze \\(Q(x) = P(2x)-P(x)\\). One can observe that \\(Q(x)-1\\) has the powers of 2 starting from \\(1, 2, 4, \\cdots\\), up to \\(2^{2010}\\) as roots. Since \\(Q\\) has degree 2011, \\(Q(x)-1 = A(x-1)(x-2)\\cdots(x-2^{2010})\\) for some \\(A\\). Meanwhile \\(Q(0) = P(0)-P(0) = 0\\), so \\[Q(0)-1 = -1 = A(-1)(-2)\\cdots(-2^{2010}) = -2^{(2010\\cdot2011)/2}A.\\] Therefore \\(A = 2^{-(1005\\cdot2011)}\\). Finally, note that the coefficient of \\(x\\) is same for \\(P\\) and \\(Q-1\\), so it equals \\[A(-2^0)(-2^1)\\cdots(-2^{2010})\\left((-2^0)+(-2^{-1})+\\cdots+(-2^{-2010})\\right) = \\frac{A\\cdot2^{1005\\cdot2011}(2^{2011}-1)}{2^{2010}} = \\boxed{2-\\frac{1}{2^{2010}}}.\\]</p>",
+      "answer": "2-\\frac{1}{2^{2010}}"
+    },
+    "8": {
+      "problem": "<p>Find the maximum of \\[\\frac{ab+bc+cd}{a^2+b^2+c^2+d^2}\\] for reals \\(a\\), \\(b\\), \\(c\\), and \\(d\\) not all zero.</p>",
+      "solutions": "<p>One has \\(ab \\le \\frac{t}{2}a^2+\\frac{1}{2t}b^2\\), \\(bc \\le \\frac12 b^2+\\frac12 c^2\\), and \\(cd \\le \\frac{1}{2t}c^2+\\frac{t}{2}d^2\\) by AM–GM. If we can set \\(t\\) such that \\(\\frac{t}{2} = \\frac{1}{2t}+\\frac12\\), it can be proved that \\(\\frac{ab+bc+cd}{a^2+b^2+c^2+d^2} \\le \\frac{\\frac{t}{2}(a^2+b^2+c^2+d^2)}{a^2+b^2+c^2+d^2} = \\frac{t}{2}\\), and this is maximal because we can set \\(a,b,c,d\\) so that the equality holds in every inequality we used. Solving this equation, we get \\(t = \\frac{1+\\sqrt5}{2}\\), so the maximum is \\(\\frac{t}{2} = \\frac{\\sqrt5+1}{4}\\).</p>",
+      "answer": "\\frac{\\sqrt5+1}{4}"
+    },
+    "9": {
+      "problem": "<p>It is a well-known fact that the sum of the first \\(n\\) \\(k\\)-th powers can be represented as a polynomial in \\(n\\). Let \\(P_k(n)\\) be such a polynomial for integers \\(k\\) and \\(n\\). For example, \\[\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6},\\] so one has \\[P_2(x) = \\frac{x(x+1)(2x+1)}{6} = \\frac13x^3+\\frac12x^2+\\frac16x.\\] Evaluate \\(P_7(-3)+P_6(-4)\\).</p>",
+      "solutions": "<p>Since the equation \\[P_k(x) = P_k(x-1)+x^k\\] has all integers \\(\\ge2\\) as roots, the equation is an identity, so it holds for all \\(x\\). Now we can substitute \\(x=-1,-2,-3,-4,\\cdots\\) to prove \\[P_k(-n) = -\\sum_{i=1}^{n-1}(-i)^k\\] so \\(P_7(-3)+P_6(-4) = -(-1)^6-(-2)^6-(-3)^6-(-1)^7-(-2)^7 = -665\\).</p>",
+      "answer": "-665"
+    },
+    "10": {
+      "problem": "<p>How many polynomials \\(P\\) of degree 4 satisfy \\(P(x^2) = P(x)P(-x)\\)?</p>",
+      "solutions": "<p>Note that if \\(r\\) is a root of \\(P\\) then \\(r^2\\) is also a root. Therefore \\(r, r^2, r^{2^2}, r^{2^3}, \\cdots\\), are all roots of \\(P\\). Since \\(P\\) has a finite number of roots, two of these roots should be equal. Therefore, either \\(r=0\\) or \\(r^N=1\\) for some \\(N&gt;0\\).</p><p>If all roots are equal to 0 or 1, then \\(P\\) is of the form \\(ax^b(x-1)^{(4-b)}\\) for \\(b=0,\\ldots,4\\).</p><p>Now suppose this is not the case. For such a polynomial, let \\(q\\) denote the largest integer such that \\(r=e^{2\\pi i p/q}\\) is a root for some integer \\(p\\) coprime to \\(q\\). We claim that the only suitable \\(q&gt;1\\) are \\(q=3\\) and \\(q=5\\).</p><p>First note that if \\(r\\) is a root then one of \\(\\sqrt{r}\\) or \\(-\\sqrt{r}\\) is also a root. So if \\(q\\) is even, then one of \\(e^{2\\pi i\\cdot p/2q}\\) or \\(e^{2\\pi i\\cdot (p+q)/2q}\\) should also be root of \\(p\\), and both \\(p/q\\) and \\((p+q)/2q\\) are irreducible fractions. This contradicts the assumption that \\(q\\) is maximal. Therefore \\(q\\) must be odd. Now, if \\(q&gt;6\\), then \\(r^{-2}, r^{-1}, r, r^2, r^4\\) should be all distinct, so \\(q\\le6\\). Therefore \\(q=5\\) or \\(3\\).</p><p>If \\(q=5\\), then the value of \\(p\\) is not important as \\(P\\) has the complex fifth roots of unity as its roots, so \\(P = a(x^4+x^3+x^2+x+1)\\). If \\(q=3\\), then \\(P\\) is divisible by \\(x^2+x+1\\). In this case we let \\(P(x) = a(x^2+x+1)Q(x)\\) and repeating the same reasoning we can show that \\(Q(x) = x^2+x+1\\) or \\(Q(x)\\) is of form \\(x^b(x-1)^{2-b}\\).</p><p>Finally, we can show that exactly one member of all 10 resulting families of polynomials fits the desired criteria. Let \\(P(x) = a(x-r)(x-s)(x-t)(x-u)\\). Then, \\(P(x)P(-x) = a^2(x^2-r^2)(x^2-s^2)(x^2-t^2)(x^2-u^2)\\). We now claim that \\(r^2, s^2, t^2\\), and \\(u^2\\) equal \\(r, s, t\\), and \\(u\\) in some order. We can prove this noting that the mapping \\(f(x)=x^2\\) maps 0 and 1 to themselves and maps the third and fifth roots of unity to another distinct third or fifth root of unity, respectively. Hence, for these polynomials, \\(P(x)P(-x) = a^2(x^2-r)(x^2-s)(x^2-t)(x^2-u) = aP(x^2)\\), so there exist exactly 10 polynomials that fit the desired criteria, namely the ones from the above 10 families with \\(a=1\\).</p>",
+      "answer": "10"
+    }
+  }
+}

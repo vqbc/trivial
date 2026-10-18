@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Algebra A",
+  "year": 2007,
+  "name": "Algebra A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2007_AlgebraA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(a\\), \\(b\\), and \\(c\\) are real numbers such that \\(a + b + c = 6\\) and \\(ab + bc + ca = 9\\), find the sum of all possible values of the expression \\(\\lfloor a \\rfloor + \\lfloor b \\rfloor + \\lfloor c \\rfloor\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Positive reals \\(p\\) and \\(q\\) are such that the graph of \\(y = x^2 - 2px + q\\) does not intersect the \\(x\\)-axis. Find \\(q\\) if there is a unique pair of points \\(A\\), \\(B\\) on the graph with \\(AB\\) parallel to the \\(x\\)-axis and \\(\\angle AOB = \\frac{\\pi}{2}\\), where \\(O\\) is the origin.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>For how many rational numbers \\(p\\) is the area of the triangle formed by the intercepts and vertex of \\(f(x) = -x^2 + 4px - p + 1\\) an integer?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Find the all values of \\(a\\) such that \\(x^6 - 6x^5 + 12x^4 + ax^3 + 12x^2 - 6x + 1\\) is nonnegative for all real \\(x\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Find the values of \\(a\\) such that \\(\\log(ax + 1) = \\log(x - a) + \\log(2 - x)\\) has a unique real solution.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>If \\(a\\), \\(b\\), \\(c\\), and \\(d\\) are reals with \\(a \\ge b \\ge c \\ge d \\ge 0\\) and \\(b(b - a) + c(c - b) + d(d - c) \\le 2 - \\frac{a^2}{2}\\), find the minimum value of the expression</p><p>\\[\\frac{1}{b + 2006c - 2006d} + \\frac{1}{a + 2006b - 2006c - d} + \\frac{1}{2007a - 2006b - c + d} + \\frac{1}{a - b + c + 2006d}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Given two sequences \\(x_n\\) and \\(y_n\\) defined by \\(x_0 = y_0 = 7\\),</p><p>\\[x_n = 4x_{n-1} + 3y_{n-1}, \\text{ and}\\] \\[y_n = 3y_{n-1} + 2x_{n-1},\\]</p><p>Find \\(\\lim_{n\\to\\infty} \\frac{x_n}{y_n}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>\\(f(x) = x^3 + 3x^2 - 1\\). Find the number of real solutions of \\(f(f(x)) = 0\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Find the value of \\(x + y\\) for which the expression</p><p>\\[\\frac{6x^2}{y^6} + \\frac{6y^2}{x^6} + 9x^2y^2 + \\frac{4}{x^6y^6}\\]</p><p>is minimized.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Find the real root of \\(x^5 + 5x^3 + 5x - 1\\). Hint: Let \\(x = u + k/u\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 1998,
+  "name": "Geometry",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/1998/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Quadrilateral \\(ALEX\\), pictured below (but not necessarily to scale!) can be inscribed in a circle; with \\(m\\angle LAX = 20^\\circ\\) and \\(m\\angle AXE = 100^\\circ\\):</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1998_HMMT_February_Geometry/1-fig1.png\" width=\"432\" alt=\"\"></p><p>Calculate \\(m\\angle EDX\\).</p>",
+      "solutions": "<p>\\(m\\angle EDX = 180^\\circ - m\\angle LAX - m\\angle ELA = 180^\\circ - m\\angle LAX - (180^\\circ - m\\angle AXE) = \\boxed{80^\\circ}\\).</p>",
+      "answer": "80^\\circ"
+    },
+    "2": {
+      "problem": "<p>Anne and Lisa enter a park that has two concentric circular paths joined by two radial paths, one of which is at the point where they enter. Anne goes in to the inner circle along the first radial path, around by the shorter way to the second radial path and out along it to the exit. Walking at the same rate, Lisa goes around the outer circle to the exit, taking the shorter of the two directions around the park.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1998_HMMT_February_Geometry/2-fig1.png\" width=\"270\" alt=\"\"></p><p>They arrive at the exit at the same time. The radial paths meet at the center of the park; what is the angle between them?</p>",
+      "solutions": "<p>If the angle in radians is \\(\\theta\\), then Anne travels \\(R\\theta\\) and Lisa travels \\((R-r)+r\\theta+(R-r)\\). Setting these equal yields \\(R(\\theta-2) = r(\\theta-2)\\), so \\(\\theta = \\boxed{2\\text{ radians}}\\).</p>",
+      "answer": "2\\text{ radians}"
+    },
+    "3": {
+      "problem": "<p>\\(MD\\) is a chord of length \\(\\sqrt{2}\\) in a circle of radius 1, and \\(L\\) is chosen on the circle so that the area of triangle \\(MLD\\) is the maximized.</p><p>Find \\(m\\angle MLD\\).</p>",
+      "solutions": "<p>\\(m\\angle MLD = \\frac12\\overgroup{AB} = \\boxed{45^\\circ}\\).</p>",
+      "answer": "45^\\circ"
+    },
+    "4": {
+      "problem": "<p>A cube with side length 100cm is filled with water and has a hole through which the water drains into a cylinder of radius 100cm. If the water level in the cube is falling at a rate of \\(1\\text{ cm/s}\\), how fast is the water level in the cylinder rising?</p>",
+      "solutions": "<p>The cylinder has a cross-sectional area \\(\\pi\\) times greater than the cube, so the water raises \\(\\frac{1}{\\pi}\\) times as quickly in the cylinder as it lowers the cube; that is, at \\(\\boxed{\\frac{1}{\\pi}\\text{ cm/s}}\\).</p>",
+      "answer": "\\frac{1}{\\pi}\\text{ cm/s}"
+    },
+    "5": {
+      "problem": "<p>Square \\(SEAN\\) has side length 2 and a quarter-circle of radius 1 around \\(E\\) is cut out.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1998_HMMT_February_Geometry/5-fig1.png\" width=\"208\" alt=\"\"></p><p>Find the radius of the largest circle that can be inscribed in the remaining figure.</p>",
+      "solutions": "<p>If the new circle has radius \\(r\\), then the distance from its center to \\(E\\) can be computed either as \\(1+r\\) or \\((2-r)\\sqrt2\\). Setting these equal yields \\(r = \\frac{2\\sqrt2-1}{\\sqrt2+1} = \\boxed{5-3\\sqrt2}\\).</p>",
+      "answer": "5-3\\sqrt{2}"
+    },
+    "6": {
+      "problem": "<p>A circle is inscribed in an equilateral triangle of side length 1. Tangents to the circle are drawn that cut off equilateral triangles at each corner. Circles are inscribed in each of these equilateral triangles. If this process is repeated infinitely many times, what is the sum of the areas of all the circles?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1998_HMMT_February_Geometry/6-fig1.png\" width=\"250\" alt=\"\"></p>",
+      "solutions": "<p>The central circle has area \\(\\pi\\left(\\frac{1}{2\\sqrt3}\\right)^2 = \\frac{\\pi}{12}\\), and each of the three small triangles are copies of the entire figure dilated by \\(\\frac13\\). Therefore, the total area is given by \\(K = \\frac{\\pi}{12}+3\\cdot\\left(\\frac13\\right)^2K \\iff \\frac23K = \\frac{\\pi}{12} \\iff K = \\boxed{\\frac{\\pi}{8}}\\).</p>",
+      "answer": "\\frac{\\pi}{8}"
+    },
+    "7": {
+      "problem": "<p>Pyramid \\(EARLY\\) has rectangular base \\(EARL\\) and apex \\(Y\\), and all of its edges are of integer length. The four edges from the apex have lengths 1, 4, 7, 8 (in no particular order), and \\(EY\\) is perpendicular to \\(YR\\).</p><p>Find the area of rectangle \\(EARL\\).</p>",
+      "solutions": "<p>Let \\(E=(a,b,0)\\), \\(A=(-c,b,0)\\), \\(R=(-c,-d,0)\\), \\(L=(a,-d,0)\\), \\(Y=(0,0,h)\\), and observe that \\(EY^2+RY^2 = a^2+b^2+c^2+d^2+2h^2 = AY^2+LY^2\\), which can only be satisfied by \\(EY=1\\), \\(AY=4\\), \\(RY=8\\), \\(LY=7\\) (or the symmetric configurations). Since \\(EA\\) is an integral side of a triangle whose other sides are 1 and 4, we must have \\(EA=4\\); similarly, \\(EL=7\\). Therefore, the area of rectangle \\(EARL\\) is \\(\\boxed{28}\\). (Such a pyramid may be constructed by taking \\(a=\\frac18\\), \\(b=\\frac{1}{14}\\), \\(c=\\frac{31}{14}\\), \\(d=\\frac{97}{14}\\), \\(h=\\frac{\\sqrt{3071}}{56}\\).)</p>",
+      "answer": "28"
+    },
+    "8": {
+      "problem": "<p>It is not possible to construct a segment of length \\(\\pi\\) using a straightedge, compass, and a given segment of length 1. The following construction, given in 1685 by Adam Kochansky, yields a segment whose length agrees with \\(\\pi\\) to five decimal places:</p><p>Construct a circle of radius 1 and call its center \\(O\\). Construct a diameter \\(AB\\) of this circle and a line \\(\\ell\\) tangent to the circle at \\(A\\). Next, draw a circle with radius 1 centered at \\(A\\), and call one of the intersections with the original circle \\(C\\). Now from \\(C\\) draw an arc of radius 1 intersecting the circle around \\(A\\) at \\(D\\), where \\(D\\) lies outside of the circle centered at \\(O\\). Draw \\(OD\\) and let \\(E\\) be its point of intersection with \\(\\ell\\). Construct \\(H\\) on \\(AE\\) such that \\(A\\) is between \\(H\\) and \\(E\\), and \\(HE=3\\).</p><p>The distance between \\(B\\) and \\(H\\) is then close to \\(\\pi\\); calculate its exact value.</p>",
+      "solutions": "<p>Since \\(OD\\perp AC\\) and \\(\\triangle AOC\\) is equilateral, we have \\(\\angle AOD = 30^\\circ\\). So \\(AE = \\frac{1}{\\sqrt3}\\), and</p><p>\\[BH = \\sqrt{AB^2+AH^2} = \\sqrt{2^2+\\left(3-\\frac{1}{\\sqrt3}\\right)^2} = \\boxed{\\sqrt{\\frac{40}{3}-2\\sqrt3}} \\approx 3.141533339.\\]</p>",
+      "answer": "\\sqrt{\\frac{40}{3}-2\\sqrt{3}}"
+    },
+    "9": {
+      "problem": "<p>Let \\(T\\) be the intersection of the common internal tangents of circles \\(C_1\\), \\(C_2\\) with centers \\(O_1\\), \\(O_2\\) respectively. Let \\(P\\) be one of the points of tangency on \\(C_1\\) and let line \\(\\ell\\) bisect angle \\(O_1TP\\). Label the intersection of \\(\\ell\\) with \\(C_1\\) that is farthest from \\(T\\), \\(R\\), and label the intersection of \\(\\ell\\) with \\(C_2\\) that is closest to \\(T\\), \\(S\\). If \\(C_1\\) has radius 4, \\(C_2\\) has radius 6, and \\(O_1O_2 = 20\\), calculate \\((TR)(TS)\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1998_HMMT_February_Geometry/9-fig1.png\" width=\"473\" alt=\"\"></p>",
+      "solutions": "<p>The dilation of ratio \\(-\\frac23\\) about \\(T\\) sends \\(C_2\\) to \\(C_1\\), \\(O_2\\) to \\(O_1\\), and \\(S\\) to the other intersection of \\(\\ell\\) with \\(C_1\\), which we shall call \\(U\\). We can now compute</p><p>\\[TR\\cdot TS = \\frac32TR\\cdot TU = \\frac32TP^2 = \\frac32\\left(O_1T^2-O_1P^2\\right) = \\frac32\\left(\\left(\\frac{O_1O_2}{1+3/2}\\right)^2-4^2\\right) = \\boxed{72}.\\]</p>",
+      "answer": "72"
+    },
+    "10": {
+      "problem": "<p>Lukas is playing pool on a table shaped like an equilateral triangle. The pockets are at the corners of the triangle and are labeled \\(C\\), \\(H\\), and \\(T\\). Each side of the table is 16 feet long. Lukas shoots a ball from corner \\(C\\) of the table in such a way that on the second bounce, the ball hits 2 feet away from him along side \\(CH\\).</p><p>(a) How many times will the ball bounce before hitting a pocket?</p><p>(b) Which pocket will the ball hit?</p><p>(c) How far will the ball travel before hitting the pocket?</p>",
+      "solutions": "<p>Suppose that when the ball hits a side of the table, instead of reflecting the ball’s path, we reflect the entire table over this side so that the path remains straight. If we repeatedly reflect the table over its sides in all possible ways, we get a triangular grid that tiles the plane. Whenever the path crosses \\(n\\) lines in this grid parallel to \\(CT\\), it will cross \\(\\frac78n\\) lines parallel to \\(CH\\) and \\(\\frac{15}8n\\) lines parallel to \\(HT\\). After crossing \\(8+7+15=30\\) grid lines it will have crossed three lines simultaneously again, which means that the ball will have landed in a pocket after bouncing \\(\\boxed{27}\\) times. By picturing the grid it is easy to see that the pocket in question is \\(\\boxed{H}\\). The distance the ball travels during the \\(\\frac18\\) of its trip described in the problem is the third side of a triangle with an \\(120^\\circ\\) angle between two sides 16 and 14, which is \\(\\sqrt{16^2+14^2-2\\cdot16\\cdot14\\cos120^\\circ}=26\\), so length of the entire trip is \\(\\boxed{208}\\).</p>",
+      "answer": "(a)\\ 27;\\ (b)\\ H;\\ (c)\\ 208"
+    }
+  }
+}

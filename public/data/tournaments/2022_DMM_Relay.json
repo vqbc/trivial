@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2022,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2022/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A robot is located at 2 on the number line, and it needs to reach either 5 or 0. Every second, there’s a \\(\\frac{1}{3}\\) chance it breaks down, a \\(\\frac{1}{3}\\) chance it moves one unit in the positive direction, and a \\(\\frac{1}{3}\\) chance it moves one unit in the negative direction. The probability the robot manages to reach 5 or 0 before breaking down is \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are coprime. Find \\(n\\).</p>",
+      "solutions": "<p>Let \\(P_n\\) for \\(1 \\le n \\le 4\\) be the probability that starting at point \\(n\\), the robot will manage to reach 5 or 0 before breaking down. Then we have the system \\[\\begin{aligned}\nP_1 &amp;= \\frac{1}{3} + \\frac{1}{3}P_2, \\\\\nP_2 &amp;= \\frac{1}{3}P_1 + \\frac{1}{3}P_3, \\\\\nP_3 &amp;= \\frac{1}{3}P_2 + \\frac{1}{3}P_4, \\\\\nP_4 &amp;= \\frac{1}{3}P_3 + \\frac{1}{3},\n\\end{aligned}\\] solving which gives \\(P_2 = \\frac{1}{5}\\). Hence, \\(n = \\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "2": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). Navya, the fruit ninja, has a bitter feud with watermelon and strawberries. She can only cut 3 watermelon with one slice or \\(T\\) strawberries with one slice. Suppose she slices 17 times tomorrow, and let \\(N\\) be the total number of watermelon and strawberries she cuts tomorrow. How many possible values of \\(N\\) are prime?</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(5\\).</i></p>",
+      "solutions": "<p>Since \\(T = 5\\), suppose Navya slices strawberries \\(s\\) times. Then, she cuts \\[3(17 - s) + 5s = 51 + 2s.\\] Since \\(s\\) ranges from 0 to 17 inclusive, the possible values of \\(N\\) are \\[51, 53, 55, \\ldots, 83, 85.\\] Searching through this list, we see that the primes are \\[53, 59, 61, 67, 71, 73, 79, 83,\\] for a total of \\(\\boxed{8}\\) primes.</p>",
+      "answer": "8"
+    },
+    "3": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\) and \\(f(x) = x^5 + 18x^4 + 19x^3 + 20x^2 + 21x + T\\). The roots of \\(f\\) are \\(a, b, c, d\\) and \\(e\\). Find \\((a-1)(b-1)(c-1)(d-1)(e-1)\\).</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(8\\).</i></p>",
+      "solutions": "<p>Since \\(T = 8\\), we have \\(f(x) = x^5 + 18x^4 + 19x^3 + 20x^2 + 21x + 8\\). Notice that \\(f(x) = (x-a)(x-b)(x-c)(x-d)(x-e)\\). Hence, we have \\((a-1)(b-1)(c-1)(d-1)(e-1) = -f(1) = \\boxed{-87}\\).</p>",
+      "answer": "-87"
+    },
+    "4": {
+      "problem": "<p>\\(x, y \\in \\mathbb{R}\\) satisfies \\(x\\sqrt{y-1} + y\\sqrt{x-1} = xy\\). Find \\(x\\).</p>",
+      "solutions": "<p>From the problem, we know that \\(x, y &gt; 1\\). Hence, we suppose \\(x = \\sec^2 \\alpha\\), \\(y = \\csc^2 \\beta\\), where \\(0 &lt; \\alpha, \\beta &lt; \\frac{\\pi}{2}\\). This gives \\[\\sec^2 \\alpha \\sqrt{\\csc^2 \\beta - 1} + \\csc^2 \\beta \\sqrt{\\sec^2 \\alpha - 1} = \\sec^2 \\alpha \\csc^2 \\beta,\\] which simplifies to \\(\\sin 2\\alpha + \\sin 2\\beta = 2\\). Hence, we have \\(\\sin 2\\alpha = \\sin 2\\beta = 1\\), which gives \\(\\alpha = \\beta = \\frac{\\pi}{4}\\). Thus, we have \\(x = \\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "5": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). A sequence \\(\\{a_n\\}\\) satisfies that for any \\(m, n \\in \\mathbb{N}\\) such that \\(m \\ge n\\) we have \\(a_{m+n} + a_{m-n} = \\frac{1}{T}(a_{2m} + a_{2n})\\). Given \\(a_1 = 1\\), find the last digit of \\(a_{2023}\\).</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(2\\).</i></p>",
+      "solutions": "<p>Since \\(T = 2\\), we observe that \\[\\frac{1}{2}(a_{2m} + a_{2m}) = a_{2m} + a_0 = 2(a_m + a_m),\\] which gives \\(a_0 = 0\\) and \\(a_{2m} = 4a_m\\). Then, we can easily show that \\(a_m = m^2\\) with induction. Hence, the last digit of \\(a_{2023}\\) is \\(\\boxed{9}\\).</p>",
+      "answer": "9"
+    },
+    "6": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). The sequence \\(\\{a_n\\}\\) satisfies \\(a_1 = 7\\) and the recurrence relation \\[a_{n+1} = Ta_n + 7.\\] Find the sum of all values of \\(i\\) such that \\(a_i\\) is a divisor of \\(a_{88}\\).</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(9\\).</i></p>",
+      "solutions": "<p>Since \\(T = 9\\), we write the numbers in base 9. Then note that \\[a_1 = (7)_9, \\quad a_2 = (77)_9, \\quad a_3 = (777)_9, \\quad \\cdots\\] This pattern holds because multiplying \\(a_n\\) by 9 moves the decimal place over when in base 9. So, in general, \\(a_n\\) is \\(n\\) sevens in base 9. Now we consider when \\(a_i \\mid a_m\\) for positive integers \\(i \\le m\\). To do so, note that if we use long division, we get that \\[a_m \\equiv a_{m \\pmod{i}} \\pmod{a_i},\\] where we let \\(a_0 = 0\\) for notational purposes. From this, it’s clear that \\(a_i \\mid a_m\\) iff \\(i \\mid m\\). So, our answer is the sum of the divisors of \\(88 = 2^3 \\cdot 11\\), which is \\[(1 + 2 + 2^2 + 2^3)(1 + 11) = (15)(12) = \\boxed{180}.\\]</p>",
+      "answer": "180"
+    }
+  }
+}

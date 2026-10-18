@@ -1,0 +1,33 @@
+{
+  "test": "CMM Mixer",
+  "year": 2014,
+  "name": "Mixer Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_d3229b4181744e2cb2ed199351fb9a28.pdf",
+  "problems": {
+    "9": {
+      "problem": "<p>Suppose a farmer learns that he will die at the end of the year (day \\(365\\), where today is day \\(0\\)) and that he has \\(100\\) sheep. He decides to sell all his sheep on one day, and that his utility is given by \\(ab\\) where \\(a\\) is the money he makes by selling the sheep (which always have a fixed price) and \\(b\\) is the number of days he has left to enjoy the profit; i.e., \\(365-k\\) where \\(k\\) is the day number. If every day his sheep breed and multiply their numbers by \\(\\frac{421+b}{421}\\) (yes, there are small, fractional sheep), on which day should he sell out?</p>",
+      "solutions": "<p>Solving \\(\\frac{421+b}{421}\\cdot\\frac{b-1}{b} &lt; 1\\) gives \\(b &lt; \\frac{1+\\sqrt{1685}}{2}\\), so \\(b &lt; 20.99\\). Therefore he should sell when \\(b=20\\), or \\(k=345\\).</p>",
+      "answer": "345"
+    },
+    "10": {
+      "problem": "<p>Suppose in your sock drawer of \\(14\\) socks there are \\(5\\) different colors and \\(3\\) different lengths present. One day, you decide you want to wear two socks that have <i>either</i> different colors <i>or</i> different lengths <i>but not both</i>. Given only this information, what is the maximum number of choices you might have?</p>",
+      "solutions": "<p>\\(45 - 6 = 39\\)</p>",
+      "answer": "39"
+    },
+    "11": {
+      "problem": "<p>Let \\(\\frac{s}{t}\\) be the answer of problem 13, written in lowest terms. Let \\(\\frac{p}{q}\\) be the answer of problem 12, written in lowest terms.</p><p>If player 1 wins in problem 11, let \\(n=q\\). Otherwise, let \\(n=p\\).</p><p>Two players play a game on a connected graph with \\(n\\) vertices and \\(t\\) edges. On each player’s turn, they remove one edge of the graph, and lose if this causes the graph to become disconnected. Which player (first or second) wins?</p><p><i>Note: the answer to Problem 13 is \\(\\frac{2}{3}\\) and the answer to Problem 12 is \\(\\frac{8}{7}\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\text{Player 1 loses}"
+    },
+    "12": {
+      "problem": "<p>Let \\(\\frac{s}{t}\\) be the answer of problem 13, written in lowest terms.</p><p>If player 1 wins in problem 11, let \\(n=t\\). Otherwise, let \\(n=s\\).</p><p>Find the maximum value of \\[\\frac{x^n}{1 + \\frac{1}{2}x + \\frac{1}{4}x^2 + \\ldots + \\frac{1}{2^{2n}}x^{2n}}\\] for \\(x&gt;0\\).</p><p><i>Note: the answer to Problem 13 is \\(\\frac{2}{3}\\) and the answer to Problem 11 (the previous problem) is “Player 1 loses”.</i></p>",
+      "solutions": "<p>Let \\(2y=x\\), so we are trying to find the max of \\[\\frac{2^n y^n}{1+y+\\ldots+y^{2n}}\\]</p><p>By the AM-GM inequality, we know \\[y^n = \\sqrt[2n+1]{1\\cdot y\\cdot y^2\\cdots y^{2n}} \\le \\frac{1+y+\\ldots+y^{2n}}{2n+1}\\] with equality iff \\(1=y=\\cdots=y^{2n}=1\\). Thus the function maximizes at \\(y=1\\), giving \\(\\frac{2^n}{2n+1}\\).</p>",
+      "answer": "\\frac{8}{7}"
+    },
+    "13": {
+      "problem": "<p>Let \\(\\frac{p}{q}\\) be the answer of problem 12, written in lowest terms.</p><p>Let \\(y\\) be the largest integer such that \\(2^y\\) divides \\(p\\).</p><p>If player 1 wins in problem 11, let \\(z=q\\). Otherwise, let \\(z=p\\).</p><p>Suppose that \\(a_1=1\\) and \\[a_{n+1} = a_n - \\frac{z}{n+2} + \\frac{2z}{n+1} - \\frac{z}{n}\\]</p><p>What is \\(a_y\\)?</p><p><i>Note: the answer to Problem 12 (the previous problem) is \\(\\frac{8}{7}\\) and the answer to Problem 11 is “Player 1 loses”.</i></p>",
+      "solutions": "<p>Telescoping, we see that \\[a_n = a_1 - \\frac{z}{1} + \\frac{z}{2} + \\frac{z}{n} - \\frac{z}{n+1}\\]</p><p>Therefore, \\(a_n = \\frac{z(n+1)-zn}{n(n+1)} = \\frac{z}{n(n+1)}\\) so \\(a_y = \\frac{z}{y(y+1)}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    }
+  }
+}

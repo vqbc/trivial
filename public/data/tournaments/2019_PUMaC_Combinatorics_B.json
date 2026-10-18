@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Combinatorics B",
+  "year": 2019,
+  "name": "Combinatorics B",
+  "url": "https://pumac.princeton.edu/s/2019Combo_B.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many ways can you arrange 3 Alice’s, 1 Bob, 3 Chad’s, and 1 David in a line if the Alice’s are all indistinguishable, the Chad’s are all indistinguishable, and Bob and David want to be adjacent to each other? (In other words, how many ways can you arrange 3 A’s, 1 B, 3 C’s, and 1 D in a row where the B and D are adjacent?)</p>",
+      "solutions": "<p>It’s \\[\\frac{7!}{3!3!} \\cdot 2 = 280.\\]</p>",
+      "answer": "280"
+    },
+    "2": {
+      "problem": "<p>Suppose Alan, Michael, Kevin, Igor, and Big Rahul are in a running race. It is given that exactly one pair of people tie (for example, two people both get second place), so that no other pair of people end in the same position. Each competitor has equal skill; this means that each outcome of the race, given that exactly two people tie, is equally likely. The probability that Big Rahul gets first place (either by himself or he ties for first) can be expressed in the form \\(m/n\\), where \\(m, n\\) are relatively prime, positive integers. Compute \\(m+n\\).</p>",
+      "solutions": "<p>We compute the total number of ways the contestants to finish the race. There are \\(\\binom{5}{2}\\) ways to choose the two that tie. Then treating the two people who tie as one unit, there are 4! ways to arrange the 3 people and the tie in a row, which is 240 ways.</p><p>There are two cases for Big Rahul to finish first; either he ties for first or he wins first place alone.</p><p>If he ties for first, there are 4 people he can tie with, and then there are 3! ways to arrange the last 3 people. Thus there are \\(4 \\cdot 3! = 24\\) ways for this case.</p><p>If he finishes first alone, then there are \\(\\binom{4}{2}\\) ways to choose the tie, and the two people who don’t tie and the pair that ties. Thus there are \\(\\binom{4}{2} \\cdot 3! = 36\\) ways for this case.</p><p>Thus there are 60 total ways for Big Rahul to finish first, for a probability of 1/4, so the answer is 5.</p>",
+      "answer": "5"
+    },
+    "3": {
+      "problem": "<p>Prinstan Trollner and Dukejukem are competing at the game show WASS. Both players spin a wheel which chooses an integer from 1 to 50 uniformly at random, and this number becomes their score. Dukejukem then flips a weighted coin that lands heads with probability 3/5. If he flips heads, he adds 1 to his score. A player wins the game if their score is higher than the other player’s score. The probability Dukejukem defeats the Trollner to win WASS equals \\(m/n\\) where \\(m,n\\) are coprime positive integers. Compute \\(m+n\\).</p>",
+      "solutions": "<p>If the coin has probability \\(q\\) of landing heads, the probability of Dukejukem winning is \\((1-\\mathbb{P}(\\text{tie}))/2 + q\\mathbb{P}(\\text{tie})\\), where \\(\\mathbb{P}(\\text{tie}) = 1/50\\) is the probability that both players spin the same number on the wheel. This is \\(251/500\\), so the answer is 751.</p>",
+      "answer": "751"
+    },
+    "4": {
+      "problem": "<p>Keith has 10 coins labeled 1 through 10, where the \\(i\\)th coin has weight \\(2^i\\). The coins are all fair, so the probability of flipping heads on any of the coins is \\(\\frac12\\). After flipping all of the coins, Keith takes all of the coins which land heads and measures their total weight, \\(W\\). If the probability that \\(137 \\le W \\le 1061\\) is \\(m/n\\) for coprime positive integers \\(m,n\\), determine \\(m+n\\).</p>",
+      "solutions": "<p>We note that these weights form binary numbers, except the “1” is omitted. Thus the numbers that are generated are exactly the even numbers between 2 and 2046, inclusive. Thus the number of possibilities is the number of even numbers between 138 and 1060, inclusive, which is exactly 462. There are \\(2^{10} = 1024\\) possible weights, which gives us a probability of \\(462/1024 = 231/512\\) for an answer of 743.</p>",
+      "answer": "743"
+    },
+    "5": {
+      "problem": "<p>Marko lives on the origin of the Cartesian plane. Every second, Marko moves 1 unit up with probability 2/9, 1 unit right with probability 2/9, 1 unit up and 1 unit right with probability 4/9, and he doesn’t move with probability 1/9. After 2019 seconds, Marko ends up on the point \\((A, B)\\). What is the expected value of \\(A \\cdot B\\)?</p>",
+      "solutions": "<p>Define the random variables \\(x_i, y_i\\) for \\(1 \\le i \\le 2019\\) where each \\(x_i\\) equals 1 if on the \\(i\\)th move, Marko makes a contribution to the right and zero otherwise. \\(y_i\\) is equal to 1 if on the \\(i\\)th move we make a contribution upwards and 0 otherwise. Hence, the answer is \\[\\mathbb{E}\\left[\\sum_{i=1}^n x_i \\cdot \\sum_{j=1}^n y_j\\right] = \\sum_{i,j} \\mathbb{E}[x_i y_j] = \\frac{4n^2}{9} = 1811716.\\] Note that one must do cases on whether \\(i=j\\), but the numbers are such that everything is 4/9.</p>",
+      "answer": "1811716"
+    },
+    "6": {
+      "problem": "<p>Kelvin and Quinn are collecting trading cards; there are 6 distinct cards that could appear in a pack. Each pack contains exactly one card, and each card is equally likely. Kelvin buys packs until he has at least one copy of every card, then he stops buying packs. If Quinn is missing exactly one card, the probability that Kelvin has at least two copies of the card Quinn is missing is expressible as \\(m/n\\) for coprime positive integers \\(m,n\\). Determine \\(m+n\\).</p>",
+      "solutions": "<p>However, we also have the probabilities for each of the new cards that appear. This is \\(\\frac56 \\cdot \\frac46 \\cdot \\ldots \\cdot \\frac16 \\cdot \\frac16\\) since we are fixing when \\(A\\) appears so we have two copies of \\(\\frac16\\), one for \\(A\\) and one for the last card that isn’t \\(A\\), Thus, in total, the probability is \\(\\frac{6^5}{5! \\cdot (6-n)} \\cdot \\frac{5!}{6^6} = \\frac{1}{(6-n)6}\\).</p><p>We now need to sum this over all possible \\(n\\), giving us \\[\\sum_{n=0}^5 \\frac{1}{(6-n)6} = \\frac16\\left(1+\\frac12+\\frac13+\\ldots+\\frac16\\right) = \\frac{49}{120}.\\]</p><p>Since we computed the complement, the probability we want is \\(1 - \\frac{49}{120} = \\frac{71}{120}\\).</p>",
+      "answer": "191"
+    },
+    "7": {
+      "problem": "<p>A candy store has 100 pieces of candy to give away. When you get to the store, there are five people in front of you, numbered from 1 to 5. The \\(i\\)th person in line considers the set of positive integers congruent to \\(i\\) modulo 5 which are at most the number of pieces of candy remaining. If this set is empty, then they take no candy. Otherwise they pick an element of this set and take that many pieces of candy. For example, the first person in line will pick an integer from the set \\(\\{1, 6, \\ldots, 96\\}\\) and take that many pieces of candy. How many ways can the first five people take their share of candy so that after they are done there are at least 35 pieces of candy remaining?</p>",
+      "solutions": "<p>We write the product of the generating functions for each person in line. The polynomial is as follows: \\[(x + x^6 + \\ldots)(x^2 + x^7 + \\ldots)\\ldots(x^5 + x^{10} + \\ldots)\\] \\[= x^{15}(1 + x^5 + x^{10} + \\ldots)^5\\]</p><p>The coefficient of \\(x^n\\) in this polynomial represents the number of ways for the five people to take a total of \\(n\\) candies. The answer will be the sum of the coefficients of the terms of degree 15 thru 65. Thus, the answer is \\[\\sum_{i=4}^{14} \\binom{i}{4} = \\binom{15}{5} = 3003.\\]</p>",
+      "answer": "3003"
+    },
+    "8": {
+      "problem": "<p>The Nationwide Basketball Society (NBS) has 8001 teams, numbered 2000 through 10000. For each \\(n\\), team \\(n\\) has \\(n+1\\) players, and in a sheer coincidence, this year each player attempted \\(n\\) shots and on team \\(n\\), exactly one player made 0 shots, one player made 1 shot, …, one player made \\(n\\) shots. A player’s <i>field goal percentage</i> is defined as the percentage of shots that the player made, rounded to the nearest tenth of a percent. (For instance, 32.45% rounds to 32.5%.) A player in the NBS is randomly selected among those whose field goal percentage is 66.6%. If this player plays for team \\(k\\), what is the probability that \\(k \\ge 6000\\)?</p>",
+      "solutions": "<p>We use Pick’s theorem, \\(A = i + \\frac{b}{2} - 1\\) for \\(A\\) the area of an enclosed figure, \\(i\\) the number of interior lattice points, and \\(b\\) the number of boundary lattice points. We draw the triangle from the origin to the points \\(P = (6655, 10000)\\) and \\(Q = (6665, 10000)\\). The is of interest because it contains all points whose rise over run gives a fraction that we seek. We compute the number of lattice points \\(N\\) above the bottom edge in the trapezoid bounded by \\((1331, 2000), P, Q, (1333, 2000)\\), corresponding to the case of at least 2000. The bottom edge there has 5 lattice points \\((1333, 2000)c\\) for \\(c \\in \\{1, 2, 3, 4, 5\\}\\). We compute \\(N = 48006\\), since there are \\(3 + 11 + 5 + 5 - 4 = 20\\) boundary points. We similarly compute the number of lattice points \\(M\\) above the bottom edge in the trapezoid bounded by \\((3993, 6000), P, Q, (3999, 6000)\\) (corresponding to the case of at least 6000) as \\(M = 32008\\), since there are \\(7 + 11 + 3 + 3 - 4 = 20\\) boundary points. \\(\\frac{m}{n} = \\frac{M}{N} = \\frac{32008}{48006} = \\frac{16004}{24003}\\), which is reduced, giving our answer to be 40007.</p>",
+      "answer": "40007"
+    }
+  }
+}

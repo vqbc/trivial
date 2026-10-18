@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2014,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2014/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Given that \\(8x+y\\le 17\\) and \\(2x+7y\\le 13\\), compute the maximum possible value of \\(x+y\\).</p>",
+      "solutions": "<p>From the two inequalities, it is always the case that \\(x+y\\le \\frac{88}{27}\\). We note that this is realizable by the point \\(\\left(\\frac{53}{27}, \\frac{35}{27}\\right)\\), so the answer is \\(\\boxed{\\frac{88}{27}}\\).</p>",
+      "answer": "\\frac{88}{27}"
+    },
+    "2": {
+      "problem": "<p>Evaluate \\[\\sum_{n=0}^{\\infty} \\frac{\\left(\\frac{-2}{5}\\right)^{\\lfloor \\sqrt{n} \\rfloor}}{\\sqrt{n}+\\sqrt{n+1}}.\\]</p>",
+      "solutions": "<p>We assume without proof that \\[\\sum_{n=0}^{\\infty} \\frac{\\left(\\frac{-2}{5}\\right)^{\\lfloor \\sqrt{n} \\rfloor}}{\\sqrt{n}+\\sqrt{n+1}} = \\sum_{n=0}^{\\infty} \\sum_{i=n^2}^{(n+1)^2-1} \\frac{\\left(\\frac{-2}{5}\\right)^{\\lfloor \\sqrt{i} \\rfloor}}{\\sqrt{i}+\\sqrt{i+1}}.\\]</p><p>The purpose of this assumption is to group together consecutive terms with the same sign.</p><p>From there, because \\(\\lfloor \\sqrt{i} \\rfloor = n\\) for \\(n^2 \\le i \\le (n+1)^2-1\\), we have \\[\\sum_{i=n^2}^{(n+1)^2-1} \\frac{\\left(\\frac{-2}{5}\\right)^n}{\\sqrt{i}+\\sqrt{i+1}} = \\left(\\frac{-2}{5}\\right)^n \\sum_{i=n^2}^{(n+1)^2-1} \\frac{1}{\\sqrt{i+1}+\\sqrt{i}} = \\left(\\frac{-2}{5}\\right)^n \\sum_{i=n^2}^{(n+1)^2-1} \\frac{1}{\\sqrt{i+1}+\\sqrt{i}}\\cdot\\frac{\\sqrt{i+1}-\\sqrt{i}}{\\sqrt{i+1}-\\sqrt{i}} = \\left(\\frac{-2}{5}\\right)^n \\sum_{i=n^2}^{(n+1)^2-1} \\frac{\\sqrt{i+1}-\\sqrt{i}}{i+1-i} = \\left(\\frac{-2}{5}\\right)^n \\sum_{i=n^2}^{(n+1)^2-1} \\left(\\sqrt{i+1}-\\sqrt{i}\\right)\\] which telescopes to \\(\\left(\\frac{-2}{5}\\right)^n\\left(\\sqrt{(n+1)^2}-\\sqrt{n^2}\\right) = \\left(\\frac{-2}{5}\\right)^n(n+1-n) = \\left(\\frac{-2}{5}\\right)^n\\). So our sum is simply equal to \\(\\sum_{n=0}^{\\infty} \\left(\\frac{-2}{5}\\right)^n = \\frac{1}{1-\\left(\\frac{-2}{5}\\right)} = \\boxed{\\frac{5}{7}}\\). To formally prove that this grouping is allowed, you can do clever things with the sandwich theorem, but that is up to you.</p>",
+      "answer": "\\frac{5}{7}"
+    },
+    "3": {
+      "problem": "<p>Compute \\[\\frac{1}{\\sin^2 \\frac{\\pi}{10}} + \\frac{1}{\\sin^2 \\frac{3\\pi}{10}}.\\]</p>",
+      "solutions": "<p>We begin by using the cosine double angle formula to rewrite \\(\\frac{1}{\\sin^2 \\frac{\\pi}{10}} + \\frac{1}{\\sin^2 \\frac{3\\pi}{10}} = \\frac{1}{\\frac12-\\frac12\\cos\\frac\\pi5} + \\frac{1}{\\frac12-\\frac12\\cos\\frac{3\\pi}5} = 2\\left(\\frac{2-\\left(\\cos\\frac\\pi5+\\cos\\frac{3\\pi}5\\right)}{1-\\left(\\cos\\frac\\pi5+\\cos\\frac{3\\pi}5\\right)+\\cos\\frac\\pi5\\cos\\frac{3\\pi}5}\\right)\\). Simplifying this reduces to computing \\(\\cos\\frac\\pi5+\\cos\\frac{3\\pi}5\\) and \\(\\cos\\frac\\pi5\\cos\\frac{3\\pi}5\\).</p><p>For the sum of the cosines, the quickest and most intuitive argument (in my opinion) goes as follows. Since the angles involved are multiples of \\(\\frac\\pi5\\), we think of the unit circle and a regular pentagon inscribed in it (with vertex at \\((-1,0)\\)). If we construct vectors from the origin to the vertices, we note that \\(\\cos\\frac\\pi5+\\cos\\frac{3\\pi}5\\) is the sum of the \\(x\\) coordinates of 2 of the vectors. Also, \\(S = \\cos\\frac\\pi5+\\cos\\frac{3\\pi}5 = \\cos\\frac{9\\pi}5+\\cos\\frac{7\\pi}5\\) because it is the reflection of those two vectors across the \\(x\\)-axis (and also because this is a basic property of the cosine). Finally, the sum of all 5 of these vectors must be 0 – suppose not. Then we may rotate all 5 vectors by \\(\\frac\\pi5\\) to get the exact same vector sum, but the only vector which remains the same when rotated by less than a full revolution is the 0 vector. So the sum of all the \\(x\\) coordinates must be 0. Thus \\(2S+\\cos\\frac{5\\pi}5 = 2S-1 = 0\\) and \\(S = \\frac12\\).</p><p>For the product, we note that \\(\\cos\\frac{3\\pi}5 = -\\cos\\frac{2\\pi}5\\) so that \\(\\cos\\frac\\pi5\\cos\\frac{3\\pi}5 = -\\cos\\frac\\pi5\\cos\\frac{2\\pi}5\\frac{\\sin\\frac\\pi5}{\\sin\\frac\\pi5} = -\\frac{\\frac12\\sin\\frac{2\\pi}5\\cos\\frac{2\\pi}5}{\\sin\\frac\\pi5} = -\\frac14\\frac{\\sin\\frac{4\\pi}5}{\\sin\\frac\\pi5} = -\\frac14\\).</p><p>We may plug both of these in to get \\(\\frac{1}{\\sin^2 \\frac{\\pi}{10}} + \\frac{1}{\\sin^2 \\frac{3\\pi}{10}} = 2\\left(\\frac{2-\\frac12}{1-\\frac12-\\frac14}\\right) = \\boxed{12}\\).</p>",
+      "answer": "12"
+    }
+  }
+}

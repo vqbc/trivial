@@ -1,0 +1,43 @@
+{
+  "test": "CMM Mixer (Fall)",
+  "year": 2012,
+  "name": "Mixer Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_339dd109b21d4444addbfff02af2a53e.pdf",
+  "problems": {
+    "2": {
+      "problem": "<p>Show that \\[\\sqrt{9 + 4\\sqrt{5}} - \\sqrt{9 - 4\\sqrt{5}}\\] is an integer.</p>",
+      "solutions": "<p>The answer is \\(4\\). Let \\(a = \\sqrt{9 + 4\\sqrt{5}}\\) and \\(b = \\sqrt{9 - 4\\sqrt{5}}\\). Hence, we have \\[(a-b)^2 = a^2 - 2ab + b^2 = 16.\\] Since \\(a &gt; b\\), we must have that \\(a - b = \\sqrt{9 + 4\\sqrt{5}} - \\sqrt{9 - 4\\sqrt{5}} = 4\\).</p>",
+      "answer": "4"
+    },
+    "3": {
+      "problem": "<p>Two players \\(A\\) and \\(B\\) play a game on a round table. Each time they take turn placing a round coin on the table. The coin has a uniform size, and this size is at least \\(10\\) times smaller than the table size. They cannot place the coin on top of any part of other coins, and the whole coin must be on the table. If a player cannot place a coin, he loses. Suppose \\(A\\) starts first. If both of them plan their moves wisely, there will be one person who will always win. Determine whether \\(A\\) or \\(B\\) will win, and then determine his winning strategy.</p>",
+      "solutions": "<p>There is a winning strategy for \\(A\\). First round, put the coin at the center of the table. Then, each time, if \\(B\\) can place a coin somewhere, there will be a guaranteed spot on the opposite side of the table (with respect to the center) because of the symmetry. If \\(A\\) keeps doing this, eventually \\(B\\) will run out of space!</p>",
+      "answer": "A"
+    },
+    "4": {
+      "problem": "<p>Suppose you are given \\(4\\) pegs arranged in a square on a board. A “move” consists of picking up a peg, reflecting it through any other peg, and placing it down on the board. For how many integers \\(1 \\le n \\le 2013\\) is it possible to arrange the \\(4\\) pegs into a <i>larger</i> square using exactly \\(n\\) moves? Justify your answers.</p>",
+      "solutions": "<p>The answer is \\(0\\). If there is a way to make it bigger, there must also be a way to make it smaller, since every move is reversible. Initially, if we place the \\(4\\) pegs on the lattice points \\((0,0)\\), \\((0,1)\\), \\((1,0)\\), and \\((1,1)\\), there is no way to move outside the lattice points. Hence we can see there is no way to make the arrangement smaller than the original one.</p>",
+      "answer": "0"
+    },
+    "5": {
+      "problem": "<p>Find smallest positive integer that has a remainder of \\(1\\) when divided by \\(2\\), a remainder of \\(2\\) when divided by \\(3\\), a remainder of \\(3\\) when divided by \\(5\\), and a remainder of \\(5\\) when divided by \\(7\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "173"
+    },
+    "6": {
+      "problem": "<p>Find the value of \\[\\sum_{m \\mid 496,\\, m&gt;0} \\frac{1}{m},\\] where \\(m \\mid 496\\) means \\(496\\) is divisible by \\(m\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "7": {
+      "problem": "<p>What is the value of \\[\\binom{100}{0} + \\binom{100}{4} + \\binom{100}{8} + \\cdots + \\binom{100}{100}?\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2^{98} - 2^{49}"
+    },
+    "8": {
+      "problem": "<p>An \\(n\\)-term sequence \\(a_0, a_1, \\ldots, a_{n-1}\\) will be called <i>sweet</i> if, for each \\(0 \\le i \\le n-1\\), \\(a_i\\) is the number of times that the number \\(i\\) appears in the sequence. For example, \\(1, 2, 1, 0\\) is a sweet sequence with \\(4\\) terms. Given that \\(a_0, a_1, \\cdots, a_{2013}\\) is a sweet sequence, find the value of \\(a_0^2 + a_1^2 + \\cdots + a_{2013}^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4036087"
+    }
+  }
+}

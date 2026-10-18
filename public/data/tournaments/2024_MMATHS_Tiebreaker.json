@@ -1,0 +1,18 @@
+{
+  "test": "MMATHS Tiebreaker",
+  "year": 2024,
+  "name": "Tiebreaker Round",
+  "url": "https://yalemathcompetitions-files.s3.amazonaws.com/mmaths_2024_tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f\\) be a function over the domain of all positive real numbers such that \\[f(x) = \\frac{1 - \\sqrt{x}}{1 + \\sqrt{x}}.\\] Now, let \\(g(x)\\) be the function given by \\[g(x) = f(x)^{\\frac{2f(\\frac{1}{x})}{f(x)}}.\\]</p><p>\\(g(100)\\) can be expressed as a fraction \\(\\frac{a}{b}\\) where \\(a\\) and \\(b\\) are relatively prime integers. What is the sum of \\(a\\) and \\(b\\)?</p>",
+      "solutions": "<p>\\(f(1/x) = -f(x)\\), so \\(g(x)\\) can be simplified to \\(f(x)^{-2}\\). \\(g(100) = f(100)^{-2} = (-9/11)^{-2} = 121/81\\), so \\(a = 121\\), and \\(b = 81\\).</p>",
+      "answer": "202"
+    },
+    "2": {
+      "problem": "<p>Define the <i>factorial function</i> of \\(n\\), denoted \\(\\partial(n)\\), as the sum of the factorials of the digits of \\(n\\). For example, \\(\\partial(2024) = 2! + 0! + 2! + 4! = 29\\). There are four positive integers such that \\(\\partial(\\partial(n)) = n\\) and \\(\\partial(n) \\ne n\\). Given that \\(n = 871\\) is one of them, compute the sum of the other three.</p>",
+      "solutions": "<p>Check that \\(n = 872\\) also works (\\(\\partial(872) = \\partial(871) + 1 = 45362\\)). Also, we must have that \\(\\partial(871)\\) and \\(\\partial(872)\\) also work, since \\(\\partial(\\partial(871)) = 871\\) and \\(\\partial(\\partial(872)) = 872\\). Then we have: \\[872 + \\partial(871) + \\partial(872) = 91595.\\]</p>",
+      "answer": "91595"
+    }
+  }
+}

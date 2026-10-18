@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Algebra",
+  "year": 2005,
+  "name": "Individual Round: Algebra Subject Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2005/feb/alg/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many real numbers \\(x\\) are solutions to the following equation?</p><p>\\[|x - 1| = |x - 2| + |x - 3|\\]</p>",
+      "solutions": "<p>If \\(x &lt; 1\\), the equation becomes \\((1 - x) = (2 - x) + (3 - x)\\) which simplifies to \\(x = 4\\), contradicting the assumption \\(x &lt; 1\\). If \\(1 \\le x \\le 2\\), we get \\((x - 1) = (2 - x) + (3 - x)\\), which gives \\(x = 2\\). If \\(2 \\le x \\le 3\\), we get \\((x - 1) = (x - 2) + (3 - x)\\), which again gives \\(x = 2\\). If \\(x \\ge 3\\), we get \\((x - 1) = (x - 2) + (x - 3)\\), or \\(x = 4\\). So \\(2\\) and \\(4\\) are the only solutions, and the answer is \\(2\\).</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>How many real numbers \\(x\\) are solutions to the following equation?</p><p>\\[2003^x + 2004^x = 2005^x\\]</p>",
+      "solutions": "<p>Rewrite the equation as \\((2003/2005)^x + (2004/2005)^x = 1\\). The left side is strictly decreasing in \\(x\\), so there cannot be more than one solution. On the other hand, the left side equals \\(2 &gt; 1\\) when \\(x = 0\\) and goes to \\(0\\) when \\(x\\) is very large, so it must equal \\(1\\) somewhere in between. Therefore there is one solution.</p>",
+      "answer": "1"
+    },
+    "3": {
+      "problem": "<p>Let \\(x\\), \\(y\\), and \\(z\\) be distinct real numbers that sum to \\(0\\). Find the maximum possible value of \\[\\frac{xy + yz + zx}{x^2 + y^2 + z^2}.\\]</p>",
+      "solutions": "<p>Note that \\(0 = (x + y + z)^2 = x^2 + y^2 + z^2 + 2xy + 2yz + 2zx\\). Rearranging, we get that \\(xy + yz + zx = -\\frac{1}{2}(x^2 + y^2 + z^2)\\), so that in fact the quantity is always equal to \\(-1/2\\).</p>",
+      "answer": "-\\frac{1}{2}"
+    },
+    "4": {
+      "problem": "<p>If \\(a, b, c &gt; 0\\), what is the smallest possible value of \\(\\left\\lfloor \\frac{a+b}{c} \\right\\rfloor + \\left\\lfloor \\frac{b+c}{a} \\right\\rfloor + \\left\\lfloor \\frac{c+a}{b} \\right\\rfloor\\)? (Note that \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x\\).)</p>",
+      "solutions": "<p>Since \\(\\lfloor x \\rfloor &gt; x - 1\\) for all \\(x\\), we have that \\[\\begin{aligned}\n\\left\\lfloor \\frac{a+b}{c} \\right\\rfloor + \\left\\lfloor \\frac{b+c}{a} \\right\\rfloor + \\left\\lfloor \\frac{c+a}{b} \\right\\rfloor &amp;&gt; \\frac{a+b}{c} + \\frac{b+c}{a} + \\frac{c+a}{b} - 3 \\\\\n&amp;= \\left(\\frac{a}{b} + \\frac{b}{a}\\right) + \\left(\\frac{b}{c} + \\frac{c}{b}\\right) + \\left(\\frac{c}{a} + \\frac{a}{c}\\right) - 3.\n\\end{aligned}\\]</p><p>But by the AM-GM inequality, each of the first three terms in the last line is at least \\(2\\). Therefore, the lefthand side is greater than \\(2 + 2 + 2 - 3 = 3\\). Since it is an integer, the smallest value it can be is \\(4\\). This is in fact attainable by letting \\((a, b, c) = (6, 8, 9)\\).</p>",
+      "answer": "4"
+    },
+    "5": {
+      "problem": "<p>Ten positive integers are arranged around a circle. Each number is one more than the greatest common divisor of its two neighbors. What is the sum of the ten numbers?</p>",
+      "solutions": "<p>First note that all the integers must be at least \\(2\\), because the greatest common divisor of any two positive integers is at least \\(1\\). Let \\(n\\) be the largest integer in the circle. The greatest common divisor of its two neighbors is \\(n - 1\\). Therefore, each of the two neighbors is at least \\(n - 1\\) but at most \\(n\\), so since \\(n - 1 \\nmid n\\) for \\(n - 1 \\ge 2\\), they must both be equal to \\(n - 1\\). Let \\(m\\) be one of the numbers on the other side of \\(n - 1\\) from \\(n\\). Then \\(\\gcd(n, m) = n - 2\\). Since \\(n - 2 \\ge 0\\), \\(n - 2 \\mid n\\) only for \\(n = 3\\) or \\(4\\). If \\(n = 3\\), each number must be \\(2\\) or \\(3\\), and it is easy to check that there is no solution. If \\(n = 4\\), then it is again not hard to find that there is a unique solution up to rotation, namely \\(4322343223\\). The only possible sum is therefore \\(28\\).</p>",
+      "answer": "28"
+    },
+    "6": {
+      "problem": "<p>Find the sum of the \\(x\\)-coordinates of the distinct points of intersection of the plane curves given by \\(x^2 = x + y + 4\\) and \\(y^2 = y - 15x + 36\\).</p>",
+      "solutions": "<p>Substituting \\(y = x^2 - x - 4\\) into the second equation yields \\[\\begin{aligned}\n0 &amp;= (x^2 - x - 4)^2 - (x^2 - x - 4) + 15x - 36 \\\\\n&amp;= x^4 - 2x^3 - 7x^2 + 8x + 16 - x^2 + x + 4 + 15x - 36 \\\\\n&amp;= x^4 - 2x^3 - 8x^2 + 24x - 16 \\\\\n&amp;= (x - 2)(x^3 - 8x + 8) = (x - 2)^2(x^2 + 2x - 4).\n\\end{aligned}\\]</p><p>This quartic has three distinct real roots at \\(x = 2, -1 \\pm \\sqrt{5}\\). Each of these yields a distinct point of intersection, so the answer is their sum, \\(0\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2005_HMMT_February_Algebra/6-fig1.png\" width=\"319\" alt=\"\"></p>",
+      "answer": "0"
+    },
+    "7": {
+      "problem": "<p>Let \\(x\\) be a positive real number. Find the maximum possible value of \\[\\frac{x^2 + 2 - \\sqrt{x^4 + 4}}{x}.\\]</p>",
+      "solutions": "<p>Rationalizing the numerator, we get \\[\\begin{aligned}\n\\frac{x^2 + 2 - \\sqrt{x^4 + 4}}{x} \\cdot \\frac{x^2 + 2 + \\sqrt{x^4 + 4}}{x^2 + 2 + \\sqrt{x^4 + 4}} &amp;= \\frac{(x^2+2)^2 - (x^4+4)}{x(x^2+2+\\sqrt{x^4+4})} \\\\\n&amp;= \\frac{4x^2}{x(x^2+2+\\sqrt{x^4+4})} \\\\\n&amp;= \\frac{4}{\\frac{1}{x}(x^2+2+\\sqrt{x^4+4})} \\\\\n&amp;= \\frac{4}{x + \\frac{2}{x} + \\sqrt{x^2 + \\frac{4}{x^2}}}.\n\\end{aligned}\\]</p><p>Since we wish to maximize this quantity, we wish to minimize the denominator. By AM-GM, \\(x + \\frac{2}{x} \\ge 2\\sqrt{2}\\) and \\(x^2 + \\frac{4}{x^2} \\ge 4\\), so that the denominator is at least \\(2\\sqrt{2} + 2\\). Therefore, \\[\\frac{x^2 + 2 - \\sqrt{x^4+4}}{x} \\le \\frac{4}{2\\sqrt{2}+2} = 2\\sqrt{2} - 2,\\] with equality when \\(x = \\sqrt{2}\\).</p>",
+      "answer": "2\\sqrt{2} - 2"
+    },
+    "8": {
+      "problem": "<p>Compute \\[\\sum_{n=0}^{\\infty} \\frac{n}{n^4 + n^2 + 1}.\\]</p>",
+      "solutions": "<p>Note that \\[n^4 + n^2 + 1 = (n^4 + 2n^2 + 1) - n^2 = (n^2+1)^2 - n^2 = (n^2+n+1)(n^2-n+1).\\]</p><p>Decomposing into partial fractions, we find that \\[\\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\left(\\frac{1}{n^2-n+1} - \\frac{1}{n^2+n+1}\\right).\\]</p><p>Now, note that if \\(f(n) = \\frac{1}{n^2-n+1}\\), then \\(f(n+1) = \\frac{1}{(n+1)^2-(n+1)+1} = \\frac{1}{n^2+n+1}\\). It follows that \\[\\sum_{n=0}^{\\infty} \\frac{n}{n^4+n^2+1} = \\frac{1}{2}\\Big((f(0)-f(1)) + (f(1)-f(2)) + (f(2)-f(3)) + \\cdots\\Big).\\]</p><p>Since \\(f(n)\\) tends towards \\(0\\) as \\(n\\) gets large, this sum telescopes to \\(f(0)/2 = 1/2\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "9": {
+      "problem": "<p>The number \\(27{,}000{,}001\\) has exactly four prime factors. Find their sum.</p>",
+      "solutions": "<p>First, we factor \\[\\begin{aligned}\n27x^6 + 1 &amp;= (3x^2)^3 + 1 \\\\\n&amp;= (3x^2+1)(9x^4-3x^2+1) \\\\\n&amp;= (3x^2+1)\\big((9x^4+6x^2+1) - 9x^2\\big) \\\\\n&amp;= (3x^2+1)\\big((3x^2+1)^2 - (3x)^2\\big) \\\\\n&amp;= (3x^2+1)(3x^2+3x+1)(3x^2-3x+1).\n\\end{aligned}\\]</p><p>Letting \\(x = 10\\), we get that \\(27000001 = 301 \\cdot 331 \\cdot 271\\). A quick check shows that \\(301 = 7 \\cdot 43\\), so that \\(27000001 = 7 \\cdot 43 \\cdot 271 \\cdot 331\\). Each factor here is prime, and their sum is \\(652\\).</p>",
+      "answer": "652"
+    },
+    "10": {
+      "problem": "<p>Find the sum of the absolute values of the roots of \\(x^4 - 4x^3 - 4x^2 + 16x - 8 = 0\\).</p>",
+      "solutions": "<p>\\[\\begin{aligned}\nx^4 - 4x^3 - 4x^2 + 16x - 8 &amp;= (x^4 - 4x^3 + 4x^2) - (8x^2 - 16x + 8) \\\\\n&amp;= x^2(x-2)^2 - 8(x-1)^2 \\\\\n&amp;= (x^2-2x)^2 - (2\\sqrt{2}x - 2\\sqrt{2})^2 \\\\\n&amp;= (x^2 - (2+2\\sqrt{2})x + 2\\sqrt{2})(x^2 - (2-2\\sqrt{2})x - 2\\sqrt{2}).\n\\end{aligned}\\]</p><p>But noting that \\((1+\\sqrt{2})^2 = 3+2\\sqrt{2}\\) and completing the square, \\[\\begin{aligned}\nx^2 - (2+2\\sqrt{2})x + 2\\sqrt{2} &amp;= x^2 - (2+2\\sqrt{2})x + 3 + 2\\sqrt{2} - 3 \\\\\n&amp;= (x - (1+\\sqrt{2}))^2 - (\\sqrt{3})^2 \\\\\n&amp;= (x - 1 - \\sqrt{2} + \\sqrt{3})(x - 1 - \\sqrt{2} - \\sqrt{3}).\n\\end{aligned}\\]</p><p>Likewise, \\[x^2 - (2-2\\sqrt{2})x - 2\\sqrt{2} = (x-1+\\sqrt{2}+\\sqrt{3})(x-1+\\sqrt{2}-\\sqrt{3}),\\]</p><p>so the roots of the quartic are \\(1 \\pm \\sqrt{2} \\pm \\sqrt{3}\\). Only one of these is negative, namely \\(1 - \\sqrt{2} - \\sqrt{3}\\), so the sum of the absolute values of the roots is \\[(1+\\sqrt{2}+\\sqrt{3}) + (1+\\sqrt{2}-\\sqrt{3}) + (1-\\sqrt{2}+\\sqrt{3}) - (1-\\sqrt{2}-\\sqrt{3}) = 2 + 2\\sqrt{2} + 2\\sqrt{3}.\\]</p>",
+      "answer": "2 + 2\\sqrt{2} + 2\\sqrt{3}"
+    }
+  }
+}

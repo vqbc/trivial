@@ -1,0 +1,23 @@
+{
+  "test": "BMT Combinatorics Tiebreaker",
+  "year": 2018,
+  "name": "Combinatorics Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2018/COSP18TB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Every face of a cube is colored one of 3 colors at random. What is the expected number of edges that lie along two faces of different colors?</p>",
+      "solutions": "<p>The probability that the two faces bordering an edge are different colors is \\(\\frac{2}{3}\\). There are 12 edges in the cube, so by linearity of expectation, the expected number of such edges is \\(12 \\cdot \\frac{2}{3} = \\boxed{8}\\).</p>",
+      "answer": "8"
+    },
+    "2": {
+      "problem": "<p>6 people stand in a circle with water guns. Each person randomly selects another person to shoot. What is the probability that no pair of people shoots at each other?</p>",
+      "solutions": "<p>Use principle of inclusion exclusion.</p><p><b>Alternative solution.</b> Start from person 0, and follow chain of people shot till it returns to someone who already fired. Do casework on length of that path.</p><p>Case \\(n=3\\): \\(\\frac{4}{5} \\cdot \\frac{1}{5} \\cdot \\left(\\frac{3}{5} \\cdot \\frac{24}{25} + \\frac{2}{5}\\left(\\frac{3}{5} + \\frac{4}{5}\\right)\\right)\\)</p><p>\\(n=4\\): \\(\\frac{4}{5} \\cdot \\frac{3}{5} \\cdot \\frac{2}{5} \\cdot \\frac{24}{25}\\)</p><p>\\(n=5\\): \\(\\frac{4}{5}\\frac{3}{5}\\frac{2}{5}\\frac{3}{5}\\)</p><p>\\(n=6\\): \\(\\frac{4}{5} \\cdot \\frac{3}{5} \\cdot \\frac{2}{5}\\frac{1}{5}\\frac{4}{5}\\)</p><p>The answer is thus \\(\\frac{440+576+360+96}{5^5} = \\boxed{\\frac{1472}{3125}}\\).</p>",
+      "answer": "\\frac{1472}{3125}"
+    },
+    "3": {
+      "problem": "<p>Alice and Bob are playing rock paper scissors. Alice however is cheating, so in each round, she has a \\(\\frac{3}{5}\\) chance of winning, \\(\\frac{2}{5}\\) chance of drawing, and \\(\\frac{2}{5}\\) chance of losing. The first person to win 5 more rounds than the other person wins the match. What is the probability Alice wins?</p>",
+      "solutions": "<p>Markov chain with state being difference in score, then Gambler’s ruin. Let \\(a_k\\) probability of Alice winning given current score difference is \\(k\\). We have the recurrence \\(a_k = pa_{k+1} + qa_{k-1}\\), with \\(a_5 = 1\\), \\(a_{-5} = 0\\). The characteristic polynomial is then \\(z = pz^2 - q\\), which has roots \\(z_1 = 1\\), \\(z_2 = \\frac{q}{p}\\), so \\(a_k = C_1 \\cdot 1^k + C_2 \\cdot \\left(\\frac{q}{p}\\right)^k\\). Solving the boundary conditions, we have \\(a_{-5} = C_1 + C_2\\left(\\frac{q}{p}\\right)^{-5} = 0\\), \\(a_5 = C_1 + C_2\\left(\\frac{q}{p}\\right)^5 = 1\\), so \\(C_2\\left(\\left(\\frac{q}{p}\\right)^k - \\left(\\frac{q}{p}\\right)^{-k}\\right) = 1\\), so \\(C_2 = \\frac{(q/p)^5}{(q/p)^{10}-1}\\), \\(C_1 = \\frac{-1}{(q/p)^{10}-1}\\). We thus see that \\(a_0 = \\frac{(q/p)^5-1}{(q/p)^{10}-1} = \\frac{1}{(q/p)^5+1} = \\frac{1}{(2/3)^5+16} = \\boxed{\\frac{243}{275}}\\).</p>",
+      "answer": "\\frac{243}{275}"
+    }
+  }
+}

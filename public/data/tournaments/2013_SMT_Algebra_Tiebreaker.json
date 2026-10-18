@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2013,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2013/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>\\(x\\) is a base-10 number such that when the digits of \\(x\\) are interpreted as a base-20 number, the resulting number is twice the value as when they are interpreted as a base-13 number. Find the sum of all possible values of \\(x\\).</p>",
+      "solutions": "<p>Clearly it can’t be one-digit. If we try two digits, we get \\(20a + b = 2(13a+b)\\) or \\(6a+b=0\\), which again has no solution.</p><p>For three digits, we have \\(400a+20b+c = 2(169a+13b+c)\\), or \\(62a = 6b+c\\). If we want \\(1 \\le a \\le 9\\) and \\(0 \\le b, c \\le 9\\), there is only one solution, namely \\(a=1\\), \\(b=9\\), and \\(c=8\\). If we try four digits, we easily see that \\(20^4 - 2\\cdot 13^4\\) is far too large for anything to even come close. Thus the only possible value for \\(x\\) is \\(\\boxed{198}\\).</p>",
+      "answer": "198"
+    },
+    "2": {
+      "problem": "<p>If \\(f\\) is a monic cubic polynomial with \\(f(0) = -64\\), and all roots of \\(f\\) are non-negative real numbers, what is the largest possible value of \\(f(-1)\\)? (A polynomial is monic if it has a leading coefficient of 1.)</p>",
+      "solutions": "<p>If the three roots of \\(f\\) are \\(r_1, r_2, r_3\\), we have \\(f(x) = x^3 - (r_1+r_2+r_3)x^2 + (r_1r_2+r_1r_3+r_2r_3)x - r_1r_2r_3\\), so \\(f(-1) = -1 - (r_1+r_2+r_3) - (r_1r_2+r_1r_3+r_2r_3) - r_1r_2r_3\\). Since \\(r_1r_2r_3 = 64\\), the arithmetic mean-geometric mean inequality reveals that \\(r_1+r_2+r_3 \\ge 3(r_1r_2r_3)^{1/3} = 12\\) and \\(r_1r_2+r_1r_3+r_2r_3 \\ge 3(r_1r_2r_3)^{2/3} = 48\\). It follows that \\(f(-1)\\) is at most \\(-1-12-48-64 = \\boxed{-125}\\). We have equality when all roots are equal, i.e. \\(f(x) = (x-4)^3\\).</p>",
+      "answer": "-125"
+    },
+    "3": {
+      "problem": "<p>Find the minimum of \\(f(x,y,z) = x^3 + 12\\frac{yz}{x} + 16\\left(\\frac{1}{yz}\\right)^{\\frac{3}{2}}\\) where \\(x\\), \\(y\\), and \\(z\\) are all positive.</p>",
+      "solutions": "<p>\\[f(x,y,z) = x^3 + 12\\frac{yz}{x} + 16\\left(\\frac{1}{yz}\\right)^{\\frac{3}{2}} \\ge 6\\sqrt[6]{x^3 \\cdot 4\\frac{yz}{x} \\cdot 4\\frac{yz}{x} \\cdot 8\\left(\\frac{1}{yz}\\right)^{\\frac{3}{2}} \\cdot 8\\left(\\frac{1}{yz}\\right)^{\\frac{3}{2}}} = 6\\sqrt[6]{4^6} = \\boxed{24}.\\]</p><p>This is attainable by setting \\(x = yz = \\sqrt[3]{4}\\).</p>",
+      "answer": "24"
+    }
+  }
+}

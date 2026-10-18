@@ -1,0 +1,58 @@
+{
+  "test": "BMT Analysis",
+  "year": 2017,
+  "name": "Analysis Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2017/AnaS2017.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>10 students take the Analysis Round. The average score was a 3 and the high score was a 7. If no one got a 0, what is the maximum number of students that could have achieved the high score?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>Find all solutions to \\(3^x - 9^{x-1} = 2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1;\\ \\log_3(6)"
+    },
+    "3": {
+      "problem": "<p>Compute \\[\\int_{-9}^{9} 17x^3 \\cos(x^2)\\, dx.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "4": {
+      "problem": "<p>Find the value of \\[\\frac{1}{2} + \\frac{4}{2^2} + \\frac{9}{2^3} + \\frac{16}{2^4} + \\cdots.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6"
+    },
+    "5": {
+      "problem": "<p>Find the value of \\(y\\) such that the following equation has exactly three solutions. \\[||x-1|-4| = y.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "6": {
+      "problem": "<p>Consider the function \\(f(x,y,z) = (x-y+z, y-z+x, z-x+y)\\) and denote by \\(f^{(n)}(x,y,z)\\) the function \\(f\\) applied \\(n\\) times to the tuple \\((x,y,z)\\). Let \\(r_1, r_2, r_3\\) be the three roots of the equation \\(x^3 - 4x^2 + 12 = 0\\) and let \\(g(x) = x^3 + a_2 x^2 + a_1 x + a_0\\) be the cubic polynomial with the tuple \\(f^{(3)}(r_1, r_2, r_3)\\) as roots. Find the value of \\(a_1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-336"
+    },
+    "7": {
+      "problem": "<p>Compute \\[\\sum_{k=1}^{\\infty} \\frac{(-1)^k}{(2k-1)(2k+1)}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2-\\pi}{4}"
+    },
+    "8": {
+      "problem": "<p>The numerical value of the following integral \\[\\int_0^1 (-x^2+x)^{2017} \\lfloor 2017x \\rfloor\\, dx\\] can be expressed in the form \\(a\\frac{m!^2}{n!}\\) where \\(a\\) is minimized. Find \\(a+m+n\\). (Note \\(\\lfloor x \\rfloor\\) is the largest integer less than or equal to \\(x\\).)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "7060"
+    },
+    "9": {
+      "problem": "<p>Let \\(a_d\\) be the number of non-negative integer solutions \\((a,b)\\) to \\(a+b=d\\) where \\(a \\equiv b \\pmod{n}\\) for a fixed \\(n \\in \\mathbb{Z}^+\\). Consider the generating function \\(M(t) = a_0 + a_1 t + a_2 t^2 + \\ldots\\). Consider \\[P(n) = \\lim_{t\\to 1} \\left( nM(t) - \\frac{1}{(1-t)^2} \\right).\\] Then \\(P(n), n \\in \\mathbb{Z}^+\\) is a polynomial in \\(n\\), so we can extend its domain to include all real numbers while having it remain a polynomial. Find \\(P(0)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-\\frac{1}{12}"
+    },
+    "10": {
+      "problem": "<p>Define \\(H_n = \\sum_{k=1}^{n} \\frac{1}{k}\\). Evaluate \\[\\sum_{n=1}^{2017} \\binom{2017}{n} H_n (-1)^n.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-\\frac{1}{2017}"
+    }
+  }
+}

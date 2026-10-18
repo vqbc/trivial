@@ -1,0 +1,83 @@
+{
+  "test": "CMM Individual",
+  "year": 2014,
+  "name": "Individual Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_63a21695ca7b44ccaf0a20cea326a1f7.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In the following 3 by 3 grid, \\(a, b, c\\) are numbers such that the sum of each row is listed at the right and the sum of each column is written below it:</p><p>\\[\\begin{array}{|c|c|c|c|}\n\\hline\na &amp; a &amp; a &amp; 33 \\\\\n\\hline\nb &amp; b &amp; c &amp; 55 \\\\\n\\hline\nb &amp; c &amp; c &amp; 50 \\\\\n\\hline\n51 &amp; n &amp; 41 &amp; \\\\\n\\hline\n\\end{array}\\]</p><p>What is \\(n\\)?</p>",
+      "solutions": "<p>The sum of rows equals the sum of columns, so \\(n = 46\\).</p>",
+      "answer": "46"
+    },
+    "2": {
+      "problem": "<p>Suppose in your sock drawer of 14 socks there are 5 different colors and 3 different lengths present. One day, you decide you want to wear two socks that have both <i>different colors</i> and <i>different lengths</i>. Given only this information, what is the maximum number of choices you might have?</p>",
+      "solutions": "<p>The maximum occurs when as many categories as possible are present. Since there are only 14 socks present, we can have only 14 categories, so one color/length combination is missing. If we had all 15 categories, we could pick any of the \\(5 \\cdot 3\\) categories and any of the \\(4 \\cdot 2\\) distinct categories to give \\(5 \\cdot 4 \\cdot 3 \\cdot 2/2 = 60\\) possibilities, but since one is missing, we must discount \\(4 \\cdot 2 = 8\\) of these, giving \\(52\\).</p>",
+      "answer": "52"
+    },
+    "3": {
+      "problem": "<p>The population of Arveymuddica is 2014, which is divided into some number of equal groups. During an election, each person votes for one of two candidates, and the person who was voted for by \\(2/3\\) or more of the group wins the group. When neither candidate gets \\(2/3\\) of the vote, no one wins the group. The person who wins the most groups wins the election. What should the size of the groups be if we want to minimize the minimum total number of votes required to win an election?</p>",
+      "solutions": "<p>The prime factorization of 2014 is \\(2 \\cdot 19 \\cdot 53\\), so groups can only come in the sizes 1, 2, 19, 38, 53, 106, 1007, 2014. Clearly 1, 2, 1007, 2014 require at least half the votes to win, so ignore those. Let \\(n\\) be the number of groups and \\(m = 2014/n\\) be the group size. It requires fewer votes to win a group than to prevent the opponent from winning two groups since \\(\\lceil 2m/3 \\rceil \\le 2(\\lfloor 1+m/3 \\rfloor)\\). This means that the minimum number of votes is \\[V = \\lceil 2m/3 \\rceil (\\lfloor 1+n/2 \\rfloor)\\] which minimizes when \\(n = 19\\) by trying the possibilities.</p>",
+      "answer": "19"
+    },
+    "4": {
+      "problem": "<p>A farmer learns that he will die at the end of the year (day 365, where today is day 0) and that he has a number of sheep. He decides that his utility is given by \\(ab\\) where \\(a\\) is the money he makes by selling his sheep (which always have a fixed price) and \\(b\\) is the number of days he has left to enjoy the profit; i.e., \\(365 - k\\) where \\(k\\) is the day. If every day his sheep breed and multiply their numbers by \\(103/101\\) (yes, there are small, fractional sheep), on which day should he sell them all?</p>",
+      "solutions": "<p>We can see that his utility maximizes on a day when he gains utility but would lose utility if he waited another day. Waiting another day means his (positive) utility gets multiplied by \\(103/101 \\cdot (364-k)/(365-k)\\), meaning that he should stop when (letting \\(l = 365-k\\)) \\((l-1)/l &lt; 101/103\\). This gives \\(2/(103l) &lt; 1\\), so \\(l \\le 51\\). Therefore he should sell on day \\(365 - 51 = 314\\). Fun fact: when he sells, he has more than 472 times as many sheep as he started with.</p>",
+      "answer": "314"
+    },
+    "5": {
+      "problem": "<p>Line segements \\(\\overline{AB}\\) and \\(\\overline{AC}\\) are tangent to a convex arc \\(\\overgroup{BC}\\) and \\(\\angle BAC = \\frac{\\pi}{3}\\). If \\(\\overline{AB} = \\overline{AC} = 3\\sqrt{3}\\), find the length of \\(\\overgroup{BC}\\).</p>",
+      "solutions": "<p>Drawing a line \\(\\overline{BC}\\) we can see that by law of cosines \\(\\overline{BC} = \\sqrt{27/2}\\). Because the tangents are angle \\(\\pi/3\\) apart, the radii of the arc that connect to the tangents must be \\(2\\pi/3\\) apart. Thus, by law of cosines, and knowing that all radii are equal, the radius of the arc is 3. The measure of the arc must be \\(2\\pi\\) minus the angle between the radii to the endpoints. Thus, the measure of the arc is \\(4\\pi/3\\). Thus, the length of \\(\\overgroup{BC}\\) is \\(4\\pi\\).</p><p>Note: due to an ambiguity in the problem, \\(2\\pi\\) was also an acceptable answer.</p>",
+      "answer": "4\\pi"
+    },
+    "6": {
+      "problem": "<p>Suppose that you start with the number 8 and always have two legal moves:</p><ul><li>Square the number</li><li>Add one if the number is divisible by 8 or multiply by 4 otherwise</li></ul><p>How many sequences of 4 moves are there that return to a multiple of 8?</p>",
+      "solutions": "<p>If we consider this mod 8, we can only ever have values of 0, 1, or 4. 0 can change to either 0 or 1, 1 can change to 1 or 4, and 4 can change to 0 in two ways. Therefore we can only cycle through 0 to 1 to 4 to 0 at most once, so we have to stay at 1 or 0 at least once. There are 2 ways to do this by staying at 1, 4 ways to do this by staying at 0 once, and 1 way to do this by staying at 0. This gives \\(7\\) ways. Alternatively, look at the fourth power of the adjacency matrix where 0 is the first vertex, 1 is the second, and 4 is the third:</p><p>\\[\\begin{pmatrix} 1 &amp; 1 &amp; 0 \\\\ 0 &amp; 1 &amp; 1 \\\\ 2 &amp; 0 &amp; 0 \\end{pmatrix}^4 = \\left( \\begin{pmatrix} 1 &amp; 1 &amp; 0 \\\\ 0 &amp; 1 &amp; 1 \\\\ 2 &amp; 0 &amp; 0 \\end{pmatrix}^2 \\right)^2\\]</p><p>\\[\\begin{pmatrix} 1 &amp; 1 &amp; 0 \\\\ 0 &amp; 1 &amp; 1 \\\\ 2 &amp; 0 &amp; 0 \\end{pmatrix}^4 = \\begin{pmatrix} 1 &amp; 2 &amp; 1 \\\\ 2 &amp; 1 &amp; 1 \\\\ 2 &amp; 2 &amp; 0 \\end{pmatrix}^2\\]</p><p>The top left corner of this is the desired quantity, 7. Maybe the easiest solution is to make a little diagram with the numbers 0, 1, 4 repeated 5 times and count the paths that start at the top row’s 0 and end at the bottom row’s 0. There are actually a lot of ways to count these sequences. Try making a recurrence relation and finding how many sequences of length 20 there are!</p>",
+      "answer": "7"
+    },
+    "7": {
+      "problem": "<p>A robot is shuffling a 9 card deck. Being very well machined, it does every shuffle in exactly the same way: it splits the deck into two piles, one containing the 5 cards from the bottom of the deck and the other with the 4 cards from the top. It then interleaves the cards from the two piles, starting with a card from the bottom of the larger pile at the bottom of the new deck, and then alternating cards from the two piles while maintaining the relative order of each pile. The top card of the new deck will be the top card of the bottom pile.</p><p>The robot repeats this shuffling procedure a total of \\(n\\) times, and notices that the cards are in the same order as they were when it started shuffling. What is the smallest possible value of \\(n\\)?</p>",
+      "solutions": "<p>After \\(k\\) repetitions of the shuffling procedure, the card that was originally in position \\(i\\), counting from the top of the deck, will be in position \\(i2^k\\), so the smallest \\(n\\) that returns the deck to the original state is the smallest \\(n\\) with \\(2^n \\equiv 1 \\pmod 9\\), which is \\(6\\).</p>",
+      "answer": "6"
+    },
+    "8": {
+      "problem": "<p>A secant line incident to a circle at points \\(A\\) and \\(C\\) intersects the circle’s diameter at point \\(B\\) with a \\(45^\\circ\\) angle. If the length of \\(AB\\) is 1 and the length of \\(BC\\) is 7, then what is the circle’s radius?</p>",
+      "solutions": "<p>Let \\(O\\) be the center of the circle, and draw the perpendicular \\(P\\) from \\(O\\) to \\(AC\\). Then \\(CPO\\) and \\(APO\\) are congruent, meaning the length of \\(BP\\) is \\((1+7)/2 - 1 = 3\\). Also notice that the measure of angle \\(POB\\) is \\(45^\\circ\\), so \\(\\triangle POB\\) is isosceles; the length of \\(OP\\) is 3. Since \\(CP\\)’s length is 4, we have by the Pythagorean theorem that the circle’s radius is \\(5\\).</p>",
+      "answer": "5"
+    },
+    "9": {
+      "problem": "<p>If a complex number \\(z\\) satisfies \\(z + 1/z = 1\\), then what is \\(z^{96} + 1/z^{96}\\)?</p>",
+      "solutions": "<p>Let \\(g_n\\) denote \\(z^n + 1/z^n\\). Expanding shows that \\(g_{n+m} = g_n g_m - g_{|n-m|}\\), so in particular</p><p>\\[g_{2^n+2^{n-1}} = g_{2^n} g_{2^{n-1}} - g_{2^{n-1}}\\]</p><p>And</p><p>\\[g_{2^{n+1}} = g_{2^n}^2 - 2\\]</p><p>Using this second relation, we can see that since \\(g_1 = 1\\), for all \\(n \\ge 1\\) we have \\(g_{2^n} = -1\\). Using the second relation then gives that</p><p>\\[g_{2^n+2^{n-1}} = 1 - -1\\] \\[g_{2^n+2^{n-1}} = 2\\]</p><p>Since 96 is \\(2^6 + 2^5\\), it takes this form, so the answer is \\(2\\).</p>",
+      "answer": "2"
+    },
+    "10": {
+      "problem": "<p>Let \\(a, b\\) be two acute angles where \\(\\tan a = 5 \\tan b\\). Find the maximum possible value of \\(\\sin(a-b)\\).</p>",
+      "solutions": "<p>First, we know that \\[\\tan(a-b) = \\frac{\\tan a - \\tan b}{1+\\tan a \\tan b} = \\frac{4}{\\frac{1}{\\tan b}+5\\tan b}.\\]</p><p>In addition, since \\(y\\) is acute, \\(\\tan y &gt; 0\\).</p><p>So we can use \\(1/x+x \\ge 2\\) to see that the denominator is at least \\(2\\sqrt5\\), and hence the expression is at most \\(2/\\sqrt5\\). Constructing a right triangle with this tangent shows that it has a sin of \\(2/3\\).</p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "11": {
+      "problem": "<p>A pyramid, represented by \\(SABCD\\) has parallelogram \\(ABCD\\) as base (\\(A\\) is across from \\(C\\)) and vertex \\(S\\). Let the midpoint of edge \\(SC\\) be \\(P\\). Consider plane \\(AMPN\\) where \\(M\\) is on edge \\(SB\\) and \\(N\\) is on edge \\(SD\\). Find the minimum value \\(r_1\\) and maximum value \\(r_2\\) of \\[\\frac{V_1}{V_2}\\] where \\(V_1\\) is the volume of pyramid \\(SAMPN\\) and \\(V_2\\) is the volume of pyramid \\(SABCD\\). Express your answer as an ordered pair \\((r_1, r_2)\\).</p>",
+      "solutions": "<p>Let \\(\\overline{SM}/\\overline{SB}\\) be a ratio \\(x\\), and \\(\\overline{SN}/\\overline{SD}\\) be a ratio \\(y\\). The region \\(SAMPN\\) can be split in half two ways: into either \\(SAMP\\) and \\(SANP\\) or \\(SAMN\\) and \\(SPMN\\). Thus</p><p>\\[V(SAMP) + V(SANP) = V(SAMN) + V(SPMN)\\]</p><p>Dividing by the volume of \\(V(SABC)\\), which is equal to \\(V(SBCD), V(SCDA)\\), or \\(V(SDAB)\\) since the base is a parallelogram:</p><p>\\[\\frac{V(SAMP)}{V(SABC)} + \\frac{V(SANP)}{V(SDCA)} = \\frac{V(SAMN)}{V(SDAB)} + \\frac{V(SPMN)}{V(SBCD)}\\]</p><p>If we consider \\(SBC\\) to be the base of \\(SABC\\), we see that since \\(SBP\\) has half the area of the base and the same height, \\(\\frac{V(SABP)}{V(SABC)} = \\frac{1}{2}\\). An analogous argument shows that \\(\\frac{V(SAMP)}{V(SABC)} = \\frac{1}{2}\\overline{SM}/\\overline{SB} = \\frac{x}{2}\\). Applying this to all sides gives</p><p>\\[\\frac{x}{2}+\\frac{y}{2} = xy + \\frac{1}{2}xy\\] \\[x+y = 3xy\\] \\[y = \\frac{x}{-1+3x}\\]</p><p>And since \\(V(SABCD) = 2V(SABC) = 2V(SDCA)\\), we want to maximize</p><p>\\[\\frac{V(SAMP)}{2V(SABC)} + \\frac{V(SANP)}{2V(SDCA)} = \\frac{x}{4}+\\frac{y}{4}\\] \\[= \\frac{3x^2}{4(3x-1)}\\] \\[= \\frac{1}{12}\\left((3x-1)+2+\\frac{1}{3x-1}\\right)\\]</p><p>where \\(x\\) is between \\(1/2\\) and \\(1\\). This minimizes when \\(3x-1=1\\), giving \\(x=2/3\\) and a ratio of \\(r_1 = \\frac{1}{3}\\). It maximizes when \\(x=1\\), giving a ratio \\(r_2 = \\frac{3}{8}\\). Thus the solution is \\(\\left(\\frac{1}{3}, \\frac{3}{8}\\right)\\).</p>",
+      "answer": "\\left(\\frac{1}{3}, \\frac{3}{8}\\right)"
+    },
+    "12": {
+      "problem": "<p>A 5x5 grid is missing one of its main diagonals. In how many ways can we place 5 pieces on the grid such that no two pieces share a row or column?</p>",
+      "solutions": "<p>Consider a full 5x5 grid and define the default “permutation” of pieces to be one in which all pieces are on the missing diagonal. Let the \\(i\\)th piece of the board be the piece on the \\(i\\)th column, so that any permutation just moves each piece into a different row. Let \\(A_{i_1\\ldots i_k}\\) be the set of permutations which keep pieces \\(i_1, \\ldots i_k\\) on the main missing diagonal. For instance, \\(A_1\\) is the set of permutations which keeps the first piece in the corner, and \\(A_{14}\\) is the set of permutations where the 1st and 4th pieces remain on the 1st and 4th rows respectively. Let \\(B\\) be the set of permutations which do not leave any pieces on the missing diagonal; that is, \\(B = A \\setminus A_1 \\setminus \\ldots \\setminus A_5\\). By the inclusion-exclusion principle, we have</p><p>\\[|B| = |A| - |A_1| - \\ldots - |A_5| + |A_{12}| + \\ldots |A_{45}| - \\ldots + \\ldots - \\ldots |A_{12345}|\\]</p><p>That is, we have an expression for the number of permutations which do not leave any of the pieces in their original places. Since in \\(A_{i_1\\ldots i_k}\\) we have freedom to move \\(5-k\\) pieces, we have \\(|A_{i_1\\ldots i_k}| = (5-k)!\\). Since there are \\(\\binom{5}{k}\\) ways to pick this, we have</p><p>\\[|B| = 120 - 5(24) + 10(6) - 10(2) + 5(1) - 1\\] \\[|B| = 44\\]</p>",
+      "answer": "44"
+    },
+    "13": {
+      "problem": "<p>There are 20 cities in a country, some of which have highways connecting them. Each highway goes from one city to another, both ways. There is no way to start in a city, drive along the highways of the country such that you travel through each city exactly once, and return to the same city you started in. What is the maximum number of roads this country could have?</p>",
+      "solutions": "<p>Suppose the country has roads between any pair of cities, and we are trying to destroy certain roads so that no such cycle (a Hamiltonian cycle) exists anymore. The most efficient way to do this is to destroy all but one road from a particular city; this destroys 18 roads, leaving us with \\(\\binom{20}{2} - 18 = 172\\). We can see this because we want to destroy roads which share the fewest number of Hamiltonian cycles with each other as possible; each road is originally a part of the same number of cycles, and each demolition is only good for destroying those cycles which no other demolition destroyed. In the complete country, roads from the same city share only 1/18 of their cycles, while roads from different pairs of cities share 2/19 of their cycles by symmetry. While not completely rigorous (the simplest proof I know uses Chvátal’s condition), the intuition is what matters in this case.</p>",
+      "answer": "172"
+    },
+    "14": {
+      "problem": "<p>Find the area of the cyclic quadrilateral with side lengths given by the solutions to \\(x^4 - 10x^3 + 34x^2 - 45x + 19 = 0\\).</p>",
+      "solutions": "<p>Use Vieta’s to extract the semiperimeter of the quadrilateral, which is \\(10/2 = 5\\), then plug that into the quartic to get \\(19\\). By Brahmagupta’s formula, we have the area is \\((s-r_1)(s-r_2)(s-r_3)(s-r_4) = 19\\) where the \\(r_i\\)’s are the roots. Thus the area is the square root of that, or \\(\\sqrt{19}\\).</p>",
+      "answer": "\\sqrt{19}"
+    },
+    "15": {
+      "problem": "<p>Suppose that we know \\(u_{0,m} = m^2+m\\) and \\(u_{1,m} = m^2+3m\\) for all integers \\(m\\), and that \\[u_{n-1,m}+u_{n+1,m} = u_{n,m-1}+u_{n,m+1}\\] Find \\(u_{30,-5}\\).</p>",
+      "solutions": "<p>Notice that if \\(u_{n,m}\\) depends only on \\(n+m\\), then \\(u(n-1+m)+u(n+1+m) = u(n+m-1)+u(n+m+1)\\), satisfying the equation. Similarly, if \\(u_{n,m}\\) depends only on \\(n-m\\), then \\(u(n-1-m)+u(n+1-m) = u(n-m+1)+u(n-m-1)\\), satisfying the equation again. Since the equation is linear, any sum of two such functions \\(f\\) and \\(g\\) would satisfy the equation. We can do this easily: if \\(f(m)+g(-m) = m^2+m\\) and \\(f(1+m)+g(1-m) = m^2+3m\\), then \\(f(n+m) = (m+n)^2\\) and \\(g(n-m) = m-n\\), so that the equation is satisfied. Thus \\(u_{30,-5} = 25^2 - 5 - 30 = 590\\).</p>",
+      "answer": "590"
+    }
+  }
+}

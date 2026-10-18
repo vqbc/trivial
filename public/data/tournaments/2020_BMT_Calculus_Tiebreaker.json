@@ -1,0 +1,23 @@
+{
+  "test": "BMT Calculus Tiebreaker",
+  "year": 2020,
+  "name": "Calculus Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2020/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A particle starts moving from \\((20, 0)\\) along the line \\(x = 20\\) at a speed of \\(1\\) unit per second in the positive \\(y\\) direction. Let \\(f(t)\\) be the distance of the particle from the origin at time \\(t\\) - therefore, \\(f(20) = 20\\sqrt{2}\\). Then \\(f'(20)\\) can be written in the form \\(\\frac{p\\sqrt{q}}{r}\\), where \\(p\\), \\(q\\), and \\(r\\) are positive integers such that \\(p\\) and \\(r\\) are relatively prime and that \\(q\\) is square-free. Compute \\(p+q+r\\).</p>",
+      "solutions": "<p>\\(f(t) = \\sqrt{t^2+400}\\). Therefore, \\(f'(t) = \\frac{t}{\\sqrt{t^2+400}}\\). Therefore, \\(f'(20) = \\frac{20}{\\sqrt{800}} = \\frac{\\sqrt2}{2}\\) and our answer is \\(\\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "2": {
+      "problem": "<p>For all real numbers \\(x\\), let \\(f(x) = |x^2+x|\\). Let \\(I_1 = \\int_{-2020}^{0} f(x)\\,dx\\), and let \\(I_2 = \\int_0^{2019} f(x)\\,dx\\). Then \\(|I_1-I_2|\\) can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m+n\\).</p>",
+      "solutions": "<p>Observe that</p><ul><li>For \\(x \\le -1\\), \\(f(-x-1) = |(-x-1)^2+(-x-1)| = x^2+x\\).</li><li>For \\(-1 \\le x \\le 0\\), \\(f(x) = -(x^2+x)\\).</li><li>For \\(x \\ge 0\\), \\(f(x) = x^2+x\\).</li></ul><p>Thus we can write \\[\\begin{aligned}\nI_1 &amp;= \\int_{-2020}^{-1} (x^2+x)\\,dx + \\int_{-1}^{0} -(x^2+x)\\,dx \\\\\n&amp;= \\int_0^{2019} (x^2+x)\\,dx + \\frac{1}{6} \\\\\n&amp;= I_2 + \\frac{1}{6}\n\\end{aligned}\\] \\[I_1 - I_2 = \\frac{1}{6}.\\]</p><p>Our answer, therefore, is \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "3": {
+      "problem": "<p>The integral \\[\\int_3^4 \\arcsin\\left(\\frac{\\sqrt{x}}{2}\\right)\\,dx\\] can be written in the form \\(\\frac{m\\pi}{n} - \\frac{p\\sqrt{q}}{r}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers, \\(p\\) and \\(r\\) are relatively prime positive integers, and \\(q\\) is a square-free positive integer. Compute \\(m+n+p+q+r\\).</p>",
+      "solutions": "<p>Refer to the diagram for labeling.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2020_BMT_Calculus_Tiebreaker/3-fig1.png\" width=\"557\" alt=\"\"></p><p>First define \\(f(x) = \\arcsin\\left(\\frac{\\sqrt{x}}{2}\\right)\\), then by simple algebra \\(f^{-1}(x) = 4\\sin^2(x)\\). Then the integral, which equals to the area of \\(A\\) in the diagram, is also equal to the area of \\(B\\) (by simple reflection over the line \\(y=x\\)). Note that the green curve is \\(f(x)\\) and the blue curve is \\(f^{-1}(x)\\). Then \\(B\\) is the region we want the area of, \\(C\\) is the rectangle \\([0, \\frac{\\pi}{3}] \\times [0,3]\\), \\(D\\) is the region under the curve \\(y = f^{-1}(x)\\) in the interval \\([\\frac{\\pi}{3}, \\frac{\\pi}{2}]\\), and \\(B \\cup C \\cup D\\) is the rectangle \\([0, \\frac{\\pi}{2}] \\times [0,4]\\). Then</p><p>\\[\\begin{aligned}\n|B| &amp;= |B \\cup C \\cup D| - |C| - |D| \\\\\n&amp;= \\left(4 \\cdot \\frac{\\pi}{2}\\right) - \\left(\\frac{\\pi}{3} \\cdot 3\\right) - \\left(\\int_{\\pi/3}^{\\pi/2} 4\\sin^2(x)\\,dx\\right) \\\\\n&amp;= 2\\pi - \\pi - \\left(\\frac{\\pi}{3} + \\frac{\\sqrt{3}}{2}\\right) \\\\\n&amp;= \\frac{2\\pi}{3} - \\frac{\\sqrt{3}}{2},\n\\end{aligned}\\]</p><p>where the integral is computed by a standard integration by parts, or other trigonometric identities. Therefore, our answer is \\(\\boxed{11}\\).</p>",
+      "answer": "11"
+    }
+  }
+}

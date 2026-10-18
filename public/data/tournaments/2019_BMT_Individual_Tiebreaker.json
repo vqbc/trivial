@@ -1,0 +1,33 @@
+{
+  "test": "BMT Individual Tiebreaker",
+  "year": 2019,
+  "name": "Individual Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2019/individual-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(p\\) be a prime and \\(n\\) a positive integer below 100. What’s the probability that \\(p\\) divides \\(n\\)?</p>",
+      "solutions": "<p>We count the number of pairs \\((p, n)\\) such that \\(p \\mid n\\). We find that</p><ol><li>\\(p = 2\\) yields 49 pairs,</li><li>\\(p = 3\\) yields 33 pairs,</li><li>\\(p = 5\\) yields 19 pairs,</li><li>\\(p = 7\\) yields 14 pairs,</li><li>\\(p = 11\\) yields 9 pairs,</li><li>\\(p = 13\\) yields 7 pairs,</li><li>\\(p = 17\\) yields 5 pairs,</li><li>\\(p = 19\\) yields 5 pairs,</li><li>\\(p = 23\\) yields 4 pairs,</li><li>\\(p = 29, 31\\) yields 3 pairs,</li><li>\\(p = 37, 41, 43, 47\\) yields 2 pairs, and</li><li>all other primes (10 of them) yield 1 pair.</li></ol><p>Adding them all up yields 169 pairs. There are a total of 2475 pairs of \\((p, n)\\) of a prime \\(p\\) and an integer below 100; yielding a probability of \\(\\boxed{\\frac{169}{2475}}\\).</p>",
+      "answer": "\\frac{169}{2475}"
+    },
+    "2": {
+      "problem": "<p>The origami club meets once a week at a fixed time, but this week, the club had to reschedule the meeting to a different time during the same day. However, the room that they usually meet has 5 available time slots, one of which is the original time the origami club meets. If at any given time slot, there is a 30 percent chance the room is not available, what is the probability the origami club will be able to meet at that day?</p>",
+      "solutions": "<p>The probability the origami club won’t be able to meet is \\(0.3^4 = 0.0081 = \\frac{81}{1000}\\).</p><p>Thus, the probability the origami club will be able to meet is \\(1 - \\frac{81}{1000} = \\boxed{\\frac{919}{1000}} = 0.919\\).</p>",
+      "answer": "\\frac{919}{1000}"
+    },
+    "3": {
+      "problem": "<p>Ankit, Bill, Charlie, Druv, and Ed are playing a game in which they go around shouting numbers in that order. Ankit starts by shouting the number 1. Bill adds a number that is a factor of the number of letters in his name to Ankit’s number and shouts the result. Charlie does the same with Bill’s number, and so on (once Ed shouts a number, Ankit does the same procedure to Ed’s number, and the game goes on). What is the sum of all possible numbers that can be the 23rd shout?</p>",
+      "solutions": "<p>The smallest number that can be shouted is 23, when each person increments the previous number by 1. The maximum number that can be the 23rd shout is 100, when everyone shouts the greatest number they can. Thus, what remains is to find out which numbers between 23 and 100 can be shouted. Ankit, Bill, and Charlie shout a total of 5 times, while Druv and Ed shout a total of 4 times. Every number from 23 to 36 can be shouted: Ankit and Charlie always increase the previous number by 1, while Bill, Druv, and Ed choose to shout 1 or 2 more depending on how much more than 23 they want to increase the 23rd shout. If everyone shouts 1 more than the previous number except for Charlie, who increases by 7 twice and 1 thrice, 35 will be the 23rd shout. In this way, every number from 35 to 48 can be shouted if Bill, Druv, and Ed pull the same trick as above. If everyone shouts 1 more than the previous number except for Charlie, who increases by 7 all but once, 47 will be the 23rd shout. In this way, every number from 47 to 60 can be shouted if Bill, Druv, and Ed pull the same trick as above. If Charlie always increases the previous shout by 7, Ankit increases the previous shout by 5 once, and all the other shouts increment by 1, the number 57 results. In this way, every number from 57 to 70 can be shouted if Bill, Druv, and Ed pull the same trick as above. The number 69 can be the 23rd shout if Ankit and Charlie increment by the maximum possible number, and everyone else always increments by 1. In this way, every number from 69 to 82 can be shouted if Bill, Druv, and Ed pull the same trick as above. The number 81 can be the 23rd shout if Ankit, Charlie, and Druv increment by the maximum possible number, while Bill and Ed always increment by 1. Every number from 81 to 90 can be shouted if Bill and Ed pull the same trick as above. Alternatively, if Bill instead of Druv originally increments by the maximum possible number, every number from 84 to 93 can be the 23rd shout. If everyone but Ed increments by the maximum possible number and Ed pulls the same trick as above, every number from 96 to 100 (inclusive) can be shouted. What remains is to find ways to shout 94 and 95. If everyone increments by the maximum possible number, except Charlie increases by 1 instead of 7 once, then 94 is the 23rd shout. Alternatively, if everyone increments by the maximum possible number, except Druv increases by 1 once, by 2 once, and 4 twice, then 95 is the 23rd shout. Thus, every number from 23 to 100 (inclusive) can be the 23rd shout; the sum of these number is \\[\\frac{100 \\cdot 101}{2} - \\frac{22 \\cdot 23}{2} = \\boxed{4797}.\\]</p>",
+      "answer": "4797"
+    },
+    "4": {
+      "problem": "<p>Consider a regular triangular pyramid with base \\(\\triangle ABC\\) and apex \\(D\\). If we have \\(AB = BC = AC = 6\\) and \\(AD = BD = CD = 4\\), calculate the surface area of the circumsphere of the pyramid.</p>",
+      "solutions": "<p>We denote the center of \\(\\triangle ABC\\) as point \\(O\\) and the center of the sphere as point \\(P\\). Then we can find \\(AO = 2\\sqrt{3}\\) and \\(DO = \\sqrt{4^2 - 12} = 2\\). Let \\(OP = x\\); then \\[x^2 + 12 = PA^2 = PD^2 = (2 - x)^2.\\]</p><p>We get \\(x = 2\\) and thus the radius of the sphere is 4, and the surface area is \\(4\\pi(4)^2 = \\boxed{64\\pi}\\).</p>",
+      "answer": "64\\pi"
+    },
+    "5": {
+      "problem": "<p>Ankit, Box, and Clark are taking the tiebreakers for the geometry round, consisting of three problems. Problem \\(k\\) takes each \\(k\\) minutes to solve. If for any given problem there is a \\(\\frac{1}{3}\\) chance for each contestant to solve that problem first, what is the probability that Ankit solves a problem first?</p>",
+      "solutions": "<p>Since all conditions for each contestant are equivalent, the probability that Ankit first solves a problem is the same as the probability that Box or Clark solves a problem. This probability, therefore, is \\(\\boxed{\\frac{1}{3}}\\).</p>",
+      "answer": "\\frac{1}{3}"
+    }
+  }
+}

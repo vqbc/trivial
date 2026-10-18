@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry B",
+  "year": 2013,
+  "name": "Geometry B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2013_GeometryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>We construct three circles: \\(O\\) with diameter \\(AB\\) and area \\(12 + 2x\\), \\(P\\) with diameter \\(AC\\) and area \\(24 + x\\), and \\(Q\\) with diameter \\(BC\\) and area \\(108 - x\\). Given that \\(C\\) is on circle \\(O\\), compute \\(x\\).</p>",
+      "solutions": "<p>Pythagorean theorem gives the answer immediately. We should have \\(12+2x = 24+x+108-x\\), or \\(x = \\boxed{60}\\).</p>",
+      "answer": "60"
+    },
+    "2": {
+      "problem": "<p>Triangle \\(ABC\\) satisfies \\(\\angle ABC = \\angle ACB = 78^\\circ\\). Points \\(D\\) and \\(E\\) lie on \\(AB, AC\\) and satisfy \\(\\angle BCD = 24^\\circ\\) and \\(\\angle CBE = 51^\\circ\\). If \\(\\angle BED = x^\\circ\\), find \\(x\\).</p>",
+      "solutions": "<p>Immediately observe \\(BCD\\) and \\(BCE\\) are isosceles. Therefore \\(CB = CD = CE\\): then \\(\\angle BED = \\frac{\\angle BCD}{2} = \\boxed{12}\\).</p>",
+      "answer": "12"
+    },
+    "3": {
+      "problem": "<p>Consider all planes through the center of a \\(2 \\times 2 \\times 2\\) cube that create cross sections that are regular polygons. The sum of the cross sections for each of these planes can be written in the form \\(a\\sqrt{b} + c\\), where \\(b\\) is a square-free positive integer. Find \\(abc\\).</p>",
+      "solutions": "<p>There are two possible regular polygons: a square and a regular hexagon.</p><p>Square: There are 3 planes that create squares of area 4.</p><p>Hexagon: Hexagons are formed by connecting midpoints of the cube. There are 4 planes that create hexagons of area \\(3\\sqrt{3}\\).</p><p>The total area will be \\(12\\sqrt{3} + 12\\). Then, \\(abc = \\boxed{432}\\).</p>",
+      "answer": "432"
+    },
+    "4": {
+      "problem": "<p>An equilateral triangle is given. A point lies on the incircle of the triangle. The smallest two distances from the point to the sides of the triangle is 1 and 4. The sidelength of this triangle can be expressed as \\(\\frac{a\\sqrt{b}}{c}\\) where \\((a,c) = 1\\) and \\(b\\) is not divisible by the square of an integer greater than 1. Find \\(a + b + c\\).</p>",
+      "solutions": "<p>Same problem exists in Test A. \\(\\boxed{34}\\).</p>",
+      "answer": "34"
+    },
+    "5": {
+      "problem": "<p>Circle \\(w\\) with center \\(O\\) meets circle \\(\\Gamma\\) at \\(X, Y\\), and \\(O\\) is on \\(\\Gamma\\). Point \\(Z \\in \\Gamma\\) lies outside \\(w\\) such that \\(XZ = 11\\), \\(OZ = 15\\) and \\(YZ = 13\\). If the radius of circle \\(w\\) is \\(r\\), find \\(r^2\\).</p>",
+      "solutions": "<p>\\(r^2 = 15^2 - 11 \\cdot 13 = \\boxed{82}\\).</p>",
+      "answer": "82"
+    },
+    "6": {
+      "problem": "<p>Draw an equilateral triangle with center \\(O\\). Rotate the equilateral triangle \\(30^\\circ, 60^\\circ, 90^\\circ\\) with respect to \\(O\\) so there would be four congruent equilateral triangles on each other. Look at the diagram. If the smallest triangle has area 1, the area of the original equilateral triangle could be expressed as \\(p + q\\sqrt{r}\\) where \\(p, q, r\\) are positive integers and \\(r\\) is not divisible by a square greater than 1. Find \\(p + q + r\\).</p>",
+      "solutions": "<p>Same problem exists in Test A. \\(\\boxed{102}\\).</p>",
+      "answer": "102"
+    },
+    "7": {
+      "problem": "<p>A tetrahedron \\(ABCD\\) satisfies \\(AB = 6\\), \\(CD = 8\\), and \\(BC = DA = 5\\). Let \\(V\\) be the maximum volume of \\(ABCD\\) possible. If we can write \\(V^4 = 2^n 3^m\\) for some integers \\(n\\) and \\(m\\), find \\(mn\\).</p>",
+      "solutions": "<p>Let \\(h\\) be the distance between line \\(AB\\) and \\(CD\\). Suppose that the four vertices \\(A, B, C, D\\) are projected vertically along \\(h\\) to vertices \\(A', B', C', D'\\) respectively. It is known that if we denote \\(\\theta\\) be the angle between \\(A'B'\\) and \\(C'D'\\), the volume is given by</p><p>\\[V = \\frac{1}{6} AB \\cdot CD \\cdot h \\cdot |\\sin\\theta|.\\]</p><p>As \\(AB\\) and \\(CD\\) are fixed, we should maximize the value of \\(h\\sin\\theta\\). Meanwhile we can observe \\(A'B' = AB, C'D' = CD\\) and \\(B'C' = \\sqrt{BC^2 - h^2}, D'A' = \\sqrt{DA^2 - h^2}\\). By the law of cosines</p><p>\\[|\\overrightarrow{A'B'} - \\overrightarrow{C'D'}| = \\sqrt{A'B'^2 + C'D'^2 - 2A'B' \\cdot C'D' \\cos\\theta} = \\sqrt{100 - 96\\cos\\theta},\\]</p><p>but also by triangle inequality</p><p>\\[|\\overrightarrow{A'B'} - \\overrightarrow{C'D'}| = |\\overrightarrow{C'B'} + \\overrightarrow{D'A'}| \\le |B'C'| + |D'A'| = 2\\sqrt{25 - h^2} = \\sqrt{100 - 4h^2},\\]</p><p>so it should give \\(h \\le \\sqrt{24\\cos\\theta}\\). Now considering \\(h\\sin\\theta\\) can be bounded by following use of AM-GM inequality</p><p>\\[h\\sin\\theta = \\sqrt{24}\\sqrt{\\cos\\theta \\sin^2\\theta} = \\sqrt{48}\\left(\\cos^2\\theta \\cdot \\frac{\\sin^2\\theta}{2} \\cdot \\frac{\\sin^2\\theta}{2}\\right)^{1/4} \\le 4\\sqrt{3}\\left(\\frac{\\cos^2\\theta + \\frac{\\sin^2\\theta}{2} + \\frac{\\sin^2\\theta}{2}}{3}\\right)^{3/4} = 4 \\cdot 3^{-1/4},\\]</p><p>this gives maximum of \\(V\\) to be \\(1/6 \\cdot 6 \\cdot 8 \\cdot (4 \\cdot 3^{-1/4}) = 2^5 \\cdot 3^{-1/4}\\). Thus \\((n,m) = (20,-1)\\). Thus \\(\\boxed{-20}\\).</p>",
+      "answer": "-20"
+    },
+    "8": {
+      "problem": "<p>Triangle \\(A_1B_1C_1\\) is an equilateral triangle with sidelength 1. For each \\(n &gt; 1\\), we construct triangle \\(A_nB_nC_n\\) from \\(A_{n-1}B_{n-1}C_{n-1}\\) according to the following rule: \\(A_n, B_n, C_n\\) are points on segments \\(A_{n-1}B_{n-1}\\), \\(B_{n-1}C_{n-1}\\), \\(C_{n-1}A_{n-1}\\) respectively, and satisfy the following:</p><p>\\[\\frac{A_{n-1}A_n}{A_nB_{n-1}} = \\frac{B_{n-1}B_n}{B_nC_{n-1}} = \\frac{C_{n-1}C_n}{C_nA_{n-1}} = \\frac{1}{n-1}.\\]</p><p>So for example, \\(A_2B_2C_2\\) is formed by taking the midpoints of the sides of \\(A_1B_1C_1\\). Now, we can write \\(\\frac{|A_5B_5C_5|}{|A_1B_1C_1|} = \\frac{m}{n}\\) where \\(m, n\\) are relatively prime positive integers. Find \\(m + n\\). (For a triangle \\(\\triangle ABC\\), \\(|ABC|\\) denotes its area.)</p>",
+      "solutions": "<p>It will suffice to compute \\(|A_nB_nC_n|/|A_{n-1}B_{n-1}C_{n-1}|\\) for the first few terms. It is immediate that this ratio is proportional to the square of \\(|A_nB_n|/|A_{n-1}B_{n-1}|\\). Noting that based on the construction \\(A_nB_nC_n\\) is equilateral for all \\(n\\) we have by the law of cosines</p><p>\\[|A_nB_n|^2 = \\frac{|A_{n-1}B_{n-1}|^2}{n^2} + \\frac{(n-1)^2|A_{n-1}B_{n-1}|^2}{n^2} - 2\\frac{(n-1)|A_{n-1}B_{n-1}|^2}{n^2}\\]</p><p>\\[\\left(\\frac{|A_nB_n|}{|A_{n-1}B_{n-1}|}\\right)^2 = \\frac{1 + (n-1)^2 - (n-1)}{n^2}\\]</p><p>\\[\\left(\\frac{|A_2B_2|}{|A_1B_1|}\\right)^2 = \\frac{1}{4}\\]</p><p>\\[\\left(\\frac{|A_3B_3|}{|A_2B_2|}\\right)^2 = \\frac{1}{3}\\]</p><p>\\[\\left(\\frac{|A_4B_4|}{|A_3B_3|}\\right)^2 = \\frac{7}{16}\\]</p><p>\\[\\left(\\frac{|A_5B_5|}{|A_4B_4|}\\right)^2 = \\frac{13}{25}\\]</p><p>\\[\\Rightarrow \\frac{|A_5B_5C_5|}{|A_1B_1C_1|} = \\prod_{i=1}^{4} \\frac{|A_{i+1}B_{i+1}C_{i+1}|}{|A_iB_iC_i|} = \\prod_{i=1}^{4} \\left(\\frac{|A_{i+1}B_{i+1}|}{|A_iB_i|}\\right)^2 = \\frac{91}{4800}\\]</p><p>Giving a final answer of \\(\\boxed{4891}\\).</p>",
+      "answer": "4891"
+    }
+  }
+}

@@ -4,8 +4,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   SUBJECTS,
-  TESTS,
+  PRACTICE_TESTS,
   TEST_WHITELIST,
+  TOURNAMENTS,
   VALID_NUMS,
   VALID_VERSIONS,
   VALID_YEARS,
@@ -15,7 +16,7 @@ import {
   DIFFICULTY_MIN,
   DIFFICULTY_MAX,
 } from "../lib/constants.js";
-import { fullTestName, underscores } from "../lib/problems.js";
+import { fullTestName, isTournamentTest, underscores } from "../lib/problems.js";
 import {
   collectMatchingProblems,
   fetchAllProblems,
@@ -192,7 +193,8 @@ function SelectTab({ onResult }) {
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(null);
 
-  const versions = VALID_VERSIONS[test] ?? [];
+  // Tournament rounds take the place of versions.
+  const versions = VALID_VERSIONS[test] ?? TOURNAMENTS[test] ?? [];
   const nums = VALID_NUMS[test];
 
   useEffect(() => {
@@ -222,7 +224,11 @@ function SelectTab({ onResult }) {
     }
     const yearsKey = `${test}${version || ""}`;
     const validYears = VALID_YEARS[yearsKey];
-    if (!validYears || year < validYears.min || year > validYears.max) {
+    // Tournament availability is checked by the page fetch instead.
+    if (
+      !isTournamentTest(test) &&
+      (!validYears || year < validYears.min || year > validYears.max)
+    ) {
       setError("The given test is not available for that year.");
       onResult(null);
       return;
@@ -262,7 +268,7 @@ function SelectTab({ onResult }) {
     <div className="options-input" id="single-input">
       <Tagify
         mode="select"
-        whitelist={TESTS}
+        whitelist={PRACTICE_TESTS}
         value={test ? [test] : []}
         onChange={(arr) => setTest(arr[0] ?? "")}
         placeholder="Test"

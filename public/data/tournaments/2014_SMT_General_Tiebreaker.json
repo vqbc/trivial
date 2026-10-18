@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2014,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2014/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>There is a circular table with 6 chairs. Alice, Bob, and Eve each pick a random chair to sit down in. Compute the probability that each person is sitting next to two empty chairs.</p>",
+      "solutions": "<p>If Alice picks a seat at random to sit down in, Bob then has probability \\(\\frac{2}{5}\\) of sitting down in a valid seat (since if he sits directly across from Alice, Eve will be forced to sit next to one of them), and Eve then has probability \\(\\frac{1}{4}\\) of sitting down in a valid seat, for a probability of \\(\\boxed{\\frac{1}{10}}\\).</p>",
+      "answer": "\\frac{1}{10}"
+    },
+    "2": {
+      "problem": "<p>\\(ABCDEF\\) is a regular hexagon, and diagonal \\(AC\\) has length 6. Find the area of hexagon \\(ABCDEF\\).</p>",
+      "solutions": "<p>Let \\(M\\) be the midpoint of \\(AC\\). Then \\(ABM\\) is a \\(30-60-90\\) right triangle. Since \\(AM = 3\\), \\(AB = 2\\sqrt{3}\\), so the area of an equilateral triangle with side length \\(AB\\) is \\((2\\sqrt{3})^2 \\cdot \\frac{\\sqrt{3}}{4} = 3\\sqrt{3}\\). Hexagon \\(ABCDEF\\) is composed of six such triangles, for a total area of \\(\\boxed{18\\sqrt{3}}\\).</p>",
+      "answer": "18\\sqrt{3}"
+    },
+    "3": {
+      "problem": "<p>Let \\(n\\) be the number which consists of the first 2014 positive integers concatenated together. Let \\(f(x)\\) be the sum of the digits of \\(x\\), and let \\(g(x)\\) be the value obtained by applying \\(f\\) repeatedly to \\(x\\) until it converges to a single value. Compute \\(g(n)\\).</p>",
+      "solutions": "<p>Two integers are equivalent mod some integer \\(k\\) if they have the same remainder upon division by \\(k\\). Note that \\(g(x)\\) is equivalent to \\(f(x) \\pmod{9}\\). Furthermore, \\(f(x)\\) should converge to a single-digit number. Since the sum of the digits \\(1-9\\) is \\(0 \\pmod{9}\\), the sum of the digits of the numbers \\(1-999\\) is also \\(0 \\pmod{9}\\), and the sum of the digits of the numbers \\(1000-1999\\) is \\(1000 \\equiv 1 \\pmod{9}\\). Finally, we can calculate that the sum of the digits of the numbers \\(2000-2014\\) is \\(0 \\pmod{9}\\). Thus, the sum of the digits of \\(n\\) is \\(1 \\pmod{9}\\), and since a number mod 9 is equivalent to the sum of its digits mod 9, it follows that \\(g(x) = \\boxed{1}\\).</p>",
+      "answer": "1"
+    }
+  }
+}

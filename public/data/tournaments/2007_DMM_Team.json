@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2007,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2007/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(x + z = v\\), \\(w + z = 2v\\), \\(z - w = 2y\\), and \\(y \\ne 0\\), compute the value of \\[\\left(x + y + \\frac{x}{y}\\right)^{101}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-1"
+    },
+    "2": {
+      "problem": "<p>Every minute, a snail picks one cardinal direction (either north, south, east, or west) with equal probability and moves one inch in that direction. What is the probability that after four minutes the snail is more than three inches away from where it started?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{9}{64}"
+    },
+    "3": {
+      "problem": "<p>What is the probability that a point chosen randomly from the interior of a cube is closer to the cube’s center than it is to any of the cube’s eight vertices?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABCD\\) be a rectangle where \\(AB = 4\\) and \\(BC = 3\\). Inscribe circles within triangles \\(ABC\\) and \\(ACD\\). What is the distance between the centers of these two circles?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{5}"
+    },
+    "5": {
+      "problem": "<p>\\(C\\) is a circle centered at the origin that is tangent to the line \\(x - y\\sqrt{3} = 4\\). Find the radius of \\(C\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "6": {
+      "problem": "<p>I have a fair 100-sided die that has the numbers 1 through 100 on its sides. What is the probability that if I roll this die three times that the number on the first roll will be greater than or equal to the sum of the two numbers on the second and third rolls?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3333}{20000}"
+    },
+    "7": {
+      "problem": "<p>List all solutions \\((x, y, z)\\) of the following system of equations with \\(x\\), \\(y\\), and \\(z\\) positive real numbers: \\[\\begin{aligned}\nx^2 + y^2 &amp;= 16 \\\\\nx^2 + z^2 &amp;= 4 + xz \\\\\ny^2 + z^2 &amp;= 4 + yz\\sqrt{3}.\n\\end{aligned}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "(2, 2\\sqrt{3}, 2)"
+    },
+    "8": {
+      "problem": "<p>\\(A_1A_2A_3A_4A_5A_6A_7\\) is a regular heptagon (7 sided-figure) centered at the origin where \\(A_1 = \\left(\\sqrt[91]{6}, 0\\right)\\). \\(B_1B_2B_3\\cdots B_{13}\\) is a regular triskaidecagon (13 sided-figure) centered at the origin where \\(B_1 = \\left(0, \\sqrt[91]{41}\\right)\\). Compute the product of all lengths \\(A_iB_j\\), where \\(i\\) ranges between 1 and 7, inclusive, and \\(j\\) ranges between 1 and 13, inclusive.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{1717}"
+    },
+    "9": {
+      "problem": "<p>How many three-digit integers are there such that one digit of the integer is exactly two times a digit of the integer that is in a different place than the first? (For example, 100, 122, and 124 should be included in the count, but 42 and 130 should not.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "205"
+    },
+    "10": {
+      "problem": "<p>Let \\(\\alpha\\) and \\(\\beta\\) be the solutions of the quadratic equation: \\[x^2 - 1154x + 1 = 0.\\] Find \\(\\sqrt[4]{\\alpha} + \\sqrt[4]{\\beta}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6"
+    }
+  }
+}

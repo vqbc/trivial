@@ -1,0 +1,83 @@
+{
+  "test": "CMM Individual",
+  "year": 2015,
+  "name": "Individual Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_c81ee1cb9d604acaa66aa80c1fc9f9cb.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The following number is the product of the divisors of \\(n\\). \\[2^6 3^3\\] What is \\(n\\)?</p>",
+      "solutions": "<p>In general, the product of the divisors of \\(n\\) is \\(n^{\\#\\text{ of divisors of }n}\\). \\(12 = 2^2 3\\) has \\(6\\) divisors, and \\((2^2 3)^3 = 2^6 3^3\\).</p>",
+      "answer": "12"
+    },
+    "2": {
+      "problem": "<p>Let a right triangle have the sides \\(AB = \\sqrt{3}\\), \\(BC = \\sqrt{2}\\), and \\(CA = 1\\). Let \\(D\\) be a point such that \\(AD = BD = 1\\). Let \\(E\\) be the point on line \\(BD\\) that is equidistant from \\(D\\) and \\(A\\). Find the angle \\(AEB\\).</p>",
+      "solutions": "<p>Since \\(D\\) is equidistant from points \\(A\\) and \\(B\\), it is on the perpendicular bisector of \\(AB\\). In particular, if \\(M\\) is the midpoint of \\(AB\\), then \\(\\triangle MAD\\) is a right triangle with side length \\(AM = \\sqrt{3}/2\\) and hypotenuse \\(AD = 1\\). This means that \\(\\triangle MAD\\) is a \\(30^\\circ - 60^\\circ - 90^\\circ\\) triangle. By the same reasoning, \\(\\triangle BMD\\) is also a \\(30^\\circ - 60^\\circ - 90^\\circ\\) triangle.</p><p>Then since \\(E\\) is on line \\(BD\\), we see that \\(\\angle ADE = 180^\\circ - \\angle ADM - \\angle BDM = 60^\\circ\\). Now note that since \\(E\\) is on the perpendicular bisector of segment \\(AD\\), if \\(N\\) is midpoint of \\(AD\\) we find that both \\(\\triangle DEN\\) and \\(\\triangle AEN\\) are \\(30^\\circ - 60^\\circ - 90^\\circ\\) triangles. Thus we find that \\(\\angle AEB = 60^\\circ\\).</p>",
+      "answer": "60^\\circ"
+    },
+    "3": {
+      "problem": "<p>There are twelve indistinguishable blackboards that are distributed to eight different schools. There must be at least one board for each school. How many ways are there of distributing the boards?</p>",
+      "solutions": "<p>Since each school automatically gets assigned at least one board, the problem is equivalent to the number of ways to distribute \\((12-8) = 4\\) boards among eight schools. By stars and bars, this is just \\(\\binom{8+4-1}{4} = \\binom{11}{4} = 330\\).</p>",
+      "answer": "330"
+    },
+    "4": {
+      "problem": "<p>A Nishop is a chess piece that moves like a knight on its first turn, like a bishop on its second turn, and in general like a knight on odd-numbered turns and like a bishop on even-numbered turns.</p><p>A Nishop starts in the bottom-left square of a \\(3 \\times 3\\)-chessboard. How many ways can it travel to touch each square of the chessboard exactly once?</p>",
+      "solutions": "<p>There is full choice in the first two moves, and then every move is forced. Observe that the last move must be from a corner square to the center.</p>",
+      "answer": "4"
+    },
+    "5": {
+      "problem": "<p>Let a Fibonacci Spiral be a spiral constructed by the addition of quarter-circles of radius \\(n\\), where each \\(n\\) is a term of the Fibonacci series: \\[1, 1, 2, 3, 5, 8, \\ldots\\] (Each term in this series is the sum of the two terms that precede it.) What is the arclength of the maximum Fibonacci spiral that can be enclosed in a rectangle of area \\(714\\), whose side lengths are terms in the Fibonacci series?</p>",
+      "solutions": "<p>The rectangle has dimensions \\(34 \\cdot 21\\). Therefore, the largest quarter circle inside of it has radius \\(21\\). The combined arclength is \\[\\frac{\\pi}{2}(1+1+2+3+5+8+13+21) = 27\\pi.\\]</p>",
+      "answer": "27\\pi"
+    },
+    "6": {
+      "problem": "<p>Suppose that \\(a_1 = 1\\) and \\[a_{n+1} = a_n - \\frac{2}{n+2} + \\frac{4}{n+1} - \\frac{2}{n}\\] What is \\(a_{15}\\)?</p>",
+      "solutions": "<p>Telescoping, we see that \\[a_n = a_1 - \\frac{2}{1} + \\frac{2}{2} + \\frac{2}{n} - \\frac{2}{n+1}\\] Therefore, \\(a_n = \\frac{2(n+1) - 2n}{n(n+1)} = \\frac{2}{n(n+1)}\\) so \\(a_{15} = \\frac{1}{120}\\).</p>",
+      "answer": "\\frac{1}{120}"
+    },
+    "7": {
+      "problem": "<p>Consider 5 points in the plane, no three of which are collinear. Let \\(n\\) be the number of circles that can be drawn through at least three of the points. What are the possible values of \\(n\\)?</p>",
+      "solutions": "<p>Any three points define a unique circle. We have three cases:</p><ul><li>All points are on the same circle</li><li>Four points are on one circle with the last point off the circle. Any set of two points on the main circle forms a unique circle with the last point, so there are \\(1 + \\binom{4}{2} = 7\\) circles.</li><li>No more than 3 points lie on the same circle. Any set of three points forms a unique circle, so there are \\(\\binom{5}{3} = 10\\) circles.</li></ul>",
+      "answer": "\\{1, 7, 10\\}"
+    },
+    "8": {
+      "problem": "<p>Find the number of positive integers \\(n\\) satisfying \\(\\lfloor n/2014 \\rfloor = \\lfloor n/2016 \\rfloor\\).</p>",
+      "solutions": "<p>Suppose \\(n\\) is such an integer, and let \\(k = \\lfloor n/2014 \\rfloor \\ge 0\\). Then we have \\(n = 2014k + x = 2016k + y\\), for some \\(0 \\le x \\le 2013\\), \\(0 \\le y \\le 2015\\). It follows that \\(2k = x - y\\), and since \\(x - y \\le x \\le 2013\\), we must have \\(0 \\le k \\le 1006\\), and \\(2k \\le x \\le 2013\\). To show that these conditions are sufficient, let \\((k, x)\\) be a pair with \\(0 \\le k \\le 1006\\) and \\(2k \\le x \\le 2013\\). If we take \\(n = 2014k + x\\), and \\(y = x - 2k\\) (so \\(0 \\le y \\le 2013 - 2k &lt; 2015\\)), we have \\(\\lfloor n/2016 \\rfloor = \\lfloor k + (y/2016) \\rfloor = k = \\lfloor k + (x/2014) \\rfloor = \\lfloor n/2014 \\rfloor\\), so \\(n\\) satisfies the given condition. Thus \\(n\\) satisfies the condition if and only if the associated pair \\((k, x)\\) satisfies the given bounds. For a given \\(k\\) there are \\(2014 - 2k\\) values of \\(x\\) satisfying the bounds, so there are a total of \\(\\sum_{k=0}^{1006}(2014 - 2k) = 1007(1008) = 1015056\\) pairs. However, this counts the pair \\((0,0)\\), which is associated with \\(n = 0\\), so the number of positive \\(n\\) satisfying the condition is \\(1015055\\).</p>",
+      "answer": "1015055"
+    },
+    "9": {
+      "problem": "<p>Let \\(f\\) be a function taking real numbers to real numbers such that for all reals \\(x \\ne 0, 1\\), we have \\[f(x) + f\\left(\\frac{1}{1-x}\\right) = (2x-1)^2 + f\\left(1 - \\frac{1}{x}\\right).\\] Compute \\(f(3)\\).</p>",
+      "solutions": "<p>Notice that the map \\(x \\mapsto 1 - \\frac{1}{x} \\mapsto \\frac{1}{1-x} \\mapsto x\\) permutes three terms of our equation. \\[f(x) + f\\left(\\frac{1}{1-x}\\right) - f\\left(1 - \\frac{1}{x}\\right) = (2x-1)^2\\] \\[f\\left(1 - \\frac{1}{x}\\right) + f(x) - f\\left(\\frac{1}{1-x}\\right) = \\left(2\\left(1 - \\frac{1}{x}\\right) - 1\\right)^2\\] Adding the two equations, we see that \\(f\\) satisfies \\[2f(x) = (2x-1)^2 + \\left(2\\left(1 - \\frac{1}{x}\\right) - 1\\right)^2\\] Then \\(f(3) = \\frac{1}{2}\\left(25 + \\frac{1}{9}\\right) = \\frac{113}{9}\\).</p>",
+      "answer": "\\frac{113}{9}"
+    },
+    "10": {
+      "problem": "<p>Alice and Bob split 5 beans into piles. They take turns removing a positive number of beans from a pile of their choice. The player to take the last bean loses. Alice plays first. How many ways are there to split the piles such that Alice has a winning strategy?</p>",
+      "solutions": "<p>Bob wins when there are 5 separate piles and Alice wins in every other configuration. There are \\(6\\) such configurations with a positive number of piles. \\(5\\) was also an accepted answer, which results if “piles” is interpreted to mean “at least two piles”. To check that these positions are winning for Alice, we can use the following principle: In general, a position is a first player win if and only if the first player can move to some second-player win position.</p><p>A position in this game is a second player win if it consists of an odd number of piles of one bean. A one-pile position is a first player win if it has strictly more than one bean.</p>",
+      "answer": "6"
+    },
+    "11": {
+      "problem": "<p>Triangle \\(ABC\\) is an equilateral triangle of side length \\(1\\). Let point \\(M\\) be the midpoint of side \\(AC\\). Another equilateral triangle \\(DEF\\), also of side length \\(1\\), is drawn such that the circumcenter of \\(DEF\\) is \\(M\\), point \\(D\\) rests on side \\(AB\\). The length of \\(AD\\) is of the form \\(\\frac{a+\\sqrt{b}}{c}\\), where \\(b\\) is square free. What is \\(a+b+c\\)?</p>",
+      "solutions": "<p>\\(MD\\) is a radius of triangle \\(DEF\\) and has a length of \\(\\frac{1}{\\sqrt{3}}\\). Since \\(M\\) is the midpoint of \\(AC\\), \\(AM\\) has a length of \\(\\frac{1}{2}\\). Let the length of \\(AD\\) be \\(x\\). By the law of cosines, \\[x^2 + \\left(\\frac{1}{2}\\right)^2 - 2\\left(\\frac{1}{2}\\right)x\\cos\\frac{\\pi}{3} = \\left(\\frac{1}{\\sqrt{3}}\\right)^2\\] We can reduce the expression to a quadratic \\[x^2 - \\frac{1}{2}x - \\frac{1}{12}\\] So \\(x = \\frac{3+\\sqrt{21}}{12}\\) and the answer is \\(3+21+12 = 36\\).</p>",
+      "answer": "36"
+    },
+    "12": {
+      "problem": "<p>Consider the function \\(f(x) = \\max\\{-11x - 37, x - 1, 9x + 3\\}\\) defined for all real \\(x\\). Let \\(p(x)\\) be a quadratic polynomial tangent to the graph of \\(f\\) at three distinct points with \\(x\\) values \\(t_1, t_2\\), and \\(t_3\\). Compute the maximum value of \\(t_1 + t_2 + t_3\\) over all possible \\(p\\).</p>",
+      "solutions": "<p>Since a parabola can only be tangent to a single line at at most one point, we see that \\(p\\) must be simultaneously tangent to the lines \\(y = -11x - 37, y = x - 1\\), and \\(y = 9x + 3\\). If we let \\(p(x)\\) have leading coefficient \\(a\\), we find \\[\\begin{cases} p(x) - (-11x - 37) = a(x - t_1)^2 \\\\ p(x) - (x - 1) = a(x - t_2)^2 \\\\ p(x) - (9x + 3) = a(x - t_3)^2 \\end{cases}.\\] Subtracting the second equation from the first, we end up with \\[12x + 36 = a(t_2 - t_1)(2x - t_1 - t_2).\\] Equating coefficients, we have \\[\\begin{cases} 12 = 2a(t_2 - t_1) \\\\ 36 = -a(t_2 - t_1)(t_1 + t_2). \\end{cases}\\] Dividing the second equation by the first and simplifying yields \\[t_1 + t_2 = -6.\\] We can similarly find that \\[t_2 + t_3 = -1\\] and \\[t_3 + t_1 = -20.\\] Thus \\[t_1 + t_2 + t_3 = -27/2.\\]</p>",
+      "answer": "-\\frac{27}{2}"
+    },
+    "13": {
+      "problem": "<p>Circle \\(J_1\\) of radius \\(77\\) is centered at point \\(X\\) and circle \\(J_2\\) of radius \\(39\\) is centered at point \\(Y\\). Point \\(A\\) lies on \\(J_1\\) and on line \\(XY\\), such that \\(A\\) and \\(Y\\) are on opposite sides of \\(X\\). \\(\\Omega\\) is the unique circle simultaneously tangent to the tangent segments from point \\(A\\) to \\(J_2\\) and internally tangent to \\(J_1\\). If \\(XY = 157\\), what is the radius of \\(\\Omega\\)?</p>",
+      "solutions": "<p>Set the point \\(C\\) as the center of circle \\(\\Omega\\). Draw perpendicular \\(CD\\) and \\(YE\\) to \\(AE\\) where \\(E\\) is the tangent point of circle \\(Y\\). We also know that points \\(A, X, C, Y\\) are colinear. We have \\(\\triangle ACD \\sim \\triangle AYE\\). Thus, we have \\(\\frac{CD}{YE} = \\frac{AC}{AY}\\) and thus \\(\\frac{CD}{39} = \\frac{154-CD}{234}\\). Solving gives us \\(CD = 22\\).</p>",
+      "answer": "22"
+    },
+    "14": {
+      "problem": "<p>Find the smallest positive integer \\(n\\) so that for any integers \\(a_1, a_2, \\ldots, a_{527}\\), the number \\[\\left(\\prod_{j=1}^{527} a_j\\right) \\cdot \\left(\\sum_{j=1}^{527} a_j^n\\right)\\] is divisible by \\(527\\).</p>",
+      "solutions": "<p>First let’s show that the above quantity is divisible by \\(527\\) if \\(n = 240\\). Note that \\(527 = 17 \\cdot 31\\) and so we need to check divisibility by \\(17\\) and \\(31\\). For \\(17\\), notice that if any of the \\(a_j\\) are divisible by \\(17\\) we’ll be done (as then \\(\\prod_{j=1}^{527} a_j\\) will be as well). Otherwise, each of the \\(a_j\\)’s is nonzero and therefore \\(a_j^{240} \\equiv (a_j^{16})^{15} \\equiv 1 \\pmod{17}\\) by Fermat’s little theorem. The same reasoning applies for \\(31\\), except now we use the fact that \\(30 \\mid 240\\) rather than \\(16 \\mid 240\\).</p><p>To show that no possible value of \\(n\\) less than \\(240\\) can work we construct a counterexample. Let \\(a_j = 1\\) for \\(1 \\le j &lt; 527\\), and take \\(a_{527} = g\\) where \\(g\\) is simultaneously a primitive root modulo \\(17\\) and \\(31\\) (such a residue exists by the Chinese Remainder Theorem). Then the only way the given quantity vanishes simultaneously modulo \\(17\\) and \\(31\\) is if \\(g^n \\equiv 1 \\pmod{17}\\) and \\(g^n \\equiv 1 \\pmod{31}\\). Since \\(g\\) is a primitive root both these primes, we need \\(16 \\mid n\\) and \\(30 \\mid n\\). Thus \\(240 \\mid n\\), so that \\(n \\ge 240\\) is forced, a contradiction.</p>",
+      "answer": "240"
+    },
+    "15": {
+      "problem": "<p>A circle \\(\\Omega\\) of unit radius is inscribed in the quadrilateral \\(ABCD\\). Let circle \\(\\omega_A\\) be the unique circle of radius \\(r_A\\) externally tangent to \\(\\Omega\\), and also tangent to segments \\(AB\\) and \\(DA\\). Similarly define circles \\(\\omega_B, \\omega_C\\), and \\(\\omega_D\\) and radii \\(r_B, r_D\\), and \\(r_D\\). Compute the smallest positive real \\(\\lambda\\) so that \\(r_C &lt; \\lambda\\) over all such configurations with \\(r_A &gt; r_B &gt; r_C &gt; r_D\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2015_CMM_Individual/15-fig1.png\" width=\"432\" alt=\"\"></p><p><img class=\"latexcenter\" src=\"/data/tournaments/2015_CMM_Individual/15-fig2.png\" width=\"371\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(\\theta_A, \\theta_B, \\theta_C, \\theta_D\\) be as shown in Figure 1. Then as shown in Figure 2, similar right triangles give \\(\\frac{1+r_A}{1-r_A} = \\sec\\theta_A\\), so \\(r_A = 1 - \\frac{2}{1+\\sec\\theta_A}\\), and the analogous equality holds for \\(B, C, D\\). \\(1 + \\sec\\theta\\) is increasing for \\(\\theta\\) in \\([0, \\pi/2)\\), so \\(\\frac{2}{1+\\sec\\theta}\\) is decreasing for \\(\\theta\\) in this interval, and thus \\(1 - \\frac{2}{1+\\sec\\theta}\\) is increasing in this interval. It follows that order is preserved, i.e. \\(\\theta_A &lt; \\theta_B\\) if and only if \\(1 - \\frac{2}{1+\\sec\\theta_A} &lt; 1 - \\frac{2}{1+\\sec\\theta_B}\\), meaning \\(r_A &lt; r_B\\). Then we have that \\(r_A &gt; r_B &gt; r_C &gt; r_D\\) if and only if \\(\\theta_A &gt; \\theta_B &gt; \\theta_C &gt; \\theta_D\\). Assuming this inequality holds, we have \\(3\\theta_C &lt; \\theta_A + \\theta_B + \\theta_C &lt; \\theta_A + \\theta_B + \\theta_C + \\theta_D = \\pi\\), so \\(\\theta_C &lt; \\pi/3\\). For all \\(\\theta &lt; \\pi/3\\), we can construct a quadrilateral with \\(\\theta_C = \\theta\\), specifically by taking \\(\\theta_A = \\pi/3 - \\varepsilon/3, \\theta_B = \\pi/3 - 2\\varepsilon/3, \\theta_C = \\pi/3 - \\varepsilon, \\theta_D = 2\\varepsilon\\), where \\(\\varepsilon = \\pi/3 - \\theta\\). It follows that \\(\\theta = \\pi/3\\) is the smallest positive real \\(\\theta\\) such that \\(\\theta_C &lt; \\theta\\) over all configurations. Since \\(1 - \\frac{2}{1+\\sec\\theta}\\) is a strictly increasing continuous function of \\(\\theta\\) on \\([0, \\pi/2)\\), we have that \\(\\lambda = 1 - \\frac{2}{1+\\sec(\\pi/3)} = 1/3\\) is the desired value.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2015_CMM_Individual/15-fig1.png\" width=\"432\" alt=\"\"></p><p><img class=\"latexcenter\" src=\"/data/tournaments/2015_CMM_Individual/15-fig2.png\" width=\"371\" alt=\"\"></p>",
+      "answer": "\\frac{1}{3}"
+    }
+  }
+}

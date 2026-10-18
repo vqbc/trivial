@@ -1,0 +1,48 @@
+{
+  "test": "DMM Individual",
+  "year": 2008,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2008/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Joe owns stock. On Monday morning on October 20th, 2008, his stocks were worth $250,000. The value of his stocks, for each day from Monday to Friday of that week, increased by 10%, increased by 5%, decreased by 5%, decreased by 15%, and decreased by 20%, though not necessarily in that order. Given this information, let \\(A\\) be the largest possible value of his stocks on that Friday evening, and let \\(B\\) be the smallest possible value of his stocks on that Friday evening. What is \\(A - B\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "2": {
+      "problem": "<p>What is the smallest positive integer \\(k\\) such that \\(2k\\) is a perfect square and \\(3k\\) is a perfect cube?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "72"
+    },
+    "3": {
+      "problem": "<p>Two competitive ducks decide to have a race in the first quadrant of the \\(xy\\) plane. They both start at the origin, and the race ends when one of the ducks reaches the line \\(y = \\frac{1}{2}\\). The first duck follows the graph of \\(y = \\frac{x}{3}\\) and the second duck follows the graph of \\(y = \\frac{x}{5}\\). If the two ducks move in such a way that their \\(x\\)-coordinates are the same at any time during the race, find the ratio of the speed of the first duck to that of the second duck when the race ends.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{5\\sqrt{65}}{39}"
+    },
+    "4": {
+      "problem": "<p>There were grammatical errors in this problem as stated during the contest. The problem should have said:</p><p>You play a carnival game as follows: The carnival worker has a circular mat of radius 20 cm, and on top of that is a square mat of side length 10 cm, placed so that the centers of the two mats coincide. The carnival worker also has three disks, one each of radius 1 cm, 2 cm, and 3 cm. You start by paying the worker a modest fee of one dollar, then choosing two of the disks, then throwing the two disks onto the mats, one at a time, so that the center of each disk lies on the circular mat. You win a cash prize if the center of the large disk is on the square AND the large disk touches the small disk, otherwise you just lost the game and you get no money. How much is the cash prize if choosing the two disks randomly and then throwing the disks randomly (i.e. with uniform distribution) will, on average, result in you breaking even?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "96\\pi"
+    },
+    "5": {
+      "problem": "<p>Four boys and four girls arrive at the Highball High School Senior Ball without a date. The principal, seeking to rectify the situation, asks each of the boys to rank the four girls in decreasing order of preference as a prom date and asks each girl to do the same for the four boys. None of the boys know any of the girls and vice-versa (otherwise they would have probably found each other before the prom), so all eight teenagers write their rankings randomly. Because the principal lacks the mathematical chops to pair the teenagers together according to their stated preference, he promptly ignores all eight of the lists and randomly pairs each of the boys with a girl. What is the probability that no boy ends up with his third or his fourth choice, and no girl ends up with her third or fourth choice?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{256}"
+    },
+    "6": {
+      "problem": "<p>In the diagram below, \\(ABCDEFGH\\) is a rectangular prism, \\(\\angle BAF = 30^\\circ\\) and \\(\\angle DAH = 60^\\circ\\). What is the cosine of \\(\\angle CEG\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2008_DMM_Individual/6-fig1.png\" width=\"144\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\sqrt{130}}{13}"
+    },
+    "7": {
+      "problem": "<p>Two cows play a game where each has one playing piece, they begin by having the two pieces on opposite vertices of an octahedron, and the two cows take turns moving their piece to an adjacent vertex. The winner is the first player who moves its piece to the vertex occupied by its opponent’s piece. Because cows are not the most intelligent of creatures, they move their pieces randomly. What is the probability that the first cow to move eventually wins?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2}{5}"
+    },
+    "8": {
+      "problem": "<p>Find the last two digits of \\[\\sum_{k=1}^{2008} k \\binom{2008}{k}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "24"
+    }
+  }
+}

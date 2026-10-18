@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2000,
+  "name": "Geometry",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2000/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many rectangles are there on an 8x8 checkerboard?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Geometry/1-fig1.png\" width=\"138\" alt=\"\"></p>",
+      "solutions": "<p>Consider the board labeled as below, with labels for columns and rows. To choose any rectangle on the board, it is sufficient to choose some number (1-8) of adjacent columns, and some number (1-8) of adjacent rows, since the rectangle can be created by forming the intersection of the columns and rows. For instance, the intersection of columns 2,3 and rows 3,4,5 is the rectangle shaded below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Geometry/1-fig2.png\" width=\"195\" alt=\"\"></p><p>So, there are 8 ways to choose 1 adjacent column, 7 ways to choose 2 adjacent columns, …, 1 way to choose 8 adjacent columns, so there are \\(8+7+6+5+4+3+2+1=36\\) total ways to choose the columns, and 36 ways to choose the rows. Thus, the total number of ways to choose a rectangle (i.e. the total number of rectangles) is \\(36^2 = \\boxed{1296}\\).</p>",
+      "answer": "1296"
+    },
+    "2": {
+      "problem": "<p>In a triangle the sum of squares of the sides is 96. What is the maximum possible value of the sum of the medians?</p>",
+      "solutions": "<p>The maximum occurs in an equilateral triangle, in which case the sides \\(a = b - c\\) are given by \\(a^2+b^2+c^2=3a^2=96\\), so \\(a=4\\sqrt{2}\\). Thus, the medians are \\(3 \\cdot \\left(\\frac{a\\sqrt{3}}{2}\\right) =\\boxed{6\\sqrt{6}}\\).</p>",
+      "answer": "6\\sqrt{6}"
+    },
+    "3": {
+      "problem": "<p>Find \\(PB\\), given that \\(PA = 15, PC = 20, PD = 7\\), and \\(ABCD\\) is a square.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Geometry/3-fig1.png\" width=\"203\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(s\\) be the side length of \\(ABCD\\). Since \\(ABCD\\) is a square, we can write \\(2s^2 = (PA)^2+(PC)^2 = (PB)^2+(PC)^2\\). So, we can substitute in for \\(PA, PC\\), and \\(PD\\) to get that \\(PB =\\boxed{24}\\).</p>",
+      "answer": "24"
+    },
+    "4": {
+      "problem": "<p>Find the total area of the non-triangle regions in the figure below (the shaded area).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Geometry/4-fig1.png\" width=\"268\" alt=\"\"></p>",
+      "solutions": "<p>Notice that in general, when there is a rectangle of side length \\(x\\) and \\(y\\), the area of the non-triangle regions (created by drawing a line connecting the midpoint of two opposite lines and a line connecting two opposite corners - see diagram for examples) is simply \\(\\frac{3}{4}\\) of the original area of the box, since the area of the excluded triangles are \\(\\frac{1}{2}\\cdot\\frac{y}{2}\\cdot\\frac{x}{2}+\\frac{1}{2}\\cdot\\frac{y}{2}\\cdot\\frac{x}{2}=2\\cdot\\frac{xy}{2}=\\frac{xy}{4}\\), so the desired area is simply \\(ab-\\frac{ab}{4}=\\frac{3}{4}ab\\), as desired.</p><p>So, if we consider the four rectangles making up the large rectangle that are divided this way (the one with dimensions \\(\\frac{a}{4}\\times\\frac{b}{3}\\), etc.), we can say that the total shaded area is \\(\\frac{3}{4}\\) of the total area of the rectangle - that is, \\(\\boxed{\\frac{3}{4}ab}\\).</p>",
+      "answer": "\\frac{3}{4}ab"
+    },
+    "5": {
+      "problem": "<p>Side \\(\\overline{AB} = 3\\). \\(\\triangle ABF\\) is an equilateral triangle. Side \\(\\overline{DE} = \\overline{AB} = \\overline{AF} = \\overline{GE}\\). \\(\\angle FED = 60^\\circ\\). \\(\\overline{FG} = 1\\). Calculate the area of \\(ABCDE\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Geometry/5-fig1.png\" width=\"203\" alt=\"\"></p>",
+      "solutions": "<p>The area of \\(\\triangle ABF = \\frac{1}{2}bh = \\frac{1}{2}\\cdot 3h = \\frac{3}{2}(3\\sin 60^\\circ) = \\frac{9}{2}\\sin 60^\\circ\\). The area of \\(\\triangle FCDE =\\) area of \\(\\triangle ABF\\) - area of \\(\\triangle FGC = \\frac{9}{2}\\sin 60^\\circ - \\frac{1}{2}\\sin 60^\\circ = 4\\sin 60^\\circ\\). Therefore, area of \\(ABCDE =\\) area of \\(\\triangle ABF\\) + area of \\(FCDE = \\frac{9}{2}\\sin 60^\\circ + 4\\sin 60^\\circ = \\frac{17}{2}\\sin 60^\\circ = \\boxed{\\frac{17\\sqrt{3}}{4}}\\).</p>",
+      "answer": "\\frac{17\\sqrt{3}}{4}"
+    },
+    "6": {
+      "problem": "<p>What is the area of the largest circle contained in an equilateral triangle of area \\(8\\sqrt{3}\\)?</p>",
+      "solutions": "<p>The area of an equilateral triangle with side length \\(s\\) is \\(\\frac{\\sqrt{3}}{4}s^2\\). Therefore, the side length is \\(4\\sqrt{2}\\) and height \\(h=2\\sqrt{6}\\). Now, if \\(r\\) is the radius of the inscribed circle, then \\(r = \\frac{h}{3}\\), since we have an equilateral triangle. Thus the area is \\(\\pi r^2 =\\boxed{\\frac{8\\pi}{3}}\\).</p>",
+      "answer": "\\frac{8\\pi}{3}"
+    },
+    "7": {
+      "problem": "<p>Let \\(ABC\\) be a triangle inscribed in the ellipse \\(\\frac{x^2}{4} + \\frac{y^2}{9} = 1\\). If its centroid is the origin \\((0,0)\\), find its area.</p>",
+      "solutions": "<p>Let’s ”resize” the coordinates to be \\(x' = x, y' = \\frac{2y}{3}\\). This keeps the origin at \\((0,0)\\), but turns our ellipse into a circle of radius 2. Thus now, the triangle is equilateral, and we can see it now has area \\(3\\sqrt{3}\\). Once we expand back, we can see we are just multiplying the area by \\(\\frac{3}{2}\\) and so the answer is \\(\\boxed{\\frac{9\\sqrt{3}}{2}}\\).</p>",
+      "answer": "\\frac{9\\sqrt{3}}{2}"
+    },
+    "8": {
+      "problem": "<p>A sphere is inscribed inside a pyramid with a square as a base whose height is \\(\\frac{\\sqrt{15}}{2}\\) times the length of one edge of the base. A cube is inscribed inside the sphere. What is the ratio of the volume of the pyramid to the volume of the cube?</p>",
+      "solutions": "<p>By standard formula, we have that the radius of the inscribed circle, \\(r\\), is \\(r = \\frac{ab\\sin A}{2a+b}\\) (isoceles triangle that is formed by cutting the pyramid vertically in half (cuts the base into 2 equal rectangles)). \\(h^2+\\left(\\frac{b}{2}\\right)^2 = a^2\\) gives \\(a = \\sqrt{h^2+\\frac{b^2}{4}}\\). Also \\(\\sin A = \\frac{h}{a}\\). Therefore, \\(r = \\frac{bh}{2\\sqrt{h^2+\\frac{b^2}{4}}+b}\\). Note that the diameter of the cube is the diameter of the sphere. Let \\(l\\) be the length of the side of the cube, so the diameter of the cube is \\(l\\sqrt{3} = 2r\\), so \\(l = \\frac{2r}{\\sqrt{3}}\\). So, the volume of the pyramid is \\(\\frac{1}{3}b^2h\\) and the cube volume is \\(l^3\\). So, the ratio is \\(\\boxed{\\frac{25\\sqrt{3}}{6}}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Geometry/8-fig1.png\" width=\"233\" alt=\"\"></p>",
+      "answer": "\\frac{25\\sqrt{3}}{6}"
+    },
+    "9": {
+      "problem": "<p>How many hexagons are in the figure below with vertices on the given vertices? (Note that a hexagon need not be convex, and edges may cross!)</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Geometry/9-fig1.png\" width=\"165\" alt=\"\"></p>",
+      "solutions": "<p>A hexagon can be formed by removing any vertex, removing all vertices connected to that vertex, and then removing any edges connected to any of the removed vertices, and these are the only hexagons in the diagram. Thus, since there are 10 vertices, there are \\(\\boxed{10}\\) hexagons in the figure below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Geometry/9-fig2.png\" width=\"183\" alt=\"\"></p>",
+      "answer": "10"
+    },
+    "10": {
+      "problem": "<p>Let \\(C_1\\) and \\(C_2\\) be two concentric reflective hollow metal spheres of radius \\(R\\) and \\(R\\sqrt{3}\\) respectively. From a point P on the surface of \\(C_2\\), a ray of light is emitted inward at \\(30^\\circ\\) from the radial direction. The ray eventually returns to P. How many <b>total</b> reflections off of \\(C_1\\) and \\(C_2\\) does it take?</p>",
+      "solutions": "<p>Consider the flattened version of the situation. Then let \\(O\\) be the center fo the spheres, \\(A\\) be the first reflection point, \\(B\\) be the point of \\(C_1\\) such that \\(OB\\) is perpendicular to \\(OP\\). Then since \\(OB=1, OP=\\sqrt{3}\\), \\(\\angle PBO = 60^\\circ\\) and \\(P,B,A\\) are collinear, \\(\\angle BAO = 60^\\circ\\) implies that \\(\\angle POA = 30^\\circ\\). Therefore, each reflection takes the ray \\(\\frac{1}{12}\\) around the circle, so there are \\(\\boxed{11}\\) reflections.</p>",
+      "answer": "11"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "test": "SMT Guts",
+  "year": 2016,
+  "name": "Guts Round",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2016/guts-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Kevin plants corn and cotton. Once he harvests the crops, he has 30 pounds of corn and \\(x\\) pounds of cotton. Corn sells for $5 per pound and cotton sells for $10 per pound. If Kevin sells all his corn and cotton for a total of $640, then compute \\(x\\).</p>",
+      "solutions": "<p>Kevin sells his corn for \\(30\\cdot5\\) dollars and his cotton for \\(x\\cdot10\\) dollars. Thus \\(30\\cdot5+x\\cdot10=640\\), so \\(x=\\frac{640-30\\cdot5}{10}=\\frac{490}{10}=\\boxed{49}\\).</p>",
+      "answer": "49"
+    },
+    "2": {
+      "problem": "<p>\\(ABCD\\) is a square where \\(AB = \\sqrt{2016}\\). Let \\(X\\) be a point on \\(AB\\) and \\(Y\\) be a point on \\(CD\\) such that \\(AX = CY\\). Compute the area of trapezoid \\(AXYD\\).</p>",
+      "solutions": "<p>Note that trapezoids \\(AXYD\\) and \\(BXYC\\) are congruent, so the area of \\(AXYD\\) is always \\(\\frac{2016}{2} = \\boxed{1008}\\).</p>",
+      "answer": "1008"
+    },
+    "3": {
+      "problem": "<p>If the integer \\(n\\) leaves a remainder of 4 when divided by 5, then what is the largest possible remainder when \\(2n\\) is divided by 15?</p>",
+      "solutions": "<p>Since \\(n\\) leaves a remainder of 4 when divided by 5, it leaves a remainder of 4, 9, or 14 when divided by 15. Thus \\(2n\\) leaves a remainder of \\(2\\cdot4=8\\), \\(2\\cdot9-15=3\\), or \\(2\\cdot14-15=13\\) when divided by 15, and the maximum remainder is \\(\\boxed{13}\\).</p>",
+      "answer": "13"
+    },
+    "4": {
+      "problem": "<p>Let \\(d(n)\\) represent the sum of the digits of the integer \\(n\\). For example, \\[d(2016) = 2+0+1+6=9.\\] For how many positive 3-digit integers \\(k\\) is it true that \\(d(k) &gt; d(k+1)\\)?</p>",
+      "solutions": "<p>Note that \\(d(k) &gt; d(k+1)\\) if and only if the units digit of \\(k\\) is 9, because if the units digit of \\(k\\) is not 9, then \\(d(k) = d(k+1) - 1 &lt; d(k+1)\\). Since there are 9 possible hundreds digits and 10 possible tens digits, there are \\(9\\cdot10 = \\boxed{90}\\) possible values of \\(k\\).</p>",
+      "answer": "90"
+    },
+    "5": {
+      "problem": "<p>Let \\(A\\), \\(B\\), and \\(C\\) be three points on circle \\(O\\) such that \\(AC\\) is a diameter of \\(O\\). Extend line \\(AC\\) to a point \\(D\\) such that \\(DB\\) is tangent to \\(O\\) at \\(B\\), and suppose that \\(\\angle ADB = 20^\\circ\\). Compute \\(\\angle ACB\\).</p>",
+      "solutions": "<p><i>Since we did not specify in which direction to extend the line \\(AC\\), we also accepted \\(35^\\circ\\) as an acceptable answer.</i></p><p>Let \\(O\\) be the center of the circle. Through angle chasing, we can determine that \\[\\angle BOD = 90^\\circ - \\angle ADB = 70^\\circ\\] \\[\\angle ACB = \\frac{180^\\circ - \\angle BOD}{2} = \\boxed{55^\\circ}.\\]</p>",
+      "answer": "55^\\circ"
+    },
+    "6": {
+      "problem": "<p>A group of \\(n\\) people, including Caroline and her best friend Catherine, stand in random order around a circle, with each order being equally likely. If the probability that Catherine is adjacent to Caroline is \\(\\frac{1}{9}\\), then what is the value of \\(n\\)?</p>",
+      "solutions": "<p>Caroline is adjacent to 2 people, and there are \\(n-1\\) people not including Caroline. Therefore, the probability that Catherine is adjacent to Caroline is \\(\\frac{2}{n-1} = \\frac{1}{9}\\), and solving gives \\(n = \\boxed{19}\\).</p>",
+      "answer": "19"
+    },
+    "7": {
+      "problem": "<p>The polynomial \\(P(x) = x^4 + 4x^3 + 8x^2 + 8x + 4\\) is the square of another polynomial \\(Q(x) = ax^2 + bx + c\\) with positive coefficients \\(a\\), \\(b\\), and \\(c\\). Compute \\(4a + 2b + c\\).</p>",
+      "solutions": "<p>Note that \\(Q(2) = 4a+2b+c\\) and \\(P(2) = [Q(2)]^2 = 2^4+4\\cdot2^3+8\\cdot2^2+8\\cdot2+4 = 100\\). Since \\(a\\), \\(b\\), and \\(c\\) are positive, we have \\(Q(2) &gt; 0\\). Taking the positive square root, we get \\(Q(2) = \\sqrt{P(2)} = \\sqrt{100} = \\boxed{10}\\).</p>",
+      "answer": "10"
+    },
+    "8": {
+      "problem": "<p>A physics class has 25 students, two of whom are Alex and Justin. Three students are chosen uniformly at random for a lab demonstration. What is the probability that at least one of Alex and Justin is chosen?</p>",
+      "solutions": "<p>We first calculate the probability that neither Alex nor Justin is chosen. The number of ways to choose 3 people in the class is \\(\\binom{25}{3}\\). If neither Alex nor Justin can be chosen, there are 23 students that can be chosen and hence \\(\\binom{23}{3}\\) ways to choose them. Therefore, the probability that neither Alex nor Justin is chosen is \\[\\frac{\\binom{23}{3}}{\\binom{25}{3}} = \\frac{\\frac{23\\cdot22\\cdot21}{3!}}{\\frac{25\\cdot24\\cdot23}{3!}} = \\frac{23\\cdot22\\cdot21}{25\\cdot24\\cdot23} = \\frac{22\\cdot21}{25\\cdot24} = \\frac{77}{100},\\] so the probability that at least one of them is chosen is \\[1-\\frac{77}{100} = \\boxed{\\frac{23}{100}}.\\]</p>",
+      "answer": "\\frac{23}{100}"
+    },
+    "9": {
+      "problem": "<p>Natasha carries a paintbrush of length 1 and walks around the perimeter of a regular 2016-gon with side length 1, painting all of the area outside the polygon that she can reach. What is the area that Natasha paints?</p>",
+      "solutions": "<p>If the curve is convex, Natasha will only be turning one way, and by the time she returns to the origin she will have turned exactly \\(2\\pi\\) radians. Therefore, she will paint the area of a circle as she turns corners, because she paints a sector of the unit circle each time until the sum of the sector angles is \\(2\\pi\\). On each of the 2016 straight edges, she paints a rectangle of length 1 and width 1, because the 2016-gon has side length 1 and the paintbrush also has length 1. Thus the total area is \\(2016\\cdot1+\\pi\\cdot1^2 = \\boxed{2016+\\pi}\\).</p>",
+      "answer": "2016+\\pi"
+    },
+    "10": {
+      "problem": "<p>Let \\(S\\) be the set of values which can be written as the sum of five consecutive perfect squares. What is the smallest element of \\(S\\) which is divisible by \\(17\\)?</p>",
+      "solutions": "<p>Each element of \\(S\\) can be written in the form \\[\\begin{aligned}\n(x-2)^2 + (x-1)^2 + x^2 + (x+1)^2 + (x+2)^2 &amp;= x^2 + 2x^2+2+2x^2+8\\\\\n&amp;= 5x^2+10\\\\\n&amp;= 5(x^2+2)\n\\end{aligned}\\] where \\(x\\) is some positive integer with \\(x \\ge 3\\). By iterating over values of \\(x\\), we observe that when \\(x = 7\\), \\(x^2+2 = 51 = 3 \\ast 17\\); no smaller value of \\(x\\) exists which satisfies the problem statement. Hence, the solution is \\(5(x^2+2) = 5 \\ast 51 = \\boxed{255}\\).</p>",
+      "answer": "255"
+    },
+    "11": {
+      "problem": "<p>Consider 6 points, two of which are \\(A\\) and \\(B\\), such that each pair of points is connected by a line segment and no three points are collinear. Compute the number of distinct paths from \\(A\\) to \\(B\\) such that no point is visited more than once.</p>",
+      "solutions": "<p>We consider cases based on the length of the path. Note that there is \\(1\\) path of length \\(1\\), \\(4\\) paths of length \\(2\\), \\(4 \\cdot 3 = 12\\) paths of length \\(3\\), \\(4 \\cdot 3 \\cdot 2 = 24\\) paths of length \\(4\\), \\(4 \\cdot 3 \\cdot 2 \\cdot 1 = 24\\) paths of length \\(5\\), and no paths of length \\(6\\) or greater. Therefore, there are a total of \\(1 + 4 + 12 + 24 + 24 = \\boxed{65}\\) distinct paths.</p>",
+      "answer": "65"
+    },
+    "12": {
+      "problem": "<p>Let \\(f(x) = 3x^2+2x+6\\). Two distinct lines \\(l_1\\) and \\(l_2\\) exist that are tangent to \\(f(x)\\) and intersect at the origin. Given that \\(l_1\\) is tangent to \\(f(x)\\) at \\((x_1, f(x_1))\\) and that \\(l_2\\) is tangent to \\(f(x)\\) at \\((x_2, f(x_2))\\), compute \\(x_1x_2\\).</p>",
+      "solutions": "<p>At any point \\((x_0, y_0)\\) in \\(f(x)\\), the slope of the tangent line is \\[m = 6x_0+2\\] Hence, the equation of the tangent line is given by \\[\\begin{aligned}\n(y-y_0) &amp;= m(x-x_0)\\\\\ny - (3x_0^2+2x_0+6) &amp;= (6x_0+2)(x-x_0)\\\\\ny &amp;= (6x_0+2)x - 6x_0^2-2x_0+3x_0^2+2x_0+6\\\\\ny &amp;= (6x_0+2)x - 3x_0^2+6\n\\end{aligned}\\] For the tangent line to cross the origin, we must have \\(3x_0^2-6=0\\). This equation has two solutions, the product of which is given by \\(\\frac{-6}{3} = \\boxed{-2}\\).</p>",
+      "answer": "-2"
+    },
+    "13": {
+      "problem": "<p>One day, Connie plays a game with a fair 6-sided die. Connie rolls the die until she rolls a 6, at which point the game ends. If she rolls a 6 on her first turn, Connie wins 6 dollars. For each subsequent turn, Connie wins \\(\\frac{1}{6}\\) of the amount she would have won the previous turn. What is Connie’s expected earnings from the game?</p>",
+      "solutions": "<p>Connie has a \\(\\frac{1}{6}\\) chance of winning 6 dollars her first turn. She has a \\(\\frac{5}{6} \\cdot \\frac{1}{6}\\) chance of winning 1 dollar her second turn. Next, she has a \\(\\frac{25}{36} \\cdot \\frac{1}{6}\\) chance of winning \\(\\frac{1}{6}\\) dollars her third turn.</p><p>Generalizing, Connie’s expected earnings form a geometric series with initial term \\(\\frac{1}{6} \\ast 6 = 1\\) and common ratio \\(\\frac{5}{6} \\ast \\frac{1}{6} = \\frac{5}{36}\\). Hence, Connie’s expected earnings are \\[\\frac{1}{1-\\frac{5}{36}} = \\boxed{\\frac{36}{31}}\\]</p>",
+      "answer": "\\frac{36}{31}"
+    },
+    "14": {
+      "problem": "<p>Calculate the positive root of the polynomial \\((x-1)(x-2)(x-3)(x-4) - 63\\).</p>",
+      "solutions": "<p>Note that \\[\\begin{aligned}\n(x-1)(x-2)(x-3)(x-4)-63 &amp;= [(x-2)(x-3)][(x-1)(x-4)]-63\\\\\n&amp;= (x^2-5x+6)(x^2-5x+4)-63\\\\\n&amp;= [(x^2-5x+5+1)(x^2-5x+5-1)]-63\\\\\n&amp;= [(x^2-5x+5)^2-1]-63\\\\\n&amp;= (x^2-5x+5)^2-64\\\\\n&amp;= (x^2-5x+5+8)(x^2-5x+5-8)\\\\\n&amp;= (x^2-5x+13)(x^2-5x-3).\n\\end{aligned}\\] The polynomial \\(x^2-5x+13\\) has no real roots, while the polynomial \\(x^2-5x-3\\) has roots \\(x = \\frac{5\\pm\\sqrt{37}}{2}\\). Since \\(\\frac{5-\\sqrt{37}}{2} &lt; 0\\), the only positive root is \\(\\boxed{\\frac{5+\\sqrt{37}}{2}}\\).</p>",
+      "answer": "\\frac{5+\\sqrt{37}}{2}"
+    },
+    "15": {
+      "problem": "<p>Consider an equilateral triangle \\(\\triangle ABC\\) with unit side length. Let \\(M\\) be the midpoint of side \\(AB\\). A ball is released in a straight line from \\(M\\) and bounces off the side \\(BC\\) at a point \\(D\\). Then, it bounces off the side \\(CA\\) at a point \\(E\\) and lands exactly at \\(B\\). By the law of reflection, we have \\(\\angle BDM = \\angle CDE\\) and \\(\\angle CED = \\angle AEB\\). Calculate \\(MD+DE+EB\\), the distance that the ball travels before reaching \\(B\\).</p>",
+      "solutions": "<p>The solution can be obtained by reflecting the triangle across edge \\(CB\\) to obtain another equilateral triangle \\(\\triangle A'CB\\), and then across \\(A'C\\) to get \\(\\triangle A'B'C'\\). The length of the line \\(MB'\\) is the minimum distance from \\(M\\) to the vertex \\(B\\) that hits both sides \\(BC\\) and \\(CA'\\).</p><p>The length of the line segment \\(BB'\\) is \\(\\frac{\\sqrt{3}}{2}\\). Thus, the length of \\(MB' = \\sqrt{1+\\frac{3}{4}} = \\boxed{\\frac{\\sqrt{13}}{2}}\\).</p>",
+      "answer": "\\frac{\\sqrt{13}}{2}"
+    },
+    "16": {
+      "problem": "<p>Suppose that 12 points are marked evenly around a unit circle. How many pairs of distinct chords are there, with each chord having endpoints among the 12 points, such that the chords are parallel?</p>",
+      "solutions": "<p>There are two possible cases:</p><ul style=\"list-style-type: none\"><li>(a) When all parallel chords are drawn, no unconnected points remain on the unit circle. First, we only consider chords which are vertical. Then, there are \\(\\frac{12}{2}=6\\) chords to select, resulting in \\(\\binom{6}{2}=15\\) distinct chords. Since these chords can be rotated 5 times to obtain other valid pairs, there are \\(6 \\ast 15 = 90\\) possible pairs.</li><li>(b) When all parallel chords are drawn, two unconnected points remain on the unit circle. Again, we only consider chords which are vertical. Then, there are \\(\\frac{10}{2}=5\\) chords to select, resulting in \\(\\binom{5}{2}=10\\) distinct chords. Since these chords can be rotated 5 times to obtain other valid pairs, there are \\(6 \\ast 10 = 60\\) possible pairs.</li></ul><p>Hence, there are a total of \\(\\boxed{150}\\) possible pairs of chords.</p>",
+      "answer": "150"
+    },
+    "17": {
+      "problem": "<p>In the 3-D coordinate plane, two squares of side length 2, \\(ABCD\\) and \\(EFGH\\), are arranged with the sides of \\(ABCD\\) lying parallel to the \\(x\\)- and \\(y\\)-axes and the diagonals of \\(EFGH\\) lying along the \\(y\\)- and \\(z\\)-axes. In addition, the two squares share the same center point, \\(A, B, G, C, D, E\\) are coplanar, and \\(FH\\) is orthogonal to \\(ABCD\\). Compute the volume of the solid \\(ABGHEFCD\\).</p>",
+      "solutions": "<p>The area of the solid can be decomposed into the area of six pyramids: \\(FABCD\\), \\(FBGC\\), \\(FAED\\), \\(HABCD\\), \\(HBGC\\), and \\(HAED\\). Each of these pyramids has height \\(\\sqrt{2}\\) and a base of either \\(2 \\ast 2 = 4\\) or \\(\\frac{2 \\ast (\\sqrt{2}-1)}{2}=\\sqrt{2}-1\\). Hence, the total volume of the solid is \\[\\begin{aligned}\nV &amp;= 2 \\ast \\frac{1}{3} \\ast \\sqrt{2} \\ast 4+4 \\ast \\frac{1}{3}\\sqrt{2} \\ast (\\sqrt{2}-1)\\\\\n&amp;= \\frac{8}{3}\\sqrt{2}+\\frac{4}{3}(2-\\sqrt{2})\\\\\n&amp;= \\frac{8}{3}\\sqrt{2}+\\frac{8}{3}-\\frac{4}{3}\\sqrt{2}\\\\\n&amp;= \\boxed{\\frac{8+4\\sqrt{2}}{3}}\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{8+4\\sqrt{2}}{3}"
+    },
+    "18": {
+      "problem": "<p>Let \\(F\\) be the Fibonacci sequence of numbers, where \\(F_1 = 1\\), \\(F_2 = 1\\), and \\(F_n = F_{n-1}+F_{n-2}\\) for all \\(n \\ge 3\\). The sum \\(\\sum_{i=1}^{2016} F_{3i}\\) can be written in the form \\(\\frac{1}{a}(F_b-c)\\), where \\(a, b, c\\) are positive integers, \\(a&gt;1\\), and \\(b\\) is minimal. Compute \\(a+b+c\\).</p>",
+      "solutions": "<p>Note that the sum can be expressed as \\[\\begin{aligned}\n\\sum_{i=1}^{2016} F_{3i} &amp;= \\frac{1}{2} \\sum_{i=1}^{2016} 2F_{3i}\\\\\n&amp;= \\frac{1}{2} \\sum_{i=1}^{2016} (F_{3i}+F_{3i-1}+F_{3i-2})\\\\\n&amp;= \\frac{1}{2} \\left[\\left(\\sum_{i=1}^{6048} F_i\\right)+F_2-F_1\\right]\\\\\n&amp;= \\frac{1}{2}(F_{6050}-1)\n\\end{aligned}\\] where in the 3rd step, the sum \\(\\left(\\sum_{i=1}^{6048} F_i\\right)+F_2\\) telescopes to the single term \\(F_{6050}\\). Hence, \\(a+b+c = 2+6050+1 = \\boxed{6053}\\).</p>",
+      "answer": "6053"
+    },
+    "19": {
+      "problem": "<p>A regular dodecahedron is a figure with 12 identical pentagons for each of its faces. Let \\(x\\) be the number of ways to color the faces of the dodecahedron with 12 different colors, where two colorings are identical if one can be rotated to obtain the other. Compute \\(\\frac{x}{12!}\\). <img class=\"latexcenter\" src=\"/data/tournaments/2016_SMT_Guts/19-fig1.png\" width=\"336\" alt=\"\"></p>",
+      "solutions": "<p>First, we fix one color for the top of the figure. Then, there are 11 possible choices for the color of the face directly opposite the top. Since there are 10 remaining faces, we can color them a total of \\(10!\\) possible ways. However, since the figure can be rotated about the vertical axis five times to obtain 5 different orientations, we must divide by 5 to prevent overcounting. Hence, the desired answer is</p><p>\\[\\frac{x}{12!} = \\frac{11\\cdot10!/5}{12!} = \\frac{12\\cdot11\\cdot10!}{12\\cdot5\\cdot12!} = \\boxed{\\frac{1}{60}}.\\]</p>",
+      "answer": "\\frac{1}{60}"
+    },
+    "20": {
+      "problem": "<p>Compute \\[\\int_0^3 \\sqrt{\\sqrt{x+1}-1}\\,dx.\\]</p>",
+      "solutions": "<p>We make the substitution \\(z = \\sqrt{\\sqrt{x+1}-1}\\), so that \\[x = (z^2+1)^2-1, \\qquad dx = 4z(z^2+1)\\,dz,\\] In addition, the endpoints map to 0 and 1. Then the integral can be written as \\[\\int_0^1 z\\cdot\\bigl(4z(z^2+1)\\bigr)\\,dz = \\int_0^1 \\bigl(4z^4+4z^2\\bigr)\\,dz = \\frac{4}{5}+\\frac{4}{3} = \\boxed{\\frac{32}{15}}.\\]</p>",
+      "answer": "\\frac{32}{15}"
+    },
+    "21": {
+      "problem": "<p>Let \\(\\omega\\) be a root of the polynomial \\(\\omega^{2016}+\\omega^{2015}+\\cdots+\\omega+1\\). Compute the sum \\[\\sum_{i=0}^{2016} (1+\\omega^i)^{2017}.\\]</p>",
+      "solutions": "<p>Using the Binomial Theorem, we expand \\((1+\\omega^i)^{2017}\\): \\[\\sum_{i=0}^{2016}(1+\\omega^i)^{2017} = \\sum_{i=0}^{2016}\\sum_{j=0}^{2017}\\binom{2017}{j}\\omega^{ij}.\\] We can then swap the indices of the sums and move out the \\(\\binom{2017}{j}\\) to get \\[\\sum_{i=0}^{2016}\\sum_{j=0}^{2017}\\binom{2017}{j}\\omega^{ij} = \\sum_{j=0}^{2017}\\binom{2017}{j}\\sum_{i=0}^{2016}\\omega^{ij}.\\] Now consider the sum \\(\\sum_{i=0}^{2016}\\omega^{ij}\\) for \\(j\\) fixed. Notice that \\(\\omega^{2017}=1\\) and 2017 is a prime. Therefore, if \\(\\omega^{aj}=\\omega^{bj}\\) for some \\(0\\le a,b\\le i\\), then \\(\\omega^{|a-b|j}=1\\), hence either \\(a=b\\) or \\(j\\mid 2017\\).</p><p>If \\(j\\mid 2017\\), then \\(\\omega^{ij}=(\\omega^j)^i=1^i=1\\) for all \\(i\\), so \\(\\sum_{i=0}^{2016}\\omega^{ij}=2017\\).</p><p>Otherwise, if \\(j\\nmid 2017\\), then each of the \\(\\omega^{ij}\\) are distinct, so \\(\\sum_{i=0}^{2016}\\omega^{ij}\\) is just a permutation of the sum \\(\\sum_{i=0}^{2016}\\omega^i=0\\) from our condition. Therefore, \\(\\sum_{i=0}^{2016}\\omega^{ij}=0\\).</p><p>Therefore, we have \\[\\sum_{j=0}^{2017}\\binom{2017}{j}\\sum_{i=0}^{2016}\\omega^{ij} = \\left(\\binom{2017}{0}+\\binom{2017}{2017}\\right)\\cdot2017 = \\boxed{4034}.\\]</p>",
+      "answer": "4034"
+    },
+    "22": {
+      "problem": "<p>A lattice point is a pair \\((x,y)\\) where \\(x\\) and \\(y\\) are integers. How many lattice points are on the graph of \\(y = \\sqrt{x^2+60^4}+2016\\)?</p>",
+      "solutions": "<p>Let \\(z = y-2016 = \\sqrt{x^2+60^4}\\). Note that the graphs of \\(y\\) and \\(z\\) have the same number of lattice points, since \\(z\\) is just \\(y\\) translated down 2016 units. Then \\(z^2=x^2+60^4\\), or \\[(z+x)(z-x) = 60^4 = 2^83^45^4.\\] Because \\(z\\) equals a square root, we have \\(z\\ge0\\). Since \\(x\\) is an integer, \\(z+x\\) and \\(z-x\\) must have the same parity. However, they cannot be both odd, because their product is \\(60^4\\), an even number. Thus \\(z+x\\) and \\(z-x\\) are both even. Now, if \\(z+x\\) is negative, then \\(z-x=\\frac{60^4}{z+x}\\) is negative as well, so \\((z+x)+(z-x)=2z&lt;0\\), which contradicts \\(z\\ge0\\). Thus \\(z+x&gt;0\\), which implies \\(z-x&gt;0\\).</p><p>Now, suppose \\(z+x=2^a3^b5^c\\), where \\(a,b,c\\) are nonnegative integers. If \\(a=0\\), then \\(z+x\\) is odd, which is not allowed, and if \\(a=8\\), then \\(z-x\\) is odd, which is also not allowed. Thus \\(1\\le a\\le7\\). Since \\(z=\\frac{(z+x)+(z-x)}{2}\\) and \\(x=\\frac{(z+x)-(z-x)}{2}\\), only the parities of \\(z+x\\) and \\(z-x\\) restrict solutions. Thus \\(b\\) and \\(c\\) are unrestricted, so \\(0\\le b\\le4\\) and \\(0\\le c\\le4\\). Therefore, there are \\(7\\cdot5\\cdot5=175\\) possible ordered triples \\((a,b,c)\\).</p><p>Each \\((a,b,c)\\) corresponds to a unique value of \\(z+x\\), each of which uniquely determines \\(z-x\\). Then, \\(z\\) and \\(x\\) are uniquely determined from \\(z=\\frac{(z+x)+(z-x)}{2}\\) and \\(x=\\frac{(z+x)-(z-x)}{2}\\), and finally, \\(y\\) is uniquely determined from \\(y=z+2016\\). We conclude that there is a one-to-one correspondence between solutions \\((a,b,c)\\) and lattice points \\((x,y)\\). Hence, there are \\(\\boxed{175}\\) lattice points.</p>",
+      "answer": "175"
+    },
+    "23": {
+      "problem": "<p>Compute \\[\\sum_{\\substack{p,\\,q+1\\ge1\\\\ \\gcd(p,q)=1}} \\frac{1}{3^{p+q}-1}.\\]</p>",
+      "solutions": "<p>We begin by computing \\[\\sum_{\\substack{p,\\,q+1\\ge1\\\\ \\gcd(p,q)=1}} \\frac{1}{3^{p+q}-1} = \\sum_{d=1}^{\\infty}\\frac{1}{3^d-1}\\sum_{\\substack{p,\\,q+1\\ge1\\\\ \\gcd(p,q)=1\\\\ p+q=d}} 1 = \\sum_{d=1}^{\\infty}\\frac{\\varphi(d)}{3^d-1}\\] where \\(\\varphi(d) = |\\{k : 1\\le k\\le d,\\ \\gcd(k,d)=1\\}|\\). This is true because \\[p,\\,q+1\\ge1,\\ \\gcd(p,q)=1,\\ p+q=d \\Leftrightarrow 1\\le p\\le d,\\ \\gcd(p,d)=1,\\ q=d-p,\\] so \\[\\sum_{\\substack{p,\\,q+1\\ge0\\\\ \\gcd(p,q)=1\\\\ p+q=d}} 1 = \\sum_{\\substack{1\\le p\\le d\\\\ \\gcd(p,d)=1}} 1 = \\varphi(d)\\] simply by the definition of \\(\\varphi\\). Next, we observe that \\[\\sum_{d=1}^{\\infty}\\frac{\\varphi(d)}{3^d-1} = \\sum_{d=1}^{\\infty}\\varphi(d)\\frac{3^{-d}}{1-3^{-d}} = \\sum_{d=1}^{\\infty}\\varphi(d)\\sum_{k=1}^{\\infty}3^{-dk} = \\sum_{d=1}^{\\infty}\\sum_{k=1}^{\\infty}3^{-dk}\\varphi(d) = \\sum_{d=1}^{\\infty}\\sum_{\\substack{n\\ge1\\\\ n=dk}}3^{-n}\\varphi(d) = \\sum_{n=1}^{\\infty}\\sum_{d\\mid n}3^{-n}\\varphi(d),\\] where the last equality is the result of interchanging the order of summation. Next, we show that \\[\\sum_{d\\mid n}\\varphi(d) = n.\\] Indeed, \\(\\{1,2,\\ldots,n\\}\\) can be partitioned into the sets \\(S_d = \\{k : 1\\le k\\le n,\\ \\gcd(k,n)=d\\}\\) for \\(d\\mid n\\). Noting that \\(\\gcd(k,n)=d \\Leftrightarrow \\gcd(k/d,n/d)=1\\) we get \\(|S_d|=\\varphi(n/d)\\). Thus \\[n = \\sum_{d\\mid n}\\varphi(n/d) = \\sum_{d\\mid n}\\varphi(d)\\] as claimed. Thus, we compute \\[\\sum_{n=1}^{\\infty}\\sum_{d\\mid n}3^{-n}\\varphi(d) = \\sum_{n=1}^{\\infty}3^{-n}\\sum_{d\\mid n}\\varphi(d) = \\sum_{n=1}^{\\infty}n3^{-n} = \\frac{\\frac13}{\\left(1-\\frac13\\right)^2} = \\boxed{\\frac34}.\\] Here we use the well known formula that \\(\\sum_{n=1}^{\\infty}nx^n = \\frac{x}{(1-x)^2}\\) for \\(|x|&lt;1\\), which we may alternatively derive by computing \\[\\sum_{n=1}^{\\infty}nx^n = \\sum_{n=1}^{\\infty}\\sum_{k=n}^{\\infty}x^k = \\sum_{n=1}^{\\infty}\\frac{x^n}{1-x} = \\frac{x}{(1-x)^2}.\\]</p>",
+      "answer": "\\frac{3}{4}"
+    },
+    "24": {
+      "problem": "<p>Let \\(ABC\\) be a right triangle with \\(\\angle C = 90^\\circ\\). The angle bisector of \\(\\angle ACB\\) intersects \\(AB\\) at \\(D\\). In addition, the angle bisector of \\(\\angle ADC\\) intersects \\(AC\\) at \\(E\\), and the angle bisector of \\(\\angle BDC\\) intersects \\(BC\\) at \\(F\\). Suppose that \\(EC=6\\) and \\(FC=8\\), and let the intersection of \\(EF\\) and \\(CD\\) be \\(G\\). Compute \\(GD\\).</p>",
+      "solutions": "<p><b>Solution 1.</b> First, we make some general observations. Note that \\(\\angle ACD = \\angle BCD = \\frac{\\angle ACB}{2} = 45\\). In addition, since \\(ED\\) bisects \\(\\angle ADC\\) and \\(FD\\) bisects \\(\\angle BDC\\), we must have \\(\\angle EDF = \\frac{\\angle ADC+\\angle BDC}{2} = 90\\). Finally, since \\(ECF\\) is also a right triangle, we have \\(EF = \\sqrt{6^2+8^2} = 10\\), by the Pythagorean Theorem.</p><p>Next, we compute \\(x = CD\\). Let \\(c = ED\\) and \\(d = FD\\). Using the law of cosines, we can write the following equations \\[c^2 = 6^2+x^2-2\\cdot6\\cdot x\\cos45\\] \\[d^2 = 8^2+x^2-2\\cdot8\\cdot x\\cos45\\] Since \\(\\angle EDF=90\\), we have \\(EF^2=c^2+d^2\\) by the Pythagorean Theorem. Hence, we may write \\[\\begin{aligned}\nEF^2 &amp;= 6^2+x^2-2\\cdot6\\cdot x\\cos45+8^2+x^2-2\\cdot8\\cdot x\\cos45\\\\\n6^2+8^2 &amp;= 6^2+8^2+2x^2-6x\\sqrt2-8x\\sqrt2\\\\\n2x^2 &amp;= (6+8)x\\sqrt2\\\\\nx &amp;= 7\\sqrt2\n\\end{aligned}\\]</p><p>We can then solve for \\(c\\) and \\(d\\): \\[\\begin{aligned}\nc^2 &amp;= 6^2+(7\\sqrt2)^2-\\sqrt2\\cdot6\\cdot7\\sqrt2\\\\\nc &amp;= \\sqrt{50} = 5\\sqrt2\\\\\nd^2 &amp;= 8^2+(7\\sqrt2)^2-\\sqrt2\\cdot8\\cdot7\\sqrt2\\\\\nd &amp;= \\sqrt{50} = 5\\sqrt2\n\\end{aligned}\\]</p><p>Since \\(c=ED=d=FD\\), \\(\\angle DEF=\\angle DFE=45\\). Next, since \\(\\angle DCF=\\angle GFD=45\\) and \\(\\angle CDF=\\angle GDF\\), we have \\(\\triangle CDF\\sim\\triangle FDG\\) by AA similarity. We may then write the ratio \\(\\frac{DG}{DF}=\\frac{DF}{DC}\\). Solving for \\(DG\\), the desired quantity is \\[DG = \\frac{DF^2}{DC} = \\frac{(5\\sqrt2)^2}{7\\sqrt2} = \\boxed{\\frac{25\\sqrt2}{7}}.\\]</p><p><b>Solution 2.</b> Observe that \\(CEDF\\) is a cyclic quadrilateral, since \\(\\angle EDF+\\angle ECF = 90+90=180\\). Moreover, since \\(\\angle DCF\\) and \\(\\angle DEF\\) subtend the same arc, we have \\(\\angle DEF=\\angle DCF=45\\). Similarly, since \\(\\angle ECD\\) and \\(\\angle EFD\\) subtend the same arc, and \\(\\angle EFD=\\angle ECD=45\\). We conclude that \\(EFD\\) is a 45-45-90 triangle, and since \\(EF=10\\), \\(ED=FD=5\\sqrt2\\).</p><p>Since \\(\\angle DCF=\\angle GFD=45\\) and \\(\\angle CDF=\\angle GDF\\), we have \\(\\triangle CDF\\sim\\triangle FDG\\) by AA similarity. Next, since \\(CG\\) bisects \\(\\angle ECF\\), we have that \\(\\frac{GF}{EG}=\\frac{FC}{CE}\\), and equivalently \\(\\frac{GF}{10-GF}=\\frac43\\).</p><p>Solving for \\(GF\\), we have that \\(GF=\\frac{40}{7}\\). Finally, from the similarity of the triangles noted above, we obtain the ratio \\(\\frac{FD}{FC}=\\frac{GD}{GF}\\). Solving for \\(GD\\), the desired quantity is \\[GD = \\frac{FD\\cdot GF}{FC} = \\frac{5\\sqrt2\\cdot\\frac{40}{7}}{8} = \\boxed{\\frac{25\\sqrt2}{7}}.\\]</p>",
+      "answer": "\\frac{25\\sqrt{2}}{7}"
+    }
+  }
+}

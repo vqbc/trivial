@@ -1,0 +1,133 @@
+{
+  "test": "BMT General",
+  "year": 2025,
+  "name": "General Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/general-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[5^2 + 8^2 - 2 \\cdot 5 \\cdot 8 + 58.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>An equilateral triangle and a square have the same perimeter. Given that the sides of the triangle each have length 8, compute the area of the square.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Find the smallest two-digit positive integer whose digits sum to a multiple of 6 and whose ones digit is twice its tens digit.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Ylann has four shirts (red, orange, yellow, and green) and two pairs of pants (black and white). An outfit consists of one shirt and one pair of pants. If Ylann refuses to wear a red shirt with white pants, and he also refuses to wear a yellow shirt with black pants, how many acceptable outfits can he make?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Oliver writes the number 1 on the board and then makes a series of moves. In each move, Oliver either multiplies the number on the board by 3 or increases it by 20. What is the minimum number of moves Oliver needs to change the number on the board to 67?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Jonathan and Carlyana race around a circular track with circumference 40 meters. They run clockwise at constant speeds: Jonathan runs at 5 meters per second, and Carlyana runs at 10 meters per second. They clap whenever they are at the same position on the track at the same time. If the first clap occurs at the start of the race, how many seconds after the start of the race does the second clap occur?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Triangle \\(\\triangle ABC\\) has a right angle at \\(B\\) and all integer side lengths. Square \\(ACDE\\) is constructed outside \\(\\triangle ABC\\). Given \\(AC = 10\\), what is the perimeter of pentagon \\(ABCDE\\)? <img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_General/7-fig1.png\" width=\"166\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Jordan has two white socks and two black socks in their sock drawer. If they pull out two socks uniformly at random without replacement, what is the probability that they are the same color?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>A hat initially contains five slips labeled with the numbers 1, 2, 3, 4, and 5 (one slip per number). Every minute, Jessica adds a new slip labeled with the number 20 to the hat. How many slips are in the hat when the average of the numbers in the hat is 5 times the initial average?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Let \\(A\\), \\(B\\), and \\(C\\) be digits such that \\(\\underline{A}\\,\\underline{B}\\,\\underline{C} \\times \\underline{A}\\,\\underline{C} = 2025\\). Find the three-digit number \\(\\underline{A}\\,\\underline{B}\\,\\underline{C}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "11": {
+      "problem": "<p>Find the real number \\(x\\) satisfying \\(\\sqrt{x+3} - \\sqrt{x-1} = 1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "12": {
+      "problem": "<p>Find the positive integer \\(n\\) such that \\(n+10\\) is both a multiple of \\(n\\) and a factor of \\(n+100\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "13": {
+      "problem": "<p>An arithmetic sequence is a sequence of numbers where the difference between any two consecutive terms is the same. Harsh writes an arithmetic sequence where the ratio of the second term to the first term is 4, and the sum of the third and fourth terms is 34. Compute the second term of Harsh’s sequence.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "14": {
+      "problem": "<p>A square of area \\(A\\) is divided using 2 lines into 4 rectangles (which may be squares) with all integer side lengths. Two of the rectangles have areas of 4 and 9, respectively. Find the sum of both distinct possible values of \\(A\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "15": {
+      "problem": "<p>Ariel places 4 green stickers, 4 orange stickers, and 4 purple stickers on the faces of two fair 6-sided dice such that face has exactly one sticker, and each die has at least one sticker of every color. If these dice are rolled, the probability that two green faces are rolled is \\(\\frac{1}{12}\\), and the probability that two orange faces are rolled is \\(\\frac{1}{12}\\). What is the probability that two purple faces are rolled?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "16": {
+      "problem": "<p>Square \\(ABCD\\), regular pentagon \\(ABEFG\\), and regular hexagon \\(ABHIJK\\) all lie in the same plane so that the square lies inside the pentagon, and the pentagon lies inside the hexagon. Compute the degree measure of \\(\\angle DGK\\) which is less than \\(180^\\circ\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "17": {
+      "problem": "<p>In how many ways can ten identical white blocks be placed into a red box, a yellow box, a green box, and a blue box such that no box is empty, and at least two boxes contain the same number of blocks?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "18": {
+      "problem": "<p>Benji writes down the decimal representation of a rational number greater than 10. He observes that if he replaces the tens digit with 2, the number decreases by \\(70\\%\\). If he instead replaces the tens digit with 8, the number increases by \\(14\\%\\). By what percent would the number decrease if he replaced the tens digit with 5?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "19": {
+      "problem": "<p>A rectangle is reflected over one of its diagonals, resulting in a second rectangle. Given that the region inside both of these rectangles is a rhombus with perimeter 52 and area 120, what is the perimeter of the original rectangle?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "20": {
+      "problem": "<p>Let triangle \\(\\triangle ABC\\) be equilateral. Points \\(D\\) and \\(E\\) lie on sides \\(\\overline{AB}\\) and \\(\\overline{AC}\\), respectively, such that \\(\\overline{DE} \\parallel \\overline{BC}\\) and \\(\\overline{CD} \\perp \\overline{BE}\\). Compute \\(\\frac{AD}{AB}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "21": {
+      "problem": "<p>A <i>substring</i> of a positive integer \\(n\\) is a number whose digits appear consecutively in the digits of \\(n\\). For example, \\(10\\), \\(00 = 0\\), and \\(02 = 2\\) are two-digit substrings of \\(1002\\), but \\(12\\) and \\(01 = 1\\) are not. An integer \\(n\\) is chosen uniformly at random from the integers between 1000 and 9999 inclusive. Compute the probability that all two-digit substrings of \\(n\\) are divisible by three.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "22": {
+      "problem": "<p>Over all triples of positive integers \\((a, b, c)\\) satisfying the equation \\[\\gcd\\left(\\operatorname{lcm}(a,b), \\operatorname{lcm}(a,c), \\operatorname{lcm}(b,c)\\right) = 2025,\\] compute the smallest possible value of \\(a + b + c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "23": {
+      "problem": "<p>Quadrilateral \\(ABCD\\) has \\(AB = CD = 25\\), \\(BC = 50\\), and acute angles at vertices \\(B\\) and \\(C\\). The distance from \\(C\\) to line \\(\\overleftrightarrow{AB}\\) is 48, and the distance from \\(B\\) to line \\(\\overleftrightarrow{CD}\\) is 40. Compute the area of quadrilateral \\(ABCD\\). <img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_General/23-fig1.png\" width=\"353\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "24": {
+      "problem": "<p>Compute the sum of all distinct real numbers \\(x\\) satisfying \\(|x| \\le \\frac{1}{2}\\) and \\[\\sin\\left(\\log_{10}\\left(\\frac{1}{x} + \\frac{1}{x^2}\\right)\\right) = 0.\\] Note that the argument of the sine function is assumed to be in radians.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "25": {
+      "problem": "<p>A <i>factor tree</i> for a composite number \\(n\\) is a binary tree with root \\(n\\) and two children, \\(a\\) and \\(b\\), such that \\(a\\) and \\(b\\) are proper divisors of \\(n\\) with \\(ab = n\\), and whose subtrees rooted at \\(a\\) and \\(b\\) are themselves factor trees for \\(a\\) and \\(b\\), respectively. A factor tree for a prime number is the single node containing the number itself.</p><p>Four distinct factor trees for 12 are shown below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_General/25-fig1.png\" width=\"686\" alt=\"\"></p><p>How many distinct factor trees are there for 120?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "test": "1993 AJHSME",
+  "year": 1993,
+  "problems": {
+    "1": {
+      "problem": "<p>Which pair of numbers does NOT have a product equal to \\(36\\)? \\(\\text{(A)}\\ \\{-4,-9\\}\\qquad\\text{(B)}\\ \\{-3,-12\\}\\qquad\\text{(C)}\\ \\left\\{\\frac{1}{2},-72\\right\\}\\qquad\\text{(D)}\\ \\{ 1,36\\}\\qquad\\text{(E)}\\ \\left\\{\\frac{3}{2},24\\right\\}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Let’s calculate each of the answer choices and see which one DOES NOT equal \\(36\\).</p><p>\\(A\\) comes out to be \\(-4 \\times -9= 36\\),</p><p>\\(B\\) equals \\(-3 \\times -12= 36\\),</p><p>\\(C\\) is \\(\\frac{1}{2} \\times -72= -36\\),</p><p>\\(D\\) simplifies to \\(1 \\times 36= 36\\),</p><p>and \\(E\\) equals \\(\\frac{3}{2} \\times 24= 3 \\times 12= 36\\).</p><p>Thus, our answer is \\(\\boxed{C}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>In order for a product to be positive (\\(36\\)), the numbers should either be both positive or both negative. Looking at our answer choices, the only option that does not fit this description is \\(\\boxed{C}\\).</p>",
+      "answer": "C"
+    },
+    "2": {
+      "problem": "<p>When the fraction \\(\\dfrac{49}{84}\\) is expressed in simplest form, then the sum of the numerator and the denominator will be</p><p>\\(\\text{(A)}\\ 11 \\qquad \\text{(B)}\\ 17 \\qquad \\text{(C)}\\ 19 \\qquad \\text{(D)}\\ 33 \\qquad \\text{(E)}\\ 133\\)</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n\\dfrac{49}{84} &amp;= \\dfrac{7^2}{2^2\\cdot 3\\cdot 7} \\\\\n&amp;= \\dfrac{7}{2^2\\cdot 3} \\\\\n&amp;= \\dfrac{7}{12}.\n\\end{aligned}\\]</p><p>The sum of the numerator and denominator is \\(7+12=19\\rightarrow \\boxed{\\text{C}}\\).</p>",
+      "answer": "C"
+    },
+    "3": {
+      "problem": "<p>Which of the following numbers has the largest prime factor?</p><p>\\(\\text{(A)}\\ 39\\qquad\\text{(B)}\\ 51\\qquad\\text{(C)}\\ 77\\qquad\\text{(D)}\\ 91\\qquad\\text{(E)}\\ 121\\)</p>",
+      "solutions": "<p>A. The prime factors of \\(39\\) are \\(3\\) and \\(13\\). Therefore, the largest prime factor is \\(13\\).</p><p>B. The prime factors of \\(51\\) are \\(3\\) and \\(17\\). Therefore, the largest prime factor is \\(17\\).</p><p>C. The prime factor of \\(77\\) are \\(7\\) and \\(11\\). Therefore, the largest prime factor is \\(11\\).</p><p>D. The prime factor of \\(91\\) are \\(7\\) and \\(13\\). Therefore, the largest prime factor is \\(13\\).</p><p>E. The prime factor of \\(121\\) are \\(11\\). Therefore, the largest prime factor is \\(11\\).</p><p>So, the answer is \\(B\\)</p>",
+      "answer": "B"
+    },
+    "4": {
+      "problem": "<p>\\(1000\\times 1993 \\times 0.1993 \\times 10 =\\)</p><p>\\(\\text{(A)}\\ 1.993\\times 10^3 \\qquad \\text{(B)}\\ 1993.1993 \\qquad \\text{(C)}\\ (199.3)^2 \\qquad \\text{(D)}\\ 1,993,001.993 \\qquad \\text{(E)}\\ (1993)^2\\)</p>",
+      "solutions": "<p>\\(1000\\times10=10^4\\\\\n0.1993=1993\\times10^{-4}\\\\\n1993\\times1993\\times10^{-4}\\times10^4= \\boxed{\\textbf{(E)}\\ (1993)^2}\\)</p>",
+      "answer": "E"
+    },
+    "5": {
+      "problem": "<p>Which one of the following bar graphs could represent the data from the circle graph?</p><p><img class=\"latexcenter\" src=\"/data/aops/1993_AJHSME/5-fig1.png\" width=\"244\" alt=\"\"></p><p><img class=\"latexcenter\" src=\"/data/aops/1993_AJHSME/5-fig2.png\" width=\"1550\" alt=\"\"></p>",
+      "solutions": "<p>Since the white portion of the graph is twice as much as the black and gray, its bar in the bar graph will need to be twice as much as the black and gray. Note that the black and gray portions are equal. This cancels choices \\(A, B, D, E\\). The final answer is now \\(\\boxed{C}\\).</p>",
+      "answer": "C"
+    },
+    "6": {
+      "problem": "<p>A can of soup can feed \\(3\\) adults or \\(5\\) children.  If there are \\(5\\) cans of soup and \\(15\\) children are fed, then how many adults would the remaining soup feed?</p><p>\\(\\text{(A)}\\ 5 \\qquad \\text{(B)}\\ 6 \\qquad \\text{(C)}\\ 7 \\qquad \\text{(D)}\\ 8 \\qquad \\text{(E)}\\ 10\\)</p>",
+      "solutions": "<p>A can of soup will feed \\(5\\) children so \\(15\\) children are feed by \\(3\\) cans of soup. Therefore, there are \\(5-3=2\\) cans for adults, so \\(3 \\times 2 =\\boxed{\\textbf{(B)}\\ 6}\\) adults are fed.</p>",
+      "answer": "B"
+    },
+    "7": {
+      "problem": "<p>\\(3^3+3^3+3^3 =\\)</p><p>\\(\\text{(A)}\\ 3^4 \\qquad \\text{(B)}\\ 9^3 \\qquad \\text{(C)}\\ 3^9 \\qquad \\text{(D)}\\ 27^3 \\qquad \\text{(E)}\\ 3^{27}\\)</p>",
+      "solutions": "<p>\\(3^3+3^3+3^3 = 3 \\times 3^3 = \\boxed{\\text{(A)}\\ 3^4}\\)</p>",
+      "answer": "A"
+    },
+    "8": {
+      "problem": "<p>To control her blood pressure, Jill’s grandmother takes one half of a pill every other day.  If one supply of medicine contains \\(60\\) pills, then the supply of medicine would last approximately</p><p>\\(\\text{(A)}\\ 1\\text{ month} \\qquad \\text{(B)}\\ 4\\text{ months} \\qquad \\text{(C)}\\ 6\\text{ months} \\qquad \\text{(D)}\\ 8\\text{ months} \\qquad \\text{(E)}\\ 1\\text{ year}\\)</p>",
+      "solutions": "<p>If Jill’s grandmother takes one half of a pill every other day, she takes a pill every \\(4\\) days. Since she has \\(60\\) pills, the supply will last \\(60 \\times 4=240\\) days which is about \\(\\boxed{\\text{(D)}\\ 8\\text{ months}}\\).</p>",
+      "answer": "D"
+    },
+    "9": {
+      "problem": "<p>Consider the operation \\(*\\) defined by the following table:</p><p>\\[\\begin{tabular}{c|cccc}\n* &amp; 1 &amp; 2 &amp; 3 &amp; 4 \\\\ \\hline\n1 &amp; 1 &amp; 2 &amp; 3 &amp; 4 \\\\\n2 &amp; 2 &amp; 4 &amp; 1 &amp; 3 \\\\\n3 &amp; 3 &amp; 1 &amp; 4 &amp; 2 \\\\\n4 &amp; 4 &amp; 3 &amp; 2 &amp; 1\n\\end{tabular}\\]</p><p>For example, \\(3*2=1\\).  Then \\((2*4)*(1*3)=\\)</p><p>\\(\\text{(A)}\\ 1 \\qquad \\text{(B)}\\ 2 \\qquad \\text{(C)}\\ 3 \\qquad \\text{(D)}\\ 4 \\qquad \\text{(E)}\\ 5\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Using the chart, \\((2*4)=3\\) and \\((1*3)=3\\). Therefore, \\((2*4)*(1*3)=3*3=\\boxed{\\text{(D)}\\ 4}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>By the chart, we can see that the \"\\(*\\)\" operation is actually multiplication modulo \\(5\\). Thus, we can do \\((2*4)*(1*3)\\rightarrow(2\\cdot4)\\cdot(1\\cdot3)=8\\cdot3=24\\rightarrow\\boxed{\\text{(D)}\\ 4}\\)</p><p>-JeffersonJ</p>",
+      "answer": "D"
+    },
+    "10": {
+      "problem": "<p>This line graph represents the price of a trading card during the first \\(6\\) months of \\(1993\\).</p><p><img class=\"latexcenter\" src=\"/data/aops/1993_AJHSME/10-fig1.png\" width=\"1624\" alt=\"\"></p><p>The greatest monthly drop in price occurred during</p><p>\\(\\text{(A)}\\ \\text{January} \\qquad \\text{(B)}\\ \\text{March} \\qquad \\text{(C)}\\ \\text{April} \\qquad \\text{(D)}\\ \\text{May} \\qquad \\text{(E)}\\ \\text{June}\\)</p>",
+      "solutions": "<p>The graph shows the following price changes:</p><p>Jan: \\(-0.50\\)</p><p>Feb: \\(+2.00\\)</p><p>Mar: \\(-2.50\\)</p><p>Apr: \\(+3.00\\)</p><p>May: \\(-0.50\\)</p><p>Jun: \\(-2.00\\)</p><p>Therefore, \\(\\boxed{\\text{(B)}\\ \\text{March}}\\) has the largest price drop.</p>",
+      "answer": "B"
+    },
+    "11": {
+      "problem": "<p>Consider this histogram of the scores for \\(81\\) students taking a test:</p><p><img class=\"latexcenter\" src=\"/data/aops/1993_AJHSME/11-fig1.png\" width=\"1044\" alt=\"\"></p><p>The median is in the interval labeled</p><p>\\(\\text{(A)}\\ 60 \\qquad \\text{(B)}\\ 65 \\qquad \\text{(C)}\\ 70 \\qquad \\text{(D)}\\ 75 \\qquad \\text{(E)}\\ 80\\)</p>",
+      "solutions": "<p>Since \\(81\\) students took the test, the median is the score of the \\(41^{st}\\) student. The five rightmost intervals include \\(2+3+6+12+16=39\\) students, so the \\(41^{st}\\) one must lie in the next interval, which is \\(\\boxed{\\text{(C)}\\ 70}\\).</p>",
+      "answer": "C"
+    },
+    "12": {
+      "problem": "<p>If each of the three operation signs, \\(+\\), \\(\\text{--}\\), \\(\\times\\), is used exactly ONCE in one of the blanks in the expression</p><p>\\[5\\hspace{1 mm}\\underline{\\hspace{4 mm}}\\hspace{1 mm}4\\hspace{1 mm}\\underline{\\hspace{4 mm}}\\hspace{1 mm}6\\hspace{1 mm}\\underline{\\hspace{4 mm}}\\hspace{1 mm}3\\]</p><p>then the value of the result could equal</p><p>\\(\\text{(A)}\\ 9 \\qquad \\text{(B)}\\ 10 \\qquad \\text{(C)}\\ 15 \\qquad \\text{(D)}\\ 16 \\qquad \\text{(E)}\\ 19\\)</p>",
+      "solutions": "<p>There are a reasonable number of ways to place the operation signs, so guess and check to find that \\(5-4+6 \\times 3 = \\boxed{\\text{(E)}\\ 19}\\).</p>",
+      "answer": "E"
+    },
+    "13": {
+      "problem": "<p>The word \"<b>HELP</b>\" in block letters is painted in black with strokes \\(1\\) unit wide on a \\(5\\) by \\(15\\) rectangular white sign with dimensions as shown.  The area of the white portion of the sign, in square units, is</p><p><img class=\"latexcenter\" src=\"/data/aops/1993_AJHSME/13-fig1.png\" width=\"604\" alt=\"\"></p><p>\\(\\text{(A)}\\ 30 \\qquad \\text{(B)}\\ 32 \\qquad \\text{(C)}\\ 34 \\qquad \\text{(D)}\\ 36 \\qquad \\text{(E)}\\ 38\\)</p>",
+      "solutions": "<p>Count the number of black squares in each letter. H has 11, E has 11, L has 7, and P has 10, giving the number of black squares to be \\(11+11+7+10=39\\). The total number of squares is \\((15)(5)=75\\) and the number of white squares is \\(75-39=\\boxed{\\text{(D)}\\ 36}\\).</p>",
+      "answer": "D"
+    },
+    "14": {
+      "problem": "<p>The nine squares in the table shown are to be filled so that every row and every column contains each of the numbers \\(1,2,3\\).  Then \\(A+B=\\)</p><p>\\[\\begin{tabular}{|c|c|c|}\\hline 1 &amp; &amp;\\\\ \\hline &amp; 2 &amp; A\\\\ \\hline &amp; &amp; B\\\\ \\hline\\end{tabular}\\]</p><p>\\(\\text{(A)}\\ 2 \\qquad \\text{(B)}\\ 3 \\qquad \\text{(C)}\\ 4 \\qquad \\text{(D)}\\ 5 \\qquad \\text{(E)}\\ 6\\)</p>",
+      "solutions": "<p>The square connected both to 1 and 2 cannot be the same as either of them, so must be 3.</p><p>\\[\\begin{tabular}{|c|c|c|}\\hline 1 &amp; 3 &amp;\\\\ \\hline &amp; 2 &amp; A\\\\ \\hline &amp; &amp; B\\\\ \\hline\\end{tabular}\\]</p><p>The last square in the top row cannot be either 1 or 3, so it must be 2.</p><p>\\[\\begin{tabular}{|c|c|c|}\\hline 1 &amp; 3 &amp; 2\\\\ \\hline &amp; 2 &amp; A\\\\ \\hline &amp; &amp; B\\\\ \\hline\\end{tabular}\\]</p><p>The other two squares in the rightmost column with A and B cannot be two, so they must be 1 and 3 and therefore have a sum of \\(1+3=\\boxed{\\text{(C)}\\ 4}\\).</p>",
+      "answer": "C"
+    },
+    "15": {
+      "problem": "<p>The arithmetic mean (average) of four numbers is \\(85\\).  If the largest of these numbers is \\(97\\), then the mean of the remaining three numbers is</p><p>\\(\\text{(A)}\\ 81.0 \\qquad \\text{(B)}\\ 82.7 \\qquad \\text{(C)}\\ 83.0 \\qquad \\text{(D)}\\ 84.0 \\qquad \\text{(E)}\\ 84.3\\)</p>",
+      "solutions": "<p>Say that the four numbers are \\(a, b, c,\\) &amp; \\(97\\). Then \\(\\frac{a+b+c+97}{4} = 85\\). What we are trying to find is \\(\\frac{a+b+c}{3}\\). Solving, \\[\\frac{a+b+c+97}{4} = 85\\]</p><p>\\[a+b+c+97 = 340\\]</p><p>\\[a+b+c = 243\\]</p><p>\\[\\frac{a+b+c}{3} = \\boxed{\\mathrm{(A)}\\ 81}\\]</p>",
+      "answer": "A"
+    },
+    "16": {
+      "problem": "<p>\\(\\frac{1}{1+\\frac{1}{2+\\frac{1}{3}}}=\\)</p><p>\\(\\text{(A)}\\ \\dfrac{1}{6} \\qquad \\text{(B)}\\ \\dfrac{3}{10} \\qquad \\text{(C)}\\ \\dfrac{7}{10} \\qquad \\text{(D)}\\ \\dfrac{5}{6} \\qquad \\text{(E)}\\ \\dfrac{10}{3}\\)</p>",
+      "solutions": "<p>\\[\\frac{1}{1+\\frac{1}{2+\\frac13}} = \\frac{1}{1+\\frac{1}{\\frac73}} = \\frac{1}{1+\\frac37} = \\frac{1}{\\frac{10}{7}} = \\boxed{\\text{(C)}\\ \\frac{7}{10}}\\]</p>",
+      "answer": "C"
+    },
+    "17": {
+      "problem": "<p>Square corners, 5 units on a side, are removed from a \\(20\\) unit by \\(30\\) unit rectangular sheet of cardboard.  The sides are then folded to form an open box.  The surface area, in square units, of the interior of the box is</p><p><img class=\"latexcenter\" src=\"/data/aops/1993_AJHSME/17-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 300 \\qquad \\text{(B)}\\ 500 \\qquad \\text{(C)}\\ 550 \\qquad \\text{(D)}\\ 600 \\qquad \\text{(E)}\\ 1000\\)</p>",
+      "solutions": "<p>If the sides of the open box are folded down so that a flat sheet with four corners cut out remains, then the revealed surface would have the same area as the interior of the box. This is equal to the area of the four corners subtracted from the area of the original sheet, which is \\(((20)(30)-4(5)(5)) = 600-100 = \\boxed{\\text{(B)}\\ 500}\\).</p>",
+      "answer": "B"
+    },
+    "18": {
+      "problem": "<p>The rectangle shown has length \\(AC=32\\), width \\(AE=20\\), and \\(B\\) and \\(F\\) are midpoints of \\(\\overline{AC}\\) and \\(\\overline{AE}\\), respectively.  The area of quadrilateral \\(ABDF\\) is</p><p><img class=\"latexcenter\" src=\"/data/aops/1993_AJHSME/18-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 320 \\qquad \\text{(B)}\\ 325 \\qquad \\text{(C)}\\ 330 \\qquad \\text{(D)}\\ 335 \\qquad \\text{(E)}\\ 340\\)</p>",
+      "solutions": "<p>The area of the quadrilateral \\(ABDF\\) is equal to the areas of the two right triangles \\(\\triangle BCD\\) and \\(\\triangle EFD\\) subtracted from the area of the rectangle \\(ABCD\\). Because \\(B\\) and \\(F\\) are midpoints, we know the dimensions of the two right triangles.</p><p><img class=\"latexcenter\" src=\"/data/aops/1993_AJHSME/18-fig2.png\" width=\"504\" alt=\"\"></p><p>\\[(20)(32)-\\frac{(16)(20)}{2}-\\frac{(10)(32)}{2} = 640-160-160 = \\boxed{\\text{(A)}\\ 320}\\]</p>",
+      "answer": "A"
+    },
+    "19": {
+      "problem": "<p>\\((1901+1902+1903+\\cdots + 1993) - (101+102+103+\\cdots + 193) =\\)</p><p>\\(\\text{(A)}\\ 167,400 \\qquad \\text{(B)}\\ 172,050 \\qquad \\text{(C)}\\ 181,071 \\qquad \\text{(D)}\\ 199,300 \\qquad \\text{(E)}\\ 362,142\\)</p>",
+      "solutions": "<p>We see that \\(1901=1800+101\\), \\(1902=1800+102\\), etc. Each term in the first set of numbers is \\(1800\\) more than the corresponding term in the second set; Because there are \\(93\\) terms in the first set, the expression can be paired up as follows and simplified:</p><p>\\[(1901-101) + (1902-102) + (1903-103) + \\cdots + (1993-193)\\\\\n=1800 + 1800 + \\cdots + 1800\\\\\n=(1800)(93)\\\\\n=\\boxed{\\text{(A)}\\ 167,400}\\]</p>",
+      "answer": "A"
+    },
+    "20": {
+      "problem": "<p>When \\(10^{93}-93\\) is expressed as a single whole number, the sum of the digits is</p><p>\\(\\text{(A)}\\ 10 \\qquad \\text{(B)}\\ 93 \\qquad \\text{(C)}\\ 819 \\qquad \\text{(D)}\\ 826 \\qquad \\text{(E)}\\ 833\\)</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n10^2-93&amp;=7\\\\\n10^3-93&amp;=907\\\\\n10^4-93&amp;=9907\\\\\n\\end{aligned}\\]</p><p>This can be generalized into \\(10^n-93\\) is equal is \\(n-2\\) nines followed by the digits \\(07\\). Then \\(10^{93}-93\\) is equal to \\(91\\) nines followed by \\(07\\). The sum of the digits is equal to \\(9(91)+7=819+7=\\boxed{\\text{(D)}\\ 826}\\).</p>",
+      "answer": "D"
+    },
+    "21": {
+      "problem": "<p>If the length of a rectangle is increased by \\(20\\%\\) and its width is increased by \\(50\\%\\), then the area is increased by</p><p>\\(\\text{(A)}\\ 10\\% \\qquad \\text{(B)}\\ 30\\% \\qquad \\text{(C)}\\ 70\\% \\qquad \\text{(D)}\\ 80\\% \\qquad \\text{(E)}\\ 100\\%\\)</p>",
+      "solutions": "<p>If a rectangle had dimensions \\(10 \\times 10\\) and area \\(100\\), then its new dimensions would be \\(12 \\times 15\\) and area \\(180\\). The area is increased by \\(180-100=80\\) or \\(80/100 = \\boxed{\\text{(D)}\\ 80\\%}\\).</p><h2><span class=\"mw-headline\" id=\"Alternate_Solution\">Alternate Solution</span></h2><p>Let the dimensions of the rectangle be \\(x \\times y\\). This rectangle has area \\(xy\\). The new dimensions would be \\(1.2x \\times 1.5y\\), so the area is \\(=1.8xy\\), which is \\(\\boxed{80\\%}\\) more than the original area.</p>",
+      "answer": "D"
+    },
+    "22": {
+      "problem": "<p>Pat Peano has a collection of numbers to label the pages of his scrapbook. He has an infinite number of 0’s, 1’s, 3’s, 4’s, 5’s, 6’s, 7’s, 8’s and 9’s, but only twenty-two 2’s.  How far can he number the pages of his scrapbook with these digits?</p><p>\\(\\text{(A)}\\ 22 \\qquad \\text{(B)}\\ 99 \\qquad \\text{(C)}\\ 112 \\qquad \\text{(D)}\\ 119 \\qquad \\text{(E)}\\ 199\\)</p>",
+      "solutions": "<p>There is \\(1\\) two in the one-digit numbers.</p><p>The number of two-digit numbers with a two in the tens place is \\(10\\) and the number with a two in the ones place is \\(9\\). Thus the digit two is used \\(10+9=19\\) times for the two digit numbers.</p><p>Now, Pat Peano only has \\(22-1-19=2\\) remaining twos. You must subtract 1 because 22 is counted twice. The last numbers with a two that he can write are \\(102\\) and \\(112\\). He can continue numbering the last couple pages without a two until \\(120\\), with the last number he writes being \\(\\boxed{\\text{(D)}\\ 119}\\).</p>",
+      "answer": "D"
+    },
+    "23": {
+      "problem": "<p>Five runners, \\(P\\), \\(Q\\), \\(R\\), \\(S\\), \\(T\\), have a race, and \\(P\\) beats \\(Q\\), \\(P\\) beats \\(R\\), \\(Q\\) beats \\(S\\), and \\(T\\) finishes after \\(P\\) and before \\(Q\\).  Who could NOT have finished third in the race?</p><p>\\(\\textbf{(A)}\\ P\\text{ and }Q \\qquad \\textbf{(B)}\\ P\\text{ and }R \\qquad \\textbf{(C)}\\ P\\text{ and }S \\qquad \\textbf{(D)}\\ P\\text{ and }T \\qquad \\textbf{(E)}\\ P,S\\text{ and }T\\)</p>",
+      "solutions": "<p>First, note that \\(P\\) beats \\(T\\), who beats \\(Q\\), who beats \\(S\\). Also, \\(P\\) beats \\(R\\).</p><p>So \\(P\\) finishes first, and \\(S\\) finishes no earlier than fourth.  Thus neither \\(P\\) nor \\(S\\) finishes third.</p><p>\\(Q\\) finishes third if the runners finish in the order \\(P, T, Q, S, R\\).</p><p>\\(R\\) finishes third if the runners finish in the order \\(P, T, R, Q, S\\).</p><p>\\(T\\) finishes third if the runners finish in the order \\(P, R, T, Q, S\\).</p><p>Thus \\(\\boxed{\\textbf{(C)}\\ P\\  \\text{and}\\ S}\\) are the only runners who certainly do not finish third.</p>",
+      "answer": "C"
+    },
+    "24": {
+      "problem": "<p>What number is directly above \\(142\\) in this array of numbers?</p><p>\\[\\begin{array}{cccccc}&amp; &amp; &amp; 1 &amp; &amp;\\\\ &amp; &amp; 2 &amp; 3 &amp; 4 &amp;\\\\ &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9\\\\ 10 &amp; 11 &amp; 12 &amp;\\cdots &amp; &amp;\\\\ \\end{array}\\]</p><p>\\(\\text{(A)}\\ 99 \\qquad \\text{(B)}\\ 119 \\qquad \\text{(C)}\\ 120 \\qquad \\text{(D)}\\ 121 \\qquad \\text{(E)}\\ 122\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Notice that a number in row \\(k\\) is \\(2k\\) less than the number directly below it. For example, \\(5\\), which is in row \\(3\\), is \\((2)(3)=6\\) less than the number below it, \\(11\\).</p><p>From row 1 to row \\(k\\), there are \\(k \\left(\\frac{1+(-1+2k)}{2} \\right) = k^2\\) numbers in those \\(k\\) rows. Because there are \\(12^2=144\\) numbers up to the 12th row, \\(142\\) is in the \\(k^{th}\\) row. The number directly above is in the 11th row, and is \\(22\\) less than \\(142\\). Thus the number directly above \\(142\\) is \\(142-22=\\boxed{\\text{(C)}\\ 120}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Writing a couple more rows, the last number in each row ends in a perfect square. Thus \\(142\\) is two left from the last number in its row, \\(144\\). One left and one up from \\(144\\) is the last number of its row, also a perfect square, and is \\(121\\). This is one right and one up from \\(142\\), so the number directly above \\(142\\) is one less than \\(121\\), or \\(\\boxed{\\text{(C)}\\ 120}\\).</p><p>Remark: The last number in each row ends in a perfect square because there is an odd amount of numbers in each row and the sum of the first n odd numbers is always a perfect square.</p><h2><span class=\"mw-headline\" id=\"Solution_3_(eyeball_it)\">Solution 3 (eyeball it)</span></h2><p>We can notice that even numbers are above even numbers so we can narrow our answers down to 2 solutions, \\(120\\) and \\(122\\). Notice each number on the right end of each row is a perfect square. The perfect square closest to these is \\(121\\) so \\(122\\) is the first number on the next row. Notice \\(142\\) is the third to last number on its row so it is too far away from 122, so our answer is \\(\\boxed{\\text{(C)}\\ 120}\\).</p>",
+      "answer": "C"
+    },
+    "25": {
+      "problem": "<p>A checkerboard consists of one-inch squares.  A square card, \\(1.5\\) inches on a side, is placed on the board so that it covers part or all of the area of each of \\(n\\) squares.  The maximum possible value of \\(n\\) is</p><p>\\(\\text{(A)}\\ 4\\text{ or }5 \\qquad \\text{(B)}\\ 6\\text{ or }7\\qquad \\text{(C)}\\ 8\\text{ or }9 \\qquad \\text{(D)}\\ 10\\text{ or }11 \\qquad \\text{(E)}\\ 12\\text{ or more}\\)</p>",
+      "solutions": "<p>Using the Pythagorean Theorem, the diagonal of the square \\(\\sqrt{(1.5)^2+(1.5)^2}=\\sqrt{4.5}&gt;2\\). Because this is longer than \\(2\\)( length of the sides of two adjacent squares), the card can be placed like so, covering \\(12\\) squares. \\(\\rightarrow \\boxed{\\text{(E)}\\ 12\\ \\text{or more}}\\).</p><p><img class=\"latexcenter\" src=\"/data/aops/1993_AJHSME/25-fig1.png\" width=\"504\" alt=\"\"></p>",
+      "answer": "E"
+    }
+  }
+}

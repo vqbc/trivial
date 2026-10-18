@@ -1,0 +1,23 @@
+{
+  "test": "BMT Calculus Tiebreaker",
+  "year": 2025,
+  "name": "Calculus Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(x) = \\frac{x+1}{x^3+1}\\). Find the real number \\(c\\) such that \\[f(c) = \\lim_{x\\to -1} f(x).\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>For positive real numbers \\(a\\) and \\(b\\), define the function \\[f(a,b) = \\int_0^{a/b} \\frac{1}{a+bx} \\, dx.\\]</p><p>Compute \\(\\max\\{f(20,25), f(25,20)\\}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Compute \\[\\int_0^1 \\sum_{n=1}^{\\infty} \\sin\\left( \\frac{\\pi}{4}(2n-1) \\right) \\frac{x^n}{n} \\, dx.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

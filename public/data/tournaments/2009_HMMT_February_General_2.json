@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 2",
+  "year": 2009,
+  "name": "Individual Round: General Test, Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2009/feb/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many ways can the integers from \\(-7\\) to \\(7\\) be arranged in a sequence such that the absolute values of the numbers in the sequence are nonincreasing?</p>",
+      "solutions": "<p>Each of the pairs \\(a\\), \\(-a\\) must occur in increasing order of \\(a\\) for \\(a = 1, \\ldots, 7\\), but \\(a\\) can either occur before or after \\(-a\\), for a total of \\(2^7 = 128\\) possible sequences.</p>",
+      "answer": "128"
+    },
+    "2": {
+      "problem": "<p>How many ways can you tile the white squares of following \\(2 \\times 24\\) grid with dominoes? (A domino covers two adjacent squares, and a tiling is a non-overlapping arrangement of dominoes that covers every white square and does not intersect any black square.)</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_February_General_2/2-fig1.png\" width=\"472\" alt=\"\"></p>",
+      "solutions": "<p>Divide the rectangle into three \\(3 \\times 8\\) sub-rectangles. It is easy to count that there are \\(3\\) ways of tiling each of these sub-rectangles independently, for a total of \\(3^3 = 27\\) possibilities.</p>",
+      "answer": "27"
+    },
+    "3": {
+      "problem": "<p>Let \\(S\\) be the sum of all the real coefficients of the expansion of \\((1+ix)^{2009}\\). What is \\(\\log_2(S)\\)?</p>",
+      "solutions": "<p>The sum of all the coefficients is \\((1+i)^{2009}\\), and the sum of the real coefficients is the real part of this, which is \\(\\frac{1}{2}\\left((1+i)^{2009} + (1-i)^{2009}\\right) = 2^{1004}\\). Thus \\(\\log_2(S) = 1004\\).</p>",
+      "answer": "1004"
+    },
+    "4": {
+      "problem": "<p>A torus (donut) having inner radius \\(2\\) and outer radius \\(4\\) sits on a flat table. What is the radius of the largest spherical ball that can be placed on top of the center torus so that the ball still touches the horizontal plane? (If the \\(x\\)–\\(y\\) plane is the table, the torus is formed by revolving the circle in the \\(x\\)–\\(z\\) plane centered at \\((3,0,1)\\) with radius \\(1\\) about the \\(z\\) axis. The spherical ball has its center on the \\(z\\)-axis and rests on either the table or the donut.)</p>",
+      "solutions": "<p>Let \\(r\\) be the radius of the sphere. One can see that it satisfies \\((r+1)^2 = (r-1)^2 + 3^2\\) by the Pythagorean Theorem, so \\(r = 9/4\\).</p>",
+      "answer": "\\frac{9}{4}"
+    },
+    "5": {
+      "problem": "<p>Suppose \\(a\\), \\(b\\) and \\(c\\) are integers such that the greatest common divisor of \\(x^2+ax+b\\) and \\(x^2+bx+c\\) is \\(x+1\\) (in the set of polynomials in \\(x\\) with integer coefficients), and the least common multiple of \\(x^2+ax+b\\) and \\(x^2+bx+c\\) is \\(x^3-4x^2+x+6\\). Find \\(a+b+c\\).</p>",
+      "solutions": "<p>Since \\(x+1\\) divides \\(x^2+ax+b\\) and the constant term is \\(b\\), we have \\(x^2+ax+b=(x+1)(x+b)\\), and similarly \\(x^2+bx+c=(x+1)(x+c)\\). Therefore, \\(a=b+1=c+2\\). Furthermore, the least common multiple of the two polynomials is \\((x+1)(x+b)(x+b-1)=x^3-4x^2+x+6\\), so \\(b=-2\\). Thus \\(a=-1\\) and \\(c=-3\\), and \\(a+b+c=-6\\).</p>",
+      "answer": "-6"
+    },
+    "6": {
+      "problem": "<p>In how many ways can you rearrange the letters of “HMMTHMMT” such that the substring “HMMT” does not appear? (For instance, one such rearrangement is HMMHMTMT.)</p>",
+      "solutions": "<p>There are \\(8!/(4!2!2!) = 420\\) ways to order the letters. If the permuted letters contain “HMMT”, there are \\(5\\cdot 4!/2! = 60\\) ways to order the other letters, so we subtract these. However, we have subtracted “HMMTHMMT” twice, so we add it back once to obtain \\(361\\) possibilities.</p>",
+      "answer": "361"
+    },
+    "7": {
+      "problem": "<p>Let \\(F_n\\) be the Fibonacci sequence, that is, \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_{n+2} = F_{n+1} + F_n\\). Compute \\[\\sum_{n=0}^{\\infty} F_n/10^n.\\]</p>",
+      "solutions": "<p>Write \\(F(x) = \\sum_{n=0}^{\\infty} F_n x^n\\). Then the Fibonacci recursion tells us that \\(F(x) - xF(x) - x^2F(x) = x\\), so \\(F(x) = x/(1-x-x^2)\\). Plugging in \\(x = 1/10\\) gives the answer.</p>",
+      "answer": "\\frac{10}{89}"
+    },
+    "8": {
+      "problem": "<p>The incircle \\(\\omega\\) of equilateral triangle \\(ABC\\) has radius \\(1\\). Three smaller circles are inscribed tangent to \\(\\omega\\) and the sides of \\(ABC\\), as shown. Three smaller circles are then inscribed tangent to the previous circles and to each of two sides of \\(ABC\\). This process is repeated an infinite number of times. What is the total length of the circumferences of all the circles?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_February_General_2/8-fig1.png\" width=\"158\" alt=\"\"></p>",
+      "solutions": "<p>One can find using the Pythagorean Theorem that, in each iteration, the new circles have radius \\(1/3\\) of that of the previously drawn circles. Thus the total circumference is \\(2\\pi + 3\\cdot 2\\pi\\left(\\frac{1}{1-1/3}-1\\right) = 5\\pi\\).</p>",
+      "answer": "5\\pi"
+    },
+    "9": {
+      "problem": "<p>How many sequences of \\(5\\) positive integers \\((a,b,c,d,e)\\) satisfy \\(abcde \\le a+b+c+d+e \\le 10\\)?</p>",
+      "solutions": "<p>We count based on how many \\(1\\)’s the sequence contains. If \\(a=b=c=d=e=1\\) then this gives us \\(1\\) possibility. If \\(a=b=c=d=1\\) and \\(e\\ne 1\\), \\(e\\) can be \\(2,3,4,5,6\\). Each such sequence \\((1,1,1,1,e)\\) can be arranged in \\(5\\) different ways, for a total of \\(5\\cdot 5 = 25\\) ways in this case.</p><p>If three of the numbers are \\(1\\), the last two can be \\((2,2)\\), \\((3,3)\\), \\((2,3)\\), \\((2,4)\\), or \\((2,5)\\). Counting ordering, this gives a total of \\(2\\cdot 10 + 3\\cdot 20 = 80\\) possibilities.</p><p>If two of the numbers are \\(1\\), the other three must be equal to \\(2\\) for the product to be under \\(10\\), and this yields \\(10\\) more possibilities.</p><p>Thus there are \\(1+25+80+10=116\\) such sequences.</p>",
+      "answer": "116"
+    },
+    "10": {
+      "problem": "<p>Let \\(T\\) be a right triangle with sides having lengths \\(3\\), \\(4\\), and \\(5\\). A point \\(P\\) is called <i>awesome</i> if \\(P\\) is the center of a parallelogram whose vertices all lie on the boundary of \\(T\\). What is the area of the set of awesome points?</p>",
+      "solutions": "<p>The set of awesome points is the medial triangle, which has area \\(6/4 = 3/2\\).</p>",
+      "answer": "\\frac{3}{2}"
+    }
+  }
+}

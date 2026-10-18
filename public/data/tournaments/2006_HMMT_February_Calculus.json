@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Calculus",
+  "year": 2006,
+  "name": "Individual Round: Calculus Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2006/feb/calc/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A nonzero polynomial \\(f(x)\\) with real coefficients has the property that \\(f(x) = f'(x)f''(x)\\). What is the leading coefficient of \\(f(x)\\)?</p>",
+      "solutions": "<p>Suppose that the leading term of \\(f(x)\\) is \\(cx^n\\), where \\(c \\ne 0\\). Then the leading terms of \\(f'(x)\\) and of \\(f''(x)\\) are \\(cnx^{n-1}\\) and \\(cn(n-1)x^{n-2}\\), respectively, so \\(cx^n = cnx^{n-1} \\cdot cn(n-1)x^{n-2}\\), which implies that \\(n = (n-1) + (n-2)\\), or \\(n = 3\\), and \\(c = cn \\cdot cn(n-1) = 18c^2\\), or \\(c = \\frac{1}{18}\\).</p>",
+      "answer": "\\frac{1}{18}"
+    },
+    "2": {
+      "problem": "<p>Compute \\(\\lim_{x \\to 0} \\frac{e^{x \\cos x} - 1 - x}{\\sin(x^2)}\\).</p>",
+      "solutions": "<p>Let’s compute all the relevant Maclaurin series expansions, up to the quadratic terms: \\[x \\cos x = x + \\ldots, \\qquad e^{x \\cos x} = 1 + x + \\frac{1}{2}x^2 + \\ldots, \\qquad \\sin(x^2) = x^2 + \\ldots,\\] so \\[\\lim_{x \\to 0} \\frac{e^{x \\cos x} - 1 - x}{\\sin(x^2)} = \\lim_{x \\to 0} \\frac{\\frac{1}{2}x^2 + \\ldots}{x^2 + \\ldots} = \\frac{1}{2}.\\]</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "3": {
+      "problem": "<p>At time 0, an ant is at \\((1,0)\\) and a spider is at \\((-1,0)\\). The ant starts walking counterclockwise along the unit circle, and the spider starts creeping to the right along the \\(x\\)-axis. It so happens that the ant’s horizontal speed is always half the spider’s. What will the shortest distance ever between the ant and the spider be?</p>",
+      "solutions": "<p>Picture an instant in time where the ant and spider have \\(x\\)-coordinates \\(a\\) and \\(s\\), respectively. If \\(1 \\le s \\le 3\\), then \\(a \\le 0\\), and the distance between the bugs is at least 1. If \\(s &gt; 3\\), then, needless to say the distance between the bugs is at least 2. If \\(-1 \\le s \\le 1\\), then \\(s = 1 - 2a\\), and the distance between the bugs is \\[\\sqrt{(a - (1 - 2a))^2 + (1 - a^2)} = \\sqrt{8a^2 - 6a + 2} = \\sqrt{\\frac{(8a-3)^2 + 7}{8}},\\] which attains the minimum value of \\(\\sqrt{7/8}\\) when \\(a = 3/8\\).</p>",
+      "answer": "\\frac{\\sqrt{14}}{4}"
+    },
+    "4": {
+      "problem": "<p>Compute \\(\\sum_{k=1}^{\\infty} \\frac{k^4}{k!}\\).</p>",
+      "solutions": "<p>Define, for non-negative integers \\(n\\), \\[S_n := \\sum_{k=0}^{\\infty} \\frac{k^n}{k!},\\] where \\(0^0 = 1\\) when it occurs. Then \\(S_0 = e\\), and, for \\(n \\ge 1\\), \\[S_n = \\sum_{k=0}^{\\infty} \\frac{k^n}{k!} = \\sum_{k=1}^{\\infty} \\frac{k^n}{k!} = \\sum_{k=0}^{\\infty} \\frac{(k+1)^n}{(k+1)!} = \\sum_{k=0}^{\\infty} \\frac{(k+1)^{n-1}}{k!} = \\sum_{i=0}^{n-1} \\binom{n-1}{i} S_i,\\] so we can compute inductively that \\(S_1 = e\\), \\(S_2 = 2e\\), \\(S_3 = 5e\\), and \\(S_4 = 15e\\).</p>",
+      "answer": "15e"
+    },
+    "5": {
+      "problem": "<p>Compute \\[\\int_0^1 \\frac{dx}{\\sqrt{x} + \\sqrt[3]{x}}.\\]</p>",
+      "solutions": "<p>Writing \\(x = u^6\\) so that \\(dx = 6u^5 du\\), we have \\[\\begin{aligned}\n\\int_0^1 \\frac{dx}{\\sqrt{x} + \\sqrt[3]{x}} &amp;= \\int_0^1 \\frac{6u^5 du}{u^3 + u^2} \\\\\n&amp;= 6 \\int_0^1 \\frac{u^3 du}{u + 1} \\\\\n&amp;= 6 \\int_0^1 \\left( u^2 - u + 1 - \\frac{1}{u+1} \\right) du \\\\\n&amp;= 6 \\left( \\frac{u^3}{3} - \\frac{u^2}{2} + u - \\ln|u+1| \\right) \\Big|_0^1 = 5 - 6\\ln(2)\n\\end{aligned}\\]</p>",
+      "answer": "5 - 6\\ln 2"
+    },
+    "6": {
+      "problem": "<p>A triangle with vertices at \\((1003, 0)\\), \\((1004, 3)\\), and \\((1005, 1)\\) in the \\(xy\\)-plane is revolved all the way around the \\(y\\)-axis. Find the volume of the solid thus obtained.</p>",
+      "solutions": "<p>Let \\(T \\subset \\mathbb{R}^2\\) denote the triangle, including its interior. Then \\(T\\)’s area is \\(5/2\\), and its centroid is \\((1004, 4/3)\\), so \\[\\int_{(x,y) \\in T} x \\, dx \\, dy = \\frac{5}{2} \\cdot 1004 = 2510.\\] We are interested in the volume \\[\\int_{(x,y) \\in T} 2\\pi x \\, dx \\, dy,\\] but this is just \\(2\\pi \\cdot 2510 = 5020\\pi\\).</p>",
+      "answer": "5020\\pi"
+    },
+    "7": {
+      "problem": "<p>Find all positive real numbers \\(c\\) such that the graph of \\(f : \\mathbb{R} \\to \\mathbb{R}\\) given by \\(f(x) = x^3 - cx\\) has the property that the circle of curvature at any local extremum is centered at a point on the \\(x\\)-axis.</p>",
+      "solutions": "<p>The equation \\(0 = f'(x) = 3x^2 - c\\) has two real roots: \\(\\pm\\sqrt{c/3}\\). Let \\(a := \\sqrt{c/3}\\). As \\(f''(-a) = -6\\sqrt{c/3} &lt; 0\\), \\(f\\) has a unique local maximum at \\(x = -a\\). Because \\(f\\) has half-turn symmetry about the origin, it suffices to consider this local extremum. The radius of curvature at any local extremum is \\[r(x) = \\frac{1}{|f''(x)|} = \\frac{1}{6|x|},\\] so the condition in the problem is equivalent to \\[\\begin{aligned}\nr(-a) &amp;= f(-a) \\\\\n\\frac{1}{6a} &amp;= -a(a^2 - c) \\\\\n1 &amp;= 6a^2(c - a^2) = 2c(2c/3) \\\\\nc &amp;= \\sqrt{3}/2.\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{\\sqrt{3}}{2}"
+    },
+    "8": {
+      "problem": "<p>Compute \\[\\int_0^{\\pi/3} x \\tan^2(x) \\, dx.\\]</p>",
+      "solutions": "<p>We have \\[\\begin{aligned}\n\\int_0^{\\pi/3} x \\tan^2(x) \\, dx &amp;= \\int_0^{\\pi/3} x \\left( -1 + \\frac{1}{\\cos^2(x)} \\right) dx \\\\\n&amp;= -\\frac{x^2}{2} \\Big|_0^{\\pi/3} + \\int_0^{\\pi/3} \\frac{x \\, dx}{\\cos^2(x)} \\\\\n&amp;= -\\frac{x^2}{2} \\Big|_0^{\\pi/3} + \\left( x\\tan(x) \\Big|_0^{\\pi/3} - \\int_0^{\\pi/3} \\tan(x) \\, dx \\right) \\qquad \\left(u = x; \\ dv = \\frac{dx}{\\cos^2(x)}\\right) \\\\\n&amp;= -\\frac{x^2}{2} + x\\tan(x) + \\ln|\\cos(x)| \\ \\Big|_0^{\\pi/3} = -\\frac{\\pi^2}{18} + \\frac{\\pi\\sqrt{3}}{3} - \\ln(2)\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{\\pi\\sqrt{3}}{3} - \\frac{\\pi^2}{18} - \\ln 2"
+    },
+    "9": {
+      "problem": "<p>Compute the sum of all real numbers \\(x\\) such that \\[2x^6 - 3x^5 + 3x^4 + x^3 - 3x^2 + 3x - 1 = 0.\\]</p>",
+      "solutions": "<p>The carefully worded problem statement suggests that repeated roots might be involved (not to be double counted), as well as complex roots (not to be counted). Let \\(P(x) = 2x^6 - 3x^5 + 3x^4 + x^3 - 3x^2 + 3x - 1\\). Now, \\(a\\) is a double root of the polynomial \\(P(x)\\) if and only if \\(P(a) = P'(a) = 0\\). Hence, we consider the system \\[\\begin{aligned}\nP(a) &amp;= 2a^6 - 3a^5 + 3a^3 + a^3 - 3a^2 + 3a - 1 = 0 \\\\\nP'(a) &amp;= 12a^5 - 15a^4 + 12a^3 + 3a^2 - 6a + 3 = 0 \\\\\n&amp;\\implies 3a^4 + 8a^3 - 15a^2 + 18a - 7 = 0 \\\\\n&amp;37a^3 - 57a^2 + 57a - 20 = 0 \\\\\n&amp;a^2 - a + 1 = 0\n\\end{aligned}\\] We have used polynomial long division to deduce that any double root must be a root of \\(a^2 - a + 1\\)! With this information, we can see that \\(P(x) = (x^2 - x + 1)^2(2x^2 + x - 1)\\). The real roots are easily computed via the quadratic formula, leading to an answer of \\(-\\frac{1}{2}\\). In fact the repeated roots were complex.</p>",
+      "answer": "-\\frac{1}{2}"
+    },
+    "10": {
+      "problem": "<p>Suppose \\(f\\) and \\(g\\) are differentiable functions such that \\[xg(f(x))f'(g(x))g'(x) = f(g(x))g'(f(x))f'(x)\\] for all real \\(x\\). Moreover, \\(f\\) is nonnegative and \\(g\\) is positive. Furthermore, \\[\\int_0^a f(g(x)) \\, dx = 1 - \\frac{e^{-2a}}{2}\\] for all reals \\(a\\). Given that \\(g(f(0)) = 1\\), compute the value of \\(g(f(4))\\).</p>",
+      "solutions": "<p>Differentiating the given integral with respect to \\(a\\) gives \\(f(g(a)) = e^{-2a}\\). Now \\[x \\frac{d[\\ln(f(g(x)))]}{dx} = x \\frac{f'(g(x))g'(x)}{f(g(x))} = \\frac{g'(f(x))f'(x)}{g(f(x))} = \\frac{d[\\ln(g(f(x)))]}{dx}\\] where the second equals sign follows from the given. Since \\(\\ln(f(g(x))) = -2x\\), we have \\(-x^2 + C = \\ln(g(f(x)))\\), so \\(g(f(x)) = Ke^{-x^2}\\). It follows that \\(K = 1\\) and \\(g(f(4)) = e^{-16}\\).</p>",
+      "answer": "e^{-16}"
+    }
+  }
+}

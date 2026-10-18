@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2022,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2022/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many possible values of \\(n\\) are there from 1 to 50 such that \\(xy - 4x - 6y = n\\) has 8 ordered pair integer solutions \\((x, y)\\)?</p>",
+      "solutions": "<p>We can rewrite the equation as \\((x - 6)(y - 4) = 24 + n\\). We see that \\(24 + n\\) will be between 25 and 74, inclusive. Each solution \\((x, y)\\) corresponds to a way of factoring \\(24 + n\\). The order of the factors matter and the factors can be negative. From this, we conclude that \\(24 + n\\) must have \\(8/2 = 4\\) factors. So, \\(24 + n = p^3\\) or \\(24 + n = pq\\) where \\(p, q\\) are prime (\\(p\\) and \\(q\\) are distinct). For the first case, we only have the possibility \\(3^3 = 27\\). For the second case, we want to count how many numbers are of the form \\(pq\\) between 25 and 74. Without loss of generality, let \\(p &lt; q\\). If \\(p = 2\\), \\(q\\) can be \\(13, 17, 19, 23, 29, 31\\), or \\(37\\). If \\(p = 3\\), \\(q\\) can be \\(11, 13, 17, 19\\), or \\(23\\). If \\(p = 5\\), \\(q\\) can be \\(7, 11\\), or \\(13\\). If \\(p &gt; 5\\), there is no \\(q\\) such that \\(pq \\le 74\\). Adding up the total number of possibilities for the first case and second case gives \\(1 + 7 + 5 + 3 = \\boxed{16}\\).</p>",
+      "answer": "16"
+    },
+    "2": {
+      "problem": "<p>Gordon and Joey each have two fair 8-sided dice where each side is labeled with a positive integer. Gordon’s two dice are each labeled with the numbers from 1 to 8 exactly once. One of Joey’s dice has a side labeled with the number 10 while the other 15 sides have labels in the positive integers. Gordon and Joey each roll both of their dice and take the sum of two numbers on the top face of each dice. For any number \\(n\\), the probability that the sum of Gordon’s numbers equaling \\(n\\) is the same as the probability that the sum of Joey’s numbers equaling \\(n\\). What is the product of the numbers on Joey’s dice that does not have a 10 on one of its sides?</p>",
+      "solutions": "<p>We can represent the possible sums of Gordon’s dice rolls with the generating function \\[(x^1 + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8)^2 = x^2(x+1)^2(x^2+1)^2(x^4+1)^2.\\]</p><p>Since each side of any dice can only contain positive numbers, Joey’s die that contains a 10 must be represented by the generating function \\(x(x+1)(x^4+1)^2\\) and have sides labeled with \\(\\{1, 2, 5, 5, 6, 6, 9, 10\\}\\). This means that Joey’s other die must be represented by the generating function \\(x(x+1)(x^2+1)^2\\). Therefore, this die has sides labeled with \\(\\{1, 2, 3, 3, 4, 4, 5, 6\\}\\), which yields a product of \\(\\boxed{8640}\\).</p>",
+      "answer": "8640"
+    },
+    "3": {
+      "problem": "<p>Let \\(k_1, k_2, k_3, k_4\\) be arbitrary circles, such that \\(k_1\\) is externally tangent to \\(k_2\\) and \\(k_4\\) at points \\(A\\) and \\(D\\), and \\(k_3\\) is externally tangent to \\(k_2\\) and \\(k_4\\) at points \\(B\\) and \\(C\\). \\(\\angle BCD = 60^\\circ\\). Find the measure of \\(\\angle BAD\\) (in degrees).</p>",
+      "solutions": "<p>Let \\(I\\) be an inversion with center at \\(A\\) and arbitrary radius \\(r\\). Therefore, we have that under \\(I\\), \\(k_1\\) and \\(k_2\\) map to parallel lines \\(l_1 \\parallel l_2\\), since \\(k_1\\) and \\(k_2\\) intersect only at point \\(A\\). \\(k_3\\) and \\(k_4\\) do not contain \\(A\\), therefore they map to circles \\(k_3'\\) and \\(k_4'\\). We have that \\(k_1\\) and \\(k_4\\) have one common point (\\(D\\), therefore \\(l_1\\) is tangent to \\(k_4'\\) at \\(D'\\), and analogously \\(l_2\\) is tangent to \\(k_3'\\) at \\(B'\\). Since \\(k_3\\) and \\(k_4\\) are tangent at \\(C\\), \\(k_3'\\) and \\(k_4'\\) are tangent at \\(C'\\), and because \\(l_1 \\parallel l_2\\), we have that \\(B', C', D'\\) are collinear. Therefore, reversing the inversion, \\(ABCD\\) is cyclic, and therefore \\(\\angle BAD = 180 - \\angle BCD = 120^\\circ\\), as desired.</p>",
+      "answer": "120^\\circ"
+    }
+  }
+}

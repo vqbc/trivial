@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Number Theory A",
+  "year": 2008,
+  "name": "Number Theory A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2008_NumberTheoryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many zeros are there at the end of \\(792!\\) when written in base 10?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "196"
+    },
+    "2": {
+      "problem": "<p>Find all integral solutions to \\(x^y - y^x = 1\\).</p>",
+      "solutions": "<p>\\((2,1)\\) and \\((3,2)\\) must be given; \\((x \\ne 0, 0)\\) may also be. If both \\(x\\) and \\(y\\) are greater than 3 and not equal, we have \\(|x^y - y^x| &gt; 2\\) for analytic reasons. Thus one of \\(x\\) and \\(y\\) are 1 or 2, so you can check that the two given are the only solutions.</p><p>In some versions of the test, the word “positive” was included; therefore the third solution (with \\(y = 0\\)) was optional. Credit was given to any contestants who answered either version correctly, that is, who gave either all three answers or just the first two.</p>",
+      "answer": "(2, 1),\\ (3, 2), \\text{ and } (n, 0) \\text{ for any positive integer } n"
+    },
+    "3": {
+      "problem": "<p>Find the largest integer \\(n\\), where \\(2009^n\\) divides \\(2008^{2009^{2010}} + 2010^{2009^{2008}}\\).</p>",
+      "solutions": "<p>Using the binomial theorem: \\[A = (2009-1)^{2009^{2010}} = -1 + 2009 \\cdot (2009^{2010}) + R_1\\] \\[B = (2009+1)^{2009^{2008}} = 1 + 2009 \\cdot (2009^{2008}) + R_2\\] \\(R_1\\) is divisible by \\(2009^{2010}\\) and \\(R_2\\) is divisible by \\(2009^{2010}\\). \\(A + B \\equiv 2009^{2009} \\pmod{2009^{2010}}\\), so \\(n = 2009\\).</p>",
+      "answer": "2009"
+    },
+    "4": {
+      "problem": "<p>\\(f(n)\\) is the sum of all integers less than \\(n\\) and relatively prime to \\(n\\). Find all integers \\(n\\) such that there exist integers \\(k\\) and \\(l\\) such that \\(f(n^k) = n^l\\).</p>",
+      "solutions": "<p>Let \\(\\phi(n)\\) denote the number of positive integers less than \\(n\\) that are relatively prime to \\(n\\). It is clear that \\(2f(n) = n\\phi(n)\\), and so we need either \\(\\phi(n) = 1\\) or \\(\\phi(n) = 2\\), and one can check that 2, 3, 4, and 6 are the only solutions to this. Moreover, for those values of \\(n\\), we have \\(f(n) = n\\) (except 2, where we have \\(f(2) = 1\\)).</p>",
+      "answer": "2, 3, 4, 6"
+    },
+    "5": {
+      "problem": "<p>If \\(f(x) = x^{x^{x^x}}\\), find the last two digits of \\(f(17) + f(18) + f(19) + f(20)\\).</p>",
+      "solutions": "<p>We are interested in finding \\(f(17) + f(18) + f(19) + f(20)\\) modulo 100. By the Chinese Remainder Theorem it suffices to find the sum modulo 4 and 25. \\(f(17) + f(18) + f(19) + f(20) \\equiv 0 \\pmod{4}\\) because 18 and 20 are raised to high powers and 19 and 17 are both raised to odd powers.</p><p>\\[18^4 \\equiv 1 \\pmod{25} \\Rightarrow f(18) \\equiv 1 \\pmod{25}\\] \\[f(20) \\equiv 0 \\pmod{25}\\]</p><p>To compute \\(f(17)\\) modulo 25, we need to compute \\(X = 17^{17^{17}}\\) modulo 20. \\(X \\equiv 1 \\pmod{4}\\) since \\(17 \\equiv 1 \\pmod{4}\\). \\(X \\equiv 2 \\pmod{5}\\) and therefore \\(X \\equiv 17 \\pmod{20}\\). Since \\(3 \\cdot 17 \\equiv 1 \\pmod{25}\\), \\(17^{17} \\equiv 3^3 \\pmod{25}\\).</p><p>\\[f(17) \\equiv 2 \\pmod{25}\\]</p><p>To compute \\(f(19)\\) modulo 25, we need to compute \\(Y = 19^{19^{19}}\\) modulo 20.</p><p>\\[19 \\equiv -1 \\pmod{20} \\Rightarrow Y \\equiv -1 \\pmod{20}\\] \\[f(19) \\equiv 19^{-1} \\equiv 4 \\pmod{25}\\] \\[f(17) + f(18) + f(19) + f(20) \\equiv 2 + 1 + 4 + 0 \\equiv 7 \\pmod{25}\\]</p><p>\\(f(17) + f(18) + f(19) + f(20) \\equiv 0 \\pmod{4}\\) because 18 and 20 are raised to high powers and 19 and 17 are both raised to odd powers.</p><p>\\(f(17) + f(18) + f(19) + f(20) \\equiv 0 \\pmod{4}\\).</p><p>The last two digits of \\(f(17) + f(18) + f(19) + f(20)\\) are 32.</p>",
+      "answer": "32"
+    },
+    "6": {
+      "problem": "<p>What is the largest integer which cannot be expressed as \\(2008x + 2009y + 2010z\\) for some positive integers \\(x\\), \\(y\\), and \\(z\\)?</p>",
+      "solutions": "<p>The largest number that cannot be a positive linear combanation of 1004 and 1005 is \\(1004 \\cdot 1005 - 1004 - 1005 = 1007011\\), so the smallest even number that cannot be written as the sum of 2008 and 2010 is 2007022. Then the largest number that we can’t get is 2009031, as every larger number you can make it even by subtracting 2009 if necessary and write that as the sum of multiples of 2008 and 2010.</p>",
+      "answer": "2016031"
+    },
+    "7": {
+      "problem": "<p>Find the smallest positive integer \\(n\\) such that \\(32^n = 167x + 2\\) for some integer \\(x\\).</p>",
+      "solutions": "<p>\\(32^{50} = 13^{500} = 13^{2+3 \\cdot 166} = 13^2 = 2\\), as 167 is prime. Since 2 is a perfect square, and nothing else in the unit group, the answer is less than 83, and so it is 50.</p><p>Alternately, \\(32 = 2^5\\). \\(2^{83} \\equiv 1 \\pmod{167}\\). So we need the smallest \\(n\\) such that \\(5n \\equiv 1 \\pmod{83}\\). That gives \\(n = 50\\).</p>",
+      "answer": "50"
+    },
+    "8": {
+      "problem": "<p>Find all sets of three primes \\(p\\), \\(q\\), and \\(r\\) such that \\(p + q = r\\) and \\((r-p)(q-p) - 27p\\) is a perfect square.</p>",
+      "solutions": "<p>It is easy to see that \\(q &gt; p\\) and that one of \\(p\\) and \\(q\\) is two, so \\(p = 2\\). We then have \\(q(q-2) - 54 = x^2\\), so \\((q-1)^2 - x^2 = 55\\). Thus, since the prime factorization of 55 is \\(5 \\cdot 11\\), we have either \\(q - 1 = 8\\) and \\(x = 3\\), or \\(q - 1 = 28\\) and \\(x = 27\\). Only \\(q = 29\\) has the solution be only primes.</p>",
+      "answer": "(p, q, r) = (2, 29, 31)"
+    },
+    "9": {
+      "problem": "<p>Find the number of positive integer solutions of \\((x^2 + 2)(y^2 + 3)(z^2 + 4) = 60xyz\\).</p>",
+      "solutions": "<p>We have that \\(xyz &lt; 60\\). We also have that, if a solution uses \\(z = 1\\), then you can replace that with \\(z = 4\\), and similarly, you can replace \\(y = 1\\) with \\(y = 3\\), and \\(x = 1\\) with \\(x = 2\\). Moreover, you have that \\(z \\equiv \\pm 1 \\pmod{5}\\), as there is no way to force 5 to divide \\(x^2 + 2\\) or \\(y^2 + 3\\). Since any solution of the equation can be forced to have \\(x, y \\ge 2\\), we have to only check \\(z = 1, 4, 6, 9, 11,\\) and \\(14\\). The only possible solution for \\(z = 14\\) is \\(x = y = 2\\) with the already stated equivalences, and one can check that that fails. If \\(z = 11\\), we need 2 powers of 5 on the right side of the equation, which forces \\(xyz\\) to be too big. If \\(z = 9\\), we have that \\(17 \\mid xy\\) and so \\(xyz\\) is too big. If \\(z = 6\\), we have that \\((x^2+2)(y^2+3) = 9xy\\). Thus \\(xy &lt; 9\\) and since \\(\\nu_3(y) \\ge \\nu_3(y^2+3)\\), we have \\(x = 4, 5\\), and, since we can force \\(y\\) to be at least 2, we have \\(x = 4\\) and \\(y = 2\\), which doesn’t work. Thus, we have \\(z = 4\\) (or 1). The work here is similar and similarly tedious, and the only solution are the 8 that are equivalent to \\(x = y = z = 1\\).</p>",
+      "answer": "8"
+    },
+    "10": {
+      "problem": "<p>What is the smallest number \\(n\\) such that you can choose \\(n\\) distinct odd integers \\(a_1, a_2, \\ldots, a_n\\), none of them 1, with \\(\\frac{1}{a_1} + \\frac{1}{a_2} + \\ldots + \\frac{1}{a_n} = 1\\)?</p>",
+      "solutions": "<p>You can check that the answer is not less than 8, as \\(\\frac{1}{3} + \\frac{1}{5} + \\frac{1}{7} + \\frac{1}{9} + \\frac{1}{11} + \\frac{1}{13} + \\frac{1}{15} &lt; 1\\). You also can check that it is not 8, as the sum is, once you normalize denominators, the sum of odd numbers over an odd number. Thus, we need to show that 9 works. To see that 9 works, you can choose \\(3, 5, 7, 9, 11, 15, 35, 45, 231\\) as the \\(a_i\\).</p>",
+      "answer": "9"
+    }
+  }
+}

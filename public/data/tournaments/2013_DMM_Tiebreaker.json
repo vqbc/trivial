@@ -1,0 +1,23 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2013,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2013/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A light beam shines from the origin into the unit square at an angle of \\(\\theta\\) to one of the sides such that \\(\\tan\\theta = \\frac{13}{17}\\). The light beam is reflected by the sides of the square. How many times does the light beam hit a side of the square before hitting a vertex of the square?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2013_DMM_Tiebreaker/1-fig1.png\" width=\"247\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Alex is given points \\(A_1, A_2, \\cdots, A_{150}\\) in the plane such that no three are collinear and \\(A_1, A_2, \\cdots, A_{100}\\) are the vertices of a convex polygon \\(\\mathcal{P}\\) containing \\(A_{101}, A_{102}, \\cdots, A_{150}\\) in its interior. He proceeds to draw edges \\(A_iA_j\\) such that no two edges intersect (except possibly at their endpoints), eventually dividing \\(\\mathcal{P}\\) up into triangles. How many triangles are there?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2013_DMM_Tiebreaker/2-fig1.png\" width=\"328\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>The polynomial \\(P(x)\\) has the property that \\(P(1)\\), \\(P(2)\\), \\(P(3)\\), \\(P(4)\\), and \\(P(5)\\) are equal to \\(1, 2, 3, 4, 5\\) in some order. How many possibilities are there for the polynomial \\(P\\), given that the degree of \\(P\\) is strictly less than \\(4\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

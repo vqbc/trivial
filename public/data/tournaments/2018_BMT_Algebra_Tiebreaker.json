@@ -1,0 +1,23 @@
+{
+  "test": "BMT Algebra Tiebreaker",
+  "year": 2018,
+  "name": "Algebra Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2018/ALSP18TB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A train accelerates at 10 mph/min, and decelerates at 20 mph/min. The train’s maximum speed is 300 mph. What’s the shortest amount of time that the train could take to travel 500 miles, if it has to be stationary at both the start and end of its trip? Please give your answer in minutes.</p>",
+      "solutions": "<p>While its accelerating and decelerating, it’ll be traveling at an average of 150 mph. It takes 30 minutes to reach full speed, and 15 minutes decelerating to a stop from full speed. During that time, it has traveled \\(\\frac{150 \\cdot 45}{60} = 112.5\\) miles. It needs to travel a remaining \\(500 - 112.5 = 387.5\\) miles at top speed, which it can do in \\(\\frac{60 \\cdot 387.5}{300} = 77.5\\) minutes. Combining these two, our answer is \\(45 + 77.5 = 122.5\\) minutes.</p>",
+      "answer": "122.5"
+    },
+    "2": {
+      "problem": "<p>Suppose 2 cars are going into a turn the shape of a half-circle. Car 1 is traveling at 50 meters per second and is hugging the inside of the turn, which has radius 200 meters. Car 2 is trying to pass Car 1 going along the turn, but in order to do this, he has to move to the outside of the turn, which has radius 210. Suppose that both cars come into the turn side by side, and that they also end the turn being side by side. What was the average speed of Car 2, in meters per second, throughout the turn?</p>",
+      "solutions": "<p>We know that the time taken is equal, so with \\(x\\) being the speed of Car 2, we want to solve the equation \\(\\frac{200\\pi}{50} = \\frac{210\\pi}{x}\\), for which the solution is \\(x = \\frac{210 \\times 50}{200} = 52.5\\).</p>",
+      "answer": "52.5"
+    },
+    "3": {
+      "problem": "<p>Find \\(\\sum_{k=0}^{k=672} \\binom{2018}{3k+2} \\pmod{3}\\).</p>",
+      "solutions": "<p>\\((1+\\omega)^{2018} = \\sum \\binom{2018}{3k} + \\left(\\sum \\binom{2018}{3k+1}\\right)\\omega + \\left(\\sum \\binom{2018}{3k+2}\\right)\\omega^2\\). The LHS is equal to \\(\\omega^2\\), so subtracting the LHS from both sides, we observe that we must have</p><p>\\[\\sum \\binom{2018}{3k} = \\sum \\binom{2018}{3k+1} = \\sum \\binom{2018}{3k+2} - 1\\]</p><p>Since \\(\\sum \\binom{n}{k} = 2^n\\), we have</p><p>\\[\\sum \\binom{2018}{3k+2} = \\frac{2^n+2}{3}\\]</p><p>, and since the numerator is 4 (mod 9), we get the required result.</p>",
+      "answer": "2"
+    }
+  }
+}

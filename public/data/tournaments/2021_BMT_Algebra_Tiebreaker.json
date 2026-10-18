@@ -1,0 +1,23 @@
+{
+  "test": "BMT Algebra Tiebreaker",
+  "year": 2021,
+  "name": "Algebra Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2021/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let the sequence \\(\\{a_n\\}\\) for \\(n \\ge 0\\) be defined as \\(a_0 = c\\), and for \\(n \\ge 0\\), \\[a_n = \\frac{2a_{n-1}}{4a_{n-1}^2 - 1}.\\] Compute the sum of all values of \\(c\\) such that \\(a_{2020}\\) exists but \\(a_{2021}\\) does not exist.</p>",
+      "solutions": "<p><b>Solution 1.</b> Note that if \\(a_0 = c\\) works, then \\(a_0 = -c\\) also works, as the sequence given by \\(a_0 = -c\\) is just the sequence given by \\(a_0 = c\\) with all terms in the sequence negated. Thus, our answer is \\(\\boxed{0}\\).</p><p><b>Solution 2.</b> Define the sequence \\(\\{\\theta_n\\}\\) such that \\(a_n = \\frac{1}{2}\\tan\\theta_n\\). Then we have that \\(\\theta_n = 2^n \\theta_0\\).</p><p>For \\(a_{2021}\\) not to exist while \\(a_{2020}\\) exists, we need that \\(\\theta_{2021} = \\frac{\\pi}{2} + \\pi m\\) for some integer \\(m\\). Thus, \\(\\theta_0 = \\frac{(2m+1)\\pi}{2^{2022}}\\) for some integer \\(m\\).</p><p>Summing over all \\(m\\) such that \\(\\theta_0\\) is in the range \\([0, 2\\pi)\\), we get the sum of \\(\\boxed{0}\\), since symmetric terms cancel out.</p>",
+      "answer": "0"
+    },
+    "2": {
+      "problem": "<p>Real numbers \\(x\\) and \\(y\\) satisfy the equations \\(x^2 - 12y = 17^2\\) and \\(38x - y^2 = 2 \\cdot 7^3\\). Compute \\(x + y\\).</p>",
+      "solutions": "<p>Subtracting the second equation from the first equation gives \\(x^2 - 38x + y^2 - 12y = -397\\), and completing the square for \\(x\\) and \\(y\\) gives \\((x-19)^2 + (y-6)^2 = 0\\). Since \\(a^2 = 0\\) if and only if \\(a = 0\\), we must have \\(x = 19\\) and \\(y = 6\\), so \\(x + y = \\boxed{25}\\). (We can check that this solution works by plugging back into the two original equations.)</p>",
+      "answer": "25"
+    },
+    "3": {
+      "problem": "<p>For integers \\(a\\) and \\(b\\), \\(a + b\\) is a root of \\(x^2 + ax + b = 0\\). Compute the smallest possible value of \\(ab\\).</p>",
+      "solutions": "<p>By Vieta’s formulas, the two roots are \\(x = -2a - b\\) and \\(x = a + b\\). Moreover, we can build and simplify an equation regarding their product: \\((a+b)(-2a-b) = b\\), so \\[2a^2 + 3ba + (b^2 + b) = 0.\\] We further establish a condition based on the fact that the roots are integers that the discriminant must be equivalent to the square of an integer \\(k\\): \\[\\Delta_1 = (3b)^2 - 4 \\cdot 2(b^2 + b) = k^2.\\] It follows that \\(b^2 - 8b - k^2 = 0\\). We can take the discriminant of this new quadratic with respect to \\(b\\) again: \\[\\Delta_2 = 8^2 + 4k^2 = 64 + 4k^2 = q^2,\\] for some integer \\(q\\). Let \\(q = 2m\\) so that \\(64 + 4k^2 = 4m^2\\); it follows that \\(16 = (m+k)(m-k)\\).</p><p>We generate ordered pairs \\((m, k)\\) that satisfy this constraint by difference of squares; we get the pairs \\((4,0)\\), \\((-4,0)\\), \\((5,-3)\\), \\((5,3)\\), \\((-5,-3)\\), and \\((-5,3)\\). We have values of \\(k = 0, \\pm 3\\), which we can substitute into our previous equations for \\(b\\) to get \\(b^2 - 8b = 0\\) (which gives \\(b = 0, 8\\)) and \\(b^2 - 8b - 9 = 0\\) (which gives \\(b = 9, -1\\)).</p><p>With these values for \\(b\\), we can substitute back into \\(2a^2 + 3ba + (b^2+b) = 0\\) to get the quadratics \\[\\begin{cases}\n2a^2 = 0 &amp; b = 0, \\\\\n2a^2 - 3a = 0 &amp; b = -1, \\\\\n2a^2 + 24a + 72 = 0 &amp; b = 8, \\\\\n2a^2 + 27a + 90 = 0 &amp; b = 9.\n\\end{cases}\\] Solving each of these for \\(a\\) shows that \\(b = 9\\) yields the smallest value of \\(ab = (-6)(9) = \\boxed{-54}\\).</p>",
+      "answer": "-54"
+    }
+  }
+}

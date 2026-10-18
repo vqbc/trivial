@@ -1,0 +1,23 @@
+{
+  "test": "BMT Calculus Tiebreaker",
+  "year": 2018,
+  "name": "Calculus Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2018/CASP18TB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[\\int_{-9}^{9} \\frac{\\cos(x^2)}{17x^3}\\, dx.\\]</p>",
+      "solutions": "<p>Odd function over a symmetric interval.</p>",
+      "answer": "0"
+    },
+    "2": {
+      "problem": "<p>\\[\\int_0^{\\infty} \\frac{1}{x^2}\\, dx\\]</p>",
+      "solutions": "<p>This is a simple integral. Use the power rule. Trivial.</p>",
+      "answer": "1"
+    },
+    "3": {
+      "problem": "<p>\\[\\int_1^2 \\tan^{-1} x + \\cot^{-1} x \\, dx\\]</p>",
+      "solutions": "<p>This is a constant function. Trivial.</p>",
+      "answer": "\\frac{\\pi}{2}"
+    }
+  }
+}

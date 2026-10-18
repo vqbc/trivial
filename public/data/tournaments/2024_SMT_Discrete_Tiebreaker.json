@@ -1,0 +1,23 @@
+{
+  "test": "SMT Discrete Tiebreaker",
+  "year": 2024,
+  "name": "Discrete Tiebreakers",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2024/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the largest three-digit number which is not a multiple of 3, but is a multiple of the sum of its digits.</p>",
+      "solutions": "<p>Let our three-digit number be \\(\\overline{ABC}\\), so we know that \\(A+B+C\\) must divide \\(100A + 10B + C\\). Then, \\(A+B+C\\) must divide \\(99A + 9B\\). Since \\(\\overline{ABC}\\) is not a multiple of 3, \\(A+B+C\\) is not a multiple of 3, so \\(A+B+C\\) must divide \\(11A+B\\). To maximize our number, let \\(A=9\\). We then check values of \\(B\\), starting from \\(B=9\\) and working our way down, to see if there is a divisor of \\(11A+B\\) that is not a multiple of 3 and at most \\(A+B+9\\). The first value that works is \\(B=3\\), which gives us \\(11A+B=102\\), and the divisor that works is 17, so \\(C=17-9-3=5\\). Our answer is \\(\\boxed{935}\\).</p>",
+      "answer": "935"
+    },
+    "2": {
+      "problem": "<p>A town has eight neighborhoods named \\(S, T, A, N, F, O, R\\), and \\(D\\). The town mayor plans to rename every neighborhood using each of the letters \\(G, A, S, H, W, O, R\\), and \\(M\\) once. In how many ways can the neighborhoods be renamed such that no neighborhood has the same name before and after the renaming?</p>",
+      "solutions": "<p>Note that the letters that \\(STANFORD\\) and \\(GASHWORM\\) have in common are \\(S, A, O,\\) and \\(R\\). We can use the Principle of Inclusion and Exclusion (PIE) to count the number of permutations of \\(GASHWORM\\) such that at least one letter among \\(S, A, O,\\) and \\(R\\) is in the same position as in \\(STANFORD\\), and subtract this from the total number of permutations, \\(8!\\).</p><p>The number of permutations with \\(k\\) letters in the same position is \\(\\binom{4}{k} \\cdot (8-k)!\\), so using PIE the number of permutations with at least one letter in the same position is \\[\\binom{4}{1} \\cdot 7! - \\binom{4}{2} \\cdot 6! + \\binom{4}{3} \\cdot 5! - \\binom{4}{4} \\cdot 4! = 16296.\\]</p><p>Then, the number of permutations with no letters in the same position is \\(8! - 16296 = \\boxed{24024}\\).</p>",
+      "answer": "24024"
+    },
+    "3": {
+      "problem": "<p>The numbers \\(1, 2, \\ldots, 9\\) are put in a \\(3 \\times 3\\) grid. Below each column, Alice writes the product of the three numbers in that column, and she adds up her three results to get \\(A\\). Besides each row, Bob writes the product of the three numbers in the row, and adds his three results to get \\(B\\). Given that \\(A\\) is as small as possible, what’s the maximum possible value of \\(B\\)?</p>",
+      "solutions": "<p>Note that the product of the three numbers \\(c_1, c_2, c_3\\) written at the bottom of the columns is a constant \\(9!\\), and so by the AM-GM inequality we know that the sum \\(c_1 + c_2 + c_3\\) is minimized when \\(c_1, c_2, c_3\\) are as close to each other as possible. Playing around with different combinations to keep \\(c_1, c_2, c_3\\) as close to \\(\\sqrt[3]{9!} \\approx 71\\) as possible we find that the sets of numbers in each column are \\(\\{2, 5, 7\\}\\), \\(\\{1, 8, 9\\}\\), and \\(\\{3, 4, 6\\}\\). In this case, the product of the numbers in each column is \\(70, 72, 72\\), which is as close as we can get, resulting in the smallest possible \\(A\\). Then, to maximize \\(B\\), we want the product of the numbers in each row to be as far apart as possible (using the same AM-GM intuition from before), so we group the largest number in each column in the same row, and the smallest number in each column in the same row. The answer is thus \\[9 \\cdot 7 \\cdot 6 + 8 \\cdot 5 \\cdot 4 + 1 \\cdot 2 \\cdot 3 = 378 + 160 + 6 = \\boxed{544}.\\]</p>",
+      "answer": "544"
+    }
+  }
+}

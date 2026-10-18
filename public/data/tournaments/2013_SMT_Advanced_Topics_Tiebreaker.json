@@ -1,0 +1,23 @@
+{
+  "test": "SMT Advanced Topics Tiebreaker",
+  "year": 2013,
+  "name": "Advanced Topics Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2013/advanced-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Andrew flips a fair coin 5 times, and counts the number of heads that appear. Beth flips a fair coin 6 times and also counts the number of heads that appear. Compute the probability Andrew counts at least as many heads as Beth.</p>",
+      "solutions": "<p>Consider the three possible cases right before Beth flips her last coin (at this point Andrew and Beth have each flipped the coin 5 times):</p><ol><li>Andrew has more heads than Beth.</li><li>Beth and Andrew have the same number of heads.</li><li>Beth has more heads than Andrew.</li></ol><p>Let \\(x\\) be the probability of case 2. As we’ll see, we won’t actually need to compute \\(x\\). Then the first and last cases are symmetric, so they must each have probability \\(\\frac{1-x}{2}\\).</p><p>Now, consider what happens when Beth flips her last coin in each of these cases. Case 1 will satisfy the problem regardless of the result of this flip, case 2 will satisfy it half the time (only when Beth flips tails), while case 3 will never satisfy the problem.</p><p>Hence, the probability that Andrew counts at least as many heads as Beth is \\[\\frac{1-x}{2} \\cdot 1 + x \\cdot \\frac{1}{2} + \\frac{1-x}{2} \\cdot 0 = \\frac{1-x}{2} + \\frac{x}{2} = \\boxed{\\frac{1}{2}}.\\]</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "2": {
+      "problem": "<p>How many alphabetic sequences (that is, sequences containing only letters from \\(a \\ldots z\\)) of length 2013 have the letters in alphabetic order?</p>",
+      "solutions": "<p>Map the 26 letters to the integers from 0 to 25. Construct an instance of stars and bars with 25 stars and 2013 bars. For any possible ordering of 25 stars and 2013 bars, the \\(i\\)th letter in our constructed sequence should correspond to the number of stars to the left of the \\(i\\)th bar. There is a bijection between every valid alphabetic string with the letters in alphabetic order and this construction, so therefore the answer is \\(\\binom{2013+25}{25} = \\boxed{\\binom{2038}{25}}\\).</p>",
+      "answer": "\\binom{2038}{25}"
+    },
+    "3": {
+      "problem": "<p>Suppose two equally strong tennis players play against each other until one player wins three games in a row. The results of each game are independent, and each player will win with probability \\(\\frac{1}{2}\\). What is the expected value of the number of games they will play?</p>",
+      "solutions": "<p>Since we don’t care who wins, we can set up a recurrence based on just the length of the current winning streak. After one game is played, one player will be on a 1-game winning streak. If he wins the next game, it will become a 2-game winning streak; otherwise it will remain a 1-game winning streak (but for his opponent). Similarly, from a 2-game winning streak, if the streaking player wins, it will become a 3-game streak, and if she loses, it will revert to a 1-game streak for her opponent. If we have a 3-game winning streak, we’re done.</p><p>Hence, let \\(e_1, e_2, e_3\\) be the expected number of games left to be played from a 1-game, 2-game, and 3-game winning streak, respectively. We know \\(e_1 = 1 + \\frac{1}{2}e_2 + \\frac{1}{2}e_1\\), \\(e_2 = 1 + \\frac{1}{2}e_3 + \\frac{1}{2}e_1\\), and \\(e_3 = 0\\). Solving, we find that \\(e_2 = 4\\) and \\(e_1 = 6\\). Hence, after playing the first game, it will take an average of 6 more games for the match to finish, so the total expected value is \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    }
+  }
+}

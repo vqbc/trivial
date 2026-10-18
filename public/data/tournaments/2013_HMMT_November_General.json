@@ -1,0 +1,58 @@
+{
+  "test": "HMMT November General",
+  "year": 2013,
+  "name": "General Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2013/nov/gen/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the smallest non-square positive integer that is the product of four prime numbers (not necessarily distinct)?</p>",
+      "solutions": "<p>The smallest two integers that are the product of four primes are \\(2^4 = 16\\) and \\(2^3 \\cdot 3 = 24\\). Since 16 is a perfect square and 24 is not, the answer is 24.</p>",
+      "answer": "24"
+    },
+    "2": {
+      "problem": "<p>Plot points \\(A, B, C\\) at coordinates \\((0, 0)\\), \\((0, 1)\\), and \\((1, 1)\\) in the plane, respectively. Let \\(S\\) denote the union of the two line segments \\(AB\\) and \\(BC\\). Let \\(X_1\\) be the area swept out when Bobby rotates \\(S\\) <i>counterclockwise</i> 45 degrees about point \\(A\\). Let \\(X_2\\) be the area swept out when Calvin rotates \\(S\\) <i>clockwise</i> 45 degrees about point \\(A\\). Find \\(\\frac{X_1+X_2}{2}\\).</p>",
+      "solutions": "<p>It’s easy to see \\(X_1 = X_2\\). Simple cutting and pasting shows that \\(X_1\\) equals the area of \\(\\frac{1}{8}\\) of a circle with radius \\(AC = \\sqrt{2}\\), so \\(\\frac{X_1+X_2}{2} = X_1 = \\frac{1}{8}\\pi(\\sqrt{2})^2 = \\frac{\\pi}{4}\\).</p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "3": {
+      "problem": "<p>A 24-hour digital clock shows times \\(h : m : s\\), where \\(h\\), \\(m\\), and \\(s\\) are integers with \\(0 \\le h \\le 23\\), \\(0 \\le m \\le 59\\), and \\(0 \\le s \\le 59\\). How many times \\(h : m : s\\) satisfy \\(h + m = s\\)?</p>",
+      "solutions": "<p>We are solving \\(h + m = s\\) in \\(0 \\le s \\le 59\\), \\(0 \\le m \\le 59\\), and \\(0 \\le h \\le 23\\). If \\(s \\ge 24\\), each \\(h\\) corresponds to exactly 1 solution, so we get \\(24(59 - 23) = 24(36)\\) in this case. If \\(s \\le 23\\), we want the number of nonnegative integer solutions to \\(h + m \\le 23\\), which by lattice point counting (or balls and urns) is \\(\\binom{23+2}{2} = (23 + 2)(23 + 1)/2 = 25 \\cdot 12\\). Thus our total is \\(12(72 + 25) = 12(100 - 3) = 1164\\).</p>",
+      "answer": "1164"
+    },
+    "4": {
+      "problem": "<p>A 50-card deck consists of 4 cards labeled ”\\(i\\)” for \\(i = 1, 2, \\ldots, 12\\) and 2 cards labeled ”13”. If Bob randomly chooses 2 cards from the deck without replacement, what is the probability that his 2 cards have the same label?</p>",
+      "solutions": "<p>All pairs of distinct cards (where we distinguish cards even with the same label) are equally likely. There are \\(\\binom{2}{2} + 12\\binom{4}{2} = 73\\) pairs of cards with the same label and \\(\\binom{50}{2} = 100 \\cdot \\frac{49}{4} = 1225\\) pairs of cards overall, so the desired probability is \\(\\frac{73}{1225}\\).</p>",
+      "answer": "\\frac{73}{1225}"
+    },
+    "5": {
+      "problem": "<p>Let \\(ABC\\) be an isosceles triangle with \\(AB = AC\\). Let \\(D\\) and \\(E\\) be the midpoints of segments \\(AB\\) and \\(AC\\), respectively. Suppose that there exists a point \\(F\\) on ray \\(\\overrightarrow{DE}\\) outside of \\(ABC\\) such that triangle \\(BFA\\) is similar to triangle \\(ABC\\). Compute \\(\\frac{AB}{BC}\\).</p>",
+      "solutions": "<p>Let \\(\\alpha = \\angle ABC = \\angle ACB\\), \\(AB = 2x\\), and \\(BC = 2y\\), so \\(AD = DB = AE = EC = x\\) and \\(DE = y\\). Since \\(\\triangle BFA \\sim \\triangle ABC\\) and \\(BA = AC\\), we in fact have \\(\\triangle BFA \\cong \\triangle ABC\\), so \\(BF = BA = 2x\\), \\(FA = 2y\\), and \\(\\angle DAF = \\alpha\\). But \\(DE \\parallel BC\\) yields \\(\\angle ADF = \\angle ABC = \\alpha\\) as well, whence \\(\\triangle FAD \\sim \\triangle ABC\\) gives \\(\\frac{2y}{x} = \\frac{FA}{AD} = \\frac{AB}{BC} = \\frac{2x}{2y} \\implies \\frac{AB}{BC} = \\frac{x}{y} = \\sqrt{2}\\).</p>",
+      "answer": "\\sqrt{2}"
+    },
+    "6": {
+      "problem": "<p>Find the number of positive integer divisors of \\(12!\\) that leave a remainder of 1 when divided by 3.</p>",
+      "solutions": "<p>First we factor \\(12! = 2^{10}3^5 5^2 7^1 11^1\\), and note that \\(2, 5, 11 \\equiv -1\\pmod 3\\) while \\(7 \\equiv 1\\pmod 3\\). The desired divisors are precisely \\(2^a 5^b 7^c 11^d\\) with \\(0 \\le a \\le 10\\), \\(0 \\le b \\le 2\\), \\(0 \\le c \\le 1\\), \\(0 \\le d \\le 1\\), and \\(a + b + d\\) even. But then for any choice of \\(a, b\\), exactly one \\(d \\in \\{0, 1\\}\\) makes \\(a + b + d\\) even, so we have exactly one \\(1\\pmod 3\\)-divisor for every triple \\((a, b, c)\\) satisfying the inequality constraints. This gives a total of \\((10 + 1)(2 + 1)(1 + 1) = 66\\).</p>",
+      "answer": "66"
+    },
+    "7": {
+      "problem": "<p>Find the largest real number \\(\\lambda\\) such that \\(a^2 + b^2 + c^2 + d^2 \\ge ab + \\lambda bc + cd\\) for all real numbers \\(a, b, c, d\\).</p>",
+      "solutions": "<p>Let \\(f(a, b, c, d) = (a^2 + b^2 + c^2 + d^2) - (ab + \\lambda bc + cd)\\). For fixed \\((b, c, d)\\), \\(f\\) is minimized at \\(a = \\frac{b}{2}\\), and for fixed \\((a, b, c)\\), \\(f\\) is minimized at \\(d = \\frac{c}{2}\\), so simply we want the largest \\(\\lambda\\) such that \\(f(\\frac{b}{2}, b, c, \\frac{c}{2}) = \\frac{3}{4}(b^2 + c^2) - \\lambda bc\\) is always nonnegative. By AM-GM, this holds if and only if \\(\\lambda \\le 2\\frac{3}{4} = \\frac{3}{2}\\).</p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "8": {
+      "problem": "<p>How many of the first 1000 positive integers can be written as the sum of finitely many distinct numbers from the sequence \\(3^0, 3^1, 3^2, \\ldots\\)?</p>",
+      "solutions": "<p>We want to find which integers have only 0’s and 1’s in their base 3 representation. Note that \\(1000_{10} = 1101001_3\\). We can construct a bijection from all such numbers to the binary strings, by mapping \\(x_3 \\leftrightarrow x_2\\). Since \\(1101001_2 = 105_{10}\\), we conclude that the answer is 105.</p>",
+      "answer": "105"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABC\\) be a triangle and \\(D\\) a point on \\(BC\\) such that \\(AB = \\sqrt{2}\\), \\(AC = \\sqrt{3}\\), \\(\\angle BAD = 30^\\circ\\), and \\(\\angle CAD = 45^\\circ\\). Find \\(AD\\).</p>",
+      "solutions": "<p>Note that \\([BAD] + [CAD] = [ABC]\\). If \\(\\alpha_1 = \\angle BAD\\), \\(\\alpha_2 = \\angle CAD\\), then we deduce \\(\\frac{\\sin(\\alpha_1+\\alpha_2)}{AD} = \\frac{\\sin\\alpha_1}{AC} + \\frac{\\sin\\alpha_2}{AB}\\) upon division by \\(AB \\cdot AC \\cdot AD\\). Now \\[AD = \\frac{\\sin(30^\\circ + 45^\\circ)}{\\frac{\\sin 30^\\circ}{\\sqrt{3}} + \\frac{\\sin 45^\\circ}{\\sqrt{2}}}.\\] But \\(\\sin(30^\\circ + 45^\\circ) = \\sin 30^\\circ\\cos 45^\\circ + \\sin 45^\\circ\\cos 30^\\circ = \\sin 30^\\circ \\frac{1}{\\sqrt{2}} + \\sin 45^\\circ \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{6}}{2}(\\frac{\\sin 30^\\circ}{\\sqrt{3}} + \\frac{\\sin 45^\\circ}{\\sqrt{2}})\\), so our answer is \\(\\frac{\\sqrt{6}}{2}\\).</p>",
+      "answer": "\\frac{\\sqrt{6}}{2}"
+    },
+    "10": {
+      "problem": "<p>How many functions \\(f : \\{1, 2, \\ldots, 2013\\} \\to \\{1, 2, \\ldots, 2013\\}\\) satisfy \\(f(j) &lt; f(i) + j - i\\) for all integers \\(i, j\\) such that \\(1 \\le i &lt; j \\le 2013\\)?</p>",
+      "solutions": "<p>Note that the given condition is equivalent to \\(f(j) - j &lt; f(i) - i\\) for all \\(1 \\le i &lt; j \\le 2013\\). Let \\(g(i) = f(i) - i\\), so that the condition becomes \\(g(j) &lt; g(i)\\) for \\(i &lt; j\\) and \\(1 - i \\le g(i) \\le 2013 - i\\). However, since \\(g\\) is decreasing, we see by induction that \\(g(i+1)\\) is in the desired range so long as \\(g(i)\\) is in the desired range. Hence, it suffices to choose 2013 values for \\(g(1), \\ldots, g(2013)\\) in decreasing order from \\([-2012, 2012]\\), for a total of \\(\\binom{4025}{2013}\\) possible functions.</p>",
+      "answer": "\\binom{4025}{2013}"
+    }
+  }
+}

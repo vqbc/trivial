@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Calculus",
+  "year": 2001,
+  "name": "Calculus Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2001/feb/calc/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A sequence of ants walk from \\((0,0)\\) to \\((1,0)\\) in the plane. The \\(n\\)th ant walks along \\(n\\) semicircles of radius \\(\\frac{1}{n}\\) with diameters lying along the line from \\((0,0)\\) to \\((1,0)\\). Let \\(L_n\\) be the length of the path walked by the \\(n\\)th ant. Compute \\(\\lim_{n\\to\\infty} L_n\\).</p>",
+      "solutions": "<p>A semicircle of radius \\(\\frac{1}{n}\\) has length \\(\\frac{1}{2}\\pi\\left(\\frac{2}{n}\\right) = \\frac{\\pi}{n}\\), so \\(n\\) such semicircles have total length \\(\\boxed{\\pi}\\).</p>",
+      "answer": "\\pi"
+    },
+    "2": {
+      "problem": "<p>The polynomial \\(3x^5-250x^3+735x\\) is interesting because it has the maximum possible number of relative extrema and points of inflection at integer lattice points for a quintic polynomial. What is the sum of the \\(x\\)-coordinates of these points?</p>",
+      "solutions": "<p>The first derivative is \\(15x^4-750x^2+735\\), whose roots (which give the relative extrema) sum to \\(750/15=50\\). The second derivative is \\(60x^3-1500x\\), whose roots (which give the points of inflection) sum to \\(1500/60=25\\), for a grand total of \\(\\boxed{75}\\).</p>",
+      "answer": "75"
+    },
+    "3": {
+      "problem": "<p>A balloon that blows up in the shape of a perfect cube is being blown up at a rate such that at time \\(t\\) fortnights, it has surface area \\(6t\\) square furlongs. At how many cubic furlongs per fortnight is the air being pumped in when the surface area is 144 square furlongs?</p>",
+      "solutions": "<p>The surface area at time \\(t\\) is \\(6t\\), so the volume is \\(t^{3/2}\\). Hence the air is being pumped in at a rate of \\(\\frac{3}{2}\\sqrt{t}\\). When the surface area is 144, \\(t=24\\), so the answer is \\(\\boxed{3\\sqrt{6}}\\).</p>",
+      "answer": "3\\sqrt{6}"
+    },
+    "4": {
+      "problem": "<p>What is the size of the largest rectangle that can be drawn inside of a 3-4-5 right triangle with one of the rectangle’s sides along one of the legs of the triangle?</p>",
+      "solutions": "<p>Clearly one vertex of the rectangle will be at the right angle. Position the triangle with the leg of length 4 along the \\(x\\)-axis and the leg of length 3 along the \\(y\\)-axis. Then the hypotenuse is along the line \\(y=3-(3/4)x\\).</p><p>Suppose the rectangle has a side of length \\(y\\) along the leg of length 3. Then the area is \\(y(4/3)(3-y)=4y-(4/3)y^2\\). The derivative of this is 0 when \\(4-(8/3)y=0\\), or \\(y=3/2\\), giving an area of 3.</p><p>Or, if you prefer, suppose the rectangle has a side of length \\(x\\) along the leg of length 4. Then the area is \\(x(3-(3/4)x)=3x-(3/4)x^2\\). The derivative of this is 0 when \\(3-(3/2)x=0\\), or \\(x=2\\), again giving an area of \\(\\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "5": {
+      "problem": "<p>Same as question 4, but now we want one of the rectangle’s sides to be along the hypotenuse.</p><p><i>Note: Problem 4 (the previous problem) reads:</i></p><blockquote><p>What is the size of the largest rectangle that can be drawn inside of a 3-4-5 right triangle with one of the rectangle’s sides along one of the legs of the triangle?</p></blockquote>",
+      "solutions": "<p>Put the hypotenuse along the \\(x\\)-axis, with the short leg starting at the origin so that the right angle is at the point \\((9/5, 12/5)\\). For notational convenience, let’s just scale everything by a factor of 5 and then remember to divide the final area by 25, so now the top point is at \\((9,12)\\).</p><p>Let \\((a,0)\\) be the point where the edge of the rectangle along the hypotenuse starts. Then the height is \\(h=(4/3)a\\) since the leg of length 3 is along the line \\(y=(4/3)x\\). The leg of length 4 is along the line \\(x=25-(4/3)y\\), so the horizontal edge of the rectangle ends at \\(b=25-(4/3)h=25-(16/9)a\\). The area of the rectangle is \\((b-a)h=(25-(16/9)a-a)(4/3)a=\\frac{100}{3}a-\\frac{100}{27}a^2\\). The derivative of this is 0 when \\(\\frac{100}{3}=\\frac{200}{27}a\\), or \\(a=9/2\\). Thus the maximum area is \\(\\frac{(100/3)(9/2)-(100/27)(81/4)}{25}=\\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "6": {
+      "problem": "<p>The graph of \\(x^2-(y-1)^2=1\\) has one tangent line with positive slope that passes through \\((x,y)=(0,0)\\). If the point of tangency is \\((a,b)\\), find \\(\\sin^{-1}\\left(\\frac{a}{b}\\right)\\) in radians.</p>",
+      "solutions": "<p>Differentiating both sides of the equation, we find that \\(2x-2(y-1)\\frac{dy}{dx}=0\\), and so \\(\\frac{dy}{dx}=\\frac{x}{y-1}=\\frac{a}{b-1}\\). The line passing through \\((0,0)\\) and \\((a,b)\\) has slope \\(\\frac{b}{a}\\), so \\(\\frac{b}{a}=\\frac{a}{b-1}\\). Solving simultaneously with \\(a^2-(b-1)^2=1\\), we get \\(b^2-b-[(b-1)^2+1]=0\\), and so \\(b=2\\), \\(a=\\sqrt{2}\\). Finally, \\(\\sin^{-1}\\left(\\frac{a}{b}\\right)=\\boxed{\\frac{\\pi}{4}}\\).</p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "7": {
+      "problem": "<p>Find the coefficient of \\(x^{12}\\) in the Maclaurin series (i.e. Taylor series around \\(x=0\\)) for \\(\\frac{1}{1-3x+2x^2}\\).</p>",
+      "solutions": "<p>If you know formal power series, then this is not such a hard question, but since this is a calculus test... Use partial fractions to get \\(\\frac{1}{1-3x+2x^2}=\\frac{1/2}{1-2x}-\\frac{1}{1-x}\\). Now each of these can be expanded as a geometric series (or take derivatives and get the same result) to get \\(\\frac{1}{2}(1+2x+4x^2+8x^3+\\cdots)-(1+x+x^2+x^3+\\cdots)\\), so the coefficient of \\(x^n\\) is \\(2^{n-1}-1\\). When \\(n=12\\), that’s \\(\\boxed{2047}\\).</p>",
+      "answer": "2047"
+    },
+    "8": {
+      "problem": "<p>Evaluate \\(\\sum_{n=0}^{\\infty} \\cot^{-1}(n^2+n+1)\\).</p>",
+      "solutions": "<p>\\(\\sum_{n=0}^{\\infty} \\cot^{-1}(n^2+n+1) = \\sum_{n=0}^{\\infty} \\arctan\\left(\\frac{1}{n^2+n+1}\\right) = \\sum_{n=0}^{\\infty} \\left(\\arctan(n+1)-\\arctan(n)\\right)\\) by the sum/difference formula for tangent. This sum, taken out to \\(n=N\\), telescopes to \\(-\\arctan(0)+\\arctan(N+1)\\). So as \\(N\\) goes to infinity, the sum goes to \\(\\boxed{\\frac{\\pi}{2}}\\).</p>",
+      "answer": "\\frac{\\pi}{2}"
+    },
+    "9": {
+      "problem": "<p>On the planet Lemniscate, the people use the elliptic table of elements, a far more advanced version of our periodic table. They’re not very good at calculus, though, so they’ve asked for your help. They know that Kr is somewhat radioactive and deteriorates into Pl, a very unstable element that deteriorates to form the stable element As. They started with a block of Kr of size 10 and nothing else. (Their units don’t translate into English, sorry.) At time \\(t\\), they let \\(x(t)\\) be the amount of Kr, \\(y(t)\\) the amount of Pl, and \\(z(t)\\) the amount of As. They know that \\(x'(t)=-x\\), and that, in the absence of Kr, \\(y'(t)=-2y\\). Your job is to find at what time \\(t\\) the quantity of Pl will be largest. You should assume that the entire amount of Kr that deteriorates has turned into Pl.</p>",
+      "solutions": "<p>This problem is long-winded since it’s giving an autonomous linear system of differential equations without using any such language (and it includes a number of subtle references). The system we have is \\(x'=-x\\), \\(y'=x-2y\\). It’s not hard to see that \\(x=10e^{-t}\\) satisfies the first equation and the initial condition. Plugging this into the second equation and using the integrating factor \\(e^{2t}\\) (or using eigenvalues and eigenvectors to solve the system directly, though I don’t want to begin to explain what that means) lets us solve for \\(y\\). More precisely, we want to solve \\(y'+2y=10e^{-t}\\). Multiply by \\(e^{2t}\\) and simplify the left hand side to get \\((ye^{2t})'=10e^t\\). Integrating both sides with respect to \\(t\\) then yields \\(ye^{2t}=10e^t+C\\), or \\(y=10e^{-t}+Ce^{-2t}\\). Since \\(y(0)=0\\), we find \\(C=-10\\). Now to maximize \\(y\\), we solve \\(y'(t)=0\\), or \\(-10e^{-t}+20e^{-2t}=0\\), or \\(t=\\boxed{\\ln 2}\\).</p>",
+      "answer": "\\ln 2"
+    },
+    "10": {
+      "problem": "<p>Evaluate the definite integral \\(\\int_{-1}^{+1} \\frac{2u^{332}+u^{998}+4u^{1664}\\sin u^{691}}{1+u^{666}}\\,du\\).</p>",
+      "solutions": "<p>The term \\(\\frac{4u^{1664}\\sin u^{691}}{1+u^{666}}\\) is odd in \\(u\\), so its integral is 0. Now make the substitution \\(u=v^{1/333}\\Rightarrow du=\\frac{1}{333}v^{-332/333}\\,dv\\) to find that \\[\\int_{-1}^{+1}\\frac{2u^{332}+u^{998}}{1+u^{666}}\\,du=\\frac{1}{333}\\int_{-1}^{+1}\\frac{2+v^2}{1+v^2}\\,dv=\\frac{1}{333}\\int_{-1}^{+1}\\left(1+\\frac{1}{1+v^2}\\right)dv=\\frac{2}{333}\\int_0^1\\left(1+\\frac{1}{1+v^2}\\right)dv\\] \\[=\\frac{2}{333}\\left(1+\\int_0^1\\frac{1}{1+v^2}\\,dv\\right)=\\frac{2}{333}\\left(1+\\tan^{-1}1\\right)=\\boxed{\\frac{2}{333}\\left(1+\\frac{\\pi}{4}\\right)}.\\]</p>",
+      "answer": "\\frac{2}{333}\\left(1+\\frac{\\pi}{4}\\right)"
+    }
+  }
+}

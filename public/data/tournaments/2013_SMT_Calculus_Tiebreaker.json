@@ -1,0 +1,23 @@
+{
+  "test": "SMT Calculus Tiebreaker",
+  "year": 2013,
+  "name": "Calculus Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2013/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[\\int_{e^{e^e}}^{\\infty} \\frac{dx}{x(\\log x)(\\log \\log x)(\\log \\log \\log x)^{4/3}}.\\]</p>",
+      "solutions": "<p>Substitute \\(u = \\log \\log \\log x\\), yielding \\[\\int_1^{\\infty} u^{-4/3} \\, du = \\left[-3u^{-1/3}\\right]_1^{\\infty} = \\boxed{3}.\\]</p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>For which integers \\(1 \\le m \\le 10\\) is it true that \\[\\int_0^{\\pi} (\\cos x)(\\cos 2x) \\cdots (\\cos mx) \\, dx = 0?\\]</p>",
+      "solutions": "<p><b>Solution 1.</b> Apply the product-to-sum formula repeatedly on the integrand, until we have no more products of cosines. What remains in the integrand (besides some factors of two which we can ignore) are \\(2^m\\) terms, each written as \\(\\cos((\\pm 1 \\pm 2 \\pm \\cdots \\pm m)x)\\). Each such term integrates to \\(0\\) if and only if \\((\\pm 1 \\pm \\cdots \\pm m)\\) sums to a nonzero number; otherwise, the term is \\(\\cos 0 = 1\\), which integrates to something positive.</p><p>Therefore, the integral is nonzero if and only if there is some choice for the \\(\\pm\\) such that we can get \\(\\pm 1 \\pm \\cdots \\pm m = 0\\).</p><p>Observe that if \\(m \\equiv 1, 2 \\pmod 4\\) (i.e. the numbers \\(1, \\ldots, m\\) contains an odd number of odd numbers), then \\(\\pm 1 \\pm \\cdots \\pm m\\) is always odd and hence nonzero; therefore, the integral is zero when \\(m \\equiv 1, 2 \\pmod 4\\).</p><p>When \\(m \\equiv 0 \\pmod 4\\), we can write \\(m = 4k\\), so that \\((1+4k) - (2 + (4k-1)) + \\cdots = 0\\). Therefore the integral is nonzero.</p><p>When \\(m \\equiv 3 \\pmod 4\\), we can write \\(m = 4k+3\\), so \\((1+2-3)+(4+(4k+3))-(5+(4k+2))+\\cdots = 0\\). Therefore the integral is nonzero.</p><p>This covers all of the cases, so we can conclude that the above integral is zero if and only if \\(m \\equiv 1, 2 \\pmod 4\\). Therefore, we should report \\(\\boxed{1, 2, 5, 6, 9, 10}\\).</p><p><b>Solution 2.</b> Observe that for all \\(k\\), we have that \\[\\begin{aligned}\n\\cos((2k+1)(\\pi - x)) &amp;= \\cos((2k+1)\\pi - (2k+1)x) = \\cos(\\pi - (2k+1)x) = -\\cos((2k+1)x) \\\\\n\\cos(2k(\\pi - x)) &amp;= \\cos(2k\\pi - 2kx) = \\cos(-2kx) = \\cos(2kx)\n\\end{aligned}\\]</p><p>This means that \\(\\cos(nx)\\) is odd about the line \\(x = \\frac{\\pi}{2}\\) when \\(n\\) is odd, and even about the line \\(x = \\frac{\\pi}{2}\\) when \\(n\\) is even.</p><p>Let \\(f_m(x) = (\\cos x)(\\cos 2x) \\cdots (\\cos mx)\\). Then \\[f_m(\\pi - x) = \\begin{cases} f_m(x) &amp; m \\equiv 0, 3 \\pmod 4 \\\\ -f_m(x) &amp; m \\equiv 1, 2 \\pmod 4 \\end{cases}.\\]</p><p>Therefore, by symmetry, \\(\\int_0^{\\pi} f_m(x)\\, dx = 0\\) when \\(m \\equiv 1, 2 \\pmod 4\\).</p><p>It remains to show that \\(\\int_0^{\\pi} f_m(x)\\, dx \\ne 0\\) when \\(m \\equiv 0, 3 \\pmod 4\\). There are a number of ways to do this, such as the solution above.</p>",
+      "answer": "1, 2, 5, 6, 9, 10"
+    },
+    "3": {
+      "problem": "<p>Let \\(f(x) = \\displaystyle\\sum_{n=0}^{\\infty} \\frac{\\sin nx}{n!}\\). Compute \\(f\\left(\\frac{\\pi}{3}\\right)\\).</p>",
+      "solutions": "<p>\\[\\sum_{n=0}^{\\infty} \\frac{\\sin nx}{n} = \\text{Im}\\left(\\sum_{n=0}^{\\infty} \\frac{e^{inx}}{n!}\\right) = \\text{Im}\\left(e^{e^{ix}}\\right) = \\text{Im}\\left(e^{\\cos x + i \\sin x}\\right) = e^{\\cos x} \\cdot \\text{Im}(e^{i \\sin x}) = e^{\\cos x} \\sin \\sin x.\\]</p><p>Therefore \\(f(x) = e^{\\cos x} \\sin \\sin x\\) and the answer follows.</p>",
+      "answer": "e^{1/2}\\sin\\left(\\frac{\\sqrt{3}}{2}\\right)"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 1",
+  "year": 2006,
+  "name": "General Test, Part 1",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2006/feb/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many positive integers \\(x\\) are there such that \\(3x\\) has 3 digits and \\(4x\\) has four digits?</p>",
+      "solutions": "<p>Note that \\(x\\) must be between 250 and 333, inclusive. There are 84 integers in that interval.</p>",
+      "answer": "84"
+    },
+    "2": {
+      "problem": "<p>What is the probability that two cards randomly selected (without replacement) from a standard 52-card deck are neither of the same value nor the same suit?</p>",
+      "solutions": "<p>After choosing a first card, the second needs to be in one of the other three suits and of a different value. Hence, the answer is \\(\\frac{3 \\cdot 12}{52-1} = \\frac{12}{17}\\).</p>",
+      "answer": "\\frac{12}{17}"
+    },
+    "3": {
+      "problem": "<p>A square and an equilateral triangle together have the property that the area of each is the perimeter of the other. Find the square’s area.</p>",
+      "solutions": "<p>Let \\(s, t\\) be the side lengths of the square and triangle, respectively. Then \\(4s = \\frac{\\sqrt{3}t^2}{4}\\), and so \\[3t = s^2 = \\left(\\frac{\\sqrt{3}t^2}{16}\\right)^2 = \\frac{3t^4}{2^8},\\] so that \\(t^3 = 2^8\\) and \\(s^2 = 3t = 3\\sqrt[3]{2^8} = 12\\sqrt[3]{4}\\).</p>",
+      "answer": "12\\sqrt[3]{4}"
+    },
+    "4": {
+      "problem": "<p>Find \\[\\frac{\\sqrt{31+\\sqrt{31+\\sqrt{31+\\ldots}}}}{\\sqrt{1+\\sqrt{1+\\sqrt{1+\\ldots}}}}.\\]</p>",
+      "solutions": "<p>Let the numerator be \\(x\\) and the denominator \\(y\\). Then \\(x^2 = 31 + x\\), so, as \\(x &gt; 0\\), we have \\[x = \\frac{1+\\sqrt{1+4 \\cdot 31}}{2} = \\frac{1+5\\sqrt{5}}{2}.\\] Similarly we compute that \\[y = \\frac{1+\\sqrt{1+4 \\cdot 1}}{2} = \\frac{1+\\sqrt{5}}{2},\\] so that \\[\\frac{x}{y} = \\frac{1+5\\sqrt{5}}{1+\\sqrt{5}} = \\frac{1+5\\sqrt{5}}{1+\\sqrt{5}} \\cdot \\frac{1-\\sqrt{5}}{1-\\sqrt{5}} = \\frac{-24+4\\sqrt{5}}{-4} = 6 - \\sqrt{5}.\\]</p>",
+      "answer": "6 - \\sqrt{5}"
+    },
+    "5": {
+      "problem": "<p>In the plane, what is the length of the shortest path from \\((-2,0)\\) to \\((2,0)\\) that avoids the interior of the unit circle (i.e., circle of radius 1) centered at the origin?</p>",
+      "solutions": "<p>The path goes in a line segment tangent to the circle, then an arc of the circle, then another line segment tangent to the circle. Since one of these tangent lines and a radius of the circle give two legs of a right triangle with hypotenuse the line from \\((0,0)\\) to \\((-2,0)\\) or \\((2,0)\\), the length of each tangent line is \\(\\sqrt{2^2-1^2} = \\sqrt{3}\\). Also, because these are 30\\(^\\circ\\)-60\\(^\\circ\\)-90\\(^\\circ\\) right triangles, the angle of the arc is 60\\(^\\circ\\) and has length \\(\\pi/3\\).</p>",
+      "answer": "2\\sqrt{3} + \\frac{\\pi}{3}"
+    },
+    "6": {
+      "problem": "<p>Six celebrities meet at a party. It so happens that each celebrity shakes hands with exactly two others. A fan makes a list of all unordered pairs of celebrities who shook hands with each other. If order does not matter, how many different lists are possible?</p>",
+      "solutions": "<p>Let the celebrities get into one or more circles so that each circle has at least three celebrities, and each celebrity shook hands precisely with his or her neighbors in the circle.</p><p>Either there is one big circle of all 6 celebrities or else there are two small circles of 3 celebrities each.</p><p>If there is one big circle of 6, then depending on the ordering of the people in the circle, the fan’s list can still vary. Literally speaking, there are \\(5!\\) different circles 6 people can make: fix one of the people, and then there are 5 choices for the person to the right, 4 for the person after that, and so on. But this would be double-counting because, as far as the fan’s list goes, it makes no difference if we “reverse” the order of all the people. There are thus \\(5!/2 = 60\\) different possible lists here.</p><p>If there are two small circles of 3, then there are \\(\\binom{6}{3}\\) different ways the members of the “first” small circle may be selected. But this, too, is double-counting, because it makes no difference which circle is termed the “first” and which the “second.” There are therefore \\(\\binom{6}{3}/2 = 10\\) essentially different ways to split up the people into the two circles. In a circle of just three, each person shakes hands with both the others, so naturally the order of people in the circle doesn’t matter. There are thus 10 different possible lists here.</p><p>(Note that, translated into the language of graph theory, the problem is asking for the number of graphs on six labeled vertices such that each vertex has degree two.)</p>",
+      "answer": "70"
+    },
+    "7": {
+      "problem": "<p>The train schedule in Hummut is hopelessly unreliable. Train A will enter Intersection \\(X\\) from the west at a random time between 9:00 am and 2:30 pm; each moment in that interval is equally likely. Train B will enter the same intersection from the north at a random time between 9:30 am and 12:30 pm, independent of Train A; again, each moment in the interval is equally likely. If each train takes 45 minutes to clear the intersection, what is the probability of a collision today?</p>",
+      "solutions": "<p>Suppose we fix the time at which Train B arrives at Intersection X; then call the interval during which Train A could arrive (given its schedule) and collide with Train B the “disaster window.”</p><p>We consider two cases:</p><ul style=\"list-style-type: none\"><li>(i) <i>Train B enters Intersection X between 9:30 and 9:45.</i> If Train B arrives at 9:30, the disaster window is from 9:00 to 10:15, an interval of \\(1\\frac{1}{4}\\) hours. If Train B arrives at 9:45, the disaster window is \\(1\\frac{1}{2}\\) hours long. Thus, the disaster window has an average length of \\((1\\frac{1}{4} + 1\\frac{1}{2}) \\div 2 = \\frac{11}{8}\\). From 9:00 to 2:30 is \\(5\\frac{1}{2}\\) hours. The probability of a collision is thus \\(\\frac{11}{8} \\div 5\\frac{1}{2} = \\frac{1}{4}\\).</li><li>(ii) <i>Train B enters Intersection X between 9:45 and 12:30.</i> Here the disaster window is always \\(1\\frac{1}{2}\\) hours long, so the probability of a collision is \\(1\\frac{1}{2} \\div 5\\frac{1}{2} = \\frac{3}{11}\\).</li></ul><p>From 9:30 to 12:30 is 3 hours. Now case (i) occurs with probability \\(\\frac{1}{4} \\div 3 = \\frac{1}{12}\\), and case (ii) occurs with probability \\(\\frac{11}{12}\\). The overall probability of a collision is therefore \\(\\frac{1}{12} \\cdot \\frac{1}{4} + \\frac{11}{12} \\cdot \\frac{3}{11} = \\frac{1}{48} + \\frac{1}{4} = \\frac{13}{48}\\).</p>",
+      "answer": "\\frac{13}{48}"
+    },
+    "8": {
+      "problem": "<p>A dot is marked at each vertex of a triangle \\(ABC\\). Then, 2, 3, and 7 more dots are marked on the sides \\(AB\\), \\(BC\\), and \\(CA\\), respectively. How many triangles have their vertices at these dots?</p>",
+      "solutions": "<p>Altogether there are \\(3 + 2 + 3 + 7 = 15\\) dots, and thus \\(\\binom{15}{3} = 455\\) combinations of 3 dots. Of these combinations, \\(\\binom{2+2}{3} + \\binom{2+3}{3} + \\binom{2+7}{3} = 4 + 10 + 84 = 98\\) do not give triangles because they are collinear (the rest do give triangles). Thus \\(455 - 98 = 357\\) different triangles can be formed.</p>",
+      "answer": "357"
+    },
+    "9": {
+      "problem": "<p>Take a unit sphere \\(S\\), i.e., a sphere with radius 1. Circumscribe a cube \\(C\\) about \\(S\\), and inscribe a cube \\(D\\) in \\(S\\), so that every edge of cube \\(C\\) is parallel to some edge of cube \\(D\\). What is the shortest possible distance from a point on a face of \\(C\\) to a point on a face of \\(D\\)?</p>",
+      "solutions": "<p>Using the Pythagorean theorem, we know that the length of a diagonal of a cube of edge length \\(s\\) is \\(s\\sqrt{3}\\). Since \\(D\\) is inscribed in a sphere that has diameter 2, this means that its side length is \\(2/\\sqrt{3}\\).</p><p>The distance from a face of \\(D\\) to a face of \\(C\\) will be the distance between them along any line perpendicular to both of them; take such a line passing through the center of \\(S\\). The distance from the center to any face of \\(D\\) along this line will be half the side length of \\(D\\), or \\(1/\\sqrt{3}\\). The distance from the center to the edge of \\(C\\) is the radius of \\(S\\), which is 1. Therefore the desired distance is \\(1 - 1/\\sqrt{3} = 1 - \\frac{\\sqrt{3}}{3}\\).</p>",
+      "answer": "\\frac{3-\\sqrt{3}}{3}"
+    },
+    "10": {
+      "problem": "<p>A positive integer \\(n\\) is called “flippant” if \\(n\\) does not end in 0 (when written in decimal notation) and, moreover, \\(n\\) and the number obtained by reversing the digits of \\(n\\) are both divisible by 7. How many flippant integers are there between 10 and 1000?</p>",
+      "solutions": "<p>We use the notation “\\(\\mid\\)” to mean “divides.”</p><p>There is only one flippant 2-digit number, namely 77. Indeed, if \\(10a+b\\) is flippant (where \\(a, b\\) are integers 1–9), then \\(7 \\mid 10a+b\\) and \\(7 \\mid 10b+a\\). Thus, \\[7 \\mid 3(10a+b) - (10b+a) = 29a - 7b = a + 7(4a-b),\\] so that \\(7 \\mid a\\), and similarly \\(7 \\mid b\\), so we’d better have \\(a = b = 7\\).</p><p>There are 16 flippant 3-digit numbers. First consider the 12 palindromic ones (ones where the hundreds and units digits are the same): 161, 252, 343, 434, 525, 595, 616, 686, 707, 777, 868, and 959. Now consider the general case: suppose \\(100a + 10b + c\\) is flippant, where \\(a, b, c\\) are integers 1–9. Then \\(7 \\mid 100a+10b+c\\) and \\(7 \\mid 100c+10b+a\\), so \\(7 \\mid (100a+10b+c) - (100c+10b+a) = 99(a-c)\\), and so \\(7 \\mid a-c\\). In order for this not to result in a <i>palindromic</i> integer, we must have \\(a - c = \\pm 7\\) and, moreover, both \\(100a+10b+a\\) and \\(100c+10b+c\\) must be palindromic flippant integers. Consulting our list above, we find 4 more flippant integers: 168, 259, 861, and 952.</p>",
+      "answer": "17"
+    }
+  }
+}

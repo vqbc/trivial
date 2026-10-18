@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Number Theory B",
+  "year": 2007,
+  "name": "Number Theory B",
+  "url": "https://pumac.princeton.edu/s/NumberTheoryB-e2ng.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If you multiply all positive integer factors of 24, you get \\(24^x\\). Find \\(x\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>How many positive integers \\(n\\) are there such that \\(n + 2\\) divides \\((n + 18)^2\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Find the number of pairs of integers \\(x, y\\) with different parities such that \\(\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{2520}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Find the sum of the reciprocals of the positive integral factors of 84.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>For how many integers \\(x \\in [0, 2007]\\) is \\(\\frac{6x^3+53x^2+61x+7}{2x^2+17x+15}\\) reducible?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Find the last three digits of \\[2008^{2007^{\\cdot^{\\cdot^{\\cdot^{2^1}}}}}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Find the largest integer \\(n\\) which equals the product of its leading digit and the sum of its digits.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>In how many ways can \\(1 + 2 + \\cdots + 2007\\) be expressed as a sum of consecutive positive integers?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>A positive integer is called <i>squarefree</i> if its only perfect square factor is 1. Call a set of positive integers <i>squarefreeful</i> if each product of two of its elements is squarefree, and <i>squarefreefullest</i> if no positive integer less than the maximum element of the set can be added while preserving the set’s squarefreefulness. What is the minimum number of elements in a squarefreefullest set containing 31?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Let \\(F_n\\) be the Fibonacci numbers, defined by \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_n = F_{n-1} + F_{n-2}\\). For each \\(i\\), \\(1 \\le i \\le 200\\), we calculate the greatest common divisor \\(g_i\\) of \\(f_i\\) and \\(f_{2007}\\). What is the sum of the distinct values of \\(g_i\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

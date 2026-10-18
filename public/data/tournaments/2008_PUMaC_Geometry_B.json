@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Geometry B",
+  "year": 2008,
+  "name": "Geometry",
+  "url": "https://pumac.princeton.edu/s/PUMaC2008_GeometryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If a rectangle’s length is increased by \\(30\\%\\) and its width is decreased by \\(30\\%\\), by what percentage does its area change? State whether the area increases or decreases.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9\\%\\text{ decrease}"
+    },
+    "2": {
+      "problem": "<p>What is the area of a circle with a circumference of \\(8\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{16}{\\pi}"
+    },
+    "3": {
+      "problem": "<p>Consider a convex polygon \\(\\mathcal{P}\\) in space with perimeter \\(20\\) and area \\(30\\). What is the volume of the locus of points that are at most \\(1\\) unit away from some point in the interior of \\(\\mathcal{P}\\)?</p>",
+      "solutions": "<p>The region is split into three sections: the volume directly above and below the convex polygon, with volume \\(2 \\cdot 30 = 60\\), a half-cylinder of radius \\(1\\) at each edge, of total volume \\(\\frac{\\pi}{2} \\cdot 20\\), and a sector of a sphere at each corner, of total volume \\(\\frac{4}{3}\\pi\\). So, the total volume is \\(60 + 10\\pi + \\frac{4}{3}\\pi = 60 + \\frac{34}{3}\\pi\\).</p>",
+      "answer": "60 + \\frac{34}{3}\\pi"
+    },
+    "4": {
+      "problem": "<p>A cube is divided into \\(27\\) unit cubes. A sphere is inscribed in each of the corner unit cubes, and another sphere is placed tangent to these \\(8\\) spheres. What is the smallest possible value for the radius of the last sphere?</p>",
+      "solutions": "<p>The smallest possible sphere is centered at the center of the cube, and each of the \\(8\\) corner spheres touches it where it is closest to the center. The center of each of the \\(8\\) spheres is at a distance of \\(\\sqrt3\\) from the center of the cube, and the radius of each is \\(\\frac12\\). So, the point of tangency is at a distance of \\(\\sqrt3 - \\frac12\\) from the center of the cube, and that value must be the radius of the last sphere.</p>",
+      "answer": "\\sqrt{3} - \\frac{1}{2}"
+    },
+    "5": {
+      "problem": "<p>Two externally tangent circles have radius \\(2\\) and radius \\(3\\). Two lines are drawn, each tangent to both circles, but not at the point where the circles are tangent to each other. What is the area of the quadrilateral whose vertices are the four points of tangency between the circles and the lines?</p>",
+      "solutions": "<p>Let \\(O\\) and \\(P\\) be the centers of the circles of radius \\(2\\) and radius \\(3\\), respectively, and let \\(A\\) and \\(B\\) be the corresponding points of tangency with the line, so that \\(\\overline{OA} = 2\\), \\(\\overline{PB} = 3\\), and \\(\\overline{OP} = 5\\). If \\(C\\) is the point on \\(BP\\) that is \\(1\\) unit away from \\(P\\), then \\(AOCB\\) is a rectangle, so \\(\\angle OCP\\) is a right angle, so \\(\\overline{CO} = \\sqrt{5^2 - 1^2} = 2\\sqrt{6}\\). If \\(B'\\) is the projection of \\(B\\) onto \\(OP\\), then \\(BPB'\\) is similar to \\(OPC\\), so \\(\\overline{PB'} = \\frac{\\overline{PB}}{\\overline{OP}}\\overline{PC} = \\frac{3}{5}\\cdot 1 = \\frac{3}{5}\\) and \\(\\overline{B'B} = \\frac{\\overline{PB}}{\\overline{OP}}\\overline{CO} = \\frac{3}{5}\\cdot 2\\sqrt{6} = \\frac{6\\sqrt{6}}{5}\\). Similarly, if \\(A'\\) is the projection of \\(A\\) onto \\(OP\\), then \\(\\overline{OA'} = \\frac{2}{5}\\) and \\(\\overline{A'A} = \\frac{4\\sqrt{6}}{5}\\). So \\(\\overline{A'B'} = \\overline{OP} + \\overline{OA'} - \\overline{PB'} = 5 + \\frac{2}{5} - \\frac{3}{5} = \\frac{24}{5}\\). So, the area of the quadrilateral, twice the area of \\(ABB'A'\\), is \\(2 \\cdot \\frac{24}{5} \\cdot \\frac{1}{2}\\left(\\frac{6\\sqrt{6}}{5} + \\frac{4\\sqrt{6}}{5}\\right) = \\frac{48\\sqrt{6}}{5}\\).</p>",
+      "answer": "\\frac{48\\sqrt{6}}{5}"
+    },
+    "6": {
+      "problem": "<p>Circles \\(A\\), \\(B\\), and \\(C\\) each have radius \\(r\\), and their centers are the vertices of an equilateral triangle of side length \\(6r\\). Two lines are drawn, one tangent to \\(A\\) and \\(C\\) and one tangent to \\(B\\) and \\(C\\), such that \\(A\\) is on the opposite side of each line from \\(B\\) and \\(C\\). Find the sine of the angle between the two lines.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2008_PUMaC_Geometry_B/6-fig1.png\" width=\"144\" alt=\"\"></p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2008_PUMaC_Geometry_B/6-fig1.png\" width=\"144\" alt=\"\"></p><p>The line tangent to \\(B\\) and \\(C\\) is parallel to the line between the centers of \\(B\\) and \\(C\\). The line tangent to \\(A\\) and \\(C\\) passes through the midpoint between the centers of \\(A\\) and \\(C\\), hence the angle it makes with the line between their centers is \\(\\sin^{-1}\\frac{r}{3r}\\). Hence we seek \\(\\sin\\left(\\frac{\\pi}{3} - \\sin^{-1}\\frac{1}{3}\\right) = \\sin\\left(\\frac{\\pi}{3}\\right)\\cos\\left(-\\sin^{-1}\\frac{1}{3}\\right) + \\cos\\left(\\frac{\\pi}{3}\\right)\\sin\\left(-\\sin^{-1}\\frac{1}{3}\\right)\\). Using \\(\\cos(\\sin^{-1}(x)) = \\sqrt{1-x^2}\\) gives \\(\\frac{\\sqrt3}{2}\\sqrt{1-\\left(\\frac13\\right)^2} - \\frac12\\cdot\\frac13 = \\frac{2\\sqrt6-1}{6}\\), as desired.</p>",
+      "answer": "\\frac{2\\sqrt{6}-1}{6}"
+    },
+    "7": {
+      "problem": "<p>How many ordered pairs of real numbers \\((x, y)\\) are there such that \\(x^2 + y^2 = 200\\) and \\[\\sqrt{(x-5)^2+(y-5)^2} + \\sqrt{(x+5)^2+(y+5)^2}\\] is an integer?</p>",
+      "solutions": "<p>The locus of points such that \\(L = \\sqrt{(x-5)^2+(y-5)^2} + \\sqrt{(x+5)^2+(y+5)^2}\\) is an ellipse with foci at \\((5,5)\\) and \\((-5,-5)\\), and the locus of points such that \\(x^2+y^2=200\\) is a circle of radius \\(10\\sqrt{2}\\) centered at the origin. The smallest \\(L\\) such that the ellipse will intersect the circle is \\(20\\sqrt{2}\\), and the largest is \\(10\\sqrt{10}\\). For \\(L\\) strictly between these values, the ellipse will intersect the circle exactly \\(4\\) times. There are three integers between \\(20\\sqrt{2}\\) and \\(10\\sqrt{10}\\), so there are \\(4 \\cdot 3 = 12\\) points on the circle such that \\(\\sqrt{(x-5)^2+(y-5)^2} + \\sqrt{(x+5)^2+(y+5)^2}\\) is an integer.</p>",
+      "answer": "12"
+    },
+    "8": {
+      "problem": "<p>Infinitesimal Randall Munroe is glued to the center of a pentagon with side length \\(1\\). At each corner of the pentagon is a confused infinitesimal velociraptor. At any time, each raptor is running at one unit per second directly towards the next raptor in the pentagon (in counterclockwise order). How far does each confused raptor travel before it reaches Randall Munroe?</p>",
+      "solutions": "<p>The raptors remain arranged in a pentagon, so at any time, the distance between two adjacent raptors is decreasing at a rate of \\(1 - \\cos\\left(\\frac{2\\pi}{5}\\right) = \\frac{1}{4}(5-\\sqrt5)\\), since a raptor is moving towards the next one at a speed of \\(1\\), and the next one is moving away at a rate of \\(\\cos\\left(\\frac{2\\pi}{5}\\right)\\). So, it takes a time of \\(\\frac{4}{5-\\sqrt5} = 1 + \\frac{\\sqrt5}{5}\\) seconds for them to be at distance \\(0\\) from each other, which is when they reach Randall. Since they travel at one unit per second, each raptor covers a distance of \\(1 + \\frac{\\sqrt5}{5}\\).</p>",
+      "answer": "1 + \\frac{\\sqrt{5}}{5}"
+    },
+    "9": {
+      "problem": "<p>Let \\(\\mathcal{H}\\) be the region of points \\((x, y)\\), such that \\((1, 0)\\), \\((x, y)\\), \\((-x, y)\\), and \\((-1, 0)\\) form an isosceles trapezoid whose legs are shorter than the base between \\((x, y)\\) and \\((-x, y)\\). Find the least possible positive slope that a line could have without intersecting \\(\\mathcal{H}\\).</p>",
+      "solutions": "<p>It’s not a hyperbola! (Each branch is the branch of a hyperbola, but they’re branches of different hyperbolas.) Thus, the answer of \\(\\frac{\\sqrt3}{2}\\) is wrong, as any line of that slope will hit one of the two arcs. In fact, one branch of the figure consists of points twice as far from \\((1,0)\\) as from the line \\(x=0\\), which is a hyperbola. Asymptotically, the definition requires an equilateral triangle, so the hyperbolas are of the form \\(x^2 - 3y^2 + ax + b = 0\\). Since it contains the points \\(\\left(\\frac13, 0\\right)\\) and \\((1,2)\\), the equation must be \\(3x^2 - y^2 + 2x - 1 = 0\\). Also, the optimal line should go through the origin: if not, rotating around the origin gives another line with the same slope, and we can put a line of the same slope between them that goes through the origin. Hence \\(y = ax\\), so \\((3-a^2)x^2 + 2x - 1 = 0\\) should have a double root (for tangency), which happens when the leading term is \\(-1\\), so we have \\(a = 2\\).</p>",
+      "answer": "2"
+    },
+    "10": {
+      "problem": "<p>A cuboctahedron is the convex hull of (smallest convex set containing) the \\(12\\) points \\((\\pm 1, \\pm 1, 0)\\), \\((\\pm 1, 0, \\pm 1)\\), \\((0, \\pm 1, \\pm 1)\\). Find the cosine of the solid angle of one of the triangular faces, as viewed from the origin. (Take a figure and consider the set of points on the unit sphere centered on the origin such that the ray from the origin through the point intersects the figure. The area of that set is the solid angle of the figure as viewed from the origin.)</p>",
+      "solutions": "<p>Viewing the cuboctahedron from the direction of one of the vertices, the vertices adjacent to it form a \\(2\\) by \\(\\sqrt2\\) rectangle. So, when projected onto a sphere, the tangent of \\(\\theta\\), half the angle of the triangle, is \\(\\frac{\\sqrt2}{2}\\). That is, \\(\\exp(i\\theta) = \\frac{1}{\\sqrt3}(\\sqrt2+i)\\). The area of a triangle on the unit sphere is equal to the sum of its interior angles minus \\(\\pi\\). Thus, if \\(\\phi\\) is the area of the triangle, \\(\\phi = 6\\theta - \\pi\\).</p><p>So \\(\\exp(i\\phi) = \\exp(6i\\theta - i\\pi) = -\\left(\\frac{1}{\\sqrt3}(\\sqrt2+i)\\right)^6 = -\\frac{1}{27}(1+2\\sqrt2i)^3 = -\\frac{1}{27}(-7+4\\sqrt2i)(1+2\\sqrt2i) = \\frac{1}{27}(23+10\\sqrt2i)\\).</p><p>So \\(\\cos(\\phi) = \\frac{23}{27}\\).</p>",
+      "answer": "\\frac{23}{27}"
+    }
+  }
+}

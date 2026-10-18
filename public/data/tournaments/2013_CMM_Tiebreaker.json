@@ -1,0 +1,28 @@
+{
+  "test": "CMM Tiebreaker",
+  "year": 2013,
+  "name": "Tiebreaker Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_5e926c6cf06344baae0393cfd7aea9db.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In the diagram below, point \\(A\\) lies on the circle centered at \\(O\\). \\(AB\\) is tangent to circle \\(O\\) with \\(\\overline{AB} = 6\\). Point \\(C\\) is \\(\\frac{2\\pi}{3}\\) radians away from point \\(A\\) on the circle, with \\(BC\\) intersecting circle \\(O\\) at point \\(D\\). The length of \\(BD\\) is 3. Compute the radius of the circle.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2013_CMM_Tiebreaker/1-fig1.png\" width=\"405\" alt=\"\"></p>",
+      "solutions": "<p>First, using the tangent-secant power theorem, find \\(\\overline{BC}\\): \\[\\overline{BC} = \\frac{\\overline{AB}^2}{\\overline{BD}} = \\frac{6^2}{3} = 12.\\]</p><p>Then, knowing that \\(\\angle AOC\\) is \\(\\frac{2\\pi}{3}\\), that \\(\\angle OAB = \\frac{\\pi}{2}\\) (tangent radius relationship), and that \\(\\overline{AO} = \\overline{CO}\\) (both radii), it can be determined that \\(\\angle BAC = \\frac{2\\pi}{3}\\): \\[\\begin{aligned}\n\\angle OAC &amp;= \\pi - \\angle AOC - \\angle OCA = \\angle OCA = \\frac{\\pi - \\frac{2\\pi}{3}}{2} = \\frac{\\pi}{6}, \\\\\n\\angle BAC &amp;= \\angle OAB + \\angle OAC = \\frac{\\pi}{2} + \\frac{\\pi}{6} = \\frac{2\\pi}{3}.\n\\end{aligned}\\]</p><p>Next, find \\(\\overline{AC}\\) using the law of cosines: \\[\\begin{aligned}\n\\overline{BC}^2 &amp;= \\overline{AB}^2 + \\overline{AC}^2 - 2\\overline{AB}\\ \\overline{AC}\\cos(\\angle BAC) \\\\\n144 &amp;= 36 + \\overline{AC}^2 + 6\\overline{AC} \\\\\n\\overline{AC} &amp;= \\frac{-6 + \\sqrt{6^2 + 4\\times 108}}{2} \\\\\n\\overline{AC} &amp;= \\frac{-6 + 2\\sqrt{117}}{2} \\\\\n\\overline{AC} &amp;= -3 + 3\\sqrt{13}\n\\end{aligned}\\]</p><p>Finally, bisect \\(\\overline{AC}\\) and use a 30-60-90 triangle to find \\(\\overline{OA}\\), the radius: \\[\\overline{OA} = \\frac{2}{\\sqrt{3}} \\cdot \\frac{\\overline{AC}}{2} = -\\sqrt{3} + \\sqrt{39}.\\]</p><p>Hence, the answer is \\(-\\sqrt{3} + \\sqrt{39}\\).</p>",
+      "answer": "-\\sqrt{3} + \\sqrt{39}"
+    },
+    "2": {
+      "problem": "<p>Suppose the roots of \\[x^4 - 3x^2 + 6x - 12 = 1\\] are \\(\\alpha\\), \\(\\beta\\), \\(\\gamma\\), and \\(\\delta\\). What is the value of \\[\\frac{\\alpha+\\beta+\\gamma}{\\delta^2} + \\frac{\\alpha+\\delta+\\gamma}{\\beta^2} + \\frac{\\alpha+\\beta+\\delta}{\\gamma^2} + \\frac{\\delta+\\beta+\\gamma}{\\alpha^2}\\ ?\\]</p>",
+      "solutions": "<p>Because \\(\\alpha\\), \\(\\beta\\), \\(\\gamma\\), and \\(\\delta\\) are the roots of the above equation, we know that their sum is the negative of the coefficient of the \\(x^3\\) term, which is 0. Hence, we can simplify: \\[\\begin{aligned}\n\\frac{\\alpha+\\beta+\\gamma}{\\delta^2} + \\frac{\\alpha+\\delta+\\gamma}{\\beta^2} + \\frac{\\alpha+\\beta+\\delta}{\\gamma^2} + \\frac{\\delta+\\beta+\\gamma}{\\alpha^2} &amp;= \\frac{0-\\delta}{\\delta^2} + \\frac{0-\\beta}{\\beta^2} + \\frac{0-\\gamma}{\\gamma^2} + \\frac{0-\\alpha}{\\alpha^2} \\\\\n&amp;= -\\frac{1}{\\delta} - \\frac{1}{\\beta} - \\frac{1}{\\gamma} - \\frac{1}{\\alpha} \\\\\n&amp;= -\\frac{-6}{-12} = -\\frac{1}{2},\n\\end{aligned}\\] as desired.</p>",
+      "answer": "-\\frac{1}{2}"
+    },
+    "3": {
+      "problem": "<p>Bill plays a game in which he rolls two fair standard six-sided dice with sides labeled one through six. He wins if the number on one of the dice is three times the number on the other die. If Bill plays this game three times, compute the probability that he wins at least once.</p>",
+      "solutions": "<p>He has a \\(\\frac{1}{9}\\) chance of winning each game, and so his chance of winning at least once is \\(1 - \\left(\\frac{8}{9}\\right)^3\\).</p>",
+      "answer": "\\frac{217}{729}"
+    },
+    "4": {
+      "problem": "<p>Let \\[\\begin{aligned}\nA &amp;= \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{5} + \\frac{1}{9}, \\\\\nB &amp;= \\frac{1}{2\\cdot 3} + \\frac{1}{2\\cdot 5} + \\frac{1}{2\\cdot 9} + \\frac{1}{3\\cdot 5} + \\frac{1}{3\\cdot 9} + \\frac{1}{5\\cdot 9}, \\\\\nC &amp;= \\frac{1}{2\\cdot 3\\cdot 5} + \\frac{1}{2\\cdot 3\\cdot 9} + \\frac{1}{2\\cdot 5\\cdot 9} + \\frac{1}{3\\cdot 5\\cdot 9}.\n\\end{aligned}\\] Compute the value of \\(A + B + C\\).</p>",
+      "solutions": "<p>\\(1 + A + B + C + \\frac{1}{270}\\) factorizes to \\(\\left(1+\\frac{1}{2}\\right)\\left(1+\\frac{1}{3}\\right)\\left(1+\\frac{1}{5}\\right)\\left(1+\\frac{1}{9}\\right)\\) and can be shown to equal \\(\\frac{8}{3}\\).</p><p>So the answer is \\(\\frac{8}{3} - 1 - \\frac{1}{270} = \\frac{449}{720}\\).</p>",
+      "answer": "\\frac{449}{720}"
+    }
+  }
+}

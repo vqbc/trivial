@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Geometry A",
+  "year": 2008,
+  "name": "Geometry",
+  "url": "https://pumac.princeton.edu/s/PUMaC2008_GeometryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the area of a circle with a circumference of 8?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{16}{\\pi}"
+    },
+    "2": {
+      "problem": "<p>Consider a convex polygon \\(\\mathcal{P}\\) in space with perimeter 20 and area 30. What is the volume of the locus of points that are at most 1 unit away from some point in the interior of \\(\\mathcal{P}\\)?</p>",
+      "solutions": "<p>The region is split into three sections: the volume directly above and below the convex polygon, with volume \\(2 \\cdot 30 = 60\\), a half-cylinder of radius 1 at each edge, of total volume \\(\\frac{\\pi}{2} \\cdot 20\\), and a sector of a sphere at each corner, of total volume \\(\\frac{4}{3}\\pi\\). So, the total volume is \\[60 + 10\\pi + \\frac{4}{3}\\pi = 60 + \\frac{34}{3}\\pi.\\]</p>",
+      "answer": "60 + \\frac{34}{3}\\pi"
+    },
+    "3": {
+      "problem": "<p>Consider a 12-sided regular polygon. If the vertices going clockwise are \\(A\\), \\(B\\), \\(C\\), \\(D\\), \\(E\\), \\(F\\), etc, draw a line between \\(A\\) and \\(F\\), \\(B\\) and \\(G\\), \\(C\\) and \\(H\\), etc. This will form a smaller 12-sided regular polygon in the center of the larger one. What is the area of the smaller one divided by the are of the larger one?</p>",
+      "solutions": "<p>The diameter of a circle inscribed inside the inner dodecagon is equal to the side length of the outer dodecahedron. This can be seen from the parallel lines that are drawn from any two adjacent outer vertices that define opposite sides of the inner dodecagon.</p><p>The area of the inner dodecagon with diameter of an inscribed circle \\(x\\) is: \\(3(2-\\sqrt{3})x^2\\). The area of the outer dodecagon with side length \\(x\\) is: \\(3(2+\\sqrt{3})x^2\\).</p><p>Thus the ratio of their areas is: \\(\\frac{2-\\sqrt{3}}{2+\\sqrt{3}} = (2-\\sqrt{3})^2 = 7-4\\sqrt{3}\\).</p><p>The above formulas can be found using the right triangle with one angle of 15 degrees with hypotenuse length \\(R\\) that makes up \\(1/24\\)th of the dodecagon. \\(\\frac{1}{2}x\\) can be plugged in for a corresponding side and used in the formula \\(\\text{Area(dodecagon)} = 3R^2\\).</p>",
+      "answer": "7 - 4\\sqrt{3}"
+    },
+    "4": {
+      "problem": "<p>How many ordered pairs of real numbers \\((x, y)\\) are there such that \\(x^2 + y^2 = 200\\) and \\[\\sqrt{(x-5)^2+(y-5)^2}+\\sqrt{(x+5)^2+(y+5)^2}\\] is an integer?</p>",
+      "solutions": "<p>The locus of points such that \\(L = \\sqrt{(x-5)^2+(y-5)^2}+\\sqrt{(x+5)^2+(y+5)^2}\\) is an ellipse with foci at \\((5,5)\\) and \\((-5,-5)\\), and the locus of points such that \\(x^2+y^2=200\\) is a circle of radius \\(10\\sqrt{2}\\) centered at the origin. The smallest \\(L\\) such that the ellipse will intersect the circle is \\(20\\sqrt{2}\\), and the largest is \\(10\\sqrt{10}\\). For \\(L\\) strictly between these values, the ellipse will intersect the circle exactly 4 times. There are three integers between \\(20\\sqrt{2}\\) and \\(10\\sqrt{10}\\), so there are \\(4 \\cdot 3 = 12\\) points on the circle such that \\(\\sqrt{(x-5)^2+(y-5)^2}+\\sqrt{(x+5)^2+(y+5)^2}\\) is an integer.</p>",
+      "answer": "12"
+    },
+    "5": {
+      "problem": "<p>Infinitesimal Randall Munroe is glued to the center of a pentagon with side length 1. At each corner of the pentagon is a confused infinitesimal velociraptor. At any time, each raptor is running at one unit per second directly towards the next raptor in the pentagon (in counterclockwise order). How far does each confused raptor travel before it reaches Randall Munroe?</p>",
+      "solutions": "<p>The raptors remain arranged in a pentagon, so at any time, the distance between two adjacent raptors is decreasing at a rate of \\(1-\\cos\\left(\\frac{2\\pi}{5}\\right) = \\frac{1}{4}(5-\\sqrt{5})\\), since a raptor is moving towards the next one at a speed of 1, and the next one is moving away at a rate of \\(\\cos\\left(\\frac{2\\pi}{5}\\right)\\). So, it takes a time of \\(\\frac{4}{5-\\sqrt{5}} = 1+\\frac{\\sqrt{5}}{5}\\) seconds for them to be at distance 0 from each other, which is when they reach Randall. Since they travel at one unit per second, each raptor covers a distance of \\(1+\\frac{\\sqrt{5}}{5}\\).</p>",
+      "answer": "1 + \\frac{\\sqrt{5}}{5}"
+    },
+    "6": {
+      "problem": "<p>Find the coordinates of the point in the plane at which the sum of the distances from it to the three points \\((0, 0)\\), \\((2, 0)\\), \\((0, \\sqrt{3})\\) is minimal.</p>",
+      "solutions": "<p>It is well known that the point we are looking for is the Fermat Point, the point \\(F\\) with the property that when we draw the segments \\(FA\\), \\(FB\\), and \\(FC\\), they make three \\(120^\\circ\\) angles at \\(F\\). We can find this point by intersecting the circumcircles of each of three equilateral triangles mounted on each edge of the original triangle. Finding the equations of two of these circles is easy given the coordinates of the triangle. We can also easily check that the given answer \\(\\left(\\frac{5}{13}, \\frac{3\\sqrt{3}}{13}\\right)\\) works by making sure the specified angles are indeed \\(120^\\circ\\). We know \\(\\cos 120^\\circ = -\\frac{1}{2}\\). Thus we can check angles by checking dot products. This verification is left to the reader.</p>",
+      "answer": "\\left(\\frac{5}{13}, \\frac{3\\sqrt{3}}{13}\\right)"
+    },
+    "7": {
+      "problem": "<p>Let \\(\\mathcal{H}\\) be the region of points \\((x, y)\\), such that \\((1, 0)\\), \\((x, y)\\), \\((-x, y)\\), and \\((-1, 0)\\) form an isosceles trapezoid whose legs are shorter than the base between \\((x, y)\\) and \\((-x, y)\\). Find the least possible positive slope that a line could have without intersecting \\(\\mathcal{H}\\).</p>",
+      "solutions": "<p>It’s not a hyperbola! (Each branch is the branch of a hyperbola, but they’re branches of different hyperbolas.) Thus, the answer of \\(\\frac{\\sqrt{3}}{2}\\) is wrong, as any line of that slope will hit one of the two arcs. In fact, one branch of the figure consists of points twice as far from \\((1,0)\\) as from the line \\(x=0\\), which is a hyperbola. Asymptotically, the definition requires an equilateral triangle, so the hyperbola’s of the form \\(x^2-3y^2+ax+b=0\\). Since it contains the points \\(\\left(\\frac{1}{3},0\\right)\\) and \\((1,2)\\), the equation must be \\(3x^2-y^2+2x-1=0\\). Also, the optimal line should go through the origin: if not, rotating around the origin gives another line with the same slope, and we can put a line of the same slope between them that goes through the origin. Hence \\(y=ax\\), so \\((3-a^2)x^2+2x-1=0\\) should have a double root (for tangency), which happens when the leading term is \\(-1\\), so we have \\(a=2\\).</p>",
+      "answer": "2"
+    },
+    "8": {
+      "problem": "<p>In four-dimensional space, the 24-cell of sidelength \\(\\sqrt{2}\\) is the convex hull of (smallest convex set containing) the 24 points \\((\\pm 1, \\pm 1, 0, 0)\\) and its permutations. Find the four-dimensional volume of this region.</p>",
+      "solutions": "<p>The region in a tesseract (4-cube) that consists of the points within the tessaract and nearest to a given face (of the eight) forms a pyramid, the convex hull of the 8 vertices of that face and the center of the tesseract. The 24-cell of sidelength 1 can be constructed by cutting a unit tesseract into 8 of these pyramids, and putting them onto the faces of another unit tesseract. So, the volume of such a 24-cell is 2, and the volume of one of sidelength \\(\\sqrt{2}\\) is \\(2\\sqrt{2}^4=8\\).</p>",
+      "answer": "8"
+    },
+    "9": {
+      "problem": "<p>In tetrahedron \\(ABCD\\) with circumradius 2, \\(AB = 2\\), \\(CD = \\sqrt{7}\\), and \\(\\angle ABC = \\angle BAD = \\frac{\\pi}{2}\\). Find all possible angles between the planes containing \\(ABC\\) and \\(ABD\\).</p>",
+      "solutions": "<p>\\(C\\) lies on the plane \\(\\mathcal{B}\\) through \\(B\\) perpendicular to \\(AB\\), and \\(D\\) lies on the plane \\(\\mathcal{A}\\) through \\(A\\) perpendicular to \\(AB\\). \\(\\mathcal{P}\\), the perpendicular bisector of \\(AB\\), contains \\(O\\), the center of the circumsphere. Let \\(\\ell\\) be the line through \\(O\\) perpendicular to \\(\\mathcal{P}\\). Since \\(\\mathcal{A}\\) and \\(\\mathcal{B}\\) are both parallel to \\(\\mathcal{P}\\), and at a distance of 1 from it, their intersections with the circumsphere (which, recall, has radius 2) are circles of radius \\(\\sqrt{3}\\), each centered on a point of \\(\\ell\\). These circles contain \\(D\\) and \\(C\\), respectively. If \\(D\\) projects to \\(D'\\) on \\(\\mathcal{B}\\), then \\(B\\), \\(D'\\) and \\(C\\) are on one of these circles, centered at \\(O'\\), and \\(\\overline{CD}^2=2^2+\\overline{CD'}^2\\), so \\(\\overline{CD'}=\\sqrt{3}\\). So \\(\\angle CO'D'=\\frac{\\pi}{3}\\), so \\(\\angle CBD'=\\frac{\\pi}{6}\\) or \\(\\angle CBD'=\\frac{5\\pi}{6}\\). Since \\(BC\\) and \\(BD'\\) are both perpendicular to the intersection of the planes containing \\(ABC\\) and \\(ABD\\), the angle between these two planes is \\(\\frac{\\pi}{6}\\) or \\(\\frac{5\\pi}{6}\\).</p>",
+      "answer": "\\frac{\\pi}{6} \\text{ or } \\frac{5\\pi}{6}"
+    },
+    "10": {
+      "problem": "<p>A cuboctahedron is the convex hull of (smallest convex set containing) the 12 points \\((\\pm 1, \\pm 1, 0)\\), \\((\\pm 1, 0, \\pm 1)\\), \\((0, \\pm 1, \\pm 1)\\). Find the cosine of the solid angle of one of the triangular faces, as viewed from the origin. (Take a figure and consider the set of points on the unit sphere centered on the origin such that the ray from the origin through the point intersects the figure. The area of that set is the solid angle of the figure as viewed from the origin.)</p>",
+      "solutions": "<p>Viewing the cuboctahedron from the direction of one of the vertices, the vertices adjacent to it form a 2 by \\(\\sqrt{2}\\) rectangle. So, when projected onto a sphere, the tangent of \\(\\theta\\), half the angle of the triangle, is \\(\\frac{\\sqrt{2}}{2}\\). That is, \\(\\exp(i\\theta)=\\frac{1}{\\sqrt{3}}\\left(\\sqrt{2}+i\\right)\\). The area of a triangle on the unit sphere is equal to the sum of its interior angles minus \\(\\pi\\). Thus, if \\(\\phi\\) is the area of the triangle, \\(\\phi=6\\theta-\\pi\\).</p><p>So \\[\\exp(i\\phi)=\\exp(6i\\theta-i\\pi)=-\\left(\\frac{1}{\\sqrt{3}}\\left(\\sqrt{2}+i\\right)\\right)^6=-\\frac{1}{27}\\left(1+2\\sqrt{2}i\\right)^3=-\\frac{1}{27}\\left(-7+4\\sqrt{2}i\\right)\\left(1+2\\sqrt{2}i\\right)=\\frac{1}{27}\\left(23+10\\sqrt{2}i\\right).\\] So \\(\\cos(\\phi)=\\frac{23}{27}\\).</p>",
+      "answer": "\\frac{23}{27}"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "BMT Algebra",
+  "year": 2025,
+  "name": "Algebra Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/algebra-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Real numbers \\(x, y,\\) and \\(z\\) satisfy \\[5x + 6y + 7z = 0,\\] \\[6x + 7y + 8z = 1.\\] Compute \\(65x + 66y + 67z\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>A hat initially contains five slips labeled with the numbers \\(1, 2, 3, 4,\\) and \\(5\\) (one slip per number). Every minute, Jessica adds a new slip labeled with the number \\(20\\) to the hat. How many slips are in the hat when the average of the numbers in the hat is \\(5\\) times the initial average?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>An arithmetic sequence is a sequence of numbers where the difference between any two consecutive terms is the same. Harsh writes an arithmetic sequence where the ratio of the second term to the first term is \\(4\\), and the sum of the third and fourth terms is \\(34\\). Compute the second term of Harsh’s sequence.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Let \\(f(x) = (2x^2 + 7x + 3)(x^2 - 2x - 15)\\). The graph of \\(f(x)\\) in the coordinate plane is translated \\(4\\) units to the right and then rotated about the origin by \\(180\\) degrees. The resulting graph is the graph of the function \\(g(x)\\). Compute the sum of the distinct roots of \\(g(x)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Complex numbers \\(a, b,\\) and \\(c\\) satisfy the equations \\[a^3 + b^3 = 2 - 3ab(a+b),\\] \\[b^3 + c^3 = 16 - 3bc(b+c),\\] \\[c^3 + a^3 = 54 - 3ca(c+a).\\] Compute the sum of all distinct possible real values of \\(a + b + c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Compute the sum of all distinct real numbers \\(x\\) satisfying \\(|x| \\le \\frac{1}{2}\\) and \\[\\sin\\left(\\log_{10}\\left(\\frac{1}{x} + \\frac{1}{x^2}\\right)\\right) = 0.\\] Note that the argument of the sine function is assumed to be in radians.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Let \\(\\omega = e^{\\frac{2i\\pi}{5}}\\). Compute \\[\\prod_{i=1}^{5} \\prod_{j=i+1}^{5} (\\omega^i - \\omega^j)^2.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Let \\(a = \\log_6(30)\\) and \\(b = \\log_{15}(24)\\). Then \\[\\frac{2ab + 2a - 1}{ab + b + 1} = \\log_m(n)\\] for positive integers \\(m\\) and \\(n\\) such that \\(m\\) is as small as possible. Compute \\(m + n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Distinct complex numbers \\(a, b,\\) and \\(c\\) each have integer real part and satisfy the equations \\[ab + bc + ca = 300,\\] \\[(a-b)^5 + (b-c)^5 + (c-a)^5 = 0.\\] Compute the sum of the three least possible positive real values of \\(abc\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Complex numbers \\(a_1, a_2, \\ldots, a_{10}\\) satisfy the following property for each \\(1 \\le k \\le 10\\): \\[\\sum_{i=1}^{10} a_i^9 = 10a_k^{10} + a_k^9 - 2^9.\\] Given \\(a_1 a_2 \\cdots a_{10} = -\\frac{m}{n}\\) for relatively prime positive integers \\(m\\) and \\(n\\), compute the sum of the digits of \\(m + n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

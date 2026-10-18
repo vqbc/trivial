@@ -1,0 +1,58 @@
+{
+  "test": "BMT Analysis",
+  "year": 2016,
+  "name": "Analysis Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2016/AnaS2016.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Evaluate \\(1001^3 - 1000^3\\)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3003001"
+    },
+    "2": {
+      "problem": "<p>Find an integer pair of solutions \\((x, y)\\) to the following system of equations. \\[\\log_2(y^x) = 16\\] \\[\\log_2(x^y) = 8\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "(16, 2)"
+    },
+    "3": {
+      "problem": "<p>A half-mile long train is traveling at a speed of 90 miles per hour. As it enters a 1 mile long tunnel, Steve starts running from the back of the train to the front of the train at a speed of 10 miles per hour. When Steve is out of the tunnel, he stops running. How far along the train has Steve run in miles?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3}{20}"
+    },
+    "4": {
+      "problem": "<p>An geometric progression starting at \\(a_0 = 3\\) has an even number of terms. Suppose the difference between the odd indexed terms and even indexed terms is 39321 and that the sum of the first and last term is 49155. Find the common ratio of this geometric progression.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "5": {
+      "problem": "<p>Find \\[\\frac{\\tan 1^\\circ}{1+\\tan 1^\\circ} + \\frac{\\tan 2^\\circ}{1+\\tan 2^\\circ} + \\ldots + \\frac{\\tan 89^\\circ}{1+\\tan 89^\\circ}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{89}{2}"
+    },
+    "6": {
+      "problem": "<p>Amy is traveling on the \\(xy\\)-plane in a spaceship where her motion is described by the following equation \\(xe^y = ye^x\\). Given that her \\(x\\)-component of velocity is a constant 3 mph , the magnitude of her velocity as she approaches \\((1, -1)\\) can be expressed as \\(\\frac{\\sqrt{a+be^4}}{c+de^2}\\). Find \\(\\frac{ac}{bd}\\).</p><p>(You may assume that the initial conditions do allow her to approach \\((1, -1)\\))</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-1"
+    },
+    "7": {
+      "problem": "<p>Find the coefficient of \\(x^2\\) in the following polynomial \\[(1-x)^2(1+2x)^2(1-3x)^2\\ldots(1-11x)^2\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-434"
+    },
+    "8": {
+      "problem": "<p>Evaluate the following limit \\[\\lim_{x\\to 0} \\left(1+2x+3x^2+4x^3+\\ldots\\right)^{1/x}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "e^2"
+    },
+    "9": {
+      "problem": "<p>Suppose \\(p''(x) = 4x^2 + 4x + 2\\) where \\[p(x) = a_0 + a_1(x-1) + a_2(x-2)^2 + a_3(x-3)^4 + a_4(x-4)^4\\] We have \\(p'(-3) = -24\\) and \\(p(x)\\) has the unique property that the sum of the third powers of the roots of \\(p(x)\\) is equal to the sum of the fourth powers of the roots of \\(p(x)\\). Find \\(a_0\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-2"
+    },
+    "10": {
+      "problem": "<p>Evaluate \\[\\sum_{k=0}^{\\infty} \\left(\\frac{-1}{8}\\right)^k \\binom{2k}{k}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\sqrt{6}}{3}"
+    }
+  }
+}

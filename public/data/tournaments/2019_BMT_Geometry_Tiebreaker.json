@@ -1,0 +1,23 @@
+{
+  "test": "BMT Geometry Tiebreaker",
+  "year": 2019,
+  "name": "Geometry Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2019/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>We inscribe a circle \\(\\omega\\) in equilateral triangle \\(ABC\\) with radius 1. What is the area of the region inside the triangle but outside the circle?</p>",
+      "solutions": "<p>Since the radius of \\(\\omega\\) is 1, we can use 30-60-90 triangles to get that the side length of \\(ABC\\) is \\(2\\sqrt{3}\\). Thus since the area of \\(\\omega\\) is \\(\\pi\\) and the area of \\(ABC\\) is \\(\\sqrt{3}/4 \\cdot (2\\sqrt{3})^2 = 3\\sqrt{3}\\), the desired area is \\(\\boxed{3\\sqrt{3} - \\pi}\\).</p>",
+      "answer": "3\\sqrt{3} - \\pi"
+    },
+    "2": {
+      "problem": "<p>Define the inverse of triangle \\(ABC\\) with respect to a point \\(O\\) in the following way: construct the circumcircle of \\(ABC\\) and construct lines \\(AO, BO,\\) and \\(CO\\). Let \\(A'\\) be the other intersection of \\(AO\\) and the circumcircle (if \\(AO\\) is tangent, then let \\(A' = A\\)). Similarly define \\(B'\\) and \\(C'\\). Then \\(A'B'C'\\) is the inverse of \\(ABC\\) with respect to \\(O\\). Compute the area of the inverse of the triangle given in the plane by \\(A(-6, -21), B(-23, 10), C(16, 23)\\) with respect to \\(O(1, 3)\\).</p>",
+      "solutions": "<p>Observe that \\(O\\) is the circumcenter of \\(ABC\\). Because of this, our definition of the inverse and some angle chasing show that the inverse of \\(ABC\\) with respect to \\(O\\) is equivalent to rotating \\(ABC\\) \\(180^\\circ\\) about \\(O\\). Thus the area of the inverse is the same as the area of \\(ABC\\), which we can find using the shoelace determinant: \\[-\\frac{1}{2} \\begin{vmatrix} -6 &amp; -21 &amp; 1 \\\\ -23 &amp; 10 &amp; 1 \\\\ 16 &amp; 23 &amp; 1 \\end{vmatrix} = 715\\]</p>",
+      "answer": "715"
+    },
+    "3": {
+      "problem": "<p>We say that a quadrilateral \\(Q\\) is <i>tangential</i> if a circle can be inscribed into it, i.e. there exists a circle \\(C\\) that does not meet the vertices of \\(Q\\), such that it meets each edge at exactly one point. Let \\(N\\) be the number of ways to choose four distinct integers out of \\(\\{1, \\ldots, 24\\}\\) so that they form the side lengths of a tangential quadrilateral. Find the largest prime factor of \\(N\\).</p>",
+      "solutions": "<p>Note that the sides of a quadrilateral \\(ABCD\\) in which a circle can be inscribed are of the form \\(AB = a+b, BC = b+c, CD = c+d, DA = d+a\\), i.e. \\(AB + CD = BC + DA\\). (insert picture). The converse also holds true: start with any quadrilateral \\(ABCD\\) with the given side lengths; there exists a circle \\(O\\) tangent to \\(AB, BC, CD\\) centered at the intersection of the bisectors of \\(\\angle ABC\\) and \\(\\angle BCD\\). Suppose \\(O\\) is not tangent to \\(DA\\). Then draw the line through \\(A\\) tangent to \\(O\\), and let \\(P\\) be its intersection with \\(CD\\). Now \\(ABCP\\) is a quadrilateral with a circle inscribed in it, so \\(AB + CP = BC + PA\\). Assume first that \\(P\\) is between \\(C\\) and \\(D\\). We have \\(AB + CD = BC + DA\\) so \\(AB + CP + PD = BC + DA\\), and thus \\(AP + PD = DA\\). \\(\\therefore P = D\\), and \\(O\\) is tangent to \\(DA\\). If \\(P\\) is not between \\(C\\) and \\(D\\) then \\(D\\) is between \\(C\\) and \\(P\\), so we get \\(AB + CD + DP = BC + PA\\) and \\(AB + CD = BC + DA\\). Hence \\(AD + DP = PA\\), so again \\(P = D\\) and \\(O\\) is tangent to \\(AD\\).</p><p>Let \\(n \\in \\mathbf{N}\\); we shall restrict to the case where \\(n\\) is even in view of our problem. For each integer \\(k\\), the number of pairs \\(1 \\le x &lt; y \\le n\\) such that \\(x + y = k\\) is \\(\\min(n - \\lfloor (k-1)/2 \\rfloor, \\lfloor (k-1)/2 \\rfloor)\\). Thus for \\(3 \\le k \\le n+1\\), the number of pairs for each \\(k\\) is \\(\\lfloor (k-1)/2 \\rfloor\\), so the number of pairs \\((x,y),(z,w)\\) such that \\(x,y,z,w\\) distinct and \\(x+y = z+w = k\\) is \\(2\\sum_{i=2}^{i=n/2} \\binom{i}{2} = \\sum_{i=2}^{i=n/2} i(i-1) = n(n+2)(n-2)/24\\). From here, we obtain that the largest prime factor is \\(\\boxed{43}\\).</p><p><b>Remark:</b> The claims above regarding the characterization of tangential quadrilaterals are Pitot’s Theorem and its converse (due to Steiner, circa. 1846), respectively. The proof given here can be found at <code>https://brilliant.org/wiki/pitots-theorem/</code>.</p>",
+      "answer": "43"
+    }
+  }
+}

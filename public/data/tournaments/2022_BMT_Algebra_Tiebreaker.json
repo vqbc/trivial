@@ -1,0 +1,23 @@
+{
+  "test": "BMT Algebra Tiebreaker",
+  "year": 2022,
+  "name": "Algebra Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2022/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>For all \\(a\\) and \\(b\\), let \\(a \\clubsuit b = 3a + 2b + 1\\). Compute \\(c\\) such that \\((2c) \\clubsuit (5 \\clubsuit (c+3)) = 60\\).</p>",
+      "solutions": "<p>Since</p><p>\\[\\begin{aligned}\n(2c) \\clubsuit (5 \\clubsuit (c+3)) &amp;= (2c) \\clubsuit (3(5) + 2(c+3) + 1) \\\\\n&amp;= (2c) \\clubsuit (2c + 22) \\\\\n&amp;= 3(2c) + 2(2c+22) + 1 \\\\\n&amp;= 10c + 45,\n\\end{aligned}\\]</p><p>we require \\(10c + 45 = 60\\), so \\(c = \\boxed{\\frac{3}{2}}\\).</p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "2": {
+      "problem": "<p>Suppose that \\((i-1)^{11}\\) is a root of the quadratic \\(x^2 + Ax + B\\) for integers \\(A\\) and \\(B\\), where \\(i = \\sqrt{-1}\\). Compute the value of \\(A+B\\).</p>",
+      "solutions": "<p>Recall \\(\\operatorname{cis}(\\theta) = \\cos\\theta + i\\sin\\theta\\). By Euler’s formula, \\[(i-1)^{11} = (\\sqrt{2} \\cdot \\operatorname{cis}(3\\pi/4))^{11} = 2^{11/2} \\cdot \\operatorname{cis}(\\pi/4) = 32 + 32i.\\]</p><p>Because \\(A\\) and \\(B\\) are real, it follows that \\(x^2 + Ax + B\\) has roots \\(32 \\pm 32i\\) since the complex conjugate must also be a root. By Vieta’s formulas, \\(A = -64\\) and \\(B = 2048\\), so \\(A+B = \\boxed{1984}\\).</p>",
+      "answer": "1984"
+    },
+    "3": {
+      "problem": "<p>Tej writes \\(2, 3, \\ldots, 101\\) on a chalkboard. Every minute he erases two numbers from the board, \\(x\\) and \\(y\\), and writes \\(xy/(x+y-1)\\). If Tej does this for 99 minutes until only one number remains, what is its maximum possible value?</p>",
+      "solutions": "<p>Let the numbers at any given time be represented by \\(\\{a_i\\}\\); for instance, initially, \\(a_1 = 2, a_2 = 3, \\ldots, a_{100} = 101\\). For each \\(i\\), let \\(b_i = (1-a_i^{-1})^{-1}\\). This yields \\(a_i = (1-b_i^{-1})^{-1}\\) and \\(a_j = (1-b_j^{-1})^{-1}\\) which imply</p><p>\\[\\begin{aligned}\n\\frac{a_ia_j}{a_i+a_j-1} &amp;= \\left(a_i^{-1} + a_j^{-1} - (a_ia_j)^{-1}\\right)^{-1} \\\\\n&amp;= \\left((1-b_i^{-1}) + (1-b_j^{-1}) - (1-b_i^{-1})(1-b_j^{-1})\\right)^{-1} \\\\\n&amp;= \\left(1-(b_ib_j)^{-1}\\right)^{-1}\n\\end{aligned}\\]</p><p>In particular, \\(\\prod_i b_i\\) is invariant and Tej’s final number is \\[\\left(1-\\prod_i b_i^{-1}\\right)^{-1} = \\left(1-\\prod_i (1-a_i^{-1})\\right)^{-1} = \\left(1-\\prod_{i=1}^{100}\\frac{i}{i+1}\\right)^{-1} = \\boxed{\\frac{101}{100}}.\\]</p>",
+      "answer": "\\frac{101}{100}"
+    }
+  }
+}

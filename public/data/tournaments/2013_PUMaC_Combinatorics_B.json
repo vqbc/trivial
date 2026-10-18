@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Combinatorics B",
+  "year": 2013,
+  "name": "Combinatorics B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2013_CombinatoricsB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Including the original, how many ways are there to rearrange the letters in PRINCETON so that no two vowels (I, E, O) are consecutive and no three consonants (P, R, N, C, T, N) are consecutive?</p>",
+      "solutions": "<p>We have six consonants and three vowels. The consonants then occur in at most four segments sectioned off by vowels. If only three segments have consonants in them, the only possibilities are CCVCCVCCV and VCCVCCVCC. If all four have consonants, we have \\(\\binom{4}{2}\\), or six, ways to add the last two consonants. In all, we have \\(6 + 2 = 8\\) layouts, and \\(\\frac{6!}{2} \\times 3! = 360(6) = 2160\\) ways to fill the layouts with letters. So the total is \\(2160(8) = 17280\\).</p>",
+      "answer": "17280"
+    },
+    "2": {
+      "problem": "<p>The number of positive integer pairs \\((a, b)\\) that have \\(a\\) dividing \\(b\\) and \\(b\\) dividing \\(2013^{2014}\\) can be written as \\(2013n + k\\), where \\(n\\) and \\(k\\) are integers and \\(0 \\le k &lt; 2013\\). What is \\(k\\)? Recall \\(2013 = 3 \\cdot 11 \\cdot 61\\).</p>",
+      "solutions": "<p>This is equivalent to choosing \\(x_1, x_2, x_3, y_1, y_2, y_3\\) nonnegative integers less than or equal to 2014 so \\(x_i \\le y_i\\). There are \\(2015 + \\frac{2015 \\cdot 2014}{2} \\equiv 2 + 1 = 3\\) ways to choose each \\(x_i, y_i\\) pair, for a total of \\(27 \\pmod{2013}\\) ways.</p>",
+      "answer": "27"
+    },
+    "3": {
+      "problem": "<p>Chris’s pet tiger travels by jumping north and east. Chris wants to ride his tiger from Fine Hall to McCosh, which is 3 jumps east and 10 jumps north. However, Chris wants to avoid the horde of PUMaC competitors eating lunch at Frist, located 2 jumps east and 4 jumps north of Fine Hall. How many ways can he get to McCosh without going through Frist?</p>",
+      "solutions": "<p>There are \\(\\binom{13}{3}\\) ways to get to McCosh without the restriction, or \\(13 \\times 11 \\times 2 = 286\\). For Chris to avoid lunchers, he needs to not take a way through Frist; there are \\(\\binom{6}{2}\\), or 15, ways to Frist, and \\(\\binom{7}{1}\\), or 7, ways from it. This gives a total of 105 bad paths, for a final total of 181 paths to McCosh.</p>",
+      "answer": "181"
+    },
+    "4": {
+      "problem": "<p>Mereduth has many red boxes and many blue boxes. Coloon has placed five green boxes in a row on the ground, and Mereduth wants to arrange some number of her boxes on top of his row. Assume that each box must be placed so that it straddles two lower boxes. Including the one with no boxes, how many arrangements can Mereduth make?</p>",
+      "solutions": "<p>Let \\(K_n\\) be the number of arrangements we can make on \\(n\\) boxes. On top of the \\(n\\) green boxes, Mereduth has some string of boxes with no gaps, possibly of length zero. If this is of length \\(i\\), we find that the number of further arrangements that can be made is \\(2^i K_i K_{n-i-1}\\). Then we have \\(K_0 = 1\\), \\(K_1 = 1\\), \\(K_2 = 2K_1K_0 + K_0K_1 = 3\\), \\(K_3 = 4K_2K_0 + 2K_1^2 + K_0K_2 = 4(3) + 2 + 3 = 17\\), \\(K_4 = 8K_3K_0 + 4K_2K_1 + 2K_1K_2 + K_0K_3 = 9(17) + 6(3) = 171\\), and</p><p>\\[K_5 = 17 \\times 171 + 10 \\times 17 + 4 \\times 3^2 = 2907 + 160 + 36 = 3113\\]</p><p>So there are 3113 rearrangements.</p>",
+      "answer": "3113"
+    },
+    "5": {
+      "problem": "<p>A sequence of vertices \\(v_1, v_2, \\ldots, v_k\\) in a graph, where \\(v_i = v_j\\) only if \\(i = j\\) and \\(k\\) can be any positive integer, is called a <i>cycle</i> if \\(v_1\\) is attached by an edge to \\(v_2\\), \\(v_2\\) to \\(v_3\\), and so on to \\(v_k\\) connected to \\(v_1\\). Rotations and reflections are distinct: \\(A, B, C\\) is distinct from \\(A, C, B\\) and \\(B, C, A\\). Suppose a simple graph \\(G\\) has 2013 vertices and 3013 edges. What is the minimal number of cycles possible in \\(G\\)?</p>",
+      "solutions": "<p>We assume \\(G\\) is connected. Then 2012 edges make a spanning subtree of \\(G\\). Adding any edge is going to allow a new loop; if this loop involves \\(n\\) vertices, \\(2n\\) cycles result. Each new edge is going to be involved in at least six new cycles, then, and it can be seen pretty easily that this bound is attained. So the minimum is 6006.</p>",
+      "answer": "6006"
+    },
+    "6": {
+      "problem": "<p>An integer sequence \\(a_1, a_2, \\ldots, a_n\\) has \\(a_1 = 0\\), \\(a_n \\le 10\\) and \\(a_{i+1} - a_i \\ge 2\\) for \\(1 \\le i &lt; n\\). How many possibilities are there for this sequence? The sequence may be of any length.</p>",
+      "solutions": "<p>Suppose \\(K_d\\) counts the number of sequences with \\(a_n \\le d\\). There are \\(K_{d-2}\\) sequences with \\(a_n = d\\) and \\(K_{d-1}\\) with \\(a_n &lt; d\\), so we have \\(K_d = K_{d-1} + K_{d-2}\\). Lovely; we find \\(K_0 = 1\\), \\(K_1 = 1\\), and from there get \\(K_2 = 2\\), \\(K_3 = 3\\), \\(K_4 = 5\\), \\(K_5 = 8\\), \\(K_6 = 13\\), \\(K_7 = 21\\), \\(K_8 = 34\\), \\(K_9 = 55\\), and \\(K_{10} = 89\\). So the answer is 89.</p>",
+      "answer": "89"
+    },
+    "7": {
+      "problem": "<p>You are eating at a fancy restaurant with a person you wish to impress. For some reason, you think that eating at least one spicy course and one meat-filled course will impress the person. The meal is five courses, with four options for each course. Each course has one option that is spicy and meat-filled, one option that is just spicy, one that is just meat-filled, and one that is neither spicy nor meat-filled. How many possible meals can you have?</p>",
+      "solutions": "<p>Inclusion exclusion: there are \\(4^5\\) meals if we ignore requirements. There are \\(2^5\\) that avoid spice, \\(2^5\\) that avoid meat, and one that avoids both, for \\(4^5 - 2(2^5) + 1 = 961\\) total meals.</p>",
+      "answer": "961"
+    },
+    "8": {
+      "problem": "<p>You roll three fair six-sided dice. Given that the highest number you rolled is a 5, the expected value of the sum of the three dice can be written as \\(\\frac{a}{b}\\) in simplest form. Find \\(a + b\\).</p>",
+      "solutions": "<p>Note that this is not the same as fixing one die at 5, then randomizing the rest from 1 to 5. To compute the expected value correctly, we consider three cases: rolls that include exactly one, two, three 5s. To make counting easier we think of the rolls as happening sequentially and count each distinct sequence as an instance. Non-5 rolls are equally likely to be 1, 2, 3, 4 and are therefore worth 2.5 on average. So we have:</p><p>Three 5s: \\((1 \\times 4^0) \\times 15 = 15\\)</p><p>Two 5s: \\((3 \\times 4^1) \\times 12.5 = 150\\)</p><p>One 5: \\((3 \\times 4^2) \\times 10.0 = 480\\)</p><p>We end up with \\(1 + 12 + 48 = 61\\) instances and a total sum of 645. The fraction \\(\\frac{645}{61}\\), already in simplest form, gives sum 706, and that is the answer.</p>",
+      "answer": "706"
+    }
+  }
+}

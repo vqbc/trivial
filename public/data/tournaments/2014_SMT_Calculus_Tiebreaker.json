@@ -1,0 +1,23 @@
+{
+  "test": "SMT Calculus Tiebreaker",
+  "year": 2014,
+  "name": "Calculus Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2014/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\(\\displaystyle\\int_{2012}^{2014} \\left[(x - 2013)^2 + (x - 2015)^2\\right]\\, dx\\).</p>",
+      "solutions": "<p>\\[\\int_{2012}^{2014} (x - 2013)^2\\, dx = \\int_{-1}^{1} x^2\\, dx = \\frac{2}{3}.\\qquad \\int_{2012}^{2014} (x - 2015)^2\\, dx = \\int_{1}^{3} x^2\\, dx = \\frac{26}{3}.\\] \\[\\frac{2}{3} + \\frac{26}{3} = \\boxed{\\frac{28}{3}}.\\]</p>",
+      "answer": "\\frac{28}{3}"
+    },
+    "2": {
+      "problem": "<p>Let \\(f(x) = (x^2 + 8x + 20)e^x\\). Find \\(f^{(100)}(x)\\).</p>",
+      "solutions": "<p>Consider any function of the form \\(g(x) = h(x)e^x\\). We claim that \\[g^{(n)}(x) = e^x \\sum_{k=0}^{n} \\binom{n}{k} h^{(k)}(x).\\]</p><p>Given this formula, we can compute \\[f^{(100)}(x) = e^x \\left((x^2 + 8x + 20) + 100(2x + 8) + \\frac{100 \\times 99}{2} \\times 2\\right) = \\boxed{(x^2 + 208x + 10720)e^x}.\\]</p><p>To prove the formula, we induct on \\(n\\). The base case \\(n = 0\\) clearly holds. Now, assume \\[g^{(n)}(x) = e^x \\sum_{k=0}^{n} \\binom{n}{k} h^{(k)}(x).\\]</p><p>The derivative, by the product rule is \\[\\begin{aligned}\ng^{(n+1)}(x) &amp;= g^{(n)}(x) + e^x \\sum_{k=0}^{n} \\binom{n}{k} h^{(k+1)}(x) \\\\\n&amp;= g^{(n)}(x) + e^x \\sum_{k=1}^{n+1} \\binom{n}{k-1} h^{(k)}(x) \\\\\n&amp;= e^x \\left(h(x) + h^{(n+1)}(x) + \\sum_{k=1}^{n} \\left(\\binom{n}{k} + \\binom{n}{k-1}\\right) h^{(k)}(x)\\right) \\\\\n&amp;= e^x \\left(h(x) + h^{(n+1)}(x) + \\sum_{k=1}^{n} \\binom{n+1}{k} h^{(k)}(x)\\right) \\\\\n&amp;= e^x \\sum_{k=0}^{n+1} \\binom{n}{k} h^{(k)}(x).\n\\end{aligned}\\]</p><p>Thus, the proof is complete.</p>",
+      "answer": "(x^2 + 208x + 10720)e^x"
+    },
+    "3": {
+      "problem": "<p>Calculate the infinite series \\[\\sum_{k=1}^{\\infty} \\frac{1}{2k^2 - k}.\\]</p>",
+      "solutions": "<p>We have the partial fraction decomposition \\[\\frac{1}{2k^2 - k} = \\frac{2}{2k - 1} - \\frac{2}{2k}.\\]</p><p>Therefore, \\[\\sum_{k=1}^{\\infty} \\frac{1}{2k^2 - k} = 2\\sum_{k=1}^{\\infty} \\left(\\frac{1}{2k - 1} - \\frac{1}{2k}\\right) = 2\\left(1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots\\right) = \\boxed{2\\ln 2}.\\]</p>",
+      "answer": "2\\ln 2"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Calculus",
+  "year": 2002,
+  "name": "Individual Subject Test: Calculus",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2002/feb/calc/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Two circles have centers that are \\(d\\) units apart, and each has diameter \\(\\sqrt{d}\\). For any \\(d\\), let \\(A(d)\\) be the area of the smallest circle that contains both of these circles. Find \\(\\lim_{d\\to\\infty} \\frac{A(d)}{d^2}\\).</p>",
+      "solutions": "<p>This equals \\(\\lim_{d\\to\\infty} \\frac{\\pi\\left(\\frac{d+\\sqrt{d}}{2}\\right)^2}{d^2} = \\boxed{\\frac{\\pi}{4}}\\).</p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "2": {
+      "problem": "<p>Find \\(\\lim_{h\\to 0} \\frac{x^2-(x+h)^2}{h}\\).</p>",
+      "solutions": "<p>This equals \\(\\lim_{h\\to 0} \\frac{x^2-x^2-h^2-2hx}{h} = \\lim_{h\\to 0} -h-2x = \\boxed{-2x}\\).</p><p><b>Alternate Solution.</b> This is the definition of the derivative of \\(-x^2\\) with respect to \\(x\\), which is \\(-2x\\).</p>",
+      "answer": "-2x"
+    },
+    "3": {
+      "problem": "<p>We are given the values of the differentiable real functions \\(f,g,h\\), as well as the derivatives of their pairwise products, at \\(x=0\\): \\[f(0)=1;\\ g(0)=2;\\ h(0)=3;\\ (gh)'(0)=4;\\ (hf)'(0)=5;\\ (fg)'(0)=6.\\]</p><p>Find the value of \\((fgh)'(0)\\).</p>",
+      "solutions": "<p>By the product rule, \\((fgh)' = f'gh + fg'h + fgh' = ((fg)'h + (gh)'f + (hf)'g)/2\\). Evaluated at 0, this gives \\(\\boxed{16}\\).</p>",
+      "answer": "16"
+    },
+    "4": {
+      "problem": "<p>Find the area of the region in the first quadrant \\(x&gt;0, y&gt;0\\) bounded above by the graph of \\(y=\\arcsin(x)\\) and below by the graph of \\(y=\\arccos(x)\\).</p>",
+      "solutions": "<p>We can integrate over \\(y\\) rather than \\(x\\). In particular, the solution is \\(\\int_0^{\\pi/4} \\sin y\\,dy + \\int_{\\pi/4}^{\\pi/2} \\cos y\\,dy = \\left(1-\\frac{1}{\\sqrt{2}}\\right)2 = \\boxed{2-\\sqrt{2}}\\).</p>",
+      "answer": "2-\\sqrt{2}"
+    },
+    "5": {
+      "problem": "<p>What is the minimum vertical distance between the graphs of \\(2+\\sin(x)\\) and \\(\\cos(x)\\)?</p>",
+      "solutions": "<p>The derivative of \\(2+\\sin(x)-\\cos(x)\\) is \\(\\cos x + \\sin x\\), which in the interval \\(0\\le x&lt;2\\pi\\) is zero at \\(x=\\frac{3\\pi}{4}, \\frac{7\\pi}{4}\\). At \\(\\frac{7\\pi}{4}\\), when \\(\\sin(x)\\) is negative and \\(\\cos(x)\\) is positive, the distance reaches its minimal value of \\(\\boxed{2-\\sqrt{2}}\\).</p>",
+      "answer": "2-\\sqrt{2}"
+    },
+    "6": {
+      "problem": "<p>Determine the positive value of \\(a\\) such that the parabola \\(y=x^2+1\\) bisects the area of the rectangle with vertices \\((0,0), (a,0), (0,a^2+1)\\), and \\((a,a^2+1)\\).</p>",
+      "solutions": "<p>The area of the rectangle is \\(a^3+a\\). The portion under the parabola has area \\(\\int_0^a x^2+1\\,dx = a^3/3+a\\). Thus we wish to solve the equation \\(a^3+a=2(a^3/3+a)\\); dividing by \\(a\\) and rearranging gives \\(a^2/3=1\\), so \\(a=\\boxed{\\sqrt{3}}\\).</p>",
+      "answer": "\\sqrt{3}"
+    },
+    "7": {
+      "problem": "<p>Denote by \\(\\langle x\\rangle\\) the fractional part of the real number \\(x\\) (for instance, \\(\\langle 3.2\\rangle = 0.2\\)). A positive integer \\(N\\) is selected randomly from the set \\(\\{1,2,3,\\ldots,M\\}\\), with each integer having the same probability of being picked, and \\(\\left\\langle \\frac{87}{303}N\\right\\rangle\\) is calculated. This procedure is repeated \\(M\\) times and the average value \\(A(M)\\) is obtained. What is \\(\\lim_{M\\to\\infty} A(M)\\)?</p>",
+      "solutions": "<p>This method of picking \\(N\\) is equivalent to uniformly randomly selecting a positive integer. Call this the average value of \\(\\left\\langle\\frac{87}{303}N\\right\\rangle\\) for \\(N\\) a positive integer. In lowest terms, \\(\\frac{87}{303}=\\frac{29}{101}\\), so the answer is the same as the average value of \\(\\frac{0}{101}, \\frac{1}{101}, \\ldots, \\frac{100}{101}\\), which is \\(\\frac{1+2+\\cdots+100}{101\\cdot 101} = \\frac{100\\cdot 101/2}{101\\cdot 101} = \\boxed{\\frac{50}{101}}\\).</p>",
+      "answer": "\\frac{50}{101}"
+    },
+    "8": {
+      "problem": "<p>Evaluate \\(\\displaystyle\\int_0^{(\\sqrt{2}-1)/2} \\frac{dx}{(2x+1)\\sqrt{x^2+x}}\\).</p>",
+      "solutions": "<p>Let \\(u=\\sqrt{x^2+x}\\). Then \\(du = \\frac{2x+1}{2\\sqrt{x^2+x}}\\,dx\\). So the integral becomes \\(2\\int \\frac{du}{(4x^2+4x+1)}\\), or \\(2\\int \\frac{du}{4u^2+1}\\). This is \\(\\tan^{-1}(2u)\\), yielding a final answer of \\(\\tan^{-1}(2\\sqrt{x^2+x})+C\\) for the indefinite integral. The definite integral becomes \\(\\tan^{-1}(1) - \\tan^{-1}(0) = \\boxed{\\frac{\\pi}{4}}\\).</p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "9": {
+      "problem": "<p>Suppose \\(f\\) is a differentiable real function such that \\(f(x)+f'(x)\\le 1\\) for all \\(x\\), and \\(f(0)=0\\). What is the largest possible value of \\(f(1)\\)? (Hint: consider the function \\(e^xf(x)\\).)</p>",
+      "solutions": "<p>Let \\(g(x)=e^xf(x)\\); then \\(g'(x) = e^x(f(x)+f'(x)) \\le e^x\\). Integrating from 0 to 1, we have \\(g(1)-g(0) = \\int_0^1 g'(x)\\,dx \\le \\int_0^1 e^x\\,dx = e-1\\). But \\(g(1)-g(0) = e\\cdot f(1)\\), so we get \\(f(1) \\le (e-1)/e\\). This maximum is attained if we actually have \\(g'(x)=e^x\\) everywhere; this entails the requirement \\(f(x)+f'(x)=1\\), which is met by \\(f(x)=1-e^{-x}\\). The largest possible value of \\(f(1)\\) is \\(\\boxed{1-1/e}\\).</p>",
+      "answer": "1-\\frac{1}{e}"
+    },
+    "10": {
+      "problem": "<p>A continuous real function \\(f\\) satisfies the identity \\(f(2x)=3f(x)\\) for all \\(x\\). If \\(\\int_0^1 f(x)\\,dx=1\\), what is \\(\\int_1^2 f(x)\\,dx\\)?</p>",
+      "solutions": "<p>Let \\(S = \\int_1^2 f(x)\\,dx\\). By setting \\(u=2x\\), we see that \\(\\int_{1/2}^1 f(x)\\,dx = \\int_{1/2}^1 f(2x)/3\\,dx = \\int_1^2 f(u)/6\\,du = S/6\\). Similarly, \\(\\int_{1/4}^{1/2} f(x)\\,dx = S/36\\), and in general \\(\\int_{1/2^n}^{1/2^{n-1}} f(x)\\,dx = S/6^n\\). Adding finitely many of these, we have \\(\\int_{1/2^n}^1 f(x)\\,dx = S/6+S/36+\\cdots+S/6^n = S\\cdot(1-1/6^n)/5\\). Taking the limit as \\(n\\to\\infty\\), we have \\(\\int_0^1 f(x)\\,dx = S/5\\). Thus \\(S=\\boxed{5}\\), the answer.</p>",
+      "answer": "5"
+    }
+  }
+}

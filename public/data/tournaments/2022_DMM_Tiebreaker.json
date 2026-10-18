@@ -1,0 +1,18 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2022,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2022/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The sequence \\(\\{x_n\\}\\) is defined by \\[x_{n+1} =\n\\begin{cases}\n2x_n - 1, &amp; \\text{if } \\frac{1}{2} \\le x_n &lt; 1 \\\\\n2x_n, &amp; \\text{if } 0 \\le x_n &lt; \\frac{1}{2}\n\\end{cases}\\] where \\(0 \\le x_0 &lt; 1\\) and \\(x_7 = x_0\\). Find the number of sequences satisfying these conditions.</p>",
+      "solutions": "<p>First, we observe that the sequence \\(\\{x_n\\}\\) is fully determined once \\(x_0\\) is determined. Hence, we essentially need to find the number of different choices for \\(x_0\\).</p><p>We represent the numbers in binary. Suppose \\(x_n = (0.b_1b_2\\cdots)_2\\). If \\(b_1 = 1\\), then we have \\(\\frac{1}{2} \\le x_n &lt; 1\\) and \\(x_{n+1} = 2x_n - 1 = (0.b_2b_3\\cdots)_2\\). If \\(b_1 = 0\\), then we have \\(0 \\le x_n &lt; \\frac{1}{2}\\) and \\(x_{n+1} = 2x_n = (0.b_2b_3\\cdots)_2\\). Hence, given \\(x_n = (0.b_1b_2\\cdots)_2\\), we always have \\(x_{n+1} = (0.b_2b_3\\cdots)_2\\).</p><p>Suppose \\(x_0 = (0.a_1a_2\\cdots)_2\\). Then, we have \\(x_7 = (0.a_8a_9\\cdots)_2\\). Since \\(x_0 = x_7\\), we have \\(a_i = a_{i+7}\\) for all \\(i \\in \\mathbb{N}^*\\). Hence, we only need to count the number of choices for \\(\\{a_1, \\ldots, a_7\\}\\). Since we have 2 choices for each of them, we have \\(2^7 - 1 = \\boxed{127}\\) choices in total.</p>",
+      "answer": "127"
+    },
+    "2": {
+      "problem": "<p>Let \\(M = \\{1, \\ldots, 2022\\}\\). For any nonempty set \\(X \\subseteq M\\), let \\(a_X\\) be the sum of the maximum and the minimum number of \\(X\\). Find the average value of \\(a_X\\) across all nonempty subsets \\(X\\) of \\(M\\).</p>",
+      "solutions": "<p>For any nonempty subset \\(X\\) of \\(M\\), let \\(X' = \\{2023 - x \\mid x \\in X\\}\\). Then, \\(X'\\) is a nonempty subset of \\(M\\) as well. Moreover, if \\(X \\ne Y\\), then \\(X' \\ne Y'\\). Hence, we can pair up \\(X\\) and \\(X'\\), so that \\(a_X + a_{X'} = 2 \\cdot 2023 = 4046\\) by definition of \\(X'\\). The only case in which we can not do such pairing is when \\(X = X'\\). However, we must have \\(a_X = 2023\\) in this case. Hence, the average value of \\(a_X\\) across all nonempty subsets \\(X\\) of \\(M\\) is \\(\\boxed{2023}\\).</p>",
+      "answer": "2023"
+    }
+  }
+}

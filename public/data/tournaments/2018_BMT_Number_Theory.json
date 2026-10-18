@@ -1,0 +1,58 @@
+{
+  "test": "BMT Number Theory",
+  "year": 2018,
+  "name": "Number Theory Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2018/NTSP18.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many multiples of 20 are also divisors of \\(17!\\)?</p>",
+      "solutions": "<p>\\(17! = 2^{15} \\times 3^6 \\times 5^3 \\times 7^2 \\times 11 \\times 13 \\times 17\\). A multiple of 20 needs to be a multiple of \\(2^2 \\times 5\\). Thus, the number of possible combinations of the factors are \\(14 \\times 7 \\times 3 \\times 3 \\times 2 \\times 2 \\times 2 = \\boxed{7056}\\).</p>",
+      "answer": "7056"
+    },
+    "2": {
+      "problem": "<p>Suppose for some positive integers, that \\(\\frac{p+\\frac1q}{q+\\frac1p} = 17\\). What is the greatest integer \\(n\\) such that \\(\\frac{p+q}{n}\\) is always an integer?</p>",
+      "solutions": "<p>If we multiply both the top and bottom of the fraction, we’ll get \\(\\frac{p^2q+p}{q^2p+q}\\), which can be factored as \\(\\frac{p(pq+1)}{q(pq+1)} = \\frac{p}{q}\\), which means that we now have \\(\\frac{p}{q} = 17\\). Since \\(p = 17q\\), \\(p+q = 18q\\), so 18 will always divide \\(p+q\\).</p>",
+      "answer": "18"
+    },
+    "3": {
+      "problem": "<p>Find the minimal \\(N\\) such that any \\(N\\)-element subset of \\(\\{1, 2, 3, 4, \\ldots 7\\}\\) has a subset \\(S\\) such that the sum of elements of \\(S\\) is divisible by 7.</p>",
+      "solutions": "<p>We see that \\(N &gt; 3\\) since \\(1+2+3 = 6 &lt; 7\\). We see that \\(N \\le 4\\) since any four element subset of \\(\\{1, 2, 3, \\ldots, 7\\}\\) has elements \\(x\\), \\(-x\\).</p>",
+      "answer": "4"
+    },
+    "4": {
+      "problem": "<p>What is the remainder when \\(201820182018\\ldots\\) [2018 times] is divided by 15?</p>",
+      "solutions": "<p>The sum of the digits is \\(11 \\cdot 2018 \\equiv 2 \\cdot 2 \\pmod 3 \\equiv 1 \\pmod 3\\). Since the last digit is 8, the number is \\(\\equiv 3 \\pmod 5\\). By the Chinese Remainder Theorem, the number is \\(\\equiv 13 \\pmod{15}\\).</p>",
+      "answer": "13"
+    },
+    "5": {
+      "problem": "<p>If \\(r_i\\) are integers such that \\(0 \\le r_i &lt; 31\\) and \\(r_i\\) satisfies the polynomial \\(x^4+x^3+x^2+x \\equiv 30 \\pmod{31}\\), find \\[\\sum_{i=1}^{4} (r_i^2+1)^{-1} \\pmod{31}\\] where \\(x^{-1}\\) is the modulo inverse of \\(x\\), that is, it is the unique integer \\(y\\) such that \\(0 &lt; y &lt; 31\\) and \\(xy-1\\) is divisible by 31.</p>",
+      "solutions": "<p>We can easily list out the squares modulo 31 to compute that \\(\\sqrt{5} = 6\\). Thus, dividing both sides by \\(x^2\\) and moving the constant term to the other side, we have \\[x^2+x+1+\\frac1x+\\frac1{x^2} \\equiv \\left(x+\\frac1x\\right)^2 + \\left(x+\\frac1x\\right) - 1 \\equiv 0 \\pmod{31}\\] Letting \\(u = x+\\frac1x\\) and solving the quadratic, we have \\[u \\equiv 18, 12 \\pmod{31}\\] Note that if \\(r\\) is a root, then either \\[r+\\frac1r \\equiv \\frac{r^2+1}{r} \\equiv 18 \\pmod{31} \\implies \\frac{1}{r^2+1} = \\frac{1}{18r}\\] or \\[r+\\frac1r \\equiv \\frac{r^2+1}{r} \\equiv 12 \\pmod{31} \\implies \\frac{1}{r^2+1} = \\frac{1}{12r}\\] Summing up, we have \\[1+1 \\equiv 2 \\equiv \\boxed{29} \\pmod{31}\\]</p>",
+      "answer": "2"
+    },
+    "6": {
+      "problem": "<p>Ankit wants to create a pseudo-random number generator using modular arithmetic. To do so he starts with a seed \\(x_0\\) and a function \\(f(x) = 2x + 25 \\pmod{31}\\). To compute the \\(k\\)th pseudo random number, he calls \\(g(k)\\) defined as follows: \\[g(k) = \\begin{cases} x_0 &amp; \\text{if } k = 0 \\\\ f(g(k-1)) &amp; \\text{if } k &gt; 0 \\end{cases}\\] If \\(x_0\\) is 2017, compute \\(\\sum_{j=0}^{2017} g(j) \\pmod{31}\\).</p>",
+      "solutions": "<p>We show that the function \\(g\\) is periodic with period 5. Given \\(f(x) = ax+b \\pmod{m}\\), if \\(a^y \\equiv 1 \\pmod{m}\\) we will show that as long as \\(a \\ne 1\\), \\(g(k)\\) relative to \\(f\\) is periodic with period \\(y\\). \\(g(y) = a^y \\cdot x + b\\sum_{i=0}^{i=y-1} a^i\\). We will show that the summation in this term is 0 as long as \\(a \\ne 1\\).</p><p><i>Proof.</i> Let \\(S \\equiv 1+a+a^2+\\cdots+a^{x-1} \\pmod{m}\\). Then \\(aS \\equiv a+a^2+a^3+\\cdots+a^x \\pmod{m}\\). However, since \\(a^x = 1\\), \\(aS \\equiv 1+a+a^2+\\cdots+a^{x-1} \\equiv S \\pmod{m}\\). This means that \\(aS \\equiv S \\pmod{m}\\). Since \\(a \\ne 1\\), \\(S = 0\\).</p><p>So we have \\(g(y) = a^y \\cdot x_0 = x_0\\). Therefore, \\(g(k+y) = g(y)\\) for all \\(k\\). We now only need to compute the value \\(x\\) such that \\(2^x \\equiv 1 \\pmod{31}\\). This is clearly 5. Plugging in for values \\(i = 1\\ldots i = 5\\). we get \\(2, 29, 25, 5, 4\\) in modulo 31, which is \\(61 \\equiv -1 \\pmod{31}\\). Summing up to 2014 yields \\((3 \\cdot 403)\\). Adding them to the values of \\(g\\) from \\(2015, 2016, 2017\\) we get our final answer of \\(\\boxed{25}\\).</p>",
+      "answer": "21"
+    },
+    "7": {
+      "problem": "<p>Determine the number of ordered triples \\((a, b, c)\\), with \\(0 \\le a, b, c \\le 10\\) for which there exists \\((x, y)\\) such that \\(ax^2 + by^2 \\equiv c \\pmod{11}\\).</p>",
+      "solutions": "<p>Note that if \\(a\\), \\(b\\), \\(c\\) are not all divisible by 11, then there exists a solution since the set \\[\\{ax^2 \\mid x \\in \\mathbb{Z}_{11}\\}\\] has 6 elements and the set \\[\\{c - by^2 \\mid y \\in \\mathbb{Z}_{11}\\}\\] also has 6 elements. Therefore, the two sets have a nonempty intersection. We now count the number of non-triples, that is triples for which there do not exist such \\(x\\) and \\(y\\). First, if \\(a = b = 0\\), all values of \\(c \\ne 0\\) is a nonsolution, giving a total of 10 in this case. Now suppose \\(a = 0\\) and \\(b \\ne 0\\). We will multiply by 2 to account for symmetry. The tuple is a nonsolution if and only if \\(cb^{-1}\\) is not a quadratic residue. There are a total of 5 quadratic residues, so for a given \\(c \\ne 0\\), there exists 5 values of \\(b\\) that give a nonsolution. Thus, in this case, there are \\(5 \\times 10 = 50\\) nonsolutions. Multiplying by 2 gives 100 nonsolutions. Finally, if \\(c = 0\\), then there are no non-solutions since one can choose \\(x = y = 0\\). This gives 110 total non-solutions. There are \\(11^3 = 1331\\) pairs, and subtracting the nonsolutions, we arrive at \\(1331 - 110 = \\boxed{1221}\\).</p>",
+      "answer": "1221"
+    },
+    "8": {
+      "problem": "<p>How many \\(1 &lt; n \\le 2018\\) such that the set \\(\\{0, 1, 1+2, \\ldots, 1+2+3+\\cdots+i, \\ldots, 1+2+3+\\cdots+n-1\\}\\) is a permutation of \\(\\{0, 1, 2, 3, 4, \\cdots, n-1\\}\\) when reduced modulo \\(n\\)?</p>",
+      "solutions": "<p>We first claim that all \\(n = 2^k\\) work. To show this, suppose not. Then there exists a sequence \\(a + a+1 + a+2 + \\cdots + a+l = (l+1) + \\frac{l(l+1)}{2} \\equiv 0 \\pmod{2^k}\\). If \\(l\\) is odd, then \\(l+1+\\frac{l(l+1)}{2} = \\frac{l+1}{2}(2+l) \\equiv 0 \\pmod{2^k}\\). But \\(l\\) is odd, so \\(2+l\\) is odd, so \\(\\frac{l+1}{2} \\equiv 0 \\pmod{2^k}\\). This is a contradiction to \\(l &lt; 2^k\\). If \\(l\\) is even, we have \\((l+1)\\left(1+\\frac{l}{2}\\right) \\equiv 0 \\pmod{2^k}\\), so \\(1+\\frac{l}{2} \\equiv 0 \\pmod{2^k}\\), again contradicting \\(l &lt; 2^k\\). Hence, \\(n = 2^k\\) works. Now, if \\(n\\) has an odd divisor greater than 1, let \\(2m+1\\) be the minimal odd divisor of \\(n\\) (e.g. a prime). Let \\(n = (2m+1)k\\). Then \\[\\sum_{i=k-m}^{k+m} i = \\frac{(2m+1)2k}{2} = (2m+1)k = n\\] Since there are 11 powers of two less than or equal to 2018, the answer is \\(\\boxed{10}\\).</p>",
+      "answer": "10"
+    },
+    "9": {
+      "problem": "<p>Compute the following: \\[\\sum_{x=0}^{99} (x^2+1)^{-1} \\pmod{199}\\] where \\(x^{-1}\\) is the value \\(0 \\le y \\le 199\\) such that \\(xy - 1\\) is divisible by 199.</p>",
+      "solutions": "<p>Note that 199 is prime.</p><p><b>Step 1: polynomial division</b></p><p>First, let us perform long division \\(\\frac{x^{198}-1}{x^2+1}\\) \\[x^{198} - 1 = P(x)(x^2+1) + c\\] First, we see that the remainder must be of even degree, since if not, then \\(P\\) must be an odd function, but we see that \\(P(x)\\) has a \\(x^{196}\\) term, a contradiction. Hence, the remainder is an even function, so the remainder is of even degree, and therefore it is a constant. Secondly, we have \\(x^2 \\equiv -1\\), so \\(x^{198} - 1 = (x^2)^{99} - 1 = -1 - 1 = -2\\). Therefore, \\[x^{198} - 1 = P(x)(x^2+1) - 2\\]</p><p><b>Step 2: Destroying the quotient</b></p><p>Let \\(p\\) be a prime. The following is a well-known fact: \\[\\sum_{n=1}^{p-1} n^k \\equiv 0 \\pmod p\\] if \\(p \\not\\equiv 1 \\pmod k\\)</p><p><i>Proof.</i> Let \\(g\\) be a generator of \\(\\mathbb{Z}_p\\). Then \\[\\sum_{n=1}^{p-1} n^k \\equiv \\sum_{n=0}^{p-2} g^{kn} \\equiv \\frac{g^{k(p-1)} - 1}{g^k - 1} \\equiv 0 \\pmod p\\] as desired.</p><p><b>Step 3: Putting everything together</b></p><p>Note that since \\(199 \\equiv 3 \\pmod 4\\) that the denominator of \\(\\frac{1}{x^2+1}\\) is never 0 as \\(x \\in \\mathbb{Z}_{199}\\). Hence, \\[-1 \\equiv \\sum_{x=0}^{198} \\frac{x^{198}-1}{x^2+1} \\equiv \\sum_{x=0}^{198} P(x) - \\sum_{x=0}^{198} \\frac{2}{x^2+1} \\equiv 0 - \\sum_{x=0}^{198} \\frac{2}{x^2+1} \\pmod{199}\\] This implies that \\[\\sum_{x=0}^{198} \\frac{2}{x^2+1} \\equiv 1 \\pmod{199}\\] or that \\[\\sum_{x=0}^{99} \\frac{1}{x^2+1} \\equiv -\\frac{1}{4} \\equiv \\boxed{150} \\pmod{199}\\]</p>",
+      "answer": "150"
+    },
+    "10": {
+      "problem": "<p>Evaluate the following \\[\\prod_{j=1}^{50} \\left(2\\cos\\left(\\frac{4\\pi j}{101}\\right) + 1\\right)\\]</p>",
+      "solutions": "<p>Let \\(q = \\exp\\left(\\frac{2\\pi}{101}\\right)\\), and let \\(n = \\frac{2\\pi}{101}\\). Then \\[2\\cos\\left(\\frac{4\\pi j}{101}\\right) + 1 = q^{2j} + q^{-2j} + 1 = \\frac{q^{3j} - q^{-3j}}{q^j - q^{-j}}\\] Hence, the product is equal to \\[\\prod_{j=1}^{50} \\frac{q^{3j} - q^{-3j}}{q^j - q^{-j}}\\] Note that as 3 \"acts\" on the set \\(S = \\{1, 2, 3, 4, \\ldots, 50\\}\\) by multiplication, some elements get sent to \\(a \\in S\\) or \\(-a\\) where \\(a \\in S\\). Note that if \\(3i \\equiv 3j \\pmod{101} \\implies i \\equiv j\\), and furthermore that if \\(3i \\equiv -3j \\pmod{101} \\implies i \\equiv -j\\), so \\(i, j\\) are not both in \\(S\\). Hence, \\(3 \\cdot S\\) is equal to \\(S\\) except some elements are negative of what they were. Note that if \\(j \\equiv -i \\pmod{101}\\), then \\(q^{3j} - q^{-3j} = -(q^{3i} - q^{-3i})\\). Hence, the product is equal to the product of all the negative signs in \\(3S\\). We just need to determine if there are an even number or if there are an odd number of negative signs in \\(3S\\). Note that \\(3 \\cdot 1, 3 \\cdot 2, 3 \\cdot 3, \\ldots, 3 \\cdot 16\\) are all positive (all in \\(S\\)), \\(3 \\cdot 17, 3 \\cdot 19, 3 \\cdot 20, \\ldots 3 \\cdot 21, \\ldots, 3 \\cdot 33\\) are all negative (in the complement of \\(S\\)), \\(3 \\cdot 34, 3 \\cdot 37, \\ldots, 3 \\cdot 50\\) are all positive. Therefore, there are \\(33 - 17 + 1 = 17\\) negative signs, and thus the product is \\(\\boxed{-1}\\).</p>",
+      "answer": "-1"
+    }
+  }
+}

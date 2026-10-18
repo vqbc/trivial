@@ -1,0 +1,128 @@
+{
+  "test": "PUMaC Live",
+  "year": 2019,
+  "name": "Live Round",
+  "url": "https://pumac.princeton.edu/s/PUMaC2019Live-92ys.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let right triangle \\(ABC\\) have hypotenuse \\(AC\\) and \\(AB = 8\\). Let \\(D\\) be the foot of the altitude from \\(B\\) to \\(AC\\). If \\(ABC\\) has area 60, then the length of \\(BD\\) can be expressed in the form \\(\\frac{a}{b}\\), where \\(a\\) and \\(b\\) are relatively prime, positive integers. Find \\(a+b\\).</p>",
+      "solutions": "<p>Using the area and the fact that \\(AB = 8\\), we have that \\(BC = 15\\). Since the triangle is right, \\(AC = 17\\). Thus, using the area, \\(BD = \\frac{120}{17}\\).</p>",
+      "answer": "137"
+    },
+    "2": {
+      "problem": "<p>Zack climbs stairs at 2 meters per minute, Kevin climbs stairs at 7 meters per minute, and Rahul climbs stairs at 8 meters per minute. The Shanghai Tower is 632 meters tall. Zack begins climbing at noon, Kevin begins \\(x\\) minutes after him, and Rahul begins \\(y\\) minutes after Kevin. If they all arrive at the top at exactly the same time, compute \\(x+y\\).</p>",
+      "solutions": "<p>Rahul begins \\(x+y\\) minutes after Zack. It takes Zack \\(\\frac{632}{2} = 316\\) minutes and Rahul \\(\\frac{632}{8} = 79\\) minutes. So, \\(\\frac{632}{2} = (x+y) + \\frac{632}{8}\\) and \\(x+y = 316-79 = 237\\).</p>",
+      "answer": "237"
+    },
+    "3": {
+      "problem": "<p>Milan colors two squares, chosen uniformly at random without replacement, on a \\(3\\times 3\\) grid. The expected number of vertices shared by the two squares is expressible as \\(a/b\\) where \\(a,b\\) are coprime positive integers. Find \\(a+b\\).</p>",
+      "solutions": "<p>We first check how many colorings have one shared vertex and how many have two shared vertices. We get that 8 arrangements have one shared vertex and 12 arrangements have two shared vertices. There are a total of \\(\\binom{9}{2} = 36\\) arrangements so the expected value is \\(\\frac{8\\cdot 1+12\\cdot 2}{36} = \\frac{32}{36} = \\frac{8}{9}\\). Thus, the answer is 17.</p>",
+      "answer": "17"
+    },
+    "4": {
+      "problem": "<p>Let \\(f\\) be the cubic polynomial that passes through the points \\((1,30),(2,15),(3,10)\\), and \\((5,6)\\). Compute the product of the roots of \\(f\\).</p>",
+      "solutions": "<p>Note that \\(xf(x) - 30\\) has roots \\(1,2,3,5\\). Write \\(xf(x) - 30 = k(x-1)(x-2)(x-3)(x-5)\\). The constant terms must match, so \\(k = -1\\). Since this is an equivalence for all \\(x\\), we can solve for \\(f(x) = -x^3+11x^2-41x+61\\). Therefore, the product of the roots of \\(f\\) is 61.</p>",
+      "answer": "61"
+    },
+    "5": {
+      "problem": "<p>In the top left corner of a grid with 100 rows and 100 columns is a ball. On each move the ball moves down one unit with probability \\(1/3\\) or right one unit with probability \\(2/3\\). After 99 moves, the ball will be in the \\(n\\)th column from the left, where \\(n = 1\\) in the leftmost column. Find the expected value of \\(n\\).</p>",
+      "solutions": "<p>At each step, the increase in the expected value is \\(\\frac{2}{3}\\). Since the expected value starts at 1, by linearity of expectation, the expected value is \\(1 + 99\\cdot\\frac{2}{3} = 67\\).</p>",
+      "answer": "67"
+    },
+    "6": {
+      "problem": "<p>Let \\(\\sigma\\) be a permutation of the numbers \\(1,2,3,4\\). If \\[\\sigma(a)\\cdot \\sigma^2(a) \\cdot \\sigma^3(a) \\cdot \\sigma^4(a) \\equiv -1 \\pmod{5},\\] for all \\(a \\in \\{1,2,3,4\\}\\), compute the number of possible \\(\\sigma\\).</p>",
+      "solutions": "<p>If \\(\\sigma(a) = a\\) for any \\(a\\), then \\[\\sigma(a)\\cdot \\sigma^2(a)\\cdot \\sigma^3(a)\\cdot \\sigma^4(a) = a^4 \\equiv -1 \\pmod{5},\\] which is not possible. Therefore, every \\(a\\) maps to itself after 4 compositions or 2 compositions.</p><p>If \\(a\\) maps to itself after 4 compositions, every such mapping works because \\[\\sigma(a)\\cdot \\sigma^2(a)\\cdot \\sigma^3(a)\\cdot \\sigma^4(a) = 1\\cdot 2\\cdot 3\\cdot 4 \\equiv -1 \\pmod{5}.\\] There are 3 choices for where 1 maps, 2 choices for where \\(\\sigma(1)\\) maps to, and the rest is fixed. This gives \\(3\\cdot 2 = 6\\) possibilities.</p><p>Otherwise, every \\(a\\) maps to itself after 2 compositions. It can be checked that 1 can either map to 2 or 3, and the rest is determined. This gives 2 more choices.</p><p>The total is \\(6+2=8\\).</p>",
+      "answer": "8"
+    },
+    "7": {
+      "problem": "<p>If the shortest distance between a point on the curve \\(y = \\sqrt{x^2+1}\\) and the line \\(y = \\frac{1}{2}x\\) can be written in the form \\(\\sqrt{\\frac{a}{b}}\\), where \\(a,b\\) are relatively prime integers, find \\(a+b\\).</p>",
+      "solutions": "<p>Let our given line be \\(l_1\\), and let \\(f(x)\\) be our given curve. We consider the line \\(y = \\frac{1}{2}x+b\\) in general and determine when this is tangent to the given curve. Note that the derivative of the curve \\(y=\\sqrt{x^2+1}\\) is \\(y' = \\frac{x}{\\sqrt{x^2+1}}\\). For this to equal \\(\\frac{1}{2}\\), we set this to be \\(\\frac{1}{2}\\), yielding that \\(\\frac{1}{4} = \\frac{x^2}{x^2+1}\\), which implies that \\(x^2+1=4x^2\\), or that \\(x^2 = \\frac{1}{3}\\). Substituting this back yields that \\(x=\\frac{\\sqrt3}{3}\\), taking the positive solution. Since \\(y\\) is equal to \\(\\sqrt{1+\\frac13} = \\frac{2\\sqrt3}{3}\\), we have that \\(b\\) is so that \\(\\frac{2\\sqrt3}{3} = \\frac{\\sqrt3}{6}+b\\), or \\(b = \\frac{\\sqrt3}{2}\\). Let this line be \\(l_2\\). Observe that \\(y = \\frac12 x+\\frac{\\sqrt3}{2} \\le f(x)\\ \\forall x\\in\\mathbb{R}\\), since \\(f''(x) = \\frac{1}{\\sqrt{x^2+1}} - \\frac{x^2}{(x^2+1)^{\\frac32}} = \\frac{1}{(x^2+1)^{\\frac32}} &gt; 0\\ \\forall x\\), so \\(f\\) is concave up and hence lies above every tangent line. It follows that the shortest distance from \\(l_1\\) to the curve represented by \\(f(x)\\) is the distance between \\(l_1\\) and \\(l_2\\), which is just \\(\\frac{\\frac{\\sqrt3}{2}}{\\sqrt{1+\\frac14}} = \\sqrt{\\frac35}\\), yielding an answer of 8.</p>",
+      "answer": "8"
+    },
+    "9": {
+      "problem": "<p>An infinite sequence of semicircles is constructed in the following way. The first semicircle has radius 2048. Then, each subsequent semicircle has diameter parallel to the previous, with endpoints on the previous semicircle’s arc, and arc tangent to the previous semicircle’s diameter. The limit of the distance of the \\(n\\)th semicircle’s center from the first’s may be written as \\(a\\sqrt{b}-c\\), where \\(b\\) is square-free and \\(a,b,c\\) are positive integers. Find \\(a+b+c\\).</p>",
+      "solutions": "<p>Consider the ratio between consecutive semicircles. Using Power of a Point, we see each semicircle has radius \\(\\frac{\\sqrt2}{2}\\) the previous one. The semicircles alternate getting closer and farther from the first, so this is an infinite geometric series with first term \\(1024\\sqrt2\\) and ratio \\(-\\frac{\\sqrt2}{2}\\), which is \\(2048\\sqrt2-2048\\), so the answer is 4098.</p>",
+      "answer": "4098"
+    },
+    "10": {
+      "problem": "<p>Let \\(a, b,\\) and \\(c\\) be real numbers that satisfy the following equations: \\(a+b+c = 0\\) and \\(abc = 2019\\). Compute \\(a^3+b^3+c^3\\).</p>",
+      "solutions": "<p>We use the identity: \\[a^3+b^3+c^3-3abc = (a+b+c)\\cdot(a^2+b^2+c^2-ab-bc-ca)\\] Since we are given that \\(a+b+c=0\\), we immediately know that \\(a^3+b^3+c^3 = 3abc = 3\\cdot 2019 = 6057\\).</p>",
+      "answer": "6057"
+    },
+    "11": {
+      "problem": "<p>Consider a triangle where the sum of the three side lengths is equal to the product of the three side lengths. If the circumcircle has 25 times the area of the incircle, the distance between the incenter and the circumcenter can be expressed in the form \\(\\frac{\\sqrt{x}}{y}\\), for integers \\(x\\) and \\(y\\), with \\(x\\) square-free. Find \\(x+y\\).</p>",
+      "solutions": "<p>Consider these two formulas for area: \\[\\text{Area} = \\frac{abc}{4R} \\quad \\text{and} \\quad \\text{Area} = \\frac12 r(a+b+c),\\] where \\(R\\) is the circumradius and \\(r\\) is the inradius. Combining these as in the problem gives \\(rR = \\frac12\\). Since we are given that \\(\\frac{R}{r} = 5\\), that means that \\(r = \\frac{1}{\\sqrt{10}}\\) and \\(R = \\sqrt{\\frac{5}{2}}\\).</p><p>However, by Euler’s Theorem for the distance between the incenter and circumcenter, the distance \\(d\\) that we are after is found as \\(\\sqrt{(R-r)^2-r^2} = \\frac{\\sqrt3}{\\sqrt2} = \\frac{\\sqrt6}{2}\\).</p>",
+      "answer": "8"
+    },
+    "12": {
+      "problem": "<p>Find the number of different possible values of the number of parts in which we can cut a circle with 2018 distinct lines (assuming that all the lines cut the circle in its interior).</p>",
+      "solutions": "<p>When none of the lines intersect each other (i.e. they are all vertical), we have 2019 parts. When no three intersect at a single point but every pair intersect we have \\(\\frac{2018^2+2018+2}{2}\\). It’s not hard to see that we can get any number in between; if we add one more intersection point by rotating a line slightly, we increase the number of regions by 1.</p>",
+      "answer": "2035154"
+    },
+    "13": {
+      "problem": "<p>What is the sum of all positive integers \\(n\\) with at most three digits that satisfy \\(n = (a+b)\\cdot(b+c)\\) when \\(n\\) is written in base 10 as \\(\\underline{a}\\ \\underline{b}\\ \\underline{c}\\)? Note: The integer \\(n\\) can have leading zeroes.</p>",
+      "solutions": "<p>Note, \\((a+b)\\cdot(b+c) \\le 18^2 = 324\\) so \\(a \\le 3\\). First, if \\(a=3\\), then \\((3+b)\\cdot(b+c) \\le 12\\cdot 18 = 216\\) so \\(a\\ne 3\\). Next, if \\(a=2\\), then \\((2+b)\\cdot(b+c) \\le 11\\cdot 18 = 198\\) so \\(a\\ne 2\\). If \\(a=1\\), then \\((1+b)\\cdot(b+c) \\le 10\\cdot 18 = 180\\). This case then requires more investiagtion.</p><p>We need to see if \\[100+10b+c = b+c+b^2+bc\\] has any solutions. Rearranging, we get \\[100+9b-b^2 = bc.\\] However, since \\(b\\le 9\\), \\[100+9b-b^2 \\ge 100 &gt; bc\\] so there are no solutions and \\(a\\ne 1\\). Finally, if \\(a=0\\), we have \\[10b+c = b^2+bc.\\] Rearranging, we get \\[\\frac{b(10-b)}{b-1} = c.\\] Thus, since \\(c\\) must be an integer and since \\(b-1\\) and \\(b\\) are relatively prime for all \\(b\\) except \\(b=2\\), we need \\(10-b &gt; b-1\\) so \\(11 &gt; 2b\\) and \\(b \\le 5\\). Checking all \\(b\\le 5\\), we see that \\(b=4\\) gives us \\(c=8\\). Also, \\(b=2\\) gives us \\(c=16\\) however, \\(c\\le 9\\) so this solution does not count. Finally, \\(b=c=0\\) also works. Thus, the only numbers \\(n\\) that satisfy this equation are 48 and 0 so the sum is 48.</p>",
+      "answer": "48"
+    },
+    "14": {
+      "problem": "<p>Let \\(k\\) be the number of nonintersecting paths a King can take on a \\(6\\times 6\\) square board from one corner to the opposite corner such that the number of steps the King is from its starting point never decreases. Compute \\(k \\mod 23\\). (Note that a King can move to any square that shares an edge or a vertex with its current square)</p>",
+      "solutions": "<p>Since the King can never move closer to the origin, this suggests solving the problem recursively by considering squares of points a fixed number of steps from the origin and counting how many paths there are that go through this point before going to a layer further away from the origin. The first square consists of the three points one step away. The number of valid paths from the starting square to each of these is 5. Now, we add one more layer and compute the number of valid paths from each of the squares of distance one away. We now introduce some conventions. Suppose the King starts at the bottom left and is moving to the top right. We will denote the number of paths to the designated square by a tuple starting with the leftmost square of the previous layer and proceeding right and then down. For example, the bottom right square of the layer a distance 2 away has as its tuple \\((4,8,2)\\) and thus, there are \\(5(4+8+2) = 70\\) possible paths. We get the number of paths for this layer as \\(70,70,85,70,70\\). This case was a special scenario since the squares were small enough. In general, for any destination square that isn’t on the main diagonal the tuple will be \\((2,3,3,\\ldots,3,8,6,6,\\ldots,6,4)\\) where the eight corresponds to the point on the main diagonal of the previous layer. For the diagonal point, the tuple will be \\((4,6,6,\\ldots,6,9,6,6,\\ldots,6,4)\\). This allows us to compute each layer from the previous one. We continue in this manner reducing modulo 23 whenever possible. The number of paths staying within each layer are given as follows. We only give two values, first, the number of paths to a nondiagonal point, second, the number of paths to the diagonal point. We have, \\((1),(5,5),(1,16),(5,3),(6,3),(15,15)\\). Thus, the final answer is 15.</p>",
+      "answer": "15"
+    },
+    "15": {
+      "problem": "<p>The sequence \\(a_n\\) satisfies \\(a_1 = 1, a_2 = 3\\) and, for \\(n\\ge 2\\), \\(a_n = \\frac{1}{n+2}\\left(\\sum_{j=1}^{n+1}a_j-1\\right)\\). Compute \\[\\left\\lceil \\log_2 \\frac{a_{2020}}{a_{2018}} \\right\\rceil.\\]</p>",
+      "solutions": "<p>We note (e.g. by computing the first few terms) that \\(a_n = \\sum_{i=1}^n i!\\). We are therefore looking at \\[\\frac{a_{2020}}{a_{2018}} = 1+\\frac{2019!+2020!}{\\sum_{i=1}^{2018} i!} \\approx 1+(2019-1)+(2019\\cdot 2020-1) \\approx 4080000 &lt; 2^{22},\\] so the answer is 22.</p>",
+      "answer": "22"
+    },
+    "16": {
+      "problem": "<p>Consider the triangle with vertices \\((0,0),(1,0)\\), and \\((0,1)\\). Let \\(A, B,\\) and \\(C\\) denote the distances from a given point to each of the three vertices. Denote the distance from the point that minimizes \\(A+B+C\\) to the point that minimizes \\(A^2+B^2+C^2\\) by \\(d\\). If \\(d\\) is written as \\(\\frac{\\sqrt{a}-\\sqrt{b}}{c}\\) where \\(a\\) and \\(b\\) are square free, find \\(a+b+c\\).</p>",
+      "solutions": "<p>The point that minimizes \\(A+B+C\\) is the Fermat point and is the intersection of the lines \\(y=-(2+\\sqrt3)x+1\\) and \\(y=\\frac{-1}{2+\\sqrt3}(x-1)\\). We calculate to see that this point is \\(\\left(\\frac{3-\\sqrt3}{6},\\frac{3-\\sqrt3}{6}\\right)\\).</p><p>For the other point, if we call it \\((x,y)\\), we wish to minimize \\(x^2+y^2+(x-1)^2+y^2+x^2+(y-1)^2\\). Taking the partial with respect to \\(x\\), we have \\(6x-2=0\\) so \\(x=1/3\\) and likewise for \\(y\\). Alternatively, we can note that \\(x=y\\) by symmetry. Thus, the point is \\(\\left(\\frac13,\\frac13\\right)\\). The distance is then \\(\\sqrt{2\\left(\\frac13-\\frac{3-\\sqrt3}{6}\\right)^2} = \\sqrt2\\cdot\\frac{\\sqrt3-1}{6} = \\frac{\\sqrt6-\\sqrt2}{6}\\) so \\(a+b+c=14\\).</p>",
+      "answer": "14"
+    },
+    "18": {
+      "problem": "<p>Compute \\[\\left\\lfloor \\sum_{n=0}^{49}\\sin\\left(\\frac{\\pi n}{100}\\right)\\right\\rfloor.\\]</p>",
+      "solutions": "<p>Call this sum \\(S\\) and let \\(a = \\pi/100\\). Then, \\(2\\sin(a)S = 2\\sum_{n=0}^{49}\\sin(a)\\sin(ia) = \\sum_{n=0}^{49}\\cos(a(i-1))-\\cos(a(i+1))\\) by the product formula. This sum telescopes leaving us with \\[2\\sin(a)S = \\cos(-a)+\\cos(0)-\\cos(49a)-\\cos(50a)\\] so \\[S = \\frac{\\cos(\\pi/100)+1-\\cos(49\\pi/100)}{2\\sin(\\pi/100)} = \\frac{\\cos(\\pi/100)+1-\\sin(\\pi/100)}{2\\sin(\\pi/100)}.\\] Approximating \\(\\cos(\\pi/100)\\) by 1 and \\(\\sin(\\pi/100)\\) by \\(\\pi/100\\), we have \\(S = \\frac{1+1-\\pi/100}{2\\pi/100} = 100/\\pi-1/2\\). We then note that \\(100/\\pi\\) is between 31.5 and 32 so \\(\\lfloor S\\rfloor = 31\\).</p>",
+      "answer": "31"
+    },
+    "19": {
+      "problem": "<p>Find the sum of all positive integers \\(k\\) such that there exists a positive integer \\(a\\) such that \\(7k^2 = a^3+a!+2767\\).</p>",
+      "solutions": "<p>We first note that for \\(a\\ge 7\\), \\(7 \\mid a!\\), so \\(a^3 \\equiv -2767 \\equiv 5 \\pmod{7}\\), but 5 is not a cubic residue modulo 7, so no solutions exist for \\(a\\ge 7\\). Checking \\(0&lt;a&lt;7\\), the only solutions are \\((k,a) = (20,3)\\) and \\((23,6)\\) so the answer is 43.</p>",
+      "answer": "43"
+    },
+    "20": {
+      "problem": "<p>If \\(a,b,c\\) are positive reals such that \\(abc = 64\\) and \\(3a^2+2b^3+c^6 = 384\\), compute maximum value of \\(a+b+c\\).</p>",
+      "solutions": "<p>By AM-GM, \\(3a^2+2b^3+c^6 = a^2+a^2+a^2+b^3+b^3+c^6 \\ge 6\\sqrt[6]{a^6b^6c^6} = 384\\). Therefore, we have equality in AM-GM so \\(a^2=b^3=c^6=64\\), so \\(a+b+c=14\\).</p>",
+      "answer": "14"
+    },
+    "21": {
+      "problem": "<p>Three fair twenty-sided dice are rolled, and then arranged in decreasing order. The expected value of the largest die can be written in the form \\(\\frac{p}{q}\\) where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p+q\\).</p>",
+      "solutions": "<p>For each \\(0\\le k&lt;20\\), let \\(P_k\\) be the probability that the largest die is greater than \\(k\\). Then, \\(P_k = 1-\\left(\\frac{k}{20}\\right)^3\\), and the expected value of the largest is therefore \\(\\sum_{k=0}^{19}P_k = 20-\\frac{1}{8000}\\sum_{k=0}^{19}k^3 = 20-\\frac{1}{8000}\\left(\\frac{19\\times 20}{2}\\right)^2 = 20-\\frac{190^2}{8000} = \\frac{1239}{80}\\).</p>",
+      "answer": "1319"
+    },
+    "22": {
+      "problem": "<p>A \\((b,k)\\)-<i>palindrome code</i> is a sequence of \\(k\\) integers between \\(0\\) and \\(b-1\\), inclusive, that reads the same forwards as backwards. Note that a \\((b,k)\\)-palindrome code can be interpreted as a base-\\(b\\) integer, if one ignores the initial zeros. A positive integer \\(n\\) is <i>reliable</i> if there exist at least two distinct pairs of positive integers \\(b\\) and \\(k\\), both greater than 1, such that the average of all \\((b,k)\\)-palindrome codes (interpreted as base-\\(b\\) integers) is equal to \\(n\\). Find the sum of the three smallest reliable numbers.</p>",
+      "solutions": "<p>The average of the stated palindromes is \\(\\frac{b-1}{2}(1+b+\\ldots+b^{k-1})\\). This is because in a randomly selected palindrome of length at most \\(k\\), the ones digits through the \\(b^{k-1}\\)-digit is one of \\(0\\) through \\(b-1\\), with uniform probability. Observe that this is only an integer for \\(b\\) odd, so we may restrict attention to \\(b=2m+1\\), in which case the average becomes \\(m(1+(2m+1)+\\ldots+(2m+1)^{k-1})\\). Using the finite geometric series formula, we observe that this is equal to \\[m\\cdot\\frac{(2m+1)^k-1}{2m} = \\frac{(2m+1)^k-1}{2}.\\] We want to find values expressed in this way for multiple pairs \\((m,k)\\). In other words, we are looking to satisfy the equation \\((2m_1+1)^{k_1} = (2m_2+1)^{k_2}\\). These are integer powers with at least one of \\(k_1\\) and \\(k_2\\) not prime. From this it is easy to see that the smallest possible pairs of palindrome codes with equal averages are \\((3,4)\\equiv(9,2)\\), \\((5,4)\\equiv(25,2)\\), and \\((3,6)\\equiv(9,3)\\). These pairs give 40, 312, and 364. The sum is 716.</p>",
+      "answer": "716"
+    },
+    "23": {
+      "problem": "<p>Define \\(S,T \\subset \\{1,\\ldots,2016\\}\\) such that \\(S\\) consists of all such integers that are divisible by 3 and \\(T\\) consists of the rest. Compute \\[\\sum_{s\\in S}\\binom{2019}{s} - \\frac12\\sum_{t\\in T}\\binom{2019}{t}.\\]</p>",
+      "solutions": "<p>Define the quantity in question to be \\(N\\). Let \\(S',T' \\subset \\{0,1,\\ldots,2019\\}\\) be defined analogously. Note that \\[N' = \\sum_{s\\in S'}\\binom{45}{s} - \\frac12\\sum_{t\\in T'}\\binom{45}{t} = \\Re(1+e^{2\\pi i/3})^{45} = \\Re(e^{2\\pi i/6})^{45} = -1,\\] and that \\(N'-N = \\binom{2019}{0}+\\binom{2019}{2019}-\\frac12\\binom{2019}{2018}-\\frac12\\binom{2019}{2017}\\). Computation gives \\(N = 1019592\\).</p>",
+      "answer": "1019592"
+    },
+    "24": {
+      "problem": "<p>In \\(\\triangle ABC\\), let \\(\\angle CAB = 45^\\circ\\), and \\(|AB| = \\sqrt2, |AC| = 6\\). Let \\(M\\) be the midpoint of side \\(BC\\). The line \\(AM\\) intersects the circumcircle of \\(\\triangle ABC\\) at \\(P\\). The circle centered at \\(M\\) with radius \\(MP\\) intersects the circumcircle of \\(ABC\\) again at \\(Q\\ne P\\). Suppose the tangent to the circumcircle of \\(\\triangle ABC\\) at \\(B\\) intersects \\(AQ\\) at \\(T\\). Find \\(TC^2\\).</p>",
+      "solutions": "<p>The key is noting that \\(P\\) and \\(Q\\) are symmetric points in the arc \\(BC\\). This makes \\(AQ\\) the \\(A\\)-symmedian of \\(\\triangle ABC\\).</p><p>Now applying symmedian-tangent lemma, \\(TB = TC\\), therefore \\[TC^2 = \\frac{AB^2+AC^2-\\sqrt2\\,AB\\cdot AC}{2}\\] so \\(TC^2 = 13\\).</p>",
+      "answer": "13"
+    },
+    "25": {
+      "problem": "<p>Let \\(p_n\\) denote the \\(n\\)th prime number. If the limit \\[\\lim_{n\\to\\infty}\\prod_{k=1}^n\\left(\\frac{p_n}{p_k}\\right)^{\\frac{p_n}{n(p_n+p_k)}}\\] is expressed as \\(e^{\\frac{\\pi^a}{b}}\\) for integers \\(a\\) and \\(b\\), find \\(a+b\\).</p>",
+      "solutions": "<p>For all \\(n\\ge 1\\), define the product \\[P_n = \\prod_{k=1}^n\\left(\\frac{p_n}{p_k}\\right)^{\\frac{p_n}{n(p_n+p_k)}}\\] and \\(S_n = \\log P_n\\). Then, \\[S_n = -\\frac1n\\sum_{k=1}^n\\frac{\\log(p_k/p_n)}{1+p_k/p_n}.\\] Now, we need to following (intuitive) refinement of the Darboux Integral: For \\(f\\) Riemann integrable in \\((0,1)\\), we have that \\[\\lim_{n\\to\\infty}\\frac1n\\sum_{k=1}^n f\\left(\\frac{p_k}{p_n}\\right) = \\int_0^1 f(x)\\,dx.\\] The proof can be found in this mathoverflow thread: https://mathoverflow.net/questions/311085/riemann-sum-formula-for-definite-integral-using-prime-numbers</p><p>Then, \\[\\lim_{n\\to\\infty}S_n = -\\int_0^1\\frac{\\log x}{1+x}\\,dx = \\frac{\\pi^2}{12}.\\] So, \\(\\lim_{n\\to\\infty}P_n = e^{\\lim_{n\\to\\infty}S_n} = e^{\\pi^2/12}\\).</p>",
+      "answer": "14"
+    },
+    "27": {
+      "problem": "<p>Two countries have three cities each. Within a country, each pair of cities is connected by a paved road. For any two cities in different countries, there is a \\(\\frac12\\) probability, independent of the other pairs, that the two cities are connected by a paved road. To better connect the two countries, the governments hire some people to pave the unpaved roads between cities. Each person will walk from city to city only along unpaved roads and pave them along the way. If the expected minimum of pavers that the countries will need to hire to pave all the roads is \\(\\frac{m}{n}\\), find \\(m+n\\).</p>",
+      "solutions": "<p>Consider the graph where two cities are connected iff they have an unpaved road between them initially. Note that the minimum number is at least \\(\\frac n2\\), where \\(n\\) is the number of cities with odd degree, since each paver can change the parity of at most two cities (the start and end), and the parity of the degree of all of the cities needs to be even at the end. We consider the cases where this doesn’t hold based on the number of cities with odd degree. If \\(n=0\\): unless the graph is empty, exactly one paver will be needed (this is a Eulerian circuit). Since each vertex can thus only have degree 0 or 2, and the cities in a given country already aren’t connected (they have a paved road between them), we either have a 4-cycle (of which there are 9, choosing which 4 will be in the cycle) or a 6-cycle (of which we have 6, by choosing the pairs of cities in opposite countries that will not be connected). If \\(n=2\\): the only case where this can occur is if we have 2 disconnected components, one of which has only vertices of even degree. One of these must be a 4-cycle, and the other a pair connected by an edge. This also has 9 cases. If \\(n\\ge 4\\), note that the only way for the countries to require more than 2 pavers is if, after the first \\(n/2-1\\) pavers are done, we end up with the case described above. But this can be avoided; if this happens, and we started and ended at vertices of odd degree, then those cities must have been amongst those in the 4-cycle. But the entire 4-cycle can be traversed before continuing with the path. The desired expected value is then \\(\\mathbb{E}[n]/2 + \\frac{9+9+6}{512} = \\mathbb{E}[n]/2+\\frac{3}{64}\\). But each vertex has a \\(\\frac12\\) chance of having odd degree, so by linearity of expectation this is \\(\\frac64+\\frac{3}{64} = \\frac{99}{64}\\), yielding our answer of 163.</p>",
+      "answer": "163"
+    }
+  }
+}

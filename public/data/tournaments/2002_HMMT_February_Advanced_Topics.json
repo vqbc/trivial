@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Advanced Topics",
+  "year": 2002,
+  "name": "Individual Subject Test: Advanced Topics",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2002/feb/adv/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Eight knights are randomly placed on a chessboard (not necessarily on distinct squares). A knight on a given square attacks all the squares that can be reached by moving either (1) two squares up or down followed by one squares left or right, or (2) two squares left or right followed by one square up or down. Find the probability that every square, occupied or not, is attacked by some knight.</p>",
+      "solutions": "<p>Since every knight attacks at most eight squares, the event can only occur if every knight attacks exactly eight squares. However, each corner square must be attacked, and some experimentation readily finds that it is impossible to place a knight so as to attack a corner and seven other squares as well.</p>",
+      "answer": "0"
+    },
+    "2": {
+      "problem": "<p>A certain cafeteria serves ham and cheese sandwiches, ham and tomato sandwiches, and tomato and cheese sandwiches. It is common for one meal to include multiple types of sandwiches. On a certain day, it was found that 80 customers had meals which contained both ham and cheese; 90 had meals containing both ham and tomatoes; 100 had meals containing both tomatoes and cheese. 20 customers’ meals included all three ingredients. How many customers were there?</p>",
+      "solutions": "<p>Everyone who ate just one sandwich is included in exactly one of the first three counts, while everyone who ate more than one sandwich is included in all four counts. Thus, to count each customer exactly once, we must add the first three figures and subtract the fourth twice: \\(80 + 90 + 100 - 2 \\cdot 20 = 230\\).</p>",
+      "answer": "230"
+    },
+    "3": {
+      "problem": "<p>How many four-digit numbers are there in which at least one digit occurs more than once?</p>",
+      "solutions": "<p>There are 9000 four-digit numbers altogether. If we consider how many four-digit numbers have all their digits distinct, there are 9 choices for the first digit (since we exclude leading zeroes), and then 9 remaining choices for the second digit, then 8 for the third, and 7 for the fourth, for a total of \\(9 \\cdot 9 \\cdot 8 \\cdot 7 = 4536\\). Thus the remaining \\(9000 - 4536 = 4464\\) numbers have a repeated digit.</p>",
+      "answer": "4464"
+    },
+    "4": {
+      "problem": "<p>Two fair coins are simultaneously flipped. This is done repeatedly until at least one of the coins comes up heads, at which point the process stops. What is the probability that the other coin also came up heads on this last flip?</p>",
+      "solutions": "<p>Let the desired probability be \\(p\\). There is a \\(1/4\\) chance that both coins will come up heads on the first toss. Otherwise, both can come up heads simultaneously only if both are tails on the first toss, and then the process restarts as if from the beginning; thus this situation occurs with probability \\(p/4\\). Thus \\(p = 1/4 + p/4\\); solving, \\(p = 1/3\\).</p><p><b>Alternate Solution.</b> The desired event is equivalent to both coins coming up tails for \\(n\\) successive turns (for some \\(n \\ge 0\\)), then both coins coming up heads. For any fixed value of \\(n\\), the probability of this occurring is \\(1/4^{n+1}\\). Since all these events are disjoint, the total probability is \\(1/4 + 1/4^2 + 1/4^3 + \\cdots = 1/3\\).</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "5": {
+      "problem": "<p>Determine the number of subsets \\(S\\) of \\(\\{1, 2, 3, \\ldots, 10\\}\\) with the following property: there exist integers \\(a &lt; b &lt; c\\) with \\(a \\in S, b \\notin S, c \\in S\\).</p>",
+      "solutions": "<p>There are \\(2^{10} = 1024\\) subsets of \\(\\{1, 2, \\ldots, 10\\}\\) altogether. Any subset without the specified property must be either the empty set or a block of consecutive integers. To specify a block of consecutive integers, we either have just one element (10 choices) or a pair of distinct endpoints (\\(\\binom{10}{2} = 45\\) choices). So the number of sets with our property is \\(1024 - (1 + 10 + 45) = 968\\).</p>",
+      "answer": "968"
+    },
+    "6": {
+      "problem": "<p>In how many ways can the numbers \\(1, 2, \\ldots, 2002\\) be placed at the vertices of a regular 2002-gon so that no two adjacent numbers differ by more than 2? (Rotations and reflections are considered distinct.)</p>",
+      "solutions": "<p>There are 2002 possible positions for the 1. The two numbers adjacent to the 1 must be 2 and 3; there are two possible ways of placing these. The positions of these numbers uniquely determine the rest: for example, if 3 lies clockwise from 1, then the number lying counterclockwise from 2 must be 4; the number lying clockwise from 3 must be 5; the number lying counterclockwise from 4 must now be 6; and so forth. Eventually, 2002 is placed adjacent to 2000 and 2001, and so we do get a valid configuration. Thus there are \\(2002 \\cdot 2\\) possible arrangements.</p>",
+      "answer": "4004"
+    },
+    "7": {
+      "problem": "<p>A manufacturer of airplane parts makes a certain engine that has a probability \\(p\\) of failing on any given flight. Their are two planes that can be made with this sort of engine, one that has 3 engines and one that has 5. A plane crashes if more than half its engines fail. For what values of \\(p\\) do the two plane models have the same probability of crashing?</p>",
+      "solutions": "<p>They have the same probability of failing if \\(\\binom{5}{2}p^3(1-p)^2 + \\binom{5}{1}p^4(1-p) + p^5 = \\binom{3}{1}p^2(1-p) + p^3\\), which is true iff \\(p^2(6p^3 - 15p^2 + 12p - 3) = 0\\). This is clearly true for \\(p = 0\\). We know it is true for \\(p = 1\\), since both probabilities would be 1 in this case, so we know \\(p - 1\\) is a factor of \\(6p^3 - 15p^2 + 12p - 3\\). Thus, factoring gives that the engines have the same probability of failing if \\(p^2(p-1)(6p^2 - 9p + 3) = 0\\). By the quadratic formula (or by factoring), the quadratic has roots \\(p = \\frac{1}{2}, 1\\), so the answer is \\(0, \\frac{1}{2}, 1\\).</p>",
+      "answer": "0, \\frac{1}{2}, 1"
+    },
+    "8": {
+      "problem": "<p>Given a \\(9 \\times 9\\) chess board, we consider all the rectangles whose edges lie along grid lines (the board consists of 81 unit squares, and the grid lines lie on the borders of the unit squares). For each such rectangle, we put a mark in every one of the unit squares inside it. When this process is completed, how many unit squares will contain an even number of marks?</p>",
+      "solutions": "<p>Consider the rectangles which contain the square in the \\(i\\)th row and \\(j\\)th column. There are \\(i\\) possible positions for the upper edge of such a rectangle, \\(10 - i\\) for the lower edge, \\(j\\) for the left edge, and \\(10 - j\\) for the right edge; thus we have \\(i(10-i)j(10-j)\\) rectangles altogether, which is odd iff \\(i, j\\) are both odd, i.e. iff \\(i, j \\in \\{1, 3, 5, 7, 9\\}\\). There are thus 25 unit squares which lie in an odd number of rectangles, so the answer is \\(81 - 25 = 56\\).</p>",
+      "answer": "56"
+    },
+    "9": {
+      "problem": "<p>Given that \\(a, b, c\\) are positive real numbers and \\(\\log_a b + \\log_b c + \\log_c a = 0\\), find the value of \\((\\log_a b)^3 + (\\log_b c)^3 + (\\log_c a)^3\\).</p>",
+      "solutions": "<p>Let \\(x = \\log_a b\\) and \\(y = \\log_b c\\); then \\(\\log_c a = -(x+y)\\). Thus we want to compute the value of \\(x^3 + y^3 - (x+y)^3 = -3x^2y - 3xy^2 = -3xy(x+y)\\). On the other hand, \\(-xy(x+y) = (\\log_a b)(\\log_b c)(\\log_c a) = 1\\), so the answer is 3.</p>",
+      "answer": "3"
+    },
+    "10": {
+      "problem": "<p>One fair die is rolled; let \\(a\\) denote the number that comes up. We then roll \\(a\\) dice; let the sum of the resulting \\(a\\) numbers be \\(b\\). Finally, we roll \\(b\\) dice, and let \\(c\\) be the sum of the resulting \\(b\\) numbers. Find the expected (average) value of \\(c\\).</p>",
+      "solutions": "<p>The expected result of an individual die roll is \\((1+2+3+4+5+6)/6 = 7/2\\). For any particular value of \\(b\\), if \\(b\\) dice are rolled independently, then the expected sum is \\((7/2)b\\). Likewise, when we roll \\(a\\) dice, the expected value of their sum \\(b\\) is \\((7/2)a\\), so the expected value of \\(c\\) is \\((7/2)^2 a\\). Similar reasoning again shows us that the expected value of \\(a\\) is \\(7/2\\) and so the expected value of \\(c\\) overall is \\((7/2)^3 = 343/8\\).</p>",
+      "answer": "\\frac{343}{8}"
+    }
+  }
+}

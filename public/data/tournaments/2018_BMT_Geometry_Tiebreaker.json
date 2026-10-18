@@ -1,0 +1,23 @@
+{
+  "test": "BMT Geometry Tiebreaker",
+  "year": 2018,
+  "name": "Geometry Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2018/GEOSP18TB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Line segment \\(\\overline{AE}\\) of length 17 bisects \\(\\overline{DB}\\) iat a point \\(C\\). If \\(\\overline{AB} = 5\\), \\(\\overline{BC} = 6\\) and \\(\\angle BAC = 78\\) degrees, calculate \\(\\angle CDE\\).</p>",
+      "solutions": "<p>We draw a diagram as follows:</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2018_BMT_Geometry_Tiebreaker/1-fig1.png\" width=\"435\" alt=\"\"></p><p>We construct line \\(\\overline{EG}\\) such that \\(\\angle EGC = \\angle ABC = 78\\).</p><p>We see that \\(\\overline{EG} = \\overline{GD} = 5\\) so triangle \\(\\triangle EGD\\) is isosceles. Therefore, \\(2\\angle GDE = \\angle EGC\\) and so \\(\\angle CDE = \\angle GDE = \\boxed{39}\\) and we are done.</p>",
+      "answer": "39"
+    },
+    "2": {
+      "problem": "<p>Points \\(A, B, C\\) are chosen on the boundary of a circle with center \\(O\\) so that \\(\\angle BAC\\) encloses an arc of 120 degrees. Let \\(D\\) be chosen on \\(\\overline{BA}\\) so that \\(\\angle AOD\\) is a right angle. Extend \\(\\overline{CD}\\) so that it intersects with \\(O\\) again at point \\(P\\). What is the measure of the arc, in degrees, that is enclosed by \\(\\angle ACP\\)? Please use the \\(\\tan^{-1}\\) function to express your answer.</p>",
+      "solutions": "<p>We can draw line \\(\\overline{DO}\\) past \\(O\\), and draw the line from point \\(C\\) parallel to \\(\\overline{AO}\\), until they meet at point \\(E\\). We can deduce that \\(\\angle AOC = 120\\) degrees, and so \\(\\angle OCA = 30\\), and \\(\\triangle OEC\\) is a 30-60-90 triangle, meaning that \\(\\overline{OE} = \\frac{\\sqrt{3}}{2}\\), and \\(\\overline{EC} = \\frac{1}{2}\\). The measure of the arc we want will be \\(2 \\times \\angle ACP\\), but we can get the measure of \\(\\angle ECP\\) with the \\(\\tan^{-1}\\) function, by taking the arctan of \\(\\overline{PE}\\) over \\(\\overline{EC}\\), and get the measure of \\(\\angle ACP\\) by subtracting 30 degrees off, to account for the extra angle given by \\(\\angle ACE\\). This gives us our answer of \\(2(\\tan^{-1}(\\frac{5\\sqrt{3}}{3}) - 30)\\)</p>",
+      "answer": "2\\left(\\tan^{-1}\\left(\\frac{5\\sqrt{3}}{3}\\right) - 30\\right)"
+    },
+    "3": {
+      "problem": "<p>Consider a regular polygon with \\(2^n\\) sides, for \\(n \\ge 2\\), inscribed in a circle of radius 1. Denote the area of this polygon by \\(A_n\\). Compute \\[\\prod_{i=2}^{\\infty} \\frac{A_i}{A_{i+1}}\\]</p>",
+      "solutions": "<p>The limit as \\(n\\) goes to infinity of \\(A_n\\) is \\(\\pi r^2\\) for polygons inscribed in a circle of radius \\(r\\). Moreover \\(A_2 = 2r^2\\). So \\[\\lim_{j\\to\\infty} \\frac{A_2}{A_j} = \\frac{2}{\\pi}\\] and since all the other terms telescope, we conclude that the infinite product tends to \\(\\pi\\).</p>",
+      "answer": "\\frac{2}{\\pi}"
+    }
+  }
+}

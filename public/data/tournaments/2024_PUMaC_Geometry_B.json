@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry B",
+  "year": 2024,
+  "name": "Geometry B",
+  "url": "https://pumac.princeton.edu/s/PUMaC_2024_Geometry_B.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Jeff the delivery driver starts at the point \\((5,0)\\) and has to make deliveries at all the other lattice points with distance 5 from the origin before returning to his starting point. The length of a shortest possible path he can make is \\(\\sqrt{a} + \\sqrt{b}\\) for positive integers \\(a\\) and \\(b\\). Find \\(a+b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Let \\(ABCDE\\) be a fixed regular pentagon of side length 1. An equilateral triangle \\(\\triangle PQR\\) with side length 1 is initially placed with \\(P\\) at \\(A\\), \\(Q\\) at \\(B\\), and \\(R\\) outside the pentagon. The triangle then rolls without slipping around the perimeter of pentagon until it comes back to its starting point. The total area covered by any part of the triangle during its journey can be written as \\(\\frac{a\\sqrt{b} + c\\pi}{d}\\) for positive integers \\(a,b,c,d\\) with \\(b\\) square-free and \\(\\gcd(a,c,d) = 1\\). Find \\(a+b+c+d\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>The following three squares are inscribed within each other such that they all share the same center, and the largest and smallest squares have parallel sides. If the largest square has side length 17 and the middle square has side length 13, the side length of the smallest square can be expressed in the form \\(\\frac{a}{b}\\), where \\(a\\) and \\(b\\) are relatively prime positive integers. Find \\(a+b\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2024_PUMaC_Geometry_B/3-fig1.png\" width=\"237\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Let \\(ABCD\\) be a square of side length 1 made of paper. Let \\(M\\) be the midpoint of side \\(AB\\). Let \\(E\\) be a point on side \\(BC\\) and let \\(F\\) be a point on side \\(AD\\) such that \\(A\\) lands on line \\(ME\\) when \\(\\triangle AMF\\) is folded across line \\(MF\\) and such that \\(B\\) lands on line \\(MF\\) when \\(\\triangle BME\\) is folded across line \\(ME\\). The area of the resulting shape when both folds are made can be written as \\(\\frac{a - \\sqrt{b}}{c}\\) for positive integers \\(a,b,c\\) with \\(b\\) squarefree. Find \\(a+b+c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be a right triangle with \\(\\angle A = 90^\\circ\\) and \\(AB = 1\\). Let \\(x\\) be the length that \\(AC\\) must be so that the perpendicular bisector of \\(AC\\) is tangent to the incircle of \\(\\triangle ABC\\). Let \\(y\\) be the length that \\(BC\\) must be so that the perpendicular bisector of \\(BC\\) is tangent to the incircle of \\(\\triangle ABC\\). (Note that \\(x\\) and \\(y\\) arise in different triangles.) Then \\(x + y = \\frac{m}{n}\\) for positive integers \\(m,n\\) with \\(\\frac{m}{n}\\) in simplest form. Compute \\(m+n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be such that \\(AB = 15, BC = 13, CA = 14\\). Let \\(P\\) be the point on the circumcircle of \\(\\triangle ABC\\) such that \\(P\\) is on the same side of \\(\\overline{AB}\\) as \\(C\\) and \\(AP = BP\\). Let \\(X\\) be the foot of the perpendicular from \\(P\\) to \\(AC\\). Then the length of \\(AX\\) is \\(\\frac{m}{n}\\) for some relatively prime positive integers \\(m\\) and \\(n\\). Find \\(m+n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be a triangle such that the angle bisector of \\(\\angle BAC\\), the median from \\(B\\) to side \\(AC\\), and the perpendicular bisector of \\(AB\\) intersect at a single point \\(X\\). If \\(AX = 5\\) and \\(AC = 12\\), compute \\(BC^2\\).</p><p><b>Note:</b> The problem should conclude: \\(BC^2\\) can be expressed in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m+n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be a triangle with \\(AB = 10\\). Let \\(D\\) be a point on the opposite side of line \\(AC\\) as \\(B\\) so that \\(\\triangle ACD\\) is directly similar to \\(\\triangle ABC\\) (i.e. \\(\\angle ACD = \\angle ABC\\), etc). Let \\(M\\) be the midpoint of \\(AD\\). Given that \\(A\\) is the centroid of triangle \\(\\triangle BCM\\), compute \\(BC^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Algebra",
+  "year": 2002,
+  "name": "Algebra",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2002/feb/alg/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Nine nonnegative numbers have average 10. What is the greatest possible value for their median?</p>",
+      "solutions": "<p>If the median is \\(m\\), then the five highest numbers are all at least \\(m\\), so the sum of all the numbers is at least \\(5m\\). Thus \\(90 \\ge 5m \\Rightarrow m \\le 18\\). Conversely, we can achieve \\(m = 18\\) by taking four 0’s and five 18’s.</p>",
+      "answer": "18"
+    },
+    "2": {
+      "problem": "<p>\\(p\\) and \\(q\\) are primes such that the numbers \\(p + q\\) and \\(p + 7q\\) are both squares. Find the value of \\(p\\).</p>",
+      "solutions": "<p>Writing \\(x^2 = p + q, y^2 = p + 7q\\), we have \\(6q = y^2 - x^2 = (y - x)(y + x)\\). Since \\(6q\\) is even, one of the factors \\(y - x, y + x\\) is even, and then the other is as well; thus \\(6q\\) is divisible by \\(4 \\Rightarrow q\\) is even \\(\\Rightarrow q = 2\\) and \\(6q = 12\\). We may assume \\(x, y\\) are both taken to be positive; then we must have \\(y - x = 2, y + x = 6 \\Rightarrow x = 2\\), so \\(p + 2 = 2^2 = 4 \\Rightarrow p = 2\\) also.</p>",
+      "answer": "2"
+    },
+    "3": {
+      "problem": "<p>Real numbers \\(a, b, c\\) satisfy the equations \\(a + b + c = 26, 1/a + 1/b + 1/c = 28\\). Find the value of \\[\\frac{a}{b} + \\frac{b}{c} + \\frac{c}{a} + \\frac{a}{c} + \\frac{c}{b} + \\frac{b}{a}.\\]</p>",
+      "solutions": "<p>Multiplying the two given equations gives \\[\\frac{a}{a} + \\frac{a}{b} + \\frac{a}{c} + \\frac{b}{a} + \\frac{b}{b} + \\frac{b}{c} + \\frac{c}{a} + \\frac{c}{b} + \\frac{c}{c} = 26 \\cdot 28 = 728,\\] and subtracting 3 from both sides gives the answer, 725.</p>",
+      "answer": "725"
+    },
+    "4": {
+      "problem": "<p>If a positive integer multiple of 864 is picked randomly, with each multiple having the same probability of being picked, what is the probability that it is divisible by 1944?</p>",
+      "solutions": "<p>The probability that a multiple of \\(864 = 2^5 \\cdot 3^3\\) is divisible by \\(1944 = 2^3 \\cdot 3^5\\) is the same as the probability that a multiple of \\(2^2\\) is divisible by \\(3^2\\), which since \\(4\\) and \\(9\\) are relatively prime is \\(\\frac{1}{9}\\).</p>",
+      "answer": "\\frac{1}{9}"
+    },
+    "5": {
+      "problem": "<p>Find the greatest common divisor of the numbers \\(2002 + 2, 2002^2 + 2, 2002^3 + 2, \\ldots\\).</p>",
+      "solutions": "<p>Notice that \\(2002 + 2\\) divides \\(2002^2 - 2^2\\), so any common divisor of \\(2002 + 2\\) and \\(2002^2 + 2\\) must divide \\((2002^2 + 2) - (2002^2 - 2^2) = 6\\). On the other hand, every number in the sequence is even, and the \\(n\\)th number is always congruent to \\(1^n + 2 \\equiv 0\\) modulo 3. Thus, 6 divides every number in the sequence.</p>",
+      "answer": "6"
+    },
+    "6": {
+      "problem": "<p>Find the sum of the even positive divisors of 1000.</p>",
+      "solutions": "<p>Notice that \\(2k\\) is a divisor of 1000 iff \\(k\\) is a divisor of 500, so we need only find the sum of the divisors of 500 and multiply by 2. This can be done by enumerating the divisors individually, or simply by using the formula: \\(\\sigma(2^2 \\cdot 5^3) = (1 + 2 + 2^2)(1 + 5 + 5^2 + 5^3) = 1092\\), and then doubling gives 2184.</p><p><b>Alternate Solution:</b> The sum of all the divisors of 1000 is \\((1 + 2 + 2^2 + 2^3)(1 + 5 + 5^2 + 5^3) = 2340\\). The odd divisors of 1000 are simply the divisors of 125, whose sum is \\(1 + 5 + 5^2 + 5^3 = 156\\); subtracting this from 2340, we are left with the sum of the even divisors of 1000, which is 2184.</p>",
+      "answer": "2184"
+    },
+    "7": {
+      "problem": "<p>The real numbers \\(x, y, z, w\\) satisfy \\[\\begin{aligned}\n2x + y + z + w &amp;= 1 \\\\\nx + 3y + z + w &amp;= 2 \\\\\nx + y + 4z + w &amp;= 3 \\\\\nx + y + z + 5w &amp;= 25.\n\\end{aligned}\\] Find the value of \\(w\\).</p>",
+      "solutions": "<p>Multiplying the four equations by \\(12, 6, 4, 3\\) respectively, we get \\[\\begin{aligned}\n24x + 12y + 12z + 12w &amp;= 12 \\\\\n6x + 18y + 6z + 6w &amp;= 12 \\\\\n4x + 4y + 16z + 4w &amp;= 12 \\\\\n3x + 3y + 3z + 15w &amp;= 75.\n\\end{aligned}\\] Adding these yields \\(37x + 37y + 37z + 37w = 111\\), or \\(x + y + z + w = 3\\). Subtract this from the fourth given equation to obtain \\(4w = 22\\), or \\(w = 11/2\\).</p>",
+      "answer": "\\frac{11}{2}"
+    },
+    "8": {
+      "problem": "<p>Determine the value of the sum \\[\\frac{3}{1^2 \\cdot 2^2} + \\frac{5}{2^2 \\cdot 3^2} + \\frac{7}{3^2 \\cdot 4^2} + \\cdots + \\frac{29}{14^2 \\cdot 15^2}.\\]</p>",
+      "solutions": "<p>The sum telescopes as \\[\\left(\\frac{1}{1^2} - \\frac{1}{2^2}\\right) + \\left(\\frac{1}{2^2} - \\frac{1}{3^2}\\right) + \\cdots + \\left(\\frac{1}{14^2} - \\frac{1}{15^2}\\right) = \\frac{1}{1^2} - \\frac{1}{15^2} = \\frac{224}{225}.\\]</p>",
+      "answer": "\\frac{224}{225}"
+    },
+    "9": {
+      "problem": "<p>For any positive integer \\(n\\), let \\(f(n)\\) denote the number of 1’s in the base-2 representation of \\(n\\). For how many values of \\(n\\) with \\(1 \\le n \\le 2002\\) do we have \\(f(n) = f(n+1)\\)?</p>",
+      "solutions": "<p>If \\(n\\) is even, then \\(n + 1\\) is obtained from \\(n\\) in binary by changing the final 0 to a 1; thus \\(f(n+1) = f(n) + 1\\). If \\(n\\) is odd, then \\(n + 1\\) is obtained by changing the last 0 to a 1, the ensuing string of 1s to 0s, and then changing the next rightmost 0 to a 1. This produces no net change in the number of 1’s iff \\(n\\) ends in 01 in base 2. Thus, \\(f(n+1) = f(n)\\) if and only if \\(n\\) is congruent to 1 mod 4, and there are 501 such numbers in the specified range.</p>",
+      "answer": "501"
+    },
+    "10": {
+      "problem": "<p>Determine the value of \\[2002 + \\frac{1}{2}\\left(2001 + \\frac{1}{2}\\left(2000 + \\cdots + \\frac{1}{2}\\left(3 + \\frac{1}{2} \\cdot 2\\right)\\right)\\cdots\\right).\\]</p>",
+      "solutions": "<p>We can show by induction that \\(n + \\frac{1}{2}([n-1] + \\frac{1}{2}(\\cdots + \\frac{1}{2} \\cdot 2)\\cdots) = 2(n-1)\\). For \\(n = 3\\) we have \\(3 + \\frac{1}{2} \\cdot 2 = 4\\), giving the base case, and if the result holds for \\(n\\), then \\((n+1) + \\frac{1}{2} \\cdot 2(n-1) = 2n = 2(n+1) - 2\\). Thus the claim holds, and now plug in \\(n = 2002\\).</p><p><b>Alternate Solution:</b> Expand the given expression as \\(2002 + 2001/2 + 2000/2^2 + \\cdots + 2/2^{2000}\\). Letting \\(S\\) denote this sum, we have \\(S/2 = 2002/2 + 2001/2^2 + \\cdots + 2/2^{2001}\\), so \\(S - S/2 = 2002 - (1/2 + 1/4 + \\cdots + 1/2^{2000}) - 2/2^{2000} = 2002 - (1 - 1/2^{2000}) - 1/2^{2000} = 2001\\), so \\(S = 4002\\).</p>",
+      "answer": "4002"
+    }
+  }
+}

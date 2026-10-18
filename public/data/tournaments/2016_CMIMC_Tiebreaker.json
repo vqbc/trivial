@@ -1,0 +1,83 @@
+{
+  "test": "CMIMC Tiebreaker",
+  "year": 2016,
+  "name": "Tiebreakers",
+  "url": "https://drive.google.com/uc?export=download&id=1s4IES6jqGIBuLVISCSVJgbaxagDBvVD0",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\[f(x) = \\frac{1}{1 - \\frac{1}{1 - x}}.\\] Compute \\(f^{2016}(2016)\\), where \\(f\\) is composed upon itself 2016 times.</p>",
+      "solutions": "<p>We compute \\(f(2016) = \\frac{2015}{2016}\\), \\(f(\\frac{2015}{2016}) = -\\frac{1}{2015}\\), and \\(f(-\\frac{1}{2015}) = 2016\\). Therefore, \\(f\\) is periodic with period 3, and so \\(f^{2016}(2016) = f^{2016 \\pmod 3}(2016) = f^3(2016) = 2016\\).</p>",
+      "answer": "2016"
+    },
+    "2": {
+      "problem": "<p>Determine the value of the sum \\[\\left|\\sum_{1 \\le i &lt; j \\le 50} ij(-1)^{i+j}\\right|.\\]</p>",
+      "solutions": "<p>Let \\(a_i = i(-1)^i\\). Then since \\[\\left(\\sum_{1 \\le i \\le 50} a_i\\right)^2 = \\sum_{1 \\le i, j \\le 50} a_i a_j = 2\\sum_{1 \\le i &lt; j \\le 50} a_i a_j + \\sum_{1 \\le i \\le 50} a_i^2,\\] we have \\[2\\sum_{1 \\le i &lt; j \\le 50} a_i a_j = (-1 + 2 - 3 + 4 + \\dots + 50)^2 - (1^2 + \\dots + 50^2) = 25^2 - \\frac{1}{6}50(51)(101) = -42300,\\] whence the answer is 21150.</p>",
+      "answer": "21150"
+    },
+    "3": {
+      "problem": "<p>Suppose \\(x\\) and \\(y\\) are real numbers which satisfy the system of equations \\[x^2 - 3y^2 = \\frac{17}{x} \\quad \\text{and} \\quad 3x^2 - y^2 = \\frac{23}{y}.\\] Then \\(x^2 + y^2\\) can be written in the form \\(\\sqrt[m]{n}\\), where \\(m\\) and \\(n\\) are positive integers and \\(m\\) is as small as possible. Find \\(m + n\\).</p>",
+      "solutions": "<p>Note that the equations rearrange to \\(x^3 - 3xy^2 = 17\\) and \\(3x^2 y - y^3 = 23\\). Thus \\[x^3 - 3xy^2 + i(3x^2 y - y^3) = 17 + 23i \\implies (x + yi)^3 = 17 + 23i.\\] Taking the magnitude of both sides yields \\[(x^2 + y^2)^{3/2} = (17 + 23i)^{1/2} \\implies x^2 + y^2 = \\sqrt[3]{17^2 + 23^2} = \\sqrt[3]{818}.\\] The requested answer is \\(818 + 3 = 821\\).</p>",
+      "answer": "821"
+    },
+    "4": {
+      "problem": "<p>For a set \\(S \\subseteq \\mathbb{N}\\), define \\(f(S) = \\{\\lfloor\\sqrt{s}\\rfloor \\mid s \\in S\\}\\). Find the number of sets \\(T\\) such that \\(|f(T)| = 2\\) and \\(f(f(T)) = \\{2\\}\\).</p>",
+      "solutions": "<p>Denote \\(S_n = \\{k \\mid \\lfloor k \\rfloor = n\\}\\), and \\(a_n\\) the number of non-empty subsets of \\(S_n\\). Observe that \\(S_n\\) contains exactly \\(2n - 1\\) elements, and so \\(a_n\\) contains \\(2^{2n-1} - 1\\) elements. Since \\(f^2(T) = \\{2\\}\\), it follows that \\(f(T) \\subset S_2 = \\{2, 3, 4\\}\\); in particular, \\(f(T)\\) contains exactly two of those three elements. Thus the number of sets \\(T\\) that satisfy the problem condition is given by \\(a_2 a_3 + a_2 a_4 + a_3 a_4 = (7)(31) + (7)(127) + (31)(127) = 5043\\).</p>",
+      "answer": "5043"
+    },
+    "5": {
+      "problem": "<p>Let \\(S = \\{1, 2, 3, 4, 5, 6, 7\\}\\). Compute the number of sets of subsets \\(T = \\{A, B, C\\}\\) with \\(A, B, C \\in S\\) such that \\(A \\cup B \\cup C = S\\), \\((A \\cap C) \\cup (B \\cap C) = \\emptyset\\), and no subset contains two consecutive integers.</p>",
+      "solutions": "<p>The last condition is equivalent to \\((A \\cup B) \\cap C = \\emptyset\\), and \\(A \\cup B \\cup C = S\\) tells us each element is in at least one set. Hence each element has four possible states: in \\(A\\) only, in \\(B\\) only, in both \\(A\\) and \\(B\\), and in \\(C\\) only. Letting \\(A_n\\) be the number of sets \\(T\\) that satisfy the condition for \\(S = \\{1, 2, \\dots, n\\}\\) such that \\(n\\) is in only \\(A\\) and similarly for \\(B, AB,\\) and \\(C\\), we have \\[\\begin{aligned}\nA_{n+1} &amp;= B_n + C_n \\\\\nB_{n+1} &amp;= A_n + C_n \\\\\nAB_{n+1} &amp;= C_n \\\\\nC_{n+1} &amp;= A_n + B_n + AB_n,\n\\end{aligned}\\] with \\(A_1 = B_1 = AB_1 = C_1 = 1\\). Solving this up to \\(n = 7\\) yields \\(A_7 + B_7 + AB_7 + C_7 = 394\\).</p>",
+      "answer": "394"
+    },
+    "6": {
+      "problem": "<p>Let \\(S\\) be the set containing all positive integers whose decimal representations contain only 3s and 7s, have at most 1998 digits, and have at least one digit appear exactly 999 times. If \\(N\\) denotes the number of elements in \\(S\\), find the remainder when \\(N\\) is divided by 1000.</p>",
+      "solutions": "<p>Note that element in \\(S\\) contains at least 999 and at most 1998 digits. For some number \\(0 \\le k &lt; 999\\), the number of integers of length \\(999+k\\) in \\(S\\) is equal to \\(2\\binom{999+k}{999}\\), and for \\(k = 999\\) there are \\(\\binom{1998}{999}\\) elements in \\(S\\). Hence \\(N = 2\\sum_{k=0}^{999}\\binom{999+k}{999} - \\binom{1998}{999} = 2\\binom{1999}{999} - \\binom{1998}{999} = \\binom{2000}{1000} - \\binom{1998}{999}\\). By examining \\(v_2(2000!)\\) and \\(v_2(1000!)\\), we find that \\(\\binom{2000}{1000} \\equiv 0 \\pmod 8\\), and using Wolstenholme’s yields \\(\\binom{2000}{1000} \\equiv \\binom{16}{8} \\equiv 120 \\pmod{125}\\). Hence \\(\\binom{2000}{1000} \\equiv 120 \\pmod{1000}\\). Noting that \\(\\binom{1998}{999} = \\frac{500}{1999}\\binom{2000}{1000}\\) yields \\(\\binom{1998}{999} \\equiv 0 \\pmod{1000}\\), and so the answer is \\(120 - 0 = 120\\).</p>",
+      "answer": "120"
+    },
+    "7": {
+      "problem": "<p>A <i>planar</i> graph is a connected graph that can be drawn on a sphere without edge crossings. Such a drawing will divide the sphere into a number of faces. Let \\(G\\) be a planar graph with 11 vertices of degree 2, 5 vertices of degree 3, and 1 vertex of degree 7. Find the number of faces into which \\(G\\) divides the sphere.</p>",
+      "solutions": "<p>By double counting, the total number of edges is \\(\\frac{1}{2}(11 \\cdot 2 + 5 \\cdot 3 + 1 \\cdot 7) = 22\\). Thus, by Euler’s polyhedron formula, there are \\(F = E - V + 2 = 22 - 17 + 2 = 7\\) faces. Note: there does exist such a graph, for example:</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2016_CMIMC_Tiebreaker/7-fig1.png\" width=\"354\" alt=\"\"></p>",
+      "answer": "7"
+    },
+    "8": {
+      "problem": "<p>The <i>Stooge sort</i> is a particularly inefficient recursive sorting algorithm defined as follows: given an array \\(A\\) of size \\(n\\), we swap the first and last elements if they are out of order; we then (if \\(n \\ge 3\\)) Stooge sort the first \\(\\lceil\\frac{2n}{3}\\rceil\\) elements, then the last \\(\\lceil\\frac{2n}{3}\\rceil\\), then the first \\(\\lceil\\frac{2n}{3}\\rceil\\) elements again. Given that this runs in \\(O(n^\\alpha)\\), where \\(\\alpha\\) is minimal, find the value of \\((243/32)^\\alpha\\).</p>",
+      "solutions": "<p>Let \\(T(n)\\) be the number of steps Stooge sort takes on an array of size \\(n\\). Then \\[T(n) = 3T\\left(\\frac{2}{3}n\\right) = 3^2 T\\left(\\left(\\frac{2}{3}\\right)^2 n\\right) = 3^3 T\\left(\\left(\\frac{2}{3}\\right)^3 n\\right) = \\dots\\] Let \\(k\\) be the smallest integer such that \\((\\frac{2}{3})^k n \\le 1\\). Then \\(k \\ge \\log_{3/2} n\\), so the algorithm will run in \\(O(3^{\\log_{3/2} n}) = O(n^{\\log_{3/2} 3})\\). Finally, \\((243/32)^{\\log_{3/2} 3} = (3/2)^{\\log_{3/2} 3^5} = 3^5 = 243\\).</p>",
+      "answer": "243"
+    },
+    "9": {
+      "problem": "<p>Let \\(\\varepsilon\\) denote the empty string. Given a pair of strings \\((A, B) \\in \\{0, 1, 2\\}^* \\times \\{0, 1\\}^*\\), we are allowed the following operations: \\[\\begin{cases}\n(A, 1) \\to (A0, \\varepsilon) \\\\\n(A, 10) \\to (A00, \\varepsilon) \\\\\n(A, 0B) \\to (A0, B) \\\\\n(A, 11B) \\to (A01, B) \\\\\n(A, 100B) \\to (A0012, 1B) \\\\\n(A, 101B) \\to (A00122, 10B)\n\\end{cases}\\] We perform these operations on \\((A, B)\\) until we can no longer perform any of them. We then iteratively delete any instance of \\(20\\) in \\(A\\) and replace any instance of \\(21\\) with \\(1\\) until there are no such substrings remaining. Among all binary strings \\(X\\) of size 9, how many different possible outcomes are there for this process performed on \\((\\varepsilon, X)\\)?</p>",
+      "solutions": "<p>Let \\([\\cdot]\\) denote the value when we read \\(\\cdot\\) as a binary integer. Now we claim this process performed on \\((\\varepsilon, X)\\) will output \\(\\lfloor[X]/3\\rfloor\\) (with enough leading zeroes). It is clear for small enough values of \\(|X|\\). Now consider the following algorithm for division when the first digits are 100 or 101:</p>",
+      "answer": "171"
+    },
+    "10": {
+      "problem": "<p>Point \\(A\\) lies on the circumference of a circle \\(\\Omega\\) with radius 78. Point \\(B\\) is placed such that \\(AB\\) is tangent to the circle and \\(AB = 65\\), while point \\(C\\) is located on \\(\\Omega\\) such that \\(BC = 25\\). Compute the length of \\(\\overline{AC}\\).</p>",
+      "solutions": "<p>Extend \\(PC\\) past \\(C\\) to intersect \\(\\Omega\\) at \\(D\\). Then by Power of a Point \\(AB^2 = AC \\cdot AD\\), so \\[AD = \\frac{AB^2}{BC} = \\frac{65^2}{25} = 169.\\] Now let \\(D'\\) be the point on \\(\\Omega\\) such that \\(AD'\\) is a diameter of \\(\\Omega\\). Then \\(AD' = 156\\); combining this with \\(AB = 65\\) yields \\(BD' = 169\\) as well. From here it’s not hard to see that \\(D \\equiv D'\\), so \\(\\triangle DAB\\) is a right triangle. Finally, note that since \\(A\\) and \\(D\\) are antipodal \\(\\angle DCA = 90^\\circ\\) as well. Thus \\(C\\) is the foot of the perpendicular from \\(A\\) to \\(BD\\), so \\[AC = \\frac{AB \\cdot AD}{BC} = \\frac{65 \\cdot 156}{169} = 60.\\]</p>",
+      "answer": "60"
+    },
+    "11": {
+      "problem": "<p>Identical spherical tennis balls of radius 1 are placed inside a cylindrical container of radius 2 and height 19. Compute the maximum number of tennis balls that can fit entirely inside this container.</p>",
+      "solutions": "<p>Observe that we can fit two balls into the bottom such that they both touch the bottom; it is then clear that the optimal way to pack in balls is to place them in layers of two each, then stack them in such a way that the line formed by connecting the centers of each pair is orthogonal to the pair above and below.</p><p>Since each ball is tangent to the other three, connecting their centers forms a tetrahedron \\(ABCD\\) of side length 2. Let \\(M\\) be the midpoint of \\(AB\\) and \\(N\\) be the midpoint of \\(CD\\). To find the vertical height between the two layers, it suffices to compute \\(MN\\). Project \\(D\\) and \\(N\\) onto the plane \\(ABC\\) to points \\(D'\\) and \\(N'\\), respectively, then we find that \\(CN' = N'D' = \\frac{1}{2}DM\\), and thus \\(MN' = \\frac{2\\sqrt{3}}{3}\\). Further, by Pythagorean Theorem we have \\(DD' = \\frac{2\\sqrt{6}}{3}\\) and \\(NN' = \\frac{1}{2}DD' = \\frac{\\sqrt{6}}{3}\\). Hence \\(MN = \\sqrt{MN'^2 + NN'^2} = \\sqrt{2}\\). Let \\(k\\) be the maximum number of layers we can fit inside this container; this is the maximum solution to the inequality \\(2 + (k - 1)\\sqrt{2} \\le 19\\). Noting that \\(\\frac{17}{\\sqrt{2}} = \\sqrt{144.5} &gt; 12\\), we have \\(k = 13\\), and so the answer is 26.</p>",
+      "answer": "26"
+    },
+    "12": {
+      "problem": "<p>Triangle \\(ABC\\) satisfies \\(AB = 28\\), \\(BC = 32\\), and \\(CA = 36\\), and \\(M\\) and \\(N\\) are the midpoints of \\(\\overline{AB}\\) and \\(\\overline{AC}\\) respectively. Let point \\(P\\) be the unique point in the plane \\(ABC\\) such that \\(\\triangle PBM \\sim \\triangle PNC\\). What is \\(AP\\)?</p>",
+      "solutions": "<p>Scale down by a factor of 4, so that \\(AB = 7\\), \\(BC = 8\\), and \\(CA = 9\\). Note that \\(P\\) is the intersection of the circumcircles of \\(\\triangle ANB\\) and \\(\\triangle AMC\\). To see this, remark that by the similarity condition \\(\\angle BMP = \\angle NCP\\), so quadrilateral \\(AMQC\\) is cyclic. Similarly, \\(ANPB\\) is also cyclic. Now perform a \\(\\sqrt{bc}\\) inversion \\(\\Phi\\) about \\(A\\). Note that \\(\\Phi\\) sends \\(B\\) to \\(C\\) and vice versa. Furthermore, \\(\\Phi\\) sends \\(M\\) to the point \\(M'\\) on ray \\(\\vec{AC}\\) such that \\[AM \\cdot AM' = AB \\cdot AC \\implies AM' = 2AC.\\] Similarly, this inversion sends \\(N\\) to the point \\(N'\\) such that \\(AN' = 2AB\\). As a result, \\(\\Phi\\) sends \\((ANB)\\) to \\(CN'\\) and \\((AMC)\\) to \\(BM'\\), meaning that the image of \\(Q\\) about \\(\\Phi\\) is the centroid of the triangle homothetic to \\(\\triangle ABC\\) with scale factor 2 (i.e. \\(\\triangle AN'M'\\)). The rest is computation. Let \\(m_a\\) be the length of the \\(A\\)-median of \\(\\triangle ABC\\). Then \\[AP' = \\frac{4}{3}m_a = \\frac{4}{3}\\sqrt{\\frac{2(AB^2 + AC^2) - BC^2}{4}} = \\frac{28}{3}.\\] Therefore, by the definition of inversion, \\[AP' \\cdot AP = AB \\cdot AC = 63 \\implies AP = \\frac{63}{28/3} = \\frac{27}{4}.\\] Scaling back up by a factor of 4 yields the desired answer of 27.</p>",
+      "answer": "27"
+    },
+    "13": {
+      "problem": "<p>For all integers \\(n \\ge 2\\), let \\(f(n)\\) denote the largest positive integer \\(m\\) such that \\(\\sqrt[m]{n}\\) is an integer. Evaluate \\[f(2) + f(3) + \\dots + f(100).\\]</p>",
+      "solutions": "<p>Increment once for each perfect power. There are \\(100 - 1 = 99\\) first powers, \\(\\sqrt{100} - 1 = 9\\) squares, \\(\\lfloor\\sqrt[3]{100}\\rfloor - 1 = 3\\) cubes, etc. for a total of \\(99 + 9 + 3 + 2 + 1 + 1 = 115\\).</p>",
+      "answer": "115"
+    },
+    "14": {
+      "problem": "<p>For each integer \\(n \\ge 1\\), let \\(S_n\\) be the set of integers \\(k &gt; n\\) such that \\(k\\) divides \\(30n - 1\\). How many elements of the set \\[\\mathcal{S} = \\bigcup_{i \\ge 1} S_i = S_1 \\cup S_2 \\cup S_3 \\cup \\dots\\] are less than 2016?</p>",
+      "solutions": "<p>Note that if \\(k \\mid 30n - 1\\) then \\(\\gcd(30, k) = 1\\). Now if \\(\\gcd(30, k) = 1\\) then let \\(n = 30^{-1} \\pmod k\\). We have \\(k \\mid 30n - 1\\) and \\(k &gt; n\\), so \\(\\mathcal{S} = \\{a \\mid \\gcd(a, 30) = 1\\}\\). Finally, since \\(\\varphi(30) = 8\\), we can look at just the first 2016 (mod 30) numbers and add them in. Since 1, 5 are the only numbers in \\([1, 6]\\) coprime with 30, the answer is \\(8 \\cdot \\frac{2016 - 6}{30} + 2 = 538\\).</p>",
+      "answer": "538"
+    },
+    "15": {
+      "problem": "<p>Let \\(\\{x\\}\\) denote the fractional part of \\(x\\). For example, \\(\\{5.5\\} = 0.5\\). Find the smallest prime \\(p\\) such that the inequality \\[\\sum_{n=1}^{p^2} \\left\\{\\frac{n^p}{p^2}\\right\\} &gt; 2016\\] holds.</p>",
+      "solutions": "<p>For each \\(1 \\le n \\le p^2\\), let \\(n = kp + \\ell\\), with \\(0 \\le k, \\ell \\le p - 1\\). Note that this fractional part is equivalent to the sum of the remainders when \\(n^p\\) is divided by \\(p^2\\). Then, \\[n^p \\equiv (kp + \\ell)^p \\equiv \\binom{p}{1}(kp)(\\ell)^{p-1} + \\binom{p}{0}\\ell^p \\pmod{p^2}.\\] That is, \\(n^p \\equiv \\ell^p \\pmod{p^2}\\). Then, for each \\(n \\ge 1\\) not divisible by \\(p\\), \\[\\left\\{\\frac{n^p}{p^2}\\right\\} + \\left\\{\\frac{(p^2 - n)^p}{p^2}\\right\\} = 1,\\] while there are \\(p^2 - p\\) such values of \\(n\\) from 1 to \\(p^2\\). Thus, \\[\\sum_{n=1}^{p^2} \\left\\{\\frac{n^p}{p^2}\\right\\} = \\frac{p^2 - p}{2},\\] and it follows that \\(p^2 - p &gt; 4032\\). Simple estimates yield \\(p = 67\\) as the smallest possible prime.</p>",
+      "answer": "67"
+    }
+  }
+}

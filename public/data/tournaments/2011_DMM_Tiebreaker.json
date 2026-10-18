@@ -1,0 +1,23 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2011,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2011/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>\\(2011\\) distinct points are arranged along the perimeter of a circle. We choose without replacement four points \\(P, Q, R, S\\). What is the probability that no two of the segments \\(PQ, QR, RS, SP\\) intersect (disregarding the endpoints)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>In Soviet Russia, all phone numbers are between three and six digits and contain only the digits \\(1\\), \\(2\\), and \\(3\\). No phone number may be the prefix of another phone number, so, for example, we cannot have the phone numbers \\(123\\) and \\(12332\\). If the Soviet bureaucracy has preassigned \\(10\\) phone numbers of length \\(3\\), \\(20\\) numbers of length \\(4\\), and \\(77\\) phone numbers of length \\(6\\), what is the maximum number of phone numbers of length \\(5\\) that the authorities can allocate?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>The sequence \\(\\{a_n\\}_{n \\ge 1}\\) is defined as follows: we have \\(a_1 = 1\\), \\(a_2 = 0\\), and for \\(n \\ge 3\\) we have \\[a_n = \\frac{1}{2} \\sum_{\\substack{1 \\le i,j,k \\le n \\\\ i+j+k=n}} a_i a_j a_k.\\]</p><p>Find \\[\\sum_{n=1}^{\\infty} \\frac{a_n}{2^n}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

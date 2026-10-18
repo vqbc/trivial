@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2018,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2018/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(a, b, c\\) are real numbers with \\(a - b = 4\\), find the maximum value of \\(ac + bc - c^2 - ab\\).</p>",
+      "solutions": "<p>We have</p><p>\\[\\begin{aligned}\nac + bc - c^2 - ab &amp;= (a-c)(c-b) \\\\\n&amp;= \\left(\\sqrt{(a-c)(c-b)}\\right)^2 \\\\\n&amp;\\le \\left(\\frac{(a-c)+(c-b)}{2}\\right)^2 \\\\\n&amp;= \\left(\\frac{a-b}{2}\\right)^2 \\\\\n&amp;= \\left(\\frac{4}{2}\\right)^2 \\\\\n&amp;= \\boxed{4}\n\\end{aligned}\\]</p><p>The maximum is attained when \\(a = 4\\), \\(b = 0\\), and \\(c = 2\\).</p>",
+      "answer": "4"
+    },
+    "2": {
+      "problem": "<p>If \\(\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{2}\\) and \\(\\frac{1}{x+1} + \\frac{1}{y+1} = \\frac{3}{8}\\), compute \\(\\frac{1}{x-1} + \\frac{1}{y-1}\\).</p>",
+      "solutions": "<p>With two equations and two unknowns, we can solve for the expressions \\(a = xy\\) and \\(b = x + y\\). The first equation can be written as</p><p>\\[\\frac{1}{x} + \\frac{1}{y} = \\frac{x+y}{xy} = \\frac{b}{a} = \\frac{1}{2}\\]</p><p>which implies that \\(a = 2b\\). Similarly, from the second equation we have</p><p>\\[\\frac{1}{x+1} + \\frac{1}{y+1} = \\frac{(x+y)+2}{xy+(x+y)+1} = \\frac{b+2}{a+b+1} = \\frac{3}{8}\\]</p><p>which implies that \\(8(b+2) = 3(a+b+1)\\), or \\(3a - 5b = 13\\). Solving the system of equations gives us \\(a = 26\\) and \\(b = 13\\). Therefore, we have</p><p>\\[\\frac{1}{x-1} + \\frac{1}{y-1} = \\frac{(x+y)-2}{xy-(x+y)+1} = \\frac{b-2}{a-b+1} = \\boxed{\\frac{11}{14}}.\\]</p>",
+      "answer": "\\frac{11}{14}"
+    },
+    "3": {
+      "problem": "<p>Let \\(F_n\\) denote the \\(n\\)-th term of the Fibonacci sequence defined recursively as \\(F_1 = F_2 = 1\\) and \\(F_{n+2} = F_{n+1} + F_n\\) for all \\(n \\ge 0\\). Compute the sum</p><p>\\[\\sum_{n=1}^{\\infty} \\frac{F_n}{2^n}\\]</p>",
+      "solutions": "<p>Let \\(S\\) be the desired sum. Note that</p><p>\\[\\begin{aligned}\nS - \\frac{S}{2} &amp;= \\sum_{n=1}^{\\infty} \\frac{F_n}{2^n} - \\sum_{n=1}^{\\infty} \\frac{F_n}{2^{n+1}} \\\\\n&amp;= \\sum_{n=1}^{\\infty} \\frac{F_n}{2^n} - \\sum_{n=2}^{\\infty} \\frac{F_{n-1}}{2^n} \\\\\n&amp;= \\frac{F_1}{2} + \\frac{F_2}{4} + \\sum_{n=3}^{\\infty} \\frac{F_n}{2^n} - \\frac{F_1}{4} - \\sum_{n=3}^{\\infty} \\frac{F_{n-1}}{2^n} \\\\\n&amp;= \\frac{1}{2} + \\sum_{n=3}^{\\infty} \\frac{F_{n-2}}{2^n} \\\\\n&amp;= \\frac{1}{2} + \\frac{1}{4}\\sum_{n=1}^{\\infty} \\frac{F_n}{2^n} \\\\\n&amp;= \\frac{1}{2} + \\frac{S}{4}\n\\end{aligned}\\]</p><p>Therefore, we have \\(\\frac{S}{2} = \\frac{1}{2} + \\frac{S}{4}\\), which solves to \\(S = \\boxed{2}\\).</p>",
+      "answer": "2"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "SMT Advanced Topics Tiebreaker",
+  "year": 2015,
+  "name": "Advanced Topics Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2015/advanced-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute the smallest \\(n &gt; 2015\\) such that \\(6^n + 8^n\\) is divisible by 7.</p>",
+      "solutions": "<p>Note that: \\[\\begin{aligned}\n8^n &amp;= (7+1)^n = 7^n + \\binom{n}{1}7^{n-1} + \\binom{n}{2}7^{n-2} + \\cdots + 1\n\\end{aligned}\\] and \\[\\begin{aligned}\n6^n &amp;= (7-1)^n = 7^n - \\binom{n}{1}7^{n-1} + \\binom{n}{2}7^{n-2} - \\cdots \\pm 1\n\\end{aligned}\\] The sign on the last \\(1\\) depends on whether \\(n\\) is odd or even and is \\(+\\) for even and \\(-\\) for odd. Hence \\(7 \\mid (8^n + 6^n)\\) if \\(n\\) is odd and thus \\(\\boxed{2017}\\) is the answer.</p>",
+      "answer": "2017"
+    },
+    "2": {
+      "problem": "<p>Evaluate the following product: \\[\\prod_{n=1}^{\\infty} 2^{\\frac{n}{(n+1)!}}\\]</p>",
+      "solutions": "<p>Let \\(P\\) denote the value of the product. Taking logs, we have \\[\\log_2 P = \\sum_{n=1}^{\\infty} \\frac{n}{(n+1)!}\\] Writing down the first few partial sums, we notice that the \\(k\\)th partial sum is given by \\[\\sum_{n=1}^{k} \\frac{n}{(n+1)!} = \\frac{(k+1)! - 1}{(k+1)!}\\] To prove this, we proceed inductively. Clearly, for \\(k = 1\\), \\(\\sum_{n=1}^{1} \\frac{n}{(n+1)!} = \\frac{1}{2} = \\frac{2! - 1}{2!}\\). Now, suppose \\[\\sum_{n=1}^{k} \\frac{n}{(n+1)!} = \\frac{(k+1)! - 1}{(k+1)!}\\] Then we can compute the \\(k+1\\)th partial sum, \\[\\begin{aligned}\n\\sum_{n=1}^{k+1} \\frac{n}{(n+1)!} &amp;= \\frac{k+1}{(k+2)!} + \\sum_{n=1}^{k} \\frac{n}{(n+1)!} \\\\\n&amp;= \\frac{k+1}{(k+2)!} + \\frac{(k+1)! - 1}{(k+1)!} \\\\\n&amp;= \\frac{(k+1) + (k+2)! - (k+2)}{(k+2)!} \\\\\n&amp;= \\frac{(k+2)! - 1}{(k+2)!}\n\\end{aligned}\\] Taking the limit as \\(k \\to \\infty\\), we see that the sum evaluates to \\(1\\), so the product \\(P\\) evaluates to \\(2^1 = \\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "3": {
+      "problem": "<p>Suppose \\(n &gt; 0\\) is an integer which, when written in base 10, has all digits either 0 or 1. If 17 evenly divides \\(n\\), find the smallest possible value of \\(n\\).</p>",
+      "solutions": "<p>We find this \\(n\\) in an algorithmic way. We start with the number 1 and construct a tree of remainders modulo 17; the first time we encounter a 0 we will get the smallest number which is divisible by 17 and which has decimal representation using only \\(0, 1\\). This is the construction of the tree: each node containing the integer \\(k\\) splits off into two nodes, the left node contains \\(10k \\bmod 17\\) and the right node contains \\(10k + 1 \\bmod 17\\). Whenever a node appears with a remainder that has already been seen, we do not have to continue computation for that node because it will only result in a larger number divisible by 17. If we call 1 the base of the tree, we find 0 at the location 2 right, 1 left, 1 right from the base. This corresponds to the number \\(\\boxed{11101}\\) because we started with 1 and as we traverse the tree, we append digits to the right of our number. Every time we move to the right we append a 1 and every time we move to the left we append a 0. Then number 11101 is indeed divisible by 17, and no smaller number is divisible by 17 because the numbers in the tree increase with each level and within levels they increase left to right.</p>",
+      "answer": "11101"
+    }
+  }
+}

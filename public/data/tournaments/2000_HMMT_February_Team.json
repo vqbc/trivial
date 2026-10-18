@@ -1,0 +1,83 @@
+{
+  "test": "HMMT February Team",
+  "year": 2000,
+  "name": "Team Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2000/feb/team/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>You are given a number, and round it to the nearest thousandth, round this result to the nearest hundredth, and round this result to the nearest tenth. If the final result is \\(.7\\), what is the smallest number you could have been given? As is customary, 5’s are always rounded up. Give the answer as a decimal.</p>",
+      "solutions": "<p>\\(.6445\\) rounds to \\(.645\\) to \\(.65\\) to \\(.7\\). Otherwise \\(.6444\\ldots\\) rounds to \\(.644\\). So the smallest number is \\(\\boxed{.6445}\\).</p>",
+      "answer": ".6445"
+    },
+    "2": {
+      "problem": "<p>The price of a gold ring in a certain universe is proportional to the square of its purity and the cube of its diameter. The purity is inversely proportional to the square of the depth of the gold mine and directly proportional to the square of the price, while the diameter is determined so that it is proportional to the cube root of the price and also directly proportional to the depth of the mine. How does the price vary solely in terms of the depth of the gold mine?</p>",
+      "solutions": "<p>Let \\(c=\\) price, \\(p=\\) purity, \\(d=\\) diameter, \\(h=\\) depth of gold mine, \\(k_i=\\) constant. We are given \\(c = k_1 p^2 d^3\\), \\(p = k_2 \\frac{c^2}{h^2}\\), and \\(d = k_3 \\sqrt[3]{c}\\, h\\). So, \\(c = k_1 k_2^2 \\frac{c^4}{h^4} k_3^3 c h^3 = k_4 c^5 \\frac{1}{h}\\). Thus, \\(k_4 c^4 = h\\), and \\(c = k_5 h^{\\frac{1}{4}}\\). Thus, \\(p\\) varies as \\(\\boxed{h^{1/4}}\\).</p>",
+      "answer": "h^{1/4}"
+    },
+    "3": {
+      "problem": "<p>Find the sum of all integers from 1 to 1000 inclusive which contain at least one 7 in their digits, i.e. find \\(7 + 17 + \\ldots + 979 + 987 + 997\\).</p>",
+      "solutions": "<p>The sum of the numbers from 700 to 799 is \\(\\frac{799\\cdot800}{2} - \\frac{699\\cdot700}{2} = 74950\\). The sum of the numbers from 70 to 79 is \\(\\frac{79\\cdot80}{2} - \\frac{69\\cdot70}{2} = 745\\). So, all numbers that end from 70 to 79 (excluding those starting with 7, since we counted those from 700 to 799) is \\(745\\cdot9+10(100+200+\\ldots+600+800+900) = 44705\\). The sum of all numbers ending in 7 is \\(9(7+17+27+37+47+57+67+87+97)+9(100+200+\\ldots+600+800+900) = 38187\\). So, the total sum of numbers containing a 7 is \\(74950 + 44705 + 38186 = \\boxed{157842}\\).</p>",
+      "answer": "157842"
+    },
+    "4": {
+      "problem": "<p>All arrangements of letters VNNWHTAAIE are listed in lexicographic (dictionary) order. If AAEHINNTVW is the first entry, what entry number is VANNAWHITE?</p>",
+      "solutions": "<p>This can be arrived at by stepping down, starting with finding how many combinations are there that begin with a letter other than V or W, and so forth. The answer is \\(\\frac{8\\cdot9!}{2\\cdot2} + \\frac{4\\cdot7!}{2} + 4\\cdot6! + 4\\cdot4! + 3! + 2! + 2! = \\boxed{738826}\\).</p>",
+      "answer": "738826"
+    },
+    "5": {
+      "problem": "<p>Given \\(\\cos(\\alpha+\\beta) + \\sin(\\alpha-\\beta) = 0\\), \\(\\tan\\beta = \\frac{1}{2000}\\), find \\(\\tan\\alpha\\).</p>",
+      "solutions": "<p>\\(0 = \\cos(\\alpha+\\beta) + \\sin(\\alpha-\\beta) = \\cos\\alpha\\cdot\\cos\\beta - \\sin\\alpha\\cdot\\sin\\beta + \\sin\\alpha\\cdot\\cos\\beta - \\sin\\beta\\cos\\alpha = (\\cos\\alpha+\\sin\\alpha)\\cdot(\\cos\\beta-\\sin\\beta)\\). So \\(\\cos\\alpha+\\sin\\alpha = 0\\) or \\(\\cos\\beta-\\sin\\beta = 0\\). Then \\(\\tan\\alpha = -1\\) or \\(\\tan\\beta = 1\\). Since \\(\\tan\\beta\\) is given as \\(\\frac{1}{2000}\\), \\(\\tan\\alpha = \\boxed{-1}\\).</p>",
+      "answer": "-1"
+    },
+    "6": {
+      "problem": "<p>If \\(\\alpha\\) is a root of \\(x^3 - x - 1 = 0\\), compute the value of \\(\\alpha^{10} + 2\\alpha^8 - \\alpha^7 - 3\\alpha^6 - 3\\alpha^5 + 4\\alpha^4 + 2\\alpha^3 - 4\\alpha^4 - 6\\alpha - 17\\).</p>",
+      "solutions": "<p>Since \\(\\alpha^3 - \\alpha - 1 = 0\\), then \\(\\alpha^{10} = \\alpha^8 + \\alpha^7\\). So, we can reduce our expression to \\(3\\alpha^8 - 3\\alpha^6 - 3\\alpha^5 + 4\\alpha^4 + 2\\alpha^3 - 4\\alpha^2 - 6\\alpha - 17\\). Also, \\(3\\alpha^8 - 3\\alpha^6 - 3\\alpha^5 = 0\\), so our expression reduces to \\(4\\alpha^4 + 2\\alpha^3 - 4\\alpha^2 - 6\\alpha - 17\\). Also, \\(4\\alpha^4 - 4\\alpha^2 - 4\\alpha^0\\), so our expression reduces to \\(2\\alpha^3 - 2\\alpha - 17\\). Now, \\(2\\alpha^3 - 2\\alpha - 2 = 0\\), so our expression reduces to \\(\\boxed{-15}\\), which is our answer.</p>",
+      "answer": "-15"
+    },
+    "7": {
+      "problem": "<p>\\(8712\\) is an integral multiple of its reversal, \\(2178\\), as \\(8712=4\\cdot2178\\). Find another 4-digit number which is a non-trivial integral multiple of its reversal.</p>",
+      "solutions": "<p>Another 4-digit number that satisfies this property is \\(\\boxed{9801}\\), since \\(9801 = 9\\cdot1089\\).</p>",
+      "answer": "9801"
+    },
+    "8": {
+      "problem": "<p>A woman has $1.58 in pennies, nickels, dimes, quarters, half-dollars and silver dollars. If she has a different number of coins of each denomination, how many coins does she have?</p>",
+      "solutions": "<p>If she has a silver dollar, then she would have too many other coins, as 0 half dollars, 2 quarters, 3 dimes, etc. would be greater than the total. So she has no silver dollars, and at least one of every other denomination. Continuing, it turns out the only feasible solution is 0 silver dollars, 1 half dollar, 2 quarters, 3 dimes, 4 nickels, 8 pennies, for a total of \\(\\boxed{18}\\) coins.</p>",
+      "answer": "18"
+    },
+    "9": {
+      "problem": "<p>Find all positive primes of the form \\(4x^4 + 1\\), for \\(x\\) an integer.</p>",
+      "solutions": "<p>It suffices to consider \\(x \\ge 1\\), since \\(4(-x)^4+1 = 4(x)^4+1\\), and \\(4(0)+1 = 1\\) is not prime. So, \\(4x^4+1 = (4x^4+4x^2+1)-4x^2 = (2x^2+1)^2-(2x)^2 = (2x^2+1-2x)(2x^2+1+2x)\\). For integers \\(x\\), both \\(2x^2-2x+1\\) and \\(2x^2+2x+1\\) are integers, so this factors \\(4x^4+1\\) unless \\(2x^2-2x+1 = \\pm1\\) or \\(2x^2+2x+1 = \\pm1\\). Since \\(x&gt;0\\), then \\(2x^2+2x+1&gt;1\\), so we must have \\(2x^2-2x+1 = \\pm1\\). \\(2x^2-2x+1=-1\\) is absurd (\\(4x^4+1, 2x^2+2x+1&gt;0\\), so \\(2x^2-2x+1 = \\frac{4x^4+1}{2x^2+2x+1}&gt;0\\)), so we solve \\(2x^2-2x+1=1\\), or \\(2x^2-2x=0\\), so \\(x(x-1)=0\\), and \\(x=0\\) or \\(x=1\\). We have already rejected \\(x=0\\), so the only case left is \\(x=1\\), or \\(4(1)^4+1=\\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "10": {
+      "problem": "<p>How many times per day do at least two of the three hands on a clock coincide?</p>",
+      "solutions": "<p>The second hand crosses the minute hand 59 times an hour. The second hand crosses the hour hand 60 times an hour, except for 2 of the hours, due to the movement of the hour hand. The minute hand and the hour hand cross 22 times total, because the hour hand completes 2 rotations in a day, and the minute hand completes 24. The second, hour, and minute hand all coincide only at noon and midnight, but we’ve counted each of these 12:00’s 3 times instead of once. Therefore, the answer is \\(59\\cdot60+60\\cdot24-2+22-2\\cdot2\\), giving us \\(\\boxed{2872}\\) crossings.</p>",
+      "answer": "2872"
+    },
+    "11": {
+      "problem": "<p>Find all polynomials \\(f(x)\\) with integer coefficients such that the coefficients of both \\(f(x)\\) and \\([f(x)]^3\\) lie in the set \\(\\{0,1,-1\\}\\)</p>",
+      "solutions": "<p>\\(f(x)\\) is either \\(\\boxed{0}\\) or something of the form \\(\\boxed{\\pm x^m}\\), where \\(m \\ge 0\\).</p>",
+      "answer": "0 \\text{ or } \\pm x^m \\text{ for an integer } m \\ge 0"
+    },
+    "12": {
+      "problem": "<p>At a dance, Abhinav starts from point \\((a,0)\\) and moves along the negative x direction with speed \\(v_a\\), while Pei-Hsin starts from \\((0,b)\\) and glides in the negative y-direction with speed \\(v_b\\). What is the distance of closest approach between the two?</p>",
+      "solutions": "<p>\\(A\\)’s position is \\((a-V_at,0)\\) and \\(P\\)’s position is \\((0,b-V_bt)\\). So, at time \\(t\\), the distance between them is \\(\\sqrt{(a-V_at)^2+(b-V_bt)^2}\\). Notice that this distance is the same as the distance between the point \\((a,b)\\) and the line \\((V_at,V_bt)\\), which is the same as the line \\(V_bx-V_ay=0\\). The distance from a line \\(Ax+By+C=0\\) and \\((x_0,y_0)\\) is \\(\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}\\), so the answer is \\(\\boxed{\\frac{|bV_a-aV_b|}{\\sqrt{V_a^2+V_b^2}}}\\).</p>",
+      "answer": "\\frac{|bV_a-aV_b|}{\\sqrt{V_a^2+V_b^2}}"
+    },
+    "13": {
+      "problem": "<p>Let \\(P_1, P_2, \\ldots, P_n\\) be a convex \\(n\\)-gon. If all lines \\(P_iP_j\\) are joined, what is the maximum possible number of intersections in terms of \\(n\\) obtained from strictly inside the polygon?</p>",
+      "solutions": "<p>Given any 4 vertices, there is exactly one intersection of all the diagonals connecting them. So, the answer is \\(\\boxed{\\binom{n}{4}}\\).</p>",
+      "answer": "\\binom{n}{4}"
+    },
+    "14": {
+      "problem": "<p>Define a sequence \\(\\langle x_n \\rangle\\) of real numbers by specifying an initial \\(x_0\\) and by the recurrence \\(x_{n+1} = \\frac{1+x_n}{1-x_n}\\). Find \\(x_n\\) as a function of \\(x_0\\) and \\(n\\), in closed form. There may be multiple cases.</p>",
+      "solutions": "<p>\\(x_0\\) if \\(n \\equiv 0 \\pmod{4}\\), \\(\\frac{1+x_0}{1-x_0}\\) if \\(n \\equiv 1 \\pmod{4}\\), \\(-\\frac{1}{x_0}\\) if \\(n \\equiv 2 \\pmod{4}\\), \\(\\frac{x_0-1}{x_0+1}\\) if \\(n \\equiv 3 \\pmod{4}\\).</p>",
+      "answer": "x_n = \\begin{cases} x_0 & n \\equiv 0 \\pmod{4} \\\\ \\frac{1+x_0}{1-x_0} & n \\equiv 1 \\pmod{4} \\\\ -\\frac{1}{x_0} & n \\equiv 2 \\pmod{4} \\\\ \\frac{x_0-1}{x_0+1} & n \\equiv 3 \\pmod{4} \\end{cases}"
+    },
+    "15": {
+      "problem": "<p>\\[\\lim_{n\\to\\infty} nr\\sqrt[2]{1-\\cos\\frac{2\\pi}{n}} = ?\\]</p>",
+      "solutions": "<p>Consider a regular \\(n\\)-gon with radius \\(r\\). Let \\(x\\) be the side length of the \\(n\\)-gon. So, since the central angle is \\(\\frac{2\\pi}{n}\\) (see diagram below), use the Law of Cosines to find that \\(x^2 = r^2+r^2-2r\\cdot r\\cos\\frac{2\\pi}{n}\\), so \\(x^2 = 2r^2(1-\\cos\\frac{2\\pi}{n})\\). Thus, \\(x = r\\sqrt{2}\\sqrt{1-\\cos\\frac{2\\pi}{n}}\\). So, the total perimeter of the \\(n\\)-gon is \\(nx = nr\\sqrt{2}\\sqrt{1-\\cos\\frac{2\\pi}{n}}\\). Now, if we take \\(\\lim_{n\\to\\infty}\\) of the perimeter, the result will be \\(2\\pi n\\), since the \\(n\\)-gon approaches a cirle, so \\(\\lim_{n\\to\\infty} nr\\sqrt{2}\\sqrt{1-\\cos\\frac{2\\pi}{n}} = 2\\pi r\\), and so \\(\\boxed{\\lim_{n\\to\\infty} nr\\sqrt{1-\\cos\\frac{2\\pi}{n}} = \\pi r\\sqrt{2}}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Team/15-fig1.png\" width=\"128\" alt=\"\"></p>",
+      "answer": "\\pi r \\sqrt{2}"
+    }
+  }
+}

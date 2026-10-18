@@ -1,0 +1,23 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2025,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2025/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(2x) = 2f(x)g(x)\\) and \\(g(2x) = (g(x))^2 - (f(x))^2\\). If \\(f(1) = 1\\) and \\(g(1) = \\sqrt{3}\\), \\(f(1024)\\) can be expressed as \\(a^b\\sqrt{c}\\), where \\(a\\) and \\(c\\) are positive integers that are not divisible by the square of any prime. Find \\(a + b + c\\).</p>",
+      "solutions": "<p>Observe that \\(g(2x) + f(2x)i = (g(x) + f(x)i)^2\\). So \\((\\sqrt{3} + i)^{1024} = g(1024) + f(1024)i\\). Note that \\((\\sqrt{3} + i)^{1024} = 2^{1024}e^{2\\pi i/3} = 2^{1024}(-1/2 + \\frac{\\sqrt{3}}{2}i)\\). Then \\(f(1024) = 2^{1023}\\sqrt{3}\\). Thus, our answer is \\(2 + 1023 + 3 = \\boxed{1028}\\).</p>",
+      "answer": "1028"
+    },
+    "2": {
+      "problem": "<p>Consider four-digit number \\(\\overline{ABCD}\\). This number is special if \\(D^2 - A^2 - B^2 - C^2\\) is a positive perfect square. What is the largest special four-digit number?</p>",
+      "solutions": "<p>We know that \\(D \\le 9\\) and \\(A &lt; D\\) and thus \\(A \\le 8\\). If \\(A = 8, D = 9\\) then we need to find \\(B, C\\) such that \\(17 - (B^2 + C^2)\\) is a positive perfect square. We have \\(B \\le 4\\), which is attainable, but we are forced to set \\(C = 0\\). Thus, our answer is \\(\\boxed{8409}\\).</p>",
+      "answer": "8409"
+    },
+    "3": {
+      "problem": "<p>In how many ways can you arrange the letters of \\(DUKEUNIV\\) so that no two adjacent letters are the same?</p>",
+      "solutions": "<p>Note that the only two equivalent letters in \\(DUKEUNIV\\) are the two \\(U\\)s. We count the number of arrangements such that the two \\(U\\)s are adjacent. Thus, we treat the two \\(U\\)s as one block, and permute this block and the remaining 6 letters for \\(7!\\) total bad arrangements.</p><p>The number of total arrangements is \\(\\frac{8!}{2}\\), as we have \\(8!\\) ways to arrange the eight letters, and we divide by 2 for the overcount on the ordering of the \\(U\\)s.</p><p>Thus, the number of good arrangements is \\(\\frac{8!}{2} - 7! = 20160 - 5040 = \\boxed{15120}\\).</p>",
+      "answer": "15120"
+    }
+  }
+}

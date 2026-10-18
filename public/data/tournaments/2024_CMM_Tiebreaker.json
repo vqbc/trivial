@@ -1,0 +1,23 @@
+{
+  "test": "CMM Tiebreaker",
+  "year": 2024,
+  "name": "Individuals Tiebreaker 2023-2024",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_9c15a33e28df431ea66619314557f53b.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Thomas the factory designer has two machines, \\(S\\) and \\(P\\), designed for crafting electronic circuits. Electronic circuits take copper wires and iron plates to craft. Machine \\(S\\) crafts 1 circuit every second, consuming 4 copper wires and 3 iron plates per craft. Machine \\(P\\) crafts 1 circuit every 1.6 seconds, consuming 3 copper wires and 2 iron plates per craft.</p><p>Thomas has a supply of 18300 copper wires and an excess of iron plates. He must produce at least 5000 circuits to meet his manager’s quota. He wants to produce these circuits as quickly as possible, but due to a power shortage, it is not possible for him to run both machines simultaneously. What is the minimum amount of time, in minutes, that it takes for him to produce the circuits needed? Express your answer as a decimal number rounded to the nearest 10th.</p>",
+      "solutions": "<p>Assume that \\(S\\) crafts \\(x\\) circuits and \\(P\\) crafts \\(y\\) circuits, for some non-negative integers \\(x, y\\). Then, it takes \\(x + \\frac{8}{5}y\\) seconds to craft \\(x+y\\) circuits, and the copper wire condition reads \\(4x+3y \\le 18300\\). Since Thomas would like to produce 5000 circuits, i.e. \\(y = 5000-x\\), the requested value is the minimum of \\(x + \\frac{8}{5}y = 8000 - \\frac{3}{5}x\\) subject to the condition \\(4x+3y = 15000+x \\le 18300\\). The minimum of \\(8000-\\frac{3}{5}x\\) is met precisely when \\(x=3300\\), and, in minutes, this minimum value is precisely \\(\\frac{1}{60}\\left(8000 - \\frac{3}{5}\\cdot 3300\\right) \\approx \\boxed{100.3}\\).</p>",
+      "answer": "100.3"
+    },
+    "2": {
+      "problem": "<p>Six basketball teams participate in a single round-robin tournament. That is, each pair of teams play one game against each other, with one team winning and the other losing. The teams are all mutually equally matched: in any game, the chance each team has of winning is exactly \\(\\frac{1}{2}\\). Compute the probability that there are two teams that win the same number of games over the course of the tournament.</p>",
+      "solutions": "<p>It suffices to find the complementary probability, where each of the teams win a distinct amount of times. There are exactly 6 possible number of wins, namely \\(\\{0,1,2,3,4,5\\}\\), as a team will not play themself. Thus, there are \\(6!\\) ways to arrange the number of wins across the 6 teams. Furthermore, there are \\(2^{15}\\) possible outcomes, since the first team plays 5 games, second 4, so on. Thus, the probability is as follows. \\[1 - \\frac{6!}{2^{15}} = 1 - \\frac{720}{2^{15}} = 1 - \\frac{45}{2^{11}} = \\frac{2048-45}{2048} = \\boxed{\\frac{2003}{2048}}\\]</p>",
+      "answer": "\\frac{2003}{2048}"
+    },
+    "3": {
+      "problem": "<p>Find the number of ordered 6-tuples of integers \\[(x_1,x_2,x_3,y_1,y_2,y_3), \\qquad \\text{with } 0 \\le x_1,x_2,x_3,y_1,y_2,y_3 \\le 9,\\] such that \\((x_1-y_1)+2(x_2-y_2)+3(x_3-y_3)\\) is divisible by 7.</p>",
+      "solutions": "<p>For any such 6-tuple \\((x_1,x_2,x_3,y_1,y_2,y_3)\\), consider the non-negative integer \\(n := \\overline{y_2y_3y_1x_2x_3x_1}_{10}\\) in base-10. Then, \\[n \\equiv 10^5y_2+10^4y_3+10^3y_1+10^2x_2+10x_3+x_1 \\equiv -2y_2-3y_3-y_1+2x_2+3x_3+x_1 \\pmod{7},\\] since \\(10 \\equiv 3 \\pmod{7}\\). Since the set of such 6-tuples is in bijection with the set of non-negative integers \\(0 \\le n &lt; 10^6\\), the answer to the problem is simply the number of non-negative multiples of 7 less than \\(10^6\\). Since \\(142857 = \\frac{10^6-1}{7}\\), there are \\(\\boxed{142858}\\) such multiples of 7.</p>",
+      "answer": "142858"
+    }
+  }
+}

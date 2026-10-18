@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Calculus",
+  "year": 2000,
+  "name": "Calculus",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2000/feb/calc/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the slope of the tangent at the point of inflection of \\(y = x^3 - 3x^2 + 6x + 2000\\).</p>",
+      "solutions": "<p>\\(y = x^3 - 3x^2 + 6x + 2000\\), so \\(y' = 3x^2 - 6x + 6\\) and \\(y'' = 6x - 6\\), so the point of inflection is the solution to \\(6x - 6 = 0\\), or \\(x = 1\\). At \\(x = 1\\), the slope is \\(f'|_{x=1} = 3(1)^2 - 6(1) + 6 = \\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>Karen is attempting to climb a rope that is not securely fastened. If she pulls herself up \\(x\\) feet at once, then the rope slips \\(x^3\\) feet down. How many feet at a time must she pull herself up to climb as efficiently as possible?</p>",
+      "solutions": "<p>The change in Karen’s position is \\(x - x^3\\). The optimal length to climb is at a critical point. The only realistic critical point is at the solution to \\(1 - 3x^2 = 0\\) or \\(x = \\frac{\\sqrt{3}}{3}\\).</p>",
+      "answer": "\\frac{\\sqrt{3}}{3}"
+    },
+    "3": {
+      "problem": "<p>A rectangle of length \\(\\frac{1}{4}\\pi\\) and height 4 is bisected by the \\(x\\)-axis and is in the first and fourth quadrants. The graph of \\(y = \\sin(x) + C\\) divides the area of the square in half. What is \\(C\\)?</p>",
+      "solutions": "<p>\\(\\int_0^{\\frac{1}{4}\\pi} \\sin x + C = 0\\), from the statement of the problem. So, \\([-\\cos x + Cx]\\big|_0^{\\frac{\\pi}{4}} = 0\\). Thus, \\(\\cos\\frac{\\pi}{4} + \\frac{\\pi}{4}C + 1 = 0\\). So, \\(-\\frac{\\sqrt{2}}{2} + \\frac{\\pi}{4}C + 1 = 0\\), and solving for \\(C\\), we find that \\(C = \\frac{2\\sqrt{2}-4}{\\pi}\\).</p>",
+      "answer": "\\frac{2\\sqrt{2}-4}{\\pi}"
+    },
+    "4": {
+      "problem": "<p>For what value of \\(x\\) (\\(0 &lt; x &lt; \\frac{\\pi}{2}\\)) does \\(\\tan x + \\cot x\\) achieve its minimum?</p>",
+      "solutions": "<p>Let \\(y = \\tan x\\). So, we want to find the minimum of \\(y + \\frac{1}{y}\\), where \\(0 \\le y \\le \\infty\\). Taking the derivative and minimizing, we find that the minimum occurs at \\(y = 1\\), so the minimum of the given function occurs at \\(\\arctan 1 = \\frac{\\pi}{4}\\).</p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "5": {
+      "problem": "<p>For \\(-1 &lt; x &lt; 1\\), let \\(f(x) = \\sum_{i=1}^{\\infty} \\frac{x^i}{i}\\). Find a closed form expression (a closed form expression is one not involving summation) for \\(f\\).</p>",
+      "solutions": "<p>\\(f(x) = \\sum_{i=1}^{\\infty} \\frac{x^i}{i}\\). So, \\(f'(x) = \\sum_{i=0}^{\\infty} x^i = \\frac{1}{1-x}\\). Thus, \\(f(x) = -\\ln(1-x)\\).</p>",
+      "answer": "-\\ln(1-x)"
+    },
+    "6": {
+      "problem": "<p>A hallway of width 6 feet meets a hallway of width \\(6\\sqrt{5}\\) feet at right angles. Find the length of the longest pipe that can be carried horizontally around this corner.</p>",
+      "solutions": "<p>Assume the pipe barely fits around the corner (i.e. it is in contact with the corner). The lower corner is at \\((0,0)\\) and the upper corner is at \\((6, 6\\sqrt{5})\\). Call \\(x_0\\) the point on the lower wall it hits at the tightest spot. Given an \\(x_0\\), the longest a pipe could be with one end at \\(x_0\\) and leaning against the \\((6,6\\sqrt{5})\\) corner is \\(\\sqrt{x_0^2 + \\left(6\\sqrt{5} + \\frac{36\\sqrt{5}}{x_0-6}\\right)^2}\\). We want the minimum of all of these ”longest pipes”, because the pipe needs to fit at all angles around the corner. Taking the derivative (without the square root for simplicity) and setting it equal to 0, we need to solve \\(x_0^3 - 6x_0^2 + 36x_0 - 1296 = 0\\). We can quickly find that \\(x_0 = 12\\) is the only good solution, so the maximum length is \\(12\\sqrt{6}\\).</p>",
+      "answer": "12\\sqrt{6}"
+    },
+    "7": {
+      "problem": "<p>An <b>envelope</b> of a set of lines is a curve tangent to all of them. What is the envelope of the family of lines \\(y = \\frac{2}{x_0} + x\\left(1 - \\frac{1}{x_0^2}\\right)\\), with \\(x_0\\) ranging over the positive real numbers?</p><p><i>Hint</i>: slope at a point P on a curve is \\(\\left.\\frac{dy}{dx}\\right|_P\\).</p>",
+      "solutions": "<p>Using the hint, take \\(\\frac{dy}{dx_0}\\). Set this equal to 0 and solve for \\(x\\) relative to \\(x_0\\). Plug this in for \\(x_0\\) in the given family of lines to obtain the envelope \\(y = x + \\frac{1}{x}\\), \\(x &gt; 0\\).</p>",
+      "answer": "y = x + \\frac{1}{x}, x > 0"
+    },
+    "8": {
+      "problem": "<p>Find \\(\\int_0^{\\frac{\\pi}{2}} \\ln\\sin\\theta\\, d\\theta\\).</p>",
+      "solutions": "<p>Let \\(I\\) denote the given integral. Under the transformation \\(\\theta \\to \\frac{\\pi}{2} - \\theta\\), \\(I\\) transforms to \\(\\int_0^{\\frac{\\pi}{2}} \\ln(\\cos(\\theta))\\,d\\theta\\). So, \\[\\begin{aligned}\n2I &amp;= \\int_0^{\\frac{\\pi}{2}} \\ln(\\sin\\theta\\cos\\theta)\\,d\\theta \\\\\n&amp;= \\int_0^{\\pi} (\\ln(\\sin 2\\theta) - \\ln 2)\\, d(2\\theta)/2 \\\\\n&amp;= -\\frac{\\pi}{2\\ln 2} + \\frac{1}{2}\\int_0^{\\pi} \\sin(\\alpha)\\,d\\alpha \\qquad \\text{giving } I = -\\frac{\\pi}{2}\\ln 2. \\\\\n&amp;= -\\frac{pi}{2}\\cdot \\ln 2 + \\int_0^{\\frac{\\pi}{2}} \\sin(\\alpha)\\,d\\alpha \\\\\n&amp;= -\\frac{pi}{2}\\cdot \\ln 2 + I\n\\end{aligned}\\]</p>",
+      "answer": "-\\frac{\\pi}{2}\\ln 2"
+    },
+    "9": {
+      "problem": "<p>Let \\(f(x) = \\sqrt{x + \\sqrt{0 + \\sqrt{x + \\sqrt{0 + \\sqrt{x + \\ldots}}}}}\\). If \\(f(a) = 4\\), then find \\(f'(a)\\).</p>",
+      "solutions": "<p>Note first that \\(([f(x)]^2 - x)^2 = f(x)\\), so if \\(f(a) = 4\\), then \\((16-a)^2 = 4\\), so \\(a = 14\\). Now, \\(f'(x) = \\frac{1+\\frac{f'(x)}{2([f(x)]^2-x)}}{2f(x)}\\), so \\(f'(14) = \\frac{4}{31}\\).</p>",
+      "answer": "\\frac{4}{31}"
+    },
+    "10": {
+      "problem": "<p>A mirror is constructed in the shape of \\(y\\) equals \\(\\pm\\sqrt{x}\\) for \\(0 \\le x \\le 1\\), and \\(\\pm 1\\) for \\(1 &lt; x &lt; 9\\). A ray of light enters at \\((10,1)\\) with slope 1. How many times does it bounce before leaving?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Calculus/10-fig1.png\" width=\"390\" alt=\"\"></p>",
+      "solutions": "<p>Throughout this solution we will use the fact that when light bounces off a mirror, the angle of incidence is equal to the angle of reflection. First the beam hits the point \\((8,-1)\\), then \\((6,1)\\), \\((4,-1)\\), \\((2,1)\\), and then is travelling along the line \\(y = x - 1\\). Thus the beam hits the parabola at the point \\(\\left(1 + \\frac{1-\\sqrt{5}}{2}, \\frac{1-\\sqrt{5}}{2}\\right)\\). To estimate \\(\\sqrt{5}\\), notice that \\(22^2 = 484\\) and \\(23^2 = 529\\), so \\(\\sqrt{5} = \\frac{\\sqrt{500}}{10} = 2.2\\ldots\\). Thus \\(\\frac{1-\\sqrt{5}}{2} = -.6\\ldots\\), so the light hits the parabola at approximately \\((.4,-.6)\\). The slope of the tangent to the parabola at this point is \\(\\frac{-1}{2}(.4)^{-1/2}\\), which is about \\(-.8\\), so we need to find the slope of the beam after it reflects off of this tangent. For purposes of finding this slope, change coordinates so that the point of intersection is the origin. The beam is coming in along \\(y = x\\), and \\(y = 1.2x\\) is perpendicular to the tangent. The diagram below should clarify the setup.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Calculus/10-fig2.png\" width=\"497\" alt=\"\"></p><p>We will find the new path of the light by finding the reflection about the line \\(y = 1.2x\\) of a point on its incoming path. We know the point \\((1,1.2)\\) is on the line \\(y = 1.2x\\), so a perpendicular through this point is \\(y - 1.2 = -.8(x-1)\\), which intersects \\(y = x\\) at the point \\((1.1,1.1)\\). Thus the new path goes through the point \\((.9,1.3)\\), so it has slope \\(1.4\\) (all values rounded to one decimal place). Going back to our original coordinate system, the light is now travelling along the line \\(y + .6 = 1.4(x-.4)\\), so it next hits the mirror at \\((1.5,1)\\). After that the \\(x\\) coordinate increases by \\(2/1.4 = 1.4\\) between bounces, so it hits \\((2.9,-1)\\), \\((4.3,1)\\), \\((5.7,-1)\\), \\((7.1,1)\\), \\((8.5,-1)\\), and finally \\((9.9,1)\\). A closer examination of the approximations made (e.g. by refining them to two decimal places) reveals that the last bounce is actually further to the left (at \\((9.21,1)\\), to be more precise), so indeed the light does bounce \\(\\boxed{12}\\) times.</p>",
+      "answer": "12"
+    }
+  }
+}

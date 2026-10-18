@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory B",
+  "year": 2014,
+  "name": "Number Theory B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2014_NumberTheoryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(x) = x^3 + ax^2 + bx + c\\) have solutions that are distinct negative integers. If \\(a + b + c = 2014\\), find \\(c\\).</p>",
+      "solutions": "<p>We have that \\(x_1 + x_2 + x_3 = -a\\), \\(x_1x_2 + x_2x_3 + x_1x_3 = b\\) and \\(x_1x_2x_3 = -c\\). Thus, \\((x_1-1)(x_2-1)(x_3-1) = -c-b-a-1 = -2015\\). \\(2015 = 5 \\times 13 \\times 31\\), therefore the only way that \\(x_i\\) can be distinct negative integers is when \\(x_1 = -4\\), \\(x_2 = -12\\), \\(x_3 = -30\\), which gives \\(c = \\boxed{1440}\\).</p>",
+      "answer": "1440"
+    },
+    "2": {
+      "problem": "<p>What is the last digit of \\(17^{17^{17^{17}}}\\)?</p>",
+      "solutions": "<p>All we care is that \\(17^{17^{17}} \\equiv 1^{17^{17}} \\equiv 1 \\pmod{4}\\). Therefore, since the last digit repeats every four products of 17s, the last digit must be \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "3": {
+      "problem": "<p>Find the 3-digit positive integer that has the most divisors.</p>",
+      "solutions": "<p>Since \\(2 \\times 3 \\times 5 \\times 7 \\times 11 &gt; 1000\\), the most number of different prime divisors a 3-digit positive integer can have is 4, and they should be the smallest ones.</p><p>If the integer has only 1 prime divisor, then since \\(2^{10} &gt; 1000\\), it can have at most 10 divisors.</p><p>If the integer has 2 prime divisors, then \\(2^6 \\times 3^3 &gt; 1000\\), so the integer has at most \\(6 \\times 4 = 24\\) divisors.</p><p>If the integer has 3 prime divisors, then \\(2^5 \\times 3^2 \\times 5 &gt; 1000\\), so the integer has at most \\(5 \\times 3 \\times 2 = 30\\) divisors.</p><p>If the integer has 4 prime divisors, then \\(2^4 \\times 3 \\times 5 \\times 7 &gt; 1000\\), so the integer has at most \\(4 \\times 2 \\times 2 \\times 2 = 32\\) divisors.</p><p>Thus, \\(2^3 \\times 3 \\times 5 \\times 7 = \\boxed{840}\\) has the most divisors.</p>",
+      "answer": "840"
+    },
+    "4": {
+      "problem": "<p>Find the number of fractions in the following list that is in its lowest form. (ie. for \\(\\frac{p}{q}\\), \\(\\gcd(p,q)=1\\).) \\[\\frac{1}{2014}, \\frac{2}{2013}, \\ldots, \\frac{1007}{1008}\\]</p>",
+      "solutions": "<p>The fractions that are not in lowest form have denominators divisible by at least one of 5, 13 and 31 (since \\(2015 = 5 \\times 13 \\times 31\\)). We calculate how many of those there are: \\(\\lfloor \\frac{1007}{5} \\rfloor + \\lfloor \\frac{1007}{13} \\rfloor + \\lfloor \\frac{1007}{31} \\rfloor - \\lfloor \\frac{1007}{65} \\rfloor - \\lfloor \\frac{1007}{403} \\rfloor - \\lfloor \\frac{1007}{155} \\rfloor + \\lfloor \\frac{1007}{2015} \\rfloor = 201 + 77 + 32 - 15 - 6 - 2 = 287\\).</p><p>Hence there are \\(1007 - 287 = \\boxed{720}\\) fractions in the lowest form.</p>",
+      "answer": "720"
+    },
+    "5": {
+      "problem": "<p>Find the sum of all positive integer \\(x\\) such that \\(3 \\times 2^x = n^2 - 1\\) for some positive integer \\(n\\).</p>",
+      "solutions": "<p>We see that \\(n^2 - 1 = (n+1)(n-1)\\). Clearly, \\(n \\neq 1\\). Thus, we consider two cases:</p><p>Case 1: \\(n+1 = 3 \\times 2^a\\), \\(n - 1 = 2^b\\).</p><p>It is clear that \\(b \\ge a\\) as otherwise \\(n+1\\) is at least 6 times of \\(n-1\\) which is impossible. Hence \\(n+1-(n-1) = 2 = 2^a(3 - 2^{b-a})\\). If \\(a = 1\\), then \\(b - a = 1\\) and \\(b = 2\\). Hence \\(x = a+b = 3\\) is a solution. When \\(a = 0\\), \\(b - a = 0\\) and hence \\(x = 0\\).</p><p>Case 2: \\(n+1 = 2^a\\), \\(n-1 = 3 \\times 2^b\\). It is clear that \\(a &gt; b\\). Hence \\(n+1-(n-1) = 2 = 2^b(2^{a-b}-3)\\). If \\(b = 1\\), then \\(a - b = 2\\) and \\(a = 3\\). Hence \\(x = a+b = 4\\) is a solution. When \\(b = 2\\), \\(a-b\\) is not an integer.</p><p>Thus the only solutions are \\(3, 4\\) and hence answer is \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "6": {
+      "problem": "<p>Given \\(S = \\{2, 5, 8, 11, 14, 17, 20, \\ldots\\}\\). Given that one can choose \\(n\\) different numbers from \\(S\\), \\(\\{A_1, A_2, \\ldots A_n\\}\\), s.t. \\(\\sum_{i=1}^{n} \\frac{1}{A_i} = 1\\). Find the minimum possible value of \\(n\\).</p>",
+      "solutions": "<p>It is clearly not possible that \\(n \\le 5\\). We see that \\(\\sum_{i=1}^{n} \\frac{1}{A_i} = 1\\) can be rewritten as \\(\\prod_{i=1}^{n} A_i = \\sum_{i=1}^{n} \\prod_{j \\ne i} A_j\\). Taking mod 3, we have \\(2^n \\equiv n2^{n-1}\\) which reduces to \\(n \\equiv 2 \\pmod 3\\). Hence the smallest possible \\(n = 8\\) and such an example for \\(\\boxed{8}\\) will be: \\(\\{2, 5, 8, 11, 20, 44, 89, 792\\}\\).</p>",
+      "answer": "8"
+    },
+    "7": {
+      "problem": "<p>How many permutations \\(p(n)\\) of \\(\\{1, 2, 3 \\ldots 35\\}\\) satisfy \\(a \\mid b\\) implies \\(p(a) \\mid p(b)\\)?</p>",
+      "solutions": "<p>We look at small numbers first. It is not hard to reason that \\(1, 2, 3, 4\\), and \\(5\\) must be fixed, since there are no other numbers that have \\(35, 17, 11, 8\\) and \\(7\\) divisors in the set. Similarly, \\(6, 7, 8, 9, 10, 11\\), and \\(12\\) are also fixed (even though 9 and 10 both have 3 divisors in the set, the fact that 1 through 5 are fixed makes them fixed as well). From 13 through 17, all of them have 2 divisors in the set. \\(14, 15\\) and \\(16\\) are fixed due to the fact that \\(7, 5\\), and \\(8\\) are fixed. Thus, the only possible move is to switch 13 and 17. From 18 through 35, the primes 19, 23, 29, and 31 can switch positions between themselves and everything else is fixed (since they can all be decomposed into smaller factors that are already fixed). Therefore, there are a total of \\(4! \\times 2 = \\boxed{48}\\) possible permutations.</p>",
+      "answer": "48"
+    },
+    "8": {
+      "problem": "<p>Find the number of positive integers \\(n \\le 2014\\) such that there exists integer \\(x\\) that satisfies the condition that \\(\\frac{x+n}{x-n}\\) is an odd perfect square.</p>",
+      "solutions": "<p>\\(\\frac{x+n}{x-n} = k^2 \\iff 1 + \\frac{2n}{x-n} = k^2 \\implies 2n = (x-n)(k^2-1)\\)</p><p>By the problem condition, \\(k^2 - 1\\) is even. Then, \\(n\\) is also even, since \\(k^2 - 1 \\not\\equiv 2 \\pmod{4}\\). So, letting \\(k = 2a-1\\) and \\(n = 2b\\), we get \\(b = (x-2b)(a^2-a)\\).</p><p>It is sufficient to find all \\(b \\le 1007\\) such that \\(b\\) is divisible by \\(a^2 - a\\). Note that \\(2^2 - 2 = 2\\), so any even \\(b\\) works. However, since \\(a^2 - a\\) is always even, no odd \\(b\\) works. So, there are \\(\\boxed{503}\\) integers \\(n\\) that satisfy the problem statement.</p>",
+      "answer": "503"
+    }
+  }
+}

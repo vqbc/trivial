@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Geometry B",
+  "year": 2007,
+  "name": "Geometry B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2007_GeometryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A pirate ship spots, 10 nautical miles to the east, an oblivious caravel sailing \\(60^\\circ\\) south of west at a steady 12 nm/hour. What is the minimum speed that the pirate ship must maintain at to be able to catch the caravel?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>A black witch’s hat is in the classic shape of a cone on top of a circular brim. The cone has a slant height of 18 inches and a base radius of 3 inches. The brim has a radius of 5 inches. What is the total surface area of the hat?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Suppose that \\(ABCD\\) is a rectangle with sides of length 12 and 18. Let \\(S\\) be the region of points contained in \\(ABCD\\) which are closer to the center of the rectangle than to any of its vertices. Find the area of \\(S\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>\\(ABCDE\\) is a regular pentagon (with vertices in that order) inscribed in a circle of radius 1. Find \\(AB \\cdot AC\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Four circles of radius 1 are each tangent to two sides (line segments) of a square and externally tangent to a circle of radius 3. What is the area of the space that is inside the square but not contained in any of the circles?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Triangle \\(ABC\\) has \\(AC = 3\\), \\(BC = 5\\), \\(AB = 7\\). A circle is drawn internally tangent to the circumcircle of \\(ABC\\) at \\(C\\), and tangent to \\(AB\\). Let \\(D\\) be its point of tangency with \\(AB\\). Find \\(BD - DA\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2007_PUMaC_Geometry_B/6-fig1.png\" width=\"239\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>\\(A,B,C\\), and \\(D\\) are all on a circle, and \\(ABCD\\) is a convex quadrilateral. If \\(AB = 13\\), \\(BC = 13\\), \\(CD = 37\\), and \\(AD = 47\\), what is the area of \\(ABCD\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Points \\(P_1\\), \\(P_2\\), \\(P_3\\), and \\(P_4\\) are \\((0,0)\\), \\((10,20)\\), \\((5,15)\\), and \\((12,-6)\\), respectively. For what point \\(P \\in \\mathbb{R}^2\\) is the sum of the distances from \\(P\\) to the other 4 points minimal?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Find \\(\\frac{\\text{area}(CDF)}{\\text{area}(CEF)}\\) in the figure.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2007_PUMaC_Geometry_B/9-fig1.png\" width=\"237\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>\\(A\\) and \\(B\\) are on a circle of radius 20 centered at \\(C\\), and \\(\\angle ACB = 60^\\circ\\). \\(D\\) is chosen so that \\(D\\) is also on the circle, \\(\\angle ACD = 160^\\circ\\), and \\(\\angle DCB = 100^\\circ\\). Let \\(E\\) be the intersection of lines \\(AC\\) and \\(BD\\). What is \\(DE\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

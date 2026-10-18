@@ -1,0 +1,28 @@
+{
+  "test": "CMM Tiebreaker (Fall)",
+  "year": 2010,
+  "name": "Tiebreaker Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_103bc28002934781a2413ce7d2c37eaf.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The numbers 25 and 76 have the property that when squared in base 10, their squares also end in the same two digits. A positive integer is called amazing if it has at most 3 digits when expressed in base 21 and also has the property that its square expressed in base 21 ends in the same 3 digits. (For this problem, the last three digits of a one-digit number \\(\\underline{b}\\) are \\(00\\underline{b}\\), and the last three digits of a two-digit number \\(\\underline{ab}\\) are \\(0\\underline{ab}\\).) Compute the sum of all amazing numbers. Express your answer in base 21.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1002"
+    },
+    "2": {
+      "problem": "<p>Let \\(A\\), \\(B\\), \\(C\\), and \\(D\\) be points on a circle, in that order, such that \\(\\overline{AD}\\) is a diameter of the circle. Let \\(E\\) be the intersection of \\(\\overleftrightarrow{AB}\\) and \\(\\overleftrightarrow{DC}\\), let \\(F\\) be the intersection of \\(\\overleftrightarrow{AC}\\) and \\(\\overleftrightarrow{BD}\\), and let \\(G\\) be the intersection of \\(\\overleftrightarrow{EF}\\) and \\(\\overleftrightarrow{AD}\\). If \\(AD = 8\\), \\(AE = 9\\), and \\(DE = 7\\), compute \\(EG\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3\\sqrt{5}"
+    },
+    "3": {
+      "problem": "<p>Talithia throws a party on the fifth Saturday of every month that has five Saturdays. That is, if a month has five Saturdays, Talithia has a party on the fifth Saturday of that month, and if a month has four Saturdays, then Talithia does not have a party that month. Given that January 1, 2010 was a Friday, compute the number of parties Talithia will have in 2010.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "4": {
+      "problem": "<p>Suppose \\(a\\) is a real number such that \\(3a + 6\\) is the greatest integer less than or equal to \\(a\\) and \\(4a + 9\\) is the least integer greater than or equal to \\(a\\). Compute \\(a\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-3"
+    }
+  }
+}

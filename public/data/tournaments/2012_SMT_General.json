@@ -1,0 +1,133 @@
+{
+  "test": "SMT General",
+  "year": 2012,
+  "name": "General Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2012/general-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In preparation for the annual USA Cow Olympics, Bessie is undergoing a new training regime. However, she has procrastinated on training for too long, and now she only has exactly three weeks to train. Bessie has decided to train for 45 hours. She spends a third of the time training during the second week as she did during the first week, and she spends a half of the time during the third week as during the second week. How much time did she spend training during the second week?</p>",
+      "solutions": "<p>Let \\(x\\) be the number of hours spent training during the second week. We have that \\(3x + x + \\frac{x}{2} = 45\\). Therefore, \\(x = \\boxed{10}\\).</p>",
+      "answer": "10"
+    },
+    "2": {
+      "problem": "<p>Nick and Moor participate in a typing challenge. When given the same document to type, Nick finishes typing it 5 minutes before Moor is done. They compete again using a second document that is the same length as the first, but now Nick has to type an extra 1200-word document in addition to the original. This time, they finish at the same time. How fast (in words per minute) does Nick type? (Assume that they both type at constant rates.)</p>",
+      "solutions": "<p><b>Solution 1.</b> Let \\(n\\) and \\(m\\) be Nick and Moor’s typing speeds in words per minute, respectively. Let \\(w\\) be the number of words in the document, and let \\(t\\) be the time it takes for Moor to type the document. Then from the first round, we know that \\(d = mt = n(t - 5)\\). From the second round, we know that \\(d + 1200 = nt\\), or \\(d = nt - 1200\\). Equating the two, we obtain \\(n(t-5) = nt - 1200\\), so \\(5n = 1200\\), or \\(n = \\boxed{240}\\).</p><p><b>Solution 2.</b> From the problem statement, Nick takes 5 minutes to type the extra 1200 words, so his speed is \\(1200/5 = \\boxed{240}\\) words per minute.</p>",
+      "answer": "240"
+    },
+    "3": {
+      "problem": "<p>The Tribonacci numbers \\(T_n\\) are defined as follows: \\(T_0 = 0\\), \\(T_1 = 1\\), and \\(T_2 = 1\\). For all \\(n \\ge 3\\), we have \\(T_n = T_{n-1} + T_{n-2} + T_{n-3}\\). Compute the smallest Tribonacci number greater than 100 which is prime.</p>",
+      "solutions": "<p>The first few Tribonacci numbers are \\(0, 1, 1, 2, 4, 7, 13, 24, 44, 81, 149\\). \\(\\boxed{149}\\) is the smallest Tribonacci number greater than 100, and it also turns out to be prime, so that is our answer.</p>",
+      "answer": "149"
+    },
+    "4": {
+      "problem": "<p>Steve works 40 hours a week at his new job. He usually gets paid 8 dollars an hour, but if he works for more than 8 hours on a given day, he earns 12 dollars an hour for every additional hour over 8 hours. If \\(x\\) is the maximum number of dollars that Steve can earn in one week by working exactly 40 hours, and \\(y\\) is the minimum number of dollars that Steve can earn in one week by working exactly 40 hours, what is \\(x - y\\)?</p>",
+      "solutions": "<p>In the minimum case, Steve can work 8 hours a day for five days, thereby earning no overtime pay and earning exactly $320. In the maximum case, Steve works 40 hours without a single break. This spans two days; there are 16 hours of work at regular pay and 24 hours of work at overtime pay. Therefore, Steve earns \\(16 \\times \\textdollar 8 + 24 \\times \\textdollar 12 = \\textdollar 416\\). Therefore, \\(x = 416\\) and \\(y = 320\\), so \\(x - y = \\boxed{96}\\).</p>",
+      "answer": "96"
+    },
+    "5": {
+      "problem": "<p>There are 100 people in a room. 60 of them claim to be good at math, but only 50 are actually good at math. If 30 of them correctly deny that they are good at math, how many people are good at math but refuse to admit it?</p>",
+      "solutions": "<p>By the principle of inclusion and exclusion, the sum of the number of people who are good at math and the number of people who claim to be good at math minus the number of people in both categories gives the number of people who either are good at math or claim they are good at math. Let \\(x\\) be the number of people in both categories. Then \\(50 + 60 - x = 100 - 30\\), so \\(x = 40\\). Thus we are left with \\(50 - 40 = \\boxed{10}\\) people who are good at math but refuse to admit it.</p>",
+      "answer": "10"
+    },
+    "6": {
+      "problem": "<p>A standard 12-hour clock has hour, minute, and second hands. How many times do two hands cross between 1:00 and 2:00 (not including 1:00 and 2:00 themselves)?</p>",
+      "solutions": "<p>We know that the hour and minute hands cross exactly once. Let \\(m\\) be the number of minutes past one o’clock that this happens. The angle between the minute hand and the 12 must be equal to the angle between the hour hand and the 12. Since 1 minute is \\(\\frac{360^\\circ}{60} = 6^\\circ\\) on the clock and 1 hour is \\(\\frac{360^\\circ}{12} = 30^\\circ\\), we have \\(6m = 30(1 + \\frac{m}{60})\\), so \\(m = \\frac{60}{11} = 5\\frac{5}{11}\\). Note that the second hand is not at the same position at this time, so we do not have to worry about a triple crossing.</p><p>On the other hand, the second hand crosses the hour hand once every minute, for a total of 60 crossings. Also, the second hand crosses the minute hand once every minute except the first and last, since those crossings take place at 1:00 and 2:00, for a total of 58 crossings. There is a grand total of \\(1 + 60 + 58 = \\boxed{119}\\) crossings.</p>",
+      "answer": "119"
+    },
+    "7": {
+      "problem": "<p>Define a set of positive integers to be <i>balanced</i> if the set is not empty and the number of even integers in the set is equal to the number of odd integers in the set. How many strict subsets of the set of the first 10 positive integers are balanced?</p>",
+      "solutions": "<p>The set of the first ten positive integers contains five odd integers and five integers. Therefore, there are \\(\\binom{5}{k}\\) ways to choose \\(k\\) odd integers from five odd integers, and also there are \\(\\binom{5}{k}\\) ways to choose \\(k\\) even integers from five even integers. Therefore, there are \\(\\binom{5}{k}^2\\) ways to pick a balanced subset containing \\(k\\) odd integers and \\(k\\) even integers. Therefore, the answer is \\[\\sum_{i=1}^{4} \\binom{5}{i}^2 = 5^2 + 10^2 + 10^2 + 5^2 = \\boxed{250}.\\]</p>",
+      "answer": "250"
+    },
+    "8": {
+      "problem": "<p>At the 2012 Silly Math Tournament, hamburgers and hot dogs are served. Each hamburger costs $4 and each hot dog costs $3. Each team has between 6 and 10 members, inclusive, and each member buys exactly one food item. How many different values are possible for a team’s total food cost?</p>",
+      "solutions": "<p>The minimum food cost for a team is \\(6(\\textdollar 3) = \\textdollar 18\\), and the maximum food cost is \\(10(\\textdollar 4) = \\textdollar 40\\). Note that all intermediate values can be achieved. Suppose \\(n\\) dollars can be achieved by purchasing \\(a\\) hamburgers and \\(b\\) hot dogs, where \\(18 \\le n &lt; 40\\). If \\(b &gt; 0\\), then \\(n + 1\\) dollars can be achieved by purchasing \\(a + 1\\) hamburgers and \\(b - 1\\) hot dogs. If \\(b = 0\\), then \\(n + 1\\) dollars can be achieved by purchasing \\(a - 2\\) hamburgers and \\(b + 3\\) hot dogs. (This increases the number of team members by 1.) Repeating this process until $40 is reached, the number of team members cannot decrease, and since we end up with 10 team members, the number of team members is always contained within 6 and 10.</p><p>Hence the number of different values is \\(40 - 18 + 1 = \\boxed{23}\\).</p>",
+      "answer": "23"
+    },
+    "9": {
+      "problem": "<p>How many ordered sequences of 1’s and 3’s sum to 16? (Examples of such sequences are \\(\\{1,3,3,3,3,3\\}\\) and \\(\\{1,3,1,3,1,3,1,3\\}\\).)</p>",
+      "solutions": "<p>Notice that there are 6 sets of 1’s and 3’s that sum to 16. For a given set suppose there are \\(n\\) 3’s we have a total of \\((16 - 3n) + n = 16 - 2n\\) numbers so we want to compute \\(\\binom{16-2n}{n}\\). Hence the total number of possible sequences is: \\[\\sum_{n=0}^{5} \\binom{16-2n}{n} = \\boxed{277}.\\]</p>",
+      "answer": "277"
+    },
+    "10": {
+      "problem": "<p>How many positive numbers up to and including 2012 have no repeating digits?</p>",
+      "solutions": "<p>All one-digit numbers have no repeating digits, so that gives us 9 numbers. For a two-digit number to have no repeating digits, the first digit must be between 1 and 9, while the second digit must not be equal to the first, giving us \\(9 \\cdot 9 = 81\\) numbers. For a three-digit number to have no repeating digits, the first digit must be between 1 and 9, the second digit must not be equal to the first, and the third digit must not be equal to either of the two, giving us \\(9 \\cdot 9 \\cdot 8 = 648\\) numbers. For a four-digit number between 1000 and 1999 to have no repeating digits, the first digit must be 1, the second digit must not be equal to the first, and so on, giving us \\(1 \\cdot 9 \\cdot 8 \\cdot 7 = 504\\) numbers. Finally, there are no numbers between 2000 and 2012 inclusive with no repeating digits, so the total is \\(9 + 81 + 648 + 504 = \\boxed{1242}\\).</p>",
+      "answer": "1242"
+    },
+    "11": {
+      "problem": "<p>Nikolai and Wolfgang are math professors at a European university, so they enjoy researching math problems. Interestingly, each is able to do math problems at a constant rate. One day, the university gives the math department a problem set to do. Working alone, Nikolai can solve all the problems in 6 hours, while Wolfgang can solve them in 8 hours. When they work together, they are more efficient because they are able to discuss the problems, so their combined output is the sum of their individual outputs plus 2 additional problems per hour. Working together, they complete the problem set in 3 hours. How many problems are on the problem set?</p>",
+      "solutions": "<p>Suppose that there are a total of \\(x\\) problems on the problems set. Then Nikolai’s rate is \\(\\frac{x}{6}\\) problems per hour, while Wolfgang’s is \\(\\frac{x}{8}\\). their combined rate (including the efficiency bonus) is \\[\\frac{x}{6} + \\frac{x}{8} + 2,\\] which is given to be equal to \\(\\frac{x}{3}\\). Solving for \\(x\\), we obtain \\(x = \\boxed{48}\\).</p>",
+      "answer": "48"
+    },
+    "12": {
+      "problem": "<p>\\(ABC\\) is an equilateral triangle with side length 1. Point \\(D\\) lies on \\(\\overline{AB}\\), point \\(E\\) lies on \\(\\overline{AC}\\), and points \\(G\\) and \\(F\\) lie on \\(\\overline{BC}\\), such that \\(DEFG\\) is a square. What is the area of \\(DEFG\\)?</p>",
+      "solutions": "<p>Let \\(x\\) be the length of a side of square \\(DEFG\\). Then \\(DE = EF = x\\). Note that \\(\\triangle ADE\\) is equilateral since \\(\\overline{DE} \\parallel \\overline{BC}\\) and hence \\(\\triangle ADE \\sim \\triangle ABC\\), so \\(AE = DE = x\\), and consequently \\(EC = 1 - x\\). Since \\(\\triangle ECF\\) is a \\(30^\\circ\\)-\\(60^\\circ\\)-\\(90^\\circ\\) triangle, we have the proportion \\[\\frac{EF}{EC} = \\frac{x}{1-x} = \\frac{\\sqrt{3}}{2},\\] so \\(x = \\frac{\\sqrt{3}}{2+\\sqrt{3}} = 2\\sqrt{3} - 3\\). Hence the area of \\(DEFG\\) is \\(x^2 = \\boxed{21 - 12\\sqrt{3}}\\).</p>",
+      "answer": "21 - 12\\sqrt{3}"
+    },
+    "13": {
+      "problem": "<p>Define a number to be <i>boring</i> if all the digits of the number are the same. How many positive integers less than 10000 are both prime and boring?</p>",
+      "solutions": "<p>The one-digit boring primes are 2, 3, 5, and 7. The only two-digit boring prime is 11, since 11 divides all other two-digit boring numbers. No three-digit boring numbers are prime, since 111 divides all of them and \\(111 = 3 \\times 37\\). No four-digit boring numbers are prime since they are all divisible by 11. Therefore, there are \\(\\boxed{5}\\) positive integers less than 10000 which are both prime and boring.</p>",
+      "answer": "5"
+    },
+    "14": {
+      "problem": "<p>Given a number \\(n\\) in base 10, let \\(g(n)\\) be the base-3 representation of \\(n\\). Let \\(f(n)\\) be equal to the base-10 number obtained by interpreting \\(g(n)\\) in base 10. Compute the smallest positive integer \\(k \\ge 3\\) that divides \\(f(k)\\).</p>",
+      "solutions": "<p>Using brute force, we note that 3, 4, 5, and 6 are invalid, but \\(7 = 21_3\\). Thus, the answer is \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "15": {
+      "problem": "<p>\\(ABCD\\) is a parallelogram. \\(AB = BC = 12\\), and \\(\\angle ABC = 120^\\circ\\). Calculate the area of parallelogram \\(ABCD\\).</p>",
+      "solutions": "<p>Since opposite sides of a parallelogram are equal, \\(AB = BC = CD = DA = 12\\). Since adjacent angles of a parallelogram are supplementary, \\(\\angle BCD = \\angle CDA = 60^\\circ\\). Therefore, when we draw diagonal \\(BD\\), we get two equilateral triangles, both with side length 12. The area of an equilateral triangle with side length \\(s\\) is \\(\\frac{s^2\\sqrt{3}}{4}\\), so therefore the area of the parallelogram is \\(2 \\times \\frac{12^2 \\times \\sqrt{3}}{4} = \\boxed{72\\sqrt{3}}\\).</p>",
+      "answer": "72\\sqrt{3}"
+    },
+    "16": {
+      "problem": "<p>Given a 1962-digit number that is divisible by 9, let \\(x\\) be the sum of its digits. Let the sum of the digits of \\(x\\) be \\(y\\). Let the sum of the digits of \\(y\\) be \\(z\\). Compute the maximum possible value of \\(z\\).</p>",
+      "solutions": "<p>Let the 1962 digit number be \\(a\\). First of all note that \\(9 \\mid x, y, z\\). This is because \\(a = \\sum_{i=1}^{1962} a_i 10^i \\equiv \\sum_{i=1}^{1962} a_i \\pmod{9} = x\\). Now clearly the largest value of \\(x\\) would be obtained if \\(a = \\sum_{i=1}^{1962} 9(10)^i\\), hence \\(x \\le 1962(9) = 17658\\). It follows that \\(y \\le 1+7+6+5+8 = 36\\) and finally that \\(z \\le 9\\). However \\(9 \\mid z\\) so \\(z = \\boxed{9}\\).</p>",
+      "answer": "9"
+    },
+    "17": {
+      "problem": "<p>A circle with radius 1 has diameter \\(AB\\). \\(C\\) lies on this circle such that \\(\\overgroup{AC} / \\overgroup{BC} = 4\\). \\(\\overline{AC}\\) divides the circle into two parts, and we will label the smaller part Region I. Similarly, \\(\\overline{BC}\\) also divides the circle into two parts, and we will denote the smaller one as Region II. Find the positive difference between the areas of Regions I and II.</p>",
+      "solutions": "<p>Let \\(O\\) be the center of the circle. Note that \\(CO\\) bisects \\(AB\\), so the areas of \\(\\triangle ACO\\) and \\(\\triangle BCO\\) are equal. Hence, the desired difference in segment areas is equal to the difference in the areas of the corresponding sectors. The sector corresponding to \\(\\overgroup{AC}\\) has area \\(\\frac{2\\pi}{5}\\), and the sector corresponding to \\(\\overgroup{BC}\\) has area \\(\\frac{\\pi}{10}\\), so the desired difference is \\(\\boxed{\\frac{3\\pi}{10}}\\).</p>",
+      "answer": "\\frac{3\\pi}{10}"
+    },
+    "18": {
+      "problem": "<p>John is on the upper-left corner of a \\(3 \\times 3\\) grid. Once per minute, John randomly chooses a square that is either horizontally or vertically adjacent to his current square and moves there. What is the expected number of minutes that John needs to get to the center square?</p>",
+      "solutions": "<p>Let \\(a\\) be the expected number of minutes necessary to move from a corner to the center square. Furthermore, let \\(b\\) be the expected number of minutes necessary to move from one of the middle squares in any of the leftmost or rightmost rows and columns to the center. We have that \\(a = b+1\\) and \\(b = \\frac{2(a+1)}{3} + \\frac{1}{3}\\). Solving these two linear equations gives us \\(b = 5\\) and \\(a = \\boxed{6}\\).</p>",
+      "answer": "6"
+    },
+    "19": {
+      "problem": "<p>If \\(f\\) is a monic cubic polynomial with \\(f(0) = -64\\), and all roots of \\(f\\) are non-negative real numbers, what is the largest possible value of \\(f(-1)\\)? (A polynomial is monic if it has a leading coefficient of 1.)</p>",
+      "solutions": "<p>If the three roots of \\(f\\) are \\(r_1, r_2, r_3\\), we have \\(f(x) = x^3 - (r_1+r_2+r_3)x^2 + (r_1r_2+r_1r_3+r_2r_3)x - r_1r_2r_3\\), so \\(f(-1) = -1 - (r_1+r_2+r_3) - (r_1r_2+r_1r_3+r_2r_3) - r_1r_2r_3\\). Since \\(r_1r_2r_3 = 64\\), the arithmetic mean-geometric mean inequality reveals that \\(r_1+r_2+r_3 \\ge 3(r_1r_2r_3)^{1/3} = 12\\) and \\(r_1r_2+r_1r_3+r_2r_3 \\ge 3(r_1r_2r_3)^{2/3} = 48\\). It follows that \\(f(-1)\\) is at most \\(-1-12-48-64 = \\boxed{-125}\\). We have equality when all roots are equal, i.e. \\(f(x) = (x-4)^3\\).</p>",
+      "answer": "-125"
+    },
+    "20": {
+      "problem": "<p>A permutation of the first \\(n\\) positive integers is <i>quadratic</i> if, for some positive integers \\(a\\) and \\(b\\) such that \\(a+b=n\\), \\(a \\ne 1\\), and \\(b \\ne 1\\), the first \\(a\\) integers of the permutation form an increasing sequence and the last \\(b\\) integers of the permutation form a decreasing sequence, or if the first \\(a\\) integers of the permutation form a decreasing sequence and the last \\(b\\) integers of the permutation form an increasing sequence. How many permutations of the first 10 positive integers are quadratic?</p>",
+      "solutions": "<p>Clearly, either 1 or 10 must be in the middle of the permutation. Assume without loss of generality that 10 is; we can construct an equivalent permutation with 1 in the middle by replacing each number \\(i\\) with \\(11-i\\). We can pick any nonempty strict subset of the first 9 positive integers, sort it, place it at the beginning of the permutation, then place 10, then place the unchosen numbers in decreasing order. There are \\(2^9 - 2 = 510\\) ways to do this. Therefore, there are \\(2 \\times 510 = \\boxed{1020}\\) quadratic permutations of the first 10 positive integers.</p>",
+      "answer": "1020"
+    },
+    "21": {
+      "problem": "<p>In trapezoid \\(ABCD\\), \\(BC \\parallel AD\\), \\(AB = 13\\), \\(BC = 15\\), \\(CD = 14\\), and \\(DA = 30\\). Find the area of \\(ABCD\\).</p>",
+      "solutions": "<p>We can use the standard method of setting up a two-variable system and solving for the height of the trapezoid. However, since one base is half the length of the other, we may take a shortcut. Extend \\(AB\\) and \\(CD\\) until they meet at \\(E\\). Clearly, \\(BC\\) is a midline of triangle \\(EAD\\), so we have \\(EA = 2BA = 26\\) and \\(ED = 2CD = 28\\). The area of \\(EAD\\) is therefore four times that of a standard 13-14-15 triangle, which we know is \\(\\frac{1}{2} \\cdot 14 \\cdot 12 = 84\\) (since the altitude to the side of length 14 splits the triangle into 9-12-15 and 5-12-13 right triangles). The area of the trapezoid is \\(\\frac{3}{4}\\) the area of \\(EAD\\) by similar triangles, and is therefore \\(3 \\cdot 84 = \\boxed{252}\\).</p><p>A similar solution draws lines from \\(B\\) and \\(C\\) to the midpoint of \\(AD\\) to form three 13-14-15 triangles.</p>",
+      "answer": "252"
+    },
+    "22": {
+      "problem": "<p>Two different squares are randomly chosen from an \\(8 \\times 8\\) chessboard. What is the probability that two queens placed on the two squares can attack each other? Recall that queens in chess can attack any square in a straight line vertically, horizontally, or diagonally from their current position.</p>",
+      "solutions": "<p>All squares that are on the edge of the chessboard can hit 21 squares; there are 28 such squares. Now consider the \\(6 \\times 6\\) chessboard that is obtained by removing these bordering squares. The squares on the edge of this board can hit 23 squares; there are 20 of these. Now we consider the 12 squares on the boundary of the \\(4 \\times 4\\) chessboard left; each of these squares can hit 25 squares. The remaining 4 can hit 27 squares. The probability then follows as \\[\\frac{21 \\times 28 + 23 \\times 20 + 25 \\times 12 + 27 \\times 4}{64 \\times 63} = \\boxed{\\frac{13}{36}}.\\]</p>",
+      "answer": "\\frac{13}{36}"
+    },
+    "23": {
+      "problem": "<p>Circle \\(O\\) has radius 18. From diameter \\(AB\\), there exists a point \\(C\\) such that \\(BC\\) is tangent to \\(O\\) and \\(AC\\) intersects \\(O\\) at a point \\(D\\), with \\(AD = 24\\). What is the length of \\(BC\\)?</p>",
+      "solutions": "<p>Since \\(\\angle ADB = \\angle ABC = 90^\\circ\\), \\(\\triangle ABC \\sim \\triangle ADB\\). In particular, \\(\\frac{AB}{AD} = \\frac{AC}{AB}\\), so \\(AC = \\frac{AB^2}{AD}\\). Therefore, \\(AC = \\frac{36^2}{24} = 54\\). Since \\(AD = 24\\), \\(DC = 30\\). By Power of a Point, \\(BC = \\sqrt{30 \\times 54} = \\boxed{18\\sqrt{5}}\\).</p>",
+      "answer": "18\\sqrt{5}"
+    },
+    "24": {
+      "problem": "<p>The quartic (4th-degree) polynomial \\(P(x)\\) satisfies \\(P(1) = 0\\) and attains its maximum value of 3 at both \\(x=2\\) and \\(x=3\\). Compute \\(P(5)\\).</p>",
+      "solutions": "<p>Consider the polynomial \\(Q(x) = P(x) - 3\\). \\(Q\\) has roots at \\(x=2\\) and \\(x=3\\). Moreover, since these roots are maxima, they both have multiplicity 2. Hence, \\(Q\\) is of the form \\(a(x-2)^2(x-3)^2\\), and so \\(P(x) = a(x-2)^2(x-3)^2 + 3\\). \\(P(1) = 0 \\implies a = -\\frac{3}{4}\\), allowing us to compute \\(P(5) = -\\frac{3}{4}(9)(4) + 3 = \\boxed{-24}\\).</p>",
+      "answer": "-24"
+    },
+    "25": {
+      "problem": "<p>Compute the ordered pair of real numbers \\((a,b)\\) such that \\(a &lt; k &lt; b\\) if and only if \\[x^3 + \\frac{1}{x^3} = k\\] does not have a real solution in \\(x\\).</p>",
+      "solutions": "<p>Substitute \\(y = x^3\\), so now we want to find the values of \\(k\\) such that \\(y + \\frac{1}{y} = k\\) has no real solutions in \\(y\\). In particular, since \\(y = x^3\\) is an invertible function, \\(x^3 + \\frac{1}{x^3} = k\\) does not have a real solution in \\(x\\) if and only if \\(y + \\frac{1}{y} = k\\) has no real solutions in \\(y\\). Therefore, clearing denominators of \\(y + \\frac{1}{y} = k\\) gives us \\(y^2 + 1 = ky\\), so \\(y^2 - ky + 1 = 0\\), so this quadratic equation has no solutions when the discriminant is negative. The discriminant is \\(k^2 - 4\\), which is negative when \\(-2 &lt; k &lt; 2\\), so therefore the ordered pair is \\(\\boxed{(-2, 2)}\\).</p>",
+      "answer": "(-2, 2)"
+    }
+  }
+}

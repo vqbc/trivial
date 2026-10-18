@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2016,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2016/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Trapezoid \\(ABCD\\) has \\(AB\\) parallel to \\(CD\\), with \\(\\angle ADC = 90^\\circ\\). Given that \\(AD = 5\\), \\(BC = 13\\) and \\(DC = 18\\), compute the area of the trapezoid.</p>",
+      "solutions": "<p>The trapezoid can be divided into a right triangle with legs of length 5 and 12, and a rectangle with side lengths 5 and 6. This gives an area of \\(\\boxed{60}\\).</p>",
+      "answer": "60"
+    },
+    "2": {
+      "problem": "<p>The cubic \\(f(x) = x^3 - 7x - 6\\) has three distinct roots, \\(a\\), \\(b\\), and \\(c\\). Compute \\(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}\\).</p>",
+      "solutions": "<p>\\[\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} = \\frac{ab+bc+ca}{abc} = -\\frac{-7}{-6} = \\boxed{-\\frac{7}{6}}.\\]</p>",
+      "answer": "-\\frac{7}{6}"
+    },
+    "3": {
+      "problem": "<p>Ben flips a fair coin repeatedly. Given that Ben’s first coin flip is heads, compute the probability Ben flips two heads in a row before Ben flips two tails in a row.</p>",
+      "solutions": "<p>If Ben successfully flips two heads in a row, then Ben must have flipped the coin an even number of times. If Ben successfully flips two tails in a row, then he must have flipped the coin an odd number of times. However, the coin must have been flipped at least twice. The desired probability is therefore \\[\\frac{\\sum_{i=1}^{\\infty} 4^{-i}}{\\sum_{i=2}^{\\infty} 2^{-i}} = \\frac{\\frac{1}{3}}{\\frac{1}{2}} = \\boxed{\\frac{2}{3}}.\\]</p>",
+      "answer": "\\frac{2}{3}"
+    }
+  }
+}

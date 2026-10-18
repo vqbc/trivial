@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry A",
+  "year": 2021,
+  "name": "Geometry A",
+  "url": "https://pumac.princeton.edu/s/GeoA_2021-1.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A circle is inscribed in a regular octagon with area 2024. A second regular octagon is inscribed in the circle, and its area can be expressed as \\(a + b\\sqrt{c}\\), where \\(a,b,c\\) are integers and \\(c\\) is square-free. Compute \\(a+b+c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Triangle \\(\\triangle ABC\\) has \\(AB = 8, AC = 10\\), and \\(AD = \\sqrt{33}\\), where \\(D\\) is the midpoint of \\(BC\\). Perpendiculars are drawn from \\(D\\) to meet \\(AB\\) and \\(AC\\) at \\(E\\) and \\(F\\), respectively. The length of \\(EF\\) can be expressed as \\(\\frac{a\\sqrt{b}}{c}\\), where \\(a,c\\) are relatively prime and \\(b\\) is square-free. Compute \\(a+b+c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Consider a circle centered at \\(O\\). Parallel chords \\(AB\\) of length 8 and \\(CD\\) of length 10 are of distance 2 apart such that \\(AC &lt; AD\\). We can write \\(\\tan \\angle BOD = \\frac{a}{b}\\), where \\(a,b\\) are positive integers such that \\(\\gcd(a,b) = 1\\). Compute \\(a+b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Let \\(BCDE\\) be a trapezoid with \\(BE \\parallel CD\\), \\(BE = 20, BC = 2\\sqrt{34}, CD = 8, DE = 2\\sqrt{10}\\). Draw a line through \\(E\\) parallel to \\(BD\\) and a line through \\(B\\) perpendicular to \\(BE\\), and let \\(A\\) be the intersection of these two lines. Let \\(M\\) be the intersection of diagonals \\(BD\\) and \\(CE\\), and let \\(X\\) be the intersection of \\(AM\\) and \\(BE\\). If \\(BX\\) can be written as \\(\\frac{a}{b}\\), where \\(a,b\\) are relatively prime positive integers, find \\(a+b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>A pentagon has vertices labelled \\(A, B, C, D, E\\) in that order counterclockwise, such that \\(AB, ED\\) are parallel and \\(\\angle EAB = \\angle ABD = \\angle ACD = \\angle CDA\\). Furthermore, suppose that \\(AB = 8, AC = 12, AE = 10\\). If the area of triangle \\(CDE\\) can be expressed as \\(\\frac{a\\sqrt{b}}{c}\\), where \\(a,b,c\\) are integers so that \\(b\\) is square free, and \\(a,c\\) are relatively prime, find \\(a+b+c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Three circles, \\(\\omega_1, \\omega_2, \\omega_3\\) are drawn, with \\(\\omega_3\\) externally tangent to \\(\\omega_1\\) at \\(C\\) and internally tangent to \\(\\omega_2\\) at \\(D\\). Say also that \\(\\omega_1\\omega_2\\) intersect at points \\(A, B\\). Suppose the radius of \\(\\omega_1\\) is 20, the radius of \\(\\omega_2\\) is 15, and the radius of \\(\\omega_3\\) is 6. Draw line \\(CD\\), and suppose it meets \\(AB\\) at point \\(X\\). If \\(AB = 24\\), then \\(CX\\) can be written in the form \\(\\frac{a\\sqrt{b}}{c}\\), where \\(a,b,c\\) are positive integers where \\(b\\) is square-free, and \\(a,c\\) are relatively prime. Find \\(a+b+c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with side lengths \\(AB = 13, AC = 17\\), and \\(BC = 20\\). Let \\(E, F\\) be the feet of the altitudes from \\(B\\) onto \\(AC\\) and \\(C\\) onto \\(AB\\), respectively. Let \\(P\\) be the second intersection of the circumcircles of \\(ABC\\) and \\(AEF\\). Suppose that \\(AP\\) can be written as \\(\\frac{a\\sqrt{b}}{c}\\) where \\(a,c\\) are relatively prime and \\(b\\) is square-free. Compute \\(a\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Let \\(ABC\\) be an acute triangle with side lengths \\(AB = 7, BC = 12, AC = 10\\), and let \\(\\omega\\) be its incircle. If \\(\\omega\\) is touching \\(AB, AC\\) at \\(F, E\\), respectively, and if \\(EF\\) intersects \\(BC\\) at \\(X\\), suppose that the ratio in which the angle bisector of \\(\\angle BAC\\) divides the segment connecting midpoint of \\(EX\\) and \\(C\\) is \\(\\frac{a}{b}\\), where \\(a,b\\) are relatively prime integers. Find \\(a+b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

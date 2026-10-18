@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Calculus",
+  "year": 1998,
+  "name": "Calculus",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/1998/feb/calc/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Farmer Tim is lost in the densely-forested Cartesian plane. Starting from the origin he walks a sinusoidal path in search of home; that is, after \\(t\\) minutes he is at position \\((t, \\sin t)\\).</p><p>Five minutes after he sets out, Alex enters the forest at the origin and sets out in search of Tim. He walks in such a way that after he has been in the forest for \\(m\\) minutes, his position is \\((m, \\cos t)\\).</p><p>What is the greatest distance between Alex and Farmer Tim while they are walking in these paths?</p>",
+      "solutions": "<p>At arbitrary time \\(t\\), Farmer Tim is at position \\((t, \\sin t)\\) and Alex is at position \\((t-5, \\cos t)\\).</p><p>Hence at time \\(t\\), the distance, \\(d\\), between Tim and Alex is \\(d = \\sqrt{(\\sin t - \\cos t)^2 + 25}\\). To find the maximum value of \\(d\\), we solve for \\(t\\) such that \\(\\frac{dd}{dt} = 0\\).</p><p>\\(\\frac{dd}{dt} = \\frac{(\\sin t - \\cos t)(\\cos t + \\sin t)}{\\sqrt{(\\sin t - \\cos t)^2+25}}\\). Then \\(\\frac{dd}{dt} = 0 \\Rightarrow \\sin^2 t - \\cos^2 t = 0 \\Rightarrow \\sin^2 t = \\cos^2 t\\). Equality happens if \\(t\\) is any constant multiple of \\(\\frac{\\pi}{4}\\).</p><p>Notice that to maximize \\(d\\), we need to maximize \\((\\sin t - \\cos t)^2\\). This is achieved when \\(\\cos t = -\\sin t\\). Because we determined earlier that \\(t\\) is a constant multiple of \\(\\frac{\\pi}{4}\\), then with this new condition, we see that \\(t\\) must be a constant multiple of \\(\\frac{3\\pi}{4}\\).</p><p>Then \\((\\sin t - \\cos t)^2 = 2 \\Rightarrow d = \\boxed{\\sqrt{29}}\\).</p>",
+      "answer": "\\sqrt{29}"
+    },
+    "2": {
+      "problem": "<p>A cube with sides 1m in length is filled with water, and has a tiny hole through which the water drains into a cylinder of radius 1m.</p><p>If the water level in the cube is falling at a rate of \\(1\\text{ cm/s}\\), at what rate is the water level in the cylinder rising?</p>",
+      "solutions": "<p>The magnitude of the change in volume per unit time of the two solids is the same. The change in volume per unit time of the cube is \\(1\\text{ cm}\\cdot m^2/\\text{s}\\). The change in volume per unit time of the cylinder is \\(\\pi \\cdot \\frac{dh}{dt} \\cdot m^2\\), where \\(\\frac{dh}{dt}\\) is the rate at which the water level in the cylinder is rising.</p><p>Solving the equation \\(\\pi \\cdot \\frac{dh}{dt} \\cdot m^2 = 1\\text{ cm} \\cdot m^2/\\text{s}\\) yields \\(\\boxed{\\frac{1}{\\pi}\\text{ cm/s}}\\).</p>",
+      "answer": "\\frac{1}{\\pi}"
+    },
+    "3": {
+      "problem": "<p>Find the area of the region bounded by the graphs of \\(y = x^2\\), \\(y = x\\), and \\(x = 2\\).</p>",
+      "solutions": "<p>There are two regions to consider. First, there is the region bounded by \\(y = x^2\\) and \\(y = x\\), in the interval \\([0, 1]\\). In this interval, the values of \\(y = x\\) are greater than the values of \\(y = x^2\\), thus the area is calculated by \\(\\int_0^1 (x - x^2)\\, dx\\).</p><p>Second, there is the region bounded by \\(y = x^2\\) and \\(y = x\\) and \\(x = 2\\), in the interval \\([1, 2]\\). In this interval, the values of \\(y = x^2\\) are greater than the values of \\(y = x\\), thus the area is calculated by \\(\\int_1^2 (x^2 - x)\\, dx\\).</p><p>Then the total area of the region bounded by the three graphs is \\(\\int_0^1 (x - x^2)\\, dx + \\int_1^2 (x^2 - x)\\, dx = \\boxed{1}\\).</p>",
+      "answer": "1"
+    },
+    "4": {
+      "problem": "<p>Let \\(f(x) = 1 + \\frac{x}{2} + \\frac{x^2}{4} + \\frac{x^3}{8} + \\ldots\\), for \\(-1 \\le x \\le 1\\). Find \\(\\sqrt{e^{\\int_0^1 f(x)\\, dx}}\\).</p>",
+      "solutions": "<p>Observe that \\(f(x)\\) is merely an infinite geometric series. Thus \\(f(x) = \\frac{1}{1 - \\frac{x}{2}} = \\frac{2}{2-x}\\). Then</p><p>\\[\\int_0^1 \\frac{2}{2-x}\\, dx = 2\\ln 2.\\]</p><p>Then \\(\\sqrt{e^{2\\ln 2}} = \\sqrt{2^2} = \\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "5": {
+      "problem": "<p>Evaluate \\(\\displaystyle\\lim_{x\\to 1} x^{\\frac{x}{\\sin(1-x)}}\\).</p>",
+      "solutions": "<p>Rewrite the expression to evaluate as \\(e^{\\ln x^{\\frac{x}{\\sin(1-x)}}}\\). Then we must evaluate \\(\\lim_{x\\to 1} e^{\\ln x^{\\frac{x}{\\sin(1-x)}}}\\).</p><p>\\[\\lim_{x\\to 1} \\ln x^{\\frac{x}{\\sin(1-x)}} = \\lim_{x\\to 1} \\left( \\frac{x}{\\sin(1-x)} \\ln x \\right).\\]</p><p>Because direct calculation of the limit results in indeterminate form \\(\\left(\\frac{1}{0}\\cdot 0\\right)\\), we can use L’Hopital’s rule to evaluate the limit. By L’Hopital’s rule, \\(\\lim_{x\\to 1} \\left( \\frac{x}{\\sin(1-x)} \\ln x \\right) = \\lim_{x\\to 1} \\frac{\\ln x + 1}{-\\cos(1-x)}\\). This limit is simply \\(-1\\).</p><p>Hence \\(\\lim_{x\\to 1} e^{\\ln x^{\\frac{x}{\\sin(1-x)}}} = e^{-1} = \\boxed{\\frac{1}{e}}\\).</p>",
+      "answer": "\\frac{1}{e}"
+    },
+    "6": {
+      "problem": "<p>Edward, the author of this test, had to escape from prison to work in the grading room today. He stopped to rest at a place 1,875 feet from the prison and was spotted by a guard with a crossbow.</p><p>The guard fired an arrow with an initial velocity of \\(100\\text{ ft/s}\\). At the same time, Edward started running away with an acceleration of \\(1\\text{ ft/s}^2\\). Assuming that air resistance causes the arrow to decelerate at \\(1\\text{ ft/s}^2\\) and that it does hit Edward, how fast was the arrow moving at the moment of impact (in \\(\\text{ft/s}\\))?</p>",
+      "solutions": "<p>We use the formula for distance, \\(d = \\frac{1}{2}at^2 + vt + d_0\\). Then after \\(t\\) seconds, Edward is at location \\(1875 + \\frac{1}{2}(1)(t^2)\\) from the prison. After \\(t\\) seconds, the arrow is at location \\(\\frac{1}{2}(-1)(t^2) + 100t\\) from the prison. When the arrow hits Edward, both objects are at the same distance away from the tower. Hence</p><p>\\[1875 + \\frac{1}{2}(1)(t^2) = \\frac{1}{2}(-1)(t^2) + 100t.\\]</p><p>Solving for \\(t\\) yields \\(t^2 - 100t + 1875 = 0 \\Rightarrow t = 25\\) or \\(t = 75\\). Then it must be \\(t = 25\\), because after the arrow hits Edward, he will stop running.</p><p>After 25 seconds, the arrow is moving at a velocity of \\(100 - 25(1) = \\boxed{75\\text{ ft/s}}\\).</p>",
+      "answer": "75"
+    },
+    "7": {
+      "problem": "<p>A parabola is inscribed in equilateral triangle \\(ABC\\) of side length 1 in the sense that \\(AC\\) and \\(BC\\) are tangent to the parabola at \\(A\\) and \\(B\\), respectively:</p><p>Find the area between \\(AB\\) and the parabola.</p>",
+      "solutions": "<p>Suppose \\(A = (0,0)\\), \\(B = (1,0)\\), and \\(C = \\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)\\). Then the parabola in question goes through \\((0,0)\\) and \\((1,0)\\) and has tangents with slopes of \\(\\sqrt{3}\\) and \\(-\\sqrt{3}\\), respectively, at these points. Suppose the parabola has equation \\(y = ax^2 + bx + c\\). Then \\(\\frac{dy}{dx} = 2ax + b\\).</p><p>At point \\((0,0)\\), \\(\\frac{dy}{dx} = b\\). Also the slope at \\((0,0)\\), as we determined earlier, is \\(\\sqrt{3}\\). Hence \\(b = \\sqrt{3}\\). Similarly, at point \\((1,0)\\), \\(\\frac{dy}{dx} = 2a + b\\). The slope at \\((1,0)\\), as we determined earlier, is \\(-\\sqrt{3}\\). Then \\(a = -\\sqrt{3}\\).</p><p>Since the parabola goes through \\((0,0)\\), \\(c = 0\\). Hence the equation of the parabola is \\(y = -\\sqrt{3}x^2 + \\sqrt{3}x\\). The desired area is simply the area under the parabolic curve in the interval \\([0,1]\\).</p><p>Hence \\(\\int_0^1 \\left(-\\sqrt{3}x^2 + \\sqrt{3}x\\right)\\, dx = \\boxed{\\frac{\\sqrt{3}}{6}}\\).</p>",
+      "answer": "\\frac{\\sqrt{3}}{6}"
+    },
+    "8": {
+      "problem": "<p>Find the slopes of all lines passing through the origin and tangent to the curve \\(y^2 = x^3 + 39x - 35\\).</p>",
+      "solutions": "<p>Any line passing through the origin has equation \\(y = mx\\), where \\(m\\) is the slope of the line. If a line is tangent to the given curve, then at the point of tangency, \\((x,y)\\), \\(\\frac{dy}{dx} = m\\).</p><p>First, we calculate \\(\\frac{dy}{dx}\\) of the curve: \\(2y\\, dy = 3x^2\\, dx + 39\\, dx \\Rightarrow \\frac{dy}{dx} = \\frac{3x^2+39}{2y}\\). Substituting \\(mx\\) for \\(y\\), we get the following system of equations:</p><p>\\[\\begin{aligned}\nm^2 x^2 &amp;= x^3 + 39x - 35 \\\\\nm &amp;= \\frac{3x^2+39}{2mx}\n\\end{aligned}\\]</p><p>Solving for \\(x\\) yields the equation \\(x^3 - 39x + 70 = 0 \\Rightarrow (x-2)(x+7)(x-5) = 0 \\Rightarrow x = 2\\) or \\(x = -7\\) or \\(x = 5\\). These solutions indicate the \\(x\\)-coordinate of the points at which the desired lines are tangent to the curve. Solving for the slopes of these lines, we get \\(m = \\pm\\frac{\\sqrt{51}}{2}\\) for \\(x = 2\\), no real solutions for \\(x = -7\\), and \\(m = \\pm\\frac{\\sqrt{285}}{5}\\) for \\(x = 5\\). Thus \\(\\boxed{m = \\pm\\frac{\\sqrt{51}}{2}, \\pm\\frac{\\sqrt{285}}{5}}\\).</p>",
+      "answer": "\\pm\\frac{\\sqrt{51}}{2}, \\pm\\frac{\\sqrt{285}}{5}"
+    },
+    "9": {
+      "problem": "<p>Evaluate \\(\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{n \\cdot 2^{n-1}}\\).</p>",
+      "solutions": "<p>Note that if we take the integral of \\(f(x)\\) in problem 4, we get the function \\(F(x) = x + \\frac{x^2}{2\\cdot 2} + \\frac{x^3}{3\\cdot 2^2} + \\ldots\\). Evaluating this integral in the interval \\([0,1]\\), we get \\(1 + \\frac{1}{2\\cdot 2} + \\frac{1}{3\\cdot 2^2} + \\ldots\\), which is the desired sum.</p><p>Hence \\(\\int_0^1 \\frac{2}{2-x}\\, dx = \\boxed{2\\ln 2}\\).</p>",
+      "answer": "2\\ln 2"
+    },
+    "10": {
+      "problem": "<p>Let \\(S\\) be the locus of all points \\((x,y)\\) in the first quadrant such that \\(\\frac{x}{t} + \\frac{y}{1-t} = 1\\) for some \\(t\\) with \\(0&lt;t&lt;1\\). Find the area of \\(S\\).</p>",
+      "solutions": "<p>Solving for \\(t\\) in the given equation, we get \\(t^2 + (y-x-1)t + x = 0\\). Using the quadratic equation, we get \\(t = \\frac{(x+1-y) \\pm \\sqrt{(y-x-1)^2 - 4x}}{2}\\). For all valid combinations of \\((x,y)\\), \\(t\\) is positive and less than 1 (this is easy to see by inspection). All valid combinations of \\((x,y)\\) are those that make \\((y-x-1)^2 - 4x \\ge 0\\).</p><p>Solving for \\(y\\) in the equation \\((y-x-1)^2 - 4x = 0\\) yields \\(y^2 - (2x+2)y + (x-1)^2 \\ge 0 \\Rightarrow y = (x+1) \\pm 2\\sqrt{x}\\). In the original equation, it is given that \\(\\frac{x}{t} + \\frac{y}{1-t} = 1\\), and \\(0&lt;t&lt;1\\). This implies that \\(x, y &lt; 1\\). Then the only possible \\(y &lt; 1\\) that satisfies \\((y-x-1)^2 - 4x = 0\\) is \\(y = x+1-2\\sqrt{x}\\).</p><p>Then to satisfy the inequality \\((y-x-1)^2 - 4x \\ge 0\\), we must have \\(y \\le x+1-2\\sqrt{x}\\). Recall that this is when \\(0 &lt; y &lt; 1\\). Hence we integrate in the interval \\([0,1]\\): \\(\\int_0^1 \\left(x+1-2\\sqrt{x}\\right)\\, dx = \\boxed{\\frac{1}{6}}\\).</p>",
+      "answer": "\\frac{1}{6}"
+    }
+  }
+}

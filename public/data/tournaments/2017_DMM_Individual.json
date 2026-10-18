@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2017,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2017/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many subsets of \\(\\{D, U, K, E\\}\\) have an odd number of elements?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "8"
+    },
+    "2": {
+      "problem": "<p>Find the coefficient of \\(x^{12}\\) in \\((1+x^2+x^4+\\ldots+x^{28})(1+x+x^2+\\ldots+x^{14})^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "49"
+    },
+    "3": {
+      "problem": "<p>How many 4-digit numbers have their digits in non-decreasing order from left to right?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "715"
+    },
+    "4": {
+      "problem": "<p>A dodecahedron (a polyhedron with 12 faces, each a regular pentagon) is projected orthogonally onto a plane parallel to one of its faces to form a polygon. Find the measure (in degrees) of the largest interior angle of this polygon.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "144"
+    },
+    "5": {
+      "problem": "<p>Justin is back with a \\(6 \\times 6\\) grid made of 36 colorless squares. Dr. Kraines wants him to color some squares such that</p><ul><li>Each row and column of the grid must have at least one colored square</li><li>For each colored square, there must be another colored square on the same row or column</li></ul><p>What is the minimum number of squares that Justin will have to color?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "8"
+    },
+    "6": {
+      "problem": "<p>Inside a circle \\(C\\), we have three equal circles \\(C_1, C_2, C_3\\), which are pairwise externally tangent to each other and all internally tangent to \\(C\\). What is the ratio of the area of \\(C_1\\) to the area of \\(C\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "21 - 12\\sqrt{3}"
+    },
+    "7": {
+      "problem": "<p>There are 3 different paths between the Duke Chapel and the Physics building. 6 students are heading towards the Physics building for a class, so they split into 3 pairs and each pair takes a separate path from the Chapel. After class, they again split into 3 pairs and take separate paths back. Find the number of possible scenarios where each student’s companion on the way there is different from their companion on the way back.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4320"
+    },
+    "8": {
+      "problem": "<p>Let \\(a_n\\) be a sequence that satisfies the recurrence relation \\[a_n a_{n+2} = \\frac{\\cos(3a_{n+1})}{\\cos(a_{n+1})[2\\cos(2a_{n+1}) - 1]} a_{n+1}\\] with \\(a_1 = 2\\) and \\(a_2 = 3\\). Find the value of \\(2018 a_{2017}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4036"
+    },
+    "9": {
+      "problem": "<p>Let \\(f(x)\\) be a polynomial with minimum degree, integer coefficients, and leading coefficient of 1 that satisfies \\(f(\\sqrt{7} + \\sqrt{13}) = 0\\). What is the value of \\(f(10)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6036"
+    },
+    "10": {
+      "problem": "<p>1024 Duke students, indexed 1 to 1024, are having a chat. For each \\(1 \\le i \\le 1023\\), student \\(i\\) claims that student \\(2^{\\lfloor \\log_2 i \\rfloor + 1}\\) has a girlfriend. (\\(\\lfloor x \\rfloor\\) is the greatest integer less than or equal to \\(x\\).) Given that exactly 201 people are lying, find the index of the 61st liar (ordered by index from smallest to largest).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "115"
+    }
+  }
+}

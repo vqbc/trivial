@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 2",
+  "year": 2005,
+  "name": "Individual Round: General Test, Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2005/feb/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The volume of a cube (in cubic inches) plus three times the total length of its edges (in inches) is equal to twice its surface area (in square inches). How many inches long is its long diagonal?</p>",
+      "solutions": "<p>If the side length of the cube is \\(s\\) inches, then the condition implies \\(s^3 + 3 \\cdot 12s = 2 \\cdot 6s^2\\), or \\(s(s^2 - 12s + 36) = s(s-6)^2 = 0\\). Therefore, \\(s = 6\\), and the long diagonal has length \\(s\\sqrt{3} = 6\\sqrt{3}\\).</p>",
+      "answer": "6\\sqrt{3}"
+    },
+    "2": {
+      "problem": "<p>Find three real numbers \\(a &lt; b &lt; c\\) satisfying: \\[\\begin{aligned}\na + b + c &amp;= 21/4 \\\\\n1/a + 1/b + 1/c &amp;= 21/4 \\\\\nabc &amp;= 1.\n\\end{aligned}\\]</p>",
+      "solutions": "<p>By inspection, one notices that if \\(b\\) is a number such that \\(b + 1/b = 17/4\\), then \\(a = 1, c = 1/b\\) will work. Again by inspection (or by solving the quadratic \\(b^2 - 17b/4 + 1 = 0\\)), one finds \\(b = 1/4\\) or \\(4\\), so the numbers are \\(1/4\\), \\(1\\), and \\(4\\).</p><p><b>Alternative Solution.</b> Note that \\(ab + bc + ca = abc(1/a + 1/b + 1/c) = 21/4\\), so \\(a\\), \\(b\\), and \\(c\\) are the roots of the polynomial \\(x^3 - 21x^2/4 + 21x/4 - 1\\), which factors as \\(\\frac{1}{4}(x-1)(x-4)(4x-1)\\), giving the same answer.</p>",
+      "answer": "1/4, 1, 4"
+    },
+    "3": {
+      "problem": "<p>Working together, Jack and Jill can paint a house in 3 days; Jill and Joe can paint the same house in 4 days; or Joe and Jack can paint the house in 6 days. If Jill, Joe, and Jack all work together, how many days will it take them?</p>",
+      "solutions": "<p>Suppose that Jack paints \\(x\\) houses per day, Jill paints \\(y\\) houses per day, and Joe paints \\(z\\) houses per day. Together, Jack and Jill paint \\(1/3\\) of a house in a day — that is, \\[x + y = 1/3.\\]</p><p>Similarly, \\[y + z = 1/4,\\] and \\[z + x = 1/6.\\]</p><p>Adding all three equations and dividing by 2 gives \\[x + y + z = 3/8.\\]</p><p>So, working together, the three folks can paint \\(3/8\\) houses in a day, or \\(8/3\\) days per house.</p>",
+      "answer": "8/3"
+    },
+    "4": {
+      "problem": "<p>In how many ways can 8 people be arranged in a line if Alice and Bob must be next to each other, and Carol must be somewhere behind Dan?</p>",
+      "solutions": "<p>Let us place Alice and Bob as a single person; there are then \\(7! = 5040\\) different arrangements. Alice can be in front of Bob or vice versa, multiplying the number of possibilities by 2, but Carol is behind Dan in exactly half of those, so that the answer is just 5040.</p>",
+      "answer": "5040"
+    },
+    "5": {
+      "problem": "<p>You and I play the following game on an \\(8 \\times 8\\) square grid of boxes: Initially, every box is empty. On your turn, you choose an empty box and draw an \\(X\\) in it; if any of the four adjacent boxes are empty, you mark them with an \\(X\\) as well. (Two boxes are adjacent if they share an edge.) We alternate turns, with you moving first, and whoever draws the last \\(X\\) wins. How many choices do you have for a first move that will enable you to guarantee a win no matter how I play?</p>",
+      "solutions": "<p>I can follow a symmetry strategy: whenever you play in the box \\(S\\), I play in the image of \\(S\\) under the \\(180^\\circ\\) rotation about the center of the board. This ensures that the board will be centrally symmetric at the beginning of your turn. Thus, if you play in an empty box \\(S\\), its symmetric image \\(S'\\) is also empty at the beginning of your turn, and it remains so after your turn, since the even size of the board ensures that \\(S\\) can be neither equal to nor adjacent to \\(S'\\). In particular, I always have a move available. Since the first person without an available move loses, you are guaranteed to lose. So the answer is that you have 0 choices for a first move that will guarantee your win.</p>",
+      "answer": "0"
+    },
+    "6": {
+      "problem": "<p>A cube with side length 2 is inscribed in a sphere. A second cube, with faces parallel to the first, is inscribed between the sphere and one face of the first cube. What is the length of a side of the smaller cube?</p>",
+      "solutions": "<p>First note that the long diagonal of the cube has length \\(2\\sqrt{3}\\), so the radius of the sphere is \\(\\sqrt{3}\\). Let \\(x\\) be the side length of the smaller cube. Then the distance from the center of the sphere to the far face of the smaller cube is \\(1 + x\\), while the distance from the center of the far face to a vertex lying on the sphere is \\(\\frac{x\\sqrt{2}}{2}\\). Therefore, the square of the radius is \\(3 = (1+x)^2 + \\frac{x^2}{2}\\), or \\(3x^2 + 4x - 4 = (3x-2)(x+2) = 0\\), so \\(x = \\frac{2}{3}\\).</p>",
+      "answer": "2/3"
+    },
+    "7": {
+      "problem": "<p>Three distinct lines are drawn in the plane. Suppose there exist exactly \\(n\\) circles in the plane tangent to all three lines. Find all possible values of \\(n\\).</p>",
+      "solutions": "<p>If the three lines form a triangle, then there are 4 circles, namely the incircle and the three excircles. If the three lines concur or are all parallel, then there are 0 circles. If two lines are parallel and the third is not, then there are 2 circles lying between the two parallel lines, one on each side of the transverse line. These are the only possible configurations, so the answers are 0, 2, and 4.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2005_HMMT_February_General_2/7-fig1.png\" width=\"419\" alt=\"\"></p>",
+      "answer": "0, 2, 4"
+    },
+    "8": {
+      "problem": "<p>What is the maximum number of bishops that can be placed on an \\(8 \\times 8\\) chessboard such that at most three bishops lie on any diagonal?</p>",
+      "solutions": "<p>If the chessboard is colored black and white as usual, then any diagonal is a solid color, so we may consider bishops on black and white squares separately. In one direction, the lengths of the black diagonals are 2, 4, 6, 8, 6, 4, and 2. Each of these can have at most three bishops, except the first and last which can have at most two, giving a total of at most \\(2+3+3+3+3+3+2 = 19\\) bishops on black squares. Likewise there can be at most 19 bishops on white squares for a total of at most 38 bishops. This is indeed attainable as in the diagram below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2005_HMMT_February_General_2/8-fig1.png\" width=\"225\" alt=\"\"></p>",
+      "answer": "38"
+    },
+    "9": {
+      "problem": "<p>In how many ways can the cells of a \\(4 \\times 4\\) table be filled in with the digits \\(1, 2, \\ldots, 9\\) so that each of the 4-digit numbers formed by the columns is divisible by each of the 4-digit numbers formed by the rows?</p>",
+      "solutions": "<p>If \\(a\\) and \\(b\\) are 4-digit numbers with the same first digit, and \\(a\\) divides \\(b\\), then since \\(b &lt; a + 1000 \\le 2a\\), \\(b\\) must equal \\(a\\). In particular, since the number formed by the first row of the table divides the number in the first column (and both have the same first digit), these numbers must be equal; call their common value \\(n\\). Then, for \\(k = 2, 3,\\) or \\(4\\), we find that the number in the \\(k\\)th column and the number in the \\(k\\)th row have the same first digit (namely the \\(k\\)th digit of \\(n\\)), so by the same reasoning, they are equal. Also, the smallest number \\(b\\) formed by any column is divisible by the largest number \\(a\\) formed by any row, but by the symmetry just proven, \\(a\\) is also the largest number formed by any column, so \\(a \\ge b\\). Since \\(b\\) is divisible by \\(a\\), we must have equality. Then all columns contain the same number — and hence all rows also contain the same number — which is only possible if all 16 cells contain the same digit. Conversely, for each \\(d = 1, \\ldots, 9\\), filling in all 16 cells with the digit \\(d\\) clearly gives a table meeting the required condition, so we have exactly 9 such tables, one for each digit.</p>",
+      "answer": "9"
+    },
+    "10": {
+      "problem": "<p>Let \\(\\lfloor x \\rfloor\\) denote the greatest integer less than or equal to \\(x\\). How many positive integers less than 2005 can be expressed in the form \\(\\lfloor x \\lfloor x \\rfloor \\rfloor\\) for some positive real \\(x\\)?</p>",
+      "solutions": "<p>Let \\(\\{x\\} = x - \\lfloor x \\rfloor\\) be the fractional part of \\(x\\). Note that \\[\\lfloor x \\lfloor x \\rfloor \\rfloor = \\lfloor (\\lfloor x \\rfloor + \\{x\\}) \\lfloor x \\rfloor \\rfloor = \\lfloor x \\rfloor^2 + \\lfloor \\{x\\} \\lfloor x \\rfloor \\rfloor.\\]</p><p>Because \\(\\{x\\}\\) may take on any value in the half-open interval \\([0,1)\\), the quantity \\(\\lfloor \\{x\\} \\lfloor x \\rfloor \\rfloor\\) can take on any integer value between 0 and \\(\\lfloor x \\rfloor - 1\\), inclusive.</p><p>If \\(\\lfloor x \\rfloor = n\\), then \\(\\lfloor x \\lfloor x \\rfloor \\rfloor\\) can be any of the numbers \\(n^2, n^2+1, \\ldots, n^2+n-1\\). In other words, there are precisely \\(n\\) possible values that \\(\\lfloor x \\lfloor x \\rfloor \\rfloor\\) can take, and moreover, all of them are less than \\((n+1)^2\\). Because \\(44^2 + 43 = 1979 &lt; 2005\\) and \\(45^2 = 2025 &gt; 2005\\), \\(n\\) can range between 1 and 44, inclusive. Therefore, the answer is \\[\\sum_{n=1}^{44} n = \\frac{44 \\cdot 45}{2} = 990.\\]</p>",
+      "answer": "990"
+    }
+  }
+}

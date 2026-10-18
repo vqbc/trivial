@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2005,
+  "name": "Individual Round: Geometry Subject Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2005/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The volume of a cube (in cubic inches) plus three times the total length of its edges (in inches) is equal to twice its surface area (in square inches). How many inches long is its long diagonal?</p>",
+      "solutions": "<p>If the side length of the cube is \\(s\\) inches, then the condition implies \\(s^3 + 3\\cdot 12s = 2\\cdot 6s^2\\), or \\(s(s^2-12s+36) = s(s-6)^2 = 0\\). Therefore, \\(s=6\\), and the long diagonal has length \\(s\\sqrt{3} = 6\\sqrt{3}\\).</p>",
+      "answer": "6\\sqrt{3}"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABCD\\) be a regular tetrahedron with side length 2. The plane parallel to edges \\(AB\\) and \\(CD\\) and lying halfway between them cuts \\(ABCD\\) into two pieces. Find the surface area of one of these pieces.</p>",
+      "solutions": "<p>The plane intersects each face of the tetrahedron in a midline of the face; by symmetry it follows that the intersection of the plane with the tetrahedron is a square of side length 1. The surface area of each piece is half the total surface area of the tetrahedron plus the area of the square, that is, \\(\\frac{1}{2}\\cdot 4\\cdot \\frac{2^2\\sqrt{3}}{4} + 1 = 1+2\\sqrt{3}\\).</p>",
+      "answer": "1+2\\sqrt{3}"
+    },
+    "3": {
+      "problem": "<p>Let \\(ABCD\\) be a rectangle with area 1, and let \\(E\\) lie on side \\(CD\\). What is the area of the triangle formed by the centroids of triangles \\(ABE\\), \\(BCE\\), and \\(ADE\\)?</p>",
+      "solutions": "<p>Let the centroids of \\(ABE\\), \\(BCE\\), and \\(ADE\\) be denoted \\(X\\), \\(Y\\), and \\(Z\\), respectively. Let \\(d(P,QR)\\) denote the distance from \\(P\\) to line \\(QR\\). Since the centroid lies two-thirds of the distance from each vertex to the midpoint of the opposite edge, \\(d(X,AB) = d(Y,CD) = d(Z,CD) = \\frac{1}{3}BC\\), so \\(YZ\\) is parallel to \\(CD\\) and \\(d(X,YZ) = BC - \\frac{2}{3}BC = \\frac{1}{3}BC\\). Likewise, \\(d(Z,AD) = \\frac{1}{3}DE\\) and \\(d(Y,BC) = \\frac{1}{3}CE\\), so that since \\(YZ\\) is perpendicular to \\(AD\\) and \\(BC\\), we have that \\(YZ = CD - \\frac{1}{3}(DE+CE) = \\frac{2}{3}CD\\). Therefore, the area of \\(XYZ\\) is \\(\\frac{1}{2}(\\frac{1}{3}BC)(\\frac{2}{3}CD) = \\frac{1}{9}BC\\cdot CD = \\frac{1}{9}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2005_HMMT_February_Geometry/3-fig1.png\" width=\"269\" alt=\"\"></p>",
+      "answer": "\\frac{1}{9}"
+    },
+    "4": {
+      "problem": "<p>Let \\(XYZ\\) be a triangle with \\(\\angle X = 60^\\circ\\) and \\(\\angle Y = 45^\\circ\\). A circle with center \\(P\\) passes through points \\(A\\) and \\(B\\) on side \\(XY\\), \\(C\\) and \\(D\\) on side \\(YZ\\), and \\(E\\) and \\(F\\) on side \\(ZX\\). Suppose \\(AB=CD=EF\\). Find \\(\\angle XPY\\) in degrees.</p>",
+      "solutions": "<p>Since \\(PAB\\), \\(PCD\\), and \\(PEF\\) are all isosceles triangles with equal legs and equal bases, they are congruent. It follows that the heights of each are the same, so that \\(P\\) is equidistant from the sides of \\(XYZ\\). Therefore, \\(P\\) is the incenter and therefore lies on the angle bisectors of \\(XYZ\\). Thus \\(\\angle YXP = \\frac{1}{2}\\angle YXZ = 30^\\circ\\) and \\(\\angle PYX = \\frac{1}{2}\\angle ZYX = \\frac{45^\\circ}{2}\\). Therefore \\(\\angle XPY = 180^\\circ - 30^\\circ - \\frac{45^\\circ}{2} = \\frac{255^\\circ}{2}\\).</p>",
+      "answer": "\\frac{255}{2}"
+    },
+    "5": {
+      "problem": "<p>A cube with side length 2 is inscribed in a sphere. A second cube, with faces parallel to the first, is inscribed between the sphere and one face of the first cube. What is the length of a side of the smaller cube?</p>",
+      "solutions": "<p>First note that the long diagonal of the cube has length \\(2\\sqrt{3}\\), so the radius of the sphere is \\(\\sqrt{3}\\). Let \\(x\\) be the side length of the smaller cube. Then the distance from the center of the sphere to the far face of the smaller cube is \\(1+x\\), while the distance from the center of the far face to a vertex lying on the sphere is \\(\\frac{x\\sqrt{2}}{2}\\). Therefore, the square of the radius is \\(3 = (1+x)^2 + \\frac{x^2}{2}\\), or \\(3x^2+4x-4 = (3x-2)(x+2) = 0\\), so \\(x = \\frac{2}{3}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "6": {
+      "problem": "<p>A triangular piece of paper of area 1 is folded along a line parallel to one of the sides and pressed flat. What is the minimum possible area of the resulting figure?</p>",
+      "solutions": "<p>Let the triangle be denoted \\(ABC\\), and suppose we fold parallel to \\(BC\\). Let the distance from \\(A\\) to \\(BC\\) be \\(h\\), and suppose we fold along a line at a distance of \\(ch\\) from \\(A\\). We will assume that neither angle \\(B\\) nor \\(C\\) is obtuse, for the area of overlap will only be smaller if either is obtuse. If \\(c \\le \\frac{1}{2}\\), then \\(A\\) does not fold past the edge \\(BC\\), so the overlap is a triangle similar to the original with height \\(ch\\); the area of the figure is then \\(1-c^2 \\ge \\frac{3}{4}\\). Suppose \\(c &gt; \\frac{1}{2}\\), so that \\(A\\) does fold past \\(BC\\). Then the overlap is a trapezoid formed by taking a triangle of height \\(ch\\) similar to the original and removing a triangle of height \\((2c-1)h\\) similar to the original. The area of the resulting figure is thus \\(1-c^2+(2c-1)^2 = 3c^2-4c+2\\). This is minimized when \\(c = \\frac{2}{3}\\), when the area is \\(\\frac{2}{3} &lt; \\frac{3}{4}\\); the minimum possible area is therefore \\(\\frac{2}{3}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "7": {
+      "problem": "<p>Let \\(ABCD\\) be a tetrahedron such that edges \\(AB\\), \\(AC\\), and \\(AD\\) are mutually perpendicular. Let the areas of triangles \\(ABC\\), \\(ACD\\), and \\(ADB\\) be denoted by \\(x\\), \\(y\\), and \\(z\\), respectively. In terms of \\(x\\), \\(y\\), and \\(z\\), find the area of triangle \\(BCD\\).</p>",
+      "solutions": "<p>Place \\(A\\), \\(B\\), \\(C\\), and \\(D\\) at \\((0,0,0)\\), \\((b,0,0)\\), \\((0,c,0)\\), and \\((0,0,d)\\) in Cartesian coordinate space, with \\(b\\), \\(c\\), and \\(d\\) positive. Then the plane through \\(B\\), \\(C\\), and \\(D\\) is given by the equation \\(\\frac{x}{b}+\\frac{y}{c}+\\frac{z}{d}=1\\). The distance from the origin to this plane is then \\[\\frac{1}{\\sqrt{\\frac{1}{b^2}+\\frac{1}{c^2}+\\frac{1}{d^2}}} = \\frac{bcd}{\\sqrt{b^2c^2+c^2d^2+d^2b^2}} = \\frac{bcd}{2\\sqrt{x^2+y^2+z^2}}.\\]</p><p>Then if the area of \\(BCD\\) is \\(K\\), the volume of the tetrahedron is \\[\\frac{bcd}{6} = \\frac{bcdK}{6\\sqrt{x^2+y^2+z^2}},\\] implying \\(K = \\sqrt{x^2+y^2+z^2}\\).</p><p><b>Alternative Solution.</b> The area of \\(BCD\\) is also half the length of the cross product of the vectors \\(\\overrightarrow{BC} = (0,-c,d)\\) and \\(\\overrightarrow{BD} = (-b,0,d)\\). This cross product is \\((-cd,-db,-bc) = -2(y,z,x)\\), which has length \\(2\\sqrt{x^2+y^2+z^2}\\). Thus the area of \\(BCD\\) is \\(\\sqrt{x^2+y^2+z^2}\\).</p>",
+      "answer": "\\sqrt{x^2+y^2+z^2}"
+    },
+    "8": {
+      "problem": "<p>Let \\(T\\) be a triangle with side lengths 26, 51, and 73. Let \\(S\\) be the set of points inside \\(T\\) which do not lie within a distance of 5 of any side of \\(T\\). Find the area of \\(S\\).</p>",
+      "solutions": "<p>Note that the sides of \\(S\\) are parallel to the sides of \\(T\\), so \\(S\\) is a triangle similar to \\(T\\). The semiperimeter of \\(T\\) is \\(s = \\frac{1}{2}(26+51+73) = 75\\). By Heron’s formula, the area of \\(T\\) is \\(\\sqrt{75\\cdot 49\\cdot 24\\cdot 2} = 420\\). If \\(r\\) is the inradius of \\(T\\), then the area of \\(T\\) is \\(rs\\), so \\(r = 420/75 = 28/5\\). It follows that the inradius of \\(S\\) is \\(r-5 = 3/5\\), and the ratio of similitude between \\(S\\) and \\(T\\) is \\(3/28\\). Therefore, the area of \\(S\\) is \\(420\\cdot(3/28)^2 = 135/28\\).</p>",
+      "answer": "\\frac{135}{28}"
+    },
+    "9": {
+      "problem": "<p>Let \\(AC\\) be a diameter of a circle \\(\\omega\\) of radius 1, and let \\(D\\) be the point on \\(AC\\) such that \\(CD = 1/5\\). Let \\(B\\) be the point on \\(\\omega\\) such that \\(DB\\) is perpendicular to \\(AC\\), and let \\(E\\) be the midpoint of \\(DB\\). The line tangent to \\(\\omega\\) at \\(B\\) intersects line \\(CE\\) at the point \\(X\\). Compute \\(AX\\).</p>",
+      "solutions": "<p>We first show that \\(AX\\) is perpendicular to \\(AC\\). Let the tangent to \\(\\omega\\) at \\(A\\) intersect \\(CB\\) at \\(Z\\) and \\(CE\\) at \\(X'\\). Since \\(ZA\\) is parallel to \\(BD\\) and \\(BE = ED\\), \\(ZX' = X'A\\). Therefore, \\(X'\\) is the midpoint of the hypotenuse of the right triangle \\(ABZ\\), so it is also its circumcenter. Thus \\(X'A = X'B\\), and since \\(X'A\\) is tangent to \\(\\omega\\) and \\(B\\) lies on \\(\\omega\\), we must have that \\(X'B\\) is tangent to \\(\\omega\\), so \\(X = X'\\).</p><p>Let \\(O\\) be the center of \\(\\omega\\). Then \\(OD = \\frac{4}{5}\\), so \\(BD = \\frac{3}{5}\\) and \\(DE = \\frac{3}{10}\\). Then \\(AX = DE\\cdot\\frac{AC}{DC} = \\frac{3}{10}\\cdot\\frac{2}{1/5} = 3\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2005_HMMT_February_Geometry/9-fig1.png\" width=\"199\" alt=\"\"></p>",
+      "answer": "3"
+    },
+    "10": {
+      "problem": "<p>Let \\(AB\\) be the diameter of a semicircle \\(\\Gamma\\). Two circles, \\(\\omega_1\\) and \\(\\omega_2\\), externally tangent to each other and internally tangent to \\(\\Gamma\\), are tangent to the line \\(AB\\) at \\(P\\) and \\(Q\\), respectively, and to semicircular arc \\(AB\\) at \\(C\\) and \\(D\\), respectively, with \\(AP &lt; AQ\\). Suppose \\(F\\) lies on \\(\\Gamma\\) such that \\(\\angle FQB = \\angle CQA\\) and that \\(\\angle ABF = 80^\\circ\\). Find \\(\\angle PDQ\\) in degrees.</p>",
+      "solutions": "<p>Extend the semicircle centered at \\(O\\) to an entire circle \\(\\omega\\), and let the reflection of \\(F\\) over \\(AB\\) be \\(F'\\). Then \\(CQF'\\) is a straight line. Also, the homothety centered at \\(C\\) taking \\(\\omega_1\\) into \\(\\omega\\) takes \\(P\\) to a point \\(X\\) on \\(\\omega\\) and \\(AB\\) to the parallel line tangent to \\(\\omega\\) at \\(X\\). Therefore, \\(X\\) is the midpoint of semicircle \\(AXB\\), and \\(C\\), \\(P\\), \\(X\\) lie on a line. Similarly, \\(D\\), \\(Q\\), \\(X\\) lie on a line. So, \\[45^\\circ = \\angle XCB = \\angle PCB = \\angle PCQ + \\angle QCB = \\angle PCQ + 10^\\circ,\\] since \\(\\angle QCB = \\angle F'CB = \\angle F'AB = \\angle FAB = 90^\\circ - \\angle ABF = 10^\\circ\\). Thus \\(\\angle PCQ = 35^\\circ\\). We will show that \\(\\angle PCQ = \\angle PDQ\\) to get that \\(\\angle PDQ = 35^\\circ\\).</p><p>Note that \\(\\angle XPQ\\) subtends the sum of arcs \\(AC\\) and \\(BX\\), which is equal to arc \\(XC\\). Therefore \\(\\angle XPQ = \\angle CDX\\), so \\(CDQP\\) is cyclic and \\(\\angle PCQ = \\angle PDQ\\). The conclusion follows.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2005_HMMT_February_Geometry/10-fig1.png\" width=\"381\" alt=\"\"></p>",
+      "answer": "35"
+    }
+  }
+}

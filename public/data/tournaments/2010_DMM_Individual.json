@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2010,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2010/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Ana, Bob, Cho, Dan, and Eve want to use a microwave. In order to be fair, they choose a random order to heat their food in (all orders have equal probability). Ana’s food needs 5 minutes to cook, Bob’s food needs 7 minutes, Cho’s needs 1 minute, Dan’s needs 12 minutes, and Eve’s needs 5 minutes. What is the expected number of minutes Bob has to wait for his food to be done?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>\\(ABC\\) is an equilateral triangle. \\(H\\) lies in the interior of \\(ABC\\), and points \\(X, Y, Z\\) lie on sides \\(AB, BC, CA\\), respectively, such that \\(HX \\perp AB, HY \\perp BC, HZ \\perp CA\\). Furthermore, \\(HX = 2, HY = 3, HZ = 4\\). Find the area of triangle \\(ABC\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Amy, Ben, and Chime play a dice game. They each take turns rolling a die such that the first person to roll one of his favorite numbers wins. Amy’s favorite number is 1, Ben’s favorite numbers are 2 and 3, and Chime’s are 4, 5, and 6. Amy rolls first, Ben rolls second, and Chime rolls third. If no one has won after Chime’s turn, they repeat the sequence until someone has won. What’s the probability that Chime wins the game?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>A point \\(P\\) is chosen randomly in the interior of a square \\(ABCD\\). What is the probability that the angle \\(\\angle APB\\) is obtuse?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Let \\(ABCD\\) be the quadrilateral with vertices \\(A = (3, 9), B = (1, 1), C = (5, 3)\\), and \\(D = (a, b)\\), all of which lie in the first quadrant. Let \\(M\\) be the midpoint of \\(AB\\), \\(N\\) the midpoint of \\(BC\\), \\(O\\) the midpoint of \\(CD\\), and \\(P\\) the midpoint of \\(AD\\). If \\(MNOP\\) is a square, find \\((a, b)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Let \\(M\\) be the number of positive perfect cubes that divide \\(60^{60}\\). What is the prime factorization of \\(M\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Given that \\(x, y\\), and \\(z\\) are complex numbers with \\(|x| = |y| = |z| = 1\\), \\(x + y + z = 1\\) and \\(xyz = 1\\), find \\(|(x+2)(y+2)(z+2)|\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>If \\(f(x)\\) is a polynomial of degree 2008 such that \\(f(m) = \\frac{1}{m}\\) for \\(m = 1, 2, \\ldots, 2009\\), find \\(f(2010)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>A drunkard is randomly walking through a city when he stumbles upon a \\(2 \\times 2\\) sliding tile puzzle. The puzzle consists of a \\(2 \\times 2\\) grid filled with a blank square, as well as 3 square tiles, labeled 1, 2, and 3. During each turn you may fill the empty square by sliding one of the adjacent tiles into it. The following image shows the puzzle’s correct state, as well as two possible moves you can make:</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_DMM_Individual/9-fig1.png\" width=\"341\" alt=\"\"></p><p>Assuming that the puzzle is initially in an incorrect (but solvable) state, and that the drunkard will make completely random moves to try and solve it, how many moves is he expected to make before he restores the puzzle to its correct state?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>How many polynomials \\(p(x)\\) exist such that the coefficients of \\(p(x)\\) are a rearrangement of \\(\\{0, 1, 2, \\cdots, \\deg p(x)\\}\\) and all of the roots of \\(p(x)\\) are rational? (Note that the leading coefficient of \\(p(x)\\) must be nonzero.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

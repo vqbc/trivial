@@ -1,0 +1,58 @@
+{
+  "test": "SMT Calculus",
+  "year": 2019,
+  "name": "Calculus Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2019/calculus-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\(\\int_0^{2\\pi} \\theta^2\\, d\\theta\\).</p>",
+      "solutions": "<p>We see that the antiderivative is \\(\\frac{\\theta^3}{3}\\), so evaluation at the limits gives the answer.</p>",
+      "answer": "\\frac{8\\pi^3}{3}"
+    },
+    "2": {
+      "problem": "<p>Let \\(f(x) = x\\ln x + x\\). Solve \\(f'(x) = 0\\) for \\(x\\).</p>",
+      "solutions": "<p>By the product rule, \\(f'(x) = \\ln x + (x/x) + 1 = 2 + \\ln x = 0\\), so \\(x = \\boxed{e^{-2}}\\).</p>",
+      "answer": "e^{-2}"
+    },
+    "3": {
+      "problem": "<p>Compute \\(\\int_0^{\\pi/4} \\cos x - 2\\sin x \\sin 2x\\, dx\\).</p>",
+      "solutions": "<p><b>Solution 1.</b> There are many ways to do this, but here’s one: notice that \\[\\begin{aligned}\n\\cos x - 2\\sin x \\sin(2x) &amp;= \\cos x - 4\\sin^2 x \\cos x \\\\\n&amp;= \\cos x - 4(1-\\cos^2 x)\\cos x \\\\\n&amp;= 4\\cos^3 x - 3\\cos x \\\\\n&amp;= \\cos 3x,\n\\end{aligned}\\] so the antiderivative is \\(\\frac{1}{3}\\sin 3x\\), and we just evaluate at the appropriate endpoints to get \\(\\boxed{\\sqrt{2}/6}\\).</p><p><b>Solution 2.</b> Note that \\[\\cos x - 2\\sin x \\sin(2x) = \\cos x - 4\\sin^2 x \\cos x\\] So, \\[\\int_0^{\\pi/4} \\cos x - 4\\sin^2 x \\cos x = \\sin x - \\frac{4}{3}\\sin^3 x \\Big|_0^{\\pi/4} = \\boxed{\\sqrt{2}/6}\\]</p>",
+      "answer": "\\frac{\\sqrt{2}}{6}"
+    },
+    "4": {
+      "problem": "<p>Let \\(f_0(x) = (\\sqrt{e})^x\\), and recursively define \\(f_{n+1}(x) = f_n'(x)\\) for integers \\(n \\ge 0\\). Compute \\(\\sum_{i=0}^{\\infty} f_i(1)\\).</p>",
+      "solutions": "<p>Rewrite \\(f_0(x)\\) as \\(e^{x/2}\\). Then, we can see by induction that \\(f_n(x) = \\frac{1}{2^n} e^{x/2}\\), and hence the infinite sum is a geometric series with ratio \\(\\frac{1}{2}\\). To finish, we evaluate \\[\\sum_{i=0}^{\\infty} f_i(1) = \\sum_{i=0}^{\\infty} \\frac{1}{2^i} e^{1/2} = \\boxed{2\\sqrt{e}}\\]</p>",
+      "answer": "2\\sqrt{e}"
+    },
+    "5": {
+      "problem": "<p>Consider the parabola \\(y = ax^2 + 2019x + 2019\\). There exists exactly one circle which is centered on the \\(x\\)-axis and is tangent to the parabola at exactly two points. It turns out that one of these tangent points is \\((0, 2019)\\). Find \\(a\\). (Diagram below does not picture the specified parabola.) <img class=\"latexcenter\" src=\"/data/tournaments/2019_SMT_Calculus/5-fig1.png\" width=\"293\" alt=\"\"></p>",
+      "solutions": "<p>We work with a general parabola \\(ax^2+bx+c\\) with \\(a,b,c \\ne 0\\).</p><p>The vertex of the parabola has \\(x\\)-coordinate \\(-\\frac{b}{2a}\\), and we can see that if the circle is to be tangent to the parabola at exactly 2 points, then the circle’s center must be at \\(\\left(-\\frac{b}{2a}, 0\\right)\\).</p><p>Now, notice that the derivative of the parabola at \\((0,c)\\) is \\(b\\), so for the circle to be tangent at that point, the line from \\(\\left(-\\frac{b}{2a},0\\right)\\) to \\((0,c)\\) must have slope \\(-\\frac{1}{b}\\). This gives us the equation \\(\\frac{c}{b/2a} = -\\frac{1}{b}\\), which simplifies to \\(a = -\\frac{1}{2c}\\). Lastly, we plug in \\(c=2019\\) to get the answer.</p>",
+      "answer": "-\\frac{1}{4038}"
+    },
+    "6": {
+      "problem": "<p>What is the smallest natural number \\(n\\) for which the limit \\[\\lim_{x\\to 0} \\frac{\\sin^n x}{\\cos^2 x\\,(1-\\cos x)^3}\\] exists?</p>",
+      "solutions": "<p>First, note that the \\(\\cos^2 x\\) in the denominator converges to 1 always and can be ignored.</p><p>The Taylor series expansions of \\(\\sin x\\) and \\(1-\\cos x\\) to first order are \\(x\\) and \\(\\frac{x^2}{2}\\), respectively. That means that: \\[\\lim_{x\\to 0} \\frac{\\sin^n x}{\\cos^2 x\\,(1-\\cos x)^3} = \\lim_{x\\to 0} \\frac{x^n}{(x^2/2)^3}\\]</p><p>The limit exists exactly when the exponent of \\(x\\) in the numerator is at least the exponent of \\(x\\) in the denominator, so \\(n\\) must be at least \\(\\boxed{6}\\).</p>",
+      "answer": "6"
+    },
+    "7": {
+      "problem": "<p>Turn the graph of \\(y=\\frac{1}{x}\\) by \\(45^\\circ\\) counter-clockwise and consider the bowl-like top part of the curve (the part above \\(y=0\\)). We let a 2D fluid accumulate in this 2D bowl until the maximum depth of the fluid is \\(\\frac{2\\sqrt{2}}{3}\\). What’s the area of the fluid used?</p>",
+      "solutions": "<p>Observe that the level surface of the fluid, in the non-rotated system, is given by the line \\(x+y=2c\\), for some \\(c&gt;0\\). The \"depth\" of the fluid is then the distance from the point \\((1,1)\\) (at the bottom of the rotated graph) to the point \\((c,c)\\). This distance is \\(\\frac{2\\sqrt{2}}{3}\\), so it is clear that \\(c = \\frac{5}{3}\\). Thus, the region of fluid is the area bounded by the curves \\(y = \\frac{10}{3}-x\\) and \\(y=\\frac{1}{x}\\).</p><p>Through simple calculation, it is clear that these curves intersect at \\(\\left(\\frac{1}{3},3\\right)\\) and \\(\\left(3,\\frac{1}{3}\\right)\\). Hence, the area of fluid is given by \\[\\int_{1/3}^{3} \\frac{10}{3} - x - \\frac{1}{x}\\, dx = \\left[\\frac{10}{3}x - \\frac{1}{2}x^2 - \\ln x\\right]_{1/3}^{3} = \\boxed{\\frac{40}{9} - 2\\ln 3}\\]</p>",
+      "answer": "\\frac{40}{9} - 2\\ln 3"
+    },
+    "8": {
+      "problem": "<p>Compute \\[\\lim_{x\\to\\infty} \\left(\\left(1+\\frac{1}{x}\\right)^x x - ex\\right).\\]</p>",
+      "solutions": "<p><b>Solution 1.</b> Consider the substitution \\(y=\\frac{1}{x}\\). Then, the limit is \\[\\lim_{y\\to 0^+} \\frac{(1+y)^{1/y}-e}{y}.\\]</p><p>If we apply L’Hopital, we get \\[\\lim_{y\\to 0^+} \\frac{(1+y)^{-1+1/y}(y-(1+y)\\ln(1+y))}{y^2}.\\]</p><p>Notice that L’Hopital on \\(\\frac{y-(1+y)\\ln(1+y)}{y^2}\\) gives \\(-\\frac{\\ln(1+y)}{2y}\\), and L’Hopital on that gives \\(-\\frac{1}{2(1+y)}\\), which has limit \\(-\\frac{1}{2}\\) at \\(y=0\\).</p><p>Now, we claim that the limit of \\((1+y)^{-1+1/y}\\) is \\(e\\). To see this, notice that \\((1+y)^{-1}\\) tends to \\(1\\), and \\((1+y)^{1/y}\\) is just \\(\\left(1+\\frac{1}{x}\\right)^x\\), which has limit \\(e\\) as \\(x\\) goes to infinity.</p><p>Putting these together yields the answer \\(-1/2 \\times e = \\boxed{-e/2}\\).</p><p><b>Solution 2.</b> We can rewrite \\(\\left(1+\\frac{1}{x}\\right)^x\\) as \\(e^{x\\ln(1+\\frac{1}{x})}\\). Then, notice that the Taylor expansion of \\(\\ln(1+\\frac{1}{x})\\) is \\(x^{-1}-\\frac{x^{-2}}{2}+\\frac{x^{-3}}{3}-\\ldots\\). Moreover, the Taylor expansion of \\(e^y\\) is \\(1+y+\\frac{y^2}{2!}+\\frac{y^3}{3!}+\\ldots\\). Lastly, note that in the limit, we take \\(x\\) to \\(\\infty\\), i.e. we take \\(\\frac{1}{x}\\) to \\(0\\), so low-order terms like \\(x^{-1}\\) will become irrelevant.</p><p>Therefore, we see that \\(x\\ln\\left(1+\\frac{1}{x}\\right)\\) is \\(1-\\frac{x^{-1}}{2}+\\frac{x^{-2}}{3}-\\ldots\\). Next, \\(xe^{x\\ln(1+\\frac{1}{x})}\\) can be expanded as \\(x+\\left(x-\\frac{1}{2}\\right)+\\frac{1}{2!}\\left(x-\\frac{2}{2}\\right)+\\frac{1}{3!}\\left(x-\\frac{3}{2}\\right)+\\frac{1}{4!}\\left(x-\\frac{4}{2}\\right)+\\ldots\\), where one should take care as to when low-order terms may be ignored. Moreover, we can expand \\(ex\\) as \\(x+x+\\frac{x}{2!}+\\frac{x}{3!}+\\ldots\\), so the overall limit is just \\(-\\frac{1}{2}-\\frac{1}{1!\\cdot 2}-\\frac{1}{3!\\cdot 2}-\\ldots=\\boxed{-\\frac{e}{2}}\\).</p>",
+      "answer": "-\\frac{e}{2}"
+    },
+    "9": {
+      "problem": "<p>Magic liquid forms a cone whose circular base rests on the floor. Time is measured in seconds. At time \\(0\\), the cone has height and radius \\(1\\) cm. Let \\(R(t)\\) be the rate at which liquid evaporates in \\(\\text{cm}^3/\\text{s}\\) at time \\(t\\). As the liquid evaporates, the cone’s radius remains the same but its height decreases. Let \\(S(t)\\) be the surface area of the slanted part of the cone in \\(\\text{cm}^2\\) at time \\(t\\). If \\(R(t) = S(t)^2\\) (numerically in the specified units), how many seconds does it take for the liquid to evaporate entirely?</p>",
+      "solutions": "<p>The circumference of the bottom circle is always \\(2\\pi\\), and when the cone has height \\(h\\), the slanted portion can be cut and flattened so that \\(2\\pi\\) is the length of an arc along the circumference of a circle with radius \\(\\sqrt{h^2+1}\\), which should have circumference \\(2\\pi\\sqrt{h^2+1}\\). Thus, by examining ratios, we see that the surface area of the slanted portion is \\(\\pi\\sqrt{h^2+1}\\).</p><p>Denote the cone’s volume by \\(V\\) so that \\(V=\\frac{1}{3}\\pi h\\) and \\(\\frac{\\partial V}{\\partial t} = -R(t) = -S(t)^2 = -\\pi^2(h^2+1)\\). By the definition of \\(V\\), we also know that \\(\\frac{\\partial V}{\\partial t} = \\frac{\\pi}{3}\\frac{\\partial h}{\\partial t}\\). This gives us \\(\\int \\frac{dh}{h^2+1} = -3\\pi\\int dt\\), which we find yields \\(h = \\tan(C-3\\pi t)\\). The initial condition is that when \\(t=0\\), \\(h\\) is \\(1\\), so \\(C=\\frac{\\pi}{4}\\).</p><p>Therefore, \\(h\\) is \\(0\\) when \\(t\\) is \\(\\frac{\\pi}{4}\\cdot\\frac{1}{3\\pi} = \\boxed{\\frac{1}{12}}\\).</p>",
+      "answer": "\\frac{1}{12}"
+    },
+    "10": {
+      "problem": "<p>Compute \\[\\int_0^2 \\frac{\\ln(1+x)}{x^2-x+1}\\, dx.\\]</p>",
+      "solutions": "<p>First, we do the substitution \\(u=1+x\\), which gives \\[\\int_1^3 \\frac{\\ln u}{u^2-3u+3}\\, du.\\]</p><p>Then, the goal is to make a substitution such that we get a very similar integral with slightly different integrand. In particular, we want the denominator and the bounds to be the same, so we do the substitution \\(w=\\frac{3}{u}\\), which gives \\[-\\frac{1}{3}\\int_3^1 \\frac{1}{w^2}\\frac{\\ln 3-\\ln w}{\\frac{9}{w^2}-\\frac{9}{w}+1}\\, dw,\\] which simplifies to \\[\\int_1^3 \\frac{\\ln 3-\\ln w}{w^2-3w+3}\\, dw.\\]</p><p>Taking the average of these two \\(u\\) and \\(w\\) forms of writing the integral, we see that we need to calculate \\[\\frac{1}{2}\\int_1^3 \\frac{\\ln 3}{w^2-3w+3}\\, dw.\\]</p><p>Converting back to \\(x\\) and simplifying, we get \\[\\frac{\\ln 3}{2}\\int_0^2 \\frac{1}{\\left(x-\\frac{1}{2}\\right)^2+\\frac{3}{4}}\\, dx.\\]</p><p>This suggests that we make the trig substitution \\(2x-1=\\sqrt{3}\\tan\\theta\\), which gives us \\[\\frac{\\ln 3}{2}\\int_{-\\pi/6}^{\\pi/3} \\frac{1}{\\frac{3}{4}(\\tan^2\\theta+1)}\\cdot\\left(\\frac{\\sqrt{3}}{2}\\sec^2\\theta\\right)\\, d\\theta\\]</p><p>Plugging in the identity \\(\\tan^2\\theta+1=\\sec^2\\theta\\) and cancelling, we finally compute \\[\\frac{\\ln 3}{2}\\cdot\\frac{\\pi}{2}\\cdot\\frac{4}{3}\\cdot\\frac{\\sqrt{3}}{2}=\\boxed{\\frac{\\pi\\sqrt{3}}{6}\\ln 3}.\\]</p>",
+      "answer": "\\frac{\\pi\\sqrt{3}}{6}\\ln 3"
+    }
+  }
+}

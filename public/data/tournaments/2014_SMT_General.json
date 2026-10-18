@@ -1,0 +1,133 @@
+{
+  "test": "SMT General",
+  "year": 2014,
+  "name": "General Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2014/general-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute the unique positive integer that, when squared, is equal to six more than five times itself.</p>",
+      "solutions": "<p>The problem gives us the equation \\(x^2 = 5x + 6\\), which has solutions \\(x = \\boxed{6}\\) and \\(x = -1\\).</p>",
+      "answer": "6"
+    },
+    "2": {
+      "problem": "<p>Upon entering a tall building, you are confronted with a problem that has existed since the late nineteenth century—should you take the stairs, or the elevator? If you decide to take the stairs, it will take you 20 seconds to walk up each flight of stairs. If you decide to take the elevator, you will have to wait 3 minutes for the elevator to arrive, after which it will take 3 seconds to move up each floor. Compute the minimum number of floors for which taking the elevator takes less time than taking the stairs.</p>",
+      "solutions": "<p>Say we want to ascend \\(n\\) floors. By stairs, this takes \\(20n\\) seconds; by elevator, this takes \\(180 + 3n\\) seconds. Solving the inequality \\(180 + 3n &lt; 20n\\), we get \\(180 &lt; 17n\\) and \\(\\frac{180}{17} &lt; n\\). Since \\(\\frac{180}{17} = 10\\frac{10}{17}\\), \\(n\\) should be at least \\(\\boxed{11}\\).</p>",
+      "answer": "11"
+    },
+    "3": {
+      "problem": "<p>David flips a fair coin five times. Compute the probability that the fourth coin flip is the first coin flip that lands heads.</p>",
+      "solutions": "<p>David must flip three tails, then heads. This happens with probability \\(\\left(\\frac{1}{2}\\right)^4 = \\boxed{\\frac{1}{16}}\\).</p>",
+      "answer": "\\frac{1}{16}"
+    },
+    "4": {
+      "problem": "<p>The analog clock in front of you displays the time 3:40. Compute the number of degrees in the smaller angle formed by the minute hand and the hour hand of the clock.</p>",
+      "solutions": "<p>The angle between any two consecutive numbers is \\(\\frac{360^\\circ}{12} = 30^\\circ\\). The hour hand has moved \\(\\frac{2}{3}\\) of the way from the 3 to the 4, so the angle between the hour hand and 4 is \\(10^\\circ\\). Meanwhile, the angle between 4 and 8 is \\(30^\\circ \\cdot 4 = 120^\\circ\\). Thus, the total angle between the two hands is \\(10^\\circ + 120^\\circ = \\boxed{130}\\) degrees.</p>",
+      "answer": "130"
+    },
+    "5": {
+      "problem": "<p>Compute the smallest positive integer \\(x &gt; 100\\) such that every permutation of the digits of \\(x\\) is prime.</p>",
+      "solutions": "<p>Clearly, all digits must be odd. 111 obviously does not work, but \\(\\boxed{113}\\) does because 113, 131, and 311 are prime.</p>",
+      "answer": "113"
+    },
+    "6": {
+      "problem": "<p>Charles has a salary of $123,456,789 this year. Next year, his salary will increase by 300%. The year after, his salary will decrease by 75%. Compute his salary in two years.</p>",
+      "solutions": "<p>A 300% increase means his salary quadruples. A decrease by 75% leaves him with his original salary of \\(\\boxed{\\textdollar 123,456,789}\\).</p>",
+      "answer": "\\$123,456,789"
+    },
+    "7": {
+      "problem": "<p>Isosceles trapezoid \\(ABCD\\) has \\(AB = 10\\), \\(CD = 20\\), \\(BC = AD\\), and an area of 180. Compute the length of \\(BC\\).</p>",
+      "solutions": "<p>We have \\(180 = h \\cdot \\frac{AB+CD}{2} = h \\cdot 15\\), thus the height \\(h = 12\\). Dropping a perpendicular from \\(B\\) down to \\(CD\\) gives us a right triangle with legs of length \\(\\frac{20-10}{2} = 5\\) and \\(h = 12\\), so \\(BC\\) has length \\(\\sqrt{5^2 + 12^2} = \\boxed{13}\\).</p>",
+      "answer": "13"
+    },
+    "8": {
+      "problem": "<p>Ted has 2 red socks, 2 blue socks, and 2 green socks. He grabs three different socks at random. Compute the probability that they are all different colors.</p>",
+      "solutions": "<p>Ted first draws one sock. With probability \\(\\frac{4}{5}\\), the second sock he draws will not match the first sock. With probability \\(\\frac{2}{4}\\), the third sock he draws matches neither the first sock nor the second. Therefore, with probability \\(\\frac{4}{5} \\cdot \\frac{2}{4} = \\boxed{\\frac{2}{5}}\\), the three socks will all be different colors.</p>",
+      "answer": "\\frac{2}{5}"
+    },
+    "9": {
+      "problem": "<p>Compute the smallest positive integer with exactly 6 distinct factors.</p>",
+      "solutions": "<p>A number with exactly 6 distinct factors is of the form \\(a^5\\) or \\(a^2 b\\) where \\(a\\) and \\(b\\) are primes. The minimum value of the first is \\(2^5 = 32\\) and the minimum value of the second is \\(2^2 \\cdot 3 = 12\\). Thus, the overall minimum is \\(\\boxed{12}\\).</p>",
+      "answer": "12"
+    },
+    "10": {
+      "problem": "<p>The coordinates of three vertices of a parallelogram are \\(A(1,1)\\), \\(B(2,4)\\), and \\(C(-5,1)\\). Compute the area of the parallelogram.</p>",
+      "solutions": "<p>Note that the area of the parallelogram is double the area of triangle \\(ABC\\). If we take \\(AC\\) as the base of the triangle, the height is 3, so the area is \\(\\frac{3\\cdot 6}{2} = 9\\). Thus, the area of the parallelogram is \\(\\boxed{18}\\).</p>",
+      "answer": "18"
+    },
+    "11": {
+      "problem": "<p>Alice and Bob are playing a game in which Alice has a \\(\\frac{1}{3}\\) probability of winning, a \\(\\frac{1}{2}\\) probability of tying, and a \\(\\frac{1}{6}\\) probability of losing. Given that Alice and Bob played a game which did not end in a tie, compute the probability that Alice won.</p>",
+      "solutions": "<p>The probability is \\(\\frac{\\frac{1}{3}}{\\frac{1}{3}+\\frac{1}{6}} = \\boxed{\\frac{2}{3}}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "12": {
+      "problem": "<p>An infinite geometric sequence has a first term of 12, and all terms in the sequence sum to 9. Compute the common ratio between consecutive terms of the geometric sequence.</p>",
+      "solutions": "<p>We have \\(\\frac{12}{1-r} = 9\\), so \\(r = \\boxed{-\\frac{1}{3}}\\).</p>",
+      "answer": "-\\frac{1}{3}"
+    },
+    "13": {
+      "problem": "<p>We define a positive integer \\(p\\) to be <i>almost prime</i> if it has exactly one divisor other than 1 and \\(p\\). Compute the sum of the three smallest numbers which are almost prime.</p>",
+      "solutions": "<p>If a number is almost prime, then it must be the square of a prime. The three smallest numbers which are squares of primes are \\(2^2\\), \\(3^2\\), and \\(5^2\\), for an answer of \\(4+9+25 = \\boxed{38}\\).</p>",
+      "answer": "38"
+    },
+    "14": {
+      "problem": "<p>Let a 5 digit number be termed a “valley” number if the digits (not necessarily distinct) in the number \\(\\underline{a}\\ \\underline{b}\\ \\underline{c}\\ \\underline{d}\\ \\underline{e}\\) satisfy \\(a &gt; b &gt; c\\) and \\(c &lt; d &lt; e\\). Compute the number of valley numbers that start with 3.</p>",
+      "solutions": "<p>\\(b, c\\) can be \\(2,1\\), \\(2,0\\), or \\(1,0\\). If \\(c = 1\\), \\(2 \\le d \\le 9\\) and \\(d+1 \\le e \\le 9\\) and hence there are \\(7+6+\\ldots+1 = 28\\) possibilities (alternately, this is equivalent to choosing two distinct digits in the range 2 through 9 for a total of \\(\\binom{8}{2} = 28\\) possibilities). Similarly, for \\(c = 0\\) there are \\(8+7+\\ldots+1 = 36\\) possibilities (or \\(\\binom{9}{2} = 36\\) possibilities). Since there are two ways to obtain \\(c = 0\\) and one way to obtain \\(c = 1\\), there are \\(28+36+36 = \\boxed{100}\\) valley numbers.</p>",
+      "answer": "100"
+    },
+    "15": {
+      "problem": "<p>Given a regular 2014-gon, we construct 2014 isosceles triangles on the exterior of the polygon such that each isosceles triangle has an edge of the polygon as its base and has legs formed by the extensions of the two adjacent sides. Compute in degrees the largest angle of one such triangle.</p>",
+      "solutions": "<p>The internal angle at each vertex of the 2014-gon is \\(\\frac{2014-2}{2014}\\cdot 180^\\circ = \\frac{1006}{1007}\\cdot 180^\\circ\\) each. The base angles of the isosceles triangle are supplementary to the interior angles and hence equal \\(180^\\circ - \\frac{1006}{1007}\\cdot 180^\\circ = \\frac{1}{1007}\\cdot 180^\\circ\\). Lastly, the tip of the isosceles triangle has angle \\[180^\\circ - 2\\cdot\\frac{1}{1007}\\cdot 180^\\circ = \\boxed{\\frac{180900}{1007}}^\\circ.\\]</p>",
+      "answer": "\\frac{180900}{1007}"
+    },
+    "16": {
+      "problem": "<p>Including the leap years, compute the average number of days in a year. Express your answer as a mixed number. (Years that are evenly divisible by 4 are leap years. However years that are evenly divisible by 100 are not leap years, unless they are also evenly divisible by 400, in which case they are leap years.)</p>",
+      "solutions": "<p>\\[365 + \\left(\\frac{1}{4} - \\frac{1}{100} + \\frac{1}{400}\\right) = \\boxed{365\\frac{97}{400}}.\\]</p>",
+      "answer": "365\\frac{97}{400}"
+    },
+    "17": {
+      "problem": "<p>We say that a number is <i>arithmetically sequenced</i> if the digits, in order, form an arithmetic sequence. Compute the number of 4-digit positive integers which are arithmetically sequenced.</p>",
+      "solutions": "<p>There are 9 numbers with an arithmetic sequence of difference 0 (1111 through 9999). There are 6 with an arithmetic sequence of difference 1 (1234 through 6789). There are 3 with an arithmetic sequence of difference 2 (1357 through 3579). There are 7 with an arithmetic sequence of difference \\(-1\\) (3210 through 9876). There are 4 with difference \\(-2\\) (6420 through 9753), and there is 1 with a difference of \\(-3\\) (9630). The answer is therefore \\(9+6+3+7+4+1 = \\boxed{30}\\).</p>",
+      "answer": "30"
+    },
+    "18": {
+      "problem": "<p>Spencer eats ice cream in a right circular cone with an opening of radius 5 and a height of 10. If Spencer’s ice cream scoops are always perfectly spherical, compute the radius of the largest scoop he can get such that at least half of the scoop is contained within the cone.</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2014_SMT_General/18-fig1.png\" width=\"295\" alt=\"\"></p><p>Since the cone is symmetric, the points of tangency of the ice cream scoop to the cone make a circle on the inside of the cone. Furthermore, the center of the ice cream scoop must coincide with the center of the base of the cone. The slant height of the cone is \\(\\sqrt{5^2+10^2} = 5\\sqrt{5}\\), so from considering similar right triangles within a cross section of the cone (see above diagram), we get \\[\\frac{5}{5\\sqrt{5}} = \\frac{r}{10} \\implies r = \\boxed{2\\sqrt{5}}.\\]</p>",
+      "answer": "2\\sqrt{5}"
+    },
+    "19": {
+      "problem": "<p>Let \\(x\\) be a two-digit positive integer. Let \\(x'\\) be the number achieved by switching the two digits in \\(x\\) (for example: if \\(x = 24\\), \\(x' = 42\\)). Compute the number of \\(x\\)’s that exist such that \\(x + x'\\) is a perfect square.</p>",
+      "solutions": "<p>Let \\(x = 10a + b\\) where \\(1 \\le a \\le 9\\), \\(0 \\le b \\le 9\\). Then \\(x' = 10b + a\\), and \\(x + x' = 11(a + b)\\). Since \\(1 \\le a + b \\le 18\\), \\(a + b = 11\\) is the only possibility which yields the solutions \\(29, 38, 47, 56, 65, 74, 83, 92\\), which is \\(\\boxed{8}\\) numbers.</p>",
+      "answer": "8"
+    },
+    "20": {
+      "problem": "<p>For any 4-tuple \\((a_1, a_2, a_3, a_4)\\) where each entry is either \\(0\\) or \\(1\\), call it <i>quadratically satisfiable</i> if there exist real numbers \\(x_1, \\ldots, x_4\\) such that \\(x_1x_4^2 + x_2x_4 + x_3 = 0\\) and for each \\(i = 1, \\ldots, 4\\), \\(x_i\\) is positive if \\(a_i = 1\\) and negative if \\(a_i = 0\\). Find the number of <i>quadratically satisfiable</i> 4-tuples.</p>",
+      "solutions": "<p>First, we may assume \\(a_1 = 1\\) without loss of generality and multiply our answer by 2 at the end, since \\(ax^2 + bx + c = 0 \\Leftrightarrow -ax^2 - bx - c = 0\\). We can furthermore assume \\(x_1 = 1\\), since we can always divide the whole equation by \\(x_1\\) (since \\(x_1 &gt; 0\\)).</p><p>Hence, we now consider equations of the form \\(x_4^2 + bx_4 + c = 0\\) in which \\(b\\) and \\(c\\) are constrained to be either positive or negative. This yields four cases:</p><p>Case 1: If \\(b\\) and \\(c\\) are both positive, the two roots have positive product but negative sum, so they must both be negative i.e. \\(x_4 &lt; 0\\). Furthermore, \\(x_4 &lt; 0\\) is possible, e.g. \\(x_4^2 + 2x_4 + 1 = 0 \\implies x_4 = -1\\).</p><p>Case 2: If \\(b\\) is positive and \\(c\\) is negative, \\(x_4\\) may be positive or negative e.g. \\(x_4^2 + x_4 - 2 \\implies x_4 \\in \\{-2, 1\\}\\).</p><p>Case 3: If \\(b\\) is negative and \\(c\\) is positive, the two roots have positive product and positive sum, so they must both be positive i.e. \\(x_4 &gt; 0\\). Furthermore, \\(x_4 &gt; 0\\) is possible e.g. \\(x_4^2 - 2x_4 + 1 = 0 \\implies x_4 = 1\\).</p><p>Case 4: If \\(b\\) and \\(c\\) are both negative, \\(x_4\\) may be positive or negative e.g. \\(x_4^2 - x_4 - 2 = 0 \\implies x_4 \\in \\{-1, 2\\}\\).</p><p>Putting these cases together, we conclude that the answer is \\(\\boxed{12}\\).</p>",
+      "answer": "12"
+    },
+    "21": {
+      "problem": "<p>The tetrahedral dice printing company has misprogrammed their machines to print either 1, 2, 3, or 4 dots on each face, uniformly at random and independently. Compute the probability that the total number of dots on a random tetrahedral (four-sided) die is greater than 10.</p>",
+      "solutions": "<p>Since \\(10 = 1 + 2 + 3 + 4\\), by symmetry, the probability that the total number of dots is greater than 10 is equivalent to the probability that the total number is less than 10. The probability that the number is exactly 10 is \\(\\frac{4! + \\binom{4}{1} + \\binom{4}{2} + \\binom{4}{2} + \\binom{4}{1}}{4^4} = \\frac{11}{64}\\) since the sets of dots that total to 10 is \\(\\{1, 2, 3, 4\\}\\), \\(\\{2, 2, 2, 4\\}\\), \\(\\{1, 1, 4, 4\\}\\), \\(\\{2, 2, 3, 3\\}\\), and \\(\\{1, 3, 3, 3\\}\\). Thus the probability that the total number is greater than 10 is \\(\\frac{1 - \\frac{11}{64}}{2} = \\boxed{\\frac{53}{128}}\\).</p>",
+      "answer": "\\frac{53}{128}"
+    },
+    "22": {
+      "problem": "<p>For any positive integer \\(x \\ge 2\\), define \\(f(x)\\) to be the product of the distinct prime factors of \\(x\\). For example, \\(f(12) = 2 \\cdot 3 = 6\\). Compute the number of integers \\(2 \\le x &lt; 100\\) such that \\(f(x) &lt; 10\\).</p>",
+      "solutions": "<p>Clearly, \\(f(x) \\le x\\), so we can start with \\(2, 3, 4, 5, 6, 7, 8, 9\\). Then, any other \\(x\\) with \\(f(x) &lt; 10\\) will be one of these numbers multiplied by a prime (or multiple primes) that already divides it. Otherwise, if we multiply by a new prime, then that prime will contribute to \\(f(x)\\) and make it \\(\\ge 10\\).</p><p>Hence, we can investigate each of our starting numbers in turn. The new numbers in each row are bolded:</p><p>\\(2 \\to 2^n \\to 4, 8, \\textbf{16, 32, 64}\\)</p><p>\\(3 \\to 3^n \\to 9, \\textbf{27, 81}\\)</p><p>\\(4 \\to 2^n \\to 8, 16, 32, 64\\)</p><p>\\(5 \\to 5^n \\to \\textbf{25}\\)</p><p>\\(6 \\to 2^m \\cdot 3^n \\to \\textbf{12, 18, 24, 36, 48, 54, 72, 96}\\)</p><p>\\(7 \\to 7^n \\to \\textbf{49}\\)</p><p>\\(8 \\to 2^n \\to 16, 32, 64\\)</p><p>\\(9 \\to 3^n \\to 27, 81\\)</p><p>Hence, we have \\(2, 3, 4, 5, 6, 7, 8, 9, 12, 16, 18, 24, 25, 27, 32, 36, 48, 49, 54, 64, 72, 81, 96\\), for a total of \\(\\boxed{23}\\) numbers that work.</p>",
+      "answer": "23"
+    },
+    "23": {
+      "problem": "<p>For a positive integer \\(a\\), let \\(f(a)\\) be the average of all positive integers \\(b\\) such that \\(x^2 + ax + b\\) has integer solutions. Compute the unique value of \\(a\\) such that \\(f(a) = a\\).</p>",
+      "solutions": "<p>Note that we want the average of all \\(cd\\) such that \\(c\\) and \\(d\\) are positive integers and \\((x + c)(x + d) = x^2 + ax + b\\) (so \\(a = c + d\\) and \\(b = cd\\)). For \\(a = \\boxed{5}\\), this is the average of \\(1 \\cdot 4 = 4\\) and \\(2 \\cdot 3 = 6\\). For smaller \\(a\\), the average is smaller than \\(a\\). For larger \\(a\\), the average is larger than \\(a\\).</p>",
+      "answer": "5"
+    },
+    "24": {
+      "problem": "<p>Compute the number of ways there are to select three distinct lattice points in three-dimensional space such that the three points are collinear and no point has a coordinate with absolute value exceeding 1.</p>",
+      "solutions": "<p>Each dimension can be considered independently. There are five valid arrangements for the points of each dimension: \\((-1, -1, -1)\\), \\((0, 0, 0)\\), \\((1, 1, 1)\\), \\((-1, 0, 1)\\), and \\((1, 0, -1)\\). Naively, this gives us \\(5^3 = 125\\) different arrangements, but note that this counts all 27 arrangements where the points are not distinct. Therefore, we have \\(125 - 27 = 98\\) arrangements. Since order doesn’t matter, this method double counts everything, so our final answer is \\(98 / 2 = \\boxed{49}\\).</p>",
+      "answer": "49"
+    },
+    "25": {
+      "problem": "<p>Let \\(ABC\\) be a triangle such that \\(AB = 3\\), \\(BC = 4\\), and \\(AC = 5\\). Let \\(X\\) be a point in the triangle. Compute the minimal possible value of \\(AX^2 + BX^2 + CX^2\\).</p>",
+      "solutions": "<p>Let the perpendicular distance from \\(X\\) to \\(BC\\) and \\(BA\\) be \\(x\\) and \\(y\\), respectively. Then \\[AX^2 + BX^2 + CX^2 = x^2 + y^2 + (3 - x)^2 + (4 - y)^2 + x^2 + y^2\\]</p><p>Completing the square gives \\(3\\left(y - \\frac{4}{3}\\right)^2 + 3(x - 1)^2 + \\frac{50}{3}\\), which has minimum \\(\\boxed{\\frac{50}{3}}\\).</p>",
+      "answer": "\\frac{50}{3}"
+    }
+  }
+}

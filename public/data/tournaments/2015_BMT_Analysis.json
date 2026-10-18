@@ -1,0 +1,58 @@
+{
+  "test": "BMT Analysis",
+  "year": 2015,
+  "name": "Analysis",
+  "url": "https://berkeley.mt/resources/archives/bmt-2015/AnaS2015.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(x, y, z, w\\) be integers such that \\(2^x + 2^y + 2^z + 2^w = 24.375\\). Find the value of \\(xyzw\\).</p>",
+      "solutions": "<p>Note that \\(2^{-2} + 2^{-3} = \\frac{1}{4} + \\frac{1}{8} = 0.375\\). In addition, \\(2^4 + 2^3 = 16 + 8 = 24\\). Hence the final answer is \\((-2)(-3)(4)(3) = \\boxed{72}\\).</p>",
+      "answer": "72"
+    },
+    "2": {
+      "problem": "<p>Let \\(g(x) = 1 + 2x + 3x^2 + 4x^3 + \\ldots\\). Find the coefficient of \\(x^{2015}\\) of \\(f(x) = \\frac{g(x)}{1-x}\\).</p>",
+      "solutions": "<p>We have that \\[\\frac{1}{1-x} = 1 + x + x^2 + x^3 + x^4 \\ldots\\] \\[\\left(\\frac{1}{1-x}\\right)' = \\frac{1}{(1-x)^2} = 1 + 2x + 3x^2 + 4x^3 + \\ldots = g(x)\\] \\[g(x) = \\sum_{k=0}^{\\infty} (k+1)x^k\\]</p><p>Differentiating again we have \\[g(x)' = \\sum_{k=0}^{\\infty} (k+1)kx^{k-1} = \\left(\\frac{1}{(1-x)^2}\\right)' = \\frac{2}{(1-x)^3} = \\frac{2g(x)}{1-x} = 2f(x)\\] \\[\\sum_{k=0}^{\\infty} (k+1)kx^{k-1} = 2f(x)\\] \\[\\sum_{k=0}^{\\infty} \\frac{(k+1)k}{2}x^{k-1} = f(x)\\]</p><p>Hence the coefficient of \\(x^{2015}\\) will be \\(\\frac{(2017)(2016)}{2} = \\boxed{\\binom{2017}{2}}\\).</p>",
+      "answer": "\\binom{2017}{2}"
+    },
+    "3": {
+      "problem": "<p>Find all integer solutions to \\[\\begin{aligned}\nx^2 + 2y^2 + 3z^2 &amp;= 36, \\\\\n3x^2 + 2y^2 + z^2 &amp;= 84, \\\\\nxy + xz + yz &amp;= -7.\n\\end{aligned}\\]</p>",
+      "solutions": "<p>We add the first two equations: \\[\\begin{aligned}\nx^2 + 2y^2 + 3z^2 &amp;= 36 \\\\\n3x^2 + 2y^2 + z^2 &amp;= 84\n\\end{aligned}\\] to get \\(4x^2+4y^2+4z^2 = 120\\), i.e. \\(x^2+y^2+z^2=30\\). We can now put this equation into equation 1 and 2 to get \\(x^2 - z^2 = 24\\). Now adding two times \\(x^2+y^2+z^2=30\\) and two times \\(xy+xz+yz=-7\\) we have: \\[\\begin{aligned}\n2(x^2+y^2+z^2) + 2(xy+xz+yz) &amp;= (x+z)^2 + (x+y)^2 + (y+z)^2 \\\\\n&amp;= 2(30) + 2(-7) = 46.\n\\end{aligned}\\]</p><p>We can now check for integer solutions by plugging in the squares from 1 to 6 and then checking whether the remaining number can be expressed as the sum of two squares. (It might be helpful to know that a number can be expressed as the sum of two squares if and only if its factorization into distinct primes contains no odd powers of primes congruent to 3 modulo 4). We then see that the only solution that works is \\(6^2 + 3^2 + 1^2 = 36+9+1=46\\). Combining this with \\(x^2-z^2=24\\) we get that the only integer solutions are \\(\\boxed{(5,-2,1), (-5,2,-1)}\\).</p>",
+      "answer": "(5, -2, 1);\\ (-5, 2, -1)"
+    },
+    "4": {
+      "problem": "<p>Let \\(\\{a_n\\}\\) be a sequence of real numbers with \\(a_1 = -1, a_2 = 2\\) and for all \\(n \\ge 3\\), \\[a_{n+1} - a_n - a_{n+2} = 0.\\] Find \\(a_1 + a_2 + a_3 + \\ldots + a_{2015}\\).</p>",
+      "solutions": "<p>From the recurrence relation we have \\(a_n = a_{n+1} - a_{n+2} = a_{n+1} - (a_{n+1}+a_{n+3}) = -a_{n+3} = a_{n+6}\\). Hence the sequence cycles with period 6. Writing out the first few terms and noting that \\(2015 \\equiv 5 \\pmod 6\\), we get that \\(a_1 + a_2 + a_3 + \\ldots + a_{2015} = a_1+a_2+a_3+a_4+a_5 = -1+2+3+1-2 = \\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "5": {
+      "problem": "<p>Let \\(x\\) and \\(y\\) be real numbers satisfying the equation \\(x^2 - 4x + y^2 + 3 = 0\\). If the maximum and minimum values of \\(x^2 + y^2\\) are \\(M\\) and \\(m\\) respectively, compute the numerical value of \\(M - m\\).</p>",
+      "solutions": "<p>Completing the square we get \\(x^2-4x+y^2+3 = (x-2)^2+y^2=1\\). From here we see that \\(x^2+y^2\\) would be the square of distance from the origin to a point on the circle \\((x-2)^2+y^2=1\\). The maximum and minimum distance would then be 3 and 1 respectively so our answer is \\(9-1=\\boxed{8}\\).</p>",
+      "answer": "8"
+    },
+    "6": {
+      "problem": "<p>The roots of the equation \\(x^5 - 180x^4 + Ax^3 + Bx^2 + Cx + D = 0\\) are in geometric progression. The sum of their reciprocals is 20. Compute \\(|D|\\).</p>",
+      "solutions": "<p>Let the five roots be \\(a, ar, ar^2, ar^3, ar^4\\). We are then given that: \\[\\begin{aligned}\na(1+r+r^2+r^3+r^4) &amp;= 180 \\\\\n-a^5r^{10} &amp;= D \\\\\n\\frac{1}{a}+\\frac{1}{ar}+\\frac{1}{ar^2}+\\frac{1}{ar^3}+\\frac{1}{ar^4} &amp;= 20\n\\end{aligned}\\] from Vieta’s formulas. Now simplifying the third equation we have: \\[\\frac{1+r+r^2+r^3+r^4}{ar^4} = 20\\] \\[\\frac{180}{a^2r^4} = 20\\] \\[(ar^2)^2 = 9\\] \\[ar^2 = \\pm 3\\]</p><p>Hence \\(D = -(ar^2)^5 = -(\\pm 3)^5 = \\pm 243 \\implies |D| = \\boxed{243}\\).</p>",
+      "answer": "243"
+    },
+    "7": {
+      "problem": "<p>Evaluate \\(\\displaystyle\\sum_{k=0}^{37}(-1)^k\\binom{75}{2k}\\).</p>",
+      "solutions": "<p>By the binomial theorem we have \\((1+x)^{75} = \\sum_{k=0}^{75}\\binom{75}{k}x^k\\). Plugging in \\(i\\) we see that our sum \\(S = \\sum_{k=0}^{37}(-1)^k\\binom{75}{2k}\\) would be the real part of \\((1+i)^{75}\\). Hence converting \\(1+i\\) to polar form we have \\[(1+i)^{75} = \\left(\\sqrt{2}, \\pi/4\\right)^{75} = \\left(2^{75/2}, \\frac{75\\pi}{4}\\right) = \\left(2^{75/2}, \\frac{3\\pi}{4}\\right)\\] Computing the real part we have \\(S = \\operatorname{Re}\\left(2^{75/2}, \\frac{3\\pi}{4}\\right) = 2^{75/2}\\cos\\frac{3\\pi}{4} = \\boxed{-2^{37}}\\).</p>",
+      "answer": "-2^{37}"
+    },
+    "8": {
+      "problem": "<p>Let \\(\\omega\\) be a primitive 7th root of unity. Find \\[\\prod_{k=0}^{6}(1+\\omega^k-\\omega^{2k}).\\]</p><p>(A complex number is a primitive root of unity if and only if it can be written in the form \\(e^{2k\\pi i/n}\\), where \\(k\\) is relatively prime to \\(n\\).)</p>",
+      "solutions": "<p>Let \\(x_k = \\omega^k\\). Then \\[P = \\prod_{k=0}^{6}(1+x_k-x_k^2) = -\\prod_{k=0}^{6}(\\phi-x_k)(\\tau-x_k)\\] where \\(\\phi, \\tau\\) are the two solutions to \\(x^2-x-1=0\\). Since \\(\\omega\\) is a primitive root of unity, as we go over all powers we pick up all the roots of unity. Hence we must have that \\(P = -(\\phi-1)(\\phi-\\omega)(\\phi-\\omega^2)\\ldots(\\phi-\\omega^6)(\\tau-1)(\\tau-\\omega)(\\tau-\\omega^2)\\ldots(\\tau-\\omega^6) = -(\\phi^7-1)(\\tau^7-1)\\). Since both \\(\\phi,\\tau\\) satisfy \\(x^2=x+1\\), we have that \\[\\begin{aligned}\nx^7-1 &amp;= x*x^6-1 = x(x+1)^3-1 \\\\\n&amp;= x(x^3+3x^2+3x+1)-1 \\\\\n&amp;= x^2(x^2+3x+3)+x-1 \\\\\n&amp;= (x+1)(4x+4)+x-1 \\\\\n&amp;= 4x^2+9x+3 \\\\\n&amp;= 13x+7\n\\end{aligned}\\]</p><p>Now since \\(\\phi+\\tau=1, \\phi\\tau=-1\\), we have that \\[P = -(13\\phi+7)(13\\tau+7) = -(-169+91+49) = \\boxed{29}\\]</p>",
+      "answer": "29"
+    },
+    "9": {
+      "problem": "<p>Find \\[\\lim_{n\\to\\infty} \\frac{1}{n^3}\\left(\\sqrt{n^2-1}+\\sqrt{n^2-2^2}+\\ldots+\\sqrt{n^2-(n-1)^2}\\right).\\]</p>",
+      "solutions": "<p>We wish to find \\[L = \\lim_{n\\to\\infty}\\frac{1}{n^2}\\left(\\sqrt{n^2-1}+\\sqrt{n^2-2^2}+\\ldots+\\sqrt{n^2-(n-1)^2}\\right)\\] Bringing a factor of \\(1/n\\) into the square roots we have \\[L = \\lim_{n\\to\\infty}\\frac{1}{n}\\left(\\sqrt{1-\\frac{1}{n^2}}+\\sqrt{1-\\frac{2^2}{n^2}}+\\ldots+\\sqrt{1-\\frac{(n-1)^2}{n^2}}\\right)\\] \\[= \\lim_{n\\to\\infty}\\frac{1}{n}\\sum_{k=1}^{n}\\sqrt{1-\\left(\\frac{k}{n}\\right)^2}\\]</p><p>Notice this is a Riemann sum with \\(\\Delta = \\frac{1}{n}\\) and \\(x_k^* = \\frac{k}{n}\\). In the limit as \\(n\\) goes to infinity this converges to the integral \\(\\int_0^1 \\sqrt{1-x^2}\\,dx\\). This is just one quarter of the area of the unit circle so the final answer is \\(\\boxed{\\frac{\\pi}{4}}\\).</p><p><i>There was a typo in the actual test, \\(1/n^3\\) should have been \\(1/n^2\\).</i></p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "10": {
+      "problem": "<p>Evaluate \\[\\int_0^{\\pi/2} \\ln(4\\sin x)\\, dx.\\]</p>",
+      "solutions": "<p>We have that \\(I = \\int_0^{\\pi/2}\\ln(4\\sin x)\\,dx = \\int_0^{\\pi/2}\\ln(4\\cos x)\\,dx\\) since \\(\\sin x\\) and \\(\\cos x\\) take on the same values on the interval \\([0,\\pi/2]\\). Adding these we have \\[\\begin{aligned}\n2I &amp;= \\int_0^{\\pi/2}\\ln(4\\sin x)\\,dx + \\int_0^{\\pi/2}\\ln(4\\cos x)\\,dx \\\\\n&amp;= \\int_0^{\\pi/2}\\ln(16\\sin x\\cos x)\\,dx \\\\\n&amp;= \\int_0^{\\pi/2}\\ln(2)+\\ln(8\\sin x\\cos x)\\,dx \\\\\n&amp;= \\frac{\\pi\\ln 2}{2} + \\int_0^{\\pi/2}\\ln(4\\sin 2x)\\,dx\n\\end{aligned}\\]</p><p>Making the substitution \\(u=2x\\) and noting that \\(\\sin x\\) assumes the same values from \\([\\pi/2,\\pi]\\) as \\([0,\\pi/2]\\), we have: \\[\\begin{aligned}\n2I &amp;= \\frac{\\pi\\ln 2}{2} + \\frac{1}{2}\\int_0^{\\pi}\\ln(4\\sin u)\\,du \\\\\n&amp;= \\frac{\\pi\\ln 2}{2} + \\frac{1}{2}\\left(\\int_0^{\\pi/2}\\ln(4\\sin u)\\,du + \\int_{\\pi/2}^{\\pi}\\ln(4\\sin u)\\,du\\right) \\\\\n&amp;= \\frac{\\pi\\ln 2}{2} + \\frac{2I}{2}\n\\end{aligned}\\]</p><p>Hence we have \\(I = \\boxed{\\frac{\\pi\\ln 2}{2}}\\).</p>",
+      "answer": "\\frac{\\pi \\ln 2}{2}"
+    }
+  }
+}

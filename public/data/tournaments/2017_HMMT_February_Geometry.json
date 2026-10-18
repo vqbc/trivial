@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2017,
+  "name": "Geometry",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2017/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(A,B,C,D\\) be four points on a circle in that order. Also, \\(AB=3\\), \\(BC=5\\), \\(CD=6\\), and \\(DA=4\\). Let diagonals \\(AC\\) and \\(BD\\) intersect at \\(P\\). Compute \\(\\frac{AP}{CP}\\).</p>",
+      "solutions": "<p>Note that \\(\\triangle APB\\sim\\triangle DPC\\) so \\(\\frac{AP}{AB}=\\frac{DP}{CD}\\). Similarly, \\(\\triangle BPC\\sim\\triangle APD\\) so \\(\\frac{CP}{BC}=\\frac{DP}{DA}\\). Dividing these two equations yields \\[\\frac{AP}{CP}=\\frac{AB\\cdot DA}{BC\\cdot CD}=\\frac{2}{5}.\\]</p>",
+      "answer": "\\frac{2}{5}"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB=13\\), \\(BC=14\\), and \\(CA=15\\). Let \\(\\ell\\) be a line passing through two sides of triangle \\(ABC\\). Line \\(\\ell\\) cuts triangle \\(ABC\\) into two figures, a triangle and a quadrilateral, that have equal perimeter. What is the maximum possible area of the triangle?</p>",
+      "solutions": "<p>There are three cases: \\(\\ell\\) intersects \\(AB,AC\\), \\(\\ell\\) intersects \\(AB,BC\\), and \\(\\ell\\) intersects \\(AC,BC\\). These cases are essentially identical, so let \\(\\ell\\) intersect segment \\(AB\\) at \\(M\\) and segment \\(AC\\) at \\(N\\).</p><p>Then the condition is equivalent to \\[AM+MN+AN=MB+BC+CN+MN\\] \\[AM+AN=MB+CN+15\\] but \\(AN+CN=14\\) and \\(AM+BM=13\\), so that \\[BM+CN=27-AM-AN=AM+AN-15\\] implying that \\(AM+AN=21\\).</p><p>Now let \\(\\angle BAC=\\theta\\) for convenience, so that \\[[AMN]=\\frac{1}{2}AM\\cdot AN\\cdot\\sin\\theta\\] which is maximized when \\(AM=AN=\\frac{21}{2}\\). Further we can easily calculate \\(\\sin\\theta=\\frac{12}{13}\\) (e.g. by LOC); note that this is why the area is maximized in this case (we want to maximize \\(\\sin\\theta\\), which is equivalent to maximizing \\(\\theta\\), so \\(\\theta\\) should be opposite the largest side). Our answer is thus \\[\\frac{1}{2}\\cdot\\frac{21}{2}\\cdot\\frac{21}{2}\\cdot\\frac{12}{13}=\\frac{1323}{26}.\\]</p><p>Alternatively we could also calculate \\[\\begin{aligned}\n[AMN]&amp;=[ABC]\\cdot\\frac{AM}{AB}\\cdot\\frac{AN}{AC}\\\\\n&amp;=84\\cdot\\frac{\\frac{21}{2}}{13}\\cdot\\frac{\\frac{21}{2}}{14}\n\\end{aligned}\\] which gives the same answer.</p>",
+      "answer": "\\frac{1323}{26}"
+    },
+    "3": {
+      "problem": "<p>Let \\(S\\) be a set of \\(2017\\) distinct points in the plane. Let \\(R\\) be the radius of the smallest circle containing all points in \\(S\\) on either the interior or boundary. Also, let \\(D\\) be the longest distance between two of the points in \\(S\\). Let \\(a,b\\) are real numbers such that \\(a\\le\\frac{D}{R}\\le b\\) for all possible sets \\(S\\), where \\(a\\) is as large as possible and \\(b\\) is as small as possible. Find the pair \\((a,b)\\).</p>",
+      "solutions": "<p>It is easy to verify that the smallest circle enclosing all the points will either have some \\(2\\) points in \\(S\\) as its diameter, or will be the circumcircle of some \\(3\\) points in \\(S\\) who form an acute triangle.</p><p>Now, clearly \\(\\frac{D}{R}\\le2\\). Indeed consider the two farthest pair of points \\(S_1,S_2\\). Then \\(D=|S_1S_2|\\le2R\\), as both points \\(S_1,S_2\\) are inside a circle of radius \\(R\\). We can achieve this upper bound by taking \\(S\\) to have essentially only \\(2\\) points, and the remaining \\(2015\\) points in \\(S\\) are at the same place as these \\(2\\) points.</p><p>For the other direction, I claim \\(\\frac{D}{R}\\ge\\sqrt{3}\\). Recall that the smallest circle is either the circumcircle of \\(3\\) points, or has some \\(2\\) points as the diameter. In the latter case, say the diameter is \\(S_1S_2\\). Then \\(D\\ge|S_1S_2|=2R\\), so \\(\\frac{D}{R}\\ge2\\) in that case. Now say the points \\(S_1,S_2,S_3\\) are the circumcircle. WLOG, say that \\(S_1S_2\\) is the longest side of the triangle. As remarked above, we can assume this triangle is acute. Therefore, \\(\\frac{\\pi}{3}\\le\\angle S_1S_3S_2\\le\\frac{\\pi}{2}\\). By the Law of Sines we have that \\[D\\ge|S_1S_2|=2R\\sin\\angle S_1S_3S_2\\ge2R\\sin\\frac{\\pi}{3}=R\\sqrt{3}.\\] This completes the proof. To achieve equality, we can take \\(S\\) to have \\(3\\) points in the shape of an equilateral triangle.</p>",
+      "answer": "(\\sqrt{3}, 2)"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABCD\\) be a convex quadrilateral with \\(AB=5\\), \\(BC=6\\), \\(CD=7\\), and \\(DA=8\\). Let \\(M,P,N,Q\\) be the midpoints of sides \\(AB,BC,CD,DA\\) respectively. Compute \\(MN^2-PQ^2\\).</p>",
+      "solutions": "<p>Draw in the diagonals of the quad and use the median formula three times to get \\(MN^2\\) in terms of the diagonals. Do the same for \\(PQ^2\\) and subtract, the diagonal length terms disappear and the answer is \\[\\frac{BC^2+DA^2-AB^2-CD^2}{2}=13.\\]</p>",
+      "answer": "13"
+    },
+    "5": {
+      "problem": "<p>Let \\(ABCD\\) be a quadrilateral with an inscribed circle \\(\\omega\\) and let \\(P\\) be the intersection of its diagonals \\(AC\\) and \\(BD\\). Let \\(R_1,R_2,R_3,R_4\\) be the circumradii of triangles \\(APB,BPC,CPD,DPA\\) respectively. If \\(R_1=31\\) and \\(R_2=24\\) and \\(R_3=12\\), find \\(R_4\\).</p>",
+      "solutions": "<p>Note that \\(\\angle APB=180^\\circ-\\angle BPC=\\angle CPD=180^\\circ-\\angle DPA\\) so \\(\\sin APB=\\sin BPC=\\sin CPD=\\sin DPA\\). Now let \\(\\omega\\) touch sides \\(AB,BC,CD,DA\\) at \\(E,F,G,H\\) respectively. Then \\(AB+CD=AE+BF+CG+DH=BC+DA\\) so \\[\\frac{AB}{\\sin APB}+\\frac{CD}{\\sin CPD}=\\frac{BC}{\\sin BPC}+\\frac{DA}{\\sin DPA}\\] and by the Extended Law of Sines this implies \\[2R_1+2R_3=2R_2+2R_4\\] which immediately yields \\(R_4=R_1+R_3-R_2=19\\).</p>",
+      "answer": "19"
+    },
+    "6": {
+      "problem": "<p>In convex quadrilateral \\(ABCD\\) we have \\(AB=15\\), \\(BC=16\\), \\(CD=12\\), \\(DA=25\\), and \\(BD=20\\). Let \\(M\\) and \\(\\gamma\\) denote the circumcenter and circumcircle of \\(\\triangle ABD\\). Line \\(CB\\) meets \\(\\gamma\\) again at \\(F\\), line \\(AF\\) meets \\(MC\\) at \\(G\\), and line \\(GD\\) meets \\(\\gamma\\) again at \\(E\\). Determine the area of pentagon \\(ABCDE\\).</p>",
+      "solutions": "<p>Note that \\(\\angle ADB=\\angle DCB=90^\\circ\\) and \\(BC\\parallel AD\\). Now by Pascal theorem on \\(DDEBFA\\) implies that \\(B,M,E\\) are collinear. So \\([ADE]=[ABD]=150\\) and \\([BCD]=96\\), so the total area is \\(396\\).</p>",
+      "answer": "396"
+    },
+    "7": {
+      "problem": "<p>Let \\(\\omega\\) and \\(\\Gamma\\) by circles such that \\(\\omega\\) is internally tangent to \\(\\Gamma\\) at a point \\(P\\). Let \\(AB\\) be a chord of \\(\\Gamma\\) tangent to \\(\\omega\\) at a point \\(Q\\). Let \\(R\\ne P\\) be the second intersection of line \\(PQ\\) with \\(\\Gamma\\). If the radius of \\(\\Gamma\\) is \\(17\\), the radius of \\(\\omega\\) is \\(7\\), and \\(\\frac{AQ}{BQ}=3\\), find the circumradius of triangle \\(AQR\\).</p>",
+      "solutions": "<p>Let \\(r\\) denote the circumradius of triangle \\(AQR\\). By Archimedes Lemma, \\(R\\) is the midpoint of arc \\(AB\\) of \\(\\Gamma\\). Therefore \\(\\angle RAQ=\\angle RPB=\\angle RPA\\) so \\(\\triangle RAQ\\sim\\triangle RPA\\). By looking at the similarity ratio between the two triangles we have \\[\\frac{r}{17}=\\frac{AQ}{AP}.\\] Now, let \\(AP\\) intersect \\(\\omega\\) again at \\(X\\ne P\\). By homothety we have \\(XQ\\parallel AR\\) so \\[\\frac{AX}{AP}=1-\\frac{PQ}{PR}=1-\\frac{7}{17}=\\frac{10}{17}.\\] But we also know \\[AX\\cdot AP=AQ^2\\] so \\[\\frac{10}{17}AP^2=AQ^2.\\] Thus \\[\\frac{r}{17}=\\frac{AQ}{AP}=\\sqrt{\\frac{10}{17}}\\] so we compute \\(r=\\sqrt{170}\\) as desired.</p>",
+      "answer": "\\sqrt{170}"
+    },
+    "8": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with circumradius \\(R=17\\) and inradius \\(r=7\\). Find the maximum possible value of \\(\\sin\\frac{A}{2}\\).</p>",
+      "solutions": "<p>Letting \\(I\\) and \\(O\\) denote the incenter and circumcenter of triangle \\(ABC\\) we have by the triangle inequality that \\[AO\\le AI+OI\\implies R\\le\\frac{r}{\\sin\\frac{A}{2}}+\\sqrt{R(R-2r)}\\] and by plugging in our values for \\(r\\) and \\(R\\) we get \\[\\sin\\frac{A}{2}\\le\\frac{17+\\sqrt{51}}{34}\\] as desired. Equality holds when \\(ABC\\) is isosceles and \\(I\\) lies between \\(A\\) and \\(O\\).</p>",
+      "answer": "\\frac{17+\\sqrt{51}}{34}"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABC\\) be a triangle, and let \\(BCDE,CAFG,ABHI\\) be squares that do not overlap the triangle with centers \\(X,Y,Z\\) respectively. Given that \\(AX=6\\), \\(BY=7\\), and \\(CZ=8\\), find the area of triangle \\(XYZ\\).</p>",
+      "solutions": "<p>By the degenerate case of Von Aubel’s Theorem we have that \\(YZ=AX=6\\) and \\(ZX=BY=7\\) and \\(XY=CZ=8\\) so it suffices to find the area of a \\(6-7-8\\) triangle which is given by \\(\\frac{21\\sqrt{15}}{4}\\).</p><p>To prove that \\(AX=YZ\\), note that by LoC we get \\[YX^2=\\frac{b^2}{2}+\\frac{c^2}{2}+bc\\sin\\angle A\\] and \\[\\begin{aligned}\nAX^2\n&amp;=b^2+\\frac{a^2}{2}-ab(\\cos\\angle C-\\sin\\angle C)\\\\\n&amp;=c^2+\\frac{a^2}{2}-ac(\\cos\\angle B-\\sin\\angle B)\\\\\n&amp;=\\frac{b^2+c^2+a(b\\sin\\angle C+c\\sin\\angle B)}{2}\\\\\n&amp;=\\frac{b^2}{2}+\\frac{c^2}{2}+ah\n\\end{aligned}\\] where \\(h\\) is the length of the \\(A\\)-altitude of triangle \\(ABC\\). In these calculations we used the well-known fact that \\(b\\cos\\angle C+c\\cos\\angle B=a\\) which can be easily seen by drawing in the \\(A\\)-altitude. Then since \\(bc\\sin\\angle A\\) and \\(ah\\) both equal twice the area of triangle \\(ABC\\), we are done.</p>",
+      "answer": "\\frac{21\\sqrt{15}}{4}"
+    },
+    "10": {
+      "problem": "<p>Let \\(ABCD\\) be a quadrilateral with an inscribed circle \\(\\omega\\). Let \\(I\\) be the center of \\(\\omega\\) let \\(IA=12\\), \\(IB=16\\), \\(IC=14\\), and \\(ID=11\\). Let \\(M\\) be the midpoint of segment \\(AC\\). Compute \\(\\frac{IM}{IN}\\), where \\(N\\) is the midpoint of segment \\(BD\\).</p>",
+      "solutions": "<p>Let points \\(W,X,Y,Z\\) be the tangency points between \\(\\omega\\) and lines \\(AB,BC,CD,DA\\) respectively. Now invert about \\(\\omega\\). Then \\(A',B',C',D'\\) are the midpoints of segments \\(ZW,WX,XY,YZ\\) respectively.</p><p>Thus by Varignon’s Theorem \\(A'B'C'D'\\) is a parallelogram. Then the midpoints of segments \\(A'C'\\) and \\(B'D'\\) coincide at a point \\(P\\). Note that figure \\(IA'PC'\\) is similar to figure \\(ICMA\\) with similitude ratio \\(\\frac{r^2}{IA\\cdot IC}\\) where \\(r\\) is the radius of \\(\\omega\\). Similarly figure \\(IB'PD'\\) is similar to figure \\(IDMB\\) with similitude ratio \\(\\frac{r^2}{IB\\cdot ID}\\). Therefore \\[IP=\\frac{r^2}{IA\\cdot IC}\\cdot IM=\\frac{r^2}{IB\\cdot ID}\\cdot IN\\] which yields \\[\\frac{IM}{IN}=\\frac{IA\\cdot IC}{IB\\cdot ID}=\\frac{12\\cdot14}{16\\cdot11}=\\frac{21}{22}.\\]</p>",
+      "answer": "\\frac{21}{22}"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "BMT Algebra",
+  "year": 2019,
+  "name": "Algebra Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2019/algebra-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many integers \\(x\\) satisfy \\(x^2 - 9x + 18 &lt; 0\\)?</p>",
+      "solutions": "<p>We factor the left side as \\((x-6)(x-3)\\). For it to be negative, exactly one of the two factors must be negative; it follows that \\(x\\) must be strictly between \\(3\\) and \\(6\\). Thus, \\(x\\) can be \\(4\\) or \\(5\\), meaning that there are \\(\\boxed{2}\\) integers that satisfy \\(x^2-9x+18&lt;0\\).</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>Find the point \\(p\\) in the first quadrant on the line \\(y=2x\\) such that the distance between \\(p\\) and \\(p'\\), the point reflected across the line \\(y=x\\), is equal to \\(\\sqrt{32}\\).</p>",
+      "solutions": "<p>The point \\(p\\) has coordinates \\((k, 2k)\\), and the point \\(p'\\) has coordinates \\((2k, k)\\). The distance between these two, by the Pythagorean theorem, is \\(k\\sqrt{2}\\). Thus, \\(k=4\\), and our answer is \\(\\boxed{(4,8)}\\).</p>",
+      "answer": "(4, 8)"
+    },
+    "3": {
+      "problem": "<p>There are several pairs of integers \\((a,b)\\) satisfying \\(a^2 - 4a + b^2 - 8b = 30\\). Find the sum of the sum of the coordinates of all such points.</p>",
+      "solutions": "<p>We complete the squares to obtain \\((a-2)^2 + (b-4)^2 = 50\\). This is a circle, so the points we need to find have a centroid of \\((2,4)\\). There are \\(12\\) such points since \\(50 = (\\pm 5)^2 + (\\pm 5)^2 = (\\pm 1)^2 + (\\pm 7)^2 = (\\pm 7)^2 + (\\pm 1)^2\\). Our answer, therefore, is \\((4+2)\\cdot 12 = \\boxed{72}\\).</p>",
+      "answer": "72"
+    },
+    "4": {
+      "problem": "<p>Two real numbers \\(x\\) and \\(y\\) are both chosen at random from the closed interval \\([-10, 10]\\). Find the probability that \\(x^2+y^2&lt;10\\). Express your answer as a common fraction in terms of \\(\\pi\\).</p>",
+      "solutions": "<p>Our locus of potential points is a square with side length \\(20\\) and area \\(400\\). The points within this square that satisfy \\(x^2+y^2&lt;10\\) lie within a circle with radius \\(\\sqrt{10}\\) and area \\(10\\pi\\). Our answer is the ratio of these two areas, so it is \\(\\frac{\\pi}{40}\\).</p>",
+      "answer": "\\frac{\\pi}{40}"
+    },
+    "5": {
+      "problem": "<p>Find the sum of all real solutions to \\((x^2-10x-12)^{x^2+5x+2}=1\\)</p>",
+      "solutions": "<p>For this to be true \\(x^2-10x-12\\) has to be either \\(1\\) or \\(-1\\) or \\(x^2+5x+2\\) has to be \\(0\\). The first case has two solutions that sum to \\(10\\). The second case has \\(x^2-10x-12=-1\\) when \\(x\\) is \\(11\\) or \\(-1\\). Note that the exponent must be even in this case. Both of these solutions work as well, and these also sum to \\(10\\). Finally, for the third case we see that there are two solutions that sum to \\(-5\\). Our total is thus \\(10+10+(-5)=15\\).</p>",
+      "answer": "15"
+    },
+    "6": {
+      "problem": "<p>Find the maximum value of \\(\\frac{x}{y}\\) if \\(x\\) and \\(y\\) are real numbers such that \\(x^2+y^2-8x-6y+20=0\\).</p>",
+      "solutions": "<p>We note that \\((x,y)\\) are points on a circle centered at \\((4,3)\\) with radius \\(\\sqrt{5}\\). We note that these points are strictly in the first quadrant. We note that the value \\(\\frac{x}{y}\\) is the reciprocal of the slope of the line from the origin to the point on the circle. We thus want to minimize the slope of this line. This line is thus the line that is tangent to the circle from below and goes through the origin. Let this line be \\(y=kx\\). We then use the point to line formula to obtain the distance from the center of the circle to the line to be \\(\\frac{|4k-3|}{\\sqrt{k^2+1}}\\). We know that this must equal the radius of the circle. We then have the equation \\(\\frac{|4k-3|}{\\sqrt{k^2+1}} = \\sqrt{5}\\). We multiply out the denominator and square both sides to obtain \\(16k^2-24k+9=5k^2+5\\). We then simplify this to \\(11k^2-24k+4=0\\). We use the quadratic formula to obtain roots \\(\\frac{24\\pm\\sqrt{400}}{22}\\). We want a minimal slope, so our \\(k\\) is \\(\\frac{4}{22}\\), and thus our answer is \\(\\frac{11}{2}\\).</p>",
+      "answer": "\\frac{11}{2}"
+    },
+    "7": {
+      "problem": "<p>Let \\(r_1, r_2, r_3\\) be the (possibly complex) roots of the polynomial \\(x^3+ax^2+bx+\\frac{4}{3}\\). How many pairs of integers \\(a,b\\) exist such that \\(r_1^3+r_2^3+r_3^3=0\\)?</p>",
+      "solutions": "<p>Using the factorization of \\(a^3+b^3+c^3-3abc\\), we see that \\(r_1^3+r_2^3+r_3^3=(-a)(a^2-3b)-3c=0\\). Substituting for \\(c\\), we see \\(a(a^2-3b)=-4\\). \\(a\\) must be a factor of \\(4\\), so we try \\(-4,-2,-1,1,2,4\\) to find solutions \\((2,2), (-1,-1)\\), and \\((-4,5)\\).</p>",
+      "answer": "3"
+    },
+    "8": {
+      "problem": "<p>A biased coin has a \\(\\frac{6+2\\sqrt{3}}{12}\\) chance of landing heads, and a \\(\\frac{6-2\\sqrt{3}}{12}\\) chance of landing tails. What is the probability that the number of times the coin lands heads after being flipped \\(100\\) times is a multiple of \\(4\\)? The answer can be expressed as \\(\\frac{1}{4}+\\frac{1+a^b}{c\\cdot d^e}\\) where \\(a,b,c,d,e\\) are positive integers. Find the minimal possible value of \\(a+b+c+d+e\\).</p>",
+      "solutions": "<p>Let \\(a\\) be the probability of landing heads and let \\(b\\) be the probability of landing tails. We need to find the sum of the terms of \\((a+b)^{100}\\) that have exponents that are a multiple of \\(4\\). We first note that the sum of the even exponent terms is equal to \\(\\frac{(a+b)^{100}+(a-b)^{100}}{2}\\). We then note that the alternating sum of even exponent terms is the real part of \\((a+ib)^{100}\\). Thus our desired answer is \\(\\frac{1}{2}\\left(\\frac{(a+b)^{100}+(a-b)^{100}}{2} + \\text{real}[(a+ib)^{100}]\\right)\\). We know \\(a+b=1\\) and \\(a-b=\\frac{\\sqrt{3}}{3}\\). Furthermore, we note that \\(a=\\frac{\\sqrt{6}}{3}\\cos(\\frac{\\pi}{12})\\) and \\(b=\\frac{\\sqrt{6}}{3}\\sin(\\frac{\\pi}{12})\\). Thus \\(a+ib=\\frac{\\sqrt{6}}{3}e^{i\\frac{\\pi}{12}}\\). We can then compute \\((a+ib)^{100}\\) to be \\(\\frac{2^{50}}{3^{50}}e^{i\\frac{\\pi}{3}}\\). The real part of this is equal to \\(\\frac{2^{49}}{3^{50}}\\). We then compute our final probability which turns out to be \\(\\frac{1}{4}+\\frac{1+2^{50}}{4\\cdot 3^{50}} = \\frac{1}{4}+\\frac{1+4^{25}}{4\\cdot 9^{25}}\\). Thus, our final answer is \\(4+25+4+9+25=67\\).</p>",
+      "answer": "67"
+    },
+    "9": {
+      "problem": "<p>Let \\(a_n\\) be the product of the complex roots of \\(x^{2n}=1\\) that are in the first quadrant of the complex plane. That is, roots of the form \\(a+bi\\) where \\(a,b&gt;0\\). Let \\(r=a_1\\cdot a_2\\cdot \\ldots \\cdot a_{10}\\). Find the smallest integer \\(k\\) such that \\(r\\) is a root of \\(x^k=1\\).</p>",
+      "solutions": "<p>We have two cases to consider, even and odd \\(n\\). If \\(n\\) is even then the roots are \\(e^{i\\frac{k\\pi}{2n}}\\), where \\(n=2m\\). The valid values for \\(k\\) are \\(1,2,\\ldots,m-1\\). Multiplying these powers is the same as summing the exponent, so we obtain a product of \\(e^{2i\\pi\\frac{m(m-1)}{8m}}\\). If \\(n\\) is odd then the roots are \\(e^{i\\frac{k\\pi}{2n}}\\), where \\(n=2m+1\\). In this case we see that \\(\\frac{m}{4m+2}\\) is less than a fourth, or \\(90\\) degrees, but \\(\\frac{m+1}{4m+2}\\) is not. Thus our potential values for \\(k\\) are \\(1,2,\\ldots,m\\). Thus we compute a product of \\(e^{\\frac{2i\\pi m(m+1)}{8m+4}}\\). We then let \\(m\\) be \\(1,2,3,4,5\\) for our even case and \\(0,1,2,3,4\\) for our odd case and manually sum the fractions. We obtain \\(e^{2i\\pi\\frac{3403}{1260}}\\), so the smallest \\(k\\) is \\(1260\\).</p>",
+      "answer": "1260"
+    },
+    "10": {
+      "problem": "<p>Find the number of ordered integer triplets \\(x,y,z\\) with absolute value less than or equal to \\(100\\) such that \\(2x^2+3y^2+3z^2+2xy+2xz-4yz&lt;5\\)</p>",
+      "solutions": "<p>We can rewrite this as \\(2(y-z)^2+(x+z)^2+(x+y)^2&lt;5\\). From here we can let \\(y-z=a\\), \\(x+z=b\\), and \\(x+y=a+b\\). We now need \\(2a^2+b^2+(a+b)^2&lt;5\\). We know that \\(a\\) is still an integer so it must be \\(-1,0\\), or \\(1\\). If \\(a=-1\\) then \\(b\\) can be \\(0\\) or \\(1\\). If \\(a=0\\) then \\(b\\) can be \\(0,-1\\) or \\(1\\). If \\(a=1\\) then \\(b\\) can be \\(0\\) or \\(-1\\). We now rewrite this back in terms of \\(y\\) for each of the triplets, obtaining \\((-y,y,y-1), (-y,y,y), (-y,y,y+1), (-y-1,y,y), (-y-1,y,y+1), (1-y,y,y-1)\\), and \\((1-y,y,y)\\). We simply need all three numbers to have absolute value less than \\(100\\). For each case there are \\(200,201,200,200,200,200,\\) and \\(200\\) choices, respectively. Summing these gives us our answer of \\(1401\\) triplets.</p>",
+      "answer": "1401"
+    }
+  }
+}

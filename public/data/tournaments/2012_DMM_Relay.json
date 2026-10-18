@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2012,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2012/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Kathleen and Andrew play a game. Kathleen has a probability \\(0 &lt; p &lt; 1\\) of winning the game. Andrew notes that Kathleen’s probability of winning a best-out-of-3 series of games is the same as her probability of winning an individual game. What is the probability that Kathleen wins an individual game?</p>",
+      "solutions": "<p>The probability that Kathleen wins an individual game is just \\(p\\). If Kathleen wins a best-out-of-3 series, she must have won either 2 or 3 games. She wins 2 games with probability \\(3p^2(1-p)\\) and she wins 3 games with probability \\(p^3\\). Hence we have \\(p^3 + 3p^2(1-p) = p\\), or \\(2p^3 - 3p^2 + p = 0\\). This factors as \\(p(p-1)(2p-1) = 0\\), so \\(p = 0\\), \\(p = 1\\) or \\(p = 1/2\\). As \\(0 &lt; p &lt; 1\\), it follows that \\(p = 1/2\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "2": {
+      "problem": "<p>Andrew wants to figure out which pairs of his friends are also friends. He decides to survey every one of his \\(F\\) friends. It takes him 90 minutes to set up the survey, and then \\(F\\) minutes to give the survey to each of his friends. If \\(F = 60 \\cdot TNYWR\\), what is the time per friend that Andrew spends on the survey, including set-up?</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(\\frac{1}{2}\\).</i></p>",
+      "solutions": "<p>It will take Andrew \\(90 + F^2\\) minutes, and thus an average time per friend of \\(90/F + F\\). As \\(F = 30\\), he averages 33 minutes per friend.</p>",
+      "answer": "33"
+    },
+    "3": {
+      "problem": "<p>Let \\(T = TNYWR/3\\). \\(ABCD\\) is a square; \\(E\\) is the midpoint of its diagonals, and \\(F\\) is a point external to the square such that \\(\\angle CFD\\) is right. If \\(FD = T\\) and \\(FE = 12\\sqrt{2}\\), what is \\(FC\\)?</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(33\\).</i></p>",
+      "solutions": "<p>There is a solution using the law of cosines. However, we give a shorter solution using Ptolemy’s theorem on cyclic quadrilaterals. Note that quadrilateral \\(CFDE\\) is cyclic, and \\(CD = \\sqrt{2}EC = \\sqrt{2}ED\\). We have by Ptolemy’s theorem that \\(FE \\cdot CD = EC \\cdot FD + ED \\cdot FC\\). Hence we know that \\(FC = FE\\sqrt{2} - FD = 13\\).</p>",
+      "answer": "13"
+    },
+    "4": {
+      "problem": "<p>How many ways can the numbers 1 through 6 be assigned to the vertices of a hexagon such that no two consecutive numbers lie on adjacent vertices? (Two numberings are considered equivalent if one can be rotated into the other.)</p>",
+      "solutions": "<p>Label the points of the hexagon as 12 o’clock, 2 o’clock, etc., 10 o’clock. Suppose the 2 is at the 12 o’clock position; if it isn’t, we can rotate the numbering so that it is. Then the 1 and 3 must be among 4 o’clock, 6 o’clock, and 8 o’clock.</p><p>If 1 is at 4 o’clock and 3 is at 6 o’clock, then the 4 cannot be at 2 o’clock or the 5 and 6 will be adjacent. The 4 cannot be at 8 o’clock, so it must be at 10 o’clock. Then the 5 must be at 2 o’clock and the 6 at 8 o’clock. The reflection of this numbering through the 12 o’clock/6 o’clock axis is also a valid numbering.</p><p>If 1 is at 4 o’clock and 3 is at 8 o’clock, then the 4 must be at 2 o’clock. Then the 5 can be at either 6 o’clock or 10 o’clock. Reflections of these two numberings through the 12 o’clock/6 o’clock axis are also valid numberings.</p><p>If 1 is at 6 o’clock and 3 is at 4 o’clock, then the 4 can be at 8 o’clock or at 10 o’clock. Then the 5 will be at 2 o’clock, and the six will fill up the last spot. Reflections of these two numberings through the 12 o’clock/6 o’clock axis are also valid numberings.</p><p>It follows then that there are 10 such numberings.</p>",
+      "answer": "10"
+    },
+    "5": {
+      "problem": "<p>A palindrome is a string that reads the same way forwards and backwards – for example, “abba” and “xyzyx” are both palindromes. For \\(n \\ge 1\\), let \\(P(n)\\) denote the number of palindromes of length \\(n\\) using the 26 letters of the English alphabet. Let \\(T = TNYWR\\). Find \\(P(T+1)/P(T)\\).</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(10\\).</i></p>",
+      "solutions": "<p>We know that the number of length-17 permutations is \\(26^9\\), since we may choose the first 9 letters freely. The number of length-16 permutations is \\(26^8\\), since we may only choose the first 8 letters freely. Hence \\(P(T+1)/P(T) = 26\\).</p>",
+      "answer": "26"
+    },
+    "6": {
+      "problem": "<p>Let \\(T = TNYWR\\). Let \\(f(x) = x^3 - 16x^2 + 10x - T\\) have roots \\(a, b, c\\). Find \\[\\sum_{i=1}^{2}\\sum_{j=1}^{2}\\sum_{k=1}^{2} a^i b^j c^k.\\]</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(26\\).</i></p>",
+      "solutions": "<p>We have \\[\\begin{aligned}\n\\sum_{i=1}^{2}\\sum_{j=1}^{2}\\sum_{k=1}^{2} a^i b^j c^k &amp;= abc(abc + ab + bc + ca + a + b + c + 1) \\\\\n&amp;= abc(a+1)(b+1)(c+1) = abc(-1)^3 f(-1).\n\\end{aligned}\\] As \\(abc = T = 26\\) and as \\(f(-1) = -53\\), it follows that our desired sum is 1378.</p>",
+      "answer": "1378"
+    }
+  }
+}

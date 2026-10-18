@@ -1,0 +1,23 @@
+{
+  "test": "SMT Geometry Tiebreaker",
+  "year": 2019,
+  "name": "Geometry Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2019/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(ABCD\\) be a quadrilateral with \\(\\angle DAB = \\angle ABC = 120^\\circ\\). If \\(AB = 3\\), \\(BC = 2\\), and \\(AD = 4\\), what is the length of \\(CD\\)?</p>",
+      "solutions": "<p>Let \\(E\\) be the intersection of rays \\(DA\\) and \\(CB\\). Then \\(\\angle EAB = \\angle EBA = 60^\\circ\\) so \\(\\triangle ABE\\) is equilateral. It follows that \\(EA = EB = 3\\). Using Law of Cosines, we find that \\[CD^2 = EC^2 + ED^2 - 2(EC)(ED)\\cos 60^\\circ = 5^2 + 7^2 - 5 \\cdot 7 = 39\\] Thus, \\(CD = \\sqrt{39}\\).</p>",
+      "answer": "\\sqrt{39}"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABCD\\) be a rectangle with \\(AB = 8\\) and \\(BC = 6\\). Point \\(E\\) is outside of the rectangle such that \\(CE = DE\\). Point \\(D\\) is reflected over line \\(AE\\) so that its image, \\(D'\\), lies on the interior of the rectangle. Point \\(D'\\) is then reflected over diagonal \\(AC\\), and its image lies on side \\(AB\\). What is the length of \\(DE\\)?</p>",
+      "solutions": "<p>Let \\(D''\\) be the image of \\(D'\\) when reflecting across \\(AC\\) so \\(D''\\) is on \\(AB\\). Reflection preserves angles, so let \\(x = \\angle CAD'' = \\angle CAD'\\). By the same reasoning, \\(\\angle DAE = \\angle D'AE\\), but \\(\\angle CAD'' + \\angle CAD' + \\angle D'AE + \\angle DAE = \\angle BAD = 90^\\circ\\), so \\(\\angle DAE = 45^\\circ - x\\).</p><p>Now establish a coordinate plane with \\(B = (0,0)\\), \\(A = (0,8)\\), \\(C = (6,0)\\), and \\(D = (6,8)\\). The slope of \\(AE\\) is \\[-\\tan(45^\\circ - x) = -\\frac{\\tan 45^\\circ - \\tan x}{1 + \\tan 45^\\circ \\tan x} = -\\frac{1 - \\frac{6}{8}}{1 + \\frac{6}{8}} = -\\frac{1}{7}\\] so the equation of line \\(AE\\) is \\(y = 8 - \\frac{x}{7}\\). But point \\(E\\) must lie on the line \\(y = 4\\), so we have \\(4 = 8 - \\frac{x}{7} \\implies x = 28\\). This implies that \\(E = (28, 4)\\), so \\[DE = \\sqrt{(28-6)^2 + (4-8)^2} = \\sqrt{22^2 + 4^2} = \\sqrt{500} = 10\\sqrt{5}\\]</p>",
+      "answer": "10\\sqrt{5}"
+    },
+    "3": {
+      "problem": "<p>Right triangle \\(ABC\\) with \\(\\angle ABC = 90^\\circ\\) is inscribed in a circle \\(\\omega_1\\) with radius 3. A circle \\(\\omega_2\\) tangent to \\(AB\\), \\(BC\\), and \\(\\omega_1\\) has radius 2. Compute the area of \\(\\triangle ABC\\).</p>",
+      "solutions": "<p>Let \\(O\\) and \\(P\\) be the centers of \\(\\omega_1\\) and \\(\\omega_2\\) respectively. Let \\(D\\) and \\(E\\) be the points of tangency of \\(\\omega_2\\) with \\(AB\\) and \\(BC\\) respectively. Then \\(\\angle BDP = \\angle BEP = 90^\\circ\\) and \\(BD = BE\\), so \\(BDPE\\) is a square with side length 2. Thus, \\(BP = 2\\sqrt{2}\\). But note that we have \\(OP = 3 - 2 = 1\\) and \\(OB = 3\\) so by the Pythagorean Theorem, \\(\\triangle BPO\\) is a right triangle.</p><p>Next, we have that \\(BP\\) bisects \\(\\angle ABC\\) so \\(\\angle OBC = 45^\\circ - \\angle OBP\\). Since \\(OB = OC\\), we have \\(\\angle ACB = \\angle OBC\\). Thus, \\[\\begin{aligned}\n\\sin \\angle ACB &amp;= \\sin(45^\\circ - \\angle OBP) \\\\\n&amp;= \\sin 45^\\circ \\cos \\angle OBP - \\cos 45^\\circ \\sin \\angle OBP \\\\\n&amp;= \\frac{\\sqrt{2}}{2} \\cdot \\frac{2\\sqrt{2}}{3} - \\frac{\\sqrt{2}}{2} \\cdot \\frac{1}{3} \\\\\n&amp;= \\frac{4 - \\sqrt{2}}{6}\n\\end{aligned}\\] We then have that \\(AB = AC \\sin \\angle ACB = 4 - \\sqrt{2}\\). Finally, using the Pythagorean Theorem yields \\(BC = \\sqrt{6^2 - (4-\\sqrt{2})^2} = 4 + \\sqrt{2}\\), so the area of \\(\\triangle ABC\\) is \\(\\frac{(4-\\sqrt{2})(4+\\sqrt{2})}{2} = 7\\).</p>",
+      "answer": "7"
+    }
+  }
+}

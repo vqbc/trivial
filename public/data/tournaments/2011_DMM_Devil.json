@@ -1,0 +1,83 @@
+{
+  "test": "DMM Devil",
+  "year": 2011,
+  "name": "Devil Round",
+  "url": "https://dukemathmeet.org/2011/devil.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The fractal T-shirt for this year’s Duke Math Meet is so complicated that the printer broke trying to print it. Thus, we devised a method for manually assembling each shirt — starting with the full-size ‘base’ shirt, we paste a smaller shirt on top of it. And then we paste an even smaller shirt on top of that one. And so on, infinitely many times. (As you can imagine, it took a while to make all the shirts.) The completed T-shirt consists of the original ‘base’ shirt along with all of the shirts that we pasted onto it. Now suppose the base shirt requires 2011 cm\\(^2\\) of fabric to make, and that each pasted-on shirt requires 4/5 as much fabric as the previous one did. How many cm\\(^2\\) of fabric in total are required to make one complete shirt?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>A dog is allowed to roam a yard while attached to a 60-meter leash. The leash is anchored to a 40-meter by 20-meter rectangular house at the midpoint of one of the long sides of the house. What is the total area of the yard that the dog can roam?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>10 birds are chirping on a telephone wire. Bird 1 chirps once per second, bird 2 chirps once every 2 seconds, and so on through bird 10, which chirps every 10 seconds. At time \\(t = 0\\), each bird chirps. Define \\(f(t)\\) to be the number of birds that chirp during the \\(t^{\\text{th}}\\) second. What is the smallest \\(t &gt; 0\\) such that \\(f(t)\\) and \\(f(t+1)\\) are both at least 4?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>The answer to this problem is 3 times the answer to problem 5 minus 4 times the answer to problem 6 plus 1.</p><p><i>Note: the answer to Problem 5 is \\(4\\) and the answer to Problem 6 is \\(1\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>The answer to this problem is the answer to problem 4 minus 4 times the answer to problem 6 minus 1.</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(9\\) and the answer to Problem 6 is \\(1\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>The answer to this problem is the answer to problem 4 minus 2 times the answer to problem 5.</p><p><i>Note: the answer to Problem 4 is \\(9\\) and the answer to Problem 5 (the previous problem) is \\(4\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Vivek and Daniel are playing a game. The game ends when one person wins 5 rounds. The probability that either wins the first round is 1/2. In each subsequent round the players have a probability of winning equal to the fraction of games that the player has lost. What is the probability that Vivek wins in six rounds?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>What is the coefficient of \\(x^8y^7\\) in \\((1+x^2-3xy+y^2)^{17}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Let \\(U(k)\\) be the set of complex numbers \\(z\\) such that \\(z^k = 1\\). How many distinct elements are in the union of \\(U(1), U(2), \\cdots, U(10)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Evaluate \\(29\\binom{30}{0} + 28\\binom{30}{1} + 27\\binom{30}{2} + \\ldots + 0\\binom{30}{29} - \\binom{30}{30}\\). You may leave your answer in exponential format.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "11": {
+      "problem": "<p>What is the number of strings consisting of 2 \\(a\\)s, 3 \\(b\\)s and 4 \\(c\\)s such that \\(a\\) is not immediately followed by \\(b\\), \\(b\\) is not immediately followed by \\(c\\) and \\(c\\) is not immediately followed by \\(a\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "12": {
+      "problem": "<p>Compute \\((\\sqrt{3} + \\tan(1^\\circ))(\\sqrt{3} + \\tan(2^\\circ)) \\cdots (\\sqrt{3} + \\tan(29^\\circ))\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "13": {
+      "problem": "<p>Three massless legs are randomly nailed to the perimeter of a massive circular wooden table with uniform density. What is the probability that the table will not fall over when it is set on its legs?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "14": {
+      "problem": "<p>Compute \\[\\sum_{n=1}^{2011} \\frac{n+4}{n(n+1)(n+2)(n+3)}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "15": {
+      "problem": "<p>Find a polynomial in two variables with integer coefficients whose range is the positive real numbers.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

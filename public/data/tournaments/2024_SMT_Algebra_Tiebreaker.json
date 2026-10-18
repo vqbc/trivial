@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2024,
+  "name": "Algebra Tiebreakers",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2024/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Consider the polynomial \\(f(x) = 2024x^{2024} - 2023x + 1 = 0\\). Let the roots of the \\(f(x)\\) be \\(r_1, r_2, \\ldots, r_{2024}\\). Compute \\((2023r_1 - 1)(2023r_2 - 1)\\cdots(2023r_{2024} - 1)\\).</p>",
+      "solutions": "<p><b>Solution:</b> We know that \\(2023r - 1 = 2024r^{2024}\\) for any root \\(r\\), so plugging that in we have \\[2024^{2024}(r_1 \\cdots r_{2024})^{2024}\\] as the desired product. By Vieta’s, we have \\(r_1 \\cdots r_{2024} = \\frac{1}{2024}\\), and the answer is \\(\\boxed{1}\\).</p>",
+      "answer": "1"
+    },
+    "2": {
+      "problem": "<p>Compute \\[\\arcsin\\left(\\frac{2}{\\sum_{k=0}^{\\infty}\\sin^{2k}\\left(\\frac{1}{2024}\\right)} - 1\\right).\\]</p>",
+      "solutions": "<p><b>Solution:</b> Let \\(x = \\frac{1}{2024}\\). Since \\(\\sin^{2k}(x) &lt; 1\\) for all \\(k\\), then we can convert the problem to \\[\\arcsin\\left(\\frac{2}{\\frac{1}{1-\\sin^2(x)}} - 1\\right) = \\arcsin(1 - 2\\sin^2(x)) = \\arcsin(\\cos(2x)).\\] We need to find the angle \\(-\\frac{\\pi}{2} \\le \\theta \\le \\frac{\\pi}{2}\\) such that \\(\\sin(\\theta) = \\cos(1/1012)\\). Since \\(\\sin(\\frac{\\pi}{2} - x) = \\cos(x)\\), we get \\(\\theta = \\boxed{\\frac{\\pi}{2} - \\frac{1}{1012}}\\).</p>",
+      "answer": "\\frac{\\pi}{2} - \\frac{1}{1012}"
+    },
+    "3": {
+      "problem": "<p>A polynomial \\(f\\) with real coefficients satisfies the functional equation \\[f(f(x) + y^2) = f(x + y)f(x - y) + 4f(xy)\\] for all real \\(x, y\\). What is the sum of all possible values of \\(|f(1)|\\)?</p>",
+      "solutions": "<p><b>Solution:</b> Via comparison of \\((x, y)\\) and \\((x, -y)\\), one sees that \\(4f(xy) = 4f(-xy)\\) for any \\(x, y\\), so \\(f\\) is even. Checking degrees on both sides, \\(f\\)’s degree must be less than or equal to 2. Therefore, we can write \\(f(x) = ax^2 + b\\).</p><p>Plug in \\(y = 0\\), we see that \\(f(f(x)) = f(x)^2 + 4f(0)\\). Plug in \\(x = 0\\), we get \\(f(f(0) + y^2) = f(y)f(-y) + 4f(0)\\). Since \\(f\\) is even, we get \\(f(f(x)) = f(f(0) + x^2)\\). Comparing leading terms forces \\(a^3 = a\\), so \\(a = \\pm 1, 0\\). The \\(x^2\\) terms on each side are \\(2a^2bx^2\\) and \\(2abx^2\\), so \\(a = -1\\) is impossible. Therefore, \\(a = 1\\) or \\(a = 0\\).</p><p>If \\(a = 0\\), \\(b = 0\\) or \\(-3\\). If \\(a = 1\\), \\(b = 0\\) from the equation \\(f(f(x)) = (f(x))^2 + 4f(0)\\). Therefore the possible solutions for \\(f\\) are \\(f = 0\\), \\(f = -3\\) and \\(f(x) = x^2\\), and the sum of the absolute values at 1 is \\(0 + 3 + 1 = \\boxed{4}\\).</p>",
+      "answer": "4"
+    }
+  }
+}

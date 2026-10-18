@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory A",
+  "year": 2014,
+  "name": "Number Theory A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2014_NumberTheoryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(x) = x^3 + ax^2 + bx + c\\) have solutions that are distinct negative integers. If \\(a + b + c = 2014\\), find \\(c\\).</p>",
+      "solutions": "<p>We have that \\(x_1 + x_2 + x_3 = -a\\), \\(x_1x_2 + x_2x_3 + x_1x_3 = b\\) and \\(x_1x_2x_3 = -c\\). Thus, \\((x_1 - 1)(x_2 - 1)(x_3 - 1) = -c - b - a - 1 = -2015\\). \\(2015 = 5 \\times 13 \\times 31\\), therefore the only way that \\(x_i\\) can be distinct negative integers is when \\(x_1 = -4\\), \\(x_2 = -12\\), \\(x_3 = -30\\), which gives \\(c = \\boxed{1440}\\).</p>",
+      "answer": "1440"
+    },
+    "2": {
+      "problem": "<p>What is the last digit of \\(17^{17^{17^{17}}}\\)?</p>",
+      "solutions": "<p>All we care is that \\(17^{17^{17}} \\equiv 1^{17^{17}} \\equiv 1 \\pmod{4}\\). Therefore, since the last digit repeats every four products of 17s, the last digit must be \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "3": {
+      "problem": "<p>Find the number of ending zeros of \\(2014!\\) in base \\(9\\). Give your answer in base \\(9\\).</p>",
+      "solutions": "<p>The number of multiples of \\(3\\) in \\(2014!\\) can be calculated as \\(\\left\\lfloor \\frac{2014}{3} \\right\\rfloor + \\left\\lfloor \\frac{2014}{9} \\right\\rfloor + \\left\\lfloor \\frac{2014}{27} \\right\\rfloor + \\left\\lfloor \\frac{2014}{81} \\right\\rfloor + \\left\\lfloor \\frac{2014}{243} \\right\\rfloor + \\left\\lfloor \\frac{2014}{729} \\right\\rfloor = 1002\\). Therefore, there should be \\(501\\) ending zeros in base \\(9\\) for \\(2014!\\). Converting to base \\(9\\) gives \\(\\boxed{616}\\).</p>",
+      "answer": "616"
+    },
+    "4": {
+      "problem": "<p>Find the sum of all positive integer \\(x\\) such that \\(3 \\times 2^x = n^2 - 1\\) for some positive integer \\(n\\).</p>",
+      "solutions": "<p>We see that \\(n^2 - 1 = (n+1)(n-1)\\). Clearly, \\(n \\neq 1\\). Thus, we consider two cases:</p><p>Case 1: \\(n + 1 = 3 \\times 2^a\\), \\(n - 1 = 2^b\\).</p><p>It is clear that \\(b \\geq a\\) as otherwise \\(n+1\\) is at least \\(6\\) times of \\(n-1\\) which is impossible. Hence \\(n+1-(n-1) = 2 = 2^a(3 - 2^{b-a})\\). If \\(a = 1\\), then \\(b - a = 1\\) and \\(b = 2\\). Hence \\(x = a + b = 3\\) is a solution. When \\(a = 0\\), \\(b - a = 0\\) and hence \\(x = 0\\).</p><p>Case 2: \\(n+1 = 2^a\\), \\(n - 1 = 3 \\times 2^b\\). It is clear that \\(a &gt; b\\). Hence \\(n+1-(n-1) = 2 = 2^b(2^{a-b} - 3)\\). If \\(b = 1\\), then \\(a - b = 2\\) and \\(a = 3\\). Hence \\(x = a + b = 4\\) is a solution. When \\(b = 2\\), \\(a - b\\) is not an integer.</p><p>Thus the only solutions are \\(3, 4\\) and hence answer is \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "5": {
+      "problem": "<p>Find the number of pairs of integer solution \\((x, y)\\) that satisfies the equation \\[(x - y + 2)(x - y - 2) = -(x - 2)(y - 2)\\]</p>",
+      "solutions": "<p>Reorganize and we get \\((x-y)^2 + (x-2)^2 + (y-2)^2 = 8\\). The only possible scenarios are when two of the three terms on the left evaluate to \\(4\\), and the other one to zero. Every scenario gives two solutions: when \\(x - y = 0\\), \\(x = y = 4\\) or \\(x = y = 0\\); when \\(x - 2 = 0\\), \\(x = 2, y = 4\\) or \\(x = 2, y = 0\\); when \\(y - 2 = 0\\), \\(x = 4, y = 2\\) or \\(x = 0, y = 2\\). Hence there are \\(\\boxed{6}\\) pairs of solution.</p>",
+      "answer": "6"
+    },
+    "6": {
+      "problem": "<p>Given \\(S = \\{2, 5, 8, 11, 14, 17, 20, \\ldots\\}\\). Given that one can choose \\(n\\) different numbers from \\(S\\), \\(\\{A_1, A_2, \\ldots A_n\\}\\), s.t. \\(\\sum_{i=1}^n \\frac{1}{A_i} = 1\\). Find the minimum possible value of \\(n\\).</p>",
+      "solutions": "<p>It is clearly not possible that \\(n \\leq 5\\). We see that \\(\\sum_{i=1}^n \\frac{1}{A_i} = 1\\) can be rewritten as \\(\\prod_{i=1}^n A_i = \\sum_{i=1}^n \\prod_{j \\neq i} A_j\\). Taking mod \\(3\\), we have \\(2^n \\equiv n2^{n-1}\\) which reduces to \\(n \\equiv 2 \\pmod{3}\\). Hence the smallest possible \\(n = 8\\) and such an example for \\(8\\) will be: \\(\\{2, 5, 8, 11, 20, 44, 89, 792\\}\\).</p>",
+      "answer": "8"
+    },
+    "7": {
+      "problem": "<p>Find the number of positive integers \\(n \\leq 2014\\) such that there exists integer \\(x\\) that satisfies the condition that \\(\\frac{x+n}{x-n}\\) is an odd perfect square.</p>",
+      "solutions": "<p>\\(\\frac{x+n}{x-n} = k^2 \\iff 1 + \\frac{2n}{x-n} = k^2 \\implies 2n = (x-n)(k^2-1)\\)</p><p>By the problem condition, \\(k^2 - 1\\) is even. Then, \\(n\\) is also even, since \\(k^2 - 1 \\not\\equiv 2 \\pmod{4}\\). So, letting \\(k = 2a-1\\) and \\(n = 2b\\), we get \\(b = (x-2b)(a^2-a)\\).</p><p>It is sufficient to find all \\(b \\leq 1007\\) such that \\(b\\) is divisible by \\(a^2 - a\\). Note that \\(2^2 - 2 = 2\\), so any even \\(b\\) works. However, since \\(a^2 - a\\) is always even, no odd \\(b\\) works. So, there are \\(\\boxed{503}\\) integers \\(n\\) that satisfy the problem statement.</p>",
+      "answer": "503"
+    },
+    "8": {
+      "problem": "<p>Find all number sets \\((a, b, c, d)\\) s.t. \\(1 &lt; a \\leq b \\leq c \\leq d\\), \\(a, b, c, d \\in \\mathbb{N}\\), and \\(a^2+b+c+d\\), \\(a+b^2+c+d\\), \\(a+b+c^2+d\\) and \\(a+b+c+d^2\\) are all square numbers. Sum the value of \\(d\\) across all solution set(s).</p>",
+      "solutions": "<p>We see that \\((d+2)^2 &gt; a+b+c+d^2 &gt; d^2\\). Hence \\(a+b+c+d^2 = (d+1)^2 = d^2+2d+1\\). Hence we see that \\(a+b+c = 2d+1\\).</p><p>We see that \\(2d+1 \\leq 3c\\) and thus \\(d &lt; \\frac{3}{2}c\\). Thus \\(c^2 &lt; a+b+c^2+d &lt; c^2 + \\frac{7}{2}c &lt; (c+2)^2\\). We see that \\(a+b+c^2+d = (c+1)^2 = c^2+2c+1\\). Hence \\(a+b+d = 2c+1\\). With the previous equation, we see that \\(d = c\\), and \\(a+b = d+1\\). Thus \\(d+1 \\leq 2b\\) and we have \\(d &lt; 2b\\). Thus \\(b^2 &lt; a+b^2+c+d &lt; b^2+b+4b\\). Thus either \\(a+b^2+c+d = (b+1)^2\\) or \\(a+b^2+c+d = (b+2)^2\\).</p><p><b>Case 1:</b> \\(a+b^2+c+d = (b+1)^2\\)</p><p>We have \\(a+c+d = 2b+1\\). Hence \\(b = c = d\\). Thus \\(a+b^2+c+d = (b+1)^2 - 1 + a\\) is a square. Hence \\(a = 1\\) is the only solution, which is not in the range.</p><p><b>Case 2:</b> \\(a+b^2+c+d = (b+2)^2\\)</p><p>We have that \\(a+c+d = 4b+4\\). We have from before \\(c = d\\) and \\(a+b+c = 2d+1\\). Hence we can reduce the equations to \\(a+2c = 4b+4\\) and \\(a+b = c+1\\). Hence \\(a+2(a+b-1) = 4b+4\\), which can be rewritten as \\(\\frac{3}{2}a - 3 = b\\), and \\(c = \\frac{5}{2}a - 4\\). Since \\((a+1)^2 &lt; a^2+b+c+d = a^2+\\frac{3}{2}a-3+5a-8 &lt; (a+4)^2\\), we see that \\(a^2+b+c+d = (a+2)^2\\) or \\(a^2+b+c+d = (a+3)^2\\).</p><p><b>Case 2a:</b> \\(a^2+b+c+d = (a+2)^2\\)</p><p>Thus \\(b+c+d = 4a+4\\) which gives \\(a = b\\). Hence \\(b+c+d = 4a+4\\) and \\(a+b+c = 2d+1\\) becomes \\(2c = 3a+4\\) and \\(2a = c+1\\). Solving, we have \\(2(2a-1) = 4a-2 = 3a+4\\) which gives \\(a = 6\\) and \\(d = 11\\).</p><p><b>Case 2b:</b> \\(a^2+b+c+d = (a+3)^2\\)</p><p>Thus \\(b+2c = 6a+9\\). We have \\(a+2c = 4b+4\\). Thus we see that \\(5b+4 = 7a+9\\). Putting this into \\(b+c+d = 6a+9\\) and \\(a+b+c = 2d+1\\) we have \\(2c = 6a+8-\\frac{7a}{5}\\) and \\(a+\\frac{7a}{5}+1 = c+1\\). Solving, we have that \\(a = 40\\), \\(c = 96\\) and hence \\(b = 57\\) and \\(d = 96\\).</p><p>Thus sum across all solution for \\(d\\) is \\(11+96 = \\boxed{107}\\).</p>",
+      "answer": "107"
+    }
+  }
+}

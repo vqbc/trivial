@@ -1,0 +1,23 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2007,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2007/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(p_b(m)\\) be the sum of digits of \\(m\\) when \\(m\\) is written in base \\(b\\). (So, for example, \\(p_2(5) = 2\\).) Let \\(f(0) = 2007^{2007}\\), and for \\(n \\ge 0\\) let \\(f(n+1) = p_7(f(n))\\). What is \\(f(10^{10000})\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "2": {
+      "problem": "<p>Compute: \\[\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}4n}{n^4 - 8n^2 + 4}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{6}"
+    },
+    "3": {
+      "problem": "<p>\\(ABCDEFGH\\) is an octagon whose eight interior angles all have the same measure. The lengths of the eight sides of this octagon are, in some order, \\[2, 2\\sqrt{2}, 4, 4\\sqrt{2}, 6, 7, 7, \\text{ and } 8.\\]</p><p>Find the area of \\(ABCDEFGH\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "50 + 56\\sqrt{2}"
+    }
+  }
+}

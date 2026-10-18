@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory A",
+  "year": 2010,
+  "name": "Number Theory A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2010_NumberTheoryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the smallest positive integer \\(n\\) such that \\(n^4 + (n+1)^4\\) is composite.</p>",
+      "solutions": "<p>One can check that \\(17\\), \\(97\\), \\(337\\), and \\(881\\) are prime, and also that \\(17 \\cdot 113 = 1921\\), so the answer is \\(5\\).</p>",
+      "answer": "5"
+    },
+    "2": {
+      "problem": "<p>Find the largest positive integer \\(n\\) such that \\(\\sigma(n) = 28\\), where \\(\\sigma(n)\\) is the sum of the divisors of \\(n\\), including \\(n\\).</p>",
+      "solutions": "<p>The answer is \\(12\\). It isn’t hard to see that that is, in fact, the only value where that equation holds.</p>",
+      "answer": "12"
+    },
+    "3": {
+      "problem": "<p>Find the sum of the first 5 positive integers \\(n\\) such that \\(n^2 - 1\\) is the product of 3 distinct primes.</p>",
+      "solutions": "<p>The five numbers are \\(14\\), \\(16\\), \\(20\\), \\(22\\), and \\(32\\), for an answer of \\(104\\).</p>",
+      "answer": "104"
+    },
+    "4": {
+      "problem": "<p>Find the largest positive integer \\(n\\) such that \\(n\\varphi(n)\\) is a perfect square. (\\(\\varphi(n)\\) is the number of integers \\(k\\), \\(1 \\le k \\le n\\) that are relatively prime to \\(n\\))</p>",
+      "solutions": "<p>If \\(n &gt; 1\\), then the highest prime that divides \\(n\\) can be shown to divide \\(n\\varphi(n)\\) to an odd power, and so \\(n\\varphi(n)\\) cannot be a perfect square. It is easy to see that \\(1\\) is a perfect square.</p>",
+      "answer": "1"
+    },
+    "5": {
+      "problem": "<p>Given that \\(x\\), \\(y\\) are positive integers with \\(x(x+1) \\mid y(y+1)\\), but neither \\(x\\) nor \\(x+1\\) divides either of \\(y\\) or \\(y+1\\), and \\(x^2 + y^2\\) as small as possible, find \\(x^2 + y^2\\).</p>",
+      "solutions": "<p>\\(x = 14\\), \\(y = 20\\). These are the first two times that \\(n\\) and \\(n+1\\) are not powers of primes. The answer is then easily seen to be \\(596\\).</p>",
+      "answer": "596"
+    },
+    "6": {
+      "problem": "<p>Find the numerator of \\[\\frac{1010\\overbrace{11\\ldots 11}^{2011 \\text{ ones}}0101}{1100\\underbrace{11\\ldots 11}_{2011 \\text{ ones}}0011}\\] when reduced.</p>",
+      "solutions": "<p>Note that \\(1+x^2+x^4+x^5+\\ldots+x^{2n+1}+x^{2n+2}+x^{2n+4}+x^{2n+6} = (1-x+x^2-x^3+x^4)(1+x+\\ldots+x^{2n+1}+x^{2n+2})\\), as well as \\(1+x+x^4+x^5+\\ldots+x^{2n+1}+x^{2n+2}+x^{2n+5}+x^{2n+6} = (1-x^2+x^4)(1+x+\\ldots+x^{2n+1}+x^{2n+2})\\). The easiest way to see this is to either multiply numerator and denominator by \\(x-1\\), or to just numerically plug in small odd values of 2011 in the original equation. Plugging in \\(n=1006\\) and \\(x=10\\) gives the fraction as \\(\\frac{9091}{9901}\\).</p>",
+      "answer": "9091"
+    },
+    "7": {
+      "problem": "<p>Let \\(n\\) be the number of polynomial functions from the integers modulo 2010 to the integers modulo 2010. \\(n\\) can be written as \\(n = p_1p_2\\cdots p_k\\), where the \\(p_i\\)s are (not necessarily distinct) primes. Find \\(p_1 + p_2 + \\cdots + p_n\\).</p>",
+      "solutions": "<p>Any polynomial is determined, by the Chinese remainder theorem, by its restriction to the integers mod \\(2\\), \\(3\\), \\(5\\), and \\(67\\). There are thus at most \\(2^2 \\cdot 3^3 \\cdot 5^5 \\cdot 67^{67}\\) such functions. However, if you have a polynomial in those various moduli, then there is a polynomial that restricts to those polynomials, so there are at least \\(2^2 \\cdot 3^3 \\cdot 5^5 \\cdot 67^{67}\\) such functions and thus exactly \\(2^2 \\cdot 3^3 \\cdot 5^5 \\cdot 67^{67}\\) such functions. The answer is then \\(4527\\).</p>",
+      "answer": "4527"
+    },
+    "8": {
+      "problem": "<p>A consecutive pythagorean triple is a pythagorean triple of the form \\(a^2 + (a+1)^2 = b^2\\), \\(a\\) and \\(b\\) positive integers. Given that \\(a\\), \\(a+1\\), and \\(b\\) form the third consecutive pythagorean triple, find \\(a\\).</p>",
+      "solutions": "<p>The equation is \\(2a^2 + 2a + 1 = b^2\\), which can be rearranged to \\((2a+1)^2 - 2b^2 = -1\\). The solutions to that are given by the coefficients of \\((1+\\sqrt{2})(3+2\\sqrt{2})^n\\), and one gets \\(a\\) values \\(0\\) (trivial and ignored), \\(3\\), \\(20\\), and \\(119\\), so \\(119\\) is the answer.</p>",
+      "answer": "119"
+    }
+  }
+}

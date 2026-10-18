@@ -1,0 +1,13 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2021,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2021/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>You are standing on one of the faces of a cube. Each turn, you randomly choose another face that shares an edge with the face you are standing on with equal probability, and move to that face. Let \\(F(n)\\) the probability that you land on the starting face after \\(n\\) turns. Supposed that \\(F(8) = \\frac{43}{256}\\), and \\(F(10)\\) can be expressed as a simplified fraction \\(\\frac{a}{b}\\). Find \\(a+b\\).</p>",
+      "solutions": "<p><b>Solution.</b> Let’s say that at the start you are standing on face 1 which is opposite of face 6, with the other faces being 2, 3, 4, 5. Define \\(G(n)\\) to be the probability that you land on faces 2, 3, 4, or 5 after \\(n\\) turns. First we show that the probability you land on face 6 after \\(n\\) turns is also \\(F(n)\\). This is clear because we can only reach face 6 from faces 2, 3, 4, 5, but you can reach face 1 from these faces with equal probability. It is also clear that \\(G(n) = \\frac{1}{4}(1 - 2F(n))\\) because all the probabilities must add up to 1. Furthermore, we can deduce that \\(F(n+1) = G(n)\\). This is because to reach face 1 after \\((n+1)\\) turns, you must reach faces 2, 3, 4, or 5 after \\(n\\) turns (probability \\(= 4G(n)\\)), but from each face you have a \\(\\frac{1}{4}\\) probability of moving to 1 on the next step, so \\(F(n+1) = \\frac{1}{4}4G(n) = G(n)\\). From these observations, we can compute \\(F(9) = G(8) = \\frac{1}{4}(1-2\\times\\frac{43}{256}) = \\frac{85}{512}\\), and \\(F(10) = G(9) = \\frac{1}{4}(1-2\\times\\frac{85}{512}) = \\frac{171}{1024}\\), so \\(a+b = 1195\\).</p>",
+      "answer": "1195"
+    }
+  }
+}

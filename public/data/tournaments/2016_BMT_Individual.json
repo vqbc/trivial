@@ -1,0 +1,108 @@
+{
+  "test": "BMT Individual",
+  "year": 2016,
+  "name": "Individual Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2016/IS2016.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the sum of all positive integers less than 30 divisible by 2, 3, or 5?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "315"
+    },
+    "2": {
+      "problem": "<p>Define \\(a \\star b\\) to be \\(2ab + a + b\\). What is \\(((3 \\star 4) \\star 5) - (4 \\star (5 \\star 3))\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "3": {
+      "problem": "<p>Consider an equilateral triangle and square, both with are 1. What is the product of their perimeters?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "8\\sqrt[4]{27}"
+    },
+    "4": {
+      "problem": "<p>Let ABC be have side lengths 3, 4, and 5. Let \\(P\\) be a point in side \\(ABC\\). What is the minimum sum of lengths of the altitudes from \\(P\\) to the side lengths of \\(ABC\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{12}{5}"
+    },
+    "5": {
+      "problem": "<p>Positive integers \\(x, y, z\\) satisfy \\((x + yi)^2 - 46i = z\\). What is \\(x + y + z\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "552"
+    },
+    "6": {
+      "problem": "<p>Let \\(g_0 = 1, g_1 = 2, g_2 = 3\\), and \\(g_n = g_{n-1} + 2g_{n-2} + 3g_{n-3}\\). For how many \\(0 \\le i \\le 100\\) is it that \\(g_i\\) is divisible by 5?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "25"
+    },
+    "7": {
+      "problem": "<p>Define \\(P(\\tau) = (\\tau + 1)^3\\). If \\(x + y = 0\\), what is the minimum possible value of \\(P(x) + P(y)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "8": {
+      "problem": "<p>Simplify \\[\\frac{1}{\\sqrt[3]{81} + \\sqrt[3]{72} + \\sqrt[3]{64}}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt[3]{9} - 2"
+    },
+    "9": {
+      "problem": "<p>On a \\(5 \\times 5\\) grid of lattice points, every point is uniformly randomly colored blue, red, or green. Find the expected number of monochromatic triangles \\(T\\) with vertices chosen from the lattice grid, such that some two sides of \\(T\\) are parallel to the axis.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{400}{9}"
+    },
+    "10": {
+      "problem": "<p>Define \\(T_n = \\sum_{i=1}^{n} i(n + 1 - i)\\). Find \\[\\lim_{n \\to \\infty} \\frac{T_n}{n^3}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{6}"
+    },
+    "11": {
+      "problem": "<p>The roots of the polynomial \\(x^3 - \\frac{3}{2}x^2 - \\frac{1}{4}x + \\frac{3}{8} = 0\\) are in arithmetic progression. What are they?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-\\frac{1}{2}, \\frac{1}{2}, \\frac{3}{2}"
+    },
+    "12": {
+      "problem": "<p>What is the number of nondecreasing positive integer sequences of length 7 whose last term is at most 9?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6435"
+    },
+    "13": {
+      "problem": "<p>The quartic equation \\(y = x^4 + 2x^3 - 20x^2 + 8x + 64\\) contains the points \\((-6, 160)\\), \\((-3, -113)\\) and \\((2, 32)\\). A cubic \\(y = ax^3 + bx + c\\) also contains these points. Determine the x-coordinate of the fourth intersection of the cubic with the quartic.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{20}{7}"
+    },
+    "14": {
+      "problem": "<p>Three circles of radius 1 are inscribed in a square of side length \\(s\\), such that the circles do not overlap or coincide with each other. What is the minimum \\(s\\) where such a configuration is possible?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{4+\\sqrt{2}+\\sqrt{6}}{2}"
+    },
+    "15": {
+      "problem": "<p>How many ways can we pick four 3-element subsets of \\(\\{1, 2, ..., 6\\}\\) so that each pair of subsets share exactly one element?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "30"
+    },
+    "16": {
+      "problem": "<p>What is the radius of the largest sphere that fits inside the tetrahedron whose vertices are the points \\((0,0,0)\\), \\((1,0,0)\\), \\((0,1,0)\\), \\((0,0,1)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3-\\sqrt{3}}{6}"
+    },
+    "17": {
+      "problem": "<p>Consider triangle \\(ABC\\) in \\(xy\\)-plane where \\(A\\) is at the origin, \\(B\\) lies on the positive \\(x\\)-axis, \\(C\\) is on the upper right quadrant, and \\(A = 30^\\circ, B = 60^\\circ, C = 90^\\circ\\). Let the length \\(BC = 1\\). Draw the angle bisector \\(\\ell\\) of angle \\(C\\), and let this intersect the \\(y\\)-axis at \\(D\\). What is the area of quadrilateral \\(ADBC\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3\\sqrt{3}}{2}+3"
+    },
+    "18": {
+      "problem": "<p>Define \\(r_n\\) to be the number of integer solutions to \\(x^2+y^2 = n\\). Determine \\(\\lim_{n\\to\\infty} \\frac{r_1 + r_2 \\ldots + r_n}{n}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\pi"
+    },
+    "19": {
+      "problem": "<p>Regular tetrahedron \\(P_1P_2P_3P_4\\) has side length 1. Define \\(P_i\\) for \\(i &gt; 4\\) to be the centroid of tetrahedron \\(P_{i-1}P_{i-2}P_{i-3}P_{i-4}\\), and \\(P_\\infty = \\lim_{n\\to\\infty} P_n\\). What is the length of \\(P_5P_\\infty\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\sqrt{10}}{20}"
+    },
+    "20": {
+      "problem": "<p>Find \\[\\prod_{k=1}^{2017} e^{\\pi i k/2017} 2\\cos\\left(\\frac{\\pi k}{2017}\\right).\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    }
+  }
+}

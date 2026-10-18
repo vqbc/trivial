@@ -1,0 +1,73 @@
+{
+  "test": "DMM Devil",
+  "year": 2009,
+  "name": "Devil Round",
+  "url": "https://dukemathmeet.org/2009/devil.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find all positive integers \\(n\\) such that \\(n^3 - 14n^2 + 64n - 93\\) is prime.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4, 5, 6"
+    },
+    "2": {
+      "problem": "<p>Let \\(a, b, c\\) be real numbers such that \\(0 \\le a, b, c \\le 1\\). Find the maximum value of \\[\\frac{a}{1+bc} + \\frac{b}{1+ac} + \\frac{c}{1+ab}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "3": {
+      "problem": "<p>Find the maximum value of the function \\(f(x, y, z) = 4x + 3y + 2z\\) on the ellipsoid \\[16x^2 + 9y^2 + 4z^2 = 1.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{3}"
+    },
+    "4": {
+      "problem": "<p>Let \\(x_1, \\ldots, x_n\\) be numbers such that \\(x_1 + \\cdots + x_n = 2009\\). Find the minimum value of \\(x_1^2 + \\cdots + x_n^2\\) (in term of \\(n\\)).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2009^2}{n}"
+    },
+    "5": {
+      "problem": "<p>Find the number of odd integers between 1000 and 9999 that have at least 3 distinct digits.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4200"
+    },
+    "6": {
+      "problem": "<p>Let \\(A_1, A_2, \\ldots, A_{2^n-1}\\) be all the possible nonempty subsets of \\(\\{1, 2, 3, \\ldots, n\\}\\). Find the maximum value of \\(a_1 + a_2 + \\ldots + a_{2^n-1}\\) where \\(a_i \\in A_i\\) for each \\(i = 1, 2, \\ldots, 2^n - 1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "(n-1)2^n + 1"
+    },
+    "7": {
+      "problem": "<p>Find the rightmost digit when \\(41^{2009}\\) is written in base 7.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6"
+    },
+    "8": {
+      "problem": "<p>How many integral ordered triples \\((x, y, z)\\) satisfy the equation \\(x+y+z=2009\\), where \\(10 \\le x &lt; 31\\), \\(100 &lt; z &lt; 310\\) and \\(y \\ge 0\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4389"
+    },
+    "9": {
+      "problem": "<p>Scooby has a fair six-sided die, labeled 1 to 6, and Shaggy has a fair twenty-sided die, labeled 1 to 20. During each turn, they both roll their own dice at the same time. They keep rolling the die until one of them rolls a 5. Find the probability that Scooby rolls a 5 before Shaggy does.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{19}{25}"
+    },
+    "10": {
+      "problem": "<p>Let \\(N = 1A323492110877\\) where \\(A\\) is a digit in the decimal expansion of \\(N\\). Suppose \\(N\\) is divisible by 7. Find \\(A\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6"
+    },
+    "11": {
+      "problem": "<p>Find all solutions \\((x, y)\\) of the equation \\(\\tan^4(x+y) + \\cot^4(x+y) = 1 - 2x - x^2\\), where \\(-\\frac{\\pi}{2} \\le x, y \\le \\frac{\\pi}{2}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\left(-1, 1-\\frac{\\pi}{4}\\right), \\left(-1, 1-\\frac{3\\pi}{4}\\right)"
+    },
+    "12": {
+      "problem": "<p>Find the remainder when \\(\\displaystyle\\sum_{k=1}^{50} k!(k^2+k-1)\\) is divided by 1008.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "269"
+    },
+    "13": {
+      "problem": "<p>The <i>devil set</i> of a positive integer \\(n\\), denoted \\(D(n)\\), is defined as follows:</p><ol><li>For every positive integer \\(n\\), \\(n \\in D(n)\\).</li><li>If \\(n\\) is divisible by \\(m\\) and \\(m &lt; n\\), then for every element \\(a \\in D(m)\\), \\(a^3\\) must be in \\(D(n)\\).</li></ol><p>Furthermore, call a set \\(S\\) <i>scary</i> if for any \\(a, b \\in S\\), \\(a &lt; b\\) implies that \\(b\\) is divisible by \\(a\\). What is the least positive integer \\(n\\) such that \\(D(n)\\) is scary and has at least 2009 elements?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2^{78}"
+    }
+  }
+}

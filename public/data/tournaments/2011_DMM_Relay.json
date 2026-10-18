@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2011,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2011/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the number of positive integers \\(n\\) such that \\(-n^2 + 8n + 13 \\ge 0\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Let \\(L = |6 - \\text{TNYWR}|\\). In the diagram below, six equilateral triangles are arranged in a ring such that a regular hexagon is formed in the middle. Each side length of the hexagon is half the side length of each triangle. Given that the perimeter of the hexagon is \\(L\\), what is the perimeter of the exterior of the diagram?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2011_DMM_Relay/2-fig1.png\" width=\"470\" alt=\"\"></p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(9\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Let \\(L = \\lfloor \\text{TNYWR} + 1 \\rfloor\\). In the written language Flipsy, there are only two characters: \\(\\vee\\) and \\(\\wedge\\). A word in Flipsy is a sequence of characters. A word is “valid” if it reads the same when it is rotated 180 degrees as it does when it isn’t rotated. For instance, \\(\\vee\\wedge\\) is valid, but \\(\\vee\\vee\\) isn’t. How many valid words with \\(L\\) characters are there? Note that \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x\\).</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(9\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>In the figure below, \\(AE = 4\\sqrt{3}\\), \\(\\angle EAC\\) and \\(\\angle EDB\\) are right, \\(\\angle BED = 15^\\circ\\), and \\(\\angle ECA = 45^\\circ\\). What is the area of \\(\\triangle EBD\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2011_DMM_Relay/4-fig1.png\" width=\"273\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Let \\(L = \\text{TNYWR}\\). Find the number of integers \\(n\\) between \\(L\\) and \\(4L\\) such that \\[\\sqrt{n} - \\lfloor \\sqrt{n} \\rfloor &lt; 1/2.\\] Note that \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x\\).</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(8\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Let \\(L = \\text{TNYWR}\\). Right triangle \\(T\\) has integer side lengths, one of which is \\(L\\). What is the second-largest possible value of the perimeter of \\(T\\)?</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(15\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

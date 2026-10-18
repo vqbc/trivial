@@ -1,0 +1,83 @@
+{
+  "test": "CMM Individual",
+  "year": 2013,
+  "name": "Individual Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_f3c07b103e484bfaa5bd8860a763e333.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[\\sqrt{(\\sqrt{63}+\\sqrt{112}+\\sqrt{175})(-\\sqrt{63}+\\sqrt{112}+\\sqrt{175})(\\sqrt{63}-\\sqrt{112}+\\sqrt{175})(\\sqrt{63}+\\sqrt{112}-\\sqrt{175})}.\\]</p>",
+      "solutions": "<p><b>Solution 1.</b> We see that \\(\\sqrt{63} = 3\\sqrt{7}\\), \\(\\sqrt{112} = 4\\sqrt{7}\\), and \\(\\sqrt{175} = 5\\sqrt{7}\\). Hence, we can compute this directly after factoring out the \\(\\sqrt{7}\\): \\[\\sqrt{7^2(3+4+5)(-3+4+5)(3-4+5)(3+4-5)} = 7\\sqrt{12\\cdot 6\\cdot 4\\cdot 2} = 7\\sqrt{24^2} = 168.\\]</p><p><b>Solution 2.</b> We see that \\(\\sqrt{63} = 3\\sqrt{7}\\), \\(\\sqrt{112} = 4\\sqrt{7}\\), and \\(\\sqrt{175} = 5\\sqrt{7}\\). Hence, these can be interpreted as the sides of a right triangle. The computation asked is very similar to the equation for Heron’s formula, which gives us that the computation is simply 4 times the area of the right triangle with sides \\(3\\sqrt{7}\\), \\(4\\sqrt{7}\\), and \\(5\\sqrt{7}\\). Hence, we get that the answer is \\[\\frac{4\\cdot(3\\sqrt{7})\\cdot(4\\sqrt{7})}{2} = 24\\cdot 7 = 168.\\]</p>",
+      "answer": "168"
+    },
+    "2": {
+      "problem": "<p>Consider the set \\(S = \\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}\\). How many distinct 3-element subsets are there such that the sum of the elements in each subset is divisible by 3?</p>",
+      "solutions": "<p>If you consider the elements of \\(S\\) modulo 3, we see that there are four elements congruent to \\(0\\) modulo 3, three elements congruent to \\(1\\) modulo 3, and three elements congruent to \\(2\\) modulo 3. Hence, the three-element subsets that satisfy the conditions we want are one of four cases:</p><ul><li>All three elements are congruent to \\(0\\) modulo 3. The number of such subsets is simply \\(\\binom{4}{3} = 4\\).</li><li>All three elements are congruent to \\(1\\) modulo 3. The number of such subsets is simply \\(\\binom{3}{3} = 1\\).</li><li>All three elements are congruent to \\(2\\) modulo 3. The number of such subsets is simply \\(\\binom{3}{3} = 1\\).</li><li>The three elements are all not congruent to each other modulo 3 (in other words, one is congruent to \\(0\\) modulo 3, one is congruent to \\(1\\) modulo 3, and one is congruent to \\(2\\) modulo 3). There are \\(4\\cdot 3\\cdot 3 = 36\\) subsets of this form.</li></ul><p>Hence, the total number of subsets is \\(4+1+1+36 = 42\\).</p>",
+      "answer": "42"
+    },
+    "3": {
+      "problem": "<p>Let \\(a^2\\) and \\(b^2\\) be two integers. Consider the triangle with one vertex at the origin, and the other two at the intersections of the circle \\(x^2+y^2=a^2+b^2\\) with the graph \\(ay=b|x|\\). If the area of the triangle is numerically equal to the radius of the circle, what is this area?</p>",
+      "solutions": "<p>Notice that the absolute value graph intersects the circle at the points \\((a,b)\\) and \\((-a,b)\\). Hence, we have a triangle with base of length \\(2a\\) and height \\(b\\). Setting the area of the triangle equal to the radius of the circle, we get \\[\\begin{aligned}\n\\frac{(2a)(b)}{2} &amp;= \\sqrt{a^2+b^2} \\\\\nab &amp;= \\sqrt{a^2+b^2} \\\\\na^2b^2 &amp;= a^2+b^2 \\\\\n1 &amp;= (a^2-1)(b^2-1).\n\\end{aligned}\\] Since \\(a^2\\) and \\(b^2\\) are integers, it follows that \\(a^2 = b^2 = 2\\), so the area of the triangle is \\(2\\).</p>",
+      "answer": "2"
+    },
+    "4": {
+      "problem": "<p>Suppose \\(f(x) = x^3+x-1\\) has roots \\(\\alpha, \\beta\\), and \\(\\gamma\\). What is \\[\\frac{\\alpha^3}{1-\\alpha}+\\frac{\\beta^3}{1-\\beta}+\\frac{\\gamma^3}{1-\\gamma}?\\]</p>",
+      "solutions": "<p>We see for a root \\(x\\), \\(f(x) = x^3+x-1 = 0 \\Rightarrow x^3/(1-x) = 1\\), so the value we want is \\(1+1+1=3\\).</p>",
+      "answer": "3"
+    },
+    "5": {
+      "problem": "<p>Lisa has a 2D rectangular box that is 48 units long and 126 units wide. She shines a laser beam into the box through one of the corners such that the beam is at a \\(45^\\circ\\) angle with respect to the sides of the box. Whenever the laser beam hits a side of the box, it is reflected perfectly, again at a \\(45^\\circ\\) angle. Compute the distance the laser beam travels until it hits one of the four corners of the box.</p>",
+      "solutions": "<p>The problem boils down to computing when the line \\(y=x\\) hits a lattice point whose \\(x\\)-value is a multiple of 126 and whose \\(y\\)-value is a multiple of 48. This occurs at the least common multiple of 48 and 126, namely, 1008. Therefore, we can find the length of this line, which is simply \\(1008\\sqrt{2}\\).</p>",
+      "answer": "1008\\sqrt{2}"
+    },
+    "6": {
+      "problem": "<p>How many ways can we form a group with an odd number of members (plural) from 99 people total? Express your answer in the form \\(a^b+c\\), where \\(a\\), \\(b\\), and \\(c\\) are integers, and \\(a\\) is prime.</p>",
+      "solutions": "<p>We want to find the sum \\[\\binom{99}{1}+\\binom{99}{3}+\\ldots+\\binom{99}{99}.\\] We see that for any arbitrary subset of size \\(k\\) of the 99 people, we can pair it with its complement of size \\(99-k\\). Further, we see that \\(99-k\\) is of the opposite parity of \\(k\\). Therefore, we see that the subsets with an odd number of elements are in a 1-1 correspondence with the subsets with an even number of elements. Hence, we see that this sum is equal to \\[\\frac12\\left[\\binom{99}{0}+\\binom{99}{1}+\\ldots+\\binom{99}{99}\\right] = \\frac12(2^{99}) = 2^{98}.\\] If we require that every group has more than one member, then our answer is \\(2^{98}-\\binom{99}{1} = 2^{98}-99\\).</p>",
+      "answer": "2^{98}-99"
+    },
+    "7": {
+      "problem": "<p>Let \\[S = \\log_2 9 \\log_3 16 \\log_4 25 \\cdots \\log_{999} 1000000.\\] Compute the greatest integer less than or equal to \\(\\log_2 S\\).</p>",
+      "solutions": "<p>Using the fact that \\(\\log_a b^2 = 2\\log_a b\\) and \\(\\log_a b \\log_b c = \\log_a c\\), we can quickly compute that \\(S = 2^{998}\\log_2 1000\\). Then \\(\\log_2 S = 998+\\log_2\\log_2 1000\\). Since \\(\\log_2 1000\\) is close to 10, it is easy to verify \\(3 &lt; \\log_2\\log_2 1000 &lt; 4\\), so \\(1001 &lt; \\log_2 S &lt; 1002\\).</p>",
+      "answer": "1001"
+    },
+    "8": {
+      "problem": "<p>A prison, housing exactly four hundred prisoners in four hundred cells numbered 1–400, has a really messed-up warden. One night, when all the prisoners are asleep and all of their doors are locked, the warden toggles the locks on all of their doors (that is, if the door is locked, he unlocks it, and if the door is unlocked, he locks it again), starting at door 1 and ending at door 400. The warden then toggles the lock on every other door starting at door 2 (2, 4, 6, etc). After he has toggled the lock on every other door, the warden then toggles every third door (doors 3, 6, 9, etc.), then every fourth door, etc., finishing by toggling every 400th door (consisting of only the 400th door). He then collapses in exhaustion.</p><p>Compute the number of prisoners who go free (that is, the number of unlocked doors) when they wake up the next morning.</p>",
+      "solutions": "<p>Note that if a door begins in the locked state in the evening, then their door will end up unlocked in the morning if it gets toggled an odd number of times: if a door begins locked and is toggled an even number of times, then it will remain locked.</p><p>Observe that for the warden’s second pass, the \\(n\\)-th door gets toggled if it is a multiple of 2; that is, if the door number is divisible by 2, then it gets toggled. Extending this logic, we see that on the warden’s \\(k\\)-th pass, the \\(n\\)-th door gets toggled if \\(n\\) is divisible by \\(k\\). Therefore, every door gets toggled by the total number of factors it has.</p><p>Now, consider an arbitrary number \\(n\\) and a divisor \\(d\\) of \\(n\\). Clearly, \\(\\frac{n}{d}\\) is also a divisor, and so we see that an arbitrary number \\(n\\) must have an even number of divisors, unless it is a perfect square – every divisor of \\(n\\) has a complementary divisor unless \\(n\\) is a square, in which case there is the sole exception of \\(\\sqrt{n}\\). Hence, we see that the unlocked doors are exactly the doors with perfect squares as numbers, and since there are 20 perfect squares from 1 to 400 inclusive, the answer is 20.</p>",
+      "answer": "20"
+    },
+    "9": {
+      "problem": "<p>Let \\(A\\) and \\(B\\) be fixed points on a 2-dimensional plane with distance \\(AB=1\\). An ant walks on a straight line from point \\(A\\) to some point \\(C\\) on the same plane and finds that the distance from itself to \\(B\\) always decreases at any time during this walk. Compute the area of the locus of points where point \\(C\\) could possibly be located.</p>",
+      "solutions": "<p>Notice that if \\(C\\) is on the border of this area, then \\(\\overline{AC}\\perp \\overline{BC}\\) because \\(C\\) must be the closest point to \\(B\\) in this direction. These locations of \\(C\\) form a circle with diameter \\(AB\\). So the area of possible positions where \\(C\\) can be located is simply \\(\\pi/4\\).</p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "10": {
+      "problem": "<p>A robot starts in the bottom left corner of a \\(4\\times 4\\) grid of squares. How many ways can it travel to each square exactly once and then return to its start if it is only allowed to move to an adjacent (not diagonal) square at each step?</p>",
+      "solutions": "<p>Coordinatize the board so that \\((0,0)\\) is the starting point and \\((3,3)\\) is the opposite corner. Consider all the ways one can enter and exit \\((1,1)\\). If one passes straight through in either direction, it is easy to verify the rest of the Hamiltonian cycle is uniquely determined. If the entrance and exit are \\((0,1)\\), \\((1,0)\\) in some order, there is no possible way. If the entrance and exit are \\((0,1)\\), \\((1,2)\\) or the reflection along the line \\(x=y\\), the rest of the Hamiltonian cycle is uniquely determined. Finally, if \\((2,1)\\), \\((1,2)\\) are the entrance and exit, we see there are two ways to make a cycle from this. (All of this is easy to determine by drawing the board and marking the edges that have to be used.) This gives a total of 6.</p>",
+      "answer": "6"
+    },
+    "11": {
+      "problem": "<p>Assuming real values for \\(p\\), \\(q\\), \\(r\\), and \\(s\\), the equation \\[x^4+px^3+qx^2+rx+s\\] has four non-real roots. The sum of two of these roots is \\(4+7i\\), and the product of the other two roots is \\(3-4i\\). Find \\(q\\).</p>",
+      "solutions": "<p>Let \\(m\\) and \\(n\\) be the first pair of roots. Since the coefficients are real, the non-real roots must be in complex conjugate pairs. Since \\(m+n\\) is not real, \\(m\\) and \\(n\\) are not conjugate to each other; let \\(m'\\) and \\(n'\\) be their conjugates, respectively. Hence, we have the following four equations: \\[\\begin{aligned}\nm+n &amp;= 4+7i \\\\\nm'+n' &amp;= 4-7i \\\\\nm'\\cdot n' &amp;= 3-4i \\\\\nm\\cdot n &amp;= 3+4i\n\\end{aligned}\\] Using Vieta’s formulas, we have that \\(q\\) is the second symmetric sum of the roots (the sum of all terms \\(r_ir_j\\), where \\(r_i\\) and \\(r_j\\) are roots of the polynomial). This can be factored to \\[\\begin{aligned}\nmm'+mn+mn'+m'n+m'n'+nn' &amp;= (m+n)(m'+n')+mn+m'n' \\\\\n&amp;= (4+7i)(4-7i)+(3+4i)+(3-4i) \\\\\n&amp;= 16+49+6 \\\\\n&amp;= 71.\n\\end{aligned}\\]</p>",
+      "answer": "71"
+    },
+    "12": {
+      "problem": "<p>A cube is inscribed in a right circular cone such that one face of the cube lies on the base of the cone. If the ratio of the height of the cone to the radius of the cone is \\(2:1\\), what fraction of the cone’s volume does the cube take up? Express your answer in simplest radical form.</p>",
+      "solutions": "<p>Let \\(h\\) be the height of the cone, \\(r\\) be the radius, and \\(s\\) be the side length of the cube. We’re given that \\(2r=h\\). By similar triangles, we get: \\[\\frac{h-s}{s/\\sqrt{2}} = \\frac{h}{r} = 2.\\] Simplifying these, we get \\(h=s(1+\\sqrt{2})\\), or \\(s=h(\\sqrt{2}-1)\\). Then, we can compute the fraction of the volumes: \\[\\frac{s^3}{\\frac13\\pi r^2 h} = \\frac{h^3(\\sqrt{2}-1)^3}{\\frac{1}{12}\\pi h^3} = \\frac{12(\\sqrt{2}-1)^3}{\\pi} = \\frac{60\\sqrt{2}-84}{\\pi}.\\]</p>",
+      "answer": "\\frac{60\\sqrt{2}-84}{\\pi}"
+    },
+    "13": {
+      "problem": "<p>Let \\[y = \\cfrac{1}{1+\\cfrac{1}{9+\\cfrac{1}{5+\\cfrac{1}{9+\\cfrac{1}{5+\\cdots}}}}}.\\] If \\(y\\) can be represented as \\(\\frac{a\\sqrt{b}+c}{d}\\), where \\(b\\) is not divisible by the square of any prime, and the greatest common divisor of \\(a\\) and \\(d\\) is 1, find the sum \\(a+b+c+d\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "14": {
+      "problem": "<p>Alice wants to paint each face of an octahedron either red or blue. She can paint any number of faces a particular color, including zero. Compute the number of ways in which she can do this. Two ways of painting the octahedron are considered the same if you can rotate the octahedron to get from one to the other.</p>",
+      "solutions": "<p>Apply Burnside’s lemma to the group of 24 symmetries of an octahedron:</p><ul><li>There is one identity rotation, with \\(2^8\\) possible colorings;</li><li>There are 8 120-degree face rotations, with \\(2^4\\) possible colorings;</li><li>There are 6 90-degree vertex rotations, with \\(2^2\\) possible colorings;</li><li>There are 3 180-degree vertex rotations, with \\(2^4\\) possible colorings;</li><li>There are 6 180-degree edge rotations, with \\(2^4\\) possible colorings.</li></ul><p>Then, by Burnside’s Lemma, we have: \\[\\frac{1}{24}(2^8+8\\cdot 2^4+6\\cdot 2^2+3\\cdot 2^4+6\\cdot 2^4) = \\frac{1}{24}(256+128+24+48+96) = \\frac{552}{24} = 23.\\]</p>",
+      "answer": "23"
+    },
+    "15": {
+      "problem": "<p>Find \\(n\\) in the equation \\[133^5+110^5+84^5+27^5=n^5,\\] where \\(n\\) is an integer less than 170.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

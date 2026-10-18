@@ -1,0 +1,173 @@
+{
+  "test": "HMMT February Guts",
+  "year": 2009,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2009/feb/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[1\\cdot 2^2 + 2\\cdot 3^2 + 3\\cdot 4^2 + \\cdots + 19\\cdot 20^2.\\]</p>",
+      "solutions": "<p>We can write this as \\((1^3+2^3+\\cdots+20^3) - (1^2+2^2+\\cdots+20^2)\\), which is equal to \\(44100-2870=41230\\).</p>",
+      "answer": "41230"
+    },
+    "2": {
+      "problem": "<p>Given that \\(\\sin A + \\sin B = 1\\) and \\(\\cos A + \\cos B = 3/2\\), what is the value of \\(\\cos(A-B)\\)?</p>",
+      "solutions": "<p>Squaring both equations and adding them together, one obtains \\(1+9/4 = 2+2(\\cos(A)\\cos(B)+\\sin(A)\\sin(B)) = 2+2\\cos(A-B)\\). Thus \\(\\cos(A-B) = 5/8\\).</p>",
+      "answer": "\\frac{5}{8}"
+    },
+    "3": {
+      "problem": "<p>Find all pairs of integer solutions \\((n,m)\\) to \\[2^{3^n} = 3^{2^m} - 1.\\]</p>",
+      "solutions": "<p>We find all solutions of \\(2^x = 3^y-1\\) for positive integers \\(x\\) and \\(y\\). If \\(x=1\\), we obtain the solution \\(x=1,y=1\\), which corresponds to \\((n,m)=(0,0)\\) in the original problem. If \\(x&gt;1\\), consider the equation modulo 4. The left hand side is 0, and the right hand side is \\((-1)^y-1\\), so \\(y\\) is even. Thus we can write \\(y=2z\\) for some positive integer \\(z\\), and so \\(2^x = (3^z-1)(3^z+1)\\). Thus each of \\(3^z-1\\) and \\(3^z+1\\) is a power of 2, but they differ by 2, so they must equal 2 and 4 respectively. Therefore, the only other solution is \\(x=3\\) and \\(y=2\\), which corresponds to \\((n,m)=(1,1)\\) in the original problem.</p>",
+      "answer": "(0,0) \\text{ and } (1,1)"
+    },
+    "4": {
+      "problem": "<p>Simplify: \\(i^0 + i^1 + \\cdots + i^{2009}\\).</p>",
+      "solutions": "<p>By the geometric series formula, the sum is equal to \\(\\frac{i^{2010}-1}{i-1} = \\frac{-2}{i-1} = 1+i\\).</p>",
+      "answer": "1+i"
+    },
+    "5": {
+      "problem": "<p>In how many distinct ways can you color each of the vertices of a tetrahedron either red, blue, or green such that no face has all three vertices the same color? (Two colorings are considered the same if one coloring can be rotated in three dimensions to obtain the other.)</p>",
+      "solutions": "<p>If only two colors are used, there is only one possible arrangement up to rotation, so this gives 3 possibilities. If all three colors are used, then one is used twice. There are 3 ways to choose the color that is used twice. Say this color is red. Then the red vertices are on a common edge, and the green and blue vertices are on another edge. We see that either choice of arrangement of the green and blue vertices is the same up to rotation. Thus there are 6 possibilities total.</p>",
+      "answer": "6"
+    },
+    "6": {
+      "problem": "<p>Let \\(ABC\\) be a right triangle with hypotenuse \\(AC\\). Let \\(B'\\) be the reflection of point \\(B\\) across \\(AC\\), and let \\(C'\\) be the reflection of \\(C\\) across \\(AB'\\). Find the ratio of \\([BCB']\\) to \\([BC'B']\\).</p>",
+      "solutions": "<p>Since \\(C\\), \\(B'\\), and \\(C'\\) are collinear, it is evident that \\([BCB'] = \\frac{1}{2}[BCC']\\). It immediately follows that \\([BCB'] = [BC'B']\\). Thus, the ratio is \\(1\\).</p>",
+      "answer": "1"
+    },
+    "7": {
+      "problem": "<p>How many perfect squares divide \\(2^3\\cdot 3^5\\cdot 5^7\\cdot 7^9\\)?</p>",
+      "solutions": "<p>The number of such perfect squares is \\(2\\cdot 3\\cdot 4\\cdot 5\\), since the exponent of each prime can be any nonnegative even number less than the given exponent.</p>",
+      "answer": "120"
+    },
+    "8": {
+      "problem": "<p>Which is greater, \\(\\log_{2008}(2009)\\) or \\(\\log_{2009}(2010)\\)?</p>",
+      "solutions": "<p>Let \\(f(x) = \\log_x(x+1)\\). Then \\(f'(x) = \\frac{x\\ln x - (x+1)\\ln(x+1)}{x(x+1)\\ln^2 x} &lt; 0\\) for any \\(x&gt;1\\), so \\(f\\) is decreasing. Thus \\(\\log_{2008}(2009)\\) is greater.</p>",
+      "answer": "\\log_{2008} 2009"
+    },
+    "9": {
+      "problem": "<p>An icosidodecahedron is a convex polyhedron with 20 triangular faces and 12 pentagonal faces. How many vertices does it have?</p>",
+      "solutions": "<p>Since every edge is shared by exactly two faces, there are \\((20\\cdot 3+12\\cdot 5)/2=60\\) edges. Using Euler’s formula \\(v-e+f=2\\), we see that there are 30 vertices.</p>",
+      "answer": "30"
+    },
+    "10": {
+      "problem": "<p>Let \\(a\\), \\(b\\), and \\(c\\) be real numbers. Consider the system of simultaneous equations in \\(x\\) and \\(y\\): \\[\\begin{aligned}\nax+by &amp;= c-1 \\\\\n(a+5)x+(b+3)y &amp;= c+1\n\\end{aligned}\\]</p><p>Determine the value(s) of \\(c\\), in terms of \\(a\\), such that the system has a solution for any \\(a\\) and \\(b\\).</p>",
+      "solutions": "<p>We have only to consider when the determinant of \\(\\begin{pmatrix} a &amp; b \\\\ a+5 &amp; b+3 \\end{pmatrix}\\) is zero. That is, when \\(b=3a/5\\). Plugging in \\(b=3a/5\\), we find that \\((a+5)(c-1)=a(c+1)\\) or that \\(c=2a/5+1\\).</p>",
+      "answer": "\\frac{2a}{5}+1"
+    },
+    "11": {
+      "problem": "<p>There are 2008 distinct points on a circle. If you connect two of these points to form a line and then connect another two points (distinct from the first two) to form another line, what is the probability that the two lines intersect inside the circle?</p>",
+      "solutions": "<p>Given four of these points, there are 3 ways in which to connect two of them and then connect the other two, and of these possibilities exactly one will intersect inside the circle. Thus 1/3 of all the ways to connect two lines and then connect two others have an intersection point inside the circle.</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "12": {
+      "problem": "<p>Bob is writing a sequence of letters of the alphabet, each of which can be either uppercase or lowercase, according to the following two rules:</p><ul><li>If he had just written an <b>uppercase</b> letter, he can either write the same letter in <b>lowercase</b> after it, or the <b>next</b> letter of the alphabet in <b>uppercase</b>.</li><li>If he had just written a <b>lowercase</b> letter, he can either write the same letter in <b>uppercase</b> after it, or the <b>preceding</b> letter of the alphabet in <b>lowercase</b>.</li></ul><p>For instance, one such sequence is \\(aAaABCDdcbBC\\). How many sequences of 32 letters can he write that start at (lowercase) \\(a\\) and end at (lowercase) \\(z\\)? (The alphabet contains 26 letters from \\(a\\) to \\(z\\), without wrapping around, so that \\(z\\) does not precede \\(a\\).)</p>",
+      "solutions": "<p>The smallest possible sequence from \\(a\\) to \\(z\\) is \\(aABCD\\ldots Zz\\), which has 28 letters. To insert 4 more letters, we can either switch two (not necessarily distinct) letters to lowercase and back again (as in \\(aABCcDEFfFGH\\ldots Zz\\)), or we can insert a lowercase letter after its corresponding uppercase letter, insert the previous letter of the alphabet, switch back to uppercase, and continue the sequence (as in \\(aABCcbBCDE\\ldots Zz\\)). There are \\(\\binom{27}{2}=13\\cdot 27\\) sequences of the former type and 25 of the latter, for a total of 376 such sequences.</p>",
+      "answer": "376"
+    },
+    "13": {
+      "problem": "<p>How many ordered quadruples \\((a,b,c,d)\\) of four distinct numbers chosen from the set \\(\\{1,2,3,\\ldots,9\\}\\) satisfy \\(b&lt;a\\), \\(b&lt;c\\), and \\(d&lt;c\\)?</p>",
+      "solutions": "<p>Given any 4 elements \\(p&lt;q&lt;r&lt;s\\) of \\(\\{1,2,\\ldots,9\\}\\), there are 5 ways of rearranging them to satisfy the inequality: \\(prqs\\), \\(psqr\\), \\(qspr\\), \\(qrps\\), \\(rspq\\). This gives a total of \\(\\binom{9}{4}\\cdot 5 = 630\\) quadruples.</p>",
+      "answer": "630"
+    },
+    "14": {
+      "problem": "<p>Compute \\[\\sum_{k=1}^{2009} k\\left(\\left\\lfloor \\frac{2009}{k} \\right\\rfloor - \\left\\lfloor \\frac{2008}{k} \\right\\rfloor\\right).\\]</p><p>Here \\(\\lfloor x \\rfloor\\) denotes the largest integer that is less than or equal to \\(x\\).</p>",
+      "solutions": "<p>The summand is equal to \\(k\\) if \\(k\\) divides 2009 and 0 otherwise. Thus the sum is equal to the sum of the divisors of 2009, or 2394.</p>",
+      "answer": "2394"
+    },
+    "15": {
+      "problem": "<p>Stan has a stack of 100 blocks and starts with a score of 0, and plays a game in which he iterates the following two-step procedure:</p><ul style=\"list-style-type: none\"><li>(a) Stan picks a stack of blocks and splits it into 2 smaller stacks each with a positive number of blocks, say \\(a\\) and \\(b\\). (The order in which the new piles are placed does not matter.)</li><li>(b) Stan adds the product of the two piles’ sizes, \\(ab\\), to his score.</li></ul><p>The game ends when there are only 1-block stacks left. What is the expected value of Stan’s score at the end of the game?</p>",
+      "solutions": "<p>Let \\(E(n)\\) be the expected value of the score for an \\(n\\)-block game. It suffices to show that the score is invariant regardless of how the game is played. We proceed by induction. We have \\(E(1) = 0\\) and \\(E(2) = 1\\). We require that \\(E(n) = E(n-k)+E(k)+(n-k)k\\) for all \\(k\\). Setting \\(k=1\\), we hypothesize that \\(E(n) = n(n-1)/2\\). This satisfies the recursion and base cases so \\(E(100) = 100 \\cdot 99/2 = 4950\\).</p>",
+      "answer": "4950"
+    },
+    "16": {
+      "problem": "<p>A spider is making a web between \\(n&gt;1\\) distinct leaves which are equally spaced around a circle. He chooses a leaf to start at, and to make the base layer he travels to each leaf one at a time, making straight lines of silk from one leaf to another, such that no two of the lines of silk cross each other and he visits every leaf exactly once. In how many ways can the spider make the base layer of the web? Express your answer in terms of \\(n\\).</p>",
+      "solutions": "<p>There are \\(n\\) ways to choose a starting vertex, and at each vertex he has only two choices for where to go next: the nearest untouched leaf in the clockwise direction, and the nearest untouched leaf in the counterclockwise direction. For, if the spider visited a leaf which is not nearest in some direction, there are two untouched leaves which are separated by this line of silk, and so the silk would eventually cross itself. Thus, for the first \\(n-2\\) choices there are 2 possibilities, and the \\((n-1)\\)st choice is then determined.</p><p>Note: This formula can also be derived recursively.</p>",
+      "answer": "n2^{n-2}"
+    },
+    "17": {
+      "problem": "<p>How many positive integers \\(n \\le 2009\\) have the property that \\(\\lfloor \\log_2(n) \\rfloor\\) is odd?</p>",
+      "solutions": "<p>We wish to find \\(n\\) such that there is some natural number \\(k\\) for which \\(2k-1 \\le \\log_2 n &lt; 2k\\). Since \\(n \\le 2009\\) we must have \\(k \\le 5\\). This is equivalent to finding the number of positive integers \\(n \\le 2009\\) satisfying \\(2^{2k-1} \\le n &lt; 2^{2k}\\) for some \\(k \\le 5\\), so the number of such integers is \\(2+2^3+2^5+2^7+2^9 = 682\\).</p>",
+      "answer": "682"
+    },
+    "18": {
+      "problem": "<p>Find the positive integer \\(n\\) such that \\(n^3 + 2n^2 + 9n + 8\\) is the cube of an integer.</p>",
+      "solutions": "<p>Since \\(n^3 &lt; n^3+2n^2+9n+8 &lt; (n+2)^3\\), we must have \\(n^3+2n^2+9n+8 = (n+1)^3\\). Thus \\(n^2 = 6n+7\\), so \\(n=7\\).</p>",
+      "answer": "7"
+    },
+    "19": {
+      "problem": "<p>Shelly writes down a vector \\(v=(a,b,c,d)\\), where \\(0&lt;a&lt;b&lt;c&lt;d\\) are integers. Let \\(\\sigma(v)\\) denote the set of 24 vectors whose coordinates are \\(a\\), \\(b\\), \\(c\\), and \\(d\\) in some order. For instance, \\(\\sigma(v)\\) contains \\((b,c,d,a)\\). Shelly notes that there are 3 vectors in \\(\\sigma(v)\\) whose sum is of the form \\((s,s,s,s)\\) for some \\(s\\). What is the smallest possible value of \\(d\\)?</p>",
+      "solutions": "<p>If \\(k=a+b+c+d\\), first you notice \\(4 \\mid 3k\\), and \\(k \\ge 10\\). So we try \\(k=12\\), which works with \\(a,b,c,d = 1,2,3,6\\) and not \\(1,2,4,5\\).</p>",
+      "answer": "6"
+    },
+    "20": {
+      "problem": "<p>A positive integer is called <i>jubilant</i> if the number of 1’s in its binary representation is even. For example, \\(6 = 110_2\\) is a jubilant number. What is the 2009th smallest jubilant number?</p>",
+      "solutions": "<p>Notice that for each pair of consecutive positive integers \\(2k\\) and \\(2k+1\\), their binary representation differs by exactly one 1 (in the units digit), so exactly one of 2 and 3 is jubilant, exactly one of 4 and 5 is jubilant, etc. It follows that there are exactly 2009 jubilant numbers less than or equal to 4019. We now simply need to check whether 4018 or 4019 is jubilant. Since the binary representation of 4018 is \\(111110110010\\), 4018 is the 2009th jubilant number.</p>",
+      "answer": "4018"
+    },
+    "21": {
+      "problem": "<p>Simplify \\[2\\cos^2(\\ln(2009)i) + i\\sin(\\ln(4036081)i).\\]</p>",
+      "solutions": "<p>We have \\[\\begin{aligned}\n2\\cos^2(\\ln(2009)i) + i\\sin(\\ln(4036081)i) &amp;= 1 + \\cos(2\\ln(2009)i) + i\\sin(\\ln(4036081)i) \\\\\n&amp;= 1 + \\cos(\\ln(4036081)i) + i\\sin(\\ln(4036081)i) \\\\\n&amp;= 1 + e^{i^2\\ln(4036081)} \\\\\n&amp;= 1 + \\frac{1}{4036081} \\\\\n&amp;= \\frac{4036082}{4036081}\n\\end{aligned}\\]</p><p>as desired.</p>",
+      "answer": "\\frac{4036082}{4036081}"
+    },
+    "22": {
+      "problem": "<p>A circle having radius \\(r_1\\) centered at point \\(N\\) is externally tangent to a circle of radius \\(r_2\\) centered at \\(M\\). Let \\(l\\) and \\(j\\) be the two common external tangent lines to the two circles. A circle centered at \\(P\\) with radius \\(r_2\\) is externally tangent to circle \\(N\\) at the point at which \\(l\\) coincides with circle \\(N\\), and line \\(k\\) is externally tangent to \\(P\\) and \\(N\\) such that points \\(M\\), \\(N\\), and \\(P\\) all lie on the same side of \\(k\\). For what ratio \\(r_1/r_2\\) are \\(j\\) and \\(k\\) parallel?</p>",
+      "solutions": "<p>Suppose the lines are parallel. Draw the other tangent line to \\(N\\) and \\(P\\) – since \\(M\\) and \\(P\\) have the same radius, it is tangent to all three circles. Let \\(j\\) and \\(k\\) meet circle \\(N\\) at \\(A\\) and \\(B\\), respectively. Then by symmetry we see that \\(\\angle ANM = \\angle MNP = \\angle PNB = 60^\\circ\\) since \\(A\\), \\(N\\), and \\(B\\) are collinear (perpendicular to \\(j\\) and \\(k\\)). Let \\(D\\) be the foot of the perpendicular from \\(M\\) to \\(AN\\). In \\(\\triangle MDN\\), we have \\(MN=2DN\\), so \\(r_1+r_2=2(r_1-r_2)\\), and so \\(r_1/r_2=3\\).</p>",
+      "answer": "3"
+    },
+    "23": {
+      "problem": "<p>The roots of \\(z^6+z^4+z^2+1=0\\) are the vertices of a convex polygon in the complex plane. Find the sum of the squares of the side lengths of the polygon.</p>",
+      "solutions": "<p>Factoring the polynomial as \\((z^4+1)(z^2+1)=0\\), we find that the 6 roots are \\(e^{\\pm i\\pi/4}\\), \\(e^{\\pm i\\pi/2}\\), \\(e^{\\pm i3\\pi/4}\\). The calculation then follows from the Law of Cosines or the distance formula.</p>",
+      "answer": "12-4\\sqrt{2}"
+    },
+    "24": {
+      "problem": "<p>Compute, in terms of \\(n\\), \\[\\sum_{k=0}^n \\binom{n-k}{k}2^k.\\]</p><p>Note that whenever \\(s&lt;t\\), \\(\\binom{s}{t}=0\\).</p>",
+      "solutions": "<p>Let \\(T_n = \\sum_{k=0}^n \\binom{n-k}{k}2^k\\). From Pascal’s recursion for binomial coefficients, we can find \\(T_n = 2T_{n-2}+T_{n-1}\\), with \\(T_0=1\\) and \\(T_1=1\\). The characteristic polynomial of this recursion is \\(x^2-x-2=0\\), which has roots 2 and \\(-1\\). Thus \\(T_n = a\\cdot 2^n + b\\cdot(-1)^n\\) for some \\(a\\) and \\(b\\). From the initial conditions we have \\(a+b=1\\) and \\(2a-b=1\\). It follows that \\(a=2/3\\) and \\(b=1/3\\), from which the conclusion follows.</p>",
+      "answer": "\\frac{2\\cdot 2^n+(-1)^n}{3}"
+    },
+    "25": {
+      "problem": "<p>Four points, \\(A\\), \\(B\\), \\(C\\), and \\(D\\), are chosen randomly on the circumference of a circle with independent uniform probability. What is the expected number of sides of triangle \\(ABC\\) for which the projection of \\(D\\) onto the line containing the side lies between the two vertices?</p>",
+      "solutions": "<p>By linearity of expectations, the answer is exactly 3 times the probability that the orthogonal projection of \\(D\\) onto \\(AB\\) lies interior to the segment. This happens exactly when either \\(\\angle DAB\\) or \\(\\angle DBA\\) is obtuse, which is equivalent to saying that \\(A\\) and \\(B\\) lie on the same side of the diameter through \\(D\\). This happens with probability \\(1/2\\). Therefore, desired answer is \\(3/2\\).</p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "26": {
+      "problem": "<p>Define the sequence \\(\\{x_i\\}_{i\\ge 0}\\) by \\(x_0 = 2009\\) and \\(x_n = -\\frac{2009}{n}\\sum_{k=0}^{n-1} x_k\\) for all \\(n \\ge 1\\). Compute the value of \\(\\sum_{n=0}^{2009} 2^n x_n\\).</p>",
+      "solutions": "<p>We have \\[-\\frac{nx_n}{2009} = x_{n-1} + x_{n-2} + \\cdots + x_0 = x_{n-1} + \\frac{(n-1)x_{n-1}}{2009},\\] which yields the recursion \\(x_n = \\frac{n-2010}{n}x_{n-1}\\). Unwinding this recursion, we find \\(x_n = (-1)^n \\cdot 2009 \\cdot \\binom{2008}{n}\\). Thus</p><p>\\[\\begin{aligned}\n\\sum_{n=0}^{2009} 2^n x_n &amp;= \\sum_{n=0}^{2009} (-2)^n \\cdot 2009 \\cdot \\binom{2008}{n} \\\\\n&amp;= 2009 \\sum_{n=0}^{2008} (-2)^n \\binom{2008}{n} \\\\\n&amp;= 2009(-2+1)^{2008}\n\\end{aligned}\\]</p><p>as desired.</p>",
+      "answer": "2009"
+    },
+    "27": {
+      "problem": "<p>Circle \\(\\Omega\\) has radius 5. Points \\(A\\) and \\(B\\) lie on \\(\\Omega\\) such that chord \\(AB\\) has length 6. A unit circle \\(\\omega\\) is tangent to chord \\(AB\\) at point \\(T\\). Given that \\(\\omega\\) is also internally tangent to \\(\\Omega\\), find \\(AT \\cdot BT\\).</p>",
+      "solutions": "<p>Let \\(M\\) be the midpoint of chord \\(AB\\) and let \\(O\\) be the center of \\(\\Omega\\). Since \\(AM = BM = 3\\), Pythagoras on triangle \\(AMO\\) gives \\(OM = 4\\). Now let \\(\\omega\\) be centered at \\(P\\) and say that \\(\\omega\\) and \\(\\Omega\\) are tangent at \\(Q\\). Because the diameter of \\(\\omega\\) exceeds 1, points \\(P\\) and \\(Q\\) lie on the same side of \\(AB\\). By tangency, \\(O\\), \\(P\\), and \\(Q\\) are collinear, so that \\(OP = OQ - PQ = 4\\). Let \\(H\\) be the orthogonal projection of \\(P\\) onto \\(OM\\); then \\(OH = OM - HM = OM - PT = 3\\). Pythagoras on \\(OHP\\) gives \\(HP^2 = 7\\). Finally, \\[AT \\cdot BT = AM^2 - MT^2 = AM^2 - HP^2 = 9 - 7 = 2.\\]</p>",
+      "answer": "2"
+    },
+    "28": {
+      "problem": "<p>The vertices of a regular hexagon are labeled \\(\\cos(\\theta), \\cos(2\\theta), \\ldots, \\cos(6\\theta)\\). For every pair of vertices, Benjamin draws a blue line through the vertices if one of these functions can be expressed as a polynomial function of the other (that holds for all real \\(\\theta\\)), and otherwise Roberta draws a red line through the vertices. In the resulting graph, how many triangles whose vertices lie on the hexagon have at least one red and at least one blue edge?</p>",
+      "solutions": "<p>The existence of the Chebyshev polynomials, which express \\(\\cos(n\\theta)\\) as a polynomial in \\(\\cos(\\theta)\\), imply that Bob draws a blue line between \\(\\cos(\\theta)\\) and each other vertex, and also between \\(\\cos(2\\theta)\\) and \\(\\cos(4\\theta)\\), between \\(\\cos(2\\theta)\\) and \\(\\cos(6\\theta)\\), and between \\(\\cos(3\\theta)\\) and \\(\\cos(6\\theta)\\) (by substituting \\(\\theta' = 2\\theta\\) or \\(3\\theta\\) as necessary). We now show that Roberta draws a red line through each other pair of vertices.</p><p>Let \\(m\\) and \\(n\\) be positive integers. Notice that \\(\\cos(n\\theta)\\) is a periodic function with period \\(\\frac{2\\pi}{n}\\), and \\(\\cos(m\\theta)\\) is periodic with period \\(\\frac{2\\pi}{m}\\). Thus, any polynomial in \\(\\cos(m\\theta)\\) is also periodic of period \\(\\frac{2\\pi}{m}\\). This may not be the minimum period of the polynomial, however, so the minimum period is \\(\\frac{2\\pi}{mk}\\) for some \\(k\\). Therefore, if \\(\\cos(n\\theta)\\) can be expressed as a polynomial in \\(\\cos(m\\theta)\\) then \\(\\frac{2\\pi}{n} = \\frac{2\\pi}{mk}\\) for some \\(k\\), so \\(m \\mid n\\). This shows that there is a blue line between two vertices \\(\\cos(a\\theta)\\) and \\(\\cos(b\\theta)\\) if and only if one of \\(a\\) or \\(b\\) divides the other.</p><p>Drawing the graph, one can easily count that there are 3 triangles with all blue edges, 3 triangles with all red edges, and \\(\\binom{6}{3} = 20\\) triangles total. Thus there are \\(20 - 3 - 3 = 14\\) triangles having at least one red and at least one blue edge.</p>",
+      "answer": "14"
+    },
+    "29": {
+      "problem": "<p>The average of a set of distinct primes is 27. What is the largest prime that can be in this set?</p>",
+      "solutions": "<p>Denote the set of these primes by \\(A\\) and the number of elements in \\(A\\) by \\(n\\). There are 9 primes smaller than 27, namely \\(2, 3, 5, 7, 11, 13, 17, 19\\) and \\(23\\). Since 27 is odd and all primes except 2 are odd, \\(2 \\notin A\\). Thus the largest prime \\(p\\) is at most \\(27 \\cdot 9 - 3 - 5 - 7 - 11 - 13 - 17 - 19 - 23 = 145\\), so \\(p \\le 141\\). When the primes are \\(3, 5, 7, 11, 13, 17, 19, 23, 29, 31\\) and \\(139\\), their average is \\(27\\). Therefore \\(p = 139\\).</p>",
+      "answer": "139"
+    },
+    "30": {
+      "problem": "<p>Let \\(f\\) be a polynomial with integer coefficients such that the greatest common divisor of all its coefficients is 1. For any \\(n \\in \\mathbb{N}\\), \\(f(n)\\) is a multiple of 85. Find the smallest possible degree of \\(f\\).</p>",
+      "solutions": "<p>Notice that, if \\(p\\) is a prime and \\(g\\) is a polynomial with integer coefficients such that \\(g(n) \\equiv 0 \\pmod{p}\\) for some \\(n\\), then \\(g(n+mp)\\) is divisible by \\(p\\) as well for any integer multiple \\(mp\\) of \\(p\\). Therefore, it suffices to find the smallest possible degree of a polynomial \\(f\\) for which \\(f(0), f(1), f(2), \\ldots, f(16)\\) are divisible by 17 and by 5.</p><p>There is a polynomial of degree 17 with integer coefficients having \\(f(0) = f(1) = \\cdots = f(16) = 0\\), namely \\(f(x) = (x)(x-1)(x-2)\\cdots(x-16)\\). Thus the minimal degree is no larger than 17.</p><p>Now, let \\(f\\) be such a polynomial and consider \\(f\\) modulo 17. The polynomial has 17 roots, so it must be at least degree 17 when taken modulo 17. Thus \\(f\\) has degree at least 17 as well.</p>",
+      "answer": "17"
+    },
+    "31": {
+      "problem": "<p>How many ways are there to win tic-tac-toe in \\(\\mathbb{R}^n\\)? (That is, how many lines pass through three of the lattice points \\((a_1, \\ldots, a_n)\\) in \\(\\mathbb{R}^n\\) with each coordinate \\(a_i\\) in \\(\\{1, 2, 3\\}\\)?) Express your answer in terms of \\(n\\).</p>",
+      "solutions": "<p>A line consists of three points. Each coordinate can do one of three things passing from the first point to the last point: increase by 1 each time, stay the same, or decrease by 1 each time. There are three ways to stay the same (three coordinates), one way to increase by 1, and one way to decrease by 1, so there are \\(5^n\\) possible types of behavior. Determining this behavior uniquely determines the end point and start point except that we have traced every line exactly twice (forwards and backwards) and incorrectly counted the \\(3^n\\) “lines” where each coordinate stays the same, so we subtract \\(3^n\\) and divide by 2.</p>",
+      "answer": "\\frac{5^n - 3^n}{2}"
+    },
+    "32": {
+      "problem": "<p>Circle \\(\\Omega\\) has radius 13. Circle \\(\\omega\\) has radius 14 and its center \\(P\\) lies on the boundary of circle \\(\\Omega\\). Points \\(A\\) and \\(B\\) lie on \\(\\Omega\\) such that chord \\(AB\\) has length 24 and is tangent to \\(\\omega\\) at point \\(T\\). Find \\(AT \\cdot BT\\).</p>",
+      "solutions": "<p>Let \\(M\\) be the midpoint of \\(AB\\); then \\(AM = BM = 12\\) and Pythagoras on triangle \\(AMO\\) gives \\(MO = 5\\). Note that \\(\\angle AOM = \\angle AOB/2 = \\angle APB = \\angle APT + \\angle TPB\\) or \\(\\tan(\\angle AOM) = \\tan(\\angle APT + \\angle TPB)\\). Applying the tangent addition formula, \\[\\frac{AM}{MO} = \\frac{\\frac{AT}{TP} + \\frac{BT}{TP}}{1 - \\frac{AT}{TP} \\cdot \\frac{BT}{TP}} = \\frac{AB \\cdot TP}{TP^2 - AT \\cdot BT},\\] from which \\(AT \\cdot BT = TP^2 - AB \\cdot TP \\cdot MO/AM = 14^2 - 24 \\cdot 14 \\cdot 5/12 = 56\\).</p>",
+      "answer": "56"
+    },
+    "33": {
+      "problem": "<p>Let \\(m\\) be a positive integer. Let \\(d(n)\\) denote the number of divisors of \\(n\\), and define the function \\[F(x) = \\sum_{n=1}^{105^m} \\frac{d(n)}{n^x}.\\] Define the numbers \\(a(n)\\) to be the positive integers for which \\[F(x)^2 = \\sum_{n=1}^{105^{2m}} \\frac{a(n)}{n^x}\\] for all real \\(x\\). Express \\(a(105^m)\\) in terms of \\(m\\).</p>",
+      "solutions": "<p>The denominator of a term in the expansion of \\(F(x)^2\\) is equal to \\(n^x\\) if and only if it is a product of two terms of \\(F\\) of the form \\(\\frac{d(n/k)}{(n/k)^x}\\) and \\(\\frac{d(k)}{k^x}\\) for some divisor \\(k\\) of \\(n\\). Thus \\(a(105^m) = \\sum_{k \\mid 105^m} d(k) d(\\frac{105^m}{k})\\). We can write \\(k = 3^a 5^b 7^c\\) with \\(a, b, c \\le m\\) for any divisor \\(k\\) of \\(105^m\\), and in this case \\(d(k) = (a+1)(b+1)(c+1)\\). Thus the sum becomes \\[\\sum_{0 \\le a,b,c \\le m} (a+1)(b+1)(c+1)(m-a+1)(m-b+1)(m-c+1).\\] For a fixed \\(b\\) and \\(c\\), we can factor out \\((b+1)(c+1)(m-b+1)(m-c+1)\\) from the terms having this \\(b\\) and \\(c\\) and find that the sum is equal to</p><p>\\[\\begin{aligned}\na(105^m) &amp;= \\sum_{0 \\le b,c \\le m} (b+1)(c+1)(m-b+1)(m-c+1)\\left(\\sum_{a=1}^{m+1} a(m-a+2)\\right) \\\\\n&amp;= \\sum_{0 \\le b,c \\le m} (b+1)(c+1)(m-b+1)(m-c+1)\\left((m+2)\\frac{(m+1)(m+2)}{2} - \\frac{(m+1)(m+2)(2m+3)}{6}\\right) \\\\\n&amp;= \\sum_{0 \\le b,c \\le m} (b+1)(c+1)(m-b+1)(m-c+1)\\left(\\frac{(3m+6-2m-3)(m+1)(m+2)}{6}\\right) \\\\\n&amp;= \\sum_{0 \\le b,c \\le m} (b+1)(c+1)(m-b+1)(m-c+1)\\binom{m+3}{3}\n\\end{aligned}\\]</p><p>Fixing \\(c\\) and factoring out terms again, we find by a similar argument that \\(a(105^m) = \\binom{m+3}{3}^3\\).</p>",
+      "answer": "\\binom{m+3}{3}^3"
+    }
+  }
+}

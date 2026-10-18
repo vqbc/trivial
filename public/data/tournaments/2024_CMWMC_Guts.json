@@ -1,0 +1,128 @@
+{
+  "test": "CMWMC Guts",
+  "year": 2024,
+  "name": "Guts Round",
+  "url": "https://drive.google.com/uc?export=download&id=1uz9NYj86ImRsi0yct7kLRvWQzuY2DKR6",
+  "problems": {
+    "1": {
+      "problem": "<p>Jesse the ant is on one vertex of a cube. How many paths are there for her to get from her vertex to the opposite vertex, given that she travels on just the edges and reaches the other side in 3 moves?</p>",
+      "solutions": "<p>There are 3 moves for the first move, 2 for the second given the first move, and one last move to the opposite vertex. This makes the answer \\(3 \\times 2 \\times 1 = 6\\).</p>",
+      "answer": "6"
+    },
+    "2": {
+      "problem": "<p>There is a straight river 9 furlongs in width, and a spotted lanternfly 6 furlongs away from the left bank of the river (point \\(X\\) in the diagram). The lanternfly wants to reach a grapevine on the right bank of the river (point \\(G\\)), 8 furlongs downstream. The lanternfly could go directly to the grapes, travelling \\(A\\) furlongs. Alternatively the lanternfly could go to the point on the left bank straight across from the grapes (point \\(Y\\)), then cross the river, travelling a total of \\(B\\) furlongs. Find \\(|B - A|\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2024_CMWMC_Guts/2-fig1.png\" width=\"207\" alt=\"\"></p>",
+      "solutions": "<p>The distance from \\(X\\) to \\(G\\) is \\(A = \\sqrt{(6 + 9)^2 + 8^2} = 17\\) by the Pythagorean theorem. The value of \\(B\\) is the distance from \\(X\\) to \\(Y\\), plus the distance from \\(Y\\) to \\(G\\). We have \\(XY = \\sqrt{6^2 + 8^2} = 10\\) by the Pythagorean theorem, and \\(YG = 9\\). Therefore \\(B = 19\\), and the answer is \\(|19 - 17| = 2\\).</p>",
+      "answer": "2"
+    },
+    "3": {
+      "problem": "<p>A bacterial colony doubles in size every \\(n\\) minutes, for some \\(n\\). However it is quite shy and pauses growth for 30 minutes after being observed. Laura observes the colony at 1:00 PM and records a size of \\(1\\text{ mm}^2\\). Laura observes the colony again at 2:50 PM and records a size of \\(16\\text{ mm}^2\\). What will the size of the colony (in \\(\\text{mm}^2\\)) be when Laura checks again at 4:20 PM?</p>",
+      "solutions": "<p>Growth is paused from 1:00 to 1:30. From 1:30 to 2:50 (80 minutes), the colony increases by a factor of \\(16 = 2^4\\). This means the colony doubles every 20 minutes. Growth is paused again from 2:50 to 3:20, and the colony doubles three more times from 3:20 to 4:20. The size at 4:20 is \\(16 \\times 2^3 = 128\\text{ mm}^2\\).</p>",
+      "answer": "128"
+    },
+    "4": {
+      "problem": "<p>Consider the regular hexagon \\(ABCDEF\\) with side length 1, and consider points \\(X_1, X_2, X_3, \\dots X_{2024}\\) which all lie in the interior of the hexagon. Find the minimum value of \\[AX_1 + X_1 X_2 + X_2 X_3 + \\dots + X_{2023} X_{2024} + X_{2024} C.\\]</p>",
+      "solutions": "<p>The line segments form a path from point \\(A\\) to point \\(C\\). The length of this path is minimized when the path is a straight line. This line has length \\(\\sqrt{3}\\).</p>",
+      "answer": "\\sqrt{3}"
+    },
+    "5": {
+      "problem": "<p>At a bakery, Christina crumbles one out of every five cookies that she individually packages. Cookie crumbling occurrences are independent from one another. What is the probability that the third cookie she crumbles occurs on the fifth instance of packaging a cookie?</p>",
+      "solutions": "<p>This is the probability that two cookies crumble in the first four packages, times the probability that the next cookie crumbles. This is equal to \\[P(\\text{third cookie crumbles on fifth instance packaging}) = \\binom{4}{2} \\left(\\frac{4}{5}\\right)^2 \\left(\\frac{1}{5}\\right)^2 \\cdot \\frac{1}{5} = \\frac{96}{3125}.\\]</p>",
+      "answer": "\\frac{96}{3125}"
+    },
+    "6": {
+      "problem": "<p>How many 3-digit numbers \\(\\underline{ABC}\\) are such that \\(A + C - B\\) is a multiple of 11?</p>",
+      "solutions": "<p>The divisibility rule for 11 states that \\(\\underline{ABC}\\) is a multiple of 11 exactly when \\(A + C - B\\) is a multiple of 11. Therefore the answer is the number of 3-digit multiples of 11. We have \\(100 \\le 11x \\le 999\\) for \\(10 \\le x \\le 90\\), yielding 81 numbers.</p>",
+      "answer": "81"
+    },
+    "7": {
+      "problem": "<p>Find the sum of the values of \\(x\\) such that \\(||||x - 1| - 1| - 1| - 1| = 1\\).</p>",
+      "solutions": "<p>\\(x = \\pm 1, \\pm 3, 5\\), so the sum of the values is just 5. An interesting observation is that this is true for all equations of this form.</p>",
+      "answer": "5"
+    },
+    "8": {
+      "problem": "<p>How many ways can you tile a \\(3 \\times 6\\) board with 6 L-shaped triominos (a \\(2 \\times 2\\) square without one tile)?</p>",
+      "solutions": "<p>There are two ways for each \\(2 \\times 3\\), so \\(2^3 = 8\\).</p>",
+      "answer": "8"
+    },
+    "9": {
+      "problem": "<p>Nicole goes for a walk on a clear, moonlight midnight that starts from her house at point \\(X\\). At each minute \\(t = 0, 1, 2, \\dots\\) she walks along a directed arrow in the graph. What is the largest value of \\(t\\) for which Nicole cannot possibly be back at \\(X\\)? For example, at time step 3 she cannot be back home because there’s no loop of length 3. She also can’t be back at time 9, even though she’s passed her house, because she’d have to walk additional steps.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2024_CMWMC_Guts/9-fig1.png\" width=\"244\" alt=\"\"></p>",
+      "solutions": "<p>There are loops of length 5, 7, and 8 (we can get 8 by taking the first edge of the pentagon, then turning left onto the heptagon). We can be home at time \\(t\\) if we can write \\(t\\) as the sum of a combination of \\(5, 7, 8\\). By trying out small cases, we can’t get 1–4, 6, 9, or 11. However, we can get every number 12 or higher. The answer is 11.</p>",
+      "answer": "11"
+    },
+    "10": {
+      "problem": "<p>Let \\(p \\in \\mathbb{R}\\) such that the polynomial \\(x^2 + px + \\frac{p^2}{2}\\) has two (not necessarily distinct) real roots \\(a, b\\). Compute \\[\\frac{(a - p + 2024)(b - p + 2024)}{2024 - ab}.\\]</p>",
+      "solutions": "<p>The only way for the given polynomial to have two real roots is if \\(p = 0\\): the discriminant of the quadratic is \\(p^2 - 4\\left(\\frac{p^2}{2}\\right) = -p^2 \\le 0\\), with equality at \\(p = 0\\). Thus \\(a = b = 0\\), making the answer 2024.</p>",
+      "answer": "2024"
+    },
+    "11": {
+      "problem": "<p>What is the greatest integer \\(n\\) such that \\(2^n\\) divides \\[1 \\times (1 + 2) \\times (1 + 2 + 3) \\times \\dots \\times (1 + 2 + \\dots + 100)?\\]</p>",
+      "solutions": "<p>Using the identity \\(1 + 2 + \\dots + n = \\frac{n(n+1)}{2}\\), we can rewrite this quantity as \\[\\frac{1 \\times 2}{2} \\times \\frac{2 \\times 3}{2} \\times \\frac{3 \\times 4}{2} \\times \\dots \\times \\frac{100 \\times 101}{2} = \\frac{(100!)^2 \\times 101}{2^{100}}.\\] Focusing on \\(100!\\), there are 50 factors that are divisible by 2, 25 of which also divide 4, 12 of which also divide 8, and so on. In total, \\(100!\\) has \\(50 + 25 + 12 + 6 + 3 + 1 = 97\\) factors of 2. This means \\(\\frac{(100!)^2 \\times 101}{2^{100}}\\) has \\(97 \\times 2 - 100 = 94\\) factors of 2.</p>",
+      "answer": "94"
+    },
+    "12": {
+      "problem": "<p>We have 3 distinct points on the plane \\(X, Y, Z\\), with \\(a = XY, b = XZ\\), and \\(c = YZ\\) such that \\(a \\ge b \\ge c\\). Define the obtuseness of these points to be \\(\\min(\\frac{a}{b}, \\frac{b}{c})\\). What is the maximum possible obtuseness of 3 points?</p>",
+      "solutions": "<p>Let \\(b = nc\\) and \\(a = mb = m(nc) = mnc\\). Note that \\(n, m \\ge 1\\). We can then re-express our side lengths as \\(c, nc, mnc\\). From the Triangle Inequality, \\(mnc \\le c + nc\\). (We allow degenerate triangles). Dividing by \\(c\\) (noting that \\(c \\ne 0\\)), we have \\(mn \\le n + 1\\). From here, let’s rewrite our inequality: \\[mn \\le n + 1 \\implies mn - n \\le 1 \\implies n(m - 1) \\le 1 \\implies m \\le 1 + \\frac{1}{n}\\] So, the maximal possible value of \\(m\\) is \\(1 + \\frac{1}{n}\\). Thus, we now have to find the maximal value of \\(\\min(1 + \\frac{1}{n}, n)\\). This occurs when \\(1 + \\frac{1}{n} = n\\), which occurs when \\(n = \\frac{1+\\sqrt{5}}{2}\\).</p>",
+      "answer": "\\frac{1+\\sqrt{5}}{2}"
+    },
+    "13": {
+      "problem": "<p>How many integers are roots of \\[(x^2 - x)(x^2 - x - 1)(x^2 - x - 2) \\dots (x^2 - x - 200)?\\]</p>",
+      "solutions": "<p>Let \\(n\\) be a real number. The roots of \\(x^2 - x - c\\) are \\(\\frac{1+\\sqrt{1+4c}}{2}, \\frac{1-\\sqrt{1+4c}}{2}\\). In our big polynomial, we see that all roots lie in between \\(\\frac{1-\\sqrt{1+800}}{2} \\approx -13.65\\) and \\(\\frac{1+\\sqrt{1+800}}{2} \\approx 14.65\\). The possible integer roots are thus \\(-13, -12, -11, \\dots, 14\\). Furthermore, if \\(c = n(n+1)\\) for some integer \\(n\\), then the roots of \\(x^2 - x - n(n+1) = (x+n)(x - (n+1))\\) are \\(-n\\) and \\(n+1\\). This means we can achieve all possible integer roots. Therefore there are 28 integer roots.</p>",
+      "answer": "28"
+    },
+    "14": {
+      "problem": "<p>Find the number of nonnegative integers \\(N &lt; 1000\\) such that \\(\\frac{15000 + N}{15 - N}\\) is an integer.</p>",
+      "solutions": "<p>Add 1 to get that \\[\\frac{15000 + N}{15 - N} + \\frac{15 - N}{15 - N} = \\frac{15015}{15 - N}\\] is an integer. Factorize \\(15015 = 3 \\times 5 \\times 7 \\times 11 \\times 13\\). Then \\(15 - N\\) can be any of the factors of 15015 (positive or negative) such that \\(15 \\ge 15 - N &gt; -985\\). There are 32 negative factors in total, but 7 of them are less than or equal to \\(-985\\): \\(-\\frac{15015}{1}, -\\frac{15015}{3}, -\\frac{15015}{5}, -\\frac{15015}{7}, -\\frac{15015}{11}, -\\frac{15015}{13}, -\\frac{15015}{15}\\). There are also 7 positive factors less than or equal to 15: \\(1, 3, 5, 7, 11, 13, 15\\). This is a total of \\(32 - 7 + 7 = 32\\) factors that work.</p>",
+      "answer": "32"
+    },
+    "15": {
+      "problem": "<p>A right circular cylindrical tank of height 100 and radius 10 was stood on its circular base and partially filled with water. Unfortunately, after an earthquake, it tipped over onto its long side, so we weren’t able to measure the water level! We measured the water level while it was on its side, and found that the height of the water was exactly \\(10 - 5\\sqrt{2}\\). What was the height of the water in the tank before the earthquake?</p>",
+      "solutions": "<p>View the cylinder base-on and draw the sector which contains the water. The distance between the center of the circle and water line is \\(5\\sqrt{2}\\), so we see by inspection that, if \\(\\theta\\) denotes the angle of the sector, then \\(\\theta/2 = \\pi/4\\) by 45-45-90 triangles, i.e. \\(\\theta = \\pi/2\\). The volume of water in the tank is thus \\[\\frac{1}{2}(10)^2(\\pi/2) - (5\\sqrt{2})(5\\sqrt{2}) = 50(\\pi/2 - 1),\\] so the height when stood-up correctly is \\[50(\\pi/2 - 1) / (100\\pi) = 25 - \\frac{50}{\\pi},\\] as required.</p>",
+      "answer": "25 - \\frac{50}{\\pi}"
+    },
+    "16": {
+      "problem": "<p>Katherene and April are playing a game on a \\(2 \\times 2\\) grid of squares. On each round, both players simultaneously pick a square on the grid. If they pick the same square, they (collectively) win 3 points. Otherwise, if their squares still lie in the same row or column, they win 1 point. If Katherene and April both pick a square uniformly at random during each round, what is their expected score at the end of 4 rounds?</p>",
+      "solutions": "<p>Each round is independent, so let us deal with each separately. For a given round, there is a \\(\\frac{1}{4}\\) chance that both players choose the same square. (When one player chooses a square, there is a \\(\\frac{1}{4}\\) chance that the other player chooses that square.) This rewards 3 points. There is a \\(\\frac{1}{2}\\) chance that the other player will instead choose one of the neighboring squares (which lie in the same row/column, but isn’t the same square as the first player’s square), and this rewards 1 point. Thus, the expected score for a round is \\[\\frac{1}{4}(3) + \\frac{1}{2}(1) = \\frac{5}{4}\\] Multiply this by 4 rounds to get 5.</p>",
+      "answer": "5"
+    },
+    "17": {
+      "problem": "<p>Find the number of ordered pairs of integers \\((x, y, z)\\) with \\(|x|, |y|, |z| \\le 10\\), such that \\[|x + y + z| \\text{ is prime} \\quad \\text{and} \\quad (x - y)^2 + (x - z)^2 + (y - z)^2 = 2.\\]</p>",
+      "solutions": "<p>(by Justin Hsieh) From the condition \\[(x - y)^2 + (y - z)^2 + (x - z)^2 = 2,\\] we must have that two of \\(x, y, z\\) are equal to each other, and the third variable is 1 away. Suppose \\(p\\) is not a multiple of 3. Then there is a unique way to set \\(x, y, z\\) such that \\(x = y = (z - 1 \\text{ or } z + 1)\\) and \\(x + y + z = p\\). In particular, \\(x\\) and \\(y\\) are equal to the integer closest to \\(p/3\\). (For example, if \\(p = 11\\), we have \\((x, y, z) = (4, 4, 3)\\).) Also, there are 3 ways to permute \\(x, y, z\\), and we can take \\(-x, -y, -z\\) instead. This gives a total of six triples \\((x, y, z)\\) that make \\(x^2 + y^2 + z^2 - xy - yz - xz = 1\\) and \\(|x + y + z| = p\\). For each positive prime \\(p \\le 30\\) except for \\(p = 3\\), there are 6 ways to set \\(x, y, z\\). There are 9 such primes, so there are a total of 54 solutions.</p>",
+      "answer": "54"
+    },
+    "18": {
+      "problem": "<p>Let \\(A = (4, 1)\\), \\(B = (10, 9)\\), and \\(C = (9, 6)\\). Draw a circle with diameter \\(\\overline{AB}\\). Construct point \\(P\\) on this circle such that \\(\\angle APC = \\angle BPC = 45^\\circ\\). Find the sum of the coordinates of \\(P\\).</p>",
+      "solutions": "<p>Let \\(O = (7, 5)\\) be the center of the circle, and let \\(Q\\) be on the circle such that \\(\\overline{PQ}\\) bisects \\(\\angle APB\\). Since \\(\\angle APQ = 45^\\circ\\), we have \\(\\angle AOQ = 90^\\circ\\). Similarly, \\(\\angle BPQ = 45^\\circ\\), so \\(\\angle BOQ = 90^\\circ\\). This means \\(\\triangle AQB\\) is a \\(45 - 45 - 90\\) triangle with a right angle at \\(Q\\). This gives two possible locations for \\(Q\\), \\((3, 8)\\) and \\((11, 2)\\). We are given that \\(C\\) must lie on \\(\\overline{PQ}\\). This means we can calculate \\(P\\) by extending a line from \\(Q\\) to \\(C\\), and finding where it intersects the circle. If \\(Q = (3, 8)\\), we get that \\(P = (12, 5)\\). If \\(Q = (11, 2)\\), then \\(P = (7, 10)\\). Both possible locations for \\(P\\) give the same sum of coordinates, 17.</p>",
+      "answer": "17"
+    },
+    "19": {
+      "problem": "<p>Find the least rational number \\(x\\) such that it is possible to write \\[x = 0.\\overline{ABCDEF}_2 = 0.\\overline{GH}_6\\] for some digits \\(0 \\le A, B, C, D, E, F \\le 1\\) and \\(0 \\le G, H \\le 5\\). (These are repeating “decimals” in base 2 and base 6.)</p>",
+      "solutions": "<p>Clarification: \\(x\\) should be a positive rational number.</p><p>First, we simplify the repeating decimals. Note that \\(0.\\overline{GH}_6 = \\frac{1}{6^2}(GH)_6 + \\frac{1}{6^4}(GH)_6 + \\dots = (GH)_6 \\cdot \\frac{(1/6)^2}{1 - (1/6)^2} = \\frac{(GH)_6}{6^2 - 1}\\). Similar reasoning yields that \\(0.\\overline{ABCDEF}_2 = \\frac{(ABCDEF)_2}{2^6 - 1}\\). Then since these two values are both equal to \\(x\\), cross-multiplying yields \\((6^2 - 1)(ABCDEF)_2 = (2^6 - 1)(GH)_6 \\implies 35(ABCDEF)_2 = 63(GH)_6 \\implies 5(ABCDEF)_2 = 9(GH)_6\\). Since 5 and 9 are coprime, \\(5 \\mid (GH)_6\\) and \\(9 \\mid (ABCDEF)_2\\), so we test \\((GH)_6 = 5\\) and \\(9 = (ABCDEF)_2\\). This implies that \\(G = 0\\), \\(H = 5\\) and \\(A, B, C = 0\\), \\(D = 1\\), \\(E = 0\\), \\(F = 1\\). Then computing yields \\(\\frac{5}{35} = \\frac{9}{63} = \\frac{1}{7}\\), so \\(x = \\frac{1}{7}\\). This is guaranteed to be the least such \\(x\\) as \\((GH)_6 = 5\\) and \\((ABCDEF)_2 = 9\\) are the minimum possible values for these, and \\(x\\) is a scalar multiple of these values.</p>",
+      "answer": "\\frac{1}{7}"
+    },
+    "20": {
+      "problem": "<p>Four points are evenly spaced on a circle of radius 2. Four circles of equal radius are drawn centered at these points such that each circle is externally tangent to two other circles. These four circles intersect the original circle at eight points. Find the area of the convex octagon formed by connecting these points.</p>",
+      "solutions": "<p>Fun trig :D</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2024_CMWMC_Guts/20-fig1.png\" width=\"255\" alt=\"\"></p>",
+      "answer": "3\\sqrt{7} + 1"
+    },
+    "21": {
+      "problem": "<p>Annie has 4 wooden cubes, of side lengths \\(1\\text{cm}\\), \\(2\\text{cm}\\), \\(3\\text{cm}\\), and \\(4\\text{cm}\\), respectively. Annie then constructs a tower by stacking the cubes on top of each other, where the cube at each step is chosen uniformly at random. The tower is constructed such that the centers of the cubes are collinear to a line perpendicular to the ground. What is the expected surface area of such a tower? (Don’t count the face that touches the ground.)</p>",
+      "solutions": "<p>Let \\(X_i\\) be a random variable corresponding to the surface area contributed by the cube with side length \\(i\\text{ cm}\\). Our desired answer is \\(E[X_1 + X_2 + X_3 + X_4] = \\sum_{i=1}^4 E[X_i]\\). We can then split each \\(X_i\\) into the surface area contributed by the top and bottom of the cube, and apply linearity again for ease of computation. We find that:</p><ul><li>\\(E[X_1] = 4 + \\frac{1}{4}(0 + 0 + 0 + 0) + \\frac{1}{4}(1 + 0 + 0 + 0) = 4 + \\frac{1}{4}\\)</li><li>\\(E[X_2] = 16 + \\frac{1}{4}(0 + 3 + 0 + 0) + \\frac{1}{4}(4 + 3 + 0 + 0) = 16 + \\frac{3}{4} + \\frac{7}{4}\\)</li><li>\\(E[X_3] = 36 + \\frac{1}{4}(0 + 8 + 5 + 0) + \\frac{1}{4}(9 + 8 + 5 + 0) = 36 + \\frac{13}{4} + \\frac{22}{4}\\)</li><li>\\(E[X_4] = 64 + \\frac{1}{4}(0 + 15 + 12 + 7) + \\frac{1}{4}(16 + 15 + 12 + 7) = 64 + \\frac{34}{4} + \\frac{50}{4}\\)</li></ul><p>Summing yields \\(152 + 1/2 = \\frac{305}{2}\\) as desired.</p>",
+      "answer": "\\frac{305}{2}"
+    },
+    "22": {
+      "problem": "<p>Find the value of \\(\\left\\lfloor\\frac{44^{2024}}{44^{92} - 7}\\right\\rfloor \\pmod{44}\\).</p>",
+      "solutions": "<p>Subtracting \\(7^{22} / (44^{92} - 7)\\), we get \\(44^{92 \\times 21} - 44^{92 \\times 20} \\times 7 + 44^{92 \\times 19} \\times 7^2 - \\dots + 7^{21}\\), which is just \\(7 \\bmod 44\\) (we have \\(7^{20} \\equiv 1 \\pmod{44}\\) by FLT).</p>",
+      "answer": "7"
+    },
+    "23": {
+      "problem": "<p>Find the number of ways to tile a \\(2 \\times 5\\) board with dominoes (\\(1 \\times 2\\) or \\(2 \\times 1\\)) and \\(1 \\times 1\\) tiles.</p>",
+      "solutions": "<p>(by Neil Makur) We can create a recurrence as follows. Given a tiling of a \\(2 \\times n\\) rectangle, consider the smallest \\(k\\) such that the leftmost \\(k\\) columns have been tiled in their own right.</p><p>If \\(k = 1\\), there are two ways for the leftmost 1 column to be tiled.</p><p>If \\(k = 2\\), there are 3 ways for the leftmost 2 columns to be tiled.</p><p>If \\(3 \\le k \\le n\\), there are 2 ways for the leftmost \\(k\\) columns to be tiled. (You have a bunch of \\(2 \\times 1\\)s that overlap in the \\(x\\)-coordinate, and there’s one \\(1 \\times 1\\) in two of the corners.)</p><p>Thus \\[\\begin{aligned}\nC_{n+1} &amp;= 2C_n + 3C_{n-2} + 2C_{n-3} + 2C_{n-2} + \\dots + 2C_1 + 2 \\\\\n&amp;= C_{n-2} + 2\\left(1 + \\sum_{i=1}^n C_i\\right).\n\\end{aligned}\\] We can write that \\(1 + \\sum_{i=1}^{n-1} C_i = \\frac{C_n - C_{n-2}}{2}\\) by applying the recurrence to \\(n - 1\\), so we have \\[C_{n+1} = C_{n-1} + 2\\left(C_n + \\frac{C_n - C_{n-2}}{2}\\right) = 3C_n + C_{n-1} - C_{n-2}.\\] For \\(n = 5\\), we can compute \\(C_5 = 228\\).</p>",
+      "answer": "228"
+    },
+    "24": {
+      "problem": "<p>Let \\(Q(x)\\) be a monic polynomial such that \\[Q(x) = P(x)(x + 45) = P(x - 45)(x + 2025)\\] for some \\(P(x)\\). Find \\(Q(10) \\bmod 2025\\).</p>",
+      "solutions": "<p>(WIP) the idea is that the only polynomial that works is \\(Q(x) = (x+45)(x+90)(x+135)\\dots(x+2025)\\). We then just bash mods, and raise them to exponents to get our answer for \\(Q(10) \\bmod 2025\\). We have \\[\\begin{aligned}\nQ(10) &amp;= (10 + 45)(10 + 90)(10 + 135) \\dots (10 + 2025) \\\\\n&amp;\\equiv 10^{45} + 10^{44}(45 + 90 + \\dots + 2025) + 0 \\pmod{2025} \\\\\n&amp;\\equiv 10^{45} \\pmod{2025} \\\\\n&amp;\\equiv 325 \\pmod{2025}\n\\end{aligned}\\] For the last step, we can compute \\(10^{45} \\equiv 0 \\pmod 25\\) and \\(10^{45} = (10^9)^5 \\equiv 1 \\pmod{81}\\), then by CRT we get the answer.</p>",
+      "answer": "325"
+    }
+  }
+}

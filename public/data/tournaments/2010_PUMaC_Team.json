@@ -1,0 +1,73 @@
+{
+  "test": "PUMaC Team",
+  "year": 2010,
+  "name": "The Team Test",
+  "url": "https://pumac.princeton.edu/s/PUMaC2010_Team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Tetrahedron \\(ABCD\\) has base \\(\\triangle BCD\\) which is an equilateral triangle with side length 2. \\(AB = AC = 3\\) and \\(AD = 4\\). Let \\(M\\) be the centroid of tetrahedron \\(ABCD\\) and \\(N\\) be the centroid of \\(\\triangle BCD\\). Write \\(\\frac{AN}{AM} = \\frac{p}{q}\\), where \\(p\\) and \\(q\\) are relatively prime integers. You are to submit the concatenation of \\(p\\) and \\(q\\).</p>",
+      "solutions": "<p>The answer does not depend on the tetrahedron at all. Rather, the fact that the ratio is \\(\\frac{4}{3}\\) is just a consequence of the fact that the centroid is the center of mass of the tetrahedron.</p>",
+      "answer": "43"
+    },
+    "2": {
+      "problem": "<p>You have 2010 ordinary decks of cards. You shuffle them all together. You then draw the least number of cards from this gigantic combined pack of \\(2010 \\times 52\\) cards so that you are guaranteed to have a four-of-a-kind (i.e. four cards of the same rank. They do not have to be from different suits in this scenario). Suppose you should draw \\(k\\) cards for some integer \\(k\\). What are the last two digits of \\(k\\)?</p>",
+      "solutions": "<p>The number of decks is irrelevant: the same answer holds for a million decks. Any card is one of 13 different values, and so there are 13 possibilities each time a card is drawn. The slowest way to obtain a four of a kind, therefore, is to first draw 13 three-of-a-kinds, and then one more card.</p>",
+      "answer": "40"
+    },
+    "3": {
+      "problem": "<p>\\(f\\) is a quadratic polynomial such that \\(f(1) = -31\\), \\(f(2) = -33\\), and \\(f(5) = -27\\). Find \\(f(10)\\).</p>",
+      "solutions": "<p>The polynomial can be determined to be \\(x^2 - 5x - 27\\).</p>",
+      "answer": "23"
+    },
+    "4": {
+      "problem": "<p>Macky found two angles \\(a\\) and \\(b\\), and the two relations \\[\\cos a + \\cos b = 5\\sqrt{\\frac{2}{29}} \\qquad \\sin a + \\sin b = \\frac{4}{\\sqrt{29}}.\\]</p><p>Given these two pieces of information, Macky wants to find the value of \\(\\cos(a-b)\\), which to his surprise turns out to be a positive rational number, i.e. a positive fraction of the form \\(m/n\\), for integers \\(m\\) and \\(n\\) with \\(n \\ne 0\\). He reduces this fraction to its lowest form and concatenates the numerator and the denominator together. What is the final result he obtains?</p>",
+      "solutions": "<p>We have, \\[\\begin{aligned}\n(\\cos a + \\cos b)^2 &amp;= \\cos^2 a + \\cos^2 b + 2\\cos a \\cos b \\\\\n(\\sin a + \\sin b)^2 &amp;= \\sin^2 a + \\sin^2 b + 2 \\sin a \\sin b.\n\\end{aligned}\\]</p><p>Adding the two together, we get \\[\\begin{aligned}\n(\\cos a + \\cos b)^2 + (\\sin a + \\sin b)^2 &amp;= \\cos^2 a + \\cos^2 b + 2\\cos a \\cos b \\\\\n&amp;\\quad + \\sin^2 a + \\sin^2 b + 2 \\sin a \\sin b \\\\\n&amp;= 2 + 2(\\cos a \\cos b + \\sin a \\sin c) \\\\\n&amp;= 2 + 2\\cos(a-b).\n\\end{aligned}\\]</p><p>So now, using the information we have, we get \\[2 + 2\\cos(a-b) = \\frac{50}{29} + \\frac{16}{29} = \\frac{66}{29},\\]</p><p>whence a little algebra yields \\(\\cos(a-b) = 4/29\\).</p>",
+      "answer": "429"
+    },
+    "5": {
+      "problem": "<p>Ashwath decides to roll two red dice and two blue dice, as well as flip a coin. Let \\(R\\) be the sum of the values of the two red dice, and \\(B\\) be the values of the two blue dice. Tengyao will give Ashwath $100 if \\(49 \\mid RB\\) and if both coins come up with the same side. If the odds that Tengyao keeps his money is \\(\\frac{p}{q}\\), submit the concatenation of \\(p\\) and \\(q\\).</p>",
+      "solutions": "<p>49 will divide the total if and only if both pairs add to 7, so there is a 1 in 36 odds of that happening for the two dice. There is clearly a 1 in 2 odds for the two coins, so Tengyao has a \\(\\frac{71}{72}\\) chance of keeping his money, for an answer of 7172.</p>",
+      "answer": "7172"
+    },
+    "6": {
+      "problem": "<p>What is the maximum number of angles greater than \\(\\pi\\) that a 45-gon can have?</p>",
+      "solutions": "<p>The sum of the internal angles of a polygon of \\(n\\) sides is \\(\\pi(n-2)\\). So, for a 45-gon, the internal angles must add up to \\(43 \\times 180 = 7740\\) degrees. If 43 or more of them are greater than \\(\\pi\\), then obviously the sum exceeds 7740, a contradiction. Therefore, the maximum number of angles that can be greater than \\(\\pi\\) is 42.</p>",
+      "answer": "42"
+    },
+    "7": {
+      "problem": "<p>An urn contains a positive number of colored balls. You have no idea how many colors there are, but you do know that there are an equal number of balls of each color. You also know that adding 20 balls of a new color to the urn would not change the probability of drawing (without replacement) two balls of the same color. Before these extra balls are added, you decide to steal one ball from the urn. At <i>this</i> point, i.e. after your masterful theft of a ball and before 20 new ones are put in, how many balls are in the urn?</p>",
+      "solutions": "<p>It is easy to see that there must initially be more than one ball of each color, because otherwise the probability is zero in one case, and positive in the other.</p><p>So, before the extra balls are added, suppose there are \\(cn\\) balls of \\(c\\) colors, with \\(n &gt; 1\\) balls of each color. The number of ways of drawing two balls is \\(cn(cn-1)\\). The number of ways of drawing two balls of a particular color is \\(n(n-1)\\), and summing over all colors, we get \\(cn(n-1)\\). Therefore, the probability before the extra balls are added is \\[\\frac{n-1}{cn-1}.\\]</p><p>Let \\(20 = k\\). A similar calculation after \\(k\\) balls are added (note that the number of ways of drawing matching colors now is \\(cn(n-1)+k(k-1)\\), as calculation shows) yields the probability after adding the extra balls to be \\[\\frac{cn(n-1)+k(k-1)}{(cn+k)(cn+k-1)}.\\]</p><p>Equating the two probabilities, we get, after a number of simple algebraic manipulations in which most terms cancel out, \\[cnk^2 = 2cn^2k + nk^2 - nk - cnk.\\]</p><p>We can divide throughout by \\(nk \\ne 0\\) now, and regroup to obtain \\(c(k+1-2n) = k-1\\), at which point we put in \\(k=20\\) to get \\(c(21-2n)=19\\). The only solution with \\(c&gt;1\\) is \\(c=19\\) and \\(n=10\\). So, there were initially \\(19 \\times 10 = 190\\) balls in the urn. After you remove one, there are 189.</p>",
+      "answer": "189"
+    },
+    "8": {
+      "problem": "<p>What 5-digit number has the property that if we put the numeral 1 at the beginning of the number, we get a number that is three times smaller than what we get if we put the numeral 1 at the end of the number?</p>",
+      "solutions": "<p>The equation we are looking for here is \\[3 \\times (100000 + x) = 10x + 1.\\]</p><p>Solving this easily gives \\(x = 42857\\).</p>",
+      "answer": "42857"
+    },
+    "9": {
+      "problem": "<p>You are given five <i>distinct</i> integers \\(a\\), \\(b\\), \\(c\\), \\(d\\) and \\(e\\). You find that you have the equation \\[(8-a)(8-b)(8-c)(8-d)(8-e) = 28.\\]</p><p>What is the value of \\(a+b+c+d+e\\)?</p>",
+      "solutions": "<p>Because \\(a\\) through \\(e\\) are distinct, this means that \\(8-a\\) through \\(8-e\\) are also distinct. Then it is evident that we are looking for five <i>distinct</i> factors of 28 (which is \\(2^2 \\times 7\\)), which multiply to 28 itself. The only possible way to do this is to consider the factors \\(2, -2, 7, -1, 1\\), which must be \\(8-a\\) through \\(8-e\\) in some order. Then, adding them all up, we get \\(7 = 40 - (a+b+c+d+e)\\), which immediately gives 33 as our answer.</p>",
+      "answer": "33"
+    },
+    "10": {
+      "problem": "<p>Suppose Alex, Bob, Charles, David, Evan, Frankenstein and Gary are seven friends who want to watch a movie. However, at the theater, only one row has seven adjacent empty seats \\(P1\\) through \\(P7\\) left, with \\(P1\\) and \\(P7\\) both aisle seats (and none of the others are aisle seats). They find out a few facts about themselves, which are given as follows. Bob wants precisely one (filled) seat between himself and Charles. Gary and Charles want aisle seats, but Gary won’t sit in \\(P1\\). With these constraints, how many ways can the seven friends sit in the theater?</p>",
+      "solutions": "<p>Gary won’t sit in \\(P1\\) but wants an aisle seat, so he has to sit in \\(P7\\). This leaves \\(P1\\) for Charles, and therefore, \\(P3\\) for Bob. These three seats are fixed, and the two other pieces of information given are completely useless (in one case, blatantly so). Therefore, the four remaining friends can sit in any order in the four remaining seats, and therefore, the number of ways this can be done is \\(4! = 24\\).</p>",
+      "answer": "24"
+    },
+    "11": {
+      "problem": "<p>Arthur tells you to guess the 6-digit natural number he is thinking of. The only hint he gives is that the sum of all the digits is 43. Further persuasion leads him to reveal that it is a perfect square and less than 500000.</p><p>What is Arthur’s number?</p>",
+      "solutions": "<p>The number must be fairly large. Use trial and error for this one. It turns out that \\[707^2 = 499849\\] \\[499849 &lt; 500000.\\]</p><p>for a solution of 499849.</p>",
+      "answer": "499849"
+    },
+    "12": {
+      "problem": "<p>Right triangle \\(\\triangle ABC\\) has integer side lengths, one side of length 29, and maximal perimeter. What is the length of the hypotenuse of this triangle?</p>",
+      "solutions": "<p>The triangle you are looking for is of the form \\(29^2 + n^2 = (n+1)^2\\), so \\(2n = 840\\), and thus the hypotenuse is 421.</p>",
+      "answer": "421"
+    },
+    "13": {
+      "problem": "<p>Each of 100 Oxford dons has an item of gossip known only to himself. Whenever a don telephones another, they exchange all items of gossip they know. What is the minimum number of calls they have to make in order to ensure that every one of them knows all the gossip there is to know?</p>",
+      "solutions": "<p>Writing \\(f(n)\\) for the minimal number of calls by \\(n\\) dons (we want the case \\(n=100\\)), it is trivial that \\(f(1)=0\\) and \\(f(2)=1\\), and a bit of work gives us \\(f(3)=3\\) and \\(f(4)=4\\). To see that \\(f(n) \\le 2n-4\\) for \\(n \\ge 4\\), observe that \\(12, 34, 13, 24\\) is a suitable system of calls for \\(n=4\\), so \\(f(4) \\le 4\\). We denote the dons by \\(1, 2, \\ldots, n\\), and the calls by \\(ij\\), also denoting by \\(i\\) the item of gossip that \\(i\\) knows. Now, \\(f(n+1) \\le f(n)+2\\) for all \\(n\\), since a suitable system of \\(k\\) calls among \\(1, 2, \\cdots, n\\) can be extended to a suitable system of \\(k+2\\) calls among \\(1, 2, \\cdots, n, n+1\\) as follows: first \\(n+1\\) talks to \\(1\\), then the first \\(n\\) dons make \\(k\\) calls to ensure that they all know their own items of gossip (and incidentally, that of \\(n+1\\) as well, because that item propagates with the item that \\(1\\) knows), and the system concludes by \\(n+1\\) calling any of the other dons. So, \\(f(n) \\le 2n-4\\) for \\(n \\le 4\\). We will skip the proof of strict equality (for the curious, it is in a wonderful book called <i>The Art of Mathematics: Coffee Time in Memphis</i> by Bela Bollobas), and leave it to the reader to intuitively come to terms with the notion that this is also, in fact, a lower bound.</p>",
+      "answer": "196"
+    }
+  }
+}

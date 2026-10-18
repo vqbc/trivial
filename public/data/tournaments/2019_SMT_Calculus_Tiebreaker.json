@@ -1,0 +1,23 @@
+{
+  "test": "SMT Calculus Tiebreaker",
+  "year": 2019,
+  "name": "Calculus Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2019/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Define functions \\(f_0, f_1, \\ldots, f_n, \\ldots\\) to satisfy the following relations: \\(f_0 = 2\\), \\(\\frac{d}{dx} f_n = f_{n-1}\\). If for \\(n \\ge 1\\), \\(f_n(0) = 0\\), compute \\[\\sum_{n=0}^{\\infty} f_n(\\ln(2019)).\\]</p>",
+      "solutions": "<p>We see by induction that \\(f_n = 2\\frac{x^n}{n!}\\). Using the Taylor series of \\(e^x\\), we have \\[\\sum_{n=0}^{\\infty} f_n(\\ln(2018)) = 2\\sum_{n=0}^{\\infty} \\frac{1}{n!}\\ln(2019)^n = 2 \\cdot 2019 = \\boxed{4038}.\\]</p>",
+      "answer": "4038"
+    },
+    "2": {
+      "problem": "<p>Compute \\[\\lim_{x\\to 0} \\frac{x^{10}e^x}{\\sin^{10}(2x)}.\\]</p>",
+      "solutions": "<p>When we plug in \\(x = 0\\) we have the indeterminate form \\(0/0\\), suggesting that we apply L’Hopital’s rule. Doing so once gives us \\[\\lim_{x\\to 0} \\frac{x^{10}e^x}{\\sin^{10}2x} = \\lim_{x\\to 0} \\frac{x^{10}e^x + 10x^9e^x}{20\\cos(2x)\\sin^9(2x)}.\\]</p><p>When we plug \\(x = 0\\) here, we again have an indeterminate form, so we must apply L’Hopital’s rule again. However, doing so will require applying the product rule multiple times in both the numerator and denominator. At this point we realize that we need only focus on the lowest power of \\(x^n\\) and \\(\\sin^n(x)\\) because when we plug in \\(x = 0\\) later, all other \\(x^k\\) and \\(\\sin^k(x)\\) terms will vanish. Furthermore in the denominator, all the \\(\\cos(0)\\) terms will vanish too so we need only focus on the coefficients of the terms. This allows us to apply L’Hopital’s rule 10 times to get \\[\\lim_{x\\to 0} \\frac{x^{10}e^x}{\\sin^{10}(2x)} = \\frac{10!}{2^{10} \\cdot 10!} = \\frac{1}{2^{10}} = \\boxed{\\frac{1}{1024}}.\\]</p>",
+      "answer": "\\frac{1}{1024}"
+    },
+    "3": {
+      "problem": "<p>Compute \\[\\int_0^{10} \\ln(x^7 + 1)\\, dx + \\int_0^{\\ln(10000001)} \\sqrt[7]{e^x - 1}\\, dx.\\]</p>",
+      "solutions": "<p>Note the formula for integration of increasing inverse functions \\[\\int_a^b f(x)\\, dx + \\int_{f(a)}^{f(b)} f^{-1}(x)\\, dx = bf(b) - af(a).\\]</p><p>(this can be seen graphically). Applying this formula with \\(f(x) = \\ln(x^7 + 1)\\) (so \\(f^{-1}(x) = \\sqrt[7]{e^x - 1}\\)), \\(a = 0\\), and \\(b = 10\\), we see that the LHS of the above formula is precisely the desired quantity, and hence the desired quantity is \\[10f(10) - 0f(0) = \\boxed{10\\ln(10^7 + 1)}.\\]</p>",
+      "answer": "10\\ln(10^7 + 1)"
+    }
+  }
+}

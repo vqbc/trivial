@@ -1,0 +1,23 @@
+{
+  "test": "BMT Calculus Tiebreaker",
+  "year": 2021,
+  "name": "Calculus Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2021/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(x) = x^2 + x + 1\\). Compute \\(f''(1)f'(1)f(1)\\).</p>",
+      "solutions": "<p>We have that \\(f'(x) = 2x+1\\) and \\(f''(x) = 2\\), so \\(f''(1)f'(1)f(1) = 2\\cdot 3 \\cdot 3 = \\boxed{18}\\).</p>",
+      "answer": "18"
+    },
+    "2": {
+      "problem": "<p>Let \\(a\\) be a positive integer. Compute \\[\\int \\left(\\tan^{a+3}(x) + \\tan^{a+2}(x) + \\tan^{a+1}(x) + \\tan^a(x)\\right)\\, dx\\] in terms of \\(a\\). You do not need to include the \\(+C\\) in your answer.</p>",
+      "solutions": "<p>Let the integral be \\(I\\). Reformat the integral.</p><p>\\[\\begin{aligned}\nI &amp;= \\int \\left(\\tan^{a+3}(x) + \\tan^{a+1}(x) + \\tan^{a+2}(x) + \\tan^a(x)\\right)\\, dx \\\\\n&amp;= \\int \\left((\\tan^2(x)+1)\\tan^{a+1}(x) + (\\tan^2(x)+1)\\tan^a(x)\\right)\\, dx \\\\\n&amp;= \\int \\left(\\sec^2(x)\\tan^{a+1}(x) + \\sec^2(x)\\tan^a(x)\\right)\\, dx \\\\\n&amp;= \\int \\sec^2(x) \\left(\\tan^{a+1}(x) + \\tan^a(x)\\right)\\, dx.\n\\end{aligned}\\]</p><p>Let \\(u = \\tan(x)\\) and compute the integral.</p><p>\\[\\begin{aligned}\nI &amp;= \\int \\left(u^{a+1} + u^a\\right)\\, du \\\\\n&amp;= \\frac{u^{a+2}}{a+2} + \\frac{u^{a+1}}{a+1}.\n\\end{aligned}\\]</p><p>Substituting \\(u\\) back in, our answer is \\[I = \\boxed{\\frac{\\tan^{a+2}(x)}{a+2} + \\frac{\\tan^{a+1}(x)}{a+1}}.\\]</p>",
+      "answer": "\\frac{\\tan^{a+2}(x)}{a+2} + \\frac{\\tan^{a+1}(x)}{a+1}"
+    },
+    "3": {
+      "problem": "<p>Compute the infinite sum \\[\\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{\\binom{n+1}{2}} = \\frac{1}{\\binom{2}{2}} - \\frac{1}{\\binom{3}{2}} + \\frac{1}{\\binom{4}{2}} - \\frac{1}{\\binom{5}{2}} + \\cdots.\\]</p>",
+      "solutions": "<p>We can rewrite the sum as</p><p>\\[\\begin{aligned}\n\\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{\\binom{n+1}{2}} &amp;= \\sum_{n=2}^{\\infty} \\frac{2(-1)^n}{n(n-1)} \\\\\n&amp;= 2\\left(\\sum_{n=1}^{\\infty} \\frac{1}{2n(2n-1)} - \\sum_{n=1}^{\\infty} \\frac{1}{(2n+1)(2n)}\\right) \\\\\n&amp;= 2\\left(\\sum_{n=1}^{\\infty} \\left(\\frac{1}{2n-1} - \\frac{1}{2n}\\right) - \\sum_{n=1}^{\\infty} \\left(\\frac{1}{2n} - \\frac{1}{2n+1}\\right)\\right) \\\\\n&amp;= 2\\left(\\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n} + \\sum_{n=2}^{\\infty} \\frac{(-1)^{n-1}}{n}\\right) \\\\\n&amp;= 2\\left(2\\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n} - 1\\right).\n\\end{aligned}\\]</p><p>Using the Taylor expansion of \\(\\ln(1+x)\\) (or knowing the alternating harmonic series), this evaluates to \\(\\boxed{4\\ln 2 - 2}\\).</p>",
+      "answer": "4\\ln 2 - 2"
+    }
+  }
+}

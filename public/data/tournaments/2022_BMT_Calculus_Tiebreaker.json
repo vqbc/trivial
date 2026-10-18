@@ -1,0 +1,23 @@
+{
+  "test": "BMT Calculus Tiebreaker",
+  "year": 2022,
+  "name": "Calculus Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2022/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[\\lim_{n\\to\\infty} \\int_1^n \\frac{\\ln(x)}{n\\ln(n)}\\, dx.\\]</p>",
+      "solutions": "<p>Let \\(\\ln\\) denote the natural logarithm. To begin, we write \\[\\lim_{n\\to\\infty} \\int_1^n \\frac{\\ln(x)}{n\\ln(n)}\\, dx = \\lim_{n\\to\\infty} \\frac{\\int_1^n \\ln(x)\\, dx}{n\\ln(n)}.\\] Applying L’Hôpital’s rule, this is \\[\\begin{aligned}\n\\lim_{n\\to\\infty} \\frac{\\int_1^n \\ln(x)\\, dx}{n\\ln(n)} &amp;= \\lim_{n\\to\\infty} \\frac{\\ln(n)}{\\ln(n) + n\\cdot \\frac{1}{n}} \\\\\n&amp;= \\lim_{n\\to\\infty} \\frac{\\ln(n)}{\\ln(n) + 1} \\\\\n&amp;= \\boxed{1}.\n\\end{aligned}\\]</p>",
+      "answer": "1"
+    },
+    "2": {
+      "problem": "<p>Let \\(f(x) = e^x \\sin(x)\\). Compute \\(f^{(2022)}(0)\\). Here, \\(f^{(2022)}(x)\\) is the 2022nd derivative of \\(f(x)\\).</p>",
+      "solutions": "<p>The key observation is that \\[\\begin{aligned}\nf(x) &amp;= e^x \\sin(x) \\\\\n&amp;= e^x \\cdot \\frac{e^{ix} - e^{-ix}}{2i} \\\\\n&amp;= \\frac{e^{(1+i)x} - e^{(1-i)x}}{2i}.\n\\end{aligned}\\] Taking iterated derivatives of the exponential, we find \\[f^{(2022)}(x) = \\frac{(1+i)^{2022} e^{(1+i)x} - (1-i)^{2022} e^{(1-i)x}}{2i},\\] so \\[\\begin{aligned}\nf^{(2022)}(0) &amp;= \\frac{(1+i)^{2022} - (1-i)^{2022}}{2i} \\\\\n&amp;= \\text{Im}\\left((1+i)^{2022}\\right) \\\\\n&amp;= \\text{Im}\\left(2^{1011} e^{i3\\pi/2}\\right) \\\\\n&amp;= \\boxed{-2^{1011}}.\n\\end{aligned}\\]</p>",
+      "answer": "-2^{1011}"
+    },
+    "3": {
+      "problem": "<p>Compute \\[\\int_{1/e}^{e} \\frac{\\arctan(x)}{x}\\, dx.\\]</p>",
+      "solutions": "<p>Set \\(x = e^u\\) so that \\(dx = e^u\\, du\\), which gives \\[\\int_{1/e}^{e} \\frac{\\arctan(x)}{x}\\, dx = \\int_{-1}^{1} \\arctan(e^u)\\, du.\\] Let the value of this integral be \\(I\\). Now, if we set \\(v = -u\\) so that \\(dv = -du\\), then we see \\[\\begin{aligned}\nI &amp;= \\int_{1}^{-1} \\arctan(e^{-v}) \\cdot -dv \\\\\n&amp;= \\int_{-1}^{1} \\arctan(e^{-v})\\, dv \\\\\n&amp;= \\int_{-1}^{1} \\arctan(e^{-u})\\, du.\n\\end{aligned}\\] However, we note that \\(\\arctan(x) + \\arctan(1/x) = \\frac{\\pi}{2}\\) for any real \\(x &gt; 0\\), so \\[\\begin{aligned}\n2I &amp;= \\int_{-1}^{1} \\left(\\arctan(e^u) + \\arctan(e^{-u})\\right) du \\\\\n&amp;= \\int_{-1}^{1} \\frac{\\pi}{2}\\, du \\\\\n&amp;= 2\\cdot \\frac{\\pi}{2},\n\\end{aligned}\\] so \\(I = \\boxed{\\frac{\\pi}{2}}\\).</p>",
+      "answer": "\\frac{\\pi}{2}"
+    }
+  }
+}

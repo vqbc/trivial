@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory B",
+  "year": 2010,
+  "name": "Number Theory B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2010_NumberTheoryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the positive integer less than 18 with the most positive divisors.</p>",
+      "solutions": "<p>The answer, as can be checked with casework, is \\(12\\).</p>",
+      "answer": "12"
+    },
+    "2": {
+      "problem": "<p>Let \\(f(n)\\) be the sum of the digits of \\(n\\). Find \\(\\sum_{n=1}^{99} f(n)\\).</p>",
+      "solutions": "<p>The answer is \\(2 \\cdot 10 \\cdot \\sum_{i=0}^{9} i\\) (2 for the number of digits, 10 for the number of times any digit appears in a place, and the sum for the sum of the 10 different digits), which is \\(900\\).</p>",
+      "answer": "900"
+    },
+    "3": {
+      "problem": "<p>Find the smallest positive integer \\(n\\) such that \\(n^4 + (n+1)^4\\) is composite.</p>",
+      "solutions": "<p>One can check that \\(17, 97, 337,\\) and \\(881\\) are prime, and also that \\(17 \\cdot 113 = 1921\\), so the answer is \\(5\\).</p>",
+      "answer": "5"
+    },
+    "4": {
+      "problem": "<p>Find the sum of the first 5 positive integers \\(n\\) such that \\(n^2 - 1\\) is the product of 3 distinct primes.</p>",
+      "solutions": "<p>The five numbers are \\(14, 16, 20, 22,\\) and \\(32\\), for an answer of \\(104\\).</p>",
+      "answer": "104"
+    },
+    "5": {
+      "problem": "<p>Given that \\(x\\), \\(y\\), and \\(z\\) are positive integers such that \\(\\frac{x}{y} + \\frac{y}{z} + \\frac{z}{x} = 2\\). Find the sum of all possible \\(x\\) values.</p>",
+      "solutions": "<p>Write \\(\\frac{x}{y} = p\\), \\(\\frac{y}{z} = q\\) and \\(\\frac{z}{x} = r\\). Then we have \\(p + q + r = 2\\) and \\(pqr = 1\\). If one of \\(p, q,\\) or \\(r\\) were \\(1\\), another would be at least one and the third would be positive, for a sum that is greater than \\(2\\). If two were greater than one, then the sum would be greater than \\(2\\). Thus, two are less than \\(1\\). If either of them were less than \\(\\frac{1}{2}\\), then the third would be greater than \\(2\\). Thus, the two are greater than or equal to \\(\\frac{1}{2}\\), while the third is greater than \\(1\\), for a sum that is greater than \\(2\\). Thus, no solutions exist, for an answer of \\(0\\).</p>",
+      "answer": "0"
+    },
+    "6": {
+      "problem": "<p>Given that \\(x, y\\) are positive integers with \\(x(x+1) \\mid y(y+1)\\), but neither \\(x\\) nor \\(x+1\\) divides either of \\(y\\) or \\(y+1\\), and \\(x^2+y^2\\) as small as possible, find \\(x^2+y^2\\).</p>",
+      "solutions": "<p>\\(x = 14\\), \\(y = 20\\). These are the first two times that \\(n\\) and \\(n+1\\) are not powers of primes. The answer is then easily seen to be \\(596\\).</p>",
+      "answer": "596"
+    },
+    "7": {
+      "problem": "<p>Find the numerator of \\[\\frac{1010\\overbrace{11\\ldots 11}^{2011 \\text{ ones}}0101}{1100\\underbrace{11\\ldots 11}_{2011 \\text{ ones}}0011}\\] when reduced.</p>",
+      "solutions": "<p>Note that \\(1+x^2+x^4+x^5+\\ldots+x^{2n+1}+x^{2n+2}+x^{2n+4}+x^{2n+6} = (1-x+x^2-x^3+x^4)(1+x+\\ldots+x^{2n+1}+x^{2n+2})\\), as well as \\(1+x+x^4+x^5+\\ldots+x^{2n+1}+x^{2n+2}+x^{2n+5}+x^{2n+6} = (1-x^2+x^4)(1+x+\\ldots+x^{2n+1}+x^{2n+2})\\). The easiest way to see this is to either multiply numerator and denominator by \\(x-1\\), or to just numerically plug in small odd values of \\(2011\\) in the original equation. Plugging in \\(n = 1006\\) and \\(x = 10\\) gives the fraction as \\(\\frac{9091}{9901}\\).</p>",
+      "answer": "9091"
+    },
+    "8": {
+      "problem": "<p>Let \\(N\\) be the number of (positive) divisors of \\(2010^{2010}\\) ending in the digit 2. What is the remainder when \\(N\\) is divided by 2010?</p>",
+      "solutions": "<p>All such divisors are of the form \\(2^a 3^b 67^c\\) with \\(1 \\le a \\le 2010\\) and \\(0 \\le b, c \\le 2010\\).</p><p>Moreover, we have \\(a - b + c \\equiv 1 \\pmod{4}\\). \\(503, 503, 502,\\) and \\(502\\) are the numbers of ways \\(a\\) can be congruent to \\(1, 2, 3,\\) or \\(0 \\pmod 4\\), respectively. \\(b\\) and \\(c\\) can each be congruent to \\(1, 2, 3,\\) and \\(0 \\pmod 4\\) in \\(503, 503, 502,\\) and \\(503\\) ways.</p><p>When \\(a \\equiv 1\\), we have \\(b - c \\equiv 0\\) which can happen \\(3 \\cdot 503^2 + 502^2 = (502+503)^2 + 2(503) \\equiv 1005^2 + 1006 \\equiv 1005 + 1006 \\equiv 1 \\pmod 4\\). This gives us \\(503 + 2010k\\) possibilities for some integer \\(k\\). For each of the other possibilities, namely, \\(a \\equiv 2, 3,\\) or \\(0 \\pmod 4\\), there are \\(2 \\cdot 503^2 + 2 \\cdot 503 \\cdot 502 = 2 \\cdot (503+502) \\cdot 503 = 2010 \\cdot 503\\) ways. This is zero \\(\\pmod{2010}\\), so the answer is just \\(503\\).</p>",
+      "answer": "503"
+    }
+  }
+}

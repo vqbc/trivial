@@ -1,0 +1,118 @@
+{
+  "test": "SMT General",
+  "year": 2021,
+  "name": "General Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2021/general-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>An isosceles triangle has two of its three angles measuring \\(30^\\circ\\) and \\(x^\\circ\\). What is the sum of the possible values of \\(x\\)?</p>",
+      "solutions": "<p>There are three cases. First \\(x = 30^\\circ\\) form the two equal angles. Second, the third angle is \\(30^\\circ\\) and \\(x = 180^\\circ - 2 \\times 30^\\circ = 120^\\circ\\). Finally, the third angle is \\(x^\\circ\\), so \\(x = 75^\\circ\\). So, the sum is \\(\\boxed{225^\\circ}\\).</p>",
+      "answer": "225^\\circ"
+    },
+    "2": {
+      "problem": "<p>An ant starts at the point \\((1,1)\\). It can travel along the integer lattice, only moving in the positive \\(x\\) and \\(y\\) directions. What is the number of ways it can reach \\((5,5)\\) without passing through \\((3,3)\\)?</p>",
+      "solutions": "<p>In total, the ant must travel 8 units, meaning there are \\(\\binom{8}{4}\\) ways for it to reach \\((5,5)\\), ignoring the missing point. Likewise, there are \\(\\binom{4}{2}\\) ways to reach the missing point, and \\(\\binom{4}{2}\\) ways to travel from the missing point to the end. Thus, there are \\(\\binom{8}{4} - \\binom{4}{2}\\binom{4}{2} = \\boxed{34}\\) ways.</p>",
+      "answer": "34"
+    },
+    "3": {
+      "problem": "<p>A rectangular pool has diagonal \\(17\\) units and area \\(120\\) units\\(^2\\). What is the perimeter of the pool?</p>",
+      "solutions": "<p>Let \\(l\\) be the length of the pool and let \\(w\\) be the width of the pool. We can solve that \\((l+w)^2 = (l^2+w^2) + 2lw = 529 = 23^2\\). Then, the perimeter of the pool is \\(2 \\cdot 23 = \\boxed{46}\\) units.</p>",
+      "answer": "46"
+    },
+    "4": {
+      "problem": "<p>Lily draws a square of side length \\(s\\) and gives it to the 3D-fier, which turns it into a cube. Kelly gives the 3D-fier a circle with radius \\(r\\) and receives a cylinder of volume 5 times the volume of the cube. If the 3D-fier always extends the 2D object the same length, what is \\(r/s\\)?</p>",
+      "solutions": "<p>Let \\(s\\) be the side length of the square. We know the volume of the cube is \\(s^3\\). So, we have that \\(5s^3 = \\pi r^2 s\\). Thus, \\(r/s = \\boxed{\\sqrt{5/\\pi}}\\).</p>",
+      "answer": "\\sqrt{5/\\pi}"
+    },
+    "5": {
+      "problem": "<p>Carla has 100 stacks of pennies. The stacks have 1 penny, 2 pennies, 3 pennies, up to 100 pennies. Carla makes a move by adding one penny to each of any 99 stacks. What is the least number of moves Carla can make such that all 100 stacks have the same amount of pennies?</p>",
+      "solutions": "<p><b>Solution 1.</b> In terms of relative stack heights, or the difference in amount of pennies between stacks, adding one penny to 99 stacks is the same as subtracting one penny from a single stack. As a result, we can count the minimum number of pennies we have to remove such that the stacks all have the same amount of pennies. We can do this by removing pennies until each stack has the same amount of pennies as that of the minimum stack, the stack with one penny. We will have to remove \\(1+2+\\ldots+99 = 4950\\) pennies and make \\(\\boxed{4950}\\) moves.</p><p><b>Solution 2.</b> After adding pennies to make all of the stacks have the same amount of pennies, we have the following equation: \\((1+2+\\ldots+99+100)+99n = 100m\\). Here \\(n\\) is the number of moves we have made, while \\(m\\) is the number of pennies in each of the resulting stacks after all moves have been made. Further, notice that if we make the minimum number of moves, at each move, we will add a penny to the minimum stack, which has only one penny at the beginning. Thus, we have that \\(m = 1+n\\). Solving our equation, we have that \\((1+2+\\ldots+99+100)+99n=100(n+1)\\), or \\(n=1+2+\\ldots+99=\\boxed{4950}\\).</p>",
+      "answer": "4950"
+    },
+    "6": {
+      "problem": "<p>How many natural numbers less than 2021 are coprime to 2021?</p>",
+      "solutions": "<p>We use the inclusion-exclusion principle to solve the problem wherein the prime factorization of 2021 is \\(43 \\cdot 47\\). Because a number that is not coprime to 2021 must be either divisible by 43 or 47, we can write that there are \\(\\frac{1}{43}\\) of 2021 must be divisible by 43 and \\(\\frac{1}{47}\\) of 2021 can be divisible by 47. We then take the complement of those two probabilities and multiply them by 2021 to get our answer. \\[2021\\left(1-\\frac{1}{43}\\right)\\left(1-\\frac{1}{47}\\right) = \\boxed{1932}\\]</p>",
+      "answer": "1932"
+    },
+    "7": {
+      "problem": "<p>Square \\(ABCD\\) has side length 3. Point \\(E\\) lies on line \\(BC\\), outside of segment \\(BC\\) and closer to \\(C\\). A semicircle is drawn with diameter \\(AE\\). The perpendicular from \\(B\\) to \\(AE\\) has length \\(\\frac{12}{5}\\). What is the area of the semicircle?</p>",
+      "solutions": "<p>Since \\(\\triangle ABE\\) has a right angle at \\(B\\), the \\(\\triangle ABE\\) is inscribed in the semicircle. Let the perpendicular from \\(B\\) meet \\(AE\\) at point \\(F\\). Then, \\(\\triangle ABF\\) has a hypotenuse of length 3 and a leg of length \\(\\frac{12}{5}\\), so it is similar to a 3-4-5 triangle. \\(\\triangle ABF \\sim \\triangle AEB\\) since they share \\(\\angle BAF\\). Thus, \\(\\triangle AEB\\) is a 3-4-5 triangle with \\(AE=5\\). The radius of the semicircle is then \\(\\frac{5}{2}\\), so its area is \\(\\boxed{\\frac{25\\pi}{8}}\\).</p>",
+      "answer": "\\frac{25\\pi}{8}"
+    },
+    "8": {
+      "problem": "<p>What is the least positive integer \\(n\\) such that \\(2020!\\) is not a multiple of \\(7^n\\)?</p>",
+      "solutions": "<p>The least value of \\(n\\) is equal to one more than the exponent of 7 in the prime factorization of \\(2020!\\). Of the first 2020 positive integers, \\(\\lfloor \\frac{2020}{7} \\rfloor = 288\\) are multiples of 7. Of these 288 multiples of 7, only \\(\\lfloor \\frac{288}{7} \\rfloor = 41\\) are multiple of \\(7^2\\). Of these 41 multiples of 7, only \\(\\lfloor \\frac{41}{7} \\rfloor = 5\\) are multiple of \\(7^3\\). Since this number 5 is less than 7, there are no multiples of \\(7^4\\), which can be verified as \\(7^4 = 2401 &gt; 2020\\). Therefore, the least possible value of \\(n\\) is \\(1 + (288+41+5) = \\boxed{335}\\).</p>",
+      "answer": "335"
+    },
+    "9": {
+      "problem": "<p>How many ways are there to color every square of an eight-by-eight grid black or white such that for every pair of rows \\(r\\) and \\(s\\), we have that either \\(r_i = s_i\\) for all \\(1 \\le i \\le 8\\), or \\(r_i \\ne s_i\\) for all \\(1 \\le i \\le 8\\)?</p>",
+      "solutions": "<p>First, we color the first row arbitrarily in \\(2^8\\) ways. Then for each successive row, we have two choices: either the row is exactly the same as the first row or the row is different from the first row in every square. As a result, there are \\(2^7\\) ways to color the remaining seven rows, so the total number of such colorings is \\(2^{15} = \\boxed{32768}\\).</p>",
+      "answer": "32768"
+    },
+    "10": {
+      "problem": "<p>Let \\(ABC\\) be a triangle and \\(D\\) be a point on side \\(BC\\). Let \\(O\\) be the midpoint of \\(AD\\). The circle centered at \\(O\\) passing through \\(A\\) intersects \\(AB\\) and \\(AC\\) at \\(E\\) and \\(F\\) (both not \\(A\\)), respectively. If \\(O\\) lies on \\(EF\\) and \\(\\angle ABC\\) is five times \\(\\angle ACB\\), compute \\(\\angle ABC\\) in degrees.</p>",
+      "solutions": "<p>If \\(EF\\) passes through center \\(O\\), then \\(\\angle BAC = \\angle EAF = 90^\\circ\\). If \\(\\angle ACB = x\\), then \\(\\angle ABC = 5x\\). Adding up all of the angles of \\(\\triangle ABC\\), we have \\(90+x+5x=180 \\implies x=15\\). It follows that \\(\\angle ABC = 5x = \\boxed{75^\\circ}\\).</p>",
+      "answer": "75^\\circ"
+    },
+    "11": {
+      "problem": "<p>Suppose that \\(f(\\frac{1}{x-3}) = \\frac{x}{x+1}\\) for all \\(x &gt; 3\\). Compute \\(f(x)\\).</p>",
+      "solutions": "<p>We start by temporarily introducing another variable \\(z\\) and trying to find \\(f(z)\\). If we let \\(z = \\frac{1}{x-3}\\), then \\(x = \\frac{1}{z}+3\\) and \\(f(z) = \\frac{x}{x+1}\\). Combining these last two equations, we have \\(f(z) = \\frac{\\frac{1}{z}+3}{\\frac{1}{z}+3+1}\\). Simplifying, we have \\(f(z) = \\frac{3z+1}{4z+1}\\), which means that \\(f(x) = \\boxed{\\frac{3x+1}{4x+1}}\\).</p>",
+      "answer": "\\frac{3x+1}{4x+1}"
+    },
+    "12": {
+      "problem": "<p>\\(\\triangle ABC\\) has side length \\(BC = 5\\). The angle bisector from \\(A\\) intersects \\(BC\\) at \\(D\\), with \\(BD = 2\\) and \\(CD = 3\\), and the angle bisector from \\(C\\) intersects \\(AB\\) at \\(F\\), with \\(BF = 2\\). What is the length of side \\(AC\\)?</p>",
+      "solutions": "<p>Using the angle bisector theorem on \\(\\angle A\\), we know that the ratio between \\(AB\\) and \\(AC\\) is 2 to 3, so we can let \\(AB = 2x\\), and \\(AC = 3x\\). Then, we can use the angle bisector theorem again on \\(\\angle C\\) to get \\[\\frac{5}{3x} = \\frac{2}{2x-2} \\Rightarrow 10x - 10 = 6x \\Rightarrow x = \\frac{5}{2}.\\]</p><p>That means \\(AC = 3x = \\boxed{\\frac{15}{2}}\\).</p>",
+      "answer": "\\frac{15}{2}"
+    },
+    "13": {
+      "problem": "<p>Imagine that school starts at 8:00 AM. When you drive at 50 mph, you reach 12 minutes early, but when you drive at 40 mph, you reach at 8:15. How many miles do you live from school?</p>",
+      "solutions": "<p>We can set up a system of equations where \\(t\\) represents how long it would take you to reach school if you planned to reach exactly at 8:00 AM. Since distance = rate * time, we can let \\(d\\) equal the total distance from home to school. Then we have \\(d = 50 \\cdot \\left(t - \\frac{1}{5}\\right)\\) and \\(d = 40 \\cdot \\left(t + \\frac{1}{4}\\right)\\). Solving this, we get that \\(t = 2\\) and \\(d = 90\\).</p>",
+      "answer": "30"
+    },
+    "14": {
+      "problem": "<p>In the upcoming pep rally, there will be two dodgeball games, one between the freshmen and sophomores, and the other between the juniors and seniors. Five students have volunteered from each grade. How many ways are there to pick the teams if the only requirements are that there is at least one person on each team and that the teams playing against each other have the same number of people?</p>",
+      "solutions": "<p>Note that \\(\\binom{n}{0}^2 + \\binom{n}{1}^2 + \\ldots + \\binom{n}{n}^2 = \\binom{2n}{n}\\).</p><p>The number of ways to pick the freshman and sophomore teams is \\[\\binom{5}{1}^2 + \\binom{5}{2}^2 + \\ldots + \\binom{5}{5}^2 = \\binom{10}{5} - 1 = 251.\\]</p><p>This is also the number of ways to pick the junior and senior teams. So, the total number of ways to pick the teams is \\(251 \\times 251 = \\boxed{63001}\\).</p>",
+      "answer": "63001"
+    },
+    "15": {
+      "problem": "<p>January 1, 2021 is a Friday. Let \\(p\\) be the probability that a randomly chosen day in the year 2021 is a Friday the 13th given that it is a Friday. Let \\(q\\) be the probability that a randomly chosen day in the year 2021 is a Friday the 13th given that it is the 13th of a month. What is \\(\\frac{p}{q}\\)?</p>",
+      "solutions": "<p>Note \\(p = (\\text{number of Friday the 13th})/(\\text{number of Fridays})\\) and \\(q = (\\text{number of Friday the 13th})/(\\text{number of 13ths})\\). Then \\(\\frac{p}{q} = (\\text{number of 13ths})/(\\text{number of Fridays}) = \\boxed{\\frac{12}{53}}\\).</p>",
+      "answer": "\\frac{12}{53}"
+    },
+    "16": {
+      "problem": "<p>What is the length of the range of \\(x\\) such that \\(\\frac{1}{x} - \\left|\\frac{1}{x-1}\\right| &gt; \\frac{1}{x-2}\\)?</p>",
+      "solutions": "<p>We note that the absolute value sign means we either have \\[\\frac{1}{x} - \\frac{1}{x-1} &gt; \\frac{1}{x-2}, \\text{ or } \\frac{1}{x} + \\frac{1}{x-1} &gt; \\frac{1}{x-2}\\]</p><p>In the first case, we have that \\[\\frac{2-x}{x(x-1)(x-2)} &gt; \\frac{x^2-x}{x(x-1)(x-2)} \\Leftrightarrow \\frac{2-x^2}{x(x-1)(x-2)} &gt; 0\\]</p><p>Then we note that the possible points of change are \\(0, 1, 2, \\pm\\sqrt{2}\\) and we have the ranges where it holds true are \\((-\\infty, -\\sqrt{2}) \\cup (0,1) \\cup (\\sqrt{2}, 2)\\). But we also note we are only in this case for \\(x \\ge 1\\), so the actual ranges here are \\((\\sqrt{2}, 2)\\) with length \\(2 - \\sqrt{2}\\).</p><p>In the second case, we have that \\[\\frac{(2x-1)(x-2)}{x(x-1)(x-2)} &gt; \\frac{x^2-x}{x(x-1)(x-2)} \\Leftrightarrow \\frac{x^2-4x+2}{x(x-1)(x-2)} &gt; 0\\]</p><p>Then the points of change are \\(0, 1, 2, 2 \\pm \\sqrt{2}\\). Then the ranges are \\((0, 2-\\sqrt{2}) \\cup (1,2) \\cup (2+\\sqrt{2}, \\infty)\\). Now we are only in this case when \\(x \\le 1\\), so the actual range is \\((0, 2-\\sqrt{2})\\).</p><p>Hence, the total distance is \\(\\boxed{4 - 2\\sqrt{2}}\\).</p>",
+      "answer": "4 - 2\\sqrt{2}"
+    },
+    "17": {
+      "problem": "<p>In \\(\\triangle ABC\\), \\(AB = 2\\), \\(AC = \\sqrt{2}\\), and \\(\\angle BAC = 105^\\circ\\). If point \\(D\\) lies on side \\(BC\\) such that \\(\\angle CAD = 90^\\circ\\), what is the length of \\(BD\\)?</p>",
+      "solutions": "<p>Note that if we place a 30-60-90 triangle with side lengths \\(1, \\sqrt{3}, 2\\) next to a 45-45-90 triangle with side lengths \\(1, 1, \\sqrt{2}\\) so that they coincide along a side length of 1, then a triangle is formed with an angle of \\(105^\\circ\\) between two sides of length 2 and \\(\\sqrt{2}\\). By SAS congruence, this must be congruent to the triangle described in the problem. (Note that we could also find out that the triangle can be formed by these two right triangles by using the Law of Cosines to get the length of \\(BC\\) and solving a system of equations to find the height of \\(\\triangle ABC\\) to side \\(BC\\).)</p><p>The length of \\(BC\\) is then \\(\\sqrt{3} + 1\\) and \\(\\angle ACB = 45^\\circ\\). \\(\\triangle CAD\\) is a 45-45-90 triangle, so \\(CD = 2\\).</p><p>Finally, \\(BD = BC - CD = \\boxed{\\sqrt{3} - 1}\\).</p>",
+      "answer": "\\sqrt{3} - 1"
+    },
+    "18": {
+      "problem": "<p>4 couples are sitting in a row. However, two particular couples are fighting, so they are not allowed to sit next to each other. How many ways can these 8 people be seated?</p>",
+      "solutions": "<p>Use PIE. There are \\(8!\\) ways to arrange without any restrictions. If the first particular couple must sit next to each other, then there are \\(7! \\cdot 2\\) ways to do so. Likewise, if the second particular couple must sit next to each other, it is equivalent. To eliminate double counting, add up the cases where both couples are sitting next to each other \\(6! \\cdot 2 \\cdot 2\\).</p><p>Thus, the answer is \\(8! - 2 \\cdot (7! \\cdot 2) + (6! \\cdot 2 \\cdot 2) = \\boxed{23040}\\).</p>",
+      "answer": "23040"
+    },
+    "19": {
+      "problem": "<p>A function \\(f(x)\\) is a quadratic with real coefficients. Given \\(f(0) \\ne 0\\) and \\(f(xy+1) = f(x) \\cdot f(y) + f(x+y)\\) for all \\(x, y \\in \\mathbb{R}\\), find \\(f(3)\\).</p>",
+      "solutions": "<p>Setting \\(y = 1\\), \\(f(x+1) = f(x) \\cdot f(1) + f(x+1)\\). This means that \\(f(x) \\cdot f(1) = 0\\). If \\(x = 0\\) then \\(f(x) \\ne 0\\), so \\(f(1) = 0\\).</p><p>Setting \\(x = 0\\) and \\(y = 0\\), \\(f(1) = f(0)^2 + f(0)\\). Since \\(f(1) = 0\\), we can solve \\(0 = f(0) \\cdot (f(0)+1) \\implies f(0) = -1\\).</p><p>Setting \\(x = -1\\) and \\(y = 2\\), \\(f(-1 \\cdot 2 + 1) = f(-1) \\cdot f(2) + f(-1+2)\\). Simplifying yields the equation \\(f(-1) \\cdot (1 - f(2)) = 0\\), which means either \\(f(-1) = 0\\) or \\(f(2) = 1\\). Given the three points \\((0,-1)\\), \\((1,0)\\), and one of \\((-1,0)\\) or \\((2,1)\\), we can uniquely define any polynomial of degree 2 or less. Choosing \\((-1,0)\\), \\(f(x) = x^2 - 1\\); choosing \\((2,1)\\), \\(f(x) = x - 1\\). Only one of these points yields a quadratic, hence, \\(f(x) = x^2 - 1\\) and \\(f(3) = 3^2 - 1 = \\boxed{8}\\).</p>",
+      "answer": "8"
+    },
+    "20": {
+      "problem": "<p>If \\(x^2+y^2 = 47xy\\), then \\(\\log(k(x+y)) = \\frac{1}{2}(\\log x + \\log y)\\). Find the value of \\(k\\).</p>",
+      "solutions": "<p>Note that the logarithmic equation is equivalent to \\((k(x+y))^2 = xy\\). Then \\((x+y)^2 = x^2+y^2+2xy = 49xy\\). Hence, \\(k = \\boxed{\\frac{1}{7}}\\).</p>",
+      "answer": "\\frac{1}{7}"
+    },
+    "21": {
+      "problem": "<p>Three spheres are centered at the vertices of a triangle in the horizontal plane and are tangent to each other. The triangle formed by the uppermost points of the spheres has side lengths 10, 26, and \\(2\\sqrt{145}\\). What is the area of the triangle whose vertices are at the centers of the spheres?</p>",
+      "solutions": "<p>The line segment connecting the uppermost points of two spheres with radii \\(r_1\\) and \\(r_2\\), where \\(r_1 &gt; r_2\\), is the hypotenuse of a right triangle with legs of length \\(r_1 - r_2\\) and \\(r_1+r_2\\). So, the length of such a line segment is \\(\\sqrt{(r_1-r_2)^2+(r_1+r_2)^2} = \\sqrt{2r_1^2+2r_2^2}\\). We can set up a system of equations to solve for the radii of the spheres. \\[2r_1^2 + 2r_2^2 = 100\\] \\[2r_2^2 + 2r_3^2 = 676\\] \\[2r_3^2 + 2r_1^2 = 580\\]</p><p>The solution to this system is \\(r_1 = 1\\), \\(r_2 = 7\\), and \\(r_3 = 17\\). The triangle whose vertices are the centers of the spheres simply has side lengths of \\(r_1+r_2\\), \\(r_2+r_3\\), and \\(r_3+r_1\\), which are equal to 8, 24, and 18. We can find the area of this triangle using Heron’s Formula: \\[\\sqrt{\\frac{8+18+24}{2} \\cdot \\frac{-8+18+24}{2} \\cdot \\frac{8-18+24}{2} \\cdot \\frac{8+18-24}{2}} = \\boxed{5\\sqrt{119}}.\\]</p>",
+      "answer": "5\\sqrt{119}"
+    },
+    "22": {
+      "problem": "<p>Jane is trying to create a list of all the students of a high school. When she organizes the students into 5, 7, 9, or 13 columns, there are 1, 4, 5, and 10 students left over, respectively. What is the least number of students that could be attending this school?</p>",
+      "solutions": "<p>Let the number of students be \\(N\\). Notice that \\(1 \\equiv -4 \\pmod{5}\\) and \\(5 \\equiv -4 \\pmod{9}\\), and \\(4 \\equiv -3 \\pmod{7}\\) and \\(10 \\equiv -3 \\pmod{13}\\). So, we must have \\(N \\equiv -4 \\pmod{45}\\) and \\(N \\equiv -3 \\pmod{91}\\). \\(N\\) is a number of the form \\(91k - 3\\), where \\(k\\) is a positive integer. We have \\(91k - 3 \\equiv -4 \\pmod{45} \\Rightarrow k \\equiv -1 \\pmod{45}\\). The smallest possible value of \\(k\\) is 44, which gives \\(N = 44 \\cdot 91 - 3 = \\boxed{4001}\\).</p>",
+      "answer": "4001"
+    }
+  }
+}

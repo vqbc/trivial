@@ -1,0 +1,108 @@
+{
+  "test": "BMT Team",
+  "year": 2015,
+  "name": "Team Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2015/TS2015.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A fair 6-sided die is repeatedly rolled until a 1, 4, 5, or 6 is rolled. What is the expected value of the product of all the rolls?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "16"
+    },
+    "2": {
+      "problem": "<p>Compute the sum of the digits of \\(1001^{10}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "43"
+    },
+    "3": {
+      "problem": "<p>How many ways are there to place the numbers \\(2, 3, \\ldots, 10\\) in a \\(3 \\times 3\\) grid, such that any two numbers that share an edge are mutually prime?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "192"
+    },
+    "4": {
+      "problem": "<p>Triangle \\(ABC\\) has side lengths \\(AB = 3\\), \\(BC = 4\\), and \\(CD = 5\\). Draw line \\(\\ell_A\\) such that \\(\\ell_A\\) is parallel to \\(BC\\) and splits the triangle into two polygons of equal area. Define lines \\(\\ell_B\\) and \\(\\ell_C\\) analogously. The intersection points of \\(\\ell_A\\), \\(\\ell_B\\), and \\(\\ell_C\\) form a triangle. Determine its area.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "51 - 36\\sqrt{2}"
+    },
+    "5": {
+      "problem": "<p>Determine the smallest positive integer containing only 0 and 1 as digits that is divisible by each integer 1 through 9.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1111011111000"
+    },
+    "6": {
+      "problem": "<p>Consider the set \\(S = \\{1, 2, \\ldots, 2015\\}\\). How many ways are there to choose 2015 distinct (possibly empty and possibly full) subsets \\(X_1, X_2, \\ldots, X_{2015}\\) of \\(S\\) such that \\(X_i\\) is strictly contained in \\(X_{i+1}\\) for all \\(1 \\le i \\le 2014\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1009 \\cdot 2015!"
+    },
+    "7": {
+      "problem": "<p>\\(X_1, X_2, \\ldots, X_{2015}\\) are 2015 points in the plane such that for all \\(1 \\le i, j \\le 2015\\), the line segment \\(X_iX_{i+1} = X_jX_{j+1}\\) and angle \\(\\angle X_iX_{i+1}X_{i+2} = \\angle X_jX_{j+1}X_{j+2}\\) (with cyclic indices such that \\(X_{2016} = X_1\\) and \\(X_{2017} = X_2\\)). Given fixed \\(X_1\\) and \\(X_2\\), determine the number of possible locations for \\(X_3\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1440"
+    },
+    "8": {
+      "problem": "<p>The sequence \\((x_n)_{n\\in\\mathbb{N}}\\) satisfies \\(x_1 = 2015\\) and \\[x_{n+1} = \\sqrt[3]{13x_n - 18} \\text{ for all } n \\ge 1.\\] Determine \\(\\lim_{n\\to\\infty} x_n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{10} - 1"
+    },
+    "9": {
+      "problem": "<p>Find the side length of the largest square that can be inscribed in the unit cube.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3\\sqrt{2}}{4}"
+    },
+    "10": {
+      "problem": "<p>Quadratics \\(g(x) = ax^2 + bx + c\\) and \\(h(x) = dx^2 + ex + f\\) are such that the six roots of \\(g\\), \\(h\\), and \\(g - h\\) are distinct real numbers (in particular, they are not double roots) forming an arithmetic progression in some order. Determine all possible values of \\(\\frac{a}{d}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\left\\{-2, -\\frac{1}{2}, \\frac{1}{3}, \\frac{2}{3}, \\frac{3}{2}, 3\\right\\}"
+    },
+    "11": {
+      "problem": "<p>Write down \\(1, 2, 3, \\ldots, 2015\\) in a row on a whiteboard. Every minute, select a pair of adjacent numbers at random, erase them, and insert their sum where you selected the numbers. (For instance, selecting \\(3\\) and \\(4\\) from \\(1, 2, 3, 4, 5\\) would result in \\(1, 2, 7, 5\\).) Repeat this process until you have two numbers remaining. What is the probability that the smaller number is less than or equal to \\(2015\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{63}{2014}"
+    },
+    "12": {
+      "problem": "<p>Let \\(f(n)\\) be the number of ordered pairs \\((k, l)\\) of positive integers such that \\(n = (2l-1) \\cdot 2^k - k\\), and let \\(g(n)\\) be the number of ordered pairs \\((k, l)\\) of positive integers such that \\(n = l \\cdot 2^{k+1} - k\\). Compute \\[\\sum_{i=1}^{\\infty} \\frac{f(i) - g(i)}{2^i}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "13": {
+      "problem": "<p>There exist right triangles with integer side lengths such that the legs differ by \\(1\\). For example, \\(3\\)-\\(4\\)-\\(5\\) and \\(20\\)-\\(21\\)-\\(29\\) are two such right triangles. What is the perimeter of the next smallest Pythagorean right triangle with legs differing by \\(1\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "408"
+    },
+    "14": {
+      "problem": "<p>Alice is at coordinate point \\((0, 0)\\) and wants to go to point \\((11, 6)\\). Similarly, Bob is at coordinate point \\((5, 6)\\) and wants to go to point \\((16, 0)\\). Both of them choose a lattice path from their current position to their target position at random (such that each lattice path has an equal probability of being chosen), where a lattice path is defined to be a path composed of unit segments with orthogonal direction (parallel to x-axis or y-axis) and of minimal length. (For instance, there are six lattice paths from \\((0, 0)\\) to \\((2, 2)\\).)</p><p>If they walk with the same speed, find the probability that they meet.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{12376}"
+    },
+    "15": {
+      "problem": "<p>Compute \\[\\int_{1/2}^{2} \\frac{x^2 + 1}{x^2(x^{2015} + 1)} \\, dx.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "16": {
+      "problem": "<p>Five points \\(A\\), \\(B\\), \\(C\\), \\(D\\), and \\(E\\) in three-dimensional Euclidean space have the property that \\(AB = BC = CD = DE = EA = 1\\) and \\(\\angle ABC = \\angle BCD = \\angle CDE = \\angle DEA = 90^\\circ\\). Find all possible \\(\\cos(\\angle EAB)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\left\\{\\frac{1}{2}, -\\frac{5}{14}\\right\\}"
+    },
+    "17": {
+      "problem": "<p>There exist real numbers \\(x\\) and \\(y\\) such that \\[x(a^3 + b^3 + c^3) + 3yabc \\ge (x+y)(a^2b + b^2c + c^2a)\\] holds for all positive real numbers \\(a\\), \\(b\\), and \\(c\\). Determine the smallest possible value of \\(\\frac{x}{y}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2}{3\\cdot 2^{1/3} - 2}"
+    },
+    "18": {
+      "problem": "<p>A value \\(x \\in [0, 1]\\) is selected uniformly at random. A point \\((a, b)\\) is called <i>friendly</i> to \\(x\\) if there exists a circle between the lines \\(y = 0\\) and \\(y = 1\\) that contains both \\((a, b)\\) and \\((0, x)\\). Find the area of the region of the plane determined by possible locations of friendly points.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\pi}{2}"
+    },
+    "19": {
+      "problem": "<p>Two sequences \\((x_n)_{n \\in \\mathbb{N}}\\) and \\((y_n)_{n \\in \\mathbb{N}}\\) are defined recursively as follows: \\[\\begin{aligned}\nx_0 = 2015 \\quad &amp;\\text{and} \\quad x_{n+1} = \\left\\lfloor x_n \\cdot \\frac{y_{n+1}}{y_{n-1}} \\right\\rfloor \\quad \\text{for all } n \\ge 0, \\\\\ny_0 = 307 \\quad &amp;\\text{and} \\quad y_{n+1} = y_n + 1 \\quad \\text{for all } n \\ge 0.\n\\end{aligned}\\] Compute \\(\\lim_{n \\to \\infty} \\frac{x_n}{(y_n)^2}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2}{101}"
+    },
+    "20": {
+      "problem": "<p>The Tower of Hanoi is a puzzle with \\(n\\) disks of different sizes and \\(3\\) vertical rods on it. All of the disks are initially placed on the leftmost rod, sorted by size such that the largest disk is on the bottom. On each turn, one may move the topmost disk of any nonempty rod onto any other rod, provided that it is smaller than the current topmost disk of that rod, if it exists. (For instance, if there were two disks on different rods, the smaller disk could move to either of the other two rods, but the larger disk could only move to the empty rod.) The puzzle is solved when all of the disks are moved to the rightmost rod. The specifications normally include an intelligent monk to move the disks, but instead there is a monkey making random moves (with each valid move having an equal probability of being selected). Given \\(64\\) disks, what is the expected number of moves the monkey will have to make to solve the puzzle?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{(3^{64} - 1)(5^{64} - 3^{64})}{2 \\cdot 3^{63}}"
+    }
+  }
+}

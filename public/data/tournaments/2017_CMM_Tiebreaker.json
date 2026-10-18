@@ -1,0 +1,33 @@
+{
+  "test": "CMM Tiebreaker",
+  "year": 2017,
+  "name": "Tiebreaker Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_fe72a00d4e1a4afb92a20ebbea334357.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(a,b\\) be the roots of the quadratic polynomial \\(Q(x) = x^2 + x + 1\\), and let \\(u,v\\) be the roots of the quadratic polynomial \\(R(x) = 2x^2 + 7x + 1\\).</p><p>Suppose \\(P\\) is a cubic polynomial which satisfies the equations \\[\\begin{cases}\nP(au) = Q(u)R(a) \\\\\nP(bu) = Q(u)R(b) \\\\\nP(av) = Q(v)R(a) \\\\\nP(bv) = Q(v)R(b).\n\\end{cases}\\]</p><p>If \\(M\\) and \\(N\\) are the coefficients of \\(x^2\\) and \\(x\\) respectively in \\(P(x)\\), what is the value of \\(M+N\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Let \\(N\\) be the number of sequences \\(a_1, a_2, \\ldots, a_{10}\\) of ten positive integers such that</p><ul style=\"list-style-type: none\"><li>(i) the value of each term of the sequence at most 30,</li><li>(ii) the arithmetic mean of any three consecutive terms of the sequence is an integer, and</li><li>(iii) the arithmetic mean of any five consecutive terms of the sequence is an integer.</li></ul><p>Compute \\(\\sqrt{N}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>You are playing a game called “Hovse.”</p><p>Initially you have the number 0 on a blackboard.</p><p>If at any moment the number \\(x\\) is written on the board, you can either:</p><ul><li>replace \\(x\\) with \\(3x+1\\)</li><li>replace \\(x\\) with \\(9x+1\\)</li><li>replace \\(x\\) with \\(27x+3\\)</li><li>or replace \\(x\\) with \\(\\left\\lfloor \\frac{x}{3} \\right\\rfloor\\).</li></ul><p>However, you are not allowed to write a number greater than 2017 on the board. How many positive numbers can you make with the game of “Hovse?”</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Jordan has an infinite geometric series of positive reals whose sum is equal to \\(2\\sqrt{2} + 2\\).</p><p>It turns out that if Jordan squares each term of his geometric series and adds up the resulting numbers, he get a sum equal to 4.</p><p>If Jordan decides to take the fourth power of each term of his original geometric series and add up the resulting numbers, what sum will he get?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Find the number of primes \\(p\\) such that \\(p! + 25p\\) is a perfect square.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}
