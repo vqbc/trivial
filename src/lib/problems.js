@@ -148,6 +148,22 @@ export function matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, dif
   return true;
 }
 
+// Tests from the AMC series (computeTest names; AJHSME counts as AMC 8).
+const AMC_SERIES = ["AMC 8", "AMC 10", "AMC 12", "AIME", "AHSME"];
+
+// Random pick for Practice. When no tests are chosen, AMC, AIME, AHSME
+// and AJHSME problems come up at least half the time, so the larger
+// tournament pool doesn't crowd them out.
+export function pickProblem(matches, tests) {
+  const random = (list) => list[Math.floor(Math.random() * list.length)];
+  const anyTest = tests.length === 0 || (tests.length === 1 && tests[0] === "(All Tests)");
+  if (!anyTest) return random(matches);
+  const isAmc = (p) => AMC_SERIES.includes(computeTest(p));
+  const amc = matches.filter(isAmc);
+  if (amc.length * 2 >= matches.length || amc.length === 0) return random(matches);
+  return Math.random() < 0.5 ? random(amc) : random(matches.filter((p) => !isAmc(p)));
+}
+
 export const sortProblems = (problems) =>
   problems.sort(
     (a, b) =>
