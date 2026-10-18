@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2011,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2011/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many primes \\(p &lt; 100\\) satisfy \\(p = a^2 + b^2\\) for some positive integers \\(a\\) and \\(b\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>For \\(a &lt; b &lt; c\\), there exists exactly one Pythagorean triple such that \\(a + b + c = 2000\\). Find \\(a + c - b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Five points lie on the surface of a sphere of radius 1 such that the distance between any two points is at least \\(\\sqrt{2}\\). Find the maximum volume enclosed by these five points.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>\\(ABCDEF\\) is a convex hexagon with \\(AB = BC = CD = DE = EF = FA = 5\\) and \\(AC = CE = EA = 6\\). Find the area of \\(ABCDEF\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Joe and Wanda are playing a game of chance. Each player rolls a fair 11-sided die, whose sides are labeled with numbers \\(1, 2, \\cdots, 11\\). Let the result of the Joe’s roll be \\(X\\), and the result of Wanda’s roll be \\(Y\\). Joe wins if \\(XY\\) has remainder 1 when divided by 11, and Wanda wins otherwise. What is the probability that Joe wins?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Vivek picks a number and then plays a game. At each step of the game, he takes the current number and replaces it with a new number according to the following rule: if the current number \\(n\\) is divisible by 3, he replaces \\(n\\) with \\(\\frac{n}{3} + 2\\), and otherwise he replaces it with \\(\\lfloor 3\\log_3 n \\rfloor\\). If he starts with the number \\(3^{2011}\\), what number will he have after 2011 steps? Note that \\(\\lfloor x \\rfloor\\) denotes the largest integer less than or equal to \\(x\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Define a sequence \\(a_n\\) of positive real numbers with \\(a_1 = 1\\), and \\[a_{n+1} = \\frac{4a_n^2 - 1}{-2 + \\frac{4a_n^2-1}{-2+\\frac{4a_n^2-1}{-2+\\cdots}}}\\]</p><p>What is \\(a_{2011}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>A set \\(S\\) of positive integers is called <i>good</i> if for any \\(x, y \\in S\\) either \\(x = y\\) or \\(|x - y| \\ge 3\\). How many subsets of \\(\\{1, 2, 3, \\ldots, 13\\}\\) are good? Include the empty set in your count.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Find all pairs of positive integers \\((a, b)\\) with \\(a \\le b\\) such that \\(10 \\cdot \\operatorname{lcm}(a, b) = a^2 + b^2\\). Note that \\(\\operatorname{lcm}(m, n)\\) denotes the least common multiple of \\(m\\) and \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>For a natural number \\(n\\), \\(g(n)\\) denotes the largest odd divisor of \\(n\\). Find \\[g(1) + g(2) + g(3) + \\cdots + g\\left(2^{2011}\\right).\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

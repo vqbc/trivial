@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2022,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2022/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(x, y,\\) and \\(z\\) are real numbers such that \\(x^2 + 2y^2 + 3z^2 = 96\\), what is the maximum possible value of \\(x + 2y + 3z\\)?</p>",
+      "solutions": "<p>By the Cauchy-Schwarz inequality, we have</p><p>\\[\\begin{aligned}\n(1+2+3)(x^2+2y^2+3z^2) &amp;\\ge (x+2y+3z)^2 \\\\\n\\Rightarrow 6 \\cdot 96 &amp;\\ge (x+2y+3z)^2 \\\\\n\\Rightarrow 24 &amp;\\ge x+2y+3z \\ge -24. \\\\\n\\Rightarrow \\boxed{24} &amp;\\ge x+2y+3z.\n\\end{aligned}\\]</p>",
+      "answer": "24"
+    },
+    "2": {
+      "problem": "<p>What is the area of the region in the complex plane consisting of all points \\(z\\) satisfying both \\(\\left|\\frac{1}{z} - 1\\right| &lt; 1\\) and \\(|z-1| &lt; 1\\)? (\\(|z|\\) denotes the magnitude of a complex number, i.e. \\(|a+bi| = \\sqrt{a^2+b^2}\\).)</p>",
+      "solutions": "<p>Let \\(z = a+bi\\). The first inequality becomes \\(\\left|\\frac{1}{a+bi} - 1\\right| &lt; 1\\), which we can write as \\(\\left|\\frac{a-bi}{a^2+b^2} - \\frac{a^2+b^2}{a^2+b^2}\\right| &lt; 1\\). Using the definition of magnitude, we have \\(\\frac{(a-(a^2+b^2))^2+b^2}{(a^2+b^2)^2} &lt; 1\\), which can be expanded and factored to give</p><p>\\[\\begin{aligned}\n\\frac{a^2 - 2a(a^2+b^2) + (a^2+b^2)^2 + b^2}{(a^2+b^2)^2} &amp;&lt; 1 \\\\\n\\Rightarrow \\frac{1 - 2a + a^2+b^2}{a^2+b^2} &amp;&lt; 1 \\\\\n\\Rightarrow \\frac{1-2a}{a^2+b^2} &amp;&lt; 0.\n\\end{aligned}\\]</p><p>Thus, the first inequality is satisfied when \\(a &gt; \\frac{1}{2}\\). For the second inequality, we see that the points are the interior of the circle centered at \\(1\\) with radius \\(1\\). We now need to find the area of the region of the circle to the right of \\(a = \\frac{1}{2}\\). Let the center of the circle be \\(O\\), and let \\(a = \\frac{1}{2}\\) intersect the circle at points \\(A\\) and \\(B\\). Let the midpoint of \\(AB\\) be \\(M\\). We see that \\(\\triangle AOM\\) is a 30-60-90 triangle, so \\(\\angle AOB = 120^\\circ\\). Thus, the area we want is \\(\\frac{2}{3}\\) of the area of the circle plus the area of \\(\\triangle AOB\\), giving us \\(\\boxed{\\frac{2\\pi}{3} + \\frac{\\sqrt{3}}{4}}\\).</p>",
+      "answer": "\\frac{2\\pi}{3} + \\frac{\\sqrt{3}}{4}"
+    },
+    "3": {
+      "problem": "<p>Determine \\[\\left\\lfloor \\prod_{n=2}^{2022} \\frac{2n+2}{2n+1} \\right\\rfloor,\\] given that the answer is relatively prime to 2022.</p>",
+      "solutions": "<p>Let this product have value \\(P\\). The desired answer is \\(\\lfloor P \\rfloor\\). We would like to find a way to make this product telescope. Consider</p><p>\\[\\frac{(2n+2)(2n+3)}{(2n+1)(2n+2)}\\]</p><p>Note that</p><p>\\[\\frac{(2n+2)(2n+3)}{(2n+1)(2n+2)} &lt; \\frac{(2n+2)^2}{(2n+1)^2} \\iff \\frac{2n+3}{2n+2} &lt; \\frac{2n+2}{2n+1}\\]</p><p>So we can bound this product below by</p><p>\\[P^2 &gt; \\prod_{n=2}^{2022} \\frac{(2n+2)(2n+3)}{(2n+1)(2n+2)} &gt; 809 \\implies P &gt; 28\\]</p><p>However, by similar logic, we may also use the fraction \\(\\frac{(2n+2)(2n+1)}{(2n+1)(2n)}\\) to bound our product below. The tricky part here is that we must exclude some terms to increase our accuracy slightly. We have</p><p>\\[\\begin{aligned}\nP^2 &amp;&lt; \\frac{6^2}{5^2} \\cdot \\frac{8^2}{7^2} \\prod_{n=3}^{2022} \\frac{(2n+2)(2n+1)}{(2n+1)(2n)} = \\frac{36}{25} \\cdot \\frac{64}{49} \\cdot \\frac{4046}{8} = \\frac{36}{25} \\cdot \\frac{8}{49} \\cdot 4046 = \\frac{48}{49} \\cdot \\frac{6}{5} \\cdot 4046 \\\\\n&amp;&lt; \\frac{48}{49} \\cdot \\frac{6}{5} \\cdot 810 = \\frac{48}{49} \\cdot 972 &lt; \\frac{48}{49} \\cdot 980 = 48 \\cdot 20 = 960 &lt; 961 \\\\\n&amp;\\implies P &lt; 31\n\\end{aligned}\\]</p><p>Hence, since \\(P\\) is also coprime to 2022, \\(P \\ne 30\\), and so \\(P = \\boxed{29}\\).</p>",
+      "answer": "29"
+    }
+  }
+}

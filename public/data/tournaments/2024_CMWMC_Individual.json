@@ -1,0 +1,108 @@
+{
+  "test": "CMWMC Individual",
+  "year": 2024,
+  "name": "Individual Round",
+  "url": "https://drive.google.com/uc?export=download&id=15TCDdHBdCuhI0BQWJMoMDzHc9-8c7XqK",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[\\frac{1}{2}\\left(1 + \\frac{1}{2}\\left(1 + \\frac{1}{2}\\left(1 + \\frac{1}{2}\\left(1 + \\frac{1}{2}\\left(1 + \\frac{1}{2}\\right)\\right)\\right)\\right)\\right).\\]</p>",
+      "solutions": "<p>You simply compute from the outside in, or distribute to get \\(\\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\frac{1}{16} + \\frac{1}{32} + \\frac{1}{64} = \\frac{63}{64}\\).</p>",
+      "answer": "\\frac{63}{64}"
+    },
+    "2": {
+      "problem": "<p>Let \\(p, q, r\\) be primes with \\(p + q + r = 26\\). What is the maximum possible value of \\(pqr\\)?</p>",
+      "solutions": "<p>We have that one of these primes must be 2 since they add to an even number. This means the remaining primes add to 24. We maximize the product of the remaining primes by making them as close to their average of 12 as \\((12 - d)(12 + d) = 144 - d^2\\) and we want \\(d\\) to be small. Thus, since \\(d = 1\\) works and \\(d = 0\\) doesn’t, we get our primes are \\(2, 11, 13\\) which gives a product of 286.</p>",
+      "answer": "286"
+    },
+    "3": {
+      "problem": "<p>In the diagram below, the areas of three triangles are given. What is the area of the shaded triangle?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2024_CMWMC_Individual/3-fig1.png\" width=\"225\" alt=\"\"></p>",
+      "solutions": "<p>Since the top two triangles have the same height with respect to the horizontal line, we could find the ratio of the bases as the ratio of the areas. We could do this on the bottom as well. Thus, both ratios are the same, so we get \\(\\frac{24}{20} = \\frac{?}{15}\\). This gets \\(? = 18\\).</p>",
+      "answer": "18"
+    },
+    "4": {
+      "problem": "<p>Shyla has five identical marbles. On two of them, she writes a “C”, and on the other three, she writes an “M”. She puts all five marbles in a bag, and shuffles them up. She then pulls out the five marbles one-by-one in a random order. If Shyla pulls a marble with an “M”, she can choose to turn it upside-down to get a “W”. What is the probability that she pulls the marbles in an order that can be interpreted as C, M, W, M, C?</p>",
+      "solutions": "<p>The first marble and the last marble must be a C. The middle three can be any order of M and W since they can be rotated to the correct orientation. Thus, out of the ten possible ways to arrange 2 C’s and 3 W’s (can be M’s), one of them is in the order CWWWC. Thus, we have \\(\\frac{1}{10}\\).</p>",
+      "answer": "\\frac{1}{10}"
+    },
+    "5": {
+      "problem": "<p>Find the remainder when \\(7^7\\) is divided by 100.</p>",
+      "solutions": "<p>We know that \\(7^4 = 2401\\). So, \\(7^7\\) has the same remainder as \\(7^3 = 343\\) when divided by 100, so our answer is 43.</p>",
+      "answer": "43"
+    },
+    "6": {
+      "problem": "<p>Consider the M of the CMIMC logo. Imagine that you play a game: you start at the middle node. On each turn, you have a 50% chance of moving to either neighbor. However, if at any time you only have one neighbor, the game ends.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2024_CMWMC_Individual/6-fig1.png\" width=\"209\" alt=\"\"></p><p>What is the probability that the game is still going after ten moves?</p>",
+      "solutions": "<p>After one move, we are not done, since we are necessarily at an upper node. In our second move, there is a half chance that we end at a bottom node (and are done), and a half chance that we end up in the middle node. Thus, after two moves, there is a 1/2 chance that the game is done, and a half chance that we are back at the middle node. Thus, if we are not done, then we reset to the original state. We continue this pattern. After four moves, there is a \\(\\frac{1}{4}\\) chance that we are not done. After six moves, there is a \\(\\frac{1}{8}\\) chance. After eight moves, 1/16 chance. After ten moves, we are at \\(\\frac{1}{32}\\).</p>",
+      "answer": "\\frac{1}{32}"
+    },
+    "7": {
+      "problem": "<p>Charlotte travels at a constant speed of 2 miles per hour up a mountain, and at a constant speed of 5 miles per hour back down. Written as a simplified fraction, what is Charlotte’s average speed over the whole trip?</p>",
+      "solutions": "<p>WLOG, assume the distance up the mountain is 10 miles. Therefore, the time it takes to travel up the hill is given by \\(\\frac{2 \\cdot 5}{2} = 5\\) hours and the time it takes to travel down the hill is \\(\\frac{2 \\cdot 5}{5} = 2\\) hours. The total distance and time of the trip is thus \\(2 \\cdot 10 = 20\\) miles and \\(2 + 5 = 7\\) hours. Then our average speed is \\(\\frac{20}{7}\\).</p>",
+      "answer": "\\frac{20}{7}"
+    },
+    "8": {
+      "problem": "<p>Jenny is trying to take a photo of the CMIMC club members. They first try to put everyone in rows of 5, but there are 2 people left over. Then they try to put everyone in rows of 7, but there are 3 people left over. Then they try to put everyone in rows of 9, but there are 4 people left over. Given that there are fewer than 300 people in CMIMC, how many club members are there (excluding the photographer)?</p>",
+      "solutions": "<p>Let’s say \\(x\\) is the number of people. We know \\(x \\equiv 2 \\pmod 5\\), \\(x \\equiv 3 \\pmod 7\\), and \\(x \\equiv 4 \\pmod 9\\). We know by CRT there will be a unique solution \\(\\bmod 315\\) since \\(315 = \\operatorname{lcm}(5, 7, 9)\\). One can brute force search, but an easier way is by noting that \\(x \\equiv (-\\frac{1}{2}) \\pmod 7\\), \\(\\bmod 9\\), \\(\\bmod 13\\), so \\(x \\equiv (-\\frac{1}{2}) \\pmod{315}\\) will be the solution. So our answer \\((-\\frac{1}{2}) \\equiv (314/2) \\equiv 157 \\pmod{315}\\).</p>",
+      "answer": "157"
+    },
+    "9": {
+      "problem": "<p>Simplify the following fraction: \\[\\frac{1 + 2 + 4 + 5 + 7 + 8 + 10 + 11 + 13 + 14 + \\dots + 298 + 299}{3 + 6 + 9 + 12 + 15 + 18 + \\dots + 297 + 300}\\]</p>",
+      "solutions": "<p>Add 1 to the expression. Then we have \\[\\frac{1 + 2 + \\dots + 300}{3 + 6 + 9 + 12 + 15 + 18 + \\dots + 297 + 300}.\\] Using the addition summation formula we have \\(\\frac{300 \\cdot 301}{3 \\cdot 100 \\cdot 101} = \\frac{301}{101}\\). Subtracting 1 we have \\(\\frac{200}{101}\\).</p>",
+      "answer": "\\frac{200}{101}"
+    },
+    "10": {
+      "problem": "<p>How many ways can we arrange the numbers \\(1, 1, 2, 2, 3, 3\\) such that 1 is not in the third position?</p>",
+      "solutions": "<p>There are \\(\\frac{6!}{(2!)^3} = 90\\) ways to arrange the numbers, and \\(\\frac{1}{3}\\) of them have a 1 in the third position. So \\(90 - \\frac{1}{3} \\cdot 90 = 60\\) ways work.</p>",
+      "answer": "60"
+    },
+    "11": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB = 5\\), \\(BC = 12\\), \\(AC = 13\\). We put points \\(D_1, D_2\\) on \\(AB\\), points \\(E_1, E_2\\) on \\(BC\\), and points \\(F_1, F_2\\) on \\(AC\\) such that:</p><ul><li>\\(AD_1 = BD_2 = \\frac{5}{3}\\),</li><li>\\(BE_1 = CE_2 = 4\\),</li><li>\\(AF_1 = CF_2 = \\frac{13}{3}\\).</li></ul><p>Find the area of the hexagon \\(D_1 D_2 E_1 E_2 F_1 F_2\\).</p>",
+      "solutions": "<p>The area of \\(ABC\\) is 30. Then, \\(BD_2 E_1\\), \\(E_2 F_1 C\\), and \\(D_1 A F_2\\) are similar to \\(ABC\\), but \\(\\frac{1}{3}\\) of the side length, making them each \\(\\frac{1}{9}\\) of the area. This means we get \\(30 - \\frac{1}{9} \\cdot 3 \\cdot 30 = 20\\).</p>",
+      "answer": "20"
+    },
+    "12": {
+      "problem": "<p>The polynomials \\[P(x) = x^3 - 4x^2 - 25, \\quad Q(x) = x^3 - 8x^2 + 11x + 20\\] share a common root. What is this root?</p>",
+      "solutions": "<p>Subtract the two polynomials from each other. We get \\(4x^2 - 11x - 45\\), which applying the quadratic formula, gets us \\(x = (x - 5)(4x + 9)\\). Substituting back in, we see only 5 works, giving us 5 as the answer.</p>",
+      "answer": "5"
+    },
+    "13": {
+      "problem": "<p>What is the smallest positive integer for which the product of its factors is a multiple of 2024? (For example, the product of the factors of 12 is \\[1 \\cdot 2 \\cdot 3 \\cdot 4 \\cdot 6 \\cdot 12 = 1728,\\] but this is not a multiple of 2024.)</p>",
+      "solutions": "<p>Let the product of the factors of \\(x\\) be \\(N\\). \\(2024 = 2^3 \\cdot 11 \\cdot 23\\), so the primes 2, 11, and 23 have to show up in \\(x\\). Therefore, we have 1, 2, 11, and 23 as factors of \\(x\\). However, this means that their LCM, which is 506, must also be a factor of \\(x\\). Adding in the factors of 506, which are necessarily factors of \\(x\\), we have 1, 2, 11, 22, 23, 46, 253, and 506. These are all the factors of 506, and their product indeed divides 2024, so our answer is 506.</p>",
+      "answer": "506"
+    },
+    "14": {
+      "problem": "<p>A parallelogram has sides of length 13 and 15. If one diagonal of this parallelogram has length 14, find the length of the other diagonal.</p>",
+      "solutions": "<p>Split the parallelogram into two 13-14-15 triangles, each of which can in turn split into a 5-12-13 right triangle and a 9-12-15 right triangle. Dropping perpendicular from the far vertices onto the diagonal of length 15, we can form a right triangle with short leg 4, long leg 24, and hypotenuse the other diagonal of the quadrilateral. This then gives us a length of \\(4\\sqrt{37}\\).</p>",
+      "answer": "4\\sqrt{37}"
+    },
+    "15": {
+      "problem": "<p>Sharon is playing a variant of chess where the initial pieces on the first row are shuffled. There are 1 king, 1 queen, 2 knights, 2 rooks, and 2 bishops, and pieces of the same type are indistinguishable from one another. Furthermore, bishops must be on opposite-colored squares, and both sides have the same configuration. How many possible starting positions are there?</p>",
+      "solutions": "<p>We have \\(\\binom{4}{1}\\) ways to choose a black-squared bishop and \\(\\binom{4}{1}\\) ways to choose a white-squared bishop. For the remaining 6 pieces, there are \\(\\frac{6!}{2 \\cdot 2}\\) ways to place them on other 6 squares, since we double count rooks and knights. Together, we have \\(\\binom{4}{1} \\binom{4}{1} \\left(\\frac{6!}{4}\\right) = 2880\\).</p>",
+      "answer": "2880"
+    },
+    "16": {
+      "problem": "<p>Claire digs a circular hole of radius \\(r &lt; 4\\) into perfectly-flat ground. If she places a sphere of radius 4 into the hole, its lowest point sits at some distance \\(d\\) below the surface. If she instead places a sphere of radius 8 into the hole, its lowest point sits at a distance \\(d - 2\\) below the surface. Compute the radius of a sphere such that, if it were placed into the hole, its center would sit at a distance of \\(d - 1\\) below the surface.</p>",
+      "solutions": "<p>Dropping a perpendicular from the center of each sphere to the hole, we get the distance from the center of the radius 4 sphere to the hole is \\(\\sqrt{16 - r^2}\\), and thus the lowest point sits at a distance \\(4 - \\sqrt{16 - r^2}\\) below the surface. Similarly, the highest point sits at a distance \\(8 - \\sqrt{64 - r^2}\\) below the surface. Subtracting these gives \\(2 = (4 - \\sqrt{16 - r^2}) - (8 - \\sqrt{64 - r^2})\\), or \\(\\sqrt{64 - r^2} - \\sqrt{16 - r^2} = 6\\). Solving this using your favorite method gives \\(r^2 = 15\\), so \\(r = \\sqrt{15}\\) and thus \\(d = 3\\). Letting our desired sphere have radius \\(R\\), we want \\(R - \\sqrt{R^2 - 15} = 2\\). Solving this using your favorite method yields \\(R = \\frac{19}{4}\\).</p>",
+      "answer": "\\frac{19}{4}"
+    },
+    "17": {
+      "problem": "<p>For \\(x \\in \\{0, 1, 2, \\dots, 10000\\}\\), let \\[f(x) = \\left\\lfloor\\frac{x^2}{2024}\\right\\rfloor.\\] How many distinct values does \\(f\\) take as \\(x\\) ranges over \\(\\{0, 1, 2, \\dots, 10000\\}\\)?</p>",
+      "solutions": "<p>If \\(\\frac{(x+1)^2}{2024} &gt; \\frac{x^2}{2024} + 1\\), then \\(x\\) and \\(x+1\\) have different values. This is true for \\(x \\ge 1012\\). Thus, each value of \\(x\\) from 1012 to 10000 can make different values, giving 8989 solutions. Now every value from 0 to \\(\\lfloor\\frac{1012^2}{2024}\\rfloor = 506\\) could work if \\(\\lceil\\sqrt{2024a}\\rceil\\) with some value of \\(a\\) is different than with every other value of \\(a\\) as this makes \\(a\\) the value that works. This must be true if \\(\\sqrt{2024(a+1)} \\ge \\sqrt{2024a} + 1 \\implies 2024a + 2024 &gt; 2024a + 1 + 2\\sqrt{2024a} \\implies \\frac{2023^2}{4 \\cdot 2024} &gt; a\\). This means every number from 0 to 505 works, adding 506 more possible choices. Thus, the answer is \\(506 + 8989 = 9495\\).</p>",
+      "answer": "9495"
+    },
+    "18": {
+      "problem": "<p>Find the greatest common divisor for \\(F_{555}\\) and \\(F_{550}\\), where \\(F_n\\) is the \\(n\\)th term in the Fibonacci sequence with \\(F_1 = F_2 = 1\\).</p>",
+      "solutions": "<p>Notice \\(F_{555} = 11F_{550} + 5F_{549}\\). Notice adjacent terms in the Fibonacci sequence are relatively prime. Thus, we can see that 5 divides \\(F_{555}\\) by mod counting, and therefore, we’re done as the answer is 5.</p>",
+      "answer": "5"
+    },
+    "19": {
+      "problem": "<p>Given a triangle \\(\\triangle ABC\\) such that \\(AB = 24\\), \\(BC = 32\\), \\(AC = 40\\). Let \\(D\\) be a point on \\(BC\\) such that \\(BD = 7\\). Furthermore, let \\(N\\) be the incenter of \\(\\triangle ABC\\) and \\(M\\) be the incenter of \\(\\triangle ABD\\). What is the area of \\(\\triangle NDM\\)?</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2024_CMWMC_Individual/19-fig1.png\" width=\"309\" alt=\"\"></p><p>We take the area of the shaded trapezoid and subtract both triangles to get the area we want. This is \\(\\frac{55}{2} - 6 - 4 = \\frac{35}{2}\\).</p>",
+      "answer": "\\frac{35}{2}"
+    },
+    "20": {
+      "problem": "<p>Suppose \\(a, b, c, d\\) are uniformly chosen divisors of \\(6^5\\). How many possible ways are there to choose such \\(a, b, c, d\\) such that \\[a \\mid b, \\quad a \\mid c, \\quad b \\nmid c, \\quad c \\nmid b, \\quad c \\mid d, \\text{ and } b \\mid d?\\] Note \\(a \\mid b\\) is shorthand for \\(a\\) divides \\(b\\). For example, \\(2 \\mid 12\\).</p>",
+      "solutions": "<p>Let \\(a = 2^{w_1} 3^{w_2}, b = 2^{x_1} 3^{x_2}, c = 2^{y_1} 3^{y_2}, d = 2^{z_1} 3^{z_2}\\). We have \\(0 \\le w_1 \\le x_1, y_1 \\le z_1 \\le 5\\) and \\(0 \\le w_2 \\le x_2, y_2 \\le z_2 \\le 5\\) and one of the following: \\(x_1 &lt; y_1, x_2 &gt; y_2\\) or \\(x_1 &gt; y_1, x_2 &lt; y_2\\). Thus, we must have \\(0 \\le w_1 \\le x_1 \\le y_1 \\le z_1, 0 \\le w_2 \\le y_2 &lt; x_2\\) or \\(0 \\le w_1 \\le y_1 \\le z_1, 0 \\le w_2 \\le x_2 &lt; y_2 \\le z_2\\). Then, we could use the prime version of each variable above to change all the \\(\\le\\) to \\(&lt;\\) and change the upper bound to 7. This means that for any two given choosing of 4 numbers from 0 to 7, we have 2 solutions. This makes the answer \\(\\binom{8}{4}^2 \\cdot 2 = 9800\\).</p>",
+      "answer": "9800"
+    }
+  }
+}

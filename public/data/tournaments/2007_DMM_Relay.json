@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2007,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2007/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many of the following eight integers are divisible by 36? \\[0, 3636, 33636, 33663, 64278, 72702, 90000, 91980.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "2": {
+      "problem": "<p>Let \\(k\\) be TNYWR. The following polynomial equation in \\(x\\) has exactly one real solution. What is it? \\[(x-k)^{10} = x^{10}.\\]</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(4\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "3": {
+      "problem": "<p>Let \\(k\\) be TNYWR. How many positive prime numbers are less than or equal to \\(18k\\)?</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(2\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "11"
+    },
+    "4": {
+      "problem": "<p>The following equation has exactly one solution \\((x,y)\\) where \\(x\\) and \\(y\\) are both positive integers. What is \\(x+y\\)? \\[\\frac{x^3}{y} + \\frac{y^3}{x} = 288.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "24"
+    },
+    "5": {
+      "problem": "<p>Let \\(k\\) be TNYWR. A lattice point is an ordered pair \\((x,y)\\) such that \\(x\\) and \\(y\\) are both integers. How many lattice points are either inside of or on the boundary of the triangle whose vertices have coordinates \\((0,0)\\), \\((k,0)\\), and \\((0,k)\\)?</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(24\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "325"
+    },
+    "6": {
+      "problem": "<p>Let \\(k\\) be TNYWR. Find the minimum of the function \\[f(x) = x^2 + \\frac{k}{x^2+1}\\] for \\(x \\in \\mathbb{R}\\).</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(325\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-1+10\\sqrt{13}"
+    }
+  }
+}

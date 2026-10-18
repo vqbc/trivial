@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Algebra",
+  "year": 2007,
+  "name": "Individual Round: Algebra Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2007/feb/alg/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[\\left\\lfloor \\frac{2007! + 2004!}{2006! + 2005!} \\right\\rfloor.\\]</p><p>(Note that \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x\\).)</p>",
+      "solutions": "<p>We have \\[\\left\\lfloor \\frac{2007! + 2004!}{2006! + 2005!} \\right\\rfloor = \\left\\lfloor \\frac{\\left(2007 \\cdot 2006 + \\frac{1}{2005}\\right) \\cdot 2005!}{(2006+1) \\cdot 2005!} \\right\\rfloor = \\left\\lfloor \\frac{2007 \\cdot 2006 + \\frac{1}{2005}}{2007} \\right\\rfloor = \\left\\lfloor 2006 + \\frac{1}{2005 \\cdot 2007} \\right\\rfloor.\\]</p>",
+      "answer": "2006"
+    },
+    "2": {
+      "problem": "<p>Two reals \\(x\\) and \\(y\\) are such that \\(x - y = 4\\) and \\(x^3 - y^3 = 28\\). Compute \\(xy\\).</p>",
+      "solutions": "<p>We have \\(28 = x^3-y^3=(x-y)(x^2+xy+y^2)=(x-y)((x-y)^2+3xy)=4\\cdot(16+3xy)\\), from which \\(xy=-3\\).</p>",
+      "answer": "-3"
+    },
+    "3": {
+      "problem": "<p>Three real numbers \\(x\\), \\(y\\), and \\(z\\) are such that \\((x+4)/2 = (y+9)/(z-3) = (x+5)/(z-5)\\). Determine the value of \\(x/y\\).</p>",
+      "solutions": "<p>Because the first and third fractions are equal, adding their numerators and denominators produces another fraction equal to the others: \\(\\left((x+4)+(x+5)\\right)/\\left(2+(z-5)\\right)=(2x+9)/(z-3)\\). Then \\(y+9=2x+9\\), etc.</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "4": {
+      "problem": "<p>Compute \\[\\frac{2^3-1}{2^3+1}\\cdot\\frac{3^3-1}{3^3+1}\\cdot\\frac{4^3-1}{4^3+1}\\cdot\\frac{5^3-1}{5^3+1}\\cdot\\frac{6^3-1}{6^3+1}.\\]</p>",
+      "solutions": "<p>Use the factorizations \\(n^3-1=(n-1)(n^2+n+1)\\) and \\(n^3+1=(n+1)(n^2-n+1)\\) to write \\[\\frac{1\\cdot7}{3\\cdot3}\\cdot\\frac{2\\cdot13}{4\\cdot7}\\cdot\\frac{3\\cdot21}{5\\cdot13}\\cdot\\frac{4\\cdot31}{6\\cdot21}\\cdot\\frac{5\\cdot43}{7\\cdot31}=\\frac{1\\cdot2\\cdot43}{3\\cdot6\\cdot7}=\\frac{43}{63}.\\]</p>",
+      "answer": "\\frac{43}{63}"
+    },
+    "5": {
+      "problem": "<p>A convex quadrilateral is determined by the points of intersection of the curves \\(x^4+y^4=100\\) and \\(xy=4\\); determine its area.</p>",
+      "solutions": "<p>By symmetry, the quadrilateral is a rectangle having \\(x=y\\) and \\(x=-y\\) as axes of symmetry. Let \\((a,b)\\) with \\(a&gt;b&gt;0\\) be one of the vertices. Then the desired area is \\[\\left(\\sqrt2(a-b)\\right)\\cdot\\left(\\sqrt2(a+b)\\right)=2(a^2-b^2)=2\\sqrt{a^4-2a^2b^2+b^4}=2\\sqrt{100-2\\cdot4^2}=4\\sqrt{17}.\\]</p>",
+      "answer": "4\\sqrt{17}"
+    },
+    "6": {
+      "problem": "<p>Consider the polynomial \\(P(x)=x^3+x^2-x+2\\). Determine all real numbers \\(r\\) for which there exists a complex number \\(z\\) not in the reals such that \\(P(z)=r\\).</p>",
+      "solutions": "<p>Because such roots to polynomial equations come in conjugate pairs, we seek the values \\(r\\) such that \\(P(x)=r\\) has just one real root \\(x\\). Considering the shape of a cubic, we are interested in the boundary values \\(r\\) such that \\(P(x)-r\\) has a repeated zero. Thus, we write \\[P(x)-r=x^3+x^2-x+(2-r)=(x-p)^2(x-q)=x^3-(2p+q)x^2+p(p+2q)x-p^2q.\\]</p><p>Then \\(q=-2p-1\\) and \\(-1=p(p+2q)=p(-3p-2)\\) so that \\(p=1/3\\) or \\(p=-1\\). It follows that the graph of \\(P(x)\\) is horizontal at \\(x=1/3\\) (a maximum) and \\(x=-1\\) (a minimum), so the desired values \\(r\\) are \\(r&gt;P(-1)=3\\) and \\(r&lt;P(1/3)=1/27+1/9-1/3+2=49/27\\).</p>",
+      "answer": "r > 3, r < \\frac{49}{27}"
+    },
+    "7": {
+      "problem": "<p>An infinite sequence of positive real numbers is defined by \\(a_0=1\\) and \\(a_{n+2}=6a_n-a_{n+1}\\) for \\(n=0,1,2,\\ldots\\) Find the possible value(s) of \\(a_{2007}\\).</p>",
+      "solutions": "<p>The characteristic equation of the linear homogeneous equation is \\(m^2+m-6=(m+3)(m-2)=0\\) with solutions \\(m=-3\\) and \\(m=2\\). Hence the general solution is given by \\(a_n=A(2)^n+B(-3)^n\\) where \\(A\\) and \\(B\\) are constants to be determined. Then we have \\(a_n&gt;0\\) for \\(n\\ge0\\), so necessarily \\(B=0\\), and \\(a_0=1\\Rightarrow A=1\\). Therefore, the unique solution to the recurrence is \\(a_n=2^n\\) for all \\(n\\).</p>",
+      "answer": "2^{2007}"
+    },
+    "8": {
+      "problem": "<p>Let \\(A := \\mathbb{Q} \\setminus \\{0,1\\}\\) denote the set of all rationals other than \\(0\\) and \\(1\\). A function \\(f: A \\to \\mathbb{R}\\) has the property that for all \\(x \\in A\\), \\[f(x) + f\\left(1-\\frac{1}{x}\\right) = \\log|x|.\\]</p><p>Compute the value of \\(f(2007)\\).</p>",
+      "solutions": "<p>Let \\(g: A \\to A\\) be defined by \\(g(x) := 1-1/x\\); the key property is that \\[g(g(g(x))) = 1 - \\frac{1}{1-\\frac{1}{1-\\frac1x}} = x.\\]</p><p>The given equation rewrites as \\(f(x)+f(g(x))=\\log|x|\\). Substituting \\(x=g(y)\\) and \\(x=g(g(z))\\) gives the further equations \\(f(g(y))+f(g(g(y)))=\\log|g(y)|\\) and \\(f(g(g(z)))+f(z)=\\log|g(g(z))|\\). Setting \\(y\\) and \\(z\\) to \\(x\\) and solving the system of three equations for \\(f(x)\\) gives \\[f(x) = \\frac{1}{2}\\cdot\\left(\\log|x|-\\log|g(x)|+\\log|g(g(x))|\\right).\\]</p><p>For \\(x=2007\\), we have \\(g(x)=\\frac{2006}{2007}\\) and \\(g(g(x))=\\frac{-1}{2006}\\), so that \\[f(2007)=\\frac{\\log|2007|-\\log\\left|\\frac{2006}{2007}\\right|+\\log\\left|\\frac{-1}{2006}\\right|}{2}=\\log(2007/2006).\\]</p>",
+      "answer": "\\log\\left(\\frac{2007}{2006}\\right)"
+    },
+    "9": {
+      "problem": "<p>The complex numbers \\(\\alpha_1, \\alpha_2, \\alpha_3\\), and \\(\\alpha_4\\) are the four distinct roots of the equation \\(x^4+2x^3+2=0\\). Determine the unordered set \\[\\{\\alpha_1\\alpha_2+\\alpha_3\\alpha_4, \\alpha_1\\alpha_3+\\alpha_2\\alpha_4, \\alpha_1\\alpha_4+\\alpha_2\\alpha_3\\}.\\]</p>",
+      "solutions": "<p>Employing the elementary symmetric polynomials (\\(s_1=\\alpha_1+\\alpha_2+\\alpha_3+\\alpha_4=-2\\), \\(s_2=\\alpha_1\\alpha_2+\\alpha_1\\alpha_3+\\alpha_1\\alpha_4+\\alpha_2\\alpha_3+\\alpha_2\\alpha_4+\\alpha_3\\alpha_4=0\\), \\(s_3=\\alpha_1\\alpha_2\\alpha_3+\\alpha_2\\alpha_3\\alpha_4+\\alpha_3\\alpha_4\\alpha_1+\\alpha_4\\alpha_1\\alpha_2=0\\), and \\(s_4=\\alpha_1\\alpha_2\\alpha_3\\alpha_4=2\\)) we consider the polynomial \\[P(x)=\\left(x-(\\alpha_1\\alpha_2+\\alpha_3\\alpha_4)\\right)\\left(x-(\\alpha_1\\alpha_3+\\alpha_2\\alpha_4)\\right)\\left(x-(\\alpha_1\\alpha_4+\\alpha_2\\alpha_3)\\right)\\]</p><p>Because \\(P\\) is symmetric with respect to \\(\\alpha_1,\\alpha_2,\\alpha_3,\\alpha_4\\), we can express the coefficients of its expanded form in terms of the elementary symmetric polynomials. We compute \\[\\begin{aligned}\nP(x) &amp;= x^3-s_2x^2+(s_3s_1-4s_4)x+(-s_3^2-s_4s_1^2+s_4s_2) \\\\\n&amp;= x^3-8x-8 \\\\\n&amp;= (x+2)(x^2-2x-4)\n\\end{aligned}\\]</p><p>The roots of \\(P(x)\\) are \\(-2\\) and \\(1\\pm\\sqrt5\\), so the answer is \\(\\{1\\pm\\sqrt5,-2\\}\\).</p><p><b>Remarks.</b> It is easy to find the coefficients of \\(x^2\\) and \\(x\\) by expansion, and the constant term can be computed without the complete expansion and decomposition of \\((\\alpha_1\\alpha_2+\\alpha_3\\alpha_4)(\\alpha_1\\alpha_3+\\alpha_2\\alpha_4)(\\alpha_1\\alpha_4+\\alpha_2\\alpha_3)\\) by noting that the only nonzero 6th degree expressions in \\(s_1,s_2,s_3,s_4\\) are \\(s_1^6\\) and \\(s_4s_1^2\\). The general polynomial \\(P\\) constructed here is called the <i>cubic resolvent</i> and arises in Galois theory.</p>",
+      "answer": "1 \\pm \\sqrt{5}, -2"
+    },
+    "10": {
+      "problem": "<p>The polynomial \\(f(x)=x^{2007}+17x^{2006}+1\\) has distinct zeroes \\(r_1,\\ldots,r_{2007}\\). A polynomial \\(P\\) of degree 2007 has the property that \\(P\\left(r_j+\\frac{1}{r_j}\\right)=0\\) for \\(j=1,\\ldots,2007\\). Determine the value of \\(P(1)/P(-1)\\).</p>",
+      "solutions": "<p>For some constant \\(k\\), we have \\[P(z)=k\\prod_{j=1}^{2007}\\left(z-\\left(r_j+\\frac{1}{r_j}\\right)\\right).\\]</p><p>Now writing \\(\\omega^3=1\\) with \\(\\omega\\ne1\\), we have \\(\\omega^2+\\omega=-1\\). Then</p><p>\\[P(1)/P(-1) = \\frac{k\\prod_{j=1}^{2007}\\left(1-\\left(r_j+\\frac{1}{r_j}\\right)\\right)}{k\\prod_{j=1}^{2007}\\left(-1-\\left(r_j+\\frac{1}{r_j}\\right)\\right)} = \\prod_{j=1}^{2007}\\frac{r_j^2-r_j+1}{r_j^2+r_j+1} = \\prod_{j=1}^{2007}\\frac{(-\\omega-r_j)(-\\omega^2-r_j)}{(\\omega-r_j)(\\omega^2-r_j)}\\]</p><p>\\[= \\frac{f(-\\omega)f(-\\omega^2)}{f(\\omega)f(\\omega^2)} = \\frac{\\left(-\\omega^{2007}+17\\omega^{2006}+1\\right)\\left(-(\\omega^2)^{2007}+17(\\omega^2)^{2006}+1\\right)}{\\left(\\omega^{2007}+17\\omega^{2006}+1\\right)\\left((\\omega^2)^{2007}+17(\\omega^2)^{2006}+1\\right)} = \\frac{(17\\omega^2)(17\\omega)}{(2+17\\omega^2)(2+17\\omega)}\\]</p><p>\\[= \\frac{289}{4+34(\\omega+\\omega^2)+289} = \\frac{289}{259}.\\]</p>",
+      "answer": "\\frac{289}{259}"
+    }
+  }
+}

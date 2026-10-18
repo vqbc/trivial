@@ -1,0 +1,23 @@
+{
+  "test": "SMT Calculus Tiebreaker",
+  "year": 2012,
+  "name": "Calculus Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2012/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A very tired audience of 9001 attends a concert of Haydn’s Surprise Symphony, which lasts 20 minutes. Members of the audience fall asleep at a continuous rate of \\(6t\\) people per minute, where \\(t\\) is the time in minutes since the symphony has begun.</p><p>The Surprise Symphony is named such because when \\(t = 8\\) minutes, the orchestra plays exactly one very loud note, waking everyone in the audience up. After that note, though, the audience continues to fall asleep at the same rate as before. Once a member of the audience has fallen asleep, he or she will stay asleep except for the rude awakening when \\(t = 8\\) minutes.</p><p>How many collective minutes does the audience sleep during the symphony?</p>",
+      "solutions": "<p>Let \\(f(t) = 6t\\) when \\(0 \\le t \\le 20\\).</p><p>Break into two cases: \\(t \\le 8\\) and \\(t &gt; 8\\). When \\(0 \\le t &lt; 8\\), the number of people sleeping at any given moment is \\(F_1(t) = \\int_0^t 6x\\,dx = 3t^2 - f(0) = 3t^2\\), so the total number of minutes slept in the first eight minutes is \\(\\int_0^8 F_1(t)\\,dt = \\int_0^8 3t^2\\,dt = 512\\).</p><p>When \\(t &gt; 8\\), the number of people sleeping at any given moment is \\(F_2(t) = \\int_8^t 6x\\,dx = 3t^2 - F_1(8) = 3t^2 - 192\\), so the total number of minutes slept in the last twelve minutes is \\(\\int_8^{20} F_2(t)\\,dt = \\int_8^{20} 3t^2 - 192\\,dt = 5184\\). Adding these together, the answer is \\(\\boxed{5696}\\).</p>",
+      "answer": "5696"
+    },
+    "2": {
+      "problem": "<p>Evaluate the limit \\[\\lim_{n\\to\\infty} \\left(\\frac{n^2+n+3}{n^2+3n+5}\\right)^n.\\]</p>",
+      "solutions": "<p>Note that \\[\\lim_{n\\to\\infty} \\left(\\frac{n^2+n+3}{n^2+3n+5}\\right)^n = \\lim_{n\\to\\infty} \\left(\\frac{n^2+3n+5-(2n+2)}{n^2+3n+5}\\right)^n = \\lim_{n\\to\\infty}\\left(1 - 2\\left(\\frac{n+1}{n^2+3n+5}\\right)\\right)^n = \\lim_{n\\to\\infty}\\left(1-\\frac{2}{n}\\right)^n\\] which by a well-known identity is equal to \\(\\boxed{e^{-2}}\\).</p>",
+      "answer": "e^{-2}"
+    },
+    "3": {
+      "problem": "<p>Evaluate \\[\\frac{\\int_0^\\infty (1+x^2)^{-2012}\\,dx}{\\int_0^\\infty (1+x^2)^{-2011}\\,dx}.\\]</p>",
+      "solutions": "<p>We begin by making the substitution \\(u = \\tan^{-1} x\\): \\[du = \\left(\\frac{d}{dx}\\tan^{-1}x\\right)dx = \\frac{dx}{1+x^2} \\implies (1+x^2)\\,du = (1+\\tan^2 u)\\,du = dx.\\]</p><p>Noting that \\(\\tan^{-1} 0 = 0\\) and that \\(\\tan^{-1} x\\) approaches infinity as \\(x\\) approaches \\(\\pi/2\\), we have that, for any positive integer \\(k\\), \\[\\int_0^\\infty (1+x^2)^{-k}\\,dx = \\int_0^{\\pi/2} (1+\\tan^2 u)(1+\\tan^2 u)^{-k}\\,du = \\int_0^{\\pi/2} (\\sec^2 u)^{1-k}\\,du = \\int_0^{\\pi/2} (\\cos^2 u)^{k-1}\\,du.\\]</p><p>Note that we can write this as \\[\\frac{1}{4}\\int_0^{2\\pi} (\\cos^2 u)^{k-1}\\,du\\] because this integral is the same over any quadrant of the unit circle. Using the method of integrating by reduction (see en.wikipedia.org/wiki/Integration_by_reduction_formulae), we can show that for positive integers \\(m\\), \\[\\int_0^{2\\pi} \\cos^{2m} x\\,dx = \\frac{1}{2m}\\cos^{2m-1}x\\sin x\\Big|_0^{2\\pi} + \\frac{2m-1}{2m}\\int_0^{2\\pi} \\cos^{2m-2}x\\,dx.\\]</p><p>Since we are evaluating this on the interval \\([0, 2\\pi]\\), the first term is zero. In particular, for \\(m = k-1\\), we have \\[\\int_0^\\infty (1+x^2)^{-k}\\,dx = \\frac{1}{4}\\int_0^{2\\pi} (\\cos^2 u)^{k-1}\\,du = \\frac{1}{4}\\left[\\frac{2k-3}{2k-2}\\int_0^{2\\pi} \\cos^{2k-4}\\,du\\right].\\]</p><p>Carrying out this recursion, we have \\[\\int_0^\\infty (1+x^2)^{-k}\\,dx = \\frac{1}{4}\\left[\\frac{2k-3}{2k-2}\\cdot\\frac{2k-5}{2k-4}\\cdots\\frac{3}{4}\\cdot\\frac{1}{2}\\int_0^{2\\pi} 1\\,dx\\right] = \\frac{2\\pi}{4}\\cdot\\frac{(2k-2)!}{(2\\cdot4\\cdots(2k-4)\\cdot(2k-2))^2} = \\frac{\\pi}{2}\\cdot\\frac{(2k-2)!}{2^{2k-2}(k-1)!(k-1)!}.\\]</p><p>Now, our original ratio becomes \\[\\frac{\\int_0^\\infty (1+x^2)^{-2012}\\,dx}{\\int_0^\\infty (1+x^2)^{-2011}\\,dx} = \\frac{\\pi}{2}\\cdot\\frac{4022!}{2^{4022}\\cdot2011!\\cdot2011!}\\cdot\\frac{2}{\\pi}\\cdot\\frac{2^{4020}\\cdot2010!\\cdot2010!}{4020!} = \\frac{4022\\cdot4021}{2^2\\cdot2011\\cdot2011} = \\frac{4021}{2\\cdot2011} = \\boxed{\\frac{4021}{4022}}.\\]</p>",
+      "answer": "\\frac{4021}{4022}"
+    }
+  }
+}

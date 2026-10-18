@@ -1,0 +1,23 @@
+{
+  "test": "SMT Number Theory Tiebreaker",
+  "year": 2021,
+  "name": "Number Theory Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2021/nt-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(a\\) be the base 10 integer equivalent to \\(2021_{20}\\) and let \\(b\\) the base 10 integer equivalent to \\(2021_{21}\\). Compute \\(b - a\\).</p>",
+      "solutions": "<p>Converting to base 10, \\[\\begin{aligned}\nb - a &amp;= (2 \\cdot 21^3 + 2 \\cdot 21 + 1) - (2 \\cdot 20^3 + 2 \\cdot 20 + 1) \\\\\n&amp;= 2(21^3 - 20^3) + 2(21 - 20) \\\\\n&amp;= 2(1261) + 2(1) \\\\\n&amp;= \\boxed{2524}.\n\\end{aligned}\\]</p>",
+      "answer": "2524"
+    },
+    "2": {
+      "problem": "<p>Let \\(f\\) be a function such that for any positive integer \\(n\\), \\(f(n)\\) is equal to the median of the positive factors of \\(n\\). Compute the sum of all positive integers \\(n\\) such that \\(20 &lt; f(n) &lt; 21\\).</p>",
+      "solutions": "<p>Bash pairs that sum to 41 to get the solution set \\(\\{148, 310, 348, 390, 408, 414, 418, 420\\}\\) which sums to 2856.</p>",
+      "answer": "2856"
+    },
+    "3": {
+      "problem": "<p>Let \\(k\\) be a randomly chosen positive divisor of \\(20!\\). What is the probability that \\(k\\) can be written as \\(a^2 + b^2\\) for some integers \\(a\\) and \\(b\\)?</p>",
+      "solutions": "<p>The choice \\(k\\) can be written as the sum of two squares if and only if every prime \\(p \\equiv 3 \\pmod{4}\\) appears to an even power in the prime factorization of \\(k\\). The primes \\(p \\le 20\\) with \\(p \\equiv 3 \\pmod{4}\\) are 3, 7, 11, and 19. Also, \\(20! = 3^8 \\cdot 7^2 \\cdot 11^1 \\cdot 19^1 \\cdot k\\) where \\(k\\) is not divisible by any of these primes. Therefore, a randomly positive divisor of \\(20!\\) has prime factorization \\(3^a \\cdot 7^b \\cdot 11^c \\cdot 19^d \\cdot l\\) where \\(l\\) is not divisible by any of these primes, \\(a \\in [0, 8]\\), \\(a \\in [0, 2]\\), \\(a \\in [0, 1]\\), \\(a \\in [0, 1]\\). Furthermore \\(a, b, c,\\) and \\(d\\) take on the possible values with equally likelihood and independently of each other. It suffices to compute the probability that \\(a, b, c,\\) and \\(d\\) are all even which is \\(\\left(\\frac{5}{9}\\right)\\left(\\frac{2}{3}\\right)\\left(\\frac{1}{2}\\right)\\left(\\frac{1}{2}\\right) = \\boxed{\\frac{5}{54}}.\\)</p>",
+      "answer": "\\frac{5}{54}"
+    }
+  }
+}

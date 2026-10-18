@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2019,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2019/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(x)\\) be a polynomial with integer coefficients such that \\(f(u) - f(v)\\) divides \\(u^2 - v^2\\) for all integers \\(u\\) and \\(v\\). Given that \\(f(0) = 1\\) and \\(f(1) = 2\\), find the largest possible value of \\(f(50)\\).</p>",
+      "solutions": "<p>Substitute \\(v = 0\\). Since \\(f(u) - 1 \\mid u^2\\) for all \\(u\\), we know that \\(\\deg(f(x)) \\le 2\\).</p><p>Let \\(f(x) = ax^2 + bx + c\\), then \\(f(0) = c = 1\\) and \\(f(1) = a + b + c = 2\\) or \\(a + b = 1\\). We also have: \\[\\frac{f(u) - f(v)}{u - v} = \\frac{a(u^2 - v^2) + b(u - v)}{u - v} = a(u + v) + b\\] divides \\(u + v\\) for all integers \\(u\\) and \\(v\\). If \\(a \\ne 0\\) then \\(b\\) has to be \\(0\\), meaning that \\(a = 1\\) and \\(f(x) = x^2 + 1\\). If \\(a = 0\\) then \\(b = 1\\), \\(f(x) = x + 1\\).</p><p>Thus the largest possible value of \\(f(50)\\) is \\(50^2 + 1 = \\boxed{2501}\\).</p>",
+      "answer": "2501"
+    },
+    "2": {
+      "problem": "<p>How many complex numbers \\(z\\) have the property that \\(z^2 = \\bar{z}\\), where \\(\\bar{z}\\) is the complex conjugate of \\(z\\)?</p>",
+      "solutions": "<p>If \\(z^2 = \\bar{z}\\), then \\(|z^2| = |\\bar{z}| = |z|\\) so \\(|z| = 0\\) or \\(|z| = 1\\). If \\(|z| = 0\\), then \\(z = 0\\) is the only solution. If \\(|z| = 1\\), then \\(z = e^{i\\theta}\\) and \\(e^{2i\\theta} = e^{-i\\theta}\\), so \\(e^{3i\\theta} = 1\\). The \\(\\boxed{4}\\) solutions are \\(0\\), \\(1\\), \\(e^{i\\pi/3}\\), and \\(e^{2i\\pi/3}\\).</p>",
+      "answer": "4"
+    },
+    "3": {
+      "problem": "<p>Compute \\[\\sum_{n=1}^{\\infty} \\binom{n}{2} \\left(\\frac{3}{4}\\right)^n.\\]</p>",
+      "solutions": "<p><b>Solution 1.</b> Let \\(S\\) be the sum we are trying to compute, and \\(f(x) = \\sum_{n=1}^{\\infty} n(n-1)x^n\\). We can see that \\(S = \\frac{1}{2} f\\left(\\frac{3}{4}\\right)\\). Then we have: \\[\\begin{aligned}\nf(x) &amp;= \\sum_{n=2}^{\\infty} n(n-1)x^n \\\\\n&amp;= \\sum_{n=2}^{\\infty} x^2 \\cdot n(n-1)x^{n-2} \\\\\n&amp;= \\sum_{n=2}^{\\infty} x^2 \\frac{d^2}{dx^2} x^{n-2} \\\\\n&amp;= x^2 \\frac{d^2}{dx^2} \\sum_{n=2}^{\\infty} x^{n-2} \\\\\n&amp;= x^2 \\frac{d^2}{dx^2} \\frac{1}{1-x} \\\\\n&amp;= \\frac{2x^2}{(1-x)^3}\n\\end{aligned}\\]</p><p>Setting \\(x = \\frac{3}{4}\\), it is easy to see that \\(f\\left(\\frac{3}{4}\\right) = 72\\), and thus the desired sum is \\(\\boxed{36}\\).</p><p><b>Solution 2.</b> Define series \\(A\\) and \\(B\\) as follows: \\[\\begin{aligned}\nA &amp;= \\sum_{n=1}^{\\infty} n \\left(\\frac{3}{4}\\right)^n \\\\\nB &amp;= \\sum_{n=1}^{\\infty} n(n-1) \\left(\\frac{3}{4}\\right)^n \\\\\n\\frac{3}{4} A &amp;= \\sum_{n=2}^{\\infty} (n-1) \\left(\\frac{3}{4}\\right)^n \\\\\nA - \\frac{3}{4} A &amp;= \\sum_{n=1}^{\\infty} \\left(\\frac{3}{4}\\right)^n = \\frac{3}{4} \\cdot 4 = 3 \\\\\nA &amp;= 12 \\\\\n\\frac{3}{4} B &amp;= \\sum_{n=2}^{\\infty} (n-1)(n-2) \\left(\\frac{3}{4}\\right)^n \\\\\nB - \\frac{3}{4} B &amp;= \\sum_{n=2}^{\\infty} 2(n-1) \\left(\\frac{3}{4}\\right)^n \\\\\n\\frac{1}{4} B &amp;= \\frac{3}{4} \\sum_{n=1}^{\\infty} 2n \\left(\\frac{3}{4}\\right)^n = \\frac{3}{4} \\cdot 2A = 18 \\\\\nB &amp;= 72\n\\end{aligned}\\]</p><p>The desired sum is equal to \\(B/2\\), so the answer is \\(\\boxed{36}\\).</p>",
+      "answer": "36"
+    }
+  }
+}

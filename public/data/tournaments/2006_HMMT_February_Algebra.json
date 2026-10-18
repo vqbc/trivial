@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Algebra",
+  "year": 2006,
+  "name": "Individual Round: Algebra Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2006/feb/alg/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Larry can swim from Harvard to MIT (with the current of the Charles River) in 40 minutes, or back (against the current) in 45 minutes. How long does it take him to <i>row</i> from Harvard to MIT, if he rows the return trip in 15 minutes? (Assume that the speed of the current and Larry’s swimming and rowing speeds relative to the current are all constant.) Express your answer in the format mm:ss.</p>",
+      "solutions": "<p>Let the distance between Harvard and MIT be 1, and let \\(c, s, r\\) denote the speeds of the current and Larry’s swimming and rowing, respectively. Then we are given \\[s + c = \\frac{1}{40} = \\frac{9}{360}, \\qquad s - c = \\frac{1}{45} = \\frac{8}{360}, \\qquad r - c = \\frac{1}{15} = \\frac{24}{360},\\] so \\[r + c = (s+c) - (s-c) + (r-c) = \\frac{9-8+24}{360} = \\frac{25}{360},\\] and it takes Larry \\(360/25 = 14.4\\) minutes, or 14:24, to row from Harvard to MIT.</p>",
+      "answer": "14{:}24"
+    },
+    "2": {
+      "problem": "<p>Find all real solutions \\((x, y)\\) of the system \\(x^2 + y = 12 = y^2 + x\\).</p>",
+      "solutions": "<p>We have \\(x^2+y=y^2+x\\) which can be written as \\((x-y)(x+y-1)=0\\). The case \\(x=y\\) yields \\(x^2+x-12=0\\), hence \\((x,y)=(3,3)\\) or \\((-4,-4)\\). The case \\(y=1-x\\) yields \\(x^2+1-x-12=x^2-x-11=0\\) which has solutions \\(x=\\frac{1\\pm\\sqrt{1+44}}{2}=\\frac{1\\pm3\\sqrt{5}}{2}\\). The other two solutions follow.</p>",
+      "answer": "(3, 3), (-4, -4), \\left(\\frac{1+3\\sqrt{5}}{2}, \\frac{1-3\\sqrt{5}}{2}\\right), \\left(\\frac{1-3\\sqrt{5}}{2}, \\frac{1+3\\sqrt{5}}{2}\\right)"
+    },
+    "3": {
+      "problem": "<p>The train schedule in Hummut is hopelessly unreliable. Train A will enter Intersection X from the west at a random time between 9:00 am and 2:30 pm; each moment in that interval is equally likely. Train B will enter the same intersection from the north at a random time between 9:30 am and 12:30 pm, independent of Train A; again, each moment in the interval is equally likely. If each train takes 45 minutes to clear the intersection, what is the probability of a collision today?</p>",
+      "solutions": "<p>Suppose we fix the time at which Train B arrives at Intersection X; then call the interval during which Train A could arrive (given its schedule) and collide with Train B the “disaster window.”</p><p>We consider two cases:</p><p><b>(i)</b> <i>Train B enters Intersection X between 9:30 and 9:45.</i> If Train B arrives at 9:30, the disaster window is from 9:00 to 10:15, an interval of \\(1\\frac{1}{4}\\) hours. If Train B arrives at 9:45, the disaster window is \\(1\\frac{1}{2}\\) hours long. Thus, the disaster window has an average length of \\((1\\frac14+1\\frac12)\\div 2=\\frac{11}{8}\\). From 9:00 to 2:30 is \\(5\\frac12\\) hours. The probability of a collision is thus \\(\\frac{11}{8}\\div 5\\frac12=\\frac{1}{4}\\).</p><p><b>(ii)</b> <i>Train B enters Intersection X between 9:45 and 12:30.</i> Here the disaster window is always \\(1\\frac12\\) hours long, so the probability of a collision is \\(1\\frac12\\div5\\frac12=\\frac{3}{11}\\).</p><p>From 9:30 to 12:30 is 3 hours. Now case (i) occurs with probability \\(\\frac14\\div3=\\frac{1}{12}\\), and case (ii) occurs with probability \\(\\frac{11}{12}\\). The overall probability of a collision is therefore \\[\\frac{1}{12}\\cdot\\frac14+\\frac{11}{12}\\cdot\\frac{3}{11}=\\frac{1}{48}+\\frac14=\\frac{13}{48}.\\]</p>",
+      "answer": "\\frac{13}{48}"
+    },
+    "4": {
+      "problem": "<p>Let \\(a_1, a_2, \\ldots\\) be a sequence defined by \\(a_1 = a_2 = 1\\) and \\(a_{n+2} = a_{n+1} + a_n\\) for \\(n \\ge 1\\). Find \\[\\sum_{n=1}^{\\infty} \\frac{a_n}{4^{n+1}}.\\]</p>",
+      "solutions": "<p>Let \\(X\\) denote the desired sum. Note that \\[\\begin{aligned}\nX &amp;= \\frac{1}{4^2}+\\frac{1}{4^3}+\\frac{2}{4^4}+\\frac{3}{4^5}+\\frac{5}{4^6}+\\ldots \\\\\n4X &amp;= \\frac{1}{4^1}+\\frac{1}{4^2}+\\frac{2}{4^3}+\\frac{3}{4^4}+\\frac{5}{4^5}+\\frac{8}{4^6}+\\ldots \\\\\n16X &amp;= \\frac{1}{4^0}+\\frac{1}{4^1}+\\frac{2}{4^2}+\\frac{3}{4^3}+\\frac{5}{4^4}+\\frac{8}{4^5}+\\frac{13}{4^6}+\\ldots\n\\end{aligned}\\] so that \\(X+4X=16X-1\\), and \\(X=1/11\\).</p>",
+      "answer": "\\frac{1}{11}"
+    },
+    "5": {
+      "problem": "<p>Tim has a working analog 12-hour clock with two hands that run continuously (instead of, say, jumping on the minute). He also has a clock that runs really slow—at half the correct rate, to be exact. At noon one day, both clocks happen to show the exact time. At any given instant, the hands on each clock form an angle between \\(0^\\circ\\) and \\(180^\\circ\\) inclusive. At how many times during that day are the angles on the two clocks equal?</p>",
+      "solutions": "<p>A tricky thing about this problem may be that the angles on the two clocks might be reversed and would still count as being the same (for example, both angles could be \\(90^\\circ\\), but the hour hand may be ahead of the minute hand on one clock and behind on the other).</p><p>Let \\(x\\), \\(-12 \\le x &lt; 12\\), denote the number of hours since noon. If we take \\(0^\\circ\\) to mean upwards to the “XII” and count angles clockwise, then the hour and minute hands of the correct clock are at \\(30x^\\circ\\) and \\(360x^\\circ\\), and those of the slow clock are at \\(15x^\\circ\\) and \\(180x^\\circ\\). The two angles are thus \\(330x^\\circ\\) and \\(165x^\\circ\\), of course after removing multiples of \\(360^\\circ\\) and possibly flipping sign; we are looking for solutions to \\[330x^\\circ \\equiv 165x^\\circ \\pmod{360^\\circ} \\quad \\text{or} \\quad 330x^\\circ \\equiv -165x^\\circ \\pmod{360^\\circ}.\\] In other words, \\[360 \\mid 165x \\quad \\text{or} \\quad 360 \\mid 495x.\\] Or, better yet, \\[\\frac{165}{360}x = \\frac{11}{24}x \\quad \\text{and/or} \\quad \\frac{495}{360}x = \\frac{11}{8}x\\] must be an integer. Now \\(x\\) is any <i>real</i> number in the range \\([-12, 12)\\), so \\(11x/8\\) ranges in \\([-16.5, 16.5)\\), an interval that contains 33 integers. For any value of \\(x\\) such that \\(11x/24\\) is an integer, of course \\(11x/8 = 3 \\times (11x/24)\\) is also an integer, so the answer is just 33.</p>",
+      "answer": "33"
+    },
+    "6": {
+      "problem": "<p>Let \\(a, b, c\\) be the roots of \\(x^3 - 9x^2 + 11x - 1 = 0\\), and let \\(s = \\sqrt{a} + \\sqrt{b} + \\sqrt{c}\\). Find \\(s^4 - 18s^2 - 8s\\).</p>",
+      "solutions": "<p>First of all, as the left side of the first given equation takes values \\(-1, 2, -7\\), and \\(32\\) when \\(x = 0, 1, 2\\), and \\(3\\), respectively, we know that \\(a, b\\), and \\(c\\) are distinct positive reals. Let \\(t = \\sqrt{ab} + \\sqrt{bc} + \\sqrt{ca}\\), and note that \\[\\begin{aligned}\ns^2 &amp;= a+b+c+2t = 9+2t, \\\\\nt^2 &amp;= ab+bc+ca+2\\sqrt{abc}\\,s = 11+2s, \\\\\ns^4 &amp;= (9+2t)^2 = 81+36t+4t^2 = 81+36t+44+8s = 125+36t+8s, \\\\\n18s^2 &amp;= 162+36t,\n\\end{aligned}\\] so that \\(s^4 - 18s^2 - 8s = -37\\).</p>",
+      "answer": "-37"
+    },
+    "7": {
+      "problem": "<p>Let \\[f(x) = x^4 - 6x^3 + 26x^2 - 46x + 65.\\] Let the roots of \\(f(x)\\) be \\(a_k + ib_k\\) for \\(k = 1, 2, 3, 4\\). Given that the \\(a_k, b_k\\) are all integers, find \\(|b_1| + |b_2| + |b_3| + |b_4|\\).</p>",
+      "solutions": "<p>The roots of \\(f(x)\\) must come in complex-conjugate pairs. We can then say that \\(a_1 = a_2\\) and \\(b_1 = -b_2\\); \\(a_3 = a_4\\) and \\(b_3 = -b_4\\). The constant term of \\(f(x)\\) is the product of these, so \\(5 \\cdot 13 = (a_1^2+b_1^2)(a_3^2+b_3^2)\\). Since \\(a_k\\) and \\(b_k\\) are integers for all \\(k\\), and it is simple to check that \\(1\\) and \\(i\\) are not roots of \\(f(x)\\), we must have \\(a_1^2+b_1^2=5\\) and \\(a_3^2+b_3^2=13\\). The only possible ways to write these sums with positive integers is \\(1^2+2^2=5\\) and \\(2^2+3^2=13\\), so the values of \\(a_1\\) and \\(b_1\\) up to sign are 1 and 2; and \\(a_3\\) and \\(b_3\\) up to sign are 2 and 3. From the \\(x^3\\) coefficient of \\(f(x)\\), we get that \\(a_1+a_2+a_3+a_4=6\\), so \\(a_1+a_3=3\\). From the limits we already have, this tells us that \\(a_1=1\\) and \\(a_3=2\\). Therefore \\(b_1, b_2 = \\pm2\\) and \\(b_3, b_4 = \\pm3\\), so the required sum is \\(2+2+3+3=10\\).</p>",
+      "answer": "10"
+    },
+    "8": {
+      "problem": "<p>Solve for all complex numbers \\(z\\) such that \\(z^4 + 4z^2 + 6 = z\\).</p>",
+      "solutions": "<p>Rewrite the given equation as \\((z^2+2)^2+2=z\\). Observe that a solution to \\(z^2+2=z\\) is a solution of the quartic by substitution of the left hand side into itself. This gives \\(z=\\frac{1\\pm i\\sqrt7}{2}\\). But now, we know that \\(z^2-z+2\\) divides into \\((z^2+2)^2-z+2=z^4+4z^2-z+6\\). Factoring it out, we obtain \\((z^2-z+2)(z^2+z+3)=z^4+4z^2-z+6\\). Finally, the second term leads to the solutions \\(z=\\frac{-1\\pm i\\sqrt{11}}{2}\\).</p>",
+      "answer": "\\frac{1 \\pm i\\sqrt{7}}{2}, \\frac{-1 \\pm i\\sqrt{11}}{2}"
+    },
+    "9": {
+      "problem": "<p>Compute the value of the infinite series \\[\\sum_{n=2}^{\\infty} \\frac{n^4 + 3n^2 + 10n + 10}{2^n \\cdot (n^4 + 4)}.\\]</p>",
+      "solutions": "<p>We employ the difference of squares identity, uncovering the factorization of the denominator: \\(n^4+4=(n^2+2)^2-(2n)^2=(n^2-2n+2)(n^2+2n+2)\\). Now, \\[\\begin{aligned}\n\\frac{n^4+3n^2+10n+10}{n^4+4} &amp;= 1+\\frac{3n^2+10n+6}{n^4+4} \\\\\n&amp;= 1+\\frac{4}{n^2-2n+2}-\\frac{1}{n^2+2n+2} \\\\\n\\Longrightarrow \\sum_{n=2}^{\\infty}\\frac{n^4+3n^2+10n+10}{2^n\\cdot(n^4+4)} &amp;= \\sum_{n=2}^{\\infty}\\frac{1}{2^n}+\\frac{4}{2^n\\cdot(n^2-2n+2)}-\\frac{1}{2^n\\cdot(n^2+2n+2)} \\\\\n&amp;= \\frac12+\\sum_{n=2}^{\\infty}\\frac{1}{2^{n-2}\\cdot((n-1)^2+1)}-\\frac{1}{2^n\\cdot((n+1)^2+1)}\n\\end{aligned}\\] The last series telescopes to \\(\\frac12+\\frac{1}{10}\\), which leads to an answer of \\(\\frac12+\\frac12+\\frac{1}{10}=\\frac{11}{10}\\).</p>",
+      "answer": "\\frac{11}{10}"
+    },
+    "10": {
+      "problem": "<p>Determine the maximum value attained by \\[\\frac{x^4 - x^2}{x^6 + 2x^3 - 1}\\] over real numbers \\(x &gt; 1\\).</p>",
+      "solutions": "<p>We have the following algebra: \\[\\begin{aligned}\n\\frac{x^4-x^2}{x^6+2x^3-1} &amp;= \\frac{x-\\frac1x}{x^3+2-\\frac{1}{x^3}} \\\\\n&amp;= \\frac{x-\\frac1x}{\\left(x-\\frac1x\\right)^3+2+3\\left(x-\\frac1x\\right)} \\\\\n&amp;\\le \\frac{x-\\frac1x}{3\\left(x-\\frac1x\\right)+3\\left(x-\\frac1x\\right)} = \\frac16\n\\end{aligned}\\] where \\(\\left(x-\\frac1x\\right)^3+1+1 \\ge 3\\left(x-\\frac1x\\right)\\) in the denominator was deduced by the AM-GM inequality. As a quick check, equality holds where \\(x-\\frac1x=1\\) or when \\(x=\\frac{1+\\sqrt5}{2}\\).</p>",
+      "answer": "\\frac{1}{6}"
+    }
+  }
+}

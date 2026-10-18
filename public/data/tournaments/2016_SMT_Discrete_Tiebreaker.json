@@ -1,0 +1,23 @@
+{
+  "test": "SMT Discrete Tiebreaker",
+  "year": 2016,
+  "name": "Discrete Math Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2016/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A certain elementary school has 48 students in the third grade that must be organized into three classes of 16 students each. There are three troublemakers in the grade. If the students are assigned independently and randomly to classes, what is the probability that all three troublemakers are assigned to the same 16 student class?</p>",
+      "solutions": "<p>Without loss of generality, let the first troublemaker be assigned to the first class. If we then assign the second troublemaker to a class, he or she will end up in the same class with probability \\(15/47\\). If we then assign the third troublemaker to a class, he or she will end up in the same class with probability \\(14/46\\). Since both of these events must happen independently, the overall probability is \\[\\frac{15}{47} \\cdot \\frac{14}{46} = \\frac{210}{2162} = \\boxed{\\frac{105}{1081}}.\\]</p>",
+      "answer": "\\frac{105}{1081}"
+    },
+    "2": {
+      "problem": "<p>A 4-digit number \\(x\\) has the property that the expected value of the integer obtained from switching any two digits in \\(x\\) is 4625. Given that the sum of the digits of \\(x\\) is 20, compute \\(x\\).</p>",
+      "solutions": "<p>The sum of all possible numbers obtained from switching any two digits of \\(x\\) is \\(4625 * \\binom{4}{2} = 27750\\). We now compute this value using a different method.</p><p>Let \\(x = ABCD\\). When switching any two of the digits, the thousands digit can either be \\(B, C, D\\), if the first digit is switched with a later digit, or \\(A\\), if the first digit is not switched. The thousands digit remains \\(A\\) for three out of the six possible resulting integers. Similarly, the hundreds digit remains \\(B\\) for three out of the six possible resulting integers, and so on. Summing over all of these possible resulting integers, we have</p><p>\\[\\begin{aligned}\n27750 &amp;= (3A + B + C + D) * 1000 + (A + 3B + C + D) * 100 \\\\\n&amp;\\quad + (A + B + 3C + D) * 10 + (A + B + C + 3D) \\\\\n27750 &amp;= (20 + 2A) * 1000 + (20 + 2B) * 100 + (20 + 2C) * 10 + (20 + 2D) \\\\\n27750 &amp;= 22220 + 2(1000A + 100B + 10C + D) \\\\\n5530 &amp;= 2x \\\\\nx &amp;= \\boxed{2765}\n\\end{aligned}\\]</p>",
+      "answer": "2765"
+    },
+    "3": {
+      "problem": "<p>Let \\(S\\) be the set of factors of \\(10^5\\). The number of subsets of \\(S\\) with a least common multiple of \\(10^5\\) can be written as \\(2^n * m\\), where \\(n\\) and \\(m\\) are positive integers and \\(m\\) is not divisible by 2. Compute \\(m + n\\).</p>",
+      "solutions": "<p>Since \\(10^5 = 2^5 5^5\\), \\(10^5\\) has \\((5+1)(5+1) = 36\\) factors. Hence, \\(S\\) has \\(2^{36}\\) subsets. We consider the number of subsets which do not have a least common multiple of \\(10^5\\), and proceed using the principal of inclusion-exclusion. \\(2^4 5^5\\) has \\((4+1)(5+1) = 30\\) factors, and hence there are \\(2^{30}\\) subsets having an LCM which is a factor of \\(2^4 5^5\\). Next, \\(2^5 5^4\\) has \\((5+1)(4+1) = 30\\) factors, and hence there are \\(2^{30}\\) subsets having an LCM which is a factor of \\(2^5 5^4\\). Adding \\(2^{30} + 2^{30}\\), however, overcounts by the number of subsets having an LCM which is a factor of \\(2^4 5^4\\), of which there are \\((4+1)(4+1) = 25\\) factors and thus \\(2^{25}\\) subsets. The total number of subsets is therefore</p><p>\\[\\begin{aligned}\n2^{36} - 2^{30} - 2^{30} + 2^{25} &amp;= 2^{36} - 2^{31} + 2^{25} \\\\\n&amp;= 2^{25}(2^{11} - 2^6 + 1) \\\\\n&amp;= 2^{25}(2048 - 64 + 1)\n\\end{aligned}\\]</p><p>The desired answer is hence \\(25 + 2048 - 64 + 1 = \\boxed{2010}\\).</p>",
+      "answer": "2010"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "SMT Calculus",
+  "year": 2016,
+  "name": "Calculus Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2016/calculus-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Evaluate \\[\\int_{-2}^2 (x^3 + 2x + 1) \\, dx.\\]</p>",
+      "solutions": "<p><b>Solution 1.</b> We directly compute that \\[\\int_{-2}^2 (x^3+2x+1)\\,dx = \\left[\\frac{x^4}{4}+x^2+x\\right]_{-2}^2 = (4+4+2)-(4+4-2) = \\boxed{4}.\\]</p><p><b>Solution 2.</b> Observe that \\(x^3+2x\\) is an odd function, so we get \\(0\\) when we integrate it over the symmetric interval \\([-2,2]\\). Therefore, we see that \\[\\int_{-2}^2 (x^3+2x+1)\\,dx = \\int_{-2}^2 1\\,dx = [x]_{-2}^2 = 2-(-2) = \\boxed{4}.\\]</p>",
+      "answer": "4"
+    },
+    "2": {
+      "problem": "<p>Find \\[\\lim_{x\\to 0} \\frac{\\ln(1+x+x^3) - x}{x^2}.\\]</p>",
+      "solutions": "<p>We apply L’Hôpital’s rule and obtain \\[\\begin{aligned}\n\\lim_{x\\to 0} \\frac{\\ln(1+x+x^3)-x}{x^2} &amp;= \\lim_{x\\to 0} \\frac{(\\ln(1+x+x^3)-x)'}{(x^2)'} \\\\\n&amp;= \\lim_{x\\to 0} \\left(\\frac{1}{2x}\\right)\\left(\\frac{1+3x^2}{1+x+x^3}-1\\right) \\\\\n&amp;= \\lim_{x\\to 0} \\left(\\frac{1}{2x}\\right)\\left(\\frac{-x+3x^2-x^3}{1+x+x^3}\\right) \\\\\n&amp;= \\lim_{x\\to 0} \\left(\\frac{-1+3x-x^2}{2(1+x+x^3)}\\right) \\\\\n&amp;= \\boxed{-\\frac{1}{2}}.\n\\end{aligned}\\]</p>",
+      "answer": "-\\frac{1}{2}"
+    },
+    "3": {
+      "problem": "<p>Find the largest possible value for the slope of a tangent line to the curve \\(f(x) = \\frac{1}{3+x^2}\\).</p>",
+      "solutions": "<p>The slopes of the tangent lines of \\(f(x)\\) are exactly the values of \\(f'(x)\\). We want to maximize \\(f'(x)\\). So let’s take some derivatives! We have \\[f'(x) = \\frac{-2x}{(3+x^2)^2},\\] \\[f''(x) = \\frac{-2(3+x^2)^2+8x^2(3+x^2)}{(3+x^2)^4}.\\]</p><p>In order to maximize \\(f'(x)\\), we solve \\(f''(x)=0\\) and look for critical points. To do this, we only need to consider the numerator: \\[\\begin{aligned}\n-2(3+x^2)^2+8x^2(3+x^2) &amp;= 0 \\\\\n(-6-2x^2+8x^2)(3+x^2) &amp;= 0 \\\\\n-6+6x^2 &amp;= 0 \\\\\nx &amp;= \\pm 1.\n\\end{aligned}\\]</p><p>We see that \\(f'(-1)=\\frac{1}{8}\\) and \\(f'(1)=-\\frac{1}{8}\\), so the largest possible slope is therefore \\(\\boxed{\\frac{1}{8}}\\).</p>",
+      "answer": "\\frac{1}{8}"
+    },
+    "4": {
+      "problem": "<p>An empty, inverted circular cone has a radius of 5 meters and a height of 20 meters. At time \\(t = 0\\) seconds, the cone is empty, and at time \\(t \\ge 0\\) we fill the cone with water at a rate of \\(4t^2\\) cubic meters per second. Compute the rate of change of the height of water with respect to time, at the point when the water reaches a height of 10 meters.</p>",
+      "solutions": "<p>The volume of water at time \\(t\\) is \\[\\int_0^t 4s^2\\,ds = \\frac{4}{3}t^3.\\]</p><p>Suppose the height of the water at time \\(t\\) is \\(h(t)\\). Then, the water fills a cone of height \\(h(t)\\) and radius \\(r(t) = \\frac{1}{4}h(t)\\). Hence, the volume of the cone of water is also \\[\\frac{1}{3}h(t)(\\pi r^2(t)) = \\frac{\\pi}{48}h^3(t).\\]</p><p>Equating the two equations for volume, we have \\[\\begin{aligned}\n\\frac{4}{3}t^3 &amp;= \\frac{\\pi}{48}h^3(t) \\\\\n64t^3 &amp;= \\pi h^3(t) \\\\\n\\frac{4}{\\sqrt[3]{\\pi}}t &amp;= h(t)\n\\end{aligned}\\]</p><p>Differentiating \\(h(t)\\) with respect to \\(t\\), we conclude that \\(h'(t) = \\boxed{\\frac{4}{\\sqrt[3]{\\pi}}}\\).</p>",
+      "answer": "\\frac{4}{\\sqrt[3]{\\pi}}"
+    },
+    "5": {
+      "problem": "<p>Compute \\[\\int_0^{\\pi/2} \\sin(2016x)\\cos(2015x) \\, dx.\\]</p>",
+      "solutions": "<p>We use the identity \\[\\sin(x)\\cos(y) = \\frac{\\sin(x+y)+\\sin(x-y)}{2}.\\]</p><p>Substituting the identity into the integral, we obtain \\[\\begin{aligned}\n\\int_0^{\\pi/2} \\sin(2016x)\\cos(2015x)\\,dx &amp;= \\int_0^{\\pi/2} \\frac{\\sin(4031x)+\\sin(x)}{2}\\,dx \\\\\n&amp;= \\left[-\\frac{\\cos(4031x)}{4031\\cdot 2}-\\frac{\\cos(x)}{2}\\right]_0^{\\pi/2} \\\\\n&amp;= 0-\\left(-\\frac{1}{4031\\cdot 2}-\\frac{1}{2}\\right) \\\\\n&amp;= \\boxed{\\frac{2016}{4031}}.\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{2016}{4031}"
+    },
+    "6": {
+      "problem": "<p>Let \\(f(x)\\) be a function defined for \\(x &gt; 1\\) such that \\(f''(x) = \\frac{x}{\\sqrt{x^2-1}}\\) and \\(f'(2) = \\sqrt{3}\\). Compute the length of the graph of \\(f(x)\\) on the domain \\(x \\in (1, 2]\\).</p>",
+      "solutions": "<p>Taking the integral of \\(f''(x)\\), we see that \\(f'(x) = \\sqrt{x^2-1}+C\\). Plugging in \\(x=2\\), we obtain \\[\\sqrt{2^2-1}+C=\\sqrt3 \\implies C=0.\\]</p><p>Thus, the length of the graph of \\(f(x)\\) on the domain \\(x\\in(1,2]\\) is \\[\\int_1^2 \\sqrt{1+(f'(x))^2}\\,dx = \\int_1^2 \\sqrt{1+(x^2-1)}\\,dx = \\int_1^2 x\\,dx = \\boxed{\\frac{3}{2}}.\\]</p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "7": {
+      "problem": "<p>Let the function \\(f : [1, \\infty) \\to \\mathbb{R}\\) be defined as \\(f(x) = x^{2\\ln(x)}\\). Compute \\[\\int_1^{\\sqrt{e}} \\left( f(x) + f^{-1}(x) \\right) \\, dx.\\]</p>",
+      "solutions": "<p>Note that \\(f\\) maps \\([1,\\sqrt e]\\) to itself monotonically and thus bijectively, hence the substitution of \\(f(x)\\) for \\(x\\) gives \\[\\int_1^{\\sqrt e} \\left(f(x)+f^{-1}(x)\\right)\\,dx = \\int_1^{\\sqrt e} f(x)\\,dx + \\int_1^{\\sqrt e} f^{-1}(x)\\,dx = \\int_1^{\\sqrt e} f(x)\\,dx + \\int_1^{\\sqrt e} x\\,d(f(x)).\\]</p><p>Reversing integration by parts gives \\[\\begin{aligned}\n\\int_1^{\\sqrt e} f(x)\\,dx + \\int_1^{\\sqrt e} x\\,d(f(x)) &amp;= \\int_1^{\\sqrt e} \\left(f(x)\\,dx + x\\,d(f(x))\\right) \\\\\n&amp;= \\int_1^{\\sqrt e} d(xf(x)) \\\\\n&amp;= \\left(xf(x)\\right)\\Big|_1^{\\sqrt e} = \\boxed{e-1},\n\\end{aligned}\\] since \\(f(x)=x\\) at the endpoints \\(x=1\\) and \\(x=\\sqrt e\\).</p><p>Alternately, one may draw a graph of \\(f\\) in the interval \\([1,\\sqrt e]\\) and deduce the result by inspection.</p>",
+      "answer": "e-1"
+    },
+    "8": {
+      "problem": "<p>Calculate \\(f(3)\\), given that \\(f(x) = x^3 + f'(-1)x^2 + f''(1)x + f'(-1)f(-1)\\).</p>",
+      "solutions": "<p>Differentiating, we compute \\[\\begin{aligned}\nf'(x) &amp;= 3x^2+2f'(-1)x+f''(1) \\\\\nf''(x) &amp;= 6x+2f'(-1).\n\\end{aligned}\\]</p><p>Plugging in \\(x=-1\\) into the first equation and \\(x=1\\) into the second, we obtain a system of equations in \\(f'(-1)\\) and \\(f''(1)\\): \\[\\begin{aligned}\nf'(-1) &amp;= 3-2f'(-1)+f''(1), \\\\\nf''(1) &amp;= 6+2f'(-1).\n\\end{aligned}\\]</p><p>Denoting \\(f'(-1)\\) and \\(f''(1)\\) by \\(a\\) and \\(b\\) respectively, we have \\[\\begin{aligned}\na &amp;= 3-2a+b \\\\\nb &amp;= 6+2a.\n\\end{aligned}\\]</p><p>Plugging the second equation into the first, we get \\[a=3-2a+(6+2a)=9.\\]</p><p>Thus, \\(b=6+2a=24\\), so \\[f(x)=x^3+ax^2+bx+af(-1)=x^3+9x^2+24x+9f(-1).\\]</p><p>Finally, plugging \\(x=-1\\) into this equation, we get \\[\\begin{aligned}\nf(-1) &amp;= -1+9-24+9f(-1) \\\\\n-8f(-1) &amp;= -16 \\\\\nf(-1) &amp;= -2.\n\\end{aligned}\\]</p><p>We conclude that \\[\\begin{aligned}\nf(x) &amp;= x^3+9x^2+24x+18 \\\\\nf(3) &amp;= 3^3+9\\cdot 3^2+24\\cdot 3+18 \\\\\n&amp;= 27+81+72+18 = \\boxed{198}.\n\\end{aligned}\\]</p>",
+      "answer": "198"
+    },
+    "9": {
+      "problem": "<p>Compute \\[\\int_1^e \\frac{\\ln(x)}{(1+\\ln(x))^2} \\, dx.\\]</p>",
+      "solutions": "<p><b>Solution 1.</b> Set \\(u=1+\\ln(x)\\). Then \\(e^{u-1}=x\\) and \\(e^{u-1}\\,du=dx\\), so we have \\[\\int_1^e \\frac{\\ln(x)}{(1+\\ln(x))^2}\\,dx = \\int_0^2 \\frac{(u-1)e^{u-1}}{u^2}\\,du = \\int_0^2 \\left(\\frac{1}{u}-\\frac{1}{u^2}\\right)e^{u-1}\\,du.\\]</p><p>Now integrate only the first term by parts, and the remaining integrals cancel: \\[\\left[\\frac{e^{u-1}}{u}\\right]_1^2 - \\int_0^2 \\frac{-1}{u^2}e^{u-1}\\,du - \\int_0^2 \\frac{1}{u^2}e^{u-1}\\,du = \\boxed{\\frac{e}{2}-1}.\\]</p><p><b>Solution 2.</b> We see that the numerator of the integral is \\(\\ln x\\,dx\\). This suggests that we should do a substitution like \\(u=x\\ln x - x\\) to use this numerator. But we aren’t quite ready for that – first, we want to use a substitution to set this up.</p><p>Start with \\(u=\\frac{1}{x}\\). Then \\(du=-\\frac{1}{x^2}\\,dx\\), and hence \\(-\\frac{1}{u^2}\\,du=dx\\). The integral then becomes \\[\\int_1^{1/e} \\frac{\\ln u}{(1-\\ln u)^2}\\frac{1}{u^2}\\,du = \\int_1^{1/e} \\frac{\\ln u}{(u\\ln u - u)^2}\\,du.\\]</p><p>Next, substitute \\(w=u\\ln u - u\\). Then \\(dw=\\ln u\\,du\\), so the integral becomes \\[\\int_{-1}^{-2/e} \\frac{dw}{w^2} = \\left[-\\frac{1}{w}\\right]_{-1}^{-2/e} = \\boxed{\\frac{e}{2}-1}.\\]</p>",
+      "answer": "\\frac{e-2}{2}"
+    },
+    "10": {
+      "problem": "<p>For \\(x \\ge 0\\), let \\(\\mathcal{R}\\) be the region in the plane bounded by the graphs of the line \\(\\ell : y = 4x\\) and \\(y = x^3\\). Let \\(V\\) be the volume of the solid formed by revolving \\(\\mathcal{R}\\) about line \\(\\ell\\). Then \\(V\\) can be expressed in the form \\(\\frac{\\pi \\cdot 2^a}{b\\sqrt{c}}\\), where \\(a, b\\), and \\(c\\) are positive integers, \\(b\\) is odd, and \\(c\\) is not divisible by the square of a prime. Compute \\(a + b + c\\).</p>",
+      "solutions": "<p>Note that \\(\\ell\\) intersects the graph of \\(y=x^3\\) at the origin and the point \\((2,8)\\) in the first quadrant. Fix \\(d\\) between \\(0\\) and \\(2\\). Let the line \\(x=d\\) intersect line \\(\\ell\\) at \\(Q\\) and let the line \\(x=d\\) intersect the graph of \\(y=x^3\\) at \\(R\\). Then \\(Q=(d,4d)\\) and \\(R=(d,d^3)\\). Now drop a perpendicular from \\(R\\) to line \\(\\ell\\), and let \\(P\\) be the foot of this perpendicular. Then \\[\\sin\\angle PQR = \\frac{PR}{QR} = \\frac{1}{\\sqrt{17}}.\\]</p><p>We compute \\(V\\) by integrating from \\(0\\) to \\(2\\) using the disk method. Note that the differential disk has a radius of \\(PR = \\frac{4d-d^3}{\\sqrt{17}}\\) and a height of \\(\\sqrt{17}\\,dx\\). So we integrate from \\(0\\) to \\(2\\) the expression \\[\\pi\\left(\\frac{4x-x^3}{\\sqrt{17}}\\right)^2\\sqrt{17}\\,dx:\\] \\[\\begin{aligned}\nV &amp;= \\int_0^2 \\pi\\left(\\frac{4x-x^3}{\\sqrt{17}}\\right)^2\\sqrt{17}\\,dx = \\frac{\\pi}{\\sqrt{17}}\\int_0^2 (x^6-8x^4+16x^2)\\,dx \\\\\n&amp;= \\frac{\\pi}{\\sqrt{17}}\\left(\\frac{1}{7}x^7-\\frac{8}{5}x^5+\\frac{16}{3}x^3\\right)\\Big|_0^2 \\\\\n&amp;= \\frac{\\pi}{\\sqrt{17}}\\left(\\frac{128}{7}-\\frac{256}{5}+\\frac{128}{3}\\right) \\\\\n&amp;= \\frac{128\\pi}{\\sqrt{17}}\\left(\\frac{1}{7}-\\frac{2}{5}+\\frac{1}{3}\\right) \\\\\n&amp;= \\frac{128\\pi}{\\sqrt{17}}\\left(\\frac{8}{105}\\right) \\\\\n&amp;= \\frac{\\pi\\cdot 2^{10}}{105\\sqrt{17}}.\n\\end{aligned}\\]</p><p>Thus \\(a=10, b=105\\), and \\(c=17\\), and the answer is \\(10+105+17=\\boxed{132}\\).</p>",
+      "answer": "132"
+    }
+  }
+}

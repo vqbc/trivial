@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2021,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2021/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find all integer solutions to \\[\\frac{1}{\\log_8 n} + \\frac{1}{\\log_n \\frac{1}{4}} = -\\frac{5}{2}\\]</p>",
+      "solutions": "<p>Applying \\(\\log_a b = \\frac{\\log_c b}{\\log_c a}\\) with \\(c = 2\\) on both fractions, this becomes: \\[\\frac{\\log_2 8}{\\log_2 n} + \\frac{\\log_2 n}{\\log_2 \\frac{1}{4}} = -\\frac{5}{2}\\]</p><p>Substituting \\(x = \\log_2 n\\) and evaluating \\(\\log_2 8 = 3\\) and \\(\\log_2 \\frac{1}{4} = -2\\), this becomes: \\[\\frac{3}{x} + \\frac{x}{-2} = -\\frac{5}{2}\\]</p><p>Multiplying both sides by \\(-2x\\) yields \\(-6 + x^2 = 5x\\), which factors into \\((x-6)(x+1) = 0\\). This quadratic has solutions \\(x = 6\\) and \\(x = -1\\). When \\(x = -1\\), we have \\(\\log_2 n = -1 \\implies n = \\frac{1}{2}\\), which is not an integer. When \\(x = 6\\), we have \\(\\log_2 n = 6 \\implies n = \\boxed{64}\\).</p>",
+      "answer": "64"
+    },
+    "2": {
+      "problem": "<p>Let \\(f : \\mathbb{N} \\to \\mathbb{N}\\) be a bijection such that for all \\(a\\), either \\(a = f(a)^2\\) or \\(f(a) = a^2\\). For how many numbers less than 40 is \\(f(a) \\ne a^2\\)?</p>",
+      "solutions": "<p>We start by figuring out the pattern. We can see that \\(f(0) = 0\\) and \\(f(1) = 1\\). Then \\(f(2) = 4\\) and \\(f(3) = 4\\). Then we can see that \\(f(4) = 2\\) or else no other number satisfies \\(f(a) = 2\\) and this is a bijection. Similarly \\(f(9) = 3\\). Then \\(f(16) = 16^2\\) since \\(f(2) = 4\\) and we have a bijection. So, we can see that the only numbers where \\(f(a) \\ne a^2\\) are \\(4, 9, 25, 36\\). So, there are \\(\\boxed{4}\\) numbers.</p>",
+      "answer": "4"
+    },
+    "3": {
+      "problem": "<p>Let \\(x\\) be a real number satisfying the equation \\(x^2 - 3x + 1 = 0\\). Then \\(x^{16} - kx^8 + 1 = 0\\) for some constant \\(k\\). Compute \\(k\\).</p>",
+      "solutions": "<p>Rearrange the given quadratic equation to \\(x + \\frac{1}{x} = 3\\). Letting \\(P_n(x) = x^n + \\frac{1}{x^n}\\), it is easy to derive the recursive formula \\[P_{2n}(x) = P_n(x)^2 - 2.\\]</p><p>We know that \\(P_1(x) = 3\\), so we can apply the recursion to obtain: \\[\\begin{aligned}\nP_2(x) &amp;= P_1(x)^2 - 2 = 7, \\\\\nP_4(x) &amp;= P_2(x)^2 - 2 = 47, \\\\\nP_8(x) &amp;= P_4(x)^2 - 2 = 2207.\n\\end{aligned}\\]</p><p>Hence, \\(x^8 + \\frac{1}{x^8} = 2207\\), and rearranging yields \\(x^{16} - 2207x^8 + 1 = 0\\). Thus, \\(k = 2207\\).</p>",
+      "answer": "2207"
+    }
+  }
+}

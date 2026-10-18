@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory A",
+  "year": 2009,
+  "name": "Number Theory A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2009_NumberTheoryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>You are given that \\[17! = 355687ab8096000\\] for some digits \\(a\\) and \\(b\\). Find the two-digit number \\(\\overline{ab}\\) that is missing above.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Find the number of ordered pairs \\((a, b)\\) of positive integers that are solutions of the following equation: \\[a^2 + b^2 = ab(a+b)\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Find the sum of all prime numbers \\(p\\) which satisfy \\[p = a^4 + b^4 + c^4 - 3\\] for some primes (not necessarily distinct) \\(a\\), \\(b\\) and \\(c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Find the sum of all integers \\(x\\) for which there is an integer \\(y\\), such that \\(x^3 - y^3 = xy + 61\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Suppose that for some positive integer \\(n\\), the first two digits of \\(5^n\\) and \\(2^n\\) are identical. Suppose the first two digits are \\(a\\) and \\(b\\) in this order. Find the two-digit number \\(\\overline{ab}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Let \\(s(m)\\) denote the sum of the digits of the positive integer \\(m\\). Find the largest positive integer that has no digits equal to zero and satisfies the equation \\[2^{s(n)} = s(n^2)\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Let \\(S = \\{p/q \\mid q \\le 2009, p/q &lt; 1257/2009, p, q \\in \\mathbb{N}\\}\\). If the maximum element of \\(S\\) is \\(p_0/q_0\\) in reduced form, find \\(p_0 + q_0\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Find the largest positive integer \\(k\\) such that \\(\\phi(\\sigma(2^k)) = 2^k\\). (\\(\\phi(n)\\) denotes the number of positive integers that are smaller than \\(n\\) and relatively prime to \\(n\\), and \\(\\sigma(n)\\) denotes the sum of divisors of \\(n\\).) As a hint, you are given that \\(641 \\mid 2^{32} + 1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

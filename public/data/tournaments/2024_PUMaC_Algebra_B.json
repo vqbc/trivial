@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Algebra B",
+  "year": 2024,
+  "name": "Algebra B",
+  "url": "https://pumac.princeton.edu/s/PUMaC_2024_Algebra_B.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(A = \\sqrt{7+2\\sqrt{10}} - \\sqrt{7-2\\sqrt{10}}\\). We can express \\(A\\) as \\(a\\sqrt{b}\\), where \\(a, b\\) are integers and \\(b\\) is square-free. Compute \\(a+b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Alien Tanvi has a favorite number, but somehow she’s managed to forget it. She remembers that it can be written as \\(x^2 + \\frac{1}{x^2}\\), where \\(x\\) is a real number satisfying \\(x^4 + 4x^2 + \\frac{4}{x^2} + \\frac{1}{x^4} = 523\\). What is Alien Tanvi’s favorite number?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Consider polynomial \\(f(x) = ax^3+bx^2+cx+d\\) where \\(a, b, c, d\\) are nonnegative integers satisfying \\(ab+bc+cd+ad=20\\). Find the sum of all distinct possible values of \\(f(1)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Let \\(f\\) and \\(g\\) be two polynomials such that \\(f(g(x)) = g(f(x))\\). If \\(g(x)\\) is linear but not identically equal to \\(x\\), and \\(f(x) = x^3 + 60x^2 + 1000x + c\\) for some \\(c\\), find the value of \\(c\\).</p><p><b>Note:</b> This problem was scrapped from the contest. It should state: “… If \\(g(x)\\) is linear, <b>non-constant</b>, and not identically equal to \\(x\\), …”</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>\\(T_1\\) consists of a single branch from 0 to 1 in the complex plane. This branch then splits into two branches at the endpoint which each form a \\(135^\\circ\\) angle with the branch in \\(T_1\\), and each branch has length \\(\\frac{1}{\\sqrt2}\\). This process is repeated, so that from each terminal branch in \\(T_n\\), we form two more branches at angles \\(135^\\circ\\) with \\(\\frac{1}{\\sqrt2}\\) the length. Let \\(L_n\\) be the collection of the \\(2^{n-1}\\) endpoints of the tree \\(T_n\\). If multiple terminal branches end at the same point, then that point is counted multiple times in \\(L_n\\). Shown below is \\(T_k\\) for \\(k=1,2,3\\) with dots at the points in \\(L_k\\). Find the sum of \\(\\ell^2\\) over all points \\(\\ell\\) in \\(L_{10}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2024_PUMaC_Algebra_B/5-fig1.png\" width=\"668\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Compute the number of solutions to \\(1+\\cos(\\theta)+\\cos(2\\theta)+\\cos(3\\theta)+\\ldots+\\cos(2024\\theta) = \\frac{1}{2}\\) for \\(\\theta \\in [0, 2\\pi]\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Real numbers \\(a, b, c\\) satisfy \\(\\frac{1}{ab} = b+2c\\), \\(\\frac{1}{bc} = 2c+3a\\), \\(\\frac{1}{ca} = 3a+b\\). Then \\((a+b+c)^3\\) can be written as \\(\\frac{m}{n}\\) for relatively prime positive integers \\(m\\) and \\(n\\). Find \\(m+n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Let \\(\\{a_n\\}_{n=0}^\\infty\\) be the sequence defined by the recurrence relation \\(a_{n+3}=2a_{n+2}-3a_{n+1}+3a_n\\) for all \\(n \\ge 0\\), with initial conditions \\(a_0=20\\), \\(a_1=0\\), and \\(a_2=23\\). Let \\(b_n=a_n^3\\) for all \\(n \\ge 0\\). Then there exists a unique positive integer \\(k\\) and constants \\(c_0, \\ldots, c_{k-1}\\) with \\(c_0 \\ne 0\\) and \\(c_{k-1} \\ne 0\\) such that for all sufficiently large \\(n\\), we have the recurrence relation \\(b_{n+k}=\\sum_{t=0}^{k-1} c_t b_{n+t}\\). Find \\(k + \\sqrt{|c_{k-1}|} + \\sqrt{|c_0|}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "BMT Algebra Tiebreaker",
+  "year": 2019,
+  "name": "Algebra Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2019/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute the maximum real value of \\(a\\) for which there is an integer \\(b\\) such that \\(\\frac{ab^2}{a+2b} = 2019\\). Compute the maximum possible value of \\(a\\).</p>",
+      "solutions": "<p>We can solve the equation for \\(a\\), obtaining \\(a = \\frac{4038b}{b^2-2019}\\). This is maximized when \\(b^2\\) is as close to \\(2019\\) while still exceeding it. We let \\(b = 45\\) and as a result \\(a = 30285\\).</p>",
+      "answer": "30285"
+    },
+    "2": {
+      "problem": "<p>If \\(P\\) is a function such that \\(P(2x) = 2^{-3}P(x) + 1\\), find \\(P(0)\\).</p>",
+      "solutions": "<p>Plugging in \\(x = 0\\), we obtain \\[P(0)(1 - 2^{-3}) = 1,\\] so \\(P(0) = \\boxed{\\frac{8}{7}}\\).</p>",
+      "answer": "\\frac{8}{7}"
+    },
+    "3": {
+      "problem": "<p>There are two equilateral triangles with a vertex at \\((0,1)\\), with another vertex on the line \\(y = x + 1\\) and with the final vertex on the parabola \\(y = x^2 + 1\\). Find the area of the larger of the two triangles.</p>",
+      "solutions": "<p>We can shift all three vertices down one unit with no change to the areas of the triangle. We then have a vertex at \\((0,0)\\), another vertex at \\((a,a)\\), and a third vertex at \\((b, b^2)\\). Representing as polar coordinates, they are at \\(0\\), \\((a + ai)\\), and \\(b + b^2 i\\). We know that either \\((a+ai)(\\frac{1}{2} + \\frac{\\sqrt{3}}{2}i) = b + b^2 i\\), or \\((b+b^2i)(\\frac{1}{2} + \\frac{\\sqrt{3}}{2}i) = a + ai\\). Solving both, we see that our maximal triangle has solution where \\(a = 5 + 3\\sqrt{3}\\) (which comes from the first equation; the second equation only has the solution \\(a = b = 0\\)), which gives us an area of \\(45 + 26\\sqrt{3}\\).</p>",
+      "answer": "45 + 26\\sqrt{3}"
+    }
+  }
+}

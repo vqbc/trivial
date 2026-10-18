@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 2",
+  "year": 2007,
+  "name": "General Test, Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2007/feb/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A cube of edge length \\(s &gt; 0\\) has the property that its surface area is equal to the sum of its volume and five times its edge length. Compute all possible values of \\(s\\).</p>",
+      "solutions": "<p>Same as Geometry #1.</p>",
+      "answer": "1, 5"
+    },
+    "2": {
+      "problem": "<p>A parallelogram has 3 of its vertices at \\((1,2)\\), \\((3,8)\\), and \\((4,1)\\). Compute the sum of all possible \\(x\\) coordinates of the 4th vertex.</p>",
+      "solutions": "<p>There are three possibilities: the 4th vertex must be opposite one of the three given vertices. These three possibilities have as a medial triangle the three given vertices, so the sum of their \\(x\\) coordinates is the same as the sum of the \\(x\\) coordinates of the given triangle.</p>",
+      "answer": "8"
+    },
+    "3": {
+      "problem": "<p>Compute \\[\\left\\lfloor \\frac{2007! + 2004!}{2006! + 2005!} \\right\\rfloor.\\]</p><p>(Note that \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x\\).)</p>",
+      "solutions": "<p>Same as Algebra #1.</p>",
+      "answer": "2006"
+    },
+    "4": {
+      "problem": "<p>Three brothers Abel, Banach, and Gauss each have portable music players that can share music with each other. Initially, Abel has 9 songs, Banach has 6 songs, and Gauss has 3 songs, and none of these songs are the same. One day, Abel flips a coin to randomly choose one of his brothers and he adds all of that brother’s songs to his collection. The next day, Banach flips a coin to randomly choose one of his brothers and he adds all of that brother’s collection of songs to his collection. Finally, each brother randomly plays a song from his collection with each song in his collection being equally likely to be chosen. What is the probability that they all play the same song?</p>",
+      "solutions": "<p>If Abel copies Banach’s songs, this can never happen. Therefore, we consider only the cases where Abel copies Gauss’s songs. Since all brothers have Gauss’s set of songs, the probability that they all play the same song is equivalent to the probability that they independently match whichever song Gauss chooses. Case 1: Abel copies Gauss and Banach copies Gauss (\\(1/4\\) chance) – The probability of songs matching is then \\(\\frac{1}{12} \\cdot \\frac{1}{9}\\). Case 2: Abel copies Gauss and Banach copies Abel (\\(1/4\\) probability) – The probability of songs matching is then \\(\\frac{1}{12} \\cdot \\frac{1}{18}\\). We add the two probabilities together to get \\(\\frac{1}{4} \\cdot \\frac{1}{12} \\cdot \\left(\\frac{1}{9} + \\frac{1}{18}\\right) = \\frac{1}{288}\\).</p>",
+      "answer": "\\frac{1}{288}"
+    },
+    "5": {
+      "problem": "<p>A best of 9 series is to be played between two teams. That is, the first team to win 5 games is the winner. One of the teams, the Mathletes, has a \\(2/3\\) chance of winning any given game. What is the probability that the winner is determined in the 7th game?</p>",
+      "solutions": "<p>If the Mathletes are the winners, they must win the 7th game and have won exactly four of the previous 6 games. The probability of this occurring is \\[\\left( \\left(\\frac{2}{3}\\right)^4 \\cdot \\left(\\frac{1}{3}\\right)^2 \\cdot \\binom{6}{2} \\right) \\cdot \\frac{2}{3}.\\]</p><p>Analogously, the other team wins with probability \\(\\left( \\left(\\frac{1}{3}\\right)^4 \\cdot \\left(\\frac{2}{3}\\right)^2 \\cdot \\binom{6}{2} \\right) \\cdot \\frac{1}{3}\\). Summing the probabilities, the probability is \\[\\frac{\\binom{6}{2} \\cdot 2^2 \\cdot (2^3 \\cdot 1^2 + 1^5)}{3^7} = \\frac{5 \\cdot 4}{3^4} = \\frac{20}{81}.\\]</p>",
+      "answer": "\\frac{20}{81}"
+    },
+    "6": {
+      "problem": "<p>Circle \\(\\omega\\) has radius 5 and is centered at \\(O\\). Point \\(A\\) lies outside \\(\\omega\\) such that \\(OA = 13\\). The two tangents to \\(\\omega\\) passing through \\(A\\) are drawn, and points \\(B\\) and \\(C\\) are chosen on them (one on each tangent), such that line \\(BC\\) is tangent to \\(\\omega\\) and \\(\\omega\\) lies outside triangle \\(ABC\\). Compute \\(AB + AC\\) given that \\(BC = 7\\).</p>",
+      "solutions": "<p>Same as Geometry #4.</p>",
+      "answer": "17"
+    },
+    "7": {
+      "problem": "<p>My friend and I are playing a game with the following rules: If one of us says an integer \\(n\\), the opponent then says an integer of their choice between \\(2n\\) and \\(3n\\), inclusive. Whoever first says 2007 or greater loses the game, and their opponent wins. I must begin the game by saying a positive integer less than 10. With how many of them can I guarantee a win?</p>",
+      "solutions": "<p>We assume optimal play and begin working backward. I win if I say any number between 1004 and 2006. Thus, by saying such a number, my friend can force a win for himself if I ever say a number between 335 and 1003. Then I win if I say any number between 168 and 334, because my friend must then say one of the losing numbers just considered. Similarly, I lose by saying 56 through 167, win by saying 28 through 55, lose with 10 through 17, win with 5 through 9, lose with 2 through 4, and win with 1.</p>",
+      "answer": "6"
+    },
+    "8": {
+      "problem": "<p>Compute the number of sequences of numbers \\(a_1, a_2, \\ldots, a_{10}\\) such that</p><ul style=\"list-style-type: none\"><li>I. \\(a_i = 0\\) or \\(1\\) for all \\(i\\)</li><li>II. \\(a_i \\cdot a_{i+1} = 0\\) for \\(i = 1, 2, \\ldots, 9\\)</li><li>III. \\(a_i \\cdot a_{i+2} = 0\\) for \\(i = 1, 2, \\ldots, 8\\).</li></ul>",
+      "solutions": "<p>Call such a sequence “good,” and let \\(A_n\\) be the number of good sequences of length \\(n\\). Let \\(a_1, a_2, \\ldots, a_n\\) be a good sequence. If \\(a_1 = 0\\), then \\(a_1, a_2, \\ldots, a_n\\) is a good sequence if and only if \\(a_2, \\ldots, a_n\\) is a good sequence, so there are \\(A_{n-1}\\) of them. If \\(a_1 = 1\\), then we must have \\(a_2 = a_3 = 0\\), and in this case, \\(a_1, a_2, \\ldots, a_n\\) is a good sequence if and only if \\(a_4, a_5, \\ldots, a_n\\) is a good sequence, so there are \\(A_{n-3}\\) of them. We thus obtain the recursive relation \\(A_n = A_{n-1} + A_{n-3}\\). Note that \\(A_1 = 2, A_2 = 3, A_3 = 4\\). Plugging these into the recursion eventually yields \\(A_{10} = 60\\).</p>",
+      "answer": "60"
+    },
+    "9": {
+      "problem": "<p>Let \\(A := \\mathbb{Q} \\setminus \\{0, 1\\}\\) denote the set of all rationals other than 0 and 1. A function \\(f : A \\to \\mathbb{R}\\) has the property that for all \\(x \\in A\\), \\[f(x) + f\\left(1 - \\frac{1}{x}\\right) = \\log|x|.\\]</p><p>Compute the value of \\(f(2007)\\).</p>",
+      "solutions": "<p>Same as Algebra #8.</p>",
+      "answer": "\\log\\left(\\frac{2007}{2006}\\right)"
+    },
+    "10": {
+      "problem": "<p>\\(ABCD\\) is a convex quadrilateral such that \\(AB = 2, BC = 3, CD = 7\\), and \\(AD = 6\\). It also has an incircle. Given that \\(\\angle ABC\\) is right, determine the radius of this incircle.</p>",
+      "solutions": "<p>Same as Geometry #10.</p>",
+      "answer": "\\frac{1+\\sqrt{13}}{3}"
+    }
+  }
+}

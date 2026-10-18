@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Algebra A",
+  "year": 2018,
+  "name": "Algebra A",
+  "url": "https://pumac.princeton.edu/s/Algebra-A-Test.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\[a_k = 0.\\overbrace{0\\ldots0}^{k-1\\text{ 0's}}1\\overbrace{0\\ldots0}^{k-1\\text{ 0's}}1\\] The value of \\(\\sum_{k=1}^{\\infty} a_k\\) can be expressed as a rational number \\(\\frac{p}{q}\\) in simplest form. Find \\(p+q\\).</p>",
+      "solutions": "<p>Note that \\[a_k = \\frac{1}{10^k}+\\frac{1}{100^k},\\] so \\[\\sum_{k=1}^\\infty a_k = \\sum_{k=1}^\\infty \\frac{1}{10^k}+\\sum_{k=1}^\\infty\\frac{1}{100^k} = \\frac19+\\frac1{99} = \\frac{4}{33},\\] so the answer is \\(37\\).</p>",
+      "answer": "37"
+    },
+    "2": {
+      "problem": "<p>If \\(a_1, a_2, \\ldots\\) is a sequence of real numbers such that for all \\(n\\), \\[\\sum_{k=1}^n a_k\\left(\\frac{k}{n}\\right)^2 = 1,\\] find the smallest \\(n\\) such that \\(a_n &lt; \\frac{1}{2018}\\).</p>",
+      "solutions": "<p>We find that \\(a_1=1, a_2=\\frac34\\), and in general \\(a_n = \\frac{2n-1}{n^2} = \\frac2n-\\frac{1}{n^2}\\). Thus, \\(a_{4036}\\) is sufficiently small. On the other hand \\(a_{4035}\\) is not, since \\(\\frac{2}{4035}-\\frac{1}{2018} = \\frac{1}{4035\\cdot 2018} &gt; \\frac{1}{4035^2}\\). Thus, the answer is \\(4036\\).</p>",
+      "answer": "4036"
+    },
+    "3": {
+      "problem": "<p>Let \\(x_0, x_1, \\ldots\\) be a sequence of real numbers such that \\(x_n = \\frac{1+x_{n-1}}{x_{n-2}}\\) for \\(n \\ge 2\\). Find the number of ordered pairs of positive integers \\((x_0, x_1)\\) such that the sequence gives \\(x_{2018} = \\frac{1}{1000}\\).</p>",
+      "solutions": "<p>In terms of \\(x_0\\) and \\(x_1\\), we have \\(x_2 = \\frac{1+x_1}{x_0}\\), \\(x_3 = \\frac{1+\\frac{1+x_1}{x_0}}{x_1} = \\frac{x_0+1+x_1}{x_0x_1}\\), \\(x_4 = \\frac{1+\\frac{x_0+1+x_1}{x_0x_1}}{\\frac{1+x_1}{x_0}} = \\frac{x_0(x_0x_1+x_0+x_1+1)}{(1+x_1)x_0x_1} = \\frac{1+x_0}{x_1}\\), \\(x_5 = \\frac{1+\\frac{1+x_0}{x_1}}{\\frac{x_0+1+x_1}{x_0x_1}} = \\frac{x_0x_1(x_1+1+x_0)}{(x_0+1+x_1)x_1} = x_0\\), and \\(x_6 = \\frac{1+x_0}{\\frac{1+x_0}{x_1}} = x_1\\). Thus, this sequence has period 5, so \\(x_{2018} = x_3 = \\frac{x_0+1+x_1}{x_0x_1}\\). Now we want to find the number of ordered pairs \\((x_0,x_1)\\) such that \\(\\frac{x_0+1+x_1}{x_0x_1}=\\frac{1}{1000}\\). Rearranging gives \\(x_0x_1-1000x_0-1000x_1=1000\\), or \\((x_0-1000)(x_1-1000)=1000^2+1000=1000\\cdot1001\\). The prime factorization of \\(1000\\cdot1001\\) is \\(2^3\\cdot5^3\\cdot7\\cdot11\\cdot13\\), which has \\((3+1)(3+1)(1+1)(1+1)(1+1)=128\\) factors. Then \\(x_0-1000\\) can equal any of these 128 factors, which also fixes \\(x_1-1000\\), so there are a total of \\(128\\) ordered pairs.</p>",
+      "answer": "128"
+    },
+    "4": {
+      "problem": "<p>Suppose real numbers \\(a,b,c,d\\) satisfy \\(a+b+c+d=17\\) and \\(ab+bc+cd+da=46\\). If the minimum possible value of \\(a^2+b^2+c^2+d^2\\) can be expressed as a rational number \\(\\frac{p}{q}\\) in simplest form, find \\(p+q\\).</p>",
+      "solutions": "<p>First note that \\(ab+bc+cd+da\\) factors as \\((a+c)(b+d)\\). Then letting \\(r=a+c\\) and \\(s=b+d\\) gives \\(r+s=17\\) and \\(rs=46\\), so \\(r\\) and \\(s\\) are the roots of the quadratic \\(x^2-17x+46=0\\). Using the quadratic formula gives \\(r,s = \\frac{17\\pm\\sqrt{17^2-4(46)}}{2} = \\frac{17\\pm\\sqrt{105}}{2}\\). Without loss of generality assume \\(a+c=\\frac{17+\\sqrt{105}}{2}\\) and \\(b+d=\\frac{17-\\sqrt{105}}{2}\\). Now we want to minimize \\(a^2+b^2+c^2+d^2 = (a+c)^2-2ac+(b+d)^2-2bd\\). We know \\(-2ac\\) and \\(-2bd\\) are minimized when \\(2ac\\) and \\(2bd\\) are maximized. Then by AM-GM, we have \\(a+c\\ge2\\sqrt{ac}\\), or \\(\\frac12(a+c)^2\\ge2ac\\), and similarly \\(\\frac12(b+d)^2\\ge2bd\\). Then we have \\(a^2+b^2+c^2+d^2\\ge\\frac12(a+c)^2+\\frac12(b+d)^2 = \\frac12\\left(\\frac{17+\\sqrt{105}}{2}\\right)^2+\\frac12\\left(\\frac{17-\\sqrt{105}}{2}\\right)^2 = \\frac{2(289+105)}{8} = \\frac{197}{2}\\), so the answer is \\(199\\).</p>",
+      "answer": "199"
+    },
+    "5": {
+      "problem": "<p>For \\(k \\in \\{0,1,\\ldots,9\\}\\), let \\(\\epsilon_k \\in \\{-1,1\\}\\). If the minimum possible value of \\(\\sum_{i=1}^{9}\\sum_{j=0}^{i-1} \\epsilon_i\\epsilon_j 2^{i+j}\\) is \\(m\\), find \\(|m|\\).</p>",
+      "solutions": "<p>Let \\(a_k = 2^k\\). \\[\\left(\\sum_{i=0}^9 a_i\\right)^2 = \\sum_{i=0}^9 a_i^2 + 2\\sum_{i=1}^9\\sum_{j=0}^{i-1} a_ia_j\\] Thus our sum is \\[\\frac12\\left(\\sum_{i=0}^9 a_i\\right)^2 - \\frac12\\sum_{i=0}^9 a_i^2 = \\frac12\\left(\\left(\\sum_{i=0}^9 a_i\\right)^2 - \\frac{4^{10}-1}{3}\\right)\\] \\(\\sum_{i=0}^9 a_i\\) is minimized when \\(a_i\\) is negative for all \\(i\\) except 10. Then answer is then \\[\\frac12\\left(1-\\left(\\frac{4^{10}-1}{3}\\right)\\right) = \\frac16(1048572)\\] \\[=174762\\]</p>",
+      "answer": "174762"
+    },
+    "6": {
+      "problem": "<p>Let \\(a,b,c\\) be non-zero real numbers that satisfy \\(\\frac{1}{abc}+\\frac1a+\\frac1c=\\frac1b\\). The expression \\(\\frac{4}{a^2+1}+\\frac{4}{b^2+1}+\\frac{7}{c^2+1}\\) has a maximum value \\(M\\). Find the sum of the numerator and denominator of the reduced form of \\(M\\).</p>",
+      "solutions": "<p>Rearrange the given to \\(b=\\frac{ac-1}{a+c}\\). This suggests the substitutions \\(a=\\cot(x)\\) and \\(c=\\cot(y)\\) giving \\(b=\\cot(x+y)\\). The expression we seek then is \\[\\frac{4}{a^2+1}+\\frac{4}{b^2+1}+\\frac{7}{c^2+1} = 4\\sin^2(x)+4\\sin^2(x+y)+7\\sin^2(y)\\] \\[=4+7\\sin^2(y)-2\\cos(2x)-2\\cos(2x+2y) = 11-7\\cos^2(y)-4\\cos(2x+y)\\cos(y)\\] Let \\(u=\\cos(y)\\) and \\(v=\\frac27\\cos(2x+y)\\). The given expression is then \\[11-7u^2-14uv\\] The expression can also be written as \\[11-7(u+v)^2+7v^2\\] which has an obvious maximum at \\(u=-v=\\frac27\\). Plugging in and adding, we get \\[M=\\frac{81}{7}\\] which gives the answer of \\(88\\).</p>",
+      "answer": "88"
+    },
+    "7": {
+      "problem": "<p>Let the sequence \\(\\{a_n\\}_{n=-2}^{\\infty}\\) satisfy \\(a_{-1}=a_{-2}=0\\), \\(a_0=1\\), and for all non-negative integers \\(n\\), \\[n^2 = \\sum_{k=0}^n a_{n-k}a_{k-1} + \\sum_{k=0}^n a_{n-k}a_{k-2}.\\] Given \\(a_{2018}\\) is rational, find the maximum integer \\(m\\) such that \\(2^m\\) divides the denominator of the reduced form of \\(a_{2018}\\).</p>",
+      "solutions": "<p>Let \\[A(x) = \\sum_{n=0}^\\infty a_nx^n\\] Let \\(b_n = a_{n-1}+a_{n-2}\\). Define \\(B(x)\\) similarly. Then we have \\(n^2 = \\sum_{k=0}^n a_{n-k}b_k\\) is the coefficient of \\(x^n\\) in \\(A(x)B(x)\\). We then get easily that \\[A(x)B(x) = \\sum_{k=0}^\\infty n^2x^n = \\frac{x+x^2}{(1-x)^3}\\] And further by definition it easily follows that \\(B(x) = (x+x^2)A(x)\\). Hence, we get \\[A(x) = \\frac{1}{(1-x)^{\\frac32}} = \\sum_{n=0}^\\infty \\frac{(2n+1)}{4^n}\\binom{2n}{n}x^n\\] So we have \\(a_n = \\frac{(2n+1)}{4^n}\\binom{2n}{n}\\). Then in particular we have the wanted value is \\[\\nu_2(4^n)-\\nu_2\\left(\\binom{2n}{n}\\right) = 2n-\\nu_2((2n)!)+2\\nu_2(n!) = n+\\nu_2(n!)\\] for general \\(n\\). Plugging in \\(n=2018\\) gives the value \\(4029\\).</p>",
+      "answer": "4029"
+    },
+    "8": {
+      "problem": "<p>\\[\\frac{p}{q} = \\sum_{n=1}^\\infty \\frac{1}{2^{n+6}}\\cdot\\frac{\\left(10-4\\cos^2\\left(\\frac{\\pi n}{24}\\right)\\right)\\left(1-(-1)^n\\right)-3\\cos\\left(\\frac{\\pi n}{24}\\right)\\left(1+(-1)^n\\right)}{25-16\\cos^2\\left(\\frac{\\pi n}{24}\\right)}\\] where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p+q\\). where \\(p\\) and \\(q\\) are relatively prime positive integers. Find \\(p+q\\).</p>",
+      "solutions": "<p>\\[\\sum_{n=0}^\\infty \\frac{1}{2^n}\\left(\\frac{1+\\frac12\\cos(2n)}{\\frac54+\\cos 2n}\\right)\\] \\[=\\Re\\sum_{n=0}^\\infty \\frac{1}{2^n}\\left(\\frac{1+\\frac12e^{-2in}}{\\left(1+\\frac12e^{2in}\\right)\\left(1+\\frac12e^{-2in}\\right)}\\right)\\] \\[=\\Re\\sum_{n\\ge0}\\frac{1}{2^n}\\sum_{k\\ge0}\\left(-\\frac12e^{2in}\\right)^k\\] \\[=\\Re\\sum_{k\\ge0}\\left(-\\frac12\\right)^k\\sum_{n\\ge0}\\frac{e^{2ikn}}{2^n}\\] \\[=\\Re\\sum_{k\\ge0}\\left(-\\frac12\\right)^k\\frac{1}{1-\\frac{e^{2ik}}{2}}\\] \\[=2\\Re\\sum_{n\\ge0}\\left(-\\frac12\\right)^n\\frac{2-e^{2in}}{\\left(2-e^{2in}\\right)\\left(2-e^{-2in}\\right)}\\] \\[=2\\Re\\sum_{n\\ge0}\\left(-\\frac12\\right)^n\\frac{2-e^{-2in}}{5-4\\cos 2n}\\] \\[=\\frac12\\sum_{n\\ge0}\\left(-\\frac12\\right)^n\\frac{8-4\\cos 2n}{5-4\\cos 2n}\\] So this implies that \\[0=\\sum_{n=0}^\\infty \\frac{1}{2^n}\\frac{\\left(10-4\\cos^2(2n)\\right)\\left(1-(-1)^n\\right)-3\\cos(2n)\\left(1+(-1)^n\\right)}{25-16\\cos^2(2n)}\\] So \\[\\frac23=\\sum_{n=1}^\\infty \\frac{1}{2^n}\\frac{\\left(10-4\\cos^2(2n)\\right)\\left(1-(-1)^n\\right)-3\\cos(2n)\\left(1+(-1)^n\\right)}{25-16\\cos^2(2n)}\\] So the expression is equal to \\(\\frac{1}{3\\cdot2^5}=\\frac{1}{96}\\), giving an answer of \\(97\\).</p>",
+      "answer": "97"
+    }
+  }
+}

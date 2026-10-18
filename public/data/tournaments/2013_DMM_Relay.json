@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2013,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2013/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the unique positive integer \\(n\\) such that \\(n, n+4, n+6, n+10, n+12, n+16, n+22\\) are all primes.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Let \\(k = \\text{TNYWR}\\). The integers are colored red and blue so that any two integers differing by \\(k\\) have opposite colors. How many such colorings are possible?</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(7\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Let \\(n = \\text{TNYWR}/8\\). How many ways are there to write \\(n\\) as a sum of powers of 2, where repetition is allowed but order does not matter? (For example, there are 4 ways to write 4 as such a sum: 4, \\(2+2\\), \\(2+1+1\\), and \\(1+1+1+1\\).)</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(128\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>A \\(3 \\times 3\\) cube has \\(1 \\times 1\\) holes drilled through it centered in the middle of each face. What is the surface area of the resulting solid?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Let \\(k = \\text{TNYWR}/8\\). Professor Kraines has found himself in New York dealing with a street hustler. The hustler (who is very trustworthy) informs Professor Kraines that he has \\(k\\) fair coins and one coin that has both sides heads. Professor Kraines takes one of the coins at random and flips it five times; each time the coin lands heads. What is the probability that Professor Kraines has selected a fair coin?</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(72\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Let \\(s = \\text{TNYWR}\\). What is the side length of the largest possible square that can fit inside a regular hexagon of side length \\(s\\)?</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(\\frac{9}{41}\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

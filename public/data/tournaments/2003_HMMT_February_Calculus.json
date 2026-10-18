@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Calculus",
+  "year": 2003,
+  "name": "Individual Round: Calculus Subject Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2003/feb/calc/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A point is chosen randomly with uniform distribution in the interior of a circle of radius 1. What is its expected distance from the center of the circle?</p>",
+      "solutions": "<p>The probability of the point falling between a distance \\(r\\) and \\(r+dr\\) from the center is the ratio of the area of the corresponding annulus to the area of the whole circle: \\(\\frac{\\pi[(r+dr)^2-r^2]}{\\pi} \\to \\frac{2\\pi r\\,dr}{\\pi} = 2r\\,dr\\) for small values of \\(dr\\). Then the expected distance is \\(\\int_0^1 r \\cdot 2r\\,dr = \\frac{2}{3}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "2": {
+      "problem": "<p>A particle moves along the \\(x\\)-axis in such a way that its velocity at position \\(x\\) is given by the formula \\(v(x) = 2 + \\sin x\\). What is its acceleration at \\(x = \\frac{\\pi}{6}\\)?</p>",
+      "solutions": "<p>Acceleration is given by \\(a = \\frac{dv}{dt} = \\frac{dv}{dx} \\cdot \\frac{dx}{dt} = \\frac{dv}{dx} \\cdot v = \\cos x \\cdot (2 + \\sin x) = \\frac{5\\sqrt{3}}{4}\\).</p>",
+      "answer": "\\frac{5\\sqrt{3}}{4}"
+    },
+    "3": {
+      "problem": "<p>What is the area of the region bounded by the curves \\(y = x^{2003}\\) and \\(y = x^{1/2003}\\) and lying above the \\(x\\)-axis?</p>",
+      "solutions": "<p>The two curves intersect at \\((0,0)\\) and \\((1,1)\\), so the desired area is \\[\\int_0^1 \\left(x^{1/2003} - x^{2003}\\right) dx = \\left[\\frac{x^{2004/2003}}{2004/2003} - \\frac{x^{2004}}{2004}\\right]_0^1 = \\frac{1001}{1002}.\\]</p>",
+      "answer": "\\frac{1001}{1002}"
+    },
+    "4": {
+      "problem": "<p>The sequence of real numbers \\(x_1, x_2, x_3, \\ldots\\) satisfies \\(\\lim_{n\\to\\infty}(x_{2n} + x_{2n+1}) = 315\\) and \\(\\lim_{n\\to\\infty}(x_{2n} + x_{2n-1}) = 2003\\). Evaluate \\(\\lim_{n\\to\\infty}(x_{2n}/x_{2n+1})\\).</p>",
+      "solutions": "<p>We have \\(\\lim_{n\\to\\infty}(x_{2n+1} - x_{2n-1}) = \\lim_{n\\to\\infty}[(x_{2n}+x_{2n+1}) - (x_{2n}+x_{2n-1})] = 315 - 2003 = -1688\\); it follows that \\(x_{2n+1} \\to -\\infty\\) as \\(n \\to \\infty\\). Then \\[\\lim_{n\\to\\infty} \\frac{x_{2n}}{x_{2n+1}} = \\lim_{n\\to\\infty} \\frac{x_{2n} + x_{2n+1}}{x_{2n+1}} - 1 = -1,\\] since \\(x_{2n} + x_{2n+1} \\to 315\\) while \\(x_{2n+1} \\to -\\infty\\).</p>",
+      "answer": "-1"
+    },
+    "5": {
+      "problem": "<p>Find the minimum distance from the point \\((0, 5/2)\\) to the graph of \\(y = x^4/8\\).</p>",
+      "solutions": "<p>We want to minimize \\(x^2 + (x^4/8 - 5/2)^2 = x^8/64 - 5x^4/8 + x^2 + 25/4\\), which is equivalent to minimizing \\(z^4/4 - 10z^2 + 16z\\), where we have set \\(z = x^2\\). The derivative of this expression is \\(z^3 - 20z + 16\\), which is seen on inspection to have \\(4\\) as a root, leading to the factorization \\((z-4)(z+2-2\\sqrt{2})(z+2+2\\sqrt{2})\\). Since \\(z = x^2\\) ranges over \\([0,\\infty)\\), the possible minima are at \\(z = 0\\), \\(z = -2 + 2\\sqrt{2}\\), and \\(z = 4\\). However, the derivative is positive on \\((0, -2+2\\sqrt{2})\\), so this leaves only \\(0\\) and \\(4\\) to be tried. We find that the minimum is in fact achieved at \\(z = 4\\), so the closest point on the graph is given by \\(x = \\pm 2\\), with distance \\(\\sqrt{2^2 + (2^4/8 - 5/2)^2} = \\frac{\\sqrt{17}}{2}\\).</p>",
+      "answer": "\\frac{\\sqrt{17}}{2}"
+    },
+    "6": {
+      "problem": "<p>For \\(n\\) an integer, evaluate \\[\\lim_{n\\to\\infty} \\left( \\frac{1}{\\sqrt{n^2 - 0^2}} + \\frac{1}{\\sqrt{n^2 - 1^2}} + \\cdots + \\frac{1}{\\sqrt{n^2 - (n-1)^2}} \\right).\\]</p>",
+      "solutions": "<p>Note that \\(\\frac{1}{\\sqrt{n^2 - i^2}} = \\frac{1}{n} \\cdot \\frac{1}{\\sqrt{1 - (i/n)^2}}\\), so that the sum we wish to evaluate is just a Riemann sum. Then, \\[\\lim_{n\\to\\infty} \\left( \\frac{1}{n} \\sum_{i=0}^{n-1} \\frac{1}{\\sqrt{1 - (i/n)^2}} \\right) = \\int_0^1 \\frac{1}{\\sqrt{1-x^2}}\\,dx = [\\sin^{-1} x]_0^1 = \\frac{\\pi}{2}.\\]</p>",
+      "answer": "\\frac{\\pi}{2}"
+    },
+    "7": {
+      "problem": "<p>For what value of \\(a &gt; 1\\) is \\[\\int_a^{a^2} \\frac{1}{x} \\log \\frac{x-1}{32}\\, dx\\] minimum?</p>",
+      "solutions": "<p>Let \\(f(a) = \\int_a^{a^2} \\frac{1}{x} \\log \\frac{x-1}{32}\\,dx\\). Then we want \\(\\frac{df}{da} = 0\\); by the Fundamental Theorem of Calculus and the chain rule, this implies that \\[2a\\left(\\frac{1}{a^2}\\log\\frac{a^2-1}{32}\\right) - \\frac{1}{a}\\log\\frac{a-1}{32} = \\frac{d}{da}\\left(\\int_c^{a^2}\\frac1x\\log\\frac{x-1}{32}\\,dx - \\int_c^a \\frac1x\\log\\frac{x-1}{32}\\,dx\\right) = 0,\\] where \\(c\\) is any constant with \\(1 &lt; c &lt; a\\). Then \\(2\\log\\frac{a^2-1}{32} = \\log\\frac{a-1}{32}\\), so that \\(\\left(\\frac{a^2-1}{32}\\right)^2 = \\frac{a-1}{32}\\). After canceling factors of \\((a-1)/32\\) (since \\(a &gt; 1\\)), this simplifies to \\((a^2-1)(a+1) = 32 \\Rightarrow a^3 + a^2 - a - 33 = 0\\), which in turn factors as \\((a-3)(a^2+4a+11) = 0\\). The quadratic factor has no real solutions, so this leaves only \\(a = 3\\). However, we have that \\(a &gt; 1\\), and we can check that \\(f(1) = 0\\), \\(\\lim_{a\\to\\infty} f(a) &gt; 0\\), and \\(f(3) &lt; 0\\), so the global minimum does occur at \\(a = 3\\).</p>",
+      "answer": "3"
+    },
+    "8": {
+      "problem": "<p>A right circular cone with a height of 12 inches and a base radius of 3 inches is filled with water and held with its vertex pointing downward. Water flows out through a hole at the vertex at a rate in cubic inches per second numerically equal to the height of the water in the cone. (For example, when the height of the water in the cone is 4 inches, water flows out at a rate of 4 cubic inches per second.) Determine how many seconds it will take for all of the water to flow out of the cone.</p>",
+      "solutions": "<p>When the water in the cone is \\(h\\) inches high, it forms a cone similar to the original, so that its base has radius \\(h/4\\) and its volume is hence \\(\\pi h^3/48\\). The given condition then states that \\[\\frac{d}{dt}\\left(\\frac{\\pi h^3}{48}\\right) = -h \\Rightarrow \\frac{\\pi h^2}{16} \\cdot \\frac{dh}{dt} = -h \\Rightarrow 2h \\cdot \\frac{dh}{dt} = -\\frac{32}{\\pi}.\\] Integrating with respect to \\(t\\), we get that \\(h^2 = -32t/\\pi + C\\); setting \\(t = 0\\), \\(h = 12\\), we get \\(C = 144\\). The cone empties when \\(h = 0\\), so \\(0 = -32t/\\pi + 144 \\Rightarrow t = \\frac{9\\pi}{2}\\).</p>",
+      "answer": "\\frac{9\\pi}{2}"
+    },
+    "9": {
+      "problem": "<p>Two differentiable real functions \\(f(x)\\) and \\(g(x)\\) satisfy \\[\\frac{f'(x)}{g'(x)} = e^{f(x)-g(x)}\\] for all \\(x\\), and \\(f(0) = g(2003) = 1\\). Find the largest constant \\(c\\) such that \\(f(2003) &gt; c\\) for all such functions \\(f, g\\).</p>",
+      "solutions": "<p>Rearranging the given equation gives \\(f'(x)e^{-f(x)} = g'(x)e^{-g(x)}\\) for all \\(x\\), so \\(\\frac{d}{dx}(e^{-f(x)} - e^{-g(x)}) = -f'(x)e^{-f(x)} + g'(x)e^{-g(x)} = 0\\). Thus, \\(e^{-f(x)} - e^{-g(x)}\\) is a constant, and it must be less than \\(e^{-f(0)} = e^{-1}\\). Thus, \\(e^{-f(2003)} &lt; e^{-g(2003)} + e^{-1} = 2e^{-1} = e^{\\ln 2 - 1} \\Rightarrow f(2003) &gt; 1 - \\ln 2\\). On the other hand, we can find positive-valued functions \\(e^{-f(x)}, e^{-g(x)}\\) that take on the required values at \\(0\\) and \\(2003\\) and have constant difference arbitrarily close to \\(e^{-1}\\). For example, for arbitrarily large \\(t\\), we can set \\(e^{-f(x)} = e^{-(t(2003-x)+1)} + e^{-1} - e^{-(2003t+1)}\\) and \\(e^{-g(x)} = e^{-(t(2003-x)+1)}\\), and we can check that the resulting functions \\(f, g\\) satisfy the required conditions. Thus, we can make \\(f(2003)\\) arbitrarily close to \\(1 - \\ln 2\\), so this is the answer.</p>",
+      "answer": "1 - \\ln 2"
+    },
+    "10": {
+      "problem": "<p>Evaluate \\[\\int_{-\\infty}^{\\infty} \\frac{1-x^2}{1+x^4}\\, dx.\\]</p>",
+      "solutions": "<p>Let \\(S = \\int_0^\\infty 1/(x^4+1)\\,dx\\); note that the integral converges absolutely. Substituting \\(x = 1/u\\), so that \\(dx = -1/u^2\\,du\\), we have \\[S = \\int_0^\\infty \\frac{1}{1+x^4}\\,dx = \\int_\\infty^0 \\frac{1}{1+u^{-4}} \\frac{-du}{u^2} = \\int_\\infty^0 \\frac{-u^2}{u^4+1}\\,du\\] \\[= \\int_0^\\infty \\frac{u^2}{1+u^4}\\,du = \\int_0^\\infty \\frac{x^2}{1+x^4}\\,dx\\] (the manipulations are justified by absolute convergence), from which we see that \\(\\int_0^\\infty (1-x^2)/(1+x^4)\\,dx = 0\\). Since the integrand is an even function, it follows that the integral from \\(-\\infty\\) to \\(\\infty\\) is zero as well.</p>",
+      "answer": "0"
+    }
+  }
+}

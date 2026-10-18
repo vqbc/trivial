@@ -1,0 +1,108 @@
+{
+  "test": "BMT Individual",
+  "year": 2017,
+  "name": "Individual Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2017/IS2017.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In three years, Xingyou’s age in years will be twice his current height in feet. If Xingyou’s current age in years is also his current height in feet, what is Xingyou’s age in years right now?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>Barack is an equilateral triangle and Michelle is a square. If Barack and Michelle each have perimeter 12, find the area of the polygon with larger area.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9"
+    },
+    "3": {
+      "problem": "<p>How many letters in the word UNCOPYRIGHTABLE have at least one line of symmetry?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "10"
+    },
+    "4": {
+      "problem": "<p>There are two 3-digit numbers which end in 99. These two numbers are also the product of two integers which differ by 2. What is the sum of these two numbers?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1298"
+    },
+    "5": {
+      "problem": "<p>How many pairs of positive integers \\((a, b)\\) satisfy the equation \\(\\log_a 16 = b\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "6": {
+      "problem": "<p>For how many numbers \\(n\\) does 2017 divided by \\(n\\) have a remainder of either 1 or 2?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "42"
+    },
+    "7": {
+      "problem": "<p>What is the sum of the infinite series \\(\\frac{20}{3} + \\frac{17}{9} + \\frac{20}{27} + \\frac{17}{81} + \\frac{20}{243} + \\frac{17}{729} + \\ldots\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{77}{8}"
+    },
+    "8": {
+      "problem": "<p>If \\(xy = 15\\) and \\(x + y = 11\\), calculate the value of \\(x^3 + y^3\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "836"
+    },
+    "9": {
+      "problem": "<p>The digits 1, 4, 9 and 2 are each used exactly once to form some 4-digit number \\(N\\). What is the sum of all possible values of \\(N\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "106656"
+    },
+    "10": {
+      "problem": "<p>Let \\(S\\) be the set of points \\(A\\) in the Cartesian plane such that the four points \\(A\\), \\((2, 3)\\), \\((-1, 0)\\), and \\((0, 6)\\) form the vertices of a parallelogram. Let \\(P\\) be the convex polygon whose vertices are the points in \\(S\\). What is the area of \\(P\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "11": {
+      "problem": "<p>Naomi has a class of 100 students who will compete with each other in five teams. Once the teams are made, each student will shake hands with every other student, except the students in his or her own team. Naomi chooses to partition the students into teams so as to maximize the number of handshakes. How many handshakes will there be?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4000"
+    },
+    "12": {
+      "problem": "<p>Square \\(S\\) is the unit square with vertices at \\((0,0)\\), \\((0,1)\\), \\((1,0)\\) and \\((1,1)\\). We choose a random point \\((x,y)\\) inside \\(S\\) and construct a rectangle with length \\(x\\) and width \\(y\\). What is the average of \\(\\lfloor p \\rfloor\\) where \\(p\\) is the perimeter of the rectangle? \\(\\lfloor x \\rfloor\\) is the greatest integer less than or equal to \\(x\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "13": {
+      "problem": "<p>Two points are located 10 units apart, and a circle is drawn with radius \\(r\\) centered at one of the points. A tangent line to the circle is drawn from the other point. What value of \\(r\\) maximizes the area of the triangle formed by the two points and the point of tangency?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5\\sqrt{2}"
+    },
+    "14": {
+      "problem": "<p>Let \\(x\\) be the first term in the sequence \\(31, 331, 3331, \\ldots\\) which is divisible by \\(17\\). How many digits long is \\(x\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9"
+    },
+    "15": {
+      "problem": "<p>Alice and Bob live on the edges and vertices of the unit cube. Alice begins at point \\((0,0,0)\\) and Bob begins at \\((1,1,1)\\). Every second, each of them chooses one of the three adjacent corners and walks at a constant rate of \\(1\\) unit per second along the edge until they reach the corner, after which they repeat the process. What is the expected amount of time in seconds before Alice and Bob meet?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "13"
+    },
+    "16": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB = 3\\), \\(BC = 5\\), \\(AC = 7\\), and let \\(P\\) be a point in its interior. If \\(G_A, G_B, G_C\\) are the centroids of \\(\\triangle PBC, \\triangle PAC, \\triangle PAB\\), respectively, find the maximum possible area of \\(\\triangle G_A G_B G_C\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{5\\sqrt{3}}{12}"
+    },
+    "17": {
+      "problem": "<p>Triangle \\(ABC\\) is drawn such that \\(\\angle A = 80^\\circ\\), \\(\\angle B = 60^\\circ\\), and \\(\\angle C = 40^\\circ\\). Let the circumcenter of \\(\\triangle ABC\\) be \\(O\\), and let \\(\\omega\\) be the circle with diameter \\(AO\\). Circle \\(\\omega\\) intersects side \\(AC\\) at point \\(P\\). Let \\(M\\) be the midpoint of side \\(BC\\), and let the intersection of \\(\\omega\\) and \\(PM\\) be \\(K\\). Find the measure of \\(\\angle MOK\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "120^\\circ"
+    },
+    "18": {
+      "problem": "<p>Consider the sequence \\((k_n)\\) defined by \\(k_{n+1} = n(k_n + k_{n-1})\\) and \\(k_0 = 0\\), \\(k_1 = 1\\). What is \\[\\lim_{n \\to \\infty} \\frac{k_n}{n!}?\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1 - \\frac{1}{e}"
+    },
+    "19": {
+      "problem": "<p>Let \\(T\\) be the triangle in the \\(xy\\)-plane with vertices \\((0,0)\\), \\((3,0)\\), and \\((0, \\frac{3}{2})\\). Let \\(E\\) be the ellipse inscribed in \\(T\\) which meets each side of \\(T\\) at its midpoint. Find the distance from the center of \\(E\\) to \\((0,0)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\sqrt{5}}{2}"
+    },
+    "20": {
+      "problem": "<p>Evaluate \\[\\sum_{k=0}^{15} 2^{560} (-1)^k \\cos^{560}\\left( \\frac{k\\pi}{16} \\right) \\pmod{17}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "15"
+    }
+  }
+}

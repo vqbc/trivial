@@ -1,0 +1,58 @@
+{
+  "test": "BMT Calculus",
+  "year": 2018,
+  "name": "Calculus Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2018/CASP18.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the integer part of the following expression, which contains 2018 square roots? \\[\\sqrt{2018+\\sqrt{2018+\\sqrt{2018+\\ldots}}}\\]</p>",
+      "solutions": "<p>Let \\[y = \\sqrt{2018+\\sqrt{2018+\\sqrt{2018+\\ldots}}}\\] Then \\(y^2 = 2018+y\\), so solving for \\(y\\), we have \\[y = \\frac{1+\\sqrt{8073}}{2}\\] We see that \\(90^2 = 8100\\), so the integer part is \\[\\frac{1+89}{2} = \\boxed{45}\\] (Note that \\(\\sqrt{2018+\\sqrt{2018}}\\) has integer part 45).</p>",
+      "answer": "45"
+    },
+    "2": {
+      "problem": "<p>Let \\(a_{n+1} = \\frac{a_n+b_n}{2}\\) and \\(b_{n+1} = \\frac{1}{\\frac{1}{a_n}+\\frac{1}{b_n}}\\), with \\(a_0 = 13\\) and \\(b_0 = 29\\). What is \\(\\lim_{n\\to\\infty} a_nb_n\\)?</p>",
+      "solutions": "<p>Let us look at \\(a_nb_n\\). We have \\[a_{n+1}b_{n+1} = \\frac{a_n+b_n}{2} \\cdot \\frac{1}{\\frac{1}{a_n}+\\frac{1}{b_n}} = \\frac{a_n+b_n}{2} \\cdot \\frac{a_nb_n}{a_n+b_n} = \\frac{1}{2}a_nb_n\\] Thus, \\(a_nb_n\\) decreases (it halves at every step). Thus, the limit is just \\(0\\).</p>",
+      "answer": "0"
+    },
+    "3": {
+      "problem": "<p>What is the 100th derivative of \\(f(x) = e^x\\cos(x)\\) at \\(x=\\pi\\)?</p>",
+      "solutions": "<p>We begin by looking at the first few derivatives: \\[f'(x) = e^x(\\cos(x)-\\sin(x))\\] \\[f''(x) = -2e^x\\sin(x)\\] \\[f'''(x) = -2e^x(\\cos(x)-\\sin(x))\\] \\[f^{(4)}(x) = -4e^x\\cos(x) = -4f(x)\\] Continuing this on to the 100th derivative: \\[f^{(100)} = (-4)^{25}f(x) = -4^{25}f(x)\\] So at \\(x=\\pi\\), the derivative is just \\(4^{25}e^\\pi\\).</p>",
+      "answer": "4^{25}e^\\pi"
+    },
+    "4": {
+      "problem": "<p>Compute the following limit: \\[\\lim_{n\\to\\infty}\\int_0^1 \\frac{nx^n}{\\sqrt{4x^3-x+1}}dx\\]</p>",
+      "solutions": "<p>We use integration by parts. Let \\(u = \\frac{1}{\\sqrt{4x^3-x+1}}\\) and \\(dv = nx^n\\). Then \\[du = -\\frac{1}{2}\\frac{12x^2-1}{\\sqrt{(4x^3-x+1)^3}}\\] \\[v = \\frac{nx^{n+1}}{n+1}\\] Thus, we have \\[\\int_0^1 \\frac{nx^n}{\\sqrt{4x^3-x+1}}dx + \\int_0^1 \\left(\\frac{nx^{n+1}}{n+1}\\right)\\left(-\\frac{1}{2}\\frac{12x^2-1}{\\sqrt{(4x^3-x+1)^3}}\\right)dx = \\frac{1}{2}\\frac{n}{n+1}\\] Note that \\[\\frac{n}{n+1} \\to 1\\] as \\(n\\) gets large and \\(x^{n+1}\\to0\\) as \\(n\\) gets large for \\(x\\in[0,1)\\). Hence, the second integral goes to \\(0\\) as \\(n\\) gets large, and the right hand side goes to \\(\\frac{1}{2}\\). Therefore, \\[\\int_0^1 \\frac{nx^n}{\\sqrt{4x^3-x+1}} = \\frac{1}{2}\\] as desired.</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "5": {
+      "problem": "<p>What is \\[\\int_{-\\pi/2}^{\\pi/2} \\frac{\\cos x}{1+e^{-x}}dx\\]</p>",
+      "solutions": "<p>Let \\(f\\) be an even function. Consider the following integral: \\[\\int_{-a}^a \\frac{f(x)}{1+e^{-x}}dx\\] By symmetry: \\[I = \\int_{-a}^a \\frac{f(x)}{1+e^{-x}}dx = \\int_{-a}^a \\frac{f(x)}{1+e^x}dx \\implies 2I = \\int_{-a}^a \\frac{f(x)}{1+e^{-x}}+\\frac{f(x)}{1+e^x}dx = \\int_{-a}^a f(x)dx\\] Now letting \\(f(x) = \\cos(x)\\), we obtain that \\[2I = \\int_{-\\pi/2}^{\\pi/2}\\cos(x)dx = 2\\] so the answer is \\(\\boxed{1}\\).</p>",
+      "answer": "-1"
+    },
+    "6": {
+      "problem": "<p>What is the value of: \\[\\sum_{n=1}^\\infty \\prod_{k=1}^{2n} \\cos\\frac{k\\pi}{2n+1}\\]</p>",
+      "solutions": "<p>We begin by realizing that \\(\\prod_{k=1}^{2n}\\cos\\frac{k\\pi}{2n+1}\\) is \\((-1)^n(4)^{-n}\\). Thus, the sum becomes \\(\\sum_{n=1}^\\infty(-1)^n(4)^{-n}\\), which is simply \\(-\\frac{1}{3}\\).</p>",
+      "answer": "-\\frac{1}{3}"
+    },
+    "7": {
+      "problem": "<p>What is the following limit: \\[\\lim_{x\\to0}\\frac{\\tan(3x)\\sin(4x)+\\sin(5x)\\tan(2x)}{\\tan(6x)\\sin(7x)\\cos(8x)}\\]</p>",
+      "solutions": "<p>To evaluate this limit, begin by replacing \\(\\tan(nx)\\) with \\(nx\\), \\(\\sin(nx)\\) with \\(nx\\), and \\(\\cos(nx)\\) with \\(1\\), as these are the rough approximations of \\(\\sin\\), \\(\\cos\\), and \\(\\tan\\) near \\(0\\). Plugging these into the original limit: \\[\\lim_{x\\to0}\\frac{\\tan(3x)\\sin(4x)+\\sin(5x)\\tan(2x)}{\\tan(6x)\\sin(7x)\\cos(8x)} = \\lim_{x\\to0}\\frac{(3x)(4x)+(5x)(2x)}{(6x)(7x)}\\] This limit can then be simplified to \\(\\frac{11}{21}\\).</p>",
+      "answer": "\\frac{11}{21}"
+    },
+    "8": {
+      "problem": "<p>What is the maximum radius of a circle tangent to the curves \\(y=e^{-x^2}\\) and \\(y=-e^{-x^2}\\) at two points each?</p>",
+      "solutions": "<p>Let us denote the radius as \\(r\\), with \\(x\\) and \\(y\\) components \\(x_r\\) and \\(y_r\\). From this, we have \\(x_r^2+y_r^2=r^2\\), and the slope of the radial vector is \\(m=\\frac{y}{x}\\). This must be perpendicular to the curves, so we can solve: \\[\\frac{-x}{y} = -2xe^{-x^2}\\] Solving this equation and plugging in our values of \\(x_r\\) and \\(y_r\\) into \\(r\\), we arrive that \\(r = \\sqrt{\\frac{1}{2}(\\ln(2)+1)}\\).</p>",
+      "answer": "\\sqrt{\\frac{1}{2}(\\ln(2)+1)}"
+    },
+    "9": {
+      "problem": "<p>Compute \\[\\int_{-\\infty}^0 \\frac{1}{x^3-1}dx\\]</p>",
+      "solutions": "<p>We first perform partial fractions on \\[\\frac{1}{x^3-1}\\] to obtain that \\[\\int \\frac{1}{x^3-1}dx = \\int \\frac{-x-2}{3(x^2+x+1)}+\\frac{1}{3(x-1)}dx\\] \\[\\int \\frac{1}{3(x-1)}dx = \\frac{1}{3}\\ln(x-1)\\] \\[\\int \\frac{-x-2}{x^2+x+1}dx = \\frac{1}{3}\\int -\\frac{2x+1}{2(x^2+x+1)}-\\frac{3}{2(x^2+x+1)}dx = -\\frac{1}{6}\\int\\frac{2x+1}{x^2+x+1}-\\frac{1}{2}\\int\\frac{1}{x^2+x+1}dx\\] Perform the substitution: \\(u=x^2+x+1\\) \\[-\\frac{1}{6}\\int\\frac{2x+1}{x^2+x+1}dx = -\\frac{1}{6}\\int\\frac{1}{u}du = -\\frac{\\ln(u)}{6}\\] \\[-\\frac{1}{2}\\int\\frac{1}{x^2+x+1}dx = -\\frac{1}{2}\\int\\frac{1}{(x+\\frac{1}{2})^2+\\frac{3}{4}}dx = -\\frac{1}{\\sqrt{3}}\\arctan\\frac{2x+1}{\\sqrt{3}}\\] \\[\\int\\frac{1}{x^3-1} = \\frac{1}{3}\\ln(1-x)-\\frac{1}{6}\\ln(x^2+x+1)-\\frac{1}{\\sqrt{3}}\\arctan\\frac{2x+1}{\\sqrt{3}}\\] Evaluating this at \\(x=-\\infty\\) and \\(x=0\\), we conclude that: \\[\\int_{-\\infty}^0 \\frac{1}{x^3-1} = -\\frac{2\\pi}{3\\sqrt{3}}\\]</p>",
+      "answer": "-\\frac{2\\pi}{3\\sqrt{3}}"
+    },
+    "10": {
+      "problem": "<p>Let \\(T\\) be defined by the recurrence relation \\(T_{n+1} = 2xT_n - T_{n-1}\\) with \\(T_0 = 1\\) and \\(T_1 = x\\). What is \\[\\sum_{n=2}^\\infty \\int_0^1 T_ndx\\]</p>",
+      "solutions": "<p>First, we claim that \\[\\int_0^1 T_ndx = \\frac{n\\sin\\frac{n\\pi}{2}-1}{n^2-1}\\] To prove this, note that \\(T_n\\) is the \\(n\\)th Tchebyshev polynomial. So in fact, \\[\\int_0^1 T_ndx = -\\int_{\\pi/2}^0 \\cos(nx)\\sin(x)dx = \\int_0^{\\pi/2}\\cos(nx)\\sin(x)dx\\] and using integration by parts, we have \\[\\int \\cos(nx)\\sin(x)dx = \\frac{n\\sin(x)\\sin(nx)+\\cos(x)\\cos(nx)}{n^2-1}+C\\] so plugging in the limits we get our desired result. Thus, \\[\\sum_{n=2}^\\infty \\int_0^1 T_ndx = \\sum_{n=2}^\\infty \\frac{n\\sin\\frac{n\\pi}{2}-1}{n^2-1} = \\sum_{n=1}^\\infty -\\frac{1}{4n^2-1}+\\frac{1}{4n+2}-\\frac{1}{4n-2}\\] which “morally” converges to \\(-1\\) by telescoping. (Note: a full rigorous proof will need background from real analysis, so will be omitted here).</p>",
+      "answer": "-1"
+    }
+  }
+}

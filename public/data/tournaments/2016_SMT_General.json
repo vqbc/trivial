@@ -1,0 +1,133 @@
+{
+  "test": "SMT General",
+  "year": 2016,
+  "name": "General Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2016/general-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Alice can bake a pie in 5 minutes. Bob can bake a pie in 6 minutes. Compute how many more pies Alice can bake than Bob in 60 minutes.</p>",
+      "solutions": "<p>Alice can bake \\(\\frac{60}{5} = 12\\) pies in 60 minutes. Bob can bake \\(\\frac{60}{6} = 10\\) pies in 60 minutes. Alice can therefore bake \\(12 - 10 = \\boxed{2}\\) more pies than Bob.</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>Ben likes long bike rides. On one ride, he goes biking for six hours. For the first hour, he bikes at a speed of 15 miles per hour. For the next two hours, he bikes at a speed of 12 miles per hour. He remembers biking 90 miles over the six hours. Compute the average speed, in miles per hour, Ben biked during the last three hours of his trip.</p>",
+      "solutions": "<p>Ben biked \\(90 - 15 - 2 \\cdot 12 = 51\\) miles over the last three hours, averaging a speed of \\(\\frac{51}{3} = \\boxed{17}\\) miles per hour.</p>",
+      "answer": "17"
+    },
+    "3": {
+      "problem": "<p>Compute the perimeter of a square with area 36.</p>",
+      "solutions": "<p>If the length of the square is \\(s\\), then \\(s^2 = 36\\) so \\(s = 6\\). The perimeter is therefore \\(4s = \\boxed{24}\\).</p>",
+      "answer": "24"
+    },
+    "4": {
+      "problem": "<p>Two ants are standing side-by-side. One ant, which is 4 inches tall, casts a shadow that is 10 inches long. The other ant is 6 inches tall. Compute, in inches, the length of the shadow that the taller ant casts.</p>",
+      "solutions": "<p>The ratio of shadow to height is constant, so if \\(x\\) is the length of the shadow, then \\(\\frac{4}{10} = \\frac{6}{x}\\) and \\(\\boxed{x = 15}\\).</p>",
+      "answer": "15"
+    },
+    "5": {
+      "problem": "<p>Compute the number of distinct line segments that can be drawn inside a square such that the endpoints of the segment are on the square and the segment divides the square into two congruent triangles.</p>",
+      "solutions": "<p>Cutting along opposite corners are the only valid ways, so there are \\(\\boxed{2}\\) such pairs.</p>",
+      "answer": "2"
+    },
+    "6": {
+      "problem": "<p>Emily has a cylindrical water bottle that can hold \\(1000\\pi\\) cubic centimeters of water. Right now, the bottle is holding \\(100\\pi\\) cubic centimeters of water, and the height of the water is 1 centimeter. Compute the radius of the water bottle.</p>",
+      "solutions": "<p>If the height of the water is 1 centimeter when there are \\(100\\pi\\) cubic centimeters of water, then the height of the water would be 10 centimeters when the water bottle is full. Therefore, \\(\\pi r^2 \\cdot 10 = 1000\\pi\\) and \\(r^2 = 100\\), so \\(\\boxed{r = 10}\\).</p>",
+      "answer": "10"
+    },
+    "7": {
+      "problem": "<p>Given that \\(x\\) and \\(y\\) are nonnegative integers, compute the number of pairs \\((x, y)\\) such that \\[5x + y = 20.\\]</p>",
+      "solutions": "<p>For \\(x = 0, 1, 2, 3, 4\\), there is a valid \\(y\\), giving the answer \\(\\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "8": {
+      "problem": "<p>A sequence \\(a_n\\) is recursively defined where \\(a_n = 3(a_{n-1} - 1000)\\) for \\(n &gt; 0\\). Compute the smallest integer \\(x\\) such that when \\(a_0 = x\\), \\(a_n &gt; a_0\\) for all \\(n &gt; 0\\).</p>",
+      "solutions": "<p>We want the smallest \\(x\\) such that \\(3(x - 1000) &gt; x\\), or \\(2x &gt; 3000\\). The smallest integral \\(x\\) that satisfies this is \\(x = \\boxed{1501}\\).</p>",
+      "answer": "1501"
+    },
+    "9": {
+      "problem": "<p>Compute the probability that two random integers, independently chosen and both taking on an integer value between 1 and 10 with equal probability, have a prime product.</p>",
+      "solutions": "<p>There are 4 primes between 1 and 10. In order for the product of the integers to be prime, one of them must be one of these primes (2, 3, 5, or 7) and the other must be the number 1. There are therefore 8 possible pairs of generated integers that will yield a prime product.</p><p>Since there are 100 possible pairs overall, the desired probability is \\(\\boxed{\\frac{2}{25}}\\).</p>",
+      "answer": "\\frac{2}{25}"
+    },
+    "10": {
+      "problem": "<p>If \\(x\\) and \\(y\\) are nonnegative integers, both less than or equal to \\(2\\), then we say that \\((x, y)\\) is a friendly point. Compute the number of unordered triples of friendly points that form triangles with positive area.</p>",
+      "solutions": "<p>There are \\(\\binom{9}{3} = 84\\) unordered triples of friendly points. Instead of trying to count the triples that yield triangles with positive area, we count the ones which have zero area. These form line segments, of which there are \\(8\\) (three vertical, three horizontal, two diagonal), giving us \\(\\boxed{76}\\) desired unordered triples.</p>",
+      "answer": "76"
+    },
+    "11": {
+      "problem": "<p>Cindy is thinking of a number which is \\(4\\) less than the square of a positive integer. The number has the property that it has two \\(2\\)-digit prime factors. What is the smallest possible value of Cindy’s number?</p>",
+      "solutions": "<p>Let \\(x\\) be Cindy’s number. Then \\(x = n^2 - 4 = (n-2)(n+2)\\) for some positive integer \\(n\\). Since \\(n+2\\) and \\(n-2\\) differ by \\(4\\), our goal is hence to find two \\(2\\)-digit prime numbers which differ by \\(4\\). By writing the first few prime numbers, we find that the pair \\((13, 17)\\) is the smallest pair possible, which gives us a value of \\(13 \\cdot 17 = \\boxed{221}\\).</p>",
+      "answer": "221"
+    },
+    "12": {
+      "problem": "<p>Winona can purchase a pencil and two pens for \\(250\\) cents, or two pencils and three pens for \\(425\\) cents. If the cost of a pencil and the cost of a pen does not change, compute the cost in cents of five pencils and six pens.</p>",
+      "solutions": "<p>If we add one pencil and one pen, an order increases in price by \\(175\\) cents. Therefore, adding four pencils and four pens increases the order by \\(700\\) cents, so the cost of five pencils and six pens is \\(700 + 250 = \\boxed{950}\\) cents.</p>",
+      "answer": "950"
+    },
+    "13": {
+      "problem": "<p>Colin has an app on his phone that generates a random integer betwen \\(1\\) and \\(10\\). He generates \\(10\\) random numbers and computes the sum. Compute the number of distinct possible sums Colin can end up with.</p>",
+      "solutions": "<p>The maximum possible sum is \\(10 \\cdot 10 = 100\\). The minimum possible sum is \\(10\\). Hence, there are \\(100 - 10 + 1 = \\boxed{91}\\) possible sums.</p>",
+      "answer": "91"
+    },
+    "14": {
+      "problem": "<p>A circle is inscribed in a unit square, and a diagonal of the square is drawn. Find the total length of the segments of the diagonal not contained within the circle.</p>",
+      "solutions": "<p>The diagonal has length \\(\\sqrt{2}\\). It passes through the center of the circle, so it contains a diameter of the circle. The length of the diagonal within the circle is therefore \\(1\\). The rest of the diagonal outside of the circle has total length \\(\\boxed{\\sqrt{2} - 1}\\).</p>",
+      "answer": "\\sqrt{2} - 1"
+    },
+    "15": {
+      "problem": "<p>A class of six students has to split into two indistinguishable teams of three people. Compute the number of distinct team arrangements that can result.</p>",
+      "solutions": "<p>Consider one specific person of the six students. There are \\(\\binom{5}{2}\\) to choose the \\(2\\) partners on his team. Hence, there are \\(\\binom{5}{2} = \\boxed{10}\\) distinct teams.</p>",
+      "answer": "10"
+    },
+    "16": {
+      "problem": "<p>A unit square is subdivided into a grid composed of \\(9\\) squares each with sidelength \\(\\frac{1}{3}\\). A circle is drawn through the centers of the \\(4\\) squares in the outermost corners of the grid. Compute the area of this circle.</p>",
+      "solutions": "<p>The circle’s radius lies between the centers of two diagonally adjacent small squares. Therefore it is equal to the diagonal of one small square, and \\(r = \\frac{\\sqrt{2}}{3}\\). The circle’s area is thus \\(\\boxed{\\frac{2\\pi}{9}}\\).</p>",
+      "answer": "\\frac{2\\pi}{9}"
+    },
+    "17": {
+      "problem": "<p>There exists exactly one positive value of \\(k\\) such that the line \\(y = kx\\) intersects the parabola \\(y = x^2 + x + 4\\) at exactly one point. Compute the intersection point.</p>",
+      "solutions": "<p>If the line is tangent, then we must have that \\(x^2 + x + 4 = kx\\) has a unique solution in \\(x\\), or \\(x^2 + (1-k)x + 4 = 0\\) has a unique solution. Thus, \\((1-k)^2 - 16 = 0\\), or \\((1-k) = \\pm 4\\). Therefore, \\(k = -3\\) or \\(k = 5\\).</p><p>Taking \\(k = 5\\), we have that \\(y = 5x\\) intersects \\(y = x^2 + x + 4\\) when \\(x = 2\\), and the intersection point is \\(\\boxed{(2, 10)}\\).</p>",
+      "answer": "(2, 10)"
+    },
+    "18": {
+      "problem": "<p>Given an integer \\(x\\), let \\(f(x)\\) be the sum of the digits of \\(x\\). Compute the number of positive integers less than \\(1000\\) where \\(f(x) = 2\\).</p>",
+      "solutions": "<p>We do casework on the number of digits:</p><ul style=\"list-style-type: none\"><li>(a) The number has \\(1\\) digit. The only valid number is \\(2\\).</li><li>(b) The number has \\(2\\) digits. The only valid numbers are \\(11\\) and \\(20\\).</li><li>(c) The number has \\(3\\) digits. The only valid numbers are \\(101\\), \\(110\\), and \\(200\\).</li></ul><p>This gives us \\(\\boxed{6}\\) numbers.</p>",
+      "answer": "6"
+    },
+    "19": {
+      "problem": "<p>Let \\(ABCD\\) be a convex quadrilateral with \\(BA = BC\\) and \\(DA = DC\\). Let \\(E\\) and \\(F\\) be the midpoints of \\(BC\\) and \\(CD\\) respectively, and let \\(BF\\) and \\(DE\\) intersect at \\(G\\). If the area of \\(CEGF\\) is \\(50\\), what is the area of \\(ABGD\\)?</p>",
+      "solutions": "<p>Let \\([XYZ]\\) denote the area of a polygon \\(XYZ\\).</p><p>Observe that \\(BF\\) and \\(DE\\) are two medians of \\(\\triangle BCD\\), so \\(G\\) is the centroid of \\(\\triangle BCD\\). Since the medians of a triangle divide the triangle into six parts of equal area, we have \\[[CGF] = [CGE] = \\frac{1}{2}[CEGF] = 25.\\]</p><p>It follows that \\([CBD] = 6 \\cdot 25 = 150\\) and \\([BGD] = 2 \\cdot 25 = 50\\).</p><p>Furthermore, since \\(BA = BC\\), \\(DA = DC\\), and \\(BD = BD\\), we have that \\(\\triangle ABD \\cong \\triangle CBD\\), so \\([ABD] = [CBD] = 150\\). Finally, \\[[ABGD] = [ABD] + [BGD] = 150 + 50 = \\boxed{200}.\\]</p>",
+      "answer": "200"
+    },
+    "20": {
+      "problem": "<p>Compute all real solutions to \\(16^x + 4^{x+1} - 96 = 0\\).</p>",
+      "solutions": "<p>If we substitute \\(y = 4^x\\), we have \\(y^2 + 4y - 96 = 0\\), so \\(y = -4\\) or \\(y = 8\\). The first does not map to a real solution, while the second maps to \\(x = \\boxed{\\frac{3}{2}}\\).</p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "21": {
+      "problem": "<p>At an M&amp;M factory, two types of M&amp;Ms are produced, red and blue. The M&amp;Ms are transported individually on a conveyor belt. Anna is watching the conveyor belt, and has determined that four out of every five red M&amp;Ms are followed by a blue one, while one out of every six blue M&amp;Ms is followed by a red one. What proportion of the M&amp;Ms are red?</p>",
+      "solutions": "<p>Suppose that the fraction of red M&amp;Ms is \\(f_r\\) and the fraction of blue M&amp;Ms is \\(f_b\\). Then the probability that Anna sees a red one emerge next is \\(f_r\\). This probability can also be expressed using conditional probabilities as \\(f_r = P(\\text{blue})P(\\text{red after blue}) + P(\\text{red})P(\\text{red after red})\\), or \\(f_r = f_b(1/6) + f_r(1/5)\\). Likewise, we find \\(f_b = f_r(4/5) + f_b(5/6)\\).</p><p>Solving the system of equations gives \\(f_b = \\frac{24}{29}\\) and \\(f_r = \\boxed{\\frac{5}{29}}\\).</p>",
+      "answer": "\\frac{5}{29}"
+    },
+    "22": {
+      "problem": "<p>\\(ABCDEFGH\\) is an equiangular octagon with side lengths \\(2\\), \\(4\\sqrt{2}\\), \\(1\\), \\(3\\sqrt{2}\\), \\(2\\), \\(3\\sqrt{2}\\), \\(3\\), and \\(2\\sqrt{2}\\), in that order. Compute the area of the octagon.</p>",
+      "solutions": "<p>The octagon can be inscribed in a square with side length \\(8\\). The four right triangles at the vertices of the square have combined area of \\(2 + 8 + \\frac{9}{2} + \\frac{9}{2} = 19\\), giving a remaining area of \\(64 - 19 = \\boxed{45}\\).</p>",
+      "answer": "45"
+    },
+    "23": {
+      "problem": "<p>The cubic \\(f(x) = x^3 + bx^2 + cx + d\\) satisfies \\(f(1) = 3\\), \\(f(2) = 6\\), and \\(f(4) = 12\\). Compute \\(f(3)\\).</p>",
+      "solutions": "<p>Note that \\(f(x) - 3x = (x-1)(x-2)(x-4)\\), so \\(f(x) = (x-1)(x-2)(x-4) + 3x\\) and therefore \\(f(3) = 2 \\cdot 1 \\cdot (-1) + 9 = \\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "24": {
+      "problem": "<p>Given a unit square, two points are chosen uniformly at random within the square. Compute the probability that the line segment connecting those two points touches both diagonals of the square.</p>",
+      "solutions": "<p>If we draw both diagonals, then the desired event happens if and only if the two points appear in different triangles that do not share an edge. Given the triangle where one point lands, the other point has probability \\(\\boxed{\\frac{1}{4}}\\) of landing in the other triangle.</p>",
+      "answer": "\\frac{1}{4}"
+    },
+    "25": {
+      "problem": "<p>Compute the remainder when \\[5\\underbrace{6666\\ldots 6666}_{2016 \\text{ sixes}}5\\] is divided by \\(17\\).</p>",
+      "solutions": "<p>A neat fact: note that \\[55 \\equiv 565 \\equiv 5665 \\equiv 56665 \\equiv \\ldots \\pmod{17}.\\]</p><p>This is easier to recognize when written in the form \\[5 \\equiv 56 \\equiv 566 \\equiv 5666 \\equiv 56666 \\equiv \\ldots \\pmod{17},\\] since \\(10n + 6 \\equiv n \\pmod{17}\\) when \\(n \\equiv 5 \\pmod{17}\\). Then, since \\[5\\underbrace{6666\\ldots 6666}_{2016 \\text{ sixes}}6 \\equiv 5 \\pmod{17},\\] clearly, \\[5\\underbrace{6666\\ldots 6666}_{2016 \\text{ sixes}}5 \\equiv \\boxed{4} \\pmod{17}.\\]</p>",
+      "answer": "4"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "test": "BMT General Tiebreaker",
+  "year": 2021,
+  "name": "General Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2021/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The arithmetic mean of 2, 6, 8, and \\(x\\) is 7. The arithmetic mean of 2, 6, 8, \\(x\\), and \\(y\\) is 9. What is the value of \\(y - x\\)?</p>",
+      "solutions": "<p>The arithmetic mean of 2, 6, 8, and \\(x\\) being 7 implies \\(\\frac{2+6+8+x}{4} = 7\\) meaning \\(16 + x = 28\\) and \\(x = 12\\). The arithmetic mean of 2, 6, 8, \\(x\\), and \\(y\\) being 9 implies \\(\\frac{2+6+8+x+y}{5} = \\frac{28+y}{5} = 9\\). Thus \\(28 + y = 45\\) and \\(y = 17\\). Therefore, \\(y - x = \\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "2": {
+      "problem": "<p>Compute the radius of the largest circle that fits entirely within a unit cube.</p>",
+      "solutions": "<p>Paper on the generalized version of this. First, by symmetry, we observe that such a circle must go through the center of the cube. Then if we imagine the cube as \\(\\{0,1\\}^3\\), we see that the plane perpendicular to the vector \\(\\langle 1,1,1 \\rangle\\) passing through the center of the cube is a hexagon which passes through the midpoints of 6 edges. By the Pythagorean theorem, this hexagon has side length \\(\\sqrt{2}/2\\), so the largest circle that fits inside it must have radius \\(\\frac{\\sqrt{3}}{2} \\cdot \\frac{\\sqrt{2}}{2} = \\boxed{\\frac{\\sqrt{6}}{4}}\\).</p>",
+      "answer": "\\frac{\\sqrt{6}}{4}"
+    },
+    "3": {
+      "problem": "<p>Dexter and Raquel are playing a game with \\(N\\) stones. Dexter goes first and takes one stone from the pile. After that, the players alternate turns and can take anywhere from 1 to \\(x + 1\\) stones from the pile, where \\(x\\) is the number of stones the other player took on the turn immediately prior. The winner is the one to take the last stone from the pile.</p><p>Assuming Dexter and Raquel play optimally, compute the number of positive integers \\(N \\le 2021\\) where Dexter wins this game.</p>",
+      "solutions": "<p>We prove that Dexter wins if and only if \\(N \\equiv 1 \\pmod{5}\\) or \\(N \\equiv 4 \\pmod{5}\\).</p><p>\\(N \\equiv 0 \\pmod{5}\\) is a losing position - if Dexter takes two stones, then Raquel takes three stones. Otherwise, Dexter takes one stone, Raquel takes one stone, then no matter what Dexter does, Raquel can force a position of \\(N - 5\\) stones.</p><p>Therefore, \\(N \\equiv 1 \\pmod{5}\\) is a winning position.</p><p>Therefore, \\(N \\equiv 2 \\pmod{5}\\) is a losing position and so is \\(N \\equiv 3 \\pmod{5}\\).</p><p>Therefore, \\(N \\equiv 4 \\pmod{5}\\) is a winning position.</p><p>There are \\(\\frac{2}{5} \\cdot 2020 + 1 = \\boxed{809}\\) winning positions.</p>",
+      "answer": "809"
+    },
+    "4": {
+      "problem": "<p>Let \\(z_1, z_2\\), and \\(z_3\\) be the complex roots of the equation \\((2z - 3\\bar{z})^3 = 54i + 54\\). Compute the area of the triangle formed by \\(z_1, z_2, z_3\\) when plotted in the complex plane.</p>",
+      "solutions": "<p>Let \\(w = 2z - 3\\bar{z}\\). Then \\(w^3 = 54i + 54\\), and using ideas from roots of unity, the solutions for \\(w\\) are three complex numbers that have magnitude \\((|54i+54|)^{1/3} = 3\\sqrt{2}\\) and, when plotted on the complex plane, form an equilateral triangle with area \\(\\frac{(3\\sqrt{2} \\cdot \\sqrt{3})^2 \\sqrt{3}}{4} = \\frac{27\\sqrt{3}}{2}\\). Now consider what happens to the complex plane when we apply the function \\(f(z) = 2z - 3\\bar{z}\\) on every point. If \\(z = a + bi\\), then \\(f(z) = 2(a+bi) + 3(a-bi) = 5a - bi\\), so when \\(f(z)\\) is applied, the complex plane flips about the imaginary axis and stretches by a factor of 5 in the direction of the real axis. This means that applying the function \\(f(z)\\) increases all areas by a factor of 5.</p><p>Thus, the triangle formed by the solutions of \\(z\\) for the equation \\(w = 2z - 3\\bar{z}\\) is \\(\\frac{1}{5}\\) of the area of the triangle formed by the solutions for \\(w\\), or \\(\\frac{1}{5} \\cdot \\frac{27\\sqrt{3}}{2} = \\boxed{\\frac{27\\sqrt{3}}{10}}\\).</p>",
+      "answer": "\\frac{27\\sqrt{3}}{10}"
+    },
+    "5": {
+      "problem": "<p>Let \\(r, s, t, u\\) be the distinct roots of the polynomial \\(x^4 + 2x^3 + 3x^2 + 3x + 5\\). For \\(n \\ge 1\\), define \\(s_n = r^n + s^n + t^n + u^n\\) and \\(t_n = s_1 + s_2 + \\cdots + s_n\\). Compute \\(t_4 + 2t_3 + 3t_2 + 3t_1 + 5\\).</p>",
+      "solutions": "<p>We utilize the first four Newton sums: \\[\\begin{aligned}\ns_1 + 2(1) &amp;= 0 \\\\\ns_2 + 2s_1 + 3(2) &amp;= 0 \\\\\ns_3 + 2s_2 + 3s_1 + 3(3) &amp;= 0 \\\\\ns_4 + 2s_3 + 3s_2 + 3s_1 + 5(4) &amp;= 0\n\\end{aligned}\\]</p><p>Adding the results yields \\[(s_1 + s_2 + s_3 + s_4) + 2(1 + s_1 + s_2 + s_3) + 3(2 + s_1 + s_2) + 3(3 + s_1) + 5(4) = 0\\]</p><p>Thus, \\[t_4 + 2(1 + t_3) + 3(2 + t_2) + 3(3 + t_1) + 4(5) = 0\\]</p><p>and \\(t_4 + 2t_3 + 3t_2 + 3t_1 + 5 = 5 - 2 - 6 - 9 - 20 = \\boxed{-32}\\).</p>",
+      "answer": "-32"
+    }
+  }
+}

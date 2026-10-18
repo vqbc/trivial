@@ -1,0 +1,58 @@
+{
+  "test": "BMT Geometry",
+  "year": 2016,
+  "name": "Geometry Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2016/GeoS2016.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A \\(2 \\times 4 \\times 8\\) rectangular prism and a cube have the same volume. What is the difference between their surface areas?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "16"
+    },
+    "2": {
+      "problem": "<p>Cyclic quadrilateral \\(ABCD\\) has side lengths \\(AB = 6, BC = 7, CD = 7, DA = 6\\). What is the area of \\(ABCD\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "42"
+    },
+    "3": {
+      "problem": "<p>Let \\(S\\) be the set of all non-degenerate triangles with integer sidelengths, such that two of the sides are 20 and 16. Suppose we pick a triangle, at random, from this set. What is the probability that it is acute?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{13}{31}"
+    },
+    "4": {
+      "problem": "<p>\\(ABC\\) is an equilateral triangle, and \\(ADEF\\) is a square. If \\(D\\) lies on side \\(AB\\) and \\(E\\) lies on side \\(BC\\), what is the ratio of the area of the equilateral triangle to the area of the square?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2\\sqrt{3}+3}{6}"
+    },
+    "5": {
+      "problem": "<p>Convex pentagon \\(ABCDE\\) has the property that \\(\\angle ADB = 20^\\circ\\), \\(\\angle BEC = 16^\\circ\\), \\(\\angle CAD = 3^\\circ\\), and \\(\\angle DBE = 12^\\circ\\). What is the measure of \\(\\angle ECA\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "129^\\circ"
+    },
+    "6": {
+      "problem": "<p>Triangle \\(ABC\\) has sidelengths \\(AB = 13, AC = 14\\), and \\(BC = 15\\) and centroid \\(G\\). What is the area of the triangle with sidelengths \\(AG, BG\\), and \\(CG\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "28"
+    },
+    "7": {
+      "problem": "<p>Let \\(ABC\\) be a right triangle with \\(AB = BC = 2\\). Construct point \\(D\\) such that \\(\\angle DAC = 30^\\circ\\) and \\(\\angle DCA = 60^\\circ\\), and \\(\\angle BCD &gt; 90^\\circ\\). Compute the area of triangle \\(BCD\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1+\\sqrt{3}}{2}"
+    },
+    "8": {
+      "problem": "<p>A regular unit 7-simplex is a polytope in 7-dimensional space with 8 vertices that are all exactly a distance of 1 apart. (It is the 7-dimensional analogue to the triangle and the tetrahedron.) In this 7-dimensional space, there exists a point that is equidistant from all 8 vertices, at a distance \\(d\\). Determine \\(d\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\sqrt{7}}{4}"
+    },
+    "9": {
+      "problem": "<p>Given right triangle \\(ABC\\) with right angle at \\(C\\), construct three external squares \\(ABDE\\), \\(BCFG\\), and \\(ACHI\\). If \\(DG = 19\\) and \\(EI = 22\\), compute the length of \\(FH\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "13"
+    },
+    "10": {
+      "problem": "<p>Triangle \\(ABC\\) has side lengths \\(AB = 5, BC = 9\\), and \\(AC = 6\\). Define the incircle of \\(ABC\\) to be \\(C_1\\). Then, define \\(C_i\\) for \\(i &gt; 1\\) to be externally tangent to \\(C_{i-1}\\) and tangent to \\(AB\\) and \\(BC\\). Compute the sum of the areas of all circles \\(C_n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{8\\pi}{3}"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2013,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2013/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Suppose 5 bales of hay are weighted two at a time in all possible ways. The weights obtained are \\(110, 112, 113, 114, 115, 116, 117, 118, 120, 121\\). What is the difference between the heaviest and the lightest bale?</p>",
+      "solutions": "<p>Note that the bales must weigh different amounts, as no weight is repeated. Let the weights be \\(a &lt; b &lt; c &lt; d &lt; e\\). Then we know that the smallest two weights of pairs must be \\(a+b &lt; a+c\\), and the largest two weights are \\(c+e &lt; d+e\\). Hence \\(a+c = 112\\) and \\(c+e = 120\\). Hence \\(e - a = 120 - 112 = 8\\).</p>",
+      "answer": "8"
+    },
+    "2": {
+      "problem": "<p>Paul and Paula are playing a game with dice. Each have an 8-sided die, and they roll at the same time. If the number is the same they continue rolling; otherwise the one who rolled a higher number wins. What is the probability that the game lasts at most 3 rounds?</p>",
+      "solutions": "<p>The probability that the game lasts at most three rounds is the complement of the probability that the game lasts four rounds or more.</p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Find the unique positive integer \\(n\\) such that \\(\\frac{n^3+5}{n^2-1}\\) is an integer.</p>",
+      "solutions": "<p>We can use polynomial long division to write \\(n^3+5 = n(n^2-1)+n+5\\); hence \\(\\frac{n^3+5}{n^2-1} = n + \\frac{n+5}{n^2-1}\\). For integer \\(n\\), we have \\(|n+5| &lt; |n^2-1|\\) precisely when \\(n &lt; -2\\) or \\(n &gt; 3\\). Hence \\(\\frac{n+5}{n^2-1}\\) cannot be an integer except when \\(n = -5\\) or when \\(-3 \\le n \\le 2\\).</p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>How many numbers have 6 digits, some four of which are 2, 0, 1, 4 (not necessarily consecutive or in that order) and have the sum of their digits equal to 9?</p>",
+      "solutions": "<p>The remaining two digits can clearly be \\(\\{0, 2\\}\\) or \\(\\{1, 1\\}\\).</p><p>In the first case, there are \\(6!/(2!)(2!) = 180\\) permutations of the digits \\(\\{0, 0, 1, 2, 2, 4\\}\\). Of these, some start with a zero. The number that do is clearly the number of permutations of \\(\\{0, 1, 2, 2, 4\\}\\), which is just \\(5!/2! = 60\\). Hence there are 120 numbers in this case.</p><p>In the second case, there are \\(6!/3! = 120\\) permutations of the digits \\(\\{0, 1, 1, 1, 2, 4\\}\\). Of these, the number that start with a zero is simply \\(5!/3! = 20\\). Hence there are 100 numbers in this case, for a total of 220 such numbers.</p>",
+      "answer": "220"
+    },
+    "5": {
+      "problem": "<p>The Duke School has \\(N\\) students, where \\(N\\) is at most 500. Every year the school has three sports competitions: one in basketball, one in volleyball, and one in soccer. Students may participate in all three competitions. A basketball team has 5 spots, a volleyball team has 6 spots, and a soccer team has 11 spots on the team. All students are encouraged to play, but 16 people choose not to play basketball, 9 choose not to play volleyball and 5 choose not to play soccer. Miraculously, other than that all of the students who wanted to play could be divided evenly into teams of the appropriate size. How many players are there in the school?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Let \\(\\{a_n\\}_{n\\ge 1}\\) be a sequence of real numbers such that \\(a_1 = 0\\) and \\(a_{n+1} = \\frac{a_n - \\sqrt{3}}{\\sqrt{3}a_n+1}\\). Find \\(a_1 + a_2 + \\cdots + a_{2014}\\).</p>",
+      "solutions": "<p>Write \\(a_n = \\tan(\\theta_n)\\). Then we note by the tangent-addition formula that \\(a_{n+1} = \\tan(\\theta_{n+1}) = \\tan(\\theta_n - \\pi/3)\\). Hence \\(\\theta_{n+1} = \\theta_n - \\pi/3\\), so that \\(\\theta_{n+3} = \\theta_n - \\pi\\) and hence \\(a_{n+3} = -a_n\\). Thus \\[a_n + a_{n+1} + a_{n+2} + a_{n+3} + a_{n+4} + a_{n+5} = 0\\] for all \\(n \\ge 1\\), and so \\[a_1 + a_2 + \\cdots + a_{2014} = a_1 + a_2 + (a_3 + \\cdots + a_8) + \\cdots + (a_{2009} + a_{2014}) = a_1 + a_2 = a_2.\\] Then we have \\(a_2 = -\\sqrt{3}\\), which is our answer.</p>",
+      "answer": "-\\sqrt{3}"
+    },
+    "7": {
+      "problem": "<p>A soldier is fighting a three-headed dragon. At any minute, the soldier swings her sword, at which point there are three outcomes: either the soldier misses and the dragon grows a new head, the soldier chops off one head that instantaneously regrows, or the soldier chops off two heads and none grow back. If the dragon has at least two heads, the soldier is equally likely to miss or chop off two heads. The dragon dies when it has no heads left, and it overpowers the soldier if it has at least five heads. What is the probability that the soldier wins?</p>",
+      "solutions": "<p>We first simplify the problem in three ways. First, we identify the five essential states: when the dragon has 0, 2, 3, 4, or at least 5 heads. We can discard the state when the dragon has one head, as in that case the soldier must either chop off the head which instantaneously regrows, or miss in which case the dragon returns to having two heads.</p><p>Second, we ignore the chance that the soldier chops off a head that instantaneously regrows; this doesn’t affect the state that we’re in. This means that when the dragon has two to four heads, there is an equal (one-half) chance that it loses two heads or gains one, although if the dragon has three heads the lose-two outcome is really lose-one.</p><p>Letting \\(P(k,n)\\) be the probability that the dragon is in state \\(k\\) at time \\(n\\), we get the transition relations for \\(n \\ge 0\\) \\[\\begin{aligned}\nP(0, n+1) &amp;= P(0, n) + \\frac{1}{2}P(2, n) \\\\\nP(2, n+1) &amp;= \\frac{1}{2}P(3, n) + \\frac{1}{2}P(4, n) \\\\\nP(3, n+1) &amp;= \\frac{1}{2}P(2, n) \\\\\nP(4, n+1) &amp;= \\frac{1}{2}P(3, n) \\\\\nP(5, n+1) &amp;= P(5, n) + \\frac{1}{2}P(4, n)\n\\end{aligned}\\] together with initial state \\(P(k, 0) = 0\\) for \\(k \\ne 3\\) and \\(P(3,0) = 1\\).</p><p>We want to calculate \\(\\lim_{n\\to\\infty} P(0,n)\\). We have \\[\\lim_{n\\to\\infty} P(0,n) = P(0,0) + \\sum_{n=0}^{\\infty} \\left(P(0,n+1) - P(0,n)\\right) = \\frac{1}{2}\\sum_{n=0}^{\\infty} P(2,n).\\]</p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>A rook moves alternating horizontally and vertically on an infinite chessboard. The rock moves one square horizontally (in either direction) at the first move, two squares vertically at the second, three horizontally at the third and so on. Let \\(S\\) be the set of integers \\(n\\) with the property that there exists a series of moves such that after the \\(n\\)-th move the rock is back where it started. Find the number of elements in the set \\(S \\cap \\{1, 2, \\ldots, 2014\\}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Find the largest integer \\(n\\) such that the number of positive integer divisors of \\(n\\) (including 1 and \\(n\\)) is at least \\(\\sqrt{n}\\).</p>",
+      "solutions": "<p>Let \\(\\tau(n)\\) be the function that counts the number of proper integer divisors of \\(n\\), including 1 and \\(n\\). Note that \\(\\tau(n)\\) is multiplicative, in the sense that if \\(m\\) and \\(n\\) are relatively prime positive integers, then \\(\\tau(mn) = \\tau(m)\\tau(n)\\). Now suppose \\(n = p_1^{e_1} \\cdots p_k^{e_k}\\) is the prime factorization of \\(n\\) (so that the \\(p_i\\) are distinct); then we have \\[\\frac{\\tau(n)}{\\sqrt{n}} = \\frac{\\tau(p_1^{e_1})}{\\sqrt{p_1^{e_1}}} \\cdots \\frac{\\tau(p_k^{e_k})}{\\sqrt{p_k^{e_k}}} = \\frac{1+e_1}{p_1^{e_1/2}} \\cdots \\frac{1+e_k}{p_k^{e_k/2}},\\] so that, writing \\(g(n) = \\tau(n)/\\sqrt{n}\\), we have \\(g(n)\\) multiplicative too.</p><p>We want to find the largest \\(n\\) with \\(g(n) \\ge 1\\). For \\(p \\ge 5\\), we have \\(g(p^k) = (1+k)/(\\sqrt{p})^k \\le (1+k)/2^k \\le 1\\). After calculating the values of \\(g(2^k)\\) and \\(g(3^k)\\), we find that \\(g(2^k)\\) attains its maximum value when \\(k=2\\) and \\(g(3^k)\\) attains its maximum value when \\(k=1\\). Hence the maximum value of \\(g(n)\\) is attained when \\(n = 12\\), for which \\(g(12) = \\sqrt{3}\\).</p><p>From here, we can conclude that any \\(n\\) with \\(g(n) \\ge 1\\) may only be divisible by the primes \\(2, 3, 5, 7, 11\\). Furthermore, it must be a divisor of \\(2^7 \\cdot 3^3 \\cdot 5^2 \\cdot 7 \\cdot 11 = 6652800\\).</p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Suppose that \\(x, y\\) are irrational numbers such that \\(xy, x^2+y, y^2+x\\) are rational numbers. Find \\(x+y\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

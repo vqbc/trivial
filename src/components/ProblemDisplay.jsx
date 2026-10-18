@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { AOPS_WIKI } from "../lib/constants.js";
 import { titleCleanup, underscores, sanitize, computeTest } from "../lib/problems.js";
 import { fetchAnswer } from "../lib/aops.js";
+import { tournamentSource } from "../lib/tournaments.js";
 import { useWikiLinkClicks } from "../lib/links.js";
 import { increment } from "../lib/stats.js";
 
@@ -103,6 +104,7 @@ export default function ProblemDisplay({
   const [resolved, setResolved] = useState(false);
   const [gaveUp, setGaveUp] = useState(false);
   const aopsHref = `${AOPS_WIKI}${underscores(pagename)}`;
+  const pdfHref = tournamentSource(pagename);
   const title = titleCleanup(pagename);
   const problemRef = useRef(null);
   const solutionsRef = useRef(null);
@@ -155,8 +157,8 @@ export default function ProblemDisplay({
           {title}
         </h2>
         <div className="section-options">
-          <a href={aopsHref} className="aops-link">
-            View on the AoPS Wiki
+          <a href={pdfHref ?? aopsHref} className="aops-link">
+            {pdfHref ? "View the official PDF" : "View on the AoPS Wiki"}
           </a>{" "}
           ⋅{" "}
           <button

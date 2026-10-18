@@ -1,0 +1,308 @@
+{
+  "test": "HMMT February Guts",
+  "year": 2002,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2002/feb/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>An \\((l, a)\\)-<i>design</i> of a set is a collection of subsets of that set such that each subset contains exactly \\(l\\) elements and that no two of the subsets share more than \\(a\\) elements. How many (2,1)-designs are there of a set containing 8 elements?</p>",
+      "solutions": "<p>There are \\(\\binom{8}{2} = 28\\) 2-element subsets. Any two distinct such subsets have at most 1 common element; hence, for each subset, we can decide independently whether or not it belongs to the design, and we thus obtain \\(\\boxed{2^{28}}\\) designs.</p>",
+      "answer": "2^{28}"
+    },
+    "2": {
+      "problem": "<p>A <i>lattice point</i> in the plane is a point of the form \\((n, m)\\), where \\(n\\) and \\(m\\) are integers. Consider a set \\(S\\) of lattice points. We construct the <i>transform</i> of \\(S\\), denoted by \\(S'\\), by the following rule: the pair \\((n, m)\\) is in \\(S'\\) if and only if any of \\((n, m-1)\\), \\((n, m+1)\\), \\((n-1, m)\\), \\((n+1, m)\\), and \\((n, m)\\) is in \\(S\\). How many elements are in the set obtained by successively transforming \\(\\{(0,0)\\}\\) 14 times?</p>",
+      "solutions": "<p>Transforming it \\(k \\ge 1\\) times yields the “diamond” of points \\((n,m)\\) such that \\(|n|+|m| \\le k\\). The diamond contains \\((k+1)^2 + k^2\\) lattice points (this can be seen by rotating the plane 45 degrees and noticing the lattice points in the transforms form two squares, one of which is contained in the other), so the answer is \\(\\boxed{421}\\).</p>",
+      "answer": "421"
+    },
+    "3": {
+      "problem": "<p>How many elements are in the set obtained by transforming \\(\\{(0,0), (2,0)\\}\\) 14 times?</p>",
+      "solutions": "<p>Transforming it \\(k \\ge 1\\) times yields the diamond \\(\\{(n,m) : |n-1|+|m| \\le k+1\\}\\) with the points \\((1,k), (1,k+1), (1,-k), (1,-k-1)\\) removed (this can be seen inductively). So we get \\((k+1)^2 + k^2 - 4\\) lattice points, making the answer \\(\\boxed{477}\\).</p>",
+      "answer": "477"
+    },
+    "4": {
+      "problem": "<p>How many ways are there of using diagonals to divide a regular 6-sided polygon into triangles such that at least one side of each triangle is a side of the original polygon and that each vertex of each triangle is a vertex of the original polygon?</p>",
+      "solutions": "<p>The number of ways of triangulating a convex \\((n+2)\\)-sided polygon is \\(\\binom{2n}{n}\\frac{1}{n+1}\\), which is 14 in this case. However, there are two triangulations of a hexagon which produce one triangle sharing no sides with the original polygon, so the answer is \\(14 - 2 = \\boxed{12}\\).</p>",
+      "answer": "12"
+    },
+    "5": {
+      "problem": "<p>Two \\(4 \\times 4\\) squares are randomly placed on an \\(8 \\times 8\\) chessboard so that their sides lie along the grid lines of the board. What is the probability that the two squares overlap?</p>",
+      "solutions": "<p>\\(\\boxed{\\frac{529}{625}}\\). Each square has \\(5\\) horizontal \\(\\cdot\\) \\(5\\) vertical \\(= 25\\) possible positions, so there are \\(625\\) possible placements of the squares. If they do not overlap, then either one square lies in the top four rows and the other square lies in the bottom four rows, or one square lies in the left four columns and the other lies in the right four columns. The first possibility can happen in \\(2 \\cdot 5 \\cdot 5 = 50\\) ways (two choices of which square goes on top, and five horizontal positions for each square); likewise, so can the second. However, this double-counts the 4 cases in which the two squares are in opposite corners, so we have \\(50 + 50 - 4 = 96\\) possible non-overlapping arrangements \\(\\Rightarrow 25^2 - 96 = 529\\) overlapping arrangements.</p>",
+      "answer": "\\frac{529}{625}"
+    },
+    "6": {
+      "problem": "<p>Find all values of \\(x\\) that satisfy \\(x = 1 - x + x^2 - x^3 + x^4 - x^5 + \\cdots\\) (be careful; this is tricky).</p>",
+      "solutions": "<p>Multiplying both sides by \\(1 + x\\) gives \\((1+x)x = 1\\), or \\(x = \\frac{-1 \\pm \\sqrt{5}}{2}\\). However, the series only converges for \\(|x| &lt; 1\\), so only the answer \\(x = \\boxed{\\frac{-1+\\sqrt{5}}{2}}\\) makes sense.</p>",
+      "answer": "\\frac{-1+\\sqrt{5}}{2}"
+    },
+    "7": {
+      "problem": "<p>A rubber band is 4 inches long. An ant begins at the left end. Every minute, the ant walks one inch rightwards along the rubber band, but then the band is stretched (uniformly) by one inch. For what value of \\(n\\) will the ant reach the right end during the \\(n\\)th minute?</p>",
+      "solutions": "<p>\\(\\boxed{7}\\) The ant traverses \\(1/4\\) of the band’s length in the first minute, \\(1/5\\) of the length in the second minute (the stretching does not affect its position as a fraction of the band’s length), \\(1/6\\) of the length in the third minute, and so on. Since \\[1/4 + 1/5 + \\cdots + 1/9 &lt; 0.25 + 0.20 + 0.167 + 0.143 + 0.125 + 0.112 = 0.997 &lt; 1,\\] the ant does not cover the entire band in six minutes. However, \\[1/4 + \\cdots + 1/10 &gt; 0.25 + 0.20 + 0.16 + 0.14 + 0.12 + 0.11 + 0.10 = 1.08 &gt; 1,\\] so seven minutes suffice.</p>",
+      "answer": "7"
+    },
+    "8": {
+      "problem": "<p>Draw a square of side length 1. Connect its sides’ midpoints to form a second square. Connect the midpoints of the sides of the second square to form a third square. Connect the midpoints of the sides of the third square to form a fourth square. And so forth. What is the sum of the areas of all the squares in this infinite series?</p>",
+      "solutions": "<p>The area of the first square is \\(1\\), the area of the second is \\(\\frac{1}{2}\\), the area of the third is \\(\\frac{1}{4}\\), etc., so the answer is \\(1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\cdots = \\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "9": {
+      "problem": "<p>Find all values of \\(x\\) with \\(0 \\le x &lt; 2\\pi\\) that satisfy \\(\\sin x + \\cos x = \\sqrt{2}\\).</p>",
+      "solutions": "<p>Squaring both sides gives \\(\\sin^2 x + \\cos^2 x + 2\\sin x \\cos x = 1 + \\sin 2x = 2\\), so \\(x = \\boxed{\\frac{\\pi}{4}, \\frac{5\\pi}{4}}\\).</p>",
+      "answer": "\\frac{\\pi}{4}, \\frac{5\\pi}{4}"
+    },
+    "10": {
+      "problem": "<p>The mathematician John is having trouble remembering his girlfriend Alicia’s 7-digit phone number. He remembers that the first four digits consist of one 1, one 2, and two 3s. He also remembers that the fifth digit is either a 4 or 5. While he has no memory of the sixth digit, he remembers that the seventh digit is 9 minus the sixth digit. If this is all the information he has, how many phone numbers does he have to try if he is to make sure he dials the correct number?</p>",
+      "solutions": "<p>There are \\(\\frac{4!}{2!} = 12\\) possibilities for the first four digits. There are two possibilities for the fifth digit. There are 10 possibilities for the sixth digit, and this uniquely determines the seventh digit. So he has to dial \\(12 \\cdot 2 \\cdot 10 = \\boxed{240}\\) numbers.</p>",
+      "answer": "240"
+    },
+    "11": {
+      "problem": "<p>How many real solutions are there to the equation \\[||||x| - 2| - 2| - 2| = ||||x| - 3| - 3| - 3|\\] ?</p>",
+      "solutions": "<p>\\(\\boxed{6}\\). The graphs of the two sides of the equation can be graphed on the same plot to reveal six intersection points.</p>",
+      "answer": "6"
+    },
+    "12": {
+      "problem": "<p>This question forms a three question multiple choice test. After each question, there are 4 choices, each preceded by a letter. Please write down your answer as the ordered triple (letter of the answer of Question #1, letter of the answer of Question #2, letter of the answer of Question #3). If you find that all such ordered triples are logically impossible, then write “no answer” as your answer. If you find more than one possible sets of answers, then provide all ordered triples as your answer.</p><p>When we refer to “the correct answer to Question \\(X\\)” it is the actual answer, not the letter, to which we refer. When we refer to “the letter of the correct answer to question \\(X\\)” it is the letter contained in parentheses that precedes the answer to which we refer.</p><p>You are given the following condition: No two correct answers to questions on the test may have the same letter.</p><p><i>Question 1</i>. If a fourth question were added to this test, and if the letter of its correct answer were (C), then:</p><ul style=\"list-style-type: none\"><li>(A) This test would have no logically possible set of answers.</li><li>(B) This test would have one logically possible set of answers.</li><li>(C) This test would have more than one logically possible set of answers.</li><li>(D) This test would have more than one logically possible set of answers.</li></ul><p><i>Question 2</i>. If the answer to Question 2 were “Letter (D)” and if Question 1 were not on this multiple-choice test (still keeping Questions 2 and 3 on the test), then the letter of the answer to Question 3 would be:</p><ul style=\"list-style-type: none\"><li>(A) Letter (B)</li><li>(B) Letter (C)</li><li>(C) Letter (D)</li><li>(D) Letter (A)</li></ul><p><i>Question 3</i>. Let \\(P_1 = 1\\). Let \\(P_2 = 3\\). For all \\(i &gt; 2\\), define \\(P_i = P_{i-1}P_{i-2} - P_{i-2}\\). Which is a factor of \\(P_{2002}\\)?</p><ul style=\"list-style-type: none\"><li>(A) 3</li><li>(B) 4</li><li>(C) 7</li><li>(D) 9</li></ul>",
+      "solutions": "<p>\\(\\boxed{(A, C, D)}\\).</p><p><i>Question 2</i>. In order for the answer to be consistent with the condition, “If the answer to Question 2 were Letter (D),” the answer to this question actually must be “Letter (D).” The letter of this answer is (C).</p><p><i>Question 1</i>. If a fourth question had an answer with letter (C), then at least two answers would have letter (C) (the answers to Questions 2 and 4). This is impossible. So, (A) must be the letter of the answer to Question 1.</p><p><i>Question 3</i>. If we inspect the sequence \\(P_i\\) modulo 3, 4, 7, and 9 (the sequences quickly become periodic), we find that 3, 7, and 9 are each factors of \\(P_{2002}\\). We know that letters (A) and (C) cannot be repeated, so the letter of this answer must be (D).</p>",
+      "answer": "(A, C, D)"
+    },
+    "13": {
+      "problem": "<p>A <i>domino</i> is a 1-by-2 or 2-by-1 rectangle. A <i>domino tiling</i> of a region of the plane is a way of covering it (and only it) completely by nonoverlapping dominoes. For instance, there is one domino tiling of a 2-by-1 rectangle and there are 2 tilings of a 2-by-2 rectangle (one consisting of two horizontal dominoes and one consisting of two vertical dominoes). How many domino tilings are there of a 2-by-10 rectangle?</p>",
+      "solutions": "<p>The number of tilings of a 2-by-\\(n\\) rectangle is the \\(n\\)th Fibonacci number \\(F_n\\), where \\(F_0 = F_1 = 1\\) and \\(F_n = F_{n-1} + F_{n-1}\\) for \\(n \\ge 2\\). (This is not hard to show by induction.) The answer is \\(\\boxed{89}\\).</p>",
+      "answer": "89"
+    },
+    "14": {
+      "problem": "<p>An <i>omino</i> is a 1-by-1 square or a 1-by-2 horizontal rectangle. An <i>omino tiling</i> of a region of the plane is a way of covering it (and only it) by ominoes. How many omino tilings are there of a 2-by-10 horizontal rectangle?</p>",
+      "solutions": "<p>There are exactly as many omino tilings of a 1-by-\\(n\\) rectangle as there are domino tilings of a 2-by-\\(n\\) rectangle. Since the rows don’t interact at all, the number of omino tilings of an \\(m\\)-by-\\(n\\) rectangle is the number of omino tilings of a 1-by-\\(n\\) rectangle raised to the \\(m\\)th power, \\(F_n^m\\). The answer is \\(89^2 = \\boxed{7921}\\).</p>",
+      "answer": "7921"
+    },
+    "15": {
+      "problem": "<p>How many sequences of 0s and 1s are there of length 10 such that there are no three 0s or 1s consecutively anywhere in the sequence?</p>",
+      "solutions": "<p>We can have blocks of either 1 or 2 0s and 1s, and these blocks must be alternating between 0s and 1s. The number of ways of arranging blocks to form a sequence of length \\(n\\) is the same as the number of omino tilings of a 1-by-\\(n\\) rectangle, and we may start each sequence with a 0 or a 1, making \\(2F_n\\) or, in this case, \\(\\boxed{178}\\) sequences.</p>",
+      "answer": "178"
+    },
+    "16": {
+      "problem": "<p>Divide an \\(m\\)-by-\\(n\\) rectangle into \\(mn\\) nonoverlapping 1-by-1 squares. A <i>polyomino</i> of this rectangle is a subset of these unit squares such that for any two unit squares \\(S, T\\) in the polyomino, either</p><ul style=\"list-style-type: none\"><li>(1) \\(S\\) and \\(T\\) share an edge or</li><li>(2) there exists a positive integer \\(n\\) such that the polyomino contains unit squares \\(S_1, S_2, S_3, \\ldots, S_n\\) such that \\(S\\) and \\(S_1\\) share an edge, \\(S_n\\) and \\(T\\) share an edge, and for all positive integers \\(k &lt; n\\), \\(S_k\\) and \\(S_{k+1}\\) share an edge.</li></ul><p>We say a polyomino of a given rectangle <i>spans</i> the rectangle if for each of the four edges of the rectangle the polyomino contains a square whose edge lies on it.</p><p>What is the minimum number of unit squares a polyomino can have if it spans a 128-by-343 rectangle?</p>",
+      "solutions": "<p>To span an \\(a \\times b\\) rectangle, we need at least \\(a+b-1\\) squares. Indeed, consider a square of the polyomino bordering the left edge of the rectangle and one bordering the right edge. There exists a path connecting these squares; suppose it runs through \\(c\\) different rows. Then the path requires at least \\(b-1\\) horizontal and \\(c-1\\) vertical steps, so it uses at least \\(b+c-1\\) different squares. However, since the polyomino also hits the top and bottom edges of the rectangle, it must run into the remaining \\(a-c\\) rows as well, so altogether we need at least \\(a+b-1\\) squares. On the other hand, this many squares suffice — just consider all the squares bordering the lower or right edges of the rectangle. So, in our case, the answer is \\(128 + 343 - 1 = \\boxed{470}\\).</p>",
+      "answer": "470"
+    },
+    "17": {
+      "problem": "<p>Find the number of <i>pentominoes</i> (5-square polyominoes) that span a 3-by-3 rectangle, where polyominoes that are flips or rotations of each other are considered the same polyomino.</p>",
+      "solutions": "<p>By enumeration, the answer is \\(\\boxed{6}\\).</p>",
+      "answer": "6"
+    },
+    "18": {
+      "problem": "<p>Call the pentominoes found in the last problem <i>square pentominoes</i>. Just like dominos and ominos can be used to tile regions of the plane, so can square pentominoes. In particular, a <i>square pentomino tiling</i> of a region of the plane is a way of covering it (and only it) completely by nonoverlapping square pentominoes. How many square pentomino tilings are there of a 12-by-12 rectangle?</p><p><i>Note: Problem 17 (the previous problem) reads:</i></p><blockquote><p>Find the number of <i>pentominoes</i> (5-square polyominoes) that span a 3-by-3 rectangle, where polyominoes that are flips or rotations of each other are considered the same polyomino.</p></blockquote>",
+      "solutions": "<p>Since 5 does not divide 144, there are \\(0\\).</p>",
+      "answer": "0"
+    },
+    "19": {
+      "problem": "<p>For how many integers \\(a\\) \\((1 \\le a \\le 200)\\) is the number \\(a^a\\) a square?</p>",
+      "solutions": "<p>\\(107\\) If \\(a\\) is even, we have \\(a^a = (a^{a/2})^2\\). If \\(a\\) is odd, \\(a^a = (a^{(a-1)/2})^2 \\cdot a\\), which is a square precisely when \\(a\\) is. Thus we have 100 even values of \\(a\\) and 7 odd square values \\((1^2, 3^2, \\ldots, 13^2)\\) for a total of 107.</p>",
+      "answer": "107"
+    },
+    "20": {
+      "problem": "<p>The Antarctican language has an alphabet of just 16 letters. Interestingly, every word in the language has exactly 3 letters, and it is known that no word’s first letter equals any word’s last letter (for instance, if the alphabet were \\(\\{a, b\\}\\) then <i>aab</i> and <i>aaa</i> could not both be words in the language because \\(a\\) is the first letter of a word and the last letter of a word; in fact, just <i>aaa</i> alone couldn’t be in the language). Given this, determine the maximum possible number of words in the language.</p>",
+      "solutions": "<p>\\(1024\\) Every letter can be the first letter of a word, or the last letter of a word, or possibly neither, but not both. If there are \\(a\\) different first letters and \\(b\\) different last letters, then we can form \\(a \\cdot 16 \\cdot b\\) different words (and the desired conditions will be met). Given the constraints \\(0 \\le a, b\\); \\(a + b \\le 16\\), this product is maximized when \\(a = b = 8\\), giving the answer.</p>",
+      "answer": "1024"
+    },
+    "21": {
+      "problem": "<p>The Dyslexian alphabet consists of consonants and vowels. It so happens that a finite sequence of letters is a word in Dyslexian precisely if it alternates between consonants and vowels (it may begin with either). There are 4800 five-letter words in Dyslexian. How many letters are in the alphabet?</p>",
+      "solutions": "<p>\\(12\\) Suppose there are \\(c\\) consonants, \\(v\\) vowels. Then there are \\(c \\cdot v \\cdot c \\cdot v \\cdot c + v \\cdot c \\cdot v \\cdot c \\cdot v = (cv)^2(c+v)\\) five-letter words. Thus, \\(c + v = 4800/(cv)^2 = 3 \\cdot (40/cv)^2\\), so \\(cv\\) is a divisor of 40. If \\(cv \\le 10\\), we have \\(c + v \\ge 48\\), impossible for \\(c, v\\) integers; if \\(cv = 40\\), then \\(c + v = 3\\) which is again impossible. So \\(cv = 20\\), giving \\(c + v = 12\\), the answer. As a check, this does have integer solutions: \\((c, v) = (2, 10)\\) or \\((10, 2)\\).</p>",
+      "answer": "12"
+    },
+    "22": {
+      "problem": "<p>A <i>path</i> of length \\(n\\) is a sequence of points \\((x_1, y_1), (x_2, y_2), \\ldots, (x_n, y_n)\\) with integer coordinates such that for all \\(i\\) between 1 and \\(n-1\\) inclusive, either</p><p>(1) \\(x_{i+1} = x_i + 1\\) and \\(y_{i+1} = y_i\\) (in which case we say the \\(i\\)th step is <i>rightward</i>) or</p><p>(2) \\(x_{i+1} = x_i\\) and \\(y_{i+1} = y_i + 1\\) (in which case we say that the \\(i\\)th step is <i>upward</i>).</p><p>This path is said to <i>start</i> at \\((x_1, y_1)\\) and <i>end</i> at \\((x_n, y_n)\\). Let \\(P(a, b)\\), for \\(a\\) and \\(b\\) nonnegative integers, be the number of paths that start at \\((0, 0)\\) and end at \\((a, b)\\).</p><p>Find \\(\\sum_{i=0}^{10} P(i, 10-i)\\).</p>",
+      "solutions": "<p>\\(1024\\) This is just the number of paths of length 10. The \\(i\\)th step can be either upward or rightward, so there are \\(2^{10} = 1024\\) such paths.</p>",
+      "answer": "1024"
+    },
+    "23": {
+      "problem": "<p>Find \\(P(7, 3)\\).</p>",
+      "solutions": "<p>The number of paths that start at \\((0, 0)\\) and end at \\((n, m)\\) is \\(\\binom{n+m}{n}\\), since we must choose \\(n\\) of our \\(n+m\\) steps to be rightward steps. In this case, the answer is \\(120\\).</p>",
+      "answer": "120"
+    },
+    "24": {
+      "problem": "<p>A <i>restricted path</i> of length \\(n\\) is a path of length \\(n\\) such that for all \\(i\\) between 1 and \\(n-2\\) inclusive, if the \\(i\\)th step is upward, the \\(i+1\\)st step must be rightward.</p><p>Find the number of restricted paths that start at \\((0, 0)\\) and end at \\((7, 3)\\).</p>",
+      "solutions": "<p>This is equal to the number of lattice paths from \\((0, 0)\\) to \\((7, 3)\\) that use only rightward and diagonal (upward+rightward) steps plus the number of lattice paths from \\((0, 0)\\) to \\((7, 2)\\) that use only rightward and diagonal steps, which is equal to the number of paths (as defined above) from \\((0, 0)\\) to \\((4, 3)\\) plus the number of paths from \\((0, 0)\\) to \\((5, 2)\\), or \\(\\binom{4+3}{3} + \\binom{5+2}{2} = 56\\).</p>",
+      "answer": "56"
+    },
+    "25": {
+      "problem": "<p>A math professor stands up in front of a room containing 100 very smart math students and says, “Each of you has to write down an integer between 0 and 100, inclusive, to guess ‘two-thirds of the average of all the responses.’ Each student who guesses the highest integer that is not higher than two-thirds of the average of all responses will receive a prize.” If among all the students it is common knowledge that everyone will write down the best response, and there is no communication between students, what single integer should each of the 100 students write down?</p>",
+      "solutions": "<p>Since the average cannot be greater than 100, no student will write down a number greater than \\(\\frac{2}{3} \\cdot 100\\). But then the average cannot be greater than \\(\\frac{2}{3} \\cdot 100\\), and, realizing this, each student will write down a number no greater than \\((\\frac{2}{3})^2 \\cdot 100\\). Continuing in this manner, we eventually see that no student will write down an integer greater than \\(0\\), so this is the answer.</p>",
+      "answer": "0"
+    },
+    "26": {
+      "problem": "<p>Another professor enters the same room and says, “Each of you has to write down an integer between 0 and 200. I will then compute \\(X\\), the number that is 3 greater than half the average of all the numbers that you will have written down. Each student who writes down the number closest to \\(X\\) (either above or below \\(X\\)) will receive a prize.” One student, who misunderstood the question, announces to the class that he will write the number 107. If among the other 99 students it is common knowledge that all 99 of them will write down the best response, and there is no further communication between students, what single integer should each of the 99 students write down?</p>",
+      "solutions": "<p>Use the same logic to get \\(7\\). Note 6 and 8 do not work.</p>",
+      "answer": "7"
+    },
+    "27": {
+      "problem": "<p>Consider the two hands of an analog clock, each of which moves with constant angular velocity. Certain positions of these hands are possible (e.g. the hour hand halfway between the 5 and 6 and the minute hand exactly at the 6), while others are impossible (e.g. the hour hand exactly at the 5 and the minute hand exactly at the 6). How many different positions are there that would remain possible if the hour and minute hands were switched?</p>",
+      "solutions": "<p>\\(143\\) We can look at the twelve-hour cycle beginning at midnight and ending just before noon, since during this time, the clock goes through each possible position exactly once. The minute hand has twelve times the angular velocity of the hour hand, so if the hour hand has made \\(t\\) revolutions from its initial position (\\(0 \\le t &lt; 1\\)), the minute hand has made \\(12t\\) revolutions. If the hour hand were to have made \\(12t\\) revolutions, the minute hand would have made \\(144t\\) revolutions. So we get a valid configuration by reversing the hands precisely when \\(144t\\) revolutions land the hour hand in the same place as \\(t\\) revolutions — i.e. when \\(143t = 144t - t\\) is an integer, which clearly occurs for exactly 143 values of \\(t\\) corresponding to distinct positions on the clock (\\(144 - 1 = 143\\)).</p>",
+      "answer": "143"
+    },
+    "28": {
+      "problem": "<p>Count how many 8-digit numbers there are that contain exactly four nines as digits.</p>",
+      "solutions": "<p>There are \\(\\binom{8}{4} \\cdot 9^4\\) sequences of 8 numbers with exactly four nines. A sequence of digits of length 8 is not an 8-digit number, however, if and only if the first digit is zero. There are \\(\\binom{7}{4} 9^3\\) 8-digit sequences that are not 8-digit numbers. The answer is thus \\(\\binom{8}{4} \\cdot 9^4 - \\binom{7}{4} 9^3 = 433755\\).</p>",
+      "answer": "433755"
+    },
+    "29": {
+      "problem": "<p>A sequence \\(s_0, s_1, s_2, s_3, \\ldots\\) is defined by \\(s_0 = s_1 = 1\\) and, for every positive integer \\(n\\), \\(s_{2n} = s_n\\), \\(s_{4n+1} = s_{2n+1}\\), \\(s_{4n-1} = s_{2n-1} + s_{2n-1}^2/s_{n-1}\\). What is the value of \\(s_{1000}\\)?</p>",
+      "solutions": "<p>\\(720\\) Some experimentation with small values may suggest that \\(s_n = k!\\), where \\(k\\) is the number of ones in the binary representation of \\(n\\), and this formula is in fact provable by a straightforward induction. Since \\(1000_{10} = 1111101000_2\\), with six ones, \\(s_{1000} = 6! = 720\\).</p>",
+      "answer": "720"
+    },
+    "30": {
+      "problem": "<p>A conical flask contains some water. When the flask is oriented so that its base is horizontal and lies at the bottom (so that the vertex is at the top), the water is 1 inch deep. When the flask is turned upside-down, so that the vertex is at the bottom, the water is 2 inches deep. What is the height of the cone?</p>",
+      "solutions": "<p>\\(\\boxed{\\frac{1}{2} + \\frac{\\sqrt{93}}{6}}\\) Let \\(h\\) be the height, and let \\(V\\) be such that \\(Vh^3\\) equals the volume of the flask. When the base is at the bottom, the portion of the flask not occupied by water forms a cone similar to the entire flask, with a height of \\(h-1\\); thus its volume is \\(V(h-1)^3\\). When the base is at the top, the water occupies a cone with a height of 2, so its volume is \\(V \\cdot 2^3\\). Since the water’s volume does not change,</p><p>\\[Vh^3 - V(h-1)^3 = 8V\\]</p><p>\\[\\Rightarrow 3h^2 - 3h + 1 = h^3 - (h-1)^3 = 8\\]</p><p>\\[\\Rightarrow 3h^2 - 3h - 7 = 0.\\]</p><p>Solving via the quadratic formula and taking the positive root gives \\(h = \\frac{1}{2} + \\frac{\\sqrt{93}}{6}\\).</p>",
+      "answer": "\\frac{1}{2} + \\frac{\\sqrt{93}}{6}"
+    },
+    "31": {
+      "problem": "<p>Express, as concisely as possible, the value of the product</p><p>\\[(0^3-350)(1^3-349)(2^3-348)(3^3-347)\\cdots(349^3-1)(350^3-0).\\]</p>",
+      "solutions": "<p>\\(\\boxed{0}\\) One of the factors is \\(7^3 - 343 = 0\\), so the whole product is zero.</p>",
+      "answer": "0"
+    },
+    "32": {
+      "problem": "<p>Two circles have radii 13 and 30, and their centers are 41 units apart. The line through the centers of the two circles intersects the smaller circle at two points; let \\(A\\) be the one outside the larger circle. Suppose \\(B\\) is a point on the smaller circle and \\(C\\) a point on the larger circle such that \\(B\\) is the midpoint of \\(AC\\). Compute the distance \\(AC\\).</p>",
+      "solutions": "<p>\\(\\boxed{12\\sqrt{13}}\\) Call the large circle’s center \\(O_1\\). Scale the small circle by a factor of 2 about \\(A\\); we obtain a new circle whose center \\(O_2\\) is at a distance of \\(41-13=28\\) from \\(O_1\\), and whose radius is 26. Also, the dilation sends \\(B\\) to \\(C\\), which thus lies on circles \\(O_1\\) and \\(O_2\\). So points \\(O_1, O_2, C\\) form a 26-28-30 triangle. Let \\(H\\) be the foot of the altitude from \\(C\\) to \\(O_1O_2\\); we have \\(CH=24\\) and \\(HO_2=10\\). Thus, \\(HA=36\\), and \\(AC=\\sqrt{24^2+36^2}=12\\sqrt{13}\\).</p>",
+      "answer": "12\\sqrt{13}"
+    },
+    "33": {
+      "problem": "<p>The expression \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x\\). Find the value of</p><p>\\[\\left\\lfloor \\frac{2002!}{2001! + 2000! + 1999! + \\cdots + 1!} \\right\\rfloor.\\]</p>",
+      "solutions": "<p>\\(\\boxed{2000}\\) We break up \\(2002! = 2002(2001)!\\) as</p><p>\\[2000(2001!) + 2\\cdot 2001(2000!) = 2000(2001!) + 2000(2000!) + 2002\\cdot 2000(1999!)\\]</p><p>\\[&gt; 2000(2001! + 2000! + 1999! + \\cdots + 1!).\\]</p><p>On the other hand,</p><p>\\[2001(2001! + 2000! + \\cdots + 1!) &gt; 2001(2001! + 2000!) = 2001(2001!) + 2001! = 2002!.\\]</p><p>Thus we have \\(2000 &lt; 2002!/(2001! + \\cdots + 1!) &lt; 2001\\), so the answer is 2000.</p>",
+      "answer": "2000"
+    },
+    "34": {
+      "problem": "<p>Points \\(P\\) and \\(Q\\) are 3 units apart. A circle centered at \\(P\\) with a radius of \\(\\sqrt{3}\\) units intersects a circle centered at \\(Q\\) with a radius of 3 units at points \\(A\\) and \\(B\\). Find the area of quadrilateral \\(APBQ\\).</p>",
+      "solutions": "<p>The area is twice the area of triangle \\(APQ\\), which is isosceles with side lengths \\(3, 3, \\sqrt{3}\\). By Pythagoras, the altitude to the base has length \\(\\sqrt{3^2-(\\sqrt{3}/2)^2} = \\sqrt{33}/2\\), so the triangle has area \\(\\frac{\\sqrt{99}}{4}\\). Double this to get \\(\\boxed{\\frac{3\\sqrt{11}}{2}}\\).</p>",
+      "answer": "\\frac{3\\sqrt{11}}{2}"
+    },
+    "35": {
+      "problem": "<p>Suppose \\(a,b,c,d\\) are real numbers such that</p><p>\\[|a-b|+|c-d|=99; \\qquad |a-c|+|b-d|=1.\\]</p><p>Determine all possible values of \\(|a-d|+|b-c|\\).</p>",
+      "solutions": "<p>\\(\\boxed{99}\\) If \\(w\\ge x\\ge y\\ge z\\) are four arbitrary real numbers, then \\(|w-z|+|x-y| = |w-y|+|x-z| = w+x-y-z \\ge w-x+y-z = |w-x|+|y-z|\\). Thus, in our case, two of the three numbers \\(|a-b|+|c-d|, |a-c|+|b-d|, |a-d|+|b-c|\\) are equal, and the third one is less than or equal to these two. Since we have a 99 and a 1, the third number must be 99.</p>",
+      "answer": "99"
+    },
+    "36": {
+      "problem": "<p>Find the set consisting of all real values of \\(x\\) such that the three numbers \\(2^x, 2^{x^2}, 2^{x^3}\\) form a non-constant arithmetic progression (in that order).</p>",
+      "solutions": "<p>The empty set, \\(\\boxed{\\emptyset}\\). Trivially, \\(x=0,1\\) yield constant arithmetic progressions; we show that there are no other possibilities. If these numbers do form a progression, then, by the AM-GM (arithmetic mean-geometric mean) inequality,</p><p>\\[2\\cdot 2^{x^2} = 2^x + 2^{x^3} \\ge 2\\sqrt{2^x \\cdot 2^{x^3}}\\]</p><p>\\[\\Rightarrow 2^{x^2} \\ge 2^{(x+x^3)/2} \\Rightarrow x^2 \\ge (x+x^3)/2\\]</p><p>\\[\\Rightarrow x(x-1)^2 = x^3-2x^2+x \\le 0.\\]</p><p>Assuming \\(x\\ne 0,1\\), we can divide by \\((x-1)^2&gt;0\\) and obtain \\(x&lt;0\\). However, then \\(2^x, 2^{x^3}\\) are less than 1, while \\(2^{x^2}\\) is more than 1, so the given sequence cannot possibly be an arithmetic progression.</p>",
+      "answer": "\\emptyset"
+    },
+    "37": {
+      "problem": "<p>Call a positive integer “mild” if its base-3 representation never contains the digit 2. How many values of \\(n\\) (\\(1\\le n\\le 1000\\)) have the property that \\(n\\) and \\(n^2\\) are both mild?</p>",
+      "solutions": "<p>\\(\\boxed{7}\\) Such a number, which must consist entirely of 0’s and 1’s in base 3, can never have more than one 1. Indeed, if \\(n=3^a+3^b+\\text{higher powers}\\) where \\(b&gt;a\\), then \\(n^2=3^{2a}+2\\cdot 3^{a+b}+\\text{higher powers}\\) which will not be mild. On the other hand, if \\(n\\) does just have one 1 in base 3, then clearly \\(n\\) and \\(n^2\\) are mild. So the values of \\(n\\le 1000\\) that work are \\(3^0,3^1,\\ldots,3^6\\); there are 7 of them.</p>",
+      "answer": "7"
+    },
+    "38": {
+      "problem": "<p>Massachusetts Avenue is ten blocks long. One boy and one girl live on each block. They want to form friendships such that each boy is friends with exactly one girl and vice-versa. Nobody wants a friend living more than one block away (but they may be on the same block). How many pairings are possible?</p>",
+      "solutions": "<p>\\(\\boxed{89}\\) Let \\(a_n\\) be the number of pairings if there are \\(n\\) blocks; we have \\(a_1=1, a_2=2\\), and we claim the Fibonacci recurrence is satisfied. Indeed, if there are \\(n\\) blocks, either the boy on block 1 is friends with the girl on block 1, leaving \\(a_{n-1}\\) possible pairings for the people on the remaining \\(n-1\\) blocks, or he is friends with the girl on block 2, in which case the girl on block 1 must be friends with the boy on block 2, and then there are \\(a_{n-2}\\) possibilities for the friendships among the remaining \\(n-2\\) blocks. So \\(a_n = a_{n-1}+a_{n-2}\\), and we compute: \\(a_3=3, a_4=5,\\ldots,a_{10}=89\\).</p>",
+      "answer": "89"
+    },
+    "39": {
+      "problem": "<p>In the \\(x\\)-\\(y\\) plane, draw a circle of radius 2 centered at \\((0,0)\\). Color the circle red above the line \\(y=1\\), color the circle blue below the line \\(y=-1\\), and color the rest of the circle white. Now consider an arbitrary straight line at distance 1 from the circle. We color each point \\(P\\) of the line with the color of the closest point to \\(P\\) on the circle. If we pick such an arbitrary line, randomly oriented, what is the probability that it contains red, white, and blue points?</p>",
+      "solutions": "<p>Let \\(O=(0,0), P=(1,0)\\), and \\(H\\) the foot of the perpendicular from \\(O\\) to the line. If \\(\\angle POH\\) (as measured counterclockwise) lies between \\(\\pi/3\\) and \\(2\\pi/3\\), the line will fail to contain blue points; if it lies between \\(4\\pi/3\\) and \\(5\\pi/3\\), the line will fail to contain red points. Otherwise, it has points of every color. Thus, the answer is \\(1 - \\frac{2\\pi}{3}/2\\pi = \\boxed{\\frac{2}{3}}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "40": {
+      "problem": "<p>Find the volume of the three-dimensional solid given by the inequality \\(\\sqrt{x^2+y^2}+|z|\\le 1\\).</p>",
+      "solutions": "<p>\\(\\boxed{\\frac{2\\pi}{3}}\\) The solid consists of two cones, one whose base is the circle \\(x^2+y^2=1\\) in the \\(xy\\)-plane and whose vertex is \\((0,0,1)\\), and the other with the same base but vertex \\((0,0,-1)\\). Each cone has a base area of \\(\\pi\\) and a height of 1, for a volume of \\(\\pi/3\\), so the answer is \\(2\\pi/3\\).</p>",
+      "answer": "\\frac{2\\pi}{3}"
+    },
+    "41": {
+      "problem": "<p>For any integer \\(n\\), define \\(\\lfloor n \\rfloor\\) as the greatest integer less than or equal to \\(n\\). For any positive integer \\(n\\), let</p><p>\\[f(n) = \\lfloor n \\rfloor + \\left\\lfloor \\frac{n}{2} \\right\\rfloor + \\left\\lfloor \\frac{n}{3} \\right\\rfloor + \\cdots + \\left\\lfloor \\frac{n}{n} \\right\\rfloor.\\]</p><p>For how many values of \\(n, 1\\le n\\le 100\\), is \\(f(n)\\) odd?</p>",
+      "solutions": "<p>\\(\\boxed{55}\\) Notice that, for fixed \\(a\\), \\(\\lfloor n/a \\rfloor\\) counts the number of integers \\(b\\in\\{1,2,\\ldots,n\\}\\) which are divisible by \\(a\\); hence, \\(f(n)\\) counts the number of pairs \\((a,b), a,b\\in\\{1,2,\\ldots,n\\}\\) with \\(b\\) divisible by \\(a\\). For any fixed \\(b\\), the number of such pairs is \\(d(b)\\) (the number of divisors of \\(b\\)), so the total number of pairs \\(f(n)\\) equals \\(d(1)+d(2)+\\cdots+d(n)\\). But \\(d(b)\\) is odd precisely when \\(b\\) is a square, so \\(f(n)\\) is odd precisely when there are an odd number of squares in \\(\\{1,2,\\ldots,n\\}\\). This happens for \\(1\\le n&lt;4; 9\\le n&lt;16; \\ldots; 81\\le n&lt;100\\). Adding these up gives 55 values of \\(n\\).</p>",
+      "answer": "55"
+    },
+    "42": {
+      "problem": "<p>Find all the integers \\(n &gt; 1\\) with the following property: the numbers \\(1, 2, \\ldots, n\\) can be arranged in a line so that, of any two adjacent numbers, one is divisible by the other.</p>",
+      "solutions": "<p>The values \\(n = 2, 3, 4, 6\\) work, as shown by respective examples \\(1, 2\\); \\(2, 1, 3\\); \\(2, 4, 1, 3\\); \\(3, 6, 2, 4, 1, 5\\). We shall show that there are no other possibilities. If \\(n = 2k+1\\) is odd, then none of the numbers \\(k+1, k+2, \\ldots, 2k+1\\) can divide any other, so no two of these numbers are adjacent. This is only possible if they occupy the 1st, 3rd, \\(\\ldots\\), \\((2k+1)\\)th positions in the line, which means every number \\(\\le k\\) is adjacent to two of these and hence divides two of them. But \\(k\\) only divides one of these numbers when \\(k \\ge 2\\). Thus no odd \\(n \\ge 5\\) works. If \\(n = 2k\\) is even, the numbers \\(k+1, k+2, \\ldots, 2k\\) again must be mutually nonadjacent, but now this means we can have up to two numbers \\(\\le k\\) each of which is adjacent to only one number \\(&gt; k\\), and if there are two such numbers, they must be adjacent. If \\(k \\ge 4\\), then each of \\(k-1, k\\) divides only one of the numbers \\(k+1, \\ldots, 2k\\), so \\(k-1, k\\) must be adjacent, but this is impossible. Thus no even \\(n \\ge 8\\) works, and we are done.</p>",
+      "answer": "2, 3, 4, 6"
+    },
+    "43": {
+      "problem": "<p>Given that \\(a, b, c\\) are positive integers satisfying \\[a+b+c = \\gcd(a,b) + \\gcd(b,c) + \\gcd(c,a) + 120,\\]</p><p>determine the maximum possible value of \\(a\\).</p>",
+      "solutions": "<p>Notice that \\((a,b,c) = (240, 120, 120)\\) achieves a value of \\(240\\). To see that this is maximal, first suppose that \\(a &gt; b\\). Notice that \\(a+b+c = \\gcd(a,b)+\\gcd(b,c)+\\gcd(c,a)+120 \\le \\gcd(a,b)+b+c+120\\), or \\(a \\le \\gcd(a,b)+120\\). However, \\(\\gcd(a,b)\\) is a proper divisor of \\(a\\), so \\(a \\ge 2\\cdot\\gcd(a,b)\\). Thus, \\(a-120 \\le \\gcd(a,b) \\le a/2\\), yielding \\(a \\le 240\\). Now, if instead \\(a \\le b\\), then either \\(b &gt; c\\) and the same logic shows that \\(b \\le 240 \\Rightarrow a \\le 240\\), or \\(b \\le c, c &gt; a\\) (since \\(a,b,c\\) cannot all be equal) and then \\(c \\le 240 \\Rightarrow a \\le b \\le c \\le 240\\).</p>",
+      "answer": "240"
+    },
+    "44": {
+      "problem": "<p>The unknown real numbers \\(x, y, z\\) satisfy the equations \\[\\frac{x+y}{1+z} = \\frac{1-z+z^2}{x^2-xy+y^2}; \\qquad \\frac{x-y}{3-z} = \\frac{9+3z+z^2}{x^2+xy+y^2}.\\]</p><p>Find \\(x\\).</p>",
+      "solutions": "<p>Cross-multiplying in both equations, we get, respectively, \\(x^3+y^3 = 1+z^3\\), \\(x^3-y^3=27-z^3\\). Now adding gives \\(2x^3 = 28\\), or \\(x = \\sqrt[3]{14}\\).</p>",
+      "answer": "\\sqrt[3]{14}"
+    },
+    "45": {
+      "problem": "<p>Find the number of sequences \\(a_1, a_2, \\ldots, a_{10}\\) of positive integers with the property that \\(a_{n+2} = a_{n+1} + a_n\\) for \\(n = 1, 2, \\ldots, 8\\), and \\(a_{10} = 2002\\).</p>",
+      "solutions": "<p>Let \\(a_1 = a, a_2 = b\\); we successively compute \\(a_3 = a+b\\); \\(a_4 = a+2b\\); \\(\\ldots\\); \\(a_{10} = 21a + 34b\\). The equation \\(2002 = 21a+34b\\) has three positive integer solutions, namely \\((84,7), (50,28), (16,49)\\), and each of these gives a unique sequence.</p>",
+      "answer": "3"
+    },
+    "46": {
+      "problem": "<p>Points \\(A, B, C\\) in the plane satisfy \\(\\overline{AB} = 2002, \\overline{AC} = 9999\\). The circles with diameters \\(AB\\) and \\(AC\\) intersect at \\(A\\) and \\(D\\). If \\(\\overline{AD} = 37\\), what is the shortest distance from point \\(A\\) to line \\(BC\\)?</p>",
+      "solutions": "<p>\\(\\angle ADB = \\angle ADC = \\pi/2\\) since \\(D\\) lies on the circles with \\(AB\\) and \\(AC\\) as diameters, so \\(D\\) is the foot of the perpendicular from \\(A\\) to line \\(BC\\), and the answer is the given \\(37\\).</p>",
+      "answer": "37"
+    },
+    "47": {
+      "problem": "<p>The real function \\(f\\) has the property that, whenever \\(a, b, n\\) are positive integers such that \\(a+b = 2^n\\), the equation \\(f(a)+f(b) = n^2\\) holds. What is \\(f(2002)\\)?</p>",
+      "solutions": "<p>We know \\(f(a) = n^2 - f(2^n - a)\\) for any \\(a, n\\) with \\(2^n &gt; a\\); repeated application gives</p><p>\\[\\begin{aligned}\nf(2002) &amp;= 11^2 - f(46) = 11^2 - (6^2 - f(18)) = 11^2 - (6^2 - (5^2 - f(14))) \\\\\n&amp;= 11^2 - (6^2 - (5^2 - (4^2 - f(2)))).\n\\end{aligned}\\]</p><p>But \\(f(2) = 2^2 - f(2)\\), giving \\(f(2) = 2\\), so the above simplifies to \\(11^2 - (6^2 - (5^2 - (4^2-2))) = 96\\).</p>",
+      "answer": "96"
+    },
+    "48": {
+      "problem": "<p>A <i>permutation</i> of a finite set is a one-to-one function from the set to itself; for instance, one permutation of \\(\\{1,2,3,4\\}\\) is the function \\(\\pi\\) defined such that \\(\\pi(1)=1, \\pi(2)=3, \\pi(3)=4\\), and \\(\\pi(4)=2\\). How many permutations \\(\\pi\\) of the set \\(\\{1,2,\\ldots,10\\}\\) have the property that \\(\\pi(i) \\ne i\\) for each \\(i = 1, 2, \\ldots, 10\\), but \\(\\pi(\\pi(i)) = i\\) for each \\(i\\)?</p>",
+      "solutions": "<p>For each such \\(\\pi\\), the elements of \\(\\{1,2,\\ldots,10\\}\\) can be arranged into pairs \\(\\{i,j\\}\\) such that \\(\\pi(i)=j\\); \\(\\pi(j)=i\\). Choosing a permutation \\(\\pi\\) is thus tantamount to choosing a partition of \\(\\{1,2,\\ldots,10\\}\\) into five disjoint pairs. There are \\(9\\) ways to pair off the number \\(1\\), then \\(7\\) ways to pair off the smallest number not yet paired, and so forth, so we have \\(9\\cdot7\\cdot5\\cdot3\\cdot1 = 945\\) partitions into pairs.</p>",
+      "answer": "945"
+    },
+    "49": {
+      "problem": "<p>Two integers are <i>relatively prime</i> if they don’t share any common factors, i.e. if their greatest common divisor is \\(1\\). Define \\(\\varphi(n)\\) as the number of positive integers that are less than \\(n\\) and relatively prime to \\(n\\). Define \\(\\varphi_d(n)\\) as the number of positive integers that are less than \\(dn\\) and relatively prime to \\(n\\).</p><p>What is the least \\(n\\) such that \\(\\varphi_x(n) = 64000\\), where \\(x = \\varphi_y(n)\\), where \\(y = \\varphi(n)\\)?</p>",
+      "solutions": "<p>For fixed \\(n\\), the pattern of integers relatively prime to \\(n\\) repeats every \\(n\\) integers, so \\(\\varphi_d(n) = d\\varphi(n)\\). Therefore the expression in the problem equals \\(\\varphi(n)^3\\). The cube root of \\(64000\\) is \\(40\\). \\(\\varphi(p) = p-1\\) for any prime \\(p\\). Since \\(40\\) is one less than a prime, the least \\(n\\) such that \\(\\varphi(n) = 40\\) is \\(41\\).</p>",
+      "answer": "41"
+    },
+    "50": {
+      "problem": "<p>Give the set of all positive integers \\(n\\) such that \\(\\varphi(n) = 2002^2 - 1\\).</p>",
+      "solutions": "<p>The empty set, \\(\\emptyset\\). If \\(m\\) is relatively prime to \\(n\\) and \\(m &lt; n\\), then \\(n - m\\) must likewise be relatively prime to \\(n\\), and these are distinct for \\(n &gt; 2\\) since \\(n/2, n\\) are not relatively prime. Therefore, for all \\(n &gt; 2\\), \\(\\varphi(n)\\) must be even. \\(2002^2 - 1\\) is odd, and \\(\\varphi(2) = 1 \\ne 2002^2 - 1\\), so no numbers \\(n\\) fulfill the equation.</p>",
+      "answer": "\\emptyset"
+    },
+    "51": {
+      "problem": "<p>Define \\(\\varphi^k(n)\\) as the number of positive integers that are less than or equal to \\(n/k\\) and relatively prime to \\(n\\). Find \\(\\varphi^{2001}(2002^2 - 1)\\). (Hint: \\(\\varphi(2003) = 2002\\).)</p>",
+      "solutions": "<p>\\(\\varphi^{2001}(2002^2-1) = \\varphi^{2001}(2001\\cdot 2003) =\\) the number of \\(m\\) that are relatively prime to both \\(2001\\) and \\(2003\\), where \\(m \\le 2003\\). Since \\(\\varphi(n) = n-1\\) implies that \\(n\\) is prime, we must only check for those \\(m\\) relatively prime to \\(2001\\), except for \\(2002\\), which is relatively prime to \\(2002^2-1\\). So \\(\\varphi^{2001}(2002^2-1) = \\varphi(2001)+1 = \\varphi(3\\cdot23\\cdot29)+1 = (3-1)(23-1)(29-1)+1 = 1233\\).</p>",
+      "answer": "1233"
+    },
+    "52": {
+      "problem": "<p>Let \\(ABCD\\) be a quadrilateral, and let \\(E, F, G, H\\) be the respective midpoints of \\(AB, BC, CD, DA\\). If \\(EG = 12\\) and \\(FH = 15\\), what is the maximum possible area of \\(ABCD\\)?</p>",
+      "solutions": "<p>The area of \\(EFGH\\) is \\(EG \\cdot FH \\sin\\theta / 2\\), where \\(\\theta\\) is the angle between \\(EG\\) and \\(FH\\). This is at most \\(90\\). However, we claim the area of \\(ABCD\\) is twice that of \\(EFGH\\). To see this, notice that \\(EF = AC/2 = GH\\), \\(FG = BD/2 = HE\\), so \\(EFGH\\) is a parallelogram. The half of this parallelogram lying inside triangle \\(DAB\\) has area \\((BD/2)(h/2)\\), where \\(h\\) is the height from \\(A\\) to \\(BD\\), and triangle \\(DAB\\) itself has area \\(BD \\cdot h/2 = 2\\cdot(BD/2)(h/2)\\). A similar computation holds in triangle \\(BCD\\), proving the claim. Thus, the area of \\(ABCD\\) is at most \\(180\\). And this maximum is attainable — just take a rectangle with \\(AB = CD = 15, BC = DA = 12\\).</p>",
+      "answer": "180"
+    },
+    "53": {
+      "problem": "<p>\\(ABC\\) is a triangle with points \\(E, F\\) on sides \\(AC, AB\\), respectively. Suppose that \\(BE, CF\\) intersect at \\(X\\). It is given that \\(AF/FB = (AE/EC)^2\\) and that \\(X\\) is the midpoint of \\(BE\\). Find the ratio \\(CX/XF\\).</p>",
+      "solutions": "<p>Let \\(x = AE/EC\\). By Menelaus’s theorem applied to triangle \\(ABE\\) and line \\(CXF\\),</p><p>\\[1 = \\frac{AF}{FB}\\cdot\\frac{BX}{XE}\\cdot\\frac{EC}{CA} = \\frac{x^2}{x+1}.\\]</p><p>Thus, \\(x^2 = x+1\\), and \\(x\\) must be positive, so \\(x = (1+\\sqrt5)/2\\). Now apply Menelaus to triangle \\(ACF\\) and line \\(BXE\\), obtaining</p><p>\\[1 = \\frac{AE}{EC}\\cdot\\frac{CX}{XF}\\cdot\\frac{FB}{BA} = \\frac{CX}{XF}\\cdot\\frac{x}{x^2+1},\\]</p><p>so \\(CX/XF = (x^2+1)/x = (2x^2-x)/x = 2x-1 = \\sqrt5\\).</p>",
+      "answer": "\\sqrt{5}"
+    },
+    "54": {
+      "problem": "<p>How many pairs of integers \\((a,b)\\), with \\(1 \\le a \\le b \\le 60\\), have the property that \\(b\\) is divisible by \\(a\\) and \\(b+1\\) is divisible by \\(a+1\\)?</p>",
+      "solutions": "<p>The divisibility condition is equivalent to \\(b - a\\) being divisible by both \\(a\\) and \\(a+1\\), or, equivalently (since these are relatively prime), by \\(a(a+1)\\). Any \\(b\\) satisfying the condition is automatically \\(\\ge a\\), so it suffices to count the number of values \\(b - a \\in \\{1-a, 2-a, \\ldots, 60-a\\}\\) that are divisible by \\(a(a+1)\\) and sum over all \\(a\\). The number of such values will be precisely \\(60/[a(a+1)]\\) whenever this quantity is an integer, which fortunately happens for every \\(a \\le 5\\); we count:</p><p>\\(a=1\\) gives 30 values of \\(b\\);</p><p>\\(a=2\\) gives 10 values of \\(b\\);</p><p>\\(a=3\\) gives 5 values of \\(b\\);</p><p>\\(a=4\\) gives 3 values of \\(b\\);</p><p>\\(a=5\\) gives 2 values of \\(b\\);</p><p>\\(a=6\\) gives 2 values (\\(b=6\\) or \\(48\\));</p><p>any \\(a \\ge 7\\) gives only one value, namely \\(b=a\\), since \\(b&gt;a\\) implies \\(b \\ge a + a(a+1) &gt; 60\\).</p><p>Adding these up, we get a total of \\(\\boxed{106}\\) pairs.</p>",
+      "answer": "106"
+    },
+    "55": {
+      "problem": "<p>A sequence of positive integers is given by \\(a_1 = 1\\) and \\(a_n = \\gcd(a_{n-1}, n) + 1\\) for \\(n &gt; 1\\). Calculate \\(a_{2002}\\).</p>",
+      "solutions": "<p>\\(\\boxed{3}\\). It is readily seen by induction that \\(a_n \\le n\\) for all \\(n\\). On the other hand, \\(a_{1999}\\) is one greater than a divisor of \\(1999\\). Since \\(1999\\) is prime, we have \\(a_{1999} = 2\\) or \\(2000\\); the latter is not possible since \\(2000 &gt; 1999\\), so we have \\(a_{1999} = 2\\). Now we straightforwardly compute \\(a_{2000} = 3\\), \\(a_{2001} = 4\\), and \\(a_{2002} = 3\\).</p>",
+      "answer": "3"
+    },
+    "56": {
+      "problem": "<p>\\(x, y\\) are positive real numbers such that \\(x + y^2 = xy\\). What is the smallest possible value of \\(x\\)?</p>",
+      "solutions": "<p>\\(\\boxed{4}\\) Notice that \\(x = y^2/(y-1) = 2 + (y-1) + 1/(y-1) \\ge 2 + 2 = 4\\). Conversely, \\(x = 4\\) is achievable, by taking \\(y = 2\\).</p>",
+      "answer": "4"
+    },
+    "57": {
+      "problem": "<p>How many ways, without taking order into consideration, can 2002 be expressed as the sum of 3 positive integers (for instance, \\(1000 + 1000 + 2\\) and \\(1000 + 2 + 1000\\) are considered to be the same way)?</p>",
+      "solutions": "<p>Call the three numbers that sum to 2002 \\(A\\), \\(B\\), and \\(C\\). In order to prevent redundancy, we will consider only cases where \\(A \\le B \\le C\\). Then \\(A\\) can range from 1 to 667, inclusive. For odd \\(A\\), there are \\(1000 - \\frac{3(A-1)}{2}\\) possible values for \\(B\\). For each choice of \\(A\\) and \\(B\\), there can only be one possible \\(C\\), since the three numbers must add up to a fixed value. We can add up this arithmetic progression to find that there are 167167 possible combinations of \\(A, B, C\\), for odd \\(A\\). For each even \\(A\\), there are \\(1002 - \\frac{3A}{2}\\) possible values for \\(B\\). Therefore, there are 166833 possible combinations for even \\(A\\). In total, this makes \\(\\boxed{334000}\\) possibilities.</p>",
+      "answer": "334000"
+    },
+    "58": {
+      "problem": "<p>A sequence is defined by \\(a_0 = 1\\) and \\(a_n = 2^{a_{n-1}}\\) for \\(n \\ge 1\\). What is the last digit (in base 10) of \\(a_{15}\\)?</p>",
+      "solutions": "<p>Certainly \\(a_{13} \\ge 2\\), so \\(a_{14}\\) is divisible by \\(2^2 = 4\\). Writing \\(a_{14} = 4k\\), we have \\(a_{15} = 2^{4k} = 16^k\\). But every power of 16 ends in 6, so this is the answer.</p>",
+      "answer": "6"
+    },
+    "59": {
+      "problem": "<p>Determine the value of \\[1 \\cdot 2 - 2 \\cdot 3 + 3 \\cdot 4 - 4 \\cdot 5 + \\cdots + 2001 \\cdot 2002.\\]</p>",
+      "solutions": "<p>\\(\\boxed{2004002}\\). Rewrite the expression as \\[2 + 3 \\cdot (4-2) + 5 \\cdot (6-4) + \\cdots + 2001 \\cdot (2002-2000)\\] \\[= 2 + 6 + 10 + \\cdots + 4002.\\] This is an arithmetic progression with \\((4002-2)/4 + 1 = 1001\\) terms and average 2002, so its sum is \\(1001 \\cdot 2002 = 2004002\\).</p>",
+      "answer": "2004002"
+    },
+    "60": {
+      "problem": "<p>A \\(5 \\times 5\\) square grid has the number \\(-3\\) written in the upper-left square and the number \\(3\\) written in the lower-right square. In how many ways can the remaining squares be filled in with integers so that any two adjacent numbers differ by 1, where two squares are adjacent if they share a common edge (but not if they share only a corner)?</p>",
+      "solutions": "<p>\\(\\boxed{250}\\) If the square in row \\(i\\), column \\(j\\) contains the number \\(k\\), let its “index” be \\(i+j-k\\). The constraint on adjacent squares now says that if a square has index \\(r\\), the squares to its right and below it each have index \\(r\\) or \\(r+2\\). The upper-left square has index 5, and the lower-right square has index 7, so every square must have index 5 or 7. The boundary separating the two types of squares is a path consisting of upward and rightward steps; it can be extended along the grid’s border so as to obtain a path between the lower-left and upper-right corners. Conversely, any such path uniquely determines each square’s index and hence the entire array of numbers — except that the two paths lying entirely along the border of the grid fail to separate the upper-left from the lower-right square and thus do not create valid arrays (since these two squares should have different indices). Each path consists of 5 upward and 5 rightward steps, so there are \\(\\binom{10}{5} = 252\\) paths, but two are impossible, so the answer is 250.</p>",
+      "answer": "250"
+    }
+  }
+}

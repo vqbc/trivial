@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Algebra B",
+  "year": 2016,
+  "name": "Algebra B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2016_AlgebraB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(x\\) is a positive real number such that \\((x^2-1)^2 - 1 = 9800\\), compute \\(x\\).</p>",
+      "solutions": "<p>We have \\((x^2-1)^2 = 9801\\), so \\(x^2 - 1 = \\pm 99\\). But \\(x^2\\) cannot be negative, so \\(x^2 = 99 + 1 = 100\\). Since \\(x\\) is positive, we have \\(x = 10\\).</p>",
+      "answer": "10"
+    },
+    "2": {
+      "problem": "<p>Let \\(a_1 = 20\\), \\(a_2 = 16\\), and for \\(k \\ge 3\\), let \\(a_k = \\sqrt[3]{k - a_{k-1}^3 - a_{k-2}^3}\\). Compute \\(a_1^3 + a_2^3 + \\cdots + a_{10}^3\\).</p>",
+      "solutions": "<p>We have \\(a_2^3 + a_3^3 + a_4^3 = 4\\), \\(a_5^3 + a_6^3 + a_7^3 = 7\\), \\(a_8^3 + a_9^3 + a_{10}^3 = 10\\), and \\(a_1^3 = 8000\\). Thus, the answer is \\(8021\\).</p>",
+      "answer": "8021"
+    },
+    "3": {
+      "problem": "<p>Bob draws the graph of \\(y = x^3 - 13x^2 + 40x + 25\\) and is dismayed to find out that it only has one root. Alice comes to the rescue, translating (without rotating or dilating) the axes so that the origin is at the point that used to be \\((-20, 16)\\). This new graph has three \\(x\\)-intercepts; compute their sum.</p>",
+      "solutions": "<p>The translation of the axes is equivalent to translating the polynomial 20 to the right and 16 down. Thus, the new polynomial has the equation \\[y = (x-20)^3 - 13(x-20)^2 + 40(x-20) + 25 - 16.\\]</p><p>The sum of the roots of this polynomial is negative the coefficient of \\(x^2\\), which is \\(-3\\cdot 20 - 13 = -73\\). Thus, the answer is \\(73\\).</p><p>Alternatively, note that changing the constant coefficient does not change the sum of the roots, and then translating the polynomial 20 to the right increases the real part of each root by 20. Thus, the sum of the roots goes from 13 to \\(13+60=73\\).</p>",
+      "answer": "73"
+    },
+    "4": {
+      "problem": "<p>Let \\(f(x) = 15x - 2016\\). If \\(f(f(f(f(f(x))))) = f(x)\\), find the sum of all possible values of \\(x\\).</p>",
+      "solutions": "<p>Note that \\(f(f(f(f(f(x))))) = f(x)\\) is a linear equation in \\(x\\) and thus has one solution. If \\(f(x) = x\\) then clearly this equation is satisfied. Thus the solution is the solution to the equation \\(x = 15x - 2016\\), which is \\(144\\).</p>",
+      "answer": "144"
+    },
+    "5": {
+      "problem": "<p>For positive real numbers \\(x\\) and \\(y\\), let \\(f(x,y) = x^{\\log_2 y}\\). The sum of the solutions to the equation \\[4096f(f(x,x),x) = x^{13}\\] can be written in simplest form as \\(\\frac{m}{n}\\). Compute \\(m+n\\).</p>",
+      "solutions": "<p>We have \\[\\begin{aligned}\n4096f(f(x,x),x) &amp;= x^{13} \\\\\n4096\\left(x^{\\log_2 x}\\right)^{\\log_2 x} &amp;= x^{13} \\\\\n4096x^{(\\log_2 x)^2} &amp;= x^{13} \\\\\n4096x^{(\\log_2 x)^2 - 13} &amp;= 1 \\\\\n2^{(\\log_2 x)((\\log_2 x)^2-13)+12} &amp;= 2^0 \\\\\n(\\log_2 x)((\\log_2 x)^2-13)+12 &amp;= 0 \\\\\n(\\log_2 x)^3 - 13\\log_2 x + 12 &amp;= 0 \\\\\n(\\log_2 x - 1)(\\log_2 x - 3)(\\log_2 x + 4) &amp;= 0,\n\\end{aligned}\\] so \\(x\\) can be any of \\(2\\), \\(8\\), and \\(\\frac{1}{16}\\). Thus, the sum of all possible values of \\(x\\) is \\(\\frac{161}{16}\\), and so our answer is \\(161+16=177\\).</p>",
+      "answer": "177"
+    },
+    "6": {
+      "problem": "<p>Suppose that \\(P\\) is a polynomial with integer coefficients such that \\(P(1) = 2\\), \\(P(2) = 3\\) and \\(P(3) = 2016\\). If \\(N\\) is the smallest possible positive value of \\(P(2016)\\), find the remainder when \\(N\\) is divided by 2016.</p>",
+      "solutions": "<p>Using the well known result that \\(x_1 - x_2 \\mid P(x_1) - P(x_2)\\) we get that \\(N \\equiv 2 \\pmod{2015}\\), \\(N \\equiv 3 \\pmod{2014}\\) and \\(N \\equiv 3 \\pmod{2013}\\). Solving these equations gives \\(N \\equiv 3 + 1007 \\times 2013 \\times 2014 \\pmod{2013\\times 2014\\times 2015}\\). Thus \\(N = 3+1007\\times 2013\\times 2014\\) and \\(N \\equiv 3+1007\\times(-3)\\times(-2) \\equiv 2013 \\pmod{2016}\\). The polynomial \\(P(x) = (x-1)((x-2)(1006)+1)+2\\) satisfies all given conditions, so \\(2013\\) is the final answer.</p>",
+      "answer": "2013"
+    },
+    "7": {
+      "problem": "<p>Define a sequence \\(a_i\\) as follows: \\(a_1 = 181\\) and for \\(i \\ge 2\\), \\(a_i = a_{i-1}^2 - 1\\) if \\(a_{i-1}\\) is odd and \\(a_i = a_{i-1}/2\\) if \\(a_{i-1}\\) is even. Find the least \\(i\\) such that \\(a_i = 0\\).</p>",
+      "solutions": "<p>By a computation, \\(a_5 = 2^{12} - 1\\). If \\(a_i = 2^k - 1\\), then \\(a_{i+1} = (2^{k-1}-1)2^{k+1}\\), so \\(a_{i+k+2} = 2^{k-1} - 1\\). Eventually we get \\(a_{105} = 0\\). Thus the answer is \\(105\\).</p>",
+      "answer": "105"
+    },
+    "8": {
+      "problem": "<p>Let \\(S_P\\) be the set of all polynomials \\(P\\) with complex coefficients, such that \\(P(x^2) = P(x)P(x-1)\\) for all complex numbers \\(x\\). Suppose \\(P_0\\) is the polynomial in \\(S_P\\) of maximal degree such that \\(P_0(1) \\mid 2016\\). Find \\(P_0(10)\\).</p>",
+      "solutions": "<p>We first determine all solutions to the equation \\(P(x^2) = P(x)P(x-1)\\). Let \\(P(x) = \\prod(x-\\alpha_i)\\) where \\(\\alpha_i\\) are the roots of \\(P\\) (including multiplicity). Then \\(\\prod(x^2-\\alpha_i) = \\prod(x-\\alpha_i)\\prod(x-(\\alpha_i+1))\\). Thus, considering the sets of roots of both sides of this equation, we get \\(\\{\\pm\\sqrt{\\alpha_i}\\} = \\{\\alpha_i\\}\\cup\\{\\alpha_i+1\\}\\). Now we note that if \\(\\max|\\sqrt{\\alpha_i}| = M &gt; 1\\) then \\(\\max|\\alpha_i| = M^2 &gt; M\\), contradiction. Similarly, if \\(\\min|\\sqrt{\\alpha_i}| = N &lt; 1\\) then \\(\\min|\\alpha_i| = N^2 &lt; N\\), contradiction. (Unless \\(N = 0\\). But this is impossible, since the multiplicity of zero as a root on both sides of the equation cannot be equal.) Therefore all roots \\(\\alpha_i\\) must satisfy \\(|\\alpha_i| = |\\alpha_i+1| = 1\\), so \\(\\alpha_i = \\pm\\left(\\frac{-1+\\sqrt{3}i}{2}\\right)\\). Now counting the distinct roots, the two different roots must have the same multiplicity, so the solutions are \\(P(x) = (x^2+x+1)^n\\) for some positive integer \\(n\\), or \\(P(x) = 0\\) or \\(P(x) = 1\\) (constant solutions). It follows that \\(P_0(1) = 3^n\\), so \\(P_0(x) = (x^2+x+1)^2\\). Therefore \\(P_0(10) = 111^2 = 12321\\).</p>",
+      "answer": "12321"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "test": "SMT General",
+  "year": 2019,
+  "name": "General Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2019/general-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In a school there are 47 tenth graders and 36 twelfth graders. Of these students 25 of them are born in the winter and 26 of the twelfth graders are not born in the winter. How many tenth graders were not born in winter?</p>",
+      "solutions": "<p>We know that there are 36 twelfth graders of which 26 do not have winter birthdays. So, there are 10 twelfth graders with winter birthdays. As in total there are 25 students with winter birthdays, there are 15 tenth graders with winter birthdays. So, there are \\(47 - 15 = \\boxed{32}\\) tenth graders who were not born in the winter.</p>",
+      "answer": "32"
+    },
+    "2": {
+      "problem": "<p>Let \\(x = 1 - 3 + 5 - 7 + \\ldots - 99 + 101\\), and let \\(y = 2 - 4 + 6 - 8 + \\ldots - 100\\). Compute \\(y - x\\).</p>",
+      "solutions": "<p>Note that \\(2 - 1 = 1\\), \\(-4 - (-3) = -1\\), \\(6 - 5 = 1\\), \\(-8 - (-7) = -1\\), and so on. Adding up the differences, we find that they all cancel out except for the final 101. Hence, the difference is \\(\\boxed{-101}\\).</p>",
+      "answer": "-101"
+    },
+    "3": {
+      "problem": "<p>In your drawer you have 23 green socks, 12 red socks, 42 blue socks, and 39 yellow socks. It is too dark to tell them apart. How many socks must you pull out to guarantee that you will have a green pair and a red pair?</p>",
+      "solutions": "<p>In the worst case, you could draw all green, blue, and yellow socks before drawing a red pair. So, you would need at least \\(23 + 42 + 39 + 2 = \\boxed{106}\\) socks.</p>",
+      "answer": "106"
+    },
+    "4": {
+      "problem": "<p>The blue train heads north at 60 miles per hour from Blueville. The red train starts an hour later and heads south at 80 miles per hour from Redtown. If Redtown is 200 miles north of Blueville, what is the ratio of the distance the blue train travels to the distance the red train travels before the collision?</p>",
+      "solutions": "<p>We have the equation that if the trains travel for time \\(t\\) that \\(200 = 60t + 80(t-1) = 140t - 80\\). Hence, \\(t = \\frac{200+80}{140} = 2\\). Then the ratio of distances is \\(\\frac{60 \\cdot 2}{80 \\cdot (2-1)} = \\boxed{\\frac{3}{2}}\\).</p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "5": {
+      "problem": "<p>Maddy wants to create a 10 letter word with using only letters in her name. If she uses \\(m\\) M’s, \\(a\\) A’s, \\(d\\) D’s, and \\(y\\) Y’s where \\(m &gt; a &gt; d &gt; y &gt; 0\\), what is \\(m \\cdot a \\cdot d \\cdot d \\cdot y\\)?</p>",
+      "solutions": "<p>Note that since all of the numbers are larger than 0 and we have the strict inequality \\(m &gt; a &gt; d &gt; y &gt; 0\\), we can only have \\(m = 4, a = 3, d = 2, y = 1\\). So, \\(maddy = 4 \\cdot 3 \\cdot 2 \\cdot 2 \\cdot 1 = \\boxed{48}\\).</p>",
+      "answer": "48"
+    },
+    "6": {
+      "problem": "<p>Harry has a chocolate kiss (cone-shaped chocolate) with radius 2 inches and height 4 inches. If he bites off a cone at the top of the kiss of height 2 inches, what is the volume of the remaining kiss?</p>",
+      "solutions": "<p>Using the volume formula for a cone, the original kiss had volume \\[V = \\pi r^2 h / 3 = 16\\pi/3\\] Using similar triangles, we can see that the cone bitten off with height 2 inches had radius 1 inch. So, the part bitten off had volume \\[V_{bite} = \\pi (1)^2 (2) / 3 = 2\\pi/3\\] So, the remaining volume is \\(\\boxed{\\frac{14\\pi}{3}}\\).</p>",
+      "answer": "\\frac{14\\pi}{3}"
+    },
+    "7": {
+      "problem": "<p>Bob and Joe are running around a 500m track. Bob runs clockwise at 5 m/s and Joe runs counterclockwise at 10 m/s. They start at the same spot on the track and run for 10 minutes. How many times do they pass each other after they start running?</p>",
+      "solutions": "<p>Bob runs \\(5 \\cdot 60 \\cdot 10 = 3000\\)m, while Joe runs twice as much, 6000m. Because they run in opposite directions, they pass each other every time they run 500m combined. Thus, they pass each other \\((3000+6000)/500 = \\boxed{18}\\) times.</p>",
+      "answer": "18"
+    },
+    "8": {
+      "problem": "<p>4 people are sitting in a line. However, 2 people are best friends and must sit next to each other. How many possible ways can they sit?</p>",
+      "solutions": "<p>Since 2 people must sit next to each other, we can consider them as one person. Then there are 3 people, for a total of \\(3! = 6\\) ways to arrange them. But the 2 people can be ordered in \\(2! = 2\\) ways, for a total of \\(2 \\cdot 6 = \\boxed{12}\\) possible orderings.</p>",
+      "answer": "12"
+    },
+    "9": {
+      "problem": "<p>What is the remainder when \\(2019^{2019}\\) is divided by 7?</p>",
+      "solutions": "<p>Note that \\(2019 \\equiv 3 \\pmod 7\\). So, we have \\(2019^{2019} \\equiv 3^{2019} \\pmod 7\\). Then Fermat’s Little Theorem gives us that \\(3^a \\equiv 3^b \\pmod 7\\) if \\(a \\equiv b \\pmod 6\\). So, we find that \\(2019 \\equiv 3 \\pmod 6\\). Thus, \\(2019^{2019} \\equiv 27 \\equiv \\boxed{6} \\pmod 7\\).</p>",
+      "answer": "6"
+    },
+    "10": {
+      "problem": "<p>A rectangular soccer field has a diagonal of \\(29\\) and an area of \\(420\\). What is the perimeter of the field?</p>",
+      "solutions": "<p>If the field has width \\(w\\) and length \\(l\\), then \\(l^2 + w^2 = 841\\) and \\(lw = 420\\). So, we can calculate that \\(l^2 + w^2 + 2lw = 841 + 840 = 1681\\). Thus, we can calculate that \\(l + w = 41\\) and the perimeter is \\(\\boxed{82}\\).</p>",
+      "answer": "82"
+    },
+    "11": {
+      "problem": "<p>Let \\(n\\) be an integer such that \\(n^4 - 2n^3 - n^2 + 2n + 2\\) is a prime number. What is the sum of all possible \\(n\\)?</p>",
+      "solutions": "<p>We can see that this expression must be an even number since \\(n^4\\) and \\(n^2\\) are the same parity. The only even prime is \\(2\\). So we solve solutions to \\(n^4 - 2n^3 - n^2 + 2n = 0\\) and use Vieta to see the sum must be \\(\\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "12": {
+      "problem": "<p>A thief steals a watch and taunts the cop “an old man like you could never catch a kid like me!” 12 years later when the thief is caught, the thief and the cops ages sum to 72. At the time of the theft, the product of the thief and cops ages was a power of two. How old was the cop when he caught the thief?</p>",
+      "solutions": "<p><b>Solution 1.</b> Since the thief is a kid at the original crime and their ages multiply to a power of two, the thief was either \\(1, 2, 4, 8, 16\\). 12 years further, the thief would be \\(13, 14, 16, 20, 28\\), giving that the cop must have been \\(59, 58, 56, 52, 44\\) respectively. So at the original theft, the cop would have been \\(47, 46, 44, 40, 32\\). So, we can see that the combination \\((16, 32)\\) works. Hence, the cop was \\(\\boxed{44}\\) when he caught the thief.</p><p><b>Alternative solution.</b> We have that the thief’s age is \\(t\\), the cop is \\(c\\) at the time of the theft. Then \\(t + c = 72 - 2 \\times 12 = 48\\). Then \\(tc = 2^k\\) for some \\(k\\). We can see that the only combination here is \\(t = 16, c = 32\\).</p>",
+      "answer": "44"
+    },
+    "13": {
+      "problem": "<p>The number \\(N_b\\) is the number such that when written in base \\(b\\), it is \\(123\\). What is the smallest \\(b\\) such that \\(N_b\\) is a cube of a positive integer?</p>",
+      "solutions": "<p>If we write out base notation, \\(N_b = 123_b = b^2 + 2b + 3\\). Then we know from the base representation that \\(b \\ge 4\\), so we guess \\(b = 4\\). We see that \\(b^2 + 2b + 3 = 27\\) which is a perfect cube.</p>",
+      "answer": "4"
+    },
+    "14": {
+      "problem": "<p>A cat chases a mouse down on the \\(xy\\) plane. The cat starts at the origin and the mouse at \\((1, 0)\\). The mouse runs straight towards the mouse hole at \\((1, 3)\\). The cat runs towards the place at which it will catch the mouse. If the cat runs at 5 units/sec and the mouse at 3 units/sec, how far away from the hole was the mouse when it was caught?</p>",
+      "solutions": "<p>First we construct the right triangle with base \\(1\\), height \\(3t\\) and diagonal \\(5t\\) where \\(t\\) is the amount of time the chase has been happening. Solving, we see that \\(t = \\frac{1}{4}\\). Then the mouse was \\(3 - \\frac{3}{4} = \\boxed{\\frac{9}{4}}\\) units away when it was caught.</p>",
+      "answer": "\\frac{9}{4}"
+    },
+    "15": {
+      "problem": "<p>Find the number of two-digit positive integers that are divisible by the sum of their own digits.</p>",
+      "solutions": "<p>Let such a two-digit number be written \\(\\overline{ab}\\). Since \\((a+b) \\mid (10a+b)\\), \\((a+b) \\mid 9a\\).</p><p><b>Case 1:</b> if \\(3 \\nmid (a+b)\\), then \\((a+b) \\mid a\\). This means that \\(b = 0\\), and we have 6 numbers that satisfy the question: \\(10, 20, 40, 50, 70, 80\\).</p><p><b>Case 2:</b> if \\(3 \\mid (a+b)\\) but \\(9 \\nmid (a+b)\\), then \\((a+b) \\mid 3a\\). Observe that \\(1 \\le \\frac{3a}{a+b} \\le 3\\). Solving for the three cases where \\(\\frac{3a}{a+b}\\) equals to \\(1, 2, 3\\) yields \\((12, 24, 48)\\), \\((21, 42, 84)\\) and \\((30, 60)\\) as answers correspondingly.</p><p><b>Case 3:</b> if \\(9 \\mid (a+b)\\), then \\(a+b = 9\\) or \\(a+b = 18\\). If \\(a+b = 9\\), we have 9 numbers that satisfy the question: \\(18, 27, 36, 45, 54, 63, 72, 81, 90\\). If \\(a+b = 18\\), this means that \\(a = b = 9\\), which we will reject since 99 is not divisible by 18.</p><p>Thus, there are \\(\\boxed{23}\\) two-digit numbers that are divisible by the sum of their own digits.</p>",
+      "answer": "23"
+    },
+    "16": {
+      "problem": "<p>A hexagon of side length \\(\\sqrt{24}\\) and a circle share the same center. The total area of the regions that are inside the circle and outside the hexagon is equal to the total area of the regions that are outside the circle and inside the hexagon. What is the square of the radius of the circle?</p>",
+      "solutions": "<p>Since the area inside the circle and outside the hexagon is equal to the area inside the hexagon and outside the circle, the circle and hexagon must have the same area. Hence, we can calculate that \\[\\pi r^2 = \\frac{3\\sqrt{3}}{2} \\times 24 = 36\\sqrt{3}\\] So, the radius squared is \\(\\boxed{\\frac{36\\sqrt{3}}{\\pi}}\\).</p>",
+      "answer": "\\frac{36\\sqrt{3}}{\\pi}"
+    },
+    "17": {
+      "problem": "<p>Let \\(ABCD\\) be a square with points \\(X\\) and \\(Y\\) on \\(BC\\) and \\(CD\\) respectively. If \\(XY = 29\\), \\(CY = 21\\) and \\(BX = 15\\), what is \\(\\angle XAY\\) in degrees?</p>",
+      "solutions": "<p>By the Pythagorean Theorem, we find that \\(CX = 20\\), so the side length of the square is \\(35\\). Then \\(DY = 14\\).</p><p>Let \\(Z\\) be a point on ray \\(CB\\) past \\(B\\) such that \\(BZ = DY\\). Then \\(\\angle ABZ = \\angle ADY\\) and \\(AB = AD\\), so \\(\\triangle ADY \\cong \\triangle ABZ\\) by SAS congruency. It follows that \\(\\angle ZAY = \\angle BAD = 90^\\circ\\) and \\(AY = AZ\\). But \\(XY = 29 = BX + BZ = XZ\\) and \\(AX = AX\\), so \\(\\triangle AXY \\cong \\triangle AXZ\\) by SSS congruency. As a result, \\(\\angle XAY = \\angle XAZ\\). But \\(\\angle XAY + \\angle XAZ = \\angle ZAY = 90^\\circ\\), so \\(\\angle XAY = \\boxed{45^\\circ}\\).</p>",
+      "answer": "45^\\circ"
+    },
+    "18": {
+      "problem": "<p>Peter has 18 colored gumballs composed of 3 red, 4 blue, 5 yellow, and 6 green where same colored gumballs are indistinguishable. What is the probability that if he chooses four gumballs at random, the gumballs that he chooses consist of at least two colors and at most three colors?</p>",
+      "solutions": "<p>Utilizing complementary counting, find the probability of choosing only one color or four colors.</p><p>Number of ways to choose one color (only red, blue, yellow, or green): \\(0 + \\binom{4}{4} + \\binom{5}{4} + \\binom{6}{4} = 0 + 1 + 5 + 15 = 21\\)</p><p>Number of ways to choose four colors (red, blue, yellow and green): \\(3 \\times 4 \\times 5 \\times 6 = 360\\)</p><p>Total ways: \\(21 + 360 = 381\\)</p><p>The probability of choosing one or four colors: \\(\\frac{381}{\\binom{18}{4}} = \\frac{3 \\times 127}{(18 \\times 17 \\times 16 \\times 15)/(4 \\times 3 \\times 2 \\times 1)} = \\frac{3 \\times 127}{6 \\times 17 \\times 2 \\times 15} = \\frac{127}{1020}\\)</p><p>Thus, the desired probability is \\(1 - \\frac{127}{1020} = \\boxed{\\frac{893}{1020}}\\).</p>",
+      "answer": "\\frac{893}{1020}"
+    },
+    "19": {
+      "problem": "<p>How many rational numbers can be written in the form \\(\\frac{a}{b}\\) such that \\(a\\) and \\(b\\) are relatively prime positive integers and the product of \\(a\\) and \\(b\\) is \\((25!)\\)?</p>",
+      "solutions": "<p>From \\(\\gcd(a,b)=1\\), we note that for each prime \\(p\\) dividing \\(25!\\), either \\(p \\mid a\\) or \\(p \\mid b\\). As a result, for each prime \\(p\\) dividing \\(25!\\), we have two ways to choose which of \\(a\\) or \\(b\\) it divides. Since there are nine primes less than 25, the answer is \\(2^9 = \\boxed{512}\\).</p>",
+      "answer": "512"
+    },
+    "20": {
+      "problem": "<p>In Smashville, there is one main straight highway running east-west between a gas station and a lake. Gina is driving along a scenic path that crosses the highway three times and can be described by a cubic polynomial. The crossings are respectively 1, 3, and 6 miles east down the highway from gas station. The distance between the scenic path and the highway is 18 miles when the path is directly south of the gas station. How far away from the gas station is Gina when she is 8 miles to its east?</p>",
+      "solutions": "<p>Let the path be described by a degree 3 polynomial \\(g(x)\\). We first want to find \\(g(8)\\). Let \\(g(x)\\) have leading coefficient \\(a\\). Then, \\(g(1) = 0\\), \\(g(6) = 0\\), \\(g(3) = 0\\), so \\(g(x) = a(x-1)(x-3)(x-6)\\). From this, note that \\(-18 = g(0) = -18a\\), so \\(a = 1\\). From this, we have \\[g(8) = (8-1)(8-6)(8-3) = 70\\] Now to find the distance, we compute that she is \\(\\sqrt{70^2 + 8^2} = \\boxed{\\sqrt{4964}} = 2\\sqrt{1241}\\) miles away.</p>",
+      "answer": "2\\sqrt{1241}"
+    },
+    "21": {
+      "problem": "<p>At the start of stage 0, the Meta-Meme-Machine has a pool of \\(i = 7\\) images and a pool of \\(t = 31\\) textboxes. In each stage, it creates \\(i \\times t\\) memes by making all pairs of an image plus a textbox. The pool of images at the start of the next round consists of all previous \\(i\\) images as well as the \\(i \\times t\\) memes. There are still \\(t\\) textboxes at the start of the next stage. What is the first stage \\(s\\) starting with a pool of more than 7 million images?</p>",
+      "solutions": "<p>If the Meta-Meme-Machine has \\(a\\) images and \\(b\\) textboxes at stage \\(t\\), associate it with the tuple \\((t, a, b)\\). Thus, the starting configuration is \\((0, 7, 31)\\). Additionally, the state goes from \\((t, a, b)\\) to \\((t+1, a(b+1), b)\\) in the next state, since \\(ab\\) images are added. From this, it is clear that it steps through the stages \\((t, 7 \\cdot 32^t, 31)\\) as time progresses.</p><p>So, the problem reduces to finding the smallest integer \\(t\\) such that \\(7 \\cdot 32^t &gt; 7{,}000{,}000\\), i.e. \\(2^{5t} &gt; 10^6\\). Using the approximation \\(2^{10} = 1024 &gt; 10^3\\), we see this occurs for \\(t = \\boxed{4}\\).</p>",
+      "answer": "4"
+    },
+    "22": {
+      "problem": "<p>A positive number greater than 1 is <i>exponent-happy</i> if when written in the form \\(p_1^{e_1}p_2^{e_2}...p_k^{e_k}\\) for distinct primes \\(p_1, p_2, ..., p_k\\), we have that \\(\\gcd(e_1, e_2, ..., e_k) = 1\\). How many positive numbers between 2 and 5000 inclusive are <i>exponent-happy</i>?</p>",
+      "solutions": "<p>Note that a number is not <i>exponent-happy</i> if it can be written in the form \\(a^n\\) for \\(n &gt; 1\\) (meaning that \\(\\gcd(e_1, e_2, ..., e_k) \\ge n\\)). Thus, we can instead count the number of non-<i>exponent-happy</i> numbers and subtract the result from 4999.</p><p>To count how many numbers are not <i>exponent-happy</i>, we can enumerate on the primes dividing \\(n\\). Let \\(f(n)\\) be the number of numbers less than 5000 that are a perfect \\(n\\)th power, which means \\(f(n) = \\lfloor \\sqrt[n]{5000} \\rfloor\\). Since \\(2^{13} &gt; 5000\\), we then wish to compute \\[f(2) + f(3) + f(5) + f(7) + f(11)\\] However, this counts the numbers in the form \\(a^6\\) and \\(a^{10}\\) twice. Hence, our actual total is \\[f(2) + f(3) + f(5) + f(7) + f(11) - f(6) - f(10)\\] \\[= 70 + 17 + 5 + 3 + 2 - 4 - 2 = 91\\] However, note that this counts 1 three times. Thus, there are \\(91 - 3 = 88\\) numbers between 2 and 5000 in the form \\(a^n\\) for \\(n &gt; 1\\). It follows that there are \\(4999 - 88 = \\boxed{4911}\\) numbers between 2 and 5000 that are <i>exponent-happy</i>.</p>",
+      "answer": "4911"
+    },
+    "23": {
+      "problem": "<p>Let \\(x, y\\) be real numbers such that \\[x + y = 2,\\] \\[x^4 + y^4 = 1234.\\]</p><p>Find \\(xy\\).</p>",
+      "solutions": "<p>Note that: \\[x^4 + y^4 = (x+y)^4 - 4xy(x+y)^2 + 2(xy)^2\\]</p><p>Let \\(P = xy\\) be the product we want to solve for. Then the equation \\(x^4 + y^4 = 1234\\) becomes: \\[\\begin{aligned}\n1234 &amp;= 16 - 16P + 2P^2 \\\\\n&amp;\\implies P^2 - 8P - 609 = 0 \\\\\n&amp;\\implies (P - 29)(P + 21) = 0.\n\\end{aligned}\\]</p><p>It follows that \\(P = 29\\) or \\(P = -21\\). If \\(P\\) is 29, then \\(x\\) and \\(y\\) are the roots of the quadratic \\(X^2 - 2X + 29\\), which are not real. Hence \\(P = \\boxed{-21}\\).</p>",
+      "answer": "-21"
+    },
+    "24": {
+      "problem": "<p>The center of a circle of radius 2 follows a path around the edges of a regular hexagon with side length 3. What is the area of the region the circle sweeps?</p>",
+      "solutions": "<p>The area the circle passes through can be described in three parts: the rectangular regions on the outside of the hexagon that are adjacent to the hexagon, the sectors (pie-shaped regions) that come out from the corners that connect the rectangles, and the hexagon itself with a smaller, missing hexagon in the middle.</p><p>First, the rectangles’ areas is easy to calculate. Each rectangle is \\(3 \\times 2\\) and there are six of them (one for each edge). This total area is 36.</p><p>Second, the sectors are similarly easy. It can be observed (or shown if desired) that each of the six sectors’ angles are \\(60^\\circ\\). This adds to one large circle (\\(6 \\times 60 = 360\\)) of radius 2. These regions areas add to \\(4\\pi\\).</p><p>Third, the hardest region to calculate is region inside the hexagon. Note that this area can be decomposed into 6 trapezoids, each with a base on a side of the hexagon. Each of the trapezoids has height 2, because the circle’s maximum distance from each of the edges is 2. Also, one base of these trapezoids is 3, the side length. Next, the trapezoid is isosceles and has base angles of \\(60^\\circ\\). This means that we can calculate the length of the other base of one of the trapezoids by creating two \\(30\\)-\\(60\\)-\\(90\\) triangles and subtracting the length of the smaller leg from 3. Each of these legs has length \\(\\frac{2}{\\sqrt{3}}\\), so the length of the smaller base is \\(3 - \\frac{4\\sqrt{3}}{3}\\).</p><p>Then, the area of each trapezoid is \\(6 - \\frac{4\\sqrt{3}}{3}\\). Then, the area of all six trapezoids is \\(36 - 8\\sqrt{3}\\). We add this to our running total.</p><p>The total sum is \\(\\boxed{72 + 4\\pi - 8\\sqrt{3}}\\).</p>",
+      "answer": "72 + 4\\pi - 8\\sqrt{3}"
+    },
+    "25": {
+      "problem": "<p>On Day 1, Aaron draws a smiley face on the board. From then on, on each day he does the same thing as the previous day (draw a smiley face or not) with probability \\(\\frac{2}{3}\\). What’s the probability he draws a smiley face on Day 10?</p>",
+      "solutions": "<p>Let the probability that he draws a smiley face on Day \\(n\\) be \\(a_n\\), so \\(a_1 = 1\\). Then we have the recurrence \\(a_n = \\frac{2}{3}a_{n-1} + (1 - \\frac{2}{3})(1 - a_{n-1})\\), which simplifies to \\(\\frac{1}{3}(1 + a_{n-1})\\). In base 3, we see that our sequence is \\(\\frac{1}{1}, \\frac{2}{10}, \\frac{12}{100}, \\frac{112}{1000}, \\ldots\\). Thus, the answer for Day 10 is \\[\\frac{1 + 1 + 3 + 9 + \\cdots + 3^8}{3^9} = \\boxed{\\frac{9842}{19683}}.\\]</p>",
+      "answer": "\\frac{9842}{19683}"
+    }
+  }
+}

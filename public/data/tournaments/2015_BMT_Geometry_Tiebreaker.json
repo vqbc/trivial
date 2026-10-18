@@ -1,0 +1,23 @@
+{
+  "test": "BMT Geometry Tiebreaker",
+  "year": 2015,
+  "name": "Geometry Round Tiebreakers",
+  "url": "https://berkeley.mt/resources/archives/bmt-2015/GeoS2015Tb.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(ABCD\\) be a parallelogram. Suppose that \\(E\\) is on line \\(DC\\) such that \\(C\\) lies on segment \\(ED\\). Then say lines \\(AE\\) and \\(BD\\) intersect at \\(X\\) and lines \\(CX\\) intersects \\(AB\\) at \\(F\\). If \\(AB = 7\\), \\(BC = 13\\), and \\(CE = 91\\), then find \\(\\frac{AF}{FB}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>The unit square \\(ABCD\\) has \\(E\\) as midpoint of \\(AD\\) and a circle of radius \\(r\\) tangent to \\(AB\\), \\(BC\\), and \\(CE\\). Determine \\(r\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>The permutohedron of order 3 is the hexagon determined by points \\((1, 2, 3)\\), \\((1, 3, 2)\\), \\((2, 1, 3)\\), \\((2, 3, 1)\\), \\((3, 1, 2)\\), and \\((3, 2, 1)\\). The pyramid determined by these six points and the origin has a unique inscribed sphere of maximal volume. Determine its radius.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

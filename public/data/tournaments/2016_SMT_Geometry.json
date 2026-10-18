@@ -1,0 +1,58 @@
+{
+  "test": "SMT Geometry",
+  "year": 2016,
+  "name": "Geometry Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2016/geometry-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A circle is inscribed in a unit square, and a diagonal of the square is drawn. Find the total length of the segments of the diagonal not contained within the circle.</p>",
+      "solutions": "<p>The diagonal has length \\(\\sqrt{2}\\). It passes through the center of the circle, so it contains a diameter of the circle. The length of the diagonal within the circle is therefore 1. The rest of the diagonal outside of the circle has total length \\(\\sqrt{2}-1\\).</p>",
+      "answer": "\\sqrt{2}-1"
+    },
+    "2": {
+      "problem": "<p>Points \\(D\\) and \\(E\\) are chosen on the exterior of \\(\\triangle ABC\\) such that \\(\\angle ADC = \\angle BEC = 90^\\circ\\). If \\(\\angle ACB = 40^\\circ\\), \\(AD = 7\\), \\(CD = 24\\), \\(CE = 15\\), and \\(BE = 20\\), what is the measure of \\(\\angle ABC\\) in degrees?</p>",
+      "solutions": "<p>Since \\(\\triangle ACD\\) and \\(\\triangle BCE\\) are right triangles, we can use the Pythagorean Theorem to get \\[AC = \\sqrt{7^2+24^2} = 25 \\qquad \\text{and} \\qquad BC = \\sqrt{15^2+20^2} = 25.\\] It follows that \\(\\triangle ABC\\) is isosceles, so \\[\\angle ABC = \\frac{180-\\angle ACB}{2} = \\frac{180-40}{2} = 70^\\circ.\\]</p>",
+      "answer": "70^\\circ"
+    },
+    "3": {
+      "problem": "<p>Let \\(ABCD\\) be a convex quadrilateral with \\(BA = BC\\) and \\(DA = DC\\). Let \\(E\\) and \\(F\\) be the midpoints of \\(BC\\) and \\(CD\\) respectively, and let \\(BF\\) and \\(DE\\) intersect at \\(G\\). If the area of \\(CEGF\\) is 50, what is the area of \\(ABGD\\)?</p>",
+      "solutions": "<p>Let \\([XYZ]\\) denote the area of a polygon \\(XYZ\\).</p><p>Observe that \\(BF\\) and \\(DE\\) are two medians of \\(\\triangle BCD\\), so \\(G\\) is the centroid of \\(\\triangle BCD\\). Since the medians of a triangle divide the triangle into six parts of equal area, we have \\[[CGF] = [CGE] = \\frac{1}{2}[CEGF] = 25.\\] It follows that \\([CBD] = 6 \\cdot 25 = 150\\) and \\([BGD] = 2 \\cdot 25 = 50\\).</p><p>Furthermore, since \\(BA=BC\\), \\(DA=DC\\), and \\(BD=BD\\), we have that \\(\\triangle ABD \\cong \\triangle CBD\\), so \\([ABD] = [CBD] = 150\\). Finally, \\[[ABGD] = [ABD]+[BGD] = 150+50 = 200.\\]</p>",
+      "answer": "200"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABC\\) be a right triangle with \\(\\angle ABC\\) right. Let \\(D\\) be a point on segment \\(AC\\) and let \\(E\\) be a point on ray \\(AB\\) past \\(B\\) such that \\(AC \\perp DE\\). Segment \\(DE\\) intersects segment \\(BC\\) at a point \\(F\\) such that \\(DF = FE\\). Suppose that \\(\\frac{CD}{BE} = 3\\). Compute \\(\\frac{AB}{AD}\\).</p>",
+      "solutions": "<p>Let \\(DF = FE = x\\). Note that \\(\\triangle CFD\\) and \\(\\triangle EBF\\) are similar, with the ratio of the sides \\(\\frac{CD}{BE} = 3\\). Hence, \\(BF = \\frac{1}{3}x\\) and \\(CF = 3x\\). Next, noting that \\(\\triangle ABC\\) is similar to \\(\\triangle ADE\\), we have \\(\\frac{AB}{AD} = \\frac{BC}{DE}\\). Hence, the desired ratio is \\[\\frac{AB}{AD} = \\frac{BC}{DE} = \\frac{BF+FC}{DF+FE} = \\frac{\\frac{1}{3}x+3x}{x+x} = \\frac{5}{3}.\\]</p>",
+      "answer": "\\frac{5}{3}"
+    },
+    "5": {
+      "problem": "<p>Plane \\(A\\) passes through the points \\((1, 0, 0)\\), \\((0, 1, 0)\\), and \\((0, 0, 1)\\). Plane \\(B\\) is parallel to plane \\(A\\), but passes through the point \\((1, 0, 1)\\). Find the distance between planes \\(A\\) and \\(B\\).</p>",
+      "solutions": "<p>Plane \\(A\\) is described by the equation \\(x+y+z=1\\). The plane with this equation can easily be confirmed to pass through the three desired points, and planes are uniquely defined by three points. Since plane \\(B\\) is parallel to \\(A\\), it has the same normal vector, but a different constant offset. Hence, \\(B\\) is described by \\(x+y+z=c\\) for some \\(c\\). Since it passes through \\((1,0,1)\\), we must have \\(c=2\\).</p><p>Next, we observe that the line \\(x=y=z\\) is perpendicular to both planes. The distance between the planes can be found by the distance between the points of intersection of the line \\(x=y=z\\) with both planes. Solving the system \\(x+y+z=1\\) and \\(x=y=z\\) yields \\(x=y=z=\\frac{1}{3}\\), while solving the system \\(x+y+z=2\\) and \\(x=y=z\\) yields \\(x=y=z=\\frac{2}{3}\\). Thus, the distance is \\[\\sqrt{\\left(\\frac{2}{3}-\\frac{1}{3}\\right)^2+\\left(\\frac{2}{3}-\\frac{1}{3}\\right)^2+\\left(\\frac{2}{3}-\\frac{1}{3}\\right)^2} = \\sqrt{\\frac{1}{9}+\\frac{1}{9}+\\frac{1}{9}} = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}.\\]</p>",
+      "answer": "\\frac{\\sqrt{3}}{3}"
+    },
+    "6": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB = 5\\) and \\(AC = 4\\). Let \\(D\\) be the reflection of \\(C\\) across \\(AB\\), and let \\(E\\) be the reflection of \\(B\\) across \\(AC\\). \\(D\\) and \\(E\\) have the special property that \\(D, A, E\\) are collinear. Finally, suppose that lines \\(DB\\) and \\(EC\\) intersect at a point \\(F\\). Compute the area of \\(\\triangle BCF\\).</p>",
+      "solutions": "<p>Let \\([XYZ]\\) denote the area of a polygon \\(XYZ\\).</p><p>Since \\(\\angle DAB = \\angle BAC = \\angle CAE\\), we must have that the three angles are \\(60^\\circ\\). We use this fact to compute the area of \\(\\triangle ABC\\), which is \\(\\frac{1}{2}\\cdot 5 \\cdot 4 \\sin 60^\\circ = 5\\sqrt{3}\\). In addition, we compute using the Law of Cosines that \\(BC^2\\) is \\[BC^2 = 5^2+4^2-2\\cdot 5\\cdot 4\\cos 60^\\circ = 25+16-20 = 21.\\]</p><p>Next, we compute the area of \\(\\triangle BCF\\) by finding the area of \\(\\triangle DEF\\) and subtracting away known areas; in this case, three times the area of \\(\\triangle ABC\\), since \\(\\triangle ABC \\cong \\triangle ABD \\cong \\triangle AEC\\). Note that since \\(\\angle FDE = \\angle ACB\\) and \\(\\angle FED = \\angle ABC\\), \\(\\triangle ABC\\) and \\(\\triangle FED\\) are similar. By using the fact that the ratio of the areas of a triangle is equivalent to the ratio of the side lengths, squared, the area of \\(\\triangle DEF\\) is \\[[DEF] = [ABC]\\cdot \\frac{(5+4)^2}{21} = 5\\sqrt{3}\\left(\\frac{81}{21}\\right) = \\frac{135}{7}\\sqrt{3}.\\]</p><p>Finally, the area of \\(\\triangle BCF\\) is \\[[BCF] = [DEF]-3[ABC] = \\frac{135}{7}\\sqrt{3}-3\\cdot 5\\sqrt{3} = \\frac{30}{7}\\sqrt{3}.\\]</p>",
+      "answer": "\\frac{30\\sqrt{3}}{7}"
+    },
+    "7": {
+      "problem": "<p>A circle intersects the \\(y\\)-axis at two points \\((0, a)\\) and \\((0, b)\\) and is tangent to the line \\(x+100y=100\\) at \\((100, 0)\\). Compute the sum of all possible values of \\(ab - a - b\\).</p>",
+      "solutions": "<p>Let \\(n=100\\) and define the following points: \\(A=(0,a)\\), \\(B=(0,b)\\), \\(C=(0,1)\\), and \\(D=(n,0)\\). By Power of a Point, \\(CA\\cdot CB = CD^2\\). Using the distance formula, \\[CD^2 = n^2+1^2 = n^2+1.\\]</p><p>If the circle lies below the line, we have that \\(CA=1-a\\) and \\(CB=1-b\\). Then \\[(1-a)(1-b) = n^2+1 \\implies ab-a-b = n^2 = 100^2 = 10000.\\]</p><p>If the circle lies above the line, we have that \\(CA=a-1\\) and \\(CB=b-1\\), so we similarly get \\[(a-1)(b-1) = n^2+1 \\implies ab-a-b = n^2 = 100^2 = 10000.\\]</p><p>It follows that the only possible value of \\(ab-a-b\\) is \\(10000\\).</p>",
+      "answer": "10000"
+    },
+    "8": {
+      "problem": "<p>In rectangle \\(ABCD\\), point \\(E\\) is chosen on \\(AB\\) and \\(F\\) is the foot of \\(E\\) onto side \\(CD\\) such that the circumcircle of \\(\\triangle ABF\\) intersects line segments \\(AD\\) and \\(BC\\) at points \\(G\\) and \\(H\\) respectively. Let \\(S\\) be the intersection of \\(EF\\) and \\(GH\\), and \\(T\\) the intersection of lines \\(EC\\) and \\(DS\\). If \\(\\angle SFT = 15^\\circ\\), compute the measure of \\(\\angle CSD\\).</p>",
+      "solutions": "<p>Since \\(F\\) is on the circumcircle of rectangle \\(ABHG\\), we have that \\[\\angle FDS = \\angle FGH = \\angle FBH = \\angle FEC,\\] which implies that \\(FTED\\) is cyclic. Since \\(\\angle EFD=90^\\circ\\), we have that \\(\\angle ETD=90^\\circ\\), so \\(S\\) is the orthocenter of \\(\\triangle CDE\\).</p><p>With this, we have that \\(CTSF\\) is cyclic, so \\(\\angle TFC = \\angle TSC\\). But \\[\\angle TSC = \\angle TFC = 90-\\angle SFT = 90-15 = 75,\\] so \\[\\angle CSD = 180-\\angle TSC = 180-75 = 105^\\circ.\\]</p>",
+      "answer": "105^\\circ"
+    },
+    "9": {
+      "problem": "<p>In quadrilateral \\(ABCD\\), \\(AC = 5\\), \\(CD = 7\\), and \\(AD = 3\\). The angle bisector of \\(\\angle CAD\\) intersects \\(CD\\) at \\(E\\). If \\(\\angle CBD = 60^\\circ\\) and \\(\\angle AED = \\angle BEC\\), compute the value of \\(AE + BE\\).</p>",
+      "solutions": "<p>First, we can use Law of Cosines to determine \\(\\angle CAD\\): \\[\\cos\\angle CAD = \\frac{CD^2-AC^2-AD^2}{-2AC\\cdot AD} = \\frac{7^2-5^2-3^2}{-2(5)(3)} = \\frac{15}{-30} = -\\frac{1}{2}.\\] Hence, \\(\\angle CAD = 120^\\circ\\).</p><p>Let \\(B'\\) be the image of \\(B\\) reflected over \\(CD\\). Then \\(\\angle CB'D = \\angle CBD = 60^\\circ\\), so \\[\\angle CAD + \\angle CB'D = 120^\\circ+60^\\circ = 180^\\circ,\\] implying that \\(ACB'D\\) is cyclic. But \\(\\angle B'EC = \\angle BEC = \\angle AED\\), so \\(A\\), \\(E\\), and \\(B'\\) are collinear. It follows that \\[\\angle B'CD = \\angle B'AD = 60^\\circ \\qquad \\text{and} \\qquad \\angle B'DC = \\angle B'AC = 60^\\circ,\\] so \\(\\triangle B'CD\\) is equilateral with \\(B'D = B'C = CD = 7\\).</p><p>Applying Ptolemy’s Theorem on \\(ACB'D\\), we have \\(AC\\cdot B'D+AD\\cdot B'C = CD\\cdot AB'\\). Substituting our known values, we have \\(5\\cdot 7+3\\cdot 7 = 7AB'\\), so \\(AB' = 8\\). As a result, \\[AE+BE = AE+B'E = AB' = 8.\\]</p>",
+      "answer": "8"
+    },
+    "10": {
+      "problem": "<p>Circle \\(\\omega_1\\) has diameter \\(AB\\), and circle \\(\\omega_2\\) has center \\(A\\) and intersects \\(\\omega_1\\) at points \\(C\\) and \\(D\\). Let \\(E\\) be the intersection of \\(AB\\) and \\(CD\\). Point \\(P\\) is chosen on \\(\\omega_2\\) such that \\(PC = 8\\), \\(PD = 14\\), and \\(PE = 7\\). Find the length of \\(PB\\).</p>",
+      "solutions": "<p>Let \\([XYZ]\\) denote the area of a polygon \\(XYZ\\).</p><p>Note that \\(E\\) is the midpoint of \\(CD\\), so let \\(CE=ED=x\\). We can use Stewart’s Theorem on triangle \\(PCD\\) and cevian \\(PE\\) to get \\[14^2x+8^2x = 7^2\\cdot(2x)+x\\cdot x\\cdot(2x)\\] \\[\\implies 196+64 = 98+2x^2\\] \\[\\implies x^2 = 91,\\] so \\(CE = ED = 9\\). Using Heron’s Formula, we can find the area of \\(PCD\\). The semiperimeter is \\(\\frac{1}{2}(14+18+8) = 20\\), so the area is \\[\\sqrt{20(20-14)(20-18)(20-8)} = 24\\sqrt{5}.\\]</p><p>The radius of \\(\\omega_2\\) is then \\[\\frac{PC\\cdot PD\\cdot CD}{4\\cdot [PCD]} = \\frac{8\\cdot 14\\cdot 18}{4\\cdot 24\\sqrt{5}} = \\frac{21}{\\sqrt{5}}.\\]</p><p>Moreover, we can compute \\(AE\\) using the Pythagorean Theorem, giving us \\[AE = \\sqrt{AC^2-CE^2} = \\sqrt{\\frac{441}{5}-81} = \\frac{6}{\\sqrt{5}}.\\]</p><p>Since \\(\\triangle ACE \\sim \\triangle ABC\\), we have that \\(AE\\cdot AB = AC^2 = AP^2\\), so \\(\\triangle APE \\sim \\triangle ABP\\) by SAS. From this, we obtain \\[\\frac{PE}{PB} = \\frac{AE}{AP} = \\frac{\\left(\\frac{6}{\\sqrt{5}}\\right)}{\\left(\\frac{21}{\\sqrt{5}}\\right)} = \\frac{2}{7}.\\]</p><p>Thus, \\(PB = \\frac{49}{2}\\).</p>",
+      "answer": "\\frac{49}{2}"
+    }
+  }
+}

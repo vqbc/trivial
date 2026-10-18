@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Algebra B",
+  "year": 2007,
+  "name": "Algebra B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2007_AlgebraB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(g\\Box K\\) is defined as \\(gK + g^2\\) and \\(g\\Diamond K\\) is defined as \\(g + 3K\\), what is \\((2\\Box 3)(3\\Diamond 2)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Hugo, Evo, and Fidel are playing Dungeons and Dragons, which requires many twenty-sided dice. Attempting to slay Evo’s <i>vicious hobgoblin +1 of viciousness</i>, Hugo rolls 25 20-sided dice, obtaining a sum of (alas!) only 70. Trying to console him, Fidel notes that, given that sum, the product of the numbers rolled was as large as possible. How many 2s did Hugo roll?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Find all values of \\(b\\) such that the difference between the maximum and minimum values of \\(f(x) = x^2 - 2bx - 1\\) on the interval \\([0, 1]\\) is \\(1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Let \\(a_{n+1} = \\frac{4}{7}a_n + \\frac{3}{7}a_{n-1}\\) and \\(a_0 = 1\\), \\(a_1 = 2\\). Find \\(\\lim_{n\\to\\infty} a_n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Round to the nearest tenth: \\(\\log_6(6^2 - 6 + 1) + 3\\log_6(5) - \\frac{1}{2}\\log_6(9)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>If \\(a\\), \\(b\\), and \\(c\\) are real numbers such that \\(a + b + c = 6\\) and \\(ab + bc + ca = 9\\), find the sum of all possible values of the expression \\(\\lfloor a \\rfloor + \\lfloor b \\rfloor + \\lfloor c \\rfloor\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Positive reals \\(p\\) and \\(q\\) are such that the graph of \\(y = x^2 - 2px + q\\) does not intersect the \\(x\\)-axis. Find \\(q\\) if there is a unique pair of points \\(A\\), \\(B\\) on the graph with \\(AB\\) parallel to the \\(x\\)-axis and \\(\\angle AOB = \\frac{\\pi}{2}\\), where \\(O\\) is the origin.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>For how many rational numbers \\(p\\) is the area of the triangle formed by the intercepts and vertex of \\(f(x) = -x^2 + 4px - p + 1\\) an integer?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Find the all values of \\(a\\) such that \\(x^6 - 6x^5 + 12x^4 + ax^3 + 12x^2 - 6x + 1\\) is nonnegative for all real \\(x\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Find the values of \\(a\\) such that \\(\\log(ax + 1) = \\log(x - a) + \\log(2 - x)\\) has a unique real solution.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

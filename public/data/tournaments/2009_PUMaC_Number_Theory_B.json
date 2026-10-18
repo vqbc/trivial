@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory B",
+  "year": 2009,
+  "name": "Number Theory B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2009_NumberTheoryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the number of pairs of integers \\(x\\) and \\(y\\) such that \\(x^2+xy+y^2=28\\).</p>",
+      "solutions": "<p>We multiply both sides by 4, and rewrite the equation as \\((2x+y)^2+3y^2=112\\). From there, we can simply take possible values for \\(y\\) sequentially to get equations that work, i.e. if we are considering some \\(y\\), we check that \\(112-3y^2\\) is a perfect square, and if it is, it is immediately an admissible answer. We end up with three possible equations: \\(10^2+3\\cdot 2^2=112\\), \\(8^2+3\\cdot 4^2=112\\) and \\(2^2+3\\cdot 6^2=112\\). For each of these, we can find a possible \\(x\\) and \\(y\\), all nonzero, satisfying the equation. But note that, given that \\(x\\) and \\(y\\), \\(\\pm x\\) and \\(\\pm y\\) serve the purpose just as well. So it follows that for each of those three equations, there are four possible values of \\((x,y)\\). Hence the total number of pairs of integers is \\(12\\).</p>",
+      "answer": "12"
+    },
+    "2": {
+      "problem": "<p>Suppose you are given that for some positive integer \\(n\\), \\(1!+2!+\\ldots+n!\\) is a perfect square. Find the sum of all possible values of \\(n\\).</p>",
+      "solutions": "<p>Note that it is easy to check the result for \\(n=1,2,3,4\\), which yield the results \\(1,3,9\\) and \\(33\\) respectively. Out of these, obviously, two are squares, and so \\(1\\) and \\(3\\) do satisfy the condition. Now, note that \\(5!\\) has a factor of \\(10\\), coming from one \\(2\\) and one \\(5\\). So, the last digit of \\(5!\\) is \\(0\\). In fact, the last digit of any factorial after \\(4\\) is \\(0\\) for precisely the same reason. Hence, the sum of some consecutive factorials after \\(4\\) is going to give us a number with last digit \\(0\\). Adding that to \\(1!+2!+3!+4!\\), we get a number whose last digit is a \\(3\\), but that cannot be a perfect square. Hence, the given expression is not a perfect square for \\(n \\ge 5\\), and in fact we have checked the rest of the values ourselves. It follows that \\(1\\) and \\(3\\) are the only solutions, and so our answer is \\(1+3=4\\).</p>",
+      "answer": "4"
+    },
+    "3": {
+      "problem": "<p>You are given that \\[17! = 355687ab8096000\\] for some digits \\(a\\) and \\(b\\). Find the two-digit number \\(\\overline{ab}\\) that is missing above.</p>",
+      "solutions": "<p>First note that the number is divisible by \\(11\\) as well as \\(9\\). We simply apply the divisibility criteria for these two numbers, and immediately obtain two simultaneous linear equations: \\[9 \\mid 34+a+b+23\\] and \\[11 \\mid (16+a+17)-(18+b+6)\\] which give the following possibilities: \\((a+b) \\in \\{6,15\\}\\) and \\((a-b) \\in \\{-9,2,13\\}\\), where \\(a\\) and \\(b\\) are digits. Now, \\(a-b=-9\\) iff \\(b=9,a=0\\), which does not satisfy any of the relations on \\(a+b\\). So, that possibility is eliminated. Furthermore, note that \\(a+b\\) and \\(a-b\\) added together gives an even number \\(2a\\), so the parities of \\(a+b\\) and \\(a-b\\) must be equal. It follows that either we have \\(a+b=6, a-b=2\\), or \\(a+b=15, a-b=13\\). Solving the first equation gives \\((a,b)=(4,2)\\) and the second gives \\((a,b)=(14,1)\\), but since \\(a\\) and \\(b\\) are digits, it follows that our required solution is \\(42\\).</p>",
+      "answer": "42"
+    },
+    "4": {
+      "problem": "<p>Find the number of ordered pairs \\((a,b)\\) of positive integers that are solutions of the following equation: \\[a^2+b^2=ab(a+b)\\]</p>",
+      "solutions": "<p>Suppose at first that \\(a=b\\). Then we get \\(2a^2=2a^3\\), which yields \\(a=0\\) or \\(a=1\\). Since we must have positive integers, this yields \\(a=b=1\\) as a possible solution. Now if \\(a \\ne b\\), then suppose WLOG that \\(a&gt;b\\). Then, the equation reduces to \\(\\frac{a}{b}+\\frac{b}{a}=a+b\\). But, \\(1&gt;\\frac{b}{a}\\), and \\(a+b \\ge a+1\\), because we have positive integers only. Then, we get \\[\\frac{a}{b}+1 &gt; \\frac{a}{b}+\\frac{b}{a} = a+b \\ge a+1\\] i.e. \\(\\frac{a}{b}&gt;a\\), which means \\(1&gt;b\\), which is a contradiction. Note that we can divide throughout freely by any of the two variables because they are positive integers.</p>",
+      "answer": "1"
+    },
+    "5": {
+      "problem": "<p>Find the sum of all prime numbers \\(p\\) which satisfy \\[p=a^4+b^4+c^4-3\\] for some primes (not necessarily distinct) \\(a\\), \\(b\\) and \\(c\\).</p>",
+      "solutions": "<p>If \\(a,b\\) and \\(c\\) are all odd, then the right hand side is even (and it’s greater than \\(2\\), which can be easily checked), and so this forces \\(p\\) to be an even number greater than \\(2\\), a contradiction. So exactly one or three of \\(a,b\\) and \\(c\\) is \\(2\\). Again, if all three are \\(2\\), then \\(p=45\\), which is not a prime, hence inadmissible. So exactly one of \\(a,b,c\\) is \\(2\\), say \\(a\\). Then we have \\(p=b^4+c^4+15\\). Now, if none of \\(b\\) and \\(c\\) is \\(3\\), then they are each of the form \\(6k\\pm 1\\) for some integer \\(k\\). Then, their fourth powers are of the form \\(6k'+1\\), and hence, adding them together, the right hand side becomes divisible by \\(3\\), which is inadmissible. So, one of \\(b\\) and \\(c\\) must be \\(3\\) (they cannot both be \\(3\\), because then \\(p=175\\), not a prime). So suppose \\(b\\) is \\(3\\). Then we get \\(p=c^4+94\\). The last deduction is as follows: if \\(c \\ne 5\\), then \\(c\\) must end in \\(1,3,7\\) or \\(9\\). The fourth power of <i>each</i> number of this form ends in the digit \\(1\\). Then, adding that to \\(94\\), we will get a number divisible by \\(5\\), a contradiction. So \\(c\\) must be \\(5\\). We have to finally check that \\(p=719\\) is indeed a prime. This is checked easily, and hence we get our unique solution.</p>",
+      "answer": "719"
+    },
+    "6": {
+      "problem": "<p>Find the sum of all integers \\(x\\) for which there is an integer \\(y\\), such that \\(x^3-y^3=xy+61\\).</p>",
+      "solutions": "<p>It is easy to see that one or more of \\(x\\) and \\(y\\) cannot be zero, because then the equation cannot hold true because of the constant term. So assume that \\(x\\) and \\(y\\) are positive integers. Also, \\(x \\ne y\\), because then we would have \\(x^2+61=0\\), which is inadmissible. If \\(x&lt;y\\), then the left hand side becomes negative while the right remains positive. So clearly, \\(x&gt;y \\ge 1\\). We will use the identity \\(x^3-y^3=(x-y)(x^2+xy+y^2)=xy+61\\), from which we have \\[61=(x-y)(x^2+y^2)+(x-y-1)xy\\] Then, if \\(x-y \\ge 3\\), then we must have \\(x \\ge 3+y=4\\), and \\(61 \\ge 3(x^2+y^2)+(x-y-1)xy \\ge 3(x^2+y^2)\\), so that \\(x^2+y^2 \\le 20\\), and then \\(x=4\\). Then, \\(y=1\\) or \\(y=2\\), but \\(x-y \\ge 3 \\implies (x,y)=(4,1)\\), which does not satisfy the original equation.</p><p>If \\(x-y=2\\), then we get \\[61=2(x^2+y^2)+xy=2((y+2)^2+y^2)+(y+2)y=5y^2+10y+8\\] which has no solution for \\(y\\) that is positive and integer. So it follows that we must have \\(x-y=1\\), and so \\[61=(x^2+y^2)=(y+1)^2+y^2\\] solving which we easily get \\((x,y)=(6,5)\\), which is the unique solution.</p>",
+      "answer": "6"
+    },
+    "7": {
+      "problem": "<p>Suppose that for some positive integer \\(n\\), the first two digits of \\(5^n\\) and \\(2^n\\) are identical. Suppose the first two digits are \\(a\\) and \\(b\\) in this order. Find the two-digit number \\(\\overline{ab}\\).</p>",
+      "solutions": "<p>Suppose \\(a\\) is the number formed by the two digits. From the condition, we must have \\(10^k a &lt; 2^n &lt; 10^k(a+1)\\) and \\(10^l a &lt; 5^n &lt; 10^l(a+1)\\) for some positive integers \\(k\\) and \\(l\\). Then, we can multiply these two equations together to obtain \\[10^{k+l}a^2 &lt; 10^n &lt; 10^{k+l}(a+1)^2\\] Now, note that \\(a\\) is a two-digit number, and so \\(10 \\le a \\le 99\\). so, \\(10^2 \\le a^2\\), and in fact, \\((a+1)^2 \\le 100^2 = 10^4\\).</p><p>So, our equation now has two additional bounds, and becomes \\[10^{k+l+2} \\le 10^{k+l}a^2 &lt; 10^n &lt; 10^{k+l}(a+1)^2 \\le 10^{k+l+4}\\] and hence it follows that \\(n=k+l+3\\). Once we have this, it becomes easy to see \\(a^2&lt;10^3&lt;(a+1)^2\\), i.e. \\(a&lt;\\sqrt{1000}&lt;a+1\\), whence \\(a=31\\).</p>",
+      "answer": "31"
+    },
+    "8": {
+      "problem": "<p>Let \\(s(m)\\) denote the sum of the digits of the positive integer \\(m\\). Find the largest positive integer that has no digits equal to zero and satisfies the equation \\[2^{s(n)}=s(n^2)\\]</p>",
+      "solutions": "<p>Suppose \\(n\\) has \\(k\\) digits, that is \\(10^{k-1} \\le n &lt; 10^k\\), then \\(k \\le s(n)\\) by the condition. Also, \\(n^2&lt;10^{2k}\\), hence \\(n^2\\) has at most \\(2k\\) digits, and so \\(s(n^2) \\le 18k\\). Thus \\[2^k \\le 2^{s(n)}=s(n^2) \\le 18k\\] which implies \\(k \\le 6\\), and so \\(2^{s(n)} \\le 18 \\times 6\\) or also \\(s(n) \\le 6\\). If \\(s(n)=6\\) then \\(n\\) is divisible by \\(3\\) so \\(n^2\\) and \\(s(n^2)=2^{s(n)}\\) is divisible by \\(3\\), which is impossible. Hence \\(1 \\le s(n) \\le 5\\) and so from the equation, the possible values of \\(s(n^2)\\) are \\(2,4,8,16\\), or \\(32\\). But the remainder of \\(s(n^2)\\) modulo \\(9\\) is the same as the remainder of \\(n^2\\) modulo \\(9\\), which can be only \\(0,1,4\\) or \\(7\\). Hence \\(s(n)\\) is either \\(2\\) or \\(4\\), and the greatest number satisfying the conditions of the problem is \\(1111\\).</p>",
+      "answer": "1111"
+    }
+  }
+}

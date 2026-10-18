@@ -1,0 +1,23 @@
+{
+  "test": "SMT Discrete Tiebreaker",
+  "year": 2022,
+  "name": "Discrete Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2022/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many 4 element subsets of \\(\\{0, 1, 2, \\ldots, 20\\}\\) contain their sum modulo 21?</p>",
+      "solutions": "<p>Denoting the four elements \\(a, b, c, d\\), they contain their sum if three of the elements sum to 0 mod 21.</p><p>We now count the number of settings of \\(a, b\\) for which there is a valid \\(c\\). Then, we divide by \\(3!\\) for overcounting and multiply by 18 for the number of choices for \\(d\\).</p><p>The only way that there is no \\(c\\) for a pair \\(a, b\\) is if \\(c\\) would have to equal \\(a\\) or \\(b\\). Given any choice for \\(a \\ne 0, 7, 14\\), there is exactly one choice for \\(b\\) so that \\(c = a\\): \\(b = -2a \\pmod {21}\\), and exactly one choice for \\(b\\) so that \\(c = b\\): \\(b = 10a \\pmod{21}\\). Hence, the number of choices for \\((a, b)\\) is \\(21 \\cdot 20 - 18 \\cdot 2 = 384\\). Accounting for overcounting, this gives 64 possibilities and multiplying by 18 gives the final answer of \\(1152\\).</p>",
+      "answer": "1152"
+    },
+    "2": {
+      "problem": "<p>Let \\(a, b, c\\) be the solutions to \\(x^3 + 3x^2 - 1 = 0\\). Define \\(S_n = a^n + b^n + c^n\\). Given that there are integers \\(0 \\le i, j, k \\le 36\\) such that \\(S_n \\equiv i^n + j^n + k^n \\pmod{37}\\) for all positive integer \\(n\\), determine the product \\(ijk\\).</p>",
+      "solutions": "<p>Note that \\(S_n\\) satisfies the recurrence relation \\(S_{n+3} \\equiv -3S_{n+2} + S_n \\pmod{37}\\). Therefore, this problem amounts to solving this linear recurrence relation in modulo 37, which is the same as solving the characteristic polynomial \\(x^3 + 3x^2 - 1 \\equiv 0 \\pmod{37}\\). After some tedium, we see that \\(x = 4\\) is a solution to this. Then we have that our equation factors as</p><p>\\[(x-4)(x^2 + 7x + 28) \\pmod{37}\\]</p><p>Write \\((x-15)^2 \\equiv 12 \\pmod{37} \\implies x - 15 \\equiv \\pm 7 \\pmod{37}\\). Hence \\(x \\equiv 8, 22 \\pmod{37}\\) and our desired answer is \\(4 \\cdot 8 \\cdot 22 = \\boxed{704}\\).</p>",
+      "answer": "704"
+    },
+    "3": {
+      "problem": "<p>Five lilypads lie in a line on a pond. At first, a frog sits on the third lilypad. Then, each minute there is a \\(\\frac{1}{2}\\) probability that the frog jumps to the lilypad to its left and \\(\\frac{1}{2}\\) probability that it jumps to its right. If the frog jumps to the left from the leftmost lilypad or right from the rightmost lilypad, it will fall in the pond and stay there forever. Compute the probability that the frog is not in the pond after 14 minutes have passed.</p>",
+      "solutions": "<p>Imagine that we are currently in a probability state: that is, there are probabilities \\([a, b, c, b, a]\\) of the frog being on the lilypads (we may exploit symmetry) at the current moment. Note that the probability that the frog falls into the pond from its current position is exactly \\(a\\), so we just need to find the sum of \\(a\\) from minute 0 through minute 14.</p><p>To do so, we can see that \\([a, b, c, b, a]\\) changes to \\([\\frac{b}{2}, \\frac{a}{2} + \\frac{c}{2}, b, \\frac{a}{2} + \\frac{c}{2}, \\frac{b}{2}]\\). Note that since the frog always starts at lilypad 3, by parity considerations we have that either \\(b\\) is nonzero or \\(a, c\\) are nonzero (after the first minute). When \\(b\\) is zero, by the state change above we have \\(2a = c = b\\) of the previous iteration. Then, at the next iteration, \\(b' = \\frac{c}{4} + \\frac{c}{4} = \\frac{3b}{4}\\). This immediately implies that</p><p>\\[a = 0, 0, \\frac{1}{4}, 0, \\frac{1}{4} \\cdot \\frac{3}{4}, 0, \\frac{1}{4} \\cdot \\left(\\frac{3}{4}\\right)^2, \\ldots\\]</p><p>where these are at minute \\(0, 1, 2, \\ldots\\).</p><p>So, we are looking for \\[1 - \\sum_{n=0}^{5} \\frac{1}{4}\\left(\\frac{3}{4}\\right)^n = 1 - \\frac{1}{4} \\cdot \\frac{1 - \\left(\\frac{3}{4}\\right)^6}{1 - \\frac{3}{4}} = \\left(\\frac{3}{4}\\right)^6 = \\boxed{\\frac{729}{4096}}.\\]</p>",
+      "answer": "\\frac{729}{4096}"
+    }
+  }
+}

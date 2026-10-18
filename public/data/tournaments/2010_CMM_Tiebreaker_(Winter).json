@@ -1,0 +1,28 @@
+{
+  "test": "CMM Tiebreaker (Winter)",
+  "year": 2010,
+  "name": "Tiebreaker Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_3048ab9d03cc4e62ba68c57fa08e623c.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The monic polynomial \\(f\\) has rational coefficients and is irreducible over the rational numbers. If \\(f\\left(\\sqrt5+\\sqrt2\\right) = 0\\), compute \\(f\\left(f\\left(\\sqrt5-\\sqrt2\\right)\\right)\\). (A polynomial is <i>monic</i> if its leading coefficient is 1. A polynomial is <i>irreducible</i> over the rational numbers if it cannot be expressed as a product of two polynomials with rational coefficients of positive degree. For example, \\(x^2-2\\) is irreducible, but \\(x^2-1 = (x+1)(x-1)\\) is not.)</p>",
+      "solutions": "<p><b>Solution:</b> Let \\(x = \\sqrt5+\\sqrt2\\). Then \\(x^2 = 5+2+2\\sqrt{10}\\), so \\((x^2-7)^2 - 40 = 0\\). Thus \\(f(x) = (x^2-7)^2-40\\) is a monic polynomial such that \\(f(\\sqrt5+\\sqrt2)=0\\). One can notice that if \\(y = \\sqrt5-\\sqrt2\\), then \\(y^2 = 7-2\\sqrt{10}\\), so \\(0 = (y^2-7)^2-40 = f(y)\\). Thus \\(f(\\sqrt5-\\sqrt2)=0\\), and so \\(f(f(\\sqrt5-\\sqrt2)) = f(0) = (0^2-7)^2-40 = \\boxed{9}\\).</p><p>There are a several ways to check that \\(f\\) is irreducible. If we could factor \\(f\\) as a product of polynomials of positive degree with rational coefficients, then one of the factors would be a linear or quadratic polynomial. We can notice that the four roots of \\(f\\) are \\(\\sqrt5+\\sqrt2\\), \\(\\sqrt5-\\sqrt2\\), \\(-\\sqrt5+\\sqrt2\\), and \\(-\\sqrt5-\\sqrt2\\). Each of these roots is irrational, so it can’t be the root of a linear polynomial with rational coefficients. It is also not hard to check that none of these roots are roots of a quadratic polynomial with rational coefficients, so we get a contradiction.</p>",
+      "answer": "9"
+    },
+    "2": {
+      "problem": "<p>In the following diagram, points \\(E\\), \\(F\\), \\(G\\), \\(H\\), \\(I\\), and \\(J\\) lie on a circle. The triangle \\(ABC\\) has side lengths \\(AB = 6\\), \\(BC = 7\\), and \\(CA = 9\\). The three chords have lengths \\(EF = 12\\), \\(GH = 15\\), and \\(IJ = 16\\). Compute \\(6 \\cdot AE + 7 \\cdot BG + 9 \\cdot CI\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_CMM_Tiebreaker_(Winter)/2-fig1.png\" width=\"361\" alt=\"\"></p>",
+      "solutions": "<p><b>Solution:</b> We use the Power of a Point Theorem three times at \\(A\\), \\(B\\), and \\(C\\) to obtain the equations \\(AE \\cdot AF = AI \\cdot AJ\\), \\(BG \\cdot BH = BE \\cdot BF\\), and \\(CI \\cdot CJ = CG \\cdot CH\\). Since we know the lengths of the chords, we can rewrite these equations just in terms of \\(AE\\), \\(BG\\), and \\(CI\\): \\[\\begin{aligned}\nAE(12-AE) &amp;= (9+CI)(7-CI) \\\\\nBG(15-BG) &amp;= (6+AE)(6-AE) \\\\\nCI(16-CI) &amp;= (7+BG)(8-BG)\n\\end{aligned}\\]</p><p>Adding these three equations together and simplifying, we find that \\[12AE + 15BG + 16CI - (AE)^2 - (BG)^2 - (CI)^2 = 155 - 2CI + BG - (AE)^2 - (BG)^2 - (CI)^2\\]</p><p>We conclude that \\(12AE + 14BG + 18CI = 155\\), so \\(6AE + 7BG + 9CI = \\boxed{\\frac{155}{2}}\\).</p>",
+      "answer": "\\frac{155}{2}"
+    },
+    "3": {
+      "problem": "<p>Compute the number of ways of tiling the \\(2 \\times 10\\) grid below with the three tiles shown. There is an infinite supply of each tile, and rotating or reflecting the tiles is not allowed.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_CMM_Tiebreaker_(Winter)/3-fig1.png\" width=\"198\" alt=\"\"></p>",
+      "solutions": "<p><b>Solution:</b> Call the three tiles a \\(\\Gamma\\)-tile, an \\(I\\)-tile, and a \\(J\\)-tile, respectively. It is easy to see that each \\(\\Gamma\\)-tile must be paired with a \\(J\\)-tile to create a \\(2 \\times 3\\) rectangle. Thus we’d like to tile a \\(2 \\times 10\\) rectangle with \\(2 \\times 3\\) rectangles and \\(2 \\times 1\\) rectangles. We can therefore reduce the problem to tiling a \\(1 \\times 10\\) rectangle with \\(1 \\times 3\\) rectangles and \\(1 \\times 1\\) squares.</p><p>We can compute the number of ways to tile this rectangle using recursion. Let \\(T_n\\) be the number of tiling a \\(1 \\times n\\) rectangle with \\(1 \\times 3\\) and \\(1 \\times 1\\) tiles. We can tile a \\(1 \\times n\\) rectangle by first placing either a \\(1 \\times 1\\) or a \\(1 \\times 3\\) tile on the left. If we place a \\(1 \\times 1\\) tile, then the number of ways of tiling the remaining \\(n-1\\) squares is \\(T_{n-1}\\). If we place a \\(1 \\times 3\\) tile, then the number of ways of tiling the remaining \\(n-3\\) squares is \\(T_{n-3}\\). Thus \\(T_n = T_{n-1} + T_{n-3}\\). Using \\(T_0 = T_1 = T_2 = 1\\), we can use this recursive formula to compute \\(T_n\\):</p><p>\\[\\begin{array}{c|ccccccccccc}\nn &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 \\\\\n\\hline\nT_n &amp; 1 &amp; 1 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 6 &amp; 9 &amp; 13 &amp; 19 &amp; 28\n\\end{array}\\]</p><p>Thus there are \\(\\boxed{28}\\) ways of tiling the rectangle.</p>",
+      "answer": "28"
+    },
+    "4": {
+      "problem": "<p>Compute the number of positive divisors of \\(2010\\).</p>",
+      "solutions": "<p><b>Solution:</b> We can factor \\(2010 = 2 \\cdot 3 \\cdot 5 \\cdot 67\\). A divisor of \\(2010\\) is the product of a subset of \\(\\{2, 3, 5, 67\\}\\). There are \\(2^4 = 16\\) such subsets, so \\(2010\\) has \\(\\boxed{16}\\) divisors.</p>",
+      "answer": "16"
+    }
+  }
+}

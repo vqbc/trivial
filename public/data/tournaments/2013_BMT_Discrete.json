@@ -1,0 +1,58 @@
+{
+  "test": "BMT Discrete",
+  "year": 2013,
+  "name": "Discrete Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2013/DisS2013.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A number is between 500 and 1000 and has a remainder of 6 when divided by 25 and a remainder of 7 when divided by 9. Find the only odd number to satisfy these requirements.</p>",
+      "solutions": "<p>If an odd number has a remainder of 6 when divided by 25, then it must have a remainder of 31 when divided by 50. Similarly, upon inclusion of the “7 mod 9” condition, we determine the remainder must be 331 upon division by 450. This calculation is simplified by noting that the digits must add to 7. Therefore, the only number in the desired range is \\(331 + 450 = \\boxed{781}\\).</p>",
+      "answer": "781"
+    },
+    "2": {
+      "problem": "<p>If I roll three fair 4-sided dice, what is the probability that the sum of the resulting numbers is relatively prime to the product of the resulting numbers?</p>",
+      "solutions": "<p>The probability is \\(\\frac{1}{2}\\) that the sum of the resulting numbers is odd, a necessary condition for the problem statement to be true. Furthermore, there are \\(6+3+3+3+3+1=19\\) such cases where both are divisible by 3, for a final probability of \\(\\frac{1}{2} - \\frac{19}{64} = \\boxed{\\frac{13}{32}}\\).</p>",
+      "answer": "\\frac{25}{64}"
+    },
+    "3": {
+      "problem": "<p>Suppose we have 2013 piles of coins, with the \\(i^{\\text{th}}\\) pile containing exactly \\(i\\) coins. We wish to remove the coins in a series of steps. In each step, we are allowed to take away coins from as many piles as we wish, but we have to take the same number of coins from each pile. We cannot take away more coins than a pile actually has. What is the minimum number of steps we have to take?</p>",
+      "solutions": "<p>Let the maximum pile of coins have at most \\(2k\\) coins. Then, we can take \\(k\\) coins away from any piles with at least \\(k\\) coins, so our new maximum pile will have at most \\(k\\) coins. Thus, our answer is \\(1 + \\lfloor \\log_2(n) \\rfloor\\). To show minimality, suppose we can remove all the coins in \\(m\\) steps. Let us denote \\(a_k\\) as the number of coins removed from each pile in the \\(k\\)th step. Since the \\(i^{\\text{th}}\\) pile is removed in the end, each number \\(i\\) can be expressed as the sum of a subset of the numbers \\(a_1, a_2, \\ldots, a_m\\). The number of such sums is at most \\(2^m\\), since for each \\(k = 1, 2, \\ldots, m\\), we can include \\(a_k\\) in the sum or not. Thus, \\(2^m\\) must be at least as large as \\(n\\), so we have \\(m &gt; \\log_2(n)\\).</p>",
+      "answer": "11"
+    },
+    "4": {
+      "problem": "<p>Given \\(f_1 = 2x - 2\\) and \\(k \\ge 2\\), define \\(f_k(x) = f_1(f_{k-1}(x))\\) to be a real-valued function of \\(x\\). Find the remainder when \\(f_{2013}(2012)\\) is divided by the prime 2011.</p>",
+      "solutions": "<p>We may show that \\(f_n(x) = 2^n(x-2) + 2\\), from which we conclude \\(f_{2013}(2012) = 2^{2013} \\cdot 2010 + 2 \\equiv -2^3 + 2 \\equiv \\boxed{2005} \\pmod{2011}\\).</p>",
+      "answer": "2005"
+    },
+    "5": {
+      "problem": "<p>Consider the roots of the polynomial \\(x^{2013} - 2^{2013} = 0\\). Some of these roots also satisfy \\(x^k - 2^k = 0\\), for some integer \\(k &lt; 2013\\). What is the product of this subset of roots?</p>",
+      "solutions": "<p>As we all know by now, \\(2013 = 3(11)61\\). If we let \\(z = \\exp\\left(\\frac{i\\tau}{2013}\\right)\\), then \\(2z^n\\) is in this subset iff \\(n\\) is a multiple of 3, 11, or 61. So we take the following products: \\(\\prod_{i=1}^{671} 2z^{3i}\\), \\(\\prod_{i=1}^{183} 2z^{11i}\\), and \\(\\prod_{i=1}^{33} 2z^{61i}\\). Note that, in each case, the final exponent on \\(z\\) will be divisible by 2013 (meaning the products of the \\(z\\) factors will be one), so the products are \\(2^{671}\\), \\(2^{183}\\), and \\(2^{33}\\). However, we overcounted double and triple overlaps, so we must divide by \\(\\prod_{i=1}^{61} 2z^{33i}\\), \\(\\prod_{i=1}^{3} 2z^{671i}\\), and \\(\\prod_{i=1}^{11} 2z^{183i}\\), which come out to \\(2^{61}\\), \\(2^3\\), and \\(2^{11}\\), by similar reasoning. Finally, we undercounted triple overlaps, where \\(n = 0\\), so we must finally multiply by \\(2z^0 = 2\\), giving a final answer of \\(2^{(671+183+33-61-3-11+1)} = \\boxed{2^{813}}\\).</p>",
+      "answer": "2^{813}"
+    },
+    "6": {
+      "problem": "<p>A coin is flipped until there is a head followed by two tails. What is the probability that this will take exactly 12 flips?</p>",
+      "solutions": "<p>We know the last three flips must be \\(HTT\\). Let \\(i\\) be the first position where an \\(H\\) appears in the sequence (note \\(i\\) can range from 1 to 10). Once an \\(H\\) appears, we are no longer allowed adjacent \\(T\\)’s until we reach the end. Thus, if we are at position \\(i\\), we have \\(10 - i - 1\\) slots. The number of ways to arrange \\(T\\) with no two being adjacent into \\(k\\) slots can be found to be \\(F_{k+2}\\), where \\(F_{k+2}\\) is the \\(k+2\\)th Fibonacci number. Thus, we have a total of \\(F_1 + F_2 + \\ldots + F_{10} = F_{12} - 1 = 143\\) valid scenarios and a total of \\(2^{12}\\) sequences, so our probability is \\(\\frac{143}{2^{12}} = \\boxed{\\frac{143}{4096}}\\).</p>",
+      "answer": "\\frac{143}{4096}"
+    },
+    "7": {
+      "problem": "<p>Denote by \\(S(a, b)\\) the set of integers \\(k\\) that can be represented as \\(k = a \\cdot m + b \\cdot n\\), for some non-negative integers \\(m\\) and \\(n\\). So, for example, \\(S(2, 4) = \\{0, 2, 4, 6, \\ldots\\}\\). Then, find the sum of all possible positive integer values of \\(x\\) such that \\(S(18, 32)\\) is a subset of \\(S(3, x)\\).</p>",
+      "solutions": "<p>We note that \\(x\\) may not be divisible by 3 or greater than 32, else 32 will never be achieved. If 32 is achieved, then \\(3 \\cdot 6 = 18\\) and 32 are both contained, so every linear combination of those two will be contained (and thus, \\(S(3, x)\\) will be contained in \\(S(18, 32)\\)). Simply considering which sets \\(S(3, x)\\) contain 32 yields \\[x = 1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 20, 23, 26, 29, 32.\\] Thus, our sum is \\(\\boxed{238}\\).</p>",
+      "answer": "238"
+    },
+    "8": {
+      "problem": "<p>Let \\(f(n)\\) take in a nonnegative integer \\(n\\) and return an integer between 0 and \\(n-1\\) at random (with the exception being \\(f(0) = 0\\) always). What is the expected value of \\(f(f(22))\\)?</p>",
+      "solutions": "<p>Notice that the expected value of \\(f(n)\\) is \\((n-1)/2\\) (except \\(f(0) = 0\\)), so the expected value of \\(f(f(n)) = \\sum_{i=1}^{n-1} f(i)/n = \\sum_{i=1}^{n-1} (i-1)/(2n) = \\frac{(n-2)(n-1)}{4n}\\). Plugging in our \\(n\\), we get \\(\\frac{20 \\cdot 21}{4 \\cdot 22} = \\boxed{\\frac{105}{22}}\\).</p>",
+      "answer": "\\frac{105}{22}"
+    },
+    "9": {
+      "problem": "<p>2013 people sit in a circle, playing a ball game. When one player has a ball, he may only pass it to another player 3, 11, or 61 seats away (in either direction). If \\(f(A, B)\\) represents the minimal number of passes it takes to get the ball from Person \\(A\\) to Person \\(B\\), what is the maximal possible value of \\(f\\)?</p>",
+      "solutions": "<p>Look mod 61, find 7 as answer, add to \\(\\left\\lfloor \\frac{2013}{2 \\cdot 61} \\right\\rfloor\\), answer \\(\\boxed{23}\\).</p>",
+      "answer": "23"
+    },
+    "10": {
+      "problem": "<p>Let \\(\\sigma_n\\) be a permutation of \\(\\{1, \\ldots, n\\}\\); that is, \\(\\sigma_n(i)\\) is a bijective function from \\(\\{1, \\ldots, n\\}\\) to itself. Define \\(f(\\sigma)\\) to be the number of times we need to apply \\(\\sigma\\) to the identity in order to get the identity back. For example, \\(f\\) of the identity is just 1, and all other permutations have \\(f(\\sigma) &gt; 1\\). What is the smallest \\(n\\) such that there exists a \\(\\sigma_n\\) with \\(f(\\sigma_n) = k\\)?</p>",
+      "solutions": "<p>Suppose instead \\(f(\\sigma_n) = k\\). Let \\(L\\) be a list of numbers. Note that each permutation may be decomposed into a product of disjoint cycles. In order to determine the smallest \\(n\\) such that a given permutation has order \\(k\\), we want to minimize the sum of all the numbers in \\(L\\) while making the gcd of \\(L\\) equal to \\(k\\). To do this, we let \\(L\\) be the list of the highest power of distinct prime factors that divide \\(k\\), such that if \\(k = p_1^{e_1} p_2^{e_2} p_3^{e_3} \\ldots\\), then our answer is \\(p_1^{e_1} + p_2^{e_2} + p_3^{e_3} + \\ldots\\).</p>",
+      "answer": "75"
+    }
+  }
+}

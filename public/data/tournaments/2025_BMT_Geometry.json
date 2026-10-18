@@ -1,0 +1,58 @@
+{
+  "test": "BMT Geometry",
+  "year": 2025,
+  "name": "Geometry Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/geometry-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Triangle \\(\\triangle ABC\\) has a right angle at \\(B\\) and all integer side lengths. Square \\(ACDE\\) is constructed outside \\(\\triangle ABC\\). Given \\(AC = 10\\), what is the perimeter of pentagon \\(ABCDE\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_Geometry/1-fig1.png\" width=\"166\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Stephanie uses a rope of length 4 meters to tie a sheep to a point that is 2 meters away from the corner of a large rectangular building. Given the sheep cannot enter the building, what is the area, in square meters, that the sheep can graze?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_Geometry/2-fig1.png\" width=\"441\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Square \\(ABCD\\), regular pentagon \\(ABEFG\\), and regular hexagon \\(ABHIJK\\) all lie in the same plane so that the square lies inside the pentagon, and the pentagon lies inside the hexagon. Compute the degree measure of \\(\\angle DGK\\) which is less than \\(180^\\circ\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Let triangle \\(\\triangle ABC\\) be equilateral. Points \\(D\\) and \\(E\\) lie on sides \\(\\overline{AB}\\) and \\(\\overline{AC}\\), respectively, such that \\(\\overline{DE} \\parallel \\overline{BC}\\) and \\(\\overline{CD} \\perp \\overline{BE}\\). Compute \\(\\frac{AD}{AB}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Quadrilateral \\(ABCD\\) has \\(AB = CD = 25\\), \\(BC = 50\\), and acute angles at vertices \\(B\\) and \\(C\\). The distance from \\(C\\) to line \\(\\overleftrightarrow{AB}\\) is 48, and the distance from \\(B\\) to line \\(\\overleftrightarrow{CD}\\) is 40. Compute the area of quadrilateral \\(ABCD\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_Geometry/5-fig1.png\" width=\"353\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Circles \\(I\\) and \\(O\\) have radii 1 and 8, respectively, and the distance between their centers is 4. Let \\(\\mathcal{C}\\) be the set of all circles simultaneously internally tangent to \\(O\\) and externally tangent to \\(I\\). Compute the area enclosed by the curve formed from the centers of all circles in \\(\\mathcal{C}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>In three-dimensional coordinate space, a <i>lattice point</i> is a point whose coordinates are all integers. A triangular prism has all vertices at lattice points. Its triangular faces are both parallel to the \\(xy\\)-plane, and its rectangular faces are all parallel to the \\(z\\)-axis. The prism has 34 lattice points on its edges (including the vertices), 72 lattice points in the interior of its faces (not including the edges), and 126 lattice points in its interior (not including the faces). What is the volume of the prism?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>In acute triangle \\(\\triangle ABC\\) with orthocenter \\(H\\), let \\(X\\) be the unique point on \\(\\overline{BC}\\) for which angle \\(\\angle AXH\\) is maximized. Given \\(HX = 15\\), \\(AX = 20\\), and \\(BC = 30\\), compute \\(AB + AC\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Triangle \\(\\triangle ABC\\) has \\(AB = 4\\), \\(AC = 5\\), \\(BC = 6\\). Points \\(E\\) and \\(F\\) are the midpoints of sides \\(\\overline{AB}\\) and \\(\\overline{AC}\\), respectively. Let \\(P\\) be the foot of the altitude from \\(A\\) to side \\(\\overline{BC}\\), and let \\(H\\) be the midpoint of \\(\\overline{AP}\\). The circumcircles of triangles \\(\\triangle HEB\\) and \\(\\triangle HFC\\) intersect at \\(K \\ne H\\). Compute \\(AK^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Triangle \\(\\triangle ABC\\) has \\(AB = 3 + \\sqrt{2}\\) and \\(AC = 1 + \\sqrt{2}\\). Point \\(D\\) lies on side \\(\\overline{BC}\\) such that \\(AD = 2 - \\sqrt{2}\\). The internal angle bisector of \\(\\angle BAD\\) intersects the circumcircle of triangle \\(\\triangle BAD\\) at \\(X \\ne A\\), and the internal angle bisector of \\(\\angle CAD\\) intersects the circumcircle of triangle \\(\\triangle CAD\\) at \\(Y \\ne A\\). Given \\(\\overline{XY} \\parallel \\overline{BC}\\), compute \\(XY\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

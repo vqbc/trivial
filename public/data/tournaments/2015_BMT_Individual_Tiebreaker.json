@@ -1,0 +1,23 @@
+{
+  "test": "BMT Individual Tiebreaker",
+  "year": 2015,
+  "name": "Individual Round Tiebreakers",
+  "url": "https://berkeley.mt/resources/archives/bmt-2015/IS2015Tb.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute the surface area of a rectangular prism with side lengths \\(2, 3, 4\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Let \\(S_n = 1 + 2 + \\ldots + n\\). Define \\[T_n = \\frac{S_2}{S_2 - 1} \\cdot \\frac{S_3}{S_3 - 1} \\cdot \\ldots \\cdot \\frac{S_n}{S_n - 1}.\\]</p><p>Find \\(T_{2015}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>A bag contains 12 marbles: 3 red, 4 green, and 5 blue. Repeatedly draw marbles with replacement until you draw two marbles of the same color in a row. What is the expected number of times that you will draw a marble?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

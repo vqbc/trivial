@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Advanced Topics",
+  "year": 2000,
+  "name": "Advanced Topics",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2000/feb/adv/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many different ways are there to paint the sides of a tetrahedron with exactly 4 colors? Each side gets its own color, and two colorings are the same if one can be rotated to get the other.</p>",
+      "solutions": "<p>Assume we have 4 colors - 1, 2, 3, and 4. Fix the bottom as color 1. On the remaining sides you can have colors 2, 3, 4 (in that order), or 2, 4, 3, which are not rotationally identical. So, there are \\(\\textbf{2}\\) ways to color it.</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>Simplify \\(\\left(\\frac{-1+i\\sqrt{3}}{2}\\right)^6 + \\left(\\frac{-1-i\\sqrt{3}}{2}\\right)^6\\) to the form \\(a+bi\\).</p>",
+      "solutions": "<p>Since \\(\\cos \\frac{2\\pi}{3} = -\\frac{1}{2}\\) and \\(\\sin \\frac{2\\pi}{3} = \\frac{\\sqrt{3}}{2}\\), we can write the first term as \\(\\left(\\cos \\frac{2\\pi}{3} + i \\sin \\frac{2\\pi}{3}\\right)^6\\). Since \\(\\cos \\frac{4\\pi}{3} = -\\frac{1}{2}\\) and \\(\\sin \\frac{4\\pi}{3} = -\\frac{\\sqrt{3}}{2}\\), we can write the second term as \\(\\left(\\cos \\frac{4\\pi}{3} + i \\sin \\frac{4\\pi}{3}\\right)^6\\). Now, we apply DeMoivre’s Theorem to simplify the first expression to \\(\\cos 6\\cdot\\frac{2\\pi}{3} + \\sin 6\\cdot\\frac{2\\pi}{3} = \\left(\\cos 4\\pi + \\sin 4\\pi\\right) = 1+0=1\\). Similarly, we simplify the second expression to \\(\\cos 6\\cdot\\frac{4\\pi}{3} + \\sin 6\\cdot\\frac{4\\pi}{3} = \\left(\\cos 8\\pi + \\sin 8\\pi\\right) = 1+0=1\\). Thus, the total sum is \\(1+1=\\textbf{2}\\).</p>",
+      "answer": "2"
+    },
+    "3": {
+      "problem": "<p>Evaluate \\(\\sum_{n=1}^{\\infty} \\frac{1}{n^2+2n}\\).</p>",
+      "solutions": "<p>We know that \\(\\frac{1}{n^2+2n} = \\frac{1}{n(n+2)} = \\frac{\\frac{1}{n}-\\frac{1}{n+2}}{2}\\). So, if we sum this from 1 to \\(\\infty\\), all terms except for \\(\\frac{\\frac{1}{1}}{2} + \\frac{\\frac{1}{2}}{2}\\) will cancel out (a “telescoping” series). Therefore, the sum will be \\(\\boldsymbol{\\frac{3}{4}}\\).</p>",
+      "answer": "\\frac{3}{4}"
+    },
+    "4": {
+      "problem": "<p>Five positive integers from 1 to 15 are chosen without replacement. What is the probability that their sum is divisible by 3?</p>",
+      "solutions": "<p>The possibilities for the numbers are:</p><ul><li>all five are divisible by 3</li><li>three are divisible by 3, one is \\(\\equiv 1 \\pmod{3}\\) and one is \\(\\equiv 2 \\pmod{3}\\)</li><li>two are divisible by 3, and the other three are either \\(\\equiv 1 \\pmod{3}\\) or \\(\\equiv 2 \\pmod{3}\\)</li><li>one is divisible by 3, two are \\(\\equiv 1 \\pmod{3}\\) and two are \\(\\equiv 2 \\pmod{3}\\)</li><li>four are \\(\\equiv 1 \\pmod{3}\\) and one is \\(\\equiv 2 \\pmod{3}\\)</li><li>four are \\(\\equiv 2 \\pmod{3}\\) and one is \\(\\equiv 1 \\pmod{3}\\)</li></ul><p>This gives us 1001 possible combinations out of \\(\\binom{15}{5}\\) or 3003. So, the probability is \\(\\frac{1001}{3003} = \\boldsymbol{\\frac{1}{3}}\\).</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "5": {
+      "problem": "<p>Find all 3-digit numbers which are the sums of the cubes of their digits.</p>",
+      "solutions": "<p>\\(\\textbf{153, 370, 371, 407}\\)</p>",
+      "answer": "153; 370; 371; 407"
+    },
+    "6": {
+      "problem": "<p>6 people each have a hat. If they shuffle their hats and redistribute them, what is the probability that exactly one person gets their own hat back?</p>",
+      "solutions": "<p>There are 6 people that could get their hat back, so we must multiply 6 by the number of ways that the other 5 people can arrange their hats such that no one gets his/her hat back. So, the number of ways this will happen is \\((6 \\cdot \\text{derangement of } 5)\\), or \\(6*44=264\\). Since there are \\(6!=720\\) possible arrangements of hats, the probability of exactly one person getting their hat back is \\(\\frac{264}{720} = \\boldsymbol{\\frac{11}{30}}\\).</p>",
+      "answer": "\\frac{11}{30}"
+    },
+    "7": {
+      "problem": "<p>Assume that \\(a,b,c,d\\) are positive integers, and \\(\\frac{a}{c} = \\frac{b}{d} = \\frac{3}{4}\\), \\(\\sqrt{a^2+c^2} - \\sqrt{b^2+d^2} = 15\\). Find \\(ac+bd-ad-bc\\).</p>",
+      "solutions": "<p>We can view these conditions as a geometry diagram as seen below. So, we know that \\(\\frac{e}{f} = \\frac{3}{4}\\) (since \\(e = a-b = \\frac{3}{4}c - \\frac{3}{4}d = \\frac{3}{4}f\\)) and we know that \\(\\sqrt{e^2+f^2}=15\\) (since this is \\(\\sqrt{a^2+c^2}-\\sqrt{b^2+d^2}\\)). Also, note that \\(ac+bd-ad-bc = (a-b)(c-d) = ef\\). So, solving for \\(e\\) and \\(f\\), we find that \\(e^2+f^2=225\\), so \\(16e^2+16f^2=3600\\), so \\((4e)^2+(4f)^2=3600\\), so \\((3f)^2+(4f)^2=3600\\), so \\(f^2(3^2+4^2)=3600\\), so \\(25f^2=3600\\), so \\(f^2=144\\) and \\(f=12\\). Thus, \\(e = \\frac{3}{4}\\cdot 12=9\\). Therefore, \\(\\boldsymbol{ef=9*12=108}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Advanced_Topics/7-fig1.png\" width=\"298\" alt=\"\"></p>",
+      "answer": "108"
+    },
+    "8": {
+      "problem": "<p>How many non-isomorphic graphs with 9 vertices, with each vertex connected to exactly 6 other vertices, are there? (Two graphs are isomorphic if one can relabel the vertices of one graph to make all edges be exactly the same.)</p>",
+      "solutions": "<p>It suffices to consider the complements of the graphs, so we are looking for graphs with 9 vertices, where each vertex is connected to 2 others. There are \\(\\textbf{4}\\) different graphs - see below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Advanced_Topics/8-fig1.png\" width=\"189\" alt=\"\"> <img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_Advanced_Topics/8-fig2.png\" width=\"198\" alt=\"\"></p>",
+      "answer": "4"
+    },
+    "9": {
+      "problem": "<p>The Cincinnati Reals are playing the Houston Alphas in the last game of the Swirled Series. The Alphas are leading by 1 run in the bottom of the 9th (last) inning, and the Reals are at bat. Each batter has a \\(\\frac{1}{3}\\) chance of hitting a single and a \\(\\frac{2}{3}\\) chance of making an out. If the Reals hit 5 or more singles before they make 3 outs, they will win. If the Reals hit exactly 4 singles before making 3 outs, they will tie the game and send it into extra innings, and they will have a \\(\\frac{3}{5}\\) chance of eventually winning the game (since they have the added momentum of coming from behind). If the Reals hit fewer than 4 singles, they will LOSE! What is the probability that the Alphas hold off the Reals and win, sending the packed Alphadome into a frenzy? Express the answer as a fraction.</p>",
+      "solutions": "<p>The probability of the Reals hitting 0 singles is \\(\\left(\\frac{2}{3}\\right)^3\\). The probability of the Reals hitting exactly 1 single is \\(\\binom{3}{2}\\cdot\\left(\\frac{2}{3}\\right)^3\\cdot\\frac{1}{3}\\), since there are 3 spots to put the two outs (the last spot must be an out, since the inning has to end on an out). The probability of the Reals hitting exactly 2 singles is \\(\\binom{4}{2}\\cdot\\left(\\frac{2}{3}\\right)^3\\cdot\\left(\\frac{1}{3}\\right)^2\\). The probability of the Reals hitting exactly 3 singles is \\(\\binom{5}{2}\\cdot\\left(\\frac{2}{3}\\right)^3\\cdot\\left(\\frac{1}{3}\\right)^3\\). If any of these happen, the Alphas win right away. Adding these gives us a \\(\\frac{656}{729}\\) chance of this happening. If exactly 4 singles occur (with probability \\(\\binom{6}{2}\\cdot\\left(\\frac{2}{3}\\right)^3\\cdot\\left(\\frac{1}{3}\\right)^4\\)), then there is a \\(\\frac{2}{5}\\) chance that the Alphas win. The probability of this happening is \\(\\frac{2}{5}\\cdot\\frac{40}{729}\\). Thus, the total probability of the Alphas winning is the sum of these two probabilities, or \\(\\frac{656}{729}+\\frac{16}{729}=\\boldsymbol{\\frac{224}{243}}\\).</p>",
+      "answer": "\\frac{224}{243}"
+    },
+    "10": {
+      "problem": "<p>I call two people A and B and think of a natural number \\(n\\). Then I give the number \\(n\\) to A and the number \\(n+1\\) to B. I tell them that they have both been given natural numbers, and further that they are consecutive natural numbers. However, I don’t tell A what B’s number is and vice versa. I start by asking A if he knows B’s number. He says “no”. Then I ask B if he knows A’s number, and he says “no” too. I go back to A and ask, and so on. A and B can both hear each other’s responses. Do I ever get a “yes” in response? If so, who responds first with “yes” and how many times does he say “no” before this? Assume that both A and B are very intelligent and logical. You may need to consider multiple cases.</p>",
+      "solutions": "<p>A will say yes when B says no to \\(n-1\\) or \\(n\\), as A will then know B’s number is one greater than A’s number. Thus, A responds first, after \\(\\frac{n-1}{2}\\) “no” responses if \\(n\\) is odd, after \\(\\frac{n}{2}\\) “no” responses if \\(n\\) is even.</p>",
+      "answer": "\\text{A responds first, after } \\frac{n-1}{2} \\text{ ``no'' responses if } n \\text{ is odd, or } \\frac{n}{2} \\text{ ``no'' responses if } n \\text{ is even}"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2016,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2016/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Mark takes a two digit number \\(x\\) and forms another two digit number by reversing the digits of \\(x\\). He then sums the two values, obtaining a value which is divisible by 13. Compute the smallest possible value of \\(x\\).</p>",
+      "solutions": "<p>Let \\(x = AB\\), where \\(1 \\le A \\le 9\\) and \\(0 \\le B \\le 9\\). We observe that</p><p>\\[AB + BA = 10(A+B) + (A+B) = 11(A+B)\\]</p><p>Hence, the resulting sum will be divisible by 11 and \\(A+B\\), and since the sum must be divisible by 13, we have \\(A+B = 13\\). \\(x\\) is minimized when we choose \\(A = 4\\) and \\(B = 9\\), hence \\(x = \\boxed{49}\\).</p>",
+      "answer": "49"
+    },
+    "2": {
+      "problem": "<p>Let \\(p(x) = x^4 - 10x^3 + cx^2 - 10x + 1\\), where \\(c\\) is a real number. Given that \\(p(x)\\) has at least one real root, what is the maximum value of \\(c\\)?</p>",
+      "solutions": "<p>Note that the products of the roots of \\(p(x)\\) are \\(1\\). For now, we guess that \\(p(x)\\) has two pairs of roots, with each pair having a product of \\(1\\). Then we can write \\(p(x)\\) as</p><p>\\[\\begin{aligned}\np(x) &amp;= (x^2 - ax + 1)(x^2 - bx + 1) \\\\\n&amp;= x^4 - (a+b)x^3 + (1+ab+1)x^2 - (a+b)x + 1\n\\end{aligned}\\]</p><p>Hence, we must maximize \\(ab\\) subject to the constraint that \\(a+b = 10\\). By AM-GM, \\(ab\\) is maximized when \\(a = b = 5\\), and we have that \\(c = 1 + 25 + 1 = 27\\).</p><p>To show that no larger value of \\(c\\) exists, we can factorize \\(p(x)\\) when \\(c = 27\\):</p><p>\\[\\begin{aligned}\np(x) &amp;= x^4 - 10x^3 + 27x^2 - 10x + 1 \\\\\n&amp;= (x^2 - 5x + 1)(x^2 - 5x + 1) \\ge 0\n\\end{aligned}\\]</p><p>Since \\(x^2 &gt; 0\\), increasing our choice of \\(c\\) to some \\(c'\\) would result in \\(p(x) + (c'-c)x^2 &gt; 0\\) for all \\(x\\), implying that \\(p(x)\\) has no real roots.</p><p>We thus conclude that our answer is \\(c = \\boxed{27}\\).</p>",
+      "answer": "27"
+    },
+    "3": {
+      "problem": "<p>\\(x\\) satisfies the equation \\((1+i)x^3 + 8ix^2 + (-8+8i)x + 36 = 0\\). Compute the largest possible value of \\(|x|\\).</p>",
+      "solutions": "<p>Recall that a complex number can be represented in terms of a direction and a magnitude, and observe the direction of the complex coefficients. From the first three coefficients, we see a factor of \\(1+i\\) in the \\(x^3\\) coefficient, a factor of \\(i\\) in the \\(x^2\\) coefficient, and a factor of \\(-1+i\\) in the \\(x\\) coefficient. Thus, making a substitution may simplify the equation.</p><p>Let \\(x = (1+i)y\\). First, we observe that \\((1+i)^2 = 2i\\); \\((1+i)^3 = -2+2i\\); and \\((1+i)^4 = -4\\). Making the substitution, we have</p><p>\\[\\begin{aligned}\n0 &amp;= (1+i)x^3 + 8ix^2 + (-8+8i)x + 36 \\\\\n0 &amp;= (1+i)((1+i)y)^3 + 8i((1+i)y)^2 + (-8+8i)((1+i)y) + 36 \\\\\n0 &amp;= (1+i)(1+i)^3y^3 + 4(2i)(1+i)^2y^2 + 4(-2+2i)(1+i)y + 36 \\\\\n0 &amp;= -4y^3 - 4\\cdot 4y^2 - 4\\cdot 4y + 36 \\\\\n0 &amp;= y^3 + 4y^2 + 4y - 9\n\\end{aligned}\\]</p><p>Since the coefficients sum to equal \\(1\\), \\(y=1\\) is a solution. Finding the remaining solutions for \\(y\\) and solving for \\(x\\), we have</p><p>\\[\\begin{aligned}\n0 &amp;= (y-1)(y^2+5y+9) \\\\\ny &amp;= 1, \\frac{-5+i\\sqrt{11}}{2}, \\frac{-5-i\\sqrt{11}}{2} \\\\\nx &amp;= 1+i, (1+i)\\frac{-5+i\\sqrt{11}}{2}, (1+i)\\frac{-5-i\\sqrt{11}}{2}\n\\end{aligned}\\]</p><p>Clearly, \\(|x|\\) is maximized when we choose \\(x\\) to be either the second or third root. Choosing the second root, we compute \\(|x|\\) to be</p><p>\\[|x| = \\left|(1+i)\\frac{-5+i\\sqrt{11}}{2}\\right| = \\sqrt{1+1}\\sqrt{\\frac{25+11}{4}} = \\sqrt{2}\\sqrt{9} = \\boxed{3\\sqrt{2}}\\]</p>",
+      "answer": "3\\sqrt{2}"
+    }
+  }
+}

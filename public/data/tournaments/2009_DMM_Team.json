@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2009,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2009/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>You are on a flat planet. There are 100 cities at points \\(x = 1, \\ldots, 100\\) along the line \\(y = -1\\), and another 100 cities at points \\(x = 1, \\ldots, 100\\) along the line \\(y = 1\\). The planet’s terrain is scalding hot, and you cannot walk over it directly. Instead, you must cross archways from city to city. There are archways between all pairs of cities with different \\(y\\) coordinates, but no other pairs: for instance, there is an archway from \\((1, -1)\\) to \\((50, 1)\\), but not from \\((1, -1)\\) to \\((50, -1)\\). The amount of “effort” necessary to cross an archway equals the square of the distance between the cities it connects. You are at \\((1, -1)\\), and you want to get to \\((100, -1)\\). What is the least amount of effort this journey can take?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "397"
+    },
+    "2": {
+      "problem": "<p>Let \\(f(x) = x^4 + ax^3 + bx^2 + cx + 25\\). Suppose \\(a, b, c\\) are integers and \\(f(x)\\) has 4 distinct integer roots. Find \\(f(3)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-128"
+    },
+    "3": {
+      "problem": "<p>Frankenstein starts at the point \\((0,0,0)\\) and walks to the point \\((3,3,3)\\). At each step he walks either one unit in the positive \\(x\\)-direction, one unit in the positive \\(y\\)-direction, or one unit in the positive \\(z\\)-direction. How many distinct paths can Frankenstein take to reach his destination?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1680"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABCD\\) be a rectangle with \\(AB = 20\\), \\(BC = 15\\). Let \\(X\\) and \\(Y\\) be on the diagonal \\(\\overline{BD}\\) of \\(ABCD\\) such that \\(BX &gt; BY\\). Suppose \\(A\\) and \\(X\\) are two vertices of a square which has two sides on lines \\(\\overline{AB}\\) and \\(\\overline{AD}\\), and suppose that \\(C\\) and \\(Y\\) are vertices of a square which has sides on lines \\(\\overline{CB}\\) and \\(\\overline{CD}\\). Find the length \\(XY\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_DMM_Team/4-fig1.png\" width=\"405\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{25}{7}"
+    },
+    "5": {
+      "problem": "<p>\\(n \\ge 2\\) kids are trick-or-treating. They enter a haunted house in a single-file line such that each kid is friends with precisely the kids (or kid) adjacent to him. Inside the haunted house, they get mixed up and out of order. They meet up again at the exit, and leave in single file. After leaving, they realize that each kid (except the first to leave) is friends with at least one kid who left before him. In how many possible orders could they have left the haunted house?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2^{n-1}"
+    },
+    "6": {
+      "problem": "<p>Call a set \\(S\\) <i>sparse</i> if every pair of distinct elements of \\(S\\) differ by more than 1. Find the number of sparse subsets (possibly empty) of \\(\\{1, 2, \\ldots, 10\\}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "144"
+    },
+    "7": {
+      "problem": "<p>How many ordered triples of integers \\((a, b, c)\\) are there such that \\(1 \\le a, b, c \\le 70\\) and \\(a^2 + b^2 + c^2\\) is divisible by 28?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6125"
+    },
+    "8": {
+      "problem": "<p>Let \\(C_1, C_2\\) be circles with centers \\(O_1, O_2\\), respectively. Line \\(\\ell\\) is an external tangent to \\(C_1\\) and \\(C_2\\); it touches \\(C_1\\) at \\(A\\) and \\(C_2\\) at \\(B\\). Line segment \\(\\overline{O_1O_2}\\) meets \\(C_1\\) at \\(X\\). Let \\(C\\) be the circle through \\(A, X, B\\) with center \\(O\\). Let \\(\\overline{OO_1}\\) and \\(\\overline{OO_2}\\) intersect circle \\(C\\) at \\(D\\) and \\(E\\), respectively. Suppose the radii of \\(C_1\\) and \\(C_2\\) are 16 and 9, respectively, and suppose the area of the quadrilateral \\(O_1O_2BA\\) is 300. Find the length of segment \\(\\overline{DE}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "12\\sqrt{2}"
+    },
+    "9": {
+      "problem": "<p>What is the remainder when \\(5^{5^{5^5}}\\) is divided by 13?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5"
+    },
+    "10": {
+      "problem": "<p>Let \\(\\alpha\\) and \\(\\beta\\) be the smallest and largest real numbers satisfying \\[x^2 = 13 + \\lfloor x \\rfloor + \\left\\lfloor \\frac{x}{2} \\right\\rfloor + \\left\\lfloor \\frac{x}{3} \\right\\rfloor + \\left\\lfloor \\frac{x}{4} \\right\\rfloor.\\] Find \\(\\beta - \\alpha\\). (\\(\\lfloor a \\rfloor\\) is defined as the largest integer that is not larger than \\(a\\).)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{21} + \\sqrt{6}"
+    }
+  }
+}

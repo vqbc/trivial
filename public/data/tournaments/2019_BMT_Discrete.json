@@ -1,0 +1,58 @@
+{
+  "test": "BMT Discrete",
+  "year": 2019,
+  "name": "Discrete Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2019/discrete-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A fair coin is repeatedly flipped until 2019 consecutive coin flips are the same. Compute the probability that the first and last flips of the coin come up differently.</p>",
+      "solutions": "<p>Call this probability \\(x\\). We can solve for \\(x\\) using the relation \\[x = \\frac{1}{2^{2018}} + \\frac{(1-x)(2^{2018}-1)}{2^{2019}}.\\] The first term describes the chance that the first 2019 flips are the same, and the added term describes the chance of getting the next 2019 flips the same, given that the previous flip was not part of such a sequence of 2019 flips. Solving for \\(x\\) yields \\(\\boxed{\\frac{2^{2018}-1}{2^{2019}-1}}\\).</p>",
+      "answer": "\\frac{2^{2018}-1}{2^{2019}-1}"
+    },
+    "2": {
+      "problem": "<p>Sylvia has a bag of 10 coins. Nine are fair coins, but the tenth has tails on both sides. Sylvia draws a coin at random from the bag and flips it without looking. If the coin comes up tails, what is the probability that the coin she drew was the 2-tailed coin?</p>",
+      "solutions": "<p>There are a total of 11 tails in the bag and the probability that the flipped tail belongs to the 2-tailed coin is \\(\\boxed{\\frac{2}{11}}\\).</p>",
+      "answer": "\\frac{2}{11}"
+    },
+    "3": {
+      "problem": "<p>There are 15 people at a party; each person has 10 friends. To greet each other each person hugs all their friends. How many hugs are exchanged at this party?</p>",
+      "solutions": "<p>Write this problem in graph-theoretic terms. Every person is a vertex; every friendship is an edge. Each vertex has degree 10, and so the sum of degrees is 150. The number of edges is \\(150/2 = \\boxed{75}\\) as claimed.</p>",
+      "answer": "75"
+    },
+    "4": {
+      "problem": "<p>There exists one pair of positive integers \\(a\\), \\(b\\) such that \\(100 &gt; a &gt; b &gt; 0\\) and \\(\\frac{1}{a} + \\frac{1}{b} = \\frac{2}{35}\\). Find \\(a+b\\).</p>",
+      "solutions": "<p>We use Simon’s Favorite Factoring Trick. \\[\\frac{1}{a} + \\frac{1}{b} = \\frac{2}{35} \\implies b+a = \\frac{2}{35}ab \\implies ab - \\frac{35}{2}a - \\frac{35}{2}b + \\frac{1225}{4} = \\left(a-\\frac{35}{2}\\right)\\left(b-\\frac{35}{2}\\right) = \\left(\\frac{35}{2}\\right)^2\\] A bit of casework from here implies that the only such solution is \\(a = 30\\) and \\(b = 42\\) in which case \\(a+b = \\boxed{72}\\).</p><p>(We have guaranteed that there is one such solution; this has been checked using a computer).</p>",
+      "answer": "72"
+    },
+    "5": {
+      "problem": "<p>Let \\(2^{1110} \\equiv n \\pmod{1111}\\) with \\(0 \\le n &lt; 1111\\). Compute \\(n\\).</p>",
+      "solutions": "<p>We can see that \\(1111 = 11 \\times 101\\). By Fermat’s little theorem, \\(2^{1100} \\equiv (2^{100})^{11} \\equiv 1 \\pmod{101}\\) and \\(2^{1100} \\equiv (2^{10})^{110} \\pmod{11}\\), therefore \\(2^{1100} \\equiv 1 \\pmod{1111}\\). Then \\(2^{1110} \\equiv 2^{10} \\equiv \\boxed{1024} \\pmod{1111}\\).</p>",
+      "answer": "1024"
+    },
+    "6": {
+      "problem": "<p>Define \\(f(n) = \\frac{n^2+n}{2}\\). Compute the number of positive integers \\(n\\) such that \\(f(n) \\le 1000\\) and \\(f(n)\\) is the product of two prime numbers.</p>",
+      "solutions": "<p>A necessary condition for \\(n\\) is that either \\(n\\) is a prime or \\(n+1\\) is prime. Along with some brute force, we find \\(\\boxed{8}\\) valid inputs, \\(n = 3, 4, 5, 6, 10, 13, 22, 37\\).</p>",
+      "answer": "8"
+    },
+    "7": {
+      "problem": "<p>Call the number of times that the digits of a number change from increasing to decreasing, or vice versa, from the left to right while ignoring consecutive digits that are equal the <i>flux</i> of the number. For example, the flux of 123 is 0 (since the digits are always increasing from left to right) and the flux of 12333332 is 1, while the flux of 9182736450 is 8. What is the average value of the flux of the positive integers from 1 to 999, inclusive?</p>",
+      "solutions": "<p>All numbers 1 to 99 have flux 0. From 100 to 999, we have a couple of cases:</p><ol><li>There is a 0 only in the second digit: then the flux is 1, and there is \\(9^2 = 81\\) numbers for that.</li><li>There is a 0 only in the third digit: then the flux is either 0 or 1, with \\(\\binom{9}{2}\\) for flux equal to 1.</li><li>There is 0 in second and third digit: then the flux is 0.</li><li>There is no 0. Suppose there are three distinct numbers. Then there are \\(\\binom{9}{3}\\) ways to choose the 3 digits. There are 4 ways to orient it so that it has flux 1. Suppose two of the digits are identical. There are \\(8 \\cdot 9 = 72\\) ways here since both of those digits must be the ones and hundreds digits for a flux 1 to occur. Then one observes that if the ones and hundreds digits are \\(d\\), then the middle digit cannot equal \\(d\\). It not being equal to \\(d\\) yields a flux of 1. Notice that it is \\(8 \\cdot 9\\) and not \\(9 \\cdot 9\\) since there are no zeroes in this case. Finally, if all three numbers are the same, there is zero flux.</li></ol><p>This gives us a total of 525 flux, so the average is \\(\\frac{525}{999} = \\boxed{\\frac{175}{333}}\\).</p>",
+      "answer": "\\frac{175}{333}"
+    },
+    "8": {
+      "problem": "<p>For a positive integer \\(n\\), define \\(\\phi(n)\\) as the number of positive integers less than or equal to \\(n\\) that are relatively prime to \\(n\\). Find the sum of all positive integers \\(n\\) such that \\(\\phi(n) = 20\\).</p>",
+      "solutions": "<p>Note that if \\(n = \\prod_{k=1}^r p_k^{e_k}\\) for some primes \\(p_k\\) and natural numbers \\(e_k\\), we have \\[\\phi(n) = \\prod_{k=1}^r p_k^{e_k-1}(p_k-1)\\] For our purposes, this right-hand side has to be 20. Note that \\(20 = 2^2 \\cdot 5\\), so the factors of 20 are \\(\\{1, 2, 4, 5, 10, 20\\}\\). We look for factors of 20 that are 1 less than a prime, which are \\(1, 2, 4, 10\\); we involve products of two or three primes in the set \\(\\{2, 3, 5, 11\\}\\).</p><p>The set of solutions are \\(n = 33 = 3 \\cdot 11\\), \\(n = 66 = 2 \\cdot 3 \\cdot 11\\), \\(n = 44 = 2^2 \\cdot 11\\), \\(n = 25 = 5^2\\), and \\(n = 50 = 2 \\cdot 5^2\\). Their sum is \\(\\boxed{218}\\) as claimed.</p>",
+      "answer": "218"
+    },
+    "9": {
+      "problem": "<p>Let \\(z = \\frac{1}{2}\\left(\\sqrt{2} + i\\sqrt{2}\\right)\\). The sum \\[\\sum_{k=0}^{13} \\frac{1}{1-ze^{k \\cdot i\\pi/7}}\\] can be written in the form \\(a - bi\\). Find \\(a+b\\).</p>",
+      "solutions": "<p>Note that each term is of the form \\(\\frac{1}{1-z\\zeta^k}\\) for \\(p = 14\\), \\(k \\in \\{0, \\ldots, 13\\}\\), and \\(\\zeta = e^{2i\\pi/p}\\).</p><p><b>Claim</b>: \\[\\sum_{k=0}^{p-1} \\frac{1}{1-z\\zeta^k} = \\frac{p}{1-z^p}\\]</p><p><b>Proof</b>: Note that \\(z, z\\zeta, \\ldots, z\\zeta^{p-1}\\) are the zeros of \\(P(x) = x^p - z^p\\), by factorization. Write \\[P(x) = \\prod_{k=0}^{p-1}(x-z\\zeta^k) \\implies \\log(P(x)) = \\sum_{k=0}^{p-1}\\log(x-z\\zeta^k)\\] Taking the formal derivative of \\(\\log(P(x)) = \\log(x^p-z^p)\\) yields \\[\\frac{P'(x)}{P(x)} = \\frac{px^{p-1}}{x^p-z^p}\\] but the term-by-term formal derivative of the sum of logarithms yields \\[\\frac{P'(x)}{P(x)} = \\sum_{k=0}^{p-1} \\frac{1}{x-z\\zeta^k}\\] so \\[\\frac{px^{p-1}}{x^p-z^p} = \\sum_{k=0}^{p-1} \\frac{1}{x-z\\zeta^k}\\] Plugging in \\(x = 1\\) yields our result.</p><p>Now, we have that the sum is just \\[\\frac{14}{1-z^{14}}\\] This second sum corresponds to the complex number obtained by rotating 1 around by an angle of \\(\\pi/4\\) counterclockwise a total of 14 times. The angle of this new complex number is \\(-\\pi/2\\) by taking modulo 8, so \\(z^{14} = -i\\). Then \\[\\frac{14}{1-z^{14}} = \\frac{14(1-i)}{2} = 7-7i\\] Hence \\(a+b = \\boxed{14}\\).</p>",
+      "answer": "14"
+    },
+    "10": {
+      "problem": "<p>Let \\(S(n)\\) be the sum of the squares of the positive integers less than and coprime to \\(n\\). For example, \\(S(5) = 1^2 + 2^2 + 3^2 + 4^2\\), but \\(S(4) = 1^2 + 3^2\\).</p><p>Let \\(p = 2^7 - 1 = 127\\) and \\(q = 2^5 - 1 = 31\\) be primes. The quantity \\(S(pq)\\) can be written in the form \\[\\frac{p^2q^2}{6}\\left(a - \\frac{b}{c}\\right)\\] where \\(a\\), \\(b\\), and \\(c\\) are positive integers, with \\(b\\) and \\(c\\) coprime and \\(b &lt; c\\). Find \\(a\\).</p>",
+      "solutions": "<p>Let \\(\\mu(n)\\) be the Mobius function.</p><p><b>Claim</b> – \\[S(n) = \\frac{n^2}{6}\\sum_{d|n}\\mu(d)\\left(3 + \\frac{2n}{d} + \\frac{d}{n}\\right)\\]</p><p><i>Proof</i> – First, we claim that \\[\\sum_{j=1}^n j^2 = \\sum_{d|n}\\frac{n^2}{d^2}S(d)\\]</p><p><i>Subproof</i> – Define \\[f(n) = \\sum_{k=1}^n \\left(\\frac{k}{n}\\right)^2 \\text{ and } f^*(n) = \\sum_{\\substack{k=1 \\\\ \\gcd(k,n)=1}}^n \\left(\\frac{k}{n}\\right)^2\\]</p><p>Then \\[f(n) = (1*f^*)(n) = \\sum_{d|n}\\sum_{\\substack{k=1 \\\\ \\gcd(k,d)=1}}^d \\left(\\frac{k}{d}\\right)^2 = \\sum_{d|n}\\frac{1}{d^2}\\sum_{\\substack{k=1 \\\\ \\gcd(k,d)=1}}^d k^2 = \\sum_{d|n}\\frac{S(d)}{d^2}\\]</p><p>Since \\[f(n) = \\sum_{k=1}^n \\left(\\frac{k}{n}\\right)^2 = \\frac{1}{n^2}\\sum_{k=1}^n k^2 = \\sum_{d|n}\\frac{S(d)}{d^2}\\]</p><p>multiplying both sides by \\(n^2\\) yields the result \\[\\sum_{j=1}^n j^2 = \\sum_{d|n}\\frac{n^2}{d^2}S(d)\\]</p><p>Using the sum-of-squares identity, we get \\[\\sum_{d|n}\\frac{S(d)}{d^2} = \\frac{1}{6}\\left(2n + 3 + \\frac{1}{n}\\right)\\]</p><p>Now, Mobius inversion yields \\[\\frac{S(n)}{n^2} = \\sum_{d|n}\\frac{1}{6}\\mu(d)\\left(\\frac{2n}{d} + 3 + \\frac{d}{n}\\right)\\]</p><p>which implies our original equality \\[S(n) = \\frac{n^2}{6}\\sum_{d|n}\\mu(d)\\left(3 + \\frac{2n}{d} + \\frac{d}{n}\\right)\\]</p><p>We want the value of the sum on the right. The values of \\(d\\) are \\(\\{1, p, q, pq\\}\\) since \\(p\\) is a prime. For the first term, \\(d = 1\\), so \\(\\mu(d) = 1\\), and so \\[\\mu(d)\\left(3 + \\frac{2n}{d} + \\frac{d}{n}\\right) = 3 + 2pq + \\frac{1}{pq}\\]</p><p>For the second term, \\(d = q\\), so \\(\\mu(d) = -1\\), and so \\[\\mu(d)\\left(3 + \\frac{2n}{d} + \\frac{d}{n}\\right) = -\\left(3 + 2p + \\frac{1}{p}\\right)\\]</p><p>For the third term, \\(d = p\\), so \\(\\mu(d) = -1\\), and so \\[\\mu(d)\\left(3 + \\frac{2n}{d} + \\frac{d}{n}\\right) = -\\left(3 + 2q + \\frac{1}{q}\\right)\\]</p><p>For the fourth term, \\(d = pq\\), so \\(\\mu(d) = 1\\), and so \\[\\mu(d)\\left(3 + \\frac{2n}{d} + \\frac{d}{n}\\right) = 3 + 2 + 1 = 6\\]</p><p>Adding the terms we have, we get \\[\\left(3 + 2pq + \\frac{1}{pq}\\right) - \\left(3 + 2p + \\frac{1}{p}\\right) - \\left(3 + 2q + \\frac{1}{q}\\right) + 6 = (2pq - 2p - 2q - 3) - \\left(\\frac{1}{p} + \\frac{1}{q} - \\frac{1}{pq}\\right)\\]</p><p>Clearly the rightmost term is never greater than 1; thus \\[a = 2pq - 2p - 2q + 3\\]</p><p>Let \\(p = 2^r - 1\\) and \\(q = 2^s - 1\\); then \\[a = 2^{r+s+1} - 2^{r+2} - 2^{s+2} + 9\\]</p><p>Plugging in \\(r = 7\\) and \\(s = 5\\) yields \\[a = 2^{13} - 2^9 - 2^7 + 9 = \\boxed{7561}\\] as claimed.</p>",
+      "answer": "7561"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "test": "PUMaC Combinatorics A",
+  "year": 2007,
+  "name": "Combinatorics A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2007_CombinatoricsA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Take the square with vertices \\((0,0)\\), \\((1,0)\\), \\((0,1)\\), and \\((1,1)\\). Choose a random point in this square and draw the line segment from it to \\((0,0)\\). Choose a second random point in this square and draw the line segment from it to \\((1,0)\\). What is the probability that the two line segments intersect?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Tom is searching for the 6 books he needs in a random pile of 30 books. What is the expected number of books must he examine before finding all 6 books he needs?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Find the minimum number \\(n\\) such that for any coloring of the integers from 1 to \\(n\\) into two colors, one can find monochromatic \\(a\\), \\(b\\), \\(c\\), and \\(d\\) (not necessarily distinct) such that \\(a+b+c=d\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>How many subsets of \\(\\{1, 2, \\ldots, 10\\}\\) are there that don’t contain 2 consecutive integers?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Joe has 1729 randomly oriented and randomly arranged unit cubes, which are initially unpainted. He makes two cubes of sidelengths 9 and 10 or of sidelengths 1 and 12 (randomly chosen). These cubes are dipped into white paint. Then two more cubes of sidelengths 1 and 12 or 9 and 10 are formed from the same unit cubes, again randomly oriented and randomly arranged, and dipped into paint. Joe continues this process until every side of every unit cube is painted. After how many times of doing this is the expected number of painted faces closest to half of the total?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>In a \\(7 \\times 7\\) square table, some of the squares are colored black and the others white, such that each white square is adjacent (along an edge) to an edge of the table or to a black square. Find the minimum number of black squares on the table.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>How many pairs of 2007-digit numbers \\(\\underline{a_1 a_2 \\cdots a_{2007}}\\) and \\(\\underline{b_1 b_2 \\cdots b_{2007}}\\) are there such that \\(a_1 b_1 + a_2 b_2 + \\cdots + a_{2007} b_{2007}\\) is even? Express your answer as \\(a*b^c + d*e^f\\) for integers \\(a\\), \\(b\\), \\(c\\), \\(d\\), \\(e\\), and \\(f\\) with \\(a \\nmid b\\) and \\(d \\nmid e\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>For how many permutations \\((a_1, a_2, \\ldots, a_{2007})\\) of the integers from 1 to 2007 is there exactly one \\(i\\) between 1 and 2006 such that \\(a_i &gt; a_{i+1}\\)? Express your answer as \\(a*b^c + d*e^f\\) for integers \\(a\\), \\(b\\), \\(c\\), \\(d\\), \\(e\\), and \\(f\\) with \\(a \\nmid b\\) and \\(d \\nmid e\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Pawns are arranged on an \\(8 \\times 8\\) chessboard such that</p><ul><li>Each \\(2 \\times 1\\) or \\(1 \\times 2\\) rectangle has at least 1 pawn</li><li>Each \\(7 \\times 1\\) or \\(1 \\times 7\\) rectangle has at least 1 pair of adjacent pawns</li></ul><p>What is the minimum number of pawns in such an arrangement?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

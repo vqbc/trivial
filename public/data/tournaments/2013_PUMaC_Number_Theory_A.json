@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory A",
+  "year": 2013,
+  "name": "Number Theory A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2013_NumberTheoryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(p, q\\) and \\(r\\) are primes with \\(pqr = 7(p+q+r)\\), find \\(p+q+r\\).</p>",
+      "solutions": "<p>Without loss of generality, we see that we must have \\(p = 7\\). Next, \\(qr = 7 + q + r\\) iff \\((q-1)(r-1) = 8\\). The only prime solution is \\((q,r) = (3,5)\\) up to permutation. Then \\(p+q+r = 15\\).</p>",
+      "answer": "15"
+    },
+    "2": {
+      "problem": "<p>What is the smallest positive integer \\(n\\) such that \\(2013^n\\) ends in \\(001\\) (i.e. the rightmost three digits of \\(2013^n\\) are \\(001\\))?</p>",
+      "solutions": "<p>Firstly,</p><p>\\[\\begin{aligned}\n2013^{100} &amp;\\equiv 13^{100} \\\\\n&amp;= (10+3)^{100} \\\\\n&amp;\\equiv 3^{100} \\\\\n&amp;\\equiv 49^{10} \\\\\n&amp;\\equiv 401^5 \\\\\n&amp;= (400+1)^5 \\\\\n&amp;\\equiv 1 \\pmod{1000}\n\\end{aligned}\\]</p><p>yields \\(n \\mid 100\\). Next</p><p>\\[\\begin{aligned}\n2013^{50} &amp;\\equiv (10+3)^{50} \\\\\n&amp;\\equiv 3^{50} + 50 \\cdot 10 \\cdot 3^{49} + \\binom{50}{2} \\cdot 10^2 \\cdot 3^{48} \\\\\n&amp;\\equiv 3^{50} \\\\\n&amp;\\equiv 49^5 \\\\\n&amp;\\equiv 807^2 \\\\\n&amp;\\equiv 249 \\pmod{1000}\n\\end{aligned}\\]</p><p>and</p><p>\\[\\begin{aligned}\n2013^{20} &amp;\\equiv (10+3)^{20} \\\\\n&amp;\\equiv 3^{20} + 20 \\cdot 10 \\cdot 3^{19} \\\\\n&amp;\\equiv 49^2 + 400 \\\\\n&amp;\\equiv 801 \\pmod{1000}\n\\end{aligned}\\]</p><p>shows that \\(n = 100\\).</p>",
+      "answer": "100"
+    },
+    "3": {
+      "problem": "<p>Let \\(A\\) be the greatest possible value of a product of positive integers that sums to \\(2014\\). Compute the sum of all bases and exponents in the prime factorization of \\(A\\). For example, if \\(A = 7 \\cdot 11^5\\), the answer would be \\(7 + 11 + 5 = 23\\).</p>",
+      "solutions": "<p>Note that if we have a large enough \\(n\\), odd \\(n \\ge 5\\), break it as \\(n = \\frac{n-1}{2} + \\frac{n+1}{2}\\). This product is larger than \\(n\\). For even \\(n \\ge 4\\), break it as \\(n = \\frac{n}{2} + \\frac{n}{2}\\). This product is larger than \\(n\\). Furthermore, noting that \\(2^3 &lt; 3^2\\), we should have at most two \\(2\\)’s. So the optimum case is \\((2)(2) + (670)(3) = 2014\\). The answer is \\(677\\).</p>",
+      "answer": "677"
+    },
+    "4": {
+      "problem": "<p>Let \\(d\\) be the greatest common divisor of \\(2^{30^{10}} - 2\\) and \\(2^{30^{45}} - 2\\). Find the remainder when \\(d\\) is divided by \\(2013\\).</p>",
+      "solutions": "<p>We have \\[d = \\left(2^{30^{10}} - 2,\\ 2^{30^{45}} - 2\\right) = 2 \\cdot \\left(2^{\\left(30^{10}-1,\\ 30^{45}-1\\right)} - 1\\right) = 2 \\cdot \\left(2^{30^{(10,45)} - 1} - 1\\right) = 2^{30^5} - 2.\\]</p><p>As \\(\\phi(2013) = 1200\\) and \\(1200 \\mid 30^5\\), the remainder is \\(2012\\).</p>",
+      "answer": "2012"
+    },
+    "5": {
+      "problem": "<p>Define a \"digitized number\" as a ten-digit number \\(a_0a_1\\ldots a_9\\) such that for \\(k = 0, 1, \\ldots, 9\\), \\(a_k\\) is equal to the number of times the digit \\(k\\) occurs in the number. Find the sum of all digitized numbers.</p>",
+      "solutions": "<p>From the condition, we need \\[\\sum_{k=0}^{9} k a_k = \\sum_{k=0}^{9} a_k = 10.\\]</p><p>In particular, \\[a_0 = \\sum_{k=2}^{9} (k-1) a_k \\ge \\sum_{k=2}^{9-a_0} (k-1)\\]</p><p>yields \\(a_0 \\ge 6\\). By examining each case, we find the only solution \\(6210001000\\).</p>",
+      "answer": "6210001000"
+    },
+    "6": {
+      "problem": "<p>What is the largest positive integer that cannot be expressed as a sum of non-negative integer multiples of \\(13, 17\\) and \\(23\\)?</p>",
+      "solutions": "<p>There are numerous approaches to this problem, and no approach that attempts to find the last obtained remainder modulo any of the three numbers in sums of them will fail. The below is our approach:</p><p>By trial, the following gives the smallest positive integer in the form \\(17a + 23b\\) for integers \\(a, b \\ge 0\\) in different residue classes modulo \\(13\\) (starting from the class \\(0\\)): \\[91, 40, 80, 68, 17, 57, 97, 46, 34, 74, 23, 63, 51.\\]</p><p>(Indeed, one should note that \\(5(17) \\equiv 2(23) \\pmod{13}\\) and \\(3(23) \\equiv 17 \\pmod{13}\\) to reduce the number of cases for consideration.)</p><p>The largest \\(n\\) which is not of the form \\(13x + 17y + 23z\\) is therefore \\(97 - 13 = 84\\).</p>",
+      "answer": "84"
+    },
+    "7": {
+      "problem": "<p>Suppose \\(P(x)\\) is a degree \\(n\\) monic polynomial with integer coefficients such that \\(2013\\) divides \\(P(r)\\) for exactly \\(1000\\) values of \\(r\\) between \\(1\\) and \\(2013\\) inclusive. Find the minimum value of \\(n\\).</p>",
+      "solutions": "<p>Let \\(a, b,\\) and \\(c\\) be the number of solutions to the congruence equations \\(P(x) \\equiv 0 \\pmod{3}\\), \\(P(x) \\equiv 0 \\pmod{11}\\), \\(P(x) \\equiv 0 \\pmod{61}\\) respectively. Then \\(abc = 1000\\) and \\(a \\le \\min\\{3,n\\}\\), \\(b \\le \\min\\{11,n\\}\\), \\(c \\le \\min\\{61,n\\}\\). Then \\(\\max a = 2\\) and \\(\\max b = 10\\) so that \\(\\min c = 50\\). In particular, \\(\\min n = 50\\). The existence of such \\(P\\) is clear.</p>",
+      "answer": "50"
+    },
+    "8": {
+      "problem": "<p>Find the number of primes \\(p\\) between \\(100\\) and \\(200\\) for which \\(x^{11} + y^{16} \\equiv 2013 \\pmod{p}\\) has a solution in integers \\(x\\) and \\(y\\).</p>",
+      "solutions": "<p>Note that if \\(p \\not\\equiv 1 \\pmod{11}\\), then \\(x^{11}\\) will cycle over all residues modulo \\(p\\), and thus there will always be a solution.</p><p>It is thus left to check the primes that are \\(1\\) modulo \\(11\\).</p><p>Of the numbers between \\(100\\) and \\(200\\) that are prime, \\(199\\) is the only one that is \\(1 \\pmod{11}\\).</p><p>It remains to conclude that there is a solution to this equation mod \\(199\\). For example, one solution is \\(x = 5, y = 46\\).</p><p>Therefore the answer is simply the number of primes between \\(100\\) and \\(200\\), which is \\(21\\).</p>",
+      "answer": "21"
+    }
+  }
+}

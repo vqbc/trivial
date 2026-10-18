@@ -1,0 +1,133 @@
+{
+  "test": "SMT General",
+  "year": 2013,
+  "name": "General Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2013/general-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Robin goes birdwatching one day. He sees three types of birds: penguins, pigeons, and robins. \\(\\frac{2}{3}\\) of the birds he sees are robins. \\(\\frac{1}{8}\\) of the birds he sees are penguins. He sees exactly 5 pigeons. How many robins does Robin see?</p>",
+      "solutions": "<p>\\(1 - \\frac{2}{3} - \\frac{1}{8} = \\frac{5}{24}\\) of the birds that Robin sees are pigeons. Therefore, Robin sees exactly \\(\\frac{5}{\\frac{5}{24}} = 24\\) birds, so \\(\\frac{2}{3} \\cdot 24 = \\boxed{16}\\) robins.</p>",
+      "answer": "16"
+    },
+    "2": {
+      "problem": "<p>Jimmy runs a successful pizza shop. In the middle of a busy day, he realizes that he is running low on ingredients. Each pizza must have 1 lb of dough, \\(\\frac{1}{4}\\) lb of cheese, \\(\\frac{1}{6}\\) lb of sauce, and \\(\\frac{1}{3}\\) lb of toppings, which include pepperonis, mushrooms, olives, and sausages. Given that Jimmy currently has 200 lbs of dough, 20 lbs of cheese, 20 lbs of sauce, 15 lbs of pepperonis, 5 lbs of mushrooms, 5 lbs of olives, and 10 lbs of sausages, what is the maximum number of pizzas that Jimmy can make?</p>",
+      "solutions": "<p>The limiting factor is the cheese. With only 20 lbs of cheese, the most pizzas that can be made is \\(20 \\cdot 4 = \\boxed{80}\\).</p>",
+      "answer": "80"
+    },
+    "3": {
+      "problem": "<p>Queen Jack likes a 5-card hand if and only if the hand contains only queens and jacks. Considering all possible 5-card hands that can come from a standard 52-card deck, how many hands does Queen Jack like?</p>",
+      "solutions": "<p>There are a total of 8 queens and jacks, each of which is distinguishable from the others. Thus, the number of hands that Queen Jack likes is \\(\\binom{8}{5} = \\boxed{56}\\).</p>",
+      "answer": "56"
+    },
+    "4": {
+      "problem": "<p>What is the smallest number over 9000 that is divisible by the first four primes?</p>",
+      "solutions": "<p>The first four primes are 2, 3, 5, and 7, so the number must be a multiple of \\(2 \\cdot 3 \\cdot 5 \\cdot 7 = 210\\). The least multiple of 210 that is greater than 9000 is \\(210 \\cdot 43 = \\boxed{9030}\\).</p>",
+      "answer": "9030"
+    },
+    "5": {
+      "problem": "<p>A rhombus has area 36 and the longer diagonal is twice as long as the shorter diagonal. What is the perimeter of the rhombus?</p>",
+      "solutions": "<p>Let \\(d\\) be the length of the shorter diagonal and \\(2d\\) the length of the longer diagonal. If \\(d_1, d_2\\) are the lengths of the diagonals of a rhombus, its area will be \\(\\frac{d_1 \\cdot d_2}{2}\\). Thus, we have \\(d^2 = 36\\) and \\(d = 6\\). Therefore, the side length of the rhombus is \\(\\sqrt{3^2 + 6^2} = 3\\sqrt{5}\\), so the perimeter is \\(\\boxed{12\\sqrt{5}}\\).</p>",
+      "answer": "12\\sqrt{5}"
+    },
+    "6": {
+      "problem": "<p>Nick is a runner, and his goal is to complete four laps around a circuit at an average speed of 10 mph. If he completes the first three laps at a constant speed of only 9 mph, what speed does he need to maintain in miles per hour on the fourth lap to achieve his goal?</p>",
+      "solutions": "<p>Let \\(d\\) be the length of one lap in miles. Then he needs to complete the four laps in \\(\\frac{4d}{10} = \\frac{2d}{5}\\) hours. He has already spent \\(\\frac{3d}{9} = \\frac{d}{3}\\) hours on the first three laps, so he has \\(\\frac{2d}{5} - \\frac{d}{3} = \\frac{d}{15}\\) hours left. Therefore, he must maintain a speed of \\(\\boxed{15}\\) mph on the final lap.</p>",
+      "answer": "15"
+    },
+    "7": {
+      "problem": "<p>A fly and an ant are on one corner of a unit cube. They wish to head to the opposite corner of the cube. The fly can fly through the interior of the cube, while the ant has to walk across the faces of the cube. How much shorter is the fly’s path if both insects take the shortest path possible?</p>",
+      "solutions": "<p>The fly’s path is the space diagonal of the cube, or the hypotenuse of the right triangle with one leg as a face diagonal of the cube (length \\(\\sqrt{2}\\)) and the other leg as an edge of the cube (length 1). Thus, it has a length of \\(\\sqrt{2+1} = \\sqrt{3}\\). The ant’s path crosses two faces of the cube to reach the opposite corner and is minimized as the diagonal of the rectangle formed by these two faces when flattened out. Thus, it is the hypotenuse of a right triangle with legs of length 2 and 1 and has length \\(\\sqrt{4+1} = \\sqrt{5}\\). The difference in length between the ant’s path and the fly’s path is \\(\\boxed{\\sqrt{5} - \\sqrt{3}}\\).</p>",
+      "answer": "\\sqrt{5} - \\sqrt{3}"
+    },
+    "8": {
+      "problem": "<p>According to Moor’s Law, the number of shoes in Moor’s room doubles every year. In 2013, Moor’s room starts out having exactly one pair of shoes. If shoes always come in unique, matching pairs, what is the earliest year when Moor has the ability to wear at least 500 mismatched pairs of shoes? Note that left and right shoes are distinct, and Moor must always wear one of each.</p>",
+      "solutions": "<p>If there are \\(n\\) pairs of shoes, then the number of mismatched pairs is \\(n(n-1)\\). In 2017, there are 16 pairs of shoes, so there are \\(16 \\cdot 15 = 240 &lt; 500\\) possible mismatchings. In 2018, there are 32 pairs of shoes, so there are \\(32 \\cdot 31 = 992 &gt; 500\\) possible mismatchings, so the earliest year is \\(\\boxed{2018}\\).</p>",
+      "answer": "2018"
+    },
+    "9": {
+      "problem": "<p>A tree has 10 pounds of apples at dawn. Every afternoon, a bird comes and eats \\(x\\) pounds of apples. Overnight, the amount of food on the tree increases by 10%. What is the maximum value of \\(x\\) such that the bird can sustain itself indefinitely on the tree without the tree running out of food?</p>",
+      "solutions": "<p>After removing \\(x\\) from 10, and then increasing that amount by 10%, we must end up with at least the amount we started with, 10 pounds. That is, the maximum value of \\(x\\) must satisfy \\(\\frac{11}{10}(10 - x) = 10\\). Solving for \\(x\\), we get that \\(x = \\boxed{\\frac{10}{11}}\\).</p>",
+      "answer": "\\frac{10}{11}"
+    },
+    "10": {
+      "problem": "<p>Consider a sequence given by \\(a_n = a_{n-1} + 3a_{n-2} + a_{n-3}\\), where \\(a_0 = a_1 = a_2 = 1\\). What is the remainder of \\(a_{2013}\\) divided by 7?</p>",
+      "solutions": "<p>In order to find the remainder mod 7, evaluate the sequence mod 7: \\(1 + 3 + 1 \\equiv 5 \\pmod 7\\), \\(5 + 3 \\cdot 1 + 1 \\equiv 2 \\pmod 7\\), and so on. The sequence repeats itself after 6 iterations, producing \\[1, 1, 1, 5, 2, 4, 1, 1, 1, \\ldots\\]</p><p>Since \\(2013 \\equiv 3 \\pmod 6\\), then \\(a_{2013} \\equiv a_3 \\equiv \\boxed{5} \\pmod 7\\).</p>",
+      "answer": "5"
+    },
+    "11": {
+      "problem": "<p>Sara has an ice cream cone with every meal. The cone has a height of \\(2\\sqrt{2}\\) inches and the base of the cone has a diameter of 2 inches. Ice cream protrudes from the top of the cone in a perfect hemisphere. Find the surface area of the ice cream cone, ice cream included, in square inches.</p>",
+      "solutions": "<p>The radius of the cone is \\(\\frac{2}{2} = 1\\), so the lateral height of the cone is \\(\\sqrt{1^2 + (2\\sqrt{2})^2} = 3\\) and the lateral surface area of the cone is \\(\\pi \\cdot 1 \\cdot 3 = 3\\pi\\). Next, the surface area of the hemisphere is \\(2\\pi r^2 = 2\\pi\\). Thus, the total surface area is \\(2\\pi + 3\\pi = \\boxed{5\\pi}\\).</p>",
+      "answer": "5\\pi"
+    },
+    "12": {
+      "problem": "<p>What is the greatest possible value of \\(c\\) such that \\(x^2 + 5x + c = 0\\) has at least one real solution?</p>",
+      "solutions": "<p>For an equation to have real solutions, the discriminant must be nonnegative. Thus, we have \\(b^2 - 4ac = 5^2 - 4c \\ge 0\\) or \\(\\boxed{\\frac{25}{4}} \\ge c\\).</p>",
+      "answer": "\\frac{25}{4}"
+    },
+    "13": {
+      "problem": "<p>\\(\\mathbb{R}^2\\)-tic-tac-toe is a game where two players take turns putting red and blue points anywhere on the \\(xy\\) plane. The red player moves first. The first player to get 3 of their points in a line without any of their opponent’s points in between wins. What is the least number of moves in which Red can guarantee a win? (We count each time that Red places a point as a move, including when Red places its winning point.)</p>",
+      "solutions": "<p>If Red only places 3 points, then Blue can get in between Red’s first 2 points and block the third point from winning. Therefore, the answer is no smaller than 4.</p><p>Now, we will describe a strategy that enables Red to win in 4 moves. First, Red places a point \\(r_1\\) and then Blue places a point \\(b_1\\). Then, Red places a point \\(r_2\\) such that \\(r_1, r_2\\), and \\(b_1\\) are not collinear. Blue must now place a point \\(b_2\\) between \\(r_1\\) and \\(r_2\\) in order to avoid losing immediately. Red must now place a point \\(r_3\\) between \\(b_1\\) and \\(b_2\\) to avoid losing immediately. But now, \\(\\overline{r_3 r_1}\\) and \\(\\overline{r_3 r_2}\\) are both lines without any blue points between them. So, no matter which line Blue chooses to block, Red can immediately place a point \\(r_3\\) on the other line such that there are 3 red points in a row.</p><p>Therefore, Red needs \\(\\boxed{4}\\) moves to guarantee a win.</p>",
+      "answer": "4"
+    },
+    "14": {
+      "problem": "<p>Peter is chasing after Rob. Rob is running on the line \\(y = 2x + 5\\) at a speed of 2 units a second, starting from the point \\((0, 5)\\). Peter starts running \\(t\\) seconds after Rob, running at 3 units a second. Peter also starts at \\((0, 5)\\), and catches up to Rob at the point \\((17, 39)\\). What is the value of \\(t\\)?</p>",
+      "solutions": "<p>Rob runs a distance of \\(\\sqrt{17^2 + 34^2} = 17\\sqrt{5}\\) units. Therefore, Rob runs for a total of \\(\\frac{17\\sqrt{5}}{2}\\) seconds. Peter must therefore run a total of \\(\\frac{17\\sqrt{5}}{2} - t\\) seconds, and we know that \\(3\\left(\\frac{17\\sqrt{5}}{2} - t\\right) = 17\\sqrt{5}\\). Solving for \\(t\\), we get \\(t = \\boxed{\\frac{17\\sqrt{5}}{6}}\\).</p>",
+      "answer": "\\frac{17\\sqrt{5}}{6}"
+    },
+    "15": {
+      "problem": "<p>Given regular hexagon \\(ABCDEF\\), compute the probability that a randomly chosen point inside the hexagon is inside triangle \\(PQR\\), where \\(P\\) is the midpoint of \\(AB\\), \\(Q\\) is the midpoint of \\(CD\\), and \\(R\\) is the midpoint of \\(EF\\).</p>",
+      "solutions": "<p>If we partition the hexagon into six equilateral triangles by drawing \\(AD\\), \\(BE\\), and \\(CF\\), we get 6 congruent equilateral triangles. If we then take each equilateral triangle and partition each one into four smaller equilateral triangles by means of connecting the midpoints of the sides, we note that \\(PQR\\) contains 9 of the small equilateral triangles while \\(ABCDEF\\) contains 24 of the small equilateral triangles. The probability therefore follows as \\(\\boxed{\\frac{3}{8}}\\).</p>",
+      "answer": "\\frac{3}{8}"
+    },
+    "16": {
+      "problem": "<p>Eight people are posing together in a straight line for a photo. Alice and Bob must stand next to each other, and Claire and Derek must stand next to each other. How many different ways can the eight people pose for their photo?</p>",
+      "solutions": "<p>Imagine that there are six slots that people can fit into. Alice and Bob go into one slot, Claire and Derek go into another slot, and each of the remaining four people get a slot. There are \\(6! = 720\\) ways for the six slots to be assigned, and then there are 2 ways for Alice and Bob to stand, and there are also 2 ways for Claire and Derek to stand, thereby giving \\(720 \\times 2^2 = \\boxed{2880}\\) ways for all of them to pose for the picture.</p>",
+      "answer": "2880"
+    },
+    "17": {
+      "problem": "<p>An isosceles right triangle is inscribed in a circle of radius 5, thereby separating the circle into four regions. Compute the sum of the areas of the two smallest regions.</p>",
+      "solutions": "<p>We use the fact that the hypotenuse of any right triangle that is inscribed in a circle is actually a diameter of the circle.</p><p>The area of the circle is \\(25\\pi\\). The hypotenuse creates two semicircles of area \\(\\frac{25\\pi}{2}\\) each. The legs divide one of these semicircles into three regions, including a right triangle with area \\(\\frac{(5\\sqrt{2})^2}{2} = 25\\). The other two regions sum to \\(\\frac{25\\pi}{2} - 25\\). Since \\(25 &gt; \\frac{25\\pi}{2} - 25\\), the sum of the areas of the two smallest regions is \\(\\boxed{\\frac{25\\pi}{2} - 25}\\).</p>",
+      "answer": "\\frac{25\\pi}{2} - 25"
+    },
+    "18": {
+      "problem": "<p>Caroline wants to plant 10 trees in her orchard. Planting \\(n\\) apple trees requires \\(n^2\\) square meters, planting \\(n\\) apricot trees requires \\(5n\\) square meters, and planting \\(n\\) plum trees requires \\(n^3\\) square meters. If she is committed to growing only apple, apricot, and plum trees, what is the least amount of space, in square meters, that her garden will take up?</p>",
+      "solutions": "<p>If we plant apple trees, the first apple tree requires 1 square meter to grow. The second one requires \\(3 = 2^2 - 1^2\\) square meters to grow, the third one requires \\(5 = 3^2 - 2^2\\), and the fourth one requires \\(7 = 4^2 - 3^2\\). If we plant apricot trees, each tree requires 5 square meters to grow. If we plant plum trees, the first plum tree requires 1 square meter whereas each subsequent one will require at least \\(7 = 2^3 - 1^3\\) square meters. Thus, to take up the least amount of space, we should plant 3 apple trees, 6 apricot trees, and 1 plum tree for a total of \\(\\boxed{40}\\) square meters.</p>",
+      "answer": "40"
+    },
+    "19": {
+      "problem": "<p>A triangle with side lengths 2 and 3 has an area of 3. Compute the third side length of the triangle.</p>",
+      "solutions": "<p>Note that \\(\\frac{2 \\cdot 3}{2} = 3\\), so therefore the triangle is a right triangle with legs 2 and 3. As a result, the third side length is, by the Pythagorean Theorem, \\(\\sqrt{2^2+3^2} = \\boxed{\\sqrt{13}}\\).</p>",
+      "answer": "\\sqrt{13}"
+    },
+    "20": {
+      "problem": "<p>Ben is throwing darts at a circular target with diameter 10. Ben never misses the target when he throws a dart, but he is equally likely to hit any point on the target. Ben gets \\(\\lceil 5-x \\rceil\\) points for having the dart land \\(x\\) units away from the center of the target. What is the expected number of points that Ben can earn from throwing a single dart? (Note that \\(\\lceil y \\rceil\\) denotes the smallest integer greater than or equal to \\(y\\).)</p>",
+      "solutions": "<p>We can split the target into five concentric circles with radii 1, 2, 3, 4, and 5; the five corresponding regions have areas of \\(\\pi\\), \\(3\\pi\\), \\(5\\pi\\), \\(7\\pi\\), \\(9\\pi\\) and are worth 5, 4, 3, 2, 1 points respectively. Thus the answer is \\(\\frac{5\\cdot \\pi + 4\\cdot 3\\pi + 3\\cdot 5\\pi + 2\\cdot 7\\pi + 1\\cdot 9\\pi}{25\\pi} = \\boxed{\\frac{11}{5}}\\).</p>",
+      "answer": "\\frac{11}{5}"
+    },
+    "21": {
+      "problem": "<p>How many positive three-digit integers \\(\\underline{a}\\,\\underline{b}\\,\\underline{c}\\) can represent a valid date in 2013, where either \\(a\\) corresponds to a month and \\(\\underline{b}\\,\\underline{c}\\) corresponds to the day in that month, or \\(\\underline{a}\\,\\underline{b}\\) corresponds to a month and \\(c\\) corresponds to the day? For example, 202 is a valid representation for February 2nd, and 121 could represent either January 21st or December 1st.</p>",
+      "solutions": "<p>The integers which are valid have a 1-1 correspondence to days in the first 9 months – this is straightforward to see for all positive integers that do not have a 1 in the hundreds place and just requires careful inspection of the case where 1 is in the hundreds place. There are \\(365 - 31 - 30 - 31 = \\boxed{273}\\) such days.</p>",
+      "answer": "273"
+    },
+    "22": {
+      "problem": "<p>The set \\(A = \\{1, 2, 3, \\ldots, 10\\}\\) contains the numbers 1 through 10. A subset of \\(A\\) of size \\(n\\) is competent if it contains \\(n\\) as an element. A subset of \\(A\\) is minimally competent if it itself is competent, but none of its proper subsets are. Find the total number of minimally competent subsets of \\(A\\).</p>",
+      "solutions": "<p>There is clearly 1 minimally competent subset of size 1, which is just \\(\\{1\\}\\). For size 2, any minimally competent subset must contain 2 and then one of 3 through 10 (not 1, because then the minimally competent subset of size 1 would be a proper subset), so there are 8 possibilities. For size \\(k\\) in general, we can see that a minimally competent subset of size \\(k\\) must contain \\(k\\) and then \\(k-1\\) numbers, each larger than \\(k\\). Thus, a minimally competent subset can contain at most 5 numbers.</p><p>The answer is then \\(\\sum_{k=1}^{5} \\binom{10-k}{k-1}\\), which can be computed directly as \\(\\boxed{55}\\). We can also argue by induction that the number is equal to \\(F_{10}\\) (the 10th Fibonacci number), which may be easier to compute.</p>",
+      "answer": "55"
+    },
+    "23": {
+      "problem": "<p>Let \\(a\\) and \\(b\\) be the solutions to \\(x^2 - 7x + 17 = 0\\). Compute \\(a^4 + b^4\\).</p>",
+      "solutions": "<p>Note that \\(a^4+b^4 = (a^2+b^2)^2-2(ab)^2 = ((a+b)^2-2ab)^2-2(ab)^2 = (7^2-34)^2-2(17)^2 = 15^2-2(17)^2 = \\boxed{-353}\\).</p>",
+      "answer": "-353"
+    },
+    "24": {
+      "problem": "<p>Compute the square of the distance between the incenter (center of the inscribed circle) and circumcenter (center of the circumscribed circle) of a 30-60-90 right triangle with hypotenuse of length 2.</p>",
+      "solutions": "<p>Orient the triangle such that the right angle of the triangle is at the origin, and such that the two legs point in the directions of the positive \\(x\\)- and \\(y\\)-axes. Note that the incenter is at \\((r,r)\\), where \\(r\\) is the inradius of the circle, but since the area is \\(A=rs\\), we have that \\[r = \\frac{A}{s} = \\frac{\\frac{\\sqrt{3}}{2}}{\\frac{3+\\sqrt{3}}{2}} = \\frac{\\sqrt{3}}{3+\\sqrt{3}}.\\] The circumcenter is at either \\(\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)\\) or \\(\\left(\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)\\).</p><p>The square of the distance between the incenter and the circumcenter is therefore \\(\\boxed{2-\\sqrt{3}}\\).</p>",
+      "answer": "2-\\sqrt{3}"
+    },
+    "25": {
+      "problem": "<p>A \\(3 \\times 6\\) grid is filled with the numbers in the list \\(\\{1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9\\}\\) according to the following rules: (1) Both the first three columns and the last three columns contain the integers 1 through 9. (2) No number appears more than once in a given row. Let \\(N\\) be the number of ways to fill the grid and let \\(k\\) be the largest positive integer such that \\(2^k\\) divides \\(N\\). What is \\(k\\)?</p>",
+      "solutions": "<p>First, note that we can fill the first 3 columns with any permutation of the numbers 1 through 9. Thus, there are \\(9!\\) ways to do this. Next, we must consider how many ways there are to place numbers in the remaining three columns. This problem can be broken into two parts: splitting the numbers into each of 3 rows, and permuting the numbers in each row. For the first part, either the rows switch positions without their contents mixing (2 ways) or each new row has one number from one row and two numbers from another row. In this second option, there are \\(3^3=27\\) ways to split each original row into a single and a pair, and 2 ways to arrange these singles and pairs. So we have a total of \\(2+27\\cdot 2 = 56\\) ways. For the second part, we note that each set of 3 elements in a row can be permuted in \\(3!\\) ways, giving a total of \\(56\\cdot(3!)^3\\) ways to fill the last 3 columns, given a particular permutation for the first three columns. Thus, \\(N = 9!\\cdot 56\\cdot 6^3\\), and therefore \\(N\\) is divisible by \\(2^k\\) for \\(k \\le 7+3+3 = \\boxed{13}\\).</p>",
+      "answer": "13"
+    }
+  }
+}

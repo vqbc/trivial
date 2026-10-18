@@ -1,0 +1,23 @@
+{
+  "test": "BMT Discrete Tiebreaker",
+  "year": 2021,
+  "name": "Discrete Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2021/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many integers \\(n\\) from 1 to 2020, inclusive, are there such that 2020 divides \\(n^2 + 1\\)?</p>",
+      "solutions": "<p>Observe that for all integer \\(n\\), \\(n^2 \\equiv 0 \\pmod{4}\\) or \\(n^2 \\equiv 1 \\pmod{4}\\); hence there are no \\(n\\) such that \\(4 \\mid (n^2+1)\\). Since \\(4 \\mid 2020\\), there are \\(\\boxed{0}\\) integers such that \\(2020 \\mid (n^2+1)\\).</p>",
+      "answer": "0"
+    },
+    "2": {
+      "problem": "<p>A <i>gradian</i> is a unit of measurement of angles much like degrees, except that there are 100 gradians in a right angle. Suppose that the number of gradians in an interior angle of a regular polygon with \\(m\\) sides equals the number of degrees in an interior angle of a regular polygon with \\(n\\) sides. Compute the number of possible distinct ordered pairs \\((m, n)\\).</p>",
+      "solutions": "<p>We can convert between gradians and degrees: there are 100 gradians in a right angle and 90 degrees in a right angle, so 100 gradians equals 90 degrees. Therefore, there are \\(\\frac{10}{9}\\) gradians in a degree. The number of degrees in an interior angle in a regular polygon with \\(m\\) sides is \\(\\frac{180(m-2)}{m}\\), so the number of gradians in an interior angle in a regular polygon with \\(m\\) sides is \\(\\frac{10}{9} \\cdot \\frac{180(m-2)}{m}\\). The number of degrees in angle in a regular polygon with \\(n\\) sides is \\(\\frac{180(n-2)}{n}\\). Setting these equal, we get \\(\\frac{10}{9} \\cdot \\frac{180(m-2)}{m} = \\frac{180(n-2)}{n}\\), and simplifying, \\(\\frac{m-2}{m} = \\frac{9}{10} \\cdot \\frac{n-2}{n}\\). Cross-multiplying, \\(10n(m-2) = 9m(n-2)\\), and simplifying further gives \\(mn + 18m - 20n = 0\\). Using Simon’s Favorite Factoring Trick, we get that \\((m-20)(n+18) = -360\\). The positive integer solutions now correspond to the factors of 360 that are greater than 18, which is half of all of the factors. The prime factorization of 360 is \\(2^3 \\cdot 3^2 \\cdot 5\\), so the number of factors is \\((3+1)(2+1)(1+1) = 24\\) and the number of solutions is \\(\\frac{24}{2} = 12\\). We also need to check that these solutions are actually greater than 2, since the number of sides of a polygon is at least 3. The solution \\(m = 2, n = 2\\) is the only solution that doesn’t satisfy this condition, so the number of working solutions is \\(12 - 1 = \\boxed{11}\\).</p>",
+      "answer": "11"
+    },
+    "3": {
+      "problem": "<p>Let \\(N\\) be the number of tuples \\((a_1, a_2, \\ldots, a_{150})\\) satisfying:</p><ul><li>\\(a_i \\in \\{2, 3, 5, 7, 11\\}\\) for all \\(1 \\le i \\le 99\\).</li><li>\\(a_i \\in \\{2, 4, 6, 8\\}\\) for all \\(100 \\le i \\le 150\\).</li><li>\\(\\sum_{i=1}^{150} a_i\\) is divisible by 8.</li></ul><p>Compute the last three digits of \\(N\\).</p>",
+      "solutions": "<p>If the first 99 terms sum to an odd number, then the entire sum will be odd and there will be no cases that work. If the first 99 terms sum to an even number, then any choice of the next 50 terms will lead to a unique last term which makes the sum divisible by 8. There are \\(\\sum_{i=0}^{49} \\binom{99}{2i} 4^{2i}\\) ways to choose the first 99 elements such that an even number of them are odd. To simplify this sum, we use a roots of unity filter: note that the terms with \\(4^{2i+1}\\) in the expansions of the binomials \\((4+1)^{99}\\) and \\((4-1)^{99}\\) cancel out when the latter expression is subtracted from the former, and the rest of the terms are doubled, so the sum becomes \\(\\frac{(4+1)^{99} - (4-1)^{99}}{2}\\). We have \\(4^{50}\\) possible choices for the next 50 terms, and the last term is uniquely determined. Thus there are a total of \\(\\frac{(4+1)^{99} - (4-1)^{99}}{2} \\cdot 4^{50} = 10^{99} - 6^{99}\\) tuples. Taking this total modulo 1000, the \\(10^{99}\\) disappears, so we want to compute \\(-6^{99} \\bmod 1000\\); we apply the Chinese Remainder Theorem to split the congruence. Note that \\(6^{99} \\equiv 0 \\pmod 8\\) also have \\(6^{99} \\equiv 6^{-1} = 21 \\pmod{125}\\) by Euler’s totient theorem. Recombining these congruences gives \\(6^{99} \\equiv 896 \\pmod{1000}\\), so \\(-6^{99} \\equiv 104 \\pmod{1000}\\). Therefore, the last three digits is \\(\\boxed{104}\\).</p>",
+      "answer": "104"
+    }
+  }
+}

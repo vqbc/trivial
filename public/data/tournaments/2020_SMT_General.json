@@ -1,0 +1,133 @@
+{
+  "test": "SMT General",
+  "year": 2020,
+  "name": "General Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2020/general-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In Trolliland, every troll lives under a custom bridge which is a half circle with radius 1 foot more than the height of the troll. If there are 75 trolls in Trolliland and an average height of 3 feet, what is the total lengths of all of the troll bridges in Trolliland?</p>",
+      "solutions": "<p>If the average height of the trolls is 3 feet, the average radius is 4 feet. We can see that the length of a bridge is \\(\\pi r\\) is linearly related to the radius. So, we can find the total length as \\(\\pi \\cdot 75 \\cdot 4 = 300\\pi\\) feet of bridges.</p>",
+      "answer": "300\\pi"
+    },
+    "2": {
+      "problem": "<p>Leonard is standing at the origin in 3D space. He can only move forward one unit in the \\(x\\)-direction, the \\(y\\)-direction, or the \\(z\\)-direction. How many ways can he get to \\((3, 3, 3)\\)?</p>",
+      "solutions": "<p>We notice that any path will consist of 3 movements in the \\(x\\)-direction, 3 in the \\(y\\)-direction and 3 in the \\(z\\)-direction. Thus, out of 9 ordered movements, we choose 3 to be in the \\(x\\)-direction, and then out of the remaining 6, we choose 3 to be in the \\(y\\)-direction. The remaining 3 must be in the \\(z\\)-direction. In mathematical notation, this represents \\[\\binom{9}{3}\\binom{6}{3} = 1680\\] different paths.</p>",
+      "answer": "1680"
+    },
+    "3": {
+      "problem": "<p>How many dates can be formed with only the digits 2 and 0 that are in the future in comparison to today?</p>",
+      "solutions": "<p>Since today is \\(2/22/2020\\), we can see that any combination and only combinations with a later year will be in the future. So, there are 5 later years: 2022, 2200, 2202, 2220, and 2222. There are 3 possible dates per year: \\(2/02\\), \\(2/20\\), \\(2/22\\). So, there are \\(\\boxed{15}\\) possible future dates.</p>",
+      "answer": "12"
+    },
+    "4": {
+      "problem": "<p>Consider the sequence \\(a_n = a_{n-1} + 22a_{n-2} + 2020a_{n-3}\\) for \\(n \\ge 3\\) where \\(a_0 = 1\\), \\(a_1 = 1\\), \\(a_2 = 2\\). What is the last digit of \\(a_{2020}\\)?</p>",
+      "solutions": "<p>We look for a pattern mod 10. We can see that mod 10, this is in fact \\(a_n = a_{n-1} + 2a_{n-2}\\). Then this gives us \\(1, 1, 2, 5, 4, 2, 5, 4, 8, \\ldots\\). Then we see this repeats every 4 terms, so we find \\(2020 \\equiv 0 \\pmod 4\\) and hence \\(a_{2020} \\equiv 8 \\pmod{10}\\).</p>",
+      "answer": "5"
+    },
+    "5": {
+      "problem": "<p>Let a number be called awesome if it: (i) is 3-digits in base 12, (ii) is 4-digits in base 7, and (iii) does not have a digit that is 0 in base 10. How many awesome numbers (in base 10) are there?</p>",
+      "solutions": "<p>The 3-digit numbers in base 12 are 144 to 1727, inclusive, in base 10. The 4-digit numbers in base 7 are 343 to 2400, inclusive, in base 10. Thus, an awesome number must be between 343 and 1727, inclusive, and not contain a 0.</p><p>First, we will use complementary counting to determine how many numbers between 144 and 342, inclusive, contain a 0. There are 138 numbers with 0 in the ones digit and 140 with zero in the tens digit. Of these, 14 have a 0 in both the ones and tens digit. Moreover, there are 90 numbers with a 0 in the hundreds digit but no zeros otherwise. Thus, there are 1040 numbers without a zero.</p>",
+      "answer": "1040"
+    },
+    "6": {
+      "problem": "<p>A cat chases a mouse on the integer lattice. The mouse starts at \\((0, 0)\\) and wants to get to the mouse hole at \\((5, 5)\\). The cat starts at \\((-1, -3)\\). The mouse can only travel along the grid at 1 unit/sec, whereas the cat can travel on diagonals and at 2 units/sec. How long will have the cat been waiting at the hole for the mouse?</p>",
+      "solutions": "<p>We can see the mouse is 10 units away, so it travels for 10 seconds. The cat is \\(\\sqrt{6^2 + 8^2} = 10\\) units away on the diagonal, so it gets to the hole in 5 seconds. Hence, it waits for \\(\\boxed{5}\\) seconds.</p>",
+      "answer": "5"
+    },
+    "7": {
+      "problem": "<p>Emily writes down 10 consecutive integers and then Vinjai erases one of the them. If the sum of the remaining 9 numbers is 2020, what number did Vinjai erase?</p>",
+      "solutions": "<p>Let \\(n\\) be the least number Emily wrote down. Since Emily wrote down the numbers from \\(n\\) to \\(n + 9\\), the sum of the 10 numbers she wrote down is equal to \\(10n + 45\\). Therefore, the sum after Vinjai erases one of the numbers must be from \\(9n + 36\\) to \\(9n + 45\\) inclusive. Since 2020 leaves a remainder of 4 when divided by 9, the sum of the remaining numbers must be \\(9n + 40\\), meaning Vinjai erased the number equal to \\(n + 5\\). Therefore, since \\(9n + 40 = 2020\\), \\(n\\) must equal 220, meaning Vinjai erased the number 225.</p>",
+      "answer": "225"
+    },
+    "8": {
+      "problem": "<p>Find the smallest real root of \\[14x^4 - 2x^3 + 13x^2 - 3x - 12\\]</p>",
+      "solutions": "<p>\\[14x^4 - 2x^3 + 13x^2 - 3x - 12 = (2x^2 + 3)(7x^2 - x - 4)\\]</p>",
+      "answer": "\\frac{1 - \\sqrt{113}}{14}"
+    },
+    "9": {
+      "problem": "<p>Colleen and Colin in total have 100 skittles. After Halloween, the number of skittles Colleen has is twice the amount that Colin has. Colin and Colleen got identical candy collections from trick-or-treating. How many possible pairs of number of skittles can Colin and Colleen start with?</p>",
+      "solutions": "<p>Colin and Colleen started with 100. We have \\(x + 3y = 100\\), and the only feasible solutions are when we let \\(y\\) range from \\(0 - 33\\). So there are 34 choices.</p>",
+      "answer": "34"
+    },
+    "10": {
+      "problem": "<p>You can buy packets of 5 cookies or packets of 11 cookies. Assuming an infinite amount of money, what is the largest number of cookies that you cannot buy?</p>",
+      "solutions": "<p>By the Chicken McNugget Theorem, which states that if you buy items in packs of \\(p\\) and \\(q\\), the largest number of items that you cannot make is \\(p * q - p - q\\), our answer is \\(5 * 11 - 5 - 11 = 39\\) cookies.</p>",
+      "answer": "39"
+    },
+    "11": {
+      "problem": "<p>If you are making a bracelet with 7 indistinguishable purple beads and 2 indistinguishable red beads, how many distinct bracelets can you make? Assume that reflections and rotations are indistinct.</p>",
+      "solutions": "<p>There are 9 total beads on the bracelet, so you can arrange them \\(9!\\) ways. However, since the purple beads and the red beads are indistinguishable, you have to divide by \\(7!\\) and \\(2!\\). To account for rotations, you have to divide by 9 ways to rotate the bracelet. Then we have</p><p>\\[\\frac{9!}{7! * 2! * 9} = 4\\]</p><p>ways.</p>",
+      "answer": "4"
+    },
+    "12": {
+      "problem": "<p>A certain 10-sided die has the number 1 one one side, the number 2 on two sides, the number 3 on three sides, and the number 4 on the the remaining 4 sides. Nathan and David each roll this die once. If the die is equally likely to land on any of the 10 sides, what is the probability that the number Nathan rolled is greater than the number David rolled?</p>",
+      "solutions": "<p><b>Solution 1.</b> By symmetry, the probability Nathan’s number is greater than David’s is equal to the probability that David’s number is greater than Nathan’s. Since the probability they both roll the same number is \\(\\left(\\frac{1}{10}\\right)^2 + \\left(\\frac{2}{10}\\right)^2 + \\left(\\frac{3}{10}\\right)^2 + \\left(\\frac{4}{10}\\right)^2 = \\frac{3}{10}\\), the probability Nathan’s number is greater is \\(\\frac{1-\\frac{3}{10}}{2} = \\frac{7}{20}\\).</p><p><b>Solution 2.</b> Using casework on the number Nathan rolled yields four cases. There is a \\(\\frac{4}{10}\\) probability that Nathan rolls a 4 and a \\(\\frac{6}{10}\\) probability that David rolls a 1, 2, or 3. There is a \\(\\frac{3}{10}\\) probability that Nathan rolls a 3 and a \\(\\frac{3}{10}\\) probability that David rolls a 1 or 2. There is a \\(\\frac{2}{10}\\) probability that Nathan rolls a 2 and a \\(\\frac{1}{10}\\) probability rolls a 1. There is a \\(\\frac{1}{10}\\) probability that Nathan rolls a 1, in which case David cannot roll a lower number. Therefore, the probability Nathan’s number is greater is \\(\\left(\\frac{4}{10}\\right)\\left(\\frac{6}{10}\\right) + \\left(\\frac{3}{10}\\right)\\left(\\frac{3}{10}\\right) + \\left(\\frac{2}{10}\\right)\\left(\\frac{1}{10}\\right) = \\frac{35}{100} = \\frac{7}{20}\\).</p>",
+      "answer": "\\frac{7}{20}"
+    },
+    "13": {
+      "problem": "<p>Three mutually-tangent circles are inscribed by a larger circle of radius 1. Their centers form a equilateral triangle, whose side length can be written as \\(a + b\\sqrt{3}\\), where \\(a\\) and \\(b\\) are rational numbers. What is \\(ab\\)?</p>",
+      "solutions": "<p>Let \\(s\\) be the side length of the equilateral triangle, \\(r\\) be the radius of the smaller circles, \\(C\\) be the center of the larger (unit) circle, and \\(X\\) be the center of one of the smaller circles. We note that each side of the triangle is composed of two radii of the smaller circles, implying \\(r = s/2\\). Additionally, by constructing a \\(30^\\circ\\)-\\(60^\\circ\\)-\\(90^\\circ\\) triangle with hypotenuse from \\(C\\) to \\(X\\) and half of a side of the equilateral triangle as a side, we observe that the length of this hypotenuse, \\(h\\), equals \\(\\frac{s}{\\sqrt{3}}\\).</p><p>Since the radius of the larger circle through \\(X\\) is composed of a radius of a smaller circle and \\(\\overline{CX}\\), we have that</p><p>\\[1 = r + h = \\frac{s}{2} + \\frac{s}{\\sqrt{3}}\\]</p><p>Solving and multiplying through by the conjugate of the denominator, we find</p><p>\\[s = \\frac{6}{3+2\\sqrt{3}} = 4\\sqrt{3} - 6.\\]</p><p>Thus \\(ab\\), with \\(a\\) and \\(b\\) defined above, equals \\(-24\\).</p>",
+      "answer": "-24"
+    },
+    "14": {
+      "problem": "<p>How many factors of \\(20^{20}\\) are greater than 2020?</p>",
+      "solutions": "<p>Since \\(20^{20} = 2^{40} \\cdot 5^{20}\\), it has \\(41 \\cdot 21 = 861\\) factors. Since 34 of these factors are less than or equal to 2020, there are 827 factors greater than 2020.</p>",
+      "answer": "827"
+    },
+    "15": {
+      "problem": "<p>Express \\(\\sqrt{\\frac{43}{4} + \\frac{15}{\\sqrt{2}}}\\) in the form \\(\\frac{a+b\\sqrt{c}}{d}\\), where \\(a,b,c,d\\) are integers, \\(c\\) is square-free, \\(a\\) and \\(d\\) are relatively prime, and \\(b\\) and \\(d\\) are relatively prime.</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n\\sqrt{\\frac{43}{4} + \\frac{15}{\\sqrt{2}}} &amp;= \\sqrt{\\frac{43}{4} + \\frac{15\\sqrt{2}}{2}} \\\\\n&amp;= \\sqrt{\\frac{43}{4} + \\frac{15\\sqrt{2}}{2}} \\\\\n&amp;= \\sqrt{\\frac{43+30\\sqrt{2}}{4}} \\\\\n&amp;= \\sqrt{\\frac{(5+3\\sqrt{2})^2}{4}} \\\\\n&amp;= \\frac{5+3\\sqrt{2}}{2}\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{5+3\\sqrt{2}}{2}"
+    },
+    "16": {
+      "problem": "<p>Consider triangle \\(ABC\\) on the coordinate plane with \\(A = (2,3)\\) and \\(C = \\left(\\frac{96}{13}, \\frac{207}{13}\\right)\\). Let \\(B\\) be the point with the smallest possible y-coordinate such that \\(AB = 13\\) and \\(BC = 15\\). Compute the coordinates of the incenter of triangle \\(ABC\\).</p>",
+      "solutions": "<p>First, note that</p><p>\\[AC = \\sqrt{\\left(\\frac{96}{13} - 2\\right)^2 + \\left(\\frac{207}{13} - 3\\right)^2} = \\sqrt{\\left(\\frac{70}{13}\\right)^2 + \\left(\\frac{168}{13}\\right)^2} = \\sqrt{\\left(\\frac{14}{13}\\right)^2 (5^2+12^2)} = 14\\]</p><p>so \\(ABC\\) is a 13-14-15 triangle. Using Heron’s Formula, we have that the area of \\(ABC\\) is 84. Then, if \\(r\\) is the inradius, \\(\\frac{13+14+15}{2} \\cdot r = 84 \\implies r = 4\\). Furthermore, we can draw a perpendicular from \\(B\\) to \\(AC\\) to split the 13-14-15 triangle into a 5-12-13 triangle and a 9-12-15 triangle. It follows that \\(\\tan{BAC} = \\frac{12}{5}\\). But the slope of line \\(AC\\) is</p><p>\\[\\frac{\\frac{168}{13}}{\\frac{70}{13}} = \\frac{168}{70} = \\frac{12}{5}\\]</p><p>so in fact side \\(AB\\) is parallel to the \\(x\\)-axis.</p><p>Let \\(I\\) be the incenter and let \\(X\\) be the point of tangency of the incircle to \\(AB\\). We have that \\(AX = \\frac{13+14+15}{2} - 15 = 6\\), so \\(X = (8,3)\\). But \\(IX \\perp AB\\) and \\(IX = 4\\), so \\(X = \\boxed{(8,7)}\\).</p>",
+      "answer": "(8, 7)"
+    },
+    "17": {
+      "problem": "<p>Let \\(i = \\sqrt{-1}\\). Compute the number of ordered pairs of positive integers \\((a,b)\\) such that the complex number \\(z = a+bi\\) satisfies \\(|2+z|^2 + |2-z|^2 &lt; 50\\).</p>",
+      "solutions": "<p>The inequality reduces to</p><p>\\[(2+z)(2+\\bar{z}) + (2-z)(2-\\bar{z}) &lt; 50\\] \\[\\Rightarrow 4 + 2z + 2\\bar{z} + z\\bar{z} + 4 - 2z - 2\\bar{z} + z\\bar{z} &lt; 50\\] \\[\\Rightarrow 8 + 2|z|^2 &lt; 50\\] \\[\\Rightarrow a^2 + b^2 &lt; 21.\\]</p><p>So we need to compute the number of ordered pairs of positive integers \\((a,b)\\) such that \\(a^2+b^2&lt;21\\). When \\(a=1\\), \\(b\\) can range from 1 to 4 (inclusive); when \\(a=2\\), \\(b\\) can range from 1 to 4; when \\(a=3\\), \\(b\\) can range from 1 to 3; and when \\(a=4\\), \\(b\\) can equal 1 or 2, for a total of \\(13\\) ordered pairs.</p>",
+      "answer": "13"
+    },
+    "18": {
+      "problem": "<p>Let \\(x\\) and \\(y\\) be positive numbers such that \\(xy + x + y = 80\\) and \\(x = 13y\\). Moreover, suppose \\(a\\) and \\(b\\) are real numbers such that \\(a+b = x^2\\) and \\(ab = 2019\\). Write out all possible solutions \\((a,b)\\).</p>",
+      "solutions": "<p>Substitute to obtain \\(13y^2 + 14y - 80 = 0\\), or \\((13y+40)(y-2) = 0\\). Since \\(y\\) is positive, \\(y = 2\\), so \\(x = 26\\). Then \\(a+b = 676\\) and \\(ab = 2019\\), which is equivalent to finding the two roots of the quadratic \\(z^2 - 676z + 2019 = 0\\). This leads us to \\(\\boxed{(a,b) = (3,673) \\text{ or } (673,3)}\\).</p>",
+      "answer": "(3, 673) \\text{ and } (673, 3)"
+    },
+    "19": {
+      "problem": "<p>Suppose \\(ABCD\\) is a square with points \\(E, F, G, H\\) inside square \\(ABCD\\) such that \\(ABE\\), \\(BCF\\), \\(CDG\\), and \\(DAH\\) are all equilateral triangles. Let \\(E', F', G', H'\\) be points outside square \\(ABCD\\) such that \\(ABE'\\), \\(BCF'\\), \\(CDG'\\), and \\(DAH'\\) are also all equilateral triangles. What is the ratio of the area of quadrilateral \\(EFGH\\) to the area of the quadrilateral \\(E'F'G'H'\\)?</p>",
+      "solutions": "<p>Let \\(s\\) be the side length of square \\(ABCD\\). Note that by symmetry, both \\(EFGH\\) and \\(E'F'G'H'\\) are also squares. Therefore, the ratio of the areas is equal to \\(\\left(\\frac{EG}{E'G'}\\right)^2\\). Since \\(EG = (\\sqrt{3}-1)s\\) and \\(E'G' = (\\sqrt{3}+1)s\\), the ratio of the area of the quadrilaterals is \\(\\left(\\frac{\\sqrt{3}-1}{\\sqrt{3}+1}\\right)^2 = (2-\\sqrt{3})^2 = 7-4\\sqrt{3}\\).</p>",
+      "answer": "7 - 4\\sqrt{3}"
+    },
+    "20": {
+      "problem": "<p>Square \\(ABCD\\) has side length 4. Points \\(P\\) and \\(Q\\) are located on sides \\(BC\\) and \\(CD\\), respectively, such that \\(BP = DQ = 1\\). Let \\(AQ\\) intersect \\(DP\\) at point \\(X\\). Compute the area of triangle \\(PQX\\).</p>",
+      "solutions": "<p>Notice that the desired area is \\([PQD] - [QDX]\\). By the standard area of a triangle formula, \\([PQD] = \\frac{1}{2} \\cdot 1 \\cdot 3 = \\frac{3}{2}\\). Let \\(\\angle QDX = \\angle CDP = \\theta\\). Since triangle \\(PCD\\) is a \\(3\\)-\\(4\\)-\\(5\\) right triangle, we have \\(\\sin\\theta = \\frac{3}{5}\\) and \\(\\cos\\theta = \\frac{4}{5}\\). Now by the sine area formula, \\([QDA] = 2 = [QDX] + [XDA] = \\frac{1}{2} \\cdot DX \\cdot (\\sin\\theta + 4\\cos\\theta)\\), so solving for \\(DX\\) gives \\(DX = \\frac{20}{19}\\). Thus \\([QDX] = \\frac{1}{2} \\cdot 1 \\cdot \\frac{20}{19} \\cdot \\frac{3}{5} = \\frac{6}{19}\\). Our answer is \\(\\frac{3}{2} - \\frac{6}{19} = \\frac{45}{38}\\).</p>",
+      "answer": "\\frac{45}{38}"
+    },
+    "21": {
+      "problem": "<p>Compute the remainder of \\(2^{10} + 2^{11} + 5^{10} + 5^{11} + 10^{10} + 10^{11}\\) when divided by 13.</p>",
+      "solutions": "<p>If \\(x\\) is the above sum, we use Fermat’s Little Theorem to obtain \\(x \\equiv \\frac{1}{4} + \\frac{1}{2} + \\frac{1}{25} + \\frac{1}{5} + \\frac{1}{100} + \\frac{1}{10} \\equiv 1 + \\frac{1}{10} \\equiv 1 + 4 = 5 \\pmod{13}\\).</p>",
+      "answer": "5"
+    },
+    "22": {
+      "problem": "<p>Given that \\(1A345678B0\\) is a multiple of 2020, compute \\(10A + B\\).</p>",
+      "solutions": "<p>Note that a number is a multiple of 2020 if and only if it is divisible by both 101 and 20. Since \\(\\overline{1A345678B0} = \\overline{1A} \\cdot 100^4 + 34 \\cdot 100^3 + 56 \\cdot 100^2 + 78 \\cdot 100^1 + \\overline{B0} \\cdot 100^0\\) and \\(100 \\equiv -1 \\pmod{101}\\), \\(\\overline{1A345678B0}\\) is a multiple of 101 if and only if \\(\\overline{1A} - 34 + 56 - 78 + \\overline{B0} = 10B + A - 46 \\equiv 0 \\pmod{101}\\). Therefore, \\(A = 6\\), and \\(B = 4\\). Furthermore, since \\(B\\) is even, \\(\\overline{1A345678B0}\\) is a multiple of 20 and therefore, 2020. Computing, \\(10A + B = 64\\).</p>",
+      "answer": "64"
+    },
+    "23": {
+      "problem": "<p>3 points are randomly selected from the vertices from a regular 2020-gon. What is the probability the three vertices form a scalene triangle?</p>",
+      "solutions": "<p>Suppose the points are labelled \\(p_0, p_1 \\ldots p_{2019}\\). Without loss of generality, let the points of the triangle be \\(p_0, p_i, p_j\\) where \\(0 &lt; i &lt; j &lt; 2020\\). Note that this is equivalent to picking an ordered triplet of natural numbers \\(\\{a, b, c\\} = \\{i, j-i, 2020-j\\}\\) that sum to 2020. Therefore, there are \\(\\binom{2019}{2}\\) total possible triangles. Furthermore, a triangle is scalene if and only if \\(a \\ne b \\ne c\\). Note that there are no equilateral triangles as this would require \\(a = b = c\\), which would require 2020 to be a multiple of 3. Considering triangles that are not scalene (and therefore isosceles), it must follow that exactly one of the following must be true: \\(a = b\\), \\(b = c\\), \\(a = c\\). There are 1009 possible isosceles triangles for each case, as they are symmetric. Therefore, by complementary counting, the probability that a triangle is scalene is \\(1 - \\frac{3 \\cdot 1009}{\\binom{2019}{2}} = \\frac{672}{673}\\).</p>",
+      "answer": "\\frac{672}{673}"
+    },
+    "24": {
+      "problem": "<p>Suppose the absolute difference between the area and perimeter of a rectangle with integer side lengths is 2020. What is the minimum possible value of the perimeter of this rectangle?</p>",
+      "solutions": "<p>Let \\(l\\) and \\(w\\) respectively be the length and the width of the triangle, \\(|lw - 2l - 2w| = 2020\\). Without loss of generality, let \\(l \\ge w &gt; 0\\). Since the left-hand side of the expression is equal to \\(|(l-2)(w-2) - 4|\\), \\((l-2)(w-2)\\) must either equal \\(-2016\\) or \\(2024\\). If \\((l-2)(w-2) = -2016\\), then since \\(l - 2 \\ge w - 2 &gt; -2\\), it follows that \\(l - 2 = 2016\\) and \\(w - 2 = -1\\), meaning the rectangle has side lengths 1 and 2018 and perimeter 4038. If \\((l-2)(w-2) = 2024\\), then the perimeter is minimized when \\(l\\) and \\(w\\) are closer together in value, which occurs when \\(l - 2 = 46\\) and \\(w - 2 = 44\\). Since this rectangle has side lengths of 46 and 48 and perimeter 188, which is less than 4038, the minimum possible value of the perimeter is 188.</p>",
+      "answer": "188"
+    },
+    "25": {
+      "problem": "<p>Find the number of subsets \\(S\\) of \\(\\{1, 2, \\ldots, 10\\}\\) such that no two of the elements in \\(S\\) are consecutive.</p>",
+      "solutions": "<p>We will use casework on the size of \\(S\\). We count the number of valid \\(k\\)-element subsets in general, using the stars and bars method. Place a bar at each of the \\(k\\) values, yielding \\(k+1\\) buckets. We reserve one star for each of the \\(k-1\\) middle buckets, leaving \\(10-(k-1)-k = 11-2k\\) stars left to place. The total number of ways to arrange \\(k\\) bars and \\(11-2k\\) stars is then \\(\\binom{11-2k}{k}\\).</p><p>Note that \\(k\\) can range from 0 to 5 inclusive. Hence our total is \\[\\binom{6}{5}+\\binom{7}{4}+\\binom{8}{3}+\\binom{9}{2}+\\binom{10}{1}+\\binom{11}{0} = 144.\\]</p>",
+      "answer": "144"
+    }
+  }
+}

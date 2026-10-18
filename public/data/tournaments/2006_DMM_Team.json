@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2006,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2006/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the smallest positive integer \\(x\\) such that \\(\\frac{1}{x} &lt; \\sqrt{12011} - \\sqrt{12006}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Two soccer players run a drill on a 100 foot by 300 foot rectangular soccer field. The two players start on two different corners of the rectangle separated by 100 feet, then run parallel along the long edges of the field, passing a soccer ball back and forth between them. Assume that the ball travels at a constant speed of 50 feet per second, both players run at a constant speed of 30 feet per second, and the players lead each other perfectly and pass the ball as soon as they receive it, how far has the ball travelled by the time it reaches the other end of the field?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>A trapezoid \\(ABCD\\) has \\(AB\\) and \\(CD\\) both perpendicular to \\(AD\\) and \\(BC = AB + AD\\). If \\(AB = 26\\), what is \\(\\frac{CD^2}{AD+CD}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>A hydrophobic, hungry, and lazy mouse is at \\((0,0)\\), a piece of cheese at \\((26,26)\\), and a circular lake of radius \\(5\\sqrt{2}\\) is centered at \\((13,13)\\). What is the length of the shortest path that the mouse can take to reach the cheese that also does not pass through the lake?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Let \\(a\\), \\(b\\), and \\(c\\) be real numbers such that \\(a+b+c=0\\) and \\(a^2+b^2+c^2=3\\). If \\(a^5+b^5+c^5 \\ne 0\\), compute \\(\\frac{(a^3+b^3+c^3)(a^4+b^4+c^4)}{a^5+b^5+c^5}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Let \\(S\\) be the number of points with integer coordinates that lie on the line segment with endpoints \\(\\left(2^{2^2}, 4^{4^4}\\right)\\) and \\(\\left(4^{4^4}, 0\\right)\\). Compute \\(\\log_2(S-1)\\)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>For a positive integer \\(n\\) let \\(f(n)\\) be the sum of the digits of \\(n\\). Calculate \\[f(f(f(2^{2006}))).\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>If \\(a_1, a_2, a_3, a_4\\) are roots of \\(x^4 - 2006x^3 + 11x + 11 = 0\\), find \\(|a_1^3 + a_2^3 + a_3^3 + a_4^3|\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>A triangle \\(ABC\\) has \\(M\\) and \\(N\\) on sides \\(BC\\) and \\(AC\\), respectively, such that \\(AM\\) and \\(BN\\) intersect at \\(P\\) and the areas of triangles \\(ANP\\), \\(APB\\), and \\(PMB\\) are 5, 10, and 8 respectively. If \\(R\\) and \\(S\\) are the midpoints of \\(MC\\) and \\(NC\\), respectively, compute the area of triangle \\(CRS\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Jack’s calculator has a strange button labelled “PS.” If Jack’s calculator is displaying the positive integer \\(n\\), pressing PS will cause the calculator to divide \\(n\\) by the largest power of 2 that evenly divides \\(n\\), and then adding 1 to the result and displaying that number. If Jack randomly chooses an integer \\(k\\) between 1 and 1023, inclusive, and enters it on his calculator, then presses the PS button twice, what is the probability that the number that is displayed is a power of 2?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

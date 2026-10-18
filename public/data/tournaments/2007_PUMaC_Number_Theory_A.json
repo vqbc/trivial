@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Number Theory A",
+  "year": 2007,
+  "name": "Number Theory A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2007_NumberTheoryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the last three digits of \\[2008^{2007^{\\cdot^{\\cdot^{\\cdot^{2^{1}}}}}}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Find the largest integer \\(n\\) which equals the product of its leading digit and the sum of its digits.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>In how many ways can \\(1 + 2 + \\cdots + 2007\\) be expressed as a sum of consecutive positive integers?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>A positive integer is called <i>squarefree</i> if its only perfect square factor is 1. Call a set of positive integers <i>squarefreeful</i> if each product of two of its elements is squarefree, and <i>squarefreefullest</i> if no positive integer less than the maximum element of the set can be added while preserving the set’s squarefreefulness. What is the minimum number of elements in a squarefreefullest set containing 31?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Let \\(F_n\\) be the Fibonacci numbers, defined by \\(F_0 = 0\\), \\(F_1 = 1\\), and \\(F_n = F_{n-1} + F_{n-2}\\). For each \\(i\\), \\(1 \\le i \\le 200\\), we calculate the greatest common divisor \\(g_i\\) of \\(f_i\\) and \\(f_{2007}\\). What is the sum of the distinct values of \\(g_i\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Find the number of ordered triplets of nonnegative integers \\((m, n, p)\\) such that \\(m + 3n + 5p \\le 600\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>How many ordered pairs of integers \\((x, y)\\) satisfy \\[8(x^3 + x^2y + xy^2 + y^3) = 15(x^2 + y^2 + xy + 1)?\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>For how many ordered pairs of positive integers \\((x, y)\\) is \\(\\frac{x^2+y^2}{x-y}\\) an integer factor of 2310?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>How many pairs of integers \\(a\\) and \\(b\\) are there such that \\(a\\) and \\(b\\) are between 1 and 42 and \\(a^9 = b^7 \\pmod{43}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Find all primes \\(p\\) such that there exists positive integers \\(q\\) and \\(r\\) such that \\(p \\nmid q\\), \\(3 \\nmid q\\), \\(p^3 = r^3 - q^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

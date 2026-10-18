@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2016,
+  "name": "Geometry",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2016/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Dodecagon \\(QWARTZSPHINX\\) has all side lengths equal to \\(2\\), is not self-intersecting (in particular, the twelve vertices are all distinct), and moreover each interior angle is either \\(90^\\circ\\) or \\(270^\\circ\\). What are all possible values of the area of \\(\\triangle SIX\\)?</p>",
+      "solutions": "<p>The dodecagon has to be a \"plus shape\" of area \\(20\\), then just try the three non-congruent possibilities.</p>",
+      "answer": "2;\\ 6"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB=13\\), \\(BC=14\\), and \\(CA=15\\), and let \\(H\\) be its orthocenter. Find the distance between the circumcenters of triangles \\(AHB\\) and \\(AHC\\).</p>",
+      "solutions": "<p>Let \\(H_B\\) be the reflection of \\(H\\) over \\(AC\\), and let \\(H_C\\) be the reflection of \\(H\\) over \\(AB\\). Recall that the reflections of \\(H\\) over \\(AB\\) and \\(AC\\) lie on the circumcircle of \\(ABC\\). Since the circumcenters of triangles \\(AH_CB\\) and \\(AH_BC\\) are both \\(O\\), the circumcenters of \\(AHB\\) and \\(AHC\\) are the reflections of \\(O\\) over \\(AB\\) and \\(AC\\), respectively. The lines from \\(O\\) to these two circumcenters are the perpendicular bisectors of \\(AB\\) and \\(AC\\). Thus the distance between the two circumcenters is twice the length of the midline of triangle \\(ABC\\) parallel to \\(BC\\), or \\[2\\left(\\frac12 BC\\right)=14.\\]</p>",
+      "answer": "14"
+    },
+    "3": {
+      "problem": "<p>In the below picture, \\(T\\) is an equilateral triangle with a side length of \\(5\\) and \\(\\omega\\) is a circle with a radius of \\(2\\). The triangle and the circle have the same center. Let \\(X\\) be the area of the shaded region, and let \\(Y\\) be the area of the starred region. What is \\(X-Y\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2016_HMMT_February_Geometry/3-fig1.png\" width=\"108\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(K(P)\\) denote the area of \\(P\\). Note that \\[K(T)-K(\\omega)=3(X-Y),\\] which gives our answer.</p>",
+      "answer": "\\frac{25\\sqrt{3}}{12}-\\frac{4\\pi}{3}"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB=3\\), \\(AC=8\\), and \\(BC=7\\). Let \\(M\\) and \\(N\\) be the midpoints of \\(AB\\) and \\(AC\\), respectively. A point \\(T\\) is selected on \\(BC\\) such that \\(AT=TC\\). The circumcircles of triangles \\(BAT\\) and \\(MAN\\) intersect at \\(D\\). Compute \\(DC\\).</p>",
+      "solutions": "<p>We note that \\(D\\) is the circumcenter \\(O\\) of \\(ABC\\), since \\[2\\angle C=\\angle ATB=\\angle AOB.\\] Thus we are merely looking for the circumradius of triangle \\(ABC\\). By Heron’s Formula, the area of \\(ABC\\) is \\[\\sqrt{9\\cdot 6\\cdot 1\\cdot 2}=6\\sqrt3.\\] Using the formula \\(\\frac{abc}{4R}=K\\), the answer is \\[\\frac{3\\cdot 8\\cdot 7}{4\\cdot 6\\sqrt3}\n=\\frac{7\\sqrt3}{3}.\\] Alternatively, one may use trigonometric methods or the fact that \\(\\angle A=60^\\circ\\).</p>",
+      "answer": "\\frac{7\\sqrt{3}}{3}"
+    },
+    "5": {
+      "problem": "<p>Nine pairwise noncongruent circles are drawn in the plane such that any two circles intersect twice. For each pair of circles, we draw the line through these two points, for a total of \\(\\binom{9}{2}=36\\) lines. Assume that all \\(36\\) lines drawn are distinct. What is the maximum possible number of points which lie on at least two of the drawn lines?</p>",
+      "solutions": "<p>The lines are the radical axes of the nine circles. Any three circles with noncollinear centers have a radical center where their three pairwise radical axes concur, but all other intersections between two of the \\(\\binom{9}{2}\\) lines can be distinct. Thus the answer is \\[\\binom{\\binom{9}{2}}{2}-2\\binom{9}{3}=462,\\] where we count pairs of lines and subtract the double counts due to the radical centers, each of which was counted three times.</p>",
+      "answer": "462"
+    },
+    "6": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with incenter \\(I\\), incircle \\(\\gamma\\), and circumcircle \\(\\Gamma\\). Let \\(M,N,P\\) be the midpoints of \\(BC,CA,AB\\), respectively, and let \\(E,F\\) be the points of tangency of \\(\\gamma\\) with \\(CA,AB\\), respectively. Let \\(U,V\\) be the intersections of \\(EF\\) with \\(MN,MP\\), respectively, and let \\(X\\) be the midpoint of arc \\(\\overgroup{BAC}\\) of \\(\\Gamma\\). Given that \\(AB=5\\), \\(AC=8\\), and \\(\\angle A=60^\\circ\\), compute the area of triangle \\(XUV\\).</p>",
+      "solutions": "<p>Let \\(AI\\) and \\(EF\\) meet at \\(K\\). Extend \\(AK\\) to meet the circumcircle again at \\(Y\\). Then \\(X\\) and \\(Y\\) are diametrically opposite, so \\(AX\\parallel EF\\). Thus the height from \\(X\\) to \\(UV\\) is \\(AK\\).</p><p>Since \\(AE=AF\\), triangle \\(AEF\\) is equilateral. Also \\(MN\\) and \\(MP\\) are parallel to \\(AF\\) and \\(AE\\), respectively, so triangles \\(MVU\\), \\(UEN\\), and \\(FPV\\) are equilateral. Therefore \\[MV=MP-PV=\\frac12 AC-FP\n=\\frac12 AC-AF+AP\n=\\frac12 AC-AF+\\frac12 AB\n=\\frac12 BC,\\] where the last equality follows from the tangency of \\(E\\) and \\(F\\). Since \\(MVU\\) is equilateral, \\[UV=MU=MV=\\frac12 BC.\\] We compute \\(BC=7\\), whence \\(UV=\\frac72\\), and \\[AK=\\frac{AB+AC-BC}{2}\\cos 30^\\circ\n=\\frac{3\\sqrt3}{2}.\\] Hence the desired area is \\[\\frac12\\cdot \\frac72\\cdot \\frac{3\\sqrt3}{2}\n=\\frac{21\\sqrt3}{8}.\\]</p>",
+      "answer": "\\frac{21\\sqrt{3}}{8}"
+    },
+    "7": {
+      "problem": "<p>Let \\[S=\\{(x,y)\\mid x,y\\in\\mathbb Z,\\ 0\\le x,y\\le 2016\\}.\\] Given \\(A=(x_1,y_1)\\) and \\(B=(x_2,y_2)\\) in \\(S\\), define \\[d_{2017}(A,B)=(x_1-x_2)^2+(y_1-y_2)^2\\pmod{2017}.\\] Consider the points \\(A=(5,5)\\), \\(B=(2,6)\\), and \\(C=(7,11)\\) in \\(S\\). There is a point \\(O\\) in \\(S\\) such that \\[d_{2017}(O,A)=d_{2017}(O,B)=d_{2017}(O,C).\\] Find \\(d_{2017}(O,A)\\).</p>",
+      "solutions": "<p>The triangle is right at \\(A\\). Therefore its circumradius squared is \\[R^2=\\frac{(7-2)^2+(11-6)^2}{4}\n=\\frac{25}{2}\n=(25)(2^{-1})\n\\equiv 1021\\pmod{2017}.\\] This is the common value \\(d_{2017}(O,A)\\). An equivalent approach works for general triangles, but the right angle makes the circumradius especially easy to compute.</p>",
+      "answer": "1021"
+    },
+    "8": {
+      "problem": "<p>For \\(i=0,1,\\ldots,5\\), let \\(\\ell_i\\) be the ray from the origin making an angle of \\(\\theta=i\\pi/3\\) counterclockwise from the positive \\(x\\)-axis. Each point \\(P_i\\) is chosen uniformly at random from the intersection of \\(\\ell_i\\) with the unit disk centered at the origin. The convex hull of the points \\(P_i\\) is, with probability \\(1\\), a convex polygon with \\(n\\) vertices. What is the expected value of \\(n\\)?</p>",
+      "solutions": "<p>A vertex \\(P_i\\) is part of the convex hull if and only if it is not contained in the triangle formed by the origin and the two adjacent vertices. Let \\(p\\) be the probability that a given vertex is contained in that triangle. By linearity of expectation, the answer is \\(6(1-p)\\).</p><p>Suppose \\(\\lvert P_0\\rvert=a\\) and \\(\\lvert P_2\\rvert=b\\). Stewart’s theorem and the Law of Cosines show that \\(P_1\\) is contained in the triangle precisely when \\[\\lvert P_1\\rvert\n&lt;\n\\sqrt{ab-\\frac{ab(a^2+b^2+ab)}{(a+b)^2}}\n=\\frac{ab}{a+b}.\\] The corresponding double integral evaluates to \\[p=\\frac23(1-\\ln 2).\\] Hence \\[6(1-p)=2+4\\ln 2.\\]</p>",
+      "answer": "2+4\\ln(2)"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABCD\\) be a cyclic quadrilateral with \\(AB=AD=49\\) and \\(AC=73\\). Let \\(I\\) and \\(J\\) be the incenters of triangles \\(ABD\\) and \\(CBD\\), respectively. If \\(BD\\) bisects \\(IJ\\), find \\(IJ\\).</p>",
+      "solutions": "<p>Let \\(O\\) be the circumcenter, \\(R\\) the circumradius, and \\(r\\) the common inradius. By Euler’s formula, \\[IO^2=JO^2=R(R-2r);\\] denote the common value of \\(IO\\) and \\(JO\\) by \\(x\\). Additionally, \\[AJ=AB=AD=49\\] by the angle chase \\(\\angle BJA=\\angle JBA\\). Since \\(A\\) is the midpoint of the arc \\(BD\\) not containing \\(C\\), the points \\(C,J,A\\) are collinear. Taking powers gives \\[R^2-x^2=2Rr=AJ\\cdot JC=49\\cdot24.\\]</p><p>Next, the angle bisector of \\(\\angle BAD\\) contains \\(I\\) and \\(O\\), so \\(A,I,O\\) are collinear. Let \\(M\\) be the midpoint of \\(IJ\\), which lies on \\(BD\\), and let \\(K=IO\\cap BD\\). The right triangles \\(IMO\\) and \\(IKM\\) are similar, so \\[IM^2=IK\\cdot IO=rx,\\] and consequently \\(IJ^2=4rx\\). Applying Stewart’s theorem to triangle \\(AOJ\\) gives \\[R\\bigl(x(R-x)+4rx\\bigr)=49^2x+x^2(R-x).\\] Eliminating \\(x\\), we obtain \\[49^2-(R-x)^2=4Rr=48\\cdot49.\\] Thus \\(R-x=7\\). Also \\[R+x=\\frac{49\\cdot24}{7}=168,\\] so \\(2R=175\\) and \\(2x=161\\). Therefore \\[r=\\frac{49\\cdot24}{175}=\\frac{168}{25},\\] and finally \\[IJ=2\\sqrt{rx}\n=2\\sqrt{\\frac{84\\cdot161}{25}}\n=\\frac{28\\sqrt{69}}5.\\]</p>",
+      "answer": "\\frac{28\\sqrt{69}}{5}"
+    },
+    "10": {
+      "problem": "<p>The incircle of triangle \\(ABC\\) is tangent to \\(BC\\) at \\(D\\). Let \\(H\\) and \\(\\Gamma\\) be the orthocenter and circumcircle, respectively, of \\(ABC\\). The \\(B\\)-mixtilinear incircle, centered at \\(O_B\\), is tangent to the lines \\(BA\\) and \\(BC\\) and internally tangent to \\(\\Gamma\\). The \\(C\\)-mixtilinear incircle, centered at \\(O_C\\), is defined similarly. Suppose that \\(DH\\perp O_BO_C\\), \\(AB=\\sqrt3\\), and \\(AC=2\\). Find \\(BC\\).</p>",
+      "solutions": "<p>Let the \\(B\\)-mixtilinear circle \\(\\omega_B\\) touch \\(\\Gamma\\) at \\(T_B\\), \\(BA\\) at \\(B_1\\), and \\(BC\\) at \\(B_2\\). Define \\(T_C\\in\\Gamma\\), \\(C_1\\in CB\\), and \\(C_2\\in CA\\) similarly for \\(\\omega_C\\). Let \\(I\\) be the incenter and \\(\\gamma\\) the incircle.</p><p>We identify two points on the radical axis. First, let \\(M\\) be the midpoint of arc \\(BC\\) of the circumcircle of \\(ABC\\). The points \\(M,B_1,T_B\\) are collinear, and \\[MB^2=MC^2=MB_1\\cdot MT_B.\\] The analogous relation holds for the \\(C\\)-mixtilinear circle. Second, let \\(N\\) be the midpoint of \\(ID\\). Since \\(I\\) is the midpoint of both \\(B_1B_2\\) and \\(C_1C_2\\), \\(N\\) lies on the radical axes of \\(\\omega_B\\) and \\(\\gamma\\), and of \\(\\omega_C\\) and \\(\\gamma\\). Thus \\(N\\) is the radical center of \\(\\omega_B,\\omega_C,\\gamma\\).</p><p>The homothety of ratio \\(2\\) centered at \\(I\\) sends \\(MN\\) to the line through \\(D\\) and the \\(A\\)-excenter \\(I_A\\), since \\(M\\) is the midpoint of \\(II_A\\). Because \\(DH\\perp O_BO_C\\), we have \\(DH\\parallel MN\\), so the line \\(DH\\) passes through \\(I_A\\). A homothety centered at \\(D\\) then shows that this occurs only when \\(H\\) is the midpoint of the altitude from \\(A\\).</p><p>Set \\(a=BC\\), \\(b=CA=2\\), and \\(c=AB=\\sqrt3\\). Using the barycentric coordinates \\[H=(S_BS_C:S_CS_A:S_AS_B),\n\\qquad\nS_A=\\frac12(b^2+c^2-a^2),\\] and cyclically defining \\(S_B,S_C\\), the condition that \\(H\\) lies on the \\(A\\)-midline is \\[S_BS_C=S_A(S_B+S_C)=a^2S_A.\\] Therefore \\[\\frac14(a^2-1)(a^2+1)\n=\\frac12a^2(7-a^2).\\] Solving, \\[3a^4-14a^2-1=0,\\] and hence \\[a=\\sqrt{\\frac13\\left(7+2\\sqrt{13}\\right)}.\\]</p>",
+      "answer": "\\sqrt{\\frac13\\left(7+2\\sqrt{13}\\right)}"
+    }
+  }
+}

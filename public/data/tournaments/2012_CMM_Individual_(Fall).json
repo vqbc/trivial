@@ -1,0 +1,83 @@
+{
+  "test": "CMM Individual (Fall)",
+  "year": 2012,
+  "name": "Individual Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_917e33ba3350422c847779b19c8b3be3.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many nonzero digits are in the number \\((5^{94} + 5^{92})(2^{94} + 2^{92})\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>Suppose \\(A\\) is a set of 2013 distinct positive integers such that the arithmetic mean of any subset of \\(A\\) is also an integer. Find an example of \\(A\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\{2013! \\cdot 1, 2013! \\cdot 2, \\ldots, 2013! \\cdot 2013\\}"
+    },
+    "3": {
+      "problem": "<p>How many minutes until the smaller angle formed by the minute and hour hands on the face of a clock is congruent to the smaller angle between the hands at 5:15pm? Round your answer to the nearest minute.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "25 \\text{ minutes}"
+    },
+    "4": {
+      "problem": "<p>Suppose \\(a\\) and \\(b\\) are positive real numbers, \\(a+b=1\\), and \\[1 + \\frac{a^2+3b^2}{2ab} = \\sqrt{4+\\frac{a}{b}+\\frac{3b}{a}}.\\]</p><p>Find \\(a\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3-\\sqrt{3}}{2}"
+    },
+    "5": {
+      "problem": "<p>Suppose \\(f(x) = \\frac{e^x - 12e^{-x}}{2}\\). Find all \\(x\\) such that \\(f(x) = 2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\ln 6"
+    },
+    "6": {
+      "problem": "<p>Let \\(P_1, P_2, \\ldots, P_n\\) be points equally spaced on a unit circle. For how many integer \\(n \\in \\{2, 3, \\ldots, 2013\\}\\) is the product of all pairwise distances: \\[\\prod_{1 \\le i &lt; j \\le n} P_iP_j\\] a rational number? Note that \\(\\prod\\) means product. For example, \\(\\prod_{1 \\le i \\le 3} i = 1 \\cdot 2 \\cdot 3 = 6\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "21"
+    },
+    "7": {
+      "problem": "<p>Determine the value \\(a\\) such that the following sum converges if and only if \\(r \\in (-\\infty, a)\\): \\[\\sum_{n=1}^{\\infty} (\\sqrt{n^4+n^r} - n^2).\\]</p><p>Note that \\(\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{n^s}\\) converges if and only if \\(s&gt;1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "8": {
+      "problem": "<p>Find two pairs of positive integers \\((a,b)\\) with \\(a&gt;b\\) such that \\[a^2+b^2 = 40501.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "(201, 10) \\text{ and } (199, 30)"
+    },
+    "9": {
+      "problem": "<p>Consider a simplified memory-knowledge model. Suppose your total knowledge level the night before you went to a college was 100 units. Each day, when you woke up in the morning you forgot 1% of what you had learned. Then, by going to lectures, working on the homework, preparing for presentations, you had learned more and so your knowledge level went up by 10 units at the end of the day.</p><p>According to this model, how long do you need to stay in college until you reach the knowledge level of exactly 1000?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\text{forever (your knowledge level will never reach 1000)}"
+    },
+    "10": {
+      "problem": "<p>Suppose \\(P(x) = 2x^8+x^6-x^4+1\\), and that \\(P\\) has roots \\(a_1, a_2, \\cdots, a_8\\) (a complex number \\(z\\) is a root of the polynomial \\(P(x)\\) if \\(P(z)=0\\)). Find the value of \\[(a_1^2-2)(a_2^2-2)(a_3^2-2) \\cdots (a_8^2-2).\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1369}{4}"
+    },
+    "11": {
+      "problem": "<p>Find all values of \\(x\\) satisfying \\((x^2+2x-5)^2 = -2x^2-3x+15\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{-3\\pm\\sqrt{17}}{2}, \\frac{-1\\pm\\sqrt{21}}{2}"
+    },
+    "12": {
+      "problem": "<p>Suppose \\(x, y\\) and \\(z\\) are <i>positive</i> real numbers such that \\[\\begin{aligned}\nx^2+y^2+xy &amp;= 9, \\\\\ny^2+z^2+yz &amp;= 16, \\\\\nx^2+z^2+xz &amp;= 25.\n\\end{aligned}\\]</p><p>Find \\(xy+yz+xz\\) (the answer is unique).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "8\\sqrt{3}"
+    },
+    "13": {
+      "problem": "<p>Suppose that \\(P(x)\\) is a monic polynomial (i.e, the leading coefficient is 1) with 20 roots, each distinct and of the form \\(\\frac{1}{3^k}\\) for \\(k = 0, 1, 2, \\ldots, 19\\). Find the coefficient of \\(x^{18}\\) in \\(P(x)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{9}{16}(1-3^{-19})(1-3^{-20})"
+    },
+    "14": {
+      "problem": "<p>Find the sum of the reciprocals of all perfect squares whose prime factorization contains only powers of 3, 5, 7 (i.e. \\(\\frac{1}{1}+\\frac{1}{9}+\\frac{1}{25}+\\frac{1}{49}+\\frac{1}{81}+\\frac{1}{225}+\\frac{1}{441}+\\frac{1}{625}+\\cdots\\)).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{9216}{11025}"
+    },
+    "15": {
+      "problem": "<p>Find the number of integer quadruples \\((a,b,c,d)\\) which also satisfy the following system of equations: \\[\\begin{aligned}\n1+b+c^2+d^3 &amp;= 0, \\\\\na+b^2+c^3+d^4 &amp;= 0, \\\\\na^2+b^3+c^4+d^5 &amp;= 0, \\\\\na^3+b^4+c^5+d^6 &amp;= 0.\n\\end{aligned}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    }
+  }
+}

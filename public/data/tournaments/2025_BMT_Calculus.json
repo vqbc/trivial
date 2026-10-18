@@ -1,0 +1,58 @@
+{
+  "test": "BMT Calculus",
+  "year": 2025,
+  "name": "Calculus Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/calculus-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(x) = x^2 - 11x + 31\\). Distinct real numbers \\(a\\) and \\(b\\) satisfy \\(f(a) = f'(a)\\) and \\(f(b) = f'(b)\\). Given \\(a &lt; b\\), compute \\(10a + b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Determine the maximum value of \\[\\frac{\\left(2025^x\\right)^\\pi}{2025^{x^\\pi}}\\] over all positive real numbers \\(x\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Let \\(f(x) = \\sqrt{3x^2 + 2x + 1}\\). Compute \\[\\lim_{x \\to \\infty} f'(x).\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Compute \\[\\lim_{n \\to \\infty} \\left( \\frac{2\\tan^{-1}(n)}{\\pi} \\right)^n.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>For each real number \\(n\\), let \\(\\lfloor n \\rfloor\\) denote the greatest integer less than or equal to \\(n\\), and let \\(\\lceil n \\rceil\\) denote the least integer greater than or equal to \\(n\\). Compute \\[\\int_0^\\infty \\frac{(-1)^{\\lfloor x \\rfloor}}{\\lceil x \\rceil^2 - \\lfloor x \\rfloor^2} \\, \\mathrm{d}x.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Evan wants to grow a garden, so he visits a florist selling \\(n\\) distinct flowers. He repeatedly rolls a fair \\(n\\)-sided die with faces labeled from \\(1\\) to \\(n\\) until he rolls a number other than \\(1\\). Evan then calculates \\(N\\), the number of ways he can choose \\(\\min\\{k, n\\}\\) of the flowers, where \\(k\\) is the number of \\(1\\)’s rolled (possibly zero). Compute the limit as \\(n\\) goes to infinity of the expected value of \\(N\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>For positive real numbers \\(a\\), let the circle \\(C(a)\\) be the graph of \\(x^2 + (y-a)^2 = 4a\\) in the coordinate plane. Let \\(f(a)\\) be the fraction of the area of \\(C(a)\\) that lies above the parabola \\(y = x^2\\). Find \\[\\lim_{a \\to \\infty} f(a).\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>An integer \\(k\\) is chosen uniformly at random from the set \\(\\{0, 1, \\cdots, 2^{2025} - 1\\}\\). Compute the probability that \\[\\int_0^\\infty e^{-2025x} x^k \\sin(2025x) \\, \\mathrm{d}x &gt; 0.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Let \\(f(a, b) = (a^3 - 4a)(b - a) - \\frac{(b-a)^2}{2}\\). Find the least real number \\(M\\) such that for all finite, strictly increasing sequences \\(d_1, \\ldots, d_n\\) with \\(d_1 = -2\\) and \\(d_n = 3\\), the following inequality is satisfied: \\[\\sum_{k=1}^{n-1} f(d_k, d_{k+1}) \\le M.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Compute \\[\\int_0^{\\frac{\\pi}{2}} \\ln\\left(\\sin^4(x) + \\cos^4(x)\\right) \\, \\mathrm{d}x.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

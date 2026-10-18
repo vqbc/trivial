@@ -1,0 +1,23 @@
+{
+  "test": "BMT Geometry Tiebreaker",
+  "year": 2022,
+  "name": "Geometry Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2022/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(ABCDEFGH\\) be a unit cube such that \\(ABCD\\) is one face of the cube and \\(\\overline{AE}\\), \\(\\overline{BF}\\), \\(\\overline{CG}\\), and \\(\\overline{DH}\\) are all edges of the cube. Points \\(I\\), \\(J\\), \\(K\\), and \\(L\\) are the respective midpoints of \\(\\overline{AF}\\), \\(\\overline{BG}\\), \\(\\overline{CH}\\), and \\(\\overline{DE}\\). The inscribed circle of \\(IJKL\\) is the largest cross-section of some sphere. Compute the volume of this sphere.</p>",
+      "solutions": "<p>Note that \\(I, J, K, L\\) are the centers of the faces \\(ABFE\\), \\(BCGF\\), \\(CDHG\\), and \\(DAEH\\), respectively. Thus, \\(IJKL\\) is a square, and its side length is the hypotenuse of an isceles right triangle with side length \\(\\frac{1}{2}\\), so it is \\(\\frac{\\sqrt{2}}{2}\\). This means that the inscribed circle of \\(IJKL\\) will have a radius which is one half the side length of \\(IJKL\\), so the radius is \\(\\frac{\\sqrt{2}}{4}\\). Thus, the sphere also has radius \\(\\frac{\\sqrt{2}}{4}\\), and hence its volume is \\(\\boxed{\\frac{\\sqrt{2}}{24}\\pi}\\).</p>",
+      "answer": "\\frac{\\sqrt{2}}{24}\\pi"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABCD\\) be a unit square. Points \\(E\\) and \\(F\\) are chosen on line segments \\(\\overline{BC}\\) and \\(\\overline{CD}\\), respectively, such that the area of \\(ABEFD\\) is three times the area of triangle \\(\\triangle ECF\\). Compute the maximum possible area of triangle \\(\\triangle AEF\\).</p>",
+      "solutions": "<p>Let \\(BE = x\\) and \\(DF = y\\). Since the areas of \\(ABEFD\\) and \\(ECF\\) sum to the area of the entire square \\(ABCD\\), which is 1, we have that \\([ECF] = \\frac{1}{4}\\). That is, \\(\\frac{1}{2}(1-x)(1-y) = \\frac{1}{4}\\). Rearranging this equation gives \\(x + y = \\frac{1}{2} + xy\\). Now, note that</p><p>\\[\\begin{aligned}\n[AEF] &amp;= [ABEFD] - [ABE] - [ADF] \\\\\n&amp;= \\frac{3}{4} - \\frac{1}{2} \\cdot 1 \\cdot x - \\frac{1}{2} \\cdot 1 \\cdot y \\\\\n&amp;= \\frac{3}{4} - \\frac{x+y}{2} \\\\\n&amp;= \\frac{1}{2} - \\frac{xy}{2}.\n\\end{aligned}\\]</p><p>We now want to maximize this expression. Equivalently, we will minimize \\(xy\\). Since \\(x, y \\ge 0\\), we will always have that \\(xy \\ge 0\\), so the minimum possible value is 0. This can indeed be achieved while satisfying the condition \\(x + y = \\frac{1}{2} + xy\\), for example with \\(x = 0\\) and \\(y = \\frac{1}{2}\\). Hence the maximum possible area of \\([AEF]\\) is \\(\\boxed{\\frac{1}{2}}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "3": {
+      "problem": "<p>In triangle \\(\\triangle ABC\\), \\(M\\) is the midpoint of \\(\\overline{AB}\\) and \\(N\\) is the midpoint of \\(\\overline{AC}\\). Let \\(P\\) be the midpoint of \\(\\overline{BN}\\) and let \\(Q\\) be the midpoint of \\(\\overline{CM}\\). If \\(AM = 6\\), \\(BC = 8\\) and \\(BN = 7\\), compute the perimeter of triangle \\(\\triangle NPQ\\).</p>",
+      "solutions": "<p>Let \\(X\\) be the midpoint of \\(\\overline{BM}\\) and let \\(Y\\) be the midpoint of \\(\\overline{CN}\\).</p><p>First, note that since \\(M, N\\) are the midpoints of \\(\\overline{AB}, \\overline{AC}\\), respectively, we have that \\(\\triangle AMN \\sim \\triangle ABC\\) with the ratio of similarity being \\(\\frac{1}{2}\\). That is, \\(MN = \\frac{1}{2}BC = 4\\). Similarly, since \\(X, P\\) are the midpoints of \\(\\overline{BM}, \\overline{BN}\\), respectively, we have that \\(\\triangle BXP \\sim \\triangle BMN\\) with the ratio of similarity being \\(\\frac{1}{2}\\). Thus \\(XP = \\frac{1}{2}MN = 2\\). By the same logic, we get that \\(QY = \\frac{1}{2}MN = 2\\). Also, since \\(\\frac{AX}{AB} = \\frac{AY}{AB} = \\frac{3}{4}\\), we have that \\(XY = \\frac{3}{4}BC = 6\\) by the similarity \\(\\triangle AXY \\sim \\triangle ABC\\). Hence \\[PQ = XY - XP - QY = 6 - 2 - 2 = 2.\\]</p><p>Also, since \\(\\frac{CQ}{CM} = \\frac{CN}{CA} = \\frac{1}{2}\\), we have that \\(\\triangle CQN \\sim \\triangle CMA\\) with ratio of similarity \\(\\frac{1}{2}\\). Hence \\(NQ = \\frac{1}{2}AM = 3\\). Finally, since \\(P\\) is the midpoint of \\(\\overline{BN}\\), \\(NP = \\frac{1}{2}BN = \\frac{7}{2}\\). Thus the perimeter of triangle \\(\\triangle NPQ\\) is \\[PQ + NQ + NP = 2 + 3 + \\frac{7}{2} = \\boxed{\\frac{17}{2}}.\\]</p>",
+      "answer": "\\frac{17}{2}"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "BMT Geometry",
+  "year": 2015,
+  "name": "Geometry Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2015/GeoS2015.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(ABC\\) be a triangle. The angle bisectors of \\(\\angle ABC\\) and \\(\\angle ACB\\) intersect at \\(D\\). If \\(\\angle BAC = 80^\\circ\\), what are all possible values for \\(\\angle BDC\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "130^\\circ"
+    },
+    "2": {
+      "problem": "<p>\\(ABCDEF\\) is a regular hexagon. Let \\(R\\) be the overlap between \\(\\triangle ACE\\) and \\(\\triangle BDF\\). What is the area of \\(R\\) divided by the area of \\(ABCDEF\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "3": {
+      "problem": "<p>Let \\(M\\) be on segment \\(BC\\) of \\(\\triangle ABC\\) so that \\(AM=3\\), \\(BM=4\\), and \\(CM=5\\). Find the largest possible area of \\(\\triangle ABC\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{27}{2}"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABCD\\) be a rectangle. Circles \\(C_1\\) and \\(C_2\\) are externally tangent to each other. Furthermore, \\(C_1\\) is tangent to \\(AB\\) and \\(AD\\), and \\(C_2\\) is tangent to \\(CB\\) and \\(CD\\). If \\(AB = 18\\) and \\(BC = 25\\), then find the sum of the radii of the circles.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "13"
+    },
+    "5": {
+      "problem": "<p>Let \\(A = (1,0)\\), \\(B = (0,1)\\), and \\(C = (0,0)\\). There are three distinct points, \\(P, Q, R\\), such that \\(\\{A,B,C,P\\}\\), \\(\\{A,B,C,Q\\}\\), \\(\\{A,B,C,R\\}\\) are all parallelograms (vertices unordered). Find the area of \\(\\triangle PQR\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "6": {
+      "problem": "<p>Let \\(\\mathcal{C}\\) be the sphere \\(x^2 + y^2 + (z-1)^2 = 1\\). Point \\(P\\) on \\(\\mathcal{C}\\) is \\((0,0,2)\\). Let \\(Q = (14,5,0)\\). If \\(PQ\\) intersects \\(\\mathcal{C}\\) again at \\(Q'\\), then find the length \\(PQ'\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{4}{15}"
+    },
+    "7": {
+      "problem": "<p>Define \\(A = (1,0,0)\\), \\(B = (0,1,0)\\), and \\(\\mathcal{P}\\) as the set of all points \\((x,y,z)\\) such that \\(x+y+z=0\\). Let \\(P\\) be the point on \\(\\mathcal{P}\\) such that \\(d = AP + PB\\) is minimized. Find \\(d^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{10}{3}"
+    },
+    "8": {
+      "problem": "<p>Suppose that \\(A = \\left(\\frac{1}{2}, \\sqrt{3}\\right)\\). Suppose that \\(B, C, D\\) are chosen on the ellipse \\(x^2 + (y/2)^2 = 1\\) such that the area of \\(ABCD\\) is maximized. Assume that \\(A, B, C, D\\) lie on the ellipse going counterclockwise. What are all possible values of \\(B\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\left(-\\frac{\\sqrt{3}}{2}, 1\\right)"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABC\\) be a triangle. Suppose that a circle with diameter \\(BC\\) intersects segments \\(CA, AB\\) at \\(E, F\\), respectively. Let \\(D\\) be the midpoint of \\(BC\\). Suppose that \\(AD\\) intersects \\(EF\\) at \\(X\\). If \\(AB = \\sqrt{9}\\), \\(AC = \\sqrt{10}\\), and \\(BC = \\sqrt{11}\\), what is \\(\\frac{EX}{XF}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{9}{10}"
+    },
+    "10": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with points \\(E, F\\) on \\(CA, AB\\), respectively. Circle \\(C_1\\) passes through \\(E, F\\) and is tangent to segment \\(BC\\) at \\(D\\). Suppose that \\(AE = AF = EF = 3\\), \\(BF = 1\\), and \\(CE = 2\\). What is \\(\\frac{ED^2}{FD^2}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{8}{5}"
+    }
+  }
+}

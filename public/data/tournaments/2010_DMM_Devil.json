@@ -1,0 +1,73 @@
+{
+  "test": "DMM Devil",
+  "year": 2010,
+  "name": "Devil Round",
+  "url": "https://dukemathmeet.org/2010/devil.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find all \\(x\\) such that \\((\\ln(x^4))^2 = (\\ln(x))^6\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>On a piece of paper, Alan has written a number \\(N\\) between 0 and 2010, inclusive. Yiwen attempts to guess it in the following manner: she can send Alan a positive number \\(M\\), which Alan will attempt to subtract from his own number, which we will call \\(N\\). If \\(M\\) is less than or equal to \\(N\\), then he will erase \\(N\\) and replace it with \\(N - M\\). Otherwise, Alan will tell Yiwen that \\(M &gt; N\\). What is the minimum number of attempts that Yiwen must make in order to determine uniquely what number Alan started with?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>How many positive integers between 1 and 50 have at least 4 distinct positive integer divisors? (Remember that both 1 and \\(n\\) are divisors of \\(n\\).)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Let \\(F_n\\) denote the \\(n^{\\text{th}}\\) Fibonacci number, with \\(F_0 = 0\\) and \\(F_1 = 1\\). Find the last digit of \\[\\sum_{i=0}^{97!+4} F_i.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Find all prime numbers \\(p\\) such that \\(2p + 1\\) is a perfect cube.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>What is the maximum number of knights that can be placed on a \\(9 \\times 9\\) chessboard such that no two knights attack each other?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>\\(S\\) is a set of 9 consecutive positive integers such that the sum of the squares of the 5 smallest integers in the set is the sum of the squares of the remaining 4. What is the sum of all 9 integers?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>In the following infinite array, each row is an arithmetic sequence, and each column is a geometric sequence. Find the sum of the infinite sequence of entries along the main diagonal. \\[\\begin{array}{ccccc}\n1 &amp; ? &amp; \\frac{1}{2} &amp; ? &amp; \\cdots \\\\\n\\frac{1}{2} &amp; ? &amp; ? &amp; ? &amp; \\cdots \\\\\n? &amp; ? &amp; ? &amp; ? &amp; \\cdots \\\\\n? &amp; ? &amp; ? &amp; ? &amp; \\cdots \\\\\n\\vdots &amp; \\vdots &amp; \\vdots &amp; \\vdots &amp; \\ddots\n\\end{array}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Let \\(x &gt; y &gt; 0\\) be real numbers. Find the minimum value of \\(\\frac{x}{y} + \\frac{4x}{x-y}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>A regular pentagon \\(P = A_1A_2A_3A_4A_5\\) and a square \\(S = B_1B_2B_3B_4\\) are both inscribed in the unit circle. For a given pentagon \\(P\\) and square \\(S\\), let \\(f(P,S)\\) be the minimum length of the minor arcs \\(A_iB_j\\), for \\(1 \\le i \\le 5\\) and \\(1 \\le j \\le 4\\). Find the maximum of \\(f(P,S)\\) over all pairs of shapes.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "11": {
+      "problem": "<p>Find the sum of the largest and smallest prime factors of \\(9^4 + 3^4 + 1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "12": {
+      "problem": "<p>A transmitter is sending a message consisting of 4 binary digits (either ones or zeros) to a receiver. Unfortunately, the transmitter makes errors: for each digit in the message, the probability that the transmitter sends the correct digit to the receiver is only 80%. (Errors are independent across all digits.) To avoid errors, the receiver only accepts a message if the sum of the first three digits equals the last digit modulo 2. If the receiver accepts a message, what is the probability that the message was correct?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "13": {
+      "problem": "<p>Find the integer \\(N\\) such that \\[\\prod_{i=0}^{8} \\sec\\left(\\frac{\\pi}{9}2^i\\right) = N.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

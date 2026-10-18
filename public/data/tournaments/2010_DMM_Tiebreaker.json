@@ -1,0 +1,23 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2010,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2010/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let the series \\(a_n\\) be defined as \\(a_1 = 1\\) and \\(a_n = \\sum_{i=1}^{n-1} a_i a_{n-i}\\) for all positive integers \\(n\\). Evaluate \\(\\sum_{i=1}^{\\infty} \\left(\\frac{1}{4}\\right)^i a_i\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>\\(a, b, c,\\) and \\(d\\) are distinct real numbers such that \\[a + \\frac{1}{b} = b + \\frac{1}{c} = c + \\frac{1}{d} = d + \\frac{1}{a} = x.\\]</p><p>Find \\(|x|\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Find all ordered tuples \\((w, x, y, z)\\) of complex numbers satisfying \\[\\begin{aligned}\nx + y + z + xy + yz + zx + xyz &amp;= -w \\\\\ny + z + w + yz + zw + wy + yzw &amp;= -x \\\\\nz + w + x + zw + wx + xz + zwx &amp;= -y \\\\\nw + x + y + wx + xy + yw + wxy &amp;= -z.\n\\end{aligned}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2019,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2019/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute the value of \\(N\\), where \\[N = 818^3 - 6 \\cdot 818^2 \\cdot 209 + 12 \\cdot 818 \\cdot 209^2 - 8 \\cdot 209^3.\\]</p>",
+      "solutions": "<p>Note that \\(N\\) is simply the binomial expansion of \\[(818 - 2 \\cdot 209)^3,\\] so \\[\\begin{aligned}\nN &amp;= (818 - 2 \\cdot 209)^3 \\\\\n&amp;= 400^3 = 64{,}000{,}000.\n\\end{aligned}\\]</p>",
+      "answer": "64{,}000{,}000"
+    },
+    "2": {
+      "problem": "<p>Suppose \\(x \\le 2019\\) is a positive integer that is divisible by 2 and 5, but not 3. If 7 is one of the digits in \\(x\\), how many possible values of \\(x\\) are there?</p>",
+      "solutions": "<p>If \\(x\\) is divisible by 2 and 5, it must be divisible by 10, thus the last digit must be 0, so there are only 3 variable digits of \\(x\\). We now do casework on the number of digits of \\(x\\).</p><p>Case 1: 2 digits. \\(x\\) must include the digit 7, so \\(x = 70\\), which is not divisible by 3. Thus, there is 1 2-digit possibilities for x.</p><p>Case 2: 3 digits. Since \\(x\\) must include the digit 7, we either have \\(7a0\\) or \\(a70\\), and since \\(x\\) is not divisible by 3, we have a total of \\(7 + 6 - 1 = 12\\) 3-digit possibilities for \\(x\\).</p><p>Case 3: 4 digits. Similar to the previous case, we either have \\(x = 7ab0\\), \\(a7b0\\), or \\(ab70\\). But, since \\(x \\le 2019\\), we must have \\(x = 1a70\\) or \\(17a0\\). Thus, we get a total of \\(7 + 7 = 14\\) 4-digit possibilities for \\(x\\).</p><p>Summing these gives \\(1 + 12 + 14 = 27\\).</p>",
+      "answer": "27"
+    },
+    "3": {
+      "problem": "<p>Find all non-negative integer solutions \\((a, b)\\) to the equation \\[b^2 + b + 1 = a^2.\\]</p>",
+      "solutions": "<p>We have \\[b^2 &lt; b^2 + b + 1 = a^2 \\le b^2 + 2b + 1 = (b+1)^2.\\] Hence, the only way for \\(a\\) to be an integer is if \\(a = b+1\\). This implies that \\((a, b) = (1, 0)\\) is the only solution.</p>",
+      "answer": "(1, 0)"
+    },
+    "4": {
+      "problem": "<p>Compute the remainder when \\(\\sum_{n=1}^{2019} n^4\\) is divided by 53.</p>",
+      "solutions": "<p>Notice that \\(\\sum_{x=1}^n x^4\\) is equivalent to counting the number of 5-tuples \\((x_1, x_2, x_3, x_4, x_5)\\) from \\(\\{1, 2, \\ldots, n+1\\}\\) with \\(x_5 &gt; \\max(x_1, x_2, x_3, x_4)\\) (you can see this by doing casework on \\(x_5\\)). The number of 5-tuples is also equal to \\[\\binom{n+1}{2} + 14\\binom{n+1}{3} + 36\\binom{n+1}{4} + 24\\binom{n+1}{5}.\\] This shows that \\(\\sum_{x=1}^n x^4\\) is divisible by \\(n\\). Thus, since \\(2019 = 53 \\cdot 38 + 5\\), we can reduce our desired sum to \\[1^4 + 2^4 + 3^4 + 4^4 + 5^5 \\pmod{5},\\] which we can easily compute to be 25.</p>",
+      "answer": "25"
+    },
+    "5": {
+      "problem": "<p>Let \\(ABC\\) be an equilateral triangle and \\(CDEF\\) a square such that \\(E\\) lies on segment \\(AB\\) and \\(F\\) on segment \\(BC\\). If the perimeter of the square is equal to 4, what is the area of triangle \\(ABC\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2019_DMM_Individual/5-fig1.png\" width=\"188\" alt=\"\"></p>",
+      "solutions": "<p>We easily find \\(EF = 1\\), so since \\(\\angle B = 60^\\circ\\), we know \\(BF = \\frac{1}{\\sqrt{3}}\\), so \\(BC = 1 + \\frac{1}{\\sqrt{3}}\\). Therefore, the area of \\(ABC\\) is \\[\\frac{\\sqrt{3}}{4}\\left(1+\\frac{1}{\\sqrt{3}}\\right)^2 = \\frac{1}{2}+\\frac{\\sqrt{3}}{3}.\\]</p>",
+      "answer": "\\frac{1}{2}+\\frac{\\sqrt{3}}{3}"
+    },
+    "6": {
+      "problem": "<p>\\[S = \\frac{4}{1\\times2\\times3}+\\frac{5}{2\\times3\\times4}+\\frac{6}{3\\times4\\times5}+\\cdots+\\frac{101}{98\\times99\\times100},\\] Let \\(T = \\frac{5}{4} - S\\). If \\(T = \\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime integers, find the value of \\(m+n\\).</p>",
+      "solutions": "<p>\\[\\begin{aligned}\nS &amp;= \\frac{4}{1\\times2\\times3}+\\frac{5}{2\\times3\\times4}+\\frac{6}{3\\times4\\times5}+\\cdots+\\frac{101}{98\\times99\\times100} \\\\\n&amp;= \\left(\\frac{3}{1\\times2\\times3}+\\frac{4}{2\\times3\\times4}+\\frac{5}{3\\times4\\times5}+\\cdots+\\frac{100}{98\\times99\\times100}\\right) \\\\\n&amp;\\quad + \\left(\\frac{1}{1\\times2\\times3}+\\frac{1}{2\\times3\\times4}+\\frac{1}{3\\times4\\times5}+\\cdots+\\frac{1}{98\\times99\\times100}\\right) \\\\\n&amp;= \\left(\\frac{1}{1\\times2}+\\frac{1}{2\\times3}+\\frac{1}{3\\times4}+\\cdots+\\frac{1}{98\\times99}\\right) \\\\\n&amp;\\quad + \\left(\\frac{1}{1\\times2\\times3}+\\frac{1}{2\\times3\\times4}+\\frac{1}{3\\times4\\times5}+\\cdots+\\frac{1}{98\\times99\\times100}\\right) \\\\\n&amp;= \\left(\\frac{1}{1}-\\frac{1}{2}+\\frac{1}{2}-\\frac{1}{3}+\\frac{1}{3}-\\frac{1}{4}+\\cdots+\\frac{1}{98}-\\frac{1}{99}\\right) \\\\\n&amp;\\quad + \\frac{1}{2}\\left(\\frac{1}{1\\times2}-\\frac{1}{2\\times3}+\\frac{1}{2\\times3}-\\frac{1}{3\\times4}+\\cdots+\\frac{1}{98\\times99}-\\frac{1}{99\\times100}\\right) \\\\\n&amp;= \\left(1-\\frac{1}{99}\\right)+\\frac{1}{2}\\left(\\frac{1}{2}-\\frac{1}{9900}\\right) \\\\\n&amp;= \\frac{5}{4}-\\left(\\frac{1}{99}+\\frac{1}{19800}\\right) \\\\\n&amp;= \\frac{5}{4}-\\frac{67}{6600}.\n\\end{aligned}\\] Thus, \\(\\frac{m}{n} = \\frac{67}{6600}\\), giving the answer of 6667.</p>",
+      "answer": "6667"
+    },
+    "7": {
+      "problem": "<p>Find the sum of \\[\\sum_{i=0}^{2019} \\frac{2^i}{2^i+2^{2019-i}}.\\]</p>",
+      "solutions": "<p>Note that \\[\\frac{2^i}{2^i+2^{2019-i}}+\\frac{2^{2019-i}}{2^i+2^{2019-i}} = 1,\\] so we can pair all the elements in the sum to get 1010.</p>",
+      "answer": "1010"
+    },
+    "8": {
+      "problem": "<p>Let \\(A\\) and \\(B\\) be two points in the Cartesian plane such that \\(A\\) lies on the line \\(y = 12\\), and \\(B\\) lies on the line \\(y = 3\\). Let \\(C_1\\), \\(C_2\\) be two distinct circles that intersect both \\(A\\) and \\(B\\) and are tangent to the \\(x\\)-axis at \\(P\\) and \\(Q\\), respectively. If \\(PQ = 420\\), determine the length of \\(AB\\).</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2019_DMM_Individual/8-fig1.png\" width=\"673\" alt=\"\"></p><p>Draw the line through \\(A\\) and \\(B\\), and let it hit the \\(x\\)-axis at \\(M\\). The power of \\(M\\) with respect to \\(C_1\\) is \\(PM^2 = BM \\cdot AM\\), and the power of \\(M\\) with respect to \\(C_2\\) is \\(MQ^2 = MB \\cdot MA\\), so we find that \\(PM = MQ = 210\\). Let \\(D\\) be the perpendicular from \\(A\\) to the \\(x\\)-axis and let \\(E\\) be the perpendicular from \\(B\\) to the \\(x\\)-axis. Then, similar triangles \\(MBE\\) and \\(MAD\\) give us \\(\\frac{BM}{AM} = \\frac{3}{12} = \\frac{1}{4}\\), so combining this with \\(BM \\cdot AM = 210^2\\) gives \\(BM = 105\\), so \\(AM = 420\\), and \\(AB = 315\\).</p>",
+      "answer": "315"
+    },
+    "9": {
+      "problem": "<p>Zion has an average 2 out of 3 hit rate for 2-pointers and 1 out of 3 hit rate for 3-pointers. In a recent basketball match, Zion scored 18 points without missing a shot, and all the points came from 2 or 3-pointers. What is the probability that all his shots were 3-pointers?</p>",
+      "solutions": "<p>The conditional probability tells us that the probability is the probability of shooting all 3-pointers over the probability of scoring 18 points without missing, which is \\[\\frac{\\left(\\frac{1}{3}\\right)^6}{\\left(\\frac{1}{3}\\right)^6 + \\left(\\frac{1}{3}\\right)^4\\left(\\frac{2}{3}\\right)^3\\binom{7}{4} + \\left(\\frac{1}{3}\\right)^2\\left(\\frac{2}{3}\\right)^6\\binom{8}{2} + \\left(\\frac{2}{3}\\right)^9} = \\frac{27}{8435}.\\]</p>",
+      "answer": "\\frac{27}{8435}"
+    },
+    "10": {
+      "problem": "<p>Let \\(S = \\{1, 2, 3, \\ldots, 2019\\}\\). Find the number of non-constant functions \\(f: S \\to S\\) such that \\[f(k) = f(f(k+1)) \\le f(k+1) \\quad \\text{for all } 1 \\le k \\le 2018.\\]</p><p>Express your answer in the form \\(\\binom{m}{n}\\), where \\(m\\) and \\(n\\) are integers.</p>",
+      "solutions": "<p>Suppose \\(f(1) = a\\). Then, \\(f(f(2)) = a \\le f(2)\\). If \\(f(2) &gt; a\\), then \\(f(f(2)) \\ge f(a) \\ge f(2) &gt; a\\), which is a contradiction by the monotonicity of \\(f\\). Therefore, \\(f(2) = a\\). By a similar argument, we see that \\(f(a+1) = a\\). Now, suppose \\(f(i) = b\\), with \\(f(j) = a\\) with \\(a &lt; b\\) for all \\(j &lt; i\\). Then, \\(f(f(i+1)) = b \\le f(i+1)\\). If \\(f(i+1) = b\\), then \\(f(f(i+1)) \\ge f(b) = a\\) because \\(b &lt; i\\), which makes a contradiction. On the other hand, if \\(f(i+1) &gt; b\\), then there is no other value \\(x \\in S\\) such that \\(f(x) = b\\), so \\(x = i\\), hence \\(f(i+1) = i\\). Therefore, we see that the number of non-constant functions satisfying the given condition is the same as the number of ways to pick \\(a\\), \\(b\\), and \\(i\\), where \\(a &lt; b &lt; i\\). This is simply the number of ways to pick 3 distinct numbers from \\(S\\), or \\(\\binom{2019}{3}\\).</p>",
+      "answer": "\\binom{2019}{3}"
+    }
+  }
+}

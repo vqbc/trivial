@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Advanced Topics",
+  "year": 1999,
+  "name": "Advanced Topics",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/1999/feb/adv/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>One of the receipts for a math tournament showed that 72 identical trophies were purchased for $_99.9_, where the first and last digits were illegible. How much did each trophy cost?</p>",
+      "solutions": "<p>The price must be divisible by 8 and 9. Thus the last 3 digits must be divisible by 8, so the price ends with 992, and the first digit must be 7 to make the total divisible by 9. $799.92/72 = $11.11.</p>",
+      "answer": "\\$11.11"
+    },
+    "2": {
+      "problem": "<p>Stacy has \\(d\\) dollars. She enters a mall with 10 shops and a lottery stall. First she goes to the lottery and her money is doubled, then she goes into the first shop and spends 1024 dollars. After that she alternates playing the lottery and getting her money doubled (Stacy always wins) then going into a new shop and spending $1024. When she comes out of the last shop she has no money left. What is the minimum possible value of \\(d\\)?</p>",
+      "solutions": "<p>Work backwards. Before going into the last shop she had $1024, before the lottery she had $512, then $1536, $768, …. We can easily prove by induction that if she ran out of money after \\(n\\) shops, \\(0 \\le n \\le 10\\), she must have started with \\(1024 - 2^{10-n}\\) dollars. Therefore \\(d\\) is \\(\\mathbf{1023}\\).</p>",
+      "answer": "1023"
+    },
+    "3": {
+      "problem": "<p>An unfair coin has the property that when flipped four times, it has the same nonzero probability of turning up 2 heads and 2 tails (in any order) as 3 heads and 1 tail (in any order). What is the probability of getting a head in any one flip?</p>",
+      "solutions": "<p>Let \\(p\\) be the probability of getting a head in one flip. There are 6 ways to get 2 heads and 2 tails, each with probability \\(p^2(1-p)^2\\), and 4 ways to get 3 heads and 1 tail, each with probability \\(p^3(1-p)\\). We are given that \\(6p^2(1-p)^2 = 4p^3(1-p)\\). Clearly \\(p\\) is not 0 or 1, so we can divide by \\(p^2(1-p)\\) to get \\(6(1-p) = 4p\\). Therefore \\(p\\) is \\(\\mathbf{\\frac{3}{5}}\\).</p>",
+      "answer": "\\frac{3}{5}"
+    },
+    "4": {
+      "problem": "<p>You are given 16 pieces of paper numbered 16, 15, …, 2, 1 in that order. You want to put them in the order 1, 2, …, 15, 16 switching only two adjacent pieces of paper at a time. What is the minimum number of switches necessary?</p>",
+      "solutions": "<p>Piece 16 has to move to the back 15 times, piece 15 has to move to the back 14 times, …, piece 2 has to move to the back 1 time, piece 1 has to move to the back 0 times. Since only one piece can move back in each switch, we must have at least \\(15 + 14 + \\ldots + 1 = \\mathbf{120}\\) switches.</p>",
+      "answer": "120"
+    },
+    "5": {
+      "problem": "<p>For any finite set \\(S\\), let \\(f(S)\\) be the sum of the elements of \\(S\\) (if \\(S\\) is empty then \\(f(S) = 0\\)). Find the sum over all subsets \\(E\\) of \\(S\\) of \\(\\frac{f(E)}{f(S)}\\) for \\(S = \\{1, 2, \\ldots, 1999\\}\\).</p>",
+      "solutions": "<p>An \\(n\\) element set has \\(2^n\\) subsets, so each element of \\(S\\) appears in \\(2^{1998}\\) subsets \\(E\\), so our sum is \\(2^{1998} \\cdot \\frac{1+2+\\ldots+1999}{1+2+\\ldots+1999} = \\mathbf{2^{1998}}\\).</p>",
+      "answer": "2^{1998}"
+    },
+    "6": {
+      "problem": "<p>Matt has somewhere between 1000 and 2000 pieces of paper he’s trying to divide into piles of the same size (but not all in one pile or piles of one sheet each). He tries 2, 3, 4, 5, 6, 7, and 8 piles but ends up with one sheet left over each time. How many piles does he need?</p>",
+      "solutions": "<p>The number of sheets will leave a remainder of 1 when divided by the least common multiple of 2, 3, 4, 5, 6, 7, and 8, which is \\(8 \\cdot 3 \\cdot 5 \\cdot 7 = 840\\). Since the number of sheets is between 1000 and 2000, the only possibility is 1681. The number of piles must be a divisor of \\(1681 = 41^2\\), hence it must be \\(\\mathbf{41}\\).</p>",
+      "answer": "41"
+    },
+    "7": {
+      "problem": "<p>Find an ordered pair \\((a, b)\\) of real numbers for which \\(x^2 + ax + b\\) has a non-real root whose cube is 343.</p>",
+      "solutions": "<p>The cube roots of 343 are the roots of \\(x^3 - 343\\), which is \\((x - 7)(x^2 + 7x + 49)\\). Therefore the ordered pair we want is \\(\\mathbf{(7,49)}\\).</p>",
+      "answer": "(7, 49)"
+    },
+    "8": {
+      "problem": "<p>Let \\(C\\) be a circle with two diameters intersecting at an angle of 30 degrees. A circle \\(S\\) is tangent to both diameters and to \\(C\\), and has radius 1. Find the largest possible radius of \\(C\\).</p>",
+      "solutions": "<p>For \\(C\\) to be as large as possible we want \\(S\\) to be as small as possible. It is not hard to see that this happens in the situation shown below. Then the radius of \\(C\\) is \\(1 + \\csc 15 = \\mathbf{1 + \\sqrt{2} + \\sqrt{6}}\\). The computation of \\(\\sin 15\\) can be done via the half angle formula.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1999_HMMT_February_Advanced_Topics/8-fig1.png\" width=\"241\" alt=\"\"></p>",
+      "answer": "1 + \\sqrt{2} + \\sqrt{6}"
+    },
+    "9": {
+      "problem": "<p>As part of his effort to take over the world, Edward starts producing his own currency. As part of an effort to stop Edward, Alex works in the mint and produces 1 counterfeit coin for every 99 real ones. Alex isn’t very good at this, so none of the counterfeit coins are the right weight. Since the mint is not perfect, each coin is weighed before leaving. If the coin is not the right weight, then it is sent to a lab for testing. The scale is accurate 95% of the time, 5% of all the coins minted are sent to the lab, and the lab’s test is accurate 90% of the time. If the lab says a coin is counterfeit, what is the probability that it really is?</p>",
+      "solutions": "<p>5% of the coins are sent to the lab, and only .95% of the coins are sent to the lab and counterfeit, so there is a 19% chance that a coin sent to the lab is counterfeit and an 81% chance that it is real. The lab could correctly detect a counterfeit coin or falsely accuse a real one of being counterfeit, so the probability that a coin the lab says is counterfeit really is counterfeit is \\(\\frac{19/100 \\cdot 9/10}{19/100 \\cdot 9/10 + 81/100 \\cdot 1/10} = \\mathbf{\\frac{19}{28}}\\).</p>",
+      "answer": "\\frac{19}{28}"
+    },
+    "10": {
+      "problem": "<p>Find the minimum possible value of the largest of \\(xy\\), \\(1 - x - y + xy\\), and \\(x + y - 2xy\\) if \\(0 \\le x \\le y \\le 1\\).</p>",
+      "solutions": "<p>I claim the answer is 4/9. Let \\(s = x+y\\), \\(p = xy\\), so \\(x\\) and \\(y\\) are \\(\\frac{s\\pm\\sqrt{s^2-4p}}{2}\\). Since \\(x\\) and \\(y\\) are real, \\(s^2-4p \\ge 0\\). If one of the three quantities is less than or equal to \\(1/9\\), then at least one of the others is at least \\(4/9\\) by the pigeonhole principle since they add up to 1. Assume that \\(s-2p&lt;4/9\\), then \\(s^2-4p&lt;(4/9+2p)^2-4p\\), and since the left side is non-negative we get \\(0 \\le p^2 - \\frac{5}{9}p+\\frac{4}{81}=(p-\\frac{1}{9})(p-\\frac{4}{9})\\). This implies that either \\(p\\le\\frac{1}{9}\\) or \\(p\\ge\\frac{4}{9}\\), and either way we’re done. This minimum is achieved if \\(x\\) and \\(y\\) are both 1/3, so the answer is \\(\\mathbf{\\frac{4}{9}}\\), as claimed.</p>",
+      "answer": "\\frac{4}{9}"
+    }
+  }
+}

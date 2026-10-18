@@ -1,0 +1,131 @@
+{
+  "test": "1994 AJHSME",
+  "year": 1994,
+  "problems": {
+    "1": {
+      "problem": "<p>Which of the following is the largest?</p><p>\\(\\text{(A)}\\ \\dfrac{1}{3} \\qquad \\text{(B)}\\ \\dfrac{1}{4} \\qquad \\text{(C)}\\ \\dfrac{3}{8} \\qquad \\text{(D)}\\ \\dfrac{5}{12} \\qquad \\text{(E)}\\ \\dfrac{7}{24}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>The least common denominator is \\(\\mathrm{lcm}(3, 4, 8, 12, 24) = 24\\). The answer choices (A) to (E) are thus \\(\\frac{8}{24}\\), \\(\\frac{6}{24}\\), \\(\\frac{9}{24}\\), \\(\\frac{10}{24}\\), and \\(\\frac{7}{24}\\), so  \\(\\boxed{\\textbf{(D)}\\ \\frac{5}{12}}\\) is the largest.</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>C and D are the only answer choices where the numerator is close to half of the denominator. \\(\\dfrac{3}{8} = .375\\) and \\(\\dfrac{5}{12} \\approx .41\\). Thus the answer is \\(\\boxed{\\text{(D)}\\ \\frac{5}{12}}\\)</p>",
+      "answer": "D"
+    },
+    "2": {
+      "problem": "<p>\\(\\dfrac{1}{10}+\\dfrac{2}{10}+\\dfrac{3}{10}+\\dfrac{4}{10}+\\dfrac{5}{10}+\\dfrac{6}{10}+\\dfrac{7}{10}+\\dfrac{8}{10}+\\dfrac{9}{10}+\\dfrac{55}{10}=\\)</p><p>\\(\\text{(A)}\\ 4\\dfrac{1}{2} \\qquad \\text{(B)}\\ 6.4 \\qquad \\text{(C)}\\ 9 \\qquad \\text{(D)}\\ 10 \\qquad \\text{(E)}\\ 11\\)</p>",
+      "solutions": "<p>\\(1+ 2+ 3 + 4 + 5 + 6 + 7 + 8 + 9 = \\dfrac{(9)(10)}{2} = 45\\)</p><p>\\(\\frac{45+55}{10} = \\dfrac{100}{10} = \\boxed{\\text{(D)}\\ 10}\\)</p>",
+      "answer": "D"
+    },
+    "3": {
+      "problem": "<p>Each day Maria must work \\(8\\) hours.  This does not include the \\(45\\) minutes she takes for lunch.  If she begins working at \\(\\text{7:25 A.M.}\\) and takes her lunch break at noon, then her working day will end at</p><p>\\(\\text{(A)}\\ \\text{3:40 P.M.} \\qquad \\text{(B)}\\ \\text{3:55 P.M.} \\qquad \\text{(C)}\\ \\text{4:10 P.M.} \\qquad \\text{(D)}\\ \\text{4:25 P.M.} \\qquad \\text{(E)}\\ \\text{4:40 P.M.}\\)</p>",
+      "solutions": "<p>8 hours from 7:25 AM is 15:25 or 3:25 PM. 45 minutes from 25 minutes is 10 minutes after the hour, so her working day ends at \\(\\boxed{\\text{(C)}\\ \\text{4:10 P.M.}}\\)</p>",
+      "answer": "C"
+    },
+    "4": {
+      "problem": "<p>Which of the following represents the result when the figure shown below is rotated clockwise \\(120^\\circ\\) about its center?</p><p><img class=\"latexcenter\" src=\"/data/aops/1994_AJHSME/4-fig1.png\" width=\"204\" alt=\"\"></p><p><img class=\"latexcenter\" src=\"/data/aops/1994_AJHSME/4-fig2.png\" width=\"1164\" alt=\"\"></p>",
+      "solutions": "<p>Rotating the circle \\(120^\\circ\\) is \\(1/3\\) of a full turn. Going \\(1/3\\) clockwise of a full loop around the circle, the triangle would replace the square, the square would replace, the circle, and the circle would replace the triangle, \\(\\boxed{\\text{(B)}}\\).</p>",
+      "answer": "B"
+    },
+    "5": {
+      "problem": "<p>Given that \\(\\text{1 mile} = \\text{8 furlongs}\\) and \\(\\text{1 furlong} = \\text{40 rods}\\), the number of rods in one mile is</p><p>\\(\\text{(A)}\\ 5 \\qquad \\text{(B)}\\ 320 \\qquad \\text{(C)}\\ 660 \\qquad \\text{(D)}\\ 1760 \\qquad \\text{(E)}\\ 5280\\)</p>",
+      "solutions": "<p>\\[(1\\ \\text{mile}) \\left( \\frac{8\\ \\text{furlongs}}{1\\ \\text{mile}} \\right) \\left( \\frac{40\\ \\text{rods}}{1\\ \\text{furlong}} \\right) = \\boxed{\\textbf{(B)}\\ 320}\\ \\text{rods}\\]</p>",
+      "answer": "B"
+    },
+    "6": {
+      "problem": "<p>The unit’s digit (one’s digit) of the product of any six consecutive positive whole numbers is</p><p>\\(\\text{(A)}\\ 0 \\qquad \\text{(B)}\\ 2 \\qquad \\text{(C)}\\ 4 \\qquad \\text{(D)}\\ 6 \\qquad \\text{(E)}\\ 8\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Any set of \\(6\\) consecutive positive integers contains at least one multiple of \\(5\\) and at least one multiple of \\(2\\). Thus the product of any \\(6\\) consecutive positive integers is divisible by \\(5\\cdot 2=10\\), so its units digit is \\(\\boxed{\\textbf{(A)}\\ 0}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Since this question has a single correct answer choice, notice that \\(1\\cdot2\\cdot3\\cdot4\\cdot5\\cdot6=720\\), which has units digit \\(\\boxed{\\textbf{(A)}\\ 0}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_3\">Solution 3</span></h2><p>Since this question has a single correct answer choice, notice that \\(5\\cdot 6 \\cdot 7 \\cdot 8 \\cdot 9 \\cdot 10\\) is divisible by \\(10\\), so its units digit is \\(\\boxed{\\textbf{(A)}\\ 0}\\).</p>",
+      "answer": "A"
+    },
+    "7": {
+      "problem": "<p>If \\(\\angle A = 60^\\circ\\), \\(\\angle E = 40^\\circ\\) and \\(\\angle C = 30^\\circ\\), then \\(\\angle BDC =\\)</p><p><img class=\"latexcenter\" src=\"/data/aops/1994_AJHSME/7-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 40^\\circ \\qquad \\text{(B)}\\ 50^\\circ \\qquad \\text{(C)}\\ 60^\\circ \\qquad \\text{(D)}\\ 70^\\circ \\qquad \\text{(E)}\\ 80^\\circ\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>The sum of the angles in a triangle is \\(180^\\circ\\). We can find \\(\\angle ABE = 80^\\circ\\), so \\(\\angle CBD = 180-80=100^\\circ\\).</p><p>\\[\\angle BDC = 180-100-30=\\boxed{\\text{(B)}\\ 50^\\circ}\\]</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>The sum of angles of a quadrilateral is \\(360^\\circ\\). Reflex \\(\\angle EDC=360-60-40-30=230^\\circ\\).  \\(\\angle BDC\\) is a straight angle less than Reflex \\(\\angle EDC\\). \\[\\angle BDC =230-180=\\boxed{\\text{(B)}\\ 50^\\circ}\\]</p>",
+      "answer": "B"
+    },
+    "8": {
+      "problem": "<p>For how many three-digit whole numbers does the sum of the digits equal \\(25\\)?</p><p>\\(\\text{(A)}\\ 2 \\qquad \\text{(B)}\\ 4 \\qquad \\text{(C)}\\ 6 \\qquad \\text{(D)}\\ 8 \\qquad \\text{(E)}\\ 10\\)</p>",
+      "solutions": "<p>Because \\(8+8+8=24\\), it follows that one of the digits must be a \\(9\\). The other two digits them have a sum of \\(25-9=16\\). The groups of digits that produce a sum of \\(25\\) are \\(799, 889\\) and can be arranged as follows</p><p>\\[799,979,997,889,898,988\\]</p><p>The number of configurations is \\(\\boxed{\\text{(C)}\\ 6}\\).</p>",
+      "answer": "C"
+    },
+    "9": {
+      "problem": "<p>A shopper buys a \\(100\\) dollar coat on sale for \\(20\\%\\) off.  An additional \\(5\\) dollars are taken off the sale price by using a discount coupon.  A sales tax of \\(8\\%\\) is paid on the final selling price.  The total amount the shopper pays for the coat is</p><p>\\(\\text{(A)}\\ \\text{81.00 dollars} \\qquad \\text{(B)}\\ \\text{81.40 dollars} \\qquad \\text{(C)}\\ \\text{82.00 dollars} \\qquad \\text{(D)}\\ \\text{82.08 dollars} \\qquad \\text{(E)}\\ \\text{82.40 dollars}\\)</p>",
+      "solutions": "<p>After the \\(20\\%\\) sale, the coat costs \\(100(0.8)=80\\) dollars. Then \\(5\\) dollars are taken off for a cost of \\(80-5=75\\). Adding on the sales tax, the final amount is \\((75)(1.08)=\\boxed{\\text{(A)}\\ 81.00\\ \\text{dollars}}\\).</p>",
+      "answer": "A"
+    },
+    "10": {
+      "problem": "<p>For how many positive integer values of \\(N\\) is the expression \\(\\dfrac{36}{N+2}\\) an integer?</p><p>\\(\\text{(A)}\\ 7 \\qquad \\text{(B)}\\ 8 \\qquad \\text{(C)}\\ 9 \\qquad \\text{(D)}\\ 10 \\qquad \\text{(E)}\\ 12\\)</p>",
+      "solutions": "<p>We should list all the positive divisors of \\(36\\) and count them. By trial and error, the divisors of \\(36\\) are found to be \\(1,2,3,4,6,9,12,18,36\\), for a total of \\(9\\). However, \\(1\\) and \\(2\\) can’t be equal to \\(N+2\\) for a POSITIVE integer N, so the number of possibilities is \\(\\boxed{\\text{(A)}\\ 7}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>To find the number of positive divisors of \\(36\\), first prime factorize \\(36\\) to get \\(2^2*3^2\\). Then add \\(1\\) to the power of both \\(2\\) and \\(3\\) to get \\(3\\). Multiply \\(3*3\\) to get \\(9\\). Since the problem is asking only for positive integer values of N, subtract \\(2\\) from \\(9\\) (since \\(2-2\\) and \\(1-2\\) result in integers that are not positive) to get \\(\\boxed{\\text{(A)}\\ 7}\\).</p><p>~spoamath321</p>",
+      "answer": "A"
+    },
+    "11": {
+      "problem": "<p>Last summer \\(100\\) students attended basketball camp.  Of those attending, \\(52\\) were boys and \\(48\\) were girls.  Also, \\(40\\) students were from Jonas Middle School and \\(60\\) were from Clay Middle School.  Twenty of the girls were from Jonas Middle School.  How many of the boys were from Clay Middle School?</p><p>\\(\\text{(A)}\\ 20 \\qquad \\text{(B)}\\ 32 \\qquad \\text{(C)}\\ 40 \\qquad \\text{(D)}\\ 48 \\qquad \\text{(E)}\\ 52\\)</p>",
+      "solutions": "<p>Make a table with the information given.</p><p>\\[\\begin{tabular}{c|ccc}\n&amp; \\text{Jonas} &amp; \\text{Clay} &amp; \\text{total} \\\\ \\hline\n\\text{boys} &amp; &amp; &amp; 52 \\\\\n\\text{girls} &amp; 20 &amp; &amp; 48 \\\\\n\\text{total} &amp; 40 &amp; 60 &amp; 100\n\\end{tabular}\\]</p><p>Because the first two columns must add up to the third column, and the same with the rows, the rest of the empty boxes can be filled in.</p><p>\\[\\begin{tabular}{c|ccc}\n&amp; \\text{Jonas} &amp; \\text{Clay} &amp; \\text{total} \\\\ \\hline\n\\text{boys} &amp; 20 &amp; 32 &amp; 52 \\\\\n\\text{girls} &amp; 20 &amp; 28 &amp; 48 \\\\\n\\text{total} &amp; 40 &amp; 60 &amp; 100\n\\end{tabular}\\]</p><p>The number of boys from Clay is \\(\\boxed{\\text{(B)}\\ 32}\\).</p>",
+      "answer": "B"
+    },
+    "12": {
+      "problem": "<p>Each of the three large squares shown below is the same size.  Segments that intersect the sides of the squares intersect at the midpoints of the sides.  How do the shaded areas of these squares compare?</p><p><img class=\"latexcenter\" src=\"/data/aops/1994_AJHSME/12-fig1.png\" width=\"964\" alt=\"\"></p><p>\\(\\text{(A)}\\ \\text{The shaded areas in all three are equal.}\\)</p><p>\\(\\text{(B)}\\ \\text{Only the shaded areas of }I\\text{ and }II\\text{ are equal.}\\)</p><p>\\(\\text{(C)}\\ \\text{Only the shaded areas of }I\\text{ and }III\\text{ are equal.}\\)</p><p>\\(\\text{(D)}\\ \\text{Only the shaded areas of }II\\text{ and }III\\text{ are equal.}\\)</p><p>\\(\\text{(E)}\\ \\text{The shaded areas of }I, II\\text{ and }III\\text{ are all different.}\\)</p>",
+      "solutions": "<p>Square II clearly has \\(1/4\\) shaded. Partitioning square I into eight right triangles also shows \\(1/4\\) of it is shaded. Lastly, square III can be partitioned into sixteen triangles, and because four are shaded, \\(1/4\\) of the total square is shaded. \\(\\boxed{\\text{(A)}}\\).</p>",
+      "answer": "A"
+    },
+    "13": {
+      "problem": "<p>The number halfway between \\(\\dfrac{1}{6}\\) and \\(\\dfrac{1}{4}\\) is</p><p>\\(\\text{(A)}\\ \\dfrac{1}{10} \\qquad \\text{(B)}\\ \\dfrac{1}{5} \\qquad \\text{(C)}\\ \\dfrac{5}{24} \\qquad \\text{(D)}\\ \\dfrac{7}{24} \\qquad \\text{(E)}\\ \\dfrac{5}{12}\\)</p>",
+      "solutions": "<p>The number halfway between is the average.</p><p>\\[\\frac{\\frac16 + \\frac14}{2} = \\frac{\\frac{2}{12} + \\frac{3}{12}}{2} = \\boxed{\\text{(C)}\\ \\frac{5}{24}}\\]</p>",
+      "answer": "C"
+    },
+    "14": {
+      "problem": "<p>Two children at a time can play pairball.  For \\(90\\) minutes, with only two children playing at time, five children take turns so that each one plays the same amount of time.  The number of minutes each child plays is</p><p>\\(\\text{(A)}\\ 9 \\qquad \\text{(B)}\\ 10 \\qquad \\text{(C)}\\ 18 \\qquad \\text{(D)}\\ 20 \\qquad \\text{(E)}\\ 36\\)</p>",
+      "solutions": "<p>There are \\(2 \\times 90 = 180\\) minutes of total playing time. Divided equally among the five children, each child gets \\(180/5 = \\boxed{\\text{(E)}\\ 36}\\) minutes.</p>",
+      "answer": "E"
+    },
+    "15": {
+      "problem": "<p>If this path is to continue in the same pattern:</p><p><img class=\"latexcenter\" src=\"/data/aops/1994_AJHSME/15-fig1.png\" width=\"564\" alt=\"\"></p><p>then which sequence of arrows goes from point \\(425\\) to point \\(427\\)?</p><p><img class=\"latexcenter\" src=\"/data/aops/1994_AJHSME/15-fig2.png\" width=\"1484\" alt=\"\"></p>",
+      "solutions": "<p>Notice the pattern from \\(0\\) to \\(4\\) repeats for every four arrows. Any number that has a remainder of \\(0\\) when divided by \\(4\\) corresponds to \\(0\\).</p><p>The remainder when \\(425\\) is divided by \\(4\\) is \\(1\\). The arrows from point \\(425\\) to point \\(427\\) correspond to points \\(1\\) and \\(3\\), which have the same pattern as \\(\\boxed{\\text{(A)}}\\).</p>",
+      "answer": "A"
+    },
+    "16": {
+      "problem": "<p>The perimeter of one square is \\(3\\) times the perimeter of another square.  The area of the larger square is how many times the area of the smaller square?</p><p>\\(\\text{(A)}\\ 2 \\qquad \\text{(B)}\\ 3 \\qquad \\text{(C)}\\ 4 \\qquad \\text{(D)}\\ 6 \\qquad \\text{(E)}\\ 9\\)</p>",
+      "solutions": "<p>Let \\(a\\) be the sidelength of one square, and \\(b\\) be the sidelength of the other, where \\(a&gt;b\\). If the perimeter of one is \\(3\\) times the other’s, then \\(a=3b\\). The area of the larger square over the area of the smaller square is</p><p>\\[\\frac{a^2}{b^2} = \\frac{(3b)^2}{b^2} = \\frac{9b^2}{b^2} = \\boxed{\\text{(E)}\\ 9}\\]</p>",
+      "answer": "E"
+    },
+    "17": {
+      "problem": "<p>Pauline Bunyan can shovel snow at the rate of \\(20\\) cubic yards for the first hour, \\(19\\) cubic yards for the second, \\(18\\) for the third, etc., always shoveling one cubic yard less per hour than the previous hour.  If her driveway is \\(4\\) yards wide, \\(10\\) yards long, and covered with snow \\(3\\) yards deep, then the number of hours it will take her to shovel it clean is closest to</p><p>\\(\\text{(A)}\\ 4 \\qquad \\text{(B)}\\ 5 \\qquad \\text{(C)}\\ 6 \\qquad \\text{(D)}\\ 7 \\qquad \\text{(E)}\\ 12\\)</p>",
+      "solutions": "<p>Her driveway has \\((4)(10)(3)=120\\) cubic yards of snow. After the first hour she would have \\(120-20=100\\) cubic yards, then \\(100-19=81\\), \\(81-18=63\\), \\(63-17=46\\), \\(46-16=30\\), \\(30-15=15\\), and \\(15-14=1\\) cubic yard after the seventh hour. It will take her a little more than seven hours to shovel it clean, which is closest to \\(\\boxed{\\text{(D)}\\ 7}\\).</p>",
+      "answer": "D"
+    },
+    "18": {
+      "problem": "<p>Mike leaves home and drives slowly east through city traffic.  When he reaches the highway he drives east more rapidly until he reaches the shopping mall where he stops.  He shops at the mall for an hour.  Mike returns home by the same route as he came, driving west rapidly along the highway and then slowly through city traffic.  Each graph shows the distance from home on the vertical axis versus the time elapsed since leaving home on the horizontal axis.  Which graph is the best representation of Mike’s trip?</p><p><img class=\"latexcenter\" src=\"/data/aops/1994_AJHSME/18-fig1.png\" width=\"1697\" alt=\"\"></p>",
+      "solutions": "<p>When Mike is shopping at the mall, his distance doesn’t change, so there should be a flat plateau shape on the graph. This rules out \\(C,D,E\\). The portion of graph \\(A\\) in which the distance is changing is linear, inconsistent with how he changes speed from the city and the highway. The best representation of his travels is graph \\(\\boxed{\\text{(B)}}\\).</p>",
+      "answer": "B"
+    },
+    "19": {
+      "problem": "<p>Around the outside of a \\(4\\) by \\(4\\) square, construct four semicircles (as shown in the figure) with the four sides of the square as their diameters.  Another square, \\(ABCD\\), has its sides parallel to the corresponding sides of the original square, and each side of \\(ABCD\\) is tangent to one of the semicircles.  The area of the square \\(ABCD\\) is</p><p><img class=\"latexcenter\" src=\"/data/aops/1994_AJHSME/19-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 16 \\qquad \\text{(B)}\\ 32 \\qquad \\text{(C)}\\ 36 \\qquad \\text{(D)}\\ 48 \\qquad \\text{(E)}\\ 64\\)</p>",
+      "solutions": "<p>The radius of each semicircle is \\(2\\), half the sidelength of the square. The line straight down the middle of square \\(ABCD\\) is the sum of two radii and the length of the smaller square, which is equivalent to its side length. The area of \\(ABCD\\) is \\((4+2+2)^2 = \\boxed{\\text{(E)}\\ 64}\\).</p>",
+      "answer": "E"
+    },
+    "20": {
+      "problem": "<p>Let \\(W,X,Y\\) and \\(Z\\) be four different digits selected from the set</p><p>\\(\\{ 1,2,3,4,5,6,7,8,9\\}.\\)</p><p>If the sum \\(\\dfrac{W}{X} + \\dfrac{Y}{Z}\\) is to be as small as possible, then \\(\\dfrac{W}{X} + \\dfrac{Y}{Z}\\) must equal</p><p>\\(\\text{(A)}\\ \\dfrac{2}{17} \\qquad \\text{(B)}\\ \\dfrac{3}{17} \\qquad \\text{(C)}\\ \\dfrac{17}{72} \\qquad \\text{(D)}\\ \\dfrac{25}{72} \\qquad \\text{(E)}\\ \\dfrac{13}{36}\\)</p>",
+      "solutions": "<p>\\[\\frac{W}{X} + \\frac{Y}{Z} = \\frac{WZ+XY}{XZ}\\]</p><p>Small fractions have small numerators and large denominators. To maximize the denominator, let \\(X=8\\) and \\(Z=9\\).</p><p>\\[\\frac{9W+8Y}{72}\\]</p><p>To minimize the numerator, let \\(W=1\\) and \\(Y=2\\).</p><p>\\[\\frac{9+16}{72} = \\boxed{\\text{(D)}\\rightarrow \\frac{25}{72}}\\]</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>To make the smallest fraction, you need the lowest numerator and the highest denominator. So, take the first \\(2\\) and last \\(2\\) digits of the set, which are \\(1,2\\) and \\(8,9\\). Balance the equations to be \"even\". Since \\(1\\) is smaller than \\(2\\), put it over \\(8\\). You get \\(\\frac{1}{8}+\\frac{2}{9}=\\frac{25}{72}\\), or \\(\\boxed{D}\\).</p><p>-goldenn</p>",
+      "answer": "D"
+    },
+    "21": {
+      "problem": "<p>A gumball machine contains \\(9\\) red, \\(7\\) white, and \\(8\\) blue gumballs.  The least number of gumballs a person must buy to be sure of getting four gumballs of the same color is</p><p>\\(\\text{(A)}\\ 8 \\qquad \\text{(B)}\\ 9 \\qquad \\text{(C)}\\ 10 \\qquad \\text{(D)}\\ 12 \\qquad \\text{(E)}\\ 18\\)</p>",
+      "solutions": "<p>If a person gets three gumballs of each of the three colors, that is, \\(9\\) gumballs, then the \\(10^{\\text{th}}\\) gumball must be the fourth one for one of the colors. Therefore, the person must buy \\(\\boxed{\\text{(C)}\\ 10}\\) gumballs.</p>",
+      "answer": "C"
+    },
+    "22": {
+      "problem": "<p>The two wheels shown below are spun and the two resulting numbers are added.  The probability that the sum is even is</p><p><img class=\"latexcenter\" src=\"/data/aops/1994_AJHSME/22-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ \\dfrac{1}{6} \\qquad \\text{(B)}\\ \\dfrac{1}{4} \\qquad \\text{(C)}\\ \\dfrac{1}{3} \\qquad \\text{(D)}\\ \\dfrac{5}{12} \\qquad \\text{(E)}\\ \\dfrac{4}{9}\\)</p>",
+      "solutions": "<p>An even sum occurs when an even is added to an even or an odd is added to an odd. Looking at the areas of the regions, the chance of getting an even in the first wheel is \\(\\frac14\\) and the chance of getting an odd is \\(\\frac34\\). On the second wheel, the chance of getting an even is \\(\\frac23\\) and an odd is \\(\\frac13\\) , resulting in an answer of D.</p><p>\\[\\frac14 \\cdot \\frac23 + \\frac34 \\cdot \\frac13 = \\frac16 + \\frac14 = \\boxed{\\text{(D)}\\ \\frac{5}{12}}\\]</p>",
+      "answer": "D"
+    },
+    "23": {
+      "problem": "<p>If \\(X\\), \\(Y\\) and \\(Z\\) are different digits, then the largest possible \\(3-\\)digit sum for</p><p>\\(\\begin{tabular}{ccc}\nX &amp; X &amp; X \\\\\n &amp; Y &amp; X \\\\\n+ &amp; &amp; X \\\\ \\hline\n\\end{tabular}\\)</p><p>has the form</p><p>\\(\\text{(A)}\\ XXY \\qquad \\text{(B)}\\ XYZ \\qquad \\text{(C)}\\ YYX \\qquad \\text{(D)}\\ YYZ \\qquad \\text{(E)}\\ ZZY\\)</p>",
+      "solutions": "<p>The sum can be rewritten as \\(113X + 10Y\\). To get the largest possible sum, we maximize the hundreds digit, \\(X\\). If \\(X=9\\), the sum is a \\(4\\)-digit number, so we let \\(X=8\\) and \\(113(8)+10Y = 904+10Y\\). To continue maxmimizing this sum, we can let \\(Y=9\\), a different digit from \\(X\\), and \\(904+10(9)=994\\), which has the form \\(\\boxed{\\text{(D)}\\ YYZ}\\).</p>",
+      "answer": "D"
+    },
+    "24": {
+      "problem": "<p>A \\(2\\) by \\(2\\) square is divided into four \\(1\\) by \\(1\\) squares.  Each of the small squares is to be painted either green or red.  In how many different ways can the painting be accomplished so that no green square shares its top or right side with any red square?  There may be as few as zero or as many as four small green squares.</p><p>\\(\\text{(A)}\\  4 \\qquad \\text{(B)}\\ 6 \\qquad \\text{(C)}\\ 7 \\qquad \\text{(D)}\\ 8 \\qquad \\text{(E)}\\ 16\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>If a green square cannot share its top or right side with a red square, then a red square can not share its bottom or left side with a green square. Let us split this up into several cases.</p><p>Case 1: There are no green squares. This can be done in \\(1\\) way.</p><p>Case 2: There is one green square and three red squares. This can only be done when the green square’s top and right edges are against the edge, so there is \\(1\\) way.</p><p>Case 3: There are two green squares and two red squares. This happens when the two green squares are in the two top squares or two right squares, so there are \\(2\\) ways.</p><p>Case 4: There are three green squares and one red square. Similar to case 2, this happens when the red square’s left and bottom edges are against the edge, so there is \\(1\\) way.</p><p>Case 5: There are four green squares and zero red squares.   \\(1\\) way.</p><p>\\[1+1+2+1+1 = \\boxed{\\textbf{(B)}\\ 6}\\]</p><h2><span class=\"mw-headline\" id=\"Solution_2_(Generalization)\">Solution 2 (Generalization)</span></h2><p>Suppose the grid has \\(m\\) rows and \\(n\\) columns.</p><p>Since a green square’s top edge may not border a red square, each column, from top to bottom, must consist of \\(k\\) green squares followed by \\(m-k\\) red squares, where \\(k\\) is an integer such that \\(0 \\leq k \\leq m\\).  Also, since a green square’s right edge may not border a red square, each column except the leftmost must contain at least as many green squares as the column directly to its left.  Any coloring satisfying these two constraints is valid.</p><p>Notice that each valid coloring can be found by tracing a path from the top left corner to the bottom right corner using edges of the grid, coloring all squares above and to the right of the path green, and coloring all the squares to the right of the path red.</p><p>There are \\(\\binom{m+n}{n}\\) paths through the grid, and thus there are also \\(\\binom{m+n}{n}\\) valid to color it.  So, there are \\(\\binom{4}{2} = \\boxed{\\textbf{(B)}\\ 6}\\) valid ways to color a \\(2 \\times 2\\) grid.</p><p>-j314andrews</p>",
+      "answer": "B"
+    },
+    "25": {
+      "problem": "<p>Find the sum of the digits in the answer to</p><p>\\(\\underbrace{9999\\cdots 99}_{94\\text{ nines}} \\times \\underbrace{4444\\cdots 44}_{94\\text{ fours}}\\)</p><p>where a string of \\(94\\) nines is multiplied by a string of \\(94\\) fours.</p><p>\\(\\text{(A)}\\ 846 \\qquad \\text{(B)}\\ 855 \\qquad \\text{(C)}\\ 945 \\qquad \\text{(D)}\\ 954 \\qquad \\text{(E)}\\ 1072\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Notice that:</p><p>\\(9 \\cdot 4 = 36\\) and \\(3+6 = 9 = 9 \\cdot 1\\)</p><p>\\(99 \\cdot 44 = 4356\\) and \\(4+5+3+6 = 18 = 9 \\cdot 2\\)</p><p>So the sum of the digits of \\(x\\) 9s times \\(x\\) 4s is simply \\(x \\cdot 9\\) (Try to find the proof that it works for all values of \\(x\\) ~MATHWIZARD10).</p><p>Therefore the answer is \\(94 \\cdot 9 = \\boxed{\\text{(A)}\\ 846.}\\)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>\\[\\underbrace{9999\\cdots 99}_{94\\text{ nines}} \\cdot \\underbrace{4444\\cdots 44}_{94\\text{ fours}} = (10^{94}-1)\\cdot \\underbrace{4444\\cdots 44}_{94\\text{ fours}} = \\underbrace{444\\cdots 4}_{94\\text{ fours}} \\underbrace{000\\cdots 0}_{94\\text{ zeros}} - \\underbrace{4444\\cdots 44}_{94\\text{ fours}} = \\underbrace{444\\cdots 4}_{93\\text{ fours}} 3 \\underbrace{555\\cdots 5}_{93\\text{ fives}}6\\]</p><p>\\[4 \\cdot 93 + 3 + 5 \\cdot 93 + 6 = 9 \\cdot 94 = \\boxed{\\text{(A)}\\ 846}\\]</p><p>~isabelchen <a class=\"external\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\">https://artofproblemsolving.com/wiki/index.php/User:Isabelchen</a></p><p>~Minor edit by wimpykid</p>",
+      "answer": "A"
+    }
+  }
+}

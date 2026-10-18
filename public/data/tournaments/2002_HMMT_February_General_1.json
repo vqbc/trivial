@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 1",
+  "year": 2002,
+  "name": "Individual General Test: Part 1",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2002/feb/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the maximum number of lattice points (i.e. points with integer coordinates) in the plane that can be contained strictly inside a circle of radius 1?</p>",
+      "solutions": "<p>The circle centered at \\((1/2, 1/2)\\) shows that 4 is achievable. On the other hand, no two points within the circle can be at a mutual distance of 2 or greater. If there are more than four lattice points, classify all such points by the parity of their coordinates: (even, even), (even, odd), (odd, even), or (odd, odd). Then some two points lie in the same class. Since they are distinct, this means either their first or second coordinates must differ by at least 2, so their distance is at least 2, a contradiction.</p>",
+      "answer": "4"
+    },
+    "2": {
+      "problem": "<p>Eight knights are randomly placed on a chessboard (not necessarily on distinct squares). A knight on a given square attacks all the squares that can be reached by moving either (1) two squares up or down followed by one squares left or right, or (2) two squares left or right followed by one square up or down. Find the probability that every square, occupied or not, is attacked by some knight.</p>",
+      "solutions": "<p>Since every knight attacks at most eight squares, the event can only occur if every knight attacks exactly eight squares. However, each corner square must be attacked, and some experimentation readily finds that it is impossible to place a knight so as to attack a corner and seven other squares as well.</p>",
+      "answer": "0"
+    },
+    "3": {
+      "problem": "<p>How many triples \\((A,B,C)\\) of positive integers (positive integers are the numbers \\(1,2,3,4,\\ldots\\)) are there such that \\(A+B+C=10\\), where order does not matter (for instance the triples \\((2,3,5)\\) and \\((3,2,5)\\) are considered to be the same triple) and where two of the integers in a triple could be the same (for instance \\((3,3,4)\\) is a valid triple)?</p>",
+      "solutions": "<p>The triples can merely be enumerated: \\((1,1,8), (1,2,7), (1,3,6), (1,4,5), (2,2,6), (2,3,5), (2,4,4)\\), and \\((3,3,4)\\). There are \\(8\\) elements.</p>",
+      "answer": "8"
+    },
+    "4": {
+      "problem": "<p>We call a set of professors and committees on which they serve a <i>university</i> if</p><p>(1) given two distinct professors there is one and only one committee on which they both serve,</p><p>(2) given any committee, \\(C\\), and any professor, \\(P\\), not on that committee, there is exactly one committee on which \\(P\\) serves and no professors on committee \\(C\\) serve, and</p><p>(3) there are at least two professors on each committee; there are at least two committees.</p><p>What is the smallest number of committees a university can have?</p>",
+      "solutions": "<p>Let \\(C\\) be any committee. Then there exists a professor \\(P\\) not on \\(C\\) (or else there would be no other committees). By axiom 2, \\(P\\) serves on a committee \\(D\\) having no common members with \\(C\\). Each of these committees has at least two members, and for each \\(Q \\in C, R \\in D\\), there exists (by axiom 1) a committee containing \\(Q\\) and \\(R\\), which (again by axiom 1) has no other common members with \\(C\\) or \\(D\\). Thus we have at least \\(2+2\\cdot 2 = 6\\) committees. This minimum is attainable - just take four professors and let any two professors form a committee.</p>",
+      "answer": "6"
+    },
+    "5": {
+      "problem": "<p>A square and a regular hexagon are drawn with the same side length. If the area of the square is \\(\\sqrt{3}\\), what is the area of the hexagon?</p>",
+      "solutions": "<p>The hexagon is composed of six equilateral triangles each of side length \\(\\sqrt[4]{3}\\) (with base \\(b = \\sqrt[4]{3}\\) and height \\(\\frac{\\sqrt{3}}{2}b\\)), so the total area is \\(\\frac{9}{2}\\).</p>",
+      "answer": "\\frac{9}{2}"
+    },
+    "6": {
+      "problem": "<p>A man, standing on a lawn, is wearing a circular sombrero of radius 3 feet. Unfortunately, the hat blocks the sunlight so effectively that the grass directly under it dies instantly. If the man walks in a circle of radius 5 feet, what area of dead grass will result?</p>",
+      "solutions": "<p>Let \\(O\\) be the center of the man’s circular trajectory. The sombrero kills all the grass that is within 3 feet of any point that is 5 feet away from \\(O\\) — i.e. all the grass at points \\(P\\) with \\(2 \\le OP \\le 8\\). The area of this annulus is then \\(\\pi(8^2-2^2) = 60\\pi\\) square feet.</p>",
+      "answer": "60\\pi\\text{ ft}^2"
+    },
+    "7": {
+      "problem": "<p>A circle is inscribed in a square dartboard. If a dart is thrown at the dartboard and hits the dartboard in a random location, with all locations having the same probability of being hit, what is the probability that it lands within the circle?</p>",
+      "solutions": "<p>The answer is the area of the circle over the area of the square, which is \\(\\frac{\\pi}{4}\\).</p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "8": {
+      "problem": "<p>Count the number of triangles with positive area whose vertices are points whose \\((x,y)\\)-coordinates lie in the set \\(\\{(0,0),(0,1),(0,2),(1,0),(1,1),(1,2),(2,0),(2,1),(2,2)\\}\\).</p>",
+      "solutions": "<p>There are \\(\\binom{9}{3}=84\\) triples of points. 8 of them form degenerate triangles (the ones that lie on a line), so there are \\(84-8=76\\) nondegenerate triangles.</p>",
+      "answer": "76"
+    },
+    "9": {
+      "problem": "<p>Real numbers \\(a,b,c\\) satisfy the equations \\(a+b+c=26, 1/a+1/b+1/c=28\\). Find the value of \\[\\frac{a}{b} + \\frac{b}{c} + \\frac{c}{a} + \\frac{a}{c} + \\frac{c}{b} + \\frac{b}{a}.\\]</p>",
+      "solutions": "<p>Multiplying the two given equations gives \\[\\frac{a}{a} + \\frac{a}{b} + \\frac{a}{c} + \\frac{b}{a} + \\frac{b}{b} + \\frac{b}{c} + \\frac{c}{a} + \\frac{c}{b} + \\frac{c}{c} = 26 \\cdot 28 = 728,\\] and subtracting 3 from both sides gives the answer, \\(725\\).</p>",
+      "answer": "725"
+    },
+    "10": {
+      "problem": "<p>A certain cafeteria serves ham and cheese sandwiches, ham and tomato sandwiches, and tomato and cheese sandwiches. It is common for one meal to include multiple types of sandwiches. On a certain day, it was found that 80 customers had meals which contained both ham and cheese; 90 had meals containing both ham and tomatoes; 100 had meals containing both tomatoes and cheese. 20 customers’ meals included all three ingredients. How many customers were there?</p>",
+      "solutions": "<p>Everyone who ate just one sandwich is included in exactly one of the first three counts, while everyone who ate more than one sandwich is included in all four counts. Thus, to count each customer exactly once, we must add the first three figures and subtract the fourth twice: \\(80+90+100-2\\cdot 20=230\\).</p>",
+      "answer": "230"
+    }
+  }
+}

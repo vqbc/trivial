@@ -1,0 +1,23 @@
+{
+  "test": "SMT Discrete Tiebreaker",
+  "year": 2020,
+  "name": "Discrete Math Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2020/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In your drawer you have two red socks and a blue sock. You randomly select socks, without replacement, from the drawer. However, every time you take a blue sock, another one magically appears in the drawer. What is the probability that you get a red pair before a blue pair?</p>",
+      "solutions": "<p>Note that at most 3 socks will be drawn. Based on this, there are three cases where a red pair is drawn before a blue pair.</p><ul style=\"list-style-type: none\"><li>(a) Red Red: The probability of the first sock being red is \\(\\frac{2}{3}\\). After removing the red sock, the probability of the second sock being red is \\(\\frac{1}{2}\\).</li><li>(b) Red Blue Red: The probability of the first sock being red is \\(\\frac{2}{3}\\). After removing the red sock, the probability of the second sock being blue is \\(\\frac{1}{2}\\). After replacing the blue sock, the probability of the third sock being red is \\(\\frac{1}{2}\\).</li><li>(c) Blue Red Red: The probability of the first sock being blue is \\(\\frac{1}{3}\\). After replacing the blue sock, the probability of the second sock being red is \\(\\frac{2}{3}\\). After removing the red sock, the probability of the third sock being red is \\(\\frac{1}{2}\\).</li></ul><p>Adding the probabilities over these three cases, the probability that a red pair is drawn before a blue pair is equal to \\((\\frac{2}{3})(\\frac{1}{2}) + (\\frac{2}{3})(\\frac{1}{2})(\\frac{1}{2}) + (\\frac{1}{3})(\\frac{2}{3})(\\frac{1}{2}) = \\frac{1}{3} + \\frac{1}{6} + \\frac{1}{9} = \\frac{11}{18}\\).</p>",
+      "answer": "\\frac{11}{18}"
+    },
+    "2": {
+      "problem": "<p>Suppose \\(a, b, c\\) are positive integers such that \\(\\text{lcm}(a,b) = 400\\), \\(\\text{lcm}(b,c) = 2000\\), \\(\\text{lcm}(c,a) = 1000\\), and \\(\\gcd(a,b,c) = 10\\). Given that \\(a\\) is a three-digit number, what is the value of \\(a + b + c\\)?</p>",
+      "solutions": "<p>Looking at the prime factorizations \\(400 = 2^4 \\cdot 5^2\\), \\(2000 = 2^4 \\cdot 5^3\\), \\(1000 = 2^3 \\cdot 5^3\\), consider the exponents of 2 in the prime factorizations of \\(a, b, c\\). It follows that the exponent of \\(b\\) must be 4 and the exponents of \\(a\\) and \\(c\\) must be 1 and 3 in some order. Similarly for the exponents of 5, the exponent of \\(c\\) must be 3 and the exponents of \\(a\\) and \\(b\\) must be 1 and 2 in some order. In order for \\(a\\) to be a three-digit number, \\(a\\) must equal \\(2^3 \\cdot 5^2 = 200\\). Therefore, \\(b\\) must equal \\(2^4 \\cdot 5^1 = 80\\) and \\(c\\) must equal \\(2^1 \\cdot 5^3 = 250\\). Since \\(a = 200\\), \\(b = 80\\), and \\(c = 250\\), \\(a + b + c = 530\\).</p>",
+      "answer": "530"
+    },
+    "3": {
+      "problem": "<p>Consider a \\(3 \\times 3\\) grid with the first 9 positive integers placed in the grid. Take the greatest integer in each row and let \\(r\\) be the smallest of those numbers. Take the smallest integer in each column and let \\(c\\) be the greatest of those numbers. How many arrangements are there such that \\(r \\le c \\le 4\\)?</p>",
+      "solutions": "<p>We first note that \\(r\\) and \\(c\\) have minimum value 3. We proceed using casework.</p><p>If \\(r = c = 3\\), then we need to split 1,2,3 into different columns for \\(c = 3\\). Then they necessarily need to be in the same row for \\(r = 3\\). There are 9 places to choose where the 3 is, 2 more ways to arrange 1,2 in the row and \\(6!\\) ways to arrange the other numbers. Thus, there are \\(9 \\cdot 2 \\cdot 6! = 720 \\cdot 18 = 12960\\) arrangements.</p><p>If \\(r = 3, c = 4\\). Then again 1,2,3 need to be in the same row, forcing them to be in different columns. But we need 4 to be the smallest integer in some column, hence causing a problem. So, there are 0 arrangements.</p><p>Finally if \\(r = 4, c = 4\\), we can choose 9 places for the 4 to be. Then we are forced to place two of the numbers 1,2,3 in the row, giving us 6 ordered ways. Then the final number can not be placed in the same column as the 4, hence there are 4 places to put it. Finally there are \\(5!\\) ways to place the final numbers. So there are \\(9 \\cdot 6 \\cdot 4 \\cdot 5! = 25920\\).</p><p>Thus there are \\(12960 + 25920 = \\boxed{38880}\\) arrangements.</p>",
+      "answer": "38880"
+    }
+  }
+}

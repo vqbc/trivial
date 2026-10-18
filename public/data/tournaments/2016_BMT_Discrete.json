@@ -1,0 +1,58 @@
+{
+  "test": "BMT Discrete",
+  "year": 2016,
+  "name": "Discrete Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2016/DisS2016.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A bag is filled with quarters and nickels. The average value when pulling out a coin is 10 cents. What is the least number of nickels in the bag possible?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>How many integers from 1 to 2016 are divisible by 3 or 7, but not 21?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "768"
+    },
+    "3": {
+      "problem": "<p>How many five-card hands from a standard deck of 52 cards are full houses? A full house consists of 3 cards of one rank and 2 cards of another rank.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3744"
+    },
+    "4": {
+      "problem": "<p>Three 3-legged (distinguishable) Stanfurdians take off their socks and trade them with each other. How many ways is this possible if everyone ends up with exactly 3 socks and nobody gets any of their own socks? All socks originating from the Stanfurdians are distinguishable from each other. All Stanfurdian feet are indistinguishable from other feet of the same Stanfurdian.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "56"
+    },
+    "5": {
+      "problem": "<p>What are the last two digits of \\(9^{8^{7^{6^{5^{4^{3^{2}}}}}}}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "21"
+    },
+    "6": {
+      "problem": "<p>Bob plays a game on the whiteboard. Initially, the numbers \\(\\{1, 2, \\ldots, n\\}\\) are shown. On each turn, Bob takes two numbers from the board \\(x, y\\), erases them both, and writes down \\(2x + y\\) onto the board. In terms of \\(n\\), what is the maximum possible value that Bob can end up with?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2^n(n-1) + 1"
+    },
+    "7": {
+      "problem": "<p>Consider the graph on 1000 vertices \\(v_1, v_2, \\ldots v_{1000}\\) such that for all \\(1 \\le i &lt; j \\le 1000\\), \\(v_i\\) is connected to \\(v_j\\) if and only if \\(i\\) divides \\(j\\). Determine the minimum number of colors that must be used to color the vertices of this graph such that no two vertices sharing an edge are the same color.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "10"
+    },
+    "8": {
+      "problem": "<p>Let \\((v_1, \\cdots, v_{2^n})\\) be the vertices of an \\(n\\)-dimensional hypercube. Label each vertex \\(v_i\\) with a real number \\(x_i\\). Label each edge of the hypercube with the product of labels of the two vertices it connects. Let \\(S\\) be the sum of the labels of all the edges. Over all possible labelings, find the minimum possible value of \\(\\frac{S}{x_1^2 + x_2^2 + \\cdots + x_{2^n}^2}\\) in terms of \\(n\\).</p><p>Note: an \\(n\\) dimensional hypercube is a graph on \\(2^n\\) vertices labeled with the binary strings of length \\(n\\), where two vertices have an edge between them if and only if their labels differ in exactly one place. For instance, the vertices \\(100\\) and \\(101\\) on the \\(3\\) dimensional hypercube are connected, but the vertices \\(100\\) and \\(111\\) are not.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-\\frac{n}{2}"
+    },
+    "9": {
+      "problem": "<p>\\((\\sqrt{6} + \\sqrt{7})^{1000}\\) in base ten has a tens digit of \\(a\\) and a ones digit of \\(b\\). Determine \\(10a + b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "73"
+    },
+    "10": {
+      "problem": "<p>An \\(m \\times n\\) rectangle is tiled with \\(\\frac{mn}{2}\\) \\(1 \\times 2\\) dominoes. The tiling is such that whenever the rectangle is partitioned into two smaller rectangles, there exists a domino that is part of the interior of both rectangles. Given \\(mn &gt; 2\\), what is the minimum possible value of \\(mn\\)?</p><p>For instance, the following tiling of a \\(4 \\times 3\\) rectangle doesn’t work because we can partition along the line shown, but that doesn’t necessarily mean other \\(4 \\times 3\\) tilings don’t work. <img class=\"latexcenter\" src=\"/data/tournaments/2016_BMT_Discrete/10-fig1.png\" width=\"338\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "30"
+    }
+  }
+}

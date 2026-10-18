@@ -1,0 +1,173 @@
+{
+  "test": "HMMT November Guts",
+  "year": 2012,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2012/nov/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the number of prime numbers less than 30.</p>",
+      "solutions": "<p>The prime numbers under 30 are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. There are 10 in total.</p>",
+      "answer": "10"
+    },
+    "2": {
+      "problem": "<p>Albert is very hungry, and goes to his favorite burger shop to buy a meal, which consists of a burger, a side, and a drink. Given that there are 5 different types of burgers offered, 3 different types of sides, and 12 different types of drinks, find the number of meals Albert could get.</p>",
+      "solutions": "<p>Albert’s choice of burgers, sides, and drinks are independent events. Therefore, we can use the Multiplication Principle of Counting Independent Events to find the total number of different meals that Albert can get is: \\[5 \\times 3 \\times 12 = 180\\]</p>",
+      "answer": "180"
+    },
+    "3": {
+      "problem": "<p>Find the area of the region between two concentric circles that have radii 100 and 99.</p>",
+      "solutions": "<p>The area of a circle of radius 100 is \\(100^2\\pi\\), and the area of a circle of radius 99 is \\(99^2\\pi\\). Therefore, the area of the region between them is \\((100^2 - 99^2)\\pi = (100 + 99)(100 - 99)\\pi = 199\\pi\\).</p>",
+      "answer": "199\\pi"
+    },
+    "4": {
+      "problem": "<p>\\(ABCD\\) is a concave quadrilateral such that \\(\\angle CBA = 50^\\circ\\), \\(\\angle BAD = 80^\\circ\\), \\(\\angle ADC = 30^\\circ\\), and \\(CB = CD\\). Find \\(\\angle CBD\\).</p>",
+      "solutions": "<p>\\(\\angle CBD = \\angle CDB\\) because \\(BC = CD\\). Notice that \\(\\angle BCD = 80^\\circ + 50^\\circ + 30^\\circ = 160^\\circ\\), so \\(\\angle CBD = \\angle CDB = 10^\\circ\\).</p>",
+      "answer": "10^\\circ"
+    },
+    "5": {
+      "problem": "<p>\\(a\\) and \\(b\\) are complex numbers such that \\(2a + 3b = 10\\) and \\(4a^2 + 9b^2 = 20\\). Find \\(ab\\).</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n20 &amp;= 4a^2 + 9b^2 \\\\\n20 + 12ab &amp;= 4a^2 + 12ab + 9b^2 \\\\\n20 + 12ab &amp;= (2a + 3b)^2 \\\\\n20 + 12ab &amp;= 100 \\\\\n12ab &amp;= 80 \\\\\nab &amp;= \\frac{20}{3}\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{20}{3}"
+    },
+    "6": {
+      "problem": "<p>Given the following formulas: \\[\\begin{aligned}\n1 + 2 + \\dotsb + n &amp;= \\frac{n(n+1)}{2} \\\\\n1^2 + 2^2 + \\dotsb + n^2 &amp;= \\frac{n(n+1)(2n+1)}{6} \\\\\n1^3 + 2^3 + \\dotsb + n^3 &amp;= \\left(\\frac{n(n+1)}{2}\\right)^2,\n\\end{aligned}\\] find \\[(1^3 + 3 \\cdot 1^2 + 3 \\cdot 1) + (2^3 + 3 \\cdot 2^2 + 3 \\cdot 2) + \\dotsb + (99^3 + 3 \\cdot 99^2 + 3 \\cdot 99).\\]</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n&amp;(1^3 + 3 \\cdot 1^2 + 3 \\cdot 1) + (2^3 + 3 \\cdot 2^2 + 3 \\cdot 2) + \\dotsb + (99^3 + 3 \\cdot 99^2 + 3 \\cdot 99) \\\\\n&amp;= (1^3 + 3 \\cdot 1^2 + 3 \\cdot 1 + 1) + (2^3 + 3 \\cdot 2^2 + 3 \\cdot 2 + 1) + \\dotsb + (99^3 + 3 \\cdot 99^2 + 3 \\cdot 99 + 1) - 99 \\\\\n&amp;= (1 + 1)^3 + (2 + 1)^3 + \\dotsb + (99 + 1)^3 - 99 \\\\\n&amp;= 1^3 + (1 + 1)^3 + (2 + 1)^3 + \\dotsb + (99 + 1)^3 - 100 \\\\\n&amp;= \\left(\\frac{100(100+1)}{2}\\right)^2 - 100 \\\\\n&amp;= 25502400\n\\end{aligned}\\]</p>",
+      "answer": "25502400"
+    },
+    "7": {
+      "problem": "<p>Consider the sequence given by \\(a_0 = 1\\), \\(a_1 = 1 + 3\\), \\(a_2 = 1 + 3 + 3^2\\), \\(a_3 = 1 + 3 + 3^2 + 3^3, \\ldots\\). Find the number of terms among \\(a_0, a_1, a_2, \\ldots, a_{2012}\\) that are divisible by 7.</p>",
+      "solutions": "<p>\\[\\begin{aligned}\na_n &amp;= 1 + 3 + 3^2 + \\dotsb + 3^n \\\\\n3a_n &amp;= 3 + 3^2 + 3^3 + \\dotsb + 3^{n+1} \\\\\n3a_n &amp;= 3^{n+1} - 1 + a_n \\\\\na_n &amp;= \\frac{3^{n+1}-1}{2}\n\\end{aligned}\\] Because \\(\\gcd(2, 7) = 1\\), to demonstrate that \\(7 \\mid a_n = \\frac{3^{n+1}-1}{2}\\) is equivalent to showing that \\(3^{n+1} - 1 \\equiv 0 \\pmod 7\\).</p><p>However \\(3^{n+1} - 1 \\equiv 0 \\pmod 7 \\implies n + 1 \\equiv 0 \\pmod 6\\), hence the values of \\(n \\le 2012\\) are \\(5, 11, 17, \\ldots, 2009\\), which is in total \\[\\frac{2009+1}{6} = 335\\] possible terms.</p>",
+      "answer": "335"
+    },
+    "8": {
+      "problem": "<p>Three cards are drawn from the top of a shuffled standard 52-card deck. Find the probability that they are all of different suits. (A suit is either spades, clubs, hearts, or diamonds.)</p>",
+      "solutions": "<p>There are 13 cards of each suit. The probability that the second card has a different suit than the first is \\(\\frac{3 \\cdot 13}{52 - 1}\\). The probability that the third card has a different suit than the first and second card is \\(\\frac{2 \\cdot 13}{52 - 2}\\).</p><p>Since the two events need to both occur, we use the multiplicative rule: \\[\\frac{3 \\cdot 13}{52 - 1} \\cdot \\frac{2 \\cdot 13}{52 - 2} = \\frac{169}{425}.\\]</p>",
+      "answer": "\\frac{169}{425}"
+    },
+    "9": {
+      "problem": "<p>How many sets consist of distinct composite numbers that add up to 23?</p>",
+      "solutions": "<p>Because 23 is odd, we must have an odd number of odd numbers in our set. Since the smallest odd composite number is 9, we cannot have more than 2 odd numbers, as otherwise the sum would be at least 27. Therefore, the set has exactly one odd number.</p><p>The only odd composite numbers less than 23 are \\(9, 15\\), and 21. If we include 21, then the rest of the set must include composite numbers that add up to 2, which is impossible. If we include 15, then the rest of the set must include distinct even composite numbers that add up to 8. The only possibility is the set \\(\\{8\\}\\). If we include 9, the rest of the set must contain distinct even composite numbers that add to 14. The only possibilities are \\(\\{14\\}\\), \\(\\{4, 10\\}\\), and \\(\\{6, 8\\}\\). We have exhausted all cases, so there are a total of 4 sets.</p>",
+      "answer": "4"
+    },
+    "10": {
+      "problem": "<p>Consider the sequence defined by \\(a_0 = 0\\), \\(a_1 = 1\\), and \\(a_n = 2013a_{n-1} + 2012a_{n-2} + n\\) for \\(n \\ge 2\\). Find the remainder when \\(a_{2012}\\) is divided by 2012.</p>",
+      "solutions": "<p>Taking both sides modulo 2012, we see that \\(a_n \\equiv a_{n-1} + n \\pmod{2012}\\). Therefore, \\[a_{2012} \\equiv a_{2011} + 2012 \\equiv a_{2010} + 2011 + 2012 \\equiv \\dotsb \\equiv 1 + 2 + \\dotsb + 2012 \\equiv \\frac{(2012)(2013)}{2} \\equiv (1006)(2013) \\equiv (1006)(1) \\equiv 1006 \\pmod{2012}.\\]</p>",
+      "answer": "1006"
+    },
+    "11": {
+      "problem": "<p>Find the smallest positive integer \\(n\\) such that the number of zeroes that \\(n!\\) ends with is a positive multiple of 5.</p>",
+      "solutions": "<p>The number of zeroes that \\(n!\\) ends with is the largest power of 10 dividing \\(n!\\). The exponent of 5 dividing \\(n!\\) exceeds the exponent of 2 dividing \\(n!\\), so we simply seek the exponent of 5 dividing \\(n!\\).</p><p>For a number less than 125, this exponent is just the number of multiples of 5, but not 25, less than \\(n\\) plus twice the number of multiples of 25 less than \\(n\\).</p><p>Counting up, we see that \\(24!\\) ends with 4 zeroes while \\(25!\\) ends with 6 zeroes, so \\(n!\\) cannot end with 5 zeroes. Continuing to count up, we see that the smallest \\(n\\) such that \\(n!\\) ends with 10 zeroes is 45.</p>",
+      "answer": "45"
+    },
+    "12": {
+      "problem": "<p>Three circles of radius 1 are drawn, whose centers form the vertices of an equilateral triangle of side length 1. Find the area of the region common to at least two of the circles.</p>",
+      "solutions": "<p>Let \\(A_\\triangle\\) be the equilateral triangle. Let \\(A_1\\) be the area of the region outside of the equilateral triangle but inside the second and third circles. Define \\(A_2, A_3\\) analogously. We have \\(A_1 = A_2 = A_3 = A_k =\\) \\[\\left(\\frac{1^2 \\cdot \\pi}{3} - \\frac{1^2 \\cdot \\sin 120^\\circ}{2}\\right) = \\frac{4\\pi - 3\\sqrt{3}}{12},\\] and \\[A_\\triangle = \\frac{1^2 \\cdot \\sin 60^\\circ}{2} = \\frac{\\sqrt{3}}{4}.\\] Thus, the total area is \\[A_1 + A_2 + A_3 + A_\\triangle = 3 \\cdot \\frac{4\\pi - 3\\sqrt{3}}{12} + \\frac{\\sqrt{3}}{4} = \\frac{2\\pi - \\sqrt{3}}{2}.\\]</p>",
+      "answer": "\\frac{2\\pi-\\sqrt{3}}{2}"
+    },
+    "13": {
+      "problem": "<p>Triangle \\(ABC\\) has a perimeter of 18. \\(\\angle A = 60^\\circ\\), and \\(BC = 7\\). Find the area of the triangle.</p>",
+      "solutions": "<p>Let \\(AB\\) be \\(x\\). Then, \\(AC = 18 - 7 - x = 11 - x\\). Using the law of cosines gives: \\[x^2 + (11 - x)^2 - 2x(11 - x)\\cos 60^\\circ = 7^2 \\implies 3x^2 - 33x + 72 = 0 \\implies x = 3\\text{ or }8.\\] Therefore, \\(AB = 8\\) and \\(AC = 3\\) or \\(AB = 3\\) and \\(AC = 8\\). In both cases, the area of the triangle is: \\[\\frac{1}{2} \\cdot 8 \\cdot 3\\sin 60^\\circ = 6\\sqrt{3}.\\]</p>",
+      "answer": "6\\sqrt{3}"
+    },
+    "14": {
+      "problem": "<p>Mark would like to place the numbers 1 to 7 on a circle such that the sequences along both arcs going from 1 to 7 are increasing. For example, one arc could be 1, 2, 4, 7 and the other could be 1, 3, 5, 6, 7. In how many distinct ways can Mark place the numbers? Two arrangements are distinct if and only if one cannot be rotated to match the other.</p>",
+      "solutions": "<p>First, we can fix the position of the 1. Then, by the condition that the numbers are increasing along each arc from 1, we know that the 2 must be adjacent to the 1; so we have two options for its placement. Similarly, we have two options for placing each of 3, 4, 5, 6 in that order. Finally, the 7 must go in the remaining space, for a total of \\(2^5 = 32\\) orderings.</p>",
+      "answer": "32"
+    },
+    "15": {
+      "problem": "<p>Find the area of the region in the \\(xy\\)-plane consisting of all points \\((a, b)\\) such that the quadratic \\(ax^2 + 2(a + b - 7)x + 2b = 0\\) has fewer than two real solutions for \\(x\\).</p>",
+      "solutions": "<p>To find the region in question, we want to find \\((a, b)\\) such that the discriminant of the quadratic is not positive. In other words, we want \\[4(a + b - 7)^2 - 4(a)(2b) \\le 0 \\iff a^2 + b^2 - 7a - 7b + 49 \\le 0 \\iff (a - 7)^2 + (b - 7)^2 \\le 49,\\] which is a circle of radius 7 centered at \\((7, 7)\\) and hence has area \\(49\\pi\\).</p>",
+      "answer": "49\\pi"
+    },
+    "16": {
+      "problem": "<p>Yuhang is making a bracelet for his one true love using beads. How many distinct bracelets can be made from 2 red beads, 2 green beads, and 2 blue beads, if two bracelets are distinct if and only if one cannot be made into the other through rotations and reflections?</p>",
+      "solutions": "<p>We divide this problem into cases based on the relative position of the two red beads:</p><ul><li>They are adjacent. Then, there are 4 possible placements of the green and blue beads: GGBB, GBBG, GBGB, BGGB.</li><li>They are 1 bead apart. Then, there are two choices for the bead between then and 2 choices for the other bead of that color, for a total of 4.</li><li>They are opposite. Then, there are three choices for the placement of the green beads.</li></ul><p>This gives a total of 11 arrangements.</p>",
+      "answer": "11"
+    },
+    "17": {
+      "problem": "<p>Given that \\(x = \\ln 30\\), \\(y = \\ln 360\\), and \\(z = \\ln 270\\), and that there are rational numbers \\(p, q, r\\) such that \\(\\ln 5400 = px + qy + rz\\), find the ordered triple \\((p, q, r)\\).</p>",
+      "solutions": "<p>We can rewrite the equation in terms of \\(\\ln 2, \\ln 3, \\ln 5\\), to get \\[3\\ln 2 + 3\\ln 3 + 2\\ln 5 = \\ln 5400 = px + qy + rz = (p + 3q + r)\\ln 2 + (p + 2q + 3r)\\ln 3 + (p + q + r)\\ln 5.\\] Consequently, since \\(p, q, r\\) are rational we want to solve the system of equations \\(p + 3q + r = 3\\), \\(p + 2q + 3r = 3\\), \\(p + q + r = 2\\), which results in the ordered triple \\((\\frac{5}{4}, \\frac{1}{2}, \\frac{1}{4})\\).</p>",
+      "answer": "\\left(\\frac{5}{4}, \\frac{1}{2}, \\frac{1}{4}\\right)"
+    },
+    "18": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be a triangle with \\(AC = 1\\) and \\(\\angle ABC\\) obtuse. Let \\(D\\) and \\(E\\) be points on \\(AC\\) such that \\(\\angle DBC = \\angle ABE = 90^\\circ\\). If \\(AD = DE = EC\\), find \\(AB + AC\\).</p>",
+      "solutions": "<p>\\(DBC\\) is a right triangle with hypotenuse \\(DC\\). Since \\(DE = EC\\), \\(E\\) is the midpoint of this right triangle’s hypotenuse, and it follows that \\(E\\) is the circumcenter of the triangle. It follows that \\(BE = DE = CE\\), as these are all radii of the same circle. A similar argument shows that \\(BD = DE = AD\\).</p><p>Thus, \\(BD = DE = DE\\), and triangle \\(BDE\\) is equilateral. So, \\(\\angle DBE = \\angle BED = \\angle EDB = 60^\\circ\\). We have \\(\\angle BEC = 180^\\circ - \\angle BED = 120^\\circ\\). Because \\(BE = CE\\), triangle \\(BEC\\) is isosceles and \\(\\angle ECB = 30^\\circ\\). Therefore, \\(DBC\\) is a right triangle with \\(\\angle DBC = 90^\\circ\\), \\(\\angle BCD = 30^\\circ\\), and \\(\\angle CDB = 60^\\circ\\). This means that \\(CD = \\frac{2}{\\sqrt{3}}BC\\). Combined with \\(CD = \\frac{2}{3}\\), we have \\(BC = \\frac{\\sqrt{3}}{3}\\). Similarly, \\(AB = \\frac{\\sqrt{3}}{3}\\), so \\(AB + AC = 1 + \\frac{\\sqrt{3}}{3}\\).</p>",
+      "answer": "1 + \\frac{\\sqrt{3}}{3}"
+    },
+    "19": {
+      "problem": "<p>Find the number of triples of nonnegative integers \\((x, y, z)\\) such that \\(15x + 21y + 35z = 525\\).</p>",
+      "solutions": "<p>First, note that \\(525 = 3 \\times 7 \\times 5 \\times 5\\). Then, taking the equation modulo 7 gives that \\(7 \\mid x\\); let \\(x = 7x'\\) for some nonnegative integer \\(x'\\). Similarly, we can write \\(y = 5y'\\) and \\(z = 3z'\\) for some nonnegative integers \\(y', z'\\). Then, after substitution and division of both sides by 105, the given equation is equivalent to \\(x' + y' + z' = 5\\). This is the same as the problem of placing 2 dividers among 5 balls, so is \\(\\binom{7}{2} = 21\\).</p>",
+      "answer": "21"
+    },
+    "20": {
+      "problem": "<p>An elementary school teacher is taking a class of 20 students on a field trip. To make sure her students don’t get lost, she uses the buddy system—using the complete class roster, she pairs the students into 10 pairs and leaves if no person reports that someone from his or her pair is missing. In particular, the teacher will not notice if both students from a pair go missing. Suppose each student independently gets lost with probability \\(\\frac{1}{10}\\). Given that the teacher leaves, what is the probability that no student got lost?</p>",
+      "solutions": "<p>The teacher will leave if the students from each pair are either both present or both not present; the probability that both are present is \\(\\frac{81}{100}\\) and the probability that neither are present is \\(\\frac{1}{100}\\). If the teacher leaves, then the probability that both students in any given pair did not get lost is \\(\\frac{\\frac{81}{100}}{\\frac{81}{100} + \\frac{1}{100}} = \\frac{81}{82}\\). Since there are ten pairs, the overall probability is \\((\\frac{81}{82})^{10} = \\frac{81^{10}}{82^{10}}\\).</p>",
+      "answer": "\\frac{81^{10}}{82^{10}}"
+    },
+    "21": {
+      "problem": "<p>\\(ABC\\) is a triangle with \\(AB = 7\\), \\(BC = 10\\), and \\(CA = 13\\). Point \\(D\\) lies on segment \\(BC\\) such that \\(DC = 2BD\\). Point \\(E\\) lies on segment \\(AD\\) such that \\(AE = 4ED\\). Point \\(F\\) lies on segment \\(AC\\) such that \\(FC = 5AF\\). Find the area of \\(\\triangle EFC\\).</p>",
+      "solutions": "<p>By shared bases, we know that \\[[EFC] = \\left(\\frac{5}{6}\\right)[AEC] = \\left(\\frac{5}{6}\\right)\\left(\\frac{4}{5}\\right)[ADC] = \\left(\\frac{5}{6}\\right)\\left(\\frac{4}{5}\\right)\\left(\\frac{2}{3}\\right)[ABC].\\] By Heron’s formula, we find that \\([ABC] = \\sqrt{(15)(8)(2)(5)} = 20\\sqrt{3}\\), so \\([AEC] = \\frac{80\\sqrt{3}}{9}\\).</p>",
+      "answer": "\\frac{80\\sqrt{3}}{9}"
+    },
+    "22": {
+      "problem": "<p>Alice generates an infinite decimal by rolling a fair 6-sided die with the numbers 1, 2, 3, 5, 7, and 9 infinitely many times, and appending the resulting numbers after a decimal point. What is the expected value of her number?</p>",
+      "solutions": "<p>Let \\(X_n\\) be the \\(n\\)th number rolled. The number formed, \\(0.\\overline{X_1 X_2 \\dotsb}\\), is simply \\(\\sum_{n=1}^\\infty \\frac{X_n}{10^n}\\). By linearity of expectation, the expected value is \\(\\sum_{n=1}^\\infty \\mathbb{E}(\\frac{X_n}{10^n}) = \\sum_{n=1}^\\infty \\frac{\\mathbb{E}(X_n)}{10^n}\\). However, the rolls are independent: for all \\(n\\), \\(\\mathbb{E}(X_n) = \\frac{1}{6}(1+2+3+5+7+9) = \\frac{9}{2}\\). So, our answer is \\(\\frac{9}{2} \\cdot \\sum_{n=1}^\\infty \\frac{1}{10^n} = \\frac{9}{2} \\cdot \\frac{1}{9} = \\frac{1}{2}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "23": {
+      "problem": "<p>\\(ABC\\) is a triangle with \\(AB = 4\\), \\(BC = 6\\), and \\(CA = 7\\). Let \\(\\Omega\\) be the circumcircle of \\(ABC\\); the tangent to \\(\\Omega\\) passing through \\(A\\) meets the extension of side \\(BC\\) at \\(P\\). Find the length \\(PB\\).</p>",
+      "solutions": "<p>Since \\(AP\\) is a tangent to \\(\\Omega\\), we know that \\(\\angle PAB = \\angle PCA\\), so \\(\\triangle PAB \\sim \\triangle PCA\\), so we get that \\[\\frac{PB}{PA} = \\frac{4}{7} = \\frac{PA}{PB + 6}.\\] Solving, we get that \\(7PB = 4PA\\), so \\[4(PB + 6) = 7PA = \\frac{49}{4}PB \\implies \\frac{33}{4}PB = 24 \\implies PB = \\frac{32}{11}.\\]</p>",
+      "answer": "\\frac{32}{11}"
+    },
+    "24": {
+      "problem": "<p>12 children sit around a circle. Find the number of ways we can distribute 4 pieces of candy among them such that each child gets at most one piece of candy and no two adjacent children both get a piece of candy.</p>",
+      "solutions": "<p>Since 4 pieces of candy are distributed, there must be exactly 8 children who do not receive any candy; since no two consecutive children do receive candy, the 8 who do not must consist of 4 groups of consecutive children. We divide into cases based on the sizes of these groups:</p><ul><li>\\(\\{5, 1, 1, 1\\}\\): there are 12 places to begin the group of 5 children who do not receive any candy</li><li>\\(\\{4, 2, 1, 1\\}\\): there are 12 places to begin the group of 4 children who do not receive candy and then 3 choices for the group of 2 children which does not receive candy, for a total of 36 choices</li><li>\\(\\{3, 3, 1, 1\\}\\): these 8 children can either be bunched in the order 3,3,1,1, or in the order 3,1,3,1; the first has 12 positions in which to begin the first group of 3 non-candy receiving children and the second has 6 possibilities (due to symmetry), for a total of 18</li><li>\\(\\{3, 2, 2, 1\\}\\): there are 12 places to begin the group of 3 children who do not receive candy and then 3 choices for the group of 1 child which does not receive candy, for a total of 36 choices</li><li>\\(\\{2, 2, 2, 2\\}\\): there are \\(12/4 = 3\\) ways in which this can occur</li></ul><p>This gives a total of \\(12 + 36 + 18 + 36 + 3 = 105\\).</p>",
+      "answer": "105"
+    },
+    "25": {
+      "problem": "<p>Triangle \\(ABC\\) satisfies \\(AB = 8\\), \\(BC = 9\\), and \\(CA = 10\\). Evaluate \\(\\frac{\\sin^2 B + \\sin^2 C - \\sin^2 A}{\\sin B \\cdot \\sin C}\\).</p>",
+      "solutions": "<p>Using the Law of Sines, we have \\[\\frac{\\sin^2 B + \\sin^2 C - \\sin^2 A}{\\sin B\\sin C} = \\frac{\\sin B}{\\sin C} + \\frac{\\sin C}{\\sin B} - \\frac{\\sin A\\sin A}{\\sin B\\sin C} = \\frac{AC}{AB} + \\frac{AB}{AC} - \\frac{BC \\cdot BC}{AC \\cdot AB} = \\frac{83}{80}.\\]</p>",
+      "answer": "\\frac{83}{80}"
+    },
+    "26": {
+      "problem": "<p>\\(x_1, x_2, x_3, \\ldots\\) is a sequence of real numbers satisfying \\(x_1 = 1\\), \\(x_2 = 2\\), and \\(x_{n+1} = 2x_n - x_{n-1} + 2^n\\) for \\(n \\ge 2\\). Find \\(x_{2012}\\).</p>",
+      "solutions": "<p>Let \\(y_n = x_n - 2^{n+1}\\). Note that \\[x_{n+1} = 2x_n - x_{n-1} + 2^n \\iff y_{n+1} = 2y_n - y_{n-1} \\iff y_{n+1} - y_n = y_n - y_{n-1}.\\] Using the values for \\(x_1, x_2\\), we get that \\(y_1 = -3\\) and \\(y_2 = -6\\), so \\(y_{n+1} - y_n = (-6) - (-3) = -3\\). By induction, \\(y_n = -3n\\). Then, we get that \\(x_n = 2^{n+1} - 3n\\), so \\(x_{2012} = 2^{2013} - 6036\\).</p>",
+      "answer": "2^{2013} - 6036"
+    },
+    "27": {
+      "problem": "<p>Find the number of ordered triples of positive integers \\((a, b, c)\\) satisfying \\(a^2 - b^2 + ac - bc = 2012\\).</p>",
+      "solutions": "<p>We write this as \\((a - b)(a + b) + (a - b)(c) = (a - b)(a + b + c) = 2012\\). Since \\(a, b, c\\) are positive integers, \\(a - b &lt; a + b + c\\). So, we have three possibilities: \\(a - b = 1\\) and \\(a + b + c = 2012\\), \\(a - b = 2\\) and \\(a + b + c = 1006\\), and \\(a - b = 4\\) and \\(a + b + c = 503\\).</p><p>The first solution gives \\(a = b + 1\\) and \\(c = 2011 - 2b\\), so \\(b\\) can range from 1 through 1005, which determines \\(a\\) and \\(c\\) completely.</p><p>Similarly, the second solution gives \\(a = b + 2\\) and \\(c = 1004 - 2b\\), so \\(b\\) can range from 1 through 501.</p><p>Finally, the third solution gives \\(a = b + 4\\) and \\(c = 499 - 2b\\), so \\(b\\) can range from 1 through 249.</p><p>Hence, the total number of solutions is \\(1005 + 501 + 249 = 1755\\).</p>",
+      "answer": "1755"
+    },
+    "28": {
+      "problem": "<p>Find the set of all possible values that can be attained by the expression \\(\\frac{ab + b^2}{a^2 + b^2}\\), where \\(a\\) and \\(b\\) are positive real numbers. Express your answer in interval notation.</p>",
+      "solutions": "<p>Suppose that \\(k = \\frac{ab + b^2}{a^2 + b^2}\\) for some positive real \\(a, b\\). We claim that \\(k\\) lies in \\((0, \\frac{1+\\sqrt{2}}{2}]\\). Let \\(x = \\frac{a}{b}\\). We have that \\(\\frac{ab+b^2}{a^2+b^2} = \\frac{\\frac{a}{b}+1}{(\\frac{a}{b})^2+1} = \\frac{x+1}{x^2+1}\\). Thus, \\(x + 1 = k(x^2 + 1)\\), so the quadratic \\(kt^2 - t + k - 1 = 0\\) has a positive real root. Thus, its discriminant must be nonnegative, so \\(1^2 \\ge 4(k - 1)(k) \\implies (2k - 1)^2 \\le 2\\), which implies \\(\\frac{1-\\sqrt{2}}{2} \\le k \\le \\frac{1+\\sqrt{2}}{2}\\). Since \\(x &gt; 0\\), we also have \\(k &gt; 0\\), so we know that \\(k\\) must lie in \\((0, \\frac{1+\\sqrt{2}}{2}]\\).</p><p>Now, take any \\(k\\) in the interval \\((0, \\frac{1+\\sqrt{2}}{2}]\\). We thus know that \\(1^2 \\ge 4k(k - 1)\\), so the quadratic \\(kt^2 - t + k - 1 = 0\\) has a positive solution, \\(\\frac{1+\\sqrt{1-4k(k-1)}}{2k}\\). Call this solution \\(x\\). Then \\(k(x^2 + 1) = x + 1\\), so \\(\\frac{x+1}{x^2+1} = k\\). If we set \\(a = x\\) and \\(b = 1\\), we get that \\(\\frac{ab+b^2}{a^2+b^2} = k\\). Thus, the set of all attainable values of \\(\\frac{ab+b^2}{a^2+b^2}\\) is the interval \\((0, \\frac{1+\\sqrt{2}}{2}]\\).</p>",
+      "answer": "\\left(0, \\frac{1+\\sqrt{2}}{2}\\right]"
+    },
+    "29": {
+      "problem": "<p>Find the sum of the real values of \\(x\\) satisfying \\((x + 1)(2x + 1)(3x + 1)(4x + 1) = 16x^4\\).</p>",
+      "solutions": "<p>First, note that \\((x + 1)(2x + 1)(3x + 1)(4x + 1) = ((x + 1)(4x + 1))((2x + 1)(3x + 1)) = (4x^2 + 5x + 1)(6x^2 + 5x + 1) = (5x^2 + 5x + 1 - x^2)(5x^2 + 5x + 1 + x^2) = (5x^2 + 5x + 1)^2 - x^4\\).</p><p>Therefore, the equation is equivalent to \\((5x^2 + 5x + 1)^2 = 17x^4\\), or \\(5x^2 + 5x + 1 = \\pm\\sqrt{17}x^2\\).</p><p>If \\(5x^2 + 5x + 1 = \\sqrt{17}x^2\\), then \\((5 - \\sqrt{17})x^2 + 5x + 1 = 0\\). The discriminant of this is \\(25 - 4(5 - \\sqrt{17}) = 5 + 4\\sqrt{17}\\), so in this case, there are two real roots and they sum to \\(-\\frac{5}{5-\\sqrt{17}} = -\\frac{25+5\\sqrt{17}}{8}\\).</p><p>If \\(5x^2 + 5x + 1 = -\\sqrt{17}x^2\\), then \\((5 + \\sqrt{17})x^2 + 5x + 1 = 0\\). The discriminant of this is \\(25 - 4(5 + \\sqrt{17}) = 5 - 4\\sqrt{17}\\). This is less than zero, so there are no real solutions in this case. Therefore, the sum of all real solutions to the equation is \\(-\\frac{25+5\\sqrt{17}}{8}\\).</p>",
+      "answer": "-\\frac{25+5\\sqrt{17}}{8}"
+    },
+    "30": {
+      "problem": "<p>A monkey forms a string of letters by repeatedly choosing one of the letters \\(a, b\\), or \\(c\\) to type at random. Find the probability that he first types the string \\(aaa\\) before he first types the string \\(abc\\).</p>",
+      "solutions": "<p>It suffices to assume that the monkey starts all over as soon as he has typed a string that ends in no prefix of either \\(abc\\) or \\(aaa\\). For instance, if the monkey gets to \\(abb\\) we can throw these out because there’s no way to finish one of those strings from this without starting all over.</p><p>Now, we draw the tree of all possible intermediate stages under this assumption; there are not many possibilities. The paths from the root ”a” are:</p><p>a- aa- aaa</p><p>a- aa- aab- aabc</p><p>a- ab- abc</p><p>The first and last possibilities have probability 1/27 each and the middle one has probability 1/81, so in total the probability of getting the first before the second or the third is \\(\\frac{1/27}{1/27 + 1/81 + 1/27} = \\frac{3}{7}\\).</p>",
+      "answer": "\\frac{3}{7}"
+    },
+    "31": {
+      "problem": "<p>Let \\(ABCD\\) be a regular tetrahedron with \\(AB = 1\\), and let \\(P\\) be the center of face \\(BCD\\). Let \\(M\\) be the midpoint of segment \\(AP\\). Ray \\(BM\\) meets face \\(ACD\\) at \\(Q\\). Determine the area of triangle \\(QDC\\).</p>",
+      "solutions": "<p>We place the points in the coordinate plane. We let \\(A = (0, 0, \\frac{\\sqrt{6}}{3})\\), \\(B = (0, \\frac{\\sqrt{3}}{3}, 0)\\), \\(C = (-\\frac{1}{2}, -\\frac{\\sqrt{3}}{6}, 0)\\), and \\(D = (\\frac{1}{2}, -\\frac{\\sqrt{3}}{6}, 0)\\). The point \\(P\\) is the origin, while \\(M\\) is \\((0, 0, \\frac{\\sqrt{6}}{6})\\). The line through \\(B\\) and \\(M\\) is the line \\(x = 0\\), \\(y = \\frac{\\sqrt{3}}{3} - z\\sqrt{2}\\). The plane through \\(A\\), \\(C\\), and \\(D\\) has equation \\(z = 2\\sqrt{2}y + \\sqrt{\\frac{2}{3}}\\). The coordinates of \\(Q\\) are the coordinates of the intersection of this line and this plane. Equating the equations and solving for \\(y\\) and \\(z\\), we see that \\(y = -\\frac{1}{5\\sqrt{3}}\\) and \\(z = \\frac{\\sqrt{6}}{5}\\), so the coordinates of \\(Q\\) are \\((0, -\\frac{1}{5\\sqrt{3}}, \\frac{\\sqrt{6}}{5})\\).</p><p>Let \\(N\\) be the midpoint of \\(CD\\), which has coordinates \\((0, -\\frac{\\sqrt{3}}{6}, 0)\\). By the distance formula, \\(QN = \\frac{3\\sqrt{3}}{10}\\). Thus, the area of \\(QCD\\) is \\(\\frac{QN \\cdot CD}{2} = \\frac{3\\sqrt{3}}{20}\\).</p>",
+      "answer": "\\frac{3\\sqrt{3}}{20}"
+    },
+    "32": {
+      "problem": "<p>Define \\(f(n)\\) to be the remainder when \\(n^n\\) is divided by 23 for each positive integer \\(n\\). Find the smallest positive integer \\(k\\) such that \\(f(n + k) = f(n)\\) for all positive integers \\(n\\).</p>",
+      "solutions": "<p>Note that \\(\\phi(23) = 22\\) and \\(\\phi(22) = 10\\), so if \\(\\operatorname{lcm}(23, 22, 10) = 2530 \\mid k\\) then \\(f(n + k) \\equiv f(n) \\pmod{23}\\) is always true. We show that this is necessary as well.</p><p>Choosing \\(n \\equiv 0 \\pmod{23}\\), we see that \\(k \\equiv 0 \\pmod{23}\\). Thus \\(n + k \\equiv n \\pmod{23}\\) always, and we can move to the exponent by choosing \\(n\\) to be a generator modulo 23: \\[(n + k)^{n+k} \\equiv n^n \\pmod{22}.\\] The choice of \\(n\\) here is independent of the choice \\(\\pmod{23}\\) since 22 and 23 are coprime. Thus we must have again \\(22 \\mid k\\), by choosing \\(n \\equiv 0 \\pmod{22}\\). But then \\(n + k \\equiv n \\pmod{11}\\) always, and we can go to the exponent modulo \\(\\phi(11) = 10\\) by choosing \\(n\\) a generator modulo 11: \\[n + k \\equiv n \\pmod{10}.\\] From here it follows that \\(10 \\mid k\\) as well. Thus \\(2530 \\mid k\\) and 2530 is the minimum positive integer desired.</p>",
+      "answer": "2530"
+    },
+    "33": {
+      "problem": "<p>You are playing pool on a \\(1 \\times 1\\) table, and the cue ball is at the bottom left corner of the square. Find the smallest angle larger than \\(45^\\circ\\) at which you could shoot the ball such that the ball bounces against walls exactly 2012 times before arriving at a vertex of the square.</p>",
+      "solutions": "<p>As per usual with reflection problems instead of bouncing off the sides of a \\(1 \\times 1\\) square we imagine the ball to travel in a straight line from origin in an infinite grid of \\(1 \\times 1\\) squares, ”bouncing” every time it meets a line \\(x = m\\) or \\(y = n\\). Let the lattice point it first meets after leaving the origin be \\((a, b)\\), so that \\(b &gt; a\\). Note that \\(a\\) and \\(b\\) are coprime, otherwise the ball will reach a vertex before the 2012th bounce. We wish to minimize the slope of the line to this point from origin, which is \\(b/a\\).</p><p>Now, the number of bounces up to this point is \\(a - 1 + b - 1 = a + b - 2\\), so the given statement is just \\(a + b = 2014\\). To minimize \\(b/a\\) with \\(a\\) and \\(b\\) relatively prime, we must have \\(a = 1005, b = 1009\\), so that the angle is \\(\\tan^{-1}\\left(\\frac{1009}{1005}\\right)\\).</p>",
+      "answer": "\\tan^{-1}\\left(\\frac{1009}{1005}\\right)"
+    }
+  }
+}

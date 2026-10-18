@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2018,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2018/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(f(x) = 3x - 1\\), what is \\(f^6(2) = (f \\circ f \\circ f \\circ f \\circ f \\circ f)(2)\\)?</p>",
+      "solutions": "<p>\\[\\begin{aligned}\nf^1(2) &amp;= 3 \\cdot 2 - 1 = 5 \\\\\nf^2(2) &amp;= 3 \\cdot 5 - 1 = 14 \\\\\nf^3(2) &amp;= 3 \\cdot 14 - 1 = 41 \\\\\nf^4(2) &amp;= 3 \\cdot 41 - 1 = 122 \\\\\nf^5(2) &amp;= 3 \\cdot 122 - 1 = 365 \\\\\nf^6(2) &amp;= 3 \\cdot 365 - 1 = \\boxed{1094}\n\\end{aligned}\\]</p>",
+      "answer": "1094"
+    },
+    "2": {
+      "problem": "<p>A frog starts at the origin of the \\((x,y)\\) plane and wants to go to \\((6,6)\\). It can either jump to the right one unit or jump up one unit. How many ways are there for the frog to jump from the origin to \\((6,6)\\) without passing through point \\((2,3)\\)?</p>",
+      "solutions": "<p>Jumping from the origin to \\((6,6)\\) requires 6 units right and 6 units up, so the total number of ways is \\(\\frac{12!}{6! \\cdot 6!} = 924\\).</p><p>Similarly, the total number of ways from the origin to \\((2,3)\\) is \\(\\frac{5!}{2! \\cdot 3!} = 10\\), and the total number of ways from \\((2,3)\\) to \\((6,6)\\) is \\(\\frac{7!}{4! \\cdot 3!} = 35\\). Hence, the total number of ways passing through point \\((2,3)\\) is \\(10 \\cdot 35 = 350\\).</p><p>Thus, there are \\(924 - 350 = \\boxed{574}\\) ways for the frog to jump from the origin to \\((6,6)\\) without passing through point \\((2,3)\\).</p>",
+      "answer": "574"
+    },
+    "3": {
+      "problem": "<p>Alfred, Bob, and Carl plan to meet at a café between noon and 2 pm. Alfred and Bob will arrive at a random time between noon and 2 pm. They will wait for 20 minutes or until 2 pm for all 3 people to show up after which they will leave. Carl will arrive at the café at noon and leave at 1:30 pm. What is the probability that all three will meet together?</p>",
+      "solutions": "<p>Let the time Alfred and Bob arrive be \\(x\\) and \\(y\\), respectively. Thus, \\(x\\) and \\(y\\) are ranged from 0 to 120 minutes. Since Alfred and Bob will wait for 20 minutes, we have \\(|x - y| \\le 20\\). Also, since Carl will arrive at the café at noon and leave at 1:30 pm, we have \\(x\\) and \\(y\\) be in the range \\([0, 90]\\). Hence, we can have the following graph:</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2018_DMM_Team/3-fig1.png\" width=\"330\" alt=\"\"></p><p>Hence, all three meeting together has a probability of \\(\\frac{90 \\cdot 90 - 70 \\cdot 70}{120 \\cdot 120} = \\boxed{\\frac{2}{9}}\\).</p>",
+      "answer": "\\frac{2}{9}"
+    },
+    "4": {
+      "problem": "<p>Let triangle \\(ABC\\) be isosceles with \\(AB = AC\\). Let \\(BD\\) be the altitude from \\(B\\) to \\(AC\\), \\(E\\) be the midpoint of \\(AB\\), and \\(AF\\) be the altitude from \\(A\\) to \\(BC\\). If \\(AF = 8\\) and the area of triangle \\(ACE\\) is 8, find the length of \\(CD\\).</p>",
+      "solutions": "<p>Since \\(E\\) is the midpoint of \\(AB\\), the area of \\(\\triangle ACE\\) is the half of the area of \\(\\triangle ABC\\). Hence, the area of \\(\\triangle ABC\\) is 16. Since the area of \\(\\triangle ABC\\) is \\(\\frac{1}{2} \\cdot BC \\cdot AF\\) and \\(AF = 8\\), we have \\(BC = 4\\), so \\(FC = 2\\). Because \\(CF^2 + AF^2 = AC^2\\), we have \\(AC = 2\\sqrt{17}\\). Since both \\(AF\\) and \\(BD\\) are altitude, we have \\(\\triangle AFC \\sim \\triangle BDC\\), so \\(\\frac{AC}{BC} = \\frac{CF}{CD}\\). Hence, \\(CD = \\frac{2 \\times 4}{2\\sqrt{17}} = \\boxed{\\frac{4}{17}\\sqrt{17}}\\).</p>",
+      "answer": "\\frac{4}{17}\\sqrt{17}"
+    },
+    "5": {
+      "problem": "<p>Find the sum of the unique prime factors of \\[(2018^2 - 121) \\cdot (2018^2 - 9).\\]</p>",
+      "solutions": "<p>Note that \\[\\begin{aligned}\n(2018^2 - 121) \\cdot (2018^2 - 9) &amp;= (2018+11)(2018-11)(2018+3)(2018-3) \\\\\n&amp;= 2029 \\cdot 2007 \\cdot 2021 \\cdot 2015.\n\\end{aligned}\\]</p><p>Since \\(2029\\) is prime, \\(2007 = 3^2 \\times 223\\), \\(2021 = 43 \\times 47\\), \\(2015 = 5 \\times 13 \\times 31\\), we have the unique prime factors to be \\(5, 13, 31, 43, 47, 223, 2029\\). Hence, the sum is \\(5 + 13 + 31 + 43 + 47 + 223 + 2029 = \\boxed{2391}\\).</p>",
+      "answer": "2391"
+    },
+    "6": {
+      "problem": "<p>Compute the remainder when \\[3^{102} + 3^{101} + \\cdots + 3^0\\] is divided by 101.</p>",
+      "solutions": "<p>Note that \\(3^{102} + 3^{101} + \\cdots + 3^0 = \\frac{3^{103}-1}{2}\\). By Fermat’s Little Theorem, we have \\(3^{100} \\equiv 1 \\pmod{101}\\). Hence, \\(\\frac{3^{103}-1}{2} \\equiv \\frac{27-1}{2} \\equiv \\boxed{13} \\pmod{101}\\).</p>",
+      "answer": "13"
+    },
+    "7": {
+      "problem": "<p>Take regular heptagon \\(DUKMATH\\) with side length 3. Find the value of \\[\\frac{1}{DK} + \\frac{1}{DM}.\\]</p>",
+      "solutions": "<p>Consider the quadrilateral \\(DKMA\\). According to Ptolemy’s Theorem, we have \\[DA \\cdot MK + DK \\cdot MA = DM \\cdot AK.\\] Since \\(DA = DM\\), \\(AK = DK\\), and \\(MA = MK = 3\\), we have \\(3DM + 3DK = DM \\cdot DK\\). Hence, we have \\(\\frac{1}{DK} + \\frac{1}{DM} = \\boxed{\\frac{1}{3}}\\).</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "8": {
+      "problem": "<p>RJ’s favorite number is a positive integer less than 1000. It has final digit of 3 when written in base 5 and final digit 4 when written in base 6. How many guesses do you need to be certain that you can guess RJ’s favorite number?</p>",
+      "solutions": "<p>Let the number be \\(n\\). Since \\(n\\) has final digit of 3 when written in base 5 and final digit 4 when written in base 6, we have \\[\\begin{cases}\nn \\equiv 3 \\pmod 5 \\\\\nn \\equiv 4 \\pmod 6.\n\\end{cases}\\] By Chinese Remainder Theorem, the solution will be \\(n \\equiv 28 \\pmod{30}\\). Since \\(\\lfloor \\frac{999}{30} \\rfloor = 33\\), and \\(999 \\equiv 9 \\pmod{30}\\), we have 33 possible values of \\(n\\). Hence, we can take \\(\\boxed{32}\\) guesses to be certain to guess RJ’s favorite number.</p>",
+      "answer": "32"
+    },
+    "9": {
+      "problem": "<p>Let \\(f(a,b) = \\frac{a^2+b^2}{ab-1}\\), where \\(a\\) and \\(b\\) are positive integers, \\(ab \\ne 1\\). Let \\(x\\) be the maximum positive integer value of \\(f\\), and let \\(y\\) be the minimum positive integer value of \\(f\\). What is \\(x - y\\)?</p>",
+      "solutions": "<p>Consider \\(a = b\\). We have \\[f(a,b) = f(a,a) = \\frac{2a^2}{a^2-1} = 2 + \\frac{2}{a^2-1}.\\] Since \\(a\\) is a positive integer, \\(f(a,a)\\) is an integer only when \\(\\frac{2}{a^2-1}\\) is an integer. Since there is no such \\(a\\), we have \\(a \\ne b\\).</p><p>Consider \\(b = 1\\). We have \\(f(a,1) = \\frac{a^2+1}{a-1}\\). Hence, \\[f(a,1) = \\frac{(a+1)(a-1)+2}{a-1} = a + 1 + \\frac{2}{a-1}.\\] Since \\(a\\) is a positive integer, \\(f(a,1)\\) is an integer only when \\(\\frac{2}{a-1}\\) is an integer. Thus, \\(a = 2\\) or \\(a = 3\\), and \\(f(2,1) = f(3,1) = 5\\).</p><p>Consider \\(b &gt; 1\\). WLOG, we can assume \\(a &gt; b &gt; 1\\). Assume \\(f(a,b) = \\frac{a^2+b^2}{ab-1} = k\\), we have \\(a^2 + b^2 = k(ab-1)\\). Then, by AM-GM, we have \\(a^2 + b^2 &gt; 2ab &gt; 2(ab-1) &gt; ab - 1\\), so \\(k &gt; 2\\).</p><p>When \\(k = 3\\), we have \\(a^2 + b^2 = 3(ab-1)\\), so \\(a^2 + b^2 \\equiv 0 \\pmod 3\\). Thus, \\(a \\equiv b \\equiv 0 \\pmod 3\\). Let \\(a = 3m\\) and \\(b = 3n\\), we have \\((3m)^2 + (3n)^2 = 3(3m \\cdot 3n - 1)\\). Thus, \\(9m^2 + 9n^2 = 27nm - 3\\), which indicates there is no solution if we take modulo 9. Hence, \\(k &gt; 3\\).</p><p>Let \\(a\\) be the least solution to the equation \\(a^2 + b^2 = k(ab-1)\\) such that \\(k\\) is maximum or minimum. Since we have \\(a^2 - (bk) \\cdot a + (b^2+k) = 0\\), the quadratic equation has two solutions \\(a\\) and \\(a'\\). By Vieta’s formula, we have \\(a + a' = bk\\) and \\(a \\cdot a' = b^2+k\\). Since \\((a-1)(a'-1) = a \\cdot a' - (a+a') + 1\\), we have \\[a' - 1 = \\frac{b^2+k-bk+1}{a-1} \\le \\frac{b^2-3b+4}{b} \\le b - 1.\\] In this way, we have \\(a' \\le b\\), which indicates \\(a' &lt; a\\) and contradicts with the assumption. Hence, there is no maximum or minimum value when \\(b &gt; 1\\), so \\(x = y = 5\\), and \\(x - y = \\boxed{0}\\).</p>",
+      "answer": "0"
+    },
+    "10": {
+      "problem": "<p>Haoyang has a circular cylinder container with height 50 and radius 5 that contains 5 tennis balls, each with outer-radius 5 and thickness 1. Since Haoyang is very smart, he figures out that he can fit in more balls if he cuts each of the balls in half, then puts them in the container, so he is ”stacking” the halves. How many balls would he have to cut up to fill up the container?</p>",
+      "solutions": "<p>Since outer-radius is 5 and thickness is 1, we have \\(AO_1 = BO_2 = 5\\) and \\(AB = 1\\). Hence, \\(BO_1 = 4\\), so \\(O_1O_2 = \\sqrt{BO_2^2 - BO_1^2} = 3\\). Thus, the number of balls in half is \\(\\frac{50-5}{3} + 1 = 16\\), so he would have to cut \\(\\boxed{8}\\) to fill up the container.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2018_DMM_Team/10-fig1.png\" width=\"326\" alt=\"\"></p>",
+      "answer": "8"
+    }
+  }
+}

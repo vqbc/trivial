@@ -1,0 +1,23 @@
+{
+  "test": "SMT Advanced Topics Tiebreaker",
+  "year": 2012,
+  "name": "Advanced Topics Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2012/advanced-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(p(n)\\) be the smallest digit that is part of the decimal writing of a natural number \\(n\\).</p><p>Compute \\(p(100) + p(101) + p(102) + \\ldots + p(998) + p(999)\\).</p>",
+      "solutions": "<p>\\[\\begin{aligned}\np(000) + p(001) + \\cdots + p(999) &amp;= (10^3 - 9^3) \\times 0 + (9^3 - 8^3) \\times 1 \\ldots + (2^3 - 1^3) \\times 8 + (1^3 - 0^3) \\times 9 \\\\\n&amp;= 9^3 + 8^3 + 7^3 + 6^3 + 5^3 + 4^3 + 3^3 + 2^3 + 1^3 \\\\\n&amp;= \\boxed{2025}.\n\\end{aligned}\\]</p>",
+      "answer": "2025"
+    },
+    "2": {
+      "problem": "<p>We define \\(n\\) to be a squarefree integer if, for every prime \\(p\\), \\(p^2\\) does not divide \\(n\\). Let \\(f(n)\\) be the sum of the reciprocals of all the divisors of \\(n\\). We define \\(n\\) to be an amazing integer if \\(f(n) = 2\\).</p><p>How many squarefree amazing integers are there?</p>",
+      "solutions": "<p>Note that \\(f(n) = \\frac{\\sigma(n)}{n} = \\prod_{i=1}^k \\frac{p_i+1}{p_i}\\). In order for \\(f(n)\\) to be integral, the only primes that can divide \\(n\\) are 2 and 3, since those are the only consecutive primes. Note that \\(f(6) = 2\\), but 1, 2, and 3 do not satisfy this constraint. Therefore, there is exactly \\(\\boxed{1}\\) squarefree amazing integer.</p>",
+      "answer": "1"
+    },
+    "3": {
+      "problem": "<p>There are 7 cages in a row in an animal shelter and an ample supply of three different kind of animals: dogs, cats, and golden bears. Since golden bears do not like each other, they cannot be placed in adjacent cages. Cats also do not like each other (but not as much so as golden bears), so there cannot be more than two cats in a row. How many ways are there to fill the cages with animals?</p>",
+      "solutions": "<p>Let \\(a_n^1\\) denote the number of ways to fill up \\(n\\) cages with the last cage being a golden bear. Let \\(b_n^1\\) denote the number of ways with the last cage being a cat and the next-to-last not a cat. Let \\(b_n^2\\) denote the number of ways with the last two cages being both cats. Let \\(c_n\\) denote the number of ways with the last cage being a dog. Then we have the recurrence</p><p>\\[\\begin{cases}\na_n^1 = b_{n-1}^1 + b_{n-1}^2 + c_{n-1} \\\\\nb_n^1 = a_{n-1}^1 + c_{n-1} \\\\\nb_n^2 = b_{n-1}^1 \\\\\nc_n = a_{n-1}^1 + b_{n-1}^1 + b_{n-1}^2 + c_{n-1}.\n\\end{cases}\\]</p><p>Initial values are \\(a_1 = b_n^1 = c_n = 1\\) while \\(b_n^2 = 0\\). Following the recurrence until \\(n = 7\\), we obtain \\(a_7^1 = 276\\), \\(b_7^1 = 250\\), \\(b_7^2 = 95\\), \\(c_7 = 381\\), so the total is \\(\\boxed{1002}\\).</p>",
+      "answer": "1002"
+    }
+  }
+}

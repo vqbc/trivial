@@ -1,0 +1,58 @@
+{
+  "test": "HMMT November General",
+  "year": 2015,
+  "name": "General Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2015/nov/gen/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the number of triples \\((a,b,c)\\) of positive integers such that \\(a + ab + abc = 11\\).</p>",
+      "solutions": "<p>We can write \\(a + ab + abc = a(1 + b + bc)\\). Since \\(11\\) is prime, \\(a = 11\\) or \\(a = 1\\). But since \\(b, c\\) are both positive integers, we cannot have \\(a = 11\\), and so \\(a = 1\\). Then \\(1 + b + bc = 11 \\implies b + bc = 10 \\implies b(c + 1) = 10\\), and since \\(c\\) is a positive integer, only \\(b = 1, 2, 5\\) are possible. This gives the \\(\\boxed{3}\\) triples \\((a,b,c) = (1, 1, 9), (1, 2, 4), (1, 5, 1)\\).</p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>Let \\(a\\) and \\(b\\) be real numbers randomly (and independently) chosen from the range \\([0, 1]\\). Find the probability that \\(a, b\\) and \\(1\\) form the side lengths of an obtuse triangle.</p>",
+      "solutions": "<p>We require \\(a + b &gt; 1\\) and \\(a^2 + b^2 &lt; 1\\). Geometrically, this is the area enclosed in the quarter-circle centered at the origin with radius \\(1\\), not including the area enclosed by \\(a + b &lt; 1\\) (an isosceles right triangle with side length \\(1\\)). As a result, our desired probability is \\(\\boxed{\\frac{\\pi-2}{4}}\\).</p>",
+      "answer": "\\frac{\\pi-2}{4}"
+    },
+    "3": {
+      "problem": "<p>Neo has an infinite supply of red pills and blue pills. When he takes a red pill, his weight will double, and when he takes a blue pill, he will lose one pound. If Neo originally weighs one pound, what is the minimum number of pills he must take to make his weight 2015 pounds?</p>",
+      "solutions": "<p>Suppose instead Neo started at a weight of 2015 pounds, instead had green pills, which halve his weight, and purple pills, which increase his weight by a pound, and he wished to reduce his weight to one pound. It is clear that, if Neo were able to find such a sequence of pills in the case where he goes from 2015 pounds to 1 pound, he can perform the sequence in reverse (replacing green pills with red pills and purple pills with blue pills) to achieve the desired weight, so this problem is equivalent to the original.</p><p>Suppose at some point, Neo were to take two purple pills followed by a green pill; this changes his weight from \\(2k\\) to \\(k + 1\\). However, the same effect could be achieved using less pills by first taking a green pill and then taking a purple pill, so the optimal sequence will never contain consecutive purple pills. As a result, there is only one optimal sequence for Neo if he is trying to lose weight: take a purple pill when his weight is odd, and a green pill when his weight is even. His weight thus becomes \\[\\begin{gathered}\n2015 \\to 2016 \\to 1008 \\to 504 \\to 252 \\to 126 \\to 63 \\\\\n\\to 64 \\to 32 \\to 16 \\to 8 \\to 4 \\to 2 \\to 1\n\\end{gathered}\\] which requires a total of \\(\\boxed{13}\\) pills. Reversing this sequence solves the original problem directly.</p>",
+      "answer": "13"
+    },
+    "4": {
+      "problem": "<p>Chords \\(AB\\) and \\(CD\\) of a circle are perpendicular and intersect at a point \\(P\\). If \\(AP = 6, BP = 12\\), and \\(CD = 22\\), find the area of the circle.</p>",
+      "solutions": "<p>Let \\(O\\) be the center of the circle and let \\(M\\) be the midpoint of segment \\(AB\\) and let \\(N\\) be the midpoint of segment \\(CD\\). Since quadrilateral \\(OMPN\\) is a rectangle we have that \\(ON = MP = AM - AP = 3\\) so \\[OC = \\sqrt{ON^2 + NC^2} = \\sqrt{9 + 121} = \\sqrt{130}\\] Hence the desired area is \\(\\boxed{130\\pi}\\).</p>",
+      "answer": "130\\pi"
+    },
+    "5": {
+      "problem": "<p>Let \\(S\\) be a subset of the set \\(\\{1, 2, 3, \\ldots, 2015\\}\\) such that for any two elements \\(a, b \\in S\\), the difference \\(a - b\\) does not divide the sum \\(a + b\\). Find the maximum possible size of \\(S\\).</p>",
+      "solutions": "<p>From each of the sets \\(\\{1, 2, 3\\}, \\{4, 5, 6\\}, \\{7, 8, 9\\}, \\ldots\\) at most 1 element can be in \\(S\\). This leads to an upper bound of \\(\\lceil \\frac{2015}{3} \\rceil = \\boxed{672}\\) which we can obtain with the set \\(\\{1, 4, 7, \\ldots, 2014\\}\\).</p>",
+      "answer": "672"
+    },
+    "6": {
+      "problem": "<p>Consider all functions \\(f : \\mathbb{Z} \\to \\mathbb{Z}\\) satisfying \\[f(f(x) + 2x + 20) = 15.\\] Call an integer \\(n\\) <i>good</i> if \\(f(n)\\) can take any integer value. In other words, if we fix \\(n\\), for any integer \\(m\\), there exists a function \\(f\\) such that \\(f(n) = m\\). Find the sum of all good integers \\(x\\).</p>",
+      "solutions": "<p>For almost all integers \\(x\\), \\(f(x) \\ne -x - 20\\). If \\(f(x) = -x - 20\\), then \\[f(-x - 20 + 2x + 20) = 15 \\implies -x - 20 = 15 \\implies x = -35.\\] Now it suffices to prove that the \\(f(-35)\\) can take any value. \\(f(-35) = 15\\) in the function \\(f(x) \\equiv 15\\). Otherwise, set \\(f(-35) = c\\), and \\(f(x) = 15\\) for all other \\(x\\). It is easy to check that these functions all work.</p>",
+      "answer": "-35"
+    },
+    "7": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be a right triangle with right angle \\(C\\). Let \\(I\\) be the incenter of \\(ABC\\), and let \\(M\\) lie on \\(AC\\) and \\(N\\) on \\(BC\\), respectively, such that \\(M, I, N\\) are collinear and \\(\\overline{MN}\\) is parallel to \\(AB\\). If \\(AB = 36\\) and the perimeter of \\(CMN\\) is 48, find the area of \\(ABC\\).</p>",
+      "solutions": "<p>Note that \\(\\angle MIA = \\angle BAI = \\angle CAI\\), so \\(MI = MA\\). Similarly, \\(NI = NB\\). As a result, \\(CM + MN + NC = CM + MI + NI + NC = CM + MA + NB + NC = AC + BC = 48\\). Furthermore, \\(AC^2 + BC^2 = 36^2\\). As a result, we have \\(AC^2 + 2AC \\cdot BC + BC^2 = 48^2\\), so \\(2AC \\cdot BC = 48^2 - 36^2 = 12 \\cdot 84\\), and so \\(\\frac{AC \\cdot BC}{2} = 3 \\cdot 84 = \\boxed{252}\\).</p>",
+      "answer": "252"
+    },
+    "8": {
+      "problem": "<p>Let \\(ABCD\\) be a quadrilateral with an inscribed circle \\(\\omega\\) that has center \\(I\\). If \\(IA = 5, IB = 7, IC = 4, ID = 9\\), find the value of \\(\\frac{AB}{CD}\\).</p>",
+      "solutions": "<p>The \\(I\\)-altitudes of triangles \\(AIB\\) and \\(CID\\) are both equal to the radius of \\(\\omega\\), hence have equal length. Therefore \\(\\frac{[AIB]}{[CID]} = \\frac{AB}{CD}\\). Also note that \\([AIB] = IA \\cdot IB \\cdot \\sin AIB\\) and \\([CID] = IC \\cdot ID \\cdot \\sin CID\\), but since lines \\(IA, IB, IC, ID\\) bisect angles \\(\\angle DAB, \\angle ABC, \\angle BCD, \\angle CDA\\) respectively we have that \\(\\angle AIB + \\angle CID = (180^\\circ - \\angle IAB - \\angle IBA) + (180^\\circ - \\angle ICD - \\angle IDC) = 180^\\circ\\). So, \\(\\sin AIB = \\sin CID\\). Therefore \\(\\frac{[AIB]}{[CID]} = \\frac{IA \\cdot IB}{IC \\cdot ID}\\). Hence \\[\\frac{AB}{CD} = \\frac{IA \\cdot IB}{IC \\cdot ID} = \\boxed{\\frac{35}{36}}.\\]</p>",
+      "answer": "\\frac{35}{36}"
+    },
+    "9": {
+      "problem": "<p>Rosencrantz plays \\(n \\le 2015\\) games of question, and ends up with a win rate \\(\\left(\\text{i.e. } \\frac{\\text{\\# of games won}}{\\text{\\# of games played}}\\right)\\) of \\(k\\). Guildenstern has also played several games, and has a win rate less than \\(k\\). He realizes that if, after playing some more games, his win rate becomes higher than \\(k\\), then there must have been some point in time when Rosencrantz and Guildenstern had the exact same win-rate. Find the product of all possible values of \\(k\\).</p>",
+      "solutions": "<p>Write \\(k = \\frac{m}{n}\\), for relatively prime integers \\(m, n\\). For the property not to hold, there must exist integers \\(a\\) and \\(b\\) for which \\[\\frac{a}{b} &lt; \\frac{m}{n} &lt; \\frac{a+1}{b+1}\\] (i.e. at some point, Guildenstern must ”jump over” \\(k\\) with a single win) \\[\\iff an + n - m &gt; bm &gt; an\\] hence there must exist a multiple of \\(m\\) strictly between \\(an\\) and \\(an + n - m\\).</p><p>If \\(n - m = 1\\), then the property holds as there is no integer between \\(an\\) and \\(an + n - m = an + 1\\). We now show that if \\(n - m \\ne 1\\), then the property does not hold. By Bézout’s Theorem, as \\(n\\) and \\(m\\) are relatively prime, there exist \\(a\\) and \\(x\\) such that \\(an = mx - 1\\), where \\(0 &lt; a &lt; m\\). Then \\(an + n - m \\ge an + 2 = mx + 1\\), so \\(b = x\\) satisfies the conditions. As a result, the only possible \\(k\\) are those in the form \\(\\frac{n}{n+1}\\).</p><p>We know that Rosencrantz played at most 2015 games, so the largest non-perfect winrate he could possibly have is \\(\\frac{2014}{2015}\\). Therefore, \\(k \\in \\{\\frac{1}{2}, \\frac{2}{3}, \\ldots, \\frac{2014}{2015}\\}\\), the product of which is \\(\\boxed{\\frac{1}{2015}}\\).</p>",
+      "answer": "\\frac{1}{2015}"
+    },
+    "10": {
+      "problem": "<p>Let \\(N\\) be the number of functions \\(f\\) from \\(\\{1, 2, \\ldots, 101\\} \\to \\{1, 2, \\ldots, 101\\}\\) such that \\(f^{101}(1) = 2\\). Find the remainder when \\(N\\) is divided by 103.</p>",
+      "solutions": "<p>For convenience, let \\(n = 101\\). Compute the number of functions such that \\(f^n(1) = 1\\). Since \\(n\\) is a prime, there are 2 cases: the order of 1 is either 1 or \\(n\\). The first case gives \\(n^{n-1}\\) functions, and the second case gives \\((n - 1)!\\) functions. By symmetry, the number of ways for \\(f^n(1) = 2\\) is \\[\\frac{1}{n-1} \\cdot (n^n - n^{n-1} - (n - 1)!) = n^{n-1} - (n - 2)!.\\] Plugging in \\(n = 101\\), we need to find \\[\\begin{aligned}\n101^{100} - 99! &amp;\\equiv (-2)^{-2} - \\frac{101!}{6} \\\\\n&amp;= 1/4 - 1/6 = 1/12 \\equiv \\boxed{43} \\pmod{103}.\n\\end{aligned}\\]</p>",
+      "answer": "43"
+    }
+  }
+}

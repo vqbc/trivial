@@ -1,0 +1,58 @@
+{
+  "test": "CMM Team (Fall)",
+  "year": 2012,
+  "name": "Team Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_f1cfecb217904028a7063b7009df5d7f.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the remainder when \\(5^{2012}\\) is divided by \\(3\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1"
+    },
+    "2": {
+      "problem": "<p>Consider a triangle \\(ABC\\) with points \\(D\\) on \\(AB\\), \\(E\\) on \\(BC\\), and let \\(F\\) be the intersection of \\(AE\\) and \\(CD\\). Suppose \\(AD = 1\\), \\(DB = 2\\), \\(BE = 1\\), \\(EC = 3\\), and \\(CA = 5\\). Find the value of the area of \\(ECF\\) minus the area of \\(ADF\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{5}{2}"
+    },
+    "3": {
+      "problem": "<p>A particular graph has \\(6\\) vertices, \\(12\\) edges, and has the property that it contains no Eulerian path; a Eulerian path is a route from vertex to vertex along edges that traces each edge exactly once. Determine all the possible degrees of its vertices in no particular order. There are two solutions, and you need to get both to get credit for this problem.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3,3,4,4,5,5 \\text{ and } 3,3,3,5,5,5"
+    },
+    "4": {
+      "problem": "<p>Consider the figure below, not drawn to scale.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2012_CMM_Team_(Fall)/4-fig1.png\" width=\"255\" alt=\"\"></p><p>In this figure, assume that \\(AB \\perp BE\\) and \\(AD \\perp DE\\). Also, let \\(AB = \\sqrt{6}\\) and \\(\\angle BED = \\frac{\\pi}{6}\\). Find \\(AC\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2\\sqrt{2}"
+    },
+    "5": {
+      "problem": "<p>At each step, a rectangular tile of length \\(1\\), \\(2\\), or \\(3\\) is chosen at random, what is the probability that the total length is \\(10\\) after \\(5\\) steps?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{17}{81}"
+    },
+    "6": {
+      "problem": "<p>Suppose you have ten pairs of red socks, ten pairs of blue socks, and ten pairs of green socks in your drawer. You need to go to a party soon, but the power is currently off in your room. It is completely dark, so you cannot see any colors and unfortunately the socks are identically shaped. What is the minimum number of socks you need to take from the drawer in order to guarantee that you have at least one pair of socks whose colors match?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "7": {
+      "problem": "<p>Consider a \\(1\\) by \\(2\\) by \\(3\\) rectangular prism. Find the length of the shortest path between opposite corners \\(A\\) and \\(B\\) that does not leave the surface of the prism.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2012_CMM_Team_(Fall)/7-fig1.png\" width=\"270\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3\\sqrt{2}"
+    },
+    "8": {
+      "problem": "<p>Find the sum of all positive \\(30\\)-digit palindromes. The leading digit is not allowed to be \\(0\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5\\times 10^{49} + 5\\times 10^{47} - 10^{20}"
+    },
+    "9": {
+      "problem": "<p>For a positive integer \\(n\\), let \\(f(n)\\) be equal to \\(n\\) if there is an integer \\(x\\) such that \\(x^2 - n\\) is divisible by \\(2^{12}\\), and let \\(f(n)\\) be \\(0\\) otherwise. Determine the remainder when \\[\\sum_{n=0}^{2^{12}-1} f(n)\\] is divided by \\(2^{12}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1536"
+    },
+    "10": {
+      "problem": "<p>Let \\[N = \\binom{2^{2012}}{0}\\binom{2^{2012}}{1}\\binom{2^{2012}}{2}\\binom{2^{2012}}{3}\\cdots\\binom{2^{2012}}{2^{2012}}.\\] Let \\(M\\) be the number of \\(0\\)’s when \\(N\\) is written in binary. How many \\(0\\)’s does \\(M\\) have when written in binary? (Warning: this question is <i>very</i> hard.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2013"
+    }
+  }
+}

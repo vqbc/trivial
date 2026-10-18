@@ -1,0 +1,18 @@
+{
+  "test": "GiM Tiebreaker",
+  "year": 2026,
+  "name": "Tiebreaker Round",
+  "url": "https://yalemathcompetitions-files.s3.amazonaws.com/gim_2026_tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A bee and a flower are a distance of \\(\\frac{14}{15}\\) apart on the same side of a unit square, and the bee is a distance of \\(\\frac{1}{150}\\) from the nearest vertex of the square. The length of the shortest path that the bee can take to reach the flower that touches all four sides of the square at least once can be expressed as \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m+n\\).</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2026_GiM_Tiebreaker/1-fig1.png\" width=\"443\" alt=\"\"></p><p>If we unfold the square, and allow the bee to pass through the square, we can refold its path to get a path on the original unit square. Therefore, we want the shortest straight-line distance from the origin point to any projection of the destination point. We see there is a \\(2 - \\frac{14}{15} = \\frac{16}{15}\\) total horizontal movement and 2 total vertical movement, so the length of the shortest path is \\[\\sqrt{2^2 + \\left(\\frac{16}{15}\\right)^2} = \\frac{34}{15},\\] giving an answer of \\(\\boxed{49}\\).</p>",
+      "answer": "49"
+    },
+    "2": {
+      "problem": "<p>The polynomial \\(x^5 - 4x^4 + 2x^3 - 3x^2 + x + 1\\) has 3 real roots and 2 pure imaginary roots. If the real roots are \\(a, b,\\) and \\(c\\), find \\(abc - (3-a)(3-b)(3-c)\\).</p>",
+      "solutions": "<p>Let \\(f(x) = x^5 - 4x^4 + 2x^3 - 3x^2 + x + 1\\). To find the imaginary roots, note \\(f(ix) = -4x^4 + 3x^2 + 1 + (-x^5 + 2x^3 - x)i\\) has roots \\(1\\) and \\(-1\\), so \\(f(x)\\) has \\((x-i)(x+i) = x^2 + 1\\) as a factor. By polynomial long division, \\(f(x) = (x^2+1)(x^3 - 4x^2 + x + 1)\\), so \\(x^3 - 4x^2 + x + 1 = (x-a)(x-b)(x-c)\\) in order to make \\(a, b,\\) and \\(c\\) the other roots. This means, plugging in \\(x = 3\\), \\((3-a)(3-b)(3-c) = 3^3 - 4\\cdot 3^2 + 3 + 1 = 27 - 36 + 4 = -5\\). Also, by Vieta’s, \\(abc = -1\\), so \\(abc - (3-a)(3-b)(3-c) = \\boxed{4}\\).</p>",
+      "answer": "4"
+    }
+  }
+}

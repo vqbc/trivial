@@ -1,0 +1,48 @@
+{
+  "test": "DMM Individual",
+  "year": 2007,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2007/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>There are 32 balls in a box: 6 are blue, 8 are red, 4 are yellow, and 14 are brown. If I pull out three balls at once, what is the probability that none of them are brown?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{51}{310}"
+    },
+    "2": {
+      "problem": "<p>Circles \\(A\\) and \\(B\\) are concentric, and the area of circle \\(A\\) is exactly 20% of the area of circle \\(B\\). The circumference of circle \\(B\\) is 10. A square is inscribed in circle \\(A\\). What is the area of that square?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{10}{\\pi^2}"
+    },
+    "3": {
+      "problem": "<p>If \\(x^2 + y^2 = 1\\) and \\(x, y \\in \\mathbb{R}\\), let \\(q\\) be the largest possible value of \\(x + y\\) and \\(p\\) be the smallest possible value of \\(x + y\\). Compute \\(pq\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-2"
+    },
+    "4": {
+      "problem": "<p>Yizheng and Jennifer are playing a game of ping-pong. Ping-pong is played in a series of consecutive matches, where the winner of a match is given one point. In the scoring system that Yizheng and Jennifer use, if one person reaches 11 points before the other person can reach 10 points, then the person who reached 11 points wins. If instead the score ends up being tied 10-to-10, then the game will continue indefinitely until one person’s score is two more than the other person’s score, at which point the person with the higher score wins. The probability that Jennifer wins any one match is 70% and the score is currently at 9-to-9. What is the probability that Yizheng wins the game?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{9}{58}"
+    },
+    "5": {
+      "problem": "<p>The squares on an \\(8 \\times 8\\) chessboard are numbered left-to-right and then from top-to-bottom (so that the top-left square is #1, the top-right square is #8, and the bottom-right square is #64). 1 grain of wheat is placed on square #1, 2 grains on square #2, 4 grains on square #3, and so on, doubling each time until every square of the chessboard has some number of grains of wheat on it. What fraction of the grains of wheat on the chessboard are on the rightmost column?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{128}{255}"
+    },
+    "6": {
+      "problem": "<p>Let \\(f\\) be any function that has the following property: For all real numbers \\(x\\) other than 0 and 1, \\[f\\left(1 - \\frac{1}{x}\\right) + 2f\\left(\\frac{1}{1-x}\\right) + 3f(x) = x^2.\\] Compute \\(f(2)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{31}{24}"
+    },
+    "7": {
+      "problem": "<p>Find all solutions of: \\[\\left(x^2 + 7x + 6\\right)^2 + 7\\left(x^2 + 7x + 6\\right) + 6 = x.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-3 + \\sqrt{3},\\ -3 - \\sqrt{3},\\ -4 + \\sqrt{2},\\ -4 - \\sqrt{2}"
+    },
+    "8": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be a triangle where \\(AB = 25\\) and \\(AC = 29\\). \\(C_1\\) is a circle that has \\(AB\\) as a diameter and \\(C_2\\) is a circle that has \\(BC\\) as a diameter. \\(D\\) is a point on \\(C_1\\) so that \\(BD = 15\\) and \\(CD = 21\\). \\(C_1\\) and \\(C_2\\) clearly intersect at \\(B\\); let \\(E\\) be the other point where \\(C_1\\) and \\(C_2\\) intersect. Find all possible values of \\(ED\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{525}{29}"
+    }
+  }
+}

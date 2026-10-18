@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2020,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2020/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Suppose \\[2 + \\cfrac{1}{5 + \\cfrac{1}{2 + \\cfrac{1}{5 + \\ldots}}} = \\frac{a+\\sqrt{b}}{c},\\] where \\(a\\), \\(b\\), and \\(c\\) are positive integers, and \\(b\\) is not divisible by the square of any prime. Compute \\(a+b+c\\).</p>",
+      "solutions": "<p>If \\(x\\) is the requested continued fraction, note \\(x = 2 + \\cfrac{1}{5 + \\cfrac{1}{x}}\\), so \\(x = \\frac{11x+2}{5x+1} \\Rightarrow 5x^2 - 10x - 2 = 0\\). Taking the positive root, we find \\(x = \\frac{5+\\sqrt{35}}{5}\\), in which case \\(a+b+c = 5+35+5 = \\boxed{45}\\).</p>",
+      "answer": "45"
+    },
+    "2": {
+      "problem": "<p>Let \\(a,b,c\\) be the roots of the polynomial \\(4x^3 + 24x^2 - 237x + 2\\). Find the value of \\[a^2(a+1) + b^2(b+1) + c^2(c+1).\\]</p><p>Write your answer as a decimal rounded to the nearest tenth.</p>",
+      "solutions": "<p>Notice that \\(a^2(a+1)+b^2(b+1)+c^2(c+1) = (a^3+b^3+c^3)+(a^2+b^2+c^2)\\). Using Vieta’s formulas we know that \\(a+b+c = -24/4 = -6\\), \\(ab+bc+ca = -59.25\\), and \\(abc = -2/4 = -0.5\\).</p><p>Then, \\[a^2+b^2+c^2 = (a+b+c)^2 - 2(ab+bc+ca) = (-6)^2 - 2\\left(-\\frac{237}{4}\\right) = 154.5\\]</p><p>Also, \\[\\begin{aligned}\na^3+b^3+c^3 &amp;= (a^2+b^2+c^2)(a+b+c) - (ab+bc+ca)(a+b+c) + 3abc \\\\\n&amp;= 154.5(-6) - (-59.25)(-6) + 3(-0.5) = -1284\n\\end{aligned}\\]</p><p>Therefore, \\[a^2(a+1)+b^2(b+1)+c^2(c+1) = 154.5 - 1284 = \\boxed{-1129.5}\\]</p>",
+      "answer": "-1129.5"
+    },
+    "3": {
+      "problem": "<p>Suppose \\(S\\) is a set of functions with the property that, if \\(f(x)\\) and \\(g(x)\\) are in \\(S\\), then \\((f\\circ g)(x) = f(g(x))\\) is in \\(S\\). Given that the functions \\(r(x) = \\frac{x\\sqrt{3}+1}{\\sqrt{3}-x}\\) and \\(s(x) = \\frac{1}{x}\\) are in \\(S\\), compute the smallest possible size of \\(S\\).</p>",
+      "solutions": "<p>Let the notation \\(f^n(x)\\) denote repeated composition of the same function, so \\(f^1(x) = f(x)\\), \\(f^2(x) = f(f(x))\\), and so on. Note \\(r^6(x) = x\\) and \\(s^2(x) = x\\) (in particular, 6 and 2 are the smallest integers such that \\(r^n(x) = x, s^n(x) = x\\)). In addition, \\((s\\circ r \\circ s \\circ r)(x)\n= x\\). Then we can compute compositions of functions that avoid reduction of one or more terms in the composition into the identity function. This determines that \\(S\\) must have a minimum size of \\(\\boxed{12}\\). The functions are \\(id, r, r^2, r^3, r^4, r^5, s, s\\circ r, s\\circ r^2, s\\circ r^3,\ns\\circ r^4, s\\circ r^5\\).</p><p>Alternatively, we can consider the functions geometrically as symmetries of a regular hexagon with labeled vertices. If \\(r\\) represents clockwise rotation of \\(60^\\circ\\) about the center and \\(s\\) represents reflection of the hexagon about a fixed line of symmetry (so that applying \\(r\\) six times, \\(s\\) twice, or \\(r\\), then \\(s\\), then \\(r\\), then \\(s\\), gives us back the vertices in their original orientation), it is easy to see that there are 12 distinct orientations of the labeled hexagon, which correspond to the minimum \\(\\boxed{12}\\) functions in \\(S\\).</p>",
+      "answer": "12"
+    }
+  }
+}

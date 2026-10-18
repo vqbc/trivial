@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 1",
+  "year": 2003,
+  "name": "Individual Round: General Test, Part 1",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2003/feb/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>10 people are playing musical chairs with \\(n\\) chairs in a circle. They can be seated in \\(7!\\) ways (assuming only one person fits on each chair, of course), where different arrangements of the same people on chairs, even rotations, are considered different. Find \\(n\\).</p>",
+      "solutions": "<p>The number of ways 10 people can be seated on \\(n\\) chairs is \\(n!\\) multiplied by the number of ways one can choose \\(n\\) people out of 10. Hence we must solve \\(7! = n! \\cdot 10!/(n! \\cdot (10-n)!)\\). This is equivalent to \\((10-n)! = 10!/7! = 8 \\cdot 9 \\cdot 10 = 720 = 6!\\). We therefore have \\(n = 4\\).</p>",
+      "answer": "4"
+    },
+    "2": {
+      "problem": "<p>\\(OPEN\\) is a square, and \\(T\\) is a point on side \\(NO\\), such that triangle \\(TOP\\) has area 62 and triangle \\(TEN\\) has area 10. What is the length of a side of the square?</p>",
+      "solutions": "<p>\\(62 = PO \\cdot OT/2\\) and \\(10 = EN \\cdot TN/2 = PO \\cdot TN/2\\), so adding gives \\(72 = PO \\cdot (OT+TN)/2 = PO \\cdot ON/2 = PO^2/2 \\Rightarrow PO = 12\\).</p>",
+      "answer": "12"
+    },
+    "3": {
+      "problem": "<p>There are 16 members on the Height-Measurement Matching Team. Each member was asked, “How many other people on the team — not counting yourself — are exactly the same height as you?” The answers included six 1’s, six 2’s, and three 3’s. What was the sixteenth answer? (Assume that everyone answered truthfully.)</p>",
+      "solutions": "<p>For anyone to have answered 3, there must have been exactly 4 people with the same height, and then each of them would have given the answer 3. Thus, we need at least four 3’s, so 3 is the remaining answer. (More generally, a similar argument shows that the number of members answering \\(n\\) must be divisible by \\(n+1\\).)</p>",
+      "answer": "3"
+    },
+    "4": {
+      "problem": "<p>How many 2-digit positive integers have an even number of positive divisors?</p>",
+      "solutions": "<p>An integer has an odd number of divisors precisely if it is a square. So we take the 90 2-digit numbers \\((10, 11, \\ldots, 99)\\) and remove the 6 squares \\((4^2, 5^2, \\ldots, 9^2)\\), for a total of 84.</p>",
+      "answer": "84"
+    },
+    "5": {
+      "problem": "<p>A room is built in the shape of the region between two semicircles with the same center and parallel diameters. The farthest distance between two points with a clear line of sight is 12m. What is the area (in \\(m^2\\)) of the room?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_General_1/5-fig1.png\" width=\"224\" alt=\"\"></p>",
+      "solutions": "<p>The maximal distance is as shown in the figure (next page). Call the radii \\(R\\) and \\(r\\), \\(R &gt; r\\). Then \\(R^2 - r^2 = 6^2\\) by the Pythagorean theorem, so the area is \\((\\pi/2) \\cdot (R^2 - r^2) = 18\\pi\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_General_1/5-fig2.png\" width=\"243\" alt=\"\"></p>",
+      "answer": "18\\pi"
+    },
+    "6": {
+      "problem": "<p>In how many ways can 3 bottles of ketchup and 7 bottles of mustard be arranged in a row so that no bottle of ketchup is immediately between two bottles of mustard? (The bottles of ketchup are mutually indistinguishable, as are the bottles of mustard.)</p>",
+      "solutions": "<p>Consider the blocks of consecutive bottles of ketchup in such an arrangement. A block of just one bottle must occur at the beginning or the end of the row, or else it would be between two bottles of mustard. However, a block of two or three bottles can occur anywhere. We cannot have three blocks of one bottle each, since there are only two possible locations for such blocks. Thus, we either have a block of one bottle and a block of two, or one block of all three bottles. In the first case, if the single bottle occurs at the beginning of the row, then anywhere from 1 to 7 bottles of mustard may intervene before the block of 2 ketchup bottles, giving 7 possible arrangements. We likewise have 7 arrangements if the single bottle occurs at the end of the row. Finally, if there is just one block of three bottles, anywhere from 0 to 7 mustard bottles may precede it, giving 8 possible arrangements. So, altogether, we have \\(7 + 7 + 8 = 22\\) configurations.</p>",
+      "answer": "22"
+    },
+    "7": {
+      "problem": "<p>Find the real value of \\(x\\) such that \\(x^3 + 3x^2 + 3x + 7 = 0\\).</p>",
+      "solutions": "<p>Rewrite the equation as \\((x+1)^3 + 6 = 0\\) to get \\((x+1)^3 = -6 \\Rightarrow x+1 = \\sqrt[3]{-6} \\Rightarrow x = -1 - \\sqrt[3]{6}\\).</p>",
+      "answer": "-1 - \\sqrt[3]{6}"
+    },
+    "8": {
+      "problem": "<p>A broken calculator has the \\(+\\) and \\(\\times\\) keys switched. For how many ordered pairs \\((a,b)\\) of integers will it correctly calculate \\(a+b\\) using the labelled \\(+\\) key?</p>",
+      "solutions": "<p>We need \\(a + b = ab\\), or \\(a = \\frac{b}{b-1} = 1 - \\frac{1}{b-1}\\), so \\(1/(b-1)\\) is an integer. Thus \\(b\\) must be 0 or 2, and \\(a\\) is 0 or 2, respectively. So there are 2.</p>",
+      "answer": "2"
+    },
+    "9": {
+      "problem": "<p>Consider a 2003-gon inscribed in a circle and a triangulation of it with diagonals intersecting only at vertices. What is the smallest possible number of obtuse triangles in the triangulation?</p>",
+      "solutions": "<p>By induction, it follows easily that any triangulation of an \\(n\\)-gon inscribed in a circle has \\(n-2\\) triangles. A triangle is obtuse unless it contains the center of the circle in its interior (in which case it is acute) or on one of its edges (in which case it is right). It is then clear that there are at most 2 non-obtuse triangles, and 2 is achieved when the center of the circle is on one of the diagonals of the triangulation. So the minimum number of obtuse triangles is \\(2001 - 2 = 1999\\).</p>",
+      "answer": "1999"
+    },
+    "10": {
+      "problem": "<p>Bessie the cow is trying to navigate her way through a field. She can travel only from lattice point to adjacent lattice point, can turn only at lattice points, and can travel only to the east or north. (A lattice point is a point whose coordinates are both integers.) \\((0,0)\\) is the southwest corner of the field. \\((5,5)\\) is the northeast corner of the field. Due to large rocks, Bessie is unable to walk on the points \\((1,1)\\), \\((2,3)\\), or \\((3,2)\\). How many ways are there for Bessie to travel from \\((0,0)\\) to \\((5,5)\\) under these constraints?</p>",
+      "solutions": "<p>In the figure, each point is labeled with the number of ways to reach that point. The numbers are successively computed as follows: The point \\((0,0)\\) can trivially be reached in 1 way. When Bessie reaches any subsequent point \\((x,y)\\) (other than a rock), she can arrive either via a northward or an eastward step, so the number of ways she can reach that point equals the number of ways of reaching \\((x-1,y)\\) plus the number of ways of reaching \\((x,y-1)\\). By iterating this calculation, we eventually find that \\((5,5)\\) can be reached in 32 ways.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2003_HMMT_February_General_1/10-fig1.png\" width=\"329\" alt=\"\"></p>",
+      "answer": "32"
+    }
+  }
+}

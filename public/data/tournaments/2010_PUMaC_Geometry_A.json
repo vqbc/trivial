@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry A",
+  "year": 2010,
+  "name": "Geometry A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2010_GeometryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>As in the following diagram, square \\(ABCD\\) and square \\(CEFG\\) are placed side by side (i.e. \\(C\\) is between \\(B\\) and \\(E\\) and \\(G\\) is between \\(C\\) and \\(D\\)). If \\(CE = 14\\), \\(AB &gt; 14\\), compute the minimal area of \\(\\triangle AEG\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_A/1-fig1.png\" width=\"232\" alt=\"\"></p>",
+      "solutions": "<p>Connect \\(AC\\). Note that two triangles \\(AEG\\) and \\(CEG\\) share same base and have equal height. So the area of \\(\\triangle AEG\\) is equal to area of \\(\\triangle CEG = 14 \\times 14/2 = 98\\).</p>",
+      "answer": "98"
+    },
+    "2": {
+      "problem": "<p>In a rectangular plot of land, a man walks in a very peculiar fashion. Labeling the corners \\(ABCD\\), he starts at \\(A\\) and walks to \\(C\\). Then, he walks to the midpoint of side \\(AD\\), say \\(A_1\\). Then, he walks to the midpoint of side \\(CD\\) say \\(C_1\\), and then the midpoint of \\(A_1D\\) which is \\(A_2\\). He continues in this fashion, indefinitely. The total length of his path if \\(AB = 5\\) and \\(BC = 12\\) is of the form \\(a + b\\sqrt{c}\\). Find \\(\\frac{abc}{4}\\).</p>",
+      "solutions": "<p>\\(AC + A_1C = 13 + \\sqrt{61}\\). Hence total length is \\((1 + 2^{-1} + 2^{-2} + \\cdots)(13 + \\sqrt{61}) = 26 + 2\\sqrt{61}\\).</p>",
+      "answer": "793"
+    },
+    "3": {
+      "problem": "<p>Triangle \\(ABC\\) has \\(AB = 4\\), \\(AC = 5\\), and \\(BC = 6\\). An angle bisector is drawn from angle \\(A\\), and meets \\(BC\\) at \\(M\\). What is the nearest integer to \\(100\\frac{AM}{CM}\\)?</p>",
+      "solutions": "<p>By Angle-Bisector Theorem, \\(BM:CM = AB:AC = 4:5\\), hence \\(BM = 8/3\\), \\(CM = 10/3\\). By Angle-Bisector Length Formula, \\(AM = \\sqrt{AB \\cdot AC - BM \\cdot CM} = 10/3\\). Hence \\(AM/CM = 1\\).</p>",
+      "answer": "100"
+    },
+    "4": {
+      "problem": "<p>In regular hexagon \\(ABCDEF\\), \\(AC\\), \\(CE\\) are two diagonals. Points \\(M\\), \\(N\\) are on \\(AC\\), \\(CE\\) respectively and satisfy \\(AC:AM = CE:CN = r\\). Suppose \\(B, M, N\\) are collinear, find \\(100r^2\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_A/4-fig1.png\" width=\"282\" alt=\"\"></p>",
+      "solutions": "<p>Let the side length of hexagon be 1. Extend \\(NC\\) and \\(AB\\) to intersect at some point \\(G\\). Then \\(AB = 1\\), \\(BG = 2\\), \\(GC = \\sqrt{3}\\), let \\(CN = x\\). We use \\([XYZ]\\) to denote area of triangle \\(XYZ\\). Then \\[[BCG]:[BCN] = CG:CN = \\sqrt{3}:x \\qquad [BAN]:[BGN] = BA:BG = 1:2\\]</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_A/4-fig2.png\" width=\"255\" alt=\"\"></p><p>Consequently, \\[AM:CM = [BCN]:[BAN] = \\frac{\\sqrt{3}+x}{2} : x = \\frac{\\sqrt{3}+x}{2x}.\\] By condition, \\(AM:AC = CN:CE\\), which translates to \\[\\frac{\\sqrt{3}+x}{\\sqrt{3}+3x} = \\frac{x}{\\sqrt{3}}.\\] Solve for \\(x\\), the only positive solution is \\(1\\). Hence \\(r = CE/CN = \\sqrt{3}/1 = \\sqrt{3}\\).</p>",
+      "answer": "300"
+    },
+    "5": {
+      "problem": "<p>A cuboctahedron is a solid with 6 square faces and 8 equilateral triangle faces, with each edge adjacent to both a square and a triangle (see picture). Suppose the ratio of the volume of an octahedron to a cuboctahedron with the same side length is \\(r\\). Find \\(100r^2\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_A/5-fig1.png\" width=\"212\" alt=\"\"></p>",
+      "solutions": "<p>A cuboctahedron is obtained by chopping off 8 corner tetrahedra of a cube. So volume of cuboctahedron of side length 1 is \\((\\sqrt{2})^3 - 8 \\times \\frac{1}{6}\\left(\\frac{\\sqrt{2}}{2}\\right)^3 = \\frac{5}{3}\\sqrt{2}\\). On the other hand, volume of a regular octahedron is \\(1^2 \\times \\frac{1}{\\sqrt{2}} \\times \\frac{1}{3} \\times 2 = \\frac{\\sqrt{2}}{3}\\). So the ratio is \\(1:5\\).</p>",
+      "answer": "4"
+    },
+    "6": {
+      "problem": "<p>In the following diagram, a semicircle is folded along a chord \\(AN\\) and intersects its diameter \\(MN\\) at \\(B\\). Given that \\(MB:BN = 2:3\\) and \\(MN = 10\\). If \\(AN = x\\), find \\(x^2\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_A/6-fig1.png\" width=\"243\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(C\\) be symmetry point of \\(B\\) w.r.t. \\(AN\\), then \\(C\\) is on arc \\(AN\\) with \\(CN = BN = 6\\). Then \\(MC = 8\\). Suppose \\(AN = x\\), then \\(AM = \\sqrt{10^2 - x^2}\\). Also, by symmetry, \\(AM = AC\\).</p><p>Apply Ptolemy’s Theorem on cyclic quadrilateral \\(AMNC\\) we get: \\[AM \\cdot CN + MN \\cdot AC = AN \\cdot MC\\] \\[\\Rightarrow 6\\sqrt{10^2-x^2} + 10\\sqrt{10^2-x^2} = 8x\\]</p><p>Solve for \\(x\\) we get \\(x = 4\\sqrt{5}\\).</p>",
+      "answer": "80"
+    },
+    "7": {
+      "problem": "<p>Square \\(ABCD\\) is divided into four rectangles by \\(EF\\) and \\(GH\\). \\(EF\\) is parallel to \\(AB\\) and \\(GH\\) parallel to \\(BC\\). \\(\\angle BAF = 18^\\circ\\). \\(EF\\) and \\(GH\\) meet at point \\(P\\). The area of rectangle \\(PFCH\\) is twice that of rectangle \\(AGPE\\). Given that the value of \\(\\angle FAH\\) in degrees is \\(x\\), find the nearest integer to \\(x\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_A/7-fig1.png\" width=\"159\" alt=\"\"></p>",
+      "solutions": "<p>Let side length of square be 1. Let \\(AG = x\\), \\(AE = y\\). Then \\((1-x)(1-y) = 2xy \\Rightarrow x+y = 1-xy\\). There are two ways to proceed from here.</p><p><b>Analytic Method.</b> We have \\(\\tan\\angle HAD = x\\), \\(\\tan\\angle FAB = y\\), by compound angle formula \\[\\tan(\\angle HAD+\\angle FAB) = \\frac{x+y}{1-xy} = 1,\\] which implies that \\(\\angle HAD+\\angle FAB = 45^\\circ\\), i.e. \\(\\angle HAF=45^\\circ\\).</p><p><b>Geometric Solution.</b> Rotate \\(\\triangle ABF\\) 90 degrees counterclockwise to \\(\\triangle ADM\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_A/7-fig2.png\" width=\"202\" alt=\"\"></p><p>We inteprete the LHS and RHS of equation \\(x+y=1-xy\\) as follow: LHS is twice the sum of areas of \\(\\triangle ABF\\) and \\(\\triangle ADH\\), which is the area of \\(\\triangle AHM\\); RHS is area of pentagon \\(ABFHD\\), which is equal to area of quadrilateral \\(AFHM\\). Therefore, \\(\\triangle AFH\\) and \\(\\triangle AHM\\) have equal area. Also since \\(AF=AM\\), \\(AH=AH\\), the two triangles must be congruent, which implies \\(\\angle FAH=45^\\circ\\).</p>",
+      "answer": "45"
+    },
+    "8": {
+      "problem": "<p>There is a point source of light in an empty universe. What is the minimum number of solid balls (of any size) one must place in space so that any light ray emanating from the light source intersects at least one ball?</p>",
+      "solutions": "<p>It is easy to see that 3 is not enough. Since suppose we regard the plane passing through light source and parallel to the triangle formed by centers of three balls as equatorial plane, then all high-lattitude light rays cannot be blocked.</p><p>To show 4 is enough, consider a regular tetrahedron \\(ABCD\\) with light source \\(O\\) at center. There exist four infinite cones containing tetrahedra \\(OABC\\), \\(OABD\\), \\(OACD\\), \\(OBCD\\). Any inscribed ball in a cone will block all light rays in that cone. Choose four non-intersecting balls inscribed in the four cones will give us the solution. The non-intersecting condition can be met since the four cones are infinite, and we can stipulate the radii of 4 balls to be drastically different. To be precise, for an inscribed ball with radius \\(R\\), there exists \\(\\alpha\\) and \\(\\beta\\) such that the ball lies entirely in the interior of the spherical shell centered at origin with inner radius \\(\\alpha R\\) and outer radius \\(\\beta R\\). Then we choose the fall balls with radius \\(R, \\alpha\\beta^{-1}R, \\alpha^2\\beta^{-2}R, \\alpha^3\\beta^{-3}R\\). This way, the four balls will not intersect since they lie in four different spherical shell regions.</p>",
+      "answer": "4"
+    }
+  }
+}

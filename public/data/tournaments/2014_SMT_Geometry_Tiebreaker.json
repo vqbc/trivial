@@ -1,0 +1,23 @@
+{
+  "test": "SMT Geometry Tiebreaker",
+  "year": 2014,
+  "name": "Geometry Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2014/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A square \\(ABCD\\) with side length \\(1\\) is inscribed in a circle. A smaller square lies in the circle with two vertices lying on segment \\(\\overline{AB}\\) and the other two vertices lying on minor arc \\(\\overgroup{AB}\\). Compute the area of the smaller square.</p>",
+      "solutions": "<p>A simple sketch reveals that the side length of the smaller square, \\(x\\), must satisfy: \\[\\left(\\frac{x}{2}\\right)^2 + \\left(x + \\frac{1}{2}\\right)^2 = \\left(\\frac{1}{\\sqrt{2}}\\right)^2\\] by the Pythagorean theorem. Thus the area is \\(x^2 = \\boxed{\\frac{1}{25}}\\).</p>",
+      "answer": "\\frac{1}{25}"
+    },
+    "2": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with sides \\(AB = 19\\), \\(BC = 21\\) and \\(AC = 20\\). Let \\(\\omega\\) be the incircle of \\(ABC\\) with center \\(I\\). Extend \\(BI\\) so that it intersects \\(AC\\) at \\(E\\). If \\(\\omega\\) is tangent to \\(AC\\) at the point \\(D\\), then find the length of \\(DE\\).</p>",
+      "solutions": "<p>Since \\(I\\) is the incenter, we know that \\(BE\\) is the angle bisector of \\(\\angle ABC\\). By the angle bisector theorem, \\(\\frac{19}{21} = \\frac{AB}{AC} = \\frac{AE}{EC}\\). Plus we have the fact that \\(AE + CE = AC = 20\\), so \\(AE = \\frac{19}{2}\\).</p><p>Because \\(D\\) is the point of tangency, we also know that \\(AD = s - BC\\), where \\(s = \\frac{AB + BC + AC}{2}\\). Note though that this means that \\(s = 30\\). This implies that \\(AD = 9\\). Finally, \\(DE = AE - AD = \\frac{19}{2} - 9 = \\boxed{\\frac{1}{2}}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "3": {
+      "problem": "<p>Circle \\(O\\) has three chords, \\(AD\\), \\(DF\\), and \\(EF\\). Point \\(E\\) lies along the arc \\(AD\\). Point \\(C\\) is the intersection of chords \\(AD\\) and \\(EF\\). Point \\(B\\) lies on segment \\(AC\\) such that \\(EB = EC = 8\\). Given \\(AB = 6\\), \\(BC = 10\\), and \\(CD = 9\\), find \\(DF\\). <img class=\"latexcenter\" src=\"/data/tournaments/2014_SMT_Geometry_Tiebreaker/3-fig1.png\" width=\"266\" alt=\"\"></p>",
+      "solutions": "<p>Using power of a point, \\(AC \\cdot CD = EC \\cdot CF\\) so \\(CF = 16 \\cdot \\frac{9}{8} = 18\\). Using the Law of Cosines we can find the measure of angle \\(ECB\\), which is congruent to angle \\(DCF\\), \\(8^2 = 8^2 + 10^2 - 2 \\cdot 8 \\cdot 10 \\cos\\theta\\). Hence \\(\\cos\\theta = 5/8\\) and \\(DF^2 = 9^2 + 18^2 - 2 \\cdot 9 \\cdot 18 \\cos\\theta = 405/2\\) yielding the answer \\(DF = \\boxed{9\\sqrt{10}/2}\\).</p>",
+      "answer": "\\frac{9\\sqrt{10}}{2}"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Algebra B",
+  "year": 2021,
+  "name": "Algebra B",
+  "url": "https://pumac.princeton.edu/s/PUMaC_2021_Algebra_B.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(x, y\\) be distinct positive real numbers satisfying \\[\\frac{1}{\\sqrt{x+y} - \\sqrt{x-y}} + \\frac{1}{\\sqrt{x+y} + \\sqrt{x-y}} = \\frac{x}{\\sqrt{y^3}}.\\]</p><p>If \\(\\frac{x}{y} = \\frac{a+\\sqrt{b}}{c}\\) for positive integers \\(a, b, c\\) with \\(\\gcd(a,c)=1\\), find \\(a+b+c\\).</p>",
+      "solutions": "<p>Note that the given equation reduces to \\(\\frac{\\sqrt{x+y}}{y} = \\frac{x}{\\sqrt{y^3}}\\). Multiplying both sides by \\(\\sqrt{y}\\) and defining \\(t = \\frac{x}{y}\\), we find \\(\\sqrt{t+1} = t \\implies t^2 - t - 1 = 0\\). As \\(t &gt; 0\\), we have \\(t = \\frac{1+\\sqrt{5}}{2}\\), and our answer is \\(1+5+2=8\\).</p><p>Note that equality holds when \\(y=1\\), \\(x=\\frac{1+\\sqrt{5}}{2}\\).</p>",
+      "answer": "8"
+    },
+    "2": {
+      "problem": "<p>Kris is asked to compute \\(\\log_{10}(x^y)\\), where \\(y\\) is a positive integer and \\(x\\) is a positive real number. However, they misread this as \\((\\log_{10} x)^y\\), and compute this value. Despite the reading error, Kris still got the right answer. Given that \\(x &gt; 10^{1.5}\\), determine the largest possible value of \\(y\\).</p>",
+      "solutions": "<p>Let \\(u = \\log_{10} x\\). Then, we know from logarithm properties that we’re looking for \\(yu\\), and Kris computed \\(u^y\\) instead. For these to be equal, we have that \\(u = y^{\\frac{1}{y-1}}\\). We’re thus looking for the largest \\(y\\) such that \\(y^{\\frac{1}{y-1}} &gt; 1.1\\), or that \\(y &gt; 1.5^{y-1}\\). Trying some small values of \\(y\\), note that \\(y=5\\) yields that \\(5 &lt; (2.25)^2 = 5.0625\\), but \\(4 &gt; 1.5^3 = 3.375\\), so our desired answer is 4.</p>",
+      "answer": "4"
+    },
+    "3": {
+      "problem": "<p>Compute the sum of all real numbers \\(x\\) which satisfy the following equation \\[\\frac{8^x - 19 \\cdot 4^x}{16 - 25 \\cdot 2^x} = 2.\\]</p>",
+      "solutions": "<p>Let \\(y = 2^x\\). Then the equation becomes \\(\\frac{y^3 - 19y^2}{16 - 25y} = 2\\), which gives us \\(y^3 - 19y^2 + 50y - 32 = 0\\). All roots of this polynomial must divide 32, so by testing the divisors of 32 we find that \\(y^2 - 19y^2 + 50y - 32 = (y-1)(y-2)(y-16)\\), so that \\(x = 0, 1\\), or \\(4\\). Thus the desired sum is \\(0+1+4=5\\).</p>",
+      "answer": "5"
+    },
+    "4": {
+      "problem": "<p>For a bijective function \\(g : \\mathbb{R} \\to \\mathbb{R}\\), we say that a function \\(f : \\mathbb{R} \\to \\mathbb{R}\\) is its <i>superinverse</i> if it satisfies the following identity \\((f \\circ g)(x) = g^{-1}(x)\\), where \\(g^{-1}\\) is the inverse of \\(g\\). Given \\(g(x) = x^3 + 9x^2 + 27x + 81\\) and \\(f\\) is its superinverse, find \\(|f(-289)|\\).</p>",
+      "solutions": "<p>Applying each side of the identity to \\(g^{-1}\\) gives \\(f \\circ g \\circ g^{-1} = g^{-1} \\circ g^{-1}\\). Noting that \\(g \\circ g^{-1}\\) is just the identity function, we have \\(f = g^{-1} \\circ g^{-1}\\). Computing from \\(g(x) = (x+3)^3+54\\), we have \\(g^{-1}(x) = (x-54)^{\\frac{1}{3}}-3\\). Since \\(g^{-1}(-289)=-10\\), and \\(g^{-1}(-10)=-7\\), \\(|f(-289)|=7\\).</p>",
+      "answer": "7"
+    },
+    "5": {
+      "problem": "<p>Let \\(f(x) = 1+2x+3x^2+4x^3+5x^4\\) and let \\(\\zeta = e^{2\\pi i/5} = \\cos\\frac{2\\pi}{5}+i\\sin\\frac{2\\pi}{5}\\). Find the value of the following expression: \\[f(\\zeta)f(\\zeta^2)f(\\zeta^3)f(\\zeta^4).\\]</p>",
+      "solutions": "<p>Write this as the product \\[f(x) = \\frac{(x^5-1)+(x^5-x)+\\ldots+(x^5-x^4)}{x-1} = \\frac{5x^6-6x^5+1}{(x-1)^2},\\] which for these terms will be equal to \\(\\frac{5}{(x-1)}\\). Thus taking this for each of our four multiplicands, the denominator becomes \\((1-\\zeta)(1-\\zeta^2)(1-\\zeta^3)(1-\\zeta^4) = 5\\), so our answer is 125.</p>",
+      "answer": "125"
+    },
+    "6": {
+      "problem": "<p>The roots of a monic cubic polynomial \\(p\\) are positive real numbers forming a geometric sequence. Suppose that the sum of the roots is equal to 10. Under these conditions, the largest possible value of \\(|p(-1)|\\) can be written as \\(\\frac{m}{n}\\), where \\(m, n\\) are relatively prime integers. Find \\(m+n\\).</p>",
+      "solutions": "<p>Because the cubic has roots that form a geometric sequence, we may write the cubic in the form \\(p(x) = (x-d)(x-dr)(x-\\frac{d}{r})\\), where \\(d, r\\) are positive numbers. We are given that \\(d+dr+\\frac{d}{r}=10\\), and we want to find the maximum of \\(|p(-1)|\\). In other words, we want to find the maximum value of \\(1+d+dr+\\frac{d}{r}+d^2(1+r+\\frac{1}{r})+d^3\\).</p><p>But given that \\(d+dr+\\frac{d}{r}=10\\), notice that we can write this as \\(d^3+10d+10+1 = d^3+10d+11\\). Notice in fact that we can write \\(d^3+10d=(d^2+10)d\\), both of which are increasing with \\(d\\). Therefore, it suffices for us to find the largest possible value of \\(d\\), as this will then give us the largest possible value of \\(|p(-1)|\\).</p><p>However, given that \\(d+dr+\\frac{d}{r}=10\\), we see that \\(d\\) is maximized when \\(1+r+\\frac{1}{r}\\) is minimized. But \\(r+\\frac{1}{r} \\ge 2\\); thus, we have that \\(d=\\frac{10}{3}\\) maximizes \\(p(-1)\\). Substituting this value in, we get our maximal value for \\(|p(-1)|\\) as \\(\\frac{1000}{27} + \\frac{100}{3} + 11 = \\frac{1000+900+297}{27} = \\frac{2197}{27}\\). Our sum for \\(m+n\\) is thus 2224.</p>",
+      "answer": "2224"
+    },
+    "7": {
+      "problem": "<p>Consider the sum \\[S = \\sum_{j=1}^{2021} \\left| \\sin \\frac{2\\pi j}{2021} \\right|.\\]</p><p>The value of \\(S\\) can be written as \\(\\tan(\\frac{c\\pi}{d})\\) for some relatively prime positive integers \\(c, d\\), satisfying \\(2c &lt; d\\). Find the value of \\(c+d\\).</p>",
+      "solutions": "<p>We know that the terms are positive for \\(j = 1, 2, \\ldots, 1010\\), and that they are negative for \\(j = 1011, 1012, \\ldots, 2020\\), and \\(0\\) for \\(j = 2021\\). Furthermore, notice that \\(\\sin\\frac{2\\pi j}{2021} = -\\sin\\frac{2\\pi(2021-j)}{2021}\\), so therefore this sum can be written as \\(2\\sum_{j=1}^{1010} \\sin\\frac{2\\pi j}{2021}\\).</p><p>From here, we can think about this as the imaginary part of the sum of exponentials \\(2\\sum_{j=1}^{1010} e^{\\frac{2i\\pi j}{2021}}\\).</p><p>From the formula for a geometric series, we may write this as \\(2\\frac{e^{\\frac{2022i\\pi}{2021}}-e^{\\frac{2i\\pi}{2021}}}{e^{\\frac{2i\\pi}{2021}}-1}\\). But recall that \\(e^{i\\pi}=-1\\), meaning that this is just equal to \\(2\\frac{-e^{\\frac{i\\pi}{2021}}-e^{\\frac{2i\\pi}{2021}}}{e^{\\frac{2i\\pi}{2021}}-1}\\). From here, we may further simplify this as \\(2\\frac{-e^{\\frac{i\\pi}{2021}}}{e^{\\frac{i\\pi}{2021}}-1}\\).</p><p>Finally, observe that if we add 1 to this, we will not change the imaginary part of this value. But adding one yields us with the fraction \\(\\frac{-e^{\\frac{i\\pi}{2021}}+1}{e^{\\frac{i\\pi}{2021}}-1} = \\cot(\\frac{\\pi}{4042}) = \\tan(\\frac{\\pi}{2}-\\frac{\\pi}{4042}) = \\tan(\\frac{1010\\pi}{2021})\\).</p><p>Our answer is thus \\(1010+2021=3031\\).</p>",
+      "answer": "3031"
+    },
+    "8": {
+      "problem": "<p>Let \\(f\\) be a polynomial. We say that a complex number \\(p\\) is a <i>double attractor</i> if there exists a polynomial \\(h(x)\\) so that \\(f(x) - f(p) = h(x)(x-p)^2\\) for all \\(x \\in \\mathbb{R}\\). Now, consider the polynomial \\[f(x) = 12x^5 - 15x^4 - 40x^3 + 540x^2 - 2160x + 1,\\]</p><p>and suppose that its double attractors are \\(a_1, a_2, \\ldots, a_n\\). If the sum \\(\\sum_{i=1}^{n} |a_i|\\) can be written as \\(\\sqrt{a} + \\sqrt{b}\\), where \\(a, b\\) are positive integers, find \\(a+b\\).</p>",
+      "solutions": "<p>Let \\(f(x) = 12x^5 - 15x^4 - 40x^3 + 540x^2 - 2160x + 1\\). Notice that \\(f(x) - f(p) = h(x)(x-p)^2\\) if and only if \\(f(x+p) - f(p) = h(x+p)x^2\\). But notice that \\(f(x+p) - f(p)\\) is also a polynomial in \\(x\\) that equals \\(0\\) when \\(x=0\\). This is divisible by \\(x^2\\) if and only if the coefficient of \\(x\\) is \\(0\\). But notice that, for \\(p\\) to satisfy this, we see that the \\(x\\) coefficient of \\(f(x+p) - f(p)\\) is the same as that of \\(f(x+p)\\), which is just \\(60p^4 - 60p^3 - 120p^2 + 1080p - 2160\\). We will now figure out when this is \\(0\\). We re-write this, factoring out the 60, as \\(p^4 - p^3 - 2p^2 + 18p - 36\\). Notice that this has integer solutions \\(2, -3\\), and factoring yields \\((p-2)(p+3)(p^2-2p+6)\\). This yields two more solutions \\(1+i\\sqrt{5}, 1-i\\sqrt{5}\\). Our final answer is thus just \\(2+3+2\\sqrt{6} = 5+2\\sqrt{6} = \\sqrt{25}+\\sqrt{24}\\). Hence, we see that yields 49, as desired.</p>",
+      "answer": "49"
+    }
+  }
+}

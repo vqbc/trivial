@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 1",
+  "year": 2001,
+  "name": "General Test, First Half",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2001/feb/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the last digit of \\(17^{103} + 5\\)?</p>",
+      "solutions": "<p>Let \\(\\langle N \\rangle\\) be the last digit of \\(N\\). \\(\\langle 17^2 \\rangle = 9\\), \\(\\langle 17^3 \\rangle = 3\\), \\(\\langle 17^4 \\rangle = 1\\), and \\(\\langle 17^5 \\rangle = 7\\). Since this pattern keeps on repeating itself, \\(\\langle 17^{4N} \\rangle = 1\\) for any integer \\(N\\). Thus \\(\\langle 17^{2 \\cdot 25} \\rangle = \\langle 17^{100} \\rangle = 1\\), so \\(\\langle 17^{103} \\rangle = 3\\), and \\(\\langle 17^{103} + 5 \\rangle = \\langle 3 + 5 \\rangle = \\boxed{8}\\).</p>",
+      "answer": "8"
+    },
+    "2": {
+      "problem": "<p>Find \\(x + y\\), given that \\(x^2 - y^2 = 10\\) and \\(x - y = 2\\).</p>",
+      "solutions": "<p>\\(x^2 - y^2 = (x - y)(x + y) = 2(x + y) = 10\\), so \\(x + y = \\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "3": {
+      "problem": "<p>There are some red and blue marbles in a box. We are told that there are twelve more red marbles than blue marbles, and we experimentally determine that when we pick a marble randomly we get a blue marble one quarter of the time. How many marbles are there in the box?</p>",
+      "solutions": "<p>Call the number of blue marbles \\(x\\), so the number of red marbles is \\(x + 12\\) and the total number of marbles is \\(2x + 12\\). The probability of picking a red marble is \\(\\frac{x}{2x+12} = \\frac14 \\Rightarrow x = 6\\), so \\(2x + 12 = \\boxed{24}\\).</p>",
+      "answer": "24"
+    },
+    "4": {
+      "problem": "<p>Find \\(a + b + c + d + e\\) if \\[\\begin{aligned}\n3a + 2b + 4d &amp;= 10, \\\\\n6a + 5b + 4c + 3d + 2e &amp;= 8, \\\\\na + b + 2c + 5e &amp;= 3, \\\\\n2c + 3d + 3e &amp;= 4, \\text{ and} \\\\\na + 2b + 3c + d &amp;= 7.\n\\end{aligned}\\]</p>",
+      "solutions": "<p>Adding the first, third, and fifth equations, we get \\(5a + 5b + 5c + 5d + 5e = 10 + 3 + 7 \\Rightarrow a + b + c + d + e = \\boxed{4}\\).</p>",
+      "answer": "4"
+    },
+    "5": {
+      "problem": "<p>What is the sum of the coefficients of the expansion \\((x + 2y - 1)^6\\)?</p>",
+      "solutions": "<p>The sum of the coefficients of a polynomial is that polynomial evaluated at 1, which for the question at hand is \\((1 + 2 \\cdot 1 - 1)^6 = 2^6 = \\boxed{64}\\).</p>",
+      "answer": "64"
+    },
+    "6": {
+      "problem": "<p>A right triangle has a hypotenuse of length 2, and one of its legs has length 1. The altitude to its hypotenuse is drawn. What is the area of the rectangle whose diagonal is this altitude?</p>",
+      "solutions": "<p>Call the triangle \\(ABC\\), with \\(AC = 2\\) and \\(BC = 1\\). By the Pythagorean theorem, \\(AB = \\sqrt3\\). Call the point at which the altitude intersects the hypotenuse \\(D\\). Let \\(E \\ne B\\) be the vertex of the rectangle on \\(AB\\) and \\(F \\ne B\\) be the vertex of the rectangle on \\(BC\\). Triangle \\(BDC\\) is similar to triangle \\(ABC\\), so \\(BD = \\frac{\\sqrt3}{2}\\). Triangle \\(DBF\\) is similar to triangle \\(ABC\\), so \\(DF = \\frac{\\sqrt3}{4}\\) and \\(BF = \\frac34\\). The area of the rectangle is thus \\(\\frac{\\sqrt3}{4} \\cdot \\frac34 = \\boxed{\\frac{3\\sqrt3}{16}}\\).</p>",
+      "answer": "\\frac{3\\sqrt{3}}{16}"
+    },
+    "7": {
+      "problem": "<p>Find \\((x+1)(x^2+1)(x^4+1)(x^8+1)\\cdots\\), where \\(|x| &lt; 1\\).</p>",
+      "solutions": "<p>Let \\(S = (x+1)(x^2+1)(x^4+1)(x^8+1)\\cdots = 1 + x + x^2 + x^3 + \\cdots\\). Since \\(xS = x + x^2 + x^3 + x^4 + \\cdots\\), we have \\((1-x)S = 1\\), so \\(S = \\boxed{\\frac{1}{1-x}}\\).</p>",
+      "answer": "\\frac{1}{1-x}"
+    },
+    "8": {
+      "problem": "<p>How many times does 24 divide into \\(100!\\)?</p>",
+      "solutions": "<p>We first determine the number of times 2 and 3 divide into \\(100! = 1 \\cdot 2 \\cdot 3 \\cdots 100\\). Let \\(\\langle N \\rangle_n\\) be the number of times \\(n\\) divides into \\(N\\) (i.e. we want to find \\(\\langle 100! \\rangle_{24}\\)). Since 2 only divides into even integers, \\(\\langle 100! \\rangle_2 = \\langle 2 \\cdot 4 \\cdot 6 \\cdots 100 \\rangle\\). Factoring out 2 once from each of these multiples, we get that \\(\\langle 100! \\rangle_2 = \\langle 2^{50} \\cdot 1 \\cdot 2 \\cdot 3 \\cdots 50 \\rangle_2\\). Repeating this process, we find that \\(\\langle 100! \\rangle_2 = \\langle 20^{50+25+12+6+3+1} \\cdot 1 \\rangle_2 = 97\\). Similarly, \\(\\langle 100! \\rangle_3 = \\langle 3^{33+11+3+1} \\rangle_3 = 48\\). Now \\(24 = 2^3 \\cdot 3\\), so for each factor of 24 in \\(100!\\) there needs to be three multiples of 2 and one multiple of 3 in \\(100!\\). Thus \\(\\langle 100! \\rangle_{24} = ([\\langle 100! \\rangle_2 / 3] + \\langle 100! \\rangle_3) = \\boxed{32}\\), where \\([N]\\) is the greatest integer less than or equal to \\(N\\).</p>",
+      "answer": "32"
+    },
+    "9": {
+      "problem": "<p>Boris was given a Connect Four game set for his birthday, but his color-blindness makes it hard to play the game. Still, he enjoys the shapes he can make by dropping checkers into the set. If the number of shapes possible modulo (horizontal) flips about the vertical axis of symmetry is expressed as \\(9(1+2+\\cdots+n)\\), find \\(n\\). (Note: the board is a vertical grid with seven columns and eight rows. A checker is placed into the grid by dropping it from the top of a column, and it falls until it hits either the bottom of the grid or another checker already in that column. Also, \\(9(1+2+\\cdots+n)\\) is the number of shapes possible, with two shapes that are horizontal flips of each other counted as one. In other words, the shape that consists solely of 3 checkers in the rightmost row and the shape that consists solely of 3 checkers in the leftmost row are to be considered the same shape.)</p>",
+      "solutions": "<p>There are \\(9^7\\) total shapes possible, since each of the 7 columns can contain anywhere from 0 to 8 checkers. The number of shapes symmetric with respect to a horizontal flip is the number of shapes of the leftmost four columns, since the configuration of these four columns uniquely determines the configuration of the remaining columns if it is known the shape is symmetric: \\(9^4\\). Now we know there are \\(9^7 - 9^4\\) non-symmetric shapes, so there are \\(\\frac{9^7-9^4}{2}\\) non-symmetric shapes modulo flips. Thus the total number of shapes modulo flips is \\(9^4 + \\frac{9^7-9^4}{2} = 9^4\\left(1 + \\frac{9^3-1}{2}\\right) = 9^4\\left(\\frac{9^3+1}{2}\\right) = \\frac{3^8(3^6-1)}{2} = 9\\frac{3^6(3^6+1)}{2} = 9(1+2+\\cdots+3^6)\\), so \\(n = 3^6 = \\boxed{729}\\).</p>",
+      "answer": "729"
+    },
+    "10": {
+      "problem": "<p>Find the 6-digit number beginning and ending in the digit 2 that is the product of three consecutive even integers.</p>",
+      "solutions": "<p>Because the last digit of the product is 2, none of the three consecutive even integers end in 0. Thus they must end in 2, 4, 6 or 4, 6, 8, so they must end in 4, 6, 8 since \\(2 \\cdot 4 \\cdot 6\\) does not end in 2. Call the middle integer \\(n\\). Then the product is \\((n-2)n(n+2) = n^3 - 4n\\), so \\(n &gt; \\sqrt[3]{200000} = \\sqrt[3]{200 \\cdot 10^3} \\approx 60\\), but clearly \\(n &lt; \\sqrt[3]{300000} = \\sqrt[3]{300 \\cdot 10^3} &lt; 70\\). Thus \\(n = 66\\), and the product is \\(66^3 - 4 \\cdot 66 = \\boxed{287232}\\).</p>",
+      "answer": "287232"
+    }
+  }
+}

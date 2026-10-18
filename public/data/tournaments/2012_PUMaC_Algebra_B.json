@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Algebra B",
+  "year": 2012,
+  "name": "Algebra B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2012_AlgebraB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the largest \\(n\\) such that the last nonzero digit of \\(n!\\) is \\(1\\).</p>",
+      "solutions": "<p>For \\(n &gt; 2\\) if we express \\(n! = 2^i 5^j m\\) where \\(i, j, m \\in \\mathbb{N}\\) such that \\(m\\) is not divisible by \\(2\\) or \\(5\\), we can easily observe that \\(i &gt; j\\). Thus, we can write \\(n! = 2^{i-j}10^j m\\) which means that the last non-zero digit of \\(n!\\) is always going to be an even number. Thus, the only possible values for \\(n\\) are \\(0\\) and \\(1\\), which both give the last non-zero digit equal to \\(1\\). Because \\(1\\) is greater, the final answer is \\(1\\).</p>",
+      "answer": "1"
+    },
+    "2": {
+      "problem": "<p>Define a sequence \\(a_n\\) such that \\(a_n = a_{n-1} - a_{n-2}\\). Let \\(a_1 = 6\\) and \\(a_2 = 5\\). Find \\[\\sum_{n=1}^{1000} a_n.\\]</p>",
+      "solutions": "<p>\\(a_1 = 6\\), \\(a_2 = 5\\), \\(a_3 = -1\\), \\(a_4 = -6\\), \\(a_5 = -5\\), \\(a_6 = 1\\), \\(a_7 = 6\\), \\(a_8 = 5\\), so the sequence starts to repeat itself. The sum of the first \\(6\\) terms is \\(0\\), so the sum of the first \\(996\\) terms is \\(0\\); thus, the sum of the first \\(1000\\) terms is \\(6 + 5 + (-1) + (-6) = 4\\).</p>",
+      "answer": "4"
+    },
+    "3": {
+      "problem": "<p>Evaluate \\(\\sqrt[3]{26 + 15\\sqrt{3}} + \\sqrt[3]{26 - 15\\sqrt{3}}\\).</p>",
+      "solutions": "<p>Let \\(x = \\sqrt[3]{26+15\\sqrt3}\\), \\(y = \\sqrt[3]{26-15\\sqrt3}\\). We are looking for \\(z = x+y\\). We can do this by cubing \\(x+y\\). \\[\\begin{aligned}\n(x+y)^3 &amp;= x^3 + 3x^2y + 3xy^2 + y^3 \\\\\n(x+y)^3 &amp;= 26+15\\sqrt3 + 26-15\\sqrt3 + 3\\sqrt[3]{26^2 - 3 \\cdot 15^2}(x+y) \\\\\n(x+y)^3 &amp;= 52 + 3\\sqrt[3]{1}(x+y) \\\\\nz^3 &amp;= 52+3z \\\\\nz^3 - 3z - 52 &amp;= 0 \\\\\n(z-4)(z^2+4z+13) &amp;= 0\n\\end{aligned}\\] Since \\(z^2+4z+13\\) has no real root, \\(z\\) has to equal \\(4\\).</p>",
+      "answer": "4"
+    },
+    "4": {
+      "problem": "<p>If \\(x\\), \\(y\\), and \\(z\\) are real numbers with \\[\\frac{x-y}{z} + \\frac{y-z}{x} + \\frac{z-x}{y} = 36,\\] find \\[2012 + \\frac{x-y}{z} \\cdot \\frac{y-z}{x} \\cdot \\frac{z-x}{y}.\\]</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n36 &amp;= \\frac{(x-y)xy + (y-z)yz + (z-x)xz}{xyz} \\\\\n&amp;= \\frac{(x-y)xy + y^2z - yz^2 + xz^2 - x^2z}{xyz} \\\\\n&amp;= \\frac{(x-y)xy - (x+y)(x-y)z + z^2(x-y)}{xyz} \\\\\n&amp;= \\frac{(x-y)(xy - xz - yz + z^2)}{xyz} \\\\\n&amp;= \\frac{(x-y)(y-z)(x-z)}{xyz} \\\\\n36 &amp;= -\\frac{(x-y)(y-z)(z-x)}{xyz}\n\\end{aligned}\\] \\[2012 + \\frac{(x-y)(y-z)(z-x)}{xyz} = 2012 - 36 = 1976\\]</p>",
+      "answer": "1976"
+    },
+    "5": {
+      "problem": "<p>Considering all numbers of the form \\(n = \\left\\lfloor \\frac{k^3}{2012} \\right\\rfloor\\), where \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x\\), and \\(k\\) ranges from \\(1\\) to \\(2012\\), how many of these \\(n\\)’s are distinct?</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n\\frac{(k+1)^3}{2012} - \\frac{k^3}{2012} &amp;= \\frac{3k^3+3k+1}{2012} \\\\\n\\frac{3k^3+3k+1}{2012} \\ge 1 &amp;\\iff 3k^2+3k+1 \\ge 2012 \\\\\n&amp;\\iff 3k^2+3k \\ge 2011 \\iff 3k^2+3k \\ge 2010 \\\\\n&amp;\\iff k^2+k \\ge 670 \\iff k \\ge 26\n\\end{aligned}\\] Thus, for \\(k\\) of at least \\(26\\), the difference between two consecutive fractions is at least \\(1\\), so the difference between their integer parts is also at least \\(1\\), so the numbers are different; in conclusion, for \\(k\\) between \\(26\\) and \\(2012\\), there are \\(1987\\) different numbers.</p><p>For \\(k\\) less than \\(26\\), the difference between two consecutive fractions is less than \\(1\\), so the integer parts of two consecutive fractions is at most \\(1\\). For \\(k=1\\), \\(\\left\\lfloor \\frac{k^3}{2012} \\right\\rfloor = 0\\), and for \\(k=25\\), \\(\\left\\lfloor \\frac{k^3}{2012} \\right\\rfloor = 7\\), so for \\(k\\) less than \\(26\\), there are \\(8\\) different numbers.</p><p>In the end, we get that for \\(k\\) ranging from \\(1\\) to \\(2012\\), there are \\(1995\\) different numbers in the sequence.</p>",
+      "answer": "1995"
+    },
+    "6": {
+      "problem": "<p>Compute \\[\\sum_{n=1}^{\\infty} \\frac{n+1}{n^2(n+2)^2}.\\]</p><p>Your answer in simplest form can be written as \\(a/b\\), where \\(a, b\\) are relatively-prime positive integers. Find \\(a+b\\).</p>",
+      "solutions": "<p>Let \\(K\\) be the result. \\[\\begin{aligned}\nK &amp;= \\sum_{n=1}^\\infty \\frac{n+1}{n^2(n+2)^2} \\\\\n4K + \\sum_{n=1}^\\infty \\frac{1}{(n+2)^2} &amp;= \\sum_{n=1}^\\infty \\frac{n^2+4n+4}{n^2(n+2)^2} \\\\\n4K - 1 - \\frac14 + \\sum_{n=1}^\\infty \\frac{1}{n^2} &amp;= \\sum_{n=1}^\\infty \\frac{(n+2)^2}{n^2(n+2)^2} \\\\\n4K - \\frac54 + \\sum_{n=1}^\\infty \\frac{1}{n^2} &amp;= \\sum_{n=1}^\\infty \\frac{1}{n^2} \\\\\n4K - \\frac54 &amp;= 0 \\\\\nK &amp;= \\frac{5}{16}\n\\end{aligned}\\] So \\(a+b = 5+16 = 21\\).</p>",
+      "answer": "21"
+    },
+    "7": {
+      "problem": "<p>Let \\(f\\) be a polynomial of degree \\(3\\) with integer coefficients such that \\(f(0) = 3\\) and \\(f(1) = 11\\). If \\(f\\) has exactly \\(2\\) integer roots, how many such polynomials \\(f\\) exist?</p>",
+      "solutions": "<p>The answer is \\(0\\), but the argument is more general: if \\(f(0)\\) and \\(f(1)\\) are odd, then we claim that \\(f\\) can’t have any integer roots.</p><p>Suppose \\(a\\) is an integer solution. Then \\(f(x) = (x-a)g(x)\\), and \\(g(x)\\) also has integer coefficients. So \\(f(0) = -ag(0)\\) and \\(f(1) = (1-a)g(1)\\), where \\(g(0)\\) and \\(g(1)\\) are also integers. Since either \\(a\\) or \\(1-a\\) is even, \\(f(0)\\) and \\(f(1)\\) can’t be both odd, as in the hypothesis, so \\(f\\) has no integer roots.</p>",
+      "answer": "0"
+    },
+    "8": {
+      "problem": "<p>Let \\(a_n\\) be a sequence such that \\(a_1 = 1\\) and \\(a_{n+1} = \\left\\lfloor a_n + \\sqrt{a_n} + \\frac{1}{2} \\right\\rfloor\\). What are the last four digits of \\(a_{2012}\\)?</p>",
+      "solutions": "<p>Computing some particular cases suggests that the function \\(f\\) is defined by the following: \\[a_n = 1 + \\left\\lfloor \\frac{n}{2} \\right\\rfloor \\left\\lfloor \\frac{n+1}{2} \\right\\rfloor,\\] for all natural numbers \\(n\\).</p><p>We will show this hypothesis is true by induction. We assume it’s true for \\(n\\) and prove it for \\(n+1\\).</p><p>If \\(n = 2m\\), then \\(a_n = 1+m^2\\). Thus, \\[\\begin{aligned}\na_{n+1} &amp;= \\left\\lfloor a_n + \\sqrt{a_n} + \\frac12 \\right\\rfloor = \\left\\lfloor m^2+1+\\sqrt{m^2+1}+\\frac12 \\right\\rfloor \\\\\n&amp;= m^2+1+m = 1+m(m+1) = 1 + \\left\\lfloor \\frac{n+1}{2} \\right\\rfloor \\left\\lfloor \\frac{n+2}{2} \\right\\rfloor\n\\end{aligned}\\]</p><p>If \\(n = 2m+1\\), then \\(a_n = 1+m(m+1)\\), thus \\[\\begin{aligned}\na_{n+1} &amp;= \\left\\lfloor 1+m(m+1)+\\sqrt{1+m(m+1)}+\\frac12 \\right\\rfloor = 1+m(m+1)+m+1 \\\\\n&amp;= 1+(m+1)^2 = 1 + \\left\\lfloor \\frac{n+1}{2} \\right\\rfloor \\left\\lfloor \\frac{n+2}{2} \\right\\rfloor\n\\end{aligned}\\]</p><p>The induction is complete, so that is the solution to the equation. In conclusion, \\(a_{2012} = 1 + \\left\\lfloor \\frac{2012}{2} \\right\\rfloor \\left\\lfloor \\frac{2013}{2} \\right\\rfloor = 1012037\\), so the answer is \\(2037\\).</p>",
+      "answer": "2037"
+    }
+  }
+}

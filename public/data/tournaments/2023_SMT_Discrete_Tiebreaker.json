@@ -1,0 +1,23 @@
+{
+  "test": "SMT Discrete Tiebreaker",
+  "year": 2023,
+  "name": "Discrete Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2023/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the smallest positive integer \\(n\\) such that there exists a prime \\(p\\) where \\(p\\) and \\(p + 10\\) both divide \\(n\\) and the sum of the digits of \\(n\\) is \\(p\\).</p>",
+      "solutions": "<p>First, we can rule out \\(p = 2, 5, 11, 17, 23, 29, 41, 47, \\ldots\\), because \\(p + 10\\) is divisible by 3 so the sum of the digits of \\(n\\) must also be divisible by 3. Note that for a given \\(p\\), the smallest \\(n\\) that satisfies the first part of our condition is \\(\\gcd(p, p + 10)\\). We check cases for \\(p = 3, 7, 13, 19, 31, 37\\) first. Note that \\(2023 = 7 \\cdot 17^2\\) works. We find that there is no \\(n\\) less than \\(\\boxed{2023}\\) that satisfies our conditions (there’s not much to check from 19 onwards and \\(41 \\cdot 51\\) is already greater than 2023).</p>",
+      "answer": "2023"
+    },
+    "2": {
+      "problem": "<p>Every cell in a \\(5 \\times 5\\) grid of paper is to be painted either red or white with equal probability. An edge of the paper is said to have a “tree” if the set of cells depicted in the diagram below are all painted red when the paper is rotated so that the edge lies at the bottom. Given that at least one edge of the paper has a tree, what is the expected number of edges that have a tree?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2023_SMT_Discrete_Tiebreaker/2-fig1.png\" width=\"301\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(X\\) be the expected number of trees. By the Law of Total Expectation, \\[\\begin{aligned}\n\\mathbb{E}[X] &amp;= \\mathbb{P}(X = 0)\\mathbb{E}[X|X = 0] + \\mathbb{P}(X &gt; 0)\\mathbb{E}[X|X &gt; 0] \\\\\n&amp;= \\mathbb{P}(X &gt; 0)\\mathbb{E}[X|X &gt; 0].\n\\end{aligned}\\]</p><p>The expected number of trees for a given edge is \\(\\frac{1}{2^{11}}\\) since all 11 cells corresponding to the tree for the edge must be painted red. By Linearity of Expectation, we can find the expected number of trees for the grid by adding up the expected number of trees for each edge: \\[\\mathbb{E}[X] = 4 \\cdot \\frac{1}{2^{11}} = \\frac{4}{2^{11}}.\\]</p><p>By the Principle of Inclusion and Exclusion, we have \\[\\begin{aligned}\n\\mathbb{P}(X &gt; 0) &amp;= \\frac{4}{2^{11}} - \\left(\\frac{4}{2^{12}} + \\frac{2}{2^{13}}\\right) + \\frac{4}{2^{13}} - \\frac{1}{2^{13}} \\\\\n&amp;= \\frac{9}{2^{13}}.\n\\end{aligned}\\]</p><p>It follows that the answer is \\[\\frac{\\mathbb{E}[X]}{\\mathbb{P}(X &gt; 0)} = \\boxed{\\frac{16}{9}}.\\]</p>",
+      "answer": "\\frac{16}{9}"
+    },
+    "3": {
+      "problem": "<p>What is the least positive integer \\(x\\) for which the expression \\(x^2 + 3x + 9\\) has 3 distinct prime divisors?</p>",
+      "solutions": "<p>The presence of 3 suggests first trying the case where \\(x\\) is divisible by 3. Plugging in \\(x = 3y\\) changes the expression to \\(9(y^2 + y + 1)\\), and after some trying, one sees that the smallest such \\(y\\) which makes things work is 9: the expression is \\(819 = 3^2 \\cdot 7 \\cdot 13\\).</p><p>Now, we wish to check 27 is the least. Assume there is some \\(x\\) such that \\(3 \\nmid x\\) and \\(x^2 + 3x + 9\\) has at least 3 distinct prime divisors and \\(x &lt; 27\\). Because \\(x^2 + 3x\\) is always even, 2 will never be a divisor of the expression. Since \\(3 \\nmid x\\), 3 cannot divide the expression either. If 5 also doesn’t divide the expression, then the expression must at least be \\(7 \\cdot 11 \\cdot 13 = 1001 &gt; 819\\), contradiction. So 5 has to divide the expression, and working with modulo cases, one sees that \\(x\\) must be equal to 4 modulo 5. Hence, we should check the cases \\(4, 14, 19\\), none of which work, showing that \\(\\boxed{27}\\) is in fact minimal.</p>",
+      "answer": "27"
+    }
+  }
+}

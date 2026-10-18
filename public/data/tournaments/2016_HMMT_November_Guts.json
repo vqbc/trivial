@@ -1,0 +1,173 @@
+{
+  "test": "HMMT November Guts",
+  "year": 2016,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2016/nov/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If five fair coins are flipped simultaneously, what is the probability that at least three of them show heads?</p>",
+      "solutions": "<p>The coin either lands heads-up at least three times or lands heads-down at least three times. These scenarios are symmetric so the probably is just \\(\\frac{1}{2}\\).</p><p>Alternatively, we can explicitly compute the probability, which is just \\[\\frac{\\binom{5}{3} + \\binom{5}{4} + \\binom{5}{5}}{2^5} = \\frac{16}{32} = \\frac{1}{2}\\]</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "2": {
+      "problem": "<p>How many perfect squares divide \\(10^{10}\\)?</p>",
+      "solutions": "<p>A perfect square \\(s\\) divides \\(10^{10}\\) if and only if \\(s = 2^a \\cdot 5^b\\) where \\(a, b \\in \\{0, 2, 4, 6, 8, 10\\}\\). There are 36 choices, giving 36 different \\(s\\)’s.</p>",
+      "answer": "36"
+    },
+    "3": {
+      "problem": "<p>Evaluate \\(\\frac{2016!^2}{2015!2017!}\\). Here \\(n!\\) denotes \\(1 \\times 2 \\times \\cdots \\times n\\).</p>",
+      "solutions": "<p>\\[\\frac{2016!^2}{2015!2017!} = \\frac{2016!}{2015!} \\frac{2016!}{2017!} = \\frac{2016}{1} \\frac{1}{2017} = \\frac{2016}{2017}\\]</p>",
+      "answer": "\\frac{2016}{2017}"
+    },
+    "4": {
+      "problem": "<p>A square can be divided into four congruent figures as shown: \\[\\begin{array}{|c|c|}\n\\hline\n\\quad &amp; \\quad \\\\\n\\hline\n\\quad &amp; \\quad \\\\\n\\hline\n\\end{array}\\] For how many \\(n\\) with \\(1 \\le n \\le 100\\) can a unit square be divided into \\(n\\) congruent figures?</p>",
+      "solutions": "<p>We can divide the square into congruent rectangles for all \\(n\\), so the answer is \\(\\boxed{100}\\).</p>",
+      "answer": "100"
+    },
+    "5": {
+      "problem": "<p>If \\(x + 2y - 3z = 7\\) and \\(2x - y + 2z = 6\\), determine \\(8x + y\\).</p>",
+      "solutions": "<p>\\[8x + y = 2(x + 2y - 3z) + 3(2x - y + 2z) = 2(7) + 3(6) = 32\\]</p>",
+      "answer": "32"
+    },
+    "6": {
+      "problem": "<p>Let \\(ABCD\\) be a rectangle, and let \\(E\\) and \\(F\\) be points on segment \\(AB\\) such that \\(AE = EF = FB\\). If \\(CE\\) intersects the line \\(AD\\) at \\(P\\), and \\(PF\\) intersects \\(BC\\) at \\(Q\\), determine the ratio of \\(BQ\\) to \\(CQ\\).</p>",
+      "solutions": "<p>Because \\(\\triangle PAE \\sim \\triangle PDC\\) and \\(AE : DC = 1 : 3\\), we have that \\(PA : PD = 1 : 3 \\implies PA : AB = PA : BC = 1 : 2\\). Also, by similar triangles \\(\\triangle PAF \\sim \\triangle QBF\\), since \\(AF : BF = 2 : 1\\), \\(PA : BQ = 2 : 1\\).</p><p>Then \\(BQ = \\frac{1}{2} PA = \\frac{1}{2} \\cdot \\frac{1}{2} BC = \\frac{1}{4} BC\\). Then \\(BQ : CQ = \\boxed{\\frac{1}{3}}\\).</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "7": {
+      "problem": "<p>What is the minimum value of the product \\[\\prod_{i=1}^6 \\frac{a_i - a_{i+1}}{a_{i+2} - a_{i+3}}\\] given that \\((a_1, a_2, a_3, a_4, a_5, a_6)\\) is a permutation of \\((1, 2, 3, 4, 5, 6)\\)? (note \\(a_7 = a_1, a_8 = a_2 \\cdots\\))</p>",
+      "solutions": "<p>The product always evaluates to \\(\\boxed{1}\\).</p>",
+      "answer": "1"
+    },
+    "8": {
+      "problem": "<p>Danielle picks a positive integer \\(1 \\le n \\le 2016\\) uniformly at random. What is the probability that \\(\\gcd(n, 2015) = 1\\)?</p>",
+      "solutions": "<p>We split the interval \\([1, 2016]\\) into \\([1, 2015]\\) and \\(2016\\). The number of integers in \\([1, 2015]\\) that are relatively prime to \\(2015\\) is \\(\\phi(2015) = \\frac{4}{5} \\cdot \\frac{12}{13} \\cdot \\frac{30}{31} \\cdot 2015 = 1440\\). Also, \\(2016\\) is relatively prime to \\(2015\\), so there are a total of \\(1441\\) numbers in \\([1, 2016]\\) that are relatively prime to \\(2015\\). Then the probability of picking a number relatively prime to \\(2015\\) is \\(\\boxed{\\frac{1441}{2016}}\\).</p>",
+      "answer": "\\frac{1441}{2016}"
+    },
+    "9": {
+      "problem": "<p>How many 3-element subsets of the set \\(\\{1, 2, 3, \\ldots, 19\\}\\) have sum of elements divisible by \\(4\\)?</p>",
+      "solutions": "<p>Consider the elements of the sets mod \\(4\\). Then we would need to have sets of the form \\(\\{0, 0, 0\\}\\), \\(\\{0, 2, 2\\}\\), \\(\\{0, 1, 3\\}\\), \\(\\{1, 1, 2\\}\\), or \\(\\{2, 3, 3\\}\\). In the set \\(\\{1, 2, \\ldots, 19\\}\\) there four elements divisible by \\(4\\) and \\(5\\) elements congruent to each of \\(1, 2, 3 \\pmod 4\\). Hence the desired number is given by \\[\\binom{4}{3} + \\binom{4}{1}\\binom{5}{2} + \\binom{4}{1}\\binom{5}{1}\\binom{5}{1} + \\binom{5}{2}\\binom{5}{1} + \\binom{5}{1}\\binom{5}{2} = \\boxed{244}\\]</p>",
+      "answer": "244"
+    },
+    "10": {
+      "problem": "<p>Michael is playing basketball. He makes \\(10\\%\\) of his shots, and gets the ball back after \\(90\\%\\) of his missed shots. If he does not get the ball back he stops playing. What is the probability that Michael eventually makes a shot?</p>",
+      "solutions": "<p>We find the probability Michael never makes a shot. We do casework on the number of shots Michael takes. He takes only one shot with probability \\(\\frac{9}{10} \\cdot \\frac{1}{10}\\) (he misses with probability \\(\\frac{9}{10}\\) and does not get the ball back with probability \\(\\frac{1}{10}\\)). Similarly, he takes two shots with probability \\(\\frac{9}{10} \\cdot \\frac{9}{10} \\cdot \\frac{9}{10} \\cdot \\frac{1}{10}\\), three shots with probability \\(\\left(\\frac{9}{10}\\right)^5 \\frac{1}{10}\\), and so on. So we want to sum \\[\\sum_{i=1}^\\infty \\left(\\frac{9}{10}\\right)^{2i-1} \\cdot \\frac{1}{10} = \\frac{\\frac{1}{10} \\cdot \\frac{9}{10}}{1 - \\frac{81}{100}} = \\frac{9}{19}\\] Then the probability Michael makes a shot is \\(1 - \\frac{9}{19} = \\boxed{\\frac{10}{19}}\\).</p>",
+      "answer": "\\frac{10}{19}"
+    },
+    "11": {
+      "problem": "<p>How many subsets \\(S\\) of the set \\(\\{1, 2, \\ldots, 10\\}\\) satisfy the property that, for all \\(i \\in [1, 9]\\), either \\(i\\) or \\(i + 1\\) (or both) is in \\(S\\)?</p>",
+      "solutions": "<p>We do casework on the number of \\(i\\)’s not in \\(S\\). Notice that these \\(i\\)’s that are not in \\(S\\) cannot be consecutive, otherwise there exists an index \\(i\\) such that both \\(i\\) and \\(i + 1\\) are both not in \\(S\\). Hence if there are \\(k\\) \\(i\\)’s not in \\(S\\), we want to arrange \\(k\\) black balls and \\(10 - k\\) white balls such that no two black balls are consecutive. Take out \\(k - 1\\) white balls to insert back between black balls later, then we want to arrange \\(k\\) black balls and \\(11 - 2k\\) white balls arbitrarily, which can be done in \\(\\binom{11-k}{k}\\) ways. Hence we want to find the sum \\(\\binom{11}{0} + \\binom{10}{1} + \\binom{9}{2} + \\binom{8}{3} + \\binom{7}{4} + \\binom{6}{5}\\), which is equal to \\(\\boxed{144}\\) ways.</p>",
+      "answer": "144"
+    },
+    "12": {
+      "problem": "<p>A positive integer \\(\\overline{ABC}\\), where \\(A, B, C\\) are digits, satisfies \\[\\overline{ABC} = B^C - A\\] Find \\(\\overline{ABC}\\).</p>",
+      "solutions": "<p>The equation is equivalent to \\(100A + 10B + C = B^C - A\\). Suppose \\(A = 0\\), so that we get \\(10B + C = B^C\\). Reducing mod \\(B\\), we find that \\(C\\) must be divisible by \\(B\\). \\(C \\ne 0\\), since otherwise \\(10B = 1\\), contradiction, so \\(C \\ge B\\). Thus \\(10B + C \\ge B^B\\) for digits \\(B, C\\). For \\(B \\ge 4\\), we have \\(100 &gt; 10B + C \\ge B^B &gt; 100\\), a contradiction, so \\(B = 1, 2, 3\\). We can easily test that these do not yield solutions, so there are no solutions when \\(A = 0\\).</p><p>Thus \\(A \\ge 1\\), and so \\(100 \\le 100A + 10B + C \\le 1000\\), and thus \\(100 \\le B^C - A \\le 1000\\). \\(1 \\le A \\le 10\\), so we have \\(101 \\le B^C \\le 1010\\). We can test that the only pairs \\((B, C)\\) that satisfy this condition are \\((2, 7), (2, 8), (2, 9), (3, 5), (3, 6), (4, 4), (5, 3), (6, 3), (7, 3), (8, 3), (9, 3)\\). Of these pairs, only \\((2, 7)\\) yields a solution to the original equation, namely \\(A = 1, B = 2, C = 7\\). Thus \\(\\overline{ABC} = 127\\).</p>",
+      "answer": "127"
+    },
+    "13": {
+      "problem": "<p>How many functions \\(f : \\{0,1\\}^3 \\to \\{0,1\\}\\) satisfy the property that, for all ordered triples \\((a_1,a_2,a_3)\\) and \\((b_1,b_2,b_3)\\) such that \\(a_i \\ge b_i\\) for all \\(i\\), \\(f(a_1,a_2,a_3) \\ge f(b_1,b_2,b_3)\\)?</p>",
+      "solutions": "<p>Consider the unit cube with vertices \\(\\{0,1\\}^3\\). Let \\(O = (0,0,0)\\), \\(A = (1,0,0)\\), \\(B = (0,1,0)\\), \\(C = (0,0,1)\\), \\(D = (0,1,1)\\), \\(E = (1,0,1)\\), \\(F = (1,1,0)\\), and \\(P = (1,1,1)\\). We want to find a function \\(f\\) on these vertices such that \\(f(1,y,z) \\ge f(0,y,z)\\) (and symmetric representations). For instance, if \\(f(A) = 1\\), then \\(f(E) = f(F) = f(P) = 1\\) as well, and if \\(f(D) = 1\\), then \\(f(P) = 1\\) as well.</p><p>We group the vertices into four levels: \\(L_0 = \\{O\\}\\), \\(L_1 = \\{A,B,C\\}\\), \\(L_2 = \\{D,E,F\\}\\), and \\(L_3 = \\{P\\}\\). We do casework on the lowest level of a 1 in a function.</p><ul><li>If the 1 is in \\(L_0\\), then \\(f\\) maps everything to 1, for a total of 1 way.</li><li>If the 1 is in \\(L_1\\), then \\(f(O) = 0\\). If there are 3 1’s in \\(L_1\\), then everything but \\(O\\) must be mapped to 1, for 1 way. If there are 2 1’s in \\(L_1\\), then \\(f(L_2) = f(L_3) = 1\\), and there are 3 ways to choose the 2 1’s in \\(L_1\\), for a total of 3 ways. If there is one 1, then WLOG \\(f(A) = 1\\). Then \\(f(E) = f(F) = f(P) = 1\\), and \\(f(D)\\) equals either 0 or 1. There are \\(3 \\cdot 2 = 6\\) ways to do this. In total, there are \\(1 + 3 + 6 = 10\\) ways for the lowest 1 to be in \\(L_1\\).</li><li>If the lowest 1 is in \\(L_2\\), then \\(f(O) = f(L_1) = 0\\). If there are 3 1’s in \\(L_2\\), there is one way to make \\(f\\). If there are 2 1’s, then we can pick the 2 1’s in 3 ways. Finally, if there is one 1, then we pick this 1 in 3 ways. There are \\(1 + 3 + 3 = 7\\) ways.</li><li>The lowest 1 is in \\(L_3\\). There is 1 way.</li><li>There are no 1’s. Then \\(f\\) sends everything to 0. There is 1 way.</li></ul><p>In total, there are \\(1 + 10 + 7 + 1 + 1 = \\boxed{20}\\) total \\(f\\)’s.</p>",
+      "answer": "20"
+    },
+    "14": {
+      "problem": "<p>The very hungry caterpillar lives on the number line. For each non-zero integer \\(i\\), a fruit sits on the point with coordinate \\(i\\). The caterpillar moves back and forth; whenever he reaches a point with food, he eats the food, increasing his weight by one pound, and turns around. The caterpillar moves at a speed of \\(2^{-w}\\) units per day, where \\(w\\) is his weight. If the caterpillar starts off at the origin, weighing zero pounds, and initially moves in the positive \\(x\\) direction, after how many days will he weigh 10 pounds?</p>",
+      "solutions": "<p>On the \\(n\\)th straight path, the caterpillar travels \\(n\\) units before hitting food and his weight is \\(n - 1\\). Then his speed is \\(2^{1-n}\\). Then right before he turns around for the \\(n\\)th time, he has traveled a total time of \\(\\sum_{i=1}^n \\frac{i}{2^{1-i}} = \\frac{1}{2} \\sum_{i=1}^n i \\cdot 2^i\\). We want to know how many days the catepillar moves before his weight is 10, so we want to take \\(n = 10\\) so that his last straight path was taken at weight 9. Hence we want to evaluate \\(S = \\frac{1}{2} \\sum_{i=1}^{10} i \\cdot 2^i\\). Note that \\(2S = \\frac{1}{2} \\sum_{i=2}^{11} (i-1) \\cdot 2^i\\), so \\(S = 2S - S = \\frac{1}{2}\\left(11 \\cdot 2^{11} - \\sum_{i=1}^{10} 2^i\\right) = \\frac{1}{2}(10 \\cdot 2^{11} - 2^{11} + 2) = \\boxed{9217}\\).</p>",
+      "answer": "9217"
+    },
+    "15": {
+      "problem": "<p>Let \\(ABCD\\) be an isosceles trapezoid with parallel bases \\(AB = 1\\) and \\(CD = 2\\) and height 1. Find the area of the region containing all points inside \\(ABCD\\) whose projections onto the four sides of the trapezoid lie on the segments formed by \\(AB,BC,CD\\) and \\(DA\\).</p>",
+      "solutions": "<p>Let \\(E\\), \\(F\\), be the projections of \\(A\\), \\(B\\) on \\(CD\\). A point whose projections lie on the sides must be contained in the square \\(ABFE\\). Furthermore, the point must lie under the perpendicular to \\(AD\\) at \\(A\\) and the perpendicular to \\(BC\\) at \\(B\\), which have slopes \\(\\frac{1}{2}\\) and \\(-\\frac{1}{2}\\). The area of the desired pentagon is \\(1 - \\frac{1}{4} - \\frac{1}{8} = \\boxed{\\frac{5}{8}}\\).</p>",
+      "answer": "\\frac{5}{8}"
+    },
+    "16": {
+      "problem": "<p>Create a cube \\(C_1\\) with edge length 1. Take the centers of the faces and connect them to form an octahedron \\(O_1\\). Take the centers of the octahedron’s faces and connect them to form a new cube \\(C_2\\). Continue this process infinitely. Find the sum of all the surface areas of the cubes and octahedrons.</p>",
+      "solutions": "<p>The lengths of the second cube are one-third of the lengths of the first cube, so the surface area decreases by a factor of one-ninth. Since the first cube has surface area 6 and the first octahedron has surface area \\(\\sqrt{3}\\), the total area is \\((6 + \\sqrt{3}) \\cdot \\left(1 + \\frac{1}{9} + \\frac{1}{9^2} + \\cdots\\right) = \\boxed{\\frac{54+9\\sqrt{3}}{8}}\\).</p>",
+      "answer": "\\frac{54+9\\sqrt{3}}{8}"
+    },
+    "17": {
+      "problem": "<p>Let \\(p(x) = x^2 - x + 1\\). Let \\(\\alpha\\) be a root of \\(p(p(p(p(x))))\\). Find the value of \\[(p(\\alpha) - 1)p(\\alpha)p(p(\\alpha))p(p(p(\\alpha)))\\]</p>",
+      "solutions": "<p>Since \\((x - 1)x = p(x) - 1\\), we can set \\[\\begin{aligned}\n(p(\\alpha) - 1)p(\\alpha)p(p(\\alpha))p(p(p(\\alpha))) &amp;= (p(p(\\alpha)) - 1)p(p(\\alpha))p(p(p(\\alpha))) \\\\\n&amp;= (p(p(p(\\alpha))) - 1)p(p(p(\\alpha))) \\\\\n&amp;= p(p(p(p(\\alpha)))) - 1 \\\\\n&amp;= \\boxed{-1}\n\\end{aligned}\\]</p>",
+      "answer": "-1"
+    },
+    "18": {
+      "problem": "<p>An 8 by 8 grid of numbers obeys the following pattern:</p><ol><li>The first row and first column consist of all 1s.</li><li>The entry in the \\(i\\)th row and \\(j\\)th column equals the sum of the numbers in the \\((i - 1)\\) by \\((j - 1)\\) sub-grid with row less than \\(i\\) and column less than \\(j\\).</li></ol><p>What is the number in the 8th row and 8th column?</p>",
+      "solutions": "<p>Let \\(x_{i,j}\\) be the number in the \\(i\\)th row and the \\(j\\)th column. Then if \\(i, j \\ge 2\\), \\(x_{i+1,j+1} - x_{i+1,j} - x_{i,j+1} + x_{i,j}\\) only counts the term \\(x_{i,j}\\) since every other term is added and subtracted the same number of times. Thus \\(x_{i+1,j+1} = x_{i+1,j} + x_{i,j+1}\\) when \\(i, j \\ge 2\\). Also, \\(x_{2,i} = x_{i,2} = i\\) so \\(x_{i+1,j+1} = x_{i+1,j} + x_{i,j+1}\\) holds for all \\(i, j \\ge 1\\) except for \\((i,j) = (1,1)\\) where \\(x_{2,2}\\) is one less than expected. This means that \\(x_{i,j}\\) is the number of ways of travelling from \\((1,1)\\) to \\((i,j)\\), minus the number of ways of travelling from \\((2,2)\\) to \\((i,j)\\), which is \\(\\binom{14}{7} - \\binom{12}{6} = \\boxed{2508}\\).</p>",
+      "answer": "2508"
+    },
+    "19": {
+      "problem": "<p>Let \\(S\\) be the set of all positive integers whose prime factorizations only contain powers of the primes 2 and 2017 (1, powers of 2, and powers of 2017 are thus contained in \\(S\\)). Compute \\(\\sum_{s\\in S} \\frac{1}{s}\\).</p>",
+      "solutions": "<p>Since every \\(s\\) can be written as \\(2^i \\cdot 2017^j\\) for non-negative integers \\(i\\) and \\(j\\), the given sum can be written as \\((\\sum_{i=0}^\\infty \\frac{1}{2^i})(\\sum_{j=0}^\\infty \\frac{1}{2017^j})\\). We can easily find the sum of these geometric series since they both have common ratio of magnitude less than 1, giving us \\((\\frac{1}{1 - \\frac{1}{2}}) \\cdot \\frac{1}{1 - \\frac{1}{2017}} = \\frac{2}{1} \\cdot \\frac{2017}{2016} = \\boxed{\\frac{2017}{1008}}\\).</p>",
+      "answer": "\\frac{2017}{1008}"
+    },
+    "20": {
+      "problem": "<p>Let \\(\\mathcal{V}\\) be the volume enclosed by the graph \\[x^{2016} + y^{2016} + z^2 = 2016\\] Find \\(\\mathcal{V}\\) rounded to the nearest multiple of ten.</p>",
+      "solutions": "<p>Let \\(R\\) be the region in question. Then we have \\[[-1, 1]^2 \\times [-\\sqrt{2014}, \\sqrt{2014}] \\subset R \\subset [-\\sqrt[2016]{2016}, \\sqrt[2016]{2016}]^2 \\times [\\sqrt{2016}, \\sqrt{2016}]\\] We find some bounds: we have \\[\\sqrt{2016} &lt; \\sqrt{2025} = 45.\\] By concavity of \\(\\sqrt{\\cdot}\\), we have the bound \\[\\sqrt{2014} \\le \\frac{11}{89}\\sqrt{1936} + \\frac{78}{89}\\sqrt{2025} = 45 - \\frac{11}{89}.\\] Finally, if we let \\(\\sqrt[2016]{2016} = 1 + \\epsilon\\), then \\((1+\\epsilon)^{2016} = 2016\\), so \\[\\binom{2016}{5}\\epsilon^5 &lt; 2016 \\implies \\epsilon &lt; \\sqrt[5]{\\frac{120}{2015 \\cdot 2014 \\cdot 2013 \\cdot 2012}} &lt; \\sqrt[5]{\\frac{120}{2000^4}} = \\sqrt[5]{\\frac{7500}{10^{15}}} = \\frac{\\sqrt[5]{7500}}{1000} &lt; \\frac{6}{1000}.\\] Therefore, the volume of \\(R\\) is lower-bounded by \\[2^2 \\cdot 2\\left(45 - \\frac{11}{89}\\right) = 360 - \\frac{88}{89} &gt; 355\\] and upper-bounded by \\[2^2 \\left(1 + \\frac{0.8}{100}\\right)^2 \\cdot 2(45) = 360\\left(1 + \\frac{6}{1000}\\right)^2 &lt; 365.\\] Thus, \\(R\\) rounded to the nearest ten is \\(\\boxed{360}\\).</p>",
+      "answer": "360"
+    },
+    "21": {
+      "problem": "<p>Zlatan has 2017 socks of various colours. He wants to proudly display one sock of each of the colours, and he counts that there are \\(N\\) ways to select socks from his collection for display. Given this information, what is the maximum value of \\(N\\)?</p>",
+      "solutions": "<p>Say that there are \\(k\\) sock types labeled \\(1, 2, \\ldots, k\\), and \\(a_i\\) socks of type \\(i\\). The problem asks to maximize \\(\\prod_{i=1}^k a_i\\) subject to \\(\\sum_{i=1}^k a_i = 2017\\), over all \\(k\\) and all sequences of positive integers \\(a_1, \\ldots, a_k\\).</p><p>The optimal \\((a_1, \\ldots, a_k)\\) cannot have any \\(a_i = 1\\) for any \\(i\\), because if there exists \\(a_i = 1\\) we can delete this \\(a_i\\) and add 1 to any \\(a_j\\) (\\(j \\ne i\\)) to increase the product while keeping the sum constant.</p><p>There exists an optimal \\((a_1, \\ldots, a_k)\\) without any \\(a_i \\ge 4\\) because if there exists \\(a_i \\ge 4\\) we can replace this \\(a_i\\) with \\(a_i - 2\\) and 2, which nonstrictly increases the product while keeping the sum constant.</p><p>Therefore, there exists an optimal \\((a_1, \\ldots, a_k)\\) whose terms are all 2 or 3. The optimal \\((a_1, \\ldots, a_k)\\) cannot have more than two 2s, because we can replace three 2s with two 3s, which increases the sum by a factor of \\(\\frac{3^2}{2^3} = \\frac{9}{8}\\) while keeping the sum constant.</p><p>It follows that we want to partition 2017 into 671 3s and two 2s, for a product of \\(\\boxed{3^{671} \\cdot 4}\\).</p>",
+      "answer": "3^{671} \\cdot 4"
+    },
+    "22": {
+      "problem": "<p>Let the function \\(f : \\mathbb{Z} \\to \\mathbb{Z}\\) take only integer inputs and have integer outputs. For any integers \\(x\\) and \\(y\\), \\(f\\) satisfies \\[f(x) + f(y) = f(x+1) + f(y-1)\\] If \\(f(2016) = 6102\\) and \\(f(6102) = 2016\\), what is \\(f(1)\\)?</p>",
+      "solutions": "<p>We have \\[f(x+1) = f(x) + f(y) - f(y-1)\\] If \\(y\\) is fixed, we have \\[f(x+1) = f(x) + constant\\] implying \\(f\\) is linear. Using our two points, then, we get \\(f(x) = 8118 - x\\), so \\(f(1) = \\boxed{8117}\\).</p>",
+      "answer": "8117"
+    },
+    "23": {
+      "problem": "<p>Let \\(d\\) be a randomly chosen divisor of 2016. Find the expected value of \\[\\frac{d^2}{d^2 + 2016}\\]</p>",
+      "solutions": "<p>Let \\(ab = 2016\\). Then \\[\\frac{a^2}{a^2 + 2016} + \\frac{b^2}{b^2 + 2016} = \\frac{a^2}{a^2 + 2016} + \\frac{(\\frac{2016}{a})^2}{(\\frac{2016}{a})^2 + 2016} = \\frac{a^2}{a^2 + 2016} + \\frac{2016}{a^2 + 2016} = 1\\] Thus, every divisor \\(d\\) pairs up with \\(\\frac{2016}{d}\\) to get 1, so our desired expected value is \\(\\boxed{\\frac{1}{2}}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "24": {
+      "problem": "<p>Consider an infinite grid of equilateral triangles. Each edge (that is, each side of a small triangle) is colored one of \\(N\\) colors. The coloring is done in such a way that any path between any two non-adjecent vertices consists of edges with at least two different colors. What is the smallest possible value of \\(N\\)?</p>",
+      "solutions": "<p>Note that the condition is equivalent to having no edges of the same color sharing a vertex by just considering paths of length two. Consider a hexagon made out of six triangles. Six edges meet at the center, so \\(N \\ge 6\\). To prove \\(N = 6\\), simply use two colors for each of the three possible directions of an edge, and color edges of the same orientation alternatingly with different colors.</p>",
+      "answer": "6"
+    },
+    "25": {
+      "problem": "<p>Chris and Paul each rent a different room of a hotel from rooms \\(1 - 60\\). However, the hotel manager mistakes them for one person and gives ”Chris Paul” a room with Chris’s and Paul’s room concatenated. For example, if Chris had \\(15\\) and Paul had \\(9\\), ”Chris Paul” has \\(159\\). If there are \\(360\\) rooms in the hotel, what is the probability that ”Chris Paul” has a valid room?</p>",
+      "solutions": "<p>There are \\(60 \\cdot 59 = 3540\\) total possible outcomes, and we need to count the number of these which concatenate into a number at most \\(60\\). Of these, \\(9 \\cdot 8\\) result from both Chris and Paul getting one-digit room numbers. If Chris gets a two-digit number, then he must get a number at most \\(35\\) and Paul should get a one-digit room number, giving \\((35 - 9) \\cdot 9\\) possibilities. If Chris gets a one-digit number, it must be \\(1\\), \\(2\\), or \\(3\\). If Chris gets \\(1\\), \\(2\\) or \\(3\\), Paul can get any two-digit number from \\(10\\) to \\(60\\) to guarantee a valid room, giving \\(51 \\cdot 3\\) outcomes. The total number of correct outcomes is \\(72 + 51 * 3 + 26 * 9 = 459\\), so the desired probability is \\(\\boxed{\\frac{153}{1180}}\\).</p>",
+      "answer": "\\frac{153}{1180}"
+    },
+    "26": {
+      "problem": "<p>Find the number of ways to choose two nonempty subsets \\(X\\) and \\(Y\\) of \\(\\{1, 2, \\ldots, 2001\\}\\), such that \\(|Y| = 1001\\) and the smallest element of \\(Y\\) is equal to the largest element of \\(X\\).</p>",
+      "solutions": "<p>We claim that there is a bijection between pairs \\((X, Y)\\) and sets \\(S\\) with at least \\(1001\\) elements. To get \\(S\\) from \\(X\\) and \\(Y\\), take \\(S = X \\cup Y\\), which contains \\(Y\\) and thus has at least \\(1001\\) elements. To form \\((X, Y)\\) from \\(S\\), make \\(Y\\) the largest \\(1001\\) elements of \\(S\\), and make \\(X\\) everything except the largest \\(1000\\) elements of \\(S\\). Therefore we need to count the number of subsets of \\(\\{1, 2, \\ldots, 2001\\}\\) with at least \\(1001\\) elements. For every subset of \\(\\{1, 2, \\ldots, 2001\\}\\), either it or its complement has at least \\(1001\\) elements, so number of possible subsets is \\(\\frac{1}{2} \\cdot 2^{2001} = \\boxed{2^{2000}}\\).</p>",
+      "answer": "2^{2000}"
+    },
+    "27": {
+      "problem": "<p>Let \\(r_1, r_2, r_3, r_4\\) be the four roots of the polynomial \\(x^4 - 4x^3 + 8x^2 - 7x + 3\\). Find the value of \\[\\frac{r_1^2}{r_2^2 + r_3^2 + r_4^2} + \\frac{r_2^2}{r_1^2 + r_3^2 + r_4^2} + \\frac{r_3^2}{r_1^2 + r_2^2 + r_4^2} + \\frac{r_4^2}{r_1^2 + r_2^2 + r_3^2}\\]</p>",
+      "solutions": "<p>Add \\(1\\) to each fraction to get \\[\\frac{r_1^2 + r_2^2 + r_3^2 + r_4^2}{r_2^2 + r_3^2 + r_4^2} + \\frac{r_1^2 + r_2^2 + r_3^2 + r_4^2}{r_1^2 + r_3^2 + r_4^2} + \\frac{r_1^2 + r_2^2 + r_3^2 + r_4^2}{r_1^2 + r_2^2 + r_4^2} + \\frac{r_1^2 + r_2^2 + r_3^2 + r_4^2}{r_1^2 + r_2^2 + r_3^2}\\] This seems like a difficult problem until one realizes that \\[r_1^2 + r_2^2 + r_3^2 + r_4^2 = (r_1 + r_2 + r_3 + r_4)^2 - 2(r_1 r_2 + r_1 r_3 + r_1 r_4 + r_2 r_3 + r_2 r_4 + r_3 r_4) = 4^2 - 2 \\cdot 8 = 0\\] Thus, our current expression is \\(0\\). Noting that we added \\(4\\), the original value had to be \\(\\boxed{-4}\\).</p>",
+      "answer": "-4"
+    },
+    "28": {
+      "problem": "<p>The numbers \\(1 - 10\\) are written in a circle randomly. Find the expected number of numbers which are at least \\(2\\) larger than an adjacent number.</p>",
+      "solutions": "<p>For \\(1 \\le i \\le 10\\), let \\(X_i\\) be the random variable that is \\(1\\) if the \\(i\\) in the circle is at least \\(2\\) larger than one of its neighbors, and \\(0\\) otherwise. The random variable representing number of numbers that are at least \\(2\\) larger than one of their neighbors is then just \\(X_1 + X_2 + \\cdots + X_{10}\\). The expected value \\(\\mathbb{E}[X_1 + X_2 + \\cdots + X_{10}]\\) is equal to \\(\\mathbb{E}[X_1] + \\mathbb{E}[X_2] + \\cdots + \\mathbb{E}[X_{10}]\\) by the linearity of expectation, so it suffices to compute \\(\\mathbb{E}[X_i]\\) for all \\(1 \\le i \\le 10\\).</p><p>By the definition of expected value, \\(\\mathbb{E}[X_i] = 1 \\cdot P(\\text{the } i \\text{ is at least } 2 \\text{ larger than one of its neighbors}) + 0 \\cdot P(\\text{it is not at least } 2 \\text{ larger than either of its neighbors}) = P(\\text{the } i \\text{ is at least } 2 \\text{ larger than one of its neighbors}) = 1 - P(\\text{the } i \\text{ is at most } 1 \\text{ larger than both of its neighbors})\\). For the last probability, \\(i\\)’s neighbors must be drawn from the set \\(\\{\\max(1, i - 1), \\max(1, i - 1) + 1, \\ldots, 10\\}\\), excluding \\(i\\) itself. This set has \\(10 - \\max(1, i - 1)\\) elements, so there are a total of \\(\\binom{10 - \\max(1, i - 1)}{2}\\) sets of two neighbors for \\(i\\) that satisfy the condition, out of a total of \\(\\binom{9}{2}\\) possible sets of two neighbors from all of the numbers that are not \\(i\\). The last probability is then \\(\\frac{\\binom{10 - \\max(1, i - 1)}{2}}{\\binom{9}{2}}\\), so \\(\\mathbb{E}[X_i] = 1 - \\frac{\\binom{10 - \\max(1, i - 1)}{2}}{\\binom{9}{2}}\\).</p><p>The final sum we wish to calculate then becomes \\((1 - \\frac{\\binom{9}{2}}{\\binom{9}{2}}) + (1 - \\frac{\\binom{9}{2}}{\\binom{9}{2}}) + (1 - \\frac{\\binom{8}{2}}{\\binom{9}{2}}) + (1 - \\frac{\\binom{7}{2}}{\\binom{9}{2}}) + \\cdots + (1 - \\frac{\\binom{1}{2}}{\\binom{9}{2}}) = 0 + 0 + (1 - \\frac{28}{36}) + (1 - \\frac{21}{36}) + \\cdots + (1 - 0) = \\boxed{\\frac{17}{3}}\\).</p>",
+      "answer": "\\frac{17}{3}"
+    },
+    "29": {
+      "problem": "<p>We want to design a new chess piece, the American, with the property that (i) the American can never attack itself, and (ii) if an American \\(A_1\\) attacks another American \\(A_2\\), then \\(A_2\\) also attacks \\(A_1\\). Let \\(m\\) be the number of squares that an American attacks when placed in the top left corner of an \\(8\\) by \\(8\\) chessboard. Let \\(n\\) be the maximal number of Americans that can be placed on the \\(8\\) by \\(8\\) chessboard such that no Americans attack each other, if one American must be in the top left corner. Find the largest possible value of \\(mn\\).</p>",
+      "solutions": "<p>Since one of the Americans must be in the top left corner, that eliminates \\(m\\) squares from consideration for placing additional Americans. So \\(m + n\\) is at most \\(64\\), which implies \\(mn\\) can be at most \\(1024\\). To achieve \\(1024\\), we can color a chessboard the normal way, and say that an American attacks all squares of the opposite color. Then the American in the top left corner attacks the \\(32\\) squares of the opposite color, and placing all Americans on the squares of the same color as the top-left corner guarantees no Americans attack each other.</p>",
+      "answer": "1024"
+    },
+    "30": {
+      "problem": "<p>On the blackboard, Amy writes \\(2017\\) in base-\\(a\\) to get \\(133201_a\\). Betsy notices she can erase a digit from Amy’s number and change the base to base-\\(b\\) such that the value of the the number remains the same. Catherine then notices she can erase a digit from Betsy’s number and change the base to base-\\(c\\) such that the value still remains the same. Compute, in decimal, \\(a + b + c\\).</p>",
+      "solutions": "<p>\\(2017 = 133201_4 = 13201_6 = 1201_{12}\\)</p>",
+      "answer": "22"
+    },
+    "31": {
+      "problem": "<p>Define a number to be an anti-palindrome if, when written in base \\(3\\) as \\(a_n a_{n-1} \\ldots a_0\\), then \\(a_i + a_{n-i} = 2\\) for any \\(0 \\le i \\le n\\). Find the number of anti-palindromes less than \\(3^{12}\\) such that no two consecutive digits in base \\(3\\) are equal.</p>",
+      "solutions": "<p>Note once the middle digit/pair of digits is determined, it suffices to choose the digits in the left half of the number and ensure no pair of consecutive digits are equal. For a number with an even number of digits, the middle pair is \\(02\\) or \\(20\\) while for a number with an odd number of digits, the middle digit is \\(1\\). We can now count recursively.</p><p>Let \\(a_n\\) be the number of ways to choose \\(n\\) digits no two of which are consecutive and equal such that the leading digit is nonzero and the ending digit is \\(1\\). Let \\(b_n\\) be the number ways to do the same such that the ending digit is \\(0\\) or \\(2\\).</p><p>Note \\(a_n = b_{n-1}\\). Also \\(b_n = b_{n-1} + 2a_{n-1}\\).</p><p>Solving for the terms of the sequence, they are \\(a_1 = 1, a_2 = b_1 = 1, a_3 = b_2 = 3, a_4 = b_3 = 5, a_5 = b_4 = 11, a_6 = b_5 = 21, b_6 = 43\\). Therefore, there are \\(43\\) twelve-digit numbers satisfying the condition, \\(21\\) eleven-digit numbers, \\(21\\) ten-digit numbers\\(\\ldots\\) and \\(1\\) one-digit number. The sum of these values gives us a final answer of \\(\\boxed{126}\\).</p>",
+      "answer": "126"
+    },
+    "32": {
+      "problem": "<p>Let \\(C_{k, n}\\) denote the number of paths on the Cartesian plane along which you can travel from \\((0, 0)\\) to \\((k, n)\\), given the following rules: 1) You can only travel directly upward or directly rightward 2) You can only change direction at lattice points 3) Each horizontal segment in the path must be at most \\(99\\) units long.</p><p>Find \\[\\sum_{j=0}^\\infty C_{100j+19, 17}\\]</p>",
+      "solutions": "<p>If we are traveling from \\((0, 0)\\) to \\((n, 17)\\), we first travel \\(x_0\\) rightwards, then up one, then \\(x_1\\) rightwards, then up one, \\(\\ldots\\), until we finally travel \\(x_{17}\\) rightwards. \\(x_0, \\ldots, x_{17}\\) are all at most \\(99\\) by our constraint, but can equal \\(0\\). Given that \\(x_0, \\ldots, x_{16}\\) are fixed, there is exactly one way to choose \\(x_{17}\\) so that \\(x_0 + \\cdots + x_{17}\\) is congruent to \\(19 \\pmod{100}\\). Then, this means that the sum equals the total number of ways to choose \\(x_0, \\ldots, x_{16}\\), which equals \\(100^{17} = 10^{34}\\).</p>",
+      "answer": "100^{17}"
+    },
+    "33": {
+      "problem": "<p>Camille the snail lives on the surface of a regular dodecahedron. Right now he is on vertex \\(P_1\\) of the face with vertices \\(P_1, P_2, P_3, P_4, P_5\\). This face has a perimeter of \\(5\\). Camille wants to get to the point on the dodecahedron farthest away from \\(P_1\\). To do so, he must travel along the surface a distance at least \\(L\\). What is \\(L^2\\)?</p>",
+      "solutions": "<p>Consider the net of the dodecahedron. It suffices to look at three pentagons \\(ABCDE\\), \\(EDFGH\\), and \\(GFIJK\\), where \\(AJ = L\\). This can be found by the law of cosines on triangle \\(AEJ\\). We have \\(AE = 1\\), \\(EJ = \\tan 72^\\circ\\), and \\(\\angle AEJ = 162^\\circ\\). Thus \\(L^2 = 1 + \\tan^2 72^\\circ + 2 \\cdot \\tan 72^\\circ \\cdot \\cos 18^\\circ = \\boxed{\\frac{17+7\\sqrt{5}}{2}}\\).</p>",
+      "answer": "\\frac{17+7\\sqrt{5}}{2}"
+    }
+  }
+}

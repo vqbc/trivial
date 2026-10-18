@@ -1,0 +1,58 @@
+{
+  "test": "BMT Geometry",
+  "year": 2014,
+  "name": "Geometry Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2014/GeoS2014.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Consider a regular hexagon with an incircle. What is the ratio of the area inside the incircle to the area of the hexagon?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\pi\\sqrt{3}}{6}"
+    },
+    "2": {
+      "problem": "<p>Regular hexagon \\(ABCDEF\\) has side length 2 and center \\(O\\). The point \\(P\\) is defined as the intersection of \\(AC\\) and \\(OB\\). Find the area of quadrilateral \\(OPCD\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3\\sqrt{3}}{2}"
+    },
+    "3": {
+      "problem": "<p>Consider an isosceles triangle \\(ABC\\) (\\(AB = BC\\)). Let \\(D\\) be on \\(BC\\) such that \\(AD \\perp BC\\) and \\(O\\) be a circle with diameter \\(BC\\). Suppose that segment \\(AD\\) intersects circle \\(O\\) at \\(E\\). If \\(CA = 2\\) what is \\(CE\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{2}"
+    },
+    "4": {
+      "problem": "<p>A cylinder with length \\(l\\) has a radius of 6 meters, and three spheres with radii \\(3, 4,\\) and \\(5\\) meters are placed inside the cylinder. If the spheres are packed into the cylinder such that \\(l\\) is minimized, determine the length \\(l\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "7 + 6\\sqrt{2} + 4\\sqrt{3}"
+    },
+    "5": {
+      "problem": "<p>In a 100-dimensional hypercube, each edge has length 1. The box contains \\(2^{100} + 1\\) hyperspheres with the same radius \\(r\\). The center of one hypersphere is the center of the hypercube, and it touches all the other spheres. Each of the other hyperspheres is tangent to 100 faces of the hypercube. Thus, the hyperspheres are tightly packed in the hypercube. Find \\(r\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{5}{12}"
+    },
+    "6": {
+      "problem": "<p>Square \\(ABCD\\) has side length 5 and arc \\(BD\\) with center \\(A\\). \\(E\\) is the midpoint of \\(AB\\) and \\(CE\\) intersects arc \\(BD\\) at \\(F\\). \\(G\\) is placed onto \\(BC\\) such that \\(FG\\) is perpendicular to \\(BC\\). What is the length of \\(FG\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1"
+    },
+    "7": {
+      "problem": "<p>Consider a parallelogram \\(ABCD\\). \\(E\\) is a point on ray \\(\\overrightarrow{AD}\\). \\(BE\\) intersects \\(AC\\) at \\(F\\) and \\(CD\\) at \\(G\\). If \\(BF = EG\\) and \\(BC = 3\\), find the length of \\(AE\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3(1+\\sqrt{5})}{2}"
+    },
+    "8": {
+      "problem": "<p>Semicircle \\(O\\) has diameter \\(AB = 12\\). Arc \\(AC = 135^\\circ\\). Let \\(D\\) be the midpoint of arc \\(AC\\). Compute the region bounded by the lines \\(CD\\) and \\(DB\\) and the arc \\(CB\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{9\\pi}{2}"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABC\\) be a triangle. Construct points \\(B'\\) and \\(C'\\) such that \\(ACB'\\) and \\(ABC'\\) are equilateral triangles that have no overlap with \\(\\triangle ABC\\). Let \\(BB'\\) and \\(CC'\\) intersect at \\(X\\). If \\(AX = 3\\), \\(BC = 4\\), and \\(CX = 5\\), find the area of quadrilateral \\(BCB'C'\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "36\\sqrt{3}"
+    },
+    "10": {
+      "problem": "<p>Consider 8 points that are a knight’s move away from the origin (i.e., the eight points \\(\\{(2,1), (2,-1), (1,2), (1,-2), (-1,2), (-1,-2), (-2,1), (-2,-1)\\}\\)). Each point has probability \\(\\frac{1}{2}\\) of being visible. What is the expected value of the area of the polygon formed by points that are visible? (If exactly 0, 1, 2 points appear, this area will be zero.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{825}{128}"
+    }
+  }
+}

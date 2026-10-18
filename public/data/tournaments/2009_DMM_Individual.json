@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2009,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2009/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(p &gt; 5\\) be a prime. It is known that the average of all of the prime numbers that are at least 5 and at most \\(p\\) is 12. Find \\(p\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "19"
+    },
+    "2": {
+      "problem": "<p>The numbers \\(1, 2, \\ldots, n\\) are written down in random order. What is the probability that \\(n-1\\) and \\(n\\) are written next to each other? (Give your answer in term of \\(n\\).)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2}{n}"
+    },
+    "3": {
+      "problem": "<p>The Duke Blue Devils are playing a basketball game at home against the UNC Tar Heels. The Tar Heels score \\(N\\) points and the Blue Devils score \\(M\\) points, where \\(1 &lt; M, N &lt; 100\\). The first digit of \\(N\\) is \\(a\\) and the second digit of \\(N\\) is \\(b\\). It is known that \\(N = a + b^2\\). The first digit of \\(M\\) is \\(b\\) and the second digit of \\(M\\) is \\(a\\). By how many points do the Blue Devils win?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9\\text{ points}"
+    },
+    "4": {
+      "problem": "<p>Let \\(P(x)\\) be a polynomial with integer coefficients. It is known that \\(P(x)\\) gives a remainder of 1 upon polynomial division by \\(x+1\\) and a remainder of 2 upon polynomial division by \\(x+2\\). Find the remainder when \\(P(x)\\) is divided by \\((x+1)(x+2)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-x"
+    },
+    "5": {
+      "problem": "<p>Dracula starts at the point \\((0,9)\\) in the plane. Dracula has to pick up buckets of blood from three rivers, in the following order: the Red River, which is the line \\(y = 10\\); the Maroon River, which is the line \\(y = 0\\); and the Slightly Crimson River, which is the line \\(x = 10\\). After visiting all three rivers, Dracula must then bring the buckets of blood to a castle located at \\((8,5)\\). What is the shortest distance that Dracula can walk to accomplish this goal?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "20"
+    },
+    "6": {
+      "problem": "<p>Thirteen hungry zombies are sitting at a circular table at a restaurant. They have five identical plates of zombie food. Each plate is either in front of a zombie or between two zombies. If a plate is in front of a zombie, that zombie and both of its neighbors can reach the plate. If a plate is between two zombies, only those two zombies may reach it. In how many ways can we arrange the plates of food around the circle so that each zombie can reach exactly one plate of food? (All zombies are distinct.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "26"
+    },
+    "7": {
+      "problem": "<p>Let \\(R_I, R_{II}, R_{III}, R_{IV}\\) be areas of the elliptical region \\[\\frac{(x-10)^2}{10} + \\frac{(y-31)^2}{31} \\le 2009\\] that lie in the first, second, third, and fourth quadrants, respectively. Find \\(R_I - R_{II} + R_{III} - R_{IV}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1240"
+    },
+    "8": {
+      "problem": "<p>Let \\(r_1, r_2, r_3\\) be the three (not necessarily distinct) solutions to the equation \\(x^3 + 4x^2 - ax + 1 = 0\\). If \\(a\\) can be any real number, find the minimum possible value of \\[\\left(r_1 + \\frac{1}{r_1}\\right)^2 + \\left(r_2 + \\frac{1}{r_2}\\right)^2 + \\left(r_3 + \\frac{1}{r_3}\\right)^2.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "13"
+    },
+    "9": {
+      "problem": "<p>Let \\(n\\) be a positive integer. There exist positive integers \\(1 = a_1 &lt; a_2 &lt; \\ldots &lt; a_n = 2009\\) such that the average of any \\(n-1\\) of elements of \\(\\{a_1, a_2, \\ldots, a_n\\}\\) is a positive integer. Find the maximum possible value of \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9"
+    },
+    "10": {
+      "problem": "<p>Let \\(A(0) = (2,7,8)\\) be an ordered triple. For each \\(n\\), construct \\(A(n)\\) from \\(A(n-1)\\) by replacing the \\(k\\)th position in \\(A(n-1)\\) by the average (arithmetic mean) of all entries in \\(A(n-1)\\), where \\(k \\equiv n \\pmod 3\\) and \\(1 \\le k \\le 3\\). For example, \\(A(1) = \\left(\\frac{17}{3}, 7, 8\\right)\\) and \\(A(2) = \\left(\\frac{17}{3}, \\frac{62}{9}, 8\\right)\\). It is known that all entries converge to the same number \\(N\\). Find the value of \\(N\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{20}{3}"
+    }
+  }
+}

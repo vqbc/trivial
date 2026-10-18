@@ -1,0 +1,58 @@
+{
+  "test": "DMM Devil",
+  "year": 2017,
+  "name": "Devil Round",
+  "url": "https://dukemathmeet.org/2017/devil.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(A = \\{D, U, K, E\\}\\) and \\(B = \\{M, A, T, H\\}\\). How many maps are there from \\(A\\) to \\(B\\)?</p>",
+      "solutions": "<p>Each map must map each letter in \\(A\\) to some letter in \\(B\\). For each letter in \\(A\\), there are \\(4\\) choices for the map.</p>",
+      "answer": "4^4"
+    },
+    "2": {
+      "problem": "<p>The product of two positive integers \\(x\\) and \\(y\\) is equal to \\(3\\) more than their sum. Find the sum of all possible \\(x\\).</p>",
+      "solutions": "<p>We have \\(xy = x + y + 3\\) or \\((x-1)(y-1) = 4\\).</p><p>Now, by iterating all positive divisors of \\(4\\) we get \\((x, y) \\in \\{(2, 5), (3, 3), (5, 2)\\}\\) and the result follows.</p>",
+      "answer": "10"
+    },
+    "3": {
+      "problem": "<p>There is a bag with \\(1\\) red ball and \\(1\\) blue ball. Jung takes out a ball at random and replaces it with a red ball. Remy then draws a ball at random. Given that Remy drew a red ball, what is the probability that the ball Jung took was red?</p>",
+      "solutions": "<p>By conditional probability we know that the stated probability equals \\[\\frac{P(\\text{Jung takes a red} \\cap \\text{Remy draws a red})}{P(\\text{Remy draws a red})}.\\]</p><p>The numerator equals \\(\\frac{1}{2}\\) times \\(\\frac{1}{2}\\), so it becomes \\(\\frac{1}{4}\\). Calculating the denominator, we may do casework on when Jung takes out red or blue, which leaves us with \\(\\frac{1}{4} + \\frac{1}{2} = \\frac{3}{4}\\). Hence the answer is \\(\\frac{1}{4} \\div \\frac{3}{4} = \\boxed{\\frac{1}{3}}\\).</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABCDE\\) be a regular pentagon and let \\(AD\\) intersect \\(BE\\) at \\(P\\). Find \\(\\angle APB\\).</p>",
+      "solutions": "<p>Let \\((O)\\) be the circumscribed circle of \\(ABCDE\\). \\[\\angle APB = \\frac{1}{2}(\\overgroup{AB} + \\overgroup{DE}) = \\angle AOB = \\frac{360^\\circ}{5} = 72^\\circ.\\]</p>",
+      "answer": "72^\\circ"
+    },
+    "5": {
+      "problem": "<p>It is Justin and his \\(4 \\times 4 \\times 4\\) cube again! Now he uses many colors to color all unit-cubes in a way such that two cubes on the same row or column must have different colors. What is the minimum number of colors that Justin needs in order to do so?</p>",
+      "solutions": "<p>Label each unit-cube as \\((i, j, k)\\) in the \\(Oxyz\\)-coordinate space.</p><p>First, by the Pigeonhole Principle, we need at least \\(4\\) colors for a single row of the cube.</p><p>Indeed, \\(4\\) colors are enough. We associate a color with a value mod \\(4\\) and color each unit-cube \\((i, j, k)\\) with the \\((i + j + k) \\bmod 4\\) color.</p>",
+      "answer": "4"
+    },
+    "6": {
+      "problem": "<p>\\(f(x)\\) is a polynomial of degree \\(3\\) where \\(f(1) = f(2) = f(3) = 4\\) and \\(f(-1) = 52\\). Determine \\(f(0)\\).</p>",
+      "solutions": "<p>By Lagrange’s Interpolation, we have \\[f(x) = f(1)\\frac{(x-2)(x-3)(x+1)}{(1-2)(1-3)(1+1)} + f(2)\\frac{(x-1)(x-3)(x+1)}{(2-1)(2-3)(2+1)} + f(3)\\frac{(x-1)(x-2)(x+1)}{(3-2)(3-1)(3+1)} + f(-1)\\frac{(x-2)(x-3)(x-1)}{(-1-2)(-1-3)(-1-1)}.\\]</p><p>Substitute \\(x = 0\\) to obtain the answer.</p>",
+      "answer": "16"
+    },
+    "7": {
+      "problem": "<p>Mike and Cassie are partners for the Duke Problem Solving Team and they decide to meet between 1pm and 2pm. The one who arrives first will wait for the other for 10 minutes, the lave. Assume they arrive at any time between 1pm and 2pm with uniform probability. Find the probability they meet.</p>",
+      "solutions": "<p>One can model this problem using graph in the \\(Oxy\\)-plane and compute the area of the right region.</p>",
+      "answer": "\\frac{11}{36}"
+    },
+    "8": {
+      "problem": "<p>The remainder of \\(2x^3 - 6x^2 + 3x + 5\\) divided by \\((x-2)^2\\) has the form \\(ax + b\\). Find \\(ab\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-9"
+    },
+    "9": {
+      "problem": "<p>Find \\(m\\) such that the decimal representation of \\(m!\\) ends with exactly \\(99\\) zeros.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "400 \\text{ or } 401 \\text{ or } 402 \\text{ or } 403 \\text{ or } 404"
+    },
+    "10": {
+      "problem": "<p>Let \\(1000 \\le n = \\overline{DUKE} \\le 9999.\\) be a positive integer whose digits \\(\\overline{DUKE}\\) satisfy the divisibility condition: \\[1111 \\mid \\left(\\overline{DUKE} + \\overline{DU} \\times \\overline{KE}\\right)\\]</p><p>Determine the smallest possible value of \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1729"
+    }
+  }
+}

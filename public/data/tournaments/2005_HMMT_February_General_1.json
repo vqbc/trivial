@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 1",
+  "year": 2005,
+  "name": "General Test, Part 1",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2005/feb/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many real numbers \\(x\\) are solutions to the following equation?</p><p>\\[|x-1| = |x-2| + |x-3|\\]</p>",
+      "solutions": "<p>If \\(x &lt; 1\\), the equation becomes \\((1-x) = (2-x)+(3-x)\\) which simplifies to \\(x=4\\), contradicting the assumption \\(x&lt;1\\). If \\(1 \\le x \\le 2\\), we get \\((x-1)=(2-x)+(3-x)\\), which gives \\(x=2\\). If \\(2 \\le x \\le 3\\), we get \\((x-1)=(x-2)+(3-x)\\), which again gives \\(x=2\\). If \\(x \\ge 3\\), we get \\((x-1)=(x-2)+(x-3)\\), or \\(x=4\\). So \\(2\\) and \\(4\\) are the only solutions, and the answer is \\(2\\).</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>A true-false test has ten questions. If you answer five questions “true” and five “false,” your score is guaranteed to be at least four. How many answer keys are there for which this is true?</p>",
+      "solutions": "<p>Suppose that either nine or ten of the questions have the same answer. Then no matter which five questions we pick to have this answer, we will be right at least four times. Conversely, suppose that there are at least two questions with each answer; we will show that we can get a score less than four. By symmetry, assume there are at least five questions whose answer is true. Then if we label five of these false, not only will we get these five wrong, but we will also have answered all the false questions with true, for a total of at least seven incorrect. There are 2 ways for all the questions to have the same answer, and \\(2 \\cdot 10 = 20\\) ways for one question to have a different answer from the others, for a total of 22 ways.</p>",
+      "answer": "22"
+    },
+    "3": {
+      "problem": "<p>Let \\(ABCD\\) be a regular tetrahedron with side length 2. The plane parallel to edges \\(AB\\) and \\(CD\\) and lying halfway between them cuts \\(ABCD\\) into two pieces. Find the surface area of one of these pieces.</p>",
+      "solutions": "<p>The plane intersects each face of the tetrahedron in a midline of the face; by symmetry it follows that the intersection of the plane with the tetrahedron is a square of side length 1. The surface area of each piece is half the total surface area of the tetrahedron plus the area of the square, that is, \\(\\frac{1}{2} \\cdot 4 \\cdot \\frac{2^2\\sqrt{3}}{4} + 1 = 1 + 2\\sqrt{3}\\).</p>",
+      "answer": "1 + 2\\sqrt{3}"
+    },
+    "4": {
+      "problem": "<p>Find all real solutions to \\(x^3+(x+1)^3+(x+2)^3=(x+3)^3\\).</p>",
+      "solutions": "<p>The equation simplifies to \\(3x^3+9x^2+15x+9=x^3+9x^2+27x+27\\), or equivalently, \\(2x^3-12x-18=2(x-3)(x^2+3x+3)=0\\). The discriminant of \\(x^2+3x+3\\) is \\(-3&lt;0\\), so the only real solution is \\(x=3\\).</p>",
+      "answer": "3"
+    },
+    "5": {
+      "problem": "<p>In how many ways can 4 purple balls and 4 green balls be placed into a \\(4 \\times 4\\) grid such that every row and column contains one purple ball and one green ball? Only one ball may be placed in each box, and rotations and reflections of a single configuration are considered different.</p>",
+      "solutions": "<p>There are \\(4! = 24\\) ways to place the four purple balls into the grid. Choose any purple ball, and place two green balls, one in its row and the other in its column. There are four boxes that do not yet lie in the same row or column as a green ball, and at least one of these contains a purple ball (otherwise the two rows containing green balls would contain the original purple ball as well as the two in the columns not containing green balls). It is then easy to see that there is a unique way to place the remaining green balls. Therefore, there are a total of \\(24 \\cdot 9 = 216\\) ways.</p>",
+      "answer": "216"
+    },
+    "6": {
+      "problem": "<p>In an election, there are two candidates, \\(A\\) and \\(B\\), who each have 5 supporters. Each supporter, independent of other supporters, has a \\(\\frac{1}{2}\\) probability of voting for his or her candidate and a \\(\\frac{1}{2}\\) probability of being lazy and not voting. What is the probability of a tie (which includes the case in which no one votes)?</p>",
+      "solutions": "<p>The probability that exactly \\(k\\) supporters of \\(A\\) vote and exactly \\(k\\) supporters of \\(B\\) vote is \\(\\binom{5}{k}^2 \\cdot \\frac{1}{2^{10}}\\). Summing over \\(k\\) from \\(0\\) to \\(5\\) gives</p><p>\\[\\left(\\frac{1}{2^{10}}\\right)(1+25+100+100+25+1) = \\frac{252}{1024} = \\frac{63}{256}.\\]</p>",
+      "answer": "\\frac{63}{256}"
+    },
+    "7": {
+      "problem": "<p>If \\(a,b,c&gt;0\\), what is the smallest possible value of \\(\\left\\lfloor \\frac{a+b}{c} \\right\\rfloor + \\left\\lfloor \\frac{b+c}{a} \\right\\rfloor + \\left\\lfloor \\frac{c+a}{b} \\right\\rfloor\\)? (Note that \\(\\lfloor x \\rfloor\\) denotes the greatest integer less than or equal to \\(x\\).)</p>",
+      "solutions": "<p>Since \\(\\lfloor x \\rfloor &gt; x-1\\) for all \\(x\\), we have that</p><p>\\[\\begin{aligned}\n\\left\\lfloor \\frac{a+b}{c} \\right\\rfloor + \\left\\lfloor \\frac{b+c}{a} \\right\\rfloor + \\left\\lfloor \\frac{c+a}{b} \\right\\rfloor &amp;&gt; \\frac{a+b}{c} + \\frac{b+c}{a} + \\frac{c+a}{b} - 3 \\\\\n&amp;= \\left(\\frac{a}{b}+\\frac{b}{a}\\right) + \\left(\\frac{b}{c}+\\frac{c}{b}\\right) + \\left(\\frac{c}{a}+\\frac{a}{c}\\right) - 3.\n\\end{aligned}\\]</p><p>But by the AM-GM inequality, each of the first three terms in the last line is at least \\(2\\). Therefore, the lefthand side is greater than \\(2+2+2-3=3\\). Since it is an integer, the smallest value it can be is therefore \\(4\\). This is in fact attainable by letting \\((a,b,c)=(6,8,9)\\).</p>",
+      "answer": "4"
+    },
+    "8": {
+      "problem": "<p>Ten positive integers are arranged around a circle. Each number is one more than the greatest common divisor of its two neighbors. What is the sum of the ten numbers?</p>",
+      "solutions": "<p>First note that all the integers must be at least 2, because the greatest common divisor of any two positive integers is at least 1. Let \\(n\\) be the largest integer in the circle. The greatest common divisor of its two neighbors is \\(n-1\\). Therefore, each of the two neighbors is at least \\(n-1\\) but at most \\(n\\), so since \\(n-1 \\nmid n\\) for \\(n-1 \\ge 2\\), they must both be equal to \\(n-1\\). Let \\(m\\) be one of the numbers on the other side of \\(n-1\\) from \\(n\\). Then \\(\\gcd(n,m)=n-2\\). Since \\(n-2 \\ge 0\\), \\(n-2 \\mid n\\) only for \\(n=3\\) or \\(4\\). If \\(n=3\\), each number must be 2 or 3, and it is easy to check that there is no solution. If \\(n=4\\), then it is again not hard to find that there is a unique solution up to rotation, namely \\(4322343223\\). The only possible sum is therefore 28.</p>",
+      "answer": "28"
+    },
+    "9": {
+      "problem": "<p>A triangular piece of paper of area 1 is folded along a line parallel to one of the sides and pressed flat. What is the minimum possible area of the resulting figure?</p>",
+      "solutions": "<p>Let the triangle be denoted \\(ABC\\), and suppose we fold parallel to \\(BC\\). Let the distance from \\(A\\) to \\(BC\\) be \\(h\\), and suppose we fold along a line at a distance of \\(ch\\) from \\(A\\). We will assume that neither angle \\(B\\) nor \\(C\\) is obtuse, for the area of overlap will only be smaller if either is obtuse. If \\(c \\le \\frac{1}{2}\\), then \\(A\\) does not fold past the edge \\(BC\\), so the overlap is a triangle similar to the original with height \\(ch\\); the area of the figure is then \\(1-c^2 \\ge \\frac{3}{4}\\). Suppose \\(c &gt; \\frac{1}{2}\\), so that \\(A\\) does fold past \\(BC\\). Then the overlap is a trapezoid formed by taking a triangle of height \\(ch\\) similar to the original and removing a triangle of height \\((2c-1)h\\) similar to the original. The area of the resulting figure is thus \\(1-c^2+(2c-1)^2=3c^2-4c+2\\). This is minimized when \\(c=\\frac{2}{3}\\), when the area is \\(\\frac{2}{3}&lt;\\frac{3}{4}\\); the minimum possible area is therefore \\(\\frac{2}{3}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "10": {
+      "problem": "<p>What is the smallest integer \\(x\\) larger than 1 such that \\(x^2\\) ends in the same three digits as \\(x\\) does?</p>",
+      "solutions": "<p>The condition is that \\(1000 \\mid x^2-x=x(x-1)\\). Since \\(1000=2^3\\cdot 5^3\\), and \\(2\\) cannot divide both \\(x\\) and \\(x-1\\), \\(2^3=8\\) must divide one of them. Similarly, \\(5^3=125\\) must divide either \\(x\\) or \\(x-1\\). We try successive values of \\(x\\) that are congruent to \\(0\\) or \\(1\\) modulo \\(125\\) and see which ones have the property that \\(x\\) or \\(x-1\\) is divisible by \\(8\\). It is easy to check that \\(125, 126, 250, 251\\), and \\(375\\) do not work, but the next value, \\(376\\), does, so this is the answer.</p>",
+      "answer": "376"
+    }
+  }
+}

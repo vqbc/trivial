@@ -1,6 +1,14 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+import { TOURNAMENT_TESTS } from "./constants.js";
+import { tournamentDifficulty } from "./tournaments.js";
+
+export const isTournamentTest = (test) => TOURNAMENT_TESTS.includes(test);
+
+// "BMT Algebra" → "BMT": the round is dropped from tournament test names
+// the way versions are dropped from AMC/AIME ones.
+const TOURNAMENT_ROUND = new RegExp(`^(${TOURNAMENT_TESTS.join("|")}) .+`);
 
 export const validProblem = (problem) =>
   problem.includes("Problems/Problem") &&
@@ -12,7 +20,8 @@ export const computeTest = (problem) =>
     .match(/(\d{4} )(.*)( Problems)/)[2]
     .replace(/AMC ((?:10)|(?:12))[AB]/, "AMC $1")
     .replace(/AIME I+/, "AIME")
-    .replace(/AJHSME/, "AMC 8");
+    .replace(/AJHSME/, "AMC 8")
+    .replace(TOURNAMENT_ROUND, "$1");
 
 export const computeYear = (problem) => problem.match(/^\d{4}/)[0];
 export const computeNumber = (problem) => problem.match(/\d+$/)[0];
@@ -98,6 +107,15 @@ export function computeDifficulty(test, num, year) {
   return diff;
 }
 
+// Difficulty of a problem title: the table above for AoPS tests, the
+// archive's per-problem rating for tournaments (lib/tournaments.js).
+export const problemDifficulty = (problem) => {
+  const test = computeTest(problem);
+  return isTournamentTest(test)
+    ? tournamentDifficulty(problem)
+    : computeDifficulty(test, computeNumber(problem), computeYear(problem));
+};
+
 export function matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, diffTo) {
   if (!/^\d{4}.*Problems\/Problem \d+$/.test(problem)) return false;
 
@@ -124,8 +142,7 @@ export function matchesOptions(problem, tests, yearsFrom, yearsTo, diffFrom, dif
   const problemYear = computeYear(problem);
   if (problemYear < yearsFrom || yearsTo < problemYear) return false;
 
-  const problemNumber = computeNumber(problem);
-  const problemDiff = computeDifficulty(problemTest, problemNumber, problemYear);
+  const problemDiff = problemDifficulty(problem);
   if (problemDiff < diffFrom || diffTo < problemDiff) return false;
 
   return true;
@@ -153,6 +170,7 @@ export const underscores = (string) =>
 // optional version selector.
 export function fullTestName(test, version) {
   if (!version) return test;
+  if (isTournamentTest(test)) return `${test} ${version}`;
   const parts = version.split(" ");
   if (parts.length > 1) return `${parts[0]} ${test}${parts[1]}`;
   if (version === "I" || version === "II") return `${test} ${version}`;

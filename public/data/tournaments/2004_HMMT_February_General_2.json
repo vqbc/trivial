@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 2",
+  "year": 2004,
+  "name": "General Test, Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2004/feb/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the largest number \\(n\\) such that \\((2004!)!\\) is divisible by \\(((n!)!)!\\).</p>",
+      "solutions": "<p>For positive integers \\(a, b\\), we have \\[a! \\mid b! \\quad \\Leftrightarrow \\quad a! \\le b! \\quad \\Leftrightarrow \\quad a \\le b.\\]</p><p>Thus, \\[((n!)!)! \\mid (2004!)! \\quad \\Leftrightarrow \\quad (n!)! \\le 2004! \\quad \\Leftrightarrow \\quad n! \\le 2004 \\quad \\Leftrightarrow \\quad n \\le 6.\\]</p>",
+      "answer": "6"
+    },
+    "2": {
+      "problem": "<p>Andrea flips a fair coin repeatedly, continuing until she either flips two heads in a row (the sequence \\(HH\\)) or flips tails followed by heads (the sequence \\(TH\\)). What is the probability that she will stop after flipping \\(HH\\)?</p>",
+      "solutions": "<p>The only way that Andrea can ever flip \\(HH\\) is if she never flips \\(T\\), in which case she must flip two heads immediately at the beginning. This happens with probability \\(\\frac{1}{4}\\).</p>",
+      "answer": "\\frac{1}{4}"
+    },
+    "3": {
+      "problem": "<p>How many ordered pairs of integers \\((a,b)\\) satisfy all of the following inequalities? \\[\\begin{aligned}\na^2+b^2 &amp;&lt; 16 \\\\\na^2+b^2 &amp;&lt; 8a \\\\\na^2+b^2 &amp;&lt; 8b\n\\end{aligned}\\]</p>",
+      "solutions": "<p>This is easiest to see by simply graphing the inequalities. They correspond to the (strict) interiors of circles of radius \\(4\\) and centers at \\((0,0), (4,0), (0,4)\\), respectively. So we can see that there are \\(6\\) lattice points in their intersection (circled in the figure).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_General_2/3-fig1.png\" width=\"242\" alt=\"\"></p>",
+      "answer": "6"
+    },
+    "4": {
+      "problem": "<p>A horse stands at the corner of a chessboard, a white square. With each jump, the horse can move either two squares horizontally and one vertically or two vertically and one horizontally (like a knight moves). The horse earns two carrots every time it lands on a black square, but it must pay a carrot in rent to rabbit who owns the chessboard for every move it makes. When the horse reaches the square on which it began, it can leave. What is the maximum number of carrots the horse can earn without touching any square more than twice?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_General_2/4-fig1.png\" width=\"262\" alt=\"\"></p>",
+      "solutions": "<p>The horse must alternate white and black squares, and it ends on the same square where it started. Thus it lands on the same number of black squares (\\(b\\)) as white squares (\\(w\\)). Thus, its net earnings will be \\(2b - (b+w) = b - w = 0\\) carrots, regardless of its path.</p>",
+      "answer": "0"
+    },
+    "5": {
+      "problem": "<p>Eight strangers are preparing to play bridge. How many ways can they be grouped into two bridge games – that is, into unordered pairs of unordered pairs of people?</p>",
+      "solutions": "<p>Putting 8 people into 4 pairs and putting those 4 pairs into 2 pairs of pairs are independent. If the people are numbered from \\(1\\) to \\(8\\), there are \\(7\\) ways to choose the person to pair with person \\(1\\). Then there are \\(5\\) ways to choose the person to pair with the person who has the lowest remaining number, \\(3\\) ways to choose the next, and \\(1\\) way to choose the last (because there are only \\(2\\) people remaining). Thus, there are \\(7 \\cdot 5 \\cdot 3 \\cdot 1\\) ways to assign 8 people to pairs and similarly there are \\(3 \\cdot 1\\) ways to assign 4 pairs to 2 pairs of pairs, so there are \\(7 \\cdot 5 \\cdot 3 \\cdot 3 = 315\\) ways.</p>",
+      "answer": "315"
+    },
+    "6": {
+      "problem": "<p>\\(a\\) and \\(b\\) are positive integers. When written in binary, \\(a\\) has 2004 1’s, and \\(b\\) has 2005 1’s (not necessarily consecutive). What is the smallest number of 1’s \\(a+b\\) could possibly have?</p>",
+      "solutions": "<p>Consider the following addition: \\[\\begin{array}{r}\n111\\cdots100\\cdots01 \\\\\n+\\phantom{1}11\\cdots11 \\\\\n=\\ 1000\\cdots\\cdots00\n\\end{array}\\]</p><p>By making the blocks of 1’s and 0’s appropriately long, we can ensure that the addends respectively contain 2004 and 2005 1’s. (To be precise, we get \\(a = 2^{4008} - 2^{2005} + 1\\) and \\(b = 2^{2005} - 1\\).) Then the sum has only one 1. And clearly it is not possible to get any less than one 1.</p>",
+      "answer": "1"
+    },
+    "7": {
+      "problem": "<p>Farmer John is grazing his cows at the origin. There is a river that runs east to west 50 feet north of the origin. The barn is 100 feet to the south and 80 feet to the east of the origin. Farmer John leads his cows to the river to take a swim, then the cows leave the river from the same place they entered and Farmer John leads them to the barn. He does this using the shortest path possible, and the total distance he travels is \\(d\\) feet. Find the value of \\(d\\).</p>",
+      "solutions": "<p>Suppose we move the barn to its reflection across the river’s edge. Then paths from the origin to the river and then to the old barn location correspond to paths from the origin to the river and then to the new barn location, by reflecting the second part of the path across the river, and corresponding paths have the same length. Now the shortest path from the origin to the river and then to the new barn location is a straight line. The new barn location is \\(200\\) feet north and \\(80\\) feet east of the origin, so the value of \\(d\\) is \\(\\sqrt{200^2 + 80^2} = 40\\sqrt{29}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_General_2/7-fig1.png\" width=\"221\" alt=\"\"></p>",
+      "answer": "40\\sqrt{29}"
+    },
+    "8": {
+      "problem": "<p>A freight train leaves the town of Jenkinsville at 1:00 PM traveling due east at constant speed. Jim, a hobo, sneaks onto the train and falls asleep. At the same time, Julie leaves Jenkinsville on her bicycle, traveling along a straight road in a northeasterly direction (but not due northeast) at 10 miles per hour. At 1:12 PM, Jim rolls over in his sleep and falls from the train onto the side of the tracks. He wakes up and immediately begins walking at 3.5 miles per hour directly towards the road on which Julie is riding. Jim reaches the road at 2:12 PM, just as Julie is riding by. What is the speed of the train in miles per hour?</p>",
+      "solutions": "<p>Julie’s distance is \\((10 \\text{ mph}) \\cdot (6/5 \\text{ hrs}) = 12\\) miles. Jim’s walking distance, after falling off the train, is \\((3.5 \\text{ mph}) \\cdot (1 \\text{ hr}) = 3.5\\) miles at a right angle to the road. Therefore, Jim rode the train for \\(\\sqrt{12^2 + 3.5^2} = \\frac{1}{2}\\sqrt{24^2+7^2} = 25/2\\) miles, and its speed is \\((25/2 \\text{ mi})/(1/5 \\text{ hr}) = 62.5\\) mph.</p>",
+      "answer": "62.5"
+    },
+    "9": {
+      "problem": "<p>Given is a regular tetrahedron of volume 1. We obtain a second regular tetrahedron by reflecting the given one through its center. What is the volume of their intersection?</p>",
+      "solutions": "<p>Imagine placing the tetrahedron \\(ABCD\\) flat on a table with vertex \\(A\\) at the top. By vectors or otherwise, we see that the center is \\(3/4\\) of the way from \\(A\\) to the bottom face, so the reflection of this face lies in a horizontal plane halfway between \\(A\\) and \\(BCD\\). In particular, it cuts off the smaller tetrahedron obtained by scaling the original tetrahedron by a factor of \\(1/2\\) about \\(A\\). Similarly, the reflections of the other three faces cut off tetrahedra obtained by scaling \\(ABCD\\) by \\(1/2\\) about \\(B\\), \\(C\\), and \\(D\\). On the other hand, the octahedral piece remaining after we remove these four smaller tetrahedra is in the intersection of \\(ABCD\\) with its reflection, since the reflection sends this piece to itself. So the answer we seek is just the volume of this piece, which is \\[\\text{(volume of } ABCD\\text{)} - 4 \\cdot \\text{(volume of } ABCD \\text{ scaled by a factor of } 1/2\\text{)}\\] \\[= 1 - 4(1/2)^3 = 1/2.\\]</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "10": {
+      "problem": "<p>A <i>lattice point</i> is a point whose coordinates are both integers. Suppose Johann walks in a line from the point \\((0, 2004)\\) to a random lattice point in the interior (not on the boundary) of the square with vertices \\((0,0), (0,99), (99,99), (99,0)\\). What is the probability that his path, including the endpoints, contains an even number of lattice points?</p>",
+      "solutions": "<p>If Johann picks the point \\((a,b)\\), the path will contain \\(\\gcd(a, 2004-b)+1\\) points. There will be an odd number of points in the path if \\(\\gcd(a, 2004-b)\\) is even, which is true if and only if \\(a\\) and \\(b\\) are both even. Since there are \\(49^2\\) points with \\(a, b\\) both even and \\(98^2\\) total points, the probability that the path contains an even number of points is \\[\\frac{98^2 - 49^2}{98^2} = \\frac{49^2(2^2-1^2)}{49^2(2^2)} = \\frac{3}{4}.\\]</p>",
+      "answer": "\\frac{3}{4}"
+    }
+  }
+}

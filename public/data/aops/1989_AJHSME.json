@@ -1,0 +1,131 @@
+{
+  "test": "1989 AJHSME",
+  "year": 1989,
+  "problems": {
+    "1": {
+      "problem": "<p>\\((1+11+21+31+41)+(9+19+29+39+49)=\\)</p><p>\\(\\text{(A)}\\ 150 \\qquad \\text{(B)}\\ 199 \\qquad \\text{(C)}\\ 200 \\qquad \\text{(D)}\\ 249 \\qquad \\text{(E)}\\ 250\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Rearranging terms yields \\((1+49)+(11+39)+(21+29)+(31+19)+(41+9) = 50+50+50+50+50 =50\\cdot 5 = \\boxed{\\textbf{(E)}\\ 250}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Alternatively, the terms can be arranged to get \\((1+9)+(11+19)+(21+29)+(31+39)+(41+49) = 10+30+50+70+90 = \\boxed{\\textbf{(E)}\\ 250}\\)</p><p>~DuoDuoling0, edited by j314andrews</p>",
+      "answer": "E"
+    },
+    "2": {
+      "problem": "<p>\\(\\frac{2}{10}+\\frac{4}{100}+\\frac{6}{1000}=\\)</p><p>\\(\\text{(A)}\\ .012 \\qquad \\text{(B)}\\ .0246 \\qquad \\text{(C)}\\ .12 \\qquad \\text{(D)}\\ .246 \\qquad \\text{(E)}\\ 246\\)</p>",
+      "solutions": "<p>\\(\\frac{2}{10}+\\frac{4}{100}+\\frac{6}{1000} = \\frac{200}{1000}+\\frac{40}{1000}+\\frac{6}{1000} = \\frac{246}{1000} = \\boxed{\\textbf{(D)}\\ .246}\\)</p>",
+      "answer": "D"
+    },
+    "3": {
+      "problem": "<p>Which of the following numbers is the largest?</p><p>\\(\\text{(A)}\\ .99 \\qquad \\text{(B)}\\ .9099 \\qquad \\text{(C)}\\ .9 \\qquad \\text{(D)}\\ .909 \\qquad \\text{(E)}\\ .9009\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>When written with \\(4\\) decimal places, the answer choices are \\(.9900\\), \\(.9099\\), \\(.9000\\), \\(.9090\\), and \\(.9009\\).  So \\(\\boxed{\\textbf{(A)}\\ .99}\\) must be greater than all the other answer choices, whose first two decimal places are \\(.90\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>The answer choices sorted from largest to smallest are \\(.99&gt;.9099&gt;.909&gt;.9009&gt;.9\\), so choice \\(\\boxed{\\textbf{(A)}\\ .99}\\) is the largest.</p><h2><span class=\"mw-headline\" id=\"Solution_3\">Solution 3</span></h2><p>If \\(.9\\) is subtracted from each answer choice, the answer choices become \\(.09\\), \\(.0099\\), \\(0\\), \\(.009\\), and \\(.0009\\).  Of these, all except \\(.09\\) are less than \\(.01\\), so \\(\\boxed{\\textbf{(A)}\\ .99}\\) is the largest.</p>",
+      "answer": "A"
+    },
+    "4": {
+      "problem": "<p>Estimate to determine which of the following numbers is closest to \\(\\frac{401}{.205}\\).</p><p>\\(\\text{(A)}\\ .2 \\qquad \\text{(B)}\\ 2 \\qquad \\text{(C)}\\ 20 \\qquad \\text{(D)}\\ 200 \\qquad \\text{(E)}\\ 2000\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>By rounding, \\(\\frac{401}{.205} \\approx \\frac{400}{.2}=\\boxed{\\textbf{(E)}\\ 2000}\\)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Using scientific notation estimated to the first significant digit, we see the numerator rounds to \\(\\frac{4*10^2}{2*10^{-1}}\\). Subtracting the exponents gives \\(2-(-1)=3\\). The answer choice that has \\(3\\) zeros to the right of the significant digit is \\(\\boxed{\\text{E}}\\)</p><p>~megaboy6679</p>",
+      "answer": "E"
+    },
+    "5": {
+      "problem": "<p>\\(-15+9\\times (6\\div 3) =\\)</p><p>\\(\\text{(A)}\\ -48 \\qquad \\text{(B)}\\ -12 \\qquad \\text{(C)}\\ -3 \\qquad \\text{(D)}\\ 3 \\qquad \\text{(E)}\\ 12\\)</p>",
+      "solutions": "<p>By order of operations, \\(-15+9\\times (6\\div 3) = -15+9\\times 2 = -15+18 = \\boxed{\\textbf{(D)}\\ 3}\\).</p>",
+      "answer": "D"
+    },
+    "6": {
+      "problem": "<p>If the markings on the number line are equally spaced, what is the number \\(y\\)?</p><p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/6-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 3 \\qquad \\text{(B)}\\ 10 \\qquad \\text{(C)}\\ 12 \\qquad \\text{(D)}\\ 15 \\qquad \\text{(E)}\\ 16\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Since there are \\(5\\) gaps between \\(0\\) and \\(20\\), each gap has length \\(\\frac{20}{5}=4\\).</p><p>Since there are \\(3\\) gaps between \\(0\\) and \\(y\\), \\(y=0 + 3\\times 4=\\boxed{\\textbf{(C)}\\ 12}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>There are \\(5\\) gaps between \\(0\\) and \\(20\\), while there are \\(3\\) gaps between \\(0\\) and \\(y\\).  So \\(y\\) is \\(\\frac{3}{5}\\) of the way from \\(0\\) to \\(20\\), that is, \\(y = \\frac{3}{5}\\cdot20 = \\boxed{\\textbf{(C)}\\ 12}\\).</p><p>-stjwyl, edited by j314andrews</p>",
+      "answer": "C"
+    },
+    "7": {
+      "problem": "<p>If the value of \\(20\\) quarters and \\(10\\) dimes equals the value of \\(10\\) quarters and \\(n\\) dimes, then \\(n=\\)</p><p>\\(\\text{(A)}\\ 10 \\qquad \\text{(B)}\\ 20 \\qquad \\text{(C)}\\ 30 \\qquad \\text{(D)}\\ 35 \\qquad \\text{(E)}\\ 45\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>The total value of \\(20\\) quarters and \\(10\\) dimes is \\(20 \\cdot \\textdollar 0.25 + 10 \\cdot \\textdollar 0.10 = \\textdollar 6.00\\).</p><p>The value of \\(10\\) quarters is \\(10 \\cdot \\textdollar 0.25 = \\textdollar 2.50\\).</p><p>Therefore, the value of \\(n\\) dimes is \\(\\textdollar 6.00 - \\textdollar 2.50 = \\textdollar 3.50\\), so \\(n = \\textdollar 3.50 \\div \\textdollar 0.10 = \\boxed{\\textbf{(D)}\\ 35}\\)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>\\[\\begin{aligned}\n20(25)+10(10) &amp;= 10(25)+n(10) \\\\\n600 &amp;= 250+10n \\\\\n35 &amp;= n \\implies \\boxed{\\text{D}}\n\\end{aligned}\\]</p><h2><span class=\"mw-headline\" id=\"Solution_3\">Solution 3</span></h2><p>The  \\(n\\) dimes’ values need to sum to \\(10\\) quarters and \\(10\\) dimes. \\[10n=10\\cdot25 + 10\\cdot 10\\] we can divide both sides by \\(10\\).</p><p>\\[n=25+10=35\\]</p><p>So, our answer is \\(\\boxed{\\text{D}}\\)—-stjwyl</p>",
+      "answer": "D"
+    },
+    "8": {
+      "problem": "<p>\\((2\\times 3\\times 4)\\left(\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}\\right) =\\)</p><p>\\(\\text{(A)}\\ 1 \\qquad \\text{(B)}\\ 3 \\qquad \\text{(C)}\\ 9 \\qquad \\text{(D)}\\ 24 \\qquad \\text{(E)}\\ 26\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>By the distributive property, this expression becomes \\(3\\times 4+2\\times 4+2\\times 3 = \\boxed{\\textbf{(E)}\\ 26}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Simplifying the left factor yields \\(24\\left(\\frac12+\\frac13+\\frac14\\right)= 12 + 8 + 6 = \\boxed{\\textbf{(E)} \\ 26}\\).</p><p>-fn106068, edited by j314andrews</p><h2><span class=\"mw-headline\" id=\"Solution_3_(Estimation,_Answer_Choices)\">Solution 3 (Estimation, Answer Choices)</span></h2><p>Since \\(\\frac12+\\frac13+\\frac14 &gt; \\frac12+\\frac14+\\frac14 = 1\\), it follows that \\((2\\times 3\\times 4)\\left(\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}\\right) &gt; 2\\times 3\\times 4 \\times 1 = 24\\).</p><p>The only answer choice greater than \\(24\\) is \\(\\boxed{\\textbf{(E)}\\ 26}\\).</p>",
+      "answer": "E"
+    },
+    "9": {
+      "problem": "<p>There are \\(2\\) boys for every \\(3\\) girls in Ms. Johnson’s math class.  If there are \\(30\\) students in her class, what percent of them are boys?</p><p>\\(\\text{(A)}\\ 12\\% \\qquad \\text{(B)}\\ 20\\% \\qquad \\text{(C)}\\ 40\\% \\qquad \\text{(D)}\\ 60\\% \\qquad \\text{(E)}\\ 66\\frac{2}{3}\\%\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Since the ratio of boys to girls is \\(2:3\\), \\(\\frac{2}{2+3} = \\frac{2}{5} = \\boxed{\\textbf{(C)}\\ 40\\%}\\) of the students are boys.  The number of students in the class is irrelevant.</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>\\[\\frac{30}{2+3} = \\frac{30}{5} = 6,\\] and that is the base unit. Since there are 2 boys for every 5 people, \\(6\\cdot2=12.\\) Applying this into a fraction gives \\(\\frac{12}{30} = \\frac{2}{5} = 40\\% = \\boxed{\\text{C}}.\\)</p><p>~DuoDuoling0</p>",
+      "answer": "C"
+    },
+    "10": {
+      "problem": "<p>What is the number of degrees in the smaller angle between the hour hand and the minute hand on a clock that reads seven o’clock?</p><p>\\(\\text{(A)}\\ 50^\\circ \\qquad \\text{(B)}\\ 120^\\circ \\qquad \\text{(C)}\\ 135^\\circ \\qquad \\text{(D)}\\ 150^\\circ \\qquad \\text{(E)}\\ 165^\\circ\\)</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/10-fig1.png\" width=\"504\" alt=\"\"></p><p>The minute hand points at \\(12\\) while the hour hand points at \\(7\\).  Therefore, the angle between the hands is \\(\\frac{5}{12}\\) of a full circle, or \\(\\frac{5}{12}\\cdot 360^\\circ = \\boxed{\\textbf{(D)}\\ 150^\\circ}\\)</p>",
+      "answer": "D"
+    },
+    "11": {
+      "problem": "<p>Which of the five \"T-like shapes\" would be symmetric to the one shown with respect to the dashed line?</p><p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/11-fig1.png\" width=\"1524\" alt=\"\"></p>",
+      "solutions": "<p>The reflection (mirror image) of the figure across the line is \\(\\boxed{\\textbf{(B)}}\\).</p>",
+      "answer": "B"
+    },
+    "12": {
+      "problem": "<p>\\(\\frac{1-\\frac{1}{3}}{1-\\frac{1}{2}} =\\)</p><p>\\(\\text{(A)}\\ \\frac{1}{3} \\qquad \\text{(B)}\\ \\frac{2}{3} \\qquad \\text{(C)}\\ \\frac{3}{4} \\qquad \\text{(D)}\\ \\frac{3}{2} \\qquad \\text{(E)}\\ \\frac{4}{3}\\)</p>",
+      "solutions": "<p>\\(\\left(1-\\frac{1}{3}\\right) \\div \\left(1-\\frac{1}{2}\\right) = \\frac{2}{3} \\div \\frac{1}{2} = \\frac{2}{3} \\cdot \\frac{2}{1} = \\boxed{\\textbf{(E)}\\ \\frac{4}{3}}\\).</p>",
+      "answer": "E"
+    },
+    "13": {
+      "problem": "<p>\\(\\frac{9}{7\\times 53} =\\)</p><p>\\(\\text{(A)}\\ \\frac{.9}{.7\\times 53} \\qquad \\text{(B)}\\ \\frac{.9}{.7\\times .53} \\qquad \\text{(C)}\\ \\frac{.9}{.7\\times 5.3} \\qquad \\text{(D)}\\ \\frac{.9}{7\\times .53} \\qquad \\text{(E)}\\ \\frac{.09}{.07\\times .53}\\)</p>",
+      "solutions": "<p>Notice that \\(\\frac{9}{7 \\times 53} = \\frac{.1 \\times 9}{.1 \\times 7 \\times 53} = \\boxed{\\textbf{(A)}\\ \\frac{.9}{.7 \\times 53}}\\).  Choices (B) and (E) are \\(100\\) times the original expression while choices (C) and (D) are \\(10\\) times the original expression.</p>",
+      "answer": "A"
+    },
+    "14": {
+      "problem": "<p>When placing each of the digits \\(2,4,5,6,9\\) in exactly one of the boxes of this subtraction problem, what is the smallest difference that is possible?</p><p>\\[\\begin{tabular}[t]{cccc}\n &amp; \\boxed{} &amp; \\boxed{} &amp; \\boxed{} \\\\\n- &amp; &amp; \\boxed{} &amp; \\boxed{} \\\\ \\hline\n\\end{tabular}\\]</p><p>\\(\\text{(A)}\\ 58 \\qquad \\text{(B)}\\ 123 \\qquad \\text{(C)}\\ 149 \\qquad \\text{(D)}\\ 171 \\qquad \\text{(E)}\\ 176\\)</p>",
+      "solutions": "<p>The smallest possible difference is found by using the smallest possible three-digit number and the largest possible two-digit number.  In this case, this difference is \\(245-96=\\boxed{\\textbf{(C)}\\ 149}\\).</p>",
+      "answer": "C"
+    },
+    "15": {
+      "problem": "<p>The area of the shaded region \\(BEDC\\) in parallelogram \\(ABCD\\) is</p><p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/15-fig1.png\" width=\"557\" alt=\"\"></p><p>\\(\\text{(A)}\\ 24 \\qquad \\text{(B)}\\ 48 \\qquad \\text{(C)}\\ 60 \\qquad \\text{(D)}\\ 64 \\qquad \\text{(E)}\\ 80\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>The area of \\(BEDC\\) can be found by subtracting the area of \\(\\triangle AEB\\) from that of \\(ABCD\\).</p><p>\\(ABCD\\) is a parallelogram, so its area is \\(10\\cdot8=80\\).</p><p>Also, \\(AD = BC = 10\\), so \\(AE\\) is \\(4\\).  So \\(\\triangle AEB\\) has area \\(\\frac{1}{2}\\cdot 4 \\cdot 8 = 16\\).</p><p>Therefore, \\(BEDC\\) has area \\(80 - 16 = \\boxed{\\textbf{(D)}\\ 64}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Notice that \\(BEDC\\) is a trapezoid. Therefore, its area is \\(\\frac{1}{2}(8)(6+10)=\\boxed{\\textbf{(D)}\\ 64}\\).</p>",
+      "answer": "D"
+    },
+    "16": {
+      "problem": "<p>In how many ways can \\(47\\) be written as the sum of two primes?</p><p>\\(\\text{(A)}\\ 0 \\qquad \\text{(B)}\\ 1 \\qquad \\text{(C)}\\ 2 \\qquad \\text{(D)}\\ 3 \\qquad \\text{(E)}\\ \\text{more than 3}\\)</p>",
+      "solutions": "<p>Since \\(47\\) is odd, if two integers sum to \\(47\\), then one is odd while the other is even.  The even number must be \\(2\\) as there are no other even prime numbers.  But this would require the odd number to be \\(47 - 2 = 45\\), which is not prime.  Therefore, there \\(\\boxed{\\textbf{(A)}\\ 0}\\) ways to write \\(47\\) as the sum of two primes.</p>",
+      "answer": "A"
+    },
+    "17": {
+      "problem": "<p>The number \\(N\\) is between \\(9\\) and \\(17\\).  The average of \\(6\\), \\(10\\), and \\(N\\) could be</p><p>\\(\\text{(A)}\\ 8 \\qquad \\text{(B)}\\ 10 \\qquad \\text{(C)}\\ 12 \\qquad \\text{(D)}\\ 14 \\qquad \\text{(E)}\\ 16\\)</p>",
+      "solutions": "<p>The smallest possible average is \\(\\frac{6 + 10 + 9}{3} = \\frac{25}{3} = 8\\frac{1}{3}\\), while the highest possible average is \\(\\frac{6+10+17}{3} = \\frac{33}{3} = 11\\).  The only answer choice between \\(8\\frac{1}{3}\\) and \\(11\\) is \\(\\boxed{\\textbf{(B)}\\ 10}\\), which would be the average if \\(N = 14\\).</p>",
+      "answer": "B"
+    },
+    "18": {
+      "problem": "<p>Many calculators have a reciprocal key \\(\\boxed{\\frac{1}{x}}\\) that replaces the current number displayed with its reciprocal.  For example, if the display is \\(\\boxed{00004}\\) and the \\(\\boxed{\\frac{1}{x}}\\) key is depressed, then the display becomes \\(\\boxed{000.25}\\).  If \\(\\boxed{00032}\\) is currently displayed, what is the fewest number of times you must depress the \\(\\boxed{\\frac{1}{x}}\\) key so the display again reads \\(\\boxed{00032}\\)?</p><p>\\(\\text{(A)}\\ 1 \\qquad \\text{(B)}\\ 2 \\qquad \\text{(C)}\\ 3 \\qquad \\text{(D)}\\ 4 \\qquad \\text{(E)}\\ 5\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>After pressing the reciprocal key once, the calculator will display the decimal representation of \\(\\frac{1}{32}\\) (which is \\(0.03125\\)).  After pressing the reciprocal key again, the calculator will display \\(1 \\div \\frac{1}{32} = 32\\).</p><p>So, after \\(\\boxed{\\textbf{(B)}\\ 2}\\) presses the calculator will display \\(32\\) again.  (Since \\(\\frac{1}{32} = 0.03125\\) is a terminating decimal, there will not be any rounding.)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Let \\(f(x) = \\frac{1}{x}\\).  Then \\(f(f(x)) = 1 \\div \\frac{1}{x} = x\\).  Therefore, if \\(x \\neq \\frac{1}{x}\\) (that is, \\(x \\neq \\pm 1\\)), a calculator displaying \\(x\\) will first display \\(x\\) again after \\(\\boxed{\\textbf{(B)}\\ 2}\\) presses.</p>",
+      "answer": "B"
+    },
+    "19": {
+      "problem": "<p>The graph below shows the total accumulated dollars (in millions) spent by the Surf City government during \\(1988\\).  For example, about \\(.5\\) million had been spent by the beginning of February and approximately \\(2\\) million by the end of April.  Approximately how many millions of dollars were spent during the summer months of June, July, and August?</p><p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/19-fig1.png\" width=\"1290\" alt=\"\"></p><p>\\(\\text{(A)}\\ 1.5 \\qquad \\text{(B)}\\ 2.5 \\qquad \\text{(C)}\\ 3.5 \\qquad \\text{(D)}\\ 4.5 \\qquad \\text{(E)}\\ 5.5\\)</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/19-fig2.png\" width=\"1290\" alt=\"\"></p><p>From the graph, about \\(\\textdollar 2.2\\) million was spent by the start of June and about \\(\\textdollar 4.7\\) million was spent by the end of August.  So about \\(4.7-2.2=\\boxed{\\textbf{(B)}\\ 2.5}\\) million dollars were spent between these two months.</p>",
+      "answer": "B"
+    },
+    "20": {
+      "problem": "<p>The figure may be folded along the lines shown to form a number cube.  Three number faces come together at each corner of the cube.  What is the largest sum of three numbers whose faces come together at a corner?</p><p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/20-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 11 \\qquad \\text{(B)}\\ 12 \\qquad \\text{(C)}\\ 13 \\qquad \\text{(D)}\\ 14 \\qquad \\text{(E)}\\ 15\\)</p>",
+      "solutions": "<p>The highest sum of three different numbers on this cube is \\(4 + 5 + 6 = 15\\). But \\(4\\) and \\(6\\) are on opposite faces, so the faces labeled \\(4\\), \\(5\\), and \\(6\\) will not meet at a corner.</p><p>The next highest sum of three different numbers on this cube is \\(3 + 5 + 6 = 14\\).  These faces meet at a corner, so the answer is \\(\\boxed{\\textbf{(D)}\\ 14}\\).</p>",
+      "answer": "D"
+    },
+    "21": {
+      "problem": "<p>Jack had a bag of \\(128\\) apples.  He sold \\(25\\%\\) of them to Jill.  Next he sold \\(25\\%\\) of those remaining to June.  Of those apples still in his bag, he gave the shiniest one to his teacher.  How many apples did Jack have then?</p><p>\\(\\text{(A)}\\ 7 \\qquad \\text{(B)}\\ 63 \\qquad \\text{(C)}\\ 65 \\qquad \\text{(D)}\\ 71 \\qquad \\text{(E)}\\ 111\\)</p>",
+      "solutions": "<p>After selling apples to Jill, Jack has \\(0.75 \\cdot 128 = 96\\) apples left.  After selling apples to June, he has \\(0.75 \\cdot 96 = 72\\) apples left.  After giving an apple to his teacher, he has \\(72 - 1 = \\boxed{\\textbf{(D)}\\ 71}\\) apples left.</p>",
+      "answer": "D"
+    },
+    "22": {
+      "problem": "<p>The letters \\(\\text{A}\\), \\(\\text{J}\\), \\(\\text{H}\\), \\(\\text{S}\\), \\(\\text{M}\\), \\(\\text{E}\\) and the digits \\(1\\), \\(9\\), \\(8\\), \\(9\\) are \"cycled\" separately as follows and put together in a numbered list:</p><p>\\[\\begin{tabular}[t]{lccc}\n &amp; &amp; AJHSME &amp; 1989 \\\\\n &amp; &amp; &amp; \\\\\n1. &amp; &amp; JHSMEA &amp; 9891 \\\\\n2. &amp; &amp; HSMEAJ &amp; 8919 \\\\\n3. &amp; &amp; SMEAJH &amp; 9198 \\\\\n &amp; &amp; ........ &amp;\n\\end{tabular}\\]</p><p>What is the number of the line on which \\(\\text{AJHSME 1989}\\) will appear for the first time?</p><p>\\(\\text{(A)}\\ 6 \\qquad \\text{(B)}\\ 10 \\qquad \\text{(C)}\\ 12 \\qquad \\text{(D)}\\ 18 \\qquad \\text{(E)}\\ 24\\)</p>",
+      "solutions": "<p>Every \\(4\\text{th}\\) line includes \\(1989\\) while every \\(6\\text{th}\\) line includes \\(\\text{AJHSME}\\).  Therefore, a line has \\(\\text{AJSHME 1989}\\) if and only if its number is divisible by both \\(4\\) and \\(6\\).  Therefore, the number of the first such line is \\(\\text{lcm}(4,6)=\\boxed{\\textbf{(C)}\\ 12}\\).</p>",
+      "answer": "C"
+    },
+    "23": {
+      "problem": "<p>An artist has \\(14\\) cubes, each with an edge of \\(1\\) meter.  She stands them on the ground to form a sculpture as shown.  She then paints the exposed surface of the sculpture.  How many square meters does she paint?</p><p>\\(\\text{(A)}\\ 21 \\qquad \\text{(B)}\\ 24 \\qquad \\text{(C)}\\ 33 \\qquad \\text{(D)}\\ 37 \\qquad \\text{(E)}\\ 42\\)</p><p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/23-fig1.png\" width=\"504\" alt=\"\"></p>",
+      "solutions": "<p>The top view of this figure forms a \\(3\\text{ m} \\times 3\\text{ m}\\) square, so it has area \\(9\\text{ m}^2\\).</p><p>The left, right, front, and rear views each consist of six \\(1\\text{ m} \\times 1\\text{ m}\\) squares stacked in a pyramid shape, so each of these views has an area of \\(6\\text{ m}^2\\).  So, these views have a total area of \\(4 \\cdot 6 = 24 \\text{ m}^2\\).</p><p>Therefore, the total painted area is \\(9 + 24 = \\boxed{\\textbf{(C)}\\ 33} \\text{ m}^2\\).  Note that the bottom is not painted.</p>",
+      "answer": "C"
+    },
+    "24": {
+      "problem": "<p>Suppose a square piece of paper is folded in half vertically.  The folded paper is then cut in half along the dashed line.  Three rectangles are formed-a large one and two small ones.  What is the ratio of the perimeter of one of the small rectangles to the perimeter of the large rectangle?</p><p>\\(\\text{(A)}\\ \\frac{1}{2} \\qquad \\text{(B)}\\ \\frac{2}{3} \\qquad \\text{(C)}\\ \\frac{3}{4} \\qquad \\text{(D)}\\ \\frac{4}{5} \\qquad \\text{(E)}\\ \\frac{5}{6}\\)</p><p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/24-fig1.png\" width=\"290\" alt=\"\"></p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>In this diagram, the dashed segment is the fold while the blue segments are cuts.</p><p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/24-fig2.png\" width=\"484\" alt=\"\"></p><p>Let \\(s\\) be the side length of the square. After being cut, the paper will be separated into two \\(s \\times \\frac{s}{4}\\) rectangles and a \\(s \\times \\frac{s}{2}\\) rectangle.  The larger rectangle has perimeter \\(2\\left(s + \\frac{s}{2}\\right) = 3s\\) while the smaller rectangle has perimeter \\(2\\left(s + \\frac{s}{4}\\right) = \\frac{5s}{2}\\).  Therefore, the ratio of the perimeters is \\(\\left(\\frac{5s}{2}\\right) \\div (3s) = \\boxed{\\textbf{(E)}\\ \\frac{5}{6}}\\).</p><p>~DuoDuoling0, edited by j314andrews</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Suppose the square has side length \\(4\\).  Then the paper would be separated into two \\(4 \\times 1\\) rectangles and a \\(4 \\times 2\\) rectangle.  The larger rectangle has perimeter \\(2(4 + 2) = 12\\) and the smaller rectangle has perimeter \\(2(4 + 1) = 10\\), so the ratio of the perimeters is \\(\\frac{10}{12} = \\boxed{\\textbf{(E)}\\ \\frac{5}{6}}\\).</p>",
+      "answer": "E"
+    },
+    "25": {
+      "problem": "<p>Every time these two wheels are spun, two numbers are selected by the pointers.  What is the probability that the sum of the two selected numbers is even?</p><p>\\(\\text{(A)}\\ \\frac{1}{6} \\qquad \\text{(B)}\\ \\frac{3}{7} \\qquad \\text{(C)}\\ \\frac{1}{2} \\qquad \\text{(D)}\\ \\frac{2}{3} \\qquad \\text{(E)}\\ \\frac{5}{7}\\)</p><p><img class=\"latexcenter\" src=\"/data/aops/1989_AJHSME/25-fig1.png\" width=\"604\" alt=\"\"></p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>For the sum to be even, both numbers must have the same parity (i.e. both are odd or both are even).</p><p>The first spinner has \\(2\\) odd and \\(2\\) even numbers, so regardless of the second spinner’s outcome, the probability the first spinner’s number has the same parity as the second spinner’s number, and thus the probability of the sum being even, is  \\(\\boxed{\\textbf{(C)}\\ \\frac{1}{2}}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>For the sum to be even, either both numbers are odd or both numbers are even.</p><p>The probability that both numbers are even is \\(\\frac{1}{2} \\cdot \\frac{1}{3} = \\frac{1}{6}\\), while the probability that both numbers are odd is \\(\\frac{1}{2} \\cdot \\frac{2}{3} = \\frac{1}{3}\\).  So the probability that the sum is even is \\(\\frac{1}{6} + \\frac{1}{3} = \\boxed{\\textbf{(C)}\\ \\frac{1}{2}}\\).</p><p>~Shadow-18, edited by j314andrews</p><h2><span class=\"mw-headline\" id=\"Solution_3_(Complementary_Counting)\">Solution 3 (Complementary Counting)</span></h2><p>We can complement count this, so we are looking for odd results. This happens when they have different parity. We can find the probability of an odd sum by using casework.</p><p>Case 1: The left spinner is odd. That has \\(\\frac{1}{2}\\), and the right has probability of \\(\\frac{1}{3}\\) for an even number, of \\(\\frac{1}{6}\\).</p><p>Case 2: The left spinner is even. That has \\(\\frac{1}{2}\\), and the right has probability of \\(\\frac{2}{3}\\) for an odd number, of \\(\\frac{1}{3}\\).</p><p>The sum is \\(\\frac{1}{6}+\\frac{1}{3} = \\frac{1}{2} \\implies \\boxed{\\textbf{(C)}}\\)</p>",
+      "answer": "C"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2022,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2022/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The serpent of fire and the serpent of ice play a game. Since the serpent of ice loves the lucky number 6, he will roll a fair 6-sided die with faces numbered 1 through 6. The serpent of fire will pay him \\(\\log_{10} x\\), where \\(x\\) is the number he rolls. The serpent of ice rolls the die 6 times. His expected total amount of winnings across the 6 rounds is \\(k\\). Find \\(10^k\\).</p>",
+      "solutions": "<p>The expected winnings for one roll of the die is \\[\\frac{1}{6}(\\log_{10} 1 + \\log_{10} 2 + \\cdots + \\log_{10} 6) = \\frac{\\log 6!}{6}.\\]</p><p>Hence, we have \\(k = \\log_{10} 6!\\) and \\(10^k = 10^{\\log_{10} 6!} = 6! = \\boxed{720}\\).</p>",
+      "answer": "720"
+    },
+    "2": {
+      "problem": "<p>Let \\(a = \\log_3 5\\), \\(b = \\log_3 4\\), \\(c = -\\log_3 20\\), evaluate \\(\\frac{a^2+b^2}{a^2+b^2+ab} + \\frac{b^2+c^2}{b^2+c^2+bc} + \\frac{c^2+a^2}{c^2+a^2+ca}\\).</p>",
+      "solutions": "<p>We can easily verify that \\(a+b+c=0\\). Hence, \\(a^2+b^2+ab = \\frac{1}{2}[a^2+b^2+(a+b)^2] = \\frac{1}{2}(a^2+b^2+c^2)\\). Similarly, we have \\(b^2+c^2+bc = c^2+a^2+ca = \\frac{1}{2}(a^2+b^2+c^2)\\). Therefore, the required sum is \\(\\frac{(a^2+b^2)+(b^2+c^2)+(c^2+a^2)}{\\frac{1}{2}(a^2+b^2+c^2)} = \\boxed{4}\\).</p>",
+      "answer": "4"
+    },
+    "3": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be an isosceles obtuse triangle with \\(AB = AC\\) and circumcenter \\(O\\). The circle with diameter \\(AO\\) meets \\(BC\\) at points \\(X, Y\\), where \\(X\\) is closer to \\(B\\). Suppose \\(XB = YC = 4\\), \\(XY = 6\\), and the area of \\(\\triangle ABC\\) is \\(m\\sqrt{n}\\) for positive integers \\(m\\) and \\(n\\), where \\(n\\) does not contain any square factors. Find \\(m+n\\).</p>",
+      "solutions": "<p>Let \\(M\\) be the intersection of \\(BC\\) and \\(AO\\). Suppose \\(AM = x\\) and \\(MO = y\\). Applying Pythagorean theorem on \\(\\triangle OMC\\), we get \\((x+y)^2 = y^2 + 49\\). Also, we have \\(xy = XM \\cdot MY = 9\\). Solving these equations gives \\(x = \\sqrt{31}\\). Hence, the area of \\(\\triangle ABC\\) is \\(7\\sqrt{31}\\), giving \\(m+n = \\boxed{38}\\).</p>",
+      "answer": "38"
+    },
+    "4": {
+      "problem": "<p>Alice is not sure what to have for dinner, so she uses a fair 6-sided die to decide. She keeps rolling, and if she gets all the even numbers (<i>i.e.</i> getting all of 2, 4, 6) before getting any odd number, she will reward herself with McDonald’s. Find the probability that Alice could have McDonald’s for dinner.</p>",
+      "solutions": "<p>The probability that Alice gets three evens for the first three distinct numbers is equal to the probability that she gets any three distinct numbers. Hence, the probability that Alice could have McDonald’s for dinner is \\(\\frac{1}{\\binom{6}{3}} = \\boxed{\\frac{1}{20}}\\).</p>",
+      "answer": "\\frac{1}{20}"
+    },
+    "5": {
+      "problem": "<p>How many distinct ways are there to split 50 apples, 50 oranges, 50 bananas into two boxes, such that the products of the number of apples, oranges, and bananas in each box are nonzero and equal?</p>",
+      "solutions": "<p>Let \\(25+a\\) (resp. \\(25+b\\), \\(25+c\\)) and \\(25-a\\) (resp. \\(25-b\\), \\(25-c\\)) be the number of apples (resp. oranges, bananas) in box 1 and 2 respectively, where \\(-24 \\le a,b,c \\le 24\\). We have \\((25+a)(25+b)(25+c) = (25-a)(25-b)(25-c)\\), which simplifies to \\(abc = 5^4(a+b+c)\\). Hence, at least one of \\(a,b,c\\) must be \\(0\\). This implies \\(a+b+c = abc = 0\\). If \\(a=0\\), then \\(b=-c\\), and we have 49 choices for \\(b\\) and \\(c\\). Similarly, we have 49 choices each for \\(b=0\\) and \\(c=0\\). The case of \\((a,b,c)=(0,0,0)\\) is triple counted, so the answer is \\(49 \\times 3 - 2 = \\boxed{145}\\).</p>",
+      "answer": "145"
+    },
+    "6": {
+      "problem": "<p>Sujay and Rishabh are taking turns marking lattice points within a square board in the Cartesian plane with opposite vertices \\((1,1), (n,n)\\) for some constant \\(n\\). Sujay loses when the two-point pattern \\(P\\) below shows up:</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2022_DMM_Team/6-fig1.png\" width=\"274\" alt=\"\"></p><p>That is, Sujay loses when there exists a pair of points \\((x,y)\\) and \\((x+2, y+1)\\). He and Rishabh stop marking points when the pattern \\(P\\) appears on the board. If Rishabh goes first, let \\(S\\) be the set of all integers \\(3 \\le n \\le 100\\) such that Rishabh has a strategy to always trick Sujay into being the one who creates \\(P\\). Find the sum of all elements of \\(S\\).</p>",
+      "solutions": "<p>We claim that Rishabh has a winning strategy for odd \\(n\\) only. Firstly, if \\(n\\) is even, then Sujay should perform the same moves as Rishabh but rotated \\(180^\\circ\\) about the center of the region. It is clear that this is always a valid move. Since \\(P\\) is rotationally symmetric, Sujay can only complete the pattern if Rishabh completes the pattern right before. Thus, Sujay wins in this case.</p><p>For odd \\(n\\), Rishabh should first mark the center of the region. Since the rotation of the center point is itself, Sujay cannot use his previous strategy and must arbitrarily mark a point. Rishabh can then mirror Sujay’s moves and will therefore win using similar logic as in the even \\(n\\) case. Thus, the answer is \\(3+5+\\ldots+99 = \\boxed{2499}\\).</p>",
+      "answer": "2499"
+    },
+    "7": {
+      "problem": "<p>Let \\(a\\) be the shortest distance between the origin \\((0,0)\\) and the graph of \\(y^3 = x(6y-x^2) - 8\\). Find \\(\\lfloor a^2 \\rfloor\\). (\\(\\lfloor x \\rfloor\\) is the largest integer not exceeding \\(x\\).)</p>",
+      "solutions": "<p>From the equation, we obtain \\(x^3 + y^3 + 2^3 - 2 \\cdot 3xy = 0\\). Using the equality \\(a^3+b^3+c^3-3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)\\), we get \\((x+y+2)(x^2+y^2+4-2x-2y-xy) = 0\\). Noting that \\(x^2+y^2+4-2x-2y-xy = \\frac{1}{2}(x-y)^2 + \\frac{1}{2}(x-2)^2 + \\frac{1}{2}(y-2)^2\\), we have either \\(x+y+2=0\\) or \\(x=y=2\\). The shortest distance from \\((0,0)\\) to \\(x+y+2=0\\) is \\(\\sqrt{2}\\); the distance from \\((0,0)\\) to \\((2,2)\\) is \\(\\sqrt{8}\\). Hence, the answer is \\(\\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "8": {
+      "problem": "<p>Find all real solutions to the following equation: \\[2\\sqrt{2}x^2 + x - \\sqrt{1-x^2} - \\sqrt{2} = 0.\\]</p>",
+      "solutions": "<p>Let \\(x = \\sin\\theta\\), where \\(\\theta \\in [-\\frac{\\pi}{2}, \\frac{\\pi}{2}]\\). Then, we have \\[2\\sqrt{2}\\sin^2\\theta + \\sin\\theta - \\cos\\theta - \\sqrt{2} = 0,\\] which simplifies to \\[(\\sin\\theta - \\cos\\theta)\\left[2\\sin\\left(\\theta+\\frac{\\pi}{4}\\right)+1\\right] = 0.\\]</p><p>If \\(\\sin\\theta - \\cos\\theta = 0\\), we have \\(\\theta = \\frac{\\pi}{4}\\) and \\(x = \\frac{\\sqrt{2}}{2}\\). If \\(\\sin\\left(\\theta+\\frac{\\pi}{4}\\right) = -\\frac{1}{2}\\), we have \\(\\theta = -\\frac{5}{12}\\pi\\) and \\(x = -\\frac{\\sqrt{6}+\\sqrt{2}}{4}\\). Hence, all real solutions to the given equation are \\(x = \\boxed{\\frac{\\sqrt{2}}{2}}\\) or \\(x = \\boxed{-\\frac{\\sqrt{6}+\\sqrt{2}}{4}}\\).</p>",
+      "answer": "x = \\frac{\\sqrt{2}}{2} \\text{ or } x = -\\frac{\\sqrt{6}+\\sqrt{2}}{4}"
+    },
+    "9": {
+      "problem": "<p>Given the expression \\(S = (x^4-x)(x^2-x^3)\\) for \\(x = \\cos \\frac{2\\pi}{5} + i\\sin \\frac{2\\pi}{5}\\), find the value of \\(S^2\\).</p>",
+      "solutions": "<p>The given value of \\(x\\) is a fifth root of unity, with \\(x^5 = 1\\). This allows us to expand \\(S\\) and divide out factors of \\(x^5\\): \\[S = (x^4-x)(x^2-x^3) = x^6-x^7-x^3+x^4 = x^4-x^3-x^2+x.\\]</p><p>Squaring this expression yields \\[S^2 = (x^4-x^3-x^2+x)^2 = x^8+x^6+x^4+x^2+2(-x^7-x^6+x^5+x^5-x^4-x^3).\\]</p><p>We again use the fact that \\(x^5=1\\) to divide out factors of \\(x^5\\), obtaining \\[\\begin{aligned}\nS^2 &amp;= x^3+x+x^4+x^2+2(-x^2-x+2-x^4-x^3) \\\\\n&amp;= 4-(x+x^2+x^3+x^4).\n\\end{aligned}\\]</p><p>Factoring \\(x^5-1=0\\), we obtain \\((x-1)(x^4+x^3+x^2+x+1)=0\\). Division by \\(x-1\\) yields \\(x^4+x^3+x^2+x=-1\\), which can be plugged into the expression for \\(S^2\\) to obtain \\[S^2 = 4-(x+x^2+x^3+x^4) = 4-(-1) = \\boxed{5}.\\]</p>",
+      "answer": "5"
+    },
+    "10": {
+      "problem": "<p>In a 32 team single-elimination rock-paper-scissors tournament, the teams are numbered from 1 to 32. Each team is guaranteed (through incredible rock-paper-scissors skill) to win any match against a team with a higher number than it, and therefore will lose to any team with a lower number. Each round, teams who have not lost yet are randomly paired with other teams, and the losers of each match are eliminated. After the 5 rounds of the tournament, the team that won all 5 rounds is ranked 1st, the team that lost the 5th round is ranked 2nd, and the two teams that lost the 4th round play each other for 3rd and 4th place. What is the probability that the teams numbered 1, 2, 3, and 4 are ranked 1st, 2nd, 3rd, and 4th respectively? If the probability is \\(\\frac{m}{n}\\) for relatively prime integers \\(m\\) and \\(n\\), find \\(m\\).</p>",
+      "solutions": "<p>The first 3 rounds of the tournament are equivalent to randomly dividing all 32 teams into four groups of 8 and selecting the best of each group to advance to the semifinals. For the top 4 teams to be ranked correctly, they all must make it to the semifinals and therefore must all be in different groups. Imagine placing the teams into the four groups in order: team 1 is placed first, so there is a \\(\\frac{32}{32}\\) chance they are placed in a different group than the others; team 2 is placed second with a \\(\\frac{24}{31}\\) chance of avoiding being in the same group as team 1; team 3 is placed third with a \\(\\frac{16}{30}\\) chance of avoiding team 1 and team 2’s groups; and team 4 has a \\(\\frac{8}{29}\\) chance of being placed correctly.</p><p>After making it to the semifinals, the top 4 teams must still be matched correctly to be ranked in the right order. Team 1 will certainly win the semifinals and finals, while team 4 will lose the semifinals and the match for 3rd place. Team 2 and 3, however, must be paired correctly to ensure that team 2 advances to the finals instead of team 3. This has a \\(\\frac{2}{3}\\) chance of happening, because team 2 will be randomly paired with team 1, 3, or 4 for the semifinals, and will make it to the finals if paired against team 3 or 4. All in all, this gives a total probability of the top 4 teams being ranked correctly of \\[\\frac{24}{31} \\cdot \\frac{16}{30} \\cdot \\frac{8}{29} \\cdot \\frac{2}{3} = \\frac{1024}{13485},\\] the numerator of which is \\(\\boxed{1024}\\).</p>",
+      "answer": "1024"
+    }
+  }
+}

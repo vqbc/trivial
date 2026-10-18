@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2022,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2022/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Sujay sees a shooting star go across the night sky, and took a picture of it. The shooting star consists of a star body, which is bounded by four quarter-circle arcs, and a triangular tail. Suppose \\(AB = 2\\), \\(AC = 4\\). Let the area of the shooting star be \\(X\\). If \\(6X = a - b\\pi\\) for positive integers \\(a, b\\), find \\(a+b\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2022_DMM_Individual/1-fig1.png\" width=\"349\" alt=\"\"></p>",
+      "solutions": "<p>We have \\(6X = 6\\left(4+2-\\frac{\\pi}{2}\\right) = 36-3\\pi\\). Hence, \\(a+b=\\boxed{39}\\).</p>",
+      "answer": "39"
+    },
+    "2": {
+      "problem": "<p>Assuming that each distinct arrangement of the letters in DISCUSSIONS is equally likely to occur, what is the probability that a random arrangement of the letters in DISCUSSIONS has all the S’s together?</p>",
+      "solutions": "<p>The total number of arrangements is \\(\\frac{11!}{2!4!}\\), and the number of arrangements with S’s together is \\(\\frac{8!}{2!}\\). Hence, the probability that a random arrangement has all the S’s together is \\(\\frac{8!/2!}{11!/(2!4!)} = \\boxed{\\frac{4}{165}}\\).</p>",
+      "answer": "\\frac{4}{165}"
+    },
+    "3": {
+      "problem": "<p>Evaluate \\[\\frac{(1+2022)(1+2022^2)(1+2022^4)\\cdots(1+2022^{2^{2022}})}{1+2022+2022^2+\\ldots+2022^{2^{2023}-1}}.\\]</p>",
+      "solutions": "<p>Multiply both the numerator and the denominator by \\((2022-1)\\). Observe that \\((x-1)(x+1)(x^2+1)\\cdots(x^{2^n}+1) = x^{2^{n+1}}-1\\) and \\((x-1)(1+x+x^2+\\cdots+x^n) = x^{n+1}-1\\), we get the answer is \\(\\boxed{1}\\).</p>",
+      "answer": "1"
+    },
+    "4": {
+      "problem": "<p>Dr. Kraines has 27 unit cubes, each of which has one side painted red while the other five are white. If he assembles his cubes into one \\(3\\times 3\\times 3\\) cube by placing each unit cube in a random orientation, what is the probability that the entire surface of the cube will be white, with no red faces visible? If the answer is \\(2^a3^b5^c\\) for integers \\(a,b,c\\), find \\(|a+b+c|\\).</p>",
+      "solutions": "<p>Each of the 8 corner pieces has a \\(\\frac{1}{2}\\) probability of having only white faces visible, as 3 of the 6 faces are concealed by other unit cubes. The 12 edge pieces each have a \\(\\frac{2}{3}\\) probability of having only white faces visible, as 4 of the 6 possible locations for the red face to be concealed. Finally, the 6 pieces at the center of a side have a \\(\\frac{5}{6}\\) chance of being placed so the 1 visible face is white. This gives a total probability of \\[\\left(\\frac{1}{2}\\right)^8 \\cdot \\left(\\frac{2}{3}\\right)^{12} \\cdot \\left(\\frac{5}{6}\\right)^6 = \\frac{5^6}{3^{18}2^2},\\] so the answer is \\(|6-18-2| = \\boxed{14}\\).</p>",
+      "answer": "14"
+    },
+    "5": {
+      "problem": "<p>Let \\(S\\) be a subset of \\(\\{1,2,3,\\ldots,1000,1001\\}\\) such that no two elements of \\(S\\) have a difference of 4 or 7. What is the largest number of elements \\(S\\) can have?</p>",
+      "solutions": "<p>First consider taking such a subset of \\(\\{1,2,\\ldots,11\\}\\). There can be no disadvantage to including 1 in our subset, so we begin by including 1 and eliminating 5 and 8. Now, at most one from each pair \\((2,9), (3,7), (4,11), (6,10)\\) can be chosen, so no more than 5 elements can be in our subset, with the subset \\(\\{1,3,4,6,9\\}\\) being a possible example of a subset containing 5 elements.</p><p>Taking the complete set from the problem, it can be divided into 91 groups of 11, from each of which a maximum of 5 elements can be taken by the logic above. This gives an upper bound of \\(5\\cdot 91 = \\boxed{455}\\), which is possible by taking \\(S = \\{x \\mid x \\in S, x \\bmod 11 \\in \\{1, 3, 4, 6, 9\\}\\}\\).</p>",
+      "answer": "455"
+    },
+    "6": {
+      "problem": "<p>George writes the number 1. At each iteration, he removes the number \\(x\\) written and instead writes either \\(4x+1\\) or \\(8x+1\\). He does this until \\(x&gt;1000\\), after which the game ends. What is the minimum possible value of the last number George writes?</p>",
+      "solutions": "<p>We will consider every number George writes in binary. In binary, turning \\(x\\) into \\(4x+1\\) is equivalent to concatenating 01 right after \\(x\\). Similarly, turning \\(x\\) into \\(8x+1\\) is equivalent to concatenating 001 right after \\(x\\). Essentially, George starts with 1, and at each step, he appends either 01 or 001 right after \\(x\\).</p><p>Note that it is impossible to use only 10 digits. If we use only 10 digits, the second digit of \\(x\\) must be 0, making it smaller than 1000. Thus, the final number must have at least 11 digits. The first digit of \\(x\\) must be 1, and we want to fill the rest of the 10 digits with 01 and 001. Suppose we use \\(a\\) 01’s and \\(b\\) 001’s. Then, we have \\(2a+3b=10\\), the only solution of which is \\(a=b=2\\). In order to minimize the value of \\(x\\), we need to place 01’s as right as possible and place 001’s as left as possible. Thus, the binary representation of the final answer is 10010010101, which equals \\(\\boxed{1173}\\).</p>",
+      "answer": "1173"
+    },
+    "7": {
+      "problem": "<p>List all positive integer ordered pairs \\((a,b)\\) satisfying \\(a^4+4b^4 = 281\\cdot 61\\).</p>",
+      "solutions": "<p>By Sophie Germain, we can write \\[a^4+4b^4 = ((a+b)^2+b^2)((a-b)^2+b^2) = 61\\cdot 281.\\] Since \\(a,b&gt;0\\), the first term is greater than the second term so we have two cases. If \\((a-b)^2+b^2=1\\), then either \\(a-b=0,b=1\\), or \\(a-b=1,b=0\\), or \\(a-b=-1,b=0\\). None of them satisfies the given equation, so \\((a-b)^2+b^2=61\\) and \\((a+b)^2+b^2=281\\). The only two square numbers that sum to 61 are 25 and 36, so either \\(a-b=5,b=6\\) or \\(a-b=6,b=5\\) which implies that \\(a=11,b=5,6\\). Testing these two pairs on \\((a+b)^2+b^2=281\\) gives \\((a,b)=\\boxed{(11,5)}\\).</p>",
+      "answer": "(11, 5)"
+    },
+    "8": {
+      "problem": "<p>Karthik the farmer is trying to protect his crops from a wildfire. Karthik’s land is a \\(5\\times 6\\) rectangle divided into 30 smaller square plots. The 5 plots on the left edge contain fire, the 5 plots on the right edge contain blueberry trees, and the other \\(5\\times 4\\) plots of land contain banana bushes. Fire will repeatedly spread to all squares with bushes or trees that share a side with a square with fire. How many ways can Karthik replace 5 of his 20 plots of banana bushes with firebreaks so that fire will not consume any of his prized blueberry trees?</p>",
+      "solutions": "<p>It is clear that each of the 5 rows must have a firebreak, and that the firebreaks must be at most 1 column away from adjacent firebreaks. Let the second and fifth columns be <i>edge</i> columns, and let the third and fourth columns be <i>center</i> columns. We proceed by recursion.</p><p>Let \\(E_k\\) be the number of configurations where the firebreaks in the first \\(k\\) rows are at most 1 columns away from each other and the \\(k\\)th firebreak is on an edge column. Likewise, let \\(C_k\\) be the number of configurations where the firebreaks in the first \\(k\\) rows are at most 1 columns away from each other and the \\(k\\)th firebreak is on a center column. We have the following recursive formula \\[E_k = E_{k-1} + C_{k-1}, \\quad C_k = E_{k-1} + 2C_{k-1}.\\] This is true because when we add a firebreak in the \\(k\\)th row and an edge column, the previous firebreak is either in an edge column or center column. When we add a firebreak in the \\(k\\)th row and a center column, the previous firebreak is either in an edge column or one of two center columns. Since \\(E_1 = C_1 = 2\\), we can calculate \\(E_5\\) and \\(C_5\\) as follows: \\[\\begin{array}{c|ccccc}\nk &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\\\\n\\hline\nE_k &amp; 2 &amp; 4 &amp; 10 &amp; 26 &amp; 68 \\\\\nC_k &amp; 2 &amp; 6 &amp; 16 &amp; 42 &amp; 110\n\\end{array}\\] Thus, our answer is \\(68+110=\\boxed{178}\\). Note that the terms in the table are actually twice the terms of the Fibonacci sequence which can be proven by induction.</p>",
+      "answer": "178"
+    },
+    "9": {
+      "problem": "<p>Find \\(a_0 \\in \\mathbb{R}\\) such that the sequence \\(\\{a_n\\}_{n=0}^{\\infty}\\) defined by \\(a_{n+1} = -3a_n + 2^n\\) is strictly increasing.</p>",
+      "solutions": "<p>Dividing both sides of the recurrence relation by \\(2^{n+1}\\) gives \\[\\frac{a_{n+1}}{2^{n+1}} = -\\frac{3}{2}\\cdot\\frac{a_n}{2^n} + \\frac{1}{2}.\\] Letting \\(b_n = \\frac{a_n}{2^n}\\) gives \\(b_{n+1} = -\\frac{3}{2}b_n + \\frac{1}{2}\\), which is equivalent to \\(b_{n+1} - \\frac{1}{5} = -\\frac{3}{2}\\left(b_n - \\frac{1}{5}\\right)\\). Hence, we get \\(b_n - \\frac{1}{5} = \\left(b_0 - \\frac{1}{5}\\right)\\left(-\\frac{3}{2}\\right)^n = \\left(a_0-\\frac{1}{5}\\right)\\left(-\\frac{3}{2}\\right)^n\\). Therefore, we have \\(a_n = 2^n\\cdot b_n = (-3)^n\\left[\\left(a_0-\\frac{1}{5}\\right)+\\frac{1}{5}\\left(-\\frac{2}{3}\\right)^n\\right]\\). Since \\(\\{a_n\\}_{n=0}^{\\infty}\\) is strictly increasing, we must have \\(a_0 - \\frac{1}{5} = 0\\), i.e. \\[a_0 = \\boxed{\\frac{1}{5}}.\\]</p>",
+      "answer": "\\frac{1}{5}"
+    },
+    "10": {
+      "problem": "<p>Jonathan is playing with his life savings. He lines up a penny, nickel, dime, quarter, and half-dollar from left to right. At each step, Jonathan takes the leftmost coin at position 1 and uniformly chooses a position \\(2 \\le k \\le 5\\). He then moves the coin to position \\(k\\), shifting all coins at positions 2 through \\(k\\) leftward. What is the expected number of steps it takes for the half-dollar to leave and subsequently return to position 5?</p>",
+      "solutions": "<p>Let \\(T_k\\) denote the expected number of steps required for a coin at position \\(k\\) to reach position 1. Note that, at each step, the probability of the coin shifting from position \\(k\\) to \\(k-1\\) is \\(\\frac{6-k}{4}\\), so we expect that it will take \\(\\frac{4}{6-k}\\) steps to reach position \\(k-1\\). This gives the recursive formula \\(T_k = \\frac{4}{6-k} + T_{k-1}\\) with \\(T_1 = 0\\), so we can compute the following: \\[\\begin{array}{c|ccccc}\nk &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\\\\n\\hline\nT_k &amp; 0 &amp; 1 &amp; \\frac{7}{3} &amp; \\frac{13}{3} &amp; \\frac{25}{3}\n\\end{array}\\] The half-dollar will then take \\(\\frac{25}{3}\\) steps in expectation to reach position 1. Afterwards, there is a \\(\\frac{1}{4}\\) chance that the next step will return the half-dollar to position 5 and a \\(\\frac{3}{4}\\) chance that it will be taken elsewhere. This means that it takes \\(\\frac{4}{1} - 1 = 3\\) failed trials in expectation for the half-dollar to successfully return to position 5. Each failed trial is expected to take \\(1 + \\frac{1}{3}(T_2+T_3+T_4)\\) steps, and the successful trial takes only 1 step to return to position 5. Thus, the overall expected value is \\(T_5 + 3\\left(1+\\frac{1}{3}(T_2+T_3+T_4)\\right)+1 = \\boxed{20}\\) steps.</p>",
+      "answer": "20"
+    }
+  }
+}

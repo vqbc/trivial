@@ -1,0 +1,23 @@
+{
+  "test": "BMT Geometry Tiebreaker",
+  "year": 2021,
+  "name": "Geometry Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2021/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Regular hexagon \\(NOSAME\\) with side length 1 and square \\(UDON\\) are drawn in the plane such that \\(UDON\\) lies outside of \\(NOSAME\\). Compute \\([SAND] + [SEND]\\), the sum of the areas of quadrilaterals \\(SAND\\) and \\(SEND\\).</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2021_BMT_Geometry_Tiebreaker/1-fig1.png\" width=\"214\" alt=\"\"></p><p>We know \\([SAND] = [SAN] + [SDN] = [SEN] + [SDN] = [SEND]\\). So, our answer is \\(2 \\cdot [SAND] = 2 \\cdot ([SANO] + [DNO] + [DOS])\\). We know \\([DNO] = \\frac{1}{2}\\). We can calculate \\([SANO]\\) and \\([SOD]\\) by calculating the length of the altitudes altitudes from \\(S\\) to \\(OA\\) and \\(NA\\) to be \\(\\frac{1}{2}\\) and \\(\\frac{\\sqrt{3}}{2}\\), respectively. So, our desired sum becomes \\(2 \\cdot \\left(\\frac{3\\sqrt{3}}{4} + \\frac{1}{2} + \\frac{1}{4}\\right) = \\boxed{\\frac{3+3\\sqrt{3}}{2}}\\).</p>",
+      "answer": "\\frac{3+3\\sqrt{3}}{2}"
+    },
+    "2": {
+      "problem": "<p>Let \\(\\triangle A_0B_0C_0\\) be an equilateral triangle with area 1, and let \\(A_1\\), \\(B_1\\), \\(C_1\\) be the midpoints of \\(\\overline{A_0B_0}\\), \\(\\overline{B_0C_0}\\), and \\(\\overline{C_0A_0}\\), respectively. Furthermore, set \\(A_2\\), \\(B_2\\), \\(C_2\\) as the midpoints of segments \\(\\overline{A_0A_1}\\), \\(\\overline{B_0B_1}\\), and \\(\\overline{C_0C_1}\\) respectively. For \\(n \\ge 1\\), \\(A_{2n+1}\\) is recursively defined as the midpoint of \\(\\overline{A_{2n}A_{2n-1}}\\), and \\(A_{2n+2}\\) is recursively defined as the midpoint of \\(\\overline{A_{2n+1}A_{2n-1}}\\). Recursively define \\(B_n\\) and \\(C_n\\) the same way. Compute the value of \\(\\lim_{n\\to\\infty} [A_nB_nC_n]\\), where \\([A_nB_nC_n]\\) denotes the area of triangle \\(\\triangle A_nB_nC_n\\).</p>",
+      "solutions": "<p>In order to find this area, we first find the limit of the ratio \\(r = \\frac{A_0A_n}{A_0B_0}\\). Observe that \\[\\lim_{n\\to\\infty} r = \\frac{1}{A_0B_0} \\left(A_0B_0 - A_1B_0 - A_2A_1 + A_3A_2 + A_4A_3 - \\cdots\\right)\\] \\[= 1 - \\frac{1}{2} - \\frac{1}{4} + \\frac{1}{8} + \\frac{1}{16} - \\frac{1}{32} - \\frac{1}{64} + \\frac{1}{128} + \\frac{1}{256} - \\cdots = \\frac{2}{5},\\]</p><p>so we have \\(\\lim_{n\\to\\infty} [A_nB_nC_n] = 1 - 3\\left(\\lim_{n\\to\\infty} r\\right)\\left(1 - \\lim_{n\\to\\infty} r\\right)[A_0B_0C_0] = 1 - 3 \\cdot \\frac{2}{5} \\cdot \\frac{3}{5} = \\boxed{\\frac{7}{25}}\\) by symmetry.</p>",
+      "answer": "\\frac{7}{25}"
+    },
+    "3": {
+      "problem": "<p>Right triangle \\(\\triangle ABC\\) with its right angle at \\(B\\) has angle bisector \\(\\overline{AD}\\) with \\(D\\) on \\(\\overline{BC}\\), as well as altitude \\(\\overline{BE}\\) with \\(E\\) on \\(\\overline{AC}\\). If \\(\\overline{DE} \\perp \\overline{BC}\\) and \\(AB = 1\\), compute \\(AC\\).</p>",
+      "solutions": "<p>Note that \\(\\angle BAD = \\angle ADE\\) because of parallel lines. Since \\(\\angle BAD = \\angle DAE\\), \\(\\triangle ADE\\) is isosceles. Let \\(AE = DE = x\\) and \\(\\angle BAC = \\theta\\). Then \\(\\triangle BAE\\) gives us \\(BE = x\\tan\\theta\\) and \\(\\triangle BED\\) gives us \\(BE = \\frac{x}{\\sin\\theta}\\) since \\(\\angle EBD = \\angle BAC\\). Thus, \\(\\sin\\theta \\cdot \\tan\\theta = 1\\), so we simplify to \\(\\sin^2\\theta = \\cos\\theta\\). Plugging \\(\\sin^2\\theta = 1 - \\cos^2\\theta\\) gives us \\(\\cos^2\\theta + \\cos\\theta - 1 = 0\\). Now we can solve the quadratic to get \\(\\cos\\theta = \\frac{-1+\\sqrt{5}}{2}\\), discarding the negative solution as \\(\\angle BAC\\) is acute. Thus, \\(AC = \\boxed{\\frac{1+\\sqrt{5}}{2}}\\).</p>",
+      "answer": "\\frac{1+\\sqrt{5}}{2}"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "SMT Geometry Tiebreaker",
+  "year": 2021,
+  "name": "Geometry Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2021/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the radius of the largest circle centered at \\((2, 2)\\) that is completely bounded within the parabola \\(y = x^2 - 4x + 5\\)?</p>",
+      "solutions": "<p>To make the calculations easier, we can translate the parabola \\(y = (x-2)^2 + 1\\) to \\(y = x^2\\) (2 units left, 1 unit down), and then \\((2,2)\\) will be translated to \\((0,1)\\). The largest circle must be tangent to the parabola, so suppose that \\((x_0, y_0)\\) is one of the tangent point. Suppose that the equation of the circle is \\(x^2 + (y-1)^2 = r^2\\), and the slope of any point \\((x, y)\\) on the circle is \\[\\frac{dy}{dx} = -\\frac{x}{y-1}\\]</p><p>Also we know that on the parabola \\[\\frac{dy}{dx} = 2x\\]</p><p>Equating the two slopes for \\((x_0, y_0)\\) gives \\[-\\frac{x_0}{y_0 - 1} = 2x_0 \\Rightarrow y_0 = \\frac{1}{2}\\]</p><p>Then \\(x_0 = \\sqrt{\\frac{1}{2}}\\). Now \\(r^2 = x_0^2 + (y_0-1)^2 = \\frac{1}{2} + \\frac{1}{4} = \\frac{3}{4} \\Rightarrow r = \\frac{\\sqrt{3}}{2}\\).</p>",
+      "answer": "\\frac{\\sqrt{3}}{2}"
+    },
+    "2": {
+      "problem": "<p>If two points are picked randomly on the perimeter of a square, what is the probability that the distance between those points is less than the side length of the square?</p>",
+      "solutions": "<p>Without loss of generality, let the square have side length \\(1\\), and let the first point be picked somewhere along the bottom side of the square. There’s four possible sides for the second point to be picked, and each has equal probability of occurring. If the second point is picked on the top side, the probability of the distance being less than a \\(1\\) is \\(0\\), and if it’s picked on the right side, the probability of of the distance being less than \\(1\\) is \\(1\\).</p><p>There’s also a \\(\\frac{1}{2}\\) probability that the second point is picked to be on either the left or right side, and for this case we can assume without loss of generality that it’s the left. Now let \\(x\\) be the distance of the point on the bottom side from the bottom left vertex and \\(y\\) be the disttance of the point on the left side from the bottom left vertex, with \\(x, y\\) chosen independently and randomly from the interval \\([0,1]\\). The distance between the points is just \\(\\sqrt{x^2+y^2}\\). If we draw out another unit square in the coordinate plane with vertices \\((0,0), (0,1), (1,0), (1,1)\\), then every \\((x,y)\\) point in the square corresponds to a choosing of points on the original square. The set of points with \\(\\sqrt{x^2+y^2} &lt; 1\\) is a quarter circle of radius \\(1\\) centered at the origin. This has an area of \\(\\frac{\\pi}{4}\\) and the area of the whole square is just \\(1\\), so the probability in this case is \\(\\frac{\\pi}{4}\\).</p><p>Adding all the probabilities, our answer is \\(\\frac{1}{4} \\cdot 0 + \\frac{1}{4} \\cdot 1 + \\frac{1}{2} \\cdot \\frac{\\pi}{4} = \\boxed{\\frac{1}{4} + \\frac{\\pi}{8}}\\).</p>",
+      "answer": "\\frac{1}{4} + \\frac{\\pi}{8}"
+    },
+    "3": {
+      "problem": "<p>In quadrilateral \\(ABCD\\), \\(CD = 14\\), \\(\\angle BAD = 105^\\circ\\), \\(\\angle ACD = 35^\\circ\\), and \\(\\angle ACB = 40^\\circ\\). Let the midpoint of \\(CD\\) be \\(M\\). Points \\(P\\) and \\(Q\\) lie on \\(\\overrightarrow{AM}\\) and \\(\\overrightarrow{BM}\\), respectively, such that \\(\\angle APB = 40^\\circ\\) and \\(\\angle AQB = 40^\\circ\\). \\(PB\\) intersects \\(CD\\) at point \\(R\\) and \\(QA\\) intersects \\(CD\\) at point \\(S\\). If \\(CR = 2\\), what is the length of \\(SM\\)?</p>",
+      "solutions": "<p>We see that \\(\\angle BAD + \\angle DCB = 105^\\circ + 75^\\circ\\), so quadrilateral \\(ABCD\\) is cyclic. Then, because \\(\\angle APB = \\angle AQB = \\angle ACB = 40^\\circ\\), points \\(P\\) and \\(Q\\) also lie on the circumcircle. Since \\(AP\\) and \\(BQ\\) intersect at the midpoint of chord \\(CD\\), by the Butterfly theorem \\(M\\) is also the midpoint of \\(RS\\). We have \\(SM = RM = CM - CR = 7 - 2 = \\boxed{5}\\).</p>",
+      "answer": "5"
+    }
+  }
+}

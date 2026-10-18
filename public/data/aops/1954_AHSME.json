@@ -1,0 +1,256 @@
+{
+  "test": "1954 AHSME",
+  "year": 1954,
+  "problems": {
+    "1": {
+      "problem": "<p>The square of \\(5-\\sqrt{y^2-25}\\) is:</p><p>\\(\\textbf{(A)}\\ y^2-5\\sqrt{y^2-25} \\qquad \\textbf{(B)}\\ -y^2 \\qquad \\textbf{(C)}\\ y^2 \\\\ \\textbf{(D)}\\ (5-y)^2\\qquad\\textbf{(E)}\\ y^2-10\\sqrt{y^2-25}\\)</p>",
+      "solutions": "<p>\\((5-\\sqrt{y^2-25})^2 = 5^2-2\\cdot 5\\cdot\\sqrt{y^2-25}+y^2-25 = y^2-10\\sqrt{y^2-25}\\) \\(\\ \\Rightarrow\\) \\(\\boxed{E}\\)</p><h2><span class=\"mw-headline\" id=\"Note\">Note</span></h2><p>Answer choice E is the only one with the coefficient of the radical term being 10.</p>",
+      "answer": "E"
+    },
+    "2": {
+      "problem": "<p>The equation \\(\\frac{2x^2}{x-1}-\\frac{2x+7}{3}+\\frac{4-6x}{x-1}+1=0\\) can be transformed by eliminating fractions to the equation \\(x^2-5x+4=0\\). The roots of the latter equation are \\(4\\) and \\(1\\). Then the roots of the first equation are:</p><p>\\(\\textbf{(A)}\\ 4 \\text{ and }1 \\qquad \\textbf{(B)}\\ \\text{only }1 \\qquad \\textbf{(C)}\\ \\text{only }4 \\qquad \\textbf{(D)}\\ \\text{neither 4 nor 1}\\qquad\\textbf{(E)}\\ \\text{4 and some other root}\\)</p>",
+      "solutions": "<p>We plug \\(x=4, x=1\\) into the original equation \\(x=4\\implies\\frac{8}{-3}+\\frac{15}{3}+\\frac{-20}{-3}\\implies\\frac{15+20-8}{4}+1=0\\) \\(x=1\\implies\\frac{2}{0}-\\frac{9}{3}+\\frac{-2}{0}+1=0\\), which is undefined because \\(\\frac{k}{0}\\) is undefined.</p><p>Thus the only solution to the equation is \\(x=4\\), \\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "3": {
+      "problem": "<p>If \\(x\\) varies as the cube of \\(y\\), and \\(y\\) varies as the fifth root of \\(z\\), then \\(x\\) varies as the nth power of \\(z\\), where n is:</p><p>\\(\\textbf{(A)}\\ \\frac{1}{15} \\qquad\\textbf{(B)}\\ \\frac{5}{3} \\qquad\\textbf{(C)}\\ \\frac{3}{5} \\qquad\\textbf{(D)}\\ 15\\qquad\\textbf{(E)}\\ 8\\)</p>",
+      "solutions": "<p>\\(x=k\\cdot y^3\\), \\(y=j\\cdot z^{\\frac{1}{5}}\\implies y^3=j^3\\cdot z^{\\frac{3}{5}}\\), so \\(x=k\\cdot j^3\\cdot z^{\\frac{3}{5}}\\), \\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "4": {
+      "problem": "<p>If the Highest Common Divisor of \\(6432\\) and \\(132\\) is diminished by \\(8\\), it will equal:</p><p>\\(\\textbf{(A)}\\ -6 \\qquad \\textbf{(B)}\\ 6 \\qquad \\textbf{(C)}\\ -2 \\qquad \\textbf{(D)}\\ 3 \\qquad \\textbf{(E)}\\ 4\\)</p>",
+      "solutions": "<p>\\(\\gcd(6432, 132)\\) \\(13\\cdot 12=132\\) \\(\\frac{6432}{6}=1072\\implies\\frac{1072}{4}=268\\implies\\frac{268}{4}=67\\), so \\(\\gcd(2^5\\cdot 3\\cdot 67, 2^2\\cdot 3\\cdot 13)=2^2\\cdot 3=12\\implies 12-8=4, \\boxed{E}\\)</p>",
+      "answer": "E"
+    },
+    "5": {
+      "problem": "<p>A regular hexagon is inscribed in a circle of radius \\(10\\) inches. Its area is:</p><p>\\(\\textbf{(A)}\\ 150\\sqrt{3} \\text{ sq. in.} \\qquad \\textbf{(B)}\\ \\text{150 sq. in.} \\qquad \\textbf{(C)}\\ 25\\sqrt{3}\\text{ sq. in.}\\qquad\\textbf{(D)}\\ \\text{600 sq. in.}\\qquad\\textbf{(E)}\\ 300\\sqrt{3}\\text{ sq. in.}\\)</p>",
+      "solutions": "<p>Using the formula for the area of a hexagon given the circumradius: \\(\\frac{3\\sqrt{3}}{2\\pi}=\\frac{A}{10^2\\pi}\\implies 100\\cdot3\\sqrt{3}\\pi=2A\\pi\\implies 50\\cdot3\\sqrt{3}=A\\implies 150\\sqrt{3}\\ \\boxed{(\\textbf{A})}\\)</p>",
+      "answer": "A"
+    },
+    "6": {
+      "problem": "<p>The value of \\(\\frac{1}{16}a^0+\\left (\\frac{1}{16a} \\right )^0- \\left (64^{-\\frac{1}{2}} \\right )- (-32)^{-\\frac{4}{5}}\\) is:</p><p>\\(\\textbf{(A)}\\ 1 \\frac{13}{16} \\qquad \\textbf{(B)}\\ 1 \\frac{3}{16} \\qquad \\textbf{(C)}\\ 1 \\qquad \\textbf{(D)}\\ \\frac{7}{8}\\qquad\\textbf{(E)}\\ \\frac{1}{16}\\)</p>",
+      "solutions": "<p>\\(\\frac{1}{16}a^0+\\left (\\frac{1}{16a} \\right )^0- \\left (64^{-\\frac{1}{2}} \\right )- (-32)^{-\\frac{4}{5}}\\implies \\frac{1}{16}+1-\\frac{1}{8}-((-32)^4)^\\frac{1}{5}\\implies 1-\\frac{1}{16}-\\frac{1}{16}\\)\\(\\implies1-\\frac{1}{8}\\implies\\boxed{\\textbf{(D) }\\frac{7}{8}}\\).</p>",
+      "answer": "D"
+    },
+    "7": {
+      "problem": "<p>A housewife saved \\(\\textdollar{2.50}\\) in buying a dress on sale. If she spent \\(\\textdollar{25}\\) for the dress, she saved about:</p><p>\\(\\textbf{(A)}\\ 8 \\% \\qquad \\textbf{(B)}\\ 9 \\% \\qquad \\textbf{(C)}\\ 10 \\% \\qquad \\textbf{(D)}\\ 11 \\% \\qquad \\textbf{(E)}\\ 12\\%\\)</p>",
+      "solutions": "<p>Since she saved \\(\\textdollar{2.50}\\) and spent \\(\\textdollar{25}\\), the original price of the dress was \\(\\textdollar{27.50}\\). The percent saved can be modeled as \\(27.5x=2.5\\), so the answer is \\(x=\\frac{2.5}{27.5}\\) or \\(\\frac{1}{11}\\), approximately \\(9\\% \\implies \\textbf{(B)}\\)</p>",
+      "answer": "B"
+    },
+    "8": {
+      "problem": "<p>The base of a triangle is twice as long as a side of a square and their areas are the same. Then the ratio of the altitude of the triangle to the side of the square is:</p><p>\\(\\textbf{(A)}\\ \\frac{1}{4} \\qquad \\textbf{(B)}\\ \\frac{1}{2} \\qquad \\textbf{(C)}\\ 1 \\qquad \\textbf{(D)}\\ 2 \\qquad \\textbf{(E)}\\ 4\\)</p>",
+      "solutions": "<p>Let the base and altitude of the triangle be \\(b, h\\), the common area \\(A\\), and the side of the square \\(s\\). Then \\(\\frac{2sh}{2}=s^2\\implies sh=s^2\\implies s=h\\), so \\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "9": {
+      "problem": "<p>A point \\(P\\) is outside a circle and is \\(13\\) inches from the center. A secant from \\(P\\) cuts the circle at \\(Q\\) and \\(R\\) so that the external segment of the secant \\(PQ\\) is \\(9\\) inches and \\(QR\\) is \\(7\\) inches. The radius of the circle is:</p><p>\\(\\textbf{(A)}\\ 3\" \\qquad \\textbf{(B)}\\ 4\" \\qquad \\textbf{(C)}\\ 5\" \\qquad \\textbf{(D)}\\ 6\"\\qquad\\textbf{(E)}\\ 7\"\\)</p>",
+      "solutions": "<p>Using the Secant-Secant Power Theorem, you can get \\(9(16)=(13-r)(13+r)\\), where \\(r\\) is the radius of the given circle. Solving the equation, you get a quadratic: \\(r^2-25\\). A radius cannot be negative so the answer is \\(\\boxed{\\textbf{(C) }5\"}\\)</p>",
+      "answer": "C"
+    },
+    "10": {
+      "problem": "<p>The sum of the numerical coefficients in the expansion of the binomial \\((a+b)^6\\) is:</p><p>\\(\\textbf{(A)}\\ 32 \\qquad \\textbf{(B)}\\ 16 \\qquad \\textbf{(C)}\\ 64 \\qquad \\textbf{(D)}\\ 48 \\qquad \\textbf{(E)}\\ 7\\)</p>",
+      "solutions": "<p>\\(P(1,1)=(1+1)^6=2^6=64\\), \\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "11": {
+      "problem": "<p>A merchant placed on display some dresses, each with a marked price. He then posted a sign “\\(\\frac{1}{3}\\) off on these dresses.” The cost of the dresses was \\(\\frac{3}{4}\\) of the price at which he actually sold them. Then the ratio of the cost to the marked price was:</p><p>\\(\\textbf{(A)}\\ \\frac{1}{2} \\qquad \\textbf{(B)}\\ \\frac{1}{3} \\qquad \\textbf{(C)}\\ \\frac{1}{4} \\qquad \\textbf{(D)}\\ \\frac{2}{3}\\qquad\\textbf{(E)}\\ \\frac{3}{4}\\)</p>",
+      "solutions": "<p>Let \\(x\\) be the marked price. Then \\(\\frac{2}{3}x\\) would be the selling price of the dresses. The cost of the dresses was \\(\\frac{3}{4}\\) of the selling price, or \\(\\frac{3}{4}\\cdot\\frac{2}{3}x \\implies \\frac{1}{2}x\\). So the ratio of the cost to the marked price is \\(\\frac{\\frac{1}{2}x}{x}\\), or \\(\\frac{1}{2} \\implies \\boxed{\\textbf{(A)}\\ \\frac{1}{2}}\\).</p>",
+      "answer": "A"
+    },
+    "12": {
+      "problem": "<p>The solution of the equations</p><p>\\[\\begin{aligned}\n2x-3y &amp;=7 \\\\ 4x-6y &amp;=20\n\\end{aligned}\\]</p><p>is:</p><p>\\(\\textbf{(A)}\\ x=18, y=12 \\qquad\n\\textbf{(B)}\\ x=0, y=0 \\qquad\n\\textbf{(C)}\\ \\text{There is no solution} \\\\\n\\textbf{(D)}\\ \\text{There are an unlimited number of solutions}\\qquad\n\\textbf{(E)}\\ x=8, y=5\\)</p>",
+      "solutions": "<p>\\(2x-3y=7\\implies 4x-6y=14\\) Then \\(4x-6y=14=20\\), which is false, so there are no solutions; \\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "13": {
+      "problem": "<p>A quadrilateral is inscribed in a circle. If angles are inscribed in the four arcs cut off by the sides of the quadrilateral, their sum will be:</p><p>\\(\\textbf{(A)}\\ 180^\\circ \\qquad \\textbf{(B)}\\ 540^\\circ \\qquad \\textbf{(C)}\\ 360^\\circ \\qquad \\textbf{(D)}\\ 450^\\circ\\qquad\\textbf{(E)}\\ 1080^\\circ\\)</p>",
+      "solutions": "<p>The arcs created by all sides of the quadrilateral will sum to 360 because they cover the entire circle. The inscribed angles created by each side of the trapezoid will all be half the measure of each arc created by their respective side. Thus, the sum of the all the inscribed angles is half the sum of all the arcs. \\(360/2 = 180\\\n \\boxed{(A)}\\)</p><p>–bozz</p>",
+      "answer": "B"
+    },
+    "14": {
+      "problem": "<p>When simplified \\(\\sqrt{1+ \\left (\\frac{x^4-1}{2x^2} \\right )^2}\\) equals:</p><p>\\(\\textbf{(A)}\\ \\frac{x^4+2x^2-1}{2x^2} \\qquad \\textbf{(B)}\\ \\frac{x^4-1}{2x^2} \\qquad \\textbf{(C)}\\ \\frac{\\sqrt{x^2+1}}{2}\\\\ \\textbf{(D)}\\ \\frac{x^2}{\\sqrt{2}}\\qquad\\textbf{(E)}\\ \\frac{x^2}{2}+\\frac{1}{2x^2}\\)</p>",
+      "solutions": "<p>\\(\\sqrt{\\frac{4x^4}{4x^4}+\\frac{(x^4-1)^2}{4x^4}}\\implies\\sqrt{\\frac{x^8-2x^4+1+4x^4}{4x^4}}\\implies \\sqrt{\\frac{(x^4+1)^2}{(2x^2)^2}}\\implies \\frac{x^4+1}{2x^2}\\implies\\frac{x^2}{2}+\\frac{1}{2x^2}\\), \\(\\boxed{E}\\)</p>",
+      "answer": "E"
+    },
+    "15": {
+      "problem": "<p>\\(\\log 125\\) equals:</p><p>\\(\\textbf{(A)}\\ 100 \\log 1.25 \\qquad \\textbf{(B)}\\ 5 \\log 3 \\qquad \\textbf{(C)}\\ 3 \\log 25  \\\\\n\\textbf{(D)}\\ 3 - 3\\log 2 \\qquad \\textbf{(E)}\\ (\\log 25)(\\log 5)\\)</p>",
+      "solutions": "<p>\\(\\log(1000)=\\log(125)+\\log(8)\\implies 3=\\log(125)+\\log(2^3)\\implies \\log(125)=3-3\\log(2)\\), \\(\\boxed{D}\\)</p>",
+      "answer": "D"
+    },
+    "16": {
+      "problem": "<p>If \\(f(x) = 5x^2 - 2x - 1\\), then \\(f(x + h) - f(x)\\) equals:</p><p>\\(\\textbf{(A)}\\ 5h^2 - 2h \\qquad \\textbf{(B)}\\ 10xh - 4x + 2 \\qquad \\textbf{(C)}\\ 10xh - 2x - 2 \\\\ \\textbf{(D)}\\ h(10x+5h-2)\\qquad\\textbf{(E)}\\ 3h\\)</p>",
+      "solutions": "<p>\\(5(x+h)^2 - 2(x+h) - 1-(5x^2 - 2x - 1)\\implies 5(x^2+2xh+h^2)-2x-2h-1-5x^2+2x+1\\implies 10xh+5h^2-2h\\)</p><p>\\(\\implies h(10x+5h-2) \\boxed{(\\textbf{D})}\\)</p>",
+      "answer": "D"
+    },
+    "17": {
+      "problem": "<p>The graph of the function \\(f(x) = 2x^3 - 7\\) goes:</p><p>\\(\\textbf{(A)}\\ \\text{up to the right and down to the left} \\\\ \\textbf{(B)}\\ \\text{down to the right and up to the left}\\\\ \\textbf{(C)}\\ \\text{up to the right and up to the left}\\\\ \\textbf{(D)}\\ \\text{down to the right and down to the left}\\\\ \\textbf{(E)}\\ \\text{none of these ways.}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>What the question is basically asking, is the limit as the function goes to each end of infinity:</p><p>\\(\\lim_{x\\to\\infty} f(x)=\\infty\\)</p><p>\\(\\lim_{x\\to-\\infty} f(x)=-\\infty\\).</p><p>This means it goes up and the right, and down and to the left. \\(\\boxed{(\\textbf{A})}\\)</p>",
+      "answer": "A"
+    },
+    "18": {
+      "problem": "<p>Of the following sets, the one that includes all values of \\(x\\) which will satisfy \\(2x - 3 &gt; 7 - x\\) is:</p><p>\\(\\textbf{(A)}\\ x &gt; 4 \\qquad \\textbf{(B)}\\ x &lt; \\frac {10}{3} \\qquad \\textbf{(C)}\\ x = \\frac {10}{3} \\qquad \\textbf{(D)}\\ x &gt;\\frac{10}{3}\\qquad\\textbf{(E)}\\ x &lt; 0\\)</p>",
+      "solutions": "<p>\\(2x-3&gt;7-x\\implies 3x&gt;10\\implies \\boxed{x&gt;\\frac{10}{3} (\\textbf{D})}\\).</p>",
+      "answer": "D"
+    },
+    "19": {
+      "problem": "<p>If the three points of contact of a circle inscribed in a triangle are joined, the angles of the resulting triangle:</p><p>\\(\\textbf{(A)}\\ \\text{are always equal to }60^\\circ\\\\ \\textbf{(B)}\\ \\text{are always one obtuse angle and two unequal acute angles}\\\\ \\textbf{(C)}\\ \\text{are always one obtuse angle and two equal acute angles}\\\\ \\textbf{(D)}\\ \\text{are always acute angles}\\\\ \\textbf{(E)}\\ \\text{are always unequal to each other}\\)</p>",
+      "solutions": "<p>For the sake of clarity, let the outermost triangle be \\(ABC\\) with incircle tangency points \\(D\\), \\(E\\), and \\(F\\) on \\(BC\\), \\(AC\\) and \\(AB\\) respectively. Let \\(\\angle A=\\alpha\\), and \\(\\angle B=\\beta\\). Because \\(\\triangle AFE\\) and \\(\\triangle BDF\\) are isosceles, \\(\\angle AFE=\\frac{180-\\alpha}{2}\\) and \\(\\angle BFD=\\frac{180-\\beta}{2}\\). So \\(\\angle DFE=180-\\frac{180-\\alpha}{2}-\\frac{180-\\beta}{2}=\\frac{\\alpha+\\beta}{2}\\), and since \\(\\alpha + \\beta &lt;180^\\circ\\), \\(\\angle DFE\\) is acute.</p><p>The same method applies to \\(\\angle FED\\) and \\(\\angle FDE\\), which means \\(\\triangle DEF\\) is acute - hence our answer is \\(\\boxed{D}\\).</p>",
+      "answer": "D"
+    },
+    "20": {
+      "problem": "<p>The equation \\(x^3+6x^2+11x+6=0\\) has:</p><p>\\(\\textbf{(A)}\\ \\text{no negative real roots}\\qquad\\textbf{(B)}\\ \\text{no positive real roots}\\qquad\\textbf{(C)}\\ \\text{no real roots}\\\\ \\textbf{(D)}\\ \\text{1 positive and 2 negative roots}\\qquad\\textbf{(E)}\\ \\text{2 positive and 1 negative root}\\)</p>",
+      "solutions": "<p>By the rational root theorem, \\(1, -1, 2, -2, 3, -3, 6, -6\\) are possible rational roots. Because \\(x^3+6x^2+11x+6&gt;0\\) for \\(x&gt;0\\), so there are no positive roots. We try \\(-1, -2, -3, -6\\), so \\(x=-1, x=-3, x=-2\\), so there are no positive real roots; \\(\\boxed{B}\\)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Note that there are no sign changes (all coefficients of terms are positive), so by Descartes’ rule of signs, there are no positive real roots \\(\\Rightarrow \\boxed{B}\\).</p>",
+      "answer": "B"
+    },
+    "21": {
+      "problem": "<p>The roots of the equation \\(2\\sqrt {x} + 2x^{ - \\frac {1}{2}} = 5\\) can be found by solving:</p><p>\\(\\textbf{(A)}\\ 16x^2-92x+1 = 0\\qquad\\textbf{(B)}\\ 4x^2-25x+4 = 0\\qquad\\textbf{(C)}\\ 4x^2-17x+4 = 0\\\\ \\textbf{(D)}\\ 2x^2-21x+2 = 0\\qquad\\textbf{(E)}\\ 4x^2-25x-4 = 0\\)</p>",
+      "solutions": "<p>Make the substitution \\(t=\\sqrt{x}\\). Then \\(2t+\\frac{2}{t}=5\\implies 2t^2-5t+2=0\\). Then \\(2x-5\\sqrt{x}+2=0\\implies 2x+2=5\\sqrt{x}\\implies (2x+2)^2=25x\\implies 4x^2+8x+4=25x\\implies 4x^2-17x+4=0\\), \\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "22": {
+      "problem": "<p>The expression \\(\\frac{2x^2-x}{(x+1)(x-2)}-\\frac{4+x}{(x+1)(x-2)}\\) cannot be evaluated for \\(x=-1\\) or \\(x=2\\), since division by zero is not allowed. For other values of \\(x\\):</p><p>\\(\\textbf{(A)}\\ \\text{The expression takes on many different values.}\\\\ \\textbf{(B)}\\ \\text{The expression has only the value 2.}\\\\ \\textbf{(C)}\\ \\text{The expression has only the value 1.}\\\\ \\textbf{(D)}\\ \\text{The expression always has a value between }-1\\text{ and }+2.\\\\ \\textbf{(E)}\\ \\text{The expression has a value greater than 2 or less than }-1.\\)</p>",
+      "solutions": "<p>\\(\\frac{2x^2-x}{(x+1)(x-2)}-\\frac{4+x}{(x+1)(x-2)} = \\frac{2x^2-2x-4}{(x+1)(x-2)}\\)</p><p>This can be factored as \\(\\frac{(2)(x^2-x-2)}{(x+1)(x-2)} \\implies \\frac{(2)(x+1)(x-2)}{(x+1)(x-2)}\\), which cancels out to \\(2 \\implies \\boxed{\\textbf{(B)} \\text{The expression has only the value 2}}\\).</p>",
+      "answer": "B"
+    },
+    "23": {
+      "problem": "<p>If the margin made on an article costing \\(C\\) dollars and selling for \\(S\\) dollars is \\(M=\\frac{1}{n}C\\), then the margin is given by:</p><p>\\(\\textbf{(A)}\\ M=\\frac{1}{n-1}S\\qquad\\textbf{(B)}\\ M=\\frac{1}{n}S\\qquad\\textbf{(C)}\\ M=\\frac{n}{n+1}S\\\\ \\textbf{(D)}\\ M=\\frac{1}{n+1}S\\qquad\\textbf{(E)}\\ M=\\frac{n}{n-1}S\\)</p>",
+      "solutions": "<p>We are given the margin in terms of the cost of the article. Looking at the answers, it appears we need to find the margin in terms of the selling price. The relationship between cost and selling price is that selling price minus the margin is the cost, \\(S-M=C\\).</p><p>Since \\(M=\\frac{1}{n}C\\) and \\(C=S-M\\), \\(M=\\frac{1}{n}(S-M)\\).</p><p>Doing some algebraic manipulation to get \\(M\\) on one side,</p><p>\\(M=\\frac{1}{n}(S-M)\\)</p><p>\\(M=\\frac{S}{n}-\\frac{M}{n}\\)</p><p>\\(M+\\frac{M}{n}=\\frac{S}{n}\\)</p><p>\\(M(1+\\frac{1}{n})=\\frac{S}{n}\\)</p><p>\\(M=\\frac{S}{n}\\cdot \\frac{1}{1+\\frac{1}{n}}\\)</p><p>\\(M=\\frac{S}{n+1}\\)</p><p>\\(M=\\frac{1}{n+1}S \\implies \\boxed{\\textbf{(D)} M=\\frac{1}{n+1}S}\\).</p>",
+      "answer": "D"
+    },
+    "24": {
+      "problem": "<p>The values of \\(k\\) for which the equation \\(2x^2-kx+x+8=0\\) will have real and equal roots are:</p><p>\\(\\textbf{(A)}\\ 9\\text{ and }-7\\qquad\\textbf{(B)}\\ \\text{only }-7\\qquad\\textbf{(C)}\\ \\text{9 and 7}\\\\ \\textbf{(D)}\\ -9\\text{ and }-7\\qquad\\textbf{(E)}\\ \\text{only 9}\\)</p>",
+      "solutions": "<p>\\(b^2-4ac=0\\implies b^2=4ac\\implies (1-k)^2=4(2)(8)\\implies (1-k)^2=8^2\\implies 1-k=8\\implies k=-7, 1-k=-8\\implies k=9\\), \\(\\boxed{A}\\)</p>",
+      "answer": "A"
+    },
+    "25": {
+      "problem": "<p>The two roots of the equation \\(a(b-c)x^2+b(c-a)x+c(a-b)=0\\) are \\(1\\) and:</p><p>\\(\\textbf{(A)}\\ \\frac{b(c-a)}{a(b-c)}\\qquad\\textbf{(B)}\\ \\frac{a(b-c)}{c(a-b)}\\qquad\\textbf{(C)}\\ \\frac{a(b-c)}{b(c-a)}\\qquad\\textbf{(D)}\\ \\frac{c(a-b)}{a(b-c)}\\qquad\\textbf{(E)}\\ \\frac{c(a-b)}{b(c-a)}\\)</p>",
+      "solutions": "<p>Let the other root be \\(k\\). Then by Vieta’s Formulas, \\(k\\cdot 1=\\frac{c(a-b)}{a(b-c)}\\), \\(\\boxed{D}\\)</p>",
+      "answer": "D"
+    },
+    "26": {
+      "problem": "<p>The straight line \\(\\overline{AB}\\) is divided at \\(C\\) so that \\(AC=3CB\\).  Circles are described on \\(\\overline{AC}\\) and \\(\\overline{CB}\\) as diameters and a common tangent meets \\(AB\\) produced at \\(D\\).  Then \\(BD\\) equals:</p><p>\\(\\textbf{(A)}\\ \\text{diameter of the smaller circle} \\\\\n\\textbf{(B)}\\ \\text{radius of the smaller circle} \\\\\n\\textbf{(C)}\\ \\text{radius of the larger circle} \\\\\n\\textbf{(D)}\\ CB\\sqrt{3}\\\\\n\\textbf{(E)}\\ \\text{the difference of the two radii}\\)</p>",
+      "solutions": "<p>Let \\(x=\\overline{BD}\\) and let \\(r\\) be the radius of the small circle. Draw the line from the center of each of the circles to the point of contact of the tangent of the circle. By similar triangles, \\(\\frac{x+r}{r}=\\frac{x+5r}{3r} \\implies x=r\\), or \\(\\boxed{\\textbf{(B)}}\\).</p><p><a class=\"external\" href=\"https://artofproblemsolving.com/community/c4h256249s1_lines_and_circles\">https://artofproblemsolving.com/community/c4h256249s1_lines_and_circles</a></p><h2><span class=\"mw-headline\" id=\"Video_Solution\">Video Solution</span></h2><p><a class=\"external\" href=\"https://youtu.be/cbU3DxJKB8U\">https://youtu.be/cbU3DxJKB8U</a></p><p>~Lucas</p>",
+      "answer": "B"
+    },
+    "27": {
+      "problem": "<p>A right circular cone has for its base a circle having the same radius as a given sphere. The volume of the cone is one-half that of the sphere. The ratio of the altitude of the cone to the radius of its base is:</p><p>\\(\\textbf{(A)}\\ \\frac{1}{1}\\qquad\\textbf{(B)}\\ \\frac{1}{2}\\qquad\\textbf{(C)}\\ \\frac{2}{3}\\qquad\\textbf{(D)}\\ \\frac{2}{1}\\qquad\\textbf{(E)}\\ \\sqrt{\\frac{5}{4}}\\)</p>",
+      "solutions": "<p>Because the circle has the same radius as the sphere, the cylinder and sphere have the same radius. Then from the volume of cylinder and volume of a sphere formulas, we have \\(\\frac{1}{3} \\pi r^2 h= \\frac{2}{3} \\pi r^3 \\implies h=2r\\implies \\frac{h}{r}=2\\) \\(\\boxed{(\\textbf{D})}\\)</p>",
+      "answer": "D"
+    },
+    "28": {
+      "problem": "<p>If \\(\\frac{m}{n}=\\frac{4}{3}\\) and \\(\\frac{r}{t}=\\frac{9}{14}\\), the value of \\(\\frac{3mr-nt}{4nt-7mr}\\) is:</p><p>\\(\\textbf{(A)}\\ -5\\frac{1}{2}\\qquad\\textbf{(B)}\\ -\\frac{11}{14}\\qquad\\textbf{(C)}\\ -1\\frac{1}{4}\\qquad\\textbf{(D)}\\ \\frac{11}{14}\\qquad\\textbf{(E)}\\ -\\frac{2}{3}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>From \\(\\frac{m}{n}=\\frac{4}{3}\\), we have \\(3m=4n\\). From \\(\\frac{r}{t}=\\frac{9}{14}\\), we have \\(14r=9t\\implies 7r=4.5t\\)</p><p>This simplifies the fraction to \\(\\frac{4nr-nt}{4nt-7r\\cdot m}\\implies \\frac{4nr-nt}{4nt-4.5mt}\\implies \\frac{4nr-nt}{4nt-1.5t\\cdot3m}\\implies \\frac{4nr-nt}{4nr-1.5\\cdot t\\cdot 4n}\\implies \\frac{\\frac{4\\cdot7r}{7}t-nt}{4nt-6nt}\\implies \\frac{\\frac{4\\cdot9t}{7\\cdot2}n-nt}{-2nt}\\implies \\frac{nt(\\frac{36}{14}-1)}{-2(nt)}\\implies\\frac{\\frac{22}{14}}{-2}\\implies \\boxed{\\frac{-11}{14} (\\textbf{B})}\\)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Because the ratio works for any set of integers satisfying \\(\\frac{m}{n}=\\frac{4}{3}\\) and \\(\\frac{r}{t}=\\frac{9}{14}\\), it has to satisfy \\(m=4\\), \\(n=3\\), \\(r=9\\), and \\(t=14\\). From here it is just simple arithmetic.</p><p>\\(\\frac{3mr-nt}{4nt-7mr}\\implies\\frac{3\\cdot4\\cdot9-3\\cdot14}{4\\cdot3\\cdot14-7\\cdot4\\cdot9}\\implies \\frac{3(36-14)}{4(42-63)}\\implies \\frac{3(22)}{4(-21)}\\implies \\boxed{\\frac{-11}{14} (\\textbf{B})}\\)</p>",
+      "answer": "B"
+    },
+    "29": {
+      "problem": "<p>If the ratio of the legs of a right triangle is \\(1: 2\\), then the ratio of the corresponding segments of the hypotenuse made by a perpendicular upon it from the vertex is:</p><p>\\(\\textbf{(A)}\\ 1: 4\\qquad\\textbf{(B)}\\ 1:\\sqrt{2}\\qquad\\textbf{(C)}\\ 1: 2\\qquad\\textbf{(D)}\\ 1:\\sqrt{5}\\qquad\\textbf{(E)}\\ 1: 5\\)</p>",
+      "solutions": "<p>Let \\(\\triangle ABC\\) be a right triangle with right angle at \\(B\\), \\(AB = 2\\), and \\(BC = 1\\). Let the altitude from \\(B\\) to \\(AC\\) intersect \\(AC\\) at \\(D\\). From the Pythagorean Theorem, \\(AC = \\sqrt{1^2 + 2^2} = \\sqrt5\\), so \\(BD = \\frac{1\\cdot 2}{\\sqrt5} = \\frac{2\\sqrt5}{5}\\). Since \\(\\triangle ADB \\sim \\triangle BDC \\sim \\triangle ABC\\), \\(\\frac{AD}{BD} = 2\\) and \\(\\frac{CD}{BD} = \\frac12\\). Therefore, \\(AD = \\frac{4\\sqrt5}{5}\\) and \\(CD = \\frac{\\sqrt5}{5}\\), so \\(CD:AD = \\boxed{\\textbf{(A) }1:4}\\).</p>",
+      "answer": "A"
+    },
+    "30": {
+      "problem": "<p>\\(A\\) and \\(B\\) together can do a job in \\(2\\) days; \\(B\\) and \\(C\\) can do it in four days; and \\(A\\) and \\(C\\) in \\(2\\frac{2}{5}\\) days. The number of days required for A to do the job alone is:</p><p>\\(\\textbf{(A)}\\ 1 \\qquad \\textbf{(B)}\\ 3 \\qquad \\textbf{(C)}\\ 6 \\qquad \\textbf{(D)}\\ 12 \\qquad \\textbf{(E)}\\ 2.8\\)</p>",
+      "solutions": "<p>Let \\(A\\) do \\(r_A\\) of the job per day, \\(B\\) do \\(r_B\\) of the job per day, and \\(C\\) do \\(r_C\\) of the job per day. These three quantities have unit \\(\\frac{\\text{job}}{\\text{day}}\\). Therefore our three conditions give us the three equations:</p><p>\\[\\begin{aligned}\n(2\\text{ days})(r_A+r_B)&amp;=1\\text{ job},\\nonumber\\\\\n(4\\text{ days})(r_B+r_C)&amp;=1\\text{ job},\\nonumber\\\\\n(2.4\\text{ days})(r_C+r_A)&amp;=1\\text{ job}.\\nonumber\n\\end{aligned}\\]</p><p>We divide the three equations by the required constant so that the coefficients of the variables become 1:</p><p>\\[\\begin{aligned}\nr_A+r_B&amp;=\\frac{1}{2}\\cdot\\frac{\\text{job}}{\\text{day}},\\nonumber\\\\\nr_B+r_C&amp;=\\frac{1}{4}\\cdot\\frac{\\text{job}}{\\text{day}},\\nonumber\\\\\nr_C+r_A&amp;=\\frac{5}{12}\\cdot\\frac{\\text{job}}{\\text{day}}.\\nonumber\n\\end{aligned}\\]</p><p>If we add these three new equations together and divide the result by two, we obtain an equation with left-hand side \\(r_A+r_B+r_C\\), so if we subtract \\(r_B+r_C\\) (the value of which we know) from both equations, we obtain the value of \\(r_A\\), which is what we wish to determine anyways. So we add these three equations and divide by two:</p><p>\\[r_A+r_B+r_C=\\frac{1}{2}\\cdot\\left(\\frac{1}{2}+\\frac{1}{4}+\\frac{5}{12}\\right)\\cdot\\frac{\\text{job}}{\\text{day}}=\\frac{7}{12}\\cdot\\frac{\\text{job}}{\\text{day}}.\\]</p><p>Hence:</p><p>\\[\\begin{aligned}\nr_A &amp;= (r_A+r_B+r_C)-(r_B+r_C)\\nonumber\\\\\n&amp;=\\frac{7}{12}\\cdot\\frac{\\text{job}}{\\text{day}}-\\frac{1}{4}\\cdot\\frac{\\text{job}}{\\text{day}}\\nonumber\\\\\n&amp;=\\frac{1}{3}\\cdot\\frac{\\text{job}}{\\text{day}}.\\nonumber\n\\end{aligned}\\]</p><p>This shows that \\(A\\) does one third of the job per day. Therefore, if \\(A\\) were to do the entire job himself, he would require \\(\\boxed{\\textbf{(B)}\\ 3}\\) days.</p>",
+      "answer": "B"
+    },
+    "31": {
+      "problem": "<p>In \\(\\triangle ABC\\), \\(AB=AC\\), \\(\\angle A=40^\\circ\\). Point \\(O\\) is within the triangle with \\(\\angle OBC \\cong \\angle OCA\\). The number of degrees in \\(\\angle BOC\\) is:</p><p>\\(\\textbf{(A)}\\ 110^{\\circ} \\qquad \\textbf{(B)}\\ 35^{\\circ} \\qquad \\textbf{(C)}\\ 140^{\\circ} \\qquad \\textbf{(D)}\\ 55^{\\circ} \\qquad \\textbf{(E)}\\ 70^{\\circ}\\)</p>",
+      "solutions": "<p>Since \\(\\triangle ABC\\) is an isosceles triangle, \\(\\angle ABC = \\angle ACB = 70^{\\circ}\\). Let \\(\\angle OBC = \\angle OCA = x\\). Since \\(\\angle ACB = 70\\), \\(\\angle OCB = 70 - x\\). The angle of \\(\\triangle OBC\\) add up to \\(180\\), so \\(\\angle BOC = 180 - (x + 70 - x) = \\boxed{\\textbf{(A) } 110^{\\circ}}\\).</p>",
+      "answer": "A"
+    },
+    "32": {
+      "problem": "<p>The factors of \\(x^4+64\\) are:</p><p>\\(\\textbf{(A)}\\ (x^2+8)^2\\qquad\\textbf{(B)}\\ (x^2+8)(x^2-8)\\qquad\\textbf{(C)}\\ (x^2+2x+4)(x^2-8x+16)\\\\ \\textbf{(D)}\\ (x^2-4x+8)(x^2-4x-8)\\qquad\\textbf{(E)}\\ (x^2-4x+8)(x^2+4x+8)\\)</p>",
+      "solutions": "<p>Notice that:</p><p>\\[\\begin{aligned}\nx^4+64  &amp;= x^4+2^6 \\\\\n\t&amp;= x^4+4\\cdot 2^4\n\\end{aligned}\\]</p><p>So, using the Sophie Germain Identity, we can factor the expression as:</p><p>\\[\\begin{aligned}\nx^4+64  &amp; = x^4+4\\cdot 2^4\\\\\n\t&amp; = (x^2+2\\cdot2^2-4x)(x^2+2\\cdot2^2+4x)\\\\\n        &amp; = (x^2-4x+8)(x^2+4x+8)\n\\end{aligned}\\]</p><p>So it is clear that our answer is \\(\\boxed{\\textbf{(E)}}\\).</p>",
+      "answer": "E"
+    },
+    "33": {
+      "problem": "<p>A bank charges \\(\\textdollar{6}\\) for a loan of \\(\\textdollar{120}\\). The borrower receives \\(\\textdollar{114}\\) and repays the loan in \\(12\\) easy installments of \\(\\textdollar{10}\\) a month. The interest rate is approximately:</p><p>\\(\\textbf{(A)}\\ 5 \\% \\qquad \\textbf{(B)}\\ 6 \\% \\qquad \\textbf{(C)}\\ 7 \\% \\qquad \\textbf{(D)}\\ 9\\% \\qquad \\textbf{(E)}\\ 15 \\%\\)</p>",
+      "solutions": "<p><i>This problem needs a solution. If you have a solution for it, please help us out by adding it.</i></p>",
+      "answer": "D"
+    },
+    "34": {
+      "problem": "<p>The fraction \\(\\frac{1}{3}\\):</p><p>\\(\\textbf{(A)}\\ \\text{equals 0.33333333}\\qquad\\textbf{(B)}\\ \\text{is less than 0.33333333 by }\\frac{1}{3\\cdot 10^8}\\\\ \\textbf{(C)}\\ \\text{is less than 0.33333333 by }\\frac{1}{3\\cdot 10^9}\\\\ \\textbf{(D)}\\ \\text{is greater than 0.33333333 by }\\frac{1}{3\\cdot 10^8}\\\\ \\textbf{(E)}\\ \\text{is greater than 0.33333333 by }\\frac{1}{3\\cdot 10^9}\\)</p>",
+      "solutions": "<p>\\(\\frac{33333333}{10^8}-\\frac{1}{3}\\implies \\frac{3\\cdot 10^7+3\\cdot 10^6+\\dots+3\\cdot 10^0}{10^8}-\\frac{1}{3}\\implies\\frac{3(10^{8}-1)}{9\\cdot 10^{8}}-\\frac{1}{3}\\implies\\frac{10^8-1}{3\\cdot 10^8}-\\frac{1}{3}\\implies\\frac{10^8}{3\\cdot 10^8}-\\frac{1}{3\\cdot 10^8}-\\frac{1}{3}\\implies\\frac{-1}{3\\cdot 10^8}\\) Because we did \\(.33333333-\\frac{1}{3}\\), it is \\(\\boxed{D}\\)</p>",
+      "answer": "D"
+    },
+    "35": {
+      "problem": "<p>In the right triangle shown the sum of the distances \\(BM\\) and \\(MA\\) is equal to the sum of the distances \\(BC\\) and \\(CA\\). If \\(MB = x, CB = h\\), and \\(CA = d\\), then \\(x\\) equals:</p><p><img class=\"latexcenter\" src=\"/data/aops/1954_AHSME/35-fig1.png\" width=\"1337\" alt=\"\"></p><p>\\(\\textbf{(A)}\\ \\frac{hd}{2h+d}\\qquad\\textbf{(B)}\\ d-h\\qquad\\textbf{(C)}\\ \\frac{1}{2}d\\qquad\\textbf{(D)}\\ h+d-\\sqrt{2d}\\qquad\\textbf{(E)}\\ \\sqrt{h^2+d^2}-h\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>The question states that \\[h+d = x+\\sqrt{(x+h)^2+d^2}\\]</p><p>We move \\(x\\) to the left: \\[h+d-x = \\sqrt{(x+h)^2+d^2}\\]</p><p>We square both sides: \\[h^2 + d^2 + x^2 - 2xh - 2xd + 2hd = x^2 + 2xh + h^2 + d^2\\]</p><p>Cancelling and moving terms, we get: \\[4xh + 2xd = 2hd\\]</p><p>Factoring \\(x\\): \\[x(4h+2d) = 2hd\\]</p><p>Isolating for \\(x\\): \\[x=\\frac{2hd}{4h+2d}=\\frac{hd}{2h+d}\\]</p><p>Therefore, the answer is \\(\\boxed{A}\\)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Realize that a 3 - 4 - 5 triangle satisfies these requirements. Checking the answer choices, \\(\\boxed{A}\\) is the correct solution.</p>",
+      "answer": "A"
+    },
+    "36": {
+      "problem": "<p>A boat has a speed of \\(15\\) mph in still water. In a stream that has a current of \\(5\\) mph it travels a certain distance downstream and returns. The ratio of the average speed for the round trip to the speed in still water is:</p><p>\\(\\textbf{(A)}\\ \\frac{5}{4}\\qquad\\textbf{(B)}\\ \\frac{1}{1}\\qquad\\textbf{(C)}\\ \\frac{8}{9}\\qquad\\textbf{(D)}\\ \\frac{7}{8}\\qquad\\textbf{(E)}\\ \\frac{9}{8}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>WLOG, let the distance the boat travel be \\(1\\) mile. Then the boat takes \\(\\frac{1}{15+5}=\\frac{1}{20}=3\\) minutes, to travel down a mile, then to travel back up the river, the boat travels \\(15-5=10\\) miles per hour, taking \\(\\frac{1}{10}=\\frac{1}{10}=6\\) minutes to travel up the river. This gives an average speed of \\(\\frac{20(3)+10(6)}{3+6}=\\frac{120}{9}=\\frac{40}{3}\\) which as a ratio to \\(15\\) is \\(\\frac{\\frac{5\\cdot 8}{3}}{3\\cdot 5}\\implies\\frac{8}{9}\\) \\(\\boxed{(\\textbf{C})}\\)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Let the distance the boat traveled be \\(d\\). Then since \\(rate=\\frac{distance}{time}\\), the average speed of the round trip is \\(\\frac{2d}{\\frac{d}{10}+\\frac{d}{20}}\\), or \\(\\frac{40}{3}\\). Note that this means that the round trip speed is the same no matter how long the trip. The speed of the boat in still water is \\(15\\) mph, so the ratio is \\(\\frac{\\frac{40}{3}}{15}\\), or \\(\\frac{8}{9} \\implies \\boxed{(\\textbf{C})}\\)</p>",
+      "answer": "C"
+    },
+    "37": {
+      "problem": "<p>Given \\(\\triangle PQR\\) with \\(\\overline{RS}\\) bisecting \\(\\angle R\\), \\(PQ\\) extended to \\(D\\) and \\(\\angle n\\) a right angle, then:</p><p><img class=\"latexcenter\" src=\"/data/aops/1954_AHSME/37-fig1.png\" width=\"964\" alt=\"\"></p><p>\\(\\textbf{(A)}\\ \\angle m = \\frac {1}{2}(\\angle p - \\angle q) \\qquad\n\\textbf{(B)}\\ \\angle m = \\frac {1}{2}(\\angle p + \\angle q) \\qquad\n\\textbf{(C)}\\ \\angle d =\\frac{1}{2}(\\angle q+\\angle p)\\qquad\n\\textbf{(D)}\\ \\angle d =\\frac{1}{2}\\angle m\\qquad\n\\textbf{(E)}\\ \\text{none of these is correct}\\)</p>",
+      "solutions": "<p>Let \\(\\angle PRS\\) be \\(\\theta\\).</p><p>\\(p+ q + 2\\theta = 180\\)</p><p>\\(m+\\theta+90=180 \\implies m+\\theta=90 \\implies 2m+2\\theta=180\\)</p><p>\\(p+q+2\\theta=2m+2\\theta \\implies \\frac{p+q}{2}=m \\implies \\boxed{\\textbf{(B) \\ } \\angle m = \\frac{1}{2}(\\angle p + \\angle q)}\\)</p><h2><span class=\"mw-headline\" id=\"Partial_Solution\">Partial Solution</span></h2><p><img class=\"latexcenter\" src=\"/data/aops/1954_AHSME/37-fig2.png\" width=\"964\" alt=\"\"></p><p>Looking at triangle PRQ, we have \\(\\angle RPD+\\angle RQS+\\angle MRN=180\\) and from the given statement \\(\\angle NMR=\\frac{1}{2}\\angle MRN\\), so looking at triangle MOR \\(\\angle NMR=90-\\frac{\\angle RPD+\\angle RQS}{2}\\), which rules out</p>",
+      "answer": "B"
+    },
+    "38": {
+      "problem": "<p>If \\(\\log 2 = .3010\\) and \\(\\log 3 = .4771\\), the value of \\(x\\) when \\(3^{x+3} = 135\\) is approximately</p><p>\\(\\textbf{(A) \\ } 5  \\qquad \\textbf{(B) \\ } 1.47 \\qquad \\textbf{(C) \\ } 1.67 \\qquad \\textbf{(D) \\ } 1.78 \\qquad \\textbf{(E) \\ } 1.63\\)</p>",
+      "solutions": "<p>Taking the logarithm in base \\(3\\) of both sides, we get \\(x+3 = \\log_3 135\\). Using the property \\(\\log ab = \\log a + \\log b\\), we get \\(x+3 = \\log_3 5 + \\log_3 3^3\\), or \\(x = \\log_3 5\\). Converting into base \\(10\\) gives \\(x = \\frac{\\log 5}{\\log 3} = \\frac{1 - \\log 2}{\\log 3}\\). Now, plugging in the values yeilds \\(\\boxed{\\textbf{(B) \\ } 1.47  }\\).</p>",
+      "answer": "B"
+    },
+    "39": {
+      "problem": "<p>The locus of the midpoint of a line segment that is drawn from a given external point \\(P\\) to a given circle with center \\(O\\) and radius \\(r\\), is:</p><p>\\(\\textbf{(A)}\\ \\text{a straight line perpendicular to }\\overline{PO}\\\\ \\textbf{(B)}\\ \\text{a straight line parallel to }\\overline{PO}\\\\ \\textbf{(C)}\\ \\text{a circle with center }P\\text{ and radius }r\\\\ \\textbf{(D)}\\ \\text{a circle with center at the midpoint of }\\overline{PO}\\text{ and radius }2r\\\\ \\textbf{(E)}\\ \\text{a circle with center at the midpoint }\\overline{PO}\\text{ and radius }\\frac{1}{2}r\\)</p>",
+      "solutions": "<p>Note that the midpoint of \\(P\\) to the point \\(Q\\) is the image of \\(Q\\) under a homothety of factor \\(\\frac{1}{2}\\) with center \\(P\\). Since homotheties preserve circles, the image of the midpoint as \\(Q\\) varies over the circle is a circle centered at the midpoint of \\(P\\) and the original center and radius half the original radius. Therefore, our answer is \\(\\boxed{\\text{(E)}}\\), and we are done.</p><p><img class=\"latexcenter\" src=\"/data/aops/1954_AHSME/39-fig1.png\" width=\"624\" alt=\"\"></p>",
+      "answer": "E"
+    },
+    "40": {
+      "problem": "<p>If \\(\\left (a+\\frac{1}{a} \\right )^2=3\\), then \\(a^3+\\frac{1}{a^3}\\) equals:</p><p>\\(\\textbf{(A)}\\ \\frac{10\\sqrt{3}}{3}\\qquad\\textbf{(B)}\\ 3\\sqrt{3}\\qquad\\textbf{(C)}\\ 0\\qquad\\textbf{(D)}\\ 7\\sqrt{7}\\qquad\\textbf{(E)}\\ 6\\sqrt{3}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>\\(a+\\frac{1}{a}=\\sqrt{3}\\implies (a+\\frac{1}{a})^3=3\\sqrt{3}\\implies a^3+3\\frac{a^2}{a}+\\frac{3a}{a^2}+\\frac{1}{a^3}\\implies a^3+3(a+\\frac{1}{a})+\\frac{1}{a^3}=3\\sqrt{3}\\implies a^3+\\frac{1}{a^3}+3\\sqrt{3}=3\\sqrt{3}\\implies a^3+\\frac{1}{a^3}=0\\), \\(\\boxed{C}\\)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>\\(\\left (a+\\frac{1}{a} \\right )^2=3 \\implies a+\\frac{1}{a} =\\sqrt{3}\\)</p><p>\\(a+\\frac{1}{a} =\\sqrt{3} \\implies (a+\\frac{1}{a})^3=\\sqrt{3^3}\\)</p><p>\\((a+\\frac{1}{a})^3=\\sqrt{3^3}\\implies a^3+3a^2\\frac{1}{a}+3a\\frac{1}{a^2}+\\frac{1}{a^3}=\\sqrt{27}\\)</p><p>\\(a^3+3a^2\\frac{1}{a}+3a\\frac{1}{a^2}+\\frac{1}{a^3}=\\sqrt{27} \\implies a^3+\\frac{1}{a^3}+3a+\\frac{3}{a}=\\sqrt{27}\\)</p><p>\\(a^3+\\frac{1}{a^3}+3a+\\frac{3}{a}=\\sqrt{27} \\implies a^3+\\frac{1}{a^3}+3(a+\\frac{1}{a})=\\sqrt{27}\\)</p><p>\\(a^3+\\frac{1}{a^3}+3(a+\\frac{1}{a})=\\sqrt{27} \\implies a^3+\\frac{1}{a^3}+3(\\sqrt{3})=\\sqrt{27}\\)</p><p>\\(3(\\sqrt{3})=\\sqrt{27}\\)</p><p>\\(a^3+\\frac{1}{a^3}=0\\)</p><h2><span class=\"mw-headline\" id=\"Solution_3\">Solution 3</span></h2><p>\\((a+\\frac{1}{a})=\\sqrt{3}\\)</p><p>\\(a^{2}+2+\\frac{1}{a^{2}}=3 \\Rightarrow a^{2}+\\frac{1}{a^{2}}=1\\)</p><p>\\((a^{3}+\\frac{1}{a^{3}})=(a+\\frac{1}{a})(a^{2}-1+\\frac{1}{a^{2}}) \\Rightarrow (a^{3}+\\frac{1}{a^{3}})=\\sqrt{3}(1-1) \\Rightarrow \\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "41": {
+      "problem": "<p>The sum of all the roots of \\(4x^3-8x^2-63x-9=0\\) is:</p><p>\\(\\textbf{(A)}\\ 8 \\qquad \\textbf{(B)}\\ 2 \\qquad \\textbf{(C)}\\ -8 \\qquad \\textbf{(D)}\\ -2 \\qquad \\textbf{(E)}\\ 0\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>By Vieta’s Formulas, \\(\\frac{--8}{4}=2\\), \\(\\boxed{B}\\)</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>\\(4x^3-8x^2-63x-9=0\\)</p><p>\\(4(x^3-2x^2-\\frac{63}{4}x-\\frac{9}{4})=0\\)</p><p>By Vieta’s Formulas: \\(x^3+ax^2+bx+c=(x-r)(x-p)(x-q)\\)</p><p>\\(x^3+ax^2+bx+c=x^3+(-r-p-q)x^2+(rp+pq+rq)x+(-rpq)\\)</p><p>\\(x^3-2x^2-\\frac{63}{4}x-\\frac{9}{4}=x^3+(-r-p-q)x^2+(rp+pq+rq)x+(-rpq)\\)</p><p>We can see that the negative sum of the roots is the coefficient of the \\(x^2\\) term, \\(-2\\). So the actual sum of the roots is \\(-(-2)\\), or \\(2 \\implies \\boxed{B}\\)</p>",
+      "answer": "B"
+    },
+    "42": {
+      "problem": "<p>Consider the graphs of</p><p>\\[(1)\\qquad y=x^2-\\frac{1}{2}x+2\\]</p><p>and</p><p>\\[(2)\\qquad y=x^2+\\frac{1}{2}x+2\\]</p><p>on the same set of axis. These parabolas are exactly the same shape. Then:</p><p>\\(\\textbf{(A)}\\ \\text{the graphs coincide.}\\\\ \\textbf{(B)}\\ \\text{the graph of (1) is lower than the graph of (2).}\\\\ \\textbf{(C)}\\ \\text{the graph of (1) is to the left of the graph of (2).}\\\\ \\textbf{(D)}\\ \\text{the graph of (1) is to the right of the graph of (2).}\\\\ \\textbf{(E)}\\ \\text{the graph of (1) is higher than the graph of (2).}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Let us consider the vertices of the two parabolas. The x-coordinate of parabola 1 is given by \\(\\frac{\\frac{1}{2}}{2} = \\frac{1}{4}\\).</p><p>Similarly, the x-coordinate of parabola 2 is given by \\(\\frac{\\frac{-1}{2}}{2} = -\\frac{1}{4}\\).</p><p>From this information, we can deduce that \\(\\textbf{(D)}\\ \\text{the graph of (1) is to the right of the graph of (2).}\\), since the parabolas are the same shape.</p>",
+      "answer": "D"
+    },
+    "43": {
+      "problem": "<p>The hypotenuse of a right triangle is \\(10\\) inches and the radius of the inscribed circle is \\(1\\) inch. The perimeter of the triangle in inches is:</p><p>\\(\\textbf{(A)}\\ 15 \\qquad \\textbf{(B)}\\ 22 \\qquad \\textbf{(C)}\\ 24 \\qquad \\textbf{(D)}\\ 26 \\qquad \\textbf{(E)}\\ 30\\)</p>",
+      "solutions": "<p>To begin, let’s notice that the inscribed circle of the right triangle is its incircle, and that the radius of the incircle is the right triangle’s inradius. In this case, the hypotenuse is 10, and the inradius is 1. The formula for the inradius of a right triangle is \\(r = (a+b-c)/2\\), where \\(r\\) is the length of the inradius of the triangle, \\(c\\) is the length hyptotenuse the the right triangle, and \\(a\\) and \\(b\\) are the lengths of the legs of the right triangle. From this, we can plug in values to notice that:</p><p>\\[\\begin{aligned}\nr &amp; = \\frac{a+b-c}{2}\\\\\\\\\n1 &amp; = \\frac{a+b-10}{2}\\\\\\\\\n2 &amp; = a+b-10\\\\\\\\\n12 &amp;= a+b\\\\\\\\\n\\end{aligned}\\]</p><p>From this, we arrive at \\(a+b+c = 12+10 = 22\\). The answer is clearly \\(\\boxed{\\textbf{(B)}}\\).</p>",
+      "answer": "B"
+    },
+    "44": {
+      "problem": "<p>A man born in the first half of the nineteenth century was \\(x\\) years old in the year \\(x^2\\). He was born in:</p><p>\\(\\textbf{(A)}\\ 1849 \\qquad \\textbf{(B)}\\ 1825 \\qquad \\textbf{(C)}\\ 1812 \\qquad \\textbf{(D)}\\ 1836 \\qquad \\textbf{(E)}\\ 1806\\)</p>",
+      "solutions": "<p>If a man born in the 19th century was \\(x\\) years of in the year \\(x^2\\), it implies that the year the man was born was \\(x^2-x\\). So, if the man was born in the first half of the 19th century, it means that \\(x^2-x &lt; 1850\\). Noticing that \\(40^2 - 40 = 1560\\) and \\(50^2-50 = 2450\\), we see that \\(40 &lt; x &lt; 50\\). We can guess values until we hit a solution.  \\(43^2-43 = 1806\\), so we see that the man had to have been \\(43\\) years old in the year \\(1849=43^2\\), so the answer is \\(\\boxed{\\textbf{(E)}}\\).</p>",
+      "answer": "E"
+    },
+    "45": {
+      "problem": "<p>In a rhombus, \\(ABCD\\), line segments are drawn within the rhombus, parallel to diagonal \\(BD\\), and terminated in the sides of the rhombus. A graph is drawn showing the length of a segment as a function of its distance from vertex \\(A\\). The graph is:</p><p>\\(\\textbf{(A)}\\ \\text{A straight line passing through the origin.}\\\\ \\textbf{(B)}\\ \\text{A straight line cutting across the upper right quadrant.}\\\\ \\textbf{(C)}\\ \\text{Two line segments forming an upright V.}\\\\ \\textbf{(D)}\\ \\text{Two line segments forming an inverted V.}\\\\ \\textbf{(E)}\\ \\text{None of these.}\\)</p>",
+      "solutions": "<p>Note that the length of the segment increases linearly with distance from \\(A\\), starting at zero, until it passes side \\(BD\\) (this can be shown with similar triangles). From there, it decreases linearly until it reaches zero at point \\(C\\) (this can also be shown with similar triangles). The only shape that matches this description is that of choice \\(\\boxed{\\textbf{(D)}}\\), so that is our answer and we are done.</p>",
+      "answer": "D"
+    },
+    "46": {
+      "problem": "<p>In the diagram, if points \\(A, B\\) and \\(C\\) are points of tangency, then \\(x\\) equals:</p><p><img class=\"latexcenter\" src=\"/data/aops/1954_AHSME/46-fig1.png\" width=\"637\" alt=\"\"></p><p>\\(\\textbf{(A)}\\ \\frac{3}{16}\"\\qquad\\textbf{(B)}\\ \\frac{1}{8}\"\\qquad\\textbf{(C)}\\ \\frac{1}{32}\"\\qquad\\textbf{(D)}\\ \\frac{3}{32}\"\\qquad\\textbf{(E)}\\ \\frac{1}{16}\"\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>First we extend the line with \\(A\\) and the line with \\(B\\) so that they both meet the line with \\(C\\), forming an equilateral triangle. Let the vertices of this triangle be \\(D\\), \\(E\\), and \\(F\\). We know it is equilateral because of the angle of \\(60^\\circ\\) shown, and because the tangent lines \\(\\overline{EF}\\) and \\(\\overline{DE}\\) are congruent. <img class=\"latexcenter\" src=\"/data/aops/1954_AHSME/46-fig2.png\" width=\"637\" alt=\"\"> We can see, because \\(A\\), \\(B\\), and \\(C\\) are points of tangency, that circle \\(ABC\\) is inscribed in \\(\\triangle DEF\\). The height of an equilateral triangle is exactly \\(3\\) times the radius of a circle inscribed in it. Let the height of \\(\\triangle DEF\\) be \\(h\\). We can see that the radius of the circle equals \\(\\frac{3}{16}\\). Thus \\[h = \\frac{3\\cdot3}{16} = \\frac 9{16}.\\] Subtracting \\(\\frac 12\\) from \\(h\\) gives us \\[x = h-\\frac 12 = \\frac 1{16},\\] so our answer is \\(\\boxed{\\text{E}}\\).</p>",
+      "answer": "E"
+    },
+    "47": {
+      "problem": "<p>At the midpoint of line segment \\(AB\\) which is \\(p\\) units long, a perpendicular \\(MR\\) is erected with length \\(q\\) units. An arc is described from \\(R\\) with a radius equal to \\(\\frac{1}{2}AB\\), meeting \\(AB\\) at \\(T\\). Then \\(AT\\) and \\(TB\\) are the roots of:</p><p>\\(\\textbf{(A)}\\ x^2+px+q^2=0\\\\ \\textbf{(B)}\\ x^2-px+q^2=0\\\\ \\textbf{(C)}\\ x^2+px-q^2=0\\\\ \\textbf{(D)}\\ x^2-px-q^2=0\\\\ \\textbf{(E)}\\ x^2-px+q=0\\)</p>",
+      "solutions": "<p>Note that \\(AT + TB = p\\). Note, also, that \\(AT * TB = (AM - TM) * (BM + TM) = (AM - TM) * (AM + TM) = AM^2 - TM^2 = TR^2 - TM^2 = MR^2 = q^2\\). Therefore, by Vieta’s formulas, we have \\((x - AT)(x - TB) = x^2 - px + q^2\\), so our answer is \\(\\boxed{\\textbf{(B)}}\\) and we are done.</p>",
+      "answer": "B"
+    },
+    "48": {
+      "problem": "<p>A train, an hour after starting, meets with an accident which detains it a half hour, after which it proceeds at \\(\\frac{3}{4}\\) of its former rate and arrives \\(3\\tfrac{1}{2}\\) hours late. Had the accident happened \\(90\\) miles farther along the line, it would have arrived only \\(3\\) hours late. The length of the trip in miles was:</p><p>\\(\\textbf{(A)}\\ 400 \\qquad \\textbf{(B)}\\ 465 \\qquad \\textbf{(C)}\\ 600 \\qquad \\textbf{(D)}\\ 640 \\qquad \\textbf{(E)}\\ 550\\)</p>",
+      "solutions": "<p>Let the speed of the train be \\(x\\) miles per hour, and let \\(D\\) miles be the total distance of the trip, where \\(x\\) and \\(D\\) are unit-less quantities. Then for the trip that actually occurred, the train travelled 1 hour before the crash, and then travelled \\(D-x\\) miles after the crash. In other words, the train travelled for \\(\\frac{(D-x)\\text{mi}}{\\frac{3x}{4}\\frac{\\text{mi}}{\\text{hr}}}=\\frac{D-x}{3x/4}\\text{hr}\\) after the crash. So, not including the half hour detention after the crash, the entire trip took</p><p>\\[\\left(1+\\frac{D-x}{3x/4}\\right)\\text{hours}.\\]</p><p>Now let us consider the alternative trip, where the accident happened \\(90\\) miles farther along the line. Originally, the accident happened \\(x\\frac{\\text{mi}}{\\text{hr}}\\cdot(1\\text{ hr})=x\\text{ mi}\\) down the line, but in this situation it happens \\(x+90\\) miles from the line. Therefore the accident happens \\(\\frac{(x+90)\\text{ mi}}{x\\frac{\\text{mi}}{\\text{hr}}}=\\frac{x+90}{x}\\text{hr}\\) into the trip. The length of the remaining part of the trip is now \\(D-x-90\\), so the remaining trip takes \\(\\frac{(D-x-90)\\text{mi}}{\\frac{3x}{4}\\frac{\\text{mi}}{\\text{hr}}}=\\frac{D-x-90}{3x/4}\\text{hr}\\). So, not including the half hour detention after the crash, the entire trip took</p><p>\\[\\left(\\frac{x+90}{x}+\\frac{D-x-90}{3x/4}\\right)\\text{hours}.\\]</p><p>We are given that the trip that actually happened resulted in being \\(3.5\\) hours late, while the alternative trip would have resulted in being only \\(3\\) hours late. Therefore the first trip took exactly \\(\\frac{1}{2}\\) hour more:</p><p>\\[1+\\frac{D-x}{3x/4}=\\frac{x+90}{x}+\\frac{D-x-90}{3x/4}+\\frac{1}{2}.\\]</p><p>After simplification and cancellation, we get the equation</p><p>\\[0=\\frac{90}{x}-\\frac{90}{3x/4}+\\frac{1}{2}.\\]</p><p>Therefore \\((90/x)+(1/2)=(120/x)\\), so \\(1/2=30/x\\). We solve for \\(x\\) and have the original speed of the train: \\(x=60\\).</p><p>We must now solve for the length of the actual trip. If the train had gone \\(60\\frac{\\text{mi}}{\\text{hr}}\\) for the entire trip, then it would have taken \\(\\frac{D}{60}\\text{hr}\\), and the train would have been on time. But the trip actually took \\(1+\\frac{D-60}{45}\\) hours, not including the half-hour detention, and the train was \\(3.5\\) hours late. Therefore</p><p>\\[\\frac{D}{60}+3.5=1+\\frac{D-60}{45}+0.5\\Rightarrow 3D+630=180+4D-240+90\\Rightarrow D=600.\\]</p><p>The length of the trip in miles was \\(\\boxed{\\textbf{(C)}\\ 600}\\).</p>",
+      "answer": "C"
+    },
+    "49": {
+      "problem": "<p>The difference of the squares of two odd numbers is always divisible by \\(8\\). If \\(a&gt;b\\), and \\(2a+1\\) and \\(2b+1\\) are the odd numbers, to prove the given statement we put the difference of the squares in the form:</p><p>\\(\\textbf{(A)}\\ (2a+1)^2-(2b+1)^2\\\\ \\textbf{(B)}\\ 4a^2-4b^2+4a-4b\\\\ \\textbf{(C)}\\ 4[a(a+1)-b(b+1)]\\\\ \\textbf{(D)}\\ 4(a-b)(a+b+1)\\\\ \\textbf{(E)}\\ 4(a^2+a-b^2-b)\\)</p>",
+      "solutions": "<p>Although all of the forms listed can be used to show that the difference of \\((2a+1)^2\\) and \\((2b+1)^2\\) is necessarily divisible by \\(8\\), we should use \\(\\boxed{\\textbf{(C)}}\\) because at least one of the second and third factors are necessarily of different parities, so that their product is necessarily even and we are done.</p>",
+      "answer": "C"
+    },
+    "50": {
+      "problem": "<p>The times between \\(7\\) and \\(8\\) o’clock, correct to the nearest minute, when the hands of a clock will form an angle of \\(84^{\\circ}\\) are:</p><p>\\(\\textbf{(A)}\\ \\text{7: 23 and 7: 53}\\qquad\n\\textbf{(B)}\\ \\text{7: 20 and 7: 50}\\qquad\n\\textbf{(C)}\\ \\text{7: 22 and 7: 53}\\\\\n\\textbf{(D)}\\ \\text{7: 23 and 7: 52}\\qquad\n\\textbf{(E)}\\ \\text{7: 21 and 7: 49}\\)</p>",
+      "solutions": "<p>At \\(7\\) o’clock, the hour hand is at the position \\(\\tfrac{7}{12}\\cdot 360^{\\circ}=210^{\\circ}\\) clockwise from the \\(12\\) o’clock position, and the minute hand is exactly at the \\(12\\) o’clock position. Thus the minute hand is \\(360^{\\circ}-210^{\\circ}=150^{\\circ}\\) ahead of the hour hand, while it is also \\(210^{\\circ}\\) behind the hour hand. So, when the minute hand first makes an \\(84^{\\circ}\\) angle with the hour hand, the minute hand will be \\(84^{\\circ}\\) behind the hour hand, and the second time they make and \\(84^{\\circ}\\) angle, the minute hand will be \\(84^{\\circ}\\) ahead the hour hand.</p><p>The minute hand moves clockwise at a rate of \\(360^{\\circ}/\\text{hr}\\), while the hour hand moves at \\((1/12)\\cdot 360^{\\circ}/\\text{ hr}=30^{\\circ}/\\text{hr}\\). Therefore the minute hand catches up to the hour hand at a rate of \\(360^{\\circ}-30^{\\circ}=330^{\\circ}\\) per hour. Therefore it will take \\((210^{\\circ}-84^{\\circ})/(330^{\\circ}/\\text{hr})=\\tfrac{126}{330}\\text{hr}\\) for the two hands of the clock to make an \\(84^{\\circ}\\) angle. It will also take \\((210^{\\circ}+84^{\\circ})/(330^{\\circ}/\\text{hr})=\\tfrac{294}{330}\\text{hr}\\) after \\(7\\) o’clock for the hands to make an \\(84^{\\circ}\\) angle for the second time. Converting these values to minutes, we see that it will take \\(22\\tfrac{10}{11}\\) minutes, and \\(53\\tfrac{5}{11}\\) minutes, for the two hands to make \\(84^{\\circ}\\) angles. Thus the times, correct to the nearest minute, at which the hands of the clock will form an \\(84^{\\circ}\\) angle are \\(\\boxed{\\textbf{(A)}\\ \\text{7: 23 and 7: 53}}\\).</p>",
+      "answer": "A"
+    }
+  }
+}

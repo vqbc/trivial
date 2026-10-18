@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2020,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2020/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Trina has decided to use a ternary counting system (base 3). If she read the expression of 2020 in ternary as a date, how many days from today would it be?</p>",
+      "solutions": "<p>2020 in ternary is 2202211. So we can see that this is 2211-2020 = 191 years away (minus 2 days), of which 47 are leap years. So, in total this is \\(191 \\times 365 + 47 - 2 = \\boxed{69760}\\) days.</p>",
+      "answer": "69760"
+    },
+    "2": {
+      "problem": "<p>A pen is tethered to the corner of a square box of side length 2cm by a string of length 4cm. What is the area of the largest shape that can be drawn with the pen without breaking the string and without the string going through the box? (Do not count the area of the box.)</p>",
+      "solutions": "<p>We notice that the string wraps around exactly to the other corner of the box, so we start with the pen there. If we keep the string taut, the pen pivots around one of the adjacent corners with a radius of \\(2\\)cm for \\(\\frac{\\pi}{2}\\) radians until the string is straight, at which point it pivots around the corner where the string is tethered for \\(\\frac{3\\pi}{2}\\) radians. We thus get an area of \\(\\left(2\\left(\\frac{4\\pi}{4}\\right) + \\frac{3}{4}(16\\pi)\\right)\\text{cm}^2 = \\boxed{14\\pi\\text{cm}^2}\\).</p>",
+      "answer": "14\\pi\\text{cm}^2"
+    },
+    "3": {
+      "problem": "<p>Suppose \\(S\\) is a set of functions with the property that, if \\(f(x)\\) and \\(g(x)\\) are in \\(S\\), then \\((f\\circ g)(x) = f(g(x))\\) is in \\(S\\). Given that the functions \\(r(x) = \\frac{x\\sqrt{3}+1}{\\sqrt{3}-x}\\) and \\(s(x) = \\frac{1}{x}\\) are in \\(S\\), compute the smallest possible size of \\(S\\).</p>",
+      "solutions": "<p>Let the notation \\(f^n(x)\\) denote repeated composition of the same function, so \\(f^1(x) = f(x)\\), \\(f^2(x) = f(f(x))\\), and so on. Note \\(r^6(x) = x\\) and \\(s^2(x) = x\\) (in particular, 6 and 2 are the smallest integers such that \\(r^n(x) = x, s^n(x) = x\\)). In addition, \\((s\\circ r\\circ s\\circ r)(x) = x\\). Then we can compute compositions of functions that avoid reduction of one or more terms in the composition into the identity function. This determines that \\(S\\) must have a minimum size of \\(\\boxed{12}\\). The functions are \\(id, r, r^2, r^3, r^4, r^5, s, s\\circ r, s\\circ r^2, s\\circ r^3, s\\circ r^4, s\\circ r^5\\).</p><p>Alternatively, we can consider the functions geometrically as symmetries of a regular hexagon with labeled vertices. If \\(r\\) represents clockwise rotation of \\(60^\\circ\\) about the center and \\(s\\) represents reflection of the hexagon about a fixed line of symmetry (so that applying \\(r\\) six times, \\(s\\) twice, or \\(r\\), then \\(s\\), then \\(r\\), then \\(s\\), gives us back the vertices in their original orientation), it is easy to see that there are 12 distinct orientations of the labeled hexagon, which correspond to the minimum \\(\\boxed{12}\\) functions in \\(S\\).</p>",
+      "answer": "12"
+    }
+  }
+}

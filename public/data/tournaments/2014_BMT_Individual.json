@@ -1,0 +1,108 @@
+{
+  "test": "BMT Individual",
+  "year": 2014,
+  "name": "Individual Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2014/IS2014.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A <i>festive</i> number is a four-digit integer containing one of each of the digits 0, 1, 2, and 4 in its decimal representation. How many festive numbers are there?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "18"
+    },
+    "2": {
+      "problem": "<p>Suppose \\(\\triangle ABC\\) is similar to \\(\\triangle DEF\\), with \\(A\\), \\(B\\), and \\(C\\) corresponding to \\(D\\), \\(E\\), and \\(F\\) respectively. If \\(\\overline{AB} = \\overline{EF}\\), \\(\\overline{BC} = \\overline{FD}\\), and \\(\\overline{CA} = \\overline{DE} = 2\\), determine the area of \\(\\triangle ABC\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{3}"
+    },
+    "3": {
+      "problem": "<p>Suppose three boba drinks and four burgers cost 28 dollars, while two boba drinks and six burgers cost $37.70. If you paid for one boba drink using only pennies, nickels, dimes, and quarters, determine the least number of coins you could use.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "10"
+    },
+    "4": {
+      "problem": "<p>Alice, Bob, Cindy, David, and Emily sit in a circle. Alice refuses to sit to the right of Bob, and Emily sits next to Cindy. If David sits next to two girls, determine who could sit immediately to the right of Alice.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\text{Bob}"
+    },
+    "5": {
+      "problem": "<p>Fred and George are playing a game, in which Fred flips 2014 coins and George flips 2015 coins. Fred wins if he flips at least as many heads as George does, and George wins if he flips more heads than Fred does. Determine the probability that Fred wins.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "6": {
+      "problem": "<p>Let \\(m\\) and \\(n\\) be integers such that \\(m+n\\) and \\(m-n\\) are prime numbers less than 100. Find the maximal possible value of \\(mn\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2350"
+    },
+    "7": {
+      "problem": "<p>If \\(f(x, y) = 3x^2 + 3xy + 1\\) and \\(f(a, b) + 1 = f(b, a) = 42\\), then determine \\(|a+b|\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3\\sqrt{3}"
+    },
+    "8": {
+      "problem": "<p>Line segment \\(AB\\) has length 4 and midpoint \\(M\\). Let circle \\(C_1\\) have diameter \\(\\overline{AB}\\), and let circle \\(C_2\\) have diameter \\(\\overline{AM}\\). Suppose a tangent of circle \\(C_2\\) goes through point \\(B\\) to intersect circle \\(C_1\\) at \\(N\\). Determine the area of triangle \\(AMN\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{8\\sqrt{2}}{9}"
+    },
+    "9": {
+      "problem": "<p>Suppose \\(a_1, a_2, \\ldots\\) and \\(b_1, b_2, \\ldots\\) are sequences satisfying \\(a_n + b_n = 7\\), \\(a_n = 2b_{n-1} - a_{n-1}\\), and \\(b_n = 2a_{n-1} - b_{n-1}\\), for all \\(n\\). If \\(a_1 = 2\\), find \\((a_{2014})^2 - (b_{2014})^2\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "7 \\cdot 3^{2014}"
+    },
+    "10": {
+      "problem": "<p>A plane intersects a sphere of radius 10 such that the distance from the center of the sphere to the plane is 9. The plane moves toward the center of the bubble at such a rate that the increase in the area of the intersection of the plane and sphere is constant, and it stops once it reaches the center of the circle. Determine the distance from the center of the sphere to the plane after two-thirds of the time has passed.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3\\sqrt{3}"
+    },
+    "11": {
+      "problem": "<p>Suppose \\(x\\), \\(y\\), and \\(1\\) are side lengths of a triangle \\(T\\) such that \\(x &lt; 1\\) and \\(y &lt; 1\\). Given \\(x\\) and \\(y\\) are chosen uniformly at random from all possible pairs \\((x, y)\\), determine the probability that \\(T\\) is obtuse.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\pi}{2} - 1"
+    },
+    "12": {
+      "problem": "<p>Suppose four coplanar points \\(A\\), \\(B\\), \\(C\\), and \\(D\\) satisfy \\(\\overline{AB} = 3\\), \\(\\overline{BC} = 4\\), \\(\\overline{CA} = 5\\), and \\(\\overline{BD} = 6\\). Determine the maximal possible area of \\(\\triangle ACD\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "21"
+    },
+    "13": {
+      "problem": "<p>A cylinder is inscribed within a sphere of radius 10 such that its volume is <i>almost-half</i> that of the sphere. If <i>almost-half</i> is defined such that the cylinder has volume \\(\\frac{1}{2} + \\frac{1}{250}\\) times the sphere’s volume, find the sum of all possible heights for the cylinder.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4 + 4\\sqrt{22}"
+    },
+    "14": {
+      "problem": "<p>Suppose that \\(f(x) = \\frac{x}{x^2 - 2x + 2}\\) and \\(g(x_1, x_2, \\ldots, x_7) = f(x_1) + f(x_2) + \\cdots + f(x_7)\\). If \\(x_1, x_2, \\ldots, x_7\\) are non-negative real numbers with sum 5, determine for how many tuples \\((x_1, x_2, \\ldots, x_7)\\) does \\(g(x_1, x_2, \\ldots x_7)\\) obtain its maximal value.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "21"
+    },
+    "15": {
+      "problem": "<p>Albert and Kevin are playing a game. Kevin has a 10% chance of winning any given round in the match. If Kevin wins the first game, he wins the match. If not, he requests that the match be extended to a best of 3. If he wins the best of 3, he wins the match. If not, then he requests the match be extended to a best of 5, and so forth. What is the probability that Kevin eventually wins the match? (A best of \\(2n+1\\) match consists of a series of rounds. The first person to reach \\(n+1\\) winning games wins the match)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{9}"
+    },
+    "16": {
+      "problem": "<p>Let \\(n\\) be the smallest positive integer such that the number obtained by taking \\(n\\)’s rightmost digit (decimal expansion) and moving it to be the leftmost digit is 7 times \\(n\\). Determine the number of digits in \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "22"
+    },
+    "17": {
+      "problem": "<p>A convex solid is formed in four-dimensional Euclidean space with vertices at the 24 possible permutations of \\(\\{1, 2, 3, 4\\}\\) (so \\((1, 2, 3, 4)\\), \\((1, 2, 4, 3)\\), etc.). What is the product of the number of faces and edges of this solid?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "504"
+    },
+    "18": {
+      "problem": "<p>Suppose the polynomial \\(f(x) = x^{2014}\\) is equal to \\[f(x) = \\sum_{k=0}^{2014} a_k \\binom{x}{k}\\] for some real numbers \\(a_0, \\ldots, a_{2014}\\). Find the largest integer \\(m\\) such that \\(2^m\\) divides \\(a_{2013}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2004"
+    },
+    "19": {
+      "problem": "<p>Evaluate the integral \\[\\int_0^{\\pi/2} \\sqrt{\\tan\\theta} \\, d\\theta.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\pi\\sqrt{2}}{2}"
+    },
+    "20": {
+      "problem": "<p>Suppose three circles of radius 5 intersect at a common point. If the three (other) pairwise intersections between the circles form a triangle of area 8, find the radius of the smallest possible circle containing all three circles.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9"
+    }
+  }
+}

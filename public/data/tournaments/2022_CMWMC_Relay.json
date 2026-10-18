@@ -1,0 +1,68 @@
+{
+  "test": "CMWMC Relay",
+  "year": 2022,
+  "name": "Relay Round",
+  "url": "https://drive.google.com/uc?export=download&id=1O9s9IjXthr3-08FNWhUvcnUz-7bEX5kf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute the number of real numbers \\(x\\) such that the sequence \\(x, x^2, x^3, x^4, x^5, \\dots\\) eventually repeats. (To be clear, we say a sequence “eventually repeats” if there is some block of consecutive digits that repeats past some point—for instance, the sequence \\(1, 2, 3, 4, 5, 6, 5, 6, 5, 6, \\dots\\) is eventually repeating with repeating block \\(5, 6\\).)</p>",
+      "solutions": "<p>Note that if \\(0 &lt; |x| &lt; 1\\) or \\(|x| &gt; 1\\), \\(|x|\\) is different for every term in the sequence, so it cannot possibly repeat (in the former case it decreases to 0 and in the latter it increases without bound). This leaves \\(x = -1, 0, 1\\) as options, all of which yield repeating sequences (the former alternates between \\(-1\\) and 1 while the latter two are constant). Thus there are 3 such \\(x\\).</p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>Let \\(T\\) be the answer to the previous problem. Nicole has a broken calculator which, when told to multiply \\(a\\) by \\(b\\), starts by multiplying \\(a\\) by \\(b\\), but then multiplies that product by \\(b\\) again, and then adds \\(b\\) to the result. Nicole inputs the computation “\\(k \\times k\\)” into the calculator for some real number \\(k\\) and gets an answer of \\(10T\\). If she instead used a working calculator, what answer should she have gotten?</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(3\\).</i></p>",
+      "solutions": "<p>The calculator’s computation of “\\(k \\times k\\)” computes \\((k \\times k) \\times k + k = k^3 + k\\). If she gets an answer of 30, this means \\(k^3 + k = 30\\), and we can check that \\(k = 3\\) satisfies this equation (and since the LHS is strictly increasing, it is the unique such solution). Thus she should have gotten \\(3 \\times 3 = 9\\).</p>",
+      "answer": "9"
+    },
+    "3": {
+      "problem": "<p>Let \\(T\\) be the answer to the previous problem. Find the positive difference between the largest and smallest perfect squares that can be written as \\(x^2 + y^2\\) for integers \\(x, y\\) satisfying \\(\\sqrt{T} \\le x \\le T\\) and \\(\\sqrt{T} \\le y \\le T\\).</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(9\\).</i></p>",
+      "solutions": "<p>We are looking for triples \\((x, y, z)\\) such that \\(x^2 + y^2 = z^2\\) with \\(3 \\le x \\le 9\\) and \\(3 \\le y \\le 9\\). These are known as <i>Pythagorean triples</i>, and testing small numbers gives that 3-4-5 and 6-8-10 are the only Pythagorean triples within these bounds. Thus the maximum perfect square is \\(10^2 = 100\\) and the minimum is \\(5^2 = 25\\), so the positive difference is \\(100 - 25 = 75\\).</p>",
+      "answer": "75"
+    },
+    "4": {
+      "problem": "<p>What is the last digit of \\(2022 + 2022^{2022} + 2022^{(2022^{2022})}\\)?</p>",
+      "solutions": "<p>Note that only the last digits of each term matters, so we can instead look for the last digit of \\(2 + 2^{2022} + 2^{(2022^{2022})}\\). Computing small powers of 2, we can see that the last digits repeat as \\(2, 4, 8, 6, \\dots\\) Thus the last digit of \\(2^k\\) depends only on the remainder when \\(k\\) is divided by 4. We can easily see that 2022 has remainder 2 while \\(2022^{2022}\\) has remainder 4, so the terms contribute 2, 4, and 6 respectively, and adding these gives a last digit of 2.</p>",
+      "answer": "2"
+    },
+    "5": {
+      "problem": "<p>Let \\(T\\) be the answer to the previous problem. CMIMC executive members are trying to arrange desks for CMWMC. If they arrange the desks into rows of 5 desks, they end up with 1 left over. If they instead arrange the desks into rows of 7 desks, they also end up with 1 left over. If they instead arrange the desks into rows of 11 desks, they end up with \\(T\\) left over. What is the smallest possible (non-negative) number of desks they could have?</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(2\\).</i></p>",
+      "solutions": "<p>Suppose there are \\(N\\) desks. The given conditions correspond to \\(N \\equiv 1 \\pmod 5\\), \\(N \\equiv 1 \\pmod 7\\), and \\(N \\equiv 2 \\pmod{11}\\). The first two conditions imply that \\(N = 35k + 1\\) for some \\(k\\). We list out the remainders upon division by 11 for small values of \\(k\\) starting at \\(k = 0\\): \\(k = 0 \\to 1\\), \\(k = 1 \\to 3\\), \\(k = 2 \\to 5\\), \\(k = 3 \\to 7\\), \\(k = 4 \\to 9\\), \\(k = 5 \\to 0\\), \\(k = 6 \\to 2\\). Thus \\(k = 6\\) is the smallest one that works, corresponding to \\(N = 35(6) + 1 = 211\\).</p>",
+      "answer": "211"
+    },
+    "6": {
+      "problem": "<p>Let \\(T\\) be the answer to the previous problem. Compute the largest value of \\(k\\) such that \\(11^k\\) divides \\[T! = T(T - 1)(T - 2)\\dots (2)(1).\\]</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(211\\).</i></p>",
+      "solutions": "<p>Note that a given factor in the product contributes a factor of 11 if and only if it is divisible by 11. Furthermore, multiples of 121 contribute two factors of 11, and so on. We can compute \\(11 \\cdot 19 = 209\\), so there are 19 multiples of 11 below 211. Of these, only 121 is divisible by 121, so we get one other factor for a total of 20.</p>",
+      "answer": "20"
+    },
+    "7": {
+      "problem": "<p>Annie has 24 letter tiles in a bag; 8 C’s, 8 M’s, and 8 W’s. She blindly draws tiles from the bag until she has enough to spell “CMWMC.” What is the maximum number of tiles she may have to draw?</p>",
+      "solutions": "<p>The most inefficient thing she could do is pick all of two letters before picking the last letters. If the last letter picked is C, then there were 8 M’s, 8 W’s, and 2 C’s, for a total of 18. The other two cases yield 18 and 17, so the maximum is 18.</p>",
+      "answer": "18"
+    },
+    "8": {
+      "problem": "<p>Let \\(T\\) be the answer from the previous problem. Charlotte is initially standing at \\((0, 0)\\) in the coordinate plane. She takes \\(T\\) steps, each of which moves her by 1 unit in either the \\(+x, -x, +y\\), or \\(-y\\) direction (e.g. her first step takes her to \\((1, 0)\\), \\((-1, 0)\\), \\((0, 1)\\) or \\((0, -1)\\)). After the \\(T\\) steps, how many possibilities are there for Charlotte’s location?</p><p><i>Note: the answer to Problem 7 (the previous problem) is \\(18\\).</i></p>",
+      "solutions": "<p>Drawing out the possible points, we see that after \\(k\\) steps, we get a square of side length \\(k+1\\) and thus \\((k+1)^2\\) points (pictured below is \\(k = 2\\) in orange and \\(k = 3\\) in blue).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2022_CMWMC_Relay/8-fig1.png\" width=\"106\" alt=\"\"></p><p>Thus for 18 steps there are \\((18 + 1)^2 = 361\\) possibilities.</p>",
+      "answer": "361"
+    },
+    "9": {
+      "problem": "<p>Let \\(T\\) be the answer from the previous problem, and let \\(S\\) be the sum of the digits of \\(T\\). Francesca has an unfair coin with an unknown probability \\(p\\) of landing heads on a given flip. If she flips the coin \\(S\\) times, the probability she gets exactly one head is equal to the probability she gets exactly two heads. Compute the probability \\(p\\).</p><p><i>Note: the answer to Problem 8 (the previous problem) is \\(361\\).</i></p>",
+      "solutions": "<p>The probability of getting one head on \\(S\\) flips is \\(\\binom{S}{1}p(1-p)^{S-1}\\). The probability of getting two heads on \\(S\\) flips is \\(\\binom{S}{2}p^2(1-p)^{S-2}\\). Setting these equal to each other and cancelling terms gives \\((S-1)p = 2(1-p)\\), and solving for \\(p\\) gives \\(p = \\frac{2}{S+1}\\). We compute \\(S = 3 + 6 + 1 = 10\\), so \\(p = \\frac{2}{11}\\).</p>",
+      "answer": "2/11"
+    },
+    "10": {
+      "problem": "<p>Quadrilateral \\(ABCD\\) (with \\(A, B, C\\) not collinear and \\(A, D, C\\) not collinear) has \\(AB = 4, BC = 7, CD = 10\\), and \\(DA = 5\\). Compute the number of possible integer lengths \\(AC\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2022_CMWMC_Relay/10-fig1.png\" width=\"111\" alt=\"\"></p>",
+      "solutions": "<p>By the triangle inequality on \\(\\triangle ABC\\), we have that \\(AC &lt; 4 + 7\\), \\(4 &lt; AC + 7\\), and \\(7 &lt; AC + 4\\). Putting these together, we get \\(3 &lt; AC &lt; 11\\). By the triangle inequality on \\(\\triangle ADC\\), we have that \\(AC &lt; 10 + 5\\), \\(5 &lt; AC + 10\\), and \\(10 &lt; AC + 5\\). Putting these together, we get \\(5 &lt; AC &lt; 15\\). The only integers satisfying both of these are \\(6, 7, 8, 9, 10\\), for a total of 5 options.</p>",
+      "answer": "5"
+    },
+    "11": {
+      "problem": "<p>Let \\(T\\) be the answer from the previous part. \\(2T\\) congruent isosceles triangles with base length \\(b\\) and leg length \\(\\ell\\) are arranged to form a parallelogram as shown below (not necessarily the correct number of triangles). If the total length of all drawn line segments (<b>not</b> double counting overlapping sides) is exactly three times the perimeter of the parallelogram, find \\(\\frac{\\ell}{b}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2022_CMWMC_Relay/11-fig1.png\" width=\"129\" alt=\"\"></p><p><i>Note: the answer to Problem 10 (the previous problem) is \\(5\\).</i></p>",
+      "solutions": "<p>We can compute the perimeter of the parallelogram to be \\(2T(b) + 2\\ell\\), while the sum of the lengths of all line segments is \\(2T(b) + (2T + 1)\\ell\\). The given condition then becomes \\[\\frac{10b + 11\\ell}{10b + 2\\ell} = 3 \\to 10b + 11\\ell = 30b + 6\\ell \\to \\frac{\\ell}{b} = 4\\]</p>",
+      "answer": "4"
+    },
+    "12": {
+      "problem": "<p>Let \\(T\\) be the answer from the previous part. Rectangle \\(R\\) has length \\(T\\) times its width. \\(R\\) is inscribed in a square \\(S\\) such that the diagonals of \\(S\\) are parallel to the sides of \\(R\\). What proportion of the area of \\(S\\) is contained within \\(R\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2022_CMWMC_Relay/12-fig1.png\" width=\"106\" alt=\"\"></p><p><i>Note: the answer to Problem 11 (the previous problem) is \\(4\\).</i></p>",
+      "solutions": "<p>Let the length and width of \\(R\\) be \\(\\ell\\) and \\(w\\) respectively. Dropping perpendiculars from the vertices of \\(S\\) to the sides of \\(R\\), we get some isosceles right triangles, from which we can compute the side length of \\(S\\) to be \\(\\frac{(\\ell+w)\\sqrt{2}}{2}\\). Letting \\(\\ell = 4w\\), we compute the area of \\(R\\) to be \\(4w^2\\), while the area of \\(S\\) is \\(\\frac{25w^2}{2}\\). Dividing gives an area of \\(\\frac{8}{25}\\).</p>",
+      "answer": "8/25"
+    }
+  }
+}

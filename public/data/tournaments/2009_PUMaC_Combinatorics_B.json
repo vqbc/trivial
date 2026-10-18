@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Combinatorics B",
+  "year": 2009,
+  "name": "Combinatorics B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2009_CombinatoricsB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Three people, John, Macky, and Rik, play a game of passing a basketball from one to another. Find the number of ways of passing the ball starting with Macky and reaching Macky again at the end of the seventh pass.</p>",
+      "solutions": "<p>Consider a graph with 3 verticies, corresponding to each player. Draw an edge between all pairs of people. Now, write down the adjacency matrix for this graph, and call it \\(M\\). We are interested in the upper left entry of \\(M^7\\), and \\(M^7\\) can be computed using repeated squaring, to get 42 as the answer.</p><p><b>Alternative Solution.</b> We can rephrase the above solution in terms of recursions.</p><p>Define the sequences \\(a_n, b_n\\) for \\(n \\ge 0\\): \\(a_n\\) is the number of ways of passing the ball starting from a player and reaching that same player again on the \\(n\\)-th pass, \\(b_n\\) is the number of ways of passing the ball starting from a player and reaching a different player on the \\(n\\)-th pass. Then \\(a_0 = 0, b_1 = 1\\) and \\[a_{n+1} = 2b_n\\] \\[b_{n+1} = a_n + b_n\\] since, for example: the ball can reach the same player on the \\(n+1\\)-st pass if and only if it reached any of the two other players on the \\(n\\)-th pass. These recursions can be easily solved, or you can use them to compute the first few values of \\(a_n\\).</p>",
+      "answer": "42"
+    },
+    "2": {
+      "problem": "<p>Find the number of subsets of \\(\\{1,2,\\ldots,7\\}\\) that do not contain two consecutive integers.</p>",
+      "solutions": "<p>Let \\(a_n\\) be the number of subsets of \\(\\{1, 2, \\ldots, n\\}\\) that don’t contain consecutive numbers. If a subset contains \\(n\\), then it doesn’t contain \\(n-1\\), and then it can be anything counted by \\(a_{n-2}\\). If it doesn’t contain \\(n\\), then it is something counted by \\(a_{n-1}\\), and it is clear that anything counted by \\(a_n\\) arises from precisely one thing counted by \\(a_{n-1}\\) or \\(a_{n-2}\\), so we get \\(a_n = a_{n-1} + a_{n-2}\\). It is easy to check \\(a_1 = 2\\) and \\(a_2 = 3\\), and then it is a quick jaunt to \\(a_7 = 34\\).</p>",
+      "answer": "34"
+    },
+    "3": {
+      "problem": "<p>It is known that a certain mechanical balance can measure any object of integer mass anywhere between 1 and 2009 (both included). This balance has \\(k\\) weights of integral values. What is the minimum \\(k\\) for which there exist weights that satisfy this condition?</p>",
+      "solutions": "<p>If \\(n &lt; \\frac{3^k}{2}\\), then one can weigh an object of weight \\(n\\) with at most \\(k\\) weights, of weights \\(1, 3, \\ldots, 3^{k-1}\\) by putting the unit weight on the same side as the object if the last ternary digit of \\(n\\) is 2, on the other side if it is 1, and ignoring the weight if it is 0; after which one divides everything by 3 and uses induction. This is also clearly optimal, as one needs at least \\(k\\) weights to weigh the object of weight \\(\\frac{3^k+1}{2}\\), so the answer is greater than \\(\\log_3(2 \\cdot 2009)\\), and one can check that that is about 7.55, so 8 is the answer.</p>",
+      "answer": "8"
+    },
+    "4": {
+      "problem": "<p>How many strings of ones and zeroes of length 10 are there such that there is an even number of ones, and no zero follows another zero?</p>",
+      "solutions": "<p>When there are 10 1’s, there is only 1 string; when there are 8 1’s, there are \\(\\binom{9}{2} = 36\\) strings; when there are 6 1’s, there are \\(\\binom{7}{4} = 35\\) strings. Thus, in total, there are 72 strings.</p>",
+      "answer": "72"
+    },
+    "5": {
+      "problem": "<p>We divide up the plane into disjoint regions using a circle, a rectangle and a triangle. What is the greatest number of regions that we can get?</p>",
+      "solutions": "<p>Looking at the triangle and rectangle first, we have at most 8 regions. Then the circle has at most 14 intersections with straight lines from triangle and rectangle, which means we add at most 14 regions by adding a circle, for a grand total of 22.</p>",
+      "answer": "22"
+    },
+    "6": {
+      "problem": "<p>There are \\(n\\) players in a round-robin ping-pong tournament (i.e. every two persons will play exactly one game). After some matches have been played, it is known that the total number of matches that have been played among any \\(n-2\\) people is equal to \\(3^k\\) (where \\(k\\) is a fixed integer). Find the sum of all possible values of \\(n\\).</p>",
+      "solutions": "<p>We make a graph with the verticies as the players, and the edges are the matches. The total number of edges is \\[\\frac{\\binom{n}{n-2} \\times 3^k}{\\binom{n}{n-4}} = \\frac{12 \\cdot 3^k}{(n-2)(n-3)}.\\] Since this number must be larger than \\(3^k\\), we have \\(\\frac{12}{(n-2)(n-3)}\\) is an integer greater than 1. Furthermore, \\(n \\ge 4\\). So only possibilities for \\(n\\) are 4 and 5. Easy to check that \\(n = 4, k = 0\\) and \\(n = 5, k = 1\\) are two complete graphs satisfying the condition. So \\(n = 4\\) or \\(5\\), and 9 is the answer.</p>",
+      "answer": "9"
+    },
+    "7": {
+      "problem": "<p>We have a \\(6 \\times 6\\) square, partitioned into 36 unit squares. We select some of these unit squares and draw some of their diagonals, subject to the condition that no two diagonals we draw have any common points. What is the maximal number of diagonals that we can draw?</p>",
+      "solutions": "<p>It is possible to draw 21 diagonals, as shown in the figure below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_PUMaC_Combinatorics_B/7-fig1.png\" width=\"198\" alt=\"\"></p><p>This is also the maximum: The vertices of the small squares form a 7 by 7 grid. Each diagonal has an endpoint in the second, fourth or sixth row of this grid. However, there are only \\(3 \\times 7 = 21\\) points on these 3 rows, so there can be at most 21 diagonals.</p>",
+      "answer": "21"
+    },
+    "8": {
+      "problem": "<p>We randomly choose 5 distinct positive integers less than or equal to 90. What is the floor of 10 times the expected value of the fourth largest number?</p>",
+      "solutions": "<p>The expected value is \\(\\frac{182}{3}\\). For any \\(3 &lt; k &lt; 90\\), there are \\((90-k)\\binom{k-1}{3}\\) ways in which the fourth largest number is exactly \\(k\\) (3 numbers must be less than \\(k\\), they can be put on \\(k-1\\) positions, one number must be larger than \\(k\\), it can be put on \\(90-k\\) positions). Hence the expected value is \\[\\frac{1}{\\binom{90}{5}} \\sum_{k=1}^{89} k(90-k)\\binom{k-1}{3}.\\]</p><p>We can simplify the sum as follows. First note that \\(k\\binom{k-1}{3} = 4\\binom{k}{4}\\) so the sum equals \\(4\\sum_{k=1}^{89}(90-k)\\binom{k}{4}\\). This can be broken up into two parts \\[4\\sum_{k=1}^{89}(91-(k+1))\\binom{k}{4} = 4 \\times 91\\sum_{k=1}^{89}\\binom{k}{4} - 4\\sum_{k=1}^{89}(k+1)\\binom{k}{4}.\\]</p><p>As above, we have \\((k+1)\\binom{k}{4} = 5\\binom{k+1}{5}\\) so this equals \\[4 \\times 91\\sum_{k=1}^{89}\\binom{k}{4} - 4 \\times 5\\sum_{k=1}^{89}\\binom{k+1}{5}.\\]</p><p>Using the known identity \\[\\binom{a}{a} + \\binom{a+1}{a} + \\ldots + \\binom{b}{a} = \\binom{b+1}{a+1}\\] the last expression simplifies to \\[4 \\times 91\\binom{90}{5} - 4 \\times 5\\binom{91}{6} = \\frac{182}{3}\\binom{90}{5}.\\]</p><p>To get the expected value, we must divide this by the total number of possibilities, which is just \\(\\binom{90}{5}\\), and this finishes the solution.</p><p><b>Alternative Solution.</b> Consider a regular 91-gon. Choose 6 vertices at random. Then choose one vertex out of the 6, label it with 0, and starting from that vertex label the remaining ones in clockwise direction with \\(1, 2, \\ldots, 90\\). Then our problem asks for the expected arclength between the vertex 0 and the 4th chosen vertex. By symmetry, the expected distance between any two consecutive chosen vertices is \\(91/6\\), hence our answer is 4 times that: \\(4 \\times 91/6 = 182/3\\).</p>",
+      "answer": "606"
+    }
+  }
+}

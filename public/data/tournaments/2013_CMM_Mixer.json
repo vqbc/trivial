@@ -1,0 +1,83 @@
+{
+  "test": "CMM Mixer",
+  "year": 2013,
+  "name": "Mixer Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_d10d57e3f7334012b7a4a846f8038844.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Two kids \\(A\\) and \\(B\\) play a game as follows: From a box containing \\(n\\) marbles (\\(n &gt; 1\\)), they alternately take some marbles for themselves, such that:</p><ol><li>\\(A\\) goes first.</li><li>The number of marbles taken by \\(A\\) in his first turn, denoted by \\(k\\), must be between \\(1\\) and \\(n\\), inclusive.</li><li>The number of marbles taken in a turn by any player must be between \\(1\\) and \\(k\\), inclusive.</li></ol><p>The winner is the one who takes the last marble. What is the sum of all \\(n\\) for which \\(B\\) has a winning strategy?</p>",
+      "solutions": "<p>\\(A\\) can always win by taking \\(n\\) marbles. Therefore, the sum is \\(0\\).</p>",
+      "answer": "0"
+    },
+    "2": {
+      "problem": "<p>How many ways can your rearrange the letters of “Alejandro” such that it contains exactly one pair of adjacent vowels?</p>",
+      "solutions": "<p>First, consider how we could arrange the 5 consonants and 4 vowels, without worrying about how to permute the consonants among themselves. Since there must be one pair of adjacent vowels, we see that we have three very similar cases to put most of the letters:</p><p>\\[\\begin{gathered}\n\\text{vv c v c v}\\\\\n\\text{v c vv c v}\\\\\n\\text{v c v c vv}\n\\end{gathered}\\]</p><p>Now, we have 3 more consonants to place, in the four different spaces between vowels. This is a standard balls-and-urns problem: the consonants can be arranged in \\(\\binom{4+3-1}{3} = \\binom{6}{3} = 20\\) ways. Therefore, we see that there are \\(3 \\cdot 20 = 60\\) different ways to order the consonants and vowels.</p><p>Hence, multiplying by \\(5!\\) to account for consonant permutation and \\(4!/2\\) to account for vowel permutation (since there are two ‘a’s), we get \\(5! \\cdot 4!/2 \\cdot 60 = 120 \\cdot 12 \\cdot 60 = 86400\\).</p>",
+      "answer": "86400"
+    },
+    "3": {
+      "problem": "<p>Assuming real values for \\(p, q, r\\), and \\(s\\), the equation \\[x^4 + px^3 + qx^2 + rx + s\\] has four non-real roots. The sum of two of these roots is \\(q + 6i\\), and the product of the other two roots is \\(3 - 4i\\). Find the smallest value of \\(q\\).</p>",
+      "solutions": "<p>Let \\(m\\) and \\(n\\) be the first pair of roots. Since the coefficients are real, the non-real roots must be in complex conjugate pairs. Since \\(m + n\\) is not real, \\(m\\) and \\(n\\) are not conjugate to each other; let \\(m'\\) and \\(n'\\) be their conjugates, respectively. Hence, we have the following four equations: \\[\\begin{aligned}\nm + n &amp;= q + 6i\\\\\nm' + n' &amp;= q - 6i\\\\\nm' \\cdot n' &amp;= 3 - 4i\\\\\nm \\cdot n &amp;= 3 + 4i\n\\end{aligned}\\]</p><p>Using Vieta’s formulas, we have that \\(q\\) is the second symmetric sum of the roots (the sum of all terms \\(r_i r_j\\), where \\(r_i\\) and \\(r_j\\) are roots of the polynomial). This can be factored to \\[\\begin{aligned}\nq &amp;= mm' + mn + mn' + m'n + m'n' + nn'\\\\\n&amp;= (m+n)(m'+n') + mn + m'n'\\\\\n&amp;= (q+6i)(q-6i) + (3+4i) + (3-4i)\\\\\n&amp;= q^2 + 36 + 6\\\\\n&amp;= q^2 + 42.\n\\end{aligned}\\]</p><p>Hence, we get that \\(q^2 - q + 42 = 0\\), which means that \\(q = -6\\) or \\(q = 7\\). Hence, the smallest value of \\(q\\) is \\(-6\\).</p>",
+      "answer": "-6"
+    },
+    "4": {
+      "problem": "<p>Lisa has a 3D box that is 48 units long, 140 units high, and 126 units wide. She shines a laser beam into the box through one of the corners, at a \\(45^\\circ\\) angle with respect to all of the sides of the box. Whenever the laser beam hits a side of the box, it is reflected perfectly, again at a \\(45^\\circ\\) angle. Compute the distance the laser beam travels until it hits one of the eight corners of the box.</p>",
+      "solutions": "<p>The trick is to find the least common multiple of 48, 140, and 126. This is 5040.</p>",
+      "answer": "5040"
+    },
+    "5": {
+      "problem": "<p>How many ways can you divide a heptagon into five non-overlapping triangles such that the vertices of the triangles are vertices of the heptagon?</p>",
+      "solutions": "<p>Either draw every possible combination, notice that 42 is a Catalan number, or notice that the answer to every question in Part II is 42.</p>",
+      "answer": "42"
+    },
+    "6": {
+      "problem": "<p>Let \\(a\\) be the greatest root of \\(y = x^3 + 7x^2 - 14x - 48\\). Let \\(b\\) be the number of ways to pick a group of \\(a\\) people out of a collection of \\(a^2\\) people. Find \\(\\frac{b}{2}\\).</p>",
+      "solutions": "<p>The cubic polynomial factors into \\(y = (x+2)(x+8)(x-3)\\); hence, \\(a = 3\\). There are \\(\\binom{9}{3} = 84\\) ways to pick 3 out of 9. Thus, the answer is 42.</p>",
+      "answer": "42"
+    },
+    "7": {
+      "problem": "<p>Consider the equation \\[1 - \\frac{1}{d} = \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c},\\] with \\(a, b, c,\\) and \\(d\\) being positive integers. What is the largest value for \\(d\\)?</p>",
+      "solutions": "<p>Let \\(a \\le b \\le c\\), WLOG. Then, we can easily brute-force that the maximal solution for \\(d\\) is \\((a, b, c, d) = (2, 3, 7, 42)\\).</p>",
+      "answer": "42"
+    },
+    "8": {
+      "problem": "<p>The number of non-negative integers \\(x_1, x_2, \\ldots x_{12}\\) such that \\[x_1 + x_2 + \\ldots + x_{12} \\le 17\\] can be expressed in the form \\(\\binom{a}{b}\\), where \\(2b \\le a\\). Find \\(a + b\\).</p>",
+      "solutions": "<p>We can add a new variable \\(x_{13}\\) to take up the “slack”: \\[x_1 + x_2 + \\ldots + x_{12} + x_{13} = 17.\\]</p><p>For example, if we already have \\(x_1, x_2, \\ldots x_{12}\\) summing to 14, this would be equivalent to a solution of the above equation with the same 12-tuple and \\(x_{13} = 3\\). Since the \\(x_i\\) are non-negative, we can change them into positive integers by making the substitution \\(y_i + 1 = x_i\\); so our equation becomes \\[x_1 + x_2 + \\ldots + x_{13} = 30.\\]</p><p>This becomes equivalent to the problem of putting 12 dividers between 30 objects, so the solution is \\(\\binom{30}{12}\\) and \\(30 + 12 = 42\\).</p>",
+      "answer": "42"
+    },
+    "9": {
+      "problem": "<p>In the diagram below, \\(AB\\) is tangent to circle \\(O\\). Given that \\(AC = 15\\), \\(AB = \\frac{27}{2}\\), and \\(BD = \\frac{243}{34}\\), compute the area of \\(\\triangle ABC\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2013_CMM_Mixer/9-fig1.png\" width=\"403\" alt=\"\"></p>",
+      "solutions": "<p>First use the tangent-secant power theorem to find \\(BC\\): \\[\\left(\\frac{27}{2}\\right)^2 = \\frac{243}{34} BC\\] \\[BC = \\frac{51}{2}.\\]</p><p>Then use Heron’s formula to calculate the area of \\(\\triangle ABC\\): \\[A = \\frac{1}{4}\\sqrt{\\left(15+\\frac{27}{2}+\\frac{51}{2}\\right)\\left(-15+\\frac{27}{2}+\\frac{51}{2}\\right)\\left(15-\\frac{27}{2}+\\frac{51}{2}\\right)\\left(15+\\frac{27}{2}-\\frac{51}{2}\\right)}\\] \\[= 81.\\]</p>",
+      "answer": "81"
+    },
+    "10": {
+      "problem": "<p>If \\[[2^{\\log x}]^{[x^{\\log 2}]^{[2^{\\log x}]^{\\cdots}}} = 2,\\] where \\(\\log x\\) is the base-10 logarithm of \\(x\\), then it follows that \\(x = \\sqrt{n}\\). Compute \\(n^2\\).</p>",
+      "solutions": "<p>We can rewrite \\(2^{\\log x}\\) as \\((10^{\\log 2})^{\\log x}\\), or \\(x^{\\log 2}\\), so every bracketed term is in fact the same. Thus, we can rewrite our equation as \\[(x^{\\log 2})^2 = 2.\\]</p><p>Taking the logarithm of both sides, \\[2 \\log 2 \\log x = \\log 2\\] \\[\\log x = \\frac{1}{2}.\\]</p><p>Therefore, \\(x = \\sqrt{10}\\) and \\(n^2 = 100\\).</p>",
+      "answer": "100"
+    },
+    "12": {
+      "problem": "<p>Find \\(n\\) in the equation \\[133^5 + 110^5 + 84^5 + 27^5 = n^5,\\] where \\(n\\) is an integer less than 170.</p>",
+      "solutions": "<p>We know that \\(n\\) is even since the left hand side of the equation has 2 even and 2 odd numbers. By Fermat’s Little Theorem, we know that \\(n^5 \\equiv n \\pmod 5\\). Thus: \\[\\begin{aligned}\n3 + 0 + 4 + 7 &amp;\\equiv n \\pmod 5\\\\\n4 &amp;\\equiv n \\pmod 5.\n\\end{aligned}\\]</p><p>We also note that the original equation becomes very useful mod 3: \\[0 \\equiv n \\pmod 3.\\]</p><p>We know that \\(n\\) is divisible by both 2 and 3 and has a remainder of 4 when divided by 5. We know that \\(n &gt; 133\\) so the only possibilities are \\(n = 144\\) or \\(n \\ge 174\\). However, \\(n &lt; 170\\), so \\(n\\) must be 144.</p>",
+      "answer": "144"
+    },
+    "13": {
+      "problem": "<p>Let \\(x\\) be the answer to number 14, and \\(z\\) be the answer to number 16. Define \\(f(n)\\) as the number of distinct two-digit integers that can be formed from digits in \\(n\\). For example, \\(f(15) = 4\\) because the integers \\(11, 15, 51, 55\\) can be formed from digits of 15.</p><p>Let \\(w\\) be such that \\(f(3xz - w) = w\\). Find \\(w\\).</p><p><i>Note: the answer to Problem 14 is \\(5\\) and the answer to Problem 16 is \\(7\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "14": {
+      "problem": "<p>Let \\(w\\) be the answer to number 13 and \\(z\\) be the answer to number 16. Let \\(x\\) be such that the coefficient of \\(a^x b^x\\) in \\((a+b)^{2x}\\) is \\(5z^2 + 2w - 1\\). Find \\(x\\).</p><p><i>Note: the answer to Problem 13 (the previous problem) is \\(4\\) and the answer to Problem 16 is \\(7\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "5"
+    },
+    "15": {
+      "problem": "<p>Let \\(w\\) be the answer to number 13, \\(x\\) be the answer to number 14, and \\(z\\) be the answer to number 16. Let \\(A, B, C, D\\) be points on a circle, in that order, such that \\(\\overline{AD}\\) is a diameter of the circle. Let \\(E\\) be the intersection of \\(\\overleftrightarrow{AB}\\) and \\(\\overleftrightarrow{DC}\\), let \\(F\\) be the intersection of \\(\\overleftrightarrow{AC}\\) and \\(\\overleftrightarrow{BD}\\), and let \\(G\\) be the intersection of \\(\\overleftrightarrow{EF}\\) and \\(\\overleftrightarrow{AD}\\). Now, let \\(AE = 3x\\), \\(ED = w^2 - w + 1\\), and \\(AD = 2z\\). If \\(FG = y\\), find \\(y\\).</p><p><i>Note: the answer to Problem 13 is \\(4\\), the answer to Problem 14 (the previous problem) is \\(5\\), and the answer to Problem 16 is \\(7\\).</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "12"
+    },
+    "16": {
+      "problem": "<p>Let \\(w\\) be the answer to number 13, and \\(x\\) be the answer to number 16. Let \\(z\\) be the number of integers \\(n\\) in the set \\(S = \\{w, w+1 \\ldots 16x - 1, 16x\\}\\) such that \\(n^2 + n^3\\) is a perfect square. Find \\(z\\).</p><p><i>Note: the answer to Problem 13 is \\(4\\).</i></p>",
+      "solutions": "<p>We define, as in the problems above, that the answer to number 13 is \\(w\\), the answer to 14 is \\(x\\), the answer to 15 is \\(y\\), and the answer to 16 is \\(z\\).</p><p>First, see that the function defined in part \\(w\\) returns the square of the number of distinct digits of the argument, so \\(w\\) is a square. Furthermore, \\(\\sqrt{w} \\le \\log(3xz)\\). That is, \\(w\\) is a smallish square.</p><p>\\(n^2 + n^3 = n^2(n+1)\\) is a square iff \\(n+1\\) is a square. The number of squares between \\(w+1\\) and \\(16x+1\\) (inclusive), is \\(z = \\lfloor \\sqrt{16x+1} \\rfloor - \\lfloor \\sqrt{w+1} \\rfloor\\).</p><p>By the binomial theorem, \\(5z^2 + 2w - 1 = \\frac{(2x)!}{x!^2}\\). Calculating the first few values by hand (making a reasonable assumption that it’s not more than three digits) gives that \\(5z^2 + 2w - 1\\) is one of \\(2, 6, 20, 70, 252, 924\\). Since \\(z\\) and \\(w\\) must be positive integers, \\(5z^2 + 2w - 1 \\ge 6\\). Equality happens if \\(z = w = 1\\) and \\(x = 2\\). This satisfies the condition given in problem \\(x\\) but not the one in problem \\(z\\). So we know that \\(x \\ge 3\\).</p><p>Knowing that \\(z\\) grows as the square root of \\(w\\) and that \\(x\\) grows inverse-factorially as the square root of \\(z\\), we can guess that they are probably small enough that \\(3xz\\) has four or fewer digits. Then \\(w\\) is one of \\(1, 4, 9, 16\\).</p><p>The possible values of \\(5z^2 + 2w - 1\\) are very restricted, that is, they must be in the sequence \\((2, 6, 20, 70, 252, 924, \\ldots)\\). Let \\(f(z, w) = 5z^2 + 2w - 1\\). Note that \\(f(z, w)\\) is odd when \\(z\\) is even, and all our target values are even. Also note that \\(f\\) is increasing in both \\(z\\) and \\(w\\).</p><ul><li><p>Try \\(x = 3\\), \\(f(z, w) = 20\\)</p><p>\\(f(1, 4) = 12\\) and \\(f(1, 9) = 22\\) and \\(f(3, 1) = 46\\), so we can’t hit 20.</p></li><li><p>Try \\(x = 4\\), \\(f(z, w) = 70\\)</p><p>\\(f(3, 9) = 62\\), \\(f(3, 16) = 76\\), \\(f(5, 1) = 126\\), so we can’t hit 70.</p></li><li><p>Try \\(x = 5\\), \\(f(z, w) = 252\\)</p><p>\\(f(5, 16) = 156\\), \\(f(7, 1) = 246\\), \\(f(7, 4) = 252\\). We found it!</p></li></ul><p>So we try \\((w, x, z) = (4, 5, 7)\\) in the other two problems.</p><p>\\(3xz = 105\\). \\(f(105 - 1) = f(104) = 9\\), \\(f(105 - 4) = f(101) = 4\\), and \\(f(105 - n) \\le 4\\) if \\(n &gt; 4\\) because \\(105 - n\\) is a two-digit number. Thus, 4 is the unique solution.</p><p>\\(z = \\lfloor \\sqrt{16 \\cdot 5 + 1} \\rfloor - \\lfloor \\sqrt{4 + 1} \\rfloor = 9 - 2 = 7\\).</p><p>Great! Now we move on to Problem \\(y\\). Draw the figure specified, then notice that since \\(\\overline{AD}\\) is the diameter of the circle, \\(\\angle ACD = \\angle ABD = 90^\\circ\\). Therefore, \\(E\\) is the orthocenter of \\(\\triangle AFD\\). So \\(\\overline{EG}\\) is an altitude of \\(\\triangle AFD\\). Let \\(A\\) be the area of that triangle. \\(A = \\frac{1}{2}(EG)(AD)\\) by the simple area formula. Additionally, Heron’s formula gives the area of the triangle differently. \\(AE = 15\\); \\(ED = 13\\); \\(AD = 14\\), so \\(s = 21\\) and \\[A = \\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} = 84.\\]</p><p>From our earlier formula, \\(EG = 2\\frac{A}{AD} = 12\\).</p>",
+      "answer": "7"
+    }
+  }
+}

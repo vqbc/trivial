@@ -1,0 +1,131 @@
+{
+  "test": "1991 AJHSME",
+  "year": 1991,
+  "problems": {
+    "1": {
+      "problem": "<p>\\(1,000,000,000,000-777,777,777,777=\\)</p><p>\\(\\text{(A)}\\ 222,222,222,222 \\qquad\n\\text{(B)}\\ 222,222,222,223 \\qquad\n\\text{(C)}\\ 233,333,333,333 \\qquad \\\\\n\\text{(D)}\\ 322,222,222,223 \\qquad\n\\text{(E)}\\ 333,333,333,333\\)</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n1,000,000,000,000-777,777,777,777 &amp;= 999,999,999,999-777,777,777,777+1 \\\\\n&amp;= 222,222,222,222+1 \\\\\n&amp;= 222,222,222,223 \\rightarrow \\boxed{\\text{B}}.\n\\end{aligned}\\]</p>",
+      "answer": "B"
+    },
+    "2": {
+      "problem": "<p>\\(\\frac{16+8}{4-2}=\\)</p><p>\\(\\text{(A)}\\ 4 \\qquad \\text{(B)}\\ 8 \\qquad \\text{(C)}\\ 12 \\qquad \\text{(D)}\\ 16 \\qquad \\text{(E)}\\ 20\\)</p>",
+      "solutions": "<p>\\(\\frac{16+8}{4-2} = \\frac{24}{2} = \\boxed{\\textbf{(C)}\\ 12}\\).</p>",
+      "answer": "C"
+    },
+    "3": {
+      "problem": "<p>Two hundred thousand times two hundred thousand equals</p><p>\\(\\text{(A)}\\ \\text{four hundred thousand} \\qquad\n\\text{(B)}\\ \\text{four million} \\qquad\n\\text{(C)}\\ \\text{forty thousand} \\qquad \\\\\n\\text{(D)}\\ \\text{four hundred million} \\qquad\n\\text{(E)}\\ \\text{forty billion}\\)</p>",
+      "solutions": "<p>Writing the numbers in scientific notation, we have</p><p>\\[\\begin{aligned}\n(2\\times 10^5)\\times (2\\times 10^5) &amp;= 4\\times 10^{10} \\\\\n&amp;= 40\\times 10^9 \\\\\n&amp;= \\text{forty billion} \\rightarrow \\boxed{\\text{E}}.\n\\end{aligned}\\]</p>",
+      "answer": "E"
+    },
+    "4": {
+      "problem": "<p>If \\(991+993+995+997+999=5000-N\\), then \\(N=\\)</p><p>\\(\\text{(A)}\\ 5 \\qquad \\text{(B)}\\ 10 \\qquad \\text{(C)}\\ 15 \\qquad \\text{(D)}\\ 20 \\qquad \\text{(E)}\\ 25\\)</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n991+993+995+997+999=5000-N \\\\ &amp;\\Rightarrow (1000-9)+(1000-7)+(1000-5)+(1000-3)+(1000-1) = 5000-N \\\\\n&amp;\\Rightarrow 5\\times 1000-(1+3+5+7+9) = 5000 -N \\\\\n&amp;\\Rightarrow 5000-25=5000-N \\\\\n&amp;\\Rightarrow N=25\\rightarrow \\boxed{\\text{E}}.\n\\end{aligned}\\]</p>",
+      "answer": "E"
+    },
+    "5": {
+      "problem": "<p>A \"domino\" is made up of two small squares:</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/5-fig1.png\" width=\"84\" alt=\"\"></p><p>Which of the \"checkerboards\" illustrated below CANNOT be covered exactly and completely by a whole number of non-overlapping dominoes?</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/5-fig2.png\" width=\"1164\" alt=\"\"></p><p>\\(\\text{(A)}\\ 3\\times 4 \\qquad \\text{(B)}\\ 3\\times 5 \\qquad \\text{(C)}\\ 4\\times 4 \\qquad \\text{(D)}\\ 4\\times 5 \\qquad \\text{(E)}\\ 6\\times 3\\)</p>",
+      "solutions": "<p>For a bunch of dominoes to completely tile a board, the board must have an even number of squares.  The \\(3\\times 5\\) board clearly does not, so \\(\\boxed{\\text{B}}\\) cannot be tiled completely.</p>",
+      "answer": "B"
+    },
+    "6": {
+      "problem": "<p>Which number in the array below is both the largest in its column and the smallest in its row?  (Columns go up and down, rows go right and left.)</p><p>\\[\\begin{tabular}[t]{ccccc}\n10 &amp; 6 &amp; 4 &amp; 3 &amp; 2 \\\\\n11 &amp; 7 &amp; 14 &amp; 10 &amp; 8 \\\\\n8 &amp; 3 &amp; 4 &amp; 5 &amp; 9 \\\\\n13 &amp; 4 &amp; 15 &amp; 12 &amp; 1 \\\\\n8 &amp; 2 &amp; 5 &amp; 9 &amp; 3\n\\end{tabular}\\]</p><p>\\(\\text{(A)}\\ 1 \\qquad \\text{(B)}\\ 6 \\qquad \\text{(C)}\\ 7 \\qquad \\text{(D)}\\ 12 \\qquad \\text{(E)}\\ 15\\)</p>",
+      "solutions": "<p>The largest numbers in the first, second, third, fourth and fifth columns are \\(13,7,15,12,9\\) respectively.  Of these, only \\(7\\) is the smallest in its row \\(\\rightarrow \\boxed{\\text{C}}\\).</p>",
+      "answer": "C"
+    },
+    "7": {
+      "problem": "<p>The value of \\(\\frac{(487,000)(12,027,300)+(9,621,001)(487,000)}{(19,367)(.05)}\\) is closest to</p><p>\\(\\text{(A)}\\ 10,000,000 \\qquad \\text{(B)}\\ 100,000,000 \\qquad \\text{(C)}\\ 1,000,000,000 \\qquad \\text{(D)}\\ 10,000,000,000 \\qquad \\text{(E)}\\ 100,000,000,000\\)</p>",
+      "solutions": "<p>We can make the approximations</p><p>\\[\\begin{aligned}\n487,000 &amp;\\approx 500,000 \\\\\n12,027,300 &amp;\\approx 12,000,000 \\\\\n9,621,001 &amp;\\approx 10,000,000 \\\\\n19,367 &amp;\\approx 20,000.\n\\end{aligned}\\]</p><p>Using these instead of the original numbers for an estimate, we have</p><p>\\[\\begin{aligned}\n\\frac{(500,000)(12,000,000)+(10,000,000)(500,000)}{(20000)(.05)} &amp;= \\frac{500,000\\times 22,000,000}{1000} \\\\\n&amp;= 500,000 \\times 22,000 \\\\\n&amp;= 1.1\\times 10^{10} \\\\\n&amp;\\approx 10,000,000,000 \\rightarrow \\boxed{\\text{D}}.\n\\end{aligned}\\]</p><p>~*If you typed this into a calculator or actually got the answer, it would be AROUND 10 billion.*~</p><p>~*Calypso*~</p><p>\"Google says the answer is 10,887,305,816.1\" ~ xxsc</p>",
+      "answer": "D"
+    },
+    "8": {
+      "problem": "<p>What is the largest quotient that can be formed using two numbers chosen from the set \\(\\{ -24, -3, -2, 1, 2, 8 \\}\\)?</p><p>\\(\\text{(A)}\\ -24 \\qquad \\text{(B)}\\ -3 \\qquad \\text{(C)}\\ 8 \\qquad \\text{(D)}\\ 12 \\qquad \\text{(E)}\\ 24\\)</p>",
+      "solutions": "<p>Let the two chosen numbers be \\(a\\) and \\(b\\).  To maximize the quotient, we first have either \\(a,b&gt;0\\) or \\(a,b&lt;0\\), and from there we maximize \\(|a|\\) and minimize \\(|b|\\).</p><p>For the case \\(a,b&lt;0\\), we have \\(a=-24\\) and \\(b=-2\\), which gives us \\((-24)/(-2)=12\\).  For the case \\(a,b&gt;0\\), we have \\(a=8\\) and \\(b=1\\), which gives us \\(8/1=8\\).</p><p>Since \\(12&gt;8\\), our answer is \\(\\boxed{\\text{D}}\\).</p>",
+      "answer": "D"
+    },
+    "9": {
+      "problem": "<p>How many whole numbers from \\(1\\) through \\(46\\) are divisible by either \\(3\\) or \\(5\\) or both?</p><p>\\(\\text{(A)}\\ 18 \\qquad \\text{(B)}\\ 21 \\qquad \\text{(C)}\\ 24 \\qquad \\text{(D)}\\ 25 \\qquad \\text{(E)}\\ 27\\)</p>",
+      "solutions": "<p>There are \\(\\left\\lfloor \\frac{46}{3}\\right\\rfloor =15\\) numbers divisible by \\(3\\), \\(\\left\\lfloor\\frac{46}{5}\\right\\rfloor =9\\) numbers divisible by \\(5\\), so at first we have \\(15+9=24\\) numbers that are divisible by \\(3\\) or \\(5\\), except we counted the multiples of \\(\\text{LCM}(3,5)=15\\) twice, once for \\(3\\) and once for \\(5\\).</p><p>There are \\(\\left\\lfloor \\frac{46}{15}\\right\\rfloor =3\\) numbers divisible by \\(15\\), so there are \\(24-3=21\\) numbers divisible by \\(3\\) or \\(5\\). \\(\\rightarrow \\boxed{\\text{B}}\\)</p>",
+      "answer": "B"
+    },
+    "10": {
+      "problem": "<p>The area in square units of the region enclosed by parallelogram \\(ABCD\\) is</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/10-fig1.png\" width=\"684\" alt=\"\"></p><p>\\(\\text{(A)}\\ 6 \\qquad \\text{(B)}\\ 8 \\qquad \\text{(C)}\\ 12 \\qquad \\text{(D)}\\ 15 \\qquad \\text{(E)}\\ 18\\)</p>",
+      "solutions": "<p>The base is \\(\\overline{BC}=4\\). The height has a length of the difference of the y-coordinates of A and B, which is 2. Therefore the area is \\(4\\cdot 2=8\\Rightarrow \\boxed{\\mathrm{B}}\\).</p>",
+      "answer": "B"
+    },
+    "11": {
+      "problem": "<p>There are several sets of three different numbers whose sum is \\(15\\) which can be chosen from \\(\\{ 1,2,3,4,5,6,7,8,9 \\}\\).  How many of these sets contain a \\(5\\)?</p><p>\\(\\text{(A)}\\ 3 \\qquad \\text{(B)}\\ 4 \\qquad \\text{(C)}\\ 5 \\qquad \\text{(D)}\\ 6 \\qquad \\text{(E)}\\ 7\\)</p>",
+      "solutions": "<p>Let the three-element set be \\(\\{ a,b,c \\}\\) and suppose that \\(a=5\\).</p><p>We need \\(b+c=10\\) and \\(b\\neq c\\).  This gives us four solutions, so there are \\(4\\) sets with a \\(5\\) also with the desired properties \\(\\rightarrow \\boxed{\\text{B}}\\).</p>",
+      "answer": "B"
+    },
+    "12": {
+      "problem": "<p>If \\(\\frac{2+3+4}{3}=\\frac{1990+1991+1992}{N}\\), then \\(N=\\)</p><p>\\(\\text{(A)}\\ 3 \\qquad \\text{(B)}\\ 6 \\qquad \\text{(C)}\\ 1990 \\qquad \\text{(D)}\\ 1991 \\qquad \\text{(E)}\\ 1992\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Note that for all integers \\(n\\neq 0\\),</p><p>\\[\\frac{(n-1)+n+(n+1)}{n}=3.\\]</p><p>Thus, we must have \\(N=1991\\rightarrow \\boxed{\\text{D}}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>As we know that \\(\\frac{1990+1991+1992}{n}\\) has to be some multiple of \\(\\frac{2+3+4}{3}\\), then we know that the first equation is \\(995\\)(1990/2) times bigger than the second one(in my solution), so the bottom must be \\(3\\cdot995=\\boxed{\\text{(D)}1991}\\)-fn106068</p>",
+      "answer": "D"
+    },
+    "13": {
+      "problem": "<p>How many zeros are at the end of the product</p><p>\\[25\\times 25\\times 25\\times 25\\times 25\\times 25\\times 25\\times 8\\times 8\\times 8?\\]</p><p>\\(\\text{(A)}\\ 3 \\qquad \\text{(B)}\\ 6 \\qquad \\text{(C)}\\ 9 \\qquad \\text{(D)}\\ 10 \\qquad \\text{(E)}\\ 12\\)</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n(5^2)^7\\times (2^3)^3 &amp;=  5^{14}\\times 2^{9} \\\\\n&amp;= 5^5\\times 10^9\n\\end{aligned}\\]</p><p>Since \\(5^5\\) doesn’t end in a \\(0\\), we can conclude that the product ends in \\(9\\) zeroes \\(\\rightarrow \\boxed{\\text{C}}\\).</p>",
+      "answer": "C"
+    },
+    "14": {
+      "problem": "<p>Several students are competing in a series of three races.  A student earns \\(5\\) points for winning a race, \\(3\\) points for finishing second and \\(1\\) point for finishing third.  There are no ties.  What is the smallest number of points that a student must earn in the three races to be guaranteed of earning more points than any other student?</p><p>\\(\\text{(A)}\\ 9 \\qquad \\text{(B)}\\ 10 \\qquad \\text{(C)}\\ 11 \\qquad \\text{(D)}\\ 13 \\qquad \\text{(E)}\\ 15\\)</p>",
+      "solutions": "<p>It is possible for two students to get \\(11\\) points: one student could win the first two races and finish third in the third race (scoring \\(5+5+1=11\\)), while another student could finish second in the first two races and win the third race (scoring \\(3+3+5=11\\)).</p><p>To score \\(13\\) or more points, a student must win at least \\(2\\) races. So any other student could win at most \\(1\\) race and thus score at most \\(5 + 3 + 3 = 11\\) points.  Therefore, \\(\\boxed{\\textbf{(D)}\\ 13}\\) is the minimum score a student needs to guarantee outscoring all other students.</p><p>Note: it is impossible for a student to score exactly \\(12\\) points.</p><p>-stjwyl, edited by j314andrews</p>",
+      "answer": "D"
+    },
+    "15": {
+      "problem": "<p>All six sides of a rectangular solid were rectangles.  A one-foot cube was cut out of the rectangular solid as shown.  The total number of square feet in the surface of the new solid is how many more or less than that of the original solid?</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/15-fig1.png\" width=\"710\" alt=\"\"></p><p>\\(\\text{(A)}\\ 2\\text{ less} \\qquad \\text{(B)}\\ 1\\text{ less} \\qquad \\text{(C)}\\ \\text{the same} \\qquad \\text{(D)}\\ 1\\text{ more} \\qquad \\text{(E)}\\ 2\\text{ more}\\)</p>",
+      "solutions": "<p>Initially, that one-foot cube contributed 3 faces to the surface area of the whole solid.  When it was removed, these 3 faces are removed, but there are 3 new faces where the cube was carved out, so the net change is \\(0 \\rightarrow \\boxed{\\text{C}}\\).</p>",
+      "answer": "C"
+    },
+    "16": {
+      "problem": "<p>The \\(16\\) squares on a piece of paper are numbered as shown in the diagram.  While lying on a table, the paper is folded in half four times in the following sequence:</p><p>(1) fold the top half over the bottom half</p><p>(2) fold the bottom half over the top half</p><p>(3) fold the right half over the left half</p><p>(4) fold the left half over the right half.</p><p>Which numbered square is on top after step \\(4\\)?</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/16-fig1.png\" width=\"244\" alt=\"\"></p><p>\\(\\text{(A)}\\ 1 \\qquad \\text{(B)}\\ 9 \\qquad \\text{(C)}\\ 10 \\qquad \\text{(D)}\\ 14 \\qquad \\text{(E)}\\ 16\\)</p>",
+      "solutions": "<p>Suppose we undo each of the four folds, considering just the top square until we completely unfold the paper.  \\(x\\) will be marked in the square if the face that shows after all the folds is face up, \\(y\\) if that face is facing down.</p><p>Step 0:</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/16-fig2.png\" width=\"64\" alt=\"\"></p><p>Step 1:</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/16-fig3.png\" width=\"124\" alt=\"\"></p><p>Step 2:</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/16-fig4.png\" width=\"244\" alt=\"\"></p><p>Step 3:</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/16-fig5.png\" width=\"244\" alt=\"\"></p><p>Step 4:</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/16-fig6.png\" width=\"244\" alt=\"\"></p><p>The marked square is in the same spot as the number \\(9\\rightarrow \\boxed{\\text{B}}\\).</p>",
+      "answer": "B"
+    },
+    "17": {
+      "problem": "<p>An auditorium with \\(20\\) rows of seats has \\(10\\) seats in the first row.  Each successive row has one more seat than the previous row.  If students taking an exam are permitted to sit in any row, but not next to another student in that row, then the maximum number of students that can be seated for an exam is</p><p>\\(\\text{(A)}\\ 150 \\qquad \\text{(B)}\\ 180 \\qquad \\text{(C)}\\ 200 \\qquad \\text{(D)}\\ 400 \\qquad \\text{(E)}\\ 460\\)</p>",
+      "solutions": "<p>We first note that if a row has \\(n\\) seats, then the maximum number of students that can be seated in that row is \\(\\left\\lceil \\frac{n}{2} \\right\\rceil\\), where \\(\\lceil x \\rceil\\) is the smallest integer greater than or equal to \\(x\\).  If a row has \\(2k\\) seats, clearly we can only fit \\(k\\) students in that row.  If a row has \\(2k+1\\) seats, we can fit \\(k+1\\) students by putting students at the ends and then alternating between skipping a seat and putting a student in.</p><p>For each row with \\(10+k\\) seats, there is a corresponding row with \\(29-k\\) seats.  The sum of the maximum number of students for these rows is</p><p>\\[\\left\\lceil \\frac{10+k}{2}\\right\\rceil +\\left\\lceil \\frac{29-k}{2} \\right\\rceil = 20.\\]</p><p>There are \\(20/2=10\\) pairs of rows, so the maximum number of students for the exam is \\(20\\times 10=200\\rightarrow \\boxed{\\text{C}}\\).</p>",
+      "answer": "C"
+    },
+    "18": {
+      "problem": "<p>The vertical axis indicates the number of employees, but the scale was accidentally omitted from this graph.  What percent of the employees at the Gauss company have worked there for \\(5\\) years or more?</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/18-fig1.png\" width=\"550\" alt=\"\"></p><p>\\(\\text{(A)}\\ 9\\% \\qquad \\text{(B)}\\ 23\\frac{1}{3}\\% \\qquad \\text{(C)}\\ 30\\% \\qquad \\text{(D)}\\ 42\\frac{6}{7}\\% \\qquad \\text{(E)}\\ 50\\%\\)</p>",
+      "solutions": "<p>Let \\(x\\) be the number of employees represented by each \\(\\text{X}\\).  The graph has a total of \\(30\\) \\(\\text{X}\\)’s, while the columns corresponding to \\(5\\) or more years at the company have a combined \\(9\\) \\(\\text{X}\\)’s.  So of the \\(30x\\) employees, \\(9x\\) have worked at the company for at least \\(5\\) years, which is \\(\\frac{9x}{30x} = \\frac{3}{10} = \\boxed{\\textbf{(C)}\\ 30\\%}\\).</p>",
+      "answer": "C"
+    },
+    "19": {
+      "problem": "<p>The average (arithmetic mean) of \\(10\\) different positive whole numbers is \\(10\\).  The largest possible value of any of these numbers is</p><p>\\(\\text{(A)}\\ 10 \\qquad \\text{(B)}\\ 50 \\qquad \\text{(C)}\\ 55 \\qquad \\text{(D)}\\ 90 \\qquad \\text{(E)}\\ 91\\)</p>",
+      "solutions": "<p>If the average of the numbers is \\(10\\), then their sum is \\(10\\times 10=100\\).</p><p>To maximize the largest number of the ten, we minimize the other nine.  Since they must be distinct, positive whole numbers, we let them be \\(1,2,3,4,5,6,7,8,9\\).  Their sum is \\(45\\).</p><p>The sum of nine of the numbers is \\(45\\), and the sum of all ten is \\(100\\) so the last number must be \\(100-45=55\\rightarrow \\boxed{\\text{C}}\\).</p>",
+      "answer": "C"
+    },
+    "20": {
+      "problem": "<p>In the addition problem, each digit has been replaced by a letter.  If different letters represent different digits then what is the value of \\(C\\)?</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/20-fig1.png\" width=\"244\" alt=\"\"></p><p>\\(\\text{(A)}\\ 1 \\qquad \\text{(B)}\\ 3 \\qquad \\text{(C)}\\ 5 \\qquad \\text{(D)}\\ 7 \\qquad \\text{(E)}\\ 9\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>If \\(A \\geq 3\\) this sum would be larger than \\(300\\), which is too large.  If \\(A \\leq 1\\) this sum would be at most \\(199 + 19 + 1 = 219\\), which is too small.  So \\(A = 2\\).</p><p>If \\(B \\geq 8\\) this sum would be at least \\(280 + 28 + 2 = 310\\), which is too large.  If \\(B \\leq 6\\) this sum would be at most \\(269 + 26 + 2 = 297\\), which is too small.  So \\(B = 7\\).</p><p>This forces \\(C = \\boxed{\\textbf{(A)}\\ 1}\\), for a sum of \\(271 + 27 + 2 = 300\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>From this we have</p><p>\\[111A+11B+C=300.\\]</p><p>Clearly, \\(A&lt;3\\).  Since \\(B,C\\leq 9\\),</p><p>\\[111A &gt; 201 \\Rightarrow A\\geq 2.\\]</p><p>Thus, \\(A=2\\) and \\(11B+C=78\\).  From here it becomes clear that \\(B=7\\) and \\(C=1\\rightarrow \\boxed{\\text{A}}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_3\">Solution 3</span></h2><p>Using logic, \\(a+b+c= 10\\), therefore \\(b+a+1\\)(from the carry over)\\(= 10\\). So \\(b+a=9\\) \\(A+1=3\\)</p><p>Thus, \\(A=2\\) and \\(11B+C=78\\).  From here it becomes clear that \\(B=7\\) and \\(C=1\\rightarrow \\boxed{\\text{A}}\\).</p>",
+      "answer": "A"
+    },
+    "21": {
+      "problem": "<p>For every \\(3^\\circ\\) rise in temperature, the volume of a certain gas expands by \\(4\\) cubic centimeters.  If the volume of the gas is \\(24\\) cubic centimeters when the temperature is \\(32^\\circ\\), what was the volume of the gas in cubic centimeters when the temperature was \\(20^\\circ\\)?</p><p>\\(\\text{(A)}\\ 8 \\qquad \\text{(B)}\\ 12 \\qquad \\text{(C)}\\ 15 \\qquad \\text{(D)}\\ 16 \\qquad \\text{(E)}\\ 40\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>The temperature increased by \\(12^{\\circ}\\), so it increased by \\(3^{\\circ}\\) four times.  Since each \\(3^{\\circ}\\) increase caused the volume of the gas to expand by \\(4\\) cubic centimeters, the gas expanded by a total of \\(4 \\cdot 4 = 16\\) cubic centimeters.  Therefore, the original volume of the gas was \\(24 - 16 = \\boxed{\\textbf{(A)}\\ 8}\\) cubic centimeters.</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Let \\(x\\) be the temperature in degrees and \\(y\\) be the volume of the gas.  Since a \\(3^{\\circ}\\) increase in the temperature causes a \\(4\\) cubic centimeter expansion, the relationship between \\(x\\) and \\(y\\) is linear and has slope \\(\\frac{4}{3}\\).  Using point-slope form with the point \\((32, 24)\\), the equation of this relationship is \\(y = \\frac{4}{3}(x-32) + 24\\).  Substituting \\(x = 20\\) gives \\(y = \\boxed{\\textbf{(A)}\\ 8}\\).</p>",
+      "answer": "A"
+    },
+    "22": {
+      "problem": "<p>Each spinner is divided into \\(3\\) equal parts.  The results obtained from spinning the two spinners are multiplied.  What is the probability that this product is an even number?</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/22-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ \\frac{1}{3} \\qquad \\text{(B)}\\ \\frac{1}{2} \\qquad \\text{(C)}\\ \\frac{2}{3} \\qquad \\text{(D)}\\ \\frac{7}{9} \\qquad \\text{(E)}\\ 1\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1_(Complementary_Counting)\">Solution 1 (Complementary Counting)</span></h2><p>The probability that the product is even can be found by subtracting the probability that the product is odd from \\(1\\).  This approach is known as complementary counting.</p><p>The product of two numbers is odd if and only if both numbers are odd.  The probability the left spinner lands on an odd number is \\(\\frac{2}{3}\\), while the probability the right spinner lands on an odd number is \\(\\frac{1}{3}\\).  So, the probability that the product is odd is \\(\\frac{1}{3}\\cdot\\frac{2}{3} = \\frac{2}{9}\\), while the probability that the product is even is \\(1 -\\frac{2}{9} = \\boxed{\\textbf{(D)}\\ \\frac{7}{9}}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2_(Inclusion-Exclusion)\">Solution 2 (Inclusion-Exclusion)</span></h2><p>The product of two numbers is even if and only if at least one number is even.  The probability the left spinner lands on an even number is \\(\\frac{1}{3}\\). The probability that the right spinner lands on an even number is \\(\\frac{2}{3}\\).  The probability that both spinners land on even numbers is \\(\\frac{1}{3} \\cdot \\frac{2}{3} = \\frac{2}{9}\\).  By the principle of inclusion-exclusion, the probability that the product is even is \\(\\frac{1}{3} + \\frac{2}{3} - \\frac{2}{9} = \\boxed{\\textbf{(D)}\\ \\frac{7}{9}}\\).</p>",
+      "answer": "D"
+    },
+    "23": {
+      "problem": "<p>The Pythagoras High School band has \\(100\\) female and \\(80\\) male members.  The Pythagoras High School orchestra has \\(80\\) female and \\(100\\) male members.  There are \\(60\\) females who are members in both band and orchestra.  Altogether, there are \\(230\\) students who are in either band or orchestra or both.  The number of males in the band who are NOT in the orchestra is</p><p>\\(\\text{(A)}\\ 10 \\qquad \\text{(B)}\\ 20 \\qquad \\text{(C)}\\ 30 \\qquad \\text{(D)}\\ 50 \\qquad \\text{(E)}\\ 70\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>There are \\(230\\) students in either band or orchestra, and \\(80+100=180\\) who are in orchestra.  So, \\(230-180=50\\) students are in band but not orchestra.</p><p>Of the \\(100\\) female band members, \\(60\\) are in orchestra, so \\(100-60=40\\) are not in orchestra.  Therefore, of the \\(50\\) students who are in band but not orchestra, \\(40\\) are female, so \\(50-40=\\boxed{\\textbf{(A)}\\ 10}\\) are male.</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>By the principle of inclusion-exclusion, \\(100+80-60=120\\) female students are in either band or orchestra. So \\(230-120=110\\) male students are in either band or orchestra. Of these \\(110\\) male students, \\(100\\) are in orchestra, so \\(\\boxed{\\textbf{(A)}\\ 10}\\) are in band but not orchestra.</p>",
+      "answer": "A"
+    },
+    "24": {
+      "problem": "<p>A cube of edge \\(3\\) cm is cut into \\(N\\) smaller cubes, not all the same size.  If the edge of each of the smaller cubes is a whole number of centimeters, then \\(N=\\)</p><p>\\(\\text{(A)}\\ 4 \\qquad \\text{(B)}\\ 8 \\qquad \\text{(C)}\\ 12 \\qquad \\text{(D)}\\ 16 \\qquad \\text{(E)}\\ 20\\)</p>",
+      "solutions": "<p>The smaller cubes have side lengths less than \\(3\\) cm, so they must have side lengths of either \\(1\\) cm or \\(2\\) cm.  Since not all smaller cubes are the same size, at least \\(1\\) of them has side length \\(2\\) cm.  However, there cannot be more than \\(1\\) cube of side length \\(2\\) cm, since the smaller cubes cannot overlap.</p><p>Therefore, there is \\(1\\) cube with side length \\(2\\) cm.  Since the original cube had volume of \\(27\\) cm³, while the \\(2\\) cm cube has volume \\(8\\) cm³, the \\(1\\) cm cubes have total volume of \\(19\\) cm³.  So there are \\(19\\) cubes with side length \\(1\\) cm, and therefore \\(1+19=\\boxed{\\textbf{(E)}\\ 20}\\) smaller cubes in total.</p>",
+      "answer": "E"
+    },
+    "25": {
+      "problem": "<p>An equilateral triangle is originally painted black.  Each time the triangle is changed, the middle fourth of each black triangle turns white.  After five changes, what fractional part of the original area of the black triangle remains black?</p><p><img class=\"latexcenter\" src=\"/data/aops/1991_AJHSME/25-fig1.png\" width=\"1204\" alt=\"\"></p><p>\\(\\text{(A)}\\ \\frac{1}{1024} \\qquad \\text{(B)}\\ \\frac{15}{64} \\qquad \\text{(C)}\\ \\frac{243}{1024} \\qquad \\text{(D)}\\ \\frac{1}{4} \\qquad \\text{(E)}\\ \\frac{81}{256}\\)</p>",
+      "solutions": "<p>Each change reduces the black area to \\(\\frac{3}{4}\\) of its former value.  Therefore, after  \\(5\\) changes, \\(\\left( \\frac{3}{4} \\right)^5= \\boxed{\\textbf{(C)}\\ \\frac{243}{1024}}\\) of the triangle’s area remains black.</p><p>-edited by stjwyl, j314andrews</p>",
+      "answer": "C"
+    }
+  }
+}

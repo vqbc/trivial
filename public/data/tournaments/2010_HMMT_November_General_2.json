@@ -1,0 +1,58 @@
+{
+  "test": "HMMT November General 2",
+  "year": 2010,
+  "name": "General Test Part 2",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2010/nov/gen2/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<h3>StarCraft</h3><p>16 progamers are playing in a single elimination tournament. Each player has a different skill level and when two play against each other the one with the higher skill level will always win. Each round, each progamer plays a match against another and the loser is eliminated. This continues until only one remains. How many different progamers can reach the round that has 2 players remaining?</p>",
+      "solutions": "<p>Each finalist must be better than the person he beat in the semifinals, both of the people they beat in the second round, and all 4 of the people any of those people beat in the first round. So, none of the 7 worst players can possibly make it to the finals. Any of the 9 best players can make it to the finals if the other 8 of the best 9 play each other in all rounds before the finals. So, exactly 9 people are capable of making it to the finals.</p>",
+      "answer": "9"
+    },
+    "2": {
+      "problem": "<p>16 progamers are playing in another single elimination tournament. Each round, each of the remaining progamers plays against another and the loser is eliminated. Additionally, each time a progamer wins, he will have a ceremony to celebrate. A player’s first ceremony is ten seconds long, and afterward each ceremony is ten seconds longer than the last. What is the total length in seconds of all the ceremonies over the entire tournament?</p>",
+      "solutions": "<p>At the end of the first round, each of the 8 winners has a 10 second ceremony. After the second round, the 4 winners have a 20 second ceremony. The two remaining players have 30 second ceremonies after the third round, and the winner has a 40 second ceremony after the finals. So, all of the ceremonies combined take \\(8 \\cdot 10 + 4 \\cdot 20 + 2 \\cdot 30 + 40 = 260\\) seconds.</p>",
+      "answer": "260"
+    },
+    "3": {
+      "problem": "<p>Dragoons take up \\(1 \\times 1\\) squares in the plane with sides parallel to the coordinate axes such that the interiors of the squares do not intersect. A dragoon can fire at another dragoon if the difference in the \\(x\\)-coordinates of their centers and the difference in the \\(y\\)-coordinates of their centers are both at most 6, regardless of any dragoons in between. For example, a dragoon centered at \\((4, 5)\\) can fire at a dragoon centered at the origin, but a dragoon centered at \\((7, 0)\\) can not. A dragoon cannot fire at itself. What is the maximum number of dragoons that can fire at a single dragoon simultaneously?</p>",
+      "solutions": "<p>Assign coordinates in such a way that the dragoon being fired on is centered at \\((0, 0)\\). Any dragoon firing at it must have a center with \\(x\\)-coordinates and \\(y\\)-coordinates that are no smaller than \\(-6\\) and no greater than 6. That means that every dragoon firing at it must lie entirely in the region bounded by the lines \\(x = -6.5\\), \\(x = 6.5\\), \\(y = -6.5\\), and \\(y = 6.5\\). This is a square with sides of length 13, so there is room for exactly 169 dragoons in it. One of them is the dragoon being fired on, so there are at most 168 dragoons firing at it.</p>",
+      "answer": "168"
+    },
+    "4": {
+      "problem": "<p>A zerg player can produce one zergling every minute and a protoss player can produce one zealot every 2.1 minutes. Both players begin building their respective units immediately from the beginning of the game. In a fight, a zergling army overpowers a zealot army if the ratio of zerglings to zealots is more than 3. What is the total amount of time (in minutes) during the game such that at that time the zergling army would overpower the zealot army?</p>",
+      "solutions": "<p>At the end of the first minute, the zerg player produces a zergling and has a superior army for the 1.1 minutes before the protoss player produces the first zealot. At this point, the zealot is at least a match for the zerglings until the fourth is produced 4 minutes into the game. Then, the zerg army has the advantage for the .2 minutes before a second zealot is produced. A third zealot will be produced 6.3 minutes into the game, which will be before the zerg player accumulates the 7 zerglings needed to overwhelm the first 2 zealots. After this, the zerglings will never regain the advantage because the zerg player can never produce 3 more zerglings to counter the last zealot before another one is produced. So, the zerg player will have the military advantage for \\(1.1 + .2 = 1.3\\) minutes.</p>",
+      "answer": "1.3"
+    },
+    "5": {
+      "problem": "<p>There are 111 StarCraft progamers. The StarCraft team SKT starts with a given set of eleven progamers on it, and at the end of each season, it drops a progamer and adds a progamer (possibly the same one). At the start of the second season, SKT has to field a team of five progamers to play the opening match. How many different lineups of five players could be fielded if the order of players on the lineup matters?</p>",
+      "solutions": "<p>We disregard the order of the players, multiplying our answer by \\(5! = 120\\) at the end to account for it. Clearly, SKT will be able to field at most 1 player not in the original set of eleven players. If it does not field a new player, then it has \\(\\binom{11}{5} = 462\\) choices. If it does field a new player, then it has 100 choices for the new player, and \\(\\binom{11}{4} = 330\\) choices for the 4 other players, giving 33000 possibilities. Thus, SKT can field at most \\(33000 + 462 = 33462\\) unordered lineups, and multiplying this by 120, we find the answer to be 4015440.</p>",
+      "answer": "4015440"
+    },
+    "6": {
+      "problem": "<h3>Unfair Coins</h3><p>When flipped, a coin has a probability \\(p\\) of landing heads. When flipped twice, it is twice as likely to land on the same side both times as it is to land on each side once. What is the larger possible value of \\(p\\)?</p>",
+      "solutions": "<p>The probability that the coin will land on the same side twice is \\(p^2 + (1 - p)^2 = 2p^2 - 2p + 1\\). The probability that the coin will land on each side once is \\(p(p - 1) + (p - 1)p = 2p(1 - p) = 2p - 2p^2\\). We are told that it is twice as likely to land on the same side both times, so \\(2p^2 - 2p + 1 = 2(2p - 2p^2) = 4p - 4p^2\\). Solving, we get \\(6p^2 - 6p + 1 = 0\\), so \\(p = \\frac{3 \\pm \\sqrt{3}}{6}\\). The larger solution is \\(p = \\frac{3+\\sqrt{3}}{6}\\).</p>",
+      "answer": "\\frac{3+\\sqrt{3}}{6}"
+    },
+    "7": {
+      "problem": "<p>George has two coins, one of which is fair and the other of which always comes up heads. Jacob takes one of them at random and flips it twice. Given that it came up heads both times, what is the probability that it is the coin that always comes up heads?</p>",
+      "solutions": "<p>In general, \\(P(A|B) = \\frac{P(A \\cap B)}{P(B)}\\), where \\(P(A|B)\\) is the probability of \\(A\\) given \\(B\\) and \\(P(A \\cap B)\\) is the probability of \\(A\\) and \\(B\\). If \\(A\\) is the event of selecting the “double-headed” coin and \\(B\\) is the event of Jacob flipping two heads, then \\(P(A \\cap B) = (\\frac{1}{2})(1)\\), since there is a \\(\\frac{1}{2}\\) chance of picking the double-headed coin and Jacob will always flip two heads when he has it. By conditional probability, \\(P(B) = (\\frac{1}{2})(1) + (\\frac{1}{2})(\\frac{1}{4}) = \\frac{5}{8}\\), so \\(P(A|B) = \\frac{1/2}{5/8} = \\frac{4}{5}\\).</p>",
+      "answer": "\\frac{4}{5}"
+    },
+    "8": {
+      "problem": "<p>Allison has a coin which comes up heads \\(\\frac{2}{3}\\) of the time. She flips it 5 times. What is the probability that she sees more heads than tails?</p>",
+      "solutions": "<p>The probability of flipping more heads than tails is the probability of flipping 3 heads, 4 heads, or 5 heads. Since 5 flips will give \\(n\\) heads with probability \\(\\binom{5}{n}(\\frac{2}{3})^n(\\frac{1}{3})^{5-n}\\), our answer is \\(\\binom{5}{3}(\\frac{2}{3})^3(\\frac{1}{3})^2 + \\binom{5}{4}(\\frac{2}{3})^4(\\frac{1}{3})^1 + \\binom{5}{5}(\\frac{2}{3})^5(\\frac{1}{3})^0 = \\frac{64}{81}\\).</p>",
+      "answer": "\\frac{64}{81}"
+    },
+    "9": {
+      "problem": "<p>Newton and Leibniz are playing a game with a coin that comes up heads with probability \\(p\\). They take turns flipping the coin until one of them wins with Newton going first. Newton wins if he flips a heads and Leibniz wins if he flips a tails. Given that Newton and Leibniz each win the game half of the time, what is the probability \\(p\\)?</p>",
+      "solutions": "<p>The probability that Newton will win on the first flip is \\(p\\). The probability that Newton will win on the third flip is \\((1-p)p^2\\), since the first flip must be tails, the second must be heads, and the third flip must be heads. By the same logic, the probability Newton will win on the \\((2n + 1)\\)st flip is \\((1 - p)^n(p)^{n+1}\\). Thus, we have an infinite geometric sequence \\(p + (1 - p)p^2 + (1 - p)^2 p^3 + \\dots\\) which equals \\(\\frac{p}{1-p(1-p)}\\). We are given that this sum must equal \\(\\frac{1}{2}\\), so \\(1 - p + p^2 = 2p\\), so \\(p = \\frac{3-\\sqrt{5}}{2}\\) (the other solution is greater than 1).</p>",
+      "answer": "\\frac{3-\\sqrt{5}}{2}"
+    },
+    "10": {
+      "problem": "<p>Justine has a coin which will come up the same as the last flip \\(\\frac{2}{3}\\) of the time and the other side \\(\\frac{1}{3}\\) of the time. She flips it and it comes up heads. She then flips it 2010 more times. What is the probability that the last flip is heads?</p>",
+      "solutions": "<p>Let the “value” of a flip be 1 if the flip is different from the previous flip and let it be 0 if the flip is the same as the previous flip. The last flip will be heads if the sum of the values of all 2010 flips is even. The probability that this will happen is \\(\\sum_{i=0}^{1005} \\binom{2010}{2i} \\left(\\frac{1}{3}\\right)^{2i} \\left(\\frac{2}{3}\\right)^{2010-2i}\\).</p><p>We know that \\[\\sum_{i=0}^{1005} \\binom{2010}{2i}\\left(\\frac{1}{3}\\right)^{2i}\\left(\\frac{2}{3}\\right)^{2010-2i} + \\binom{2010}{2i+1}\\left(\\frac{1}{3}\\right)^{2i+1}\\left(\\frac{2}{3}\\right)^{2010-(2i+1)} = \\sum_{k=0}^{2010}\\binom{2010}{k}\\left(\\frac{1}{3}\\right)^k\\left(\\frac{2}{3}\\right)^{2010-k} = \\left(\\frac{1}{3} + \\frac{2}{3}\\right)^{2010} = 1\\] and \\[\\sum_{i=0}^{1005} \\binom{2010}{2i}\\left(\\frac{1}{3}\\right)^{2i}\\left(\\frac{2}{3}\\right)^{2010-2i} - \\binom{2010}{2i+1}\\left(\\frac{1}{3}\\right)^{2i+1}\\left(\\frac{2}{3}\\right)^{2010-(2i+1)} = \\sum_{k=0}^{2010}\\binom{2010}{k}\\left(\\frac{-1}{3}\\right)^k\\left(\\frac{2}{3}\\right)^{2010-k} = \\left(\\frac{-1}{3} + \\frac{2}{3}\\right)^{2010} = \\left(\\frac{1}{3}\\right)^{2010}.\\] Summing these two values and dividing by 2 gives the answer \\(\\frac{1 + (\\frac{1}{3})^{2010}}{2} = \\frac{3^{2010}+1}{2\\cdot 3^{2010}}\\).</p>",
+      "answer": "\\frac{3^{2010}+1}{2\\cdot 3^{2010}}"
+    }
+  }
+}

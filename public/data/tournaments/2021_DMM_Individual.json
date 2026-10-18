@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2021,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2021/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>There are 4 mirrors facing the inside of a \\(5 \\times 7\\) rectangle as shown in the figure. A ray of light comes into the inside of a rectangle through \\(A\\) with an angle of \\(45^\\circ\\). When it hits the sides of the rectangle, it bounces off at the same angle, as shown in the diagram. How many times will the ray of light bounce before it reaches any one of the corners \\(A, B, C, D\\)? A bounce is a time when the ray hit a mirror and reflects off it.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2021_DMM_Individual/1-fig1.png\" width=\"340\" alt=\"\"></p>",
+      "solutions": "<p>\\(\\boxed{10}\\)</p>",
+      "answer": "10"
+    },
+    "2": {
+      "problem": "<p>Jerry cuts 4 unit squares out from the corners of a \\(45 \\times 45\\) square and folds it into a \\(43 \\times 43 \\times 1\\) tray. He then divides the bottom of the tray into a \\(43 \\times 43\\) grid and drops a unit cube, which lands in precisely one of the squares on the grid with uniform probability. Suppose that the average number of sides of the cube that are in contact with the tray is given by \\(\\frac{m}{n}\\) where \\(m, n\\) are positive integers that are relatively prime. Find \\(m+n\\).</p>",
+      "solutions": "<p>\\(\\boxed{90}\\)</p><p>This can be done fairly easily with casework. Alternatively, note that each grid square has equal probability of being selected (\\(1/43^2\\)) and every face on the box is contacted exactly once. The number of possible faces that the tray can contact is the area of the cut square, which is 2021, so the answer is just \\(2021/43^2 = 47/43\\).</p>",
+      "answer": "90"
+    },
+    "3": {
+      "problem": "<p>Compute \\(2021^4 - 4 \\cdot 2023^4 + 6 \\cdot 2025^4 - 4 \\cdot 2027^4 + 2029^4\\).</p>",
+      "solutions": "<p>\\(\\boxed{384}\\)</p><p>Write \\(x = 2025\\), then we want to compute \\((x-4)^4 - 4(x-2)^4 + 6x^4 - 4(x+2)^4 + (x+4)^4\\). Upon expanding, all the \\(x\\) cancels out and we are left with 384.</p>",
+      "answer": "384"
+    },
+    "4": {
+      "problem": "<p>Find the number of distinct subsets \\(S \\subseteq \\{1, 2, \\ldots, 20\\}\\), such that the sum of elements in \\(S\\) leaves a remainder of 10 when divided by 32.</p>",
+      "solutions": "<p>\\(2^{15} = \\boxed{32768}\\). For any arbitrary subset \\(U \\subset \\{1, 2, \\ldots, 20\\} \\setminus \\{1, 2, 4, 8, 16\\}\\), there is exactly one subset \\(V \\subset \\{1, 2, 4, 8, 16\\}\\) such that \\(U \\cup V\\) satisfies the conditions.</p>",
+      "answer": "32768"
+    },
+    "5": {
+      "problem": "<p>Some \\(k\\) consecutive integers have the sum 45. What is the maximum value of \\(k\\)?</p>",
+      "solutions": "<p>\\(\\boxed{90}\\)</p><p>Let those consecutive integers start at \\(m\\) and end at \\(n\\), then the sum would be \\(m(n-m+1) + (n-m+1)(n-m)/2 = (n-m+1)(n+m)/2\\). So we would have \\((n-m+1)(n+m) = 90\\). We have \\(k = n-m+1\\), so its max is 90, correspond to \\(n=45\\) and \\(m=-44\\).</p>",
+      "answer": "90"
+    },
+    "6": {
+      "problem": "<p>Jerry picks 4 distinct diagonals from a regular nonagon (a regular polygon with 9-sides). A diagonal is a segment connecting two vertices of the nonagon that is not a side. Let the probability that no two of these diagonals are parallel be \\(\\frac{m}{n}\\) where \\(m, n\\) are positive integers that are relatively prime. Find \\(m+n\\).</p>",
+      "solutions": "<p>\\(\\boxed{514}\\)</p><p>There are 9 sets of 3 diagonals that are parallel to each other. Hence the answer is \\(\\frac{9 \\cdot 8 \\cdot 7 \\cdot 6 \\cdot 3^4}{27 \\cdot 26 \\cdot 25 \\cdot 24} = \\frac{189}{325}\\).</p>",
+      "answer": "514"
+    },
+    "7": {
+      "problem": "<p>The Olympic logo is made of 5 circles of radius 1, as shown in the figure</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2021_DMM_Individual/7-fig1.png\" width=\"350\" alt=\"\"></p><p>Suppose that the total area covered by these 5 circles is \\(a+b\\pi\\) where \\(a, b\\) are rational numbers. Find \\(10a + 20b\\).</p>",
+      "solutions": "<p>\\(\\boxed{100}\\)</p><p>The total area is \\(5\\pi - 4 \\times \\left(\\frac{\\pi}{2} - 1\\right) = 4 + 3\\pi\\).</p>",
+      "answer": "100"
+    },
+    "8": {
+      "problem": "<p>Let \\(P(x)\\) be an integer polynomial (polynomial with integer coefficients) with \\(P(-5) = 3\\) and \\(P(5) = 23\\). Find the minimum possible value of \\(|P(-2) + P(2)|\\).</p>",
+      "solutions": "<p>\\(\\boxed{16}\\), which is achieved by \\(x^2 + 2x - 12\\).</p><p>To show that it is optimal we will use the fact that \\(a - b \\mid P(a) - P(b)\\). We note that</p><p>\\[P(2) \\equiv 3 \\pmod{7}, P(2) \\equiv 2 \\pmod{3} \\implies P(2) \\equiv 17 \\pmod{21}.\\]</p><p>\\[P(-2) \\equiv 0 \\pmod{3}, P(-2) \\equiv 2 \\pmod{7} \\implies P(-2) \\equiv 9 \\pmod{21}.\\]</p><p>Hence \\(P(-2) + P(2) \\equiv 5 \\pmod{21}\\). Furthermore, \\(P(2) + P(-2)\\) must be even, and so \\(|P(-2) + P(2)| \\ge 16\\).</p>",
+      "answer": "16"
+    },
+    "9": {
+      "problem": "<p>There exists a unique tuple of rational numbers \\((a, b, c)\\) such that the equation \\(a \\log 10 + b \\log 12 + c \\log 90 = \\log 2025\\). What is the value of \\(a+b+c\\)?</p>",
+      "solutions": "<p>\\(\\boxed{1}\\)</p><p>This says that \\(10^a 12^b 90^c = 2025\\). Since \\(a, b, c\\) are rational, we can compare prime factors to find equations for them. These give</p><p>\\[a + 2b + c = 0, \\quad b + 2c = 4, \\quad a + c = 2.\\]</p><p>Solving, we obtain \\((a, b, c) = (-1/2, -1, 5/2)\\) and so \\(a+b+c=1\\).</p>",
+      "answer": "1"
+    },
+    "10": {
+      "problem": "<p>Each grid of a board \\(7 \\times 7\\) is filled with a natural number smaller than 7 such that the number in the grid at the \\(i\\)th row and \\(j\\)th column is congruent to \\(i+j\\) modulo 7. Now, we can choose any two different columns or two different rows, and swap them. How many different boards can we obtain from a finite number of swaps?</p>",
+      "solutions": "<p>\\(7! \\times 6! = \\boxed{3628800}\\).</p><p>The key invariant here is that for any 4 grids that form a rectangle, it splits into two pairs of opposite grids, and the sum of each pair is equal. Swapping any two rows or two columns maintains this property. So we can see that a board can be fully determined by only the information from the first rows and the first columns. So the number of boards we can obtain is the number of configurations in the first row and column.</p><p>Now, note that every row and column is a permutation of 7 different numbers modulo 7. So, the grid \\((1,1)\\) has 7 choices, and there are \\(6!\\) choices for the 6 other grids on the first row, and \\(6!\\) choices for the 6 other grids on the first column. So in total there are \\(7! \\times 6! = 3628800\\) choices.</p>",
+      "answer": "3628800"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "test": "DMM Relay",
+  "year": 2024,
+  "name": "Relay Round",
+  "url": "https://dukemathmeet.org/2024/relay.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Given regular pentagon \\(ABCDE\\), point \\(F\\) is inside the pentagon such that \\(ABF\\) is an equilateral triangle. Find the measure of \\(\\angle FCD\\) in degrees.</p>",
+      "solutions": "<p>Each interior angle of a regular pentagon is \\(108^\\circ\\) and \\(60^\\circ\\) for an equilateral triangle. Thus, \\(\\angle FBC = 48^\\circ\\). Because \\(BF = BC\\), \\(\\triangle FBC\\) is isosceles, so \\(\\angle BFC = \\angle BCF = 66^\\circ\\). We then have \\(\\angle FCD = 108^\\circ - \\angle BCF = \\boxed{42^\\circ}\\).</p>",
+      "answer": "42^\\circ"
+    },
+    "2": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). How many ways are there to arrange the digits of \\(T\\) and one more digit from the set \\(\\{0, 1, 2, 3, 4, 5\\}\\) so that the resulting number is divisible by 4 and greater than 100?</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(42^\\circ\\).</i></p>",
+      "solutions": "<p>From Problem 1 we have \\(T = 42\\). We take the digits of \\(T\\) (i.e. \\(\\{4, 2\\}\\)) and add one extra digit \\(d \\in \\{0, 1, 2, 3, 4, 5\\}\\). We must form a 3-digit number \\(N\\) that is divisible by 4 (so its last two digits form a multiple of 4) and \\(N &gt; 100\\).</p><p>We do a short casework on \\(d\\).</p><ul><li>\\(d = 0\\): digits \\(\\{0, 2, 4\\}\\). Valid endings (multiples of 4) are \\(20, 40, 24, 04\\). Only \\(420, 240, 204\\) are three-digit: 3 numbers.</li><li>\\(d = 1\\): digits \\(\\{1, 2, 4\\}\\). Valid endings: \\(12, 24 \\Rightarrow\\) numbers \\(412, 124\\): 2.</li><li>\\(d = 2\\): digits \\(\\{2, 2, 4\\}\\). Valid ending: \\(24 \\Rightarrow\\) number \\(224\\): 1.</li><li>\\(d = 3\\): digits \\(\\{2, 3, 4\\}\\). Valid endings: \\(24, 32 \\Rightarrow\\) numbers \\(324, 432\\): 2.</li><li>\\(d = 4\\): digits \\(\\{2, 4, 4\\}\\). Valid endings: \\(24, 44 \\Rightarrow\\) numbers \\(424, 244\\): 2.</li><li>\\(d = 5\\): digits \\(\\{2, 4, 5\\}\\). Valid endings: \\(24, 52 \\Rightarrow\\) numbers \\(524, 452\\): 2.</li></ul><p>Total: \\(3 + 2 + 1 + 2 + 2 + 2 = \\boxed{12}\\).</p>",
+      "answer": "12"
+    },
+    "3": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). Let \\(AEDF\\) and \\(FDGH\\) be squares that share a common side, and let \\(B\\) be on line \\(AE\\) so that \\(E\\) lies in between points \\(A\\) and \\(B\\). Extend line \\(BD\\) to intersect side \\(HF\\) at \\(C\\). Given that \\(AC = CG = T/6\\), compute the area of triangle \\(ABC\\).</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(12\\).</i></p>",
+      "solutions": "<p>Let \\(AB = x\\) and \\(AE = y\\). Since \\(\\triangle CFD \\sim \\triangle DEB\\), we have</p><p>\\[\\frac{2 - y}{y} = \\frac{y}{x - y} \\implies y = \\frac{2x}{x + 2}.\\]</p><p>Then</p><p>\\[HC = HF - CF = y - (2 - y) = 2y - 2 = \\frac{2x - 4}{x + 2}, \\qquad HG = y = \\frac{2x}{x + 2}.\\]</p><p>Apply the Pythagorean Theorem to right triangle \\(HCG\\) (note \\(CG = 2\\)):</p><p>\\[HC^2 + HG^2 = \\frac{4(x - 2)^2}{(x + 2)^2} + \\frac{4x^2}{(x + 2)^2} = 4 \\cdot \\frac{(x - 2)^2 + x^2}{(x + 2)^2} = 4.\\]</p><p>Thus</p><p>\\[(x - 2)^2 + x^2 = (x + 2)^2 \\implies 2x^2 - 4x + 4 = x^2 + 4x + 4 \\implies x^2 - 8x = 0 \\implies x = 8.\\]</p><p>Finally,</p><p>\\[[ABC] = \\frac{AC \\cdot AB}{2} = \\frac{2 \\cdot 8}{2} = \\boxed{8}.\\]</p>",
+      "answer": "8"
+    },
+    "4": {
+      "problem": "<p>How many positive integers less than 64 have at most two 1s in their binary representation?</p>",
+      "solutions": "<p>Since \\(64 = 2^6\\), every \\(1 \\le n \\le 63\\) has a 6-bit binary form. We can count based on the number of 1’s:</p><p>\\[\\text{one } 1 = \\binom{6}{1} = 6, \\qquad \\text{two } 1 = \\binom{6}{2} = 15.\\]</p><p>Thus the total is \\(6 + 15 = \\boxed{21}\\). Hence \\(T = 21\\).</p>",
+      "answer": "21"
+    },
+    "5": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). Suppose that \\(x^2 + \\frac{1}{x^2} = \\frac{T}{3}\\) for some real value \\(x\\). Compute the product of all possible values of \\(x^3 + \\frac{1}{x^3}\\).</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(21\\).</i></p>",
+      "solutions": "<p>Solve for \\(x^3 + \\frac{1}{x^3}\\) given \\(x^2 + \\frac{1}{x^2} = \\frac{T}{3} = \\frac{21}{3} = 7\\). Let \\(t = x + \\frac{1}{x}\\). Then \\(t^2 - 2 = 7 \\Rightarrow t^2 = 9 \\Rightarrow t = \\pm 3\\). Now</p><p>\\[x^3 + \\frac{1}{x^3} = t^3 - 3t = \\begin{cases} 3^3 - 3 \\cdot 3 = 18, \\\\ (-3)^3 - 3(-3) = -18. \\end{cases}\\]</p><p>The product of all possible values is \\(18 \\cdot (-18) = \\boxed{-324}\\).</p>",
+      "answer": "-324"
+    },
+    "6": {
+      "problem": "<p>Let \\(T = \\text{TNYWR}\\). Let \\(K\\) be the last digit of \\(T\\). Two players each roll two 6-sided dice, first player A, then player B. If player A rolls a sum of \\(K\\), they win. If player B rolls a sum of \\(K + 1\\), they win. They take turns, back and forth, until someone wins. Find the probability that A wins, which can be expressed as a simplified fraction \\(\\frac{a}{b}\\).</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(-324\\).</i></p>",
+      "solutions": "<p>With two fair dice,</p><p>\\[p_4 = \\Pr(\\text{sum } 4) = \\frac{3}{36} = \\frac{1}{12}, \\qquad p_5 = \\Pr(\\text{sum } 5) = \\frac{4}{36} = \\frac{1}{9}.\\]</p><p>Let \\(P\\) be the probability that A eventually wins. One “cycle” is A then B; if both miss, we return to the same state. Hence</p><p>\\[P = p_4 + (1 - p_4)(1 - p_5)P \\implies P = \\frac{p_4}{1 - (1 - p_4)(1 - p_5)} = \\frac{p_4}{p_4 + p_5 - p_4 p_5}.\\]</p><p>Substitute the values:</p><p>\\[P = \\frac{\\frac{1}{12}}{\\frac{1}{12} + \\frac{1}{9} - \\frac{1}{108}} = \\frac{\\frac{1}{12}}{\\frac{5}{27}} = \\frac{27}{60} = \\boxed{\\frac{9}{20}}.\\]</p>",
+      "answer": "\\frac{9}{20}"
+    }
+  }
+}

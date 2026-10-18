@@ -1,0 +1,18 @@
+{
+  "test": "MMATHS Tiebreaker",
+  "year": 2025,
+  "name": "Tiebreaker Round",
+  "url": "https://yalemathcompetitions-files.s3.amazonaws.com/mmaths_2025_tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the value of \\[\\sum_{n=0}^{\\infty} \\frac{n^3 - 4n^2 + 3n}{n!}.\\]</p>",
+      "solutions": "<p>Note that \\[\\begin{aligned}\n\\sum_{n=0}^{\\infty} \\frac{n^3 - 4n^2 + 3n}{n!} &amp;= \\sum_{n=0}^{\\infty} \\frac{n(n-1)(n-3)}{n!} \\\\\n&amp;= \\sum_{n=2}^{\\infty} \\frac{n(n-1)(n-3)}{n!} \\\\\n&amp;= \\sum_{n=2}^{\\infty} \\frac{n-3}{(n-2)!} \\\\\n&amp;= \\sum_{n=0}^{\\infty} \\frac{n-1}{n!} \\\\\n&amp;= \\sum_{n=0}^{\\infty} \\frac{n}{n!} - \\sum_{n=0}^{\\infty} \\frac{1}{n!} \\\\\n&amp;= \\sum_{n=0}^{\\infty} \\frac{1}{n!} - \\sum_{n=0}^{\\infty} \\frac{1}{n!} = \\boxed{0}.\n\\end{aligned}\\]</p>",
+      "answer": "0"
+    },
+    "2": {
+      "problem": "<p>Define a sequence of polynomials recursively by \\(P_1(x) = 2x^2 - 1\\) and \\(P_n(x) = P_{n-1}\\left(P_{n-1}(x)\\right)\\) for \\(n \\ge 2\\). How many distinct real roots of \\(P_4\\) lie between \\(-\\frac{1}{2}\\) and \\(\\frac{1}{2}\\), inclusive?</p>",
+      "solutions": "<p>Note that \\(P_1(\\cos\\theta) = 2\\cos^2\\theta - 1 = \\cos(2\\theta)\\). We claim that \\(P_n(\\cos\\theta) = \\cos\\left(2^{2^{n-1}}\\theta\\right)\\).</p><p>The base case is given above. For the inductive step, note that \\[P_{n+1}(\\cos\\theta) = P_n\\left(P_n(\\cos\\theta)\\right) = P_n\\left(\\cos\\left(2^{2^{n-1}}\\theta\\right)\\right) = \\cos\\left(2^{2^{n-1}} \\cdot 2^{2^{n-1}}\\theta\\right) = \\cos\\left(2^{2^n}\\theta\\right).\\]</p><p>In particular, we have \\(P_4(\\cos\\theta) = \\cos(256\\theta)\\). Thus we have that \\(\\cos\\left(\\frac{(2k+1)\\pi}{512}\\right)\\) are distinct roots of \\(P_4\\) for \\(k = 0, 1, \\ldots, 255\\). Since \\(P_4\\) has degree \\(256\\), these are all the roots of \\(P_4\\). Thus it suffices to find the number of \\(k\\) such that \\[\\frac{\\pi}{3} \\le \\frac{(2k+1)\\pi}{512} \\le \\frac{2\\pi}{3},\\] or equivalently, \\[512 \\le 6k + 3 \\le 1024.\\] There are exactly \\(\\boxed{86}\\) such \\(k\\).</p>",
+      "answer": "86"
+    }
+  }
+}

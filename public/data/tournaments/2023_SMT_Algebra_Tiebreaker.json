@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2023,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2023/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute the area of the polygon formed by connecting the roots of \\[x^{10} + x^9 + x^8 + x^6 + x^5 + x^4 + x^2 + x + 1\\] graphed in the complex plane with line segments in counterclockwise order.</p>",
+      "solutions": "<p>Note that the polynomial can be factored as \\(\\frac{x^3-1}{x-1} \\cdot \\frac{x^{12}-1}{x^4-1}\\). We can find the roots of polynomial by taking the roots of \\((x^3-1)(x^{12}-1)\\) and removing the roots of \\((x-1)(x^4-1)\\). This gives us \\(e^{i\\pi/6}, e^{i\\pi/3}, e^{i2\\pi/3}, e^{i5\\pi/6}, e^{i7\\pi/6}, e^{i4\\pi/3}, e^{i5\\pi/3}, e^{i11\\pi/6}\\) as the roots. Note that the resulting polynomial consists of four isosceles triangles with sides of length 1 around an angle of \\(30^\\circ\\) and four isosceles triangles with sides of length 1 around an angle of \\(60^\\circ\\). The total area of these triangles using the Law of Sines is \\(4 \\cdot \\frac{1}{2} \\cdot 1 \\cdot 1 \\cdot \\sin 30^\\circ + 4 \\cdot \\frac{1}{2} \\cdot 1 \\cdot 1 \\cdot \\sin 60^\\circ = \\boxed{1+\\sqrt{3}}\\).</p>",
+      "answer": "1+\\sqrt{3}"
+    },
+    "2": {
+      "problem": "<p>\\(f(x)\\) is a nonconstant polynomial. Given that \\(f(f(x)) + f(x) = f(x)^2\\), compute \\(f(3)\\).</p>",
+      "solutions": "<p>We use LHS to refer to the left hand side of the equation and RHS to refer to the right hand side. Let the degree of \\(f\\) be \\(k\\). If \\(k \\ge 2\\), LHS has degree \\(k^2\\) and RHS has degree \\(2k\\), with equality only at \\(k = 2\\). Thus, the degree is 2.</p><p>Let \\(f(x) = ax^2 + bx + c\\). The LHS coefficient of \\(x^4\\) is \\(a^3\\), while the RHS coefficient of \\(x^4\\) is \\(a^2\\); equality gives \\(a = 1\\). So \\(f(x) = x^2 + bx + c\\). In addition, note that \\(f(x)\\) divides \\(f(x)^2 - f(x) = f(f(x)) = f(x)^2 + bf(x) + c\\), forcing \\(c = 0\\).</p><p>Now, the condition given in the problem becomes \\(f(x)^2 + bf(x) + f(x) = f(x)^2 \\to b = -1\\). Hence, \\(f(x) = x^2 - x\\), and \\(f(3) = \\boxed{6}\\).</p>",
+      "answer": "6"
+    },
+    "3": {
+      "problem": "<p>Let \\(f(x) = x^3 - 6x^2 + \\frac{25}{2}x - 7\\). There is an interval \\([a,b]\\) such that for any real number \\(x\\), the sequence \\(x, f(x), f(f(x)), \\cdots\\) is bounded (i.e., has a lower and upper bound) if and only if \\(x \\in [a,b]\\). Compute \\((a-b)^2\\).</p>",
+      "solutions": "<p>Note that \\(f(x) - x\\) can be factored as \\((x-2)((x-2)^2 - \\frac{1}{2})\\), so in particular, \\(2 \\in [a,b]\\) (since \\(f(2) - 2 = 0 \\to 2 = f(2) = f(f(2)) = \\cdots\\)).</p><p>For any \\(x\\), write \\(x = 2+\\delta\\). Then, \\(f(x) - 2 = (x-2)((x-2)^2 - \\frac{1}{2}) + x - 2 = \\delta(\\delta^2 - \\frac{1}{2}) + \\delta = \\delta(\\delta^2 + \\frac{1}{2})\\). If \\(|\\delta| &gt; \\frac{1}{\\sqrt{2}}\\), then \\(|f(x) - 2| &gt; |\\delta|c\\) for some \\(c &gt; 1\\), and repeating this process (setting \\(f(x) = 2 + \\delta'\\) with \\(|\\delta'| &gt; |\\delta|c\\)) shows divergence. Conversely, if \\(|\\delta| &lt; \\frac{1}{\\sqrt{2}}\\), the factor \\(c\\) is smaller than 1. Since we are given that the converging set is closed, it follows that \\([a,b] = 2 \\pm \\frac{1}{\\sqrt{2}}\\) and hence \\(a - b = \\sqrt{2} \\to (a-b)^2 = \\boxed{2}\\).</p>",
+      "answer": "2"
+    }
+  }
+}

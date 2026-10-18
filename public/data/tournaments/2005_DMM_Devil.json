@@ -1,0 +1,83 @@
+{
+  "test": "DMM Devil",
+  "year": 2005,
+  "name": "Devil Round",
+  "url": "https://dukemathmeet.org/2005/devil.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(a\\) and \\(b\\) be complex numbers such that \\(a^3+b^3=-17\\) and \\(a+b=1\\). What is the value of \\(ab\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Let \\(AEFB\\) be a right trapezoid, with \\(\\angle AEF = \\angle EAB = 90^\\circ\\). The two diagonals \\(EB\\) and \\(AF\\) intersect at point \\(D\\), and \\(C\\) is a point on \\(AE\\) such that \\(AE \\perp DC\\). If \\(AB=8\\) and \\(EF=17\\), what is the lenght of \\(CD\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>How many three-digit numbers \\(abc\\) (where each of \\(a\\), \\(b\\), and \\(c\\) represents a single digit, \\(a \\ne 0\\)) are there such that the six-digit number \\(abcabc\\) is divisible by 2, 3, 5, 7, 11, or 13?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Let \\(S\\) be the sum of all numbers of the form \\(\\frac{1}{n}\\) where \\(n\\) is a postive integer and \\(\\frac{1}{n}\\) terminates in base \\(b\\), a positive integer. If \\(S\\) is \\(\\frac{15}{8}\\), what is the smallest such \\(b\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Sysyphus is having a birthday party and he has a square cake that is to be cut into 25 square pieces. Zeus gets to make the first straight cut and messes up badly. What is the largest number of pieces Zeus can ruin (cut across)? Diagram?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Given \\((9x^2-y^2)(9x^2+6xy+y^2)=16\\) and \\(3x+y=2\\). Find \\(x^y\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>What is the prime factorization of the smallest integer \\(N\\) such that \\(\\frac{N}{2}\\) is a perfect square, \\(\\frac{N}{3}\\) is a perfect cube, \\(\\frac{N}{5}\\) is a perfect fifth power?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>What is the maximum number of pieces that an spherical watermelon can be divided into with four straight planar cuts?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>How many ordered triples of integers \\((x,y,z)\\) are there such that \\(0 \\le x,y,z \\le 100\\) and</p><p>\\[(x-y)^2+(y-z)^2+(z-x)^2 \\ge (x+y-2z)+(y+z-2x)^2+(z+x-2y)^2.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Find all real solutions to \\((2^x-4)^2+(4^x-2)^3=(4^x+2^x-6)^3\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "11": {
+      "problem": "<p>Let \\(f\\) be a function that takes integers to integers that also has the following property: \\(f(x) = \\begin{cases} x-5 &amp; \\text{if } x \\ge 50 \\\\ f(f(x+12)) &amp; \\text{if } x &lt; 50 \\end{cases}\\). Evaluate \\(f(2)+f(39)+f(58)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "12": {
+      "problem": "<p>If two real numbers are chosen at random (i.e. uniform distribution) from the interval \\([0,1]\\), what is the probability that theit difference will be less than \\(\\frac{3}{5}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "13": {
+      "problem": "<p>Let \\(a\\), \\(b\\), and \\(c\\) be positive integers, not all even, such that \\(a&lt;b\\), \\(b=c-2\\), and \\(a^2+b^2=c^2\\). What is the smallest possible value for \\(c\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "14": {
+      "problem": "<p>Let \\(ABCD\\) be a quadrilateral whose diagonals intersect at \\(O\\). If \\(BO=8\\), \\(OD=8\\), \\(AO=16\\), \\(OC=4\\), and \\(AB=16\\), then find \\(AD\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "15": {
+      "problem": "<p>Let \\(P_0\\) be a regular icosahedron with an edge length of 17 units. For each nonnegative integer \\(n\\), recursively construct \\(P_{n+1}\\) from \\(P_n\\) by performing the following procedure on each face of \\(P_n\\): glue a regular tetrahedron to that face such that three of the vertices of the tetrahedron are the midpoints of the three adjacent edges of the face, and the last vertex extends outside of \\(P_n\\). Express the number of square units in the surface area of \\(P_{17}\\) in the form \\[\\frac{u^v \\cdot w\\sqrt{x}}{y^z},\\] where \\(u\\), \\(v\\), \\(w\\), \\(x\\), \\(y\\), and \\(z\\) are integers, all greater than or equal to 2, that satisfy the following conditions: the only perfect square that evenly divides \\(x\\) is 1, the \\(\\gcd\\) of \\(u\\) and \\(y\\) is 1, and neither \\(u\\) nor \\(y\\) divides \\(w\\). <b>Answers written in any other form will not be considered correct!</b></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

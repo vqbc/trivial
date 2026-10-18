@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Combinatorics B",
+  "year": 2024,
+  "name": "Combinatorics B",
+  "url": "https://pumac.princeton.edu/s/PUMaC_2024_Combinatorics_B.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Sunay is in the bottom-left square of a checkerboard which is 5 squares wide (the left-right direction) and 3 squares tall (the up-down direction). From any square, he may move one square up, one square down, or one square to the right, provided that he does not fall off the checkerboard and provided that he does not revisit a square. How many paths are there for Sunay from the bottom-left square to the top-right square?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Ben and Connor are playing a game of wallball. The first player to lead by 2 points wins the game. Suppose Ben wins each point with probability \\(\\frac{3}{4}\\) and is gracious enough to allow Connor to start with a 1 point lead. The probability that Ben wins the game is \\(\\frac{m}{n}\\) for coprime positive integers \\(m\\) and \\(n\\). What is \\(m + n\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Consider the Sierpinski triangle iterations drawn below. \\(S_0\\) is a single triangle, and \\(S_{n+1}\\) consists of three copies of \\(S_n\\). Let a <i>maximal line segment</i> be line segment in the drawing of \\(S_k\\) which cannot be extended any further while remaining in \\(S_k\\). For example, \\(S_0\\) has three maximal line segments and \\(S_1\\) has 6 maximal line segments. How many maximal line segments are there in \\(S_5\\)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2024_PUMaC_Combinatorics_B/3-fig1.png\" width=\"320\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Arnie draws 20 real numbers independently and uniformly at random from the interval \\([0, 1]\\). Given that the largest number that Arnie draws equals \\(\\frac{19}{20}\\), the expected value of the average of the 20 numbers can be written as \\(\\frac{m}{n}\\) for relatively prime positive integers \\(m\\) and \\(n\\). Find \\(m + n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Joseph chooses a permutation of the numbers \\(1, 2, 3, 4, 5, 6\\) uniformly at random. Then, he goes through his permutation, and deletes the numbers which are not the maximum among each of the preceding numbers. For example, if he chooses the permutation \\(3, 2, 4, 5, 1, 6\\), then he deletes \\(2\\) and \\(1\\), leaving him with \\(3, 4, 5, 6\\). The expected number of numbers remaining can be expressed as \\(m/n\\) for relatively prime positive integers \\(m\\) and \\(n\\). Find \\(m + n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Michael and Steven are playing the card game War with a deck of 4 cards numbered 1 through 4. The deck is shuffled randomly and Michael gets a stack of 1 card and Steven gets a stack of 3 cards. In each round, the players reveal the top card from their stack, and the player whose card was higher collects both cards to the bottom of their stack in random order. A player wins when they get all four cards in their hand. The probability that Michael wins after exactly 5 rounds is \\(\\frac{m}{n}\\) for coprime positive integers \\(m\\) and \\(n\\). Find \\(m + n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>It is election year in PUMACland, and for the presidential election there are 27 people voting for either Vraj Patel or Vedant Shah. Each voter selects a candidate uniformly at random, and their ballots are labeled 1 through 27.</p><p>The election takes place as a series of rounds. In each round, the surviving ballots are sorted by label and separated into consecutive groups of three. From each group, the person with the most votes wins, and exactly one of the ballots bearing the winner’s name is allowed to proceed to the next round. This procedure continues until a single ballot remains, and the person whose name is on the ballot wins.</p><p>Alice, Bob, and Carol submitted ballots numbered 1, 15, and 27, respectively. Suppose that Alice, Bob, and Carol had all flipped their votes. If the probability that the outcome of the election would have changed is \\(\\frac{a}{b}\\) for relatively prime positive integers \\(a, b\\), find \\(a + b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Ezzie is walking around the perimeter of a regular hexagon. Each vertex of the hexagon has an instruction telling him to move clockwise or counterclockwise around the hexagon. However, when he leaves a vertex the instruction switches from clockwise to counterclockwise on that vertex, or vice versa. We say that a configuration \\(C\\) of Ezzie’s position and the instructions on the vertices is <i>irrepeatable</i> if, when starting from configuration \\(C\\), configuration \\(C\\) only appears finitely many more times. Find the number of irrepeatable configurations.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

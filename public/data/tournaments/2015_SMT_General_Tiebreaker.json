@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2015,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2015/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Consider a rectangular prism with sides of length 2, 4, and 8. Points \\(a\\) and \\(b\\) are opposite corners of the prism, so \\(a\\) and \\(b\\) do not both lie on the same face. Compute the shortest distance between \\(a\\) and \\(b\\) measured along the faces of the prism.</p>",
+      "solutions": "<p>There are 3 possible routes along the faces between the two diagonally opposite corners. This is easy to see if one draws out the net of the figure. They correspond to the following distances: \\[d_1^2 = (2+4)^2 + 8^2;\\ d_2^2 = (2+8)^2 + 4^2;\\ d_3^2 = (4+8)^2 + 2^2\\]</p><p>The shortest distance among these is \\(d_1 = \\boxed{10}\\).</p>",
+      "answer": "10"
+    },
+    "2": {
+      "problem": "<p>Define a string to be a sequence of lower-case letters drawn from the alphabet \\(\\{a, b, h\\}\\). \\(\\phi\\) is an operator on strings which replaces the first letter of the string according to the following rules, leaving the rest of the string untouched: \\(a \\mapsto ba\\), \\(b \\mapsto ah\\), \\(h \\mapsto h\\). For example, \\(\\phi(bb) = ahb\\). Find the string \\(s\\) satisfying \\(\\phi^4(s) = bahaha\\).</p>",
+      "solutions": "<p>\\(\\phi(ba) = aha\\).</p><p>\\(\\phi^2(ba) = \\phi(aha) = baha\\).</p><p>\\(\\phi^3(ba) = \\phi(baha) = ahaha\\).</p><p>\\(\\phi^4(ba) = \\phi(ahaha) = bahaha\\).</p><p>It is clear that the last character of \\(s\\) must be \\(a\\), and \\(\\phi^4(a) = ahaha\\) so we must consider at least two-character strings. Putting an \\(h\\) in front stops the string from growing so we check \\(\\phi^4(aa) = ahahaa\\) and \\(\\phi^4(ba) = bahaha\\). Three-character strings beginning with \\(h\\) stay three characters long, while those beginning with \\(a\\) or \\(b\\) become seven characters long (which is too long). Similar reasoning shows that longer strings cannot satisfy \\(\\phi^4(s) = bahaha\\), with the only remaining case to check being the six-character string starting with \\(h\\). This trivially cannot work so the only solution is \\(s = \\boxed{ba}\\).</p>",
+      "answer": "ba"
+    },
+    "3": {
+      "problem": "<p>Compute the number of ways to divide 12 indistinguishable slices of pizza among five (distinguishable) people, such that each person receives at least one slice.</p>",
+      "solutions": "<p>After each person receives at least one slice, we must allocate the 7 remaining slices among 5 people. This is equivalent to arranging the 7 slices and 4 dividers in a line, so the 4 dividers partition the 7 slices into 5 groups, one for each person. We can do this in \\(\\binom{7+4}{4} = \\boxed{330}\\) ways.</p>",
+      "answer": "330"
+    }
+  }
+}

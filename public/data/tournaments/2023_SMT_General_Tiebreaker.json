@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2023,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2023/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>You’re at a carnival and enter to play a dart-throwing game. The dartboard consists of three concentric circles of radii 2 inches, 4 inches, and 6 inches. If the dart lands in the innermost circle, you win $4, if it lands in between the first and second circles, you lose $2, and if it lands in between the second and third circles, you win $1. How many dollars should you have to pay to play in order to make it a fair game?</p>",
+      "solutions": "<p>The probability of the dart landing in the innermost circle is equal to the area of the innermost circle (\\(4\\pi\\)) divided by the total area of the dartboard (\\(36\\pi\\)), which gives us \\(\\frac{1}{9}\\). The probability of the dart landing in between the first and second circles is equal to the area of the second circle minus the area of the first circle divided by the total area of the dartboard, which gives us \\(\\frac{16\\pi-4\\pi}{36\\pi} = \\frac{1}{3}\\). The probability of the dart landing in between the second and third circles is equal to the area of the third circle minus the area of the second circle divided by the total area of the dartboard, which gives us \\(\\frac{36\\pi-16\\pi}{36\\pi} = \\frac{5}{9}\\). To find the expected value of playing the game, we must multiply the probability of each of these scenarios by the amount of money we would win in each case: \\(\\frac{1}{9}\\cdot 4 + \\frac{1}{3}\\cdot(-2) + \\frac{5}{9}\\cdot 1 = \\frac{1}{3}\\). For a game to be fair, the expected value of playing the game must be equal to the cost to play the game. Therefore, you should have to pay \\(\\boxed{\\frac{1}{3}}\\) dollars.</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "2": {
+      "problem": "<p>Three spheres of radius 6 have centers at points \\(A, B, C\\). Triangle \\(\\triangle ABC\\) is equilateral with side length \\(s\\). Suppose there are two points at which all three spheres intersect. If the distance between those two points is \\(2\\sqrt{3}\\), compute \\(s\\).</p>",
+      "solutions": "<p>Call the two points \\(M, N\\) with \\(P\\) the midpoint of \\(MN\\). Triangle \\(\\triangle AMP\\) is a right triangle with hypotenuse 6 and legs of lengths \\(\\sqrt{3}\\) and \\(\\frac{s}{\\sqrt{3}}\\). By the Pythagorean Theorem \\(\\frac{s^2}{3} = 36 - 3 = 33\\), which gives us \\(s = \\boxed{3\\sqrt{11}}\\).</p>",
+      "answer": "3\\sqrt{11}"
+    },
+    "3": {
+      "problem": "<p>\\(f(x)\\) is a nonconstant polynomial. Given that \\(f(f(x)) + f(x) = f(x)^2\\), compute \\(f(3)\\).</p>",
+      "solutions": "<p>We use LHS to refer to the left hand side of the equation and RHS to refer to the right hand side. Let the degree of \\(f\\) be \\(k\\). If \\(k \\ge 2\\), LHS has degree \\(k^2\\) and RHS has degree \\(2k\\), with equality only at \\(k = 2\\). Thus, the degree is 2.</p><p>Let \\(f(x) = ax^2 + bx + c\\). The LHS coefficient of \\(x^4\\) is \\(a^3\\), while the RHS coefficient of \\(x^4\\) is \\(a^2\\); equality gives \\(a = 1\\). So \\(f(x) = x^2 + bx + c\\). In addition, note that \\(f(x)\\) divides \\(f(x)^2 - f(x) = f(f(x)) = f(x)^2 + bf(x) + c\\), forcing \\(c = 0\\).</p><p>Now, the condition given in the problem becomes \\(f(x)^2 + bf(x) + f(x) = f(x)^2 \\to b = -1\\). Hence, \\(f(x) = x^2 - x\\), and \\(f(3) = \\boxed{6}\\).</p>",
+      "answer": "6"
+    }
+  }
+}

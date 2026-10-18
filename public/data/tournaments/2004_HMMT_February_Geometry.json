@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2004,
+  "name": "Individual Round: Geometry Subject Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2004/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In trapezoid \\(ABCD\\), \\(AD\\) is parallel to \\(BC\\). \\(\\angle A = \\angle D = 45^\\circ\\), while \\(\\angle B = \\angle C = 135^\\circ\\). If \\(AB = 6\\) and the area of \\(ABCD\\) is 30, find \\(BC\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_Geometry/1-fig1.png\" width=\"480\" alt=\"\"></p>",
+      "solutions": "<p>Draw altitudes from \\(B\\) and \\(C\\) to \\(AD\\) and label the points of intersection \\(X\\) and \\(Y\\), respectively. Then \\(ABX\\) and \\(CDY\\) are \\(45^\\circ\\)-\\(45^\\circ\\)-\\(90^\\circ\\) triangles with \\(BX = CY = 3\\sqrt{2}\\). So, the area of \\(ABX\\) and the area of \\(CDY\\) are each 9, meaning that the area of rectangle \\(BCYX\\) is 12. Since \\(BX = 3\\sqrt{2}\\), \\(BC = 12/(3\\sqrt{2}) = 2\\sqrt{2}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_Geometry/1-fig2.png\" width=\"525\" alt=\"\"></p>",
+      "answer": "2\\sqrt{2}"
+    },
+    "2": {
+      "problem": "<p>A parallelogram has 3 of its vertices at \\((1, 2)\\), \\((3,8)\\), and \\((4, 1)\\). Compute the sum of the possible \\(x\\)-coordinates for the 4th vertex.</p>",
+      "solutions": "<p>There are 3 possible locations for the 4th vertex. Let \\((a, b)\\) be its coordinates. If it is opposite to vertex \\((1, 2)\\), then since the midpoints of the diagonals of a parallelogram coincide, we get \\(\\left(\\frac{a+1}{2}, \\frac{b+2}{2}\\right) = \\left(\\frac{3+4}{2}, \\frac{8+1}{2}\\right)\\). Thus \\((a, b) = (6, 7)\\). By similar reasoning for the other possible choices of opposite vertex, the other possible positions for the fourth vertex are \\((0, 9)\\) and \\((2, -5)\\), and all of these choices do give parallelograms. So the answer is \\(6 + 0 + 2 = 8\\).</p>",
+      "answer": "8"
+    },
+    "3": {
+      "problem": "<p>A swimming pool is in the shape of a circle with diameter 60 ft. The depth varies linearly along the east-west direction from 3 ft at the shallow end in the east to 15 ft at the diving end in the west (this is so that divers look impressive against the sunset) but does not vary at all along the north-south direction. What is the volume of the pool, in \\(\\text{ft}^3\\)?</p>",
+      "solutions": "<p>Take another copy of the pool, turn it upside-down, and put the two together to form a cylinder. It has height 18 ft and radius 30 ft, so the volume is \\(\\pi(30\\text{ ft})^2 \\cdot 18\\text{ ft} = 16200\\pi \\text{ ft}^3\\); since our pool is only half of that, the answer is \\(8100\\pi \\text{ ft}^3\\).</p>",
+      "answer": "8100\\pi"
+    },
+    "4": {
+      "problem": "<p>\\(P\\) is inside rectangle \\(ABCD\\). \\(PA = 2, PB = 3\\), and \\(PC = 10\\). Find \\(PD\\).</p>",
+      "solutions": "<p>Draw perpendiculars from \\(P\\) to \\(E\\) on \\(AB\\), \\(F\\) on \\(BC\\), \\(G\\) on \\(CD\\), and \\(H\\) on \\(DA\\), and let \\(AH = BF = w\\), \\(HD = FC = x\\), \\(AE = DG = y\\), and \\(EB = GC = z\\). Then \\(PA^2 = w^2 + y^2\\), \\(PB^2 = w^2 + z^2\\), \\(PC^2 = x^2 + z^2\\), and \\(PD^2 = x^2 + y^2\\). Adding and subtracting, we see that \\(PD^2 = PA^2 - PB^2 + PC^2 = 95\\), so \\(PD = \\sqrt{95}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_Geometry/4-fig1.png\" width=\"283\" alt=\"\"></p>",
+      "answer": "\\sqrt{95}"
+    },
+    "5": {
+      "problem": "<p>Find the area of the region of the \\(xy\\)-plane defined by the inequality \\(|x|+|y|+|x+y| \\le 1\\).</p>",
+      "solutions": "<p>To graph this region we divide the \\(xy\\)-plane into six sectors depending on which of \\(x, y, x+y\\) are \\(\\ge 0\\), or \\(\\le 0\\). The inequality simplifies in each case:</p><p>\\[\\begin{array}{c|c|c}\n\\text{Sector} &amp; \\text{Inequality} &amp; \\text{Simplified inequality} \\\\\n\\hline\nx \\ge 0, y \\ge 0, x+y \\ge 0 &amp; x+y+(x+y) \\le 1 &amp; x+y \\le 1/2 \\\\\nx \\ge 0, y \\le 0, x+y \\ge 0 &amp; x-y+(x+y) \\le 1 &amp; x \\le 1/2 \\\\\nx \\ge 0, y \\le 0, x+y \\le 0 &amp; x-y-(x+y) \\le 1 &amp; y \\ge -1/2 \\\\\nx \\le 0, y \\ge 0, x+y \\ge 0 &amp; -x+y+(x+y) \\le 1 &amp; y \\le 1/2 \\\\\nx \\le 0, y \\ge 0, x+y \\le 0 &amp; -x+y-(x+y) \\le 1 &amp; x \\ge -1/2 \\\\\nx \\le 0, y \\le 0, x+y \\le 0 &amp; -x-y-(x+y) \\le 1 &amp; x+y \\ge -1/2 \\\\\n\\end{array}\\]</p><p>We then draw the region; we get a hexagon as shown. The hexagon intersects each region in an isosceles right triangle of area \\(1/8\\), so the total area is \\(6 \\cdot 1/8 = 3/4\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_Geometry/5-fig1.png\" width=\"525\" alt=\"\"></p>",
+      "answer": "\\frac{3}{4}"
+    },
+    "6": {
+      "problem": "<p>In trapezoid \\(ABCD\\) shown, \\(AD\\) is parallel to \\(BC\\), and \\(AB = 6, BC = 7, CD = 8, AD = 17\\). If sides \\(AB\\) and \\(CD\\) are extended to meet at \\(E\\), find the resulting angle at \\(E\\) (in degrees).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_Geometry/6-fig1.png\" width=\"230\" alt=\"\"></p>",
+      "solutions": "<p>Choose point \\(F\\) on \\(AD\\) so that \\(BCDF\\) is a parallelogram. Then \\(BF = CD = 8\\), and \\(AF = AD - DF = AD - BC = 10\\), so \\(\\triangle ABF\\) is a 6-8-10 right triangle. The required angle is equal to \\(\\angle ABF = 90^\\circ\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_Geometry/6-fig2.png\" width=\"230\" alt=\"\"></p>",
+      "answer": "90"
+    },
+    "7": {
+      "problem": "<p>Yet another trapezoid \\(ABCD\\) has \\(AD\\) parallel to \\(BC\\). \\(AC\\) and \\(BD\\) intersect at \\(P\\). If \\([ADP]/[BCP] = 1/2\\), find \\([ADP]/[ABCD]\\). (Here the notation \\([P_1 \\cdots P_n]\\) denotes the area of the polygon \\(P_1 \\cdots P_n\\).)</p>",
+      "solutions": "<p>A homothety (scaling) about \\(P\\) takes triangle \\(ADP\\) into \\(BCP\\), since \\(AD, BC\\) are parallel and \\(A, P, C\\); \\(B, P, D\\) are collinear. The ratio of homothety is thus \\(\\sqrt{2}\\). It follows that, if we rescale to put \\([ADP] = 1\\), then \\([ABP] = [CDP] = \\sqrt{2}\\), just by the ratios of lengths of bases. So \\([ABCD] = 3 + 2\\sqrt{2}\\), so \\([ADP]/[ABCD] = 1/(3+2\\sqrt{2})\\). Simplifying this, we get \\(3 - 2\\sqrt{2}\\).</p>",
+      "answer": "3 - 2\\sqrt{2}"
+    },
+    "8": {
+      "problem": "<p>A triangle has side lengths 18, 24, and 30. Find the area of the triangle whose vertices are the incenter, circumcenter, and centroid of the original triangle.</p>",
+      "solutions": "<p>There are many solutions to this problem, which is straightforward. The given triangle is a right 3-4-5 triangle, so the circumcenter is the midpoint of the hypotenuse. Coordinatizing for convenience, put the vertex at \\((0,0)\\) and the other vertices at \\((0,18)\\) and \\((24,0)\\). Then the circumcenter is \\((12,9)\\). The centroid is at one-third the sum of the three vertices, which is \\((8,6)\\). Finally, since the area equals the inradius times half the perimeter, we can see that the inradius is \\((18 \\cdot 24/2) / ([18+24+30]/2) = 6\\). So the incenter of the triangle is \\((6,6)\\). So the small triangle has a base of length 2 and a height of 3, hence its area is 3.</p>",
+      "answer": "3"
+    },
+    "9": {
+      "problem": "<p>Given is a regular tetrahedron of volume 1. We obtain a second regular tetrahedron by reflecting the given one through its center. What is the volume of their intersection?</p>",
+      "solutions": "<p>Imagine placing the tetrahedron \\(ABCD\\) flat on a table with vertex \\(A\\) at the top. By vectors or otherwise, we see that the center is \\(3/4\\) of the way from \\(A\\) to the bottom face, so the reflection of this face lies in a horizontal plane halfway between \\(A\\) and \\(BCD\\). In particular, it cuts off the smaller tetrahedron obtained by scaling the original tetrahedron by a factor of \\(1/2\\) about \\(A\\). Similarly, the reflections of the other three faces cut off tetrahedra obtained by scaling \\(ABCD\\) by \\(1/2\\) about \\(B\\), \\(C\\), and \\(D\\). On the other hand, the octahedral piece remaining remaining after we remove these four smaller tetrahedra is in the intersection of \\(ABCD\\) with its reflection, since the reflection sends this piece to itself. So the answer we seek is just the volume of this piece, which is</p><p>\\[\\text{(volume of } ABCD\\text{)} - 4 \\cdot \\text{(volume of } ABCD \\text{ scaled by a factor of } 1/2\\text{)}\\] \\[= 1 - 4(1/2)^3 = 1/2.\\]</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "10": {
+      "problem": "<p>Right triangle \\(XYZ\\) has right angle at \\(Y\\) and \\(XY = 228, YZ = 2004\\). Angle \\(Y\\) is trisected, and the angle trisectors intersect \\(XZ\\) at \\(P\\) and \\(Q\\) so that \\(X, P, Q, Z\\) lie on \\(XZ\\) in that order. Find the value of \\((PY + YZ)(QY + XY)\\).</p>",
+      "solutions": "<p>The triangle’s area is \\((228 \\cdot 2004)/2 = 228456\\). All the angles at \\(Y\\) are 30 degrees, so by the sine area formula, the areas of the three small triangles in the diagram are \\(QY \\cdot YZ/4, PY \\cdot QY/4\\), and \\(XY \\cdot PY/4\\), which sum to the area of the triangle. So expanding \\((PY + YZ)(QY + XY)\\), we see that it equals</p><p>\\[4 \\cdot 228456 + XY \\cdot YZ = 6 \\cdot 228456 = 1370736.\\]</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_Geometry/10-fig1.png\" width=\"525\" alt=\"\"></p>",
+      "answer": "1370736"
+    }
+  }
+}

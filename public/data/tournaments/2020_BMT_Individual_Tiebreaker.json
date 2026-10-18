@@ -1,0 +1,33 @@
+{
+  "test": "BMT Individual Tiebreaker",
+  "year": 2020,
+  "name": "Individual Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2020/individual-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>An <i>exterior angle</i> is the supplementary angle to an interior angle in a polygon. What is the sum of the exterior angles of a triangle and dodecagon (12-gon), in degrees?</p>",
+      "solutions": "<p>For any polygon, the sum of the exterior angles is \\(360^\\circ\\). The sum of the exterior angles of a triangle and dodecagon are each \\(360^\\circ\\), and \\(360^\\circ \\cdot 2 = \\boxed{720}^\\circ\\).</p>",
+      "answer": "720"
+    },
+    "2": {
+      "problem": "<p>Let \\(\\eta \\in [0, 1]\\) be a relative measure of material absorbence. \\(\\eta\\) values for materials combined together are additive. \\(\\eta\\) for a napkin is 10 times that of a sheet of paper, and a cardboard roll has \\(\\eta = 0.75\\). Justin can create a makeshift cup with \\(\\eta = 1\\) using 50 napkins and nothing else. How many sheets of paper would he need to add to a cardboard roll to create a makeshift cup with \\(\\eta = 1\\)?</p>",
+      "solutions": "<p>Since 50 napkins are necessary to create a makeshift cup with \\(\\eta = 1\\), each napkin has \\(\\eta = \\frac{1}{50} = 0.02\\). Then each paper would have \\(\\eta = \\frac{1}{10}\\) of that of each napkin, or \\(\\eta = 0.002\\). To create a makeshift cup using a cardboard roll and sheets of paper, Justin would need the paper to have a cumulative \\(\\eta\\) value of \\(1 - 0.75 = 0.25\\). Therefore, he would need \\(\\frac{0.25}{0.002} = \\boxed{125}\\) sheets of paper to create the makeshift cup.</p>",
+      "answer": "125"
+    },
+    "3": {
+      "problem": "<p>\\(\\triangle ABC\\) has \\(AB = 5\\), \\(BC = 12\\), and \\(AC = 13\\). A circle is inscribed in \\(\\triangle ABC\\), and \\(\\overline{MN}\\) tangent to the circle is drawn such that \\(M\\) is on \\(\\overline{AC}\\), \\(N\\) is on \\(\\overline{BC}\\), and \\(\\overline{MN} \\parallel \\overline{AB}\\). The area of \\(\\triangle MNC\\) is \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Find \\(m + n\\).</p>",
+      "solutions": "<p>Using the formula \\(A = rs\\), where \\(r\\) denotes inradius, \\(s\\) denotes semiperimeter, and \\(A\\) denotes area, \\(r = \\frac{A}{s} = \\frac{30}{15} = 2\\). Then, because the diameter of the incircle of \\(\\triangle CAB\\) is 4, \\(BN = 4\\) so \\(CN = 8\\). Because \\(\\triangle CMN \\sim \\triangle CAB\\) by AA similarity, the ratio of their sides is \\(\\frac{2}{3}\\), so the area of \\(\\triangle MNC\\) is \\(\\frac{4}{9}\\) that of \\(\\triangle ABC\\). Then the area of \\(\\triangle MNC\\) is \\(\\frac{4}{9}\\left(\\frac{1}{2} \\cdot 5 \\cdot 12\\right) = \\frac{40}{3}\\), and our answer is \\(\\boxed{43}\\).</p>",
+      "answer": "43"
+    },
+    "4": {
+      "problem": "<p>In a \\(6 \\times 6\\) grid of lattice points, how many ways are there to choose 4 points that are vertices of a nondegenerate quadrilateral with at least one pair of opposite sides parallel to the sides of the grid?</p>",
+      "solutions": "<p>First, we count the quadrilaterals with horizontal bases. There are \\(\\binom{6}{2} = 15\\) ways to choose the \\(y\\)-coordinates of the bases. Then, there are \\(\\binom{6}{2}^2 = 225\\) ways to choose the coordinates of the quadrilateral’s vertices. Similarly, there are \\(15 \\cdot 225\\) ways to create quadrilaterals with vertical bases. However, we have counted the rectangles twice, so we must subtract \\(\\binom{6}{2}^2 = 225\\) rectangles. So there are a total of \\(15 \\cdot 225 + 15 \\cdot 225 - 225 = 29 \\cdot 225 = \\boxed{6525}\\) nondegenerate quadrilaterals that satisfy the given constraint.</p>",
+      "answer": "6525"
+    },
+    "5": {
+      "problem": "<p>The polynomial \\(f(x) = x^3 + rx^2 + sx + t\\) has \\(r\\), \\(s\\), and \\(t\\) as its roots (with multiplicity), where \\(f(1)\\) is rational and \\(t \\ne 0\\). Compute \\(|f(0)|\\).</p>",
+      "solutions": "<p>First, we have by Vieta’s formulae that \\(rst = -t\\). Since \\(t \\ne 0\\), \\(rs = -1\\), so we write \\[s = -\\frac{1}{r}.\\] Now we also observe (from Vieta’s formulae) that \\(r + s + t = -r\\), so \\(t = -2r - s = -2r + \\frac{1}{r}\\). Now we can write \\[\\begin{aligned}\nf(x) &amp;= (x-r)(x-s)(x-t) \\\\\n&amp;= (x-r)\\left(x+\\frac{1}{r}\\right)\\left(x+2r-\\frac{1}{r}\\right) \\\\\n&amp;= x^3 + rx^2 - \\left(2r^2 - 2 + \\frac{1}{r^2}\\right)x - 2r + \\frac{1}{r} \\\\\n&amp;= x^3 + rx^2 + sx + t \\\\\n&amp;= x^3 + rx^2 - \\frac{1}{r}x - 2r + \\frac{1}{r}.\n\\end{aligned}\\] Equating the coefficients of \\(x\\) in the third and fifth lines above yields \\(\\frac{1}{r} = 2r^2 - 2 + \\frac{1}{r^2}\\), so \\(2r^4 - 2r^2 - r + 1 = 0\\). We are given that \\[f(1) = r + s + t + 1 = -r + 1\\] is rational, so \\(r\\) must be rational. By the rational root theorem, the only possible values for \\(r\\) are \\(\\pm 1\\) and \\(\\pm \\frac{1}{2}\\). A simple check reveals that \\(r = 1\\) is the only possibility, whence we find \\[f(x) = x^3 + x^2 - x - 1,\\] so \\(|f(0)| = \\boxed{1}\\).</p>",
+      "answer": "1"
+    }
+  }
+}

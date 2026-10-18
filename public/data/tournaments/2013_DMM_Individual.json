@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2013,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2013/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>\\(p, q, r\\) are prime numbers such that \\(p^q + 1 = r\\). Find \\(p+q+r\\).</p>",
+      "solutions": "<p>Note that \\(p &lt; p^q &lt; r\\). Hence \\(r\\) must be odd, so that \\(p^q\\) must be even. Hence \\(p = 2\\). If \\(q &gt; 2\\), then \\(q\\) is odd; as \\(2^n + 1\\) is divisible by 3 when \\(n\\) is odd, it must be the case that \\(q = 2\\). Then we find \\(2^2 + 1 = 5\\), so \\(p + q + r = 9\\).</p>",
+      "answer": "9"
+    },
+    "2": {
+      "problem": "<p>2014 apples are distributed among a number of children such that each child gets a different number of apples. Every child gets at least one apple. What is the maximum possible number of children who receive apples?</p>",
+      "solutions": "<p>The problem is equivalent to finding the maximal \\(n\\) such that \\(1 + 2 + 3 + \\cdots + n \\le 2014\\), as we can give any excess apples to the last student. Thus we want \\(n^2 + n - 4028 \\le 0\\). We know that the roots of this quadratic are going to be close to \\(60 &lt; \\sqrt{4028} &lt; 65\\). We can compute \\((60^2+60)/2 = 1830\\). Then the next triangular number is \\((61^2+61)/2 = 1891 = 1830 + 61\\), followed by \\((62^2+62)/2 = 1953 = 1891+62\\) and \\((63^2+63)/2 = 2016 = 1953+63\\). Hence there can be at most 62 students.</p>",
+      "answer": "62"
+    },
+    "3": {
+      "problem": "<p>Cathy has a jar containing jelly beans. At the beginning of each minute he takes jelly beans out of the jar. At the \\(n\\)-th minute, if \\(n\\) is odd, he takes out 5 jellies. If \\(n\\) is even he takes out \\(n\\) jellies. After the 46th minute there are only 4 jellies in the jar. How many jellies were in the jar in the beginning?</p>",
+      "solutions": "<p>The question is just asking for the sum \\(4 + 23 \\cdot 5 + 2(1+2+\\cdots+23) = 4+23\\cdot5+23\\cdot24 = 671\\).</p>",
+      "answer": "671"
+    },
+    "4": {
+      "problem": "<p>David is traveling to Budapest from Paris without a cellphone and he needs to use a public payphone. He only has two coins with him. There are three pay-phones - one that never works, one that works half of the time, and one that always works. The first phone that David tries does not work. Assuming that he does not use the same phone again, what is the probability that the second phone that he uses will work?</p>",
+      "solutions": "<p>There is a \\(2/3\\) chance that the first phone David tried was the phone that never works, and a \\(1/3\\) chance that the first phone was the phone that works half the time. In the first case there is a \\(3/4\\) chance that the next phone will work, and in the second case there is a \\(1/2\\) chance that the next phone will work. Hence the total chance is \\(\\frac{2}{3}\\cdot\\frac{3}{4}+\\frac{1}{3}\\cdot\\frac{1}{2}=\\frac{1}{2}+\\frac{1}{6}=\\frac{2}{3}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "5": {
+      "problem": "<p>Let \\(a, b, c, d\\) be positive real numbers such that \\[\\begin{gathered}\na^2+b^2=1; \\\\\nc^2+d^2=1; \\\\\nad-bc=\\frac{1}{7}.\n\\end{gathered}\\]</p><p>Find \\(ac + bd\\).</p>",
+      "solutions": "<p>We have \\((ac+bd)^2+(ad-bc)^2=(a^2+b^2)(c^2+d^2)\\). One way to see this identity is to think about multiplying complex numbers \\(x=a+bi\\) and \\(y=c+di\\), and then computing the norms in two ways via \\(|xy|^2=|x|^2|y|^2\\).</p><p>At any rate, we find that \\(\\frac{1}{49}+(ac+bd)^2=1\\), so that \\(ac+bd=\\sqrt{48/49}=\\frac{4\\sqrt{3}}{7}\\).</p>",
+      "answer": "\\frac{4\\sqrt{3}}{7}"
+    },
+    "6": {
+      "problem": "<p>Three circles \\(C_A, C_B, C_C\\) of radius 1 are centered at points \\(A, B, C\\) such that \\(A\\) lies on \\(C_B\\) and \\(C_C\\), \\(B\\) lies on \\(C_C\\) and \\(C_A\\), and \\(C\\) lies on \\(C_A\\) and \\(C_B\\). Find the area of the region where \\(C_A\\), \\(C_B\\), and \\(C_C\\) all overlap.</p>",
+      "solutions": "<p>We may add up the three sectors of circles \\(C_A, C_B, C_C\\) of angular measure \\(\\pi/6\\) and subtract twice the equilateral triangle \\(ABC\\) in order to find the area of the region. (Incidentally, this shape is called a <i>Reuleaux triangle</i>.) This gives us a total of \\(3\\pi/6-2\\sqrt{3}/4=(\\pi-\\sqrt{3})/2\\).</p>",
+      "answer": "\\frac{\\pi-\\sqrt{3}}{2}"
+    },
+    "7": {
+      "problem": "<p>Two distinct numbers \\(a\\) and \\(b\\) are randomly and uniformly chosen from the set \\(\\{3, 8, 16, 18, 24\\}\\). What is the probability that there exist integers \\(c\\) and \\(d\\) such that \\(ac+bd=6\\)?</p>",
+      "solutions": "<p>There are 10 pairs of numbers \\(a, b\\) that can be chosen. There exist integers \\(c, d\\) such that \\(ac+bd=6\\) if and only if the greatest common divisor of \\(a, b\\) evenly divides 6. The only pairs \\(a, b\\) from the given set of numbers that have greatest common divisor not dividing 6 are \\(\\{8, 16\\}\\), \\(\\{8, 24\\}\\), and \\(\\{16, 24\\}\\), all of which have greatest common divisor 8. Hence the probability that there exist such \\(c, d\\) is equal to \\(1 - \\frac{3}{10} = 7/10\\).</p>",
+      "answer": "\\frac{7}{10}"
+    },
+    "8": {
+      "problem": "<p>Let \\(S\\) be the set of integers \\(1 \\le N \\le 2^{20}\\) such that \\(N = 2^i + 2^j\\) where \\(i, j\\) are distinct integers. What is the probability that a randomly chosen element of \\(S\\) will be divisible by 9?</p>",
+      "solutions": "<p>The total number of elements of \\(S\\) is \\(\\binom{20}{2}=190\\), as we can choose any \\(i, j\\) distinct from \\(\\{0, 1, \\cdots, 19\\}\\). As the powers of 2 are periodic modulo 9, repeating (starting from \\(2^0 = 1\\)) \\(1, 2, 4, 8, 7, 5\\), it follows that 9 divides \\(2^i+2^j\\) iff \\(i\\) and \\(j\\) differ by an odd multiple of 3.</p><p>There are 17 pairs \\(\\{i, j\\}\\) taken from \\(\\{0, \\cdots, 19\\}\\) that differ by 3, 11 that differ by 9, and 5 that differ by 15, for a total of 33 such pairs. Hence the probability is \\(33/190\\).</p>",
+      "answer": "\\frac{33}{190}"
+    },
+    "9": {
+      "problem": "<p>Given a two-pan balance, what is the minimum number of weights you must have to weigh any object that weighs an integer number of kilograms not exceeding 100 kilograms?</p>",
+      "solutions": "<p>Each weight can either be placed in the left pan, the right pan, or removed from the balance entirely. Hence there must be at least five weights, or otherwise at most \\(3^4=81\\) distinct weights could be measured. As it turns out, 5 suffice: taking weights of 1, 3, 9, 27, and 81 we can achieve any combination; if we write the weight in balanced ternary form and place the weights accordingly this will give us the desired balance.</p>",
+      "answer": "5"
+    },
+    "10": {
+      "problem": "<p>Alex, Michael and Will write 2-digit perfect squares \\(A, M, W\\) on the board. They notice that the 6-digit number \\(10000A+100M+W\\) is also a perfect square. Given that \\(A &lt; W\\), find the square root of the 6-digit number.</p>",
+      "solutions": "<p>Write \\(a^2=A, m^2=M, w^2=W\\). Note that \\(4 \\le a, m, w \\le 9\\). Then we have \\((100a+w)^2=10000A+200aw+W\\). Hence if \\(200aw=100m^2\\), then \\(10000A+100M+W\\) will be a perfect square. This is equivalent to \\(2aw=m^2\\), so \\(m\\) must be even. If \\(m=4\\), then \\(aw=8\\); as \\(a,w\\ge4\\) this is impossible. If \\(m=6\\), then \\(aw=18\\); as \\(a,w&gt;3\\) this is impossible. If \\(m=8\\), however, then \\(aw=32\\), and we may take \\(a=4,w=8\\). Note that \\(a=8,w=4\\) is not possible as \\(a&lt;w\\). Hence \\(166464\\) is a perfect square with square root \\(408\\), exactly as desired. (By the same logic, \\(646416\\) is also a perfect square, with root \\(804\\).)</p><p>Note that this does not prove uniqueness; that happens to be a numerological miracle. But the existence of the answer to the problem inherently asserts uniqueness, so students are justified in assuming this to be the case.</p>",
+      "answer": "408"
+    }
+  }
+}

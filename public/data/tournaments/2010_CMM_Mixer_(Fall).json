@@ -1,0 +1,68 @@
+{
+  "test": "CMM Mixer (Fall)",
+  "year": 2010,
+  "name": "Mixer Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_51bfacf7a20a461e874e2d2e466ff235.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(\\mathbf{F}\\) be the answer to problem number 6. You want to tile a nondegenerate square with side length \\(\\mathbf{F}\\) with \\(1\\times 2\\) rectangles and \\(1\\times 1\\) squares. The rectangles can be oriented in either direction. How many ways can you do this?</p><p><i>Note: the answer to Problem 6 is \\(2\\).</i></p>",
+      "solutions": "<p>Knowing \\(\\mathbf{F} = 2\\), condition on the number of rectangles used. If there are none, then we have four squares, for one way. If there is one rectangle, we can put it in any of four positions and tile the remaining area with squares, for four ways. If there are two rectangles, they can be either horizontal or vertical, for two ways. Summing up, we get an answer of \\(7\\).</p>",
+      "answer": "7"
+    },
+    "2": {
+      "problem": "<p>Let \\(\\mathbf{A}\\) be the answer to problem number 1. Triangle \\(ABC\\) has a right angle at \\(B\\) and the length of \\(AC\\) is \\(\\mathbf{A}\\). Let \\(D\\) be the midpoint of \\(AB\\), and let \\(P\\) be a point inside triangle \\(ABC\\) such that \\(PA = PC = \\frac{7\\sqrt{5}}{4}\\) and \\(PD = \\frac{7}{4}\\). The length of \\(AB^2\\) is expressible as \\(m/n\\) for \\(m, n\\) relatively prime positive integers. Find \\(m\\).</p><p><i>Note: the answer to Problem 1 (the previous problem) is \\(7\\).</i></p>",
+      "solutions": "<p>Knowing \\(\\mathbf{A} = 7\\), let \\(E\\) be the midpoint of \\(AC\\). Since \\(PA = PC\\), \\(P\\) is on the perpendicular bisector of \\(AC\\), so \\(PE \\perp AC\\). We have \\(AE = \\frac{7}{2}\\), so using the Pythagorean theorem on \\(\\triangle AEP\\), we get \\(PE = \\frac{7}{4}\\). Then \\(P\\) is also on the perpendicular bisector of \\(DE\\); draw this perpendicular bisector and let it intersect \\(AC\\) at \\(F\\). Since \\(DE \\parallel AB\\) we also have \\(AB \\parallel PF\\), and thus \\(F\\) is the midpoint of \\(AE\\). Thus \\(PE = EF = \\frac{7}{4}\\), so \\(\\triangle PEF\\) is an isosceles right triangle and \\(\\angle PFE = 45^\\circ\\). Then also \\(\\angle BAC = 45^\\circ\\), so \\(\\triangle ABC\\) is also an isosceles right triangle. Thus \\(AB^2 = \\frac{49}{2}\\), so \\(49\\) is the answer.</p>",
+      "answer": "49"
+    },
+    "3": {
+      "problem": "<p>Let \\(\\mathbf{B}\\) be the answer to problem number 2. Let \\(S\\) be the set of positive integers less than or equal to \\(\\mathbf{B}\\). What is the maximum size of a subset of \\(S\\) whose elements are pairwise relatively prime?</p><p><i>Note: the answer to Problem 2 (the previous problem) is \\(49\\).</i></p>",
+      "solutions": "<p>Knowing \\(\\mathbf{B} = 49\\), note that for any prime less than \\(49\\), that prime can divide at most one element of the set. So we can have \\(1\\) in the set and one element for each prime, but no more. There are \\(15\\) primes less than \\(49\\), so we can get up to \\(16\\) elements. This is achievable by taking \\(1\\) and every prime less than \\(49\\), so \\(16\\) is the answer.</p>",
+      "answer": "16"
+    },
+    "4": {
+      "problem": "<p>Let \\(\\mathbf{C}\\) be the answer to problem number 3. You have \\(9\\) shirts and \\(9\\) pairs of pants. Each is either red or blue, you have more red shirts than blue shirts, and you have same number of red shirts as blue pants. Given that you have \\(\\mathbf{C}\\) ways of wearing a shirt and pants whose colors match, find out how many red shirts you own.</p><p><i>Note: the answer to Problem 3 (the previous problem) is \\(16\\).</i></p>",
+      "solutions": "<p>Knowing \\(\\mathbf{C} = 16\\), suppose we have \\(r\\) red shirts. We’re given \\(r \\ge 5\\). Wearing matching red clothes has \\(r(9-r)\\) ways and matching blue clothes has \\((9-r)r\\) ways. Since we need a total of \\(16\\) ways, \\(r(9-r) = 8\\), which has roots \\(1, 8\\). Since \\(r \\ge 5\\), \\(r = 8\\), the answer.</p>",
+      "answer": "8"
+    },
+    "5": {
+      "problem": "<p>Let \\(\\mathbf{D}\\) be the answer to problem number 4. You have two odd positive integers \\(a, b\\). It turns out that \\(\\mathrm{lcm}(a,b) + a = \\gcd(a,b) + b = \\mathbf{D}\\). Find \\(ab\\).</p><p><i>Note: the answer to Problem 4 (the previous problem) is \\(8\\).</i></p>",
+      "solutions": "<p>Knowing \\(\\mathbf{D} = 8\\), let \\(a = dx\\) and \\(b = dy\\) for \\(d = \\gcd(a,b)\\) and \\(x, y\\) relatively prime. Note that \\(\\mathrm{lcm}(a,b) = dxy\\). Then the equations become \\(dxy + dx = d + dy = 8\\). So \\(x = 1\\) and \\(8 = d(1+y)\\). We have \\(a, b\\) odd, so \\(d\\) is odd, meaning it must be \\(1\\). Thus \\(y = 7\\), so \\(a = 1\\), \\(b = 7\\), and the answer is \\(7\\).</p>",
+      "answer": "7"
+    },
+    "6": {
+      "problem": "<p>Let \\(\\mathbf{E}\\) be the answer to problem number 5. A function \\(f\\) defined on integers satisfies \\(f(y) + f(12-y) = 10\\) and \\(f(y) + f(8-y) = 4\\) for all integers \\(y\\). Given that \\(f(\\mathbf{E}) = 0\\), compute \\(f(4)\\).</p><p><i>Note: the answer to Problem 5 (the previous problem) is \\(7\\).</i></p>",
+      "solutions": "<p>In this part, problem 6 can be answered without knowing the answer to problem 5, and after that each problem can be done sequentially: put \\(y = 4\\) into the second equation to get \\(2f(4) = 4\\), so \\(f(4) = 2\\).</p>",
+      "answer": "2"
+    },
+    "7": {
+      "problem": "<p>Let \\(\\mathbf{L}\\) be the answer to problem number 12. You want to tile a nondegenerate square with side length \\(\\mathbf{L}\\) with \\(1\\times 2\\) rectangles and \\(7\\times 7\\) squares. The rectangles can be oriented in either direction. How many ways can you do this?</p><p><i>Note: the answer to Problem 12 is \\(7\\).</i></p>",
+      "solutions": "<p>The answer to this problem, \\(\\mathbf{G}\\), is found in the course of solving problem 8: since \\(\\mathbf{G}\\) equals the length \\(AC\\) in that problem, and \\(AC\\) must be a positive integer with, by the triangle inequality, \\(AC \\le PA + PC = 1\\), we get \\(AC = 1\\). Thus \\(\\mathbf{G} = 1\\).</p><p>(Working forward: with \\(\\mathbf{L} = 7\\), as found in problem 12, if the square has even side length then we can reflect any tiling of \\(1\\times 2\\) rectangles about a diagonal to get a different tiling, so there must be more than one tiling if there are any. If it has odd side length, it can be verified that there are no tilings for a side less than \\(7\\), there is one tiling for side length \\(7\\), and there is more than one tiling for side length greater than \\(7\\). This confirms that side length \\(7\\) gives exactly one tiling, i.e. \\(\\mathbf{G} = 1\\).)</p>",
+      "answer": "1"
+    },
+    "8": {
+      "problem": "<p>Let \\(\\mathbf{G}\\) be the answer to problem number 7. Triangle \\(ABC\\) has a right angle at \\(B\\) and the length of \\(AC\\) is \\(\\mathbf{G}\\). Let \\(D\\) be the midpoint of \\(AB\\), and let \\(P\\) be a point in the plane such that \\(PA = PC = \\frac{1}{2}\\) and \\(PD = \\frac{1}{2010}\\). The length of \\(AB^2\\) is expressible as \\(m/n\\) for \\(m, n\\) relatively prime positive integers. Find \\(m\\).</p><p><i>Note: the answer to Problem 7 (the previous problem) is \\(1\\).</i></p>",
+      "solutions": "<p>This problem can be answered only by knowing that the answer to problem \\(7\\) is a positive integer. By the triangle inequality, \\(AC \\le PA + PC = 1\\). Since \\(AC\\) is a positive integer, \\(AC = 1\\) and \\(P\\) must be the midpoint of \\(AC\\). Then \\(BC = 2 \\cdot PD = \\frac{1}{1005}\\). Finally, \\(AB^2 = 1^2 - \\left(\\frac{1}{1005}\\right)^2 = \\frac{1005^2 - 1}{1005^2}\\), which has numerator \\(1010024\\), the answer.</p>",
+      "answer": "1010024"
+    },
+    "9": {
+      "problem": "<p>Let \\(\\mathbf{H}\\) be the answer to problem number 8. Let \\(S\\) be the set of positive integers less than or equal to \\(\\mathbf{H}\\). What is the maximum size of a subset of \\(S\\) whose elements are pairwise relatively prime?</p><p><i>Note: the answer to Problem 8 (the previous problem) is \\(1010024\\).</i></p>",
+      "solutions": "<p>As in problem 3, the maximum size of such a subset of \\(\\{1, \\ldots, \\mathbf{H}\\}\\) equals \\(1\\) plus the number of primes less than \\(\\mathbf{H} = 1010024\\); directly counting these primes is not feasible in a short-answer timeframe, so instead we work backwards through the round. Given that the answer to problem \\(10\\) is \\(233\\), we have \\(233^2\\) ways to wear matching red clothes and \\(158^2\\) ways to wear matching blue clothes; their sum is \\(79253\\), so \\(\\mathbf{I} = 79253\\). Indeed, one can verify that the number of primes less than \\(1010024\\) is \\(79252\\), confirming \\(\\mathbf{I} = 1 + 79252 = 79253\\).</p>",
+      "answer": "79253"
+    },
+    "10": {
+      "problem": "<p>Let \\(\\mathbf{I}\\) be the answer to problem number 9. You have \\(391\\) shirts and \\(391\\) pairs of pants. Each is either red or blue, you have more red shirts than blue shirts, and you have same number of red shirts as red pants. Given that you have \\(\\mathbf{I}\\) ways of wearing a shirt and pants whose colors match, find out how many red shirts you own.</p><p><i>Note: the answer to Problem 9 (the previous problem) is \\(79253\\).</i></p>",
+      "solutions": "<p>Given that the answer to problem \\(11\\) is \\(231\\), let \\(\\gcd(a,b) = d\\), \\(a = dx\\), \\(b = dy\\) for \\(x, y\\) relatively prime, and \\(\\mathrm{lcm}(a,b) = dxy\\), as in problem 5. We have \\(xy + 2x = 2 + y\\), or \\((y+2)(x-1) = 0\\). Since \\(x, y\\) are positive, \\(x = 1\\). Now suppose \\(d &gt; 1\\). Then \\(d^2\\) divides \\(ab\\). But we know \\(ab = 231\\), which has no square factors greater than \\(1\\), so \\(d\\) must be \\(1\\). Hence \\(a = 1\\), \\(b = 231\\), and this gives \\(\\mathbf{J} = 233\\).</p>",
+      "answer": "233"
+    },
+    "11": {
+      "problem": "<p>Let \\(\\mathbf{J}\\) be the answer to problem number 10. You have two odd positive integers \\(a, b\\). It turns out that \\(\\mathrm{lcm}(a,b) + 2a = 2\\gcd(a,b) + b = \\mathbf{J}\\). Find \\(ab\\).</p><p><i>Note: the answer to Problem 10 (the previous problem) is \\(233\\).</i></p>",
+      "solutions": "<p>Given that the answer to problem \\(12\\) is \\(7\\), we have \\(f(2) = 7\\). From the first equation, \\(f(5) = 1\\). Notice that combining the two equations gives \\(4 = f(x+2) - f(x)\\). Using this and what we know, \\(f(2k) = 3 + 4k\\) and \\(f(2k+1) = -7 + 4k\\) for all integers \\(k\\). Since \\(453 \\equiv 1 \\pmod 4\\), it is of the form \\(-7 + 4k\\). Choosing \\(k = 115\\), we get \\(f(231) = 453\\), so \\(\\mathbf{K} = 231\\).</p>",
+      "answer": "231"
+    },
+    "12": {
+      "problem": "<p>Let \\(\\mathbf{K}\\) be the answer to problem number 11. A function \\(f\\) defined on integers satisfies \\(f(y) + f(7-y) = 8\\) and \\(f(y) + f(5-y) = 4\\) for all integers \\(y\\). Given that \\(f(\\mathbf{K}) = 453\\), compute \\(f(2)\\).</p><p><i>Note: the answer to Problem 11 (the previous problem) is \\(231\\).</i></p>",
+      "solutions": "<p>Since the answer to problem \\(8\\) (\\(\\mathbf{H} = 1010024\\)) makes problem 9 infeasible to solve directly, we must work backwards through the round; we found that \\(\\mathbf{G} = 1\\) in the course of solving problem 8. Given that the answer to problem \\(7\\) is \\(1\\): if the square has even side length then we can reflect any tiling of \\(1 \\times 2\\) rectangles about a diagonal to get a different tiling, so there must be more than one tiling if there are any. If it has odd side length, it can be verified that there are no tilings for a side less than \\(7\\), there is one tiling for side length \\(7\\), and there is more than one tiling for side length greater than \\(7\\). So the side length must be \\(7\\), i.e. \\(\\mathbf{L} = 7\\). Indeed, given that the answer to problem \\(12\\) is \\(7\\), we have \\(f(2) = 7\\).</p>",
+      "answer": "7"
+    }
+  }
+}

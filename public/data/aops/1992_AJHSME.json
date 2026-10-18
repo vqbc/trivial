@@ -1,0 +1,131 @@
+{
+  "test": "1992 AJHSME",
+  "year": 1992,
+  "problems": {
+    "1": {
+      "problem": "<p>\\(\\dfrac{10-9+8-7+6-5+4-3+2-1}{1-2+3-4+5-6+7-8+9}=\\)</p><p>\\(\\text{(A)}\\ -1 \\qquad \\text{(B)}\\ 1 \\qquad \\text{(C)}\\ 5 \\qquad \\text{(D)}\\ 9 \\qquad \\text{(E)}\\ 10\\)</p>",
+      "solutions": "<p>\\[\\begin{aligned}\n\\dfrac{10-9+8-7+6-5+4-3+2-1}{1-2+3-4+5-6+7-8+9} &amp;= \\dfrac{(10-9)+(8-7)+(6-5)+(4-3)+(2-1)}{1+(-2+3)+(-4+5)+(-6+7)+(-8+9)} \\\\\n&amp;= \\dfrac{1+1+1+1+1}{1+1+1+1+1} \\\\\n&amp;= 1 \\rightarrow \\boxed{\\text{B}}.\n\\end{aligned}\\]</p>",
+      "answer": "B"
+    },
+    "2": {
+      "problem": "<p>Which of the following is not equal to \\(\\dfrac{5}{4}\\)?</p><p>\\(\\text{(A)}\\ \\dfrac{10}{8} \\qquad \\text{(B)}\\ 1\\dfrac{1}{4} \\qquad \\text{(C)}\\ 1\\dfrac{3}{12} \\qquad \\text{(D)}\\ 1\\dfrac{1}{5} \\qquad \\text{(E)}\\ 1\\dfrac{10}{40}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>The fraction in question is equal to \\(1.25\\).  Expressing all of the choices we have,</p><p>\\(\\text{(A)}\\ 1.25 \\qquad \\text{(B)}\\ 1.25 \\qquad \\text{(C)}\\ 1.25 \\qquad \\text{(D)}\\ 1.2 \\qquad \\text{(E)}\\ 1.25\\).</p><p>It’s clear then that choice \\(\\boxed{\\text{D}}\\) is the answer.</p><h2><span class=\"mw-headline\" id=\"Solution_2_(low_on_time)\">Solution 2 (low on time)</span></h2><p>A quick glance shows that \\(\\boxed{\\text{D}}\\) is the only answer with a denominator that does not have 4 as a factor, so it is unlikely that it will simplify into \\(\\frac{5}{4}\\).</p>",
+      "answer": "D"
+    },
+    "3": {
+      "problem": "<p>What is the largest difference that can be formed by subtracting two numbers chosen from the set \\(\\{ -16,-4,0,2,4,12 \\}\\)?</p><p>\\(\\text{(A)}\\ 10 \\qquad \\text{(B)}\\ 12 \\qquad \\text{(C)}\\ 16 \\qquad \\text{(D)}\\ 28 \\qquad \\text{(E)}\\ 48\\)</p>",
+      "solutions": "<p>The largest difference can be found by subtracting the smallest number from the largest number.  Therefore, the largest difference is \\(12 - (-16) = \\boxed{\\textbf{(D)}\\ 28}\\).</p>",
+      "answer": "D"
+    },
+    "4": {
+      "problem": "<p>During the softball season, Judy had \\(35\\) hits.  Among her hits were \\(1\\) home run, \\(1\\) triple and \\(5\\) doubles.  The rest of her hits were single.  What percent of her hits were single?</p><p>\\(\\text{(A)}\\ 28\\% \\qquad \\text{(B)}\\ 35\\% \\qquad \\text{(C)}\\ 70\\% \\qquad \\text{(D)}\\ 75\\% \\qquad \\text{(E)}\\ 80\\%\\)</p>",
+      "solutions": "<p>From the information given, \\(35-5-1-1=28\\) hits were single.  Thus, the percentage was</p><p>\\[\\dfrac{28}{35}=80\\% \\rightarrow \\boxed{\\text{E}}.\\]</p>",
+      "answer": "E"
+    },
+    "5": {
+      "problem": "<p>A circle of diameter \\(1\\) is removed from a \\(2\\times 3\\) rectangle, as shown.  Which whole number is closest to the area of the shaded region?</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/5-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 1 \\qquad \\text{(B)}\\ 2 \\qquad \\text{(C)}\\ 3 \\qquad \\text{(D)}\\ 4 \\qquad \\text{(E)}\\ 5\\)</p>",
+      "solutions": "<p>The area of the shaded region is the area of the circle subtracted from the area of the rectangle.</p><p>The diameter of the circle is \\(1\\), so the radius is \\(1/2\\) and the area is</p><p>\\[(1/2)^2\\pi = \\pi /4.\\]</p><p>The rectangle obviously has area \\(2\\times 3= 6\\), so the area of the shaded region is \\(6-\\pi / 4\\). This is closest to \\(5\\rightarrow \\boxed{\\text{E}}\\).</p>",
+      "answer": "E"
+    },
+    "6": {
+      "problem": "<p>Suppose that</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/6-fig1.png\" width=\"124\" alt=\"\"></p><p>means \\(a+b-c\\). For example,</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/6-fig2.png\" width=\"124\" alt=\"\"></p><p>is \\(5+4-6 = 3\\). Then the sum</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/6-fig3.png\" width=\"304\" alt=\"\"></p><p>is</p><p>\\(\\text{(A)}\\ -2 \\qquad \\text{(B)}\\ -1 \\qquad \\text{(C)}\\ 0 \\qquad \\text{(D)}\\ 1 \\qquad \\text{(E)}\\ 2\\)</p>",
+      "solutions": "<p>The first triangle represents \\(1+3-4 = 0\\), and the 2nd triangle represents \\(2+5-6 = 1\\)</p><p>Since we have to add the 2 triangles together, the final answer is \\(1\\), which is \\(\\boxed{\\text{D}}\\).</p>",
+      "answer": "D"
+    },
+    "7": {
+      "problem": "<p>The digit-sum of \\(998\\) is \\(9+9+8=26\\).  How many 3-digit whole numbers, whose digit-sum is \\(26\\), are even?</p><p>\\(\\text{(A)}\\ 1 \\qquad \\text{(B)}\\ 2 \\qquad \\text{(C)}\\ 3 \\qquad \\text{(D)}\\ 4 \\qquad \\text{(E)}\\ 5\\)</p>",
+      "solutions": "<p>The highest digit sum  for three-digit numbers is \\(9+9+9=27\\). Therefore, the only possible digit combination is \\(9, 9, 8\\). Of course, of the three possible numbers, only \\(998\\) works. Thus, the answer is \\(\\boxed{\\text{(A)}\\ 1}\\).</p>",
+      "answer": "A"
+    },
+    "8": {
+      "problem": "<p>A store owner bought \\(1500\\) pencils at \\(\\textdollar  0.10\\) each.  If he sells them for \\(\\textdollar  0.25\\) each, how many of them must he sell to make a profit of exactly \\(\\textdollar  100.00\\)?</p><p>\\(\\text{(A)}\\ 400 \\qquad \\text{(B)}\\ 667 \\qquad \\text{(C)}\\ 1000 \\qquad \\text{(D)}\\ 1500 \\qquad \\text{(E)}\\ 1900\\)</p>",
+      "solutions": "<p>\\(1500\\times 0.1=150\\), so the store owner is \\(\\textdollar 150\\) below profit. Therefore he needs to sell \\(150+100= 250\\) dollars worth of pencils. Selling them at \\(\\textdollar 0.25\\) each gives \\(250/0.25= \\boxed{\\textbf{(C)}\\ 1000}\\).</p>",
+      "answer": "C"
+    },
+    "9": {
+      "problem": "<p>The population of a small town is \\(480\\).  The graph indicates the number of females and males in the town, but the vertical scale-values are omitted.  How many males live in the town?</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/9-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 120 \\qquad \\text{(B)}\\ 160 \\qquad \\text{(C)}\\ 200 \\qquad \\text{(D)}\\ 240 \\qquad \\text{(E)}\\ 360\\)</p>",
+      "solutions": "<p>The graph show that the ratio of men to total population is \\(\\frac{1}{3}\\), so the total number of men is \\(\\frac{1}{3} \\times 480= \\boxed{\\text{(B)}\\ 160}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>The graph shows \\(3\\) equal squares, each with value \\(x\\). So \\(3x = 480\\), so \\(x = \\boxed{160}\\).</p>",
+      "answer": "B"
+    },
+    "10": {
+      "problem": "<p>An isosceles right triangle with legs of length \\(8\\) is partitioned into \\(16\\) congruent triangles as shown.  The shaded area is</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/10-fig1.png\" width=\"497\" alt=\"\"></p><p>\\(\\text{(A)}\\ 10 \\qquad \\text{(B)}\\ 20 \\qquad \\text{(C)}\\ 32 \\qquad \\text{(D)}\\ 40 \\qquad \\text{(E)}\\ 64\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Because the smaller triangles are congruent, the shaded area take \\(\\frac{10}{16}\\) of the largest triangles area, which is \\(\\frac{8 \\times 8}{2}=32\\), so the shaded area is  \\(\\frac{10}{16} \\times 32= \\boxed{\\text{(B)}\\ 20}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Each of the triangle has side length of \\(\\frac{1}{4} \\times 8=2\\), so the area is \\(\\frac{1}{2} \\times 2 \\times 2=2\\). Because there are \\(10\\) triangles is the shaded area, its area is \\(2 \\times 10 =\\boxed{\\text{(B)}\\ 20}\\).</p>",
+      "answer": "B"
+    },
+    "11": {
+      "problem": "<p>The bar graph shows the results of a survey on color preferences.  What percent preferred blue?</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/11-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 20\\% \\qquad \\text{(B)}\\ 24\\% \\qquad \\text{(C)}\\ 30\\% \\qquad \\text{(D)}\\ 36\\% \\qquad \\text{(E)}\\ 42\\%\\)</p>",
+      "solutions": "<p>The total frequency is \\(50+60+40+60+40=250\\), with the blue frequency of \\(60\\). Therefore, the precentage that preferred blue is \\(\\frac{60}{250}=\\boxed{\\text{(B)}\\ 24\\%}\\).</p>",
+      "answer": "B"
+    },
+    "12": {
+      "problem": "<p>The five tires of a car (four road tires and a full-sized spare) were rotated so that each tire was used the same number of miles during the first \\(30,000\\) miles the car traveled.  For how many miles was each tire used?</p><p>\\(\\text{(A)}\\ 6000 \\qquad \\text{(B)}\\ 7500 \\qquad \\text{(C)}\\ 24,000 \\qquad \\text{(D)}\\ 30,000 \\qquad \\text{(E)}\\ 37,500\\)</p>",
+      "solutions": "<p>In the \\(30,000\\) miles, four tires were always used at one time, so the amount of miles the five tires were used in total is \\(30,000 \\times 4=120,000\\). Five tires were used and each was used equally, so each tire was used for \\(\\frac{120,000}{5}=\\boxed{\\text{(C)}\\ 24,000}\\).</p>",
+      "answer": "C"
+    },
+    "13": {
+      "problem": "<p>Five test scores have a mean (average score) of \\(90\\), a median (middle score) of \\(91\\) and a mode (most frequent score) of \\(94\\).  The sum of the two lowest test scores is</p><p>\\(\\text{(A)}\\ 170 \\qquad \\text{(B)}\\ 171 \\qquad \\text{(C)}\\ 176 \\qquad \\text{(D)}\\ 177 \\qquad \\text{(E)}\\ \\text{not determined by the information given}\\)</p>",
+      "solutions": "<p>Because there was an odd number of scores, \\(91\\) must be the middle score. Since there are two scores above \\(91\\) and \\(94\\) appears the most frequent (so at least twice) and \\(94&gt;91\\), \\(94\\) appears twice. Also, the sum of the five numbers is \\(90 \\times 5 =450\\). Thus, the sum of the lowest two scores is \\(450-91-94-94= \\boxed{\\text{(B)}\\ 171}\\).</p>",
+      "answer": "B"
+    },
+    "14": {
+      "problem": "<p>When four gallons are added to a tank that is one-third full, the tank is then one-half full.  The capacity of the tank in gallons is</p><p>\\(\\text{(A)}\\ 8 \\qquad \\text{(B)}\\ 12 \\qquad \\text{(C)}\\ 20 \\qquad \\text{(D)}\\ 24 \\qquad \\text{(E)}\\ 48\\)</p>",
+      "solutions": "<p>Four gallons is \\(\\frac{1}{2}-\\frac{1}{3} = \\frac{1}{6}\\) of the tank. Thus, capacity of the tank in gallons is \\(6 \\cdot 4= \\boxed{\\text{(D)}\\ 24}\\).</p>",
+      "answer": "D"
+    },
+    "15": {
+      "problem": "<p>What is the \\(1992^\\text{nd}\\) letter in this sequence?</p><p>\\[\\text{ABCDEDCBAABCDEDCBAABCDEDCBAABCDEDC}\\cdots\\]</p><p>\\(\\text{(A)}\\ \\text{A} \\qquad \\text{(B)}\\ \\text{B} \\qquad \\text{(C)}\\ \\text{C} \\qquad \\text{(D)}\\ \\text{D} \\qquad \\text{(E)}\\ \\text{E}\\)</p>",
+      "solutions": "<p>The sequence consists of repeated strings of 9 letters, \\(\\text{ABCDEDCBA}\\). When 1992 is divided by 9, the remainder is 3, and so the 1992nd letter in the sequence is the 3rd letter of the smaller string, \\(\\boxed{\\text{(C)}\\ \\text{C}}\\).</p>",
+      "answer": "C"
+    },
+    "16": {
+      "problem": "<p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/16-fig1.png\" width=\"504\" alt=\"\"></p><p>Which cylinder has twice the volume of the cylinder shown above?</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/16-fig2.png\" width=\"1510\" alt=\"\"></p><p>\\(\\text{(E)}\\ \\text{None of the above}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Recall that a cylinder with radius \\(r\\) and height \\(h\\) has volume \\(V = \\pi r^2 h\\).</p><p>The original cylinder thus has volume \\(500\\pi\\), while the cylinders in choices (A), (B), (C), and (D) have volumes \\(2000\\pi\\), \\(1000\\pi\\), \\(250\\pi\\), and \\(4000\\pi\\) respectively.  So only the cylinder in choice \\(\\boxed{\\textbf{(B)}}\\) has twice the volume of the original cylinder.</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>The volume of a cylinder is directly proportional to both its height and the square of its radius.</p><p>The cylinder in choice (A) has the same height as and twice the radius of the original, so its volume is \\(2^2 = 4\\) times that of the original.</p><p>The cylinder in choice (B) has twice the height of and the same radius as the original, so its volume is \\(2\\) times that of the original.</p><p>The cylinder in choice (C) has twice the height of and half the radius of the original, so its volume is \\(2 \\cdot \\left(\\frac{1}{2}\\right)^2 = \\frac{1}{2}\\) of that of the original.</p><p>The cylinder in choice (D) has twice the height of and twice the radius of the original, so its volume is \\(2 \\cdot 2^2 = 8\\) times that of the original.</p><p>Therefore, only the cylinder in choice \\(\\boxed{\\textbf{(B)}}\\) has twice the volume of the original cylinder.</p>",
+      "answer": "B"
+    },
+    "17": {
+      "problem": "<p>The sides of a triangle have lengths \\(6.5\\), \\(10\\), and \\(s\\), where \\(s\\) is a whole number.  What is the smallest possible value of \\(s\\)?</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/17-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 3 \\qquad \\text{(B)}\\ 4 \\qquad \\text{(C)}\\ 5 \\qquad \\text{(D)}\\ 6 \\qquad \\text{(E)}\\ 7\\)</p>",
+      "solutions": "<p>By the triangle inequality, \\(6.5 + s &gt; 10\\) and therefore \\(s &gt; 3.5\\). The smallest whole number \\(s\\) that satisfies this inequality is \\(\\boxed{\\textbf{(B)}\\ 4}\\).</p>",
+      "answer": "B"
+    },
+    "18": {
+      "problem": "<p>On a trip, a car traveled \\(80\\) miles in an hour and a half, then was stopped in traffic for \\(30\\) minutes, then traveled \\(100\\) miles during the next \\(2\\) hours.  What was the car’s average speed in miles per hour for the \\(4\\)-hour trip?</p><p>\\(\\text{(A)}\\ 45 \\qquad \\text{(B)}\\ 50 \\qquad \\text{(C)}\\ 60 \\qquad \\text{(D)}\\ 75 \\qquad \\text{(E)}\\ 90\\)</p>",
+      "solutions": "<p>The car traveled a total of \\(80 + 100 = 180\\) miles on the trip, so its average speed was \\(180 \\div 4 = \\boxed{\\text{(\\textbf{A})}\\ 45}\\) miles per hour.</p>",
+      "answer": "A"
+    },
+    "19": {
+      "problem": "<p>The distance between the \\(5^\\text{th}\\) and \\(26^\\text{th}\\) exits on an interstate highway is \\(118\\) miles.  If any two consecutive exits are at least \\(5\\) miles apart, then what is the largest number of miles there can be between two consecutive exits that are between the \\(5^\\text{th}\\) and \\(26^\\text{th}\\) exits?</p><p>\\(\\text{(A)}\\ 8 \\qquad \\text{(B)}\\ 13 \\qquad \\text{(C)}\\ 18 \\qquad \\text{(D)}\\ 47 \\qquad \\text{(E)}\\ 98\\)</p>",
+      "solutions": "<p>There are \\(21\\) pairs of consecutive exits. To find the maximum number of miles of one of these, the other \\(20\\) must be equal to the minimum number yielding a total of \\((5)(20)=100\\) miles. The longest distance must be \\(118-100=\\boxed{\\text{(C)}\\ 18}\\).</p>",
+      "answer": "C"
+    },
+    "20": {
+      "problem": "<p>Which pattern of identical squares could NOT be folded along the lines shown to form a cube?</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/20-fig1.png\" width=\"1364\" alt=\"\"></p>",
+      "solutions": "<p>If pattern \\(\\boxed{\\text{(D)}}\\) were to be folded into a cube, the topmost square would overlap the rightmost square.</p>",
+      "answer": "D"
+    },
+    "21": {
+      "problem": "<p>Northside’s Drum and Bugle Corps raised money for a trip. The drummers and bugle players kept separate sales records. According to the double bar graph, in what month did one group’s sales exceed the other’s by the greatest percent?</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/21-fig1.png\" width=\"690\" alt=\"\"></p><p>\\(\\text{(A)}\\ \\text{Jan}\\qquad\\text{(B)}\\ \\text{Feb}\\qquad\\text{(C)}\\ \\text{Mar}\\qquad\\text{(D)}\\ \\text{Apr}\\qquad\\text{(E)}\\ \\text{May}\\)</p>",
+      "solutions": "<p>The ratio of the sales of the group with more sales and the sales of the group with less sales is largest in \\(\\boxed{\\text{(B)}\\ \\text{Feb}}\\) which is \\(5/3 \\approx 1.67\\).</p>",
+      "answer": "B"
+    },
+    "22": {
+      "problem": "<p>Eight \\(1\\times 1\\) square tiles are arranged as shown so their outside edges form a polygon with a perimeter of \\(14\\) units.  Two additional tiles of the same size are added to the figure so that at least one side of each tile is shared with a side of one of the squares in the original figure.  Which of the following could be the perimeter of the new figure?</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/22-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 15 \\qquad \\text{(B)}\\ 17 \\qquad \\text{(C)}\\ 18 \\qquad \\text{(D)}\\ 19 \\qquad \\text{(E)}\\ 20\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>One such figure would be</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/22-fig2.png\" width=\"504\" alt=\"\"></p><p>The perimeter of this figure is \\(\\boxed{\\text{(C)}\\ 18}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>If we attach a square to one side, one side will be covered, and \\(3\\) more sides will be added, resulting in a \\(+2\\) perimeter. If we attach a square to two sides, \\(2\\) sides are covered and \\(2\\) sides are attached, so the perimeter don’t change. There is no possibility of attaching a square to \\(3\\) sides, so we can get \\(14,16,18\\) as the perimeter so the only answer is \\(\\boxed{\\text{(C)}\\ 18}\\).</p><p>~TheRealMee</p>",
+      "answer": "C"
+    },
+    "23": {
+      "problem": "<p>If two dice are tossed, the probability that the product of the numbers showing on the tops of the dice is greater than 10 is</p><p>\\(\\text{(A)}\\ \\frac{3}{7}\\qquad\\text{(B)}\\ \\frac{17}{36}\\qquad\\text{(C)}\\ \\frac{1}{2}\\qquad\\text{(D)}\\ \\frac{5}{8}\\qquad\\text{(E)}\\ \\frac{11}{12}\\)</p>",
+      "solutions": "<p>When the first dice is \\(1\\), there are no possibilities for the second dice.</p><p>When the first dice is \\(2\\), the second dice can be \\(6\\), giving one possibility.</p><p>When the first dice is \\(3\\), the second dice can be \\(4,5,6\\), giving three possibilities.</p><p>When the first dice is \\(4\\), the second dice can be \\(3,4,5,6\\), giving four possibilities.</p><p>When the first dice is \\(5\\), the second dice can be \\(3,4,5,6\\), giving four possibilities.</p><p>When the first dice is \\(6\\), the second dice can be \\(2,3,4,5,6\\), giving five possibilities.</p><p>The total number of ways for the product to greater than 10 is \\(1+3+4+4+5=17\\) and the total number of possibilities is \\((6)(6)=36\\), yielding a probability of \\(\\boxed{\\text{(B)}\\ \\frac{17}{36}}\\).</p>",
+      "answer": "B"
+    },
+    "24": {
+      "problem": "<p>Four circles of radius \\(3\\) are arranged as shown.  Their centers are the vertices of a square.  The area of the shaded region is closest to</p><p><img class=\"latexcenter\" src=\"/data/aops/1992_AJHSME/24-fig1.png\" width=\"504\" alt=\"\"></p><p>\\(\\text{(A)}\\ 7.7 \\qquad \\text{(B)}\\ 12.1 \\qquad \\text{(C)}\\ 17.2 \\qquad \\text{(D)}\\ 18 \\qquad \\text{(E)}\\ 27\\)</p>",
+      "solutions": "<p>The square has side length \\(6\\), so its area is \\(36\\).</p><p>The unshaded region inside the square consists of \\(4\\) quarter-circles of radius \\(3\\), so it has the same area as a circle of radius \\(3\\), or \\(9\\pi\\).</p><p>Therefore, the shaded area is \\(36 - 9\\pi \\approx 36 - 9 (3.14) = 7.74\\), which is closest to \\(\\boxed{\\textbf{(A)}\\ 7.7}\\).</p>",
+      "answer": "A"
+    },
+    "25": {
+      "problem": "<p>One half of the water is poured out of a full container.  Then one third of the remainder is poured out.  Continue the process: one fourth of the remainder for the third pouring, one fifth of the remainder for the fourth pouring, etc.  After how many pourings does exactly one tenth of the original water remain?</p><p>\\(\\text{(A)}\\ 6 \\qquad \\text{(B)}\\ 7 \\qquad \\text{(C)}\\ 8 \\qquad \\text{(D)}\\ 9 \\qquad \\text{(E)}\\ 10\\)</p>",
+      "solutions": "<p>1)Model the amount left in the container as follows:</p><p>After the first pour \\(\\frac12\\) remains, after the second \\(\\frac12 \\times \\frac23\\) remains, etc.</p><p>This becomes the product \\(\\frac12 \\times \\frac13 \\times \\frac34 \\times \\cdots \\times \\frac{9}{10}\\).</p><p>Note that the terms cancel out leaving \\(\\frac{1}{10}\\).</p><p>Now all that remains is to count the number of terms or pourings, as the numerators form an arithmetic sequence with a common difference of 1 and endpoints (1,9), the number of pourings is \\(\\boxed{\\text{(D)}\\ 9}\\).</p>",
+      "answer": "D"
+    }
+  }
+}

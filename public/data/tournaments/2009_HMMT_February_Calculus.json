@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Calculus",
+  "year": 2009,
+  "name": "Individual Round: Calculus Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2009/feb/calc/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f\\) be a differentiable real-valued function defined on the positive real numbers. The tangent lines to the graph of \\(f\\) always meet the \\(y\\)-axis 1 unit lower than where they meet the function. If \\(f(1) = 0\\), what is \\(f(2)\\)?</p>",
+      "solutions": "<p>The tangent line to \\(f\\) at \\(x\\) meets the \\(y\\)-axis at \\(f(x) - 1\\) for any \\(x\\), so the slope of the tangent line is \\(f'(x) = \\frac{1}{x}\\), and so \\(f(x) = \\ln(x) + C\\) for some \\(a\\). Since \\(f(1) = 0\\), we have \\(C = 0\\), and so \\(f(x) = \\ln(x)\\). Thus \\(f(2) = \\ln(2)\\).</p>",
+      "answer": "\\ln 2"
+    },
+    "2": {
+      "problem": "<p>The differentiable function \\(F: \\mathbb{R} \\to \\mathbb{R}\\) satisfies \\(F(0) = -1\\) and \\[\\frac{d}{dx}F(x) = \\sin(\\sin(\\sin(\\sin(x)))) \\cdot \\cos(\\sin(\\sin(\\sin(x)))) \\cdot \\cos(\\sin(\\sin(x))) \\cdot \\cos(\\sin(x)) \\cdot \\cos(x).\\]</p><p>Find \\(F(x)\\) as a function of \\(x\\).</p>",
+      "solutions": "<p>Substituting \\(u = \\sin(\\sin(\\sin(x)))\\), we find \\[F(x) = \\int \\sin(u)\\,du = -\\cos(u) + C.\\]</p><p>for some \\(C\\). Since \\(F(0) = 1\\) we find \\(C = 0\\).</p>",
+      "answer": "-\\cos(\\sin(\\sin(\\sin(x))))"
+    },
+    "3": {
+      "problem": "<p>Compute \\(e^A\\) where \\(A\\) is defined as \\[\\int_{3/4}^{4/3} \\frac{2x^2+x+1}{x^3+x^2+x+1}\\,dx.\\]</p>",
+      "solutions": "<p><b>Solution 1.</b> We can use partial fractions to decompose the integrand to \\(\\frac{1}{x+1} + \\frac{x}{x^2+1}\\), and then integrate the addends separately by substituting \\(u = x+1\\) for the former and \\(u = x^2+1\\) for latter, to obtain \\[\\ln(x+1) + \\frac{1}{2}\\ln(x^2+1)\\Big|_{3/4}^{4/3} = \\ln((x+1)\\sqrt{x^2+1})\\Big|_{3/4}^{4/3} = \\ln\\frac{16}{9}.\\]</p><p>Thus \\(e^A = 16/9\\).</p><p><b>Alternate solution.</b> Substituting \\(u = 1/x\\), we find \\[A = \\int_{4/3}^{3/4} \\frac{2u+u^2+u^3}{1+u+u^2+u^3}\\left(-\\frac{1}{u^2}\\right)du = \\int_{3/4}^{4/3} \\frac{2/u+1+u}{1+u+u^2+u^3}du\\]</p><p>Adding this to the original integral, we find \\[2A = \\int_{3/4}^{4/3} \\frac{2/u+2+2u+2u^2}{1+u+u^2+u^3}du = \\int_{3/4}^{4/3} \\frac{2}{u}du\\]</p><p>Thus \\(A = \\ln\\frac{16}{9}\\) and \\(e^A = \\frac{16}{9}\\).</p>",
+      "answer": "\\frac{16}{9}"
+    },
+    "4": {
+      "problem": "<p>Let \\(P\\) be a fourth degree polynomial, with derivative \\(P'\\), such that \\(P(1) = P(3) = P(5) = P'(7) = 0\\). Find the real number \\(x \\ne 1, 3, 5\\) such that \\(P(x) = 0\\).</p>",
+      "solutions": "<p>Observe that 7 is not a root of \\(P\\). If \\(r_1, r_2, r_3, r_4\\) are the roots of \\(P\\), then \\(\\frac{P'(7)}{P(7)} = \\sum_i \\frac{1}{7-r_i} = 0\\). Thus \\(r_4 = 7 - \\left(\\sum_{i \\ne 4} \\frac{1}{7-r_i}\\right)^{-1} = 7 + \\left(\\frac{1}{6}+\\frac{1}{4}+\\frac{1}{2}\\right)^{-1} = 7 + 12/11 = 89/11\\).</p>",
+      "answer": "\\frac{89}{11}"
+    },
+    "5": {
+      "problem": "<p>Compute \\[\\lim_{h\\to 0} \\frac{\\sin\\left(\\frac{\\pi}{3}+4h\\right) - 4\\sin\\left(\\frac{\\pi}{3}+3h\\right) + 6\\sin\\left(\\frac{\\pi}{3}+2h\\right) - 4\\sin\\left(\\frac{\\pi}{3}+h\\right) + \\sin\\left(\\frac{\\pi}{3}\\right)}{h^4}.\\]</p>",
+      "solutions": "<p>The derivative of a function is defined as \\(f'(x) = \\lim_{h\\to 0} \\frac{f(x+h)-f(x)}{h}\\). Iterating this formula four times yields \\[f^{(4)}(x) = \\lim_{h\\to 0} \\frac{f(x+4h) - 4f(x+3h) + 6f(x+2h) - 4f(x+h) + f(x)}{h^4}.\\]</p><p>Substituting \\(f = \\sin\\) and \\(x = \\pi/3\\), the expression is equal to \\(\\sin^{(4)}(\\pi/3) = \\sin(\\pi/3) = \\frac{\\sqrt{3}}{2}\\).</p>",
+      "answer": "\\frac{\\sqrt{3}}{2}"
+    },
+    "6": {
+      "problem": "<p>Let \\(p_0(x), p_1(x), p_2(x), \\ldots\\) be polynomials such that \\(p_0(x) = x\\) and for all positive integers \\(n\\), \\(\\frac{d}{dx}p_n(x) = p_{n-1}(x)\\). Define the function \\(p(x): [0,\\infty) \\to \\mathbb{R}\\) by \\(p(x) = p_n(x)\\) for all \\(x \\in [n, n+1]\\). Given that \\(p(x)\\) is continuous on \\([0,\\infty)\\), compute \\[\\sum_{n=0}^{\\infty} p_n(2009).\\]</p>",
+      "solutions": "<p>By writing out the first few polynomials, one can guess and then show by induction that \\[p_n(x) = \\frac{1}{(n+1)!}(x+1)^{n+1} - \\frac{1}{n!}x^n.\\]</p><p>Thus the sum evaluates to \\(e^{2010} - e^{2009} - 1\\) by the series expansion of \\(e^x\\).</p>",
+      "answer": "e^{2010} - e^{2009} - 1"
+    },
+    "7": {
+      "problem": "<p>A line in the plane is called <i>strange</i> if it passes through \\((a,0)\\) and \\((0,10-a)\\) for some \\(a\\) in the interval \\([0,10]\\). A point in the plane is called <i>charming</i> if it lies in the first quadrant and also lies below some strange line. What is the area of the set of all charming points?</p>",
+      "solutions": "<p>The strange lines form an envelope (set of tangent lines) of a curve \\(f(x)\\), and we first find the equation for \\(f\\) on \\([0,10]\\). Assuming the derivative \\(f'\\) is continuous, the point of tangency of the line \\(\\ell\\) through \\((a,0)\\) and \\((0,b)\\) to \\(f\\) is the limit of the intersection points of this line with the lines \\(\\ell_\\epsilon\\) passing through \\((a+\\epsilon,0)\\) and \\((0,b-\\epsilon)\\) as \\(\\epsilon \\to 0\\). If these limits exist, then the derivative is indeed continuous and we can calculate the function from the points of tangency.</p><p>The intersection point of \\(\\ell\\) and \\(\\ell_\\epsilon\\) can be calculated to have \\(x\\)-coordinate \\(\\frac{a(a-\\epsilon)}{a+b}\\), so the tangent point of \\(\\ell\\) has \\(x\\)-coordinate \\(\\lim_{\\epsilon\\to 0} \\frac{a(a-\\epsilon)}{a+b} = \\frac{a^2}{a+b} = \\frac{a^2}{10}\\). Similarly, the \\(y\\)-coordinate is \\(\\frac{b^2}{10} = \\frac{(10-a)^2}{10}\\). Thus, solving for the \\(y\\) coordinate in terms of the \\(x\\) coordinate for \\(a \\in [0,10]\\), we find \\(f(x) = 10 - 2\\sqrt{10}\\sqrt{x}+x\\), and so the area of the set of charming points is \\[\\int_0^{10} \\left(10 - 2\\sqrt{10}\\sqrt{x} + x\\right)dx = 50/3.\\]</p>",
+      "answer": "\\frac{50}{3}"
+    },
+    "8": {
+      "problem": "<p>Compute \\[\\int_1^{\\sqrt{3}} x^{2x^2+1} + \\ln\\left(x^{2x^{2x^2+1}}\\right)\\,dx.\\]</p>",
+      "solutions": "<p>Using the fact that \\(x = e^{\\ln(x)}\\), we evaluate the integral as follows: \\[\\begin{aligned}\n\\int x^{2x^2+1} + \\ln\\left(x^{2x^{2x^2+1}}\\right)dx &amp;= \\int x^{2x^2+1} + x^{2x^2+1}\\ln(x^2)dx \\\\\n&amp;= \\int e^{\\ln(x)(2x^2+1)}(1+\\ln(x^2))dx \\\\\n&amp;= \\int xe^{x^2\\ln(x^2)}(1+\\ln(x^2))dx\n\\end{aligned}\\]</p><p>Noticing that the derivative of \\(x^2\\ln(x^2)\\) is \\(2x(1+\\ln(x^2))\\), it follows that the integral evaluates to \\[\\frac{1}{2}e^{x^2\\ln(x^2)} = \\frac{1}{2}x^{2x^2}.\\]</p><p>Evaluating this from 1 to \\(\\sqrt{3}\\) we obtain the answer.</p>",
+      "answer": "13"
+    },
+    "9": {
+      "problem": "<p>Let \\(\\mathcal{R}\\) be the region in the plane bounded by the graphs of \\(y = x\\) and \\(y = x^2\\). Compute the volume of the region formed by revolving \\(\\mathcal{R}\\) around the line \\(y = x\\).</p>",
+      "solutions": "<p>We integrate from 0 to 1 using the method of washers. Fix \\(d\\) between 0 and 1. Let the line \\(x = d\\) intersect the graph of \\(y = x^2\\) at \\(Q\\), and let the line \\(x = d\\) intersect the graph of \\(y = x\\) at \\(P\\). Then \\(P = (d,d)\\), and \\(Q = (d,d^2)\\). Now drop a perpendicular from \\(Q\\) to the line \\(y = x\\), and let \\(R\\) be the foot of this perpendicular. Because \\(PQR\\) is a \\(45-45-90\\) triangle, \\(QR = (d-d^2)/\\sqrt{2}\\). So the differential washer has radius of \\((d-d^2)/\\sqrt{2}\\) and a height of \\(\\sqrt{2}dx\\). So we integrate (from 0 to 1) the expression \\([(x-x^2)/\\sqrt{2}]^2\\sqrt{2}dx\\), and the answer follows.</p>",
+      "answer": "\\frac{\\sqrt{2}\\pi}{60}"
+    },
+    "10": {
+      "problem": "<p>Let \\(a\\) and \\(b\\) be real numbers satisfying \\(a &gt; b &gt; 0\\). Evaluate \\[\\int_0^{2\\pi} \\frac{1}{a+b\\cos(\\theta)}\\,d\\theta.\\]</p><p>Express your answer in terms of \\(a\\) and \\(b\\).</p>",
+      "solutions": "<p>Using the geometric series formula, we can expand the integral as follows: \\[\\begin{aligned}\n\\int_0^{2\\pi} \\frac{1}{a+b\\cos(\\theta)}d\\theta &amp;= \\frac{1}{a}\\int_0^{2\\pi} 1+\\frac{b}{a}\\cos(\\theta)+\\left(\\frac{b}{a}\\right)^2\\cos^2(\\theta)d\\theta \\\\\n&amp;= \\frac{1}{a}\\sum_{n=0}^{\\infty}\\int_0^{2\\pi} \\left(\\frac{b}{a}\\right)^n\\left(\\frac{e^{i\\theta}+e^{-i\\theta}}{2}\\right)^n d\\theta \\\\\n&amp;= \\frac{2\\pi}{a}\\sum_{n=0}^{\\infty}\\left(\\frac{b^2}{a^2}\\right)^n\\frac{\\binom{2n}{n}}{2^{2n}}\n\\end{aligned}\\]</p><p>To evaluate this sum, recall that \\(C_n = \\frac{1}{n+1}\\binom{2n}{n}\\) is the \\(n\\)th Catalan number. The generating function for the Catalan numbers is \\[\\sum_{n=0}^{\\infty} C_n x^n = \\frac{1-\\sqrt{1-4x}}{2x},\\]</p><p>and taking the derivative of \\(x\\) times this generating function yields \\(\\sum \\binom{2n}{n}x^n = \\frac{1}{\\sqrt{1-4x}}\\). Thus the integral evaluates to \\(\\frac{2\\pi}{\\sqrt{a^2-b^2}}\\), as desired.</p>",
+      "answer": "\\frac{2\\pi}{\\sqrt{a^2-b^2}}"
+    }
+  }
+}

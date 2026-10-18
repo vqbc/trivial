@@ -1,0 +1,23 @@
+{
+  "test": "BMT Analysis Tiebreaker",
+  "year": 2015,
+  "name": "Analysis Round Tiebreakers",
+  "url": "https://berkeley.mt/resources/archives/bmt-2015/AnaS2015Tb.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(S_n = 1 + 2 + \\ldots + n\\). Define \\[T_n = \\frac{S_2}{S_2 - 1} \\cdot \\frac{S_3}{S_3 - 1} \\cdot \\ldots \\cdot \\frac{S_n}{S_n - 1}.\\]</p><p>Find \\(T_{2015}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Compute \\[\\int_{-1}^{1} \\frac{x^2}{1 + 2015^x}\\, dx.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Let \\(a_1, a_2, \\ldots, a_k\\) be real numbers for some natural number \\(k\\). Find \\[\\lim_{n \\to \\infty} \\left( \\frac{(a_1)^n + (a_2)^n + \\ldots + (a_k)^n}{k} \\right)^{1/n}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

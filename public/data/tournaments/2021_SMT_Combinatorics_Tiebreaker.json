@@ -1,0 +1,23 @@
+{
+  "test": "SMT Combinatorics Tiebreaker",
+  "year": 2021,
+  "name": "Combinatorics Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2021/combo-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Five people each choose an integer between 1 and 3, inclusive. What is the probability that all 3 numbers are chosen by at least one of the five people?</p>",
+      "solutions": "<p>We use complementary counting and find how many cases there are where at least one number is not chosen. Call \\(E_n\\) the event where \\(n\\) is not chosen. Then, using the principle of inclusion and exclusion, \\(\\#(E_1 \\cup E_2 \\cup E_3) = \\#(E_1) + \\#(E_2) + \\#(E_3) - (\\#(E_1 \\cup E_2) + \\#(E_1 \\cup E_3) + \\#(E_2 \\cup E_3)) + \\#(E_1 + E_2 + E_3)\\). \\(\\#(E_1) = 2^5\\), since there are two numbers left over for the 5 people to choose and similarly, \\(\\#(E_1 \\cup E_2) = 1^5\\), and \\(\\#(E_1 \\cup E_2 \\cup E_3) = 0\\). Thus there are \\(3 * 2^5 - 3 = 93\\) ways that one of the 3 numbers is not selected. Our final answer is then</p><p>\\[P = 1 - \\frac{93}{3^5} = \\boxed{\\frac{50}{81}}.\\]</p>",
+      "answer": "\\frac{50}{81}"
+    },
+    "2": {
+      "problem": "<p>How many ordered quadruples \\((a, b, c, d)\\) satisfy \\(a+b+c+d = 4030\\) and \\(a, b, c, d \\in \\{-2020, -2019, \\ldots, -2010, 2010, 2011, \\ldots, 2020\\}\\)? \\(a\\), \\(b\\), \\(c\\), and \\(d\\) do not need to be distinct.</p>",
+      "solutions": "<p>Let \\(a = a_1 + a_2\\) where \\(a_1 \\in \\{-2020, 2010\\}\\), \\(a_2 \\in \\{0, 1, 2 \\ldots 10\\}\\). Write \\(b, c, d\\) similarly. Of \\(a_1, b_1, c_1, d_1\\), 3 must equal 2010 and 1 must equal \\(-2020\\). Thus there are 4 ways to assign values to \\(a_1, b_1, c_1, d_1\\). Then \\(a_2 + b_2 + c_2 + d_2 = 4030 - (a_1 + b_1 + c_1 + d_1) = 20\\). By sticks and stones, if there was no upper constraint on \\(a_2, b_2, c_2, d_2\\), there would be \\(\\binom{23}{3} = 1771\\) ways to assign values. We now subtract cases where one of the values is greater than 10. Note that we can only have one value greater than 10. WLOG let \\(a_2 \\ge 11\\). Consider \\(a_3 = a_2 - 11\\); we then want the number of integer solutions to \\(a_3 + b_2 + c_2 + d_2 = 9\\). There are then \\(\\binom{12}{3} = 220\\) ways. Thus there are a total of \\(1771 - 4 * 220 = 891\\) ways to assign values to \\(a_2, b_2, c_2, d_2\\). Then there are \\(891 * 4 = \\boxed{3564}\\) quadruples.</p>",
+      "answer": "3564"
+    },
+    "3": {
+      "problem": "<p>Adam flips a fair coin. He stops flipping when he flips the same face 2021 consecutive times. If \\(a^b - 1\\) is the expected number of flips, where \\(a\\) and \\(b\\) are positive integers and \\(a\\) is prime, find \\(a + b\\).</p>",
+      "solutions": "<p>Let us define \\(E(n)\\) as a state of \\(n\\) consecutive flips such that it defines the expected number of flips to reach 2021 consecutive results given \\(n\\) consecutive results. Given this definition, \\(E(0) = R\\).</p><p>\\[\\begin{aligned}\nE(2021) &amp;= 0 \\\\\nE(2020) &amp;= \\frac{1}{2}(1+E(2021)) + \\frac{1}{2}(1+E(1)) = (1 + \\frac{1}{2}E(1)) \\\\\nE(2019) &amp;= \\frac{1}{2}(1+E(2020)) + \\frac{1}{2}(1+E(1)) = \\frac{1}{2}E(2020) + (1 + \\frac{1}{2}E(1)) \\\\\n&amp;\\ \\ \\vdots \\\\\nE(1) &amp;= \\frac{1}{2}(1+E(2)) + \\frac{1}{2}(1+E(1)) = \\frac{1}{2}E(2) + (1 + \\frac{1}{2}E(1)) \\\\\nE(0) &amp;= 1 + E(1)\n\\end{aligned}\\]</p><p>We know that, for \\(i \\in \\{1, 2, 3, \\ldots, 2020\\}\\), \\(E(i) = \\frac{1}{2}E(i+1) + (1 + \\frac{1}{2}E(1))\\) holds. Using the fact that \\(E(i+1) = \\frac{1}{2}E(i+2) + (1 + \\frac{1}{2}E(1))\\) holds for \\(0 \\le i \\le 2020\\), we have the following:</p><p>\\[E(i+1) - E(i) = (\\frac{1}{2}E(i+2) + (1 + \\frac{1}{2}E(1))) - (\\frac{1}{2}E(i+1) + (1 + \\frac{1}{2}E(1))) = \\frac{1}{2}(E(i+2) - E(i+1))\\]</p><p>The common difference is geometric, so given \\(E(2020) - E(2021) = (1 + \\frac{1}{2}E(1)) - 0 = 1 + \\frac{1}{2}E(1)\\), we solve for \\(E(1)\\):</p><p>\\[E(1) = E(1) - E(2021) = (E(1) - E(2)) + (E(2) - E(3)) + \\ldots + (E(2020) - E(2021))\\] \\[= (1 + \\frac{1}{2} + \\frac{1}{4} + \\ldots + (\\frac{1}{2})^{2019})(1 + \\frac{1}{2}E(1)) = (2 - (\\frac{1}{2})^{2019})(1 + \\frac{1}{2}E(1))\\]</p><p>Solving for \\(E(1)\\), we have</p><p>\\[(\\frac{1}{2})^{2020}E(1) = 2 - (\\frac{1}{2})^{2019} \\implies E(1) = 2^{2021} - 2.\\]</p><p>Then, \\(E(0) = 1 + E(1) = 2^{2021} - 1\\). The answer is \\(2 + 2021 = \\boxed{2023}\\).</p>",
+      "answer": "2023"
+    }
+  }
+}

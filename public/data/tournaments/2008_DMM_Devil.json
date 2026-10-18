@@ -1,0 +1,83 @@
+{
+  "test": "DMM Devil",
+  "year": 2008,
+  "name": "Devil Round",
+  "url": "https://dukemathmeet.org/2008/devil.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Twelve people, three of whom are in the Mafia and one of whom is a police inspector, randomly sit around a circular table. What is the probability that the inspector ends up sitting next to at least one of the Mafia?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{28}{55}"
+    },
+    "2": {
+      "problem": "<p>Of the positive integers between 1 and 1000, inclusive, how many of them contain neither the digit “4” nor the digit “7”?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "512"
+    },
+    "3": {
+      "problem": "<p>You are really bored one day and decide to invent a variation of chess. In your variation, you create a new piece called the “krook,” which, on any given turn, can move either one square up or down, or one square left or right. If you have a krook at the bottom-left corner of the chessboard, how many different ways can the krook reach the top-right corner of the chessboard in exactly 17 moves?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "4": {
+      "problem": "<p>Let \\(p\\) be a prime number. What is the smallest positive integer that has exactly \\(p\\) different positive integer divisors? Write your answer as a formula in terms of \\(p\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2^{p-1}"
+    },
+    "5": {
+      "problem": "<p>You make the square \\(\\{(x,y) \\mid -5 \\le x \\le 5, -5 \\le y \\le 5\\}\\) into a dartboard as follows:</p><ul style=\"list-style-type: none\"><li>(i) If a player throws a dart and its distance from the origin is less than one unit, then the player gets 10 points.</li><li>(ii) If a player throws a dart and its distance from the origin is between one and three units, inclusive, then the player gets awarded a number of points equal to the number of the quadrant that the dart landed on. (The player receives no points for a dart that lands on the coordinate axes in this case.)</li><li>(iii) If a player throws a dart and its distance from the origin is greater than three units, then the player gets 0 points.</li></ul><p>If a person throws three darts and each hits the board randomly (i.e with uniform distribution), what is the expected value of the score that they will receive?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{9}{10}\\pi"
+    },
+    "6": {
+      "problem": "<p>Teddy works at Please Forget Meat, a contemporary vegetarian pizza chain in the city of Gridtown, as a deliveryman. Please Forget Meat (PFM) has two convenient locations, marked with “X” and “Y” on the stret map of Gridtown shown below. Teddy, who is currently at \\(X\\), needs to deliver an eggplant pizza to \\(\\nabla\\) en route to \\(Y\\), where he is urgently needed. There is currently construction taking place at \\(A\\), \\(B\\), and \\(C\\), so those three intersections will be completely impassable. How many ways can Teddy get from \\(X\\) to \\(Y\\) while staying on the roads (Traffic tickets are expensive!), not taking paths that are longer than necessary (Gas is expensive!), and that let him pass through \\(\\nabla\\) (Losing a job is expensive!)?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2008_DMM_Devil/6-fig1.png\" width=\"267\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1144"
+    },
+    "7": {
+      "problem": "<p>\\(x\\), \\(y\\), and \\(z\\) are positive real numbers that satisfy the following three equations: \\[x + \\frac{1}{y} = 4 \\qquad y + \\frac{1}{z} = 1 \\qquad z + \\frac{1}{x} = \\frac{7}{3}.\\]</p><p>Compute \\(xyz\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1"
+    },
+    "8": {
+      "problem": "<p>Alan, Ben, and Catherine will all start working at the Duke University Math Department on January 1st, 2009. Alan’s work schedule is on a four-day cycle; he starts by working for three days and then takes one day off. Ben’s work schedule is on a seven-day cycle; he starts by working for five days and then takes two days off. Catherine’s work schedule is on a ten-day cycle; she starts by working for seven days and then takes three days off. On how many days in 2009 will none of the three be working?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "11"
+    },
+    "9": {
+      "problem": "<p>\\(x\\) and \\(y\\) are complex numbers such that \\(x^3 + y^3 = -16\\) and \\((x+y)^2 = xy\\). What is the value of \\(|x+y|\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "10": {
+      "problem": "<p>Call a four-digit number “well-meaning” if (1) its second digit is the mean of its first and its third digits and (2) its third digit is the mean of its second and fourth digits. How many well-meaning four-digit numbers are there?</p><p>(For a four-digit number, its first digit is its thousands [leftmost] digit and its fourth digit is its units [rightmost] digit. Also, four-digit numbers cannot have “0” as their first digit.)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "30"
+    },
+    "11": {
+      "problem": "<p>Suppose that \\(\\theta\\) is a real number such that \\(\\sum_{k=2}^{\\infty} \\sin\\left(2^k\\theta\\right)\\) is well-defined and equal to the real number \\(a\\). Compute: \\[\\sum_{k=0}^{\\infty} \\left( \\cot^3\\left(2^k\\theta\\right) - \\cot\\left(2^k\\theta\\right) \\right) \\sin^4\\left(2^k\\theta\\right).\\]</p><p>Write your answer as a formula in terms of \\(a\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{a}{4}"
+    },
+    "12": {
+      "problem": "<p>You have 13 loaded coins; the probability that they come up as heads are \\(\\cos\\left(\\frac{0\\pi}{24}\\right)\\), \\(\\cos\\left(\\frac{1\\pi}{24}\\right)\\), \\(\\cos\\left(\\frac{2\\pi}{24}\\right)\\), \\(\\ldots\\), \\(\\cos\\left(\\frac{11\\pi}{24}\\right)\\), and \\(\\cos\\left(\\frac{12\\pi}{24}\\right)\\), respectively. You throw all 13 of these coins in the air at once. What is the probability that an even number of them come up as heads?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "13": {
+      "problem": "<p>Three married couples sit down on a long bench together in random order. What is the probability that none of the husbands sit next to their respective wives?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "14": {
+      "problem": "<p>What is the smallest positive integer that has at least 25 different positive divisors?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "720"
+    },
+    "15": {
+      "problem": "<p>Let \\(A_1\\) be any three-element set, \\(A_2 = \\{\\varnothing\\}\\), and \\(A_3 = \\varnothing\\). For each \\(i \\in \\{1, 2, 3\\}\\), let:</p><ul style=\"list-style-type: none\"><li>(i) \\(B_i = \\{\\varnothing, A_i\\}\\),</li><li>(ii) \\(C_i\\) be the set of all subsets of \\(B_i\\),</li><li>(iii) \\(D_i = B_i \\cup C_i\\), and</li><li>(iv) \\(k_i\\) be the number of different elements in \\(D_i\\).</li></ul><p>Compute \\(k_1 k_2 k_3\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "40"
+    }
+  }
+}

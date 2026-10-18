@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 1",
+  "year": 2008,
+  "name": "General 1",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2008/feb/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(ABCD\\) be a unit square (that is, the labels \\(A, B, C, D\\) appear in that order around the square). Let \\(X\\) be a point outside of the square such that the distance from \\(X\\) to \\(AC\\) is equal to the distance from \\(X\\) to \\(BD\\), and also that \\(AX = \\frac{\\sqrt{2}}{2}\\). Determine the value of \\(CX^2\\).</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2008_HMMT_February_General_1/1-fig1.png\" width=\"428\" alt=\"\"></p><p>Since \\(X\\) is equidistant from \\(AC\\) and \\(BD\\), it must lie on either the perpendicular bisector of \\(AB\\) or the perpendicular bisector of \\(AD\\). It turns out that the two cases yield the same answer, so we will just assume the first case. Let \\(M\\) be the midpoint of \\(AB\\) and \\(N\\) the midpoint of \\(CD\\). Then \\(XM\\) is perpendicular to \\(AB\\), so \\(XM = \\frac{1}{2}\\) and thus \\(XN = \\frac{3}{2}\\), \\(NC = \\frac{1}{2}\\). By the Pythagorean Theorem we find \\(XC = \\frac{\\sqrt{10}}{2}\\) and the answer follows.</p>",
+      "answer": "\\frac{5}{2}"
+    },
+    "2": {
+      "problem": "<p>Find the smallest positive integer \\(n\\) such that \\(107n\\) has the same last two digits as \\(n\\).</p>",
+      "solutions": "<p>The two numbers have the same last two digits if and only if \\(100\\) divides their difference \\(106n\\), which happens if and only if \\(50\\) divides \\(n\\).</p>",
+      "answer": "50"
+    },
+    "3": {
+      "problem": "<p>There are 5 dogs, 4 cats, and 7 bowls of milk at an animal gathering. Dogs and cats are distinguishable, but all bowls of milk are the same. In how many ways can every dog and cat be paired with either a member of the other species or a bowl of milk such that all the bowls of milk are taken?</p>",
+      "solutions": "<p>Since there are \\(9\\) dogs and cats combined and \\(7\\) bowls of milk, there can only be one dog-cat pair, and all the other pairs must contain a bowl of milk. There are \\(4 \\times 5\\) ways of selecting the dog-cat pair, and only one way of picking the other pairs, since the bowls of milk are indistinguishable, so the answer is \\(4 \\times 5 = 20\\).</p>",
+      "answer": "20"
+    },
+    "4": {
+      "problem": "<p>Positive real numbers \\(x, y\\) satisfy the equations \\(x^2 + y^2 = 1\\) and \\(x^4 + y^4 = \\frac{17}{18}\\). Find \\(xy\\).</p>",
+      "solutions": "<p>Same as Algebra Test problem 1.</p>",
+      "answer": "\\frac{1}{6}"
+    },
+    "5": {
+      "problem": "<p>The function \\(f\\) satisfies \\[f(x) + f(2x+y) + 5xy = f(3x-y) + 2x^2 + 1\\] for all real numbers \\(x, y\\). Determine the value of \\(f(10)\\).</p>",
+      "solutions": "<p>Same as Algebra Test problem 4.</p>",
+      "answer": "-49"
+    },
+    "6": {
+      "problem": "<p>In a triangle \\(ABC\\), take point \\(D\\) on \\(BC\\) such that \\(DB = 14, DA = 13, DC = 4\\), and the circumcircle of \\(ADB\\) is congruent to the circumcircle of \\(ADC\\). What is the area of triangle \\(ABC\\)?</p>",
+      "solutions": "<p>Same as Geometry Test problem 4.</p>",
+      "answer": "108"
+    },
+    "7": {
+      "problem": "<p>The equation \\(x^3 - 9x^2 + 8x + 2 = 0\\) has three real roots \\(p, q, r\\). Find \\(\\frac{1}{p^2} + \\frac{1}{q^2} + \\frac{1}{r^2}\\).</p>",
+      "solutions": "<p>From Vieta’s relations, we have \\(p+q+r=9\\), \\(pq+qr+pr=8\\) and \\(pqr=-2\\). So \\[\\frac{1}{p^2} + \\frac{1}{q^2} + \\frac{1}{r^2} = \\frac{(pq+qr+rp)^2 - 2(p+q+r)(pqr)}{(pqr)^2} = \\frac{8^2 - 2\\cdot 9 \\cdot (-2)}{(-2)^2} = 25.\\]</p>",
+      "answer": "25"
+    },
+    "8": {
+      "problem": "<p>Let \\(S\\) be the smallest subset of the integers with the property that \\(0 \\in S\\) and for any \\(x \\in S\\), we have \\(3x \\in S\\) and \\(3x + 1 \\in S\\). Determine the number of positive integers in \\(S\\) less than 2008.</p>",
+      "solutions": "<p>Same as Combinatorics Test problem 5.</p>",
+      "answer": "127"
+    },
+    "9": {
+      "problem": "<p>A <i>Sudoku matrix</i> is defined as a \\(9\\times 9\\) array with entries from \\(\\{1, 2, \\ldots, 9\\}\\) and with the constraint that each row, each column, and each of the nine \\(3\\times 3\\) boxes that tile the array contains each digit from 1 to 9 exactly once. A Sudoku matrix is chosen at random (so that every Sudoku matrix has equal probability of being chosen). We know two of squares in this matrix, as shown. What is the probability that the square marked by ? contains the digit 3?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2008_HMMT_February_General_1/9-fig1.png\" width=\"174\" alt=\"\"></p>",
+      "solutions": "<p>Same as Combinatorics Test problem 6.</p>",
+      "answer": "\\frac{2}{21}"
+    },
+    "10": {
+      "problem": "<p>Let \\(ABC\\) be an equilateral triangle with side length 2, and let \\(\\Gamma\\) be a circle with radius \\(\\frac{1}{2}\\) centered at the center of the equilateral triangle. Determine the length of the shortest path that starts somewhere on \\(\\Gamma\\), visits all three sides of \\(ABC\\), and ends somewhere on \\(\\Gamma\\) (not necessarily at the starting point). Express your answer in the form of \\(\\sqrt{p} - q\\), where \\(p\\) and \\(q\\) are rational numbers written as reduced fractions.</p>",
+      "solutions": "<p>Same as Geometry Test problem 8.</p>",
+      "answer": "\\sqrt{\\frac{28}{3}} - 1"
+    }
+  }
+}

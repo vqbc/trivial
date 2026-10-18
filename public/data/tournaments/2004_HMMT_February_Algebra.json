@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Algebra",
+  "year": 2004,
+  "name": "Individual Round: Algebra Subject Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2004/feb/alg/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>How many ordered pairs of integers \\((a,b)\\) satisfy all of the following inequalities? \\[\\begin{aligned}\na^2+b^2 &amp;&lt; 16\\\\\na^2+b^2 &amp;&lt; 8a\\\\\na^2+b^2 &amp;&lt; 8b\n\\end{aligned}\\]</p>",
+      "solutions": "<p>This is easiest to see by simply graphing the inequalities. They correspond to the (strict) interiors of circles of radius 4 and centers at \\((0,0), (4,0), (0,4)\\), respectively. So we can see that there are 6 lattice points in their intersection (circled in the figure).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2004_HMMT_February_Algebra/1-fig1.png\" width=\"193\" alt=\"\"></p>",
+      "answer": "6"
+    },
+    "2": {
+      "problem": "<p>Find the largest number \\(n\\) such that \\((2004!)!\\) is divisible by \\(((n!)!)!\\).</p>",
+      "solutions": "<p>For positive integers \\(a, b\\), we have \\[a! \\mid b! \\iff a! \\le b! \\iff a \\le b.\\] Thus, \\[((n!)!)! \\mid (2004!)! \\iff (n!)! \\le 2004! \\iff n! \\le 2004 \\iff n \\le 6.\\]</p>",
+      "answer": "6"
+    },
+    "3": {
+      "problem": "<p>Compute: \\[\\left\\lfloor \\frac{2005^3}{2003\\cdot 2004} - \\frac{2003^3}{2004\\cdot 2005} \\right\\rfloor.\\]</p>",
+      "solutions": "<p>Let \\(x=2004\\). Then the expression inside the floor brackets is \\[\\frac{(x+1)^3}{(x-1)x} - \\frac{(x-1)^3}{x(x+1)} = \\frac{(x+1)^4-(x-1)^4}{(x-1)x(x+1)} = \\frac{8x^3+8x}{x^3-x} = 8 + \\frac{16x}{x^3-x}.\\] Since \\(x\\) is certainly large enough that \\(0 &lt; 16x/(x^3-x) &lt; 1\\), the answer is 8.</p>",
+      "answer": "8"
+    },
+    "4": {
+      "problem": "<p>Evaluate the sum \\[\\frac{1}{2\\lfloor\\sqrt{1}\\rfloor+1} + \\frac{1}{2\\lfloor\\sqrt{2}\\rfloor+1} + \\frac{1}{2\\lfloor\\sqrt{3}\\rfloor+1} + \\cdots + \\frac{1}{2\\lfloor\\sqrt{100}\\rfloor+1}.\\]</p>",
+      "solutions": "<p>The first three terms all equal \\(1/3\\), then the next five all equal \\(1/5\\); more generally, for each \\(a=1,2,\\ldots,9\\), the terms \\(1/(2\\lfloor\\sqrt{a^2}\\rfloor+1)\\) to \\(1/(2\\lfloor\\sqrt{a^2+2a}\\rfloor+1)\\) all equal \\(1/(2a+1)\\), and there are \\(2a+1\\) such terms. Thus our terms can be arranged into 9 groups, each with sum 1, and only the last term \\(1/(2\\lfloor\\sqrt{100}\\rfloor+1)\\) remains, so the answer is \\(9+1/21 = 190/21\\).</p>",
+      "answer": "\\frac{190}{21}"
+    },
+    "5": {
+      "problem": "<p>There exists a positive real number \\(x\\) such that \\(\\cos(\\tan^{-1}(x)) = x\\). Find the value of \\(x^2\\).</p>",
+      "solutions": "<p>Draw a right triangle with legs \\(1, x\\); then the angle \\(\\theta\\) opposite \\(x\\) is \\(\\tan^{-1} x\\), and we can compute \\(\\cos(\\theta) = 1/\\sqrt{x^2+1}\\). Thus, we only need to solve \\(x = 1/\\sqrt{x^2+1}\\). This is equivalent to \\(x\\sqrt{x^2+1} = 1\\). Square both sides to get \\(x^4 + x^2 = 1 \\Rightarrow x^4+x^2-1=0\\). Use the quadratic formula to get the solution \\(x^2 = (-1+\\sqrt{5})/2\\) (unique since \\(x^2\\) must be positive).</p>",
+      "answer": "\\frac{-1+\\sqrt{5}}{2}"
+    },
+    "6": {
+      "problem": "<p>Find all real solutions to \\(x^4 + (2-x)^4 = 34\\).</p>",
+      "solutions": "<p>Let \\(y=2-x\\), so \\(x+y=2\\) and \\(x^4+y^4=34\\). We know \\[(x+y)^4 = x^4+4x^3y+6x^2y^2+4xy^3+y^4 = x^4+y^4+2xy(2x^2+2y^2+3xy).\\] Moreover, \\(x^2+y^2 = (x+y)^2-2xy\\), so the preceding equation becomes \\(2^4 = 34+2xy(2\\cdot 2^2-xy)\\), or \\((xy)^2-8xy-9=0\\). Hence \\(xy = 9\\) or \\(-1\\). Solving \\(xy=9, x+y=2\\) produces complex solutions, and solving \\(xy=-1, x+y=2\\) produces \\((x,y) = (1+\\sqrt{2}, 1-\\sqrt{2})\\) or \\((1-\\sqrt{2}, 1+\\sqrt{2})\\). Thus, \\(x = 1\\pm\\sqrt{2}\\).</p>",
+      "answer": "1\\pm\\sqrt{2}"
+    },
+    "7": {
+      "problem": "<p>If \\(x,y,k\\) are positive reals such that \\[3 = k^2\\left(\\frac{x^2}{y^2}+\\frac{y^2}{x^2}\\right) + k\\left(\\frac{x}{y}+\\frac{y}{x}\\right),\\] find the maximum possible value of \\(k\\).</p>",
+      "solutions": "<p>We have \\(3 = k^2(x^2/y^2+y^2/x^2)+k(x/y+y/x) \\ge 2k^2+2k\\), hence \\(7 \\ge 4k^2+4k+1 = (2k+1)^2\\), hence \\(k \\le (\\sqrt{7}-1)/2\\). Obviously \\(k\\) can assume this value, if we let \\(x=y=1\\).</p>",
+      "answer": "\\frac{-1+\\sqrt{7}}{2}"
+    },
+    "8": {
+      "problem": "<p>Let \\(x\\) be a real number such that \\(x^3+4x=8\\). Determine the value of \\(x^7+64x^2\\).</p>",
+      "solutions": "<p>For any integer \\(n \\ge 0\\), the given implies \\(x^{n+3} = -4x^{n+1}+8x^n\\), so we can rewrite any such power of \\(x\\) in terms of lower powers. Carrying out this process iteratively gives \\[\\begin{aligned}\nx^7 &amp;= -4x^5+8x^4\\\\\n&amp;= 8x^4+16x^3-32x^2\\\\\n&amp;= 16x^3-64x^2+64x\\\\\n&amp;= -64x^2+128.\n\\end{aligned}\\] Thus, our answer is 128.</p>",
+      "answer": "128"
+    },
+    "9": {
+      "problem": "<p>A sequence of positive integers is defined by \\(a_0=1\\) and \\(a_{n+1}=a_n^2+1\\) for each \\(n \\ge 0\\). Find \\(\\gcd(a_{999}, a_{2004})\\).</p>",
+      "solutions": "<p>If \\(d\\) is the relevant greatest common divisor, then \\(a_{1000} = a_{999}^2+1 \\equiv 1 = a_0 \\pmod{d}\\), which implies (by induction) that the sequence is periodic modulo \\(d\\), with period 1000. In particular, \\(a_4 \\equiv a_{2004} \\equiv 0 \\pmod{d}\\). So \\(d\\) must divide \\(a_4\\). Conversely, we can see that \\(a_5 = a_4^2+1 \\equiv 1 = a_0\\) modulo \\(a_4\\), so (again by induction) the sequence is periodic modulo \\(a_4\\) with period 5, and hence \\(a_{999}, a_{2004}\\) are indeed both divisible by \\(a_4\\). So the answer is \\(a_4\\), which we can compute directly; it is 677.</p>",
+      "answer": "677"
+    },
+    "10": {
+      "problem": "<p>There exists a polynomial \\(P\\) of degree 5 with the following property: if \\(z\\) is a complex number such that \\(z^5+2004z=1\\), then \\(P(z^2)=0\\). Calculate the quotient \\(P(1)/P(-1)\\).</p>",
+      "solutions": "<p>Let \\(z_1,\\ldots,z_5\\) be the roots of \\(Q(z)=z^5+2004z-1\\). We can check these are distinct (by using the fact that there’s one in a small neighborhood of each root of \\(z^5+2004z\\), or by noting that \\(Q(z)\\) is relatively prime to its derivative). And certainly none of the roots of \\(Q\\) is the negative of another, since \\(z^5+2004z=1\\) implies \\((-z)^5+2004(-z)=-1\\), so their squares are distinct as well. Then, \\(z_1^2,\\ldots,z_5^2\\) are the roots of \\(P\\), so if we write \\(C\\) for the leading coefficient of \\(P\\), we have \\[\\begin{aligned}\n\\frac{P(1)}{P(-1)} &amp;= \\frac{C(1-z_1^2)\\cdots(1-z_5^2)}{C(-1-z_1^2)\\cdots(-1-z_5^2)}\\\\\n&amp;= \\frac{[(1-z_1)\\cdots(1-z_5)]\\cdot[(1+z_1)\\cdots(1+z_5)]}{[(i-z_1)\\cdots(i-z_5)]\\cdot[(i+z_1)\\cdots(i+z_5)]}\\\\\n&amp;= \\frac{[(1-z_1)\\cdots(1-z_5)]\\cdot[(-1-z_1)\\cdots(-1-z_5)]}{[(i-z_1)\\cdots(i-z_5)]\\cdot[(-i-z_1)\\cdots(-i-z_5)]}\\\\\n&amp;= \\frac{(1^5+2004\\cdot 1-1)(-1^5+2004\\cdot(-1)-1)}{(i^5+2004\\cdot i-1)(-i^5+2004\\cdot(-i)-1)}\\\\\n&amp;= \\frac{(2004)(-2006)}{(-1+2005i)(-1-2005i)}\\\\\n&amp;= -\\frac{2005^2-1}{2005^2+1}\\\\\n&amp;= -4020024/4020026 = -2010012/2010013.\n\\end{aligned}\\]</p><p><b>Alternative Solution.</b> In fact, we can construct the polynomial \\(P\\) explicitly (up to multiplication by a constant). We write \\(P(z^2)\\) as a polynomial in \\(z\\); it must use only even powers of \\(z\\) and be divisible by \\(z^5+2004z-1\\), so we are inspired to try a difference of squares, \\[P(z^2) = (z^5+2004z-1)(z^5+2004z+1) = (z^5+2004z)^2-1^2 = z^2(z^4+2004)^2-1,\\] giving \\[P(z) = z(z^2+2004)^2-1.\\] Now plugging in \\(z=1\\) and \\(z=-1\\) rapidly gives \\((2005^2-1)/(-2005^2-1)\\) as before.</p>",
+      "answer": "-\\frac{2010012}{2010013}"
+    }
+  }
+}

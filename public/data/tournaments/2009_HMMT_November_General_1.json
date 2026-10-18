@@ -1,0 +1,58 @@
+{
+  "test": "HMMT November General 1",
+  "year": 2009,
+  "name": "General Test Part 1",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2009/nov/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Evaluate the sum: \\[11^2 - 1^2 + 12^2 - 2^2 + 13^2 - 3^2 + \\dots + 20^2 - 10^2.\\]</p>",
+      "solutions": "<p>This sum can be written as \\(\\sum_{a=1}^{10} (a + 10)^2 - a^2 = \\sum_{a=1}^{10} 10(2a + 10) = 10 * 10 * 11 + 10 * 10 * 10 = 2100\\).</p>",
+      "answer": "2100"
+    },
+    "2": {
+      "problem": "<p>Given that \\(a + b + c = 5\\) and that \\(1 \\le a, b, c \\le 2\\), what is the minimum possible value of \\(\\frac{1}{a+b} + \\frac{1}{b+c}\\)?</p>",
+      "solutions": "<p>If \\(a &gt; 1\\) and \\(b &lt; 2\\), we can decrease the sum by decreasing \\(a\\) and increasing \\(b\\). You can follow a similar procedure if \\(c &gt; 1\\) and \\(b &lt; 2\\). Therefore, the sum is minimized when \\(b = 2\\). We can then cross-multiply the two fractions and see that we are trying to minimize \\(\\frac{a+c+4}{(a+2)(c+2)} = \\frac{7}{(a+2)(c+2)}\\). The product of two numbers with a fixed sum is maximized when those two numbers are equal, so \\(\\frac{7}{(a+2)(c+2)}\\) is minimized for \\(a = c = \\frac{3}{2}\\), which gives us an answer of \\(\\frac{4}{7}\\).</p>",
+      "answer": "\\frac{4}{7}"
+    },
+    "3": {
+      "problem": "<p>What is the period of the function \\(f(x) = \\cos(\\cos(x))\\)?</p>",
+      "solutions": "<p>Since \\(f(x)\\) never equals \\(\\cos(1)\\) for \\(x \\in (0, \\pi)\\) but \\(f(0) = \\cos(1)\\), the period is at least \\(\\pi\\). However, \\(\\cos(x + \\pi) = -\\cos(x)\\), so \\(\\cos(\\cos(x + \\pi)) = \\cos(\\cos(x))\\).</p>",
+      "answer": "\\pi"
+    },
+    "4": {
+      "problem": "<p>How many subsets \\(A\\) of \\(\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}\\) have the property that no two elements of \\(A\\) sum to 11?</p>",
+      "solutions": "<p>For each element listed, there is exactly one other element such that the two elements sum to 11. Thus, we can list all the 10 numbers above as 5 pairs of numbers, such that each pair sums to 11. The problem then can be solved as follows: in any given subset with no two elements summing to 11, at most one element from each pair can be present. Thus, there are 3 ways in which each pair can contribute to a given subset (no element, the first element in the pair, or the second element in the pair). Since there are 5 pairs, the total number of ways to construct a subset with no two elements summing to 11 is \\(3^5 = 243\\).</p>",
+      "answer": "243"
+    },
+    "5": {
+      "problem": "<p>A polyhedron has faces that are all either triangles or squares. No two square faces share an edge, and no two triangular faces share an edge. What is the ratio of the number of triangular faces to the number of square faces?</p>",
+      "solutions": "<p>Let \\(s\\) be the number of square faces and \\(t\\) be the number of triangular faces. Every edge is adjacent to exactly one square face and one triangular face. Therefore, the number of edges is equal to \\(4s\\), and it is also equal to \\(3t\\). Thus \\(4s = 3t\\) and \\(\\frac{t}{s} = \\frac{4}{3}\\).</p>",
+      "answer": "\\frac{4}{3}"
+    },
+    "6": {
+      "problem": "<p>Find the maximum value of \\(x + y\\), given that \\(x^2 + y^2 - 3y - 1 = 0\\).</p>",
+      "solutions": "<p>We can rewrite \\(x^2 + y^2 - 3y - 1 = 0\\) as \\(x^2 + (y - \\frac{3}{2})^2 = \\frac{13}{4}\\). We then see that the set of solutions to \\(x^2 + y^2 - 3y - 1 = 0\\) is the circle of radius \\(\\frac{\\sqrt{13}}{2}\\) and center \\((0, \\frac{3}{2})\\). This can be written as \\(x = \\frac{\\sqrt{13}}{2}\\cos(\\theta)\\) and \\(y = \\frac{\\sqrt{13}}{2}\\sin(\\theta) + \\frac{3}{2}\\). Thus, \\(x + y = \\frac{3}{2} + \\frac{\\sqrt{13}}{2}(\\cos(\\theta) + \\sin(\\theta)) = \\frac{3}{2} + \\frac{\\sqrt{13}}{2}\\sqrt{2}\\sin(\\theta + 45^\\circ)\\), which is maximized for \\(\\theta = 45^\\circ\\) and gives \\(\\frac{\\sqrt{26}+3}{2}\\). (We could also solve this geometrically by noting that if \\(x + y\\) attains a maximum value of \\(s\\) then the line \\(x + y = s\\) is tangent to the circle.)</p>",
+      "answer": "\\frac{\\sqrt{26}+3}{2}"
+    },
+    "7": {
+      "problem": "<p>There are 15 stones placed in a line. In how many ways can you mark 5 of these stones so that there are an odd number of stones between any two of the stones you marked?</p>",
+      "solutions": "<p>Number the stones 1 through 15 in order. We note that the condition is equivalent to stipulating that the stones have either all odd numbers or all even numbers. There are \\(\\binom{8}{5}\\) ways to choose 5 odd-numbered stones, and \\(\\binom{7}{5}\\) ways to choose all even-numbered stones, so the total number of ways to pick the stones is \\(\\binom{8}{5} + \\binom{7}{5} = 77\\). (\\(\\binom{n}{k}\\) is the number of ways to choose \\(k\\) out of \\(n\\) items. It equals \\(\\frac{n!}{k!(n-k)!}\\).)</p>",
+      "answer": "77"
+    },
+    "8": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be an equilateral triangle with height 13, and let \\(O\\) be its center. Point \\(X\\) is chosen at random from all points inside \\(\\triangle ABC\\). Given that the circle of radius 1 centered at \\(X\\) lies entirely inside \\(\\triangle ABC\\), what is the probability that this circle contains \\(O\\)?</p>",
+      "solutions": "<p>The set of points \\(X\\) such that the circle of radius 1 centered at \\(X\\) lies entirely inside \\(\\triangle ABC\\) is itself a triangle, \\(A'B'C'\\), such that \\(AB\\) is parallel to \\(A'B'\\), \\(BC\\) is parallel to \\(B'C'\\), and \\(CA\\) is parallel to \\(C'A'\\), and furthermore \\(AB\\) and \\(A'B'\\), \\(BC\\) and \\(B'C'\\), and \\(CA\\) and \\(C'A'\\) are all 1 unit apart. We can use this to calculate that \\(A'B'C'\\) is an equilateral triangle with height 10, and hence has area \\(\\frac{100}{\\sqrt{3}}\\). On the other hand, the set of points \\(X\\) such that the circle of radius 1 centered at \\(X\\) contains \\(O\\) is a circle of radius 1, centered at \\(O\\), and hence has area \\(\\pi\\). The probability that the circle centered at \\(X\\) contains \\(O\\) given that it also lies in \\(ABC\\) is then the ratio of the two areas, that is, \\(\\frac{\\pi}{\\frac{100}{\\sqrt{3}}} = \\frac{\\sqrt{3}\\pi}{100}\\).</p>",
+      "answer": "\\frac{\\sqrt{3}\\pi}{100}"
+    },
+    "9": {
+      "problem": "<p>A set of points is <i>convex</i> if the points are the vertices of a convex polygon (that is, a non-self-intersecting polygon with all angles less than or equal to \\(180^\\circ\\)). Let \\(S\\) be the set of points \\((x, y)\\) such that \\(x\\) and \\(y\\) are integers and \\(1 \\le x, y \\le 26\\). Find the number of ways to choose a convex subset of \\(S\\) that contains exactly 98 points.</p>",
+      "solutions": "<p>For this problem, let \\(n = 26\\). A convex set may be divided into four subsets: a set of points with maximal \\(y\\) coordinate, a set of points with minimal \\(y\\) coordinate, the points to the left of one of these subsets, and the points to the right of one of these subsets (the left, top, right, and bottom of the corresponding convex polygon). Each of these four parts contains at most \\(n\\) points. (All points in the top or bottom have distinct \\(x\\) coordinates while all points in the left or right have distinct \\(y\\) coordinates.) Moreover, there are four corners each of which is contained in two of these regions. This implies that at most \\(4n - 4\\) distinct points are in any convex set. To find a set of size \\(4n - 6\\) we can remove 2 additional points. Either exactly one of the top, bottom, left, or right contains exactly \\(n - 2\\) points or some two of them each contain exactly \\(n - 1\\) points.</p><p>Any of the \\(\\binom{100}{98} = 4950\\) sets of 98 points with either \\(x\\) or \\(y\\) coordinate either 1 or 26 have this property. Suppose instead that some of the points have \\(x\\) coordinate and \\(y\\) coordinate both different from 1 and from 26. In this case we can check that it is impossible for one side to have \\(n - 2\\) points. If two opposite sides (top/bottom or left/right) have \\(n - 1\\) points, then we obtain all the points on the boundary of an \\(n - 1\\) by \\(n\\) rectangle (of which there are four). If two adjacent sides (any of the other pairs) have \\(n - 1\\) points, then we obtain the points on the boundary of an \\(n\\) by \\(n\\) square with the points \\((1, 1)\\), \\((1, 2)\\), \\((2, 1)\\) missing and the point \\((2, 2)\\) added (or one of its rotations). There are an additional 4 such sets, for a total of 4958.</p>",
+      "answer": "4958"
+    },
+    "10": {
+      "problem": "<p>Compute \\[\\prod_{n=0}^\\infty \\left(1 - \\left(\\frac{1}{2}\\right)^{3^n} + \\left(\\frac{1}{4}\\right)^{3^n}\\right).\\]</p>",
+      "solutions": "<p>We can rewrite each term as \\(\\frac{1 + (\\frac{1}{2})^{3^{n+1}}}{1 + (\\frac{1}{2})^{3^n}}\\). In the infinite product, each term of the form \\(1 + \\left(\\frac{1}{2}\\right)^{3^n}\\) with \\(n &gt; 0\\) appears once in the numerator and once in the denominator. The only remaining term is \\(1 + \\left(\\frac{1}{2}\\right)^1\\) in the first denominator.</p>",
+      "answer": "\\frac{2}{3}"
+    }
+  }
+}

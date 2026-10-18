@@ -1,0 +1,83 @@
+{
+  "test": "BMT Team",
+  "year": 2017,
+  "name": "Team Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2017/TS2017.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>You are racing an Artificially Intelligent Robot, called AI, that you built. You can run at a constant speed of 10 m/s throughout the race. Meanwhile, AI starts running at a constant speed of 1 m/s. Thereafter, when exactly 1 second has passed from when AI last changed its speed, AI’s speed instantaneously becomes 1 m/s faster, so that AI runs at a constant speed of \\(k\\) m/s in the \\(k\\)th second of the race. (Start counting seconds at 1).</p><p>Suppose AI beats you by exactly 1 second. How many meters was the race?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "210"
+    },
+    "2": {
+      "problem": "<p>Colin has 900 Choco Pies. He realizes that for some integer values of \\(n \\le 900\\), if he eats \\(n\\) pies a day, he will be able to eat the same number of pies every day until he runs out. How many possible values of \\(n\\) are there?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "27"
+    },
+    "3": {
+      "problem": "<p>Suppose we have \\(w &lt; x &lt; y &lt; z\\), and each of the 6 pairwise sums are distinct. The 4 greatest sums are \\(4, 3, 2, 1\\). What is the sum of all possible values of \\(w\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-\\frac{5}{2}"
+    },
+    "4": {
+      "problem": "<p>2 darts are thrown randomly at a circular board with center \\(O\\), such that each dart has an equal probability of hitting any point on the board. The points at which they land are marked \\(A\\) and \\(B\\). What is the probability that \\(\\angle AOB\\) is acute?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "5": {
+      "problem": "<p>You enter an elevator on floor 0 of a building with some other people, and request to go to floor 10. In order to be efficient, it doesn’t stop at adjacent floors (so, if it’s at floor 0, its next stop cannot be floor 1). Given that the elevator will stop at floor 10, no matter what other floors it stops at, how many combinations of stops are there for the elevator?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "34 \\text{ or } 55"
+    },
+    "6": {
+      "problem": "<p>The center of a square of side length 1 is placed uniformly at random inside a circle of radius 1. Given that we are allowed to rotate the square about its center, what is the probability that the entire square is contained within the circle for some orientation of the square?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1 - \\frac{\\sqrt{3}}{2}"
+    },
+    "7": {
+      "problem": "<p>There are 86400 seconds in a day, which can be deduced from the conversions between seconds, minutes, hours, and days. However, the leading scientists decide that we should decide on 3 new integers \\(x\\), \\(y\\), and \\(z\\), such that there are \\(x\\) seconds in a minute, \\(y\\) minutes in an hour, and \\(z\\) hours in a day, such that \\(xyz = 86400\\) as before, but such that the sum \\(x + y + z\\) is minimized. What is the smallest possible value of that sum?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "133"
+    },
+    "8": {
+      "problem": "<p>A function \\(f\\) with its domain on the positive integers \\(\\mathbb{N} = \\{1, 2, ...\\}\\) satisfies the following conditions:</p><p>(a): \\(f(1) = 2017\\).</p><p>(b): \\(\\sum_{i=1}^n f(i) = n^2 f(n)\\), for every positive integer \\(n &gt; 1\\).</p><p>What is the value of \\(f(2017)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{1009}"
+    },
+    "9": {
+      "problem": "<p>Let \\(AB = 10\\) be a diameter of circle \\(P\\). Pick point \\(C\\) on the circle such that \\(AC = 8\\). Let the circle with center \\(O\\) be the incircle of \\(\\triangle ABC\\). Extend line \\(AO\\) to intersect circle \\(P\\) again at \\(D\\). Find the length of \\(BD\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{10}"
+    },
+    "10": {
+      "problem": "<p>You and your friend play a game on a \\(7 \\times 7\\) grid of buckets. Your friend chooses 5 “lucky” buckets by marking an “X” on the bottom that you cannot see. However, he tells you that they either form a vertical, or horizontal line of length 5. To clarify, he will select either of the following sets of buckets:</p><p>either \\(\\{(a,b), (a,b+1), (a,b+2), (a,b+3), (a,b+4)\\}\\),</p><p>or \\(\\{(b,a), (b+1,a), (b+2,a), (b+3,a), (b+4,a)\\}\\),</p><p>with \\(1 \\le a \\le 7\\), and \\(1 \\le b \\le 3\\). Your friend lets you pick up at most \\(n\\) buckets, and you win if one of the buckets you picked was a “lucky” bucket. What is the minimum possible value of \\(n\\) such that, if you pick your buckets optimally, you can guarantee that at least one is “lucky”?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9"
+    },
+    "11": {
+      "problem": "<p>Ben picks a positive number \\(n\\) less than 2017 uniformly at random. Then Rex, starting with the number 1, repeatedly multiplies his number by \\(n\\) and then finds the remainder when dividing by 2017. Rex does this until he gets back to the number 1. What is the probability that, during this process, Rex reaches every positive number less than 2017 before returning back to 1?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2}{7}"
+    },
+    "12": {
+      "problem": "<p>A robot starts at the origin of the Cartesian plane. At each of 10 steps, he decides to move 1 unit in any of the following directions: left, right, up, or down, each with equal probability. After 10 steps, the probability that the robot is at the origin is \\(\\frac{n}{4^{10}}\\). Find \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "63504"
+    },
+    "13": {
+      "problem": "<p>4 equilateral triangles of side length 1 are drawn on the interior of a unit square, each one of which shares a side with one of the 4 sides of the unit square. What is the common area enclosed by all 4 equilateral triangles?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{9 - 5\\sqrt{3}}{3}"
+    },
+    "14": {
+      "problem": "<p>Suppose that there is a set of 2016 positive numbers, such that both their sum, and the sum of their reciprocals, are equal to 2017. Let \\(x\\) be one of those numbers. Find the maximum possible value of \\(x + \\frac{1}{x}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{8065}{2017}"
+    },
+    "15": {
+      "problem": "<p>In triangle \\(ABC\\), the angle at \\(C\\) is \\(30^\\circ\\), side \\(BC\\) has length 4, and side \\(AC\\) has length 5. Let \\(P\\) be the point such that triangle \\(ABP\\) is equilateral and non-overlapping with triangle \\(ABC\\). Find the distance from \\(C\\) to \\(P\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{41}"
+    }
+  }
+}

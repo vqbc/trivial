@@ -1,0 +1,23 @@
+{
+  "test": "SMT Geometry Tiebreaker",
+  "year": 2022,
+  "name": "Geometry Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2022/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>George is drawing a Christmas tree; he starts with an isosceles triangle \\(AB_0C_0\\) with \\(AB_0 = AC_0 = 41\\) and \\(B_0C_0 = 18\\). Then, he draws points \\(B_i\\) and \\(C_i\\) on sides \\(AB_0\\) and \\(AC_0\\), respectively, such that \\(B_iB_{i+1} = 1\\) and \\(C_iC_{i+1} = 1\\) (\\(B_{41} = C_{41} = A\\)). Finally, he uses a green crayon to color in triangles \\(B_iC_iC_{i+1}\\) for \\(i\\) from \\(0\\) to \\(40\\). What is the total area that he colors in?</p>",
+      "solutions": "<p>Since \\(B_iC_i\\) is parallel to \\(B_0C_0\\), triangles \\(AB_iC_i\\) are similar to \\(\\triangle AB_0C_0\\). So, the area of \\(\\triangle AB_iC_i\\) is \\((\\frac{41-i}{41})^2\\) of the area of \\(AB_0C_0\\). Also, the area of \\(\\triangle B_iC_iC_{i+1}\\) is \\(\\frac{1}{41-i}\\) of the area of \\(\\triangle AB_iC_i\\). So, the area of \\(\\triangle B_iC_iC_{i+1}\\) is \\(\\frac{1}{41-i}(\\frac{41-i}{41})^2 = \\frac{41-i}{41^2}\\).</p><p>The sum of all triangles \\(\\triangle B_iC_iC_{i+1}\\) is then \\(\\sum_{i=1}^{41} \\frac{i}{41^2} = \\frac{\\frac{41 \\times 42}{2}}{41^2} = \\frac{21}{41}\\). The height of \\(\\triangle AB_0C_0\\) is \\(\\sqrt{41^2 - 9^2} = 40\\), so its area is \\(\\frac{1}{2} \\times 40 \\times 18 = 360\\). The total area of the colored triangles is \\(\\frac{21}{41} \\times 360 = \\boxed{\\frac{7560}{41}}\\).</p>",
+      "answer": "\\frac{7560}{41}"
+    },
+    "2": {
+      "problem": "<p>The incircle of \\(\\triangle ABC\\) is centered at \\(I\\) and is tangent to \\(BC\\), \\(CA\\), and \\(AB\\) at \\(D, E,\\) and \\(F\\), respectively. A circle with radius \\(2\\) is centered at each of \\(D, E,\\) and \\(F\\). Circle \\(D\\) intersects circle \\(I\\) at points \\(D_1\\) and \\(D_2\\). The points \\(E_1, E_2, F_1,\\) and \\(F_2\\) are defined similarly. If the inradius of \\(\\triangle ABC\\) is \\(5\\), what is the ratio of the area of the triangle whose sides are formed by extending \\(D_1D_2\\), \\(E_1E_2\\), and \\(F_1F_2\\) to the area of \\(\\triangle ABC\\)?</p>",
+      "solutions": "<p>Let the new triangle be \\(\\triangle XYZ\\). Note that \\(\\triangle XYZ \\sim \\triangle ABC\\) since all of its sides are parallel to a corresponding side of \\(\\triangle ABC\\). The incenter of \\(\\triangle XYZ\\) is also \\(I\\), so it suffices to find the inradius of \\(\\triangle XYZ\\) and then use the ratio with the inradius of \\(\\triangle ABC\\) to find the ratio of their areas. Consider circle \\(D\\). Let the intersection of \\(ID\\) and \\(D_1D_2\\) be \\(M\\) and let the length of \\(MD\\) be \\(x\\). Then, \\(D_1M = \\sqrt{4 - x^2}\\) and the Pythagorean theorem on \\(\\triangle D_1MI\\) gives \\[\\begin{aligned}\nD_1M^2 + IM^2 &amp;= D_1I^2 \\\\\n\\Rightarrow 4 - x^2 + (5-x)^2 &amp;= 25 \\\\\n\\Rightarrow 4 - 10x &amp;= 0 \\\\\n\\Rightarrow x &amp;= \\frac{2}{5}.\n\\end{aligned}\\] Then, \\(IM = \\frac{23}{25}\\), which is the inradius of \\(\\triangle XYZ\\). The ratio of the areas of \\(\\triangle XYZ\\) and \\(\\triangle ABC\\) is then \\(\\boxed{\\frac{529}{625}}\\).</p>",
+      "answer": "\\frac{529}{625}"
+    },
+    "3": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be a triangle with \\(BA &lt; AC\\), \\(BC = 10\\), and \\(BA = 8\\). Let \\(H\\) be the orthocenter of \\(\\triangle ABC\\). Let \\(F\\) be the point on segment \\(AC\\) such that \\(BF = 8\\). Let \\(T\\) be the point of intersection of \\(FH\\) and the extension of line \\(BC\\). Suppose that \\(BT = 8\\). Find the area of \\(\\triangle ABC\\).</p>",
+      "solutions": "<p>We claim that \\(\\triangle TAC\\) is isosceles. It will suffice to show that \\(\\triangle THC\\) is isosceles. Note that \\(BHFC\\) is cyclic. Hence \\(\\angle BFH = \\angle BHC\\). But then \\(\\triangle TBF \\sim \\triangle THC\\), from AA similarity. Since \\(\\triangle TBF\\) is isosceles, so is \\(\\triangle THC\\). Hence we have that \\(AH\\) is the perpendicular bisector of \\(TC\\) which has length \\(18\\). Let \\(A_H\\) be the foot of the altitude from \\(A\\) to \\(BC\\). We then see that \\(A_HC = 9\\), and so \\(BA_H = 1\\). From the Pythagorean Theorem, we then have that \\(AA_H = \\sqrt{63}\\), and so our answer is \\(\\frac{1}{2} \\cdot 10 \\cdot \\sqrt{63} = 15\\sqrt{7}\\).</p>",
+      "answer": "15\\sqrt{7}"
+    }
+  }
+}

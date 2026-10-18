@@ -1,0 +1,83 @@
+{
+  "test": "CMM Individual (Fall)",
+  "year": 2010,
+  "name": "Individual Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_04de822230a64a58a07acb3775ffe186.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Susan plays a game in which she rolls two fair standard six-sided dice with sides labeled one through six. She wins if the number on one of the dice is three times the number on the other die. If Susan plays this game three times, compute the probability that she wins at least once.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{217}{729}"
+    },
+    "2": {
+      "problem": "<p>In triangles \\(\\triangle ABC\\) and \\(\\triangle DEF\\), \\(DE = 4AB\\), \\(EF = 4BC\\), and \\(FD = 4CA\\). The area of \\(\\triangle DEF\\) is 360 units more than the area of \\(\\triangle ABC\\). Compute the area of \\(\\triangle ABC\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "24"
+    },
+    "3": {
+      "problem": "<p>Andy has 2010 square tiles, each of which has a side length of one unit. He plans to arrange the tiles in an \\(m \\times n\\) rectangle, where \\(mn = 2010\\). Compute the sum of the perimeters of all of the different possible rectangles he can make. Two rectangles are considered to be the same if one can be rotated to become the other, so, for instance, a \\(1 \\times 2010\\) rectangle is considered to be the same as a \\(2010 \\times 1\\) rectangle.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9792"
+    },
+    "4": {
+      "problem": "<p>Let \\[S = \\log_2 9 \\log_3 16 \\log_4 25 \\cdots \\log_{999} 1000000.\\] Compute the greatest integer less than or equal to \\(\\log_2 S\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1001"
+    },
+    "5": {
+      "problem": "<p>Let \\(A\\) and \\(B\\) be fixed points in the plane with distance \\(AB = 1\\). An ant walks on a straight line from point \\(A\\) to some point \\(C\\) in the plane and notices that the distance from itself to \\(B\\) always decreases at any time during this walk. Compute the area of the region in the plane containing all points where point \\(C\\) could possibly be located.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\pi}{4}"
+    },
+    "6": {
+      "problem": "<p>Lisette notices that \\(2^{10} = 1024\\) and \\(2^{20} = 1048576\\). Based on these facts, she claims that every number of the form \\(2^{10k}\\) begins with the digit 1, where \\(k\\) is a positive integer. Compute the smallest \\(k\\) such that Lisette’s claim is false. You may or may not find it helpful to know that \\(\\ln 2 \\approx 0.69314718\\), \\(\\ln 5 \\approx 1.60943791\\), and \\(\\log_{10} 2 \\approx 0.30103000\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "30"
+    },
+    "7": {
+      "problem": "<p>Let \\(S\\) be the set of all positive integers relatively prime to 6. Find the value of \\(\\sum_{k \\in S} \\frac{1}{2^k}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{34}{63}"
+    },
+    "8": {
+      "problem": "<p>Euclid’s algorithm is a way of computing the greatest common divisor of two positive integers \\(a\\) and \\(b\\) with \\(a &gt; b\\). The algorithm works by writing a sequence of pairs of integers as follows.</p><ol><li>Write down \\((a, b)\\).</li><li><p>Look at the last pair of integers you wrote down, and call it \\((c, d)\\).</p><ul><li>If \\(d \\ne 0\\), let \\(r\\) be the remainder when \\(c\\) is divided by \\(d\\). Write down \\((d, r)\\).</li><li>If \\(d = 0\\), then write down \\(c\\). Once this happens, you’re done, and the number you just wrote down is the greatest common divisor of \\(a\\) and \\(b\\).</li></ul></li><li>Repeat step 2 until you’re done.</li></ol><p>For example, with \\(a = 7\\) and \\(b = 4\\), Euclid’s algorithm computes the greatest common divisor in 4 steps: \\[(7, 4) \\to (4, 3) \\to (3, 1) \\to (1, 0) \\to 1\\]</p><p>For \\(a &gt; b &gt; 0\\), compute the least value of \\(a\\) such that Euclid’s algorithm takes 10 steps to compute the greatest common divisor of \\(a\\) and \\(b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "89"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABCD\\) be a square of unit side length. Inscribe a circle \\(C_0\\) tangent to all of the sides of the square. For each positive integer \\(n\\), draw a circle \\(C_n\\) that is externally tangent to \\(C_{n-1}\\) and also tangent to sides \\(AB\\) and \\(AD\\). Suppose \\(r_i\\) is the radius of circle \\(C_i\\) for every nonnegative integer \\(i\\). Compute \\(\\sqrt[200]{r_0/r_{100}}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\sqrt{2}+1}{\\sqrt{2}-1}"
+    },
+    "10": {
+      "problem": "<p>Rachel and Mike are playing a game. They start at 0 on the number line. At each positive integer on the number line, there is a carrot. At the beginning of the game, Mike picks a positive integer \\(n\\) other than 30. Every minute, Rachel moves to the next multiple of 30 on the number line that has a carrot on it and eats that carrot. At the same time, every minute, Mike moves to the next multiple of \\(n\\) on the number line that has a carrot on it and eats that carrot. Mike wants to pick an \\(n\\) such that, as the game goes on, he is always within 1000 units of Rachel. Compute the average (arithmetic mean) of all such \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "32"
+    },
+    "11": {
+      "problem": "<p>Darryl has a six-sided die with faces \\(1, 2, 3, 4, 5, 6\\). He knows the die is weighted so that one face comes up with probability \\(1/2\\) and the other five faces have equal probability of coming up. He unfortunately does not know which side is weighted, but he knows each face is equally likely to be the weighted one. He rolls the die 5 times and gets a \\(1, 2, 3, 4\\) and \\(5\\) in some unspecified order. Compute the probability that his next roll is a 6.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3}{26}"
+    },
+    "12": {
+      "problem": "<p>Let \\(F_0 = 1\\), \\(F_1 = 1\\) and \\(F_k = F_{k-1} + F_{k-2}\\). Let \\(P(x) = \\sum_{k=0}^{99} x^{F_k}\\). The remainder when \\(P(x)\\) is divided by \\(x^3 - 1\\) can be expressed as \\(ax^2 + bx + c\\). Find \\(2a + b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "112"
+    },
+    "13": {
+      "problem": "<p>Let \\(\\theta \\ne 0\\) be the smallest acute angle for which \\(\\sin \\theta\\), \\(\\sin(2\\theta)\\), \\(\\sin(3\\theta)\\), when sorted in increasing order, form an arithmetic progression. Compute \\(\\cos(\\theta/2)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\sqrt{14}}{4}"
+    },
+    "14": {
+      "problem": "<p>A 4-dimensional hypercube of edge length 1 is constructed in 4-space with its edges parallel to the coordinate axes and one vertex at the origin. The coordinates of its sixteen vertices are given by \\((a, b, c, d)\\), where each of \\(a\\), \\(b\\), \\(c\\), and \\(d\\) is either 0 or 1. The 3-dimensional hyperplane given by \\(x + y + z + w = 2\\) intersects the hypercube at 6 of its vertices. Compute the 3-dimensional volume of the solid formed by the intersection.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{4}{3}"
+    },
+    "15": {
+      "problem": "<p>A student puts 2010 red balls and 1957 blue balls into a box. Weiqing draws randomly from the box one ball at a time without replacement. She wins if, at anytime, the total number of blue balls drawn is more than the total number of red balls drawn. Assuming Weiqing keeps drawing balls until she either wins or runs out, compute the probability that she eventually wins.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1957}{2011}"
+    }
+  }
+}

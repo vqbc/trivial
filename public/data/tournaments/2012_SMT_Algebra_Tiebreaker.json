@@ -1,0 +1,23 @@
+{
+  "test": "SMT Algebra Tiebreaker",
+  "year": 2012,
+  "name": "Algebra Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2012/algebra-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The quadratic \\(x^2 - 4x + 2\\) has two distinct roots, \\(a\\) and \\(b\\). Compute the sum of the coefficients of the monic quadratic with roots \\(a^2 + b^2\\) and \\(a^3 + b^3\\).</p>",
+      "solutions": "<p>We know that \\(a + b = 4\\) and \\(ab = 2\\) from Vieta’s. \\(a^2 + b^2 = (a+b)^2 - 2ab = 12\\), while \\(a^3 + b^3 = (a+b)^3 - 3ab(a+b) = 40\\). Therefore, our quadratic is \\((x - 12)(x - 40)\\), and the sum of the coefficients of the quadratic can be obtained by evaluating the quadratic at \\(x = 1\\), which gives us \\(\\boxed{429}\\).</p>",
+      "answer": "429"
+    },
+    "2": {
+      "problem": "<p>Find the minimum value of \\(xy + xz + yz\\) given that \\(x, y, z\\) are real and \\(x^2 + y^2 + z^2 = 1\\).</p>",
+      "solutions": "<p>We note that \\((x+y+z)^2 = (x^2+y^2+z^2) + 2(xy+xz+yz) = 1 + 2(xy+xz+yz)\\). Since \\((x+y+z)^2\\) clearly has a minimum value of \\(0\\), it follows that \\(xy + xz + yz\\) is at least \\(\\boxed{-1/2}\\). This occurs, for example, when \\(x = -y = 1/\\sqrt{2}\\) and \\(z = 0\\).</p>",
+      "answer": "-\\frac{1}{2}"
+    },
+    "3": {
+      "problem": "<p>Find all solutions \\(\\alpha\\) with \\(0^\\circ &lt; \\alpha &lt; 90^\\circ\\) to the equation \\(1 + \\sqrt{3}\\tan(60^\\circ - \\alpha) = \\frac{1}{\\sin \\alpha}\\).</p>",
+      "solutions": "<p>Multiply both sides by \\(\\cos(60^\\circ - \\alpha)\\) and write \\(1\\) as \\(2\\sin(30^\\circ)\\) and \\(\\sqrt{3}\\) as \\(2\\cos(30^\\circ)\\) to get \\[2\\left(\\sin(30^\\circ)\\cos(60^\\circ - \\alpha) + \\cos(30^\\circ)\\sin(60^\\circ - \\alpha)\\right) = \\frac{\\cos(60^\\circ - \\alpha)}{\\sin(\\alpha)}.\\]</p><p>Applying the formula for the sine of a sum, we see that the left-hand-side is \\(2 \\cdot \\sin(30^\\circ + 60^\\circ - \\alpha)\\), or \\(2\\cos(\\alpha)\\). Multiplying both sides by \\(\\sin(\\alpha)\\) yields \\(2\\sin(\\alpha)\\cos(\\alpha) = \\cos(60^\\circ - \\alpha)\\), which can be rewritten \\[\\sin(2\\alpha) = \\sin(\\alpha + 30^\\circ).\\]</p><p>Therefore, either \\(2\\alpha = \\alpha + 30^\\circ\\) or \\(2\\alpha + (\\alpha + 30^\\circ) = 180^\\circ\\), from which we obtain \\(\\alpha = 30^\\circ\\) and \\(\\alpha = 50^\\circ\\), respectively.</p>",
+      "answer": "30^\\circ, 50^\\circ"
+    }
+  }
+}

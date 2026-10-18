@@ -1,0 +1,178 @@
+{
+  "test": "HMMT February Guts",
+  "year": 2000,
+  "name": "Guts",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2000/feb/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The sum of 3 real numbers is known to be zero. If the sum of their cubes is \\(\\pi^e\\), what is their product equal to?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{\\pi^e}{3}"
+    },
+    "2": {
+      "problem": "<p>If \\(X = 1 + x + x^2 + x^3 + \\ldots\\) and \\(Y = 1 + y + y^2 + y^3 + \\ldots\\), what is \\(1 + xy + x^2y^2 + x^3y^3 + \\ldots\\) in terms of \\(X\\) and \\(Y\\) only?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{XY}{X+Y-1}"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABC\\) be a triangle and \\(H\\) be its orthocentre. If it is given that \\(B\\) is \\((0,0)\\), \\(C\\) is \\((1,2)\\) and \\(H\\) is \\((5,0)\\), find \\(A\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "(1,2)"
+    },
+    "5": {
+      "problem": "<p>Find all natural numbers \\(n\\) such that \\(n\\) equals the cube of the sum of its digits.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1, 512, 4913, 5832"
+    },
+    "7": {
+      "problem": "<p>Suppose you are give a fair coin and a sheet of paper with the polynomial \\(x^m\\) written on it. Now for each toss of the coin, if heads show up, you much erase the polynomial \\(x^r\\) (where \\(r\\) is going to change with time – initially it is \\(m\\)) written on the paper and replace it by \\(x^{r-1}\\). If tails show up, replace it by \\(x^{r+1}\\). What is the expected value of the polynomial I get after \\(m\\) such tosses? (Note: this is a different concept from the most probable value)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\left(\\frac{x^2+1}{2}\\right)^m"
+    },
+    "9": {
+      "problem": "<p>A cubic polynomial \\(f\\) satisfies \\(f(0) = 0, f(1) = 1, f(2) = 2, f(3) = 4\\). What is \\(f(5)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "15"
+    },
+    "10": {
+      "problem": "<p>What is the total surface area of an ice cream cone, radius \\(R\\), height \\(H\\), with a spherical scoop of ice cream of radius \\(r\\) on top? (Given \\(R &lt; r\\))</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\pi R\\sqrt{R^2+H^2} + 2\\pi r^2\\left(1+\\sqrt{1-\\frac{R^2}{r^2}}\\right)"
+    },
+    "11": {
+      "problem": "<p>Let \\(M\\) be the maximum possible value of \\(x_1x_2 + x_2x_3 + \\ldots + x_5x_1\\) where \\(x1, x2, \\ldots, x5\\) is a permutation of \\((1,2,3,4,5)\\) and let \\(N\\) be the number of permutations for which this maximum is attained. Evaluate \\(M + N\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "58"
+    },
+    "12": {
+      "problem": "<p>Calculate the number of ways of choosing 4 numbers from the set \\(\\{1, 2, \\ldots, 11\\}\\) such that at least 2 of the numbers are consecutive.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "274"
+    },
+    "14": {
+      "problem": "<p>\\(ABCD\\) is a cyclic quadrilateral inscribed in a circle of radius 5, with \\(AB = 6, BC = 7, CD = 8\\). Find \\(AD\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\sqrt{51}"
+    },
+    "15": {
+      "problem": "<p>Find the number of ways of filling a \\(8 \\times 8\\) grid with 0’s and X’s so that the number of 0’s in each row and each column is odd.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2^{49}"
+    },
+    "16": {
+      "problem": "<p>Solve for real \\(x, y\\):</p><p>\\[\\begin{aligned}\nx+y &amp;= 2 \\\\\nx^5+y^5 &amp;= 82\n\\end{aligned}\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "(-1,3) \\text{ and } (3,-1)"
+    },
+    "17": {
+      "problem": "<p>Find the highest power of 3 dividing \\(\\binom{666}{333}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3^0"
+    },
+    "19": {
+      "problem": "<p>Define \\(a * b = \\frac{a-b}{1-ab}\\). What is \\((1*(2*(3*\\ldots(n*(n+1))\\ldots)))\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1"
+    },
+    "20": {
+      "problem": "<p>What is the minimum possible perimeter of a triangle two of whose sides are along the x- and y-axes and such that the third contains the point \\((1,2)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3 + 2\\sqrt{2} + \\sqrt{3} + \\sqrt{6}"
+    },
+    "21": {
+      "problem": "<p>How many ways can you color a necklace of 7 beads with 4 colors so that no two adjacent beads have the same color?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "546"
+    },
+    "22": {
+      "problem": "<p>Find the smallest \\(n\\) such that \\(2^{2000}\\) divides \\(n!\\)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2008"
+    },
+    "23": {
+      "problem": "<p>How many 7-digit numbers with distinct digits can be made that are divisible by 3?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "224640"
+    },
+    "25": {
+      "problem": "<p>Find the next number in the sequence \\(131, 111311, 311321, 1321131211,\\)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1113122113111221"
+    },
+    "26": {
+      "problem": "<p>What are the last 3 digits of \\(1! + 2! + \\ldots + 100!\\)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "313"
+    },
+    "28": {
+      "problem": "<p>What is the smallest possible volume to surface ratio of a solid cone with height = 1 unit?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{6}"
+    },
+    "30": {
+      "problem": "<p>\\(ABCD\\) is a unit square. If \\(\\angle PAC = \\angle PCD\\), find the length \\(BP\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1"
+    },
+    "31": {
+      "problem": "<p>Given collinear points \\(A, B, C\\) such that \\(AB = BC\\). How can you construct a point \\(D\\) on \\(AB\\) such that \\(AD = 2DB\\), using only a straightedge? (You are not allowed to measure distances)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "D \\text{ is the harmonic conjugate of } C, \\text{ standard construction}"
+    },
+    "32": {
+      "problem": "<p>How many (nondegenerate) tetrahedrons can be formed from the vertices of an \\(n\\)-dimensional hypercube?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "35": {
+      "problem": "<p>If \\(1 + 2x + 3x^2 + \\ldots = 9\\), find \\(x\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "36": {
+      "problem": "<p>If, in a triangle of sides \\(a, b, c\\), the incircle has radius \\(\\frac{b+c-a}{2}\\), what is the magnitude of angle \\(A\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "90^\\circ"
+    },
+    "37": {
+      "problem": "<p>A cone with semivertical angle \\(30^\\circ\\) is half filled with water. What is the angle it must be tilted by so that water starts spilling?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "38": {
+      "problem": "<p>What is the largest number you can write with three 3’s and three 8’s, using only symbols \\(+, -, /, \\times\\) and exponentiation?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3^{3^{3^{8^{8^{8}}}}}"
+    },
+    "41": {
+      "problem": "<p>A observes a building of height \\(h\\) at an angle of inclination \\(\\alpha\\) from a point on the ground. After walking a distance \\(a\\) toward it, the angle is now \\(2\\alpha\\), and walking a further distance \\(b\\) causes to increase to \\(3\\alpha\\). Find \\(h\\) in terms of \\(a\\) and \\(b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "h = \\frac{1}{4b}\\sqrt{(a+b)(3b-a)}"
+    },
+    "42": {
+      "problem": "<p>A \\(n \\times n\\) magic square contains numbers from 1 to \\(n^2\\) such that the sum of every row and every column is the same. What is this sum?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{n(n^2+1)}{2}"
+    },
+    "43": {
+      "problem": "<p>Box A contains 3 black and 4 blue marbles. Box B has 7 black and 1 blue, whereas Box C has 2 black, 3 blue and 1 green marble. I close my eyes and pick two marbles from 2 different boxes. If it turns out that I get 1 black and 1 blue marble, what is the probability that the black marble is from box A and the blue one is from C?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{120}{1147}"
+    },
+    "44": {
+      "problem": "<p>A function \\(f : \\mathbb{Z} \\to \\mathbb{Z}\\) satisfies</p><p>\\[\\begin{aligned}\nf(x+4) - f(x) &amp;= 8x + 20 \\\\\nf(x^2-1) &amp;= (f(x)-x)^2 + x^2 - 2\n\\end{aligned}\\]</p><p>Find \\(f(0)\\) and \\(f(1)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "f(0) = -1, \\ f(1) = 1"
+    },
+    "45": {
+      "problem": "<p>Find all positive integers \\(x\\) for which there exists a positive integer \\(y\\) such that \\(\\binom{x}{y} = 1999000\\)</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1999000, \\ 2000"
+    },
+    "46": {
+      "problem": "<p>For what integer values of \\(n\\) is \\(1 + n + n^2/2 + \\ldots + n^n/n!\\) an integer?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "1, \\ 2"
+    }
+  }
+}

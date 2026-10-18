@@ -1,0 +1,23 @@
+{
+  "test": "BMT Number Theory Tiebreaker",
+  "year": 2018,
+  "name": "Number Theory Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2018/NTSP18TB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute the least positive \\(x\\) such that \\(25x - 6\\) is divisible by \\(1001\\).</p>",
+      "solutions": "<p>Just use the Chinese Remainder Theorem, and note that \\(1001 = 7 \\times 11 \\times 13\\). Reducing modulo \\(7, 11, 13\\), respectively, we have \\[n \\equiv 5 \\pmod{7}\\] \\[n \\equiv 2 \\pmod{11}\\] \\[n \\equiv 7 \\pmod{13}\\]</p><p>Now applying the Chinese remainder theorem, we have \\[n \\equiv \\boxed{761} \\pmod{1001}\\]</p>",
+      "answer": "761"
+    },
+    "2": {
+      "problem": "<p>An integer \\(a\\) is a <i>quadratic nonresidue</i> modulo a prime \\(p\\) if there does not exist \\(x \\in \\mathbb{Z}\\) such that \\(x^2 \\equiv a \\pmod{p}\\). How many ordered pairs (a, b) modulo 29 exist such that \\[a + b \\equiv 1 \\pmod{29}\\] where both \\(a\\) and \\(b\\) are quadratic nonresidues modulo 29?</p>",
+      "solutions": "<p><b>Solution 1.</b> We shall see that the quadratic nonresidues modulo 29 are \\[2, 3, 8, 10, 11, 12, 14, 15, 17, 18, 19, 21, 26, 27\\]</p><p>We just pick the number of ordered pairs that sum to 30, which is 4, and we have to multiply by 2, and subtract 1 (because \\((15,15)\\)) to get \\(\\boxed{7}\\).</p><p><b>Solution 2.</b> We compute the following sum: \\[\\sum_{j=1}^{28} \\left(1 - \\left(\\frac{j}{29}\\right)\\right)\\left(1 - \\left(\\frac{1-j}{29}\\right)\\right) = 28 - 0 - (-1) + (-1) = 28\\]</p><p>Now dividing by 4, we get \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "3": {
+      "problem": "<p>Let \\(f : \\mathbb{Z}^2 \\to \\mathbb{C}\\) be a function such that \\(f(x+11, y) = f(x, y+11) = f(x, y)\\), and \\(f(x, y)f(z, w) = f(xz - yw, xw + yz)\\). How many possible values can \\(f(1, 1)\\) have?</p>",
+      "solutions": "<p>Note that the multiplication for the function corresponds to multiplication of complex numbers. This shows that \\(f\\) is multiplicative over the complex numbers which have integer parts. The periodicity conditions suggest that we are working over the integers modulo 11. Note that \\(f(1,0)^2 = f(1,0) \\implies f(1,0) = 0\\) or \\(f(1,0) = 1\\). Also, we can easily compute that the order of \\(1+i\\) modulo 11 is 40. This means that \\(f(1,1)^{40} = f(1,0)\\). If \\(f(1,0) = 0\\), then \\(f \\equiv 0\\). If \\(f(1,0) = 1\\), then there are 40 values that \\((1,1)\\) can be sent to. Hence, the answer is \\(\\boxed{41}\\).</p>",
+      "answer": "41"
+    }
+  }
+}

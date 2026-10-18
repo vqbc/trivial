@@ -1,0 +1,33 @@
+{
+  "test": "BMT General Tiebreaker",
+  "year": 2023,
+  "name": "General Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2023/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Wen finds 17 consecutive positive integers that sum to 2023. Compute the smallest of these integers.</p>",
+      "solutions": "<p>Notice that the average of these integers must be \\(\\frac{2023}{17} = 119\\). Since they are consecutive, we know that the middle, 9th, number out of our 17 integers must be 119. This will be 8 more than the smallest integer, so our answer is \\(119 - 8 = \\boxed{111}\\).</p>",
+      "answer": "111"
+    },
+    "2": {
+      "problem": "<p>Triangle \\(\\triangle ABC\\) has \\(\\angle ABC = \\angle BCA = 45^\\circ\\) and \\(AB = 1\\). Let \\(D\\) be on \\(\\overline{AC}\\) such that \\(\\angle ABD = 30^\\circ\\). Let \\(\\overleftrightarrow{BD}\\) and the line through \\(A\\) parallel to \\(\\overleftrightarrow{BC}\\) intersect at \\(E\\). Compute the area of \\(\\triangle ADE\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2023_BMT_General_Tiebreaker/2-fig1.png\" width=\"523\" alt=\"\"></p>",
+      "solutions": "<p>Triangles \\(\\triangle ADE\\) and \\(\\triangle CDB\\) are similar. Thus, the area of \\(\\triangle ADE\\) is \\(\\left(\\frac{AD}{DC}\\right)^2\\) times the area of \\(\\triangle CDB\\). Since \\(\\angle ABD = 30^\\circ\\) and \\(AB = 1\\), we have \\(AD = \\frac{1}{\\sqrt{3}}\\) and \\(DC = 1 - \\frac{1}{\\sqrt{3}}\\). Thus, the area of \\(\\triangle ADE\\) is \\(\\frac{1}{2}\\left(1 - \\frac{1}{\\sqrt{3}}\\right)\\left(\\frac{1/\\sqrt{3}}{1-(1/\\sqrt{3})}\\right)^2 = \\boxed{\\frac{3+\\sqrt{3}}{12}}\\).</p>",
+      "answer": "\\frac{3+\\sqrt{3}}{12}"
+    },
+    "3": {
+      "problem": "<p>Mataio has a weighted die numbered 1 to 6, where the probability of rolling a side \\(n\\) for \\(1 \\le n \\le 6\\) is inversely proportional to the value of \\(n\\). If Mataio rolls the die twice, what is the probability that the sum of the two rolls is 7?</p>",
+      "solutions": "<p>The probability of rolling a given side \\(n\\) is \\(\\frac{k}{n}\\) for some constant \\(k\\). So the probability that rolling the die twice yields a sum of 7 is \\(2 \\cdot \\left(\\frac{k}{1}\\cdot\\frac{k}{6} + \\frac{k}{2}\\cdot\\frac{k}{5} + \\frac{k}{3}\\cdot\\frac{k}{4}\\right) = \\frac{7k^2}{10}\\)</p><p>We can solve for \\(k\\) using the following equation \\[1 = \\frac{k}{1} + \\frac{k}{2} + \\frac{k}{3} + \\frac{k}{4} + \\frac{k}{5} + \\frac{k}{6}\\]</p><p>Solving, we get \\(k = \\frac{20}{49}\\), and plugging into \\(\\frac{7k^2}{10}\\) gives the final answer of \\(\\boxed{\\frac{40}{343}}\\).</p>",
+      "answer": "\\frac{40}{343}"
+    },
+    "4": {
+      "problem": "<p>Let \\(N = 2^{18} \\cdot 3^{19} \\cdot 5^{20} \\cdot 7^{21} \\cdot 11^{22}\\). Compute the number of positive integer divisors of \\(N\\) whose units digit is 7.</p>",
+      "solutions": "<p>Any divisor \\(n\\) can be written as \\[n = 2^a \\cdot 3^b \\cdot 5^c \\cdot 7^d \\cdot 11^e,\\] where \\(a, b, c, d, e\\) are nonnegative integers bounded above. To count divisors \\(n\\) with units digit 7, we immediately require \\(a = c = 0\\). Now, the key trick is that 3 generates \\((\\mathbb{Z}/10\\mathbb{Z})^\\times\\) because \\[\\{3^0, 3^1, 3^2, 3^3\\} \\equiv \\{1, 3, 9, 7\\} \\pmod{10},\\] so for any choice of \\(d\\) and \\(e\\), there is a unique value of \\(b \\pmod 4\\) which give \\(n = 3^b \\cdot 7^d \\cdot 11^e\\) with units digit 7. Because \\(0 \\le b &lt; 19\\), this amounts to five different choices for \\(b\\) for any choices of \\((d, e)\\).</p><p>To finish, we note that \\(d\\) has 22 options, and \\(e\\) has 23 options, so our answer is \\(5 \\cdot 22 \\cdot 23 = 110 \\cdot 23 = \\boxed{2530}\\).</p>",
+      "answer": "2530"
+    },
+    "5": {
+      "problem": "<p>Compute the real solution for \\(x\\) to the equation \\((4^x + 8)^4 - (8^x - 4)^4 = (4 + 8^x + 4^x)^4\\).</p>",
+      "solutions": "<p>Let \\(a = 4^x + 8\\) and \\(b = 8^x - 4\\). Then the equation becomes \\(a^4 - b^4 = (a+b)^4\\). Then \\((a^2-b^2)(a^2+b^2) = (a+b)^4\\), and so \\((a-b)(a+b)(a^2+b^2) = (a+b)^4\\). Note that \\(a+b = (4^x+8) + (8^x-4) = 4^x + 8^x + 4 &gt; 0\\). Thus, we can divide by \\(a+b\\) on both sides to get that \\((a-b)(a^2+b^2) = (a+b)^3\\). Expanding the LHS and RHS gives \\(a^3 - b^3 - a^2b + ab^2 = a^3 + 3a^2b + 3ab^2 + b^3\\), which after simplification yields \\(2b^3 + 4a^2b + 2ab^2 = 0\\). We can factor out a \\(b\\) and we have \\(b(2b^2 + 4a^2 + 2ab) = 0\\). This gives a solution of \\(b = 0\\), which implies that the only real solution here is \\(a = 0, b = 0\\). The expression \\(2b^2 + 4a^2 + 2ab\\) has no other real solutions. We can show this by factoring it as \\(2(2a^2 + ab + b^2)\\): applying the quadratic formula by treating the \\(b\\) terms as constants would imply the discriminant, \\(-7b^2\\), is negative. Since \\(b = 0\\) is our only possibility, we have \\(8^x - 4 = 0\\), so \\(8^x = 4\\), which means \\(x = \\boxed{\\frac{2}{3}}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    }
+  }
+}

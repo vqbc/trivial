@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Calculus",
+  "year": 2007,
+  "name": "Calculus Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2007/feb/calc/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute: \\[\\lim_{x\\to 0} \\frac{x^2}{1-\\cos(x)}\\]</p>",
+      "solutions": "<p>Since \\(\\sin^2(x) = 1-\\cos^2(x)\\), we multiply the numerator and denominator by \\(1+\\cos(x)\\) and use the fact that \\(x/\\sin(x) \\to 1\\), obtaining \\[\\lim_{x\\to 0} \\frac{x^2}{1-\\cos(x)} = \\lim_{x\\to 0} \\frac{x^2(1+\\cos(x))}{1-\\cos^2(x)} = \\lim_{x\\to 0} \\left(\\frac{x}{\\sin(x)}\\right)^2 \\cdot 2 = 2.\\]</p><p><b>Remarks.</b> Another solution, using L’Hôpital’s rule, is possible: \\(\\lim_{x\\to 0} \\frac{x^2}{1-\\cos(x)} = \\lim_{x\\to 0}\\frac{2x}{\\sin(x)} = 2\\).</p>",
+      "answer": "2"
+    },
+    "2": {
+      "problem": "<p>Determine the real number \\(a\\) having the property that \\(f(a) = a\\) is a relative minimum of \\(f(x) = x^4 - x^3 - x^2 + ax + 1\\).</p>",
+      "solutions": "<p>Being a relative minimum, we have \\(0 = f'(a) = 4a^3-3a^2-2a+a = a(4a+1)(a-1)\\). Then \\(a = 0, 1, -1/4\\) are the only possibilities. However, it is easily seen that \\(a=1\\) is the only value satisfying \\(f(a) = a\\).</p>",
+      "answer": "1"
+    },
+    "3": {
+      "problem": "<p>Let \\(a\\) be a positive real number. Find the value of \\(a\\) such that the definite integral \\[\\int_a^{a^2} \\frac{dx}{x+\\sqrt{x}}\\] achieves its smallest possible value.</p>",
+      "solutions": "<p>Let \\(F(a)\\) denote the given definite integral. Then \\[F'(a) = \\frac{d}{da}\\int_a^{a^2} \\frac{dx}{x+\\sqrt{x}} = 2a\\cdot\\frac{1}{a^2+\\sqrt{a^2}} - \\frac{1}{a+\\sqrt{a}}.\\] Setting \\(F'(a) = 0\\), we find \\(2a+2\\sqrt{a} = a+1\\) or \\((\\sqrt{a}+1)^2 = 2\\). We find \\(\\sqrt{a} = \\pm\\sqrt{2}-1\\), and because \\(\\sqrt{a} &gt; 0\\), \\(a = (\\sqrt{2}-1)^2 = 3-2\\sqrt{2}\\).</p>",
+      "answer": "3-2\\sqrt{2}"
+    },
+    "4": {
+      "problem": "<p>Find the real number \\(\\alpha\\) such that the curve \\(f(x) = e^x\\) is tangent to the curve \\(g(x) = \\alpha x^2\\).</p>",
+      "solutions": "<p>Suppose tangency occurs at \\(x = x_0\\). Then \\(e^{x_0} = \\alpha x_0^2\\) and \\(f'(x_0) = 2\\alpha x_0\\). On the other hand, \\(f'(x) = f(x)\\), so \\(\\alpha x_0^2 = 2\\alpha x_0\\). Clearly, \\(\\alpha = 0\\) and \\(x_0 = 0\\) are impossible, so it must be that \\(x_0 = 2\\). Then \\(\\alpha = e^{x_0}/x_0^2 = e^2/4\\).</p>",
+      "answer": "\\frac{e^2}{4}"
+    },
+    "5": {
+      "problem": "<p>The function \\(f: \\mathbb{R} \\to \\mathbb{R}\\) satisfies \\(f(x^2)f''(x) = f'(x)f'(x^2)\\) for all real \\(x\\). Given that \\(f(1) = 1\\) and \\(f'''(1) = 8\\), determine \\(f'(1) + f''(1)\\).</p>",
+      "solutions": "<p>Let \\(f'(1) = a\\) and \\(f''(1) = b\\). Then setting \\(x=1\\) in the given equation, \\(b = a^2\\). Differentiating the given yields \\[2xf'(x^2)f''(x) + f(x^2)f'''(x) = f''(x)f'(x^2) + 2xf'(x)f''(x^2).\\] Plugging \\(x=1\\) into this equation gives \\(2ab+8 = ab+2ab\\), or \\(ab=8\\). Then because \\(a\\) and \\(b\\) are real, we obtain the solution \\((a,b) = (2,4)\\).</p><p><b>Remarks.</b> A priori, the function needn’t exist, but one possibility is \\(f(x) = e^{2x-2}\\).</p>",
+      "answer": "6"
+    },
+    "6": {
+      "problem": "<p>The elliptic curve \\(y^2 = x^3+1\\) is tangent to a circle centered at \\((4,0)\\) at the point \\((x_0, y_0)\\). Determine the sum of all possible values of \\(x_0\\).</p>",
+      "solutions": "<p>Note that \\(y^2 \\ge 0\\), so \\(x^3 \\ge -1\\) and \\(x \\ge -1\\). Let the circle be defined by \\((x-4)^2+y^2 = c\\) for some \\(c \\ge 0\\). Now differentiate the equations with respect to \\(x\\), obtaining \\(2y\\frac{dy}{dx} = 3x^2\\) from the given and \\(2y\\frac{dy}{dx} = -2x+8\\) from the circle. For tangency, the two expressions \\(\\frac{dy}{dx}\\) must be equal if they are well-defined, and this is almost always the case. Thus, \\(-2x_0+8 = 3x_0^2\\) so \\(x_0 = -2\\) or \\(x_0 = 4/3\\), but only the latter corresponds to a point on \\(y^2 = x^3+1\\). Otherwise, \\(y_0 = 0\\), and this gives the trivial solution \\(x_0 = -1\\).</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "7": {
+      "problem": "<p>Compute \\[\\sum_{n=1}^{\\infty} \\frac{1}{n\\cdot(n+1)\\cdot(n+1)!}.\\]</p>",
+      "solutions": "<p>We write \\[\\begin{aligned}\n\\sum_{n=1}^{\\infty} \\frac{1}{n\\cdot(n+1)\\cdot(n+1)!} &amp;= \\sum_{n=1}^{\\infty} \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right)\\frac{1}{(n+1)!} = \\sum_{n=1}^{\\infty} \\frac{1}{n\\cdot(n+1)!} - \\sum_{n=1}^{\\infty} \\frac{1}{(n+1)\\cdot(n+1)!} \\\\\n&amp;= \\frac{1}{2} + \\sum_{n=2}^{\\infty} \\frac{1}{n\\cdot(n+1)!} - \\sum_{n=1}^{\\infty} \\frac{1}{(n+1)\\cdot(n+1)!} = \\frac{1}{2} + \\sum_{n=1}^{\\infty} \\frac{1}{(n+1)(n+2)!} - \\frac{1}{(n+1)(n+1)!} \\\\\n&amp;= \\frac{1}{2} + \\sum_{n=1}^{\\infty} \\frac{1-(n+2)}{(n+1)(n+2)!} = \\frac{1}{2} - \\left(\\frac{1}{3!}+\\frac{1}{4!}+\\cdots\\right) = 3-\\left(\\frac{1}{0!}+\\frac{1}{1!}+\\frac{1}{2!}\\right) = 3-e.\n\\end{aligned}\\]</p><p>Alternatively, but with considerably less motivation, we can induce telescoping by adding and subtracting \\(e-2 = 1/2!+1/3!+\\cdots\\), obtaining \\[\\begin{aligned}\n2-e+\\sum_{n=1}^{\\infty} \\frac{n(n+1)+1}{n\\cdot(n+1)\\cdot(n+1)!} &amp;= 2-e+\\sum_{n=1}^{\\infty} \\frac{(n+1)^2-n}{n\\cdot(n+1)\\cdot(n+1)!} \\\\\n&amp;= 2-e+\\sum_{n=1}^{\\infty} \\frac{1}{n\\cdot n!} - \\frac{1}{(n+1)\\cdot(n+1)!} = 3-e.\n\\end{aligned}\\]</p>",
+      "answer": "3-e"
+    },
+    "8": {
+      "problem": "<p>Suppose that \\(\\omega\\) is a primitive \\(2007^{\\text{th}}\\) root of unity. Find \\[(2^{2007}-1)\\sum_{j=1}^{2006} \\frac{1}{2-\\omega^j}.\\]</p><p>For this problem only, you may express your answer in the form \\(m\\cdot n^k + p\\), where \\(m, n, k\\), and \\(p\\) are positive integers. Note that a number \\(z\\) is a <i>primitive \\(n^{\\text{th}}\\) root of unity</i> if \\(z^n = 1\\) and \\(n\\) is the smallest number amongst \\(k = 1, 2, \\ldots, n\\) such that \\(z^k = 1\\).</p>",
+      "solutions": "<p>Note that \\[\\begin{aligned}\n\\frac{1}{z-\\omega}+\\cdots+\\frac{1}{z-\\omega^{2006}} &amp;= \\frac{\\sum_{j=1}^{2006}\\prod_{i\\ne j}(z-\\omega^i)}{(z-\\omega)\\cdots(z-\\omega^{2006})} \\\\\n&amp;= \\frac{\\frac{d}{dz}\\left[z^{2006}+z^{2005}+\\cdots+1\\right]}{z^{2006}+z^{2005}+\\cdots+1} \\\\\n&amp;= \\frac{2006z^{2005}+2005z^{2004}+\\cdots+1}{z^{2006}+z^{2005}+\\cdots+1}\\cdot\\frac{z-1}{z-1} \\\\\n&amp;= \\frac{2006z^{2007}-2007z^{2006}+1}{(z^{2007}-1)(z-1)}.\n\\end{aligned}\\] Plugging in \\(z=2\\) gives \\(\\frac{2005\\cdot 2^{2006}+1}{2^{2007}-1}\\); whence the answer.</p>",
+      "answer": "2005\\cdot 2^{2006}+1"
+    },
+    "9": {
+      "problem": "<p>\\(g\\) is a twice differentiable function over the positive reals such that \\[\\begin{aligned}\ng(x) + 2x^3 g'(x) + x^4 g''(x) &amp;= 0 \\quad \\text{for all positive reals } x, \\\\\n\\lim_{x\\to\\infty} xg(x) &amp;= 1.\n\\end{aligned}\\] Find the real number \\(\\alpha &gt; 1\\) such that \\(g(\\alpha) = 1/2\\).</p>",
+      "solutions": "<p>In the first equation, we can convert the expression \\(2x^3g'(x)+x^4g''(x)\\) into the derivative of a product, and in fact a second derivative, by writing \\(y=1/x\\). Specifically, \\[\\begin{aligned}\n0 = g(x)+2x^3g'(x)+x^4g''(x) &amp;= g\\left(\\frac{1}{y}\\right)+2y^{-3}g'\\left(\\frac{1}{y}\\right)+y^{-4}g''\\left(\\frac{1}{y}\\right) \\\\\n&amp;= g\\left(\\frac{1}{y}\\right)+\\frac{d}{dy}\\left[-y^{-2}g'\\left(\\frac{1}{y}\\right)\\right] \\\\\n&amp;= g\\left(\\frac{1}{y}\\right)+\\frac{d^2}{dy^2}\\left[g\\left(\\frac{1}{y}\\right)\\right].\n\\end{aligned}\\] Thus \\(g\\left(\\frac{1}{y}\\right) = c_1\\cos(y)+c_2\\sin(y)\\) or \\(g(x) = c_1\\cos(1/x)+c_2\\sin(1/x)\\). Now the second condition gives \\[1 = \\lim_{x\\to\\infty} c_1 x + c_2\\cdot\\frac{\\sin(1/x)}{1/x} = c_2 + \\lim_{x\\to\\infty} c_1 x.\\] It must be that \\(c_1=0\\), \\(c_2=1\\). Now since \\(0 &lt; 1/\\alpha &lt; 1\\), the value of \\(\\alpha\\) such that \\(g(\\alpha) = \\sin(1/\\alpha) = 1/2\\) is given by \\(1/\\alpha = \\pi/6\\) and so \\(\\alpha = 6/\\pi\\).</p>",
+      "answer": "\\frac{6}{\\pi}"
+    },
+    "10": {
+      "problem": "<p>Compute \\[\\int_0^\\infty \\frac{e^{-x}\\sin(x)}{x}\\,dx.\\]</p>",
+      "solutions": "<p>We can compute the integral by introducing a parameter and exchanging the order of integration: \\[\\begin{aligned}\n\\int_0^\\infty e^{-x}\\left(\\frac{\\sin(x)}{x}\\right)dx &amp;= \\int_0^\\infty e^{-x}\\left(\\int_0^1 \\cos(ax)\\,da\\right)dx = \\int_0^1\\left(\\int_0^\\infty e^{-x}\\cos(ax)\\,dx\\right)da \\\\\n&amp;= \\int_0^1 \\text{Re}\\left[\\int_0^\\infty e^{(-1+ai)x}dx\\right]da = \\int_0^1 \\text{Re}\\left[\\left.\\frac{e^{(-1+ai)x}}{-1+ai}\\right|_{x=0}^\\infty\\right]da \\\\\n&amp;= \\int_0^1 \\text{Re}\\left[\\frac{1}{1-ai}\\right]da = \\int_0^1 \\text{Re}\\left[\\frac{1+ai}{1+a^2}\\right]da \\\\\n&amp;= \\int_0^1 \\frac{1}{1+a^2}\\,da = \\left.\\tan^{-1}(a)\\right|_{a=0}^1 = \\frac{\\pi}{4}.\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{\\pi}{4}"
+    }
+  }
+}

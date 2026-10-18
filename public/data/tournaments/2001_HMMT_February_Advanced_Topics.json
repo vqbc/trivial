@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Advanced Topics",
+  "year": 2001,
+  "name": "Advanced Topics Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2001/feb/adv/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find \\(x-y\\), given that \\(x^4=y^4+24\\), \\(x^2+y^2=6\\), and \\(x+y=3\\).</p>",
+      "solutions": "<p>Solution: \\(\\frac{24}{6\\cdot 3} = \\frac{x^4-y^4}{(x^2+y^2)(x+y)} = \\frac{(x^2+y^2)(x+y)(x-y)}{(x^2+y^2)(x+y)} = x-y = \\boxed{\\frac{4}{3}}\\).</p>",
+      "answer": "\\frac{4}{3}"
+    },
+    "2": {
+      "problem": "<p>Find \\(\\log_n\\left(\\frac{1}{2}\\right)\\log_{n-1}\\left(\\frac{1}{3}\\right)\\cdots\\log_2\\left(\\frac{1}{n}\\right)\\) in terms of \\(n\\).</p>",
+      "solutions": "<p>Solution: Using \\(\\log\\frac{1}{x} = -\\log x\\) and \\(\\log_b a = \\frac{\\log a}{\\log b}\\), we get that the product equals \\(\\frac{(-\\log 2)(-\\log 3)\\cdots(-\\log n)}{\\log n\\cdots\\log 3\\log 2} = \\boxed{(-1)^{n-1}}\\).</p>",
+      "answer": "(-1)^{n-1}"
+    },
+    "3": {
+      "problem": "<p>Calculate the sum of the coefficients of \\(P(x)\\) if \\((20x^{27}+2x^2+1)P(x)=2001x^{2001}\\).</p>",
+      "solutions": "<p>Solution: The sum of coefficients of \\(f(x)\\) is the value of \\(f(1)\\) for any polynomial \\(f\\). Plugging in 1 to the above equation, \\(P(1) = \\frac{2001}{23} = \\boxed{87}\\).</p>",
+      "answer": "87"
+    },
+    "4": {
+      "problem": "<p>Boris was given a Connect Four game set for his birthday, but his color-blindness makes it hard to play the game. Still, he enjoys the shapes he can make by dropping checkers into the set. If the number of shapes possible modulo (horizontal) flips about the vertical axis of symmetry is expressed as \\(9(1+2+\\cdots+n)\\), find \\(n\\). (Note: the board is a vertical grid with seven columns and eight rows. A checker is placed into the grid by dropping it from the top of a column, and it falls until it hits either the bottom of the grid or another checker already in that column. Also, \\(9(1+2+\\cdots+n)\\) is the number of shapes possible, with two shapes that are horizontal flips of each other counted as one. In other words, the shape that consists solely of 3 checkers in the rightmost row and the shape that consists solely of 3 checkers in the leftmost row are to be considered the same shape.)</p>",
+      "solutions": "<p>Solution: There are \\(9^7\\) total shapes possible, since each of the 7 columns can contain anywhere from 0 to 8 checkers. The number of shapes symmetric with respect to a horizontal flip is the number of shapes of the leftmost four columns, since the configuration of these four columns uniquely determines the configuration of the remaining columns if it is known the shape is symmetric: \\(9^4\\). Now we know there are \\(9^7-9^4\\) non-symmetric shapes, so there are \\(\\frac{9^7-9^4}{2}\\) non-symmetric shapes modulo flips. Thus the total number of shapes modulo flips is \\(9^4 + \\frac{9^7-9^4}{2} = 9^4\\left(1+\\frac{9^3-1}{2}\\right) = 9^4\\left(\\frac{9^3+1}{2}\\right) = (\\frac{3^8(3^6-1)}{2} = 9\\frac{3^6(3^6+1)}{2} = 9(1+2+\\cdots+3^6)\\), so \\(n = 3^6 = \\boxed{729}\\).</p>",
+      "answer": "729"
+    },
+    "5": {
+      "problem": "<p>Find the 6-digit number beginning and ending in the digit 2 that is the product of three consecutive even integers.</p>",
+      "solutions": "<p>Solution: Because the last digit of the product is 2, none of the three consecutive even integers end in 0. Thus they must end in 2, 4, 6 or 4, 6, 8, so they must end in 4, 6, 8 since \\(2\\cdot 4\\cdot 6\\) does not end in 2. Call the middle integer \\(n\\). Then the product is \\((n-2)n(n+2) = n^3-4n\\), so \\(n &gt; \\sqrt[3]{200000} = \\sqrt[3]{200\\cdot 10^3} \\approx 60\\), but clearly \\(n &lt; \\sqrt[3]{300000} = \\sqrt[3]{300\\cdot 10^3} &lt; 70\\). Thus \\(n = 66\\), and the product is \\(66^3 - 4\\cdot 66 = \\boxed{287232}\\).</p>",
+      "answer": "287232"
+    },
+    "6": {
+      "problem": "<p>There are two red, two black, two white, and a positive but unknown number of blue socks in a drawer. It is empirically determined that if two socks are taken from the drawer without replacement, the probability they are of the same color is \\(\\frac{1}{5}\\). How many blue socks are there in the drawer?</p>",
+      "solutions": "<p>Solution: Let the number of blue socks be \\(x&gt;0\\). Then the probability of drawing a red sock from the drawer is \\(\\frac{2}{6+x}\\) and the probability of drawing a second red sock from the drawer is \\(\\frac{1}{6+x-1}=\\frac{1}{5+x}\\), so the probability of drawing two red socks from the drawer without replacement is \\(\\frac{2}{(6+x)(5+x)}\\). This is the same as the probability of drawing two black socks from the drawer and the same as the probability of drawing two white socks from the drawer. The probability of drawing two blue socks from the drawer, similarly, is \\(\\frac{x(x-1)}{(6+x)(5+x)}\\). Thus the probability of drawing two socks of the same color is the sum of the probabilities of drawing two red, two black, two white, and two blue socks from the drawer: \\(3\\frac{2}{(6+x)(5+x)}+\\frac{x(x-1)}{(6+x)(5+x)}=\\frac{x^2-x+6}{(6+x)(5+x)}=\\frac{1}{5}\\). Cross-multiplying and distributing gives \\(5x^2-5x+30=x^2+11x+30\\), so \\(4x^2-16x=0\\), and \\(x=0\\) or \\(4\\). But since \\(x&gt;0\\), there are \\(\\boxed{4}\\) blue socks.</p>",
+      "answer": "4"
+    },
+    "7": {
+      "problem": "<p>Order these four numbers from least to greatest: \\(5^{56}, 10^{51}, 17^{35}, 31^{28}\\).</p>",
+      "solutions": "<p>Solution: \\(10^{51} &gt; 9^{51}=3^{102}=27^{34}&gt;17^{35}&gt;16^{35}=32^{28}&gt;31^{28}&gt;25^{28}=5^{56}\\), so the ordering is \\(\\boxed{5^{56}, 31^{28}, 17^{35}, 10^{51}}\\).</p>",
+      "answer": "5^{56}, 31^{28}, 17^{35}, 10^{51}"
+    },
+    "8": {
+      "problem": "<p>Find the number of positive integer solutions to \\(n^x+n^y=n^z\\) with \\(n^z&lt;2001\\).</p>",
+      "solutions": "<p>Solution: If \\(n=1\\), the relation can not hold, so assume otherwise. If \\(x&gt;y\\), the left hand side factors as \\(n^y(n^{x-y}+1)\\) so \\(n^{x-y}+1\\) is a power of \\(n\\). But it leaves a remainder of 1 when divided by \\(n\\) and is greater than 1, a contradiction. We reach a similar contradiction if \\(y&gt;x\\). So \\(y=x\\) and \\(2n^x=n^z\\), so 2 is a power of \\(n\\) and \\(n=2\\). So all solutions are of the form \\(2^x+2^x=2^{x+1}\\), which holds for all \\(x\\). \\(2^{x+1}&lt;2001\\) implies \\(x&lt;11\\), so there are \\(\\boxed{10}\\) solutions.</p>",
+      "answer": "10"
+    },
+    "9": {
+      "problem": "<p>Find the real solutions of \\((2x+1)(3x+1)(5x+1)(30x+1)=10\\).</p>",
+      "solutions": "<p>Solution: \\((2x+1)(3x+1)(5x+1)(30x+1) = [(2x+1)(30x+1)][(3x+1)(5x+1)] = (60x^2+32x+1)(15x^2+8x+1) = (4y+1)(y+1) = 10\\), where \\(y=15x^2+8x\\). The quadratic equation in \\(y\\) yields \\(y=1\\) and \\(y=-\\frac{9}{4}\\). For \\(y=1\\), we have \\(15x^2+8x-1=0\\), so \\(x=\\frac{-4\\pm\\sqrt{31}}{15}\\). For \\(y=-\\frac{9}{4}\\), we have \\(15x^2+8x+\\frac{9}{4}\\), which yields only complex solutions for \\(x\\). Thus the real solutions are \\(\\boxed{\\frac{-4\\pm\\sqrt{31}}{15}}\\).</p>",
+      "answer": "\\frac{-4\\pm\\sqrt{31}}{15}"
+    },
+    "10": {
+      "problem": "<p>Alex picks his favorite point \\((x,y)\\) in the first quadrant on the unit circle \\(x^2+y^2=1\\), such that a ray from the origin through \\((x,y)\\) is \\(\\theta\\) radians counterclockwise from the positive \\(x\\)-axis. He then computes \\(\\cos^{-1}\\left(\\frac{4x+3y}{5}\\right)\\) and is surprised to get \\(\\theta\\). What is \\(\\tan(\\theta)\\)?</p>",
+      "solutions": "<p>Solution: \\(x=\\cos(\\theta)\\), \\(y=\\sin(\\theta)\\). By the trig identity you never thought you’d need, \\(\\frac{4x+3y}{5}=\\cos(\\theta-\\phi)\\), where \\(\\phi\\) has sine \\(3/5\\) and cosine \\(4/5\\). Now \\(\\theta-\\phi=\\theta\\) is impossible, since \\(\\phi\\ne 0\\), so we must have \\(\\theta-\\phi=-\\theta\\), hence \\(\\theta=\\phi/2\\). Now use the trusty half-angle identities to get \\(\\tan(\\theta)=\\boxed{\\frac{1}{3}}\\).</p>",
+      "answer": "\\frac{1}{3}"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "BMT Geometry Tiebreaker",
+  "year": 2020,
+  "name": "Geometry Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2020/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Given a regular hexagon, a circle is drawn circumscribing it and another circle is drawn inscribing it. The ratio of the area of the larger circle to the area of the smaller circle can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m+n\\).</p>",
+      "solutions": "<p>Call the side length of the hexagon \\(s\\). The radius of the circumscribed circle is \\(s\\), and drawing a 30-60-90 triangle with the 2 radii as sides shows that the radius of the inscribed circle is \\(s\\frac{\\sqrt{3}}{2}\\). Then the ratio of their areas is the squared ratio of their side lengths, which is \\(\\left(s/\\frac{s\\sqrt{3}}{2}\\right)^2 = \\left(\\frac{2}{\\sqrt{3}}\\right)^2 = \\frac{4}{3}\\), and thus our answer is \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "2": {
+      "problem": "<p>Quadrilateral \\(ABCD\\) is cyclic with \\(AB = CD = 6\\). Given that \\(AC = BD = 8\\) and \\(AD+3 = BC\\), the area of \\(ABCD\\) can be written in the form \\(\\frac{p\\sqrt{q}}{r}\\), where \\(p\\), \\(q\\), and \\(r\\) are positive integers such that \\(p\\) and \\(r\\) are relatively prime and that \\(q\\) is square-free. Compute \\(p+q+r\\).</p>",
+      "solutions": "<p>By Ptolemy’s Theorem, \\(AB \\cdot CD + BC \\cdot DA = AC \\cdot BD = 64\\), so \\(BC \\cdot DA = 28\\), giving \\(BC = 7\\) and \\(DA = 4\\). Then by drawing an altitude of \\(ABCD\\) and using the Pythagorean Theorem to solve for its height and then using the formula for a trapezoid, (or by Brahmagupta’s formula), the area is \\(\\frac{33\\sqrt{15}}{4}\\) and our answer is \\(\\boxed{52}\\).</p>",
+      "answer": "52"
+    },
+    "3": {
+      "problem": "<p>In unit cube \\(ABCDEFGH\\) (with faces \\(ABCD\\), \\(EFGH\\) and connecting vertices labeled so that \\(\\overline{AE}, \\overline{BF}, \\overline{CG}, \\overline{DH}\\) are edges of the cube), \\(L\\) is the midpoint of \\(\\overline{GH}\\). The area of \\(\\triangle CAL\\) can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m+n\\).</p>",
+      "solutions": "<p>First, we show that \\(\\angle LAC = 45^\\circ\\). Let \\(X\\) be the reflection of \\(C\\) over \\(L\\), so \\(A, B, C, X\\) are four corners of a \\(1 \\times 1 \\times 2\\) prism. Then \\(AX = CX = \\sqrt{5}\\) and \\(AC = \\sqrt{2}\\). The idea is that these can be interpreted as lengths in a \\(2 \\times 2\\) square: specifically, using coordinates for simplicity, we can set \\(X = (0,0)\\), \\(A = (1,2)\\), and \\(C = (2,1)\\). Then \\(L\\) is the midpoint of \\(CX\\) and has \\(x\\)-coordinate \\(1\\), so \\(AL\\) is vertical while \\(AC\\) has slope \\(-1\\). Thus \\(\\angle LAC = 45^\\circ\\). See below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2020_BMT_Geometry_Tiebreaker/3-fig1.png\" width=\"289\" alt=\"\"></p><p>Then the Pythagorean theorem shows that \\(AC = \\sqrt{2}\\) and \\(AL = \\frac{3}{2}\\) (using triangle \\(AHL\\), which has legs of length \\(\\sqrt{2}\\) and \\(\\frac{1}{2}\\)). Then using the formula \\(\\frac{1}{2}ab\\sin(C)\\) for area, the desired area is \\(\\frac{1}{2} \\cdot \\sqrt{2} \\cdot \\frac{3}{2} \\cdot \\sin(45^\\circ) = \\frac{1}{2} \\cdot \\sqrt{2} \\cdot \\frac{3}{2} \\cdot \\frac{\\sqrt{2}}{2} = \\frac{3}{4}\\), and thus our answer is \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry A",
+  "year": 2013,
+  "name": "Geometry A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2013_GeometryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(O\\) be a point with three other points \\(A\\), \\(B\\), \\(C\\) and \\(\\angle AOB = \\angle BOC = \\angle AOC = 2\\pi/3\\). Consider the average area of the set of triangles \\(ABC\\) where \\(OA, OB, OC \\in \\{3, 4, 5\\}\\). The average area can be written in the form \\(m\\sqrt{n}\\) where \\(m, n\\) are integers and \\(n\\) is not divisible by a perfect square greater than 1. Find \\(m + n\\).</p>",
+      "solutions": "<p>By symmetry, it suffices to solve for the average area of \\(\\triangle OAB\\) and multiply by 3.</p><p>\\(|\\triangle OAB| = \\frac{1}{2}|OA||OB|\\sin(2\\pi/3)\\), so summing over all the possible combinations, we have the total area of \\(OAB\\) as \\(\\frac{1}{2}(3+4+5)(3+4+5)\\left(\\frac{\\sqrt{3}}{2}\\right) = 36\\sqrt{3}\\). Thus the average area of \\(OAB\\) is \\(4\\sqrt{3}\\).</p><p>Therefore the average area of \\(\\triangle ABC\\) is \\(12\\sqrt{3}\\), and the answer is \\(15\\).</p>",
+      "answer": "15"
+    },
+    "2": {
+      "problem": "<p>An equilateral triangle is given. A point lies on the incircle of the triangle. If the smallest two distances from the point to the sides of the triangle is 1 and 4, the sidelength of this equilateral triangle can be expressed as \\(\\frac{a\\sqrt{b}}{c}\\) where \\((a, c) = 1\\) and \\(b\\) is not divisible by the square of an integer greater than 1. Find \\(a + b + c\\).</p>",
+      "solutions": "<p>Let the triangle be \\(ABC\\), and let the point on the incircle be \\(P\\). Let the feet of the two shorter pedals be \\(X\\) and \\(Y\\), and assume \\(P\\) is closest to \\(A\\) among \\(A, B, C\\). Then \\(AXPY\\) is a cyclic quadrilateral so \\(\\angle XPY = 120^\\circ\\). We have from this that \\(XY = \\sqrt{21} \\Rightarrow AP = 2\\sqrt{7}\\). Setting up an equation on \\(r\\), the inradius, we get \\(r = \\frac{14}{3}\\), and thus the sidelength is \\(\\frac{28\\sqrt{3}}{3}\\).</p>",
+      "answer": "34"
+    },
+    "3": {
+      "problem": "<p>Consider the shape formed from taking equilateral triangle \\(ABC\\) with side length 6 and tracing out the arc \\(BC\\) with center \\(A\\). Set the shape down on line \\(l\\) so that segment \\(AB\\) is perpendicular to \\(l\\), and \\(B\\) touches \\(l\\). Beginning from arc \\(BC\\) touching \\(l\\), We roll \\(ABC\\) along \\(l\\) until both points \\(A\\) and \\(C\\) are on the line. The area traced out by the roll can be written in the form \\(n\\pi\\), where \\(n\\) is an integer. Find \\(n\\).</p>",
+      "solutions": "<p>The roll can be broken down into two parts. The first part, when the shape rolls along arc \\(BC\\), traces a rectangle of area \\(12\\pi\\). The second part, when the shape rolls about the point \\(C\\), traces a quarter circle of area \\(9\\pi\\). The total area is \\(21\\pi\\).</p>",
+      "answer": "21"
+    },
+    "4": {
+      "problem": "<p>Draw an equilateral triangle with center \\(O\\). Rotate the equilateral triangle \\(30^\\circ, 60^\\circ, 90^\\circ\\) with respect to \\(O\\) so there would be four congruent equilateral triangles on each other. Look at the diagram. If the smallest triangle has area 1, the area of the original equilateral triangle could be expressed as \\(p + q\\sqrt{r}\\) where \\(p, q, r\\) are positive integers and \\(r\\) is not divisible by a square greater than 1. Find \\(p + q + r\\).</p>",
+      "solutions": "<p>\\(\\frac{1}{3}\\) of triangle is similar to the smallest triangle with a ratio of \\(3 + 2\\sqrt{3}\\). Answer is \\(63 + 36\\sqrt{3}\\) hence \\(\\boxed{102}\\).</p>",
+      "answer": "102"
+    },
+    "5": {
+      "problem": "<p>Suppose you have a sphere tangent to \\(xy\\)-plane with its center having positive \\(z\\)-coordinate. If it is projected from a point \\(P = (0, b, a)\\) to the \\(xy\\)-plane, it gives the conic section \\(y = x^2\\). If we write \\(a = \\frac{p}{q}\\) where \\(p, q\\) are integers, find \\(p + q\\).</p>",
+      "solutions": "<p>If \\(P\\) is (strictly) above the sphere, the projected curve should become ellipse. If it is above, the projection should become hyperbola instead. Thus the height of the sphere (two times the radius) should be exactly same as \\(a\\), the height of \\(P\\). Also as \\(y = x^2\\) is symmetric with respect to \\(yz\\)-plane, the sphere should also be symmetric.</p><p>Let \\(Q = (0, c, a/2)\\) be the center of the sphere, and \\(X = (t, t^2, 0)\\) be a point on the projected conic. Note that \\(PX\\) should be tangent to the sphere, so the distance from \\(Q\\) to \\(PX\\) is \\(a/2\\). Using the inner product, this condition can be phrased as follows: \\[\\frac{a/2}{|PQ|} = \\cos\\angle XPQ = \\frac{\\overrightarrow{PX} \\cdot \\overrightarrow{PQ}}{|PX||PQ|}.\\]</p><p>Meanwhile we have \\(\\overrightarrow{PX} = (t, t^2 - b, -a)\\) and \\(\\overrightarrow{PQ} = (0, c - b, -a/2)\\), so this becomes \\[\\frac{a}{2}|PX| = \\frac{a}{2}\\sqrt{t^2 + (t^2 - b)^2 + a^2} = \\overrightarrow{PX} \\cdot \\overrightarrow{PQ} = (c-b)(t^2-b) + \\frac{a^2}{2}.\\]</p><p>Squaring both sides gives \\[\\frac{a^2}{4}(t^2-b)^2 + \\frac{a^2}{4}t^2 + \\frac{a^4}{4} = (c-b)^2(t^2-b)^2 + a^2(c-b)(t^2-b) + \\frac{a^4}{4},\\] which should be identity for all \\(t\\). Comparing coefficients gives \\(|c-b| = a/2\\) and \\(c - b = 1/4\\), so \\(a\\) should be \\(\\boxed{1/2}\\).</p>",
+      "answer": "3"
+    },
+    "6": {
+      "problem": "<p>On a circle, points \\(A, B, C, D\\) lie counterclockwise in this order. Let the orthocenters of \\(ABC, BCD, CDA, DAB\\) be \\(H, I, J, K\\) respectively. Let \\(HI = 2, IJ = 3, JK = 4, KH = 5\\). Find the value of \\(13(BD)^2\\).</p>",
+      "solutions": "<p>We repeatedly take advantage of the fact that \\(\\overrightarrow{OH} = \\overrightarrow{OA}+\\overrightarrow{OB}+\\overrightarrow{OC}\\) for a triangle \\(ABC\\) with circumcenter \\(O\\), orthocenter \\(H\\). (This is a crucial lemma to a synthetic proof of the Euler Line and is well-known.)</p><p>Using this, we have \\(\\overrightarrow{OH} = \\overrightarrow{OA}+\\overrightarrow{OB}+\\overrightarrow{OC}\\) and \\(\\overrightarrow{OI} = \\overrightarrow{OB}+\\overrightarrow{OC}+\\overrightarrow{OD}\\). Thus we have \\(\\overrightarrow{HI} = \\overrightarrow{AD}\\). Likewise we have \\(\\overrightarrow{IJ} = \\overrightarrow{DC}\\), \\(\\overrightarrow{JK} = \\overrightarrow{CB}\\), \\(\\overrightarrow{KH} = \\overrightarrow{BA}\\).</p><p>Thus the given length equations is actually just \\(AB = 5, BC = 4, CD = 3, DA = 2\\). From this one can use many ways to prove that \\[BD = \\sqrt{\\frac{(2*5+4*3)(2*4+3*5)}{(2*5+4*3)}}.\\]</p><p>(This is also well-known.)</p>",
+      "answer": "253"
+    },
+    "7": {
+      "problem": "<p>Given triangle \\(ABC\\) and a point \\(P\\) inside it, \\(\\angle BAP = 18^\\circ\\), \\(\\angle CAP = 30^\\circ\\), \\(\\angle ACP = 48^\\circ\\), and \\(AP = BC\\). If \\(\\angle BCP = x^\\circ\\), find \\(x\\).</p>",
+      "solutions": "<p>Observe \\(\\angle BAC = \\angle ACP = 48^\\circ\\). Draw a line through \\(P\\) parallel to \\(AC\\) and let it cut \\(AB\\) at \\(Q\\). Then \\(ACPQ\\) is isosceles trapezoid. Thus we have \\(BC = AP = CQ\\) and hence \\(\\angle ABC = \\angle BQC = 48^\\circ + 30^\\circ = 78^\\circ\\), giving \\(\\angle BCP = 6^\\circ\\).</p>",
+      "answer": "6"
+    },
+    "8": {
+      "problem": "<p>Three chords of a sphere, each having length \\(5, 6, 7\\), intersect at a single point inside the sphere and are pairwise perpendicular. For \\(R\\) the minimum possible radius of the sphere, find \\(R^2\\).</p>",
+      "solutions": "<p>Let \\(X\\) be the intersection point, \\(A_1B_1, A_2B_2, A_3B_3\\) be three chords of length \\((l_1, l_2, l_3) = (5, 6, 7)\\) respectively, and \\(M_1, M_2, M_3\\) be their midpoints respectively. The notion of \"power of a point\" generalizes naturally to sphere, as any two chords intersecting at \\(X\\) should lie on a same plane and power theorem for the circle section can be applied. Thus we can write \\[p = A_1X \\cdot B_1X = A_2X \\cdot B_2X = A_3X \\cdot B_3X.\\]</p><p>It also holds that \\(p = R^2 - OX^2\\) since you can still calculate the power using the diameter going through \\(X\\). Also we have \\(A_iX \\cdot B_iX = A_iM_i^2 - XM_i^2\\), thus the length \\(t_i = XM_i\\) is given by \\[p = R^2 - OX^2 = \\frac{l_i^2}{4} - t_i^2, \\quad t_i = \\frac{l_i^2}{4} - p.\\]</p><p>Meanwhile note that that \\(M_iO\\) is prependicular to \\(A_iB_i\\), thus \\(XM_i\\) is projection of \\(XO\\) onto \\(A_iB_i\\). As three chords are pairwise perpendicular, the Pythagorean theorem gives \\[OX^2 = t_1^2+t_2^2+t_3^2 = \\frac{l_1^2+l_2^2+l_3^2}{4} - 3p\\] so \\[R^2 = OX^2+p = \\frac{l_1^2+l_2^2+l_3^2}{4} - 2p.\\]</p><p>Now \\(p = l_1^2/4 - t_1^2\\) is at most \\(l_1^2/4 = 25/4\\), and this bound gives \\[R^2 \\ge \\frac{l_1^2+l_2^2+l_3^2}{4} - 2\\cdot\\frac{25}{4} = \\frac{25+36+49-50}{4} = 15.\\]</p><p>Notice that this bound is indeed attainable. For any values of \\(t_1, t_2, t_3\\) and \\(p &gt; 0\\) satisfying above equations, the relative positions of \\(A_i\\)s and \\(B_i\\)s are all fixed. And if we define the point \\(O\\) to be \\(\\overrightarrow{XO} = \\overrightarrow{XM_1} + \\overrightarrow{XM_2} + \\overrightarrow{XM_3}\\), then it can be proven that \\(OA_i^2 = OB_i^2 = \\text{const}\\) using the Pythagorean theorem.</p>",
+      "answer": "15"
+    }
+  }
+}

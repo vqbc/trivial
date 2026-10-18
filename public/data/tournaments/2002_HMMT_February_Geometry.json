@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2002,
+  "name": "Geometry",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2002/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A man, standing on a lawn, is wearing a circular sombrero of radius 3 feet. Unfortunately, the hat blocks the sunlight so effectively that the grass directly under it dies instantly. If the man walks in a circle of radius 5 feet, what area of dead grass will result?</p>",
+      "solutions": "<p>Let \\(O\\) be the center of the man’s circular trajectory. The sombrero kills all the grass that is within 3 feet of any point that is 5 feet away from \\(O\\) — i.e. all the grass at points \\(P\\) with \\(2 \\le OP \\le 8\\). The area of this annulus is then \\(\\pi(8^2-2^2)=\\boxed{60\\pi}\\) square feet.</p>",
+      "answer": "60\\pi \\text{ ft}^2"
+    },
+    "2": {
+      "problem": "<p>Dan is holding one end of a 26 inch long piece of light string that has a heavy bead on it with each hand (so that the string lies along straight lines). If he starts with his hands together at the start and leaves his hands at the same height, how far does he need to pull his hands apart so that the bead moves upward by 8 inches?</p>",
+      "solutions": "<p>After he pulls the bead is 5 inches below his hands, and it is 13 inches from each hand. Using the Pythagorean theorem, his hands must be \\(2 \\cdot 12 = \\boxed{24}\\) inches apart.</p>",
+      "answer": "24"
+    },
+    "3": {
+      "problem": "<p>A square and a regular hexagon are drawn with the same side length. If the area of the square is \\(\\sqrt{3}\\), what is the area of the hexagon?</p>",
+      "solutions": "<p>The hexagon is composed of six equilateral triangles each of side length \\(\\sqrt[4]{3}\\) (with base \\(b=\\sqrt[4]{3}\\) and height \\(\\frac{\\sqrt3}{2}b\\)), so the total area is \\(\\boxed{\\frac92}\\).</p>",
+      "answer": "\\frac{9}{2}"
+    },
+    "4": {
+      "problem": "<p>We call a set of professors and committees on which they serve a <i>university</i> if</p><p>(1) given two distinct professors there is one and only one committee on which they both serve,</p><p>(2) given any committee, \\(C\\), and any professor, \\(P\\), not on that committee, there is exactly one committee on which \\(P\\) serves and no professors on committee \\(C\\) serve, and</p><p>(3) there are at least two professors on each committee; there are at least two committees.</p><p>What is the smallest number of committees a university can have?</p>",
+      "solutions": "<p>Let \\(C\\) be any committee. Then there exists a professor \\(P\\) not on \\(C\\) (or else there would be no other committees). By axiom 2, \\(P\\) serves on a committee \\(D\\) having no common members with \\(C\\). Each of these committees has at least two members, and for each \\(Q \\in C, R \\in D\\), there exists (by axiom 1) a committee containing \\(Q\\) and \\(R\\), which (again by axiom 1) has no other common members with \\(C\\) or \\(D\\). Thus we have at least \\(2+2\\cdot2=\\boxed6\\) committees. This minimum is attainable - just take four professors and let any two professors form a committee.</p>",
+      "answer": "6"
+    },
+    "5": {
+      "problem": "<p>Consider a square of side length 1. Draw four lines that each connect a midpoint of a side with a corner not on that side, such that each midpoint and each corner is touched by only one line. Find the area of the region completely bounded by these lines.</p>",
+      "solutions": "<p>In unit square \\(ABCD\\), denote by \\(E,F,G,H\\) the respective midpoints of sides \\(AB,BC,CD,DA\\). Let \\(I\\) be the intersection of \\(AF\\) and \\(DE\\), let \\(J\\) be the intersection of \\(BG\\) and \\(AF\\), let \\(K\\) be the intersection of \\(CH\\) and \\(BG\\), and let \\(L\\) be the intersection of \\(DE\\) and \\(CH\\). We want to find the area of square \\(IJKL\\). The area of \\(ABF\\) is \\(\\frac14\\), which is equal to \\(\\frac12 AF \\cdot BJ = \\frac{\\sqrt5}{4}BJ\\), so \\(BJ=\\frac{1}{\\sqrt5}\\). Using similar triangles, \\(GK=JF=\\frac12 BJ\\). Thus the length of a side of \\(IJKL\\) is \\(JK = \\frac{\\sqrt5}{2} - \\frac{1}{\\sqrt5} - \\frac12\\cdot\\frac{1}{\\sqrt5} = \\frac{1}{\\sqrt5}\\), and the area of \\(IJKL\\) is \\(\\boxed{\\frac15}\\).</p>",
+      "answer": "\\frac{1}{5}"
+    },
+    "6": {
+      "problem": "<p>If we pick (uniformly) a random square of area 1 with sides parallel to the \\(x-\\) and \\(y-\\)axes that lies entirely within the 5-by-5 square bounded by the lines \\(x=0, x=5, y=0, y=5\\) (the corners of the square need not have integer coordinates), what is the probability that the point \\((x,y)=(4.5,0.5)\\) lies within the square of area 1?</p>",
+      "solutions": "<p>The upper-left corner of the unit square is picked uniformly from the square \\(0 \\le x \\le 4;\\ 1 \\le y \\le 5\\), and for it to contain the desired point it must lie in the square \\(3.5 \\le x \\le 4;\\ 1 \\le y \\le 1.5\\). The answer is the ratio of the squares’ areas, \\(\\frac14/16=\\boxed{\\frac{1}{64}}\\).</p>",
+      "answer": "\\frac{1}{64}"
+    },
+    "7": {
+      "problem": "<p>Equilateral triangle \\(ABC\\) of side length 2 is drawn. Three squares external to the triangle, \\(ABDE\\), \\(BCFG\\), and \\(CAHI\\), are drawn. What is the area of the smallest triangle that contains these squares?</p>",
+      "solutions": "<p>The equilateral triangle with sides lying on lines \\(DG\\), \\(EH\\), and \\(FI\\) has minimal area. (The only other reasonable candidate is the triangle with sides along \\(DE, FG, HI\\), but a quick sketch shows that it is larger.) Let \\(J\\), \\(K\\), and \\(L\\) be the vertices of this triangle closest to \\(D\\), \\(H\\), and \\(F\\), respectively. Clearly, \\(KI=FL=2\\). Triangle \\(FCI\\) is a \\(30^\\circ-30^\\circ-120^\\circ\\) triangle, so we can calculate the length of \\(FI\\) as \\(2\\sqrt3\\), making the side length of \\(\\triangle JKL\\) \\(4+2\\sqrt3\\), and its area \\(\\boxed{12+7\\sqrt3}\\).</p>",
+      "answer": "12+7\\sqrt{3}"
+    },
+    "8": {
+      "problem": "<p>Equilateral triangle \\(ABC\\) of side length 2 is drawn. Three squares containing the triangle, \\(ABDE\\), \\(BCFG\\), and \\(CAHI\\), are drawn. What is the area of the smallest triangle that contains these squares?</p>",
+      "solutions": "<p>The equilateral triangle with sides lying on lines \\(DE\\), \\(FG\\), and \\(HI\\) has minimal area. Let \\(J\\), \\(K\\), and \\(L\\) be the vertices of this triangle closest to \\(D\\), \\(H\\), and \\(F\\), respectively. Clearly, \\(DE=2\\). Denote by \\(M\\) the intersection of \\(CI\\) and \\(BD\\). Using the \\(30^\\circ-30^\\circ-120^\\circ\\) triangle \\(BCM\\), we get \\(BM=2/\\sqrt3\\), and thus \\(MD=2-2/\\sqrt3\\). By symmetry, \\(MJ\\) bisects angle \\(DMI\\), from which we see that \\(\\triangle JMD\\) is a \\(30^\\circ-60^\\circ-90^\\circ\\) triangle. We then get \\(JD=2\\sqrt3-2\\), making the side length of \\(JKL\\) \\(4\\sqrt3-2\\), and its area \\(\\boxed{13\\sqrt3-12}\\).</p>",
+      "answer": "13\\sqrt{3}-12"
+    },
+    "9": {
+      "problem": "<p>\\(A\\) and \\(B\\) are two points on a circle with center \\(O\\), and \\(C\\) lies outside the circle, on ray \\(AB\\). Given that \\(AB=24, BC=28, OA=15\\), find \\(OC\\).</p>",
+      "solutions": "<p>Let \\(M\\) be the midpoint of \\(AB\\); then \\(\\triangle OMB\\) is a right triangle with \\(OB=15, MB=12\\), so \\(OM=9\\). Now \\(\\triangle OMC\\) is a right triangle with \\(OM=9, MC=40\\), so \\(OC=\\boxed{41}\\).</p>",
+      "answer": "41"
+    },
+    "10": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be equilateral, and let \\(D,E,F\\) be points on sides \\(BC,CA,AB\\) respectively, with \\(FA=9, AE=EC=6, CD=4\\). Determine the measure (in degrees) of \\(\\angle DEF\\).</p>",
+      "solutions": "<p>Let \\(H, I\\) be the respective midpoints of sides \\(BC, AB\\), and also extend \\(CB\\) and \\(EF\\) to intersect at \\(J\\). By equal angles, \\(\\triangle EIF \\sim \\triangle JBF\\). However, \\(BF=12-9=3=9-6=IF\\), so in fact \\(\\triangle EIF \\cong \\triangle JBF\\), and then \\(JB=6\\). Now let \\(HI\\) intersect \\(EF\\) at \\(K\\), and notice that \\(\\triangle EIK \\sim \\triangle JHK \\Rightarrow IK/HK = EI/JH = 6/12 = 1/2 \\Rightarrow HK=4\\), since \\(IK+HK=HI=6\\). Now consider the \\(60^\\circ\\) rotation about \\(E\\) carrying triangle \\(CHE\\) to triangle \\(HIE\\); we see that it also takes \\(D\\) to \\(K\\), and thus \\(\\angle DEF = \\angle DEK = \\boxed{60^\\circ}\\).</p>",
+      "answer": "60^\\circ"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "test": "BMT Individual",
+  "year": 2013,
+  "name": "Individual Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2013/IS2013.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Billy the kid likes to play on escalators! Moving at a constant speed, he manages to climb up one escalator in 24 seconds and climb back down the same escalator in 40 seconds. If at any given moment the escalator contains 48 steps, how many steps can Billy climb in one second?</p>",
+      "solutions": "<p>If the escalator stayed stationary, Billy would be able to ascend or descend in \\(\\frac{2}{\\frac{1}{24}+\\frac{1}{40}} = 30\\) seconds. Thus, Billy can climb \\(\\frac{48}{30} = \\boxed{\\frac{8}{5}}\\) steps in one second.</p>",
+      "answer": "\\frac{8}{5}"
+    },
+    "2": {
+      "problem": "<p>S-Corporation designs its logo by linking together 4 semicircles along the diameter of a unit circle. Find the perimeter of the shaded portion of the logo.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2013_BMT_Individual/2-fig1.png\" width=\"206\" alt=\"\"></p>",
+      "solutions": "<p>The unit circle has circumference \\(2\\pi\\) and the four semicircles contribute \\(\\pi \\cdot (x + (1-x))\\) on each side, for a total perimeter of \\(\\boxed{4\\pi}\\).</p>",
+      "answer": "4\\pi"
+    },
+    "3": {
+      "problem": "<p>Two boxes contain some number of red, yellow, and blue balls. The first box has 3 red, 4 yellow, and 5 blue balls, and the second box has 6 red, 2 yellow, and 7 blue balls. There are two ways to select a ball from these boxes; one could first randomly choose a box and then randomly select a ball or one could put all the balls in the same box and simply randomly select a ball from there. How much greater is the probability of drawing a red ball using the second method than the first?</p>",
+      "solutions": "<p>The first method has a probability of \\(\\frac{3+6}{12+15} = \\frac{1}{3}\\), and the second method has probability \\(\\frac{1}{2}\\left(\\frac{3}{12} + \\frac{6}{15}\\right) = \\frac{13}{40}\\). Thus, our difference is \\(\\boxed{\\frac{1}{120}}\\).</p>",
+      "answer": "\\frac{1}{120}"
+    },
+    "4": {
+      "problem": "<p>Let \\(ABCD\\) be a square with side length 2, and let a semicircle with flat side \\(CD\\) be drawn inside the square. Of the remaining area inside the square outside the semi-circle, the largest circle is drawn. What is the radius of this circle?</p>",
+      "solutions": "<p>Clearly, this circle will be tangent to the semicircle and tangent to \\(AB\\) and one of \\(BC\\) or \\(AD\\). Without loss of generality, suppose it is tangent to \\(AD\\). Then, let the center of this circle be \\(O\\), and let it have radius \\(r\\). Drop a perpendicular from \\(O\\) to \\(CD\\) and label it \\(E\\), and let the midpoint of \\(CD\\) be \\(F\\). Then, we have \\(OF = 1+r, FE = 1-r, OE = 2-r\\). Applying the Pythagorean theorem, we have \\((2-r)^2 + (1-r)^2 = (1+r)^2\\), which simplifying yields \\(r^2 - 8r + 4 = 0\\). Solving this quadratic and getting rid of negative solutions gives us \\(r = \\boxed{4-2\\sqrt{3}}\\).</p>",
+      "answer": "4-2\\sqrt{3}"
+    },
+    "5": {
+      "problem": "<p>Two positive integers \\(m\\) and \\(n\\) satisfy \\[\\max(m,n) = (m-n)^2\\] \\[\\gcd(m,n) = \\frac{\\min(m,n)}{6}\\] Find \\(\\operatorname{lcm}(m,n)\\).</p>",
+      "solutions": "<p>Without loss of generality, let \\(m \\ge n\\). Then, \\(m = (m-n)^2\\), so \\(m = k^2\\) and \\(n = k^2-k\\) for some positive integer \\(k\\). Therefore, \\(\\gcd(m,n) = k\\), so \\(k = \\frac{k^2-k}{6}\\) implies \\(k = 7\\) and \\(m = 49, n = 42\\). Thus, our answer is \\(\\operatorname{lcm}(49,42) = \\boxed{294}\\).</p>",
+      "answer": "294"
+    },
+    "6": {
+      "problem": "<p>Bubble Boy and Bubble Girl live in bubbles of unit radii centered at \\((20,13)\\) and \\((0,10)\\) respectively. Because Bubble Boy loves Bubble Girl, he wants to reach her as quickly as possible, but he needs to bring a gift; luckily, there are plenty of gifts along the \\(x\\)-axis. Assuming that Bubble Girl remains stationary, find the length of the shortest path Bubble Boy can take to visit the \\(x\\)-axis and then reach Bubble Girl (the bubble is a solid boundary, and anything the bubble can touch, Bubble Boy can touch too).</p>",
+      "solutions": "<p>Consider the reflection of Bubble Boy and his path over the line \\(y=1\\). Note that Bubble Boy’s center must touch the line \\(y=1\\) once, as that is the boundary for the rest of his body to touch the \\(x\\)-axis. Then, Bubble Boy reflection will take a path directly to Bubble Girl, and the shortest possible path is a straight line. Furthermore, Bubble Boy and Bubble Girl will end with their centers 2 units apart, so as to minimize Bubble Boy’s distance walked. Therefore, the value is \\[\\sqrt{(20-0)^2+(10+13-2\\cdot 1)^2} - (1+1) = \\boxed{27}.\\]</p>",
+      "answer": "27"
+    },
+    "7": {
+      "problem": "<p>Given real numbers \\(a,b,c\\) such that \\(a+b-c = ab-bc-ca = abc = 8\\). Find all possible values of \\(a\\).</p>",
+      "solutions": "<p>Consider the polynomial with roots \\(a, b\\), and \\(-c\\). We factor to \\((x-2)(x^2-6x-4) = 0\\) to find \\(a = x = 2, 3\\pm\\sqrt{13}\\).</p>",
+      "answer": "2, 3+\\sqrt{13}, 3-\\sqrt{13}"
+    },
+    "8": {
+      "problem": "<p>The <b>three-digit</b> prime number \\(p\\) is written in base 2 as \\(p_2\\) and in base 5 as \\(p_5\\), and the two representations share the same last 2 digits. If the ratio of the number of digits in \\(p_2\\) to the number of digits in \\(p_5\\) is 5 to 2, find all possible values of \\(p\\).</p>",
+      "solutions": "<p>We may bound \\(5^3 \\le p &lt; 5^4\\) and \\(2^9 \\le p &lt; 2^{10}\\) and compute \\(p \\equiv 1 \\pmod{100}\\) or \\(p \\equiv 31 \\pmod{100}\\), giving us \\(p = 531\\) and \\(p = 601\\) as possible solutions. \\(531\\) is divisible by \\(3\\), so our only solution is \\(\\boxed{601}\\).</p>",
+      "answer": "601"
+    },
+    "9": {
+      "problem": "<p>An ant in the \\(xy\\)-plane is at the origin facing in the positive \\(x\\)-direction. The ant then begins a progression of moves, on the \\(n^{\\text{th}}\\) of which it first walks \\(\\frac{1}{5^n}\\) units in the direction it is facing and then turns \\(60^\\circ\\) degrees to the left. After a very large number of moves, the ant’s movements begins to converge to a certain point; what is the \\(y\\)-value of this point?</p>",
+      "solutions": "<p>The \\(n^{\\text{th}}\\) move the ant takes moves it \\(\\frac{1}{5^n}\\sin\\frac{\\pi(n-1)}{3}\\) in the \\(y\\)-direction. Then, the movements converge to \\(\\frac{\\sqrt{3}}{2}\\left(\\frac{1}{25}+\\frac{1}{125}\\right) - \\frac{\\sqrt{3}}{2}\\left(\\frac{1}{3125}+\\frac{1}{15625}\\right)+\\cdots = \\frac{\\sqrt{3}}{2}\\cdot\\frac{6}{125}\\left(1-\\frac{1}{125}+\\ldots\\right) = \\frac{\\sqrt{3}}{2}\\cdot\\frac{6}{125}\\cdot\\frac{125}{126} = \\boxed{\\frac{\\sqrt{3}}{42}}\\).</p>",
+      "answer": "\\frac{\\sqrt{3}}{42}"
+    },
+    "10": {
+      "problem": "<p>If five squares of a \\(3\\times 3\\) board initially colored white are chosen at random and blackened, what is the expected number of edges between two squares of the same color?</p>",
+      "solutions": "<p>There are 12 possible edges that could satisfy the given condition. The probability the two squares touching the edge are both black is \\(\\frac{5}{9}\\cdot\\frac{4}{8}\\), and the probability they are both white is \\(\\frac{4}{9}\\cdot\\frac{3}{8}\\). Thus, the expected number of edges touched by two black squares is \\(12\\left(\\frac{8}{9}\\cdot\\frac{4}{8}\\right) = \\boxed{\\frac{16}{3}}\\).</p>",
+      "answer": "\\frac{16}{3}"
+    },
+    "11": {
+      "problem": "<p>Let \\(t = (a, b, c)\\), and let us define \\(f^1(t) = (a+b, b+c, c+a)\\) and \\(f^k(t) = f^{k-1}(f^1(t))\\) for all \\(k &gt; 1\\). Furthermore, a permutation of \\(t\\) has the same elements, just in a different order (e.g., \\((b,c,a)\\)). If \\(f^{2013}(s)\\) is a permutation of \\(s\\) for some \\(s = (k,m,n)\\), where \\(k\\), \\(m\\), and \\(n\\) are integers such that \\(|k|, |m|, |n| \\le 10\\), how many possible values of \\(s\\) are there?</p>",
+      "solutions": "<p>Define \\(s(t) = a+b+c\\). Then, \\(s(f(t)) = a+b+b+c+c+a = 2s(t)\\), and in general \\(s(f^k(t)) = 2^k s(t)\\), so if \\(f^k(t) = t\\), we must have \\(s(t) = 0\\). Now we show that we will always return in at most 6 steps. Let \\(t = (a,b,c)\\), then \\(f(t) = (a+b, b+c, c+a)\\), and \\(f(f(t)) = (a+b+b+c, b+c+c+a, c+a+a+b) = (b,c,a)\\). Notice that this shifts all elements by 1, so if we repeat this operation three more times, we will return to \\((a,b,c)\\). Thus, we have \\(k \\le 6\\).</p>",
+      "answer": "6"
+    },
+    "12": {
+      "problem": "<p>Triangle \\(ABC\\) satisfies the property that \\(\\angle A = a \\log x\\), \\(\\angle B = a \\log 2x\\), and \\(\\angle C = a \\log 4x\\) radians, for some real numbers \\(a\\) and \\(x\\). If the altitude to side \\(AB\\) has length 8 and the altitude to side \\(BC\\) has length 9, find the area of \\(\\triangle ABC\\).</p>",
+      "solutions": "<p>Noting \\(\\angle B = \\frac{2\\pi}{3}\\) radians, we may calculate the area \\([ABC]\\) to be \\([ABC] = \\frac{\\sqrt{3}}{4} AB \\cdot BC = \\frac{\\sqrt{3}}{4} \\cdot \\frac{[ABC]}{4} \\cdot \\frac{[ABC]}{9/2}\\) and therefore, \\([ABC] = \\frac{72}{\\sqrt{3}} = 24\\sqrt{3}\\).</p>",
+      "answer": "24\\sqrt{3}"
+    },
+    "13": {
+      "problem": "<p>Let \\(f(n)\\) be a function from integers to integers. Suppose \\(f(11) = 1\\), and \\(f(a)f(b) = f(a+b) + f(a-b)\\), for all integers \\(a, b\\). Find \\(f(2013)\\).</p>",
+      "solutions": "<p>Let \\(a = 11, b = 0\\), yielding \\(f(11)f(0) = f(11) + f(11)\\), so \\(f(0) = 2\\). Now, let \\(b = 11\\), and \\(a\\) arbitrary, which gives us \\(f(a)f(11) = f(a+11) + f(a-11)\\), so \\(f(a+11) = f(a) - f(a-11)\\), which we may find subsequent values of \\(f(a)\\) if \\(a\\) is a multiple of 11. In turn, we get \\(f(22) = f(11) - f(0) = -1, f(33) = f(22) - f(11) = -2, f(44) = -1, f(55) = 1, f(66) = 2, f(77) = 1\\). Notice that \\(f(0) = f(66), f(11) = f(77)\\), and the recurrence has depth 2, so we see the cycle will repeat with length 6. Thus, \\(f(2013) = f(183 \\cdot 11) = f(33) = -2\\).</p>",
+      "answer": "-2"
+    },
+    "14": {
+      "problem": "<p>Triangle \\(ABC\\) has incircle \\(O\\) that is tangent to \\(AC\\) at \\(D\\). Let \\(M\\) be the midpoint of \\(AC\\). \\(E\\) lies on \\(BC\\) so that line \\(AE\\) is perpendicular to \\(BO\\) extended. If \\(AC = 2013, AB = 2014, DM = 249\\), find \\(CE\\).</p>",
+      "solutions": "<p>Let \\(O\\) be tangent to \\(AB\\) at \\(F\\) and \\(BC\\) at \\(G\\). Then, we have \\(AM = MC\\), \\(CG = DC\\), \\(AF = AD\\), \\(BF = BG\\), and \\(GE = FA\\), so \\(DC = DM + MC = CE + EG = CG\\), so \\(CE + EG = CE + FA\\). Thus, we get \\(DM + MC = CE + AM - MD\\), and \\(2DM = CE\\), so \\(CE = 498\\).</p>",
+      "answer": "498"
+    },
+    "15": {
+      "problem": "<p>Let \\(ABCD\\) be a convex quadrilateral with \\(\\angle ABD = \\angle BCD\\), \\(AD = 1000\\), \\(BD = 2000\\), \\(BC = 2001\\), and \\(DC = 1999\\). Point \\(E\\) is chosen on segment \\(DB\\) such that \\(\\angle ABD = \\angle ECD\\). Find \\(AE\\).</p>",
+      "solutions": "<p>\\(\\triangle ABD \\sim \\triangle ECD \\implies \\triangle AED \\sim \\triangle BCD\\). Then \\(AE = \\frac{BC \\cdot AD}{BD} = \\frac{2001}{2}\\).</p>",
+      "answer": "\\frac{2001}{2}"
+    },
+    "16": {
+      "problem": "<p>Find the sum of all possible \\(n\\) such that \\(n\\) is a positive integer and there exist \\(a, b, c\\) real numbers such that for every integer \\(m\\), the quantity \\(\\frac{2013m^3 + am^2 + bm + c}{n}\\) is an integer.</p>",
+      "solutions": "<p>Letting \\(a = a'n, b = b'n\\), and \\(c = c'n\\), we realize if \\(\\frac{2013}{n}m^3 + a'm^2 + b'm + c'\\) is an integer for every \\(m\\), then we have \\(\\frac{2013}{n}(m+1)^3 + a(m+1)^2 + b(m+1) + c\\) is also an integer, so the difference between these two must be an integer. The difference is \\(\\frac{3 \\cdot 2013}{n}m^2 + dm + e\\) for some real \\(d, e\\). We know this quantity must be an integer for every integer \\(m\\), so we can apply the same trick. The difference that we get next is \\(\\frac{6 \\cdot 2013}{n}m + f\\), for some real \\(f\\). If we apply this once again, we just get \\(\\frac{6 \\cdot 2013}{n}\\). Thus, we want \\(\\frac{6 \\cdot 2013}{n}\\) to be an integer, so we just need to find the sum of all divisors of \\(6 \\cdot 2013 = 2 \\cdot 3^2 \\cdot 11 \\cdot 61\\), which is \\((1+2)(1+3+3^2)(1+11)(1+61) = 29016\\).</p>",
+      "answer": "29016"
+    },
+    "17": {
+      "problem": "<p>Let \\(N \\ge 1\\) be a positive integer and \\(k\\) be an integer such that \\(1 \\le k \\le N\\). Define the recurrence \\(x_n = \\frac{x_{n-1} + x_{n-2} + \\ldots + x_{n-N}}{N}\\) for \\(n &gt; N\\) and \\(x_k = 1, x_1 = x_2 = \\ldots = x_{k-1} = x_{k+1} = \\ldots = x_N = 0\\). As \\(n\\) approaches infinity, \\(x_n\\) approaches some value. What is this value?</p>",
+      "solutions": "<p>Define the sequence \\(y_n\\) that satisfies the recurrence \\(Ny_n + (N-1)y_{n-1} + \\ldots + 1 \\cdot y_{n-N+1} = k\\) for \\(n \\ge N\\) with initial conditions \\(y_1 = \\ldots = y_{k-1} = y_{k+1} = \\ldots = y_N = 0\\) and \\(y_k = 1\\). Observe the initial values satisfy the recurrence for \\(y\\) and that \\(y_i = x_i\\) for \\(i = 1, 2, \\ldots, N\\). Take the recurrence for \\(y\\) and take \\(n \\to n+1\\). Then we get for \\(n \\ge N\\), \\(Ny_n + (N-1)y_{n-1} + \\ldots + 1 \\cdot y_{n-N+1} = Ny_{n+1} + (N-1)y_n + \\ldots + 1 \\cdot y_{n-N} \\implies Ny_{n+1} = y_n + \\ldots + y_{n-N+1}\\). Thus \\(x, y\\) satisfy the same recurrence. As \\(n\\) tends to infinity, the sequence tends to a finite limit. Call this limit \\(L\\). Then \\(NL + (N-1)L + \\ldots + L = k\\) so \\(L = \\frac{2k}{N(N+1)}\\).</p>",
+      "answer": "\\frac{2k}{N(N+1)}"
+    },
+    "18": {
+      "problem": "<p>Paul and his pet octahedron like to play games together. For this game, the octahedron randomly draws an arrow on each of its faces pointing to one of its three edges. Paul then randomly chooses a face and progresses from face to adjacent face, as determined by the arrows on each face, and he wins if he reaches every face of the octahedron. What is the probability that Paul wins?</p>",
+      "solutions": "<p>There are 18 successful cases, after choosing the placement of the first face. Thus, the answer is \\(\\frac{18}{3^7} = \\frac{2}{243}\\).</p>",
+      "answer": "\\frac{2}{243}"
+    },
+    "19": {
+      "problem": "<p>Equilateral triangle \\(ABC\\) is inscribed in a circle. Chord \\(AD\\) meets \\(BC\\) at \\(E\\). If \\(DE = 2013\\), how many scenarios exist such that both \\(DB\\) and \\(DC\\) are integers (two scenarios are different if \\(AB\\) is different or \\(AD\\) is different)?</p>",
+      "solutions": "<p>Let \\(e = DB, f = DC\\). Since \\(ABDC\\) is cyclic, we have \\(AD \\cdot BC = AB \\cdot f + AC \\cdot e\\), but \\(AB = BC = AC\\), so \\(AD = e + f\\). Additionally, we have triangle \\(BDE\\) similar to triangle \\(ADC\\), so \\(BD/AD = DE/DC\\), so \\(DE = DC*BD/AD\\). Thus, we have \\(2013 = \\frac{f \\cdot e}{f+e}\\), so \\(\\frac{1}{2013} = \\frac{1}{f} + \\frac{1}{e}\\). Thus, it suffices to find the number of integer solutions to this equation. Without loss of generality, suppose \\(f \\le e\\). Clearing demoninators, we have \\(2013f + 2013e = ef\\), so \\(e = 2013f/(f - 2013)\\). Let \\(k = f - 2013\\), so \\(e = 2013(k+2013)/k = 2013 + 2013^2/k\\), so if \\(e\\) is an integer, then \\(k\\) must divide \\(n^2\\). We also have \\(f = 2013 + k \\le x = 2013 + 2013^2/k\\), so \\(k \\le 2013^2/k\\), so \\(k \\le 2013\\). Thus, this is the number of divisors of \\(2013^2\\) that are less than or equal to 2013, or \\((d(2013^2)+1)/2\\) (where \\(d\\) represents the number of divisors, and because each factor \\(\\le 2013\\) gets paired with a unique factor \\(\\ge 2013\\)). Factoring \\(2013 = 3 \\cdot 11 \\cdot 61\\), so \\(2013^2\\) has \\(3^3 = 27\\) divisors, so the number of integer solutions is 14.</p>",
+      "answer": "14"
+    },
+    "20": {
+      "problem": "<p>A sequence \\(a_n\\) is defined such that \\(a_0 = \\frac{1+\\sqrt{3}}{2}\\) and \\(a_{n+1} = \\sqrt{a_n}\\) for \\(n \\ge 0\\). Evaluate \\[\\prod_{k=0}^{\\infty} 1 - a_k + a_k^2\\]</p>",
+      "solutions": "<p>Simplify to \\(1 - a_k + a_k^2\\) and take the limit of partial products up through \\(n\\) as \\(n \\to \\infty\\). Then, multiply by \\(\\frac{1+a_n+a_n^2}{1+a_n+a_n^2}\\) and collapse. Remaining is \\(\\frac{a_0^4+a_0^2+1}{3} = \\frac{5+2\\sqrt{3}}{4}\\).</p>",
+      "answer": "\\frac{5+2\\sqrt{3}}{4}"
+    }
+  }
+}

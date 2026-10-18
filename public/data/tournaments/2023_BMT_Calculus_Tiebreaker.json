@@ -1,0 +1,23 @@
+{
+  "test": "BMT Calculus Tiebreaker",
+  "year": 2023,
+  "name": "Calculus Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2023/calculus-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute \\[\\lim_{x\\to 0} \\left( \\frac{\\tan^{-1}(x)}{\\tan^{-1}(x) + x} \\right)^3.\\]</p>",
+      "solutions": "<p>So this function is nasty, let’s kind of cheat a little bit. \\[\\begin{aligned}\n\\lim_{x\\to 0} \\left( \\frac{\\tan^{-1}(x) + x}{\\tan^{-1}(x)} \\right) &amp;= \\lim_{x\\to 0} \\left( 1 + \\frac{x}{\\tan^{-1}(x)} \\right) = 2 \\\\\n\\lim_{x\\to 0} \\left( \\frac{\\tan^{-1}(x) + x}{\\tan^{-1}(x)} \\right)^3 &amp;= \\lim_{x\\to 0} \\left( \\frac{1}{2} \\right)^3 = \\boxed{\\frac{1}{8}}\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{1}{8}"
+    },
+    "2": {
+      "problem": "<p>Compute \\[\\int_0^1 \\frac{x^2}{1 + \\sqrt{1-x^2}} \\, dx.\\]</p>",
+      "solutions": "<p>We make the trig substitution \\(x = \\sin\\theta\\).</p><p>We obtain \\[\\begin{aligned}\n\\int_0^{\\pi/2} \\frac{\\sin^2\\theta \\cos\\theta}{1+\\cos\\theta} \\, d\\theta &amp;= \\int_0^{\\pi/2} \\left( \\frac{\\sin\\theta}{1+\\cos\\theta} \\right) \\sin\\theta \\cos\\theta \\, d\\theta \\\\\n&amp;= \\int_0^{\\pi/2} \\tan(\\theta/2) \\sin\\theta \\cos\\theta \\, d\\theta \\\\\n&amp;= \\int_0^{\\pi/2} 2\\tan(\\theta/2) \\sin(\\theta/2) \\cos(\\theta/2) \\cos\\theta \\, d\\theta \\\\\n&amp;= 2 \\int_0^{\\pi/2} \\sin^2(\\theta/2) \\cos\\theta \\, d\\theta \\\\\n&amp;= 2 \\int_0^{\\pi/2} \\sin^2(\\theta/2) (1 - 2\\sin^2(\\theta/2)) \\, d\\theta \\\\\n&amp;= 2 \\int_0^{\\pi/2} \\sin^2(\\theta/2) \\, d\\theta - 4 \\int_0^{\\pi/2} \\sin^4(\\theta/2) \\, d\\theta \\\\\n&amp;= 2 \\int_0^{\\pi/2} \\sin^2(\\theta/2) \\, d\\theta - 4 \\int_0^{\\pi/2} \\sin^2(\\theta/2) (1 - \\cos^2(\\theta/2)) \\, d\\theta \\\\\n&amp;= \\int_0^{\\pi/2} 4\\sin^2(\\theta/2) \\cos^2(\\theta/2) \\, d\\theta - 2 \\int_0^{\\pi/2} \\sin^2(\\theta/2) \\, d\\theta \\\\\n&amp;= \\int_0^{\\pi/2} \\sin^2(\\theta) \\, d\\theta - 2 \\int_0^{\\pi/2} \\sin^2(\\theta/2) \\, d\\theta\n\\end{aligned}\\]</p><p>Then, we evaluate each integral as follows: \\[\\begin{aligned}\n\\int_0^{\\pi/2} \\sin^2(\\theta/2) \\, d\\theta &amp;= \\int_0^{\\pi/2} \\frac{1-\\cos\\theta}{2} \\, d\\theta \\\\\n&amp;= \\frac{\\pi}{4} - \\frac{1}{2} \\int_0^{\\pi/2} \\cos\\theta \\, d\\theta \\\\\n&amp;= \\frac{\\pi}{4} - \\frac{1}{2},\n\\end{aligned}\\] \\[\\begin{aligned}\n\\int_0^{\\pi/2} \\sin^2(\\theta) &amp;= \\int_0^{\\pi/2} \\frac{1-\\cos(2\\theta)}{2} \\, d\\theta \\\\\n&amp;= \\frac{\\pi}{4} - \\frac{1}{2} \\int_0^{\\pi/2} \\cos(2\\theta) \\, d\\theta \\\\\n&amp;= \\frac{\\pi}{4}.\n\\end{aligned}\\]</p><p>Thus, the integral is \\[\\int_0^1 \\frac{x^2}{1+\\sqrt{1-x^2}} dx = \\frac{\\pi}{4} - 2 \\left( \\frac{\\pi}{4} - \\frac{1}{2} \\right) = \\boxed{\\frac{4-\\pi}{4}}.\\]</p>",
+      "answer": "\\frac{4-\\pi}{4}"
+    },
+    "3": {
+      "problem": "<p>Compute \\[\\sum_{n=0}^{\\infty} \\frac{n^3}{n!}.\\]</p>",
+      "solutions": "<p>The series is reminiscent of the power series definition for \\(e^x\\). Our strategy will be to repeatedly take the derivative of the power series of \\(e^x\\) and multiply by \\(x\\). \\[e^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}\\]</p><p>Take the derivative and multiply by \\(x\\): \\[\\begin{aligned}\ne^x &amp;= \\sum_{n=1}^{\\infty} \\frac{n x^{n-1}}{n!} \\\\\nx e^x &amp;= \\sum_{n=1}^{\\infty} \\frac{n x^n}{n!} = \\sum_{n=0}^{\\infty} \\frac{n x^n}{n!}.\n\\end{aligned}\\]</p><p>Repeat: \\[\\begin{aligned}\ne^x + x e^x &amp;= \\sum_{n=1}^{\\infty} \\frac{n^2 x^{n-1}}{n!} \\\\\nx e^x + x^2 e^x &amp;= \\sum_{n=0}^{\\infty} \\frac{n^2 x^n}{n!}.\n\\end{aligned}\\]</p><p>Repeat one last time: \\[\\begin{aligned}\ne^x + 3x e^x + x^2 e^x &amp;= \\sum_{n=1}^{\\infty} \\frac{n^3 x^{n-1}}{n!} \\\\\nx e^x + 3x^2 e^x + x^3 e^x &amp;= \\sum_{n=0}^{\\infty} \\frac{n^3 x^n}{n!}.\n\\end{aligned}\\]</p><p>We plug in \\(x=1\\) to get: \\[\\sum_{n=0}^{\\infty} \\frac{n^3 x^n}{n!} = \\boxed{5e}.\\]</p>",
+      "answer": "5e"
+    }
+  }
+}

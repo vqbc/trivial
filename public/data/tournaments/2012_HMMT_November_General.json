@@ -1,0 +1,58 @@
+{
+  "test": "HMMT November General",
+  "year": 2012,
+  "name": "General Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2012/nov/gen/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>What is the sum of all of the distinct prime factors of \\(25^3 - 27^2\\)?</p>",
+      "solutions": "<p>We note that \\(25^3 - 27^2 = 5^6 - 3^6 = (5^3 - 3^3)(5^3 + 3^3) = (5 - 3)(5^2 + 5 \\cdot 3 + 3^2)(5 + 3)(5^2 - 5 \\cdot 3 + 3^2) = 2 \\cdot 7^2 \\cdot 2^3 \\cdot 19\\), so the sum of the distinct prime factors is \\(2 + 7 + 19 = 28\\).</p>",
+      "answer": "28"
+    },
+    "2": {
+      "problem": "<p>Let \\(Q(x) = x^2 + 2x + 3\\), and suppose that \\(P(x)\\) is a polynomial such that \\[P(Q(x)) = x^6 + 6x^5 + 18x^4 + 32x^3 + 35x^2 + 22x + 8.\\] Compute \\(P(2)\\).</p>",
+      "solutions": "<p>Note that \\(Q(-1) = 2\\). Therefore, \\(P(2) = P(Q(-1)) = 1 - 6 + 18 - 32 + 35 - 22 + 8 = 2\\).</p>",
+      "answer": "2"
+    },
+    "3": {
+      "problem": "<p>\\(ABCD\\) is a rectangle with \\(AB = 20\\) and \\(BC = 3\\). A circle with radius 5, centered at the midpoint of \\(DC\\), meets the rectangle at four points: \\(W\\), \\(X\\), \\(Y\\), and \\(Z\\). Find the area of quadrilateral \\(WXYZ\\).</p>",
+      "solutions": "<p>Suppose that \\(X\\) and \\(Y\\) are located on \\(AB\\) with \\(X\\) closer to \\(A\\) than \\(B\\). Let \\(O\\) be the center of the circle, and let \\(P\\) be the midpoint of \\(AB\\). We have \\(OP \\perp AB\\) so \\(OPX\\) and \\(OPY\\) are right triangles with right angles at \\(P\\). Because \\(OX = OY = 5\\) and \\(OP = 3\\), we have \\(XP = PY = 4\\) by the Pythagorean theorem. Now, \\(WXYZ\\) is a trapezoid with \\(WZ = WO + OZ = 5 + 5 = 10\\), \\(XY = XP + PY = 8\\), and height 3, so its area is \\((\\frac{10+8}{2}) \\times 3 = 27\\).</p>",
+      "answer": "27"
+    },
+    "4": {
+      "problem": "<p>If you roll four fair 6-sided dice, what is the probability that at least three of them will show the same value?</p>",
+      "solutions": "<p>We have two cases: either three of the dice show one value and the last shows a different value, or all four dice show the same value. In the first case, there are six choices for the value of the dice which are the same and \\(\\binom{4}{3}\\) choice for which dice show that value. Then there are 5 choices for the last die. In total, there are \\(6\\binom{4}{3}5 = 120\\) possibilities. For the second case, there are 6 values that the last die can show. Consequently, the overall probability is, \\(\\frac{120+6}{6^4} = \\frac{126}{6^4} = \\frac{7}{72}\\).</p>",
+      "answer": "\\frac{7}{72}"
+    },
+    "5": {
+      "problem": "<p>How many ways are there to arrange three indistinguishable rooks on a \\(6 \\times 6\\) board such that no two rooks are attacking each other? (Two rooks are attacking each other if and only if they are in the same row or the same column.)</p>",
+      "solutions": "<p>There are \\(6 \\times 6 = 36\\) possible places to place the first rook. Since it cannot be in the same row or column as the first, the second rook has \\(5 \\times 5 = 25\\) possible places, and similarly, the third rook has \\(4 \\times 4 = 16\\) possible places. However, the rooks are indistinguishable, so there are \\(3! = 6\\) ways to reorder them. Therefore, the number of arrangements is \\(\\frac{36 \\times 25 \\times 16}{6} = 2400\\).</p>",
+      "answer": "2400"
+    },
+    "6": {
+      "problem": "<p>\\(ABCD\\) is a parallelogram satisfying \\(AB = 7\\), \\(BC = 2\\), and \\(\\angle DAB = 120^\\circ\\). Parallelogram \\(ECFA\\) is contained in \\(ABCD\\) and is similar to it. Find the ratio of the area of \\(ECFA\\) to the area of \\(ABCD\\).</p>",
+      "solutions": "<p>First, note that \\(BD\\) is the long diagonal of \\(ABCD\\), and \\(AC\\) is the long diagonal of \\(ECFA\\). Because the ratio of the areas of similar figures is equal to the square of the ratio of their side lengths, we know that the ratio of the area of \\(ECFA\\) to the area of \\(ABCD\\) is equal to the ratio \\(\\frac{AC^2}{BD^2}\\).</p><p>Using law of cosines on triangle \\(ABD\\), we have \\(BD^2 = AD^2 + AB^2 - 2(AD)(AB)\\cos(120^\\circ) = 2^2 + 7^2 - 2(2)(7)(-\\frac{1}{2}) = 67\\).</p><p>Using law of cosines on triangle \\(ABC\\), we have \\(AC^2 = AB^2 + BC^2 - 2(AB)(BC)\\cos(60^\\circ) = 7^2 + 2^2 - 2(7)(2)(\\frac{1}{2}) = 39\\).</p><p>Finally, \\(\\frac{AC^2}{BD^2} = \\frac{39}{67}\\).</p>",
+      "answer": "\\frac{39}{67}"
+    },
+    "7": {
+      "problem": "<p>Find the number of ordered 2012-tuples of integers \\((x_1, x_2, \\ldots, x_{2012})\\), with each integer between 0 and 2011 inclusive, such that the sum \\(x_1 + 2x_2 + 3x_3 + \\cdots + 2012x_{2012}\\) is divisible by 2012.</p>",
+      "solutions": "<p>We claim that for any choice of \\(x_2, x_3, \\ldots, x_{2012}\\), there is exactly one possible value of \\(x_1\\) satisfying the condition. We have \\(x_1 + 2x_2 + \\dotsb + 2012x_{2012} \\equiv 0 \\pmod{2012}\\) or \\(x_1 \\equiv -(2x_2 + \\dotsb + 2012x_{2012}) \\pmod{2012}\\). Indeed, we see that the right hand side is always an integer between 0 and 2011, so \\(x_1\\) must equal this number.</p><p>Now, there are 2012 choices for each of the 2011 variables \\(x_2, \\ldots, x_{2012}\\), and each of the \\(2012^{2011}\\) possible combinations gives exactly one valid solution, so the total number of 2012-tuples is \\(2012^{2011}\\).</p>",
+      "answer": "2012^{2011}"
+    },
+    "8": {
+      "problem": "<p>Let \\(n\\) be the 200th smallest positive real solution to the equation \\(x - \\frac{\\pi}{2} = \\tan x\\). Find the greatest integer that does not exceed \\(\\frac{n}{2}\\).</p>",
+      "solutions": "<p>Drawing the graphs of the functions \\(y = x - \\frac{\\pi}{2}\\) and \\(y = \\tan x\\), we may observe that the graphs intersect exactly once in each of the intervals \\((\\frac{(2k-1)\\pi}{2}, \\frac{(2k+1)\\pi}{2})\\) for each \\(k = 1, 2, \\ldots\\). Hence, the 200th intersection has \\(x\\) in the range \\((\\frac{399\\pi}{2}, \\frac{401\\pi}{2})\\). At this intersection, \\(y = x - \\frac{\\pi}{2}\\) is large, and thus, the intersection will be slightly less than \\(\\frac{401\\pi}{2}\\). We have that \\(\\lfloor\\frac{401\\pi}{4}\\rfloor = \\lfloor 100\\pi + \\frac{\\pi}{4}\\rfloor = \\lfloor 314.16 + \\frac{\\pi}{4}\\rfloor = 314\\).</p>",
+      "answer": "314"
+    },
+    "9": {
+      "problem": "<p>Consider triangle \\(ABC\\) where \\(BC = 7\\), \\(CA = 8\\), and \\(AB = 9\\). \\(D\\) and \\(E\\) are the midpoints of \\(BC\\) and \\(CA\\), respectively, and \\(AD\\) and \\(BE\\) meet at \\(G\\). The reflection of \\(G\\) across \\(D\\) is \\(G'\\), and \\(G'E\\) meets \\(CG\\) at \\(P\\). Find the length \\(PG\\).</p>",
+      "solutions": "<p>Observe that since \\(G'\\) is a reflection and \\(GD = \\frac{1}{2}AG\\), we have \\(AG = GG'\\) and therefore, \\(P\\) is the centroid of triangle \\(ACG'\\). Thus, extending \\(CG\\) to hit \\(AB\\) at \\(F\\), \\(PG = \\frac{1}{3}CG = \\frac{2}{9}CF = \\frac{2}{9}\\sqrt{\\frac{2(8^2+7^2)-9^2}{4}} = \\frac{\\sqrt{145}}{9}\\) by the formula for the length of a median.</p>",
+      "answer": "\\frac{\\sqrt{145}}{9}"
+    },
+    "10": {
+      "problem": "<p>Let \\(\\alpha\\) and \\(\\beta\\) be reals. Find the least possible value of \\[(2\\cos\\alpha + 5\\sin\\beta - 8)^2 + (2\\sin\\alpha + 5\\cos\\beta - 15)^2.\\]</p>",
+      "solutions": "<p>Let the vector \\(\\vec{v} = (2\\cos\\alpha, 2\\sin\\alpha)\\) and \\(\\vec{w} = (5\\sin\\beta, 5\\cos\\beta)\\). The locus of ends of vectors expressible in the form \\(\\vec{v} + \\vec{w}\\) are the points which are five units away from a point on the circle of radius two about the origin. The expression that we desire to minimize is the square of the distance from this point to \\(X = (8, 15)\\). Thus, the closest distance from such a point to \\(X\\) is when the point is 7 units away from the origin along the segment from the origin to \\(X\\). Thus, since \\(X\\) is 17 units away from the origin, the minimum is \\(10^2 = 100\\).</p>",
+      "answer": "100"
+    }
+  }
+}

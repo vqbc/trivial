@@ -1,0 +1,58 @@
+{
+  "test": "CMM Team (Fall)",
+  "year": 2010,
+  "name": "Team Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_2af5440b19c54f40975ed3aaa7ed7b6e.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In the diagram below, all circles are tangent to each other as shown. The six outer circles are all congruent to each other, and the six inner circles are all congruent to each other. Compute the ratio of the <i>area</i> of one of the outer circles to the <i>area</i> of one of the inner circles.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_CMM_Team_(Fall)/1-fig1.png\" width=\"303\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9"
+    },
+    "2": {
+      "problem": "<p>Alfonso teaches Francis how to draw a spiral in the plane: First draw half of a unit circle. Starting at one of the ends, draw half a circle with radius \\(1/2\\). Repeat this process at the endpoint of each half circle, where each time the radius is half of the previous half-circle. Assuming you can’t stop Francis from drawing the entire spiral, compute the total length of the spiral.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2\\pi"
+    },
+    "3": {
+      "problem": "<p>In the diagram below, the three circles and the three line segments are tangent as shown. Given that the radius of all of the three circles is 1, compute the area of the triangle.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_CMM_Team_(Fall)/3-fig1.png\" width=\"315\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4\\sqrt{3} + 6"
+    },
+    "4": {
+      "problem": "<p>Dagan has a wooden cube. He paints each of the six faces a different color. He then cuts up the cube to get eight identically-sized smaller cubes, each of which now has three painted faces and three unpainted faces. He then puts the smaller cubes back together into one larger cube such that no unpainted face is visible. Compute the number of different cubes that Dagan can make this way. Two cubes are considered the same if one can be rotated to obtain the other. You may express your answer either as an integer or as a product of prime numbers.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "11\\,022\\,480"
+    },
+    "5": {
+      "problem": "<p>The three positive integers \\(a, b, c\\) satisfy the equalities \\(\\gcd(ab, c^2) = 20\\), \\(\\gcd(ac, b^2) = 18\\), and \\(\\gcd(bc, a^2) = 75\\). Compute the minimum possible value of \\(a + b + c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "107"
+    },
+    "6": {
+      "problem": "<p>A \\(101 \\times 101\\) square grid is given with rows and columns numbered in order from 1 to 101. Each square that is contained in both an even-numbered row and an even-numbered column is cut out. A small section of the grid is shown below, with the cut-out squares in black.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_CMM_Team_(Fall)/6-fig1.png\" width=\"228\" alt=\"\"> <img class=\"latexcenter\" src=\"/data/tournaments/2010_CMM_Team_(Fall)/6-fig2.png\" width=\"112\" alt=\"\"></p><p>Compute the maximum number of L-triominoes (pictured below) that can be placed in the grid so that each L-triomino lies entirely inside the grid and no two overlap. Each L-triomino may be placed in the orientation pictured below, or rotated by \\(90^\\circ\\), \\(180^\\circ\\), or \\(270^\\circ\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2550"
+    },
+    "7": {
+      "problem": "<p>Art and Kimberly build flagpoles on a level ground with respective heights 10 m and 15 m, separated by a distance of 5 m. Kimberly wants to move her flagpole closer to Art’s, but she can only doing so in the following manner:</p><ol><li>Run a straight wire from the top of her flagpole to the bottom of Art’s.</li><li>Run a straight wire from the top of Art’s flagpole to the bottom of hers.</li><li>Build the flagpole to the point where the wires meet.</li></ol><p>If Kimberly keeps moving her flagpole in this way, compute the number of flagpoles she will build whose heights are 1 m or greater (not counting her original 15 m flagpole).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "9"
+    },
+    "8": {
+      "problem": "<p>Rachel writes down a simple inequality: one 2-digit number is greater than another. Matt is sitting across from Rachel and peeking at her paper. If Matt, reading upside down, sees a valid inequality between two 2-digit numbers, compute the number of different inequalities that Rachel could have written. Assume that each digit is either a 1, 6, 8, or 9.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "60"
+    },
+    "9": {
+      "problem": "<p>Let \\(a_0, a_1, \\ldots a_n\\) be such that \\(a_n \\ne 0\\) and \\[(1+x+x^3)^{342}(1+2x+x^2+2x^3+2x^4+x^6)^{341} = \\sum_{i=0}^n a_i x^i.\\] Compute the number of odd terms in the sequence \\(a_0, a_1, \\ldots a_n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "10": {
+      "problem": "<p>The 100th degree polynomial \\(P(x)\\) satisfies \\(P(2^k) = k\\) for \\(k = 0, 1, \\ldots 100\\). Let \\(a\\) denote the leading coefficient of \\(P(x)\\). Find the unique integer \\(M\\) such that \\(2^M &lt; |a| &lt; 2^{M+1}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-5050"
+    }
+  }
+}

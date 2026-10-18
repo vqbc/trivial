@@ -1,0 +1,23 @@
+{
+  "test": "BMT Discrete Tiebreaker",
+  "year": 2023,
+  "name": "Discrete Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2023/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Mataio has a weighted die numbered 1 to 6, where the probability of rolling a side \\(n\\) for \\(1 \\le n \\le 6\\) is inversely proportional to the value of \\(n\\). If Mataio rolls the die twice, what is the probability that the sum of the two rolls is 7?</p>",
+      "solutions": "<p>The probability of rolling a given side \\(n\\) is \\(\\frac{k}{n}\\) for some constant \\(k\\). So the probability that rolling the die twice yields a sum of 7 is \\(2 \\cdot \\left(\\frac{k}{1} \\cdot \\frac{k}{6} + \\frac{k}{2} \\cdot \\frac{k}{5} + \\frac{k}{3} \\cdot \\frac{k}{4}\\right) = \\frac{7k^2}{10}\\)</p><p>We can solve for \\(k\\) using the following equation \\[1 = \\frac{k}{1} + \\frac{k}{2} + \\frac{k}{3} + \\frac{k}{4} + \\frac{k}{5} + \\frac{k}{6}\\]</p><p>Solving, we get \\(k = \\frac{20}{49}\\), and plugging into \\(\\frac{7k^2}{10}\\) gives the final answer of \\(\\boxed{\\frac{40}{343}}\\).</p>",
+      "answer": "\\frac{40}{343}"
+    },
+    "2": {
+      "problem": "<p>Andrew, Benji, and Carlson want to split a pile of 5 indistinguishable left shoes and 7 indistinguishable right shoes. Andrew is practical and wants the same number of left and right shoes. Benji is greedy and wants the most shoes out of the three of them. Carlson is a trickster and wants Benji to have a different number of left and right shoes. How many ways are there to split up the shoes in a way that suits everyone’s desires?</p>",
+      "solutions": "<p>We do casework on the number of shoes that Andrew receives:</p><ul><li>If Andrew receives no shoes, then Benji can receive between 7 and 12 shoes. However, if he receives 8 or 10 shoes, then he cannot receive the same number of each shoe, so there are \\(6+5+4+3+2+1-2=21-2=19\\) possibilities in this case.</li><li>If Andrew receives a left shoe and a right shoe, then there are 10 shoes left, and Benji can receive between 6 and 10 shoes. However, if he receives 6 or 8 shoes, then he cannot receive the same number of each shoe, so there are \\(5+4+3+2+1-2=15-2=13\\) possibilities in this case.</li><li>If Andrew receives two left shoes and two right shoes, then there are 8 shoes left, and Benji can receive between 5 and 8 shoes. However, if he receives 6 shoes, then he cannot receive the same number of each shoe, so there are \\(4+3+2+1-1=10-1=9\\) possibilities in this case.</li><li>If Andrew receives at least three left and three right shoes, there is no way for Benji to have more shoes than Andrew, so there are no other valid cases to consider.</li></ul><p>Thus, there are \\(19+13+9=\\boxed{41}\\) different ways to split up the shoes in the desired way.</p>",
+      "answer": "41"
+    },
+    "3": {
+      "problem": "<p>Bessie the cow is hungry and wants to eat some oranges, which she has an infinite supply of. Bessie starts with a fullness level of 0, and each orange that she eats increases her fullness level by 85. She can also eat lemons, and each time she eats a lemon, her fullness level is halved, rounding down. What is the smallest number of lemons that Bessie should have in order to be able to attain every possible nonnegative integer fullness level?</p>",
+      "solutions": "<p>Note that a fullness level can be obtained with a certain number of lemons if and only if it is attainable by eating a bunch of oranges first, then eating a bunch of lemons. This is because each orange eaten immediately after a lemon is equivalent to two oranges eaten immediately before the lemon, so we can use this process to move all of the oranges back in time before the lemons are eaten. So this question is equivalent to: what is the smallest value of \\(a\\) for which for each nonnegative integer \\(n\\), there exists a nonnegative integer \\(m\\) such that \\(\\frac{m}{2^a} \\in \\left[\\frac{n}{85}, \\frac{n+1}{85}\\right)\\)? The answer to this question is: when \\(2^a &gt; 85\\). Then the smallest value of \\(a\\), or the smallest number of lemons, is \\(\\boxed{7}\\).</p>",
+      "answer": "7"
+    }
+  }
+}

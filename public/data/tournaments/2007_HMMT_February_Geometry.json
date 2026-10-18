@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2007,
+  "name": "Geometry Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2007/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A cube of edge length \\(s&gt;0\\) has the property that its surface area is equal to the sum of its volume and five times its edge length. Compute all possible values of \\(s\\).</p>",
+      "solutions": "<p>The volume of the cube is \\(s^3\\) and its surface area is \\(6s^2\\), so we have \\(6s^2=s^3+5s\\), or \\[0 = s^3-6s^2+5s = s(s-1)(s-5).\\] <img class=\"latexcenter\" src=\"/data/tournaments/2007_HMMT_February_Geometry/1-fig1.png\" width=\"206\" alt=\"\"></p>",
+      "answer": "1, 5"
+    },
+    "2": {
+      "problem": "<p>\\(A\\), \\(B\\), \\(C\\), and \\(D\\) are points on a circle, and segments \\(\\overline{AC}\\) and \\(\\overline{BD}\\) intersect at \\(P\\), such that \\(AP=8\\), \\(PC=1\\), and \\(BD=6\\). Find \\(BP\\), given that \\(BP&lt;DP\\).</p>",
+      "solutions": "<p>Writing \\(BP=x\\) and \\(PD=6-x\\), we have that \\(BP&lt;3\\). Power of a point at \\(P\\) gives \\(AP\\cdot PC = BP\\cdot PD\\) or \\(8=x(6-x)\\). This can be solved for \\(x=2\\) and \\(x=4\\), and we discard the latter. <img class=\"latexcenter\" src=\"/data/tournaments/2007_HMMT_February_Geometry/2-fig1.png\" width=\"164\" alt=\"\"></p>",
+      "answer": "2"
+    },
+    "3": {
+      "problem": "<p>Circles \\(\\omega_1, \\omega_2\\), and \\(\\omega_3\\) are centered at \\(M, N\\), and \\(O\\), respectively. The points of tangency between \\(\\omega_2\\) and \\(\\omega_3\\), \\(\\omega_3\\) and \\(\\omega_1\\), and \\(\\omega_1\\) and \\(\\omega_2\\) are tangent at \\(A\\), \\(B\\), and \\(C\\), respectively. Line \\(MO\\) intersects \\(\\omega_3\\) and \\(\\omega_1\\) again at \\(P\\) and \\(Q\\) respectively, and line \\(AP\\) intersects \\(\\omega_2\\) again at \\(R\\). Given that \\(ABC\\) is an equilateral triangle of side length 1, compute the area of \\(PQR\\).</p>",
+      "solutions": "<p>Note that \\(ONM\\) is an equilateral triangle of side length 2, so \\(m\\angle BPA = m\\angle BOA/2 = \\pi/6\\). Now \\(BPA\\) is a 30-60-90 triangle with short side length 1, so \\(AP=\\sqrt{3}\\). Now \\(A\\) and \\(B\\) are the midpoints of segments \\(PR\\) and \\(PQ\\), so \\[[PQR] = \\frac{PR}{PA}\\cdot\\frac{PQ}{PB}[PBA] = 2\\cdot 2[PBA] = 2\\sqrt{3}.\\] <img class=\"latexcenter\" src=\"/data/tournaments/2007_HMMT_February_Geometry/3-fig1.png\" width=\"562\" alt=\"\"></p>",
+      "answer": "2\\sqrt{3}"
+    },
+    "4": {
+      "problem": "<p>Circle \\(\\omega\\) has radius 5 and is centered at \\(O\\). Point \\(A\\) lies outside \\(\\omega\\) such that \\(OA=13\\). The two tangents to \\(\\omega\\) passing through \\(A\\) are drawn, and points \\(B\\) and \\(C\\) are chosen on them (one on each tangent), such that line \\(BC\\) is tangent to \\(\\omega\\) and \\(\\omega\\) lies outside triangle \\(ABC\\). Compute \\(AB+AC\\) given that \\(BC=7\\).</p>",
+      "solutions": "<p>Let \\(T_1, T_2,\\) and \\(T_3\\) denote the points of tangency of \\(AB, AC,\\) and \\(BC\\) with \\(\\omega\\), respectively. Then \\(7=BC=BT_3+T_3C=BT_1+CT_2\\). By Pythagoras, \\(AT_1=AT_2=\\sqrt{13^2-5^2}=12\\). Now note that \\(24=AT_1+AT_2=AB+BT_1+AC+CT_2=AB+AC+7\\).</p>",
+      "answer": "17"
+    },
+    "5": {
+      "problem": "<p>Five marbles of various sizes are placed in a conical funnel. Each marble is in contact with the adjacent marble(s). Also, each marble is in contact all around the funnel wall. The smallest marble has a radius of 8, and the largest marble has a radius of 18. What is the radius of the middle marble?</p>",
+      "solutions": "<p>One can either go through all of the algebra, find the slope of the funnel wall and go from there to figure out the radius of the middle marble. Or one can notice that the answer will just be the geometric mean of 18 and 8 which is 12. <img class=\"latexcenter\" src=\"/data/tournaments/2007_HMMT_February_Geometry/5-fig1.png\" width=\"554\" alt=\"\"></p>",
+      "answer": "12"
+    },
+    "6": {
+      "problem": "<p>Triangle \\(ABC\\) has \\(\\angle A=90^\\circ\\), side \\(BC=25, AB&gt;AC\\), and area 150. Circle \\(\\omega\\) is inscribed in \\(ABC\\), with \\(M\\) its point of tangency on \\(AC\\). Line \\(BM\\) meets \\(\\omega\\) a second time at point \\(L\\). Find the length of segment \\(BL\\).</p>",
+      "solutions": "<p>Let \\(D\\) be the foot of the altitude from \\(A\\) to side \\(BC\\). The length of \\(AD\\) is \\(2\\cdot 150/25=12 \\Rightarrow BD=16\\) and \\(CD=9 \\Rightarrow AB=20\\) and \\(AC=15\\). Using equal tangents or the formula inradius as area divided by semiperimeter, we can find the radius of \\(\\omega\\) to be 5. Now, let \\(N\\) be the tangency point of \\(\\omega\\) on \\(AB\\). By power of a point, we have \\(BL\\cdot BM = BN^2\\). Since the center of \\(\\omega\\) together with \\(M, A,\\) and \\(N\\) determines a square, \\(BN=15\\) and \\(BM=5\\sqrt{17}\\), and we have \\(BL=45\\sqrt{17}/17\\). <img class=\"latexcenter\" src=\"/data/tournaments/2007_HMMT_February_Geometry/6-fig1.png\" width=\"278\" alt=\"\"></p>",
+      "answer": "\\frac{45\\sqrt{17}}{17}"
+    },
+    "7": {
+      "problem": "<p>Convex quadrilateral \\(ABCD\\) has sides \\(AB=BC=7, CD=5\\), and \\(AD=3\\). Given additionally that \\(m\\angle ABC=60^\\circ\\), find \\(BD\\).</p>",
+      "solutions": "<p>Triangle \\(ABC\\) is equilateral, so \\(AC=7\\) as well. Now the law of cosines shows that \\(m\\angle CDA=120^\\circ\\); i.e., \\(ABCD\\) is cyclic. Ptolemy’s theorem now gives \\(AC\\cdot BD = AB\\cdot CD+AD\\cdot BC\\), or simply \\(BD=CD+AD=8\\). <img class=\"latexcenter\" src=\"/data/tournaments/2007_HMMT_February_Geometry/7-fig1.png\" width=\"270\" alt=\"\"></p>",
+      "answer": "8"
+    },
+    "8": {
+      "problem": "<p>\\(ABCD\\) is a convex quadrilateral such that \\(AB&lt;AD\\). The diagonal \\(\\overline{AC}\\) bisects \\(\\angle BAD\\), and \\(m\\angle ABD=130^\\circ\\). Let \\(E\\) be a point on the interior of \\(\\overline{AD}\\), and \\(m\\angle BAD=40^\\circ\\). Given that \\(BC=CD=DE\\), determine \\(m\\angle ACE\\) in degrees.</p>",
+      "solutions": "<p>First, we check that \\(ABCD\\) is cyclic. Reflect \\(B\\) over \\(\\overline{AC}\\) to \\(B'\\) on \\(\\overline{AD}\\), and note that \\(B'C=CD\\). Therefore, \\(m\\angle ADC = m\\angle B'DC = m\\angle CB'D = 180^\\circ-m\\angle AB'C = 180^\\circ-m\\angle CBA\\). Now \\(m\\angle CBD = m\\angle CAD = 20^\\circ\\) and \\(m\\angle ADC = 180^\\circ-m\\angle CBA = 30^\\circ\\). Triangle \\(CDE\\) is isosceles, so \\(m\\angle CED=75^\\circ\\) and \\(m\\angle AEC=105^\\circ\\). It follows that \\(m\\angle ECA = 180^\\circ-m\\angle AEC-m\\angle CAE = 55^\\circ\\). <img class=\"latexcenter\" src=\"/data/tournaments/2007_HMMT_February_Geometry/8-fig1.png\" width=\"434\" alt=\"\"></p>",
+      "answer": "55^\\circ"
+    },
+    "9": {
+      "problem": "<p>\\(\\triangle ABC\\) is right angled at \\(A\\). \\(D\\) is a point on \\(AB\\) such that \\(CD=1\\). \\(AE\\) is the altitude from \\(A\\) to \\(BC\\). If \\(BD=BE=1\\), what is the length of \\(AD\\)?</p>",
+      "solutions": "<p>Let \\(AD=x\\), angle \\(ABC=t\\). We also have \\(\\angle BCA=90-t\\) and \\(\\angle DCA=90-2t\\) so that \\(\\angle ADC=2t\\). Considering triangles \\(ABE\\) and \\(ADC\\), we obtain, respectively, \\[\\cos(t) = \\frac{1}{1+x} \\quad \\text{and} \\quad \\cos(2t) = x.\\] By the double angle formula we get, \\((1+x)^3=2\\).</p><p>Alternatively, construct \\(M\\), the midpoint of segment \\(BC\\), and note that triangles \\(ABC, EBA,\\) and \\(MBD\\) are similar. Thus, \\(AB^2 = BC\\cdot BE = BC\\). In particular, \\[AB = \\frac{BC}{AB} = \\frac{AB}{BE} = \\frac{BD}{BM} = \\frac{2BD}{BC} = \\frac{2}{AB^2},\\] from which \\(AB=\\sqrt[3]{2}\\) and \\(AD=\\sqrt[3]{2}-1\\).</p>",
+      "answer": "\\sqrt[3]{2}-1"
+    },
+    "10": {
+      "problem": "<p>\\(ABCD\\) is a convex quadrilateral such that \\(AB=2, BC=3, CD=7\\), and \\(AD=6\\). It also has an incircle. Given that \\(\\angle ABC\\) is right, determine the radius of this incircle.</p>",
+      "solutions": "<p>Note that \\(AC^2 = AB^2+BC^2=13=CD^2-DA^2\\). It follows that \\(\\angle DAC\\) is right, and so \\[[ABCD] = [ABC]+[DAC] = 2\\cdot 3/2+6\\cdot\\sqrt{13}/2 = 3+3\\sqrt{13}.\\] On the other hand, if \\(I\\) denotes the incenter and \\(r\\) denotes the inradius, \\[[ABCD] = [AIB]+[BIC]+[CID]+[DIA] = AB\\cdot r/2+BC\\cdot r/2+CD\\cdot r/2+DA\\cdot r/2 = 9r.\\] Therefore, \\(r=(3+3\\sqrt{13})/9=\\frac{1+\\sqrt{13}}{3}\\). <img class=\"latexcenter\" src=\"/data/tournaments/2007_HMMT_February_Geometry/10-fig1.png\" width=\"350\" alt=\"\"></p>",
+      "answer": "\\frac{1+\\sqrt{13}}{3}"
+    }
+  }
+}

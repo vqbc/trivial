@@ -1,0 +1,23 @@
+{
+  "test": "BMT Discrete Tiebreaker",
+  "year": 2020,
+  "name": "Discrete Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2020/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute the smallest positive integer \\(n\\) such that \\(\\frac{n}{2}\\) is a perfect square and \\(\\frac{n}{3}\\) is a perfect cube.</p>",
+      "solutions": "<p><b>Solution 1:</b> If \\(n\\) is minimal, then only 2 and 3 can divide \\(n\\), so \\(n = 2^a 3^b\\). Therefore, \\(a \\equiv 1 \\pmod 2\\) and \\(a \\equiv 0 \\pmod 3\\), so \\(a = 3\\). Furthermore, \\(b \\equiv 0 \\pmod 2\\) and \\(b \\equiv 1 \\pmod 3\\), so \\(b = 4\\). Therefore, \\(n = 2^3 \\cdot 3^4 = \\boxed{648}\\).</p><p><b>Solution 2:</b> We know the integer \\(n = 2r^2 = 3s^3\\) for some integers \\(r, s\\). Then we have \\(3 \\mid r^2\\), so \\(3 \\mid r\\) and \\(9 \\mid 2r^2\\). It follows that \\(9 \\mid 3s^3\\), so \\(3 \\mid s\\). Similarly, we have \\(2 \\mid s\\) and \\(6 \\mid s\\). We observe that when \\(s = 6\\), \\(648 = 2 \\cdot 18^2 = 3 \\cdot 6^3\\), and our answer is \\(\\boxed{648}\\).</p>",
+      "answer": "648"
+    },
+    "2": {
+      "problem": "<p>On a certain planet, the alien inhabitants are born without any arms, legs, or noses. Every year, on their birthday, each alien randomly grows either an arm, a leg, or a nose, with equal probability for each. After its sixth birthday, the probability that an alien will have at least 2 arms, at least 2 legs, and at least 1 nose on the day is \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m + n\\).</p>",
+      "solutions": "<p>Each ordered 6-tuple of \\(A\\)’s (arms), \\(L\\)’s (legs), and \\(N\\)’s (noses) represents a possible growth history of a 6 year old alien. There are \\(3^6 = 729\\) possible 6-tuples. To satisfy the given conditions, note that an alien must have either 3 arms, 2 legs, and 1 nose; 2 arms, 3 legs, and 1 nose; or 2 arms, 2 legs, and 2 noses, so we wish to find the total number of permutations of \\(AAALLN\\), \\(AALLLN\\), and \\(AALLNN\\), and divide it by the total number of 6-tuples. There are \\(\\frac{6!}{3!2!1!} = 60\\) permutations of both \\(AAALLN\\) and \\(AALLLN\\), and \\(\\frac{6!}{2!2!2!} = 90\\) permutations of \\(AALLNN\\). So the probability is \\(\\frac{60+60+90}{729} = \\frac{70}{243}\\) and our answer is \\(\\boxed{313}\\).</p>",
+      "answer": "313"
+    },
+    "3": {
+      "problem": "<p>Three distinct integers \\(a_1, a_2, a_3\\) between 1 and 21, inclusive, are selected uniformly at random. The probability that the greatest common factor of \\(a_i - a_j\\) and 21 is 7 for some positive integers \\(i\\) and \\(j\\), where \\(1 \\le i \\ne j \\le 3\\), can be written in the form \\(\\frac{m}{n}\\), where \\(m\\) and \\(n\\) are relatively prime positive integers. Compute \\(m + n\\).</p>",
+      "solutions": "<p>Since all three of the integers are distinct, the greatest common factor of \\(a_i - a_j\\) and 21 is 7 when \\(a_i\\) and \\(a_j\\) are congruent modulo 7. The probability that all three integers are distinct modulo 7 is \\(\\frac{18}{20} \\cdot \\frac{15}{19} = \\frac{27}{38}\\), so the complement of this is the probability that we want, or \\(\\frac{11}{38}\\). Therefore, our answer is \\(\\boxed{49}\\).</p>",
+      "answer": "49"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2021,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2021/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The values \\(E, R, I, C\\) (not necessarily distinct) are chosen such that \\(E \\cdot R \\cdot I \\cdot C = 1600\\). How many quadruples \\((E, R, I, C)\\) exist?</p>",
+      "solutions": "<p>Consider how we can distribute powers of 2, 5 to each of the four values; these powers can be independently assigned. Hence, the problem is equivalent to computing the number of ways to distribute \\(2^6\\) to each of the four values, and then computing the number of ways to distribute \\(5^2\\) to each of the four values.</p><p>To distribute the powers of 2, we observe that this is equivalent to distributing 6 identical balls to 4 indistinguishable urns, which is equivalent to placing 3 dividers between 6 items. There are hence \\(\\binom{9}{3} = 84\\) ways of distributing the powers of 2. Similarly, there are \\(\\binom{5}{3} = 10\\) ways of distributing the powers of 5. Hence, there are a total of \\(84 \\cdot 10 = 840\\) ways of distributing the factors between \\(E, R, I, C\\).</p>",
+      "answer": "840"
+    },
+    "2": {
+      "problem": "<p>Three spheres are centered at the vertices of a triangle in the horizontal plane and are tangent to each other. The triangle formed by the uppermost points of the spheres has side lengths 10, 26, and \\(2\\sqrt{145}\\). What is the area of the triangle whose vertices are at the centers of the spheres?</p>",
+      "solutions": "<p>The line segment connecting the uppermost points of two spheres with radii \\(r_1\\) and \\(r_2\\), where \\(r_1 &gt; r_2\\), is the hypotenuse of a right triangle with legs of length \\(r_1 - r_2\\) and \\(r_1 + r_2\\). So, the length of such a line segment is \\(\\sqrt{(r_1 - r_2)^2 + (r_1 + r_2)^2} = \\sqrt{2r_1^2 + 2r_2^2}\\). We can set up a system of equations to solve for the radii of the spheres.</p><p>\\[\\begin{aligned}\n2r_1^2 + 2r_2^2 &amp;= 100 \\\\\n2r_2^2 + 2r_3^2 &amp;= 676 \\\\\n2r_3^2 + 2r_1^2 &amp;= 580\n\\end{aligned}\\]</p><p>The solution to this system is \\(r_1 = 1\\), \\(r_2 = 7\\), and \\(r_3 = 17\\). The triangle whose vertices are the centers of the spheres simply has side lengths of \\(r_1 + r_2\\), \\(r_2 + r_3\\), and \\(r_3 + r_1\\), which are equal to 8, 24, and 18. We can find the area of this triangle using Heron’s Formula: \\[\\sqrt{\\frac{8+18+24}{2} \\cdot \\frac{-8+18+24}{2} \\cdot \\frac{8-18+24}{2} \\cdot \\frac{8+18-24}{2}} = \\boxed{5\\sqrt{119}}.\\]</p>",
+      "answer": "5\\sqrt{119}"
+    },
+    "3": {
+      "problem": "<p>Let \\(A\\) be the number of positive integers less than 2019 where \\(x^{2020}\\) has last digit 1. Let \\(B\\) be the number of positive integers less than 2019 where \\(x^{2019}\\) has last digit 6. What is \\(A - B\\)?</p>",
+      "solutions": "<p>We will compute \\(A\\) and \\(B\\) with Fermat’s little theorem. Note that \\(\\varphi(10) = 4\\). So, if \\(\\gcd(x, 10) = 1\\) then \\(x^{2020} \\equiv 1 \\pmod{10}\\). So, this is equivalent to finding the last digits \\(1, 3, 7, 9\\). So, there are \\(A = 803\\).</p><p>Now if \\(\\gcd(x, 10) \\ne 1\\), then we have \\(x^{2017} \\equiv x \\pmod{10}\\). Hence, we need to figure out when \\(x^3 \\equiv 6 \\pmod{10}\\) which occurs when \\(x \\equiv 6 \\pmod{10}\\). So, \\(B = 201\\). Hence \\(A - B = \\boxed{602}\\).</p>",
+      "answer": "602"
+    }
+  }
+}

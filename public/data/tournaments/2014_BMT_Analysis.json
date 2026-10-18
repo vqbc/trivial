@@ -1,0 +1,58 @@
+{
+  "test": "BMT Analysis",
+  "year": 2014,
+  "name": "Analysis Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2014/AnaS2014.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find all real numbers \\(x\\) such that \\(4^x - 2^{x+2} + 3 = 0\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "x = 0, \\log_2 3"
+    },
+    "2": {
+      "problem": "<p>Find the smallest positive value of \\(x\\) such that \\(x^3 - 9x^2 + 22x - 16 = 0\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{7-\\sqrt{17}}{2}"
+    },
+    "3": {
+      "problem": "<p>Emma is seated on a train traveling at a speed of 120 miles per hour. She notices distance markers are placed evenly alongside the track, with a constant distance \\(x\\) between any two consecutive ones, and during a span of 6 minutes, she sees precisely 11 markers pass by her. Determine the difference (in miles) between the largest and smallest possible values of \\(x\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{5}"
+    },
+    "4": {
+      "problem": "<p>The function \\(f(x) = x^5 - 20x^4 + ax^3 + bx^2 + cx + 24\\) has the interesting property that its roots can be arranged to form an arithmetic sequence. Determine \\(f(8)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-24"
+    },
+    "5": {
+      "problem": "<p>Determine \\[\\lim_{x\\to\\infty} \\frac{\\sqrt{x+2014}}{\\sqrt{x}+\\sqrt{x+2014}}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "6": {
+      "problem": "<p>Find \\(f(2)\\) given that \\(f\\) is a real-valued function that satisfies the equation \\[4f(x) + \\left(\\frac{2}{3}\\right)(x^2+2)f\\left(x - \\frac{2}{x}\\right) = x^3 + 1.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{19}{12}"
+    },
+    "7": {
+      "problem": "<p>Let \\(f(x) = x^2 + 18\\) have roots \\(r_1\\) and \\(r_2\\), and let \\(g(x) = x^2 - 8x + 17\\) have roots \\(r_3\\) and \\(r_4\\). If \\(h(x) = x^4 + ax^3 + bx^2 + cx + d\\) has roots \\(r_1 + r_3\\), \\(r_1 + r_4\\), \\(r_2 + r_3\\), and \\(r_2 + r_4\\), then find \\(h(4)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "289"
+    },
+    "8": {
+      "problem": "<p>Suppose an integer-valued function \\(f\\) satisfies \\[\\sum_{k=0}^{2n+1} f(k) = \\ln|2n+1| - 4\\ln|2n-1| \\quad \\text{and} \\quad \\sum_{k=0}^{2n} f(k) = 4e^n - e^{n-1}\\] for all non-negative integers \\(n\\). Determine \\[\\sum_{n=0}^{\\infty} \\frac{f(n)}{2^n}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{8e-2}{4e-e^2}"
+    },
+    "9": {
+      "problem": "<p>Find \\(\\alpha\\) such that \\[\\lim_{x\\to 0^+} x^{\\alpha} I(x) = a \\quad \\text{given} \\quad I(x) = \\int_0^{\\infty} \\sqrt{1+t}\\cdot e^{-xt}\\, dt\\] where \\(a\\) is a nonzero real number.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "10": {
+      "problem": "<p>Suppose that \\(x^3 - x + 10^{-6} = 0\\). Suppose that \\(x_1 &lt; x_2 &lt; x_3\\) are the solutions for \\(x\\). Find the integers \\((a, b, c)\\) closest to \\(10^8 x_1\\), \\(10^8 x_2\\), and \\(10^8 x_3\\) respectively.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "(-10^8-50,\\ 100,\\ 10^8-50)"
+    }
+  }
+}

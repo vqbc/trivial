@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 1999,
+  "name": "Geometry",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/1999/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Two \\(10 \\times 24\\) rectangles are inscribed in a circle as shown. Find the shaded area.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1999_HMMT_February_Geometry/1-fig1.png\" width=\"266\" alt=\"\"></p>",
+      "solutions": "<p>The rectangles are \\(10 \\times 24\\), so their diagonals, which are diameters of the circle, have length 26. Therefore the area of the circle is \\(\\pi 13^2\\), and the overlap is a \\(10 \\times 10\\) square, so the shaded area is \\(\\pi 13^2 - 2 \\cdot 10 \\cdot 24 + 10^2 = \\boxed{169\\pi - 380}\\).</p>",
+      "answer": "169\\pi - 380"
+    },
+    "2": {
+      "problem": "<p>A semicircle is inscribed in a semicircle of radius 2 as shown. Find the radius of the smaller semicircle.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1999_HMMT_February_Geometry/2-fig1.png\" width=\"186\" alt=\"\"></p>",
+      "solutions": "<p>Draw a line from the center of the smaller semicircle to the center of the larger one, and a line from the center of the larger semicircle to one of the other points of intersection of the two semicircles. We now have a right triangle whose legs are both the radius of the smaller semicircle and whose hypotenuse is 2, therefore the radius of the smaller semicircle is \\(\\boxed{\\sqrt{2}}\\).</p>",
+      "answer": "\\sqrt{2}"
+    },
+    "3": {
+      "problem": "<p>In a cube with side length 6, what is the volume of the tetrahedron formed by any vertex and the three vertices connected to that vertex by edges of the cube?</p>",
+      "solutions": "<p>We have a tetrahedron whose base is half a face of the cube and whose height is the side length of the cube, so its volume is \\(\\frac{1}{3} \\cdot \\left(\\frac{1}{2} \\cdot 6^2\\right) \\cdot 6 = \\boxed{36}\\).</p>",
+      "answer": "36"
+    },
+    "4": {
+      "problem": "<p>A cross-section of a river is a trapezoid with bases 10 and 16 and slanted sides of length 5. At this section the water is flowing at \\(\\pi\\) mph. A little ways downstream is a dam where the water flows through 4 identical circular holes at 16 mph. What is the radius of the holes?</p>",
+      "solutions": "<p>The volume of water going through any cross-section of the river in an hour (assuming the cross-sections are parallel) is the area times the velocity. The trapezoid has height 4, hence area 52, so the volume of water going through at any hour is \\(52\\pi\\). Let \\(r\\) be the radius of the holes, then the total area is \\(4\\pi r^2\\), so the volume of water is \\(64\\pi r^2\\). Therefore \\(64\\pi r^2 = 52\\pi\\), so \\(r = \\boxed{\\frac{\\sqrt{13}}{4}}\\).</p>",
+      "answer": "\\frac{\\sqrt{13}}{4}"
+    },
+    "5": {
+      "problem": "<p>In triangle \\(BEN\\) shown below with its altitudes intersecting at \\(X\\), \\(NA = 7, EA = 3, AX = 4\\), and \\(NS = 8\\). Find the area of \\(BEN\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1999_HMMT_February_Geometry/5-fig1.png\" width=\"181\" alt=\"\"></p>",
+      "solutions": "<p>The idea is to try to find a base and height for the triangle so that we can find the area. By the Pythagorean theorem, \\(EX = 5\\), \\(NX = \\sqrt{65}\\), and \\(SX = 1\\). Triangles \\(AXE\\) and \\(BXS\\) are similar since they have the same angles. The ratio of their side lengths is 4:1, so \\(BS = 3/4\\) and \\(BX = 5/4\\). Now using either \\(NE\\) or \\(NB\\) as a base, we get that the area of \\(BEN\\) is \\(\\frac{1}{2} \\cdot \\left(8 + \\frac{3}{4}\\right) \\cdot 6\\) or \\(\\frac{1}{2} \\cdot \\left(4 + \\frac{5}{4}\\right) \\cdot 10\\), both of which simplify to \\(\\boxed{\\frac{105}{4}}\\).</p>",
+      "answer": "\\frac{105}{4}"
+    },
+    "6": {
+      "problem": "<p>A sphere of radius 1 is covered in ink and rolling around between concentric spheres of radii 3 and 5. If this process traces a region of area 1 on the larger sphere, what is the area of the region traced on the smaller sphere?</p>",
+      "solutions": "<p>The figure drawn on the smaller sphere is just a scaled down version of what was drawn on the larger sphere, so the ratio of the areas is the ratio of the surface area of the spheres. This is the same as the ratio of the squares of the radii, which is \\(\\boxed{\\frac{9}{25}}\\).</p>",
+      "answer": "\\frac{9}{25}"
+    },
+    "7": {
+      "problem": "<p>A dart is thrown at a square dartboard of side length 2 so that it hits completely randomly. What is the probability that it hits closer to the center than any corner, but within a distance 1 of a corner?</p>",
+      "solutions": "<p>By symmetry it will suffice to consider one quarter of the dartboard, which is a square of side length 1. Therefore the probability is the area of the desired region in this square. The desired region is the part of the circle of radius 1 centered at a corner that is closer to the opposite corner. The points closer to the opposite corner are those that are on the other side of the diagonal through the other two corners, so the desired region is a quarter of a circle of radius 1 minus a right triangle with legs of length 1. Therefore the area (and hence the probability) is \\(\\boxed{\\frac{\\pi - 2}{4}}\\).</p>",
+      "answer": "\\frac{\\pi - 2}{4}"
+    },
+    "8": {
+      "problem": "<p>Squares \\(ABKL, BCMN, CAOP\\) are drawn externally on the sides of a triangle \\(ABC\\). The line segments \\(KL, MN, OP\\), when extended, form a triangle \\(A'B'C'\\). Find the area of \\(A'B'C'\\) if \\(ABC\\) is an equilateral triangle of side length 2.</p>",
+      "solutions": "<p>Triangle \\(ABC\\) has area \\(\\sqrt{3}\\), and each of the three squares has area 4. The three remaining regions are congruent, so just consider the one that includes vertex \\(B\\). Triangle \\(KBN\\) has two sides of length 2 and an angle of \\(120^\\circ\\) between them, to bisecting that angle we get two halves of an equilateral triangle of side length 2, so the area is again \\(\\sqrt{3}\\). The remaining region is an equilateral triangle of side length \\(2\\sqrt{3}\\), so its area is \\((2\\sqrt{3})^2\\sqrt{3}/4 = 3\\sqrt{3}\\). Therefore the area of \\(A'B'C'\\) is \\(\\sqrt{3} + 3 \\cdot 4 + 3 \\cdot \\sqrt{3} + 3 \\cdot 3\\sqrt{3} = \\boxed{12 + 13\\sqrt{3}}\\).</p><p>Note that this problem is still solvable, but much harder, if the first triangle is not equilateral.</p>",
+      "answer": "12 + 13\\sqrt{3}"
+    },
+    "9": {
+      "problem": "<p>A regular tetrahedron has two vertices on the body diagonal of a cube with side length 12. The other two vertices lie on one of the face diagonals not intersecting that body diagonal. Find the side length of the tetrahedron.</p>",
+      "solutions": "<p>Let \\(ABCD\\) be a tetrahedron of side \\(s\\). We want to find the distance between two of its opposite sides. Let \\(E\\) be the midpoint of \\(AD\\), \\(F\\) the midpoint of \\(BC\\). Then \\(AE = s/2\\), \\(AF = s\\sqrt{3}/2\\), and angle \\(AEF = 90^\\circ\\). So the distance between the two opposite sides is \\(EF = \\sqrt{AF^2 - AE^2} = \\sqrt{3s^2/4 - s^2/4} = s/\\sqrt{2}\\).</p><p>Now we find the distance between a body diagonal and a face diagonal of a cube of side \\(a\\). Let \\(O\\) be the center of the cube and \\(P\\) be the midpoint of the face diagonal. Then the plane containing \\(P\\) and the body diagonal is perpendicular to the face diagonal. So the distance between the body and face diagonals is the distance between \\(P\\) and the body diagonal, which is \\(\\frac{a}{2}\\sqrt{\\frac{2}{3}}\\) (the altitude from \\(P\\) of right triangle \\(OPQ\\), where \\(Q\\) is the appropriate vertex of the cube). So now \\(\\frac{s}{\\sqrt{2}} = \\frac{a}{2}\\sqrt{\\frac{2}{3}}\\), thus \\(s = a/\\sqrt{3} = 12/\\sqrt{3} = \\boxed{4\\sqrt{3}}\\).</p>",
+      "answer": "4\\sqrt{3}"
+    },
+    "10": {
+      "problem": "<p>In the figure below, \\(AB = 15, BD = 18, AF = 15, DF = 12, BE = 24\\), and \\(CF = 17\\). Find \\(BG : FG\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/1999_HMMT_February_Geometry/10-fig1.png\" width=\"204\" alt=\"\"></p>",
+      "solutions": "<p>Our goal is to find the lengths \\(BG\\) and \\(FG\\). There are several ways to go about doing this, but we will show only one here. We will make several uses of Stewart’s theorem, which can be proved using the law of cosines twice. By Stewart’s theorem on triangle \\(ABD\\) and line \\(BF\\), \\(15^2 \\cdot 12 + 18^2 \\cdot 15 = BF^2 \\cdot 27 + 15 \\cdot 12 \\cdot 27\\), so \\(BF = 10\\) and \\(EF = 14\\). By Stewart’s theorem on triangle \\(ABE\\) and line \\(AF\\), \\(AE^2 \\cdot 10 + 15^2 \\cdot 14 = 15^2 \\cdot 24 + 14 \\cdot 10 \\cdot 24\\), so \\(AE = \\sqrt{561}\\). By Stewart’s theorem on triangle \\(AED\\) and line \\(EF\\), \\(ED^2 \\cdot 15 + 561 \\cdot 12 = 14^2 \\cdot 27 + 12 \\cdot 15 \\cdot 27\\), so \\(ED = 2\\sqrt{57}\\). By Stewart’s theorem on triangle \\(CFE\\) and line \\(FD\\), \\(14^2 \\cdot CD + 17^2 \\cdot 2\\sqrt{57} = 12^2 \\cdot (CD + 2\\sqrt{57}) + 2\\sqrt{57} \\cdot CD \\cdot (CD + 2\\sqrt{57})\\), so \\(CD = \\sqrt{57}\\) and \\(CE = 3\\sqrt{57}\\). Note that \\(DG = 18 - BG\\) and apply Menelaus’ theorem to triangle \\(BED\\) and the line through \\(C, G\\), and \\(F\\) to get \\(3 \\cdot \\frac{18-BG}{BG} \\cdot \\frac{10}{14} = 1\\), so \\(BG = \\frac{135}{11}\\). Similarly \\(CG = 17 - FG\\), so applying Menelaus’ theorem to triangle \\(CFE\\) and the line through \\(B, G\\), and \\(D\\) we get \\(\\frac{24}{10} \\cdot \\frac{FG}{17-FG} \\cdot \\frac{1}{2} = 1\\), so \\(FG = \\frac{85}{11}\\). Therefore \\(BG : FG = \\boxed{27:17}\\).</p>",
+      "answer": "27:17"
+    }
+  }
+}

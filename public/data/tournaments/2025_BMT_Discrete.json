@@ -1,0 +1,58 @@
+{
+  "test": "BMT Discrete",
+  "year": 2025,
+  "name": "Discrete Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/discrete-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Jordan has two white socks and two black socks in their sock drawer. If they pull out two socks uniformly at random without replacement, what is the probability that they are the same color?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Find the positive integer \\(n\\) such that \\(n + 10\\) is both a multiple of \\(n\\) and a factor of \\(n + 100\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>In how many ways can ten identical white blocks be placed into a red box, a yellow box, a green box, and a blue box such that no box is empty, and at least two boxes contain the same number of blocks?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>A <i>substring</i> of a positive integer \\(n\\) is a positive integer whose digits appear consecutively in the digits of \\(n\\). For example, \\(10\\), \\(00 = 0\\), and \\(02 = 2\\) are two-digit substrings of \\(1002\\), but \\(12\\) and \\(01 = 1\\) are not. An integer \\(n\\) is chosen uniformly at random from the integers between \\(1000\\) and \\(9999\\) inclusive. Compute the probability that all two-digit substrings of \\(n\\) are divisible by three.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Over all triples of positive integers \\((a, b, c)\\) satisfying the equation \\[\\gcd(\\operatorname{lcm}(a,b), \\operatorname{lcm}(a,c), \\operatorname{lcm}(b,c)) = 2025,\\] compute the smallest possible value of \\(a + b + c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>An increasing sequence of positive integers is <i>three-hating</i> if it contains at least one term and alternates between integers that are multiples of \\(3\\) and integers that are not multiples of \\(3\\). For example, \\((1)\\), \\((3, 4, 6)\\), and \\((3)\\) are three-hating while \\((3, 6)\\) and \\((3, 6, 7, 9)\\) are not. Compute the number of three-hating sequences in which every term is less than or equal to \\(12\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Fourteen people are sitting at a circular table with fourteen distinct seats. They all get up to eat lunch and then return to the table. When they sit down again, each person sits either in their original seat or a seat adjacent to their original seat, and no two people sit in the same seat. In how many ways can this occur?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Let \\(N = 2025 \\times 202^5 \\times 20^{25}\\). For each positive integer \\(x\\), define \\(\\sigma(x)\\) to be the sum of the positive divisors of \\(x\\). Define \\(h(x)\\) to be the sum of all positive divisors \\(y\\) of \\(x\\) such that \\(\\sigma(y)\\) is even. For example, \\(\\sigma(9) = 13\\) and \\(h(9) = 3\\). Find the number of positive divisors \\(k\\) of \\(N\\) such that \\(h(k)\\) is odd.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>In a tournament, twelve players compete in a sequence of matches. Each match consists of two players, and no two matches have the same pair of players. Furthermore, no two players who compete in the same number of matches in the tournament compete against each other in a match. What is the greatest possible number of matches that can be played in the tournament?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Let \\(S\\) be the set of triples of nonnegative integers \\((p, q, r)\\) such that \\[3^p \\cdot 21^q + 9 \\cdot 2^r\\] is a perfect square. Compute \\[\\sum_{(p,q,r) \\in S} 100p + 10q + r.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

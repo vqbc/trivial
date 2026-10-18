@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2010,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2010/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the smallest positive integer \\(N\\) such that \\(N!\\) is a multiple of \\(10^{2010}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>An equilateral triangle \\(T\\) is externally tangent to three mutually tangent unit circles, as shown in the diagram. Find the area of \\(T\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>The polynomial \\(p(x) = x^3 + ax^2 + bx + c\\) has the property that the average of its roots, the product of its roots, and the sum of its coefficients are all equal. If \\(p(0) = 2\\), find \\(b\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>A regular pentagon \\(P = A_1A_2A_3A_4A_5\\) and a square \\(S = B_1B_2B_3B_4\\) are both inscribed in the unit circle. For a given pentagon \\(P\\) and square \\(S\\), let \\(f(P,S)\\) be the minimum length of the minor arcs \\(A_iB_j\\), for \\(1 \\le i \\le 5\\) and \\(1 \\le j \\le 4\\). Find the maximum of \\(f(P,S)\\) over all pairs of shapes.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Let \\(a, b, c\\) be three three-digit perfect squares that together contain each nonzero digit exactly once. Find the value of \\(a+b+c\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>There is a big circle \\(P\\) of radius 2. Two smaller circles \\(Q\\) and \\(R\\) are drawn tangent to the big circle \\(P\\) and tangent to each other at the center of the big circle \\(P\\). A fourth circle \\(S\\) is drawn externally tangent to the smaller circles \\(Q\\) and \\(R\\) and internally tangent to the big circle \\(P\\). Finally, a tiny fifth circle \\(T\\) is drawn externally tangent to the 3 smaller circles \\(Q, R, S\\). What is the radius of the tiny circle \\(T\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Let \\(P(x) = (1+x)(1+x^2)(1+x^4)(1+x^8)(\\cdots)\\). This infinite product converges when \\(|x| &lt; 1\\). Find \\(P(\\frac{1}{2010})\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>\\(P(x)\\) is a polynomial of degree four with integer coefficients that satisfies \\(P(0) = 1\\) and \\(P(\\sqrt{2} + \\sqrt{3}) = 0\\). Find \\(P(5)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Find all positive integers \\(n \\ge 3\\) such that both roots of the equation \\[(n-2)x^2 + (2n^2 - 13n + 38)x + 12n - 12 = 0\\] are integers.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Let \\(a, b, c, d, e, f\\) be positive integers (not necessarily distinct) such that \\[a^4 + b^4 + c^4 + d^4 + e^4 = f^4.\\] Find the largest positive integer \\(n\\) such that \\(n\\) is guaranteed to divide at least one of \\(a, b, c, d, e, f\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

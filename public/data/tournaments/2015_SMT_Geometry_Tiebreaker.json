@@ -1,0 +1,23 @@
+{
+  "test": "SMT Geometry Tiebreaker",
+  "year": 2015,
+  "name": "Geometry Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/asmt2015/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Quadrilateral \\(ABCD\\) has side lengths \\(AB = 3\\), \\(AD = 2\\), and \\(CD = BC\\). In addition, \\(\\angle BAD = \\angle ADC = 90^\\circ\\). Compute the area of \\(ABCD\\).</p>",
+      "solutions": "<p>Extend \\(C\\) to a point \\(E\\) so that \\(ABED\\) is a rectangle. Triangle \\(BCE\\) is right-angled with side lengths \\(BE = 2\\), \\(CE = 3 - CD\\) and \\(BC = CD\\). By Pythagoras, we have \\(2^2 + (3-CD)^2 = CD^2\\) and hence \\(CD = \\frac{13}{6}\\). The area of \\(ABCD\\) is thus the area of the rectangle \\(ABED\\) minus the area of the triangle \\(BCE\\), which equals \\(6 - \\frac{5}{6} = \\boxed{\\frac{31}{6}}\\).</p>",
+      "answer": "\\frac{31}{6}"
+    },
+    "2": {
+      "problem": "<p>Consider a right cone of height and radius 1. Spin the cone around a line that passes through a point on the perimeter of the cone’s base and is parallel to the cone’s altitude. Compute the volume of the resulting solid.</p>",
+      "solutions": "<p>The axis of the cone, \\(z\\), and the axis of revolution \\(r\\) define a plane, call it \\(P\\). The volume generated in the revolution is equal to the volume formed by spinning the projection of the cone on \\(P\\) about \\(r\\). This projection is a triangle of base 2 and height 1. The volume formed by spinning the triangle is equivalent to a conical frustum with a cone drilled out of it (a sketch is necessary here). The frustum has base radius 2 and height 1, while the drilled out cone has base radius 1 and height 1. This is equivalent to the volume of one cone of height and radius 2 minus 2 of height and radius 1. Thus the total volume is: \\[V = \\frac{\\pi 2^2 \\cdot 2}{3} - 2\\frac{\\pi 1^2 \\cdot 1}{3} = \\boxed{2\\pi}\\]</p><p>Another, potentially faster way to see this is to use Pappus’ Theorem and quote the result instantly!</p>",
+      "answer": "2\\pi"
+    },
+    "3": {
+      "problem": "<p>In triangle \\(ABC\\), two angle trisectors of \\(A\\) intersect \\(BC\\) at \\(D\\) and \\(E\\) such that \\(D\\) is closer to \\(B\\) and \\(E\\) is closer to \\(C\\). Given that \\(BD = 3\\), \\(DE = 1\\) and \\(EC = 2\\), compute \\(\\angle DAE\\) in degrees.</p>",
+      "solutions": "<p><b>Solution 1.</b> Applying the angle bisector theorem on triangles \\(ABE\\) and \\(ACD\\), we see that \\(\\frac{AB}{AE} = \\frac{3}{1}\\) and \\(\\frac{AC}{AD} = \\frac{2}{1}\\). Let \\(x\\) denote the length of \\(AD\\) and \\(y\\) denote the length of \\(AE\\). Then \\(AB = 3y\\) and \\(AC = 2x\\).</p><p>Now, let \\(\\alpha = \\angle DAE = \\angle EAC = \\angle DAB\\). Applying the law of cosines to triangle \\(ACE\\), we have \\(\\cos(\\alpha) = -\\frac{4-4x^2-y^2}{4xy}\\). Applying the law of cosines to \\(ADE\\), we have \\(\\cos(\\alpha) = -\\frac{1-x^2-y^2}{2xy}\\). Applying the law of cosines to \\(ABD\\), we have \\(\\cos(\\alpha) = -\\frac{9-9y^2-x^2}{6xy}\\). Thus, we have</p><p>\\[\\begin{aligned}\n-\\frac{4-4x^2-y^2}{4xy} &amp;= -\\frac{1-x^2-y^2}{2xy} \\\\\n8xy - 8x^3y - 2xy^3 &amp;= 4xy - 4x^3y - 4xy^2 \\\\\n4xy - 4x^3y + 2xy^3 &amp;= 0 \\\\\n2 - 2x^2 + y^2 &amp;= 0 \\\\\n2x^2 - y^2 &amp;= 2\n\\end{aligned}\\]</p><p>and</p><p>\\[\\begin{aligned}\n-\\frac{9-9y^2-x^2}{6xy} &amp;= -\\frac{1-x^2-y^2}{2xy} \\\\\n18xy - 18xy^3 - 2x^3y &amp;= 6xy - 6x^3y - 6xy^3 \\\\\n12xy - 12xy^3 + 4x^3y &amp;= 0 \\\\\n3 - 3y^2 + x^2 &amp;= 0 \\\\\n-x^2 + 3y^2 &amp;= 3\n\\end{aligned}\\]</p><p>Solving this system for \\(x\\) and \\(y\\), we find that \\(y = \\sqrt{\\frac{8}{5}}\\) and \\(x = \\sqrt{\\frac{9}{5}}\\). Substituting the values of \\(x\\) and \\(y\\) into the equation \\(\\cos(\\alpha) = -\\frac{1-x^2-y^2}{2xy}\\), we see that \\(\\cos(\\alpha) = \\frac{1}{\\sqrt{2}}\\). Therefore, it follows that \\(\\alpha = \\boxed{45^\\circ}\\).</p><p><b>Solution 2.</b> The locus of points \\(P\\) with \\(\\angle BPD = \\angle DPE\\) is equivalent to locus of \\(P\\) with \\(BP : PE = BD : DE = 3 : 1\\). This can be found by Apollonian circle theorem, which states that the locus is given by a circle having two points on a line \\(BC\\) as diameter. But as \\(C\\) happens to be on that locus, the circle has \\(DC\\) as diameter. Therefore we have \\(\\angle DAC = 2\\angle DAE = \\pi/2\\), \\(\\angle DAE = \\pi/4\\).</p>",
+      "answer": "45^\\circ"
+    }
+  }
+}

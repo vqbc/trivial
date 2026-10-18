@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2016,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2016/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Trung took five tests this semester. For his first three tests, his average was 60, and for the fourth test he earned a 50. What must he have earned on his fifth test if his final average for all five tests was exactly 60?</p>",
+      "solutions": "<p>His total after 4 tests was \\(3(60) + 50 = 230\\). In order to have average of 60, his final score needs to be \\(300\\). So the fifth test must be \\(300 - 230 = \\boxed{70}\\).</p>",
+      "answer": "70"
+    },
+    "2": {
+      "problem": "<p>Find the number of pairs of integers \\((a, b)\\) such that \\(20a + 16b = 2016 - ab\\).</p>",
+      "solutions": "<p>\\(20a + 16b = 2016 - ab \\implies ab + 20a + 16b = 2016\\). Note that the left hand side is \\((a+16)(b+20) - 20(16)\\) (common factoring technique). So we have \\((a+16)(b+20) = 2016 + 20(16) = 2336\\). \\(2336\\) factors as \\(2^5 \\times 73\\). So it has \\(6 \\times 2 = 12\\) positive divisors. Note that every pair of divisors gives us a solution (subtract 16 from first and 20 from second). However the question asks for integers, which includes negative divisors. So we have a total \\(= 2 \\times 12 = \\boxed{24}\\) solutions.</p>",
+      "answer": "24"
+    },
+    "3": {
+      "problem": "<p>Let \\(f: \\mathbb{N} \\to \\mathbb{N}\\) be a strictly increasing function with \\(f(1) = 2016\\) and \\(f(2t) = f(t) + t\\) for all \\(t \\in \\mathbb{N}\\). Find \\(f(2016)\\).</p>",
+      "solutions": "<p>\\(f(2t) = f(t) + t\\). So there are \\(t\\) values between \\(f(t)\\) and \\(f(2t)\\) (\\(f(2t) - f(t) = t\\)). But there are \\(t\\) values between \\(t\\) and \\(2t\\). Hence we see that \\(f(t+x) = f(t) + x\\). So \\(f(2016) = f(1) + 2015 = \\boxed{4031}\\). Making this argument rigorous can be done by induction.</p>",
+      "answer": "4031"
+    },
+    "4": {
+      "problem": "<p>Circles of radius \\(7, 7, 18\\), and \\(r\\) are mutually externally tangent, where \\(r = \\frac{m}{n}\\) for relatively prime positive integers \\(m\\) and \\(n\\). Find \\(m+n\\).</p>",
+      "solutions": "<p>Let \\(A, B, C, D\\) be the centers of the circles with radius \\(7, 7, 18, r\\) respectively. So \\(AC = BC = 25\\). Let \\(E\\) be the midpoint of \\(AB\\). So \\(AE = 7\\) and thus by Pythagorean theorem and symmetry, \\(CE = 24\\). Drawing a picture, we see that \\(D\\) must lie in the small hole between the circles. So we have \\(AD = 7 + r\\), \\(CD = 18 + r\\).</p><p>\\(DE + CD = CE = 24\\) and \\(DE^2 + AE^2 = AD^2\\). Hence \\(r^2 + 14r = DE^2 = (24-CD)^2 = (24 - (18+r))^2 = (6-r)^2 = 36 - 12r + r^2\\). Solving this, we see that \\(r = \\frac{18}{13}\\). So the answer is \\(18 + 13 = \\boxed{31}\\).</p>",
+      "answer": "31"
+    },
+    "5": {
+      "problem": "<p>A point is chosen at random from within the circumcircle of a triangle with angles \\(45^\\circ, 75^\\circ, 60^\\circ\\). What is the probability that the point is closer to the vertex with an angle of \\(45^\\circ\\) than either of the two other vertices?</p>",
+      "solutions": "<p>If we draw the perpendicular bisectors of the three sides of the triangle, then the area of the sector closest to \\(45^\\circ\\) angle is what we want. Note that intersection of perpendicular bisectors is the center of the circle. To find the area relative to whole circle, we just need to find the angle. The quadrilateral formed has three other angles of total \\(90^\\circ + 90^\\circ + 45^\\circ = 225^\\circ\\). Thus the last angle is \\(360^\\circ - 225^\\circ = 135^\\circ\\). So the area relative to whole circle is equal to \\(\\frac{135}{360} = \\boxed{\\frac{3}{8}}\\).</p>",
+      "answer": "\\frac{3}{8}"
+    },
+    "6": {
+      "problem": "<p>Find the largest positive integer \\(a\\) less than 100 such that for some positive integer \\(b\\), \\(a-b\\) is a prime number and \\(ab\\) is a perfect square.</p>",
+      "solutions": "<p>Any common divisor of \\(a, b\\) divides \\(p\\). So the gcd of \\(a, b\\) is either \\(1\\) or \\(p\\). If the gcd is \\(p\\), then \\(a = pk\\) and \\(b = p(k-1)\\) but \\(ab = p^2k(k-1)\\) is only perfect square if \\(k, k-1\\) are perfect squares. But that’s not possible.</p><p>Hence the gcd is \\(1\\) and if \\(ab\\) is a perfect square, then \\(a, b\\) are individually perfect squares. So we have \\(a = x^2, b = y^2\\) and \\(x^2 - y^2 = (x-y)(x+y) = p\\). But \\(p\\) only has one pair of divisors \\((1, p)\\) so \\(x - y = 1\\) and \\(x + y = p\\). Solving these for \\(x\\), we get \\(x = \\frac{p+1}{2}\\). In order for \\(a = x^2 &lt; 100\\), then \\(x \\le 9\\). However we see that if \\(x = 9\\), then \\(a = 81\\) and \\(b = 64\\) and we can check that these work. Hence \\(\\boxed{81}\\) is the largest solution.</p>",
+      "answer": "81"
+    },
+    "7": {
+      "problem": "<p>There is a set of 6 parallel lines and another set of six parallel lines, where these two sets of lines are not parallel with each other. If Blythe adds 6 more lines, not necessarily parallel with each other, find the maximum number of triangles that could be made.</p>",
+      "solutions": "<p>\\(18\\) lines so \\(\\binom{18}{3}\\) ways to form a possible triangles. We must take out all triples from 2 or 3 parallel lines: \\(2\\left(\\binom{6}{2}12 + \\binom{6}{3}\\right)\\). Hence, \\(816 - 2(180+20) = \\boxed{416}\\).</p>",
+      "answer": "416"
+    },
+    "8": {
+      "problem": "<p>Triangle \\(ABC\\) has sides \\(AB = 5\\), \\(AC = 4\\), and \\(BC = 3\\). Let \\(O\\) be any arbitrary point inside \\(ABC\\), and \\(D \\in BC\\), \\(E \\in AC\\), \\(F \\in AB\\), such that \\(OD \\perp BC\\), \\(OE \\perp AC\\), \\(OF \\perp AB\\). Find the minimum value of \\(OD^2 + OE^2 + OF^2\\).</p>",
+      "solutions": "<p>\\((OD^2+OE^2+OF^2)(a^2+b^2+c^2) \\ge (a\\times OD + b\\times OE + c\\times OF)^2 = (2S_{ABC})^2\\). But \\(a^2+b^2+c^2 = 5^2+4^2+3^2 = 50\\) and \\(2S_{ABC} = 3(4) = 12\\) (right triangle). So we have \\(\\frac{144}{50} = \\boxed{\\frac{72}{25}}\\).</p>",
+      "answer": "\\frac{72}{25}"
+    },
+    "9": {
+      "problem": "<p>Find the root with the largest real part to \\(x^4 - 3x^3 + 3x + 1 = 0\\) over the complex numbers.</p>",
+      "solutions": "<p>Note that \\(x = 0\\) is not a root. Divide by \\(x^2\\). We get \\(x^2 - 3x + 3x^{-1} + x^{-2}\\). We can group this as \\((x^2+x^{-2}) - 3(x-x^{-1}) = (x-x^{-1})^2 + 2 - 3(x-x^{-1})\\). If we let \\(y = x - x^{-1}\\), we have \\(y^2 - 3y + 2 = (y-2)(y-1) = 0\\). So we have \\(x - x^{-1} = 2 \\implies x^2 - 2x - 1 = (x-1)^2 - 2 = 0\\). So we have root \\(1 \\pm \\sqrt{2}\\). \\(x - x^{-1} = 1 \\implies x^2 - x - 1 = (x - \\frac{1}{2})^2 - \\frac{5}{4} = 0\\). Which gives us roots \\(\\frac{1\\pm\\sqrt5}{2}\\). Using estimates of square roots, it is easy to see that \\(\\boxed{1+\\sqrt2}\\) is the largest real root.</p>",
+      "answer": "1+\\sqrt{2}"
+    },
+    "10": {
+      "problem": "<p>Tony has a board with 2 rows and 4 columns. Tony will use 8 numbers from 1 to 8 to fill in this board, each number in exactly one entry. Let array \\((a_1, .., a_4)\\) be the first row of the board and array \\((b_1, .., b_4)\\) be the second row of the board.</p><p>Let \\(F = \\sum_{i=1}^{4} |a_i - b_i|\\), calculate the average value of \\(F\\) across all possible ways to fill in.</p>",
+      "solutions": "<p>We first find the probability that \\((x,y)\\) appears. Given the position \\(x\\), we need \\(y\\) to appear opposite it. This has probability \\(\\frac{1}{7}\\). We then calculate the expected value of \\(|x-y|\\). \\(|x-y|=n\\) when \\(x=i, y=i+n\\) or \\(x=i+n, y=i\\) where \\(1 \\le x, y \\le 8\\). Smallest value of \\(i\\) is \\(1\\) and \\(i+n \\le 8\\) so \\(i \\le 8-n\\). Hence \\(|x-y|=n\\) a total of \\(2(8-n)\\) times. \\(\\sum_{i=1}^{7} 2n(8-n) = 84\\). So we have total expected value of \\(\\frac{84}{7} = \\boxed{12}\\).</p>",
+      "answer": "12"
+    }
+  }
+}

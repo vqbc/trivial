@@ -1,0 +1,58 @@
+{
+  "test": "SMT Calculus",
+  "year": 2018,
+  "name": "Calculus Test",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2018/calculus-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(f(x) = x^2\\) and \\(g(x) = \\ln(x)\\), compute \\(f'(1) + g'(1)\\).</p>",
+      "solutions": "<p>We compute \\(f'(x) = 2x\\) and \\(g'(x) = \\frac{1}{x}\\), so plugging in \\(1\\) for both gives us \\(\\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "2": {
+      "problem": "<p>Given that \\(f(x) = x^2 + ax - 17\\), find all real values of \\(a\\) such that \\(f(4) = f'(4)\\).</p>",
+      "solutions": "<p>Differentiating \\(f(x)\\) gives us \\(f'(x) = 2x+a\\). Now \\(f(4) = 4a-1\\) and \\(f'(4) = a+8\\), so setting the two equal yields \\(4a-1 = a+8\\), which solves to \\(a = \\boxed{3}\\).</p>",
+      "answer": "3"
+    },
+    "3": {
+      "problem": "<p>Find the value of \\(a\\) such that \\[\\int_1^a (3x^2 - 6x + 3)\\, dx = 27.\\]</p>",
+      "solutions": "<p>We factor the integrand to get \\[\\int_1^a 3(x-1)^2\\, dx = (x-1)^3\\Big|_1^a = (a-1)^3 = 27.\\]</p><p>Taking the cube root of both sides yields \\(a - 1 = 3\\) or \\(a = \\boxed{4}\\).</p>",
+      "answer": "4"
+    },
+    "4": {
+      "problem": "<p>Compute \\[\\int_0^4 \\frac{dx}{\\sqrt{|x-2|}}.\\]</p>",
+      "solutions": "<p>Note that the function \\(\\frac{1}{\\sqrt{|x-2|}}\\) is discontinuous at \\(x=2\\). We therefore split the integral into two parts and compute separately: \\[\\int_0^2 \\frac{dx}{\\sqrt{|x-2|}} = \\int_0^2 \\frac{dx}{\\sqrt{2-x}} = -2\\sqrt{2-x}\\Big|_0^2 = 2\\sqrt{2}\\] \\[\\int_2^4 \\frac{dx}{\\sqrt{|x-2|}} = \\int_2^4 \\frac{dx}{\\sqrt{x-2}} = 2\\sqrt{x-2}\\Big|_2^4 = 2\\sqrt{2}\\]</p><p>The answer is therefore \\(2\\sqrt{2} + 2\\sqrt{2} = \\boxed{4\\sqrt{2}}\\).</p>",
+      "answer": "4\\sqrt{2}"
+    },
+    "5": {
+      "problem": "<p>Eric and Harrison are standing in a field, and Eric is 400 feet directly East of Harrison. Eric starts to walk North at a rate of 4 feet per second, while Harrsion starts to walk South at the same time at a rate of 6 feet per second. After 30 seconds, at what rate is the distance between Eric and Harrison changing?</p>",
+      "solutions": "<p>We can model the rate of change as a right triangle with base \\(x = 400\\) feet and height \\(y\\) increasing at a rate of \\(10\\) feet per second. After \\(30\\) seconds, we will have \\(y = 300\\) feet. If we let \\(z\\) denote the distance between Eric and Harrison, then \\(z\\) is the hypotenuse of the right triangle, giving us the relation \\(z^2 = x^2+y^2\\). Thus, the distance between Eric and Harrison after \\(30\\) seconds is \\(z = 500\\) feet. Differentiating both sides also yields \\(2z\\cdot z' = 2x\\cdot x' + 2y\\cdot y'\\). Plugging in our values, we get \\(2\\cdot 500z' = 2\\cdot 400\\cdot 0+2\\cdot 300\\cdot 10\\), which gives us \\(z' = \\boxed{6}\\) feet per second.</p>",
+      "answer": "6"
+    },
+    "6": {
+      "problem": "<p>Compute \\[\\lim_{x\\to 0} \\frac{(1-\\cos x)^2}{x^2 - x^2\\cos^2 x}.\\]</p>",
+      "solutions": "<p>Factoring out the \\(x^2\\) from the denominator and recalling that \\(\\sin^2 x + \\cos^2 x = 1\\), our limit becomes \\[\\lim_{x\\to 0} \\frac{(1-\\cos x)^2}{x^2\\sin^2 x} = \\left(\\lim_{x\\to 0} \\frac{1-\\cos x}{x\\sin x}\\right)^2.\\]</p><p>Note that the limit is in an indeterminate form \\(0/0\\) when we plug in \\(x = 0\\), so we apply L’Hopital’s rule to get \\[\\lim_{x\\to 0} \\frac{1-\\cos x}{x\\sin x} = \\lim_{x\\to 0} \\frac{\\sin x}{\\sin x + x\\cos x}.\\]</p><p>Plugging in \\(x = 0\\) still gives us the indeterminate form \\(0/0\\), so we apply L’Hopital’s rule again to get \\[\\lim_{x\\to 0} \\frac{\\sin x}{\\sin x + x\\cos x} = \\lim_{x\\to 0} \\frac{\\cos x}{\\cos x + \\cos x - x\\sin x}.\\]</p><p>Plugging in \\(x = 0\\) here gives us \\(\\frac{1}{2}\\). Therefore, our answer is \\(\\left(\\frac{1}{2}\\right)^2 = \\boxed{\\frac{1}{4}}\\).</p>",
+      "answer": "\\frac{1}{4}"
+    },
+    "7": {
+      "problem": "<p>Compute \\[\\int_{-2}^0 \\frac{x^3+4x^2+7x-20}{x^2+4x+8}\\, dx + \\int_0^2 \\frac{2x^3-7x^2+9x-10}{x^2+4}\\, dx.\\]</p>",
+      "solutions": "<p>The polynomials in the denominator are similar, so we rewrite them in the form \\[\\int_{-2}^0 \\frac{x^3+4x^2+7x-20}{(x+2)^2+4}\\, dx + \\int_0^2 \\frac{2x^3-7x^2+9x-10}{x^2+4}\\, dx.\\]</p><p>This suggests we make the \\(u\\)-substitution \\(u = x+2\\) in the first integral, which gives us \\[\\int_0^2 \\frac{(u-2)^3+4(u-2)^2+7(u-2)-20}{u^2+4}\\, du + \\int_0^2 \\frac{2x^3-7x^2+9x-10}{x^2+4}\\, dx\\]</p><p>which simplifies down to \\[\\int_0^2 \\frac{u^3-2u^2+3u-26}{u^2+4}\\, du + \\int_0^2 \\frac{2x^3-7x^2+9x-10}{x^2+4}\\, dx.\\]</p><p>We can then combine the two integrals into a single integral and combine like terms to get \\[\\int_0^2 \\frac{3x^3-9x^2+12x-36}{x^2+4}\\, dx = \\int_0^2 (3x-9)\\, dx = \\left(\\frac{3}{2}x^2-9x\\right)\\Big|_0^2 = \\frac{3}{2}(2^2) - 9\\cdot 2 = \\boxed{-12}.\\]</p>",
+      "answer": "-12"
+    },
+    "8": {
+      "problem": "<p>Compute \\[\\lim_{n\\to\\infty} n^2 \\int_0^{1/n} x^{2018x+1}\\, dx.\\]</p>",
+      "solutions": "<p>The key to evaluating this limit is to approximate the limit with a simpler integral. In particular, notice that \\(x^x \\to 1\\) as \\(x \\to 0\\). This suggests that we can approximate the integrand using \\(x^{2018x} = (x^x)^{2018} \\approx 1\\) to get \\[\\lim_{n\\to\\infty} n^2 \\int_0^{1/n} x^{2018x+1}\\, dx = \\lim_{n\\to\\infty} n^2 \\int_0^{1/n} x\\, dx.\\]</p><p>The integral then evaluates to \\(\\int_0^{1/n} x\\, dx = \\frac{1}{2n^2}\\). Plugging this back into the limit gives us the answer \\(\\frac{1}{2}\\).</p><p>To prove this claim rigorously, let \\(\\epsilon &gt; 0\\). Because \\(\\lim_{x\\to 0} x^{2018x} = 1\\), there exists some \\(\\delta &gt; 0\\) such that \\(|x^{2018x} - 1| &lt; \\epsilon\\) for all \\(0 &lt; x &lt; \\delta\\). Now consider the integral \\[n^2 \\int_0^{1/n} x^{2018x+1} - x\\, dx.\\]</p><p>Armed with this approximation, so long as \\(0 &lt; \\frac{1}{n} &lt; \\delta\\), or \\(n &gt; \\frac{1}{\\delta}\\), we have \\[\\begin{aligned}\n\\left| n^2 \\int_0^{1/n} x^{2018x+1} - x\\, dx \\right| &amp;= \\left| n^2 \\int_0^{1/n} x\\left(x^{2018x} - 1\\right) dx \\right| \\\\\n&amp;\\le n^2 \\int_0^{1/n} x\\left|x^{2018x}-1\\right| dx \\\\\n&amp;&lt; n^2 \\int_0^{1/n} \\epsilon \\cdot x\\, dx \\\\\n&amp;= \\frac{\\epsilon}{2}\n\\end{aligned}\\]</p><p>where we have used the facts that the function \\(x\\) is non-negative on the interval \\([0, 1/n]\\).</p><p>We have already shown above that \\(n^2\\int_0^{1/n} x\\, dx = \\frac{1}{2}\\), so for all \\(n &gt; \\frac{1}{\\delta}\\) we have \\[\\left| n^2 \\int_0^{1/n} x^{2018x+1}\\, dx - \\frac{1}{2} \\right| &lt; \\frac{\\epsilon}{2}.\\]</p><p>This is precisely the definition of a limit, so we conclude that the limit does exist and approaches \\(\\boxed{\\frac{1}{2}}\\) as claimed above.</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "9": {
+      "problem": "<p>Compute \\[\\int_0^\\pi \\frac{2x\\sin x}{3+\\cos 2x}\\, dx.\\]</p>",
+      "solutions": "<p>Let \\[I = \\int_0^\\pi \\frac{2x\\sin x}{3+\\cos 2x}\\, dx.\\]</p><p>We first use the identity \\(\\cos 2x = 2\\cos^2 x - 1\\) to reduce the integral into the form \\[\\int_0^\\pi \\frac{x\\sin x}{1+\\cos^2 x}\\, dx.\\]</p><p>Next, we consider the substitution \\(x \\mapsto \\pi - y\\). The integral then becomes \\[\\int_0^\\pi \\frac{(\\pi-y)\\sin y}{1+\\cos^2 y}\\, dy.\\]</p><p>Adding the two integrals together, we get \\[2I = \\int_0^\\pi \\frac{\\pi\\sin x}{1+\\cos^2 x}\\, dx.\\]</p><p>This gives us the simpler \\[I = \\frac{\\pi}{2}\\int_0^\\pi \\frac{\\sin x}{1+\\cos^2 x}\\, dx.\\]</p><p>Now use the substitution \\(u = \\cos x\\) to get \\[-\\frac{\\pi}{2}\\int_1^{-1} \\frac{1}{1+u^2}\\, du.\\]</p><p>This is the standard \\(\\tan^{-1} u\\) integral, so we have \\[I = \\frac{\\pi}{2}\\left(\\tan^{-1}(1) - \\tan^{-1}(-1)\\right) = \\frac{\\pi}{2}\\left(\\frac{\\pi}{4} - \\left(-\\frac{\\pi}{4}\\right)\\right) = \\boxed{\\frac{\\pi^2}{4}}.\\]</p>",
+      "answer": "\\frac{\\pi^2}{4}"
+    },
+    "10": {
+      "problem": "<p><i>Fact</i>: The value \\(\\ln(2)\\) is not the root of any polynomial with rational coefficients.</p><p>For any nonnegative integer \\(n\\), let \\(p_n(x)\\) be the unique polynomial with integer coefficients such that \\[p_n(\\ln(2)) = \\int_1^2 (\\ln(x))^n\\, dx.\\]</p><p>Compute the value of the sum \\[\\sum_{n=0}^\\infty \\frac{1}{p_n(0)}.\\]</p>",
+      "solutions": "<p>We first attempt to compute the integral \\(p_n(\\ln(2)) = \\int_1^2 (\\ln(x))^n\\, dx\\). Using integration by parts with \\(u = (\\ln(x))^n\\) and \\(dv = 1\\), we get \\[\\begin{aligned}\n\\int_1^2 (\\ln(x))^n\\, dx &amp;= x(\\ln(x))^n\\Big|_1^2 - \\int_1^2 n(\\ln(x))^{n-1}\\, dx \\\\\n&amp;= 2(\\ln(2))^n - n\\int_1^2 (\\ln(x))^{n-1}\\, dx \\\\\n&amp;= 2(\\ln(2))^n - np_{n-1}(\\ln(2)).\n\\end{aligned}\\]</p><p>Because \\(\\ln(2)\\) is not the root of any polynomial with rational coefficients, we can plug in \\(x = \\ln(2)\\) to get the recurrence \\[p_n(x) = 2x^n - np_{n-1}(x).\\]</p><p>Recall that we are only concerned with the constant terms \\(p_n(0)\\), so plugging in \\(x = 0\\) yields \\[p_n(0) = -np_{n-1}(0).\\]</p><p>Now since \\[p_0(\\ln(2)) = \\int_1^2 dx = 1,\\] we have \\(p_0(x) = 1\\), and therefore \\(p_0(0) = 1\\). From the recurrence, we deduce that \\[p_n(0) = (-1)^n\\cdot n!.\\]</p><p>Our desired sum is thus \\[\\sum_{n=0}^\\infty \\frac{1}{p_n(0)} = \\sum_{n=0}^\\infty \\frac{(-1)^n}{n!} = \\boxed{\\frac{1}{e}}\\] from the Taylor series expansion of \\(e^x\\) at \\(x = -1\\).</p>",
+      "answer": "\\frac{1}{e}"
+    }
+  }
+}

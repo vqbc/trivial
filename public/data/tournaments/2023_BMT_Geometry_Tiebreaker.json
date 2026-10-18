@@ -1,0 +1,23 @@
+{
+  "test": "BMT Geometry Tiebreaker",
+  "year": 2023,
+  "name": "Geometry Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2023/geometry-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Points \\(W, X, Y,\\) and \\(Z\\) are chosen inside a regular octagon so that four congruent rhombuses are formed, as shown in the diagram below. If the side length of the octagon is \\(1\\), compute the area of quadrilateral \\(WXYZ\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2023_BMT_Geometry_Tiebreaker/1-fig1.png\" width=\"248\" alt=\"\"></p>",
+      "solutions": "<p>Let the closest vertex of the octagon between \\(W\\) and \\(X\\) be \\(A\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2023_BMT_Geometry_Tiebreaker/1-fig2.png\" width=\"248\" alt=\"\"></p><p>Since rhombuses are formed, \\(WA = XA = 1\\). Using formula \\[\\text{interior angle} = \\frac{180^\\circ \\cdot (n-2)}{n}\\] where \\(n\\) is the number of the sides of the octagon, we know that the interior angle of the octagon is \\(135^\\circ\\). Thus, \\(\\angle WAX = 135^\\circ - (180^\\circ - 135^\\circ) \\cdot 2 = 45^\\circ\\). Using law of cosines on \\(\\triangle WAX\\), we can see \\(WX^2 = WA^2 + XA^2 - 2 \\cdot WA \\cdot XA \\cdot \\cos(\\angle WAX) = 1^2 + 1^2 - 2 \\cdot 1 \\cdot 1 \\cdot \\frac{\\sqrt{2}}{2} = 2 - \\sqrt{2}\\). By symmetry, \\(WXYZ\\) is a square whose area is \\(WX^2 = \\boxed{2 - \\sqrt{2}}\\).</p>",
+      "answer": "2 - \\sqrt{2}"
+    },
+    "2": {
+      "problem": "<p>Triangle \\(\\triangle ABC\\) has \\(\\angle ABC = \\angle BCA = 45^\\circ\\) and \\(AB = 1\\). Let \\(D\\) be on \\(\\overline{AC}\\) such that \\(\\angle ABD = 30^\\circ\\). Let \\(\\overleftrightarrow{BD}\\) and the line through \\(A\\) parallel to \\(\\overleftrightarrow{BC}\\) intersect at \\(E\\). Compute the area of \\(\\triangle ADE\\).</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2023_BMT_Geometry_Tiebreaker/2-fig1.png\" width=\"523\" alt=\"\"></p><p>Triangles \\(\\triangle ADE\\) and \\(\\triangle CDB\\) are similar. Thus, the area of \\(\\triangle ADE\\) is \\(\\left(\\frac{AD}{DC}\\right)^2\\) times the area of \\(\\triangle CDB\\). Since \\(\\angle ABD = 30^\\circ\\) and \\(AB = 1\\), we have \\(AD = \\frac{1}{\\sqrt{3}}\\) and \\(DC = 1 - \\frac{1}{\\sqrt{3}}\\). Thus, the area of \\(\\triangle ADE\\) is \\(\\frac{1}{2}\\left(1 - \\frac{1}{\\sqrt{3}}\\right)\\left(\\frac{1/\\sqrt{3}}{1-(1/\\sqrt{3})}\\right)^2 = \\boxed{\\frac{3+\\sqrt{3}}{12}}\\).</p>",
+      "answer": "\\frac{3+\\sqrt{3}}{12}"
+    },
+    "3": {
+      "problem": "<p>Points \\(A\\), \\(B\\), and \\(C\\) lie on a semicircle with diameter \\(\\overline{PQ}\\) such that \\(AB = 3\\), \\(AC = 4\\), \\(BC = 5\\), and \\(A\\) is on \\(\\overline{PQ}\\). Given \\(\\angle PAB = \\angle QAC\\), compute the area of the semicircle.</p>",
+      "solutions": "<p>Since \\(\\angle PAB = \\angle QAC\\), \\(B\\) and \\(C\\) cannot lie on diameter \\(PQ\\). Otherwise, one of \\(\\angle PAB\\) and \\(\\angle QAC\\) would be \\(0^\\circ\\) or \\(180^\\circ\\) and the other one would be \\(90^\\circ\\). So we can construct the diagram below.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2023_BMT_Geometry_Tiebreaker/3-fig1.png\" width=\"286\" alt=\"\"></p><p>Consider reflecting the whole picture across \\(\\overline{PQ}\\), creating points \\(A'\\), \\(B'\\), and \\(C'\\) (\\(A'\\) is the same point as \\(A\\)). Since \\(\\angle PAB = \\angle QAC = \\frac{\\pi}{4}\\), we must have \\(\\angle B'AB = \\angle C'AC = \\frac{\\pi}{2}\\). Thus, two isosceles right triangles are formed, and \\(BB' = 3\\sqrt{2}\\) and \\(CC' = 4\\sqrt{2}\\). If the center of the semicircle is \\(O\\), then the central angle \\(\\angle B'OB\\) equals \\(2\\angle B'CB = 2\\sin^{-1}\\left(\\frac{3}{5}\\right)\\). Then, \\(\\angle B'OP = \\sin^{-1}\\left(\\frac{3}{5}\\right) \\to \\frac{3}{5} = \\frac{0.5 \\cdot B'B}{r}\\), so \\(r = \\frac{5\\sqrt{2}}{2}\\) and the area of the semicircle is therefore \\(\\boxed{\\frac{25\\pi}{4}}\\).</p>",
+      "answer": "\\frac{25\\pi}{4}"
+    }
+  }
+}

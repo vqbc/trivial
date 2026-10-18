@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory A",
+  "year": 2024,
+  "name": "Number Theory A",
+  "url": "https://pumac.princeton.edu/s/PUMaC_2024_NT_A.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A quadratic polynomial \\(f(x) = Ax^2 + Bx + C\\) is <i>small</i> if \\(A, B, C\\) are single-digit positive integers. It is <i>full</i> if there are only finitely many positive integers that cannot be expressed as \\(f(x) + 3y\\) for some positive integers \\(x\\) and \\(y\\). Find the number of quadratic polynomials that are both small and full.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>A quadratic polynomial with positive integer coefficients and rational roots can be written as \\(196x^2 + Bx + 135\\) for some integer \\(B\\). What is the sum of all possible values of \\(B\\) such that \\(\\gcd(B, 196 \\cdot 135) = 1\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Let \\(\\sigma\\) be a permutation of the set \\(S := \\{1, 2, \\ldots, 100\\}\\), such that \\(\\sigma(a+b) \\equiv \\sigma(a) + \\sigma(b) \\pmod{100}\\) whenever \\(a, b, a+b \\in S\\). Denote by \\(f(s)\\) the sum of the distinct values \\(\\sigma(s)\\) can take over all possible \\(\\sigma\\)s satisfying the given condition. What is the nonnegative difference between the maximum and minimum value \\(f\\) takes on when ranging over all \\(s \\in S\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Let \\(r(m)\\) be the number of positive integers \\(a\\) less than or equal to \\(m\\) where \\(\\gcd(a, m)\\) is prime. Find the sum of all positive integers \\(m &lt; 300\\) such that \\(r(m) = \\varphi(m)\\), where \\(\\varphi(m)\\) denotes the number of positive integers \\(a\\) less than \\(m\\) where \\(\\gcd(a, m) = 1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Call a positive integer <i>nice</i> if the sum of its even proper divisors is larger than the sum of its odd proper divisors. What is the smallest nice number that is congruent to \\(2 \\pmod{4}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Let Pascal’s triangle be constructed where each \\(\\binom{n}{i}\\) is written inside its own cell in row \\(n\\). Colby colors the cells red for \\(1 \\le n \\le 63\\) when \\(\\binom{n}{i}\\) is divisible by \\(4\\). How many cells does he color red?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Call a 2-by-2 grid a <i>perfectly perfect square</i> if it contains distinct positive integers such that the sum of each row is a perfect square and the sum of each column is a perfect square. Define \\(f(n)\\) to be the number of perfectly perfect squares whose entries sum to \\(n\\). Let \\(m\\) be the smallest integer such that \\(f(m) &gt; m\\). Find \\(f(m)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Let \\(a, b, c\\) be pairwise coprime integers such that \\(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} = \\frac{N}{a+b+c}\\) for some positive integer \\(N\\). What is the sum of all possible values of \\(N\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

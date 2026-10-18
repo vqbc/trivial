@@ -1,0 +1,23 @@
+{
+  "test": "SMT Discrete Tiebreaker",
+  "year": 2019,
+  "name": "Discrete Math Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2019/discrete-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the number of pairs \\((A, B)\\) of distinct subsets of \\(\\{1, 2, 3, 4, 5, 6, 7, 8\\}\\), such that \\(A\\) is a proper subset of \\(B\\).</p>",
+      "solutions": "<p>Since \\(B\\) cannot be empty, the number of elements in \\(B\\) is between 1 and 8. Suppose that \\(B\\) has \\(n\\) elements. There are \\(2^n - 1\\) possible options for \\(A\\), since \\(A\\) and \\(B\\) are distinct. Thus the total number of pairs is \\[\\begin{aligned}\n\\sum_{n=1}^{8}\\binom{8}{n}(2^n-1) &amp;= \\sum_{n=0}^{8}\\binom{8}{n}(2^n-1) \\\\\n&amp;= \\sum_{n=0}^{8}\\binom{8}{n}2^n - \\sum_{n=0}^{8}\\binom{8}{n} \\\\\n&amp;= (2+1)^8 - (1+1)^8 \\\\\n&amp;= \\boxed{6305}.\n\\end{aligned}\\]</p>",
+      "answer": "6305"
+    },
+    "2": {
+      "problem": "<p>What is the remainder when \\((5^2 + 3^2)(5^4 + 3^4)(5^8 + 3^8)\\ldots(5^{2^{419}} + 3^{2^{419}})(5^{2^{420}} + 3^{2^{420}})\\) is divided by 1285?</p>",
+      "solutions": "<p><b>Solution 1.</b> Let \\(S = (5^2 + 3^2)(5^4 + 3^4)(5^8 + 3^8)\\ldots(5^{2^{419}} + 3^{2^{419}})(5^{2^{420}} + 3^{2^{420}})\\). Then, \\[\\begin{aligned}\n(5^2-3^2)S &amp;= (5^2-3^2)(5^2+3^2)(5^4+3^4)(5^8+3^8)\\ldots(5^{2^{419}}+3^{2^{419}})(5^{2^{420}}+3^{2^{420}}) \\\\\n16S &amp;= (5^4-3^4)(5^4+3^4)(5^8+3^8)\\ldots(5^{2^{419}}+3^{2^{419}})(5^{2^{420}}+3^{2^{420}}) \\\\\n&amp;\\ldots \\\\\n16S &amp;= 5^{2^{421}} - 3^{2^{421}} \\\\\nS &amp;\\equiv (16)^{-1}(5^{2^{421}} - 3^{2^{421}}) \\pmod{1285}\n\\end{aligned}\\]</p><p>By Euler’s theorem, for relatively prime \\(a\\) and \\(n\\), \\(a^{\\phi(n)} \\equiv 1 \\pmod{n}\\). Note that \\(1285 = 5 \\cdot 257\\), so \\(\\phi(5) = 4\\) and \\(\\phi(257) = 256\\) will be helpful. First we consider \\(S \\pmod{257}\\): \\[\\begin{aligned}\nS &amp;\\equiv (16)^{-1}(5^{2^{421} \\bmod 256} - 3^{2^{421} \\bmod 256}) \\pmod{257} \\\\\nS &amp;\\equiv (16)^{-1}(1 - 1) \\pmod{257} \\\\\nS &amp;\\equiv 0 \\pmod{257}\n\\end{aligned}\\]</p><p>Next we consider \\(S \\pmod 5\\): \\[\\begin{aligned}\nS &amp;\\equiv (16)^{-1}(5^{2^{421}} - 3^{2^{421} \\bmod 4}) \\pmod{5} \\\\\nS &amp;\\equiv (1)(0-1) \\pmod{5} \\\\\nS &amp;\\equiv 4 \\pmod{5}\n\\end{aligned}\\]</p><p>Thus, from \\(S \\equiv 0 \\pmod{257}\\) and \\(S \\equiv 4 \\pmod{5}\\), it follows that \\(S \\equiv \\boxed{514} \\pmod{1285}\\).</p>",
+      "answer": "514"
+    },
+    "3": {
+      "problem": "<p>Let \\(S = \\{1, 2, 3, 4, 5\\}\\). How many ordered pairs of functions \\((f, g)\\) satisfy \\(f, g : S \\to S\\), \\(f(g(x)) = g(x)\\), and \\(g(f(x)) = f(x)\\) for all \\(x \\in S\\)?</p>",
+      "solutions": "<p>For some \\(x \\in S\\), let \\(g(x) = y\\). Then we have \\(f(g(x)) = g(x) \\implies f(y) = y\\), and \\(g(f(x)) = f(x) \\implies g(y) = y\\). By symmetry, if \\(f(a) = b\\) for some \\(a \\in S\\), then \\(f(b) = b\\) and \\(g(b) = b\\).</p><p>For a function \\(h\\), let \\(x\\) be a <i>fixed point</i> if \\(h(x) = x\\). Then by above, all fixed points of \\(f\\) must also be fixed points of \\(g\\) and vice versa. Furthermore, if \\(f(x) = y\\) or \\(g(x) = y\\) for \\(x \\ne y\\), then \\(y\\) must be a fixed point.</p><p>Therefore, we can count the number of ordered pairs of functions by casework over the number of fixed points. If there are \\(n\\) fixed points, there are \\(\\binom{5}{n}\\) ways to choose them. For the rest of the \\(5-n\\) elements in the domain, they have to map to a fixed point. Hence, there are \\(n^{5-n}\\) ways to choose the values for the remaining elements in the domain for each of the two functions. As a result, the total number of ordered pairs of functions is \\[\\sum_{n=1}^{5}\\binom{5}{n}n^{2(5-n)} = \\boxed{1536}\\]</p>",
+      "answer": "1536"
+    }
+  }
+}

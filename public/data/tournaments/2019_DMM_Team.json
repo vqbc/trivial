@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2019,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2019/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Zion, RJ, Cam, and Tre decide to start learning languages. The four most popular languages that Duke offers are Spanish, French, Latin, and Korean. If each friend wants to learn exactly three of these four languages, how many ways can they pick courses such that they all attend at least one course together?</p>",
+      "solutions": "<p>The complement is that they do not have a class together, which happens in \\(4! = 24\\) ways. Since there are \\(4^4 = 256\\) total combinations of classes they can take, the answer is \\(256 - 24 = 232\\).</p>",
+      "answer": "232"
+    },
+    "2": {
+      "problem": "<p>Suppose we wrote the integers between 0001 and 2019 on a blackboard as such: \\[000100020003 \\cdots 20182019.\\] How many 0’s did we write?</p>",
+      "solutions": "<p>We do casework on the position of the 0 for each group of 4 digits. Note that we don’t have to care about overcounting (if we were counting the group 0001, then we would count it three times, but there are 3 zeros). Consider the integer \\(0abc\\). There are 10 choices for each of \\(a\\), \\(b\\), and \\(c\\), giving us \\(10 \\cdot 10 \\cdot 10 = 1000\\) total. For the integer \\(a0bc\\), we have \\(2 \\cdot 10 \\cdot 10 + 1 \\cdot 2 \\cdot 10 = 220\\) total integers. Similarly, we have \\(2 \\cdot 10 \\cdot 10 + 1 \\cdot 1 \\cdot 10 = 210\\) for the integer \\(ab0c\\) and \\(2 \\cdot 10 \\cdot 10 + 1 \\cdot 1 \\cdot 2 = 202\\) for the integer \\(abc0\\). However, we are counting \\(0000\\) each time, so we must subtract 4, giving us a total of \\[1000 + 220 + 210 + 202 - 4 = 1628.\\]</p>",
+      "answer": "1628"
+    },
+    "3": {
+      "problem": "<p>Duke’s basketball team has made \\(x\\) three-pointers, \\(y\\) two-pointers, and \\(z\\) one-point free throws, where \\(x, y, z\\) are whole numbers. Given that \\(3|x\\), \\(5|y\\), and \\(7|z\\), find the greatest number of points that Duke’s basketball team could not have scored.</p>",
+      "solutions": "<p>This question is essentially asking to find the greatest integer \\(I\\) that cannot be expressed as the sum of multiples of \\(7, 9\\), and \\(10\\), so \\(I \\neq 7k + 9l + 10m\\) for whole numbers \\(k, l, m\\). We can find the upper bound of \\(I\\) by setting \\(m = 0\\). \\(I \\equiv 9l \\pmod 7\\), so any number smaller than \\(9n\\) for \\(n \\le 6\\) that has the same remainder modulo 7 cannot be expressed as \\(7k + 9l\\). The upper bound is therefore \\(9 \\cdot 6 - 7 = 47\\). However, \\(47 = 3 \\cdot 9 + 2 \\cdot 10\\), so \\(I &lt; 47\\). We can find other numbers that cannot be expressed as \\(7k + 9l\\) by deducting multiples of 7 and/or multiples of 9 from 47 and see whether they can be expressed as \\(7k + 9l + 10m\\). It can then be found that 23 is the greatest value. We can check that 24 through 30 can be expressed as \\(7k + 9l + 10m\\).</p>",
+      "answer": "23"
+    },
+    "4": {
+      "problem": "<p>Find the minimum value of \\(x^2 + 2xy + 3y^2 + 4x + 8y + 12\\), given that \\(x\\) and \\(y\\) are real numbers. Note: calculus is <b>not</b> required to solve this problem.</p>",
+      "solutions": "<p>We see that \\[\\begin{aligned}\nx^2 + 2xy + 3y^2 + 4x + 8y + 12 &amp;= x^2 + (2y+4)x + 3y^2 + 8y + 12\\\\\n&amp;= (x+y+2)^2 + 2y^2 + 4y + 8\\\\\n&amp;= (x+y+2)^2 + 2(y+1)^2 + 6 \\ge 6.\n\\end{aligned}\\] We can check that the expression is equal to 6 when \\(x = y = -1\\), so 6 is attainable, and thus is the minimum value.</p>",
+      "answer": "6"
+    },
+    "5": {
+      "problem": "<p>Circles \\(C_1, C_2\\) have radii 1, 2 and are centered at \\(O_1, O_2\\), respectively. They intersect at points \\(A\\) and \\(B\\), and convex quadrilateral \\(O_1AO_2B\\) is cyclic. Find the length of \\(AB\\). Express your answer as \\(\\frac{x}{\\sqrt{y}}\\), where \\(x, y\\) are integers and \\(y\\) is square-free.</p>",
+      "solutions": "<p>In a cyclic quadrilateral, opposite angles add to \\(180^\\circ\\). Since \\(\\angle O_1AO_2 = \\angle O_1BO_2\\) due to symmetry, they must each be \\(90^\\circ\\). Therefore, \\(O_1O_2 = \\sqrt{1^2+2^2} = \\sqrt5\\). The area of \\(O_1AO_2B\\) is equal to \\(2 \\times \\frac{1 \\cdot 2}{2} = 2\\). Equating the area to \\(\\frac{O_1O_2 \\cdot AB}{2}\\), we get \\(AB = \\frac{4}{\\sqrt5}\\). <img class=\"latexcenter\" src=\"/data/tournaments/2019_DMM_Team/5-fig1.png\" width=\"586\" alt=\"\"></p>",
+      "answer": "\\frac{4}{\\sqrt{5}}"
+    },
+    "6": {
+      "problem": "<p>An infinite geometric sequence \\(\\{a_n\\}\\) has sum \\[\\sum_{n=0}^{\\infty} a_n = 3.\\] Compute the maximum possible value of the sum \\[\\sum_{n=0}^{\\infty} a_{3n}.\\]</p>",
+      "solutions": "<p>We are given that \\(\\frac{a_0}{1-r} = 3\\), where \\(r\\) is the ratio between terms in the sequence by the infinite geometric sum. The sum we are asked to calculate is then \\(\\frac{a_0}{1-r^3}\\). Dividing these two equations gives us \\(\\frac{1}{1+r+r^2} = \\frac{k}{3}\\), so \\(k = \\frac{3}{1+r+r^2}\\) for \\(r \\in (-1,1)\\). To maximize \\(k\\), we must minimize the denominator, which is done at \\(r = -\\frac12\\), giving us \\(k=4\\).</p>",
+      "answer": "4"
+    },
+    "7": {
+      "problem": "<p>Let there be a sequence of numbers \\(x_1, x_2, x_3, \\cdots\\) such that for all \\(i\\), \\[x_i = \\frac{49}{7^{\\frac{i}{1010}}+49}.\\] Find the largest value of n such that \\[\\left\\lfloor \\sum_{i=1}^{n} x_i \\right\\rfloor \\le 2019.\\]</p>",
+      "solutions": "<p>Note that if \\(f(x) = \\frac{49}{7^x+49}\\), then \\(f(x) + f(4-x) = 1\\), which can be seen by simplifying \\(1-f(x)\\). Then, the sequence up to \\(x_{4039}\\) has 2019 pairs that sum up to 1, the pairs being \\(x_i\\) and \\(x_{4040-i}\\), and one term equal to \\(\\frac12\\), so the answer is 4039.</p>",
+      "answer": "4039"
+    },
+    "8": {
+      "problem": "<p>Let \\(X\\) be a 9-digit integer that includes all the digits 1 through 9 exactly once, such that any 2-digit number formed from adjacent digits of \\(X\\) is divisible by 7 or 13. Find all possible values of \\(X\\).</p>",
+      "solutions": "<p>The only possible 2-digit numbers are \\[13, 14, 21, 26, 28, 35, 39, 42, 49, 52, 56, 63, 65, 77, 78, 84, 91, 98.\\] The strategy is to guess-and-check; if \\(x\\) is the only digit that can precede \\(y\\), then \\(x\\) must precede \\(y\\) or \\(y\\) is the first digit, and if \\(x\\) is the only digit that can come after \\(y\\), then \\(x\\) must come after \\(y\\) or \\(y\\) is the last digit. Therefore, 8 must come right before 4, or at the very end. From here, we try all the different combinations until we find a possible value of \\(X\\), or we find that we cannot add more digits to our number. The result is that we find 784913526 to be the only possible value of \\(X\\).</p>",
+      "answer": "784913526"
+    },
+    "9": {
+      "problem": "<p>Two 2025-digit numbers, \\(428\\underbrace{99\\ldots99}_{2019\\ 9\\text{'s}}571\\) and \\(571\\underbrace{99\\ldots99}_{2019\\ 9\\text{'s}}428\\), form the legs of a right triangle. Find the sum of the digits in the hypotenuse.</p>",
+      "solutions": "<p>Notice that 428571, 571428, and 714285 form a Pythagorean triple, as seen from repeating parts of \\(\\frac37\\), \\(\\frac47\\), and \\(\\frac57\\). We also notice (by inducting on the number of 9’s that we insert) that adding 9’s into the middle generates a new Pythagorean triple: \\[\\begin{aligned}\n4289571^2 + 5719428^2 &amp;= 7149285^2\\\\\n42899571^2 + 57199428^2 &amp;= 71499285^2\\\\\n428999571^2 + 571999428^2 &amp;= 714999285^2.\n\\end{aligned}\\] Thus, the sum of the digits in the hypotenuse is \\(9 \\cdot 2019 + 7+1+4+2+8+5 = 18198\\). Alternatively, one could use the idea that there is no feasible way to find the hypotenuse if there wasn’t a pattern to the triple to intelligently guess that the sum of the digits of the hypotenuse should be the same as the sum of the digits of the legs, hence 18198.</p>",
+      "answer": "18198"
+    },
+    "10": {
+      "problem": "<p>Suppose that the side lengths of \\(\\triangle ABC\\) are positive integers and the perimeter of the triangle is 35. Let \\(G\\) the centroid and \\(I\\) be the incenter of the triangle. Given that \\(\\angle GIC = 90^\\circ\\), what is the length of \\(AB\\)?</p>",
+      "solutions": "<p>Let \\(GI \\cap CB = P\\), \\(GI \\cap AC = Q\\). Let \\(R\\) be the perpendicular from \\(I\\) to \\(QC\\), \\(F\\) be the perpendicular from \\(G\\) to \\(QC\\), and \\(E\\) be the perpendicular from \\(G\\) to \\(CP\\). Then, \\(IR = r\\), the inradius of \\(ABC\\). Since \\(PQ \\perp CI\\) and \\(\\angle QCI = \\angle PCI\\), we have \\(PC = QC\\) and \\(PI = QI\\). Let \\([ABC]\\) denote the area of triangle \\(ABC\\). Then, we have \\[\\begin{aligned}\n[PCQ] &amp;= [GCQ] + [GCP]\\\\\n&amp;= \\frac12 CQ(GE+GF)\\\\\n&amp;= \\frac12 CQ \\cdot IR \\cdot 2,\n\\end{aligned}\\] so we get \\(GE + GF = 2IR = 2r\\). Since \\(G\\) is the centroid, if \\(h_a\\) denotes the length of the altitude from \\(A\\) to \\(BC\\) and \\(h_b\\) is defined similarly, we know that \\(GE = \\frac13 h_a\\) and \\(GF = \\frac13 h_b\\). Thus, we substitute to get \\[\\frac13 \\left( \\frac{2[ABC]}{BC} + \\frac{2[ABC]}{AC} \\right) = 2 \\frac{2[ABC]}{a+b+c},\\] so if \\(BC = a\\), \\(AC = b\\), and \\(AB = c\\), then we get \\[6ab = (a+b)(a+b+c) = 35(a+b).\\] Therefore, \\(6 | a+b\\), and by Triangle Inequality, \\(18 \\le a+b &lt; 35\\), so \\(a+b = 18, 24\\), or \\(30\\). Since \\(a\\) and \\(b\\) are both integers, we must have \\(a+b = 24\\), which can be seen by trial and error with the other two cases, which gives us \\(AB = c = 11\\). <img class=\"latexcenter\" src=\"/data/tournaments/2019_DMM_Team/10-fig1.png\" width=\"517\" alt=\"\"></p>",
+      "answer": "11"
+    }
+  }
+}

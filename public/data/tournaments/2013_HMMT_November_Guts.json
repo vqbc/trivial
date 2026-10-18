@@ -1,0 +1,173 @@
+{
+  "test": "HMMT November Guts",
+  "year": 2013,
+  "name": "Guts Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2013/nov/guts/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Evaluate \\(2 + 5 + 8 + \\cdots + 101\\).</p>",
+      "solutions": "<p>There are \\(\\frac{102}{3} = 34\\) terms with average \\(\\frac{2+101}{2}\\), so their sum is \\(17 \\cdot 103 = 1751\\).</p>",
+      "answer": "1751"
+    },
+    "2": {
+      "problem": "<p>Two fair six-sided dice are rolled. What is the probability that their sum is at least 10?</p>",
+      "solutions": "<p>There are \\(3, 2, 1\\) outcomes with sum \\(10, 11, 12\\), so the probability is \\(\\frac{3+2+1}{6^2} = \\frac{1}{6}\\).</p>",
+      "answer": "\\frac{1}{6}"
+    },
+    "3": {
+      "problem": "<p>A square is inscribed in a circle of radius 1. Find the perimeter of the square.</p>",
+      "solutions": "<p>The square has diagonal length 2, so side length \\(\\sqrt{2}\\) and perimeter \\(4\\sqrt{2}\\).</p>",
+      "answer": "4\\sqrt{2}"
+    },
+    "4": {
+      "problem": "<p>Find the minimum possible value of \\((x^2 + 6x + 2)^2\\) over all real numbers \\(x\\).</p>",
+      "solutions": "<p>This is \\(((x+3)^2 - 7)^2 \\ge 0\\), with equality at \\(x + 3 = \\pm\\sqrt{7}\\).</p>",
+      "answer": "0"
+    },
+    "5": {
+      "problem": "<p>How many positive integers less than 100 are relatively prime to 200? (Two numbers are <i>relatively prime</i> if their greatest common factor is 1.)</p>",
+      "solutions": "<p>\\(1 \\le n &lt; 100\\) is relatively prime to 200 if and only if it’s relatively prime to 100 (200, 100 have the same prime factors). Thus our answer is \\(\\phi(100) = 100\\frac{1}{2}\\frac{4}{5} = 40\\).</p>",
+      "answer": "40"
+    },
+    "6": {
+      "problem": "<p>A right triangle has area 5 and a hypotenuse of length 5. Find its perimeter.</p>",
+      "solutions": "<p>If \\(x, y\\) denote the legs, then \\(xy = 10\\) and \\(x^2 + y^2 = 25\\), so \\(x + y + \\sqrt{x^2 + y^2} = \\sqrt{(x^2 + y^2) + 2xy} + 5 = \\sqrt{45} + 5 = 5 + 3\\sqrt{5}\\).</p>",
+      "answer": "5 + 3\\sqrt{5}"
+    },
+    "7": {
+      "problem": "<p>Marty and three other people took a math test. Everyone got a non-negative integer score. The average score was 20. Marty was told the average score and concluded that everyone else scored below average. What was the minimum possible score Marty could have gotten in order to definitively reach this conclusion?</p>",
+      "solutions": "<p>Suppose for the sake of contradiction Marty obtained a score of 60 or lower. Since the mean is 20, the total score of the 4 test takers must be 80. Then there exists the possibility of 2 students getting 0, and the last student getting a score of 20 or higher. If so, Marty could not have concluded with certainty that everyone else scored below average.</p><p>With a score of 61, any of the other three students must have scored points lower or equal to 19 points. Thus Marty is able to conclude that everyone else scored below average.</p>",
+      "answer": "61"
+    },
+    "8": {
+      "problem": "<p>Evaluate the expression \\[\\cfrac{1}{2 - \\cfrac{1}{2 - \\cfrac{1}{2 - \\dotsb \\cfrac{1}{2 - \\cfrac{1}{2}}}}},\\] where the digit 2 appears 2013 times.</p>",
+      "solutions": "<p>Let \\(f(n)\\) denote the corresponding expression with the digit 2 appearing exactly \\(n\\) times. Then \\(f(1) = \\frac{1}{2}\\) and for \\(n &gt; 1\\), \\(f(n) = \\frac{1}{2 - f(n-1)}\\). By induction using the identity \\(\\frac{1}{2 - \\frac{N-1}{N}} = \\frac{N}{N+1}\\), \\(f(n) = \\frac{n}{n+1}\\) for all \\(n \\ge 1\\), so \\(f(2013) = \\frac{2013}{2014}\\).</p>",
+      "answer": "\\frac{2013}{2014}"
+    },
+    "9": {
+      "problem": "<p>Find the remainder when \\(1^2 + 3^2 + 5^2 + \\cdots + 99^2\\) is divided by 1000.</p>",
+      "solutions": "<p>We have \\(S = \\sum_{i=0}^{49}(2i+1)^2 = \\sum_{i=0}^{49} 4i^2 + 4i + 1 = 4 \\cdot \\frac{49 \\cdot 50 \\cdot 99}{6} + 4 \\cdot \\frac{49 \\cdot 50}{2} + 50 \\equiv 700 + 900 + 50 \\pmod{1000} \\equiv 650 \\pmod{1000}\\).</p>",
+      "answer": "650"
+    },
+    "10": {
+      "problem": "<p>How many pairs of real numbers \\((x, y)\\) satisfy the equation \\[y^4 - y^2 = xy^3 - xy = x^3 y - xy = x^4 - x^2 = 0?\\]</p>",
+      "solutions": "<p>We can see that if they solve the first and fourth equations, they are automatically solutions to the second and third equations. Hence, the solutions are just the \\(3^2 = 9\\) points where \\(x, y\\) can be any of \\(-1, 0, 1\\).</p>",
+      "answer": "9"
+    },
+    "11": {
+      "problem": "<p>David has a unit triangular array of 10 points, 4 on each side. A <i>looping path</i> is a sequence \\(A_1, A_2, \\ldots, A_{10}\\) containing each of the 10 points exactly once, such that \\(A_i\\) and \\(A_{i+1}\\) are adjacent (exactly 1 unit apart) for \\(i = 1, 2, \\ldots, 10\\). (Here \\(A_{11} = A_1\\).) Find the number of looping paths in this array.</p>",
+      "solutions": "<p>There are \\(10 \\cdot 2\\) times as many loop sequences as loops. To count the number of loops, first focus on the three corners of the array: their edges are uniquely determined. It’s now easy to see there are 3 loops (they form ”V-shapes”), so the answer is \\(10 \\cdot 2 \\cdot 3 = 60\\).</p>",
+      "answer": "60"
+    },
+    "12": {
+      "problem": "<p>Given that \\(62^2 + 122^2 = 18728\\), find positive integers \\((n, m)\\) such that \\(n^2 + m^2 = 9364\\).</p>",
+      "solutions": "<p>If \\(a^2 + b^2 = 2c\\), then \\((\\frac{a+b}{2})^2 + (\\frac{a-b}{2})^2 = \\frac{2a^2 + 2b^2}{4} = \\frac{a^2 + b^2}{2} = c\\). Thus, \\(n = \\frac{62+122}{2} = 92\\) and \\(m = \\frac{122-62}{2} = 30\\) works.</p>",
+      "answer": "(30, 92)"
+    },
+    "13": {
+      "problem": "<p>Let \\(S = \\{1, 2, \\ldots, 2013\\}\\). Find the number of ordered triples \\((A, B, C)\\) of subsets of \\(S\\) such that \\(A \\subseteq B\\) and \\(A \\cup B \\cup C = S\\).</p>",
+      "solutions": "<p>Let \\(n = 2013\\). Each of the \\(n\\) elements can be independently placed in 5 spots: there are \\(2^3 - 1\\) choices with element \\(x\\) in at least one set, and we subtract the \\(2^1\\) choices with element \\(x\\) in set \\(A\\) but not \\(B\\). Specifying where the elements go uniquely determines \\(A, B, C\\), so there are \\(5^n = 5^{2013}\\) ordered triples.</p>",
+      "answer": "5^{2013}"
+    },
+    "14": {
+      "problem": "<p>Find all triples of positive integers \\((x, y, z)\\) such that \\(x^2 + y - z = 100\\) and \\(x + y^2 - z = 124\\).</p>",
+      "solutions": "<p>Cancel \\(z\\) to get \\(24 = (y - x)(y + x - 1)\\). Since \\(x, y\\) are positive, we have \\(y + x - 1 \\ge 1 + 1 - 1 &gt; 0\\), so \\(0 &lt; y - x &lt; y + x - 1\\). But \\(y - x and y + x - 1\\) have opposite parity, so \\((y - x, y + x - 1) \\in \\{(1, 24), (3, 8)\\}\\) yields \\((y, x) \\in \\{(13, 12), (6, 3)\\}\\).</p><p>Finally, \\(0 &lt; z = x^2 + y - 100\\) forces \\((x, y, z) = (12, 13, 57)\\).</p>",
+      "answer": "(12, 13, 57)"
+    },
+    "15": {
+      "problem": "<p>Find all real numbers \\(x\\) between 0 and 360 such that \\(\\sqrt{3}\\cos 10^\\circ = \\cos 40^\\circ + \\sin x^\\circ\\).</p>",
+      "solutions": "<p>Note that \\(\\sqrt{3} = 2\\cos 30^\\circ\\), so \\(\\sin x^\\circ = \\cos 20^\\circ \\implies x \\in \\{70, 110\\}\\).</p>",
+      "answer": "70, 110"
+    },
+    "16": {
+      "problem": "<p>A bug is on one exterior vertex of solid \\(S\\), a \\(3 \\times 3 \\times 3\\) cube that has its center \\(1 \\times 1 \\times 1\\) cube removed, and wishes to travel to the opposite exterior vertex. Let \\(O\\) denote the <i>outer</i> surface of \\(S\\) (formed by the surface of the \\(3 \\times 3 \\times 3\\) cube). Let \\(L(S)\\) denote the length of the shortest path through \\(S\\). (Note that such a path cannot pass through the missing center cube, which is empty space.) Let \\(L(O)\\) denote the length of the shortest path through \\(O\\). What is the ratio \\(\\frac{L(S)}{L(O)}\\)?</p>",
+      "solutions": "<p>By (*), the shortest route in \\(O\\) has length \\(2\\sqrt{1.5^2 + 3^2} = 3\\sqrt{5}\\). By (**), the shortest route overall (in \\(S\\)) has length \\(2\\sqrt{1.5^2 + 1^2 + 2^2} = \\sqrt{3^2 + 2^2 + 4^2} = \\sqrt{29}\\). Therefore the desired ratio is \\(\\frac{\\sqrt{29}}{3\\sqrt{5}} = \\frac{\\sqrt{145}}{15}\\).</p><p>(*) Suppose we’re trying to get from \\((0,0,0)\\) to \\((3,3,3)\\) through \\(O\\). Then one minimal-length path through \\(O\\) is \\((0,0,0) \\to (1.5,0,3) \\to (3,3,3)\\).</p><p>(**) Suppose we’re trying to get from \\((0,0,0)\\) to \\((3,3,3)\\) through \\(S\\). Then the inner hole is \\([1,2] \\times [1,2] \\times [1,2]\\), and one minimal-length path is \\((0,0,0) \\to (1.5,1,2) \\to (3,3,3)\\).</p><p>To justify (*), note that we must at some point hit one of the three faces incident to \\((3,3,3)\\), and therefore one of the edges of those faces. Without loss of generality, the <i>first</i> of these edges (which must lie on a face incident to \\((0,0,0)\\)) is \\(\\{(t,0,3) : 0 \\le t \\le 3\\}\\). Then the shortest path goes directly from the origin to the edge, and then directly to \\((3,3,3)\\); \\(t = 1.5\\) minimizes the resulting distance. (One may either appeal to the classic geometric ”unfolding” argument, or just direct algebraic minimization.)</p><p>To justify (**), consider the portion of \\(S\\) ”visible” from \\((0,0,0)\\). It sees 3 mutually adjacent faces of the center cube ”hole” (when looking inside the solid) and its 6 edges. \\((3,3,3)\\) can also see these 6 edges. The shortest path through \\(S\\) must be a straight line from the start vertex to some point \\(P\\) on the surface of the center cube (+), and it’s easy to see, using the triangle inequality, that this point \\(P\\) must be on one of the 6 edges. Without loss of generality, it’s on the edge \\(\\{(t,1,2) : 1 \\le t \\le 2\\}\\). The remaining path is a straight line to \\((3,3,3)\\). Then once again, \\(t = 1.5\\) minimizes the distance. (And once again, one may either appeal to the classic geometric ”unfolding” argument—though this time it’s a little trickier—or just direct algebraic minimization.)</p><p><b>Comment.</b> (+) can be proven in many ways. The rough physical intuition is that ”a fully stretched rubber band” with ends at \\((0,0,0)\\) and \\((3,3,3)\\) must not have any ”wiggle room” (and so touches the inner cube). Perhaps more rigorously, we can try shortening a path that does not hit the center cube, for instance by ”projecting the path down” towards the closest edge of the inner cube.</p>",
+      "answer": "\\frac{\\sqrt{29}}{3\\sqrt{5}}"
+    },
+    "17": {
+      "problem": "<p>Find the sum of \\(\\frac{1}{n}\\) over all positive integers \\(n\\) with the property that the decimal representation of \\(\\frac{1}{n}\\) terminates.</p>",
+      "solutions": "<p>The decimal representation of \\(\\frac{1}{n}\\) terminates if and only if \\(n = 2^i 5^j\\) for some nonnegative integers \\(i, j\\), so our desired sum is \\[\\sum_{i\\ge 0}\\sum_{j\\ge 0} 2^{-i}5^{-j} = \\sum_{i\\ge 0} 2^{-i}\\sum_{j\\ge 0} 5^{-j} = (1 - 2^{-1})^{-1}(1 - 5^{-1})^{-1} = \\frac{2}{1}\\frac{5}{4} = \\frac{5}{2}.\\]</p>",
+      "answer": "\\frac{5}{2}"
+    },
+    "18": {
+      "problem": "<p>The rightmost nonzero digit in the decimal expansion of \\(101!\\) is the same as the rightmost nonzero digit of \\(n!\\), where \\(n\\) is an integer greater than 101. Find the smallest possible value of \\(n\\).</p>",
+      "solutions": "<p>\\(101!\\) has more factors of 2 than 5, so its rightmost nonzero digit is one of \\(2, 4, 6, 8\\). Notice that if the rightmost nonzero digit of \\(101!\\) is \\(2k\\) (\\(1 \\le k \\le 4\\)), then \\(102!\\) has rightmost nonzero digit \\(102(2k) \\equiv 4k \\pmod{10}\\), and \\(103!\\) has rightmost nonzero digit \\(103(4k) \\equiv 2k \\pmod{10}\\). Hence \\(n = 103\\).</p>",
+      "answer": "103"
+    },
+    "19": {
+      "problem": "<p>Let \\(p, q, r, s\\) be distinct primes such that \\(pq - rs\\) is divisible by 30. Find the minimum possible value of \\(p + q + r + s\\).</p>",
+      "solutions": "<p>The key is to realize none of the primes can be 2, 3, or 5, or else we would have to use one of them twice. Hence \\(p, q, r, s\\) must lie among \\(7, 11, 13, 17, 19, 23, 29, \\ldots\\) These options give remainders of 1 (mod 2) (obviously), \\(1, -1, 1, -1, 1, -1, \\ldots\\) modulo 3, and \\(2, 1, 3, 2, 4, 3, 4, \\ldots\\) modulo 5. We automatically have \\(2 \\mid pq - rs\\), and we have \\(3 \\mid pq - rs\\) if and only if \\(pqrs \\equiv (pq)^2 \\equiv 1 \\pmod 3\\), i.e. there are an even number of \\(-1 \\pmod 3\\)’s among \\(p, q, r, s\\).</p><p>If \\(\\{p, q, r, s\\} = \\{7, 11, 13, 17\\}\\), then we cannot have \\(5 \\mid pq - rs\\), or else \\(12 \\equiv pqrs \\equiv (pq)^2 \\pmod 5\\) is a quadratic residue. Our next smallest choice (in terms of \\(p + q + r + s\\)) is \\(\\{7, 11, 17, 19\\}\\), which works: \\(7 \\cdot 17 - 11 \\cdot 19 \\equiv 2^2 - 4 \\equiv 0 \\pmod 5\\). This gives an answer of \\(7 + 17 + 11 + 19 = 54\\).</p>",
+      "answer": "54"
+    },
+    "20": {
+      "problem": "<p>There exist unique nonnegative integers \\(A, B\\) between 0 and 9, inclusive, such that \\[(1001 \\cdot A + 110 \\cdot B)^2 = 57,108,249.\\] Find \\(10 \\cdot A + B\\).</p>",
+      "solutions": "<p>We only need to bound for \\(AB00\\); in other words, \\(AB^2 \\le 5710\\) but \\((AB+1)^2 \\ge 5710\\). A quick check gives \\(AB = 75\\). (Lots of ways to get this...)</p>",
+      "answer": "75"
+    },
+    "21": {
+      "problem": "<p>Suppose \\(A\\), \\(B\\), \\(C\\), and \\(D\\) are four circles of radius \\(r &gt; 0\\) centered about the points \\((0, r)\\), \\((r, 0)\\), \\((0, -r)\\), and \\((-r, 0)\\) in the plane. Let \\(O\\) be a circle centered at \\((0, 0)\\) with radius \\(2r\\). In terms of \\(r\\), what is the area of the union of circles \\(A\\), \\(B\\), \\(C\\), and \\(D\\) subtracted by the area of circle \\(O\\) that is not contained in the union of \\(A\\), \\(B\\), \\(C\\), and \\(D\\)?</p><p>(The <i>union</i> of two or more regions in the plane is the set of points lying in at least one of the regions.)</p>",
+      "solutions": "<p><b>Solution 1.</b> Let \\(U\\) denote the union of the four circles, so we seek \\[U - ([O] - U) = 2U - [O] = 2[(2r)^2 + 4 \\cdot \\frac{1}{2}\\pi r^2] - \\pi(2r)^2 = 8r^2.\\] (Here we decompose \\(U\\) into the square \\(S\\) with vertices at \\((\\pm r, \\pm r)\\) and the four semicircular regions of radius \\(r\\) bordering the four sides of \\(U\\).)</p><p><b>Solution 2.</b> There are three different kinds of regions: let \\(x\\) be an area of a small circle that does not contain the two intersections with the other two small circles, \\(y\\) be an area of intersection of two small circles, and \\(z\\) be one of those four areas that is inside the big circle but outside all of the small circles.</p><p>Then the key observation is \\(y = z\\). Indeed, adopting the union \\(U\\) notation from the previous solution, we have \\(4z = [O] - U = \\pi(2r)^2 - U\\), and by the inclusion-exclusion principle, \\(4y = [A] + [B] + [C] + [D] - U = 4\\pi r^2 - U\\), so \\(y = z\\). Now \\(U = (4x + 4y) - (4z) = 4x\\). But the area of each \\(x\\) is simply \\(2r^2\\) by moving the curved outward parts to fit into the curved inward parts to get a \\(r \\times 2r\\) rectangle. So the answer is \\(8r^2\\).</p>",
+      "answer": "8r^2"
+    },
+    "22": {
+      "problem": "<p>Let \\(S\\) be a subset of \\(\\{1, 2, 3, \\ldots, 12\\}\\) such that it is impossible to partition \\(S\\) into \\(k\\) disjoint subsets, each of whose elements sum to the same value, for any integer \\(k \\ge 2\\). Find the maximum possible sum of the elements of \\(S\\).</p>",
+      "solutions": "<p>We note that the maximum possible sum is 78 (the entire set). However, this could be partitioned into 2 subsets with sum 39: \\(\\{1, 2, 3, 10, 11, 12\\}\\) and \\(\\{4, 5, 6, 7, 8, 9\\}\\). The next largest possible sum is 77 (the entire set except 1). If \\(k \\ge 2\\) subsets each had equal sum, then they would have to be 7 subsets with sum 11 each or 11 subsets with sum 7 each. However, the subset containing 12 will have sum greater than 11; hence there is no way to partition the subset \\(\\{2, \\ldots, 12\\}\\) into equal subsets.</p>",
+      "answer": "77"
+    },
+    "23": {
+      "problem": "<p>The number \\(989 \\cdot 1001 \\cdot 1007 + 320\\) can be written as the product of three distinct primes \\(p, q, r\\) with \\(p &lt; q &lt; r\\). Find \\((p, q, r)\\).</p>",
+      "solutions": "<p>Let \\(f(x) = x(x - 12)(x + 6) + 320 = x^3 - 6x^2 - 72x + 320\\), so that \\(f(1001) = 989 \\cdot 1001 \\cdot 1007 + 320\\). But \\(f(4) = 4(-8)(10) + 320 = 0\\), so \\(f(x) = (x - 4)(x^2 - 2x - 80) = (x - 4)(x - 10)(x + 8)\\).</p><p>Thus \\(f(1001) = 991 \\cdot 997 \\cdot 1009\\), as desired.</p>",
+      "answer": "(991, 997, 1009)"
+    },
+    "24": {
+      "problem": "<p>Find the number of subsets \\(S\\) of \\(\\{1, 2, \\ldots, 6\\}\\) satisfying the following conditions:</p><ul><li>\\(S\\) is non-empty.</li><li>No subset of \\(S\\) has the property that the sum of its elements is 10.</li></ul>",
+      "solutions": "<p>We do casework based on the largest element of \\(S\\). Call a set \\(n\\)-free if none of its subsets have elements summing to \\(n\\).</p><p><b>Case 1: The largest element of \\(S\\) is 6.</b> Then \\(4 \\notin S\\). If \\(5 \\notin S\\), then we wish to find all 4-free subsets of \\(\\{1, 2, 3\\}\\) (note that \\(1 + 2 + 3 = 6 &lt; 10\\)). We just cannot include both \\(1, 3\\), so we have \\(2(2^2 - 1) = 6\\) choices here.</p><p>If \\(5 \\in S\\), then we want \\(4, 5\\)-free subsets of \\(\\{1, 2, 3\\}\\). The only 4-but-not-5-free subset is \\(\\{2, 3\\}\\), so we have \\(6 - 1\\) choices here, for a case total of \\(6 + 5 = 11\\).</p><p><b>Case 2: The largest element of \\(S\\) is 5.</b> We seek \\(5, 10\\)-free subsets of \\(\\{1, 2, 3, 4\\}\\). We just cannot have both \\(1, 4\\) or both \\(2, 3\\) (note that getting 10 requires the whole set), so we have \\((2^2 - 1)^2 = 9\\) subsets in this case.</p><p><b>Case 3: The largest element of \\(S\\) is at most 4.</b> (So we want a 4-free subset of \\(\\{1, 2, 3, 4\\}\\).) The only way to sum to 10 with \\(1, 2, 3, 4\\) is by using all the terms, so we simply discount the empty set and \\(\\{1, 2, 3, 4\\}\\), for a total of \\(2^4 - 2 = 14\\) subsets.</p><p><b>In conclusion</b>, the total number of subsets is \\(11 + 9 + 14 = 34\\).</p>",
+      "answer": "34"
+    },
+    "25": {
+      "problem": "<p>Let \\(a, b\\) be positive reals with \\(a &gt; b &gt; \\frac{1}{2}a\\). Place two squares of side lengths \\(a, b\\) next to each other, such that the larger square has lower left corner at \\((0, 0)\\) and the smaller square has lower left corner at \\((a, 0)\\). Draw the line passing through \\((0, a)\\) and \\((a + b, 0)\\). The region in the two squares lying <i>above</i> the line has area 2013. If \\((a, b)\\) is the unique pair maximizing \\(a + b\\), compute \\(\\frac{a}{b}\\).</p>",
+      "solutions": "<p>Let \\(t = \\frac{a}{b} \\in (1, 2)\\); we will rewrite the sum \\(a + b\\) as a function of \\(t\\). The area condition easily translates to \\(\\frac{a^2 - ab + 2b^2}{2} = 2013\\), or \\(b^2(t^2 - t + 2) = 4026 \\iff b = \\sqrt{\\frac{4026}{t^2 - t + 2}}\\). Thus \\(a + b\\) is a function \\(f(t) = (1 + t)\\sqrt{\\frac{4026}{t^2 - t + 2}}\\) of \\(t\\), and our answer is simply the value of \\(t\\) maximizing \\(f\\), or equivalently \\(g(t) = \\frac{f^2}{4026} = \\frac{(1+t)^2}{t^2 - t + 2}\\), over the interval \\((1, 2)\\). (In general, such maximizers/maximums need not exist, but we shall prove there’s a unique maximum here.)</p><p>We claim that \\(\\lambda = \\frac{16}{7}\\) is the maximum of \\(\\frac{(1+t)^2}{t^2 - t + 2}\\). Indeed, \\[\\begin{aligned}\n\\lambda - g(t) &amp;= \\frac{(\\lambda - 1)t^2 - (\\lambda + 2)t + (2\\lambda - 1)}{t^2 - t + 2} \\\\\n&amp;= \\frac{1}{7}\\frac{9t^2 - 30t + 25}{t^2 - t + 2} = \\frac{1}{7}\\frac{(3t-5)^2}{(t - \\frac{1}{2})^2 + \\frac{7}{4}} \\ge 0\n\\end{aligned}\\] for <i>all</i> reals \\(t\\) (not just \\(t \\in (1, 2)\\)), with equality at \\(t = \\frac{5}{3} \\in (1, 2)\\).</p><p><b>Comment.</b> To motivate the choice of \\(\\lambda\\), suppose \\(\\lambda\\) were the maximum of \\(f\\), attained at \\(t_0 \\in (1, 2)\\); then \\(h(t) = \\lambda(t^2 - t + 2) - (t + 1)^2\\) is quadratic and nonnegative on \\((1, 2)\\), but zero at \\(t = t_0\\). If \\(g\\) is a nontrivial quadratic (nonzero leading coefficient), then \\(t_0\\) must be a double root, so \\(g\\) has determinant 0. Of course, \\(g\\) could also be constant or linear over \\((1, 2)\\), but we can easily rule out both of these possibilities.</p><p>Alternatively, we can simply take a derivative of \\(f\\) to find critical points.</p>",
+      "answer": "\\frac{5}{3}"
+    },
+    "26": {
+      "problem": "<p>Trapezoid \\(ABCD\\) is inscribed in the parabola \\(y = x^2\\) such that \\(A = (a, a^2)\\), \\(B = (b, b^2)\\), \\(C = (-b, b^2)\\), and \\(D = (-a, a^2)\\) for some positive reals \\(a, b\\) with \\(a &gt; b\\). If \\(AD + BC = AB + CD\\), and \\(AB = \\frac{3}{4}\\), what is \\(a\\)?</p>",
+      "solutions": "<p>Let \\(t = \\frac{3}{4}\\), so \\(2a + 2b = 2\\sqrt{(a - b)^2 + (a^2 - b^2)^2} = 2t\\) gives \\(a = b = t\\) and \\(t^2 = (a - b)^2[1 + (a + b)^2] = (a - b)^2[1 + t^2]\\). Thus \\(a = \\frac{t + \\frac{t}{\\sqrt{1+t^2}}}{2} = \\frac{\\frac{3}{4} + \\frac{3}{5}}{2} = \\frac{27}{40}\\).</p>",
+      "answer": "\\frac{27}{40}"
+    },
+    "27": {
+      "problem": "<p>Find all triples of real numbers \\((a, b, c)\\) such that \\(a^2 + 2b^2 - 2bc = 16\\) and \\(2ab - c^2 = 16\\).</p>",
+      "solutions": "<p>\\(a^2 + 2b^2 - 2bc\\) and \\(2ab - c^2\\) are both homogeneous degree 2 polynomials in \\(a, b, c\\), so we focus on the <i>homogeneous</i> equation \\(a^2 + 2b^2 - 2bc = 2ab - c^2\\), or \\((a - b)^2 + (b - c)^2 = 0\\). So \\(a = b = c\\), and \\(a^2 = 2ab - c^2 = 16\\) gives the solutions \\((4, 4, 4)\\) and \\((-4, -4, -4)\\).</p>",
+      "answer": "(4, 4, 4), (-4, -4, -4)"
+    },
+    "28": {
+      "problem": "<p>Triangle \\(ABC\\) has \\(AB = 4\\), \\(BC = 3\\), and a right angle at \\(B\\). Circles \\(\\omega_1\\) and \\(\\omega_2\\) of equal radii are drawn such that \\(\\omega_1\\) is tangent to \\(AB\\) and \\(AC\\), \\(\\omega_2\\) is tangent to \\(BC\\) and \\(AC\\), and \\(\\omega_1\\) is tangent to \\(\\omega_2\\). Find the radius of \\(\\omega_1\\).</p>",
+      "solutions": "<p><b>Solution 1.</b> Denote by \\(r\\) the common radius of \\(\\omega_1, \\omega_2\\), and let \\(O_1, O_2\\) be the centers of \\(\\omega_1\\) and \\(\\omega_2\\) respectively. Suppose \\(\\omega_i\\) hits \\(AC\\) at \\(B_i\\) for \\(i = 1, 2\\), so that \\(O_1 O_2 = B_1 B_2 = 2r\\).</p><p>Extend angle bisector \\(AO_1\\) to hit \\(BC\\) at \\(P\\). By the angle bisector theorem and triangle similarity \\(\\triangle AB_1 O_1 \\sim \\triangle ABP\\), we deduce \\(\\frac{r}{AB_1} = \\frac{BP}{AB} = \\frac{3}{4+5}\\). Similarly, \\(\\frac{r}{CB_2} = \\frac{4}{3+5}\\), so \\[5 = AC = AB_1 + B_1 B_2 + B_2 C = 3r + 2r + 2r = 7r,\\] or \\(r = \\frac{5}{7}\\).</p><p><b>Solution 2.</b> Use the same notation as in the previous solution, and let \\(\\alpha = \\frac{1}{2}\\angle A\\). By constructing right triangles with hypotenuses \\(AO_1\\), \\(O_1 O_2\\), and \\(O_2 C\\) and legs parallel to \\(AB\\) and \\(BC\\), we obtain \\[4 = AB = r\\cot\\alpha + 2r\\cos\\angle A + r.\\] But \\(\\cot\\alpha = \\frac{1 + \\cos 2\\alpha}{\\sin 2\\alpha} = \\frac{1 + \\frac{4}{5}}{\\frac{3}{5}} = 3\\) and \\(\\cos\\angle A = \\frac{4}{5}\\), so the above equation simplifies to \\[4 = r(3 + \\frac{8}{5} + 1) = \\frac{28r}{5},\\] or \\(r = \\frac{5}{7}\\).</p>",
+      "answer": "\\frac{5}{7}"
+    },
+    "29": {
+      "problem": "<p>Let \\(\\triangle XYZ\\) be a right triangle with \\(\\angle XYZ = 90^\\circ\\). Suppose there exists an infinite sequence of equilateral triangles \\(X_0 Y_0 T_0, X_1 Y_1 T_1, \\ldots\\) such that \\(X_0 = X, Y_0 = Y\\), \\(X_i\\) lies on the segment \\(XZ\\) for all \\(i \\ge 0\\), \\(Y_i\\) lies on the segment \\(YZ\\) for all \\(i \\ge 0\\), \\(X_i Y_i\\) is perpendicular to \\(YZ\\) for all \\(i \\ge 0\\), \\(T_i\\) and \\(Y\\) are separated by line \\(XZ\\) for all \\(i \\ge 0\\), and \\(X_i\\) lies on segment \\(Y_{i-1}T_{i-1}\\) for \\(i \\ge 1\\).</p><p>Let \\(\\mathcal{P}\\) denote the union of the equilateral triangles. If the area of \\(\\mathcal{P}\\) is equal to the area of \\(XYZ\\), find \\(\\frac{XY}{YZ}\\).</p>",
+      "solutions": "<p>For any region \\(R\\), let \\([R]\\) denote its area.</p><p>Let \\(a = XY\\), \\(b = YZ\\), \\(ra = X_1 Y_1\\). Then \\([\\mathcal{P}] = [XYT_0](1 + r^2 + r^4 + \\cdots)\\), \\([XYZ] = [XYY_1 X_1](1 + r^2 + r^4 + \\cdots)\\), \\(YY_1 = ra\\sqrt{3}\\), and \\(b = ra\\sqrt{3}(1 + r + r^2 + \\cdots)\\) (although we can also get this by similar triangles).</p><p>Hence \\(\\frac{a^2\\sqrt{3}}{4} = \\frac{1}{2}(ra + a)(ra\\sqrt{3})\\), or \\(2r(r + 1) = 1 \\implies r = \\frac{\\sqrt{3}-1}{2}\\). Thus \\(\\frac{XY}{YZ} = \\frac{a}{b} = \\frac{1-r}{r\\sqrt{3}} = 1\\).</p>",
+      "answer": "1"
+    },
+    "30": {
+      "problem": "<p>Find the number of ordered triples of integers \\((a, b, c)\\) with \\(1 \\le a, b, c \\le 100\\) and \\(a^2 b + b^2 c + c^2 a = ab^2 + bc^2 + ca^2\\).</p>",
+      "solutions": "<p>This factors as \\((a - b)(b - c)(c - a) = 0\\). By the inclusion-exclusion principle, we get \\(3 \\cdot 100^2 - 3 \\cdot 100 + 100 = 29800\\).</p>",
+      "answer": "29800"
+    },
+    "31": {
+      "problem": "<p>Chords \\(\\overline{AB}\\) and \\(\\overline{CD}\\) of circle \\(\\omega\\) intersect at \\(E\\) such that \\(AE = 8\\), \\(BE = 2\\), \\(CD = 10\\), and \\(\\angle AEC = 90^\\circ\\). Let \\(R\\) be a rectangle inside \\(\\omega\\) with sides parallel to \\(\\overline{AB}\\) and \\(\\overline{CD}\\), such that no point in the interior of \\(R\\) lies on \\(\\overline{AB}\\), \\(\\overline{CD}\\), or the boundary of \\(\\omega\\). What is the maximum possible area of \\(R\\)?</p>",
+      "solutions": "<p>By power of a point, \\((CE)(ED) = (AE)(EB) = 16\\), and \\(CE + ED = CD = 10\\). Thus \\(CE, ED\\) are \\(2, 8\\). Without loss of generality, assume \\(CE = 8\\) and \\(DE = 2\\).</p><p>Assume our circle is centered at the origin, with points \\(A = (-3, 5)\\), \\(B = (-3, -5)\\), \\(C = (5, -3)\\), \\(D = (-5, -3)\\), and the equation of the circle is \\(x^2 + y^2 = 34\\). Clearly the largest possible rectangle must lie in the first quadrant, and if we let \\((x, y)\\) be the upper-right corner of the rectangle, then the area of the rectangle is \\((x + 3)(y + 3) = 9 + 6(x + y) + xy \\le 9 + 12\\sqrt{\\frac{x^2+y^2}{2}} + \\frac{x^2+y^2}{2} = 26 + 6\\sqrt{17}\\), where equality holds if and only if \\(x = y = \\sqrt{17}\\).</p>",
+      "answer": "26 + 6\\sqrt{17}"
+    },
+    "32": {
+      "problem": "<p>Suppose that \\(x\\) and \\(y\\) are chosen randomly and uniformly from \\((0, 1)\\). What is the probability that \\(\\lfloor\\sqrt{\\frac{x}{y}}\\rfloor\\) is even? <i>Hint: \\(\\sum_{n=1}^\\infty \\frac{1}{n^2} = \\frac{\\pi^2}{6}\\).</i></p>",
+      "solutions": "<p>Note that for every positive integer \\(n\\), the probability that \\(\\lfloor\\sqrt{\\frac{x}{y}}\\rfloor = n\\) is just the area of the triangle formed between \\((0, 0)\\), \\((1, \\frac{1}{n^2})\\), \\((1, \\frac{1}{(n+1)^2})\\), which is just \\(\\frac{1}{2}(\\frac{1}{n^2} - \\frac{1}{(n+1)^2})\\).</p><p>Thus the probability that \\(\\lfloor\\sqrt{\\frac{x}{y}}\\rfloor\\) is odd is \\[\\begin{aligned}\n\\sum_{k=1}^\\infty \\frac{1}{2}\\left(\\frac{1}{(2k-1)^2} - \\frac{1}{(2k)^2}\\right) &amp;= \\frac{1}{2}\\sum_{k=1}^\\infty\\left(\\frac{1}{(2k-1)^2} + \\frac{1}{(2k)^2}\\right) - \\sum_{k=1}^\\infty \\frac{1}{(2k)^2} \\\\\n&amp;= \\frac{1}{2}\\sum_{n=1}^\\infty \\frac{1}{n^2} - \\frac{1}{4}\\sum_{k=1}^\\infty \\frac{1}{k^2} \\\\\n&amp;= \\frac{\\pi^2}{12} - \\frac{\\pi^2}{24} = \\frac{\\pi^2}{24}.\n\\end{aligned}\\] Thus our answer is just \\(1 - \\frac{\\pi^2}{24}\\).</p>",
+      "answer": "1 - \\frac{\\pi^2}{24}"
+    },
+    "33": {
+      "problem": "<p>On each side of a 6 by 8 rectangle, construct an equilateral triangle with that side as one edge such that the interior of the triangle intersects the interior of the rectangle. What is the total area of all regions that are contained in exactly 3 of the 4 equilateral triangles?</p>",
+      "solutions": "<p>Let the rectangle be \\(ABCD\\) with \\(AB = 8\\) and \\(BC = 6\\). Let the four equilateral triangles be \\(ABP_1\\), \\(BCP_2\\), \\(CDP_3\\), and \\(DAP_4\\) (for convenience, call them the \\(P_1\\)-, \\(P_2\\)-, \\(P_3\\)-, \\(P_4\\)- triangles). Let \\(W = AP_1 \\cap DP_3\\), \\(X = AP_1 \\cap DP_4\\), and \\(Y = DP_4 \\cap CP_2\\). Reflect \\(X, Y\\) over the line \\(P_2 P_4\\) (the line halfway between \\(AB\\) and \\(DC\\)) to points \\(X', Y'\\).</p><p>First we analyze the basic configuration of the diagram. Since \\(AB = 8 &lt; 2 \\cdot 6\\frac{\\sqrt{3}}{2}\\), the \\(P_2\\)-, \\(P_4\\)- triangles intersect. Furthermore, \\(AP_1 \\perp BP_2\\), so if \\(T = BP_2 \\cap AP_1\\), then \\(BP_2 = 6 &lt; 4\\sqrt{3} = BT\\). Therefore \\(P_2\\) lies inside triangle \\(P_1 BA\\), and by symmetry, also triangle \\(P_3 DC\\).</p><p>It follows that the area we wish to compute is the union of two (congruent) concave hexagons, one of which is \\(WXYP_2 Y'X'\\). (The other is its reflection over \\(YY'\\), the mid-line of \\(AD\\) and \\(BC\\).) So we seek \\[2[WXYP_2 Y'X'] = 2([WXP_4 X'] - [P_2 YP_4 Y']).\\] It’s easy to see that \\([WXP_4 X'] = \\frac{1}{3}[ADP_4] = \\frac{1}{3}\\frac{6^2\\sqrt{3}}{4} = 3\\sqrt{3}\\), since \\(WXP_4 X'\\) and its reflections over lines \\(DWX'\\) and \\(AWX\\) partition \\(\\triangle ADP_4\\).</p><p>It remains to consider \\(P_2 YP_4 Y'\\), a rhombus with (perpendicular) diagonals \\(P_2 P_4\\) and \\(YY'\\). If \\(O\\) denotes the intersection of these two diagonals (also the center of \\(ABCD\\)), then \\(OP_2\\) is \\(P_2 B\\frac{\\sqrt{3}}{2} - \\frac{1}{2}AB = 3\\sqrt{3} - 4\\), the difference between the lengths of the \\(P_2\\)-altitude in \\(\\triangle CBP_2\\) and the distance between the parallel lines \\(YY', CB\\). Easy angle chasing gives \\(OY = \\frac{OP_2}{\\sqrt{3}}\\), so \\[[P_2 YP_4 Y'] = 4 \\cdot \\frac{OP_2 \\cdot OY}{2} = \\frac{2}{\\sqrt{3}}OP_2^2 = \\frac{2}{\\sqrt{3}}(3\\sqrt{3}-4)^2 = \\frac{86 - 48\\sqrt{3}}{\\sqrt{3}},\\] and our desired area is \\[2[WXP_4 X'] - 2[P_2 YP_4 Y'] = 6\\sqrt{3} - \\frac{172 - 96\\sqrt{3}}{\\sqrt{3}} = \\frac{96\\sqrt{3} - 154}{\\sqrt{3}},\\] or \\(\\frac{288 - 154\\sqrt{3}}{3}\\).</p>",
+      "answer": "\\frac{96\\sqrt{3}-154}{\\sqrt{3}}"
+    }
+  }
+}

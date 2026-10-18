@@ -1,0 +1,58 @@
+{
+  "test": "BMT Team",
+  "year": 2013,
+  "name": "Team Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2013/TS2013.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A time is called <i>reflexive</i> if its representation on an analog clock would still be permissible if the hour and minute hand were switched. In a given non-leap day (12:00:00.00 a.m. to 11:59:59.99 p.m.), how many times are <i>reflexive</i>?</p>",
+      "solutions": "<p>In any given period modulo 5 minutes, there must be one, save the final 5 minutes of each 12 hour period. Thus, the answer is \\(\\frac{1440}{5} - 2 = \\boxed{286}\\).</p>",
+      "answer": "286"
+    },
+    "2": {
+      "problem": "<p>Find the sum of all positive integers \\(N\\) such that \\(s = \\sqrt[3]{2+\\sqrt{N}} + \\sqrt[3]{2-\\sqrt{N}}\\) is also a positive integer.</p>",
+      "solutions": "<p>Let \\(x = \\sqrt[3]{2+\\sqrt{N}}\\) and \\(y = \\sqrt[3]{2-\\sqrt{N}}\\). We have \\(s = x+y\\), and \\(s^3 = (x+y)^3 = x^3+y^3+3xy(x+y) = x^3+y^3+3xys\\). Since \\(x^3 = 2+\\sqrt{N}\\), \\(y^3 = 2-\\sqrt{N}\\), we have \\(x^3+y^3=4\\). Additionally, we have \\(xy = \\sqrt[3]{(2+\\sqrt{N})(2-\\sqrt{N})} = \\sqrt[3]{4-N}\\), so \\(s^3 = 4+3s\\sqrt[3]{4-N}\\), and \\((s^3-4)/(3s) = \\sqrt[3]{4-N}\\). Since \\(N\\) is a positive integer, we have the right hand side to be at most \\(\\sqrt[3]{4} &lt; 2\\). Thus, we have \\((s^3-4)/(3s) &lt; 2 \\to s^3 - 6s &lt; 4\\). We can see the only possible values of \\(s\\) in this case are \\(1, 2\\), but if \\(s=2\\), then \\((s^3-4)/(3s) = 2/3\\), which is not the cube root of an integer, so we are only left with \\(s=1\\). This gives us \\(N = \\boxed{5}\\) as the only possible solution.</p>",
+      "answer": "5"
+    },
+    "3": {
+      "problem": "<p>A round robin tennis tournament is played among 4 friends in which each player plays every other player only one time, resulting in either a win or a loss for each player. If overall placement is determined strictly by how many games each player won, how many possible placements are there at the end of the tournament? For example, Andy and Bob tying for first and Charlie and Derek tying for third would be one possible case.</p>",
+      "solutions": "<p>Note that a player with highest score at the end of the tournament must have won either 2 or 3 games. In the first case, the permissible final scores are \\((2,2,1,1)\\) or \\((2,2,2,0)\\), corresponding to two 1st place finishes and two 3rd place finishes or three 1st place finishes and one 4th place finish. In the second case, the permissible final scores are \\((3,1,1,1)\\) or \\((3,2,1,0)\\), and \\((3,3,0,0)\\) is not permissible, as one of the two first place finishers would have to have beaten the other at some point. Thus, there are \\(\\boxed{4}\\) possible results.</p>",
+      "answer": "4"
+    },
+    "4": {
+      "problem": "<p>Find the sum of all real numbers \\(x\\) such that \\(x^2 = 5x + 6\\sqrt{x} - 3\\).</p>",
+      "solutions": "<p>Factoring, we obtain \\((x+3\\sqrt{x}+3)(x-3\\sqrt{x}+1) = 0\\), from which we determine \\(r_1+r_2 = 3\\) and \\(r_1r_2 = 1\\) and conclude \\(r_1^2+r_2^2 = \\boxed{7}\\), where \\(r_1, r_2\\) are the roots of the real-valued equation \\(r^2 - 3r + 1 = 0\\).</p>",
+      "answer": "7"
+    },
+    "5": {
+      "problem": "<p>Circle \\(C_1\\) has center \\(O\\) and radius \\(OA\\), and circle \\(C_2\\) has diameter \\(OA\\). \\(AB\\) is a chord of circle \\(C_1\\) and \\(BD\\) may be constructed with \\(D\\) on \\(OA\\) such that \\(BD\\) and \\(OA\\) are perpendicular. Let \\(C\\) be the point where \\(C_2\\) and \\(BD\\) intersect. If \\(AC=1\\), find \\(AB\\).</p>",
+      "solutions": "<p>Let \\(AO\\) intersect the other side of \\(C_1\\) at \\(E\\). In right triangle \\(OCA\\), we have \\(AC^2 = AO \\cdot AD\\) (by similar triangles). In right triangle \\(ABE\\), we have \\(AB^2 = AE \\cdot AD = 2 \\cdot AO \\cdot AD = 2\\). Thus, we must have \\(AB = \\boxed{\\sqrt{2}}\\).</p>",
+      "answer": "\\sqrt{2}"
+    },
+    "6": {
+      "problem": "<p>In a class of 30 students, each students knows exactly six other students. (Of course, knowing is a mutual relation, so if \\(A\\) knows \\(B\\), then \\(B\\) knows \\(A\\)). A group of three students is <i>balanced</i> if either all three students know each other, or no one knows anyone else within that group. How many balanced groups exist?</p>",
+      "solutions": "<p>We do complementary counting. There are \\(\\binom{30}{3}\\) groups to choose from. In a non-balanced groups, there are exactly two students whose relations with the other two members of the group are different (i.e. he/she knows one, but not the other). Thus, we can count the number of ordered triplets \\((A,B,C)\\) where \\(A\\) knows \\(B\\) but not \\(C\\), and this will double count the number of non-balanced groups. We can choose \\(A\\) in 30 ways, and we only have 6 choices for \\(B\\) and 23 choices for \\(C\\) (independent of each other). Thus, we get the total number of groups is \\(30 \\cdot 6 \\cdot 23/2 = 2070\\), for which we take the complement to get \\(\\boxed{1990}\\).</p>",
+      "answer": "1990"
+    },
+    "7": {
+      "problem": "<p>Consider the infinite polynomial \\(G(x) = F_1x + F_2x^2 + F_3x^3 + \\ldots\\) defined for \\(0 &lt; x &lt; \\frac{\\sqrt{5}-1}{2}\\), where \\(F_k\\) is the \\(k\\)th term of the Fibonacci sequence defined to be \\(F_k = F_{k-1} + F_{k-2}\\) with \\(F_1 = 1, F_2 = 1\\). Determine the value \\(a\\) such that \\(G(a) = 2\\).</p>",
+      "solutions": "<p>Let \\(y = xF_1 + x^2F_2 + x^3F_3 + \\ldots\\). Consider \\(xy = x^2F_1 + x^3F_2 + x^4F_3 + \\ldots\\). Then \\((1-x)y = xF_1 + x^2(F_2-F_1) + x^3F_1 + x^4F_2 + \\ldots = x + x^2y\\) so \\(x^2y + x(y+1) - y = 0\\). Solving this quadratic gives us \\(x = \\frac{-(y+1)+\\sqrt{(y+1)^2+4y^2}}{2y}\\), and plugging in \\(y=2\\) yields \\(\\boxed{\\frac{1}{2}}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "8": {
+      "problem": "<p>A parabola has focus \\(F\\) and vertex \\(V\\), where \\(VF=10\\). Let \\(AB\\) be a chord of length 100 that passes through \\(F\\). Determine the area of \\(\\triangle VAB\\).</p>",
+      "solutions": "<p>Let \\(AF=a\\) and \\(BF=b\\). Let \\(\\angle AFV = \\theta\\). Then we have \\[a + a\\cos\\theta = 2\\cdot 10 = b - b\\cos\\theta\\] So, we have \\[100 = a+b = \\frac{20}{1+\\cos\\theta}+\\frac{20}{1-\\cos\\theta} = \\frac{40}{\\sin^2\\theta}\\] So, \\[\\sin\\theta = \\sqrt{\\frac{2}{5}}\\] So, we get \\[\\begin{aligned}\n\\text{Area} \\triangle VAB &amp;= \\text{Area} \\triangle VAF + \\text{Area} \\triangle VFB\\\\\n&amp;= \\frac{1}{2}(10a\\sin\\theta + 10b\\sin(\\pi-\\theta))\\\\\n&amp;= \\frac{1}{2}(10 \\cdot 100\\sin\\theta)\\\\\n&amp;= \\boxed{100\\sqrt{10}}.\n\\end{aligned}\\]</p>",
+      "answer": "100\\sqrt{10}"
+    },
+    "9": {
+      "problem": "<p>Sequences \\(x_n\\) and \\(y_n\\) satisfy the simultaneous relationships \\(x_k = x_{k+1} + y_{k+1}\\) and \\(x_k &gt; y_k\\) for all \\(k \\ge 1\\). Furthermore, either \\(y_k = y_{k+1}\\) or \\(y_k = x_{k+1}\\). If \\(x_1 = 3 + \\sqrt{2}\\), \\(x_3 = 5 - \\sqrt{2}\\), and \\(y_1 = y_5\\), evaluate \\[(y_1)^2 + (y_2)^2 + (y_3)^2 + \\ldots\\]</p>",
+      "solutions": "<p>Imagine a rectangle of dimensions \\(x \\times y\\). Now, continuously estimate the area of the rectangle by placing the largest possible square inside the rectangle. If \\(x_1 = x\\) and \\(y_1 = y\\), the side lengths of these squares are the same as the sequence \\(b_n\\)!! Thus, our answer is \\(xy\\), or \\((3+\\sqrt{2})(\\sqrt{2}-1) = \\boxed{2\\sqrt{2}-1}\\).</p>",
+      "answer": "2\\sqrt{2} - 1"
+    },
+    "10": {
+      "problem": "<p>In a far away kingdom, there exist \\(k^2\\) cities subdivided into \\(k\\) distinct districts, such that in the \\(i^{\\text{th}}\\) district, there exist \\(2i-1\\) cities. Each city is connected to every city in its district but no cities outside of its district. In order to improve transportation, the king wants to add \\(k-1\\) roads such that all cities will become connected, but his advisors tell him there are many ways to do this. Two plans are different if one road is in one plan that is not in the other. Find the total number of possible plans in terms of \\(k\\).</p>",
+      "solutions": "<p>Consider two sequences \\(x_1, \\ldots, x_{k-2}\\), and \\(a_1, \\ldots, a_k\\), where \\(x_i \\in [1,k^2]\\), and \\(a_i \\in [1, 2i-1]\\). We will show a bijection from these two sequences to the number of ways to connect the cities. To transform a graph into a sequence, consider the smallest indexed component that is connected to only one other component. Then, set \\(a_I\\) to be the endpoint of that road in component \\(I\\), and let \\(x_1\\) be the other endpoint. Then, we can keep repeating this sequence for \\(k-2\\) roads to create the sequence \\(x\\). The last road will connect components \\(u,v\\), for which we can just set \\(a_u, a_v\\) as the endpoints of that edge. Now, we simply need to count the number of ways to choose such sequences. There are \\(k^2\\) choices for each of the \\(k-2\\) \\(x_i\\)’s, yielding \\(k^{2k-4}\\) choices for the entire sequence. There are \\(2i-1\\) choices for each of the \\(k\\) \\(a_i\\)’s, yielding \\(1 \\cdot 3 \\cdot 4 \\ldots (2k-1) \\cdot (2k) = \\frac{1 \\cdot 2 \\cdot 3 \\cdot 4 \\ldots (2k-1) \\cdot (2k)}{2 \\cdot 4 \\ldots (2k)} = \\frac{(2k)!}{2^k \\cdot k!}\\) choices for the entire sequence. Thus, the total number of possible plans is equal to \\(k^{2k-4} \\cdot \\frac{(2k)!}{2^k \\cdot k!}\\).</p>",
+      "answer": "k^{2k-4} \\cdot \\frac{(2k)!}{2^k \\cdot k!}"
+    }
+  }
+}

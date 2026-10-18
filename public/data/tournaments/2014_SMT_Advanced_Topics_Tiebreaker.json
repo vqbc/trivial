@@ -1,0 +1,23 @@
+{
+  "test": "SMT Advanced Topics Tiebreaker",
+  "year": 2014,
+  "name": "Advanced Topics Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2014/advanced-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Mary is painting her five fingernails. She has four different colors of nail polish: red, green, blue, and pink. If she chooses the color of each nail independently and uniformly at random, compute the probability that at least four of her nails end up the same color.</p>",
+      "solutions": "<p>If we pick at least four nails of the same color there are two cases:</p><ul style=\"list-style-type: none\"><li>(a) Four nails of one color and one other nail of a different color. Then there are \\(4 \\cdot 3 = 12\\) ways to choose the colors, \\(\\binom{5}{1} = 5\\) ways to order them, so the probability of this case is \\(12 \\cdot 5 \\cdot \\frac{1}{2^{10}} = \\frac{15}{2^8}\\).</li><li>(b) Five nails of the same color, which means in particular the last four nails must match the first. The probability of this is clearly \\(1 \\cdot \\left(\\frac{1}{4}\\right)^4 = \\frac{1}{2^8}\\).</li></ul><p>Hence, the probability of picking at least four nails to be the same color is \\(\\frac{15+1}{2^8} = \\frac{16}{2^8} = \\boxed{\\frac{1}{16}}\\).</p>",
+      "answer": "\\frac{1}{16}"
+    },
+    "2": {
+      "problem": "<p>Compute the smallest positive integer that can be written as both the sum of 16 consecutive positive integers and as the sum of 17 consecutive positive integers.</p>",
+      "solutions": "<p>Let the number be written as \\(\\sum_{i=-8}^{7} (a+i)\\) and \\(\\sum_{i=-8}^{8} (b+i)\\). Therefore, this number can be written as \\(16a - 8\\) and \\(17b\\) for \\(a, b \\ge 9\\). Equating both expressions and taking them modulo 16, we have that \\(b \\equiv -8 \\pmod{16}\\). The smallest valid \\(b\\) is 24, giving us \\(24 \\cdot 17 = \\boxed{408}\\).</p>",
+      "answer": "408"
+    },
+    "3": {
+      "problem": "<p>Twenty guests sit at twenty seats around a round table according to the following process. One guest, who is selected uniformly at random from the unseated guests, selects an empty seat uniformly at random and sits in that seat. This process repeats until all guests are seated. Alice is one of the guests. Compute the probability that when Alice sits down the both the seat to her left and the seat to her right are already occupied.</p>",
+      "solutions": "<p>This process is equivalent to a process where everyone pre-selects a seat and then each guest sits in their pre-selected seat in a random order. So let everyone sit at the table using this equivalent process.</p><p>Consider this set of three people: Alice, the guest to her left, and the guest to her right. By symmetry, there are the same number of seating orders where Alice sits down last as seating orders where the guest to her left sits last, and there are also the same number of seating orders where the guest to her right sits last. Therefore there is \\(\\boxed{\\frac{1}{3}}\\) probability that Alice sits down between two occupied seats.</p>",
+      "answer": "\\frac{1}{3}"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Algebra A",
+  "year": 2014,
+  "name": "Algebra A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2014_AlgebraA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>On the number line, consider the point \\(x\\) that corresponds to the value 10. Consider 24 distinct integer points \\(y_1, y_2, \\ldots, y_{24}\\) on the number line such that for all \\(k\\) such that \\(1 \\le k \\le 12\\), we have that \\(y_{2k-1}\\) is the reflection of \\(y_{2k}\\) across \\(x\\). Find the minimum possible value of \\[\\sum_{n=1}^{24} (|y_n - 1| + |y_n + 1|).\\]</p>",
+      "solutions": "<p>Let \\(k\\) be the coordinate of a given point (different from variable used in problem statement). Then, the reflection of \\(k\\) across \\(x\\) is \\(20-k\\). WLOG let \\(k &lt; 10\\). For nonzero integers \\(m\\), \\(|m-1|+|m+1| = |2m|\\). If \\(1 \\le k &lt; 10\\), then since \\(20-k-1 \\ge 1\\), it follows that \\(|k-1|+|k+1|+|20-k-1|+|20-k+1| = 2k+2(20-k) = 40\\). If \\(k=0\\), then \\(|k-1|+|k+1|+|20-k-1|+|20-k+1| = 2+40 = 42\\). If \\(k \\le -1\\), then \\(20-k \\ge 1\\), so \\(|k-1|+|k+1|+|20-k-1|+|20-k+1| = -2k+2(20-k) = 40-4k \\ge 44\\). So, to attain the minimum, we pick the 12 smallest such \\(k\\). This gets us \\(9 \\cdot 40 + 42 + 44 + 48 = \\boxed{494}\\).</p>",
+      "answer": "494"
+    },
+    "2": {
+      "problem": "<p>Alice, Bob, and Charlie are visiting Princeton and decide to go to the Princeton U-Store to buy some tiger plushies. They each buy at least one plushie at price \\(p\\). A day later, the U-Store decides to give a discount on plushies and sell them at \\(p'\\) with \\(0 &lt; p' &lt; p\\). Alice, Bob, and Charlie go back to the U-Store and buy some more plushies with each buying at least one again. At the end of that day, Alice has 12 plushies, Bob has 40, and Charlie has 52 but they all spent the same amount of money: $42. How many plushies did Alice buy on the first day?</p>",
+      "solutions": "<p>If we let \\(a, b, c\\) denote the number of plushies Alice, Bob, and Charlie bought the first day, then the next day they bought \\(12-a, 40-b, 52-c\\) more plushies respectively. So, we have the set of equations:</p><p>\\[\\begin{aligned}\nap + (12-a)p' &amp;= 42 \\\\\nbp + (40-b)p' &amp;= 42 \\\\\ncp + (52-c)p' &amp;= 42\n\\end{aligned}\\]</p><p>\\[\\Downarrow\\]</p><p>\\[\\begin{aligned}\na(p-p') + 12p' &amp;= 42 \\\\\nb(p-p') + 40p' &amp;= 42 \\\\\nc(p-p') + 52p' &amp;= 42\n\\end{aligned}\\]</p><p>Then subtracting the second equation from the first, we get that \\((a-b)(p-p') = 28p'\\) and subtracting the third equation from the second we get \\((c-b)(p-p') = 12p'\\) and so \\(\\frac{a-b}{28} = \\frac{c-b}{12} \\Rightarrow \\frac{a-b}{7} = \\frac{c-b}{3}\\). Since \\(1 \\le a &lt; 12\\) we must have that \\(a-b=7\\) and \\(c-b=3\\) and so \\(c-a=10\\). Since \\(c \\ge 1\\) and \\(a &lt; 12\\), we must have \\(a = \\boxed{11}, b=4, c=1\\).</p>",
+      "answer": "11"
+    },
+    "3": {
+      "problem": "<p>A function \\(f\\) has its domain equal to the set of integers \\(0, 1, \\ldots, 11\\), and \\(f(n) \\ge 0\\) for all such \\(n\\), and \\(f\\) satisfies \\[f(0) = 0\\] \\[f(6) = 1\\] If \\(x \\ge 0, y \\ge 0\\), and \\(x+y \\le 11\\), then \\(f(x+y) = \\frac{f(x)+f(y)}{1-f(x)f(y)}\\)</p><p>Find \\(f(2)^2 + f(10)^2\\).</p>",
+      "solutions": "<p>Represent \\(f(4)\\) as a function of \\(f(2)\\) using the identity. Represent \\(f(6)\\) as a function of \\(f(4)\\) and \\(f(2)\\), and substitute in the first result to get \\(f(6)\\) as a function of \\(f(2)\\). This gives us that \\(f(2) = 2-\\sqrt{3}\\). Then, using \\(f(2)\\) and \\(f(6)\\) to get \\(f(8)\\), and then using \\(f(2)\\) and \\(f(8)\\) to get \\(f(10) = 2+\\sqrt{3}\\), we get that \\(f(2)^2+f(10)^2 = (2-\\sqrt{3})^2+(2+\\sqrt{3})^2 = \\boxed{14}\\).</p>",
+      "answer": "14"
+    },
+    "4": {
+      "problem": "<p>There is a sequence with \\(a(2) = 0, a(3) = 1\\) and \\(a(n) = a\\left(\\left\\lfloor \\frac{n}{2} \\right\\rfloor\\right) + a\\left(\\left\\lceil \\frac{n}{2} \\right\\rceil\\right)\\) for \\(n \\ge 4\\). Find \\(a(2014)\\). [Note that \\(\\left\\lfloor \\frac{n}{2} \\right\\rfloor\\) and \\(\\left\\lceil \\frac{n}{2} \\right\\rceil\\) denote the floor function (largest integer \\(\\le \\frac{n}{2}\\)) and the ceiling function (smallest integer \\(\\ge \\frac{n}{2}\\)), respectively.]</p>",
+      "solutions": "<p>We can see that if \\(n\\) is a power of 2, then \\(a_n = 0\\). Then playing with some values, we see that the sequence has the property that \\(a_n = a_{n-1}+1\\) if \\(2^a &lt; n \\le 3 \\cdot 2^{a-1}\\) and \\(a_n = a_{n-1}-1\\) if \\(3 \\cdot 2^{a-1} &lt; n \\le 2^{a+1}\\). So, the sequence goes: \\(0, 1, 0, 1, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1, 0, \\ldots\\). So since \\(a_{2048} = 0\\), we have that \\(a_{2047} = 1, a_{2046} = 2, \\ldots, a_{2014} = \\boxed{34}\\).</p>",
+      "answer": "34"
+    },
+    "5": {
+      "problem": "<p>Real numbers \\(x, y, z\\) satisfy the following equality: \\[4(x+y+z) = x^2+y^2+z^2\\] Let \\(M\\) be the maximum of \\(xy+yz+zx\\), and let \\(m\\) be the minimum of \\(xy+yz+zx\\). Find \\(M+10m\\).</p>",
+      "solutions": "<p>Let \\(A = x+y+z\\), \\(B = x^2+y^2+z^2\\), \\(C = xy+yz+zx\\). The problem statement gives us \\(4A = B\\). Then, \\(A^2 = B+2C = 4A+2C\\). So, \\(C = \\frac{1}{2}(A-2)^2 - 2\\). And by the inequality \\(C \\le B\\), it follows that \\(A^2 = B+2C \\le 3B \\le 12A\\). So, \\(0 \\le A \\le 12\\), which means that \\(-2 \\le C \\le 48\\). \\(-2\\) is attained at \\((2, -\\sqrt{2}, \\sqrt{2})\\) and \\(48\\) is attained at \\((4,4,4)\\). So, \\(M+10m = 48-20 = \\boxed{28}\\).</p>",
+      "answer": "28"
+    },
+    "6": {
+      "problem": "<p>Given that \\(x_{n+2} = \\frac{20x_{n+1}}{14x_n}\\), \\(x_0 = 25, x_1 = 11\\), it follows that \\(\\displaystyle\\sum_{n=0}^{\\infty} \\frac{x_{3n}}{2^n} = \\frac{p}{q}\\) for some positive integers \\(p, q\\) with \\(\\gcd(p,q)=1\\). Find \\(p+q\\).</p>",
+      "solutions": "<p>We have that \\(x_{n+3} = \\frac{20x_{n+2}}{14x_{n+1}} = \\frac{20^2}{14^2 x_n} = \\frac{100}{49x_n}\\). So we have that \\(x_{n+6} = x_n\\) and so:</p><p>\\[\\begin{aligned}\n\\sum_{n=0}^{\\infty} \\frac{x_{3n}}{2^n} &amp;= \\sum_{n=0}^{\\infty} \\frac{x_{6n}}{4^n} + \\sum_{n=0}^{\\infty} \\frac{x_{6n+3}}{2 \\cdot 4^n} \\\\\n&amp;= x_0 \\sum_{n=0}^{\\infty} \\frac{1}{4^n} + \\frac{100}{98x_0} \\sum_{n=0}^{\\infty} \\frac{1}{4^n} \\\\\n&amp;= \\frac{4x_0}{3} + \\frac{200}{147x_0} \\\\\n&amp;= \\frac{100}{3} + \\frac{8}{147} = \\boxed{\\frac{1636}{49}}\n\\end{aligned}\\]</p><p>So the answer is \\(1636+49 = \\boxed{1685}\\).</p>",
+      "answer": "1685"
+    },
+    "7": {
+      "problem": "<p>\\(x, y, z\\) are positive real numbers that satisfy \\(x^3+2y^3+6z^3=1\\). Let \\(k\\) be the maximum possible value of \\(2x+y+3z\\). Let \\(n\\) be the smallest positive integer such that \\(k^n\\) is an integer. Find the value of \\(k^n+n\\).</p>",
+      "solutions": "<p>We see that by the Holder inequality, we have \\[2x+y+3z = (2)(x) + (2^{-1/3})(2^{1/3}y) + (3^{2/3}2^{-1/3})(6^{1/3}z) \\le (x^3+2y^3+6z^3)^{1/3}\\left(2^{3/2} + \\left(2^{-1/3}\\right)^{3/2} + \\left(3^{2/3}2^{-1/3}\\right)^{3/2}\\right)^{2/3} = 2^{5/3}.\\] Hence \\(n=3\\) and \\(k^3+3 = \\boxed{35}\\).</p>",
+      "answer": "35"
+    },
+    "8": {
+      "problem": "<p>For nonnegative integer \\(n\\), the following are true: \\[f(0) = 0\\] \\[f(1) = 1\\] \\[f(n) = f\\left(n - \\frac{m(m-1)}{2}\\right) - f\\left(\\frac{m(m+1)}{2} - n\\right) \\text{ for integer } m \\text{ satisfying } m \\ge 2 \\text{ and } \\frac{m(m-1)}{2} &lt; n \\le \\frac{m(m+1)}{2}.\\]</p><p>Find the smallest \\(n\\) such that \\(f(n) = 4\\).</p>",
+      "solutions": "<p>If \\(f(n) = f(a) - f(b)\\), then \\(a+b=m\\) (where \\(a \\ge 1, b \\ge 0\\)), and furthermore, \\(n = \\frac{m(m-1)}{2}+a = \\frac{(a+b)(a+b-1)}{2}+a\\) (call this equality *). So, if \\(a\\) or \\(b\\) increases, then \\(n\\) increases.</p><p>\\(f(0)=0, f(1)=1, f(2)=0\\), and for \\(n \\ge 3\\), it’s true that \\(n &gt; a, b, m\\). And \\(a, b, m\\) are uniquely determined by \\(n\\).</p><p>Let \\(n_k\\) be the smallest \\(n\\) that satisfies \\(f(n)=k\\). \\(n_1 = 1\\). And \\(f(n_{-1}) = -1 = 0-1 = f(2)-f(1)\\), which means that from our identity *, it follows that \\(n_{-1} = 5\\). And \\(f(n_2) = 1-(-1) = f(n_1) - f(n_{-1}) = f(1) - f(5)\\), which gives us \\(n_2 = 16\\). And \\(f(n_{-2}) = -1-1 = f(n_{-1}) - f(1)\\), which gives us \\(n_{-2} = 20\\). Continuing this process gives us \\(n_{-3} = 211, n_3 = 215, n_4 = 646\\). So, our answer is \\(\\boxed{646}\\).</p>",
+      "answer": "646"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2009,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2009/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Your Halloween took a bad turn, and you are trapped on a small rock above a sea of lava. You are on rock 1, and rocks 2 through 12 are arranged in a straight line in front of you. You want to get to rock 12. You must jump from rock to rock, and you can either (1) jump from rock \\(n\\) to \\(n+1\\) or (2) jump from rock \\(n\\) to \\(n+2\\). Unfortunately, you are weak from eating too much candy, and you cannot do (2) twice in a row. How many different sequences of jumps will take you to your destination?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "60"
+    },
+    "2": {
+      "problem": "<p>Find the number of ordered triples \\((p,q,r)\\) such that \\(p,q,r\\) are prime, \\(p^q + p^r\\) is a perfect square and \\(p+q+r \\le 100\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "18"
+    },
+    "3": {
+      "problem": "<p>Let \\(x, y, z\\) be nonzero complex numbers such that \\(\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\ne 0\\) and</p><p>\\[x^2(y+z) + y^2(z+x) + z^2(x+y) = 4(xy+yz+zx) = -3xyz.\\]</p><p>Find \\(\\frac{x^3+y^3+z^3}{x^2+y^2+z^2}\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    }
+  }
+}

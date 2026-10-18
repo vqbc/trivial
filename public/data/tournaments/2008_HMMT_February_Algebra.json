@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Algebra",
+  "year": 2008,
+  "name": "Individual Round: Algebra Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2008/feb/alg/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Positive real numbers \\(x, y\\) satisfy the equations \\(x^2 + y^2 = 1\\) and \\(x^4 + y^4 = \\frac{17}{18}\\). Find \\(xy\\).</p>",
+      "solutions": "<p>We have \\(2x^2y^2 = (x^2+y^2)^2 - (x^4+y^4) = \\frac{1}{18}\\), so \\(xy = \\frac{1}{6}\\).</p>",
+      "answer": "\\frac{1}{6}"
+    },
+    "2": {
+      "problem": "<p>Let \\(f(n)\\) be the number of times you have to hit the \\(\\sqrt{\\ }\\) key on a calculator to get a number less than 2 starting from \\(n\\). For instance, \\(f(2) = 1, f(5) = 2\\). For how many \\(1 &lt; m &lt; 2008\\) is \\(f(m)\\) odd?</p>",
+      "solutions": "<p>This is \\([2^1, 2^2) \\cup [2^4, 2^8) \\cup [2^{16}, 2^{32}) \\ldots\\), and \\(2^8 &lt; 2008 &lt; 2^{16}\\) so we have exactly the first two intervals.</p>",
+      "answer": "242"
+    },
+    "3": {
+      "problem": "<p>Determine all real numbers \\(a\\) such that the inequality \\(|x^2 + 2ax + 3a| \\le 2\\) has exactly one solution in \\(x\\).</p>",
+      "solutions": "<p>Let \\(f(x) = x^2+2ax+3a\\). Note that \\(f(-3/2) = 9/4\\), so the graph of \\(f\\) is a parabola that goes through \\((-3/2, 9/4)\\). Then, the condition that \\(|x^2+2ax+3a|\\le 2\\) has exactly one solution means that the parabola has exactly one point in the strip \\(-1\\le y\\le 1\\), which is possible if and only if the parabola is tangent to \\(y=1\\). That is, \\(x^2+2ax+3a=2\\) has exactly one solution. Then, the discriminant \\(\\Delta = 4a^2-4(3a-2)=4a^2-12a+8\\) must be zero. Solving the equation yields \\(a=1,2\\).</p>",
+      "answer": "1, 2"
+    },
+    "4": {
+      "problem": "<p>The function \\(f\\) satisfies</p><p>\\[f(x) + f(2x+y) + 5xy = f(3x-y) + 2x^2 + 1\\]</p><p>for all real numbers \\(x, y\\). Determine the value of \\(f(10)\\).</p>",
+      "solutions": "<p>Setting \\(x=10\\) and \\(y=5\\) gives \\(f(10)+f(25)+250=f(25)+200+1\\), from which we get \\(f(10)=-49\\).</p><p><i>Remark: By setting \\(y = \\frac{x}{2}\\), we see that the function is \\(f(x) = -\\frac{1}{2}x^2 + 1\\), and it can be checked that this function indeed satisfies the given equation.</i></p>",
+      "answer": "-49"
+    },
+    "5": {
+      "problem": "<p>Let \\(f(x) = x^3 + x + 1\\). Suppose \\(g\\) is a cubic polynomial such that \\(g(0) = -1\\), and the roots of \\(g\\) are the squares of the roots of \\(f\\). Find \\(g(9)\\).</p>",
+      "solutions": "<p>Let \\(a,b,c\\) be the zeros of \\(f\\). Then \\(f(x) = (x-a)(x-b)(x-c)\\). Then, the roots of \\(g\\) are \\(a^2,b^2,c^2\\), so \\(g(x) = k(x-a^2)(x-b^2)(x-c^2)\\) for some constant \\(k\\). Since \\(abc = -f(0) = -1\\), we have \\(k = ka^2b^2c^2 = -g(0) = 1\\). Thus,</p><p>\\[g(x^2) = (x^2-a^2)(x^2-b^2)(x^2-c^2) = (x-a)(x-b)(x-c)(x+a)(x+b)(x+c) = -f(x)f(-x).\\]</p><p>Setting \\(x=3\\) gives \\(g(9) = -f(3)f(-3) = -(31)(-29) = 899\\).</p>",
+      "answer": "899"
+    },
+    "6": {
+      "problem": "<p>A <i>root of unity</i> is a complex number that is a solution to \\(z^n = 1\\) for some positive integer \\(n\\). Determine the number of roots of unity that are also roots of \\(z^2+az+b=0\\) for some integers \\(a\\) and \\(b\\).</p>",
+      "solutions": "<p>The only real roots of unity are \\(1\\) and \\(-1\\). If \\(\\zeta\\) is a complex root of unity that is also a root of the equation \\(z^2+az+b=0\\), then its conjugate \\(\\bar\\zeta\\) must also be a root. In this case, \\(|a| = |\\zeta+\\bar\\zeta| \\le |\\zeta|+|\\bar\\zeta| = 2\\) and \\(b = \\zeta\\bar\\zeta = 1\\). So we only need to check the quadratics \\(z^2+2z+1, z^2+z+1, z^2+1, z^2-z+1, z^2-2z+1\\). We find 8 roots of unity: \\(\\pm 1, \\pm i, \\frac{1}{2}(\\pm 1 \\pm \\sqrt{3}i)\\).</p>",
+      "answer": "8"
+    },
+    "7": {
+      "problem": "<p>Compute</p><p>\\[\\sum_{n=1}^{\\infty}\\sum_{k=1}^{n-1} \\frac{k}{2^{n+k}}.\\]</p>",
+      "solutions": "<p>We change the order of summation:</p><p>\\[\\sum_{n=1}^{\\infty}\\sum_{k=1}^{n-1}\\frac{k}{2^{n+k}} = \\sum_{k=1}^{\\infty}\\frac{k}{2^k}\\sum_{n=k+1}^{\\infty}\\frac{1}{2^n} = \\sum_{k=1}^{\\infty}\\frac{k}{4^k} = \\frac{4}{9}.\\]</p><p>(The last two steps involve the summation of an infinite geometric series, and what is sometimes called an infinite arithmetico-geometric series. These summations are quite standard, and thus we omit the details here.)</p>",
+      "answer": "\\frac{4}{9}"
+    },
+    "8": {
+      "problem": "<p>Compute \\(\\arctan(\\tan 65^\\circ - 2\\tan 40^\\circ)\\). (Express your answer in degrees.)</p>",
+      "solutions": "<p><b>First Solution.</b> We have</p><p>\\[\\tan 65^\\circ - 2\\tan 40^\\circ = \\cot 25^\\circ - 2\\cot 50^\\circ = \\cot 25^\\circ - \\frac{\\cot^2 25^\\circ - 1}{\\cot 25^\\circ} = \\frac{1}{\\cot 25^\\circ} = \\tan 25^\\circ.\\]</p><p>Therefore, the answer is \\(25^\\circ\\).</p><p><b>Second Solution.</b> We have</p><p>\\[\\tan 65^\\circ - 2\\tan 40^\\circ = \\frac{1+\\tan 20^\\circ}{1-\\tan 20^\\circ} - \\frac{4\\tan 20^\\circ}{1-\\tan^2 20^\\circ} = \\frac{(1-\\tan 20^\\circ)^2}{(1-\\tan 20^\\circ)(1+\\tan 20^\\circ)} = \\tan(45^\\circ-20^\\circ) = \\tan 25^\\circ.\\]</p><p>Again, the answer is \\(25^\\circ\\).</p>",
+      "answer": "25^\\circ"
+    },
+    "9": {
+      "problem": "<p>Let \\(S\\) be the set of points \\((a,b)\\) with \\(0 \\le a, b \\le 1\\) such that the equation</p><p>\\[x^4+ax^3-bx^2+ax+1=0\\]</p><p>has at least one real root. Determine the area of the graph of \\(S\\).</p>",
+      "solutions": "<p>After dividing the equation by \\(x^2\\), we can rearrange it as</p><p>\\[\\left(x+\\frac{1}{x}\\right)^2 + a\\left(x+\\frac{1}{x}\\right) - b - 2 = 0.\\]</p><p>Let \\(y = x+\\frac{1}{x}\\). We can check that the range of \\(x+\\frac{1}{x}\\) as \\(x\\) varies over the nonzero reals is \\((-\\infty,-2]\\cup[2,\\infty)\\). Thus, the following equation needs to have a real root:</p><p>\\[y^2+ay-b-2=0.\\]</p><p>Its discriminant, \\(a^2+4(b+2)\\), is always positive since \\(a,b\\ge 0\\). Then, the maximum absolute value of the two roots is</p><p>\\[\\frac{a+\\sqrt{a^2+4(b+2)}}{2}.\\]</p><p>We need this value to be at least \\(2\\). This is equivalent to</p><p>\\[\\sqrt{a^2+4(b+2)} \\ge 4-a.\\]</p><p>We can square both sides and simplify to obtain</p><p>\\[2a \\ge 2-b\\]</p><p>This equation defines the region inside \\([0,1]\\times[0,1]\\) that is occupied by \\(S\\), from which we deduce that the desired area is \\(1/4\\).</p>",
+      "answer": "\\frac{1}{4}"
+    },
+    "10": {
+      "problem": "<p>Evaluate the infinite sum</p><p>\\[\\sum_{n=0}^{\\infty} \\binom{2n}{n}\\frac{1}{5^n}.\\]</p>",
+      "solutions": "<p><b>First Solution.</b> Note that</p><p>\\[\\binom{2n}{n} = \\frac{(2n)!}{n!\\cdot n!} = \\frac{(2n)(2n-2)(2n-4)\\cdots(2)}{n!}\\cdot\\frac{(2n-1)(2n-3)(2n-5)\\cdots(1)}{n!}\\]</p><p>\\[= 2^n\\cdot\\frac{(-2)^n}{n!}\\left(-\\frac{1}{2}\\right)\\left(-\\frac{1}{2}-1\\right)\\left(-\\frac{1}{2}-2\\right)\\cdots\\left(-\\frac{1}{2}-n+1\\right)\\]</p><p>\\[= (-4)^n\\binom{-\\frac{1}{2}}{n}.\\]</p><p>Then, by the binomial theorem, for any real \\(x\\) with \\(|x|&lt;\\frac{1}{4}\\), we have</p><p>\\[(1-4x)^{-1/2} = \\sum_{n=0}^{\\infty}\\binom{-\\frac{1}{2}}{n}(-4x)^n = \\sum_{n=0}^{\\infty}\\binom{2n}{n}x^n.\\]</p><p>Therefore,</p><p>\\[\\sum_{n=0}^{\\infty}\\binom{2n}{n}\\left(\\frac{1}{5}\\right)^n = \\frac{1}{\\sqrt{1-\\frac{4}{5}}} = \\sqrt{5}.\\]</p><p><b>Second Solution.</b> Consider the generating function</p><p>\\[f(x) = \\sum_{n=0}^{\\infty}\\binom{2n}{n}x^n.\\]</p><p>It has formal integral given by</p><p>\\[g(x) = I(f(x)) = \\sum_{n=0}^{\\infty}\\frac{1}{n+1}\\binom{2n}{n}x^{n+1} = \\sum_{n=0}^{\\infty} C_n x^{n+1} = x\\sum_{n=0}^{\\infty} C_n x^n,\\]</p><p>where \\(C_n = \\frac{1}{n+1}\\binom{2n}{n}\\) is the \\(n\\)th Catalan number. Let \\(h(x) = \\sum_{n=0}^{\\infty} C_n x^n\\); it suffices to compute this generating function. Note that</p><p>\\[1+xh(x)^2 = 1+x\\sum_{i,j\\ge0} C_iC_j x^{i+j} = 1+x\\sum_{k\\ge0}\\left(\\sum_{i=0}^k C_iC_{k-i}\\right)x^k = 1+\\sum_{k\\ge0} C_{k+1}x^{k+1} = h(x),\\]</p><p>where we’ve used the recurrence relation for the Catalan numbers. We now solve for \\(h(x)\\) with the quadratic equation to obtain</p><p>\\[h(x) = \\frac{1/x\\pm\\sqrt{1/x^2-4/x}}{2} = \\frac{1\\pm\\sqrt{1-4x}}{2x}.\\]</p><p>Note that we must choose the \\(-\\) sign in the \\(\\pm\\), since the \\(+\\) would lead to a leading term of \\(\\frac{1}{x}\\) for \\(h\\) (by expanding \\(\\sqrt{1-4x}\\) into a power series). Therefore, we see that</p><p>\\[f(x) = D(g(x)) = D(xh(x)) = D\\left(\\frac{1-\\sqrt{1-4x}}{2}\\right) = \\frac{1}{\\sqrt{1-4x}}\\]</p><p>and our answer is hence \\(f(1/5) = \\sqrt{5}\\).</p>",
+      "answer": "\\sqrt{5}"
+    }
+  }
+}

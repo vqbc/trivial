@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry B",
+  "year": 2018,
+  "name": "Geometry B",
+  "url": "https://pumac.princeton.edu/s/GeoBTest.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Frist Campus Center is located 1 mile north and 1 mile west of Fine Hall. The area within 5 miles of Fine Hall that is located north and east of Frist can be expressed in the form \\(\\frac{a}{b}\\pi - c\\), where \\(a,b,c\\) are positive integers and \\(a\\) and \\(b\\) are relatively prime. Find \\(a+b+c\\).</p>",
+      "solutions": "<p>Create a \\(2\\times 2\\) square about the radius-5 circle centered at Fine. Subtracting this area from the circle gives \\(25\\pi - 4\\). By symmetry, the area desired is \\(\\frac14\\) of this area, for a final answer of \\(\\frac{25}{4}\\pi - 1\\). So the answer is \\(25+4+1=\\boxed{30}\\).</p>",
+      "answer": "30"
+    },
+    "2": {
+      "problem": "<p>Let a right cone of the base radius \\(r=3\\) and height greater than 6 be inscribed in a sphere of radius \\(R=6\\). The volume of the cone can be written as \\(\\pi(a\\sqrt{b}+c)\\), where \\(b\\) is square free. Find \\(a+b+c\\).</p>",
+      "solutions": "<p>By power of a point (or in many other ways) \\(3\\cdot 3 = h(12-h)\\) which implies \\(h = 6+3\\sqrt3\\). Hence \\(V=\\frac13\\pi r^2 h = 3(3\\sqrt3+6)\\pi=(9\\sqrt3+18)\\pi\\). So the answer is \\(3+9+18=\\boxed{30}\\).</p>",
+      "answer": "30"
+    },
+    "3": {
+      "problem": "<p>Let \\(\\overline{AD}\\) be a diameter of a circle. Let point \\(B\\) be on the circle, point \\(C\\) be on \\(\\overline{AD}\\) such that \\(A,B,C\\) form a right triangle with right angle at \\(C\\). The value of the hypotenuse of the triangle is 4 times the square root of its area. If \\(\\overline{BC}\\) has length 30, what is the length of the radius of the circle?</p>",
+      "solutions": "<p>Let \\(h\\) be the length of \\(\\overline{BC}\\) and \\(r\\) the radius of the circle. Triangle \\(ABD\\) has one length diameter of the circle, so angle \\(ABD\\) is a right angle and we have similar triangles. Let \\(AB=y\\). Then \\(AC(AD) = AC(2r) = y^2 = \\left(4\\sqrt{\\frac{h(AC)}{2}}\\right)^2 = 8h(AC)\\), so \\(r=4h\\). We are given \\(h\\) is 30, so the radius of the circle is \\(\\boxed{120}\\).</p>",
+      "answer": "120"
+    },
+    "4": {
+      "problem": "<p>Let \\(\\triangle ABC\\) satisfy \\(AB=17, AC=\\frac{70}{3}\\) and \\(BC=19\\). Let \\(I\\) be the incenter of \\(\\triangle ABC\\) and \\(E\\) be the excenter of \\(\\triangle ABC\\) opposite \\(A\\). (Note: this means that the circle tangent to ray \\(AB\\) beyond \\(B\\), ray \\(AC\\) beyond \\(C\\), and side \\(BC\\) is centered at \\(E\\).) Suppose the circle with diameter \\(IE\\) intersects \\(AB\\) beyond \\(B\\) at \\(D\\). If \\(BD=\\frac{a}{b}\\) where \\(a,b\\) are coprime positive integers, find \\(a+b\\).</p>",
+      "solutions": "<p>An angle chase shows that \\(BICED\\) is cyclic, and the reflection across \\(AI\\) takes \\(D\\) to \\(C\\). Therefore \\(AD=AC=\\frac{70}{3}\\), so \\(BD=\\frac{70}{3}-17=\\frac{19}{3}\\) and \\(a+b=\\boxed{22}\\).</p>",
+      "answer": "22"
+    },
+    "5": {
+      "problem": "<p>Consider rectangle \\(ABCD\\) with \\(AB=30\\) and \\(BC=60\\). Construct circle \\(T\\) whose diameter is \\(AD\\). Construct circle \\(S\\) whose diameter is \\(AB\\). Let circles \\(T\\) and \\(S\\) intersect at \\(P\\), so \\(P\\ne A\\). Let \\(AP\\) intersect \\(BC\\) at \\(E\\). Let \\(F\\) be the point on \\(AB\\) so that \\(EF\\) is tangent to the circle with diameter \\(AD\\). Find the area of triangle \\(AEF\\).</p>",
+      "solutions": "<p>Let \\(G\\) be the tangency point of \\(EF\\) with \\(T\\), and define \\(H\\) to the tangency point of \\(BC\\) with \\(T\\). It turns out that \\(E\\) is the midpoint of \\(BH\\) because \\(AP\\) is the radical axis of the two circles and \\(BC\\) is a common external tangent. So we have \\(BE=EH=GE=15\\). Let \\(x=AF=GF\\), so \\(BG=30-x\\). Since \\(BEF\\) is a right triangle, Pythagorean Theorem yields \\[(30-x)^2+15^2=(x+15)^2 \\Rightarrow 900-60x+x^2+225=x^2+30x+225 \\Rightarrow x=10.\\] Then the area is \\[\\frac12(AF)(BE) = \\boxed{75}\\]</p><p>NOTE: There is an unintended solution that yielded an answer of 225. The point \\(F\\) could have been interpreted to be equal to point \\(B\\). In this case, the area of \\(AEF\\) is \\(\\frac12(30)(15)=225\\).</p>",
+      "answer": "75"
+    },
+    "6": {
+      "problem": "<p>Triangle \\(ABC\\) has \\(\\angle A=90^\\circ\\), \\(\\angle C=30^\\circ\\), and \\(AC=12\\). Let the circumcircle of this triangle be \\(W\\). Define \\(D\\) to be the point on arc \\(BC\\) not containing \\(A\\) so that \\(\\angle CAD=60^\\circ\\). Define points \\(E\\) and \\(F\\) to be the feet of the perpendiculars from \\(D\\) to lines \\(AB\\) and \\(AC\\), respectively. Let \\(J\\) be the intersection of line \\(EF\\) with \\(W\\), where \\(J\\) is on the minor arc \\(AC\\). The line \\(DF\\) intersects \\(W\\) at \\(H\\) other than \\(D\\). The area of the triangle \\(FHJ\\) is in the form \\(\\frac{a}{b}(\\sqrt{c}-\\sqrt{d})\\) for positive integers \\(a,b,c,d\\), where \\(a,b\\) are relatively prime, and the sum of \\(a,b,c,d\\) is minimal. Find \\(a+b+c+d\\).</p>",
+      "solutions": "<p>Let \\(G\\) be the point of intersection of \\(EF\\) with \\(BC\\). Since \\(G\\) lies on the Simson line with respect to point \\(D\\), \\(DG\\perp BC\\). It follows that \\(CDGF\\) is cyclic because \\(\\angle CFD=90^\\circ\\). Since \\(\\angle DAC=60^\\circ\\), triangle \\(ACD\\) is equilateral, which implies \\(AF=FC=6\\). Since \\(CDF\\) is a \\(30^\\circ\\)-\\(60^\\circ\\)-\\(90^\\circ\\) right triangle, \\(DF=6\\sqrt3\\). At this point, it suffices to find length \\(FJ\\) because the area of \\(FJH\\) is given by \\(\\frac12 FH(FJ)\\sin(30^\\circ)\\). We can find \\(FJ\\) through the following lemma.</p><p><b>Lemma.</b> Suppose equilateral triangle \\(ABC\\) is inscribed in a circle with side length 12. Let \\(D\\) be the foot of the altitude from \\(A\\), let \\(E\\) be the intersection of line \\(AD\\) with the circumcircle other than at \\(A\\). Let \\(F\\) be the point on minor arc \\(BC\\), not containing \\(A\\), so that \\(\\angle EDF=30^\\circ\\). Then \\(EF=3(\\sqrt5-1)\\).</p><p><b>Proof.</b> Suppose line \\(DF\\) intersects \\(AB\\) at \\(G\\), and let \\(DF\\) intersect the circle at \\(H\\), other than at \\(F\\). We have \\(\\angle ADG=30^\\circ\\), so angle \\(\\angle AGH=60^\\circ\\). Since triangle \\(BDG\\) is equilateral, \\(G\\) is the midpoint of \\(AB\\). So \\(GH\\) is exactly the same length as \\(DF\\). Let \\(DF=HG=x\\). \\(DG=6\\), so by power of a point, \\(BD\\cdot DC=DF\\cdot DH\\), so \\(36=x(x+6)\\), which implies that \\(x=3(\\sqrt5-1)\\). This concludes the lemma.</p><p>Then, \\[[FHJ]=\\frac12 FH(FJ)\\sin(30^\\circ)=\\frac32(\\sqrt{15}-\\sqrt3).\\]</p><p>So the answer is \\(\\boxed{23}\\).</p>",
+      "answer": "23"
+    },
+    "7": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be triangle with side lengths \\(AB=9, BC=10, CA=11\\). Let \\(O\\) be the circumcenter of \\(\\triangle ABC\\). Denote \\(D=AO\\cap BC, E=BO\\cap CA, F=CO\\cap AB\\). If \\(1/AD+1/BE+1/FC\\) can be written in simplest form as \\(\\frac{a\\sqrt b}{c}\\), find \\(a+b+c\\).</p>",
+      "solutions": "<p>For a general point \\(P\\) inside \\(\\triangle ABC\\), we have \\[\\frac{DP}{DA}+\\frac{EP}{EB}+\\frac{FP}{FC}=\\frac{[PBC]}{[ABC]}+\\frac{[PCA]}{[ABC]}+\\frac{[PAB]}{[ABC]}=1.\\] Therefore, \\[\\frac{PA}{DA}+\\frac{PB}{EB}+\\frac{PC}{FC}=2.\\] Now apply in the case \\(P=O\\). We have \\(R=\\frac{33}{4\\sqrt2}\\), giving an answer of \\(\\frac{8\\sqrt2}{33}\\) (\\(\\boxed{43}\\)).</p>",
+      "answer": "43"
+    },
+    "8": {
+      "problem": "<p>Let \\(ABCD\\) be a parallelogram such that \\(AB=35\\) and \\(BC=28\\). Suppose that \\(BD\\perp BC\\). Let \\(\\ell_1\\) be the reflection of \\(AC\\) across the angle bisector of \\(\\angle BAD\\), and let \\(\\ell_2\\) be the line through \\(B\\) perpendicular to \\(CD\\). \\(\\ell_1\\) and \\(\\ell_2\\) intersect at a point \\(P\\). If \\(PD\\) can be expressed in simplest form as \\(\\frac{m}{n}\\), find \\(m+n\\).</p>",
+      "solutions": "<p>It is a well-known lemma that given a triangle \\(\\triangle XYZ\\), the symmedian from \\(X\\), the perpendicular bisector of \\(YZ\\), and the tangents to the circumcircle at \\(Y\\) and \\(Z\\) are all concurrent. Considering \\(\\triangle ABD\\), we have that \\(AC\\) is a median, hence \\(AP\\) is a symmedian, and through some angle chasing, we have that \\(BP\\) is a tangent to the circumcircle. It follows by the above lemma that \\(P\\) must lie on the perpendicular bisector of \\(BD\\) and \\(PD\\) is a tangent to the circumcircle of \\(\\triangle ABD\\). We note that \\(\\triangle ABD \\sim \\triangle DPM\\) where \\(M\\) is the midpoint of \\(BD\\), and that both triangles are 3-4-5 triangles. Therefore \\(PD=PB\\), and \\(\\triangle PDM \\sim \\triangle ABD\\), where \\(M\\) is the midpoint of \\(BD\\), hence \\(PD = 6\\cdot\\frac{7\\cdot 20}{4\\cdot 16}=\\frac{7\\cdot 15}{4\\cdot 2}=\\frac{105}{8}\\), so the answer is \\(105+8=\\boxed{113}\\).</p>",
+      "answer": "113"
+    }
+  }
+}

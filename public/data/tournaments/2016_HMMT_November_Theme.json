@@ -1,0 +1,58 @@
+{
+  "test": "HMMT November Theme",
+  "year": 2016,
+  "name": "Theme Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2016/nov/thm/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>DeAndre Jordan shoots free throws that are worth 1 point each. He makes 40% of his shots. If he takes two shots find the probability that he scores at least 1 point.</p>",
+      "solutions": "<p>We want to find the probability of making at least one shot. The probability he makes no shots is \\(\\left(\\frac{3}{5}\\right)^2\\), so the probability of making at least one is \\(1 - \\left(\\frac{3}{5}\\right)^2 = \\boxed{\\frac{16}{25}}\\).</p>",
+      "answer": "\\frac{16}{25}"
+    },
+    "2": {
+      "problem": "<p>Point \\(P_1\\) is located 600 miles West of point \\(P_2\\). At 7:00 AM a car departs from \\(P_1\\) and drives East at a speed of 50 miles per hour. At 8:00 AM another car departs from \\(P_2\\) and drives West at a constant speed of \\(x\\) miles per hour. If the cars meet each other exactly halfway between \\(P_1\\) and \\(P_2\\), what is the value of \\(x\\)?</p>",
+      "solutions": "<p>Each car meets having traveled 300 miles. Therefore the first car traveled for \\(300/50 = 6\\) hours, and so the second car traveled for 5 hours. The second car must have traveled \\(300/5 = \\boxed{60}\\) miles per hour.</p>",
+      "answer": "60"
+    },
+    "3": {
+      "problem": "<p>The three points \\(A\\), \\(B\\), \\(C\\) form a triangle. \\(AB = 4\\), \\(BC = 5\\) \\(AC = 6\\). Let the angle bisector of \\(\\angle A\\) intersect side \\(BC\\) at \\(D\\). Let the foot of the perpendicular from \\(B\\) to the angle bisector of \\(\\angle A\\) be \\(E\\). Let the line through \\(E\\) parallel to \\(AC\\) meet \\(BC\\) at \\(F\\). Compute \\(DF\\).</p>",
+      "solutions": "<p>Since \\(AD\\) bisects \\(\\angle A\\), by the angle bisector theorem \\(\\frac{AB}{BD} = \\frac{AC}{CD}\\), so \\(BD = 2\\) and \\(CD = 3\\). Extend \\(BE\\) to hit \\(AC\\) at \\(X\\). Since \\(AE\\) is the perpendicular bisector of \\(BX\\), \\(AX = 4\\). Since \\(B, E, X\\) are collinear, applying Menelaus’ Theorem to the triangle \\(ADC\\), we have \\[\\frac{AE}{ED} \\cdot \\frac{DB}{BC} \\cdot \\frac{CX}{XA} = 1\\] This implies that \\(\\frac{AE}{ED} = 5\\), and since \\(EF \\parallel AC\\), \\(\\frac{DF}{DC} = \\frac{DE}{DA}\\), so \\(DF = \\frac{DC}{6} = \\boxed{\\frac{1}{2}}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "4": {
+      "problem": "<p>A positive integer is written on each corner of a square such that numbers on opposite vertices are relatively prime while numbers on adjacent vertices are not relatively prime. What is the smallest possible value of the sum of these 4 numbers?</p>",
+      "solutions": "<p>Two opposite vertices are relatively prime, but they both share a factor with their common neighbor. So that common neighbor must have two prime factors. So each of the 4 numbers has two prime factors, which are not shared with the opposite vertex. Moreover, it suffices to choose the vertices to be the numbers \\(ab, bc, cd, da\\) for some prime numbers \\(a, b, c, d\\). It’s clear that we should choose them to be the smallest primes \\(2, 3, 5, 7\\) in some order. The order that minimizes the sum of all of the numbers gives \\(14, 10, 15, 21\\) for a sum of \\(\\boxed{60}\\).</p>",
+      "answer": "60"
+    },
+    "5": {
+      "problem": "<p>Steph Curry is playing the following game and he wins if he has exactly 5 points at some time. Flip a fair coin. If heads, shoot a 3-point shot which is worth 3 points. If tails, shoot a free throw which is worth 1 point. He makes \\(\\frac{1}{2}\\) of his 3-point shots and all of his free throws. Find the probability he will win the game. (Note he keeps flipping the coin until he has exactly 5 or goes over 5 points)</p>",
+      "solutions": "<p>If he misses the shot, then the state of the game is the same as before he flipped the coin. Since the probability of making a free throw is \\(\\frac{1}{2}\\) and the probability of making a 3-point shot is \\(\\frac{1}{4}\\). Therefore, given that he earns some point, the probability it is a 3-point shot is \\(\\frac{1}{3}\\). The possible ways of earning points are 11111, 113, 131, and 311, which have probabilities \\(\\frac{32}{243}\\), \\(\\frac{4}{27}\\), \\(\\frac{4}{27}\\), and \\(\\frac{4}{27}\\), which sum to \\(\\boxed{\\frac{140}{243}}\\).</p>",
+      "answer": "\\frac{140}{243}"
+    },
+    "6": {
+      "problem": "<p>Let \\(P_1, P_2, \\ldots, P_6\\) be points in the complex plane, which are also roots of the equation \\(x^6+6x^3-216 = 0\\). Given that \\(P_1P_2P_3P_4P_5P_6\\) is a convex hexagon, determine the area of this hexagon.</p>",
+      "solutions": "<p>Factor \\(x^6 + 6x^3 - 216 = (x^3 - 12)(x^3 + 18)\\). This gives us 6 points equally spaced in terms of their angles from the origin, alternating in magnitude between \\(\\sqrt[3]{12}\\) and \\(\\sqrt[3]{18}\\). This means our hexagon is composed of 6 triangles, each with sides of length \\(\\sqrt[3]{12}\\) and \\(\\sqrt[3]{18}\\) and with a 60 degree angle in between them. This yields the area of each triangle as \\(\\frac{3\\sqrt{3}}{2}\\), so the total area of the hexagon is \\(\\boxed{9\\sqrt{3}}\\).</p>",
+      "answer": "9\\sqrt{3}"
+    },
+    "7": {
+      "problem": "<p>Seven lattice points form a convex heptagon with all sides having distinct lengths. Find the minimum possible value of the sum of the squares of the sides of the heptagon.</p>",
+      "solutions": "<p>Consider the vectors corresponding to the sides of the heptagon, and call them \\([x_i, y_i]\\) for \\(i\\) between 1 and 7. Then since \\(\\sum x_i = \\sum y_i = 0\\), and \\(a^2\\) has the same parity as \\(a\\), we have that \\(\\sum x_i^2 + y_i^2\\) must be an even number. A side length of a lattice valued polygon must be expressible as \\(\\sqrt{a^2 + b^2}\\), so the smallest possible values are \\(\\sqrt{1}, \\sqrt{2}, \\sqrt{4}, \\sqrt{5}, \\sqrt{8}, \\sqrt{9}, \\sqrt{10}\\). However, using the seven smallest lengths violates the parity constraint. If we try \\(\\sqrt{13}\\), we indeed can get a heptagon with lengths \\(\\sqrt{1}, \\sqrt{2}, \\sqrt{4}, \\sqrt{5}, \\sqrt{8}, \\sqrt{9}, \\sqrt{13}\\). One example is the heptagon \\((0, 0), (3, 0), (5, 1), (6, 2), (3, 4), (2, 4), (0, 2)\\), and its sum of squares of side lengths is \\(1 + 2 + 4 + 5 + 8 + 9 + 13 = \\boxed{42}\\).</p>",
+      "answer": "42"
+    },
+    "8": {
+      "problem": "<p>Let \\(P_1P_2 \\ldots P_8\\) be a convex octagon. An integer \\(i\\) is chosen uniformly at random from 1 to 7, inclusive. For each vertex of the octagon, the line between that vertex and the vertex \\(i\\) vertices to the right is painted red. What is the expected number times two red lines intersect at a point that is not one of the vertices, given that no three diagonals are concurrent?</p>",
+      "solutions": "<p>If \\(i = 1\\) or \\(i = 7\\), there are 0 intersections. If \\(i = 2\\) or \\(i = 6\\) there are 8. If \\(i = 3\\) or \\(i = 5\\) there are 16 intersections. When \\(i = 4\\) there are 6 intersections (since the only lines drawn are the four long diagonals).</p><p>Thus the final answer is \\[\\frac{8+16+6+16+8}{7} = \\boxed{\\frac{54}{7}}\\]</p>",
+      "answer": "\\frac{54}{7}"
+    },
+    "9": {
+      "problem": "<p>The vertices of a regular nonagon are colored such that 1) adjacent vertices are different colors and 2) if 3 vertices form an equilateral triangle, they are all different colors.</p><p>Let \\(m\\) be the minimum number of colors needed for a valid coloring, and \\(n\\) be the total number of colorings using \\(m\\) colors. Determine \\(mn\\). (Assume each vertex is distinguishable.)</p>",
+      "solutions": "<p>It’s clear that \\(m\\) is more than 2 since it’s impossible to alternate the color of the vertices without having two of the same color adjacent (since the graph is not bipartite). However, it’s possible to use 3 colors. Number the vertices 1 through 9 in order and let the colors be \\(A, B, C\\). Coloring the vertices in the order \\(BCBCACABA\\) gives a configuration that works, so \\(m\\) is 3. To determine \\(n\\), we can partition the nonagon into three equilateral triangles. Vertices 1, 4, 7 must be different colors, which we can choose in \\(3! = 6\\) ways. Suppose WLOG that they’re \\(A, B, C\\) respectively. Then we look at vertices 2, 5, 8. Vertex 2 can be colored \\(B\\) or \\(C\\). If 2 is \\(B\\), then vertex 8 must be \\(A\\), and vertex 5 must be \\(C\\). In this case there are two ways to color the remaining vertices 3, 6, 9. Otherwise, if vertex 2 is \\(C\\), then vertex 5 must be \\(A\\), and vertex 8 must be \\(B\\). This gives us only 1 possible coloring for the remaining three vertices. So \\(n\\) is \\(6(2 + 1) = 18\\). So our answer is \\(mn = 54\\).</p>",
+      "answer": "54"
+    },
+    "10": {
+      "problem": "<p>We have 10 points on a line \\(A_1, A_2 \\cdots A_{10}\\) in that order. Initially there are \\(n\\) chips on point \\(A_1\\). Now we are allowed to perform two types of moves. Take two chips on \\(A_i\\), remove them and place one chip on \\(A_{i+1}\\), or take two chips on \\(A_{i+1}\\), remove them, and place a chip on \\(A_{i+2}\\) and \\(A_i\\). Find the minimum possible value of \\(n\\) such that it is possible to get a chip on \\(A_{10}\\) through a sequence of moves.</p>",
+      "solutions": "<p>We claim that \\(n = 46\\) is the minimum possible value of \\(n\\). As having extra chips cannot hurt, it is always better to perform the second operation than the first operation, except on point \\(A_1\\). Assign the value of a chip on point \\(A_i\\) to be \\(i\\). Then the total value of the chips initially is \\(n\\). Furthermore, both types of operations keep the total values of the chips the same, as \\(2 \\cdot 1 = 2\\) and \\(i + (i + 2) = 2 \\cdot (i + 1)\\).</p><p>When \\(n = 46\\), we claim that any sequence of these moves will eventually lead to a chip reaching \\(A_{10}\\). If, for the sake of contradiction, that there was a way to get stuck with no chip having reached \\(A_{10}\\), then there could only be chips on \\(A_1\\) through \\(A_9\\), and furthermore at most one chip on each. The total value of these chips is at most 45, which is less than the original value of chips 46.</p><p>However, if \\(n \\le 45\\), we claim that it is impossible to get one chip to \\(A_{10}\\). To get a chip to \\(A_{10}\\), an operation must have been used on each of \\(A_1\\) through \\(A_9\\) at least once. Consider the last time the operation was used on \\(A_k\\) for \\(2 \\le k \\le 9\\). After this operation, there must be a chip on \\(A_{k-1}\\). Additionally, since no chip is ever moved past \\(A_k\\) again, there is no point to perform any operations on any chips left of \\(A_k\\), which means that a chip will remain on \\(A_{k-1}\\) until the end. Therefore, if there is a way to get a chip to \\(A_{10}\\), there must also be a way to get a chip to \\(A_{10}\\) and also \\(A_1\\) through \\(A_8\\), which means that the original value of the chips must have been already \\(1 + 2 + \\dots + 8 + 10 = 46\\).</p>",
+      "answer": "46"
+    }
+  }
+}

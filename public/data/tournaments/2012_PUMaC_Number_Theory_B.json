@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Number Theory B",
+  "year": 2012,
+  "name": "Number Theory B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2012_NumberTheoryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>When some number \\(a^2\\) is written in base \\(b\\), the result is \\(144_b\\). \\(a\\) and \\(b\\) also happen to be integer side lengths of a right triangle. If \\(a\\) and \\(b\\) are both less than 20, find the sum of all possible values of \\(a\\).</p>",
+      "solutions": "<p>\\(144_b = b^2 + 4b + 4 = (b+2)^2\\). Therefore, \\(a = b+2\\). (Thanks to multiple teams for pointing out the following fact:) If for example we make \\(a\\) and \\(b\\) the lengths of the legs, then the hypotenuse can always exist with length \\(c = \\sqrt{a^2+b^2}\\), which does not necessarily need to be an integer. Thus all possible values of \\(a, b\\) such that \\(b &gt; 4\\) (for \\(144_b\\) to be a possible number) and \\(a, b &lt; 20\\) are possible, so the possible values of \\(a\\) are all integers from 7 to 19, and the answer is \\(\\frac{(7+19)(13)}{2} = \\boxed{169}\\).</p>",
+      "answer": "169"
+    },
+    "2": {
+      "problem": "<p>Let \\(M\\) be the smallest positive multiple of 2012 that has 2012 divisors. Suppose \\(M\\) can be written as \\[\\prod_{k=1}^{n} p_k^{a_k}\\] where the \\(p_k\\)’s are distinct primes and the \\(a_k\\)’s are positive integers. Find \\[\\sum_{k=1}^{n} (p_k + a_k).\\]</p>",
+      "solutions": "<p>The prime factorization of 2012 is \\(2^2 \\times 503\\). We see that the solution must have a factor of 2 greater than or equal to 4 and a factor of 503. One of the primes must be raised to the 503rd power. Because 2 is the smallest prime number, \\(M\\) must be divisible by \\(2^{502}\\) in order to minimize its value. We then see that \\(2^{502} \\times 3^1 \\times 503^1\\) has \\(503 \\times 2 \\times 2 = 2012\\) factors and must be the minimal number satisfying the conditions. So we have \\(2+502+3+1+503+1 = \\boxed{1012}\\).</p>",
+      "answer": "1012"
+    },
+    "3": {
+      "problem": "<p>How many factors of \\(\\left(20^{12}\\right)^2\\) less than \\(20^{12}\\) are not factors of \\(20^{12}\\)?</p>",
+      "solutions": "<p>We start by writing the prime factorizations of \\(20^{12}\\) and \\(\\left(20^{12}\\right)^2\\). \\[20^{12} = 2^{24} \\times 5^{12}\\] \\[\\left(20^{12}\\right)^2 = 2^{48} \\times 5^{24}\\] \\(\\left(20^{12}\\right)^2\\) has \\(49 \\times 25 = 1225\\) factors, and \\(20^{12}\\) has \\(25 \\times 13 = 325\\) factors. Aside from \\(20^{12}\\), each factor of \\(\\left(20^{12}\\right)^2\\) that is greater than \\(20^{12}\\) can be paired up with a factor that is less than \\(20^{12}\\), so \\(\\left(20^{12}\\right)^2\\) has 612 factors less than \\(20^{12}\\). Then we see that \\(612 - 324 = \\boxed{288}\\) of those factors are not factors of \\(20^{12}\\).</p>",
+      "answer": "288"
+    },
+    "4": {
+      "problem": "<p>Albert has a very large bag of candies and he wants to share all of it with his friends. At first, he splits the candies evenly amongst his 20 friends and himself and he finds that there are five left over. Ante arrives, and they redistribute the candies evenly again. This time, there are three left over. If the bag contains over 500 candies, what is the fewest number of candies the bag can contain?</p>",
+      "solutions": "<p>Note that 21 and 22 are relatively prime, so we can apply the Chinese Remainder Theorem to find that there is a unique solution modulo 462. Taking \\(x\\) to be the answer, we have \\[x \\equiv 5 \\pmod{21}\\] \\[x \\equiv 3 \\pmod{22}\\] Solving this system, we find that \\[x \\equiv 47 \\pmod{462},\\] so we have \\(x = \\boxed{509}\\).</p>",
+      "answer": "509"
+    },
+    "5": {
+      "problem": "<p>How many ways can \\(2^{2012}\\) be expressed as the sum of four (not necessarily distinct) positive squares?</p>",
+      "solutions": "<p>We have the equation \\(a^2+b^2+c^2+d^2 = 2^{2012}\\). First, consider the problem modulo 4. The only residues of squares modulo 4 are 0 and 1.</p><p>If all of the squares have residues of 1 modulo 4, then they are all odd and we consider the problem modulo 8. The only residues of squares modulo 8 are 0, 1, and 4, and because \\(2^{2012} \\equiv 0 \\pmod{8}\\), we see that the squares cannot all be odd, so they must all be even.</p><p>If all of the squares are even, then we divide both sides by 4 and repeat the process. We see that the only solution is \\[a = b = c = d = 2^{1005},\\] so there is only \\(\\boxed{1}\\) solution.</p>",
+      "answer": "1"
+    },
+    "6": {
+      "problem": "<p>Let \\(f_n(x) = n + x^2\\). Evaluate the product \\[\\gcd\\{f_{2001}(2002), f_{2001}(2003)\\} \\times \\gcd\\{f_{2011}(2012), f_{2011}(2013)\\} \\times \\gcd\\{f_{2021}(2022), f_{2021}(2023)\\},\\] where \\(\\gcd\\{x, y\\}\\) is the greatest common divisor of \\(x\\) and \\(y\\).</p>",
+      "solutions": "<p>We use the Euclidean Algorithm to solve this problem. \\[\\gcd\\{n+x^2, n+(x+1)^2\\} = \\gcd\\{n+x^2, n+x^2+2x+1\\} = \\gcd\\{n+x^2, 2x+1\\}.\\] Note that \\(2x+1\\) is odd, so multiplying \\(n+x^2\\) by 4 will not change the greatest common divisor. Then we have \\[\\gcd\\{n+x^2, 2x+1\\} = \\gcd\\{4n+4x^2, 2x+1\\} = \\gcd\\{4n+(2x+1)^2-4x-1, 2x+1\\} = \\gcd\\{4n-4x-1, 2x+1\\}\\] \\[\\gcd\\{4n-4x-1, 2x+1\\} = \\gcd\\{4n+1, 2x+1\\}.\\] Then the calculations are simple. \\(\\gcd\\{8005, 4005\\} = 5\\), \\(\\gcd\\{8045, 2025\\} = 5\\), and \\(\\gcd\\{8085, 2045\\} = 5\\), so the product is \\(5 \\times 5 \\times 5 = \\boxed{125}\\).</p>",
+      "answer": "125"
+    },
+    "7": {
+      "problem": "<p>Find the sum of all possible sums \\(a+b\\) where \\(a\\) and \\(b\\) are nonnegative integers such that \\(4^a + 2^b + 5\\) is a perfect square.</p>",
+      "solutions": "<p>This question is based on quadratic residues. If \\(a &gt; 1\\) and \\(b &gt; 2\\) then the resulting number is 5 \\(\\pmod{8}\\), hence not a perfect square.</p><p>Then we check other cases 1 by 1:</p><p>1) \\(b = 0\\). This becomes \\(4^a + 6\\) which is 2 \\(\\pmod{4}\\) (\\(a &gt; 0\\)) or 3 \\(\\pmod{4}\\) (\\(a = 0\\)), not a perfect square.</p><p>2) \\(a = 0\\). This becomes \\(2^b + 6\\) which is either 7, 8, or is 2 \\(\\pmod{4}\\), so it’s not a perfect square.</p><p>3) \\(b = 1\\). This becomes \\(4^a + 7\\) which is either 8, or is 3 \\(\\pmod{4}\\), so it’s not a perfect square.</p><p>4) \\(a = 1\\). This becomes \\(2 \\cdot b + 9\\), which is 2 \\(\\pmod{3}\\) if \\(b\\) is odd (so it’s not a perfect square), and if \\(b\\) is even, let \\(b = 2k\\), then if \\(k &gt; 2\\) then \\((2^k)^2 &lt; 2^b + 9 &lt; (2^k+1)^2\\), and only when \\(k = 2\\) we get a perfect square. Hence only solution in this case is \\(a = 1, b = 4\\).</p><p>5) \\(b = 2\\). This becomes \\(4^a + 9\\), and if \\(a &gt; 2\\) then \\((2^a)^2 &lt; 4^a + 9 &lt; (2^a+1)^2\\), and only when \\(a = 2\\) we get a perfect square. Hence only solution in this case is \\(a = b = 2\\).</p><p>And so we get the solutions \\(a = 1, b = 4\\) and \\(a = b = 2\\). Thus, our answer is \\(\\boxed{9}\\).</p>",
+      "answer": "9"
+    },
+    "8": {
+      "problem": "<p>Let \\(p_1 = 2012\\) and \\(p_n = 2012^{p_{n-1}}\\) for all \\(n &gt; 1\\). Find the largest integer \\(k\\) such that \\(p_{2012} - p_{2011}\\) is divisible by \\(2011^k\\).</p>",
+      "solutions": "<p>The difference in question is \\[p_{2012} - p_{2011} = p_{2011}\\left((2012)^{p_{2011}-p_{2010}} - 1\\right) = p_{2011}\\left((2012)^{p_{2011}-p_{2010}} - 1^{p_{2011}-p_{2010}}\\right).\\]</p><p>We note that we can apply the Lifting the Exponent Lemma to the quantity in parentheses because 2011 is prime. The lemma states that if \\(x\\) and \\(y\\) are integers, \\(n\\) is a positive integer, and \\(p\\) is an odd prime such that \\(p \\mid x - y\\) but \\(x\\) and \\(y\\) are not divisible by \\(p\\), we have \\[v_p(x^n - y^n) = v_p(x-y) + v_p(n)\\] where \\(v_p(m)\\) refers to the greatest power in which \\(p\\) divides \\(m\\), i.e. \\(p^{v_p(m)} \\mid m\\) but \\(p^{v_p(m)+1} \\nmid m\\).</p><p>So by this lemma, \\[v_{2011}\\left((2012)^{p_{2011}-p_{2010}} - 1^{p_{2011}-p_{2010}}\\right) = v_{2011}(2011) + v_{2011}(p_{2011}-p_{2010}),\\] where \\(v_{2011}(x)\\) denotes the largest \\(m\\) such that \\(2011^m\\) divides \\(x\\). Clearly \\(v_{2011}(2011) = 1\\), so we need to determine \\(v_{2011}(p_{2011}-p_{2010})\\). But we note that this sequence is recursive, with 1 being added at each step. So we just need to find \\(v_{2011}(p_2 - p_1)\\). \\[v_{2011}(p_2 - p_1) = v_{2011}\\left(2012(2012^{2011} - 1^{2011})\\right) = v_{2011}(2011) + v_{2011}(2011).\\] So \\(v_{2011}(p_2-p_1) = 2\\) and we have \\(v_{2011}(p_{2012}-p_{2011}) = 2012\\), so \\(k = \\boxed{2012}\\).</p>",
+      "answer": "2012"
+    }
+  }
+}

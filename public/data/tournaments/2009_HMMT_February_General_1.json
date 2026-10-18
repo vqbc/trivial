@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February General 1",
+  "year": 2009,
+  "name": "General Test, Part 1",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2009/feb/gen1/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(a\\) and \\(b\\) are positive integers such that \\(a^2 - b^4 = 2009\\), find \\(a+b\\).</p>",
+      "solutions": "<p>We can factor the equation as \\((a-b^2)(a+b^2) = 41 \\cdot 49\\), from which it is evident that \\(a=45\\) and \\(b=2\\) is a possible solution. By examining the factors of 2009, one can see that there are no other solutions.</p>",
+      "answer": "47"
+    },
+    "2": {
+      "problem": "<p>Suppose \\(N\\) is a 6-digit number having base-10 representation \\(\\underline{a}\\,\\underline{b}\\,\\underline{c}\\,\\underline{d}\\,\\underline{e}\\,\\underline{f}\\). If \\(N\\) is \\(6/7\\) of the number having base-10 representation \\(\\underline{d}\\,\\underline{e}\\,\\underline{f}\\,\\underline{a}\\,\\underline{b}\\,\\underline{c}\\), find \\(N\\).</p>",
+      "solutions": "<p>We have \\(7(abcdef)_{10} = 6(defabc)_{10}\\), so \\(699400a + 69940b + 6994c = 599300d + 59930e + 5993f\\). We can factor this equation as \\(6994(100a+10b+c) = 5993(100d+10e+f)\\), which yields \\(538(abc)_{10} = 461(def)_{10}\\). Since \\(\\gcd(538, 461) = 1\\), we must have \\((abc)_{10} = 461\\) and \\((def)_{10} = 538\\).</p>",
+      "answer": "461538"
+    },
+    "3": {
+      "problem": "<p>A rectangular piece of paper with side lengths 5 by 8 is folded along the dashed lines shown below, so that the folded flaps just touch at the corners as shown by the dotted lines. Find the area of the resulting trapezoid.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2009_HMMT_February_General_1/3-fig1.png\" width=\"240\" alt=\"\"></p>",
+      "solutions": "<p>Drawing the perpendiculars from the point of intersection of the corners to the bases of the trapezoid, we see that we have similar \\(3\\)–\\(4\\)–\\(5\\) right triangles, and we can calculate that the length of the smaller base is 3. Thus the area of the trapezoid is \\(\\frac{8+3}{2} \\cdot 5 = \\frac{55}{2}\\).</p>",
+      "answer": "\\frac{55}{2}"
+    },
+    "4": {
+      "problem": "<p>If \\(\\tan x + \\tan y = 4\\) and \\(\\cot x + \\cot y = 5\\), compute \\(\\tan(x+y)\\).</p>",
+      "solutions": "<p>We have \\(\\cot x + \\cot y = \\frac{\\tan x + \\tan y}{\\tan x \\tan y}\\), so \\(\\tan x \\tan y = \\frac{4}{5}\\). Thus, by the tan addition formula, \\(\\tan(x+y) = \\frac{\\tan x + \\tan y}{1 - \\tan x \\tan y} = 20\\).</p>",
+      "answer": "20"
+    },
+    "5": {
+      "problem": "<p>Two jokers are added to a 52 card deck and the entire stack of 54 cards is shuffled randomly. What is the expected number of cards that will be strictly between the two jokers?</p>",
+      "solutions": "<p>Each card has an equal likelihood of being either on top of the jokers, in between them, or below the jokers. Thus, on average, \\(\\frac{1}{3}\\) of them will land between the two jokers.</p>",
+      "answer": "\\frac{52}{3}"
+    },
+    "6": {
+      "problem": "<p>The corner of a unit cube is chopped off such that the cut runs through the three vertices adjacent to the vertex of the chosen corner. What is the height of the cube when the freshly-cut face is placed on a table?</p>",
+      "solutions": "<p>The major diagonal has a length of \\(\\sqrt{3}\\). The volume of the pyramid is \\(\\frac{1}{6}\\), and so its height \\(h\\) satisfies \\(\\frac{1}{3} \\cdot h \\cdot \\frac{\\sqrt{3}}{4}(\\sqrt{2})^2 = \\frac{1}{6}\\) since the freshly cut face is an equilateral triangle of side length \\(\\sqrt{2}\\). Thus \\(h = \\frac{\\sqrt{3}}{3}\\), and the answer follows.</p>",
+      "answer": "\\frac{2\\sqrt{3}}{3}"
+    },
+    "7": {
+      "problem": "<p>Let \\(s(n)\\) denote the number of 1’s in the binary representation of \\(n\\). Compute \\[\\frac{1}{255} \\sum_{0 \\le n &lt; 16} 2^n (-1)^{s(n)}.\\]</p>",
+      "solutions": "<p>Notice that if \\(n&lt;8\\), \\((-1)^{s(n)} = (-1)\\cdot(-1)^{s(n+8)}\\) so the sum becomes \\(\\frac{1}{255}(1-2^8)\\sum_{0\\le n&lt;8}2^n(-1)^{s(n)} = 45\\).</p>",
+      "answer": "45"
+    },
+    "8": {
+      "problem": "<p>Let \\(a\\), \\(b\\), and \\(c\\) be the 3 roots of \\(x^3 - x + 1 = 0\\). Find \\(\\frac{1}{a+1} + \\frac{1}{b+1} + \\frac{1}{c+1}\\).</p>",
+      "solutions": "<p>We can substitute \\(x = y-1\\) to obtain a polynomial having roots \\(a+1\\), \\(b+1\\), \\(c+1\\), namely, \\((y-1)^3 - (y-1) + 1 = y^3 - 3y^2 + 2y + 1\\). The sum of the reciprocals of the roots of this polynomial is, by Viete’s formulas, \\(\\frac{2}{-1} = -2\\).</p>",
+      "answer": "-2"
+    },
+    "9": {
+      "problem": "<p>How many functions \\(f: \\{1,2,3,4,5\\} \\to \\{1,2,3,4,5\\}\\) satisfy \\(f(f(x)) = f(x)\\) for all \\(x \\in \\{1,2,3,4,5\\}\\)?</p>",
+      "solutions": "<p>A <i>fixed point</i> of a function \\(f\\) is an element \\(a\\) such that \\(f(a) = a\\). The condition is equivalent to the property that \\(f\\) maps every number to a fixed point. Counting by the number of fixed points of \\(f\\), the total number of such functions is \\[\\begin{aligned}\n\\sum_{k=1}^{5} \\binom{5}{k} k^{5-k} &amp;= 1\\cdot(0^5+5^0) + 5\\cdot(1^4+4^1) + 10\\cdot(2^3+3^2) \\\\\n&amp;= 1 + 25 + 10\\cdot 17 \\\\\n&amp;= 196.\n\\end{aligned}\\]</p>",
+      "answer": "196"
+    },
+    "10": {
+      "problem": "<p>A <i>kite</i> is a quadrilateral whose diagonals are perpendicular. Let kite \\(ABCD\\) be such that \\(\\angle B = \\angle D = 90^\\circ\\). Let \\(M\\) and \\(N\\) be the points of tangency of the incircle of \\(ABCD\\) to \\(AB\\) and \\(BC\\) respectively. Let \\(\\omega\\) be the circle centered at \\(C\\) and tangent to \\(AB\\) and \\(AD\\). Construct another kite \\(AB'C'D'\\) that is similar to \\(ABCD\\) and whose incircle is \\(\\omega\\). Let \\(N'\\) be the point of tangency of \\(B'C'\\) to \\(\\omega\\). If \\(MN' \\parallel AC\\), then what is the ratio of \\(AB:BC\\)?</p>",
+      "solutions": "<p>Let’s focus on the right triangle \\(ABC\\) and the semicircle inscribed in it since the situation is symmetric about \\(AC\\). First we find the radius \\(a\\) of circle \\(O\\). Let \\(AB = x\\) and \\(BC = y\\). Drawing the radii \\(OM\\) and \\(ON\\), we see that \\(AM = x-a\\) and \\(\\triangle AMO \\sim \\triangle ABC\\). In other words, \\[\\frac{AM}{MO} = \\frac{AB}{BC}\\] \\[\\frac{x-a}{a} = \\frac{x}{y}\\] \\[a = \\frac{xy}{x+y}.\\] Now we notice that the situation is homothetic about \\(A\\). In particular, \\[\\triangle AMO \\sim \\triangle ONC \\sim \\triangle CN'C'.\\] Also, \\(CB\\) and \\(CN'\\) are both radii of circle \\(C\\). Thus, when \\(MN' \\parallel AC\\), we have \\[AM = CN' = CB\\] \\[x - a = y\\] \\[a = \\frac{xy}{x+y} = x-y\\] \\[x^2 - xy - y^2 = 0\\] \\[x = \\frac{y}{2} \\pm \\sqrt{\\frac{y^2}{4}+y^2}\\] \\[\\frac{AB}{BC} = \\frac{x}{y} = \\frac{1+\\sqrt{5}}{2}.\\]</p>",
+      "answer": "\\frac{1+\\sqrt{5}}{2}"
+    }
+  }
+}

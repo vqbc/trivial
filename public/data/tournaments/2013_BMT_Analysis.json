@@ -1,0 +1,58 @@
+{
+  "test": "BMT Analysis",
+  "year": 2013,
+  "name": "Analysis Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2013/AnaS2013.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the value of \\(a\\) satisfying \\[\\begin{gathered}\na+b=3 \\\\\nb+c=11 \\\\\nc+a=61\n\\end{gathered}\\]</p>",
+      "solutions": "<p>Adding the three equations yields \\(2a+2b+2c=75\\), equivalent to \\(a+b+c=\\frac{75}{2}\\).</p><p>Because \\(b+c=11\\), we conclude \\(a=(a+b+c)-(b+c)=\\frac{75}{2}-11=\\boxed{\\frac{53}{2}}\\).</p>",
+      "answer": "\\frac{53}{2}"
+    },
+    "2": {
+      "problem": "<p>A point \\(P\\) is given on the curve \\(x^4+y^4=1\\). Find the maximum distance from the point \\(P\\) to the origin.</p>",
+      "solutions": "<p>The distance from the origin to any point \\((x,y)\\) on the curve is \\(\\sqrt{x^2+y^2}\\). Because \\(x^2\\) and \\(y^2\\) are positive real numbers, we apply AM-QM to conclude \\[\\frac{x^2+y^2}{2} \\le \\sqrt{\\frac{x^4+y^4}{2}} = \\sqrt{\\frac12}.\\] We thus get, by multiplying by two and taking the square root, \\[\\sqrt{x^2+y^2} \\le \\sqrt{2\\cdot\\sqrt{\\frac12}} = \\boxed{\\sqrt[4]{2}}.\\]</p><p>Indeed, \\(x=y=\\sqrt[4]{\\frac12}\\) yields the desired equivalence.</p>",
+      "answer": "\\sqrt[4]{2}"
+    },
+    "3": {
+      "problem": "<p>Evaluate \\[\\lim_{x\\to 0} \\frac{\\sin 2x}{e^{3x}-e^{-3x}}.\\]</p>",
+      "solutions": "<p>Recall the definition of the derivative at \\(0\\) as \\(f'(0)=\\lim_{x\\to0}\\frac{f(x)-f(0)}{x}\\). Then, \\[\\lim_{x\\to0}\\frac{\\sin 2x}{e^{3x}-e^{-3x}} = \\lim_{x\\to0}\\frac{\\sin 2x}{x}\\cdot\\left(\\lim_{x\\to0}\\frac{e^{3x}-e^{-3x}}{x}\\right)^{-1} = 2\\cdot(3+3)^{-1} = \\boxed{\\frac13}.\\]</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "4": {
+      "problem": "<p>Given a complex number \\(z\\) satisfies \\(\\operatorname{Im}(z)=z^2-z\\), find all possible values of \\(|z|\\).</p>",
+      "solutions": "<p>Setting \\(z=\\operatorname{Re}(z)+\\operatorname{Im}(z)i\\), where \\(\\operatorname{Re}(z)\\) and \\(\\operatorname{Im}(z)\\) are real numbers, we find \\[\\operatorname{Im}(z) = \\operatorname{Re}(z)^2-\\operatorname{Im}(z)^2-\\operatorname{Re}(z) + \\left(2\\operatorname{Re}(z)\\operatorname{Im}(z)-\\operatorname{Im}(z)\\right)i.\\] Inspecting the imaginary part, we notice either \\(2\\operatorname{Re}(z)-1=0\\) or \\(\\operatorname{Im}(z)=0\\). Because we have the further condition imposed by the real part \\(\\operatorname{Im}(z)^2-\\operatorname{Im}(z)=\\operatorname{Re}(z)^2-\\operatorname{Re}(z)\\), we find all solutions \\(\\frac12-\\frac12 i\\), \\(0\\), and \\(1\\).</p><p>Thus, \\(|z|\\in\\boxed{\\left\\{0,\\frac{\\sqrt2}{2},1\\right\\}}\\).</p>",
+      "answer": "\\left\\{0, \\frac{\\sqrt{2}}{2}, 1\\right\\}"
+    },
+    "5": {
+      "problem": "<p>Suppose that \\(c_n=(-1)^n(n+1)\\). While the sum \\(\\displaystyle\\sum_{n=0}^\\infty c_n\\) is divergent, we can still attempt to assign a value to the sum using other methods. The Abel Summation of a sequence, \\(a_n\\), is \\[\\operatorname{Abel}(a_n) = \\lim_{x\\to1^-}\\sum_{n=0}^\\infty a_n x^n.\\] Find \\(\\operatorname{Abel}(c_n)\\).</p>",
+      "solutions": "<p>\\[\\sum_{n=0}^\\infty c_n x^n = \\frac{1}{(1+x)^2} \\quad \\text{for } |x|&lt;1.\\] Taking \\(x\\) to \\(1\\) gives \\(\\boxed{\\frac14}\\).</p>",
+      "answer": "\\frac{1}{4}"
+    },
+    "6": {
+      "problem": "<p>The <i>minimal polynomial</i> of a complex number \\(r\\) is the unique polynomial with rational coefficients of minimal degree with leading coefficient \\(1\\) that has \\(r\\) as a root. If \\(f\\) is the minimal polynomial of \\(\\cos\\frac{\\pi}{7}\\), what is \\(f(-1)\\)?</p>",
+      "solutions": "<p>Recall \\(x=\\cos\\frac{\\pi}{7}=\\frac12\\left(e^{i\\pi/7}+e^{-i\\pi/7}\\right)\\). Additionally, \\(8x^3=e^{3i\\pi/7}+3e^{i\\pi/7}+3e^{-i\\pi/7}+e^{-3i\\pi/7}\\), \\(4x^2=e^{2i\\pi/7}+2+e^{-2i\\pi/7}\\), and \\(2x=e^{i\\pi/7}+e^{-i\\pi/7}\\). Thus, \\[g(x)=8x^3-4x^2-4x+1 = e^{3i\\pi/7}-e^{2i\\pi/7}+e^{i\\pi/7}-1+e^{-i\\pi/7}-e^{-2i\\pi/7}-e^{-3i\\pi/7}.\\]</p><p>We claim the right hand side in the above equation has numeric value \\(0\\), and this follows from \\(e^{i\\pi/7}\\) being a fourteenth root of unity but not a seventh root of unity (or \\(-1\\)). \\[x^{14}-1 = (x^7-1)(x^7+1) = (x^7-1)(x+1)(x^6-x^5+x^4-x^3+x^2-x+1)\\] whence we determine \\(e^{3i\\pi/7}\\cdot\\left(e^{3i\\pi/7}-e^{2i\\pi/7}+e^{i\\pi/7}-1+e^{-i\\pi/7}-e^{-2i\\pi/7}-e^{-3i\\pi/7}\\right)=0\\).</p><p>Then, applying the rational root test, we determine \\(g(x)\\) has no factors of degree \\(1\\) and therefore is irreducible over the rationals. Thus, the minimal polynomial of \\(\\cos\\frac{\\pi}{7}\\) is \\(f(x)=x^3-\\frac12x^2-\\frac12x+\\frac18\\). Plugging in \\(x=-1\\) yields our answer of \\(f(-1)=\\boxed{-\\frac78}\\).</p><p>Note that it is no coincidence the numerator’s only factor is the odd prime present in the denominator of \\(\\cos\\frac{\\pi}{k}\\).</p>",
+      "answer": "-\\frac{7}{8}"
+    },
+    "7": {
+      "problem": "<p>If \\(x,y\\) are positive real numbers satisfying \\(x^3-xy+1=y^3\\), find the minimum possible value of \\(y\\).</p>",
+      "solutions": "<p>Consider the intersection of cubic function \\(f(x)=x^3+1\\) and linear function \\(g(x)=y\\cdot x+y^3\\). In order to minimize the value of \\(y\\) while these functions still have an intersection in the First Quadrant, the linear function must be tangent to \\(f(x)\\). Thus, for some value of intersection \\(x=a\\), we have \\(f(a)=g(a)\\) and \\(f'(a)=g'(a)\\). Therefore, \\(a^3+1=ya+y^3\\) and \\(3a^2=y\\). Plugging the latter into the former, \\[\\begin{aligned}\na^3+1 &amp;= 3a^3+27a^6 \\\\\n27a^6+2a^3-1 &amp;= 0 \\\\\na^3 &amp;= \\frac{2\\sqrt7-1}{27}\n\\end{aligned}\\] \\[a=\\frac13\\sqrt[3]{2\\sqrt7-1} \\quad\\text{and}\\quad y=\\boxed{\\frac13\\sqrt[3]{29-4\\sqrt7}}.\\]</p>",
+      "answer": "\\frac{1}{3}\\sqrt[3]{29-4\\sqrt{7}}"
+    },
+    "8": {
+      "problem": "<p>Billy is standing at \\((1,0)\\) in the coordinate plane as he watches his Aunt Sydney go for her morning jog starting at the origin. If Aunt Sydney runs into the First Quadrant at a constant speed of \\(1\\) meter per second along the graph of \\(x=\\frac25y^2\\), find the rate, in radians per second, at which Billy’s head is turning clockwise when Aunt Sydney passes through \\(x=1\\).</p>",
+      "solutions": "<p>Let \\(t\\) be the amount of time that has passed, \\((x,y)\\) be the coordinates of Aunt Sydney’s positions, and \\(\\theta\\) be the angle Billy’s head makes with the negative \\(x\\)-axis. (\\(\\theta=0\\) initially.) We wish to find \\(\\frac{d\\theta}{dt}\\) when \\(x=1\\). By considering the triangle formed by Billy, Aunt Sydney, and the point \\((x,0)\\) we get that \\(\\theta=\\tan^{-1}\\left(\\frac{y}{1-\\frac25y^2}\\right)\\). \\(\\frac{d\\theta}{dy}=\\frac{1+\\frac25y^2}{\\left(1-\\frac25y^2\\right)^2+y^2}\\). At \\(x=1\\), \\(\\frac{d\\theta}{dx}=\\frac45\\).</p><p>Let the distance Aunt Sydney runs be \\(s=\\int_0^y\\sqrt{1+\\frac{16t^2}{25}}\\,dt\\). Then \\(1=\\frac{ds}{dt}=\\frac{dx}{dt}\\sqrt{1+\\frac{16y^2}{25}}\\), so \\(\\frac{dx}{dt}=\\frac{1}{\\sqrt{1+\\frac{16x^2}{25}}}\\). At \\(x=1\\), \\(\\frac{dx}{dt}=\\frac{\\sqrt5}{\\sqrt{13}}\\). Now \\(\\frac{d\\theta}{dt}=\\frac{d\\theta}{dx}\\frac{dx}{dt}=\\frac45\\cdot\\frac{\\sqrt5}{\\sqrt{13}}=\\boxed{\\frac{4}{\\sqrt{65}}}\\).</p>",
+      "answer": "\\frac{4}{\\sqrt{65}}"
+    },
+    "9": {
+      "problem": "<p>Evaluate the integral \\[\\int_0^1 \\sqrt{(x-1)^3+1}+x^{2/3}-(1-x)^{3/2}-\\sqrt[3]{1-x^2}\\,dx.\\]</p>",
+      "solutions": "<p>We first show that \\(\\displaystyle\\int_0^1 \\sqrt{(x-1)^3+1}-\\sqrt[3]{1-x^2}\\,dx=0\\). This is easily obtained by considering the graph of \\(y^2=(x-1)^3+1\\) from \\((0,0)\\) to \\((1,1)\\). From this, we have \\[\\int_0^1\\sqrt{(x-1)^3+1}\\,dx+\\int_0^1\\sqrt{1-y^2}+1\\,dy=1.\\] Combining integrals yields the desired equivalence. Then, evaluating the two remaining terms, we obtain an answer of \\[\\int_0^1 x^{2/3}-(1-x)^{3/2}\\,dx=\\frac35-\\frac25=\\boxed{\\frac15}.\\]</p>",
+      "answer": "\\frac{1}{5}"
+    },
+    "10": {
+      "problem": "<p>Let the class of functions \\(f_n\\) be defined such that \\(f_1(x)=|x^3-x^2|\\) and \\(f_{k+1}(x)=|f_k(x)-x^3|\\) for all \\(k\\ge1\\). Denote by \\(S_n\\) the sum of all \\(y\\)-values of \\(f_n(x)\\)’s “sharp” points in the First Quadrant. (A “sharp” point is a point for which the derivative is not defined.) Find the ratio of odd to even terms, \\[\\lim_{k\\to\\infty}\\frac{S_{2k+1}}{S_{2k}}.\\]</p>",
+      "solutions": "<p>Note that there exist sharp points of \\(f_n(x)\\) at all \\(x=\\frac11,\\frac12,\\frac13,\\ldots,\\frac1n\\) and that (a different) half of them are \\(0\\) for odd or even values of \\(n\\). We then wish to find \\(A/B\\) where \\(A=\\displaystyle\\sum_{k=1}^\\infty\\frac{1}{(2k)^3}\\) and \\(B=\\displaystyle\\sum_{k=1}^\\infty\\frac{1}{(2k-1)^3}\\). Noting that \\(8A=\\displaystyle\\sum_{k=1}^\\infty\\frac1{k^3}=A+B\\), we obtain \\(7A=B\\) or \\(A/B=\\boxed{\\frac17}\\).</p>",
+      "answer": "\\frac{1}{7}"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "DMM Tiebreaker",
+  "year": 2006,
+  "name": "Tiebreaker Round",
+  "url": "https://dukemathmeet.org/2006/tiebreaker.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Suppose that \\(a\\), \\(b\\), and \\(c\\) are positive integers such that not all of them are even, \\(a &lt; b\\), \\(a^2 + b^2 = c^2\\), and \\(c - b = 289\\). What is the smallest possible value for \\(c\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>If \\(a, b &gt; 1\\) and \\(a^2\\) is \\(11\\) in base \\(b\\), what is the third digit from the right of \\(b^2\\) in base \\(a\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Find real numbers \\(a, b\\) such that \\(x^2 - x - 1\\) is a factor of \\(ax^{10} + bx^9 + 1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Algebra A",
+  "year": 2016,
+  "name": "Algebra A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2016_AlgebraA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(a_1 = 20\\), \\(a_2 = 16\\), and for \\(k \\ge 3\\), let \\(a_k = \\sqrt[3]{k - a_{k-1}^3 - a_{k-2}^3}\\). Compute \\(a_1^3 + a_2^3 + \\cdots + a_{10}^3\\).</p>",
+      "solutions": "<p>We have \\(a_2^3 + a_3^3 + a_4^3 = 4\\), \\(a_5^3 + a_6^3 + a_7^3 = 7\\), \\(a_8^3 + a_9^3 + a_{10}^3 = 10\\), and \\(a_1^3 = 8000\\). Thus, the answer is \\(\\boxed{8021}\\).</p>",
+      "answer": "8021"
+    },
+    "2": {
+      "problem": "<p>Let \\(f(x) = 15x - 2016\\). If \\(f(f(f(f(f(x))))) = f(x)\\), find the sum of all possible values of \\(x\\).</p>",
+      "solutions": "<p>Note that \\(f(f(f(f(f(x))))) = f(x)\\) is a linear equation in \\(x\\) and thus has one solution. If \\(f(x) = x\\) then clearly this equation is satisfied. Thus the solution is the solution to the equation \\(x = 15x - 2016\\), which is \\(\\boxed{144}\\).</p>",
+      "answer": "144"
+    },
+    "3": {
+      "problem": "<p>For positive real numbers \\(x\\) and \\(y\\), let \\(f(x,y) = x^{\\log_2 y}\\). The sum of the solutions to the equation \\[4096 f(f(x,x),x) = x^{13}\\] can be written in simplest form as \\(\\frac{m}{n}\\). Compute \\(m+n\\).</p>",
+      "solutions": "<p>We have \\[\\begin{aligned}\n4096f(f(x,x),x) &amp;= x^{13} \\\\\n4096 \\left(x^{\\log_2 x}\\right)^{\\log_2 x} &amp;= x^{13} \\\\\n4096x^{(\\log_2 x)^2} &amp;= x^{13} \\\\\n4096x^{(\\log_2 x)^2-13} &amp;= 1 \\\\\n2^{(\\log_2 x)((\\log_2 x)^2-13)+12} &amp;= 2^0 \\\\\n(\\log_2 x)((\\log_2 x)^2-13)+12 &amp;= 0 \\\\\n(\\log_2 x)^3 - 13\\log_2 x + 12 &amp;= 0 \\\\\n(\\log_2 x - 1)(\\log_2 x - 3)(\\log_2 x + 4) &amp;= 0,\n\\end{aligned}\\] so \\(x\\) can be any of \\(2\\), \\(8\\), and \\(\\frac{1}{16}\\). Thus, the sum of all possible values of \\(x\\) is \\(\\frac{161}{16}\\), and so our answer is \\(161+16=\\boxed{177}\\).</p>",
+      "answer": "177"
+    },
+    "4": {
+      "problem": "<p>Suppose that \\(P\\) is a polynomial with integer coefficients such that \\(P(1)=2\\), \\(P(2)=3\\) and \\(P(3)=2016\\). If \\(N\\) is the smallest possible positive value of \\(P(2016)\\), find the remainder when \\(N\\) is divided by \\(2016\\).</p>",
+      "solutions": "<p>Using the well known result that \\(x_1-x_2 \\mid P(x_1)-P(x_2)\\) we get that \\(N \\equiv 2 \\pmod{2015}\\), \\(N \\equiv 3 \\pmod{2014}\\) and \\(N \\equiv 3 \\pmod{2013}\\). Solving these equations gives \\(N \\equiv 3+1007\\times2013\\times2014 \\pmod{2013\\times2014\\times2015}\\). Thus \\(N = 3+1007\\times2013\\times2014\\) and \\(N \\equiv 3+1007\\times(-3)\\times(-2) \\equiv 2013 \\pmod{2016}\\). The polynomial \\(P(x) = (x-1)((x-2)(1006)+1)+2\\) satisfies all given conditions, so \\(\\boxed{2013}\\) is the final answer.</p>",
+      "answer": "2013"
+    },
+    "5": {
+      "problem": "<p>Define a sequence \\(a_i\\) as follows: \\(a_1 = 181\\) and for \\(i \\ge 2\\), \\(a_i = a_{i-1}^2 - 1\\) if \\(a_{i-1}\\) is odd and \\(a_i = a_{i-1}/2\\) if \\(a_{i-1}\\) is even. Find the least \\(i\\) such that \\(a_i = 0\\).</p>",
+      "solutions": "<p>By a computation, \\(a_5 = 2^{12}-1\\). If \\(a_i = 2^k-1\\), then \\(a_{i+1} = (2^{k-1}-1)2^{k+1}\\), so \\(a_{i+k+2} = 2^{k-1}-1\\). Eventually we get \\(a_{105} = 0\\). Thus the answer is \\(\\boxed{105}\\).</p>",
+      "answer": "105"
+    },
+    "6": {
+      "problem": "<p>Let \\([a,b] = ab - a - b\\). Shaq sees the numbers \\(2, 3, \\ldots, 101\\) written on a blackboard. Let \\(V\\) be the largest number that Shaq can obtain by repeatedly choosing two numbers \\(a, b\\) on the board and replacing them with \\([a, b]\\) until there is only one number left. Suppose \\(N\\) is the integer with \\(N!\\) nearest to \\(V\\). Find the nearest integer to \\(10^6 \\cdot \\frac{|V-N!|}{N!}\\).</p>",
+      "solutions": "<p>We can write \\([a,b] = (a-1)(b-1) - 1\\). Since \\([[a,b],[c,d]] \\le [[[a,b],c],d]\\) if \\(a&gt;b&gt;c&gt;d\\), we can maximize \\(V\\) by finding \\[[[\\cdots[[101,100],99],\\cdots],2] = \\prod_{k=2}^{101}(k-1) - 2\\sum_{j=2}^{99}\\prod_{k=2}^{j}(k-1) - (2-1) - 1.\\]</p><p>This is perhaps most easily seen by evaluating \\[[[[a,b],c],d] = (a-1)(b-1)(c-1)(d-1) - 2(c-1)(d-1) - 2(d-1) - 1\\] and generalizing from there; the general form is \\[[[\\cdots[[a_n,a_{n-1}],a_1],\\cdots],2] = \\prod_{k=1}^{n} (a_k-1) - 2\\sum_{j=1}^{n-2}\\prod_{k=1}^{j} (a_k-1) - (a_1-1) - 1.\\]</p><p>Clearly the first term, \\(100!\\), dominates, so \\(N = 100\\). So, the desired value becomes \\(2\\cdot10^6\\left(\\frac{1}{100\\cdot99} + \\frac{1}{100\\cdot99\\cdot98} + \\cdots\\right)\\) as the remaining terms in the sum are far too small to change our value. In fact, \\(100\\cdot99\\cdot98\\cdot97 \\gg 2\\cdot10^6\\), so we actually wish to find \\(2\\cdot10^4\\left(\\frac{1}{99}+\\frac{1}{99\\cdot98}\\right)\\).</p><p>This is just a smidge over \\(\\boxed{204}\\).</p>",
+      "answer": "204"
+    },
+    "7": {
+      "problem": "<p>Let \\(S_P\\) be the set of all polynomials \\(P\\) with complex coefficients, such that \\(P(x^2) = P(x)P(x-1)\\) for all complex numbers \\(x\\). Suppose \\(P_0\\) is the polynomial in \\(S_P\\) of maximal degree such that \\(P_0(1) \\mid 2016\\). Find \\(P_0(10)\\).</p>",
+      "solutions": "<p>We first determine all solutions to the equation \\(P(x^2) = P(x)P(x-1)\\). Let \\(P(x) = \\prod(x-\\alpha_i)\\) where \\(\\alpha_i\\) are the roots of \\(P\\) (including multiplicity). Then \\(\\prod(x^2-\\alpha_i) = \\prod(x-\\alpha_i)\\prod(x-(\\alpha_i+1))\\). Thus, considering the sets of roots of both sides of this equation, we get \\(\\{\\pm\\sqrt{\\alpha_i}\\} = \\{\\alpha_i\\}\\cup\\{\\alpha_i+1\\}\\). Now we note that if \\(\\max|\\sqrt{\\alpha_i}| = M &gt; 1\\) then \\(\\max|\\alpha_i| = M^2 &gt; M\\), contradiction. Similarly, if \\(\\min|\\sqrt{\\alpha_i}| = N &lt; 1\\) then \\(\\min|\\alpha_i| = N^2 &lt; N\\), contradiction. (Unless \\(N = 0\\). But this is impossible, since the multiplicity of zero as a root on both sides of the equation cannot be equal.) Therefore all roots \\(\\alpha_i\\) must satisfy \\(|\\alpha_i| = |\\alpha_i+1| = 1\\), so \\(\\alpha_i = \\pm\\left(\\frac{-1+\\sqrt{3}i}{2}\\right)\\). Now counting the distinct roots, the two different roots must have the same multiplicity, so the solutions are \\(P(x) = (x^2+x+1)^n\\) for some positive integer \\(n\\), or \\(P(x) = 0\\) or \\(P(x) = 1\\) (constant solutions). It follows that \\(P_0(1) = 3^n\\), so \\(P_0(x) = (x^2+x+1)^2\\). Therefore \\(P_0(10) = 111^2 = \\boxed{12321}\\).</p>",
+      "answer": "12321"
+    },
+    "8": {
+      "problem": "<p>Define the function \\(f : \\mathbb{R}\\backslash\\{-1,1\\} \\to \\mathbb{R}\\) to be \\[f(x) = \\sum_{a,b=0}^{\\infty} \\frac{x^{2^a3^b}}{1-x^{2^{a+1}3^{b+1}}}.\\]</p><p>Suppose that \\(f(y) - f\\left(\\frac{1}{y}\\right) = 2016\\). Then \\(y\\) can be written in simplest form as \\(\\frac{p}{q}\\). Find \\(p+q\\). (\\(\\mathbb{R}\\backslash\\{-1,1\\}\\) refers to the set of all real numbers excluding \\(-1\\) and \\(1\\).)</p>",
+      "solutions": "<p>For \\(|x| &lt; 1\\), we have: \\[\\begin{aligned}\nf(x) - f(x^{-1}) &amp;= \\sum_{a,b\\ge0}\\frac{x^{2^a3^b}}{1-x^{2^{a+1}3^{b+1}}} + \\frac{x^{-2^a3^b}}{x^{-2^{a+1}3^{b+1}}-1} \\\\\n&amp;= \\sum_{a\\ge0}\\sum_{b\\ge0}\\frac{x^{2^a3^b}+x^{5\\cdot2^a3^b}}{1-x^{2^{a+1}3^{b+1}}} \\\\\n&amp;= \\sum_{a\\ge0}\\sum_{u\\ge0}\\left(x^{2^a}\\right)^{2u+1} \\\\\n&amp;= \\sum_{v&gt;0} x^v \\\\\n&amp;= \\frac{x}{1-x}\n\\end{aligned}\\]</p><p>Similarly, for \\(|x| &gt; 1\\), we have: \\[f(x) - f(x^{-1}) = \\frac{1}{1-x}.\\]</p><p>Since the range of \\(\\frac{1}{1-x}\\) over the domain \\(|x|&gt;1\\) is \\((-\\infty,0)\\cup(0,\\frac{1}{2})\\), it follows that \\(|y| &lt; 1\\). Setting \\(\\frac{y}{1-y} = 2016\\) yields \\(y = \\frac{2016}{2017}\\), so \\(p+q = \\boxed{4033}\\).</p>",
+      "answer": "4033"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "test": "DMM Devil",
+  "year": 2007,
+  "name": "Devil Round",
+  "url": "https://dukemathmeet.org/2007/devil.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If: \\[\\begin{aligned}\na^2+b^2+c^2 &amp;= 1000, \\\\\n(a+b+c)^2 &amp;= 100, \\text{ and} \\\\\nab+bc &amp;= 10,\n\\end{aligned}\\] what is \\(ac\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "-460"
+    },
+    "2": {
+      "problem": "<p>If \\(a\\) and \\(b\\) are real numbers such that \\(a \\neq 0\\) and the numbers \\(1\\), \\(a+b\\), and \\(a\\) are, in some order, the numbers \\(0\\), \\(\\frac{b}{a}\\), and \\(b\\), what is \\(b-a\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "3": {
+      "problem": "<p>Of the first 120 natural numbers, how many are divisible by at least one of 3, 4, 5, 12, 15, 20, and 60?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "72"
+    },
+    "4": {
+      "problem": "<p>For positive real numbers \\(a\\), let \\(p_a\\) and \\(q_a\\) be the maximum and minimum values, respectively, of \\(\\log_a(x)\\) for \\(a \\le x \\le 2a\\). If \\(p_a - q_a = \\frac{1}{2}\\), what is \\(a\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "4"
+    },
+    "5": {
+      "problem": "<p>Let \\(ABC\\) be an acute triangle and let \\(a\\), \\(b\\), and \\(c\\) be the sides opposite the vertices \\(A\\), \\(B\\), and \\(C\\), respectively. If \\(a = 2b\\sin A\\), what is the measure of angle \\(B\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "30^\\circ"
+    },
+    "6": {
+      "problem": "<p>How many ordered triples \\((x, y, z)\\) of positive integers satisfy the equation \\[x^3 + 2y^3 + 4z^3 = 9?\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0"
+    },
+    "7": {
+      "problem": "<p>Joe has invented a robot that travels along the sides of a regular octagon. The robot starts at a vertex of the octagon and every minute chooses one of two directions (clockwise or counterclockwise) with equal probability and moves to the next vertex in that direction. What is the probability that after 8 minutes the robot is directly opposite the vertex it started from?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{7}{32}"
+    },
+    "8": {
+      "problem": "<p>Find the nonnegative integer \\(n\\) such that when \\[\\left(x^2 - \\frac{1}{x}\\right)^n\\] is completely expanded the constant coefficient is 15.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "6"
+    },
+    "9": {
+      "problem": "<p>For each positive integer \\(k\\), let \\[f_k(x) = \\frac{kx+9}{x+3}.\\] Compute \\[f_1 \\circ f_2 \\circ \\cdots \\circ f_{13}(2).\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{23}{11}"
+    },
+    "10": {
+      "problem": "<p>Exactly one of the following five integers cannot be written in the form \\[x^2 + y^2 + 5z^2,\\] where \\(x\\), \\(y\\), and \\(z\\) are integers. Which one is it? \\[2003, 2004, 2005, 2006, 2007.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2003"
+    },
+    "11": {
+      "problem": "<p>Suppose that two circles \\(C_1\\) and \\(C_2\\) intersect at two distinct points \\(M\\) and \\(N\\). Suppose that \\(P\\) is a point on the line \\(MN\\) that is outside of both \\(C_1\\) and \\(C_2\\). Let \\(A\\) and \\(B\\) be the two distinct points on \\(C_1\\) such that \\(AP\\) and \\(BP\\) are each tangent to \\(C_1\\) and \\(B\\) is inside \\(C_2\\). Similarly, let \\(D\\) and \\(E\\) be the two distinct points on \\(C_2\\) such that \\(DP\\) and \\(EP\\) are each tangent to \\(C_2\\) and \\(D\\) is inside \\(C_1\\). If \\(AB = \\frac{5\\sqrt{2}}{2}\\), \\(AD = 2\\), \\(BD = 2\\), \\(EB = 1\\), and \\(ED = \\sqrt{2}\\), find \\(AE\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "12": {
+      "problem": "<p>How many ordered pairs \\((x, y)\\) of positive integers satisfy the following equation? \\[\\sqrt{x} + \\sqrt{y} = \\sqrt{2007}.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "2"
+    },
+    "13": {
+      "problem": "<p>The sides \\(BC\\), \\(CA\\), and \\(CB\\) of triangle \\(ABC\\) have midpoints \\(K\\), \\(L\\), and \\(M\\), respectively. If \\[AB^2 + BC^2 + CA^2 = 200,\\] what is \\(AK^2 + BL^2 + CM^2\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "150"
+    },
+    "14": {
+      "problem": "<p>Let \\(x\\) and \\(y\\) be real numbers that satisfy \\[x + \\frac{4}{x} = y + \\frac{4}{y} = \\frac{20}{xy}.\\] Compute the maximum value of \\(|x-y|\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "3"
+    },
+    "15": {
+      "problem": "<p>30 math meet teams receive different scores which are then shuffled around to lend an aura of mystery to the grading. What is the probability that no team receives their own score? Express your answer as a decimal accurate to the nearest hundredth.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": "0.37"
+    }
+  }
+}

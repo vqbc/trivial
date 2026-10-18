@@ -17,12 +17,138 @@ export const TESTS = [
   "AHSME",
 ];
 
+// College tournaments served from public/data/tournaments/ (built by
+// buildtournaments.js) instead of the AoPS wiki. Keys are the test
+// names used in problem titles; values are the rounds, which act as
+// versions ("2018 BMT Algebra Problems/Problem 3"). Each problem
+// carries its own difficulty and subject (see lib/tournaments.js).
+export const TOURNAMENTS = {
+  "HMMT February": [
+    "Algebra",
+    "Algebra and Calculus",
+    "Algebra and Combinatorics",
+    "Algebra and Geometry",
+    "Algebra and Number Theory",
+    "Geometry",
+    "Combinatorics",
+    "Combinatorics and Geometry",
+    "Calculus",
+    "Calculus and Combinatorics",
+    "Calculus and Geometry",
+    "Advanced Topics",
+    "General",
+    "General 1",
+    "General 2",
+    "Team",
+    "Team B",
+    "Guts",
+  ],
+  "HMMT November": ["General", "General 1", "General 2", "Theme", "Team", "Guts"],
+  PUMaC: [
+    "Algebra A",
+    "Algebra B",
+    "Geometry A",
+    "Geometry B",
+    "Combinatorics A",
+    "Combinatorics B",
+    "Number Theory A",
+    "Number Theory B",
+    "Team",
+    "Live",
+  ],
+  SMT: [
+    "Algebra",
+    "Algebra Tiebreaker",
+    "Geometry",
+    "Geometry Tiebreaker",
+    "Combinatorics",
+    "Combinatorics Tiebreaker",
+    "Number Theory",
+    "Number Theory Tiebreaker",
+    "Calculus",
+    "Calculus Tiebreaker",
+    "Discrete",
+    "Discrete Tiebreaker",
+    "Advanced Topics",
+    "Advanced Topics Tiebreaker",
+    "General",
+    "General Tiebreaker",
+    "Team",
+    "Guts",
+  ],
+  BMT: [
+    "Algebra",
+    "Algebra Tiebreaker",
+    "Geometry",
+    "Geometry Tiebreaker",
+    "Combinatorics",
+    "Combinatorics Tiebreaker",
+    "Number Theory",
+    "Number Theory Tiebreaker",
+    "Calculus",
+    "Calculus Tiebreaker",
+    "Discrete",
+    "Discrete Tiebreaker",
+    "Analysis",
+    "Analysis Tiebreaker",
+    "General",
+    "General Tiebreaker",
+    "Individual",
+    "Individual Tiebreaker",
+    "Team",
+    "Guts",
+    "Tournament",
+  ],
+  CMIMC: [
+    "Algebra",
+    "Algebra Division 1",
+    "Algebra Division 2",
+    "Geometry",
+    "Geometry Division 1",
+    "Geometry Division 2",
+    "Combinatorics",
+    "Combinatorics Division 1",
+    "Combinatorics Division 2",
+    "Number Theory",
+    "Team",
+    "Tiebreaker",
+  ],
+  CMWMC: ["Individual", "Guts", "Relay"],
+  CMM: [
+    "Individual",
+    "Individual (Fall)",
+    "Individual (Spring)",
+    "Individual (Winter)",
+    "Team",
+    "Team (Fall)",
+    "Team (Spring)",
+    "Team (Winter)",
+    "Mixer",
+    "Mixer (Fall)",
+    "Mixer (Spring)",
+    "Mixer (Winter)",
+    "Tiebreaker",
+    "Tiebreaker (Fall)",
+    "Tiebreaker (Spring)",
+    "Tiebreaker (Winter)",
+  ],
+  DMM: ["Individual", "Team", "Guts", "Relay", "Devil", "Tiebreaker"],
+  MMATHS: ["Individual", "Team", "Guts", "Tiebreaker", "Lightning Finals"],
+  GiM: ["Individual", "Team", "Guts", "Tiebreaker"],
+};
+
+export const TOURNAMENT_TESTS = Object.keys(TOURNAMENTS);
+
 // Tagify whitelist for Tests in Random Practice / Random Sets — adds
 // the legacy "(AMC Tests)" meta-token that expands to AHSME + AMC 8/
 // 10/12 + AIME + USAMO + IMO (see matchesOptions in lib/problems.js).
 // Select tabs use TESTS directly since "(AMC Tests)" isn't a real
 // single test.
-export const TEST_WHITELIST = ["(AMC Tests)", ...TESTS];
+export const TEST_WHITELIST = ["(AMC Tests)", ...TESTS, ...TOURNAMENT_TESTS];
+
+// TESTS with the tournaments added, for Practice's Select tab. Problem
+// Sets' Past Test tab keeps the AoPS-only list for now.
+export const PRACTICE_TESTS = [...TESTS, ...TOURNAMENT_TESTS];
 
 // Filter default used when the user clears all tests — pulls from every
 // test (matchesOptions recognizes the "(All Tests)" meta-token).

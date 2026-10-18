@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2001,
+  "name": "Geometry Test",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2001/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A circle of radius 3 crosses the center of a square of side length 2. Find the positive difference between the areas of the nonoverlapping portions of the figures.</p>",
+      "solutions": "<p>Call the area of the square \\(s\\), the area of the circle \\(c\\), and the area of the overlapping portion \\(x\\). The area of the circle not overlapped by the square is \\(c - x\\) and the area of the square not overlapped by the circle is \\(s - x\\), so the difference between these two is \\((c - x) - (s - x) = c - s = \\boxed{9\\pi^2 - 4}\\).</p>",
+      "answer": "9\\pi^2 - 4"
+    },
+    "2": {
+      "problem": "<p>Call three sides of an opaque cube adjacent if someone can see them all at once. Draw a plane through the centers of each triple of adjacent sides of a cube with edge length 1. Find the volume of the closed figure bounded by the resulting planes.</p>",
+      "solutions": "<p>The volume of the figure is half the volume of the cube (which can be seen by cutting the cube into 8 equal cubes and realizing that the planes cut each of these cubes in half), namely \\(\\boxed{\\frac{1}{2}}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "3": {
+      "problem": "<p>Square \\(ABCD\\) is drawn. Isosceles Triangle \\(CDE\\) is drawn with \\(E\\) a right angle. Square \\(DEFG\\) is drawn. Isosceles triangle \\(FGH\\) is drawn with \\(H\\) a right angle. This process is repeated infinitely so that no two figures overlap each other. If square \\(ABCD\\) has area 1, compute the area of the entire figure.</p>",
+      "solutions": "<p>Let the area of the \\(n\\)th square drawn be \\(S_n\\) and the area of the \\(n\\)th triangle be \\(T_n\\). Since the hypotenuse of the \\(n\\)th triangle is of length \\(\\sqrt{S_n}\\), its legs are of length \\(l = \\sqrt{\\frac{S_n}{2}}\\), so \\(S_{n+1} = l^2 = \\frac{S_n}{2}\\) and \\(T_n = \\frac{l^2}{2} = \\frac{S_n}{4}\\). Using the recursion relations, \\(S_n = \\frac{1}{2^{n-1}}\\) and \\(T_n = \\frac{1}{2^{n+1}}\\), so \\(S_n + T_n = \\frac{1}{2^{n-1}} + \\frac{1}{2^{n+1}} = \\left(\\frac{1}{2} + 2\\right)\\frac{1}{2^n} = \\frac{5}{2}\\frac{1}{2^n}\\). Thus the total area of the figure is \\[\\sum_{n=1}^{\\infty} S_n + T_n = \\frac{5}{2}\\sum_{n=1}^{\\infty} \\frac{1}{2^n} = \\boxed{\\frac{5}{2}}.\\]</p>",
+      "answer": "\\frac{5}{2}"
+    },
+    "4": {
+      "problem": "<p>A circle has two parallel chords of length \\(x\\) that are \\(x\\) units apart. If the part of the circle included between the chords has area \\(2 + \\pi\\), find \\(x\\).</p>",
+      "solutions": "<p>Let \\(C\\) be the area of the circle, \\(S\\) be the area of the square two of whose edges are the chords, and \\(A\\) be the area of the part of the circle included between the chords. The radius of the circle is \\(\\frac{\\sqrt{2}}{2}x\\), so \\(C = \\frac{\\pi}{2}x^2\\), and \\(S = x^2\\). Then the area \\(A\\) is the area of the square plus one half of the difference between the areas of the circle and square: \\(A = \\frac{C - S}{2} + S = \\frac{C + S}{2} = \\frac{1 + \\frac{\\pi}{2}}{2}x^2\\), so \\(x = \\sqrt{\\frac{2A}{1 + \\frac{\\pi}{2}}} = \\boxed{2}\\).</p>",
+      "answer": "2"
+    },
+    "5": {
+      "problem": "<p>Find the volume of the tetrahedron with vertices \\((5, 8, 10)\\), \\((10, 10, 17)\\), \\((4, 45, 46)\\), \\((2, 5, 4)\\).</p>",
+      "solutions": "<p>Each vertex \\((x, y, z)\\) obeys \\(x + y = z + 3\\), so all the vertices are coplanar and the volume of the tetrahedron is \\(\\boxed{0}\\).</p>",
+      "answer": "0"
+    },
+    "6": {
+      "problem": "<p>A point on a circle inscribed in a square is 1 and 2 units from the two closest sides of the square. Find the area of the square.</p>",
+      "solutions": "<p>Call the point in question \\(A\\), the center of the circle \\(O\\), and its radius \\(r\\). Consider a right triangle \\(BOA\\) with hypotenuse \\(OA\\): \\(OA\\) has length \\(r\\), and \\(BO\\) and \\(BA\\) have lengths \\(r - 1\\) and \\(r - 2\\). By the Pythagorean theorem, \\((r - 1)^2 + (r - 2)^2 = r^2 \\Rightarrow r^2 - 6r + 5 = 0 \\Rightarrow r = 5\\) since \\(r &gt; 4\\). The area of the square is \\((2r)^2 = \\boxed{100}\\).</p>",
+      "answer": "100"
+    },
+    "7": {
+      "problem": "<p>Equilateral triangle \\(ABC\\) with side length 1 is drawn. A square is drawn such that its vertex at \\(A\\) is opposite to its vertex at the midpoint of \\(BC\\). Find the area enclosed within the intersection of the insides of the triangle and square. Hint: \\(\\sin 75 = \\frac{\\sqrt{2}(\\sqrt{3}+1)}{4}\\).</p>",
+      "solutions": "<p>Let \\(D\\) be the midpoint of \\(BC\\), \\(F \\neq A\\) be the point of intersection of the square and triangle lying on \\(AC\\), \\(b\\) be the length of \\(FC\\), \\(x\\) be the side length of the triangle, and \\(y\\) be the length of \\(AD\\). By the law of sines on triangle \\(CDF\\), we have \\(\\frac{2\\sin 75}{x} = \\frac{\\sin 45}{b}\\), so \\(b = \\frac{x \\sin 45}{2 \\sin 75} = \\frac{\\sqrt{2}x}{4\\sin 75}\\). The area of the desired figure can easily be seen to be \\(\\frac{1}{2}(x - b)y\\) since it can be seen as two triangles of width \\(y\\) and height \\(\\frac{x-b}{2}\\). This reduces to \\(\\frac{1}{2}\\left(1 - \\frac{\\sqrt{2}}{4\\sin 75}\\right)xy\\). Then by the Pythagorean theorem on triangle \\(ABD\\), \\(x^2 = \\left(\\frac{x}{2}\\right)^2 + y^2\\), so \\(y = \\frac{\\sqrt{3}}{2}x\\), and the area becomes \\(\\frac{\\sqrt{3}}{4}\\left(1 - \\frac{\\sqrt{2}}{4\\sin 75}\\right)x^2 = \\frac{\\sqrt{3}}{4}\\left(1 - \\frac{\\sqrt{2}}{4\\sin 75}\\right) = \\boxed{\\frac{3}{4(\\sqrt{3}+1)}}\\).</p>",
+      "answer": "\\frac{3}{4(\\sqrt{3}+1)}"
+    },
+    "8": {
+      "problem": "<p>Point \\(D\\) is drawn on side \\(BC\\) of equilateral triangle \\(ABC\\), and \\(AD\\) is extended past \\(D\\) to \\(E\\) such that angles \\(EAC\\) and \\(EBC\\) are equal. If \\(BE = 5\\) and \\(CE = 12\\), determine the length of \\(AE\\).</p>",
+      "solutions": "<p>By construction, \\(ABEC\\) is a cyclic quadrilateral. Ptolemy’s theorem says that for cyclic quadrilaterals, the sum of the products of the lengths of the opposite sides equals the product of the lengths of the diagonals. This yields \\((BC)(AE) = (BA)(CE) + (BE)(AC)\\). Since \\(ABC\\) is equilateral, \\(BC = AC = AB\\), so dividing out by this common value we get \\(AE = CE + BE = \\boxed{17}\\).</p>",
+      "answer": "17"
+    },
+    "9": {
+      "problem": "<p>Parallelogram \\(AECF\\) is inscribed in square \\(ABCD\\). It is reflected across diagonal \\(AC\\) to form another parallelogram \\(AE'CF'\\). The region common to both parallelograms has area \\(m\\) and perimeter \\(n\\). Compute the value of \\(\\frac{m}{n^2}\\) if \\(AF : AD = 1 : 4\\).</p>",
+      "solutions": "<p>By symmetry, the region is a rhombus, \\(AXCY\\), centered at the center of the square, \\(O\\). Consider isoceles right triangle \\(ACD\\). By the technique of mass points, we find that \\(DO : YO = 7 : 1\\). Therefore, the rhombus is composed of four triangles, whose sides are in the ratio \\(1 : 7 : 5\\sqrt{2}\\). The perimeter of the rhombus is \\(20\\sqrt{2}N\\), and the area is \\(14N^2\\). The required ratio is thus \\(\\boxed{\\frac{7}{400}}\\).</p>",
+      "answer": "\\frac{7}{400}"
+    },
+    "10": {
+      "problem": "<p>\\(A\\) is the center of a semicircle, with radius \\(AD\\) lying on the base. \\(B\\) lies on the base between \\(A\\) and \\(D\\), and \\(E\\) is on the circular portion of the semicircle such that \\(EBA\\) is a right angle. Extend \\(EA\\) through \\(A\\) to \\(C\\), and put \\(F\\) on line \\(CD\\) such that \\(EBF\\) is a line. Now \\(EA = 1\\), \\(AC = \\sqrt{2}\\), \\(BF = \\frac{2-\\sqrt{2}}{4}\\), \\(CF = \\frac{2\\sqrt{5}+\\sqrt{10}}{4}\\), and \\(DF = \\frac{2\\sqrt{5}-\\sqrt{10}}{4}\\). Find \\(DE\\).</p>",
+      "solutions": "<p>Let \\(\\theta = \\angle AED\\) and \\(x = DE\\). By the law of cosines on triangle \\(ADE\\), we have \\(1 = 1 + x^2 - 2x\\cos\\theta \\Rightarrow 2x\\cos\\theta = x^2\\). Then by the law of cosines on triangle \\(CDE\\) (note that \\(CD = \\sqrt{5}\\)), we have \\(5 = (1+\\sqrt{2})^2 + x^2 - 2(1+\\sqrt{2})x\\cos\\theta = (1+\\sqrt{2})^2 + x^2 - (1+\\sqrt{2})x^2\\). Solving the quadratic equation gives \\(x = \\boxed{\\sqrt{2-\\sqrt{2}}}\\).</p>",
+      "answer": "\\sqrt{2-\\sqrt{2}}"
+    }
+  }
+}

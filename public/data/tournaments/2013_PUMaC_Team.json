@@ -1,0 +1,78 @@
+{
+  "test": "PUMaC Team",
+  "year": 2013,
+  "name": "Team Round",
+  "url": "https://pumac.princeton.edu/s/PUMaC2013_Team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A token is placed in the leftmost square in a strip of four squares. In each move, you are allowed to move the token left or right along the strip by sliding it a single square, provided that the token stays on the strip. In how many ways can the token be moved so that after exactly 15 moves, it is in the rightmost square of the strip?</p>",
+      "solutions": "<p>Let \\(a_n\\) be the number of ways to move the token to the third square in \\(n\\) steps, where \\(n \\in \\mathbb{N}\\). By induction, \\(a_{2k+1} = F_{2k}\\) for \\(k \\ge 1\\), where \\(F_n\\) is the Fibonacci sequence. So \\(a_{15} = F_{14} = 377\\).</p>",
+      "answer": "377"
+    },
+    "2": {
+      "problem": "<p>(Following question 1) Now instead consider an infinite strip of squares, labeled with the integers \\(0, 1, 2, \\ldots\\) in that order. You start at the square labeled \\(0\\). You want to end up at the square labeled \\(3\\). In how many ways can this be done in exactly \\(15\\) moves?</p><p><i>Note: Problem 1 (the previous problem) reads:</i></p><blockquote><p>A token is placed in the leftmost square in a strip of four squares. In each move, you are allowed to move the token left or right along the strip by sliding it a single square, provided that the token stays on the strip. In how many ways can the token be moved so that after exactly 15 moves, it is in the rightmost square of the strip?</p></blockquote>",
+      "solutions": "<p>One can directly observe that the question is equivalent to the following:</p><p>Starting from \\((0,0)\\) in the cartesian plane, one can move a unit up and right; in how many ways can we go to end up in \\((9,6)\\), without crossing the line \\(y = x\\)?</p><p>This rephrasing rings the bell: Catalan. We can carefully construct an identical argument.</p><p>The number of ways to get from \\((0,0)\\) to \\((9,6)\\) is \\(\\binom{15}{9} = 5005\\).</p><p>For the paths that cross \\(y = x\\), consider the first moment they go “above” \\(y = x\\). They should be then on the line \\(y = x+1\\). Flip the rest of the path with respect to \\(y = x+1\\) \\(\\to\\) we have a path from \\((0,0)\\) to \\((5,10)\\). One can see that this mapping is bijective because an inverse map is well-defined: all paths from \\((0,0)\\) to \\((5,10)\\) cross \\(y = x+1\\) and we can flip the path from the point it first meets \\(y = x+1\\).</p><p>Thus, (the number of paths that go above \\(y = x\\)) = (number of paths from \\((0,0)\\) to \\((5,10)\\)) = \\(\\binom{15}{5} = 3003\\).</p><p>Thus the answer is \\(5005 - 3003 = 2002\\).</p>",
+      "answer": "2002"
+    },
+    "3": {
+      "problem": "<p>The area of a circle centered at the origin, which is inscribed in the parabola \\(y = x^2 - 25\\), can be expressed as \\(\\frac{a}{b}\\pi\\), where \\(a\\) and \\(b\\) are coprime positive integers. What is the value of \\(a + b\\)?</p>",
+      "solutions": "<p>Let the equation of the circle be \\(x^2 + y^2 = r^2\\). The discriminant of the quadratic equation \\(y = (r^2 - y^2) - 25\\) is \\(0\\). This gives \\(r^2 = \\frac{99}{4}\\) so that \\(a + b = 103\\).</p>",
+      "answer": "103"
+    },
+    "4": {
+      "problem": "<p>Find the sum of all positive integers \\(m\\) such that \\(2^m\\) can be expressed as a sum of four factorials (of positive integers).</p><p>Note: The factorials do not have to be distinct. For example, \\(2^4 = 16\\) counts, because it equals \\(3! + 3! + 2! + 2!\\).</p>",
+      "solutions": "<p>Clearly, \\(m \\ge 2\\). WLOG assume \\(a \\le b \\le c \\le d\\).</p><p>If \\(a = 1\\), then \\(4 \\mid 2^m\\) suggests \\(b = 1\\) and \\(c \\le 3\\). If \\((a,b,c) = (1,1,1)\\), we must have \\(d = 1\\), corresponding to \\(m = 2\\). If \\((a,b,c) = (1,1,2)\\), taking modulo \\(8\\) yields \\(d \\le 3\\), which has no solution. If \\((a,b,c) = (1,1,6)\\), taking modulo \\(16\\) yields \\(d \\le 5\\), corresponding to \\((a,b,c,d) = (1,1,6,24)\\) or \\((1,1,6,120)\\), corresponding to \\(m = 5\\) or \\(m = 7\\).</p><p>Similarly, if \\(a = 2\\), then \\(4 \\mid 2^m\\) suggests \\(b = 2, 3\\). If \\((a,b) = (2,2)\\), we have the solutions \\((a,b,c,d) = (2,2,2,2)\\) or \\((2,2,6,6)\\), corresponding to \\(m = 3\\) or \\(m = 4\\). If \\((a,b) = (2,3)\\), then \\(c = 3,4,5\\), each of which yields no solution.</p><p>If \\(a \\ge 3\\), then \\(3 \\mid a! + b! + c! + d! = 2^m\\), which has no solution.</p><p>So the answer is \\(\\sum m = 2 + 3 + 4 + 5 + 7 = 21\\).</p>",
+      "answer": "21"
+    },
+    "5": {
+      "problem": "<p>A palindrome number is a positive integer that reads the same forward and backward. For example, \\(1221\\) and \\(8\\) are palindrome numbers whereas \\(69\\) and \\(157\\) are not. \\(A\\) and \\(B\\) are 4-digit palindrome numbers. \\(C\\) is a 3-digit palindrome number. Given that \\(A - B = C\\), what is the value of \\(C\\)?</p>",
+      "solutions": "<p>\\(A\\) and \\(B\\) must be multiples of \\(11\\), so is \\(C\\) from \\(A - B = C\\). If \\(A\\) and \\(B\\) have the same unit digit, then \\(C\\) has unit digit \\(0\\). This contradicts that \\(C\\) is a 3-digit palindrome number. As the difference of \\(A\\) and \\(B\\) is a 3-digit number, their thousands digits (and hence unit digits) can differ by at most \\(1\\). So the unit digit of \\(C\\) can only be \\(1\\), and that \\(C = 121\\). For example, we can have \\(2002 - 1881 = 121\\).</p>",
+      "answer": "121"
+    },
+    "6": {
+      "problem": "<p>How many positive integers \\(n\\) less than \\(1000\\) have the property that the number of positive integers less than \\(n\\) which are coprime to \\(n\\) is exactly \\(\\frac{n}{3}\\)?</p>",
+      "solutions": "<p>From \\[\\prod_{p \\mid n} \\frac{p-1}{p} = \\frac{1}{3},\\] one of the \\(p\\)’s must be \\(3\\). Similarly, from \\[\\prod_{p \\mid n,\\, p \\ne 3} \\frac{p-1}{p} = \\frac{1}{2},\\] one of the remaining \\(p\\)’s must be \\(2\\), and we must have \\(n = 2^a 3^b\\) for some \\(a, b \\ge 1\\) with \\(n &lt; 1000\\). The solutions are \\(n = 6, 12, 24, 48, 96, 192, 384, 768, 18, 36, 72, 144, 288, 576, 54, 108, 216, 432, 864, 162, 324, 648, 486, 972\\). There are \\(24\\) of them.</p>",
+      "answer": "24"
+    },
+    "7": {
+      "problem": "<p>Find the total number of triples of integers \\((x, y, n)\\) satisfying the equation \\(\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{n^2}\\), where \\(n\\) is either \\(2012\\) or \\(2013\\).</p>",
+      "solutions": "<p>For \\(n\\), the equation is the same as \\((x - n^2)(y - n^2) = n^4\\). For each particular \\(n\\), there are \\(2d(n^4) - 1\\) solution pairs \\((x, y)\\) in \\(\\mathbb{N}\\), where \\(d(m)\\) is the number of positive divisors of \\(m \\in \\mathbb{N}\\) (since \\((-n^2) \\cdot (-n^2) = n^4\\) would lead to \\(x = y = 0\\), which is rejected). The answer follows from calculating \\(d(2012^4)\\) and \\(d(2013^4)\\).</p>",
+      "answer": "338"
+    },
+    "8": {
+      "problem": "<p>Let \\(k\\) be a positive integer with the following property: For every subset \\(A\\) of \\(\\{1, 2, \\ldots, 25\\}\\) with \\(|A| = k\\), we can find distinct elements \\(x\\) and \\(y\\) of \\(A\\) such that \\(\\frac{2}{3} \\le \\frac{x}{y} \\le \\frac{3}{2}\\). Find the smallest possible value of \\(k\\).</p>",
+      "solutions": "<p>By considering \\(\\{1, 2, 4, 8, 16, 25\\}\\), we see that \\(6\\) numbers don’t necessarily suffice. To prove that \\(k = 7\\) works, consider the partition \\(\\{1\\}, \\{2,3\\}, \\{4,5,6\\}, \\{7,8,9,10\\}, \\{11,12,\\ldots,16\\}, \\{17,18,\\ldots,25\\}\\). If \\(7\\) numbers are picked, two of them, \\(x\\) and \\(y\\), will be in the same set. Then \\(\\frac{2}{3} \\le \\frac{x}{y} \\le \\frac{3}{2}\\).</p>",
+      "answer": "7"
+    },
+    "9": {
+      "problem": "<p>If two distinct integers from \\(1\\) to \\(50\\) inclusive are chosen at random, what is the expected value of their product?</p><p>Note: The expectation is defined as the sum of the products of probability and value, i.e., the expected value of a coin flip that gives you $10 if head and $5 if tail is \\(\\frac{1}{2} \\times \\textdollar 10 + \\frac{1}{2} \\times \\textdollar 5 = \\textdollar 7.5\\).</p>",
+      "solutions": "<p>\\[\\sum_{i=1}^{49}\\sum_{j=i+1}^{50} ij = \\sum_{i=1}^{49} \\frac{i(i+51)(50-i)}{2} = \\sum_{i=1}^{49}\\left(-\\frac{1}{2}i^3 - \\frac{1}{2}i^2 + 1275i\\right) = -\\frac{(49)^2(50)^2}{8} - \\frac{(49)(50)(99)}{12} + \\frac{(1275)(49)(50)}{2} = (49)(50)(323).\\]</p><p>Hence, the expected value is \\(\\frac{(49)(50)(323)}{\\binom{50}{2}} = 646\\).</p>",
+      "answer": "646"
+    },
+    "10": {
+      "problem": "<p>On a plane, there are 7 seats. Each is assigned to a passenger. The passengers walk on the plane one at a time. The first passenger sits in the wrong seat (someone else’s). For all the following people, they either sit in their assigned seat, or if it is full, randomly pick another. You are the last person to board the plane. What is the probability that you sit in your own seat?</p>",
+      "solutions": "<p>Label the correct seats for passengers \\(1, 2, \\cdots, 7\\) as \\(S_1, S_2, \\cdots, S_7\\).</p><p>If \\(1\\) takes \\(S_7\\), then \\(P = 0\\).</p><p>If \\(1\\) takes \\(S_6\\), then \\(2, 3, 4, 5\\) take the correct seats, so that \\(P = \\frac{1}{2}\\).</p><p>If \\(1\\) takes \\(S_5\\), then \\(2, 3, 4\\) take the correct seats. If \\(5\\) takes \\(S_1\\), then everything is fine. If \\(5\\) takes \\(S_6\\), then there is still a chance of \\(\\frac{1}{2}\\) for \\(7\\) to take \\(S_7\\). This yields \\(P = \\frac{1}{3} + \\frac{1}{3}\\cdot\\frac{1}{2} = \\frac{1}{2}\\).</p><p>Similarly, one can show that \\(P = \\frac{1}{2}\\) for any choice of \\(1\\) (except taking \\(S_7\\)) by induction. Then the answer is \\(P = \\frac{5}{6}\\cdot\\frac{1}{2} = \\frac{5}{12}\\).</p>",
+      "answer": "\\frac{5}{12}"
+    },
+    "11": {
+      "problem": "<p>If two points are selected at random on a fixed circle and the chord between the two points is drawn, what is the probability that its length exceeds the radius of the circle?</p>",
+      "solutions": "<p>Suppose the centre of the circle is \\(O\\) and one endpoint \\(A\\) of the chord is fixed. The other endpoint \\(B\\) of the chord must satisfy \\(\\angle AOB &gt; 60^\\circ\\). This means there is a \\(120^\\circ\\) sector \\(\\angle B'OB''\\) where the other point cannot be. Hence the answer is \\(\\frac{240}{360} = \\frac{2}{3}\\).</p>",
+      "answer": "\\frac{2}{3}"
+    },
+    "12": {
+      "problem": "<p>Let \\(D\\) be a point on the side \\(BC\\) of \\(\\triangle ABC\\). If \\(AB = 8\\), \\(AC = 7\\), \\(BD = 2\\) and \\(CD = 1\\), find \\(AD\\).</p>",
+      "solutions": "<p>By applying the cosine law to \\(\\triangle ABD\\) and \\(\\triangle ACD\\) with respect to the angles \\(\\angle ADB\\) and \\(\\angle ADC\\) respectively, and canceling (since \\(\\cos \\angle ADB = \\cos \\angle ADC\\)), we get \\(AD = 2\\sqrt{13}\\).</p>",
+      "answer": "2\\sqrt{13}"
+    },
+    "13": {
+      "problem": "<p>The equation \\(x^5 - 2x^4 - 1 = 0\\) has five complex roots \\(r_1, r_2, r_3, r_4, r_5\\). Find the value of \\[\\frac{1}{r_1^8} + \\frac{1}{r_2^8} + \\frac{1}{r_3^8} + \\frac{1}{r_4^8} + \\frac{1}{r_5^8}.\\]</p>",
+      "solutions": "<p>By Vieta’s formulae, we know \\[\\sum r_i = 2\\] and \\[\\sum r_i r_j = 0.\\] Rearranging the original equation, we get \\[x^{-8} = (x-2)^2\\] and hence \\[\\begin{aligned}\n\\sum r_i^{-8} &amp;= \\sum (r_i - 2)^2 \\\\\n&amp;= \\sum r_i^2 - 4\\sum r_i + 20 \\\\\n&amp;= \\left(\\sum r_i\\right)^2 - \\sum r_i r_j - 4\\sum r_i + 20 \\\\\n&amp;= 16.\n\\end{aligned}\\]</p>",
+      "answer": "16"
+    },
+    "14": {
+      "problem": "<p>Shuffle a deck of \\(71\\) playing cards which contains \\(6\\) aces. Then turn up cards from the top until you see an ace. What is the average number of cards required to be turned up to find the first ace?</p>",
+      "solutions": "<p>Let \\(X_i\\) be the random variable for which \\(X_i = 1\\) if no ace is drawn before the \\(i\\)-th step, and \\(X_i = 0\\) if not. Clearly, \\(E[X_i] = \\frac{\\binom{65}{i-1}}{\\binom{71}{i-1}}\\). Then \\[\\begin{aligned}\nE[X_1 + \\cdots + X_{71}] &amp;= E[X_1] + \\cdots + E[X_{71}] \\\\\n&amp;= \\sum_{i=1}^{71} \\frac{\\binom{65}{i-1}}{\\binom{71}{i-1}} \\\\\n&amp;= \\sum_{i=1}^{71} \\frac{(72-i)\\cdots(67-i)}{71 \\cdots 66} \\\\\n&amp;= \\frac{6!}{71 \\cdots 66} \\sum_{i=1}^{71} \\binom{72-i}{6} \\\\\n&amp;= \\frac{6!}{71 \\cdots 66} \\binom{72}{7} \\\\\n&amp;= \\frac{72}{7}.\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{72}{7}"
+    }
+  }
+}

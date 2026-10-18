@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry A",
+  "year": 2014,
+  "name": "Geometry A",
+  "url": "https://pumac.princeton.edu/s/PUMaC2014_GeometryA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(x = \\frac{p}{q}\\) for \\(p, q\\) coprime. Find \\(p+q\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2014_PUMaC_Geometry_A/1-fig1.png\" width=\"281\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(S_{\\triangle ADF} = y\\) and \\(S_{\\triangle AEF} = z\\). Hence \\(x = y+z\\). We see that \\(\\frac{z}{2} = \\frac{\\triangle AEF}{\\triangle CEF} = \\frac{\\triangle AEB}{\\triangle CEB} = \\frac{y+z+3}{8}\\) and \\(\\frac{y}{3} = \\frac{\\triangle ADF}{\\triangle BDF} = \\frac{\\triangle ADC}{\\triangle BDC} = \\frac{y+z+2}{9}\\). Solving, we see that \\(z = \\frac{9}{5}\\) and \\(y = \\frac{8}{5}\\). Thus \\(x = \\frac{17}{5}\\) and hence \\(p+q = \\boxed{22}\\).</p>",
+      "answer": "22"
+    },
+    "2": {
+      "problem": "<p>Triangle \\(ABC\\) has lengths \\(AB = 20, AC = 14, BC = 22\\). The median from \\(B\\) intersects \\(AC\\) at \\(M\\) and the angle bisector from \\(C\\) intersects \\(AB\\) at \\(N\\) and the median from \\(B\\) at \\(P\\). Let \\(\\frac{p}{q} = \\frac{[AMPN]}{[ABC]}\\) for positive integers \\(p, q\\) coprime. Note that \\([ABC]\\) denotes the area of triangle \\(ABC\\). Find \\(p+q\\).</p>",
+      "solutions": "<p>We have that \\(\\frac{[BMC]}{[ABC]} = \\frac{MC}{AC} = \\frac{1}{2}\\) since \\(BM\\) is a median, and \\(\\frac{[BNC]}{[ABC]} = \\frac{BN}{AB} = \\frac{11}{18}\\) from the angle bisector theorem. Now, we find the area of \\(BPC\\).</p><p>We see \\(\\frac{[BPC]}{[BMC]} = \\frac{BP}{BM}\\). Using mass points, \\(A\\) is assigned a mass of \\(11\\) meaning that the mass at \\(M\\) is \\(22\\) and the mass at \\(B\\) is \\(7\\). Therefore, \\(\\frac{BP}{BM} = \\frac{22}{29}\\). So \\(\\frac{[BNPMC]}{[ABC]} = \\frac{1}{2}+\\frac{11}{18}-\\frac{22}{29}\\cdot\\frac{1}{2} = \\frac{191}{261}\\).</p><p>Then, \\(\\frac{[AMPN]}{[ABC]} = 1 - \\frac{191}{261} = \\frac{70}{261}\\). Hence \\(p+q = \\boxed{331}\\).</p>",
+      "answer": "331"
+    },
+    "3": {
+      "problem": "<p>Let \\(O\\) be the circumcenter of triangle \\(ABC\\) with circumradius \\(15\\). Let \\(G\\) be the centroid of \\(ABC\\) and let \\(M\\) be the midpoint of \\(BC\\). If \\(BC = 18\\) and \\(\\angle MOA = 150^\\circ\\), find the area of \\(OMG\\).</p>",
+      "solutions": "<p>Since \\(O\\) is the circumcenter, we have that \\(OM\\) is perpendicular to \\(BC\\) and so \\(OMB\\) forms an equilateral triangle. Since \\(OB = 15, BM = 9 \\Rightarrow OM + 12\\). Then we have that \\(AO = 15 \\Rightarrow [AOM] = \\frac{1}{2}(12)(15)\\sin 150 = 45\\). Then \\(G\\) splits \\(AM\\) into the ratio \\(2:1\\) and so \\([OMG] = \\frac{GM}{AM}[AOM] = \\frac{1}{3}\\cdot 45 = \\boxed{15}\\).</p>",
+      "answer": "15"
+    },
+    "4": {
+      "problem": "<p>Consider the cyclic quadrilateral with sides \\(1, 4, 8, 7\\) in that order. What is its circumdiameter? Let the answer be of the form \\(a\\sqrt{b}+c\\), for \\(b\\) square free. Find \\(a+b+c\\).</p>",
+      "solutions": "<p>Let the quadrilaterial be denoted by \\(ABCD\\) with \\(AB = 1, BC = 4, CD = 8, AD = 7\\). We note that if we reflect point \\(D\\) across the perpendicular bisector of \\(AC\\) to \\(D'\\), we get the same circle. But then, we have \\(AD' = 8, CD' = 7\\) and so \\(AB^2 + AD'^2 = BC^2 + D'C^2 = 65\\) which is the circumdiameter squared. Hence the circumdiameter is \\(\\sqrt{65}\\). Thus \\(a+b+c = \\boxed{66}\\).</p>",
+      "answer": "66"
+    },
+    "5": {
+      "problem": "<p>There is a point \\(D\\) on side \\(AC\\) of acute triangle \\(\\triangle ABC\\). Let \\(AM\\) be the median drawn from \\(A\\) (so \\(M\\) is on \\(BC\\)) and \\(CH\\) be the altitude drawn from \\(C\\) (so \\(H\\) is on \\(AB\\)). Let \\(I\\) be the intersection of \\(AM\\) and \\(CH\\), and let \\(K\\) be the intersection of \\(AM\\) and line segment \\(BD\\). We know that \\(AK = 8, BK = 8\\), and \\(MK = 6\\). Find the length of \\(AI\\).</p>",
+      "solutions": "<p>The line parallel to \\(AM\\) and passing through \\(C\\) meets line \\(BD\\) at some point (call this point \\(E\\)). Since \\(M\\) is the midpoint of \\(BC\\), \\(K\\) is the midpoint of \\(EB\\). Let \\(H'\\) be the foot of perpendicular from \\(K\\) onto \\(AB\\). Since \\(AK = 8 = KB\\), we see that \\(H'\\) bisect \\(AB\\). Hence \\(AE \\parallel KH' \\parallel CH\\). Hence \\(AICE\\) is a parallelogram. Thus \\(AI = CE = 2KM = \\boxed{12}\\).</p>",
+      "answer": "12"
+    },
+    "6": {
+      "problem": "<p>\\(\\triangle ABC\\) has side lengths \\(AB = 15, BC = 34\\), and \\(CA = 35\\). Let the circumcenter of \\(ABC\\) be \\(O\\). Let \\(D\\) be the foot of perpendicular from \\(C\\) to \\(AB\\). Let \\(R\\) be the foot of perpendicular from \\(D\\) to \\(AC\\), and let \\(W\\) be the perpendicular foot from \\(D\\) to \\(BC\\). Find the area of quadrilateral \\(CROW\\).</p>",
+      "solutions": "<p>By Heron, (area of \\(\\triangle ABC\\)) \\(= 252\\). Let \\(P\\) be the perpendicular foot from \\(O\\) to \\(AC\\), and let \\(Q\\) be the perpendicular foot from \\(O\\) to \\(BC\\). Then, it’s clear that \\(\\triangle DOP = \\triangle WOP\\) and \\(\\triangle DOQ = \\triangle WOQ\\). From this, \\((\\text{area of } CROW) = (\\text{area of } DPCQ) = \\frac{\\triangle ABC}{2} = \\boxed{126}\\).</p>",
+      "answer": "126"
+    },
+    "7": {
+      "problem": "<p>Let \\(O\\) be the center of a circle of radius \\(26\\), and let \\(A, B\\) be two distinct point on the circle, with \\(M\\) being the midpoint of \\(AB\\). Consider point \\(C\\) for which \\(CO = 34\\) and \\(\\angle COM = 15^\\circ\\). Let \\(N\\) be the midpoint of \\(CO\\). Suppose that \\(\\angle ACB = 90^\\circ\\). Find \\(MN\\).</p>",
+      "solutions": "<p>We apply cosine rule to \\(\\triangle MNO\\) and \\(\\triangle MNC\\), to get \\[OM^2 = ON^2 + MN^2 - 2MN\\cdot ON\\cos\\angle MNO = 17^2 + MN^2 - 34MN\\cos\\angle MNO\\] \\[CM^2 = NC^2 + MN^2 + 2MN\\cdot NC\\cos\\angle MNO = 17^2 + MN^2 + 34MN\\cos\\angle MNO\\] Hence we have \\(OM^2 + CM^2 = 2\\times 17^2 + 2\\times MN^2\\). Since \\(CM = AM\\), hence \\(OM^2 + CM^2 = OP^2 = 26^2\\). Hence \\(MN = \\sqrt{13\\times 26 - 17^2} = \\boxed{7}\\).</p>",
+      "answer": "7"
+    },
+    "8": {
+      "problem": "<p>\\(ABCD\\) is a cyclic quadrilateral with circumcenter \\(O\\) and circumradius \\(7\\). \\(AB\\) intersects \\(CD\\) at \\(E\\), \\(DA\\) intersects \\(CB\\) at \\(F\\). \\(OE = 13, OF = 14\\). Let \\(\\cos\\angle FOE = \\frac{p}{q}\\), with \\(p, q\\) coprime. Find \\(p+q\\).</p>",
+      "solutions": "<p>Since we’re given \\(EO = 13\\) and the radius is \\(7\\), by power of a point, the power of \\(E\\) with respect to \\(\\odot O\\) is \\(P(E) = (13-7)(13+7) = 120\\). Similarly, the power of point \\(F\\) with respect to \\(\\odot O\\) is \\(P(F) = (14-7)(14+7) = 147\\).</p><p>Construct point \\(X\\) on \\(\\overline{EF}\\) such that \\(\\angle CXE = \\angle CDF\\). Note that given \\(ABCD\\) is cyclic, this implies \\(\\angle CBA = 180 - \\angle ADC = \\angle CDF\\). Thus note that \\[\\angle EBC + \\angle CXE = (180 - \\angle CBA) + \\angle CDF = 180.\\]</p><p>Therefore quadrilateral \\(BEXC\\) is cyclic; and similarly, quadrilateral \\(CXFD\\) is cyclic. Note that the circle about \\(BEXC\\) and \\(\\odot O\\) have a common chord \\(BC\\). Thus the power of point \\(F\\) with respect to both circles is \\(FC\\cdot FB\\), and so the power of \\(F\\) with respect to the circle about \\(BEXC\\) is \\(P(F) = 147\\). Similarly, the power of \\(E\\) with respect to the circle about \\(CXFD\\) is \\(P(E) = 120\\).</p><p>Therefore, by power of a point, \\((EX+XF)(XF) = 147 = P(F)\\) and \\((EX)(EX+XF) = 120 = P(E)\\). Then by adding, \\[267 = 120+147 = (EX+XF)(EX)+(EX+XF)(XF) = (EX+XF)^2\\] \\[\\implies EF = \\sqrt{267}.\\]</p><p>Now by Law of Cosine on \\(\\triangle EOF\\), \\[EF^2 = EO^2 + OF^2 - 2\\cdot EO\\cdot OF\\cos(\\angle EOF)\\] \\[267 = 169 + 196 - 2\\cdot 13\\cdot 14\\cos(\\angle EOF)\\] \\[\\implies \\cos(\\angle EOF) = \\frac{-98}{-2\\cdot 13\\cdot 14} = \\frac{7}{26}.\\]</p><p>Hence \\(p+q = \\boxed{33}\\).</p>",
+      "answer": "33"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "test": "DMM Devil",
+  "year": 2006,
+  "name": "Devil Round",
+  "url": "https://dukemathmeet.org/2006/devil.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>The entrance fee the county fair is 64 cents. Unfortunately, you only have nickels and quarters so you cannot give them exact change. Furthermore, the attendent insists that he is only allowed to change in increments of six cents. What is the least number of coins you will have to pay?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>At the county fair, there is a carnival game set up with a mouse and six cups layed out in a circle. The mouse starts at position \\(A\\) and every ten seconds the mouse has equal probability of jumping one cup clockwise or counter-clockwise. After a minute if the mouse has returned to position \\(A\\), you win a giant chunk of cheese. What is the probability of winning the cheese?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>A clown stops you and poses a riddle. How many ways can you distribute 21 identical balls into 3 different boxes, with at least 4 balls in the first box and at least 1 ball in the second box?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Watch out for the pig. How many sets \\(S\\) of positive integers are there such that the product of all the elements of the set is 125970?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>A <i>good</i> word is a word consisting of two letters \\(A, B\\) such that there is never a letter \\(B\\) between any two \\(A\\)’s. Find the number of good words with length 8.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Evaluate \\(\\sqrt{2 - \\sqrt{2 + \\sqrt{2 - \\ldots}}}\\) without looking.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>There is nothing wrong with being odd. Of the first 2006 Fibonacci numbers (\\(F_1 = 1, F_2 = 1\\)), how many of them are even?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Let \\(f\\) be a function satisfying \\(f(x) + 2f(27 - x) = x\\). Find \\(f(11)\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Let \\(A, B, C\\) denote digits in decimal representation. Given that \\(A\\) is prime and \\(A - B = 4\\), find \\((A, B, C)\\) such that \\(\\overline{AAABBBC}\\) is a prime.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Given \\(\\frac{x^2+y^2}{x^2-y^2} + \\frac{x^2-y^2}{x^2+y^2} = k\\), find \\(\\frac{x^8+y^8}{x^8-y^8}\\) in terms of \\(k\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "11": {
+      "problem": "<p>Let \\(a_i \\in \\{-1, 0, 1\\}\\) for each \\(i = 1, 2, 3, \\ldots, 2007\\). Find the least possible value for \\(\\sum_{i=1}^{2006}\\sum_{j=i+1}^{2007} a_i a_j\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "12": {
+      "problem": "<p>Find all integer solutions \\(x\\) to \\(x^2 + 615 = 2^n\\) for any integer \\(n \\ge 1\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "13": {
+      "problem": "<p>Suppose a parabola \\(y = x^2 - ax - 1\\) intersects the coordinate axes at three points \\(A, B,\\) and \\(C\\). The circumcircle of the triangle \\(ABC\\) intersects the \\(y\\)-axis again at point \\(D = (0, t)\\). Find the value of \\(t\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

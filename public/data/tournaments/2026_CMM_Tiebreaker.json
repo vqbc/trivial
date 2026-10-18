@@ -1,0 +1,28 @@
+{
+  "test": "CMM Tiebreaker",
+  "year": 2026,
+  "name": "Tiebreaker Round",
+  "url": "https://www.caltechmathmeet.org/_files/ugd/006423_64e5f1a752d747d49796d5514ba20fa5.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Find the smallest positive integer \\(N\\) so that one can select 7 distinct positive divisors of \\(N\\), no two of which divide each other.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Two frogs, Vivian and Luke, start at \\((0, 0)\\) and jump to \\((3, 3)\\). Vivian can move either one unit right or one unit up on each move. Meanwhile, Luke can move one unit right, one unit up, or diagonally one unit right and up on each move. Each frog’s path is drawn out on the grid. Compute the probability that all of the closed polygons formed by their paths do NOT form a total area of 1 or greater.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>In triangle \\(\\triangle ABC\\), point \\(E\\) is on line \\(AC\\) and \\(F\\) is on line \\(AB\\), and points \\(E'\\) and \\(F'\\) are the reflections of \\(E\\) across the midpoint of \\(AC\\) and \\(F\\) across the midpoint of \\(AB\\). Suppose that segment \\(EF\\) and line \\(E'F'\\) intersect at point \\(D\\) on segment \\(BC\\). If \\(\\frac{DE}{DF} = \\frac{3}{5}\\) and \\(\\frac{EE'}{FF'} = \\frac{1}{3}\\), what is \\(\\frac{AE}{AF}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Alice and Bob play a game. They start with a number \\(N = 2^p3^q5^r7^s\\) for nonnegative integers \\(p, q, r, s\\), and take turns, with Alice going first, dividing the number \\(N\\) by an integer from 2 through 9 such that the quotient is a positive integer. The player who divides the number such that the quotient is 1 wins the game. Compute the smallest three-digit number \\(N\\) for which Bob will win the game.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

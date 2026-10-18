@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2012,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2012/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Vivek has three letters to send out. Unfortunately, he forgets which letter is which after sealing the envelopes and before putting on the addresses. He puts the addresses on at random sends out the letters anyways. What are the chances that none of the three recipients get their intended letter?</p>",
+      "solutions": "<p><i>Solution.</i> Vivek can send the letters to persons \\(A\\), \\(B\\), \\(C\\) in any permutation of \\(A\\), \\(B\\), \\(C\\). There are 6 such permutations: \\((A,B,C)\\), \\((A,C,B)\\), \\((B,A,C)\\), \\((B,C,A)\\), \\((C,A,B)\\), \\((C,B,A)\\). Of these, only the \\((B,C,A)\\) and \\((C,A,B)\\) permutations have none of the three recipients getting their intended letter, for a chance of \\(1/3\\).</p>",
+      "answer": "\\frac{1}{3}"
+    },
+    "2": {
+      "problem": "<p>David is a horrible bowler. Luckily, Logan and Christy let him use bumpers. The bowling lane is 2 meters wide, and David’s ball travels a total distance of 24 meters. How many times did David’s bowling ball hit the bumpers, if he threw it from the middle of the lane at a \\(60^\\circ\\) degree angle to the horizontal?</p>",
+      "solutions": "<p><i>Solution.</i> After 24 meters the ball will have traveled a total of \\(24\\cos(60^\\circ) = 12\\) meters horizontally. It will hit the bumpers at 1 meter horizontal, 3 meters horizontal, 5 meters horizontal, etc., 11 meters horizontal. Hence David hits the bumper 6 times.</p>",
+      "answer": "6"
+    },
+    "3": {
+      "problem": "<p>Find \\(\\gcd(212106, 106212)\\).</p>",
+      "solutions": "<p><i>Solution.</i> We know that \\(212106 = 106 \\cdot 2001\\) and \\(106212 = 106 \\cdot 1002\\). We can also calculate \\(\\gcd(2001, 1002) = \\gcd(2001, 3) = 3\\) by the Euclidean algorithm. (We may also factor \\(667 = 23 \\cdot 29\\) and \\(334 = 2 \\cdot 167\\) and notice this fact.) Hence \\(\\gcd(212106, 106212) = 318\\).</p>",
+      "answer": "318"
+    },
+    "4": {
+      "problem": "<p>Michael has two fair dice, one six-sided (with sides marked 1 through 6) and one eight-sided (with sides marked 1-8). Michael play a game with Alex: Alex calls out a number, and then Michael rolls the dice. If the sum of the dice is equal to Alex’s number, Michael gives Alex the amount of the sum. Otherwise Alex wins nothing. What number should Alex call to maximize his expected gain of money?</p>",
+      "solutions": "<p><i>Solution.</i> The sum of the dice must be between 2 and 14 inclusive. Alex’s maximum expected gain occurs somewhere between 8 and 14, as Michael has the same chance of rolling \\(k\\) (\\(2 \\le k \\le 8\\)) as of rolling \\(16-k\\), and Alex gains at least as much money in the latter case.</p><p>Hence we may make a table of each sum, the number of ways to get it, and 48 times the expected gain to find the maximum:</p><p>\\[\\begin{array}{|c|c|c|c|c|c|c|c|}\n\\hline\n\\text{Sum} &amp; 8 &amp; 9 &amp; 10 &amp; 11 &amp; 12 &amp; 13 &amp; 14 \\\\\n\\hline\n\\text{Ways} &amp; 6 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 2 &amp; 1 \\\\\n\\hline\n\\text{E.G.} &amp; 48 &amp; 54 &amp; 50 &amp; 44 &amp; 36 &amp; 26 &amp; 14 \\\\\n\\hline\n\\end{array}\\]</p><p>Hence Alex should call 9.</p>",
+      "answer": "9"
+    },
+    "5": {
+      "problem": "<p>Suppose that \\(x\\) is a real number with \\(\\log_5 \\sin x + \\log_5 \\cos x = -1\\). Find \\[|\\sin^2 x \\cos x + \\cos^2 x \\sin x|.\\]</p>",
+      "solutions": "<p><i>Solution.</i> We know that \\(\\sin x \\cos x = 1/5\\). Hence we have \\(|\\sin^2 x \\cos x + \\cos^2 x \\sin x| = |\\sin x + \\cos x|/5\\). But we know that \\((\\sin x + \\cos x)^2 = 1 + 2\\sin x \\cos x = 7/5\\). Hence we have \\[|\\sin^2 x \\cos x + \\cos^2 x \\sin x| = \\frac{\\sqrt{35}}{25}.\\]</p>",
+      "answer": "\\frac{\\sqrt{35}}{25}"
+    },
+    "6": {
+      "problem": "<p>What is the volume of the largest sphere that fits inside a regular tetrahedron of side length 6?</p>",
+      "solutions": "<p><i>Solution.</i> The sphere must be tangent to all four sides of the tetrahedron, else we could perform a dilation centered at a vertex opposite a side the sphere is not tangent to and increase the volume of the sphere without making it pass outside the tetrahedron.</p><p>Now consider the 4 pyramids with bases the 4 faces of the tetrahedron and the vertex of each pyramid the center of the inscribed sphere. These pyramids will each have volume \\(rA/3\\), where \\(r\\) is the radius of the sphere and \\(A\\) is the area of a face of the tetrahedron. The sum of their volumes is the volume of the tetrahedron; hence \\(4rA/3 = hA/3\\), where \\(h\\) is the height of the pyramid. Hence \\(r = h/4\\).</p><p>Let the vertices of the tetrahedron be \\(A, B, C, D\\), and let \\(M\\) be the midpoint of side \\(CD\\). Then the altitude in triangle \\(AMB\\) from \\(A\\) (or \\(B\\)) has length \\(h\\). We know that \\(AB = 7\\); as \\(AM\\) is an altitude of triangle \\(ACD\\) it follows that \\(AM = 3\\sqrt{3}\\). The same argument on triangle \\(BCD\\) gives \\(BM = AM\\).</p><p>We may calculate that the area of triangle \\(AMB\\) is \\(9\\sqrt{2}\\); hence, as \\(BM = 3\\sqrt{3}\\), it follows that \\(h = 2\\sqrt{6}\\). Hence we have \\(r = \\sqrt{6}/2\\) and \\(V = 4\\pi r^3/3 = \\pi\\sqrt{6}\\).</p>",
+      "answer": "\\pi\\sqrt{6}"
+    },
+    "7": {
+      "problem": "<p>An ant is wandering on the edges of a cube. At every second, the ant randomly chooses one of the three edges incident at one vertex and walks along that edge, arriving at the other vertex at the end of the second. What is the probability that the ant is at its starting vertex after exactly 6 seconds?</p>",
+      "solutions": "<p><i>Solution.</i> Label the ant’s starting vertex \\(S\\). Let \\(T\\) be the set containing the three vertices of the cube that are exactly two edges away from \\(S\\). Note that after any even number of seconds, the ant must be among \\(\\{S\\} \\cup T\\). Hence we need only consider 2-second steps.</p><p>If the ant starts at \\(S\\), it has a \\(1/3\\) chance of going \\(S \\to S\\) and a \\(2/3\\) chance of going \\(S \\to T\\). If the ant starts at any vertex in \\(T\\), it has a \\(2/9\\) chance of going \\(T \\to S\\) and a \\(7/9\\) chance of going \\(T \\to T\\).</p><p>The ant may start and return to \\(S\\) by going \\(S \\to S \\to S \\to S\\), \\(S \\to T \\to S \\to S\\), \\(S \\to S \\to T \\to S\\), or \\(S \\to T \\to T \\to S\\). These four possibilities have probabilities \\(1/27\\), \\(4/81\\), \\(4/81\\), and \\(28/243\\), respectively, for a total probability of \\(61/243\\).</p>",
+      "answer": "\\frac{61}{243}"
+    },
+    "8": {
+      "problem": "<p>Determine the smallest positive integer \\(k\\) such that there exist \\(m, n\\) non-negative integers with \\(m &gt; 1\\) satisfying \\[k = 2^{2m+1} - n^2.\\]</p>",
+      "solutions": "<p><i>Solution.</i> We first examine the equation modulo 8. As \\(m &gt; 1\\), we have \\(2^{2m+1} \\equiv 0 \\pmod 8\\). We also know that \\(n^2 \\equiv 0, 1, 4 \\pmod 8\\) for any positive integer \\(n\\). Hence we have \\(k \\ne 2, 3, 5, 6\\). We have that \\(2^{2\\cdot 2+1} - 5^2 = 7\\), so we know that \\(k \\le 7\\). If \\(k = 4\\), then \\(n\\) must be even. Writing \\(n = 2n'\\) and \\(m' = m - 1\\), we can divide through by 4 to get \\(1 = 2^{2m'+1} - n'^2\\). But as \\(m &gt; 1\\), \\(m' \\ge 1\\), so this is not possible mod 8. Hence \\(k = 7\\) is the minimal such \\(k\\).</p>",
+      "answer": "7"
+    },
+    "9": {
+      "problem": "<p>For \\(A, B \\subset \\mathbb{Z}\\) with \\(A, B \\ne \\emptyset\\), define \\(A + B = \\{a+b \\mid a \\in A, b \\in B\\}\\). Determine the least \\(n\\) such that there exist sets \\(A, B\\) with \\(|A| = |B| = n\\) and \\(A + B = \\{0, 1, 2, \\ldots, 2012\\}\\).</p>",
+      "solutions": "<p><i>Solution.</i> We note that \\(|A+B| \\le |A||B|\\), as every element of \\(A+B\\) corresponds to one or more ordered pairs of elements from \\(A\\) and \\(B\\), respectively. Hence we know that \\(n \\ge 45\\). We can give an explicit example of such sets \\(A, B\\) by working in base 45 and then making a small modification. We note that taking \\(A = \\{0, 1, 2, \\cdots, 44\\}\\) and \\(B = \\{0, 45, 90, \\cdots, 1980\\}\\) gives \\(A+B = \\{0, 1, 2, \\cdots, 2023, 2024\\}\\). Hence changing the largest element of \\(B\\) from 1980 to 1968 gives a solution with \\(|A|=|B|=45\\) and \\(A+B = \\{0,1,2,\\cdots,2012\\}\\). Hence we have \\(n = 45\\) minimal.</p>",
+      "answer": "45"
+    },
+    "10": {
+      "problem": "<p>For positive integers \\(n \\ge 1\\), let \\(\\tau(n)\\) and \\(\\sigma(n)\\) be, respectively, the number of and sum of the positive integer divisors of \\(n\\) (including 1 and \\(n\\)). For example, \\(\\tau(1) = \\sigma(1) = 1\\) and \\(\\tau(6) = 4\\), \\(\\sigma(6) = 12\\). Find the number of positive integers \\(n \\le 100\\) such that \\[\\sigma(n) \\le (\\sqrt{n} - 1)^2 + \\tau(n)\\sqrt{n}.\\]</p>",
+      "solutions": "<p><i>Solution.</i> Suppose first that \\(n &gt; 1\\) is not a perfect square or a prime. Then we have \\[\\sigma(n) = n + 1 + \\sum_{\\substack{d \\mid n \\\\ 1 &lt; d &lt; \\sqrt{n}}} \\left(d + \\frac{n}{d}\\right).\\] Applying the AM-GM inequality to each expression of the form \\(d + \\frac{n}{d}\\) gives \\(\\sigma(n) &gt; n+1+(\\tau(n)-2)\\sqrt{n} = (\\sqrt{n}-1)^2 + \\tau(n)\\sqrt{n}\\). Now if \\(n&gt;1\\) is a perfect square that is not the square of a prime, a similar analysis gives \\(\\sigma(n) &gt; n + \\sqrt{n} + 1 + (\\tau(n)-3)\\sqrt{n}\\) and we recover the same inequality. Thus the only \\(n\\) for which the inequality might hold are \\(n=1\\), \\(n=p\\), or \\(n=p^2\\) for \\(p\\) a prime. As \\(\\sigma(p) = p+1\\), \\(\\sigma(p^2) = p^2+p+1\\), \\(\\tau(p)=2\\), and \\(\\tau(p^2)=3\\), we may verify that the given inequality holds in all three of these cases.</p><p>There are 25 primes less than 100. There are in addition four perfect squares of primes that we must include: 4, 9, 25, and 49. Finally, we must include 1, for a grand total of 30 such \\(n\\).</p>",
+      "answer": "30"
+    }
+  }
+}

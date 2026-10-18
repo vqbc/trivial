@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2024,
+  "name": "General Tiebreakers",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2024/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Rectangle \\(ABCD\\) has side lengths \\(AB = 10\\) and \\(BC = 12\\). Let the midpoint of \\(CD\\) be point \\(M\\). Compute the area of the overlap between \\(\\triangle AMB\\) and \\(\\triangle ADC\\).</p>",
+      "solutions": "<p><b>Solution:</b> We have that the area of \\(\\triangle ADC\\) is \\(\\frac{12 \\cdot 10}{2} = 60\\). The area of \\(\\triangle ADM\\) is \\(\\frac{12 \\cdot 5}{2} = 30\\). Let the intersection of \\(AC\\) and \\(BM\\) be \\(N\\). Then, we can see that \\(\\triangle ABN\\) and \\(\\triangle CMN\\) are similar, with ratio \\(\\frac{AB}{CM} = \\frac{10}{5} = 2\\), so the height of \\(\\triangle CMN\\) is \\(\\frac{12}{3} = 4\\) and the area of \\(\\triangle CMN\\) is \\(\\frac{5 \\cdot 4}{2} = 10\\). Then, the area of the overlap between \\(\\triangle AMB\\) and \\(\\triangle ADC\\) is \\([ADC] - [ADM] - [CMN] = 60 - 30 - 10 = \\boxed{20}\\).</p>",
+      "answer": "20"
+    },
+    "2": {
+      "problem": "<p>In day 0 of a Fairytale themed video game, three magical beanstalks are planted, each initially a seed. Starting on day 1, each beanstalk that has not sprouted will sprout (and reach for the sky) with \\(\\frac{1}{3}\\) probability. Find the probability that the beanstalks sprout on different days.</p>",
+      "solutions": "<p><b>Solution:</b> Consider the moment at which the first beanstalk sprouts. Then, if more than one plant comes out, then the beanstalks can no longer sprout on different days. There is a \\(\\left(\\frac{2}{3}\\right)^3\\) chance of no plant sprouting, giving a \\(\\frac{19}{27}\\) chance at least one plant sprouts. There is a \\(3\\left(\\frac{1}{3}\\right)\\left(\\frac{2}{3}\\right)^2 = \\frac{12}{27}\\) chance exactly one plant sprouts, giving a \\(\\frac{\\frac{12}{27}}{\\frac{19}{27}} = \\frac{12}{19}\\) chance it is still possible to have all three beanstalks sprout on different days after the first beanstalk sprouts. Now, assuming only one beanstalk sprouts that first time, the next time at least one plant sprouts occurs with probability \\(1 - \\left(\\frac{2}{3}\\right)^2 = \\frac{5}{9}\\). The probability exactly one beanstalk sprouts is \\(2\\left(\\frac{1}{3}\\right)\\left(\\frac{2}{3}\\right) = \\frac{4}{9}\\), giving a \\(\\frac{\\frac{4}{9}}{\\frac{5}{9}} = \\frac{4}{5}\\) chance exactly one beanstalk sprouts when the next does. After this occurs, all three plants sprout on different days, and remain that way. The answer is thus \\(\\frac{12}{19} \\cdot \\frac{4}{5} = \\boxed{\\frac{48}{95}}\\).</p>",
+      "answer": "\\frac{48}{95}"
+    },
+    "3": {
+      "problem": "<p>The numbers \\(1, 2, \\ldots, 9\\) are put in a \\(3 \\times 3\\) grid. Below each column, Alice writes the product of the three numbers in that column, and she adds up her three results to get \\(A\\). Besides each row, Bob writes the product of the three numbers in the row, and adds his three results to get \\(B\\). Given that \\(A\\) is as small as possible, what’s the maximum possible value of \\(B\\)?</p>",
+      "solutions": "<p><b>Solution:</b> Note that the product of the three numbers \\(c_1, c_2, c_3\\) written at the bottom of the columns is a constant \\(9!\\), and so by the AM-GM inequality we know that the sum \\(c_1 + c_2 + c_3\\) is minimized when \\(c_1, c_2, c_3\\) are as close to each other as possible. Playing around with different combinations to keep \\(c_1, c_2, c_3\\) as close to \\(\\sqrt[3]{9!} \\approx 71\\) as possible we find that the sets of numbers in each column are \\(\\{2, 5, 7\\}\\), \\(\\{1, 8, 9\\}\\), and \\(\\{3, 4, 6\\}\\). In this case, the product of the numbers in each column is \\(70, 72, 72\\), which is as close as we can get, resulting in the smallest possible \\(A\\). Then, to maximize \\(B\\), we want the product of the numbers in each row to be as far apart as possible (using the same AM-GM intuition from before), so we group the largest number in each column in the same row, and the smallest number in each column in the same row. The answer is thus \\[9 \\cdot 7 \\cdot 6 + 8 \\cdot 5 \\cdot 4 + 1 \\cdot 2 \\cdot 3 = 378 + 160 + 6 = \\boxed{544}.\\]</p>",
+      "answer": "544"
+    }
+  }
+}

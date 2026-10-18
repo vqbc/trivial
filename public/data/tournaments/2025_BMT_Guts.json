@@ -1,0 +1,128 @@
+{
+  "test": "BMT Guts",
+  "year": 2025,
+  "name": "Guts Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2025/guts-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Ben the Bear’s head is constructed using one square of side length 2 and two squares of side length 1, where all the squares have parallel sides, and the centers of the small squares are adjacent vertices of the large square. Find the perimeter around Ben’s head.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_Guts/1-fig1.png\" width=\"158\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>In 1 hour, Isaac can make 5 more burgers than Nathan can. Nathan can make 20 more burgers in 4 hours than Isaac can make in 3 hours. Together, how many burgers can Isaac and Nathan make in 5 hours?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>The boxes in the expression below are filled with the numbers 1, 2, 3, 4, 5, and 6 so that each number is used exactly once and the value of the expression is <b>positive</b>. What is the least possible value of the expression?</p><p>\\[\\square \\times \\square \\times \\square - \\square \\times \\square \\times \\square\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Shrey wrote down six distinct positive factors of 30 and noticed that the average of these six numbers is 6. What is the largest number that Shrey wrote?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>Wen starts with a two-digit positive integer. She begins by adding the two digits together and subtracting 9 from that sum. Then, she cubes the result, adds 3, subtracts 22, and finally squares the number. If she ends up with a result of 2025, what is the smallest number she could have started with?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Find the number of multiples of 15 between 100 and 999 that have a sum of digits strictly greater than 15.</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>Kiran’s coloring sheet has six squares, as shown below. Kiran will color each square a different color: red, orange, yellow, green, blue, or purple. How many different ways can the squares be colored according to the following rules?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_Guts/7-fig1.png\" width=\"170\" alt=\"\"></p><ul><li>The red square touches the purple square and the orange square.</li><li>The yellow square touches the orange square and the green square.</li><li>The blue square touches the green square and the purple square.</li></ul>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>Triangle \\(\\triangle ABC\\) has a right angle at \\(B\\) and \\(AB = 3, BC = 4\\). Rectangle \\(ACDE\\) is constructed outside \\(\\triangle ABC\\). Given the area of triangle \\(\\triangle BDE\\) is \\(\\frac{7}{12}\\) of the area of pentagon \\(ABCDE\\), find \\(CD\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_Guts/8-fig1.png\" width=\"233\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Recall that in an arithmetic sequence, the difference between consecutive terms is constant, and in a geometric sequence, the ratio of consecutive terms is constant. The common difference of the arithmetic sequence \\(\\{a_n\\}\\) equals the common ratio of the geometric sequence \\(\\{g_n\\}\\). Given \\(a_1 = 0\\), \\(g_1 = 1\\), and \\(a_1 + a_2 + a_3 = g_1 + g_2 + g_3\\), find the unique positive integer \\(x\\) for which \\(a_x = g_x\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Arthur chooses three distinct integers between 2 and 14, inclusive, to be his winning numbers. If he rolls a fair 6-sided die and a fair 8-sided die with faces labeled 1–6 and 1–8, respectively, there is a \\(\\frac{1}{3}\\) chance that the sum of the faces rolled is a winning number. What is the largest winning number Arthur could have chosen?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "11": {
+      "problem": "<p>For each real number \\(n\\), let \\(\\lfloor n \\rfloor\\) denote the greatest integer less than or equal to \\(n\\). Find the sum of the cubes of all distinct real numbers \\(x\\) satisfying \\[x^3 - 3\\lfloor x \\rfloor = 4.\\]</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "12": {
+      "problem": "<p>A right rectangular <b>pyramid</b> has height 4, and each of its lateral <b>edges</b> forms a \\(30^\\circ\\) angle with the base. Given one of the four lateral faces has area \\(4\\sqrt{15}\\), what is the area of the pyramid’s base?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "13": {
+      "problem": "<p>For real numbers \\(a\\) and \\(b\\) with \\(a + b \\ne 0\\), define \\[a \\otimes b = \\frac{a}{a+b}.\\]</p><p>The operation \\(\\otimes\\) is not <i>associative</i> since \\((1 \\otimes 1) \\otimes 1 = \\frac{1}{3}\\) and \\(1 \\otimes (1 \\otimes 1) = \\frac{2}{3}\\) are different. Andrew evaluates \\(1 \\otimes 1 \\otimes 1 \\otimes 1 \\otimes 1 \\otimes 1 \\otimes 1\\) in any order he likes. What is the absolute difference between the largest and smallest possible results that Andrew could obtain?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "14": {
+      "problem": "<p>Find the sum of all real numbers \\(x\\) satisfying \\[\\left( \\sqrt{\\frac{x^2 - 3x - 4}{6}} \\right)^{x^2+3x-18} = 1.\\]</p><p>Recall that \\((\\sqrt{-4})^2 = -4\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "15": {
+      "problem": "<p>Let \\([XYZ]\\) denote the area of triangle \\(\\triangle XYZ\\). Right triangle \\(\\triangle ABC\\) has side lengths \\(AB = 3\\), \\(BC = 4\\), \\(AC = 5\\). Points \\(P\\), \\(Q\\), and \\(R\\) are drawn inside \\(\\triangle ABC\\) such that:</p><ol><li>\\([ABP] : [BCP] : [ACP] = 1 : 1 : 1\\),</li><li>\\([ABQ] : [BCQ] : [ACQ] = 3 : 4 : 5\\),</li><li>\\([ABR] : [BCR] : [ACR] = 1 : 28 : 1\\).</li></ol><p>What is the value of \\([PQR]\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "16": {
+      "problem": "<p>The Lunarians (moon people) define the <i>lunatic</i> operation, \\(\\circledast\\), on positive integers with the same number of digits. For any two positive integers \\(\\underline{a_1} \\ldots \\underline{a_n}\\) and \\(\\underline{b_1} \\ldots \\underline{b_n}\\), each with \\(n\\) digits, \\[\\underline{a_1} \\ldots \\underline{a_n} \\circledast \\underline{b_1} \\ldots \\underline{b_n} = \\underline{c_1} \\ldots \\underline{c_n},\\] where for each \\(1 \\le i \\le n\\), \\(c_i\\) is the units digit of the product \\(a_ib_i\\). For example, \\(36 \\circledast 82 = 42\\), and \\(36 \\circledast 820\\) is not defined because \\(36\\) and \\(820\\) have different numbers of digits. For how many positive integers \\(a \\le 2025\\) does there exist a positive integer \\(b \\le 2025\\) for which \\(a \\circledast b = 2025\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "17": {
+      "problem": "<p>Rectangle \\(ABCD\\) has \\(AB = CD = \\sqrt{3}\\) and \\(AD = BC = 1\\). Points \\(A'\\), \\(B'\\), \\(C'\\), \\(D'\\) are constructed such that \\(AB = A'B, BC = B'C, CD = C'D, AD = AD'\\) and the areas of quadrilaterals \\(A'BCD\\), \\(AB'CD\\), \\(ABC'D\\), and \\(ABCD'\\) are all maximized. Find the area of quadrilateral \\(A'B'C'D'\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "18": {
+      "problem": "<p>A base-2025 palindrome is a positive integer that reads the same forward and backward when written in base-2025. For each positive integer \\(n\\), let \\(P(n)\\) be the number of integers between \\(1\\) and \\(n\\), inclusive, that are base-2025 palindromes. Find the smallest real number \\(x\\) such that \\(x\\sqrt{n} \\ge P(n)\\) for all positive integers \\(n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "19": {
+      "problem": "<p>Let \\(N_{21}\\) be the answer to problem 21.</p><p>Four distinct points in the coordinate plane are chosen uniformly at random from the set \\[\\{(21, N_{21}), (-21, N_{21}), (21, -N_{21}), (-21, -N_{21}), (N_{21}, 21), (-N_{21}, 21), (N_{21}, -21), (-N_{21}, -21)\\}.\\] Given that there is one point in each quadrant, what is the expected area of the convex quadrilateral with vertices at the four chosen points?</p><p><i>Note: the answer to Problem 21 is \\(23\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "20": {
+      "problem": "<p>Let \\(N_{19}\\) be the <b>leading two digits of the decimal representation</b> of the answer to problem 19.</p><p>The 24 lines \\(y = \\pm 4x, y = \\pm 8x, \\ldots, y = \\pm 48x\\) and the curve \\(y = N_{19}x^2 + N_{19}\\) are drawn in the coordinate plane. How many (possibly infinitely large) distinct regions of the coordinate plane are in the resulting graph?</p><p><i>Note: the answer to Problem 19 (the previous problem) is \\(1936\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "21": {
+      "problem": "<p>Let \\(N_{20}\\) be the answer to problem 20.</p><p>Clara needs to visit \\(N = \\left\\lfloor \\frac{N_{20}}{3} \\right\\rfloor\\) places which are labeled with the integers \\(0, 2, 3, 4, \\ldots, N\\) (there is no place 1). Each pair of places \\(a\\) and \\(b\\) is connected if and only if \\(\\gcd(a, b) &gt; 1\\) (note that \\(\\gcd(0, n) = n\\) for all positive integers \\(n\\)). Call every instance when Clara moves from one place to a connected place a <i>trip</i>. If Clara starts at place 0, what is the minimum number of trips she needs to make to visit all places?</p><p><i>Note: the answer to Problem 20 (the previous problem) is \\(61\\). No official answer was published for the referenced problem; this value was worked out for this archive.</i></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "22": {
+      "problem": "<p>Aarush and Brian are watching a sequence of fair coin flips. Both players start with 0 points. Aarush gains a point when the coin lands on heads, and Brian gains a point when the coin lands on tails. If Brian reaches 2 points, both players reset their points to 0. What is the expected number of coin flips it takes for Aarush to reach 9 points for the first time?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "23": {
+      "problem": "<p>There is a unique finite sequence of positive integers \\((a_1, \\ldots, a_n)\\) such that \\(a_i^2 \\le a_{i+1}\\) for each \\(1 \\le i &lt; n\\) and \\[\\prod_{j=1}^{n} \\left(1 + \\frac{1}{a_j}\\right) = 2025.\\] Find \\(n + a_n\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "24": {
+      "problem": "<p>Determine the volume of the three-dimensional solid with the net shown below. Arrows denote parallel segments, and some right angles are marked. <img class=\"latexcenter\" src=\"/data/tournaments/2025_BMT_Guts/24-fig1.png\" width=\"344\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

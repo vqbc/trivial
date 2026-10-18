@@ -1,0 +1,33 @@
+{
+  "test": "BMT General Tiebreaker",
+  "year": 2022,
+  "name": "General Tiebreaker",
+  "url": "https://berkeley.mt/resources/archives/bmt-2022/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>For all \\(a\\) and \\(b\\), let \\(a \\clubsuit b = 3a + 2b + 1\\). Compute \\(c\\) such that \\((2c) \\clubsuit (5 \\clubsuit (c+3)) = 60\\).</p>",
+      "solutions": "<p>Since \\[\\begin{aligned}\n(2c) \\clubsuit (5 \\clubsuit (c+3)) &amp;= (2c) \\clubsuit (3(5) + 2(c+3) + 1) \\\\\n&amp;= (2c) \\clubsuit (2c+22) \\\\\n&amp;= 3(2c) + 2(2c+22) + 1 \\\\\n&amp;= 10c + 45,\n\\end{aligned}\\]</p><p>we require \\(10c + 45 = 60\\), so \\(c = \\boxed{\\frac{3}{2}}\\).</p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "2": {
+      "problem": "<p>Call a positive whole number <i>rickety</i> if it is three times the product of its digits. There are two 2-digit numbers that are rickety. What is their sum?</p>",
+      "solutions": "<p>It is possible to just check all two-digit multiples of 3 to find the answer. Presented is a more complete solution.</p><p>Write \\(n = 10a + b\\) with \\(a, b \\in \\{0, 1, \\ldots, 9\\}\\). We are given that \\[10a + b = 3ab,\\] which is equivalent to \\[(3a-1)(3b-10) = 10\\] after multiplying both sides by 3. Now, \\(3a-1\\) must be a 2 \\(\\pmod{3}\\) nonnegative factor of 10, so \\(3a - 1 \\in \\{2, 5\\}\\), so \\(a \\in \\{1, 2\\}\\). These force \\(3b - 10 \\in \\{5, 2\\}\\) and so \\(b \\in \\{5, 4\\}\\), giving \\(n \\in \\{15, 24\\}\\). So the sum of all possible \\(n\\) is \\(15 + 24 = \\boxed{39}\\).</p>",
+      "answer": "39"
+    },
+    "3": {
+      "problem": "<p>You wish to color every vertex, edge, face, and the interior of a cube one color each such that no two adjacent objects are the same color. Faces are adjacent if they share an edge. Edges are adjacent if they share a vertex. The interior is adjacent to all of its faces, edges, and vertices. Each face is adjacent to all of its edges and vertices, but is not adjacent to any other edges or vertices. Each edge is adjacent to both of its vertices, but is not adjacent to any other vertices. What is the minimum number of colors required for a coloring satisfying this property?</p>",
+      "solutions": "<p>Note that three faces that share a vertex, the vertex the faces share and the interior of the cube are all adjacent to each other, so at least 5 colors are required. The following set of instructions creates a coloring that uses 5 colors:</p><ul><li>The interior of the cube is colored purple.</li><li>Color each pair of opposite faces red, green, and blue.</li><li>Color each vertex yellow.</li><li>Each edge is adjacent to two faces that take up two of the colors among red, green, and blue. Color the edge the remaining color that is not the color of either adjacent face. (For example, if the adjacent faces are red and green, color the edge blue.)</li></ul><p>Therefore the minimum number of colors required is \\(\\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "4": {
+      "problem": "<p>How many positive integers less than 2022 contain at least one digit less than 5 and also at least one digit greater than 4?</p>",
+      "solutions": "<p>It is easier to count the numbers which do not satisfy the property, so we seek the numbers whose digits are either all less than 5 or greater than 4. We can organize our work mostly based on the number of digits:</p><ul><li>There are no 1-digit numbers that satisfy the property, which makes for 9 numbers in our complementary count.</li><li>Of the 2-digit numbers, there are \\(4 \\cdot 5 = 20\\) numbers that use only digits less than 5 and \\(5 \\cdot 5 = 25\\) numbers that use only digits greater than 5.</li><li>Of the 3-digit numbers, there are \\(4 \\cdot 5 \\cdot 5 = 100\\) numbers that use only digits less than 5 and \\(5 \\cdot 5 \\cdot 5 = 125\\) numbers that use only digits greater than 5.</li><li>Of all of the 4-digit numbers starting with the digit 1, \\(5 \\cdot 5 \\cdot 5 = 125\\) numbers only use digits less than 5.</li><li>Finally, for the numbers from 2000 to 2021, the numbers 2000 to 2004, 2010 to 2014, and 2020 and 2021 are the numbers which only use digits less than 5, amounting to 12 numbers.</li></ul><p>The total number of positive integers less than 2022 which do not satisfy the property is \\(9 + 20 + 25 + 100 + 125 + 125 + 12 = 416\\), so the number of positive integers less than 2022 which satisfy the property is \\(2021 - 416 = \\boxed{1605}\\).</p>",
+      "answer": "1605"
+    },
+    "5": {
+      "problem": "<p>In triangle \\(\\triangle ABC\\), \\(M\\) is the midpoint of \\(\\overline{AB}\\) and \\(N\\) is the midpoint of \\(\\overline{AC}\\). Let \\(P\\) be the midpoint of \\(\\overline{BN}\\) and let \\(Q\\) be the midpoint of \\(\\overline{CM}\\). If \\(AM = 6\\), \\(BC = 8\\) and \\(BN = 7\\), compute the perimeter of triangle \\(\\triangle NPQ\\).</p>",
+      "solutions": "<p>Let \\(X\\) be the midpoint of \\(\\overline{BM}\\) and let \\(Y\\) be the midpoint of \\(\\overline{CN}\\).</p><p>First, note that since \\(M, N\\) are the midpoints of \\(\\overline{AB}, \\overline{AC}\\), respectively, we have that \\(\\triangle AMN \\sim \\triangle ABC\\) with the ratio of similarity being \\(\\frac{1}{2}\\). That is, \\(MN = \\frac{1}{2}BC = 4\\). Similarly, since \\(X, P\\) are the midpoints of \\(\\overline{BM}, \\overline{BN}\\), respectively, we have that \\(\\triangle BXP \\sim \\triangle BMN\\) with the ratio of similarity being \\(\\frac{1}{2}\\). Thus \\(XP = \\frac{1}{2}MN = 2\\). By the same logic, we get that \\(QY = \\frac{1}{2}MN = 2\\). Also, since \\(\\frac{AX}{AB} = \\frac{AY}{AB} = \\frac{3}{4}\\), we have that \\(XY = \\frac{3}{4}BC = 6\\) by the similarity \\(\\triangle AXY \\sim \\triangle ABC\\). Hence \\[PQ = XY - XP - QY = 6 - 2 - 2 = 2.\\]</p><p>Also, since \\(\\frac{CQ}{CM} = \\frac{CN}{CA} = \\frac{1}{2}\\), we have that \\(\\triangle CQN \\sim \\triangle CMA\\) with ratio of similarity \\(\\frac{1}{2}\\). Hence \\(NQ = \\frac{1}{2}AM = 3\\). Finally, since \\(P\\) is the midpoint of \\(\\overline{BN}\\), \\(NP = \\frac{1}{2}BN = \\frac{7}{2}\\). Thus the perimeter of triangle \\(\\triangle NPQ\\) is \\[PQ + NQ + NP = 2 + 3 + \\frac{7}{2} = \\boxed{\\frac{17}{2}}.\\]</p>",
+      "answer": "\\frac{17}{2}"
+    }
+  }
+}

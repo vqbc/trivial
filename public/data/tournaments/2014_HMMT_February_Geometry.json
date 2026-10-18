@@ -1,0 +1,58 @@
+{
+  "test": "HMMT February Geometry",
+  "year": 2014,
+  "name": "Geometry Round",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2014/feb/geo/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(O_1\\) and \\(O_2\\) be concentric circles with radii \\(4\\) and \\(6\\), respectively. A chord \\(AB\\) is drawn in \\(O_1\\) with length \\(2\\). Extend \\(AB\\) to intersect \\(O_2\\) in points \\(C\\) and \\(D\\). Find \\(CD\\).</p>",
+      "solutions": "<p>Let \\(O\\) be the common center of \\(O_1\\) and \\(O_2\\), and let \\(M\\) be the midpoint of \\(AB\\). Then \\(OM\\perp AB\\), so by the Pythagorean Theorem, \\(OM=\\sqrt{4^2-1^2}=\\sqrt{15}\\). Thus \\(CD=2CM=2\\sqrt{6^2-15}=2\\sqrt{21}\\).</p>",
+      "answer": "2\\sqrt{21}"
+    },
+    "2": {
+      "problem": "<p>Point \\(P\\) and line \\(\\ell\\) are such that the distance from \\(P\\) to \\(\\ell\\) is \\(12\\). Given that \\(T\\) is a point on \\(\\ell\\) such that \\(PT=13\\), find the radius of the circle passing through \\(P\\) and tangent to \\(\\ell\\) at \\(T\\).</p>",
+      "solutions": "<p>Let \\(O\\) be the center of the given circle, \\(Q\\) be the foot of the altitude from \\(P\\) to \\(\\ell\\), and \\(M\\) be the midpoint of \\(PT\\). Then since \\(OM\\perp PT\\) and \\(\\angle OTP=\\angle TPQ\\), \\(\\triangle OMP\\sim\\triangle TQP\\). Thus the radius is \\[OP=TP\\cdot\\frac{PM}{PQ}=13\\cdot\\frac{13/2}{12}=\\frac{169}{24}.\\]</p>",
+      "answer": "\\frac{169}{24}"
+    },
+    "3": {
+      "problem": "<p>\\(ABC\\) is a triangle such that \\(BC=10\\), \\(CA=12\\). Let \\(M\\) be the midpoint of side \\(AC\\). Given that \\(BM\\) is parallel to the external bisector of \\(\\angle A\\), find area of triangle \\(ABC\\). (Lines \\(AB\\) and \\(AC\\) form two angles, one of which is \\(\\angle BAC\\). The external bisector of \\(\\angle A\\) is the line that bisects the other angle.)</p>",
+      "solutions": "<p>Since \\(BM\\) is parallel to the external bisector of \\(\\angle A=\\angle BAM\\), it is perpendicular to the angle bisector of \\(\\angle BAM\\). Thus \\(BA=BM=\\frac12BC=6\\). By Heron’s formula, the area of \\(\\triangle ABC\\) is therefore \\(\\sqrt{(14)(8)(4)(2)}=8\\sqrt{14}\\).</p>",
+      "answer": "8\\sqrt{14}"
+    },
+    "4": {
+      "problem": "<p>In quadrilateral \\(ABCD\\), \\(\\angle DAC=98^\\circ\\), \\(\\angle DBC=82^\\circ\\), \\(\\angle BCD=70^\\circ\\), and \\(BC=AD\\). Find \\(\\angle ACD\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2014_HMMT_February_Geometry/4-fig1.png\" width=\"243\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(B'\\) be the reflection of \\(B\\) across \\(CD\\). Note that \\(AD=BC'\\), and \\(\\angle DAC+\\angle CB'D=180^\\circ\\), so \\(ACB'D\\) is a cyclic trapezoid. Thus, \\(ACB'D\\) is an isosceles trapezoid, so \\(\\angle ACB'=98^\\circ\\). Note that \\(\\angle DCB'=\\angle BCD=70^\\circ\\), so \\(\\angle ACD=\\angle ACB'-\\angle DCB'=98^\\circ-70^\\circ=28^\\circ\\).</p>",
+      "answer": "28^\\circ"
+    },
+    "5": {
+      "problem": "<p>Let \\(C\\) be a circle in the \\(xy\\) plane with radius \\(1\\) and center \\((0,0,0)\\), and let \\(P\\) be a point in space with coordinates \\((3,4,8)\\). Find the largest possible radius of a sphere that is contained entirely in the slanted cone with base \\(C\\) and vertex \\(P\\).</p>",
+      "solutions": "<p>Consider the plane passing through \\(P\\) that is perpendicular to the plane of the circle. The intersection of the plane with the cone and sphere is a cross section consisting of a circle inscribed in a triangle with a vertex \\(P\\). By symmetry, this circle is a great circle of the sphere, and hence has the same radius. The other two vertices of the triangle are the points of intersection between the plane and the unit circle, so the other two vertices are \\((\\frac35,\\frac45,0)\\), \\((-\\frac35,-\\frac45,0)\\).</p><p>Using the formula \\(A=rs\\) and using the distance formula to find the side lengths, we find that \\[r=\\frac{2A}{2s}=\\frac{2\\cdot8}{2+10+4\\sqrt5}=3-\\sqrt5.\\]</p>",
+      "answer": "3-\\sqrt{5}"
+    },
+    "6": {
+      "problem": "<p>In quadrilateral \\(ABCD\\), we have \\(AB=5\\), \\(BC=6\\), \\(CD=5\\), \\(DA=4\\), and \\(\\angle ABC=90^\\circ\\). Let \\(AC\\) and \\(BD\\) meet at \\(E\\). Compute \\(\\frac{BE}{ED}\\).</p>",
+      "solutions": "<p>We find that \\(AC=\\sqrt{61}\\), and applying the law of cosines to triangle \\(ACD\\) tells us that \\(\\angle ADC=120^\\circ\\). Then \\(\\frac{ED}{BE}\\) is the ratio of the areas of triangles \\(ADC\\) and \\(ABC\\), which is \\(\\frac{(4)(5)(\\sqrt3/2)}{(5)(6)/2}=\\frac{\\sqrt3}{3}\\). Therefore, \\(\\frac{BE}{ED}=\\sqrt3\\).</p>",
+      "answer": "\\sqrt{3}"
+    },
+    "7": {
+      "problem": "<p>Triangle \\(ABC\\) has sides \\(AB=14\\), \\(BC=13\\), and \\(CA=15\\). It is inscribed in circle \\(\\Gamma\\), which has center \\(O\\). Let \\(M\\) be the midpoint of \\(AB\\), let \\(B'\\) be the point on \\(\\Gamma\\) diametrically opposite \\(B\\), and let \\(X\\) be the intersection of \\(AO\\) and \\(MB'\\). Find the length of \\(AX\\).</p>",
+      "solutions": "<p>Since \\(B'B\\) is a diameter, \\(\\angle B'AB=90^\\circ\\), so \\(B'A\\parallel OM\\), so \\(\\frac{OM}{B'A}=\\frac{BM}{BA}=\\frac12\\). Thus \\(\\frac{XO}{AX}=\\frac{OM}{B'A}=\\frac12\\), so \\(AX=\\frac23R\\), where \\(R=\\frac{abc}{4A}=\\frac{(13)(14)(15)}{4(84)}=\\frac{65}{8}\\) is the circumradius of \\(ABC\\). Putting it all together gives \\(AX=\\frac{65}{12}\\).</p>",
+      "answer": "\\frac{65}{12}"
+    },
+    "8": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with sides \\(AB=6\\), \\(BC=10\\), and \\(CA=8\\). Let \\(M\\) and \\(N\\) be the midpoints of \\(BA\\) and \\(BC\\), respectively. Choose the point \\(Y\\) on ray \\(CM\\) so that the circumcircle of triangle \\(AMY\\) is tangent to \\(AN\\). Find the area of triangle \\(NAY\\).</p>",
+      "solutions": "<p>Let \\(G=AN\\cap CM\\) be the centroid of \\(ABC\\). Then \\(GA=\\frac23AN=\\frac{10}{3}\\) and \\(GM=\\frac13CM=\\frac13\\sqrt{8^2+3^2}=\\frac{\\sqrt{73}}3\\). By power of a point, \\((GM)(GY)=GA^2\\), so \\(GY=\\frac{GA^2}{GM}=\\frac{100\\sqrt{73}}{219}\\). Thus \\[\\begin{aligned}\n[NAY]&amp;=[GAM]\\cdot\\frac{GY}{GM}\\cdot\\frac{NA}{GA}\\\\\n&amp;=\\frac16[ABC]\\cdot\\frac{100}{73}\\cdot\\frac32\\\\\n&amp;=4\\cdot\\frac{100}{73}\\cdot\\frac32=\\frac{600}{73}.\n\\end{aligned}\\]</p>",
+      "answer": "\\frac{600}{73}"
+    },
+    "9": {
+      "problem": "<p>Two circles are said to be orthogonal if they intersect in two points, and their tangents at either point of intersection are perpendicular. Two circles \\(\\omega_1\\) and \\(\\omega_2\\) with radii \\(10\\) and \\(13\\), respectively, are externally tangent at point \\(P\\). Another circle \\(\\omega_3\\) with radius \\(2\\sqrt2\\) passes through \\(P\\) and is orthogonal to both \\(\\omega_1\\) and \\(\\omega_2\\). A fourth circle \\(\\omega_4\\), orthogonal to \\(\\omega_3\\), is externally tangent to \\(\\omega_1\\) and \\(\\omega_2\\). Compute the radius of \\(\\omega_4\\).</p>",
+      "solutions": "<p>Let \\(\\omega_i\\) have center \\(O_i\\) and radius \\(r_i\\). Since \\(\\omega_3\\) is orthogonal to \\(\\omega_1,\\omega_2,\\omega_4\\), it has equal power \\(r_3^2\\) to each of them. Thus \\(O_3\\) is the radical center of \\(\\omega_1,\\omega_2,\\omega_4\\), which is equidistant to the three sides of \\(\\triangle O_1O_2O_4\\) and therefore its incenter.</p><p>For distinct \\(i,j\\in\\{1,2,4\\}\\), \\(\\omega_i\\cap\\omega_j\\) lies on the circles with diameters \\(O_3O_i\\) and \\(O_3O_j\\), and hence \\(\\omega_3\\) itself. It follows that \\(\\omega_3\\) is the incircle of \\(\\triangle O_1O_2O_4\\), so \\[8=r_3^2=\\frac{r_1r_2r_4}{r_1+r_2+r_4}=\\frac{130r_4}{23+r_4}\\Longrightarrow r_4=\\frac{92}{61}.\\]</p><p><b>Comment:</b> The condition \\(P\\in\\omega_3\\) is unnecessary.</p>",
+      "answer": "\\frac{92}{61}"
+    },
+    "10": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(AB=13\\), \\(BC=14\\), and \\(CA=15\\). Let \\(\\Gamma\\) be the circumcircle of \\(ABC\\), let \\(O\\) be its circumcenter, and let \\(M\\) be the midpoint of minor arc \\(BC\\). Circle \\(\\omega_1\\) is internally tangent to \\(\\Gamma\\) at \\(A\\), and circle \\(\\omega_2\\), centered at \\(M\\), is externally tangent to \\(\\omega_1\\) at a point \\(T\\). Ray \\(AT\\) meets segment \\(BC\\) at point \\(S\\), such that \\(BS-CS=\\frac4{15}\\). Find the radius of \\(\\omega_2\\).</p>",
+      "solutions": "<p>Let \\(N\\) be the midpoint of \\(BC\\). Notice that \\(BS-CS=\\frac4{15}\\) means that \\(NS=\\frac2{15}\\). Let lines \\(MN\\) and \\(AS\\) meet at \\(P\\), and let \\(D\\) be the foot of the altitude from \\(A\\) to \\(BC\\). Then \\(BD=5\\) and \\(AD=12\\), so \\(DN=2\\) and \\(DS=\\frac{32}{15}\\). Thus \\[NP=AD\\frac{SN}{SD}=12\\frac{2/15}{32/15}=\\frac34.\\] Now \\(OB=R=\\frac{abc}{4A}=\\frac{(13)(14)(15)}{4(84)}=\\frac{65}{8}\\), so \\[ON=\\sqrt{OB^2-BN^2}=\\sqrt{\\left(\\frac{65}{8}\\right)^2-7^2}=\\frac{33}{8}.\\] Thus \\(OP=\\frac{27}{8}\\) and \\(PM=OM-OP=\\frac{19}{4}\\). By Monge’s theorem, the exsimilicenter of \\(\\omega_1\\) and \\(\\Gamma\\) (which is \\(A\\)), the insimilicenter of \\(\\omega_1\\) and \\(\\omega_2\\) (which is \\(T\\)), and the insimilicenter of \\(\\omega_2\\) and \\(\\Gamma\\) (call this \\(P'\\)) are collinear. But notice that this means \\(P'=OM\\cap AT=P\\). From this we get \\[\\frac{\\text{radius of }\\omega_2}{R}=\\frac{MP}{OP}=\\frac{38}{27}.\\] Thus the radius of \\(\\omega_2\\) is \\(\\frac{65}{8}\\cdot\\frac{38}{27}=\\frac{1235}{108}\\).</p>",
+      "answer": "\\frac{1235}{108}"
+    }
+  }
+}

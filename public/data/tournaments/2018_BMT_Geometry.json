@@ -1,0 +1,58 @@
+{
+  "test": "BMT Geometry",
+  "year": 2018,
+  "name": "Geometry Test",
+  "url": "https://berkeley.mt/resources/archives/bmt-2018/GEOSP18.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A cube has side length 5. Let \\(S\\) be its surface area and \\(V\\) its volume. Find \\(\\frac{S^3}{V^2}\\).</p>",
+      "solutions": "<p>Let \\(s = 5\\). Then \\(S = 6s^2\\), \\(V = s^3\\). So \\(\\frac{S^3}{V^2} = \\frac{(6s^2)^3}{(s^3)^2} = 216\\frac{s^6}{s^6} = 216\\).</p>",
+      "answer": "216"
+    },
+    "2": {
+      "problem": "<p>A \\(1\\) by \\(1\\) square \\(ABCD\\) is inscribed in the circle \\(m\\). Circle \\(n\\) has radius \\(1\\) and is centered around \\(A\\). Let \\(S\\) be the set of points inside of \\(m\\) but outside of \\(n\\). What is the area of \\(S\\)?</p>",
+      "solutions": "<p>The quarter circle of \\(M\\) around \\(A\\) has the same area as half of circle \\(N\\). Thus the answer is the area of triangle \\(ABD\\), which is \\(\\frac{1}{2}\\).</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "3": {
+      "problem": "<p>If \\(A\\) is the area of a triangle with perimeter \\(1\\), what is the largest possible value of \\(A^2\\)?</p>",
+      "solutions": "<p>The largest area occurs when the triangle is equilateral, in which case the side length is \\(\\frac{1}{3}\\) and the area is \\(\\frac{\\sqrt{3}}{36}\\), so \\(A^2 = \\frac{1}{432}\\).</p>",
+      "answer": "\\frac{1}{432}"
+    },
+    "4": {
+      "problem": "<p>There are six lines in the plane. No two of them are parallel and no point lies on more than three lines. What is the minimum possible number of points that lie on at least two lines?</p>",
+      "solutions": "<p>There are 15 pairs of lines, and their intersections can coincide up to three at a time. It is not the case that there are only 5 points of intersection (each three lines at a time) by Sylvester’s Theorem. Thus there are at most 4 points that lie on three different lines, so there are at least \\(7\\) total intersection points. This is achieved by drawing a triangle and its three medians.</p>",
+      "answer": "7"
+    },
+    "5": {
+      "problem": "<p>A point is picked uniformly at random inside of a square. Four segments are then drawn in connecting the point to each of the vertices of the square, cutting the square into four triangles. What is the probability that at least two of the resulting triangles are obtuse?</p>",
+      "solutions": "<p>Suppose the square has area \\(1\\). A triangle is obtuse if and only if the point lies within the circle whose diameter is one of the sides of the square. The resulting overlap is composed of eight chordal regions. Each one has area \\(\\frac{\\pi}{16} - \\frac{1}{8}\\), so the probability is \\(\\frac{\\pi}{2} - 1\\).</p>",
+      "answer": "\\frac{\\pi}{2} - 1"
+    },
+    "6": {
+      "problem": "<p>A triangle \\(T\\) has all integer side lengths and at most one of its side lengths is greater than ten. What is the largest possible area of \\(T\\)?</p>",
+      "solutions": "<p>First we see that all side lengths are at least 10, since otherwise the angle opposite of the smallest side length could be made larger while preserving the other two side lengths, increasing the area. Thus two of the side lengths are 10. The area is maximized when the height is maximized (when one of the sides of length 10 is taken to be the base). This occurs when the long side has length \\(10\\sqrt{2}\\), so the long side has length 14 or 15. In the first case, the area is \\(\\sqrt{17 \\cdot 7 \\cdot 7 \\cdot 3} = \\sqrt{2499}\\) by Heron’s formula. In the second the area is \\(\\sqrt{\\frac{35}{2} \\cdot \\frac{15}{2} \\cdot \\frac{15}{2} \\cdot \\frac{5}{2}} = \\sqrt{\\frac{39375}{16}}\\) which is smaller. Thus the largest area is \\(7\\sqrt{51}\\).</p>",
+      "answer": "7\\sqrt{51}"
+    },
+    "7": {
+      "problem": "<p>A line in the \\(xy\\)-plane has positive slope, passes through the point \\((x, y) = (0, 29)\\), and lies tangent to the ellipse defined by \\(\\frac{x^2}{100} + \\frac{y^2}{400} = 1\\). What is the slope of the line?</p>",
+      "solutions": "<p>We change variable to \\(w = 2x\\). Then in the \\(wy\\) plane, the line still has positive slope, passes through \\((w, y) = (0, 29)\\), and now lies tangent to the circle of radius \\(20\\) defined by \\(\\frac{w^2}{400} + \\frac{y^2}{400} = 1\\). By the Pythagorean Theorem, the distance (in the \\(wy\\)-plane) from the point of tangency to \\((0, 29)\\) is \\(\\sqrt{29^2 - 20^2} = 21\\). By similar triangles, the slope of the line (in the \\(wy\\)-plane) is then \\(\\frac{21}{20}\\). Thus the slope of the line in the \\(xy\\)-plane is \\(\\frac{21}{10}\\).</p>",
+      "answer": "\\frac{21}{10}"
+    },
+    "8": {
+      "problem": "<p>What is the largest possible area of a triangle with largest side length \\(39\\) and inradius \\(10\\)?</p>",
+      "solutions": "<p>By inspection, we see that area is maximized when the triangle has two largest sides equal to \\(39\\). To prove this, we observe the following:</p><p>Let \\(ABC\\) be the triangle with \\(BC\\) be its minimal side length. Let \\(I\\) be its incenter. To maximize the area of triangle \\(ABC\\), we should maximize the angle \\(BIC\\). Let \\(D\\) be the point of tangency of the incircle to side \\(BC\\). Let \\(BD = a - x\\) and \\(a + x\\). Then</p><p>\\[\\angle BIC = \\arctan\\left(\\frac{a+x}{r}\\right) + \\arctan\\left(\\frac{a-x}{r}\\right) = \\arctan\\left(\\frac{2ar}{r - a^2 + x^2}\\right)\\]</p><p>Then to maximize this quantity, we have \\(x = 0\\). Hence, the area of the triangle is maximized when two sides are equal.</p><p>In this case we see that the height of the triangle is \\(36\\) and half the base is \\(15\\), since a \\(36\\)-\\(15\\)-\\(39\\) triangle is similar to a \\((36 - 10 = 26)\\)-\\(10\\)-\\((39 - 15 = 24)\\) triangle. Thus the area is \\(15 \\cdot 36 = 540\\).</p>",
+      "answer": "540"
+    },
+    "9": {
+      "problem": "<p>What is the least integer \\(a\\) greater than \\(14\\) so that the triangle with side lengths \\(a - 1\\), \\(a\\), and \\(a + 1\\) has integer area?</p>",
+      "solutions": "<p>By Heron’s formula, the semiperimeter is \\(\\frac{3a}{2}\\) and the area is \\(A = \\sqrt{\\frac{3a}{2} \\cdot \\frac{a}{2} \\left(\\frac{a}{2} - 1\\right)\\left(\\frac{a}{2} + 1\\right)}\\). So \\(A = \\frac{a}{4}\\sqrt{3(a^2 - 4)}\\). This shows that \\(a\\) cannot be an odd number so we write \\(a = 2b\\) and \\(A = b\\sqrt{3(b^2 - 1)}\\) which is an integer precisely when \\(3(b^2 - 1) = c^2\\) is a square. Here, \\(c\\) must be divisible by \\(3\\), so we can write \\(c = 3d\\) and \\(b^2 - 3d^2 = 1\\) which is a Pell equation. The solutions to \\((b + d\\sqrt{3})(b - d\\sqrt{3}) = 1\\) are powers of the fundamental solution \\((2 + \\sqrt{3})(2 - \\sqrt{3}) = 1\\). We compute \\((2+\\sqrt{3})^2 = 7 + 4\\sqrt{3}\\) and \\((2+\\sqrt{3})^3 = 26 + 15\\sqrt{3}\\). So we have \\(b = 26\\) and \\(a = 52\\).</p>",
+      "answer": "52"
+    },
+    "10": {
+      "problem": "<p>A plane cuts a sphere of radius \\(1\\) into two pieces, one of which has three times the surface area of the other. What is the area of the disk that the sphere cuts out of the plane?</p>",
+      "solutions": "<p>By a theorem of geometry, the plane also cuts the perpendicular diameter of the sphere in a ratio of \\(3\\) to \\(1\\). Thus the distance from the center of the sphere to the plane is \\(\\frac{1}{2}\\). By the Pythagorean Theorem, the radius of the disk is then \\(\\sqrt{1^2 - \\left(\\frac{1}{2}\\right)^2} = \\frac{\\sqrt{3}}{2}\\), so the area is \\(\\frac{3\\pi}{4}\\).</p>",
+      "answer": "\\frac{3\\pi}{4}"
+    }
+  }
+}

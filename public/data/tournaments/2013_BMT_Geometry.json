@@ -1,0 +1,58 @@
+{
+  "test": "BMT Geometry",
+  "year": 2013,
+  "name": "Geometry Round",
+  "url": "https://berkeley.mt/resources/archives/bmt-2013/GeoS2013.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A rectangle with sides \\(a\\) and \\(b\\) has an area of 24 and a diagonal of length 11. Find the perimeter of this rectangle.</p>",
+      "solutions": "<p>We have \\(ab = 24\\) and \\(a^2 + b^2 = 121\\). Thus, \\(a + b = \\sqrt{169} = 13\\).</p>",
+      "answer": "13"
+    },
+    "2": {
+      "problem": "<p>Two rays start from a common point and have an angle of 60 degrees. Circle \\(C\\) is drawn with radius 42 such that it is tangent to the two rays. Find the radius of the circle that has radius smaller than circle \\(C\\) and is also tangent to \\(C\\) and the two rays.</p>",
+      "solutions": "<p>Let the intersection of the rays be \\(A\\). Also let \\(O\\) be the center of circle \\(C\\) and \\(P\\) be the center of the smaller circle. Draw line \\(OP\\) and extend it such that it intersects \\(A\\). We know these points are collinear because \\(O\\) and \\(P\\) are equidistant from the rays (verified by dropping perpendicular lines from \\(O\\) and \\(P\\) to the rays). Also, line \\(OA\\) bisects the angle between the rays. Now draw a line from \\(O\\) to a ray but is perpendicular to the ray. Call this point \\(M\\). We know that \\(\\angle OAM\\) is 30 degrees, and that \\(\\angle AMO\\) is right (perpendicular). Thus \\(\\angle APM\\) is 30 degrees. Now draw a perpendicular line from \\(P\\) to \\(OM\\), and call this point \\(N\\). Let the radius we want to find be \\(r\\). We know that \\(OP = r + 42\\) and that \\(ON = OM - NM = 42 - r\\). Now we can equate \\(\\cos(60) = \\frac{ON}{OP} = \\frac{r+42}{r-42} = \\frac{1}{2}\\). Solving for \\(r\\) we get 21.</p>",
+      "answer": "21"
+    },
+    "3": {
+      "problem": "<p>Given a regular tetrahedron \\(ABCD\\) with center \\(O\\), find \\(\\sin \\angle AOB\\).</p>",
+      "solutions": "<p>Assume the edge length is 1. Let \\(E\\) be the center of triangle \\(ABC\\). The height of triangle \\(ABC\\) is \\(\\frac{\\sqrt3}{2}\\), so \\(AE = \\frac{2}{3}\\cdot\\frac{\\sqrt3}{2} = \\frac{1}{\\sqrt3}\\). Triangle \\(AED\\) is a right triangle, so the tetrahedron’s height \\(DE = \\sqrt{\\frac{2}{3}}\\). Thus, \\(DO\\) is \\(\\frac{3}{4}\\sqrt{\\frac{2}{3}} = \\frac{\\sqrt6}{4}\\). Thus \\(AOB\\) is an isosceles triangle with base length 1 and leg length \\(\\frac{\\sqrt6}{4}\\). Letting \\(\\theta\\) be angle \\(AOB\\), and using the Law of Cosines: \\[1 = \\frac{3}{8} + \\frac{3}{8} - \\frac{3}{4}\\cos(\\theta)\\] , so \\(\\theta = \\cos^{-1}\\left(-\\frac{1}{3}\\right)\\). Then, \\(\\sin\\theta = \\boxed{\\frac{2\\sqrt2}{3}}\\).</p>",
+      "answer": "\\frac{2\\sqrt{2}}{3}"
+    },
+    "4": {
+      "problem": "<p>Two cubes \\(A\\) and \\(B\\) have different side lengths, such that the volume of cube \\(A\\) is numerically equal to the surface area of cube \\(B\\). If the surface area of cube \\(A\\) is numerically equal to six times the side length of cube \\(B\\), what is the ratio of the surface area of cube \\(A\\) to the volume of cube \\(B\\)?</p>",
+      "solutions": "<p>If cube \\(A\\) has side length \\(a\\) and cube \\(B\\) has side length \\(b\\), then \\(a^3 = 6b^2\\) and \\(6a^2 = 6b\\), so \\(\\frac{1}{a} = 6\\) or \\(a = \\frac16\\) and \\(b = \\frac{1}{36}\\). Then, \\(\\frac{6a^2}{b^3} = \\frac{1}{b^2} = \\boxed{\\frac{1}{1296}}\\).</p>",
+      "answer": "\\frac{1}{1296}"
+    },
+    "5": {
+      "problem": "<p>Points \\(A\\) and \\(B\\) are fixed points in the plane such that \\(AB = 1\\). Find the area of the region consisting of all points \\(P\\) such that \\(\\angle APB &gt; 120^\\circ\\).</p>",
+      "solutions": "<p>Pick a point \\(Q\\) such that \\(\\angle AQB = 120\\). Let \\(O\\) be the center of the circumcircle of \\(\\triangle AQB\\) and let \\(M\\) be the midpoint of \\(AB\\). Note that any point within the region of the circle formed by the segment \\(AB\\) and the minor arc \\(AB\\) will satisfy the requirements for \\(P\\). The area of this region is equal to the area of the sector formed by \\(AB\\) and the triangle \\(AOB\\). Since \\(\\angle AOB = 120^\\circ, \\angle MOB = 60^\\circ\\). We know \\(\\angle BMO = 90^\\circ\\), so since \\(AM = \\frac{1}{2}\\), we have \\(OM = \\frac{1}{2\\sqrt3}\\) and \\(OB = \\frac{1}{\\sqrt3}\\). This gives \\([\\triangle AOB] = \\frac12 \\cdot \\frac{1}{2\\sqrt3} = \\frac{\\sqrt3}{12}\\) and the area of the sector is \\(\\frac13 \\pi \\left(\\frac{1}{\\sqrt3}\\right) = \\frac{\\pi}{9}\\). Then the area of the region is \\(\\left(\\frac{\\pi}{9} - \\frac{\\sqrt3}{6}\\right)\\). Note that we can construct two such regions, one on each side of segment \\(AB\\). Then the answer is twice the area of one such region, giving us \\(2\\left(\\frac{\\pi}{9} - \\frac{\\sqrt3}{6}\\right) = \\frac{2\\pi}{9} - \\frac{\\sqrt3}{6}\\).</p>",
+      "answer": "\\frac{2\\pi}{9} - \\frac{\\sqrt{3}}{6}"
+    },
+    "6": {
+      "problem": "<p>Let \\(ABCD\\) be a cyclic quadrilateral where \\(AB = 4\\), \\(BC = 11\\), \\(CD = 8\\), and \\(DA = 5\\). If \\(BC\\) and \\(DA\\) intersect at \\(X\\), find the area of \\(\\triangle XAB\\).</p>",
+      "solutions": "<p>Denote the lengths of \\(XA\\), \\(XB\\) by \\(x, y\\), respectively. Since \\(ABCD\\) is cyclic, the triangles \\(XAB\\) and \\(XCD\\) are similar (AA) and we get \\[\\frac{y+11}{x} = \\frac{8}{4} = \\frac{x+5}{y},\\] so \\(y+11 = 2x\\) and \\(x+5 = 2y\\). Solving gives \\(x = 7\\), \\(y = 9\\). Recalling Heron’s formula we obtain the answer \\([XAB] = \\sqrt{10\\cdot 6\\cdot 3\\cdot 1} = 6\\sqrt5\\).</p>",
+      "answer": "6\\sqrt{5}"
+    },
+    "7": {
+      "problem": "<p>Let \\(ABC\\) be a triangle with \\(BC = 5\\), \\(CA = 3\\), and \\(AB = 4\\). Variable points \\(P, Q\\) are on segments \\(AB, AC\\), respectively such that the area of \\(APQ\\) is half of the area of \\(ABC\\). Let \\(x\\) and \\(y\\) be the lengths of perpendiculars drawn from the midpoint of \\(PQ\\) to sides \\(AB\\) and \\(AC\\), respectively. Find the range of values of \\(2y + 3x\\).</p>",
+      "solutions": "<p>Use coordinates where you place \\(A = (0,0)\\), \\(B = (0,4)\\), \\(C = (3,0)\\). \\(P = (a,0)\\), \\(Q = (0,b)\\) where \\(a \\in [0,3]\\) and \\(b \\in [0,4]\\). Then the area condition gives us that \\(ab = 6\\). Note \\(M = \\frac12(a,b) = (x,y)\\). Thus \\(x \\in [0,3/2]\\), \\(y \\in [0,2]\\) and \\(xy = 3/2\\). Using \\(y = \\frac{3}{2x}\\), we have \\(x \\ge \\frac34\\). Thus we need to find the range of \\[\\frac{3}{x} + 3x \\qquad x \\in [3/4, 3/2]\\] The minimum, by AM-GM is 6 for \\(x = 1\\) which is in the interval. Checking the endpoints, we get values of 6.25 and 6.5. Thus the range is \\([6, 6.5]\\).</p>",
+      "answer": "[6, 6.5]"
+    },
+    "8": {
+      "problem": "<p>\\(ABC\\) is an isosceles right triangle with right angle \\(B\\) and \\(AB = 1\\). \\(ABC\\) has an incenter at \\(E\\). The excircle to \\(ABC\\) at side \\(AC\\) is drawn and has center \\(P\\). Let this excircle be tangent to \\(AB\\) at \\(R\\). Draw \\(T\\) on the excircle so that \\(RT\\) is the diameter. Extend line \\(BC\\) and draw point \\(D\\) on \\(BC\\) so that \\(DT\\) is perpendicular to \\(RT\\). Extend \\(AC\\) and let it intersect with \\(DT\\) at \\(G\\). Let \\(F\\) be the incenter of \\(CDG\\). Find the area of \\(\\triangle EFP\\).</p>",
+      "solutions": "<p>There are a ton of similar triangles in this figure (i.e. \\((ABC, CDG)\\), \\((CQF, PQD)\\), \\((PCQ, DFQ)\\), \\((DFC, FQC)\\), \\((BEP, DFP)\\), \\((BEP, CEP)\\), \\((PDQ, CDF)\\)). We can probably make harder problems using similar triangles in other ways. But, back to the solution: The radius of an excircle at side \\(c\\) is given by \\(\\frac{2K}{a+b-c}\\), where \\(K\\) is the area of the triangle, so we have \\(PR = \\frac{1}{2-\\sqrt2} = 1 + \\frac{\\sqrt2}{2}\\). Additionally, we have \\(PR = PT = TD\\), so \\(PD = \\sqrt2 PR\\), and \\(CD = 2PR - 1\\), and solving for both gives \\(PD = CD = 1+\\sqrt2\\). Then, we notice similar triangles \\(PDC, APC\\), so \\(AP = CP, PD = CD\\), we have \\(PD/PC = PC/AC\\), so \\(PC^2 = AC \\cdot PD\\). We have \\(\\angle APE = \\pi/8\\), so then, \\(AE = PA\\tan(\\pi/8) = PC\\tan(\\pi/8)\\). Additionally, by similar triangles, we have \\(AE = EC, CF = (1+\\sqrt2)(EC)\\), so then, we can solve for the area of \\(EPF\\) as \\((EC+CF)(PC)/2 = EC(2+\\sqrt2)(PC)/2 = PC^2\\tan(\\pi/8)(2+\\sqrt2)/2 = (2+\\sqrt2)(\\tan(\\pi/8))(2+\\sqrt2)/2\\). Doing some simplifying will give us \\(1+\\sqrt2\\) as our answer.</p>",
+      "answer": "1 + \\sqrt{2}"
+    },
+    "9": {
+      "problem": "<p>Let \\(ABC\\) be a triangle. Points \\(D, E, F\\) are on segments \\(BC, CA, AB\\), respectively. Suppose that \\(AF = 10\\), \\(FB = 10\\), \\(BD = 12\\), \\(DC = 17\\), \\(CE = 11\\), and \\(EA = 10\\). Suppose that the circumcircles of \\(\\triangle BFD\\) and \\(\\triangle CED\\) intersect again at \\(X\\). Find the circumradius of \\(\\triangle EXF\\).</p>",
+      "solutions": "<p>One can show that \\(AEXF\\) is cyclic using angle chasing. So it suffices to compute the circumradius of \\(\\triangle AEF\\), \\(R'\\). Also \\(\\angle BAC = 90^\\circ\\). Noting that \\(EAF\\) is a right triangle, \\[R' = \\frac12 EF = \\boxed{5\\sqrt2}.\\]</p>",
+      "answer": "5\\sqrt{2}"
+    },
+    "10": {
+      "problem": "<p>Let \\(D\\), \\(E\\), and \\(F\\) be the points at which the incircle, \\(\\omega\\), of \\(\\triangle ABC\\) is tangent to \\(BC\\), \\(CA\\), and \\(AB\\), respectively. \\(AD\\) intersects \\(\\omega\\) again at \\(T\\). Extend rays \\(TE, TF\\) to hit line \\(BC\\) at \\(E', F'\\), respectively. If \\(BC = 21\\), \\(CA = 16\\), and \\(AB = 15\\), then find \\(\\left| \\frac{1}{DE'} - \\frac{1}{DF'} \\right|\\).</p>",
+      "solutions": "<p>Let the tangent to the incircle at \\(T\\) intersect \\(BC\\) at \\(X\\). An important lemma states that because \\(AE, AF\\) are tangents and \\(A, T, D\\) are collinear that \\(T, E, D, F\\) is a harmonic quadrilateral. Using point \\(T\\), we project this quadrilateral onto line \\(BC\\) to get that \\(X, F', D, E'\\) form a harmonic 4-tuple. Thus \\(\\frac{F'D}{DE'} = \\frac{XF'}{XE'} = \\frac{XD-F'D}{XD+DE'}\\). It follows that the desired quantity is equal to \\(\\frac{2}{DX}\\). Another important lemma states that \\(X, B, D, C\\) form a harmonic 4-tuple. Thus \\(\\frac{XB}{XC} = \\frac{BD}{DC} = \\frac{XD-BD}{XD+DC}\\). It follows that \\(\\frac{2}{DX} = \\left|\\frac{1}{BD} - \\frac{1}{DC}\\right|\\). It follows that the answer is \\(\\frac{1}{10} - \\frac{1}{11} = \\boxed{\\frac{1}{110}}\\).</p>",
+      "answer": "\\frac{1}{110}"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2018,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2018/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(f(x) = \\frac{3x^3+7x^2-12x+2}{x^2+2x-3}\\). Find all integers \\(n\\) such that \\(f(n)\\) is an integer.</p>",
+      "solutions": "<p>\\[\\begin{aligned}\nf(n) &amp;= 3n+1+\\frac{-5n+5}{n^2+2n-3} \\\\\n&amp;= 3n+1+\\frac{-5(n-1)}{(n-1)(n+3)} \\\\\n&amp;= 3n+1+\\frac{-5}{n+3}.\n\\end{aligned}\\]</p><p>Since \\(n\\) is an integer, \\(3n+1\\) will also be an integer. To make \\(\\frac{-5}{n+3}\\) an integer, \\(n+3\\) should be a factor of \\(-5\\). Therefore, \\(n+3\\) can be \\(-5, -1, 1, 5\\), so \\(n\\) can be \\(\\boxed{-8, -4, -2, 2}\\).</p>",
+      "answer": "-8, -4, -2, 2"
+    },
+    "2": {
+      "problem": "<p>How many ways are there to arrange 10 trees in a line where every tree is either a yew or an oak and no two oak trees are adjacent?</p>",
+      "solutions": "<p>Let \\(a_n\\) denote the number of arrangements when there are \\(n\\) trees. Consider the \\(n\\)th tree. If it is a yew, then the previous \\(n-1\\) trees can have \\(a_{n-1}\\) arrangements. If it is an oak, then the \\((n-1)\\)th tree must be a yew, and the previous \\(n-2\\) trees can have \\(a_{n-2}\\) arrangements. Therefore, \\(a_n = a_{n-1} + a_{n-2}\\). Since there are 2 arrangements when there is 1 tree, 3 arrangements when there are 2 trees, we can have \\(a_1 = 2\\) and \\(a_2 = 3\\). Hence, \\(a_3 = 5\\), \\(a_4 = 8\\), \\(a_5 = 13\\), \\(a_6 = 21\\), \\(a_7 = 34\\), \\(a_8 = 55\\), \\(a_9 = 89\\), \\(a_{10} = \\boxed{144}\\).</p>",
+      "answer": "144"
+    },
+    "3": {
+      "problem": "<p>20 students sit in a circle in a math class. The teacher randomly selects three students to give a presentation. What is the probability that none of these three students sit next to each other?</p>",
+      "solutions": "<p>There are \\(\\binom{20}{3} = 1140\\) ways to choose the students.</p><p>Consider the case when only 2 students selected sit together. Label the seats from 1 to 20. If 1 and 2 are selected, then the last seat can be from 4 to 19, so there are 16 ways. Since there are 20 ways to choose 2 students who sit together, there are \\(16 \\cdot 20 = 320\\) ways when only 2 students sit together.</p><p>Consider the case when all 3 students sit together, there are 20 ways.</p><p>Hence, if none of the students sit next to each other, there are \\(1140 - 320 - 20 = 800\\) ways, so the probability is \\(\\boxed{\\frac{40}{57}}\\).</p>",
+      "answer": "\\frac{40}{57}"
+    },
+    "4": {
+      "problem": "<p>Let \\(f_0(x) = x + |x-10| - |x+10|\\), and for \\(n \\ge 1\\), let \\(f_n(x) = |f_{n-1}(x)| - 1\\). For how many values of \\(x\\) is \\(f_{10}(x) = 0\\)?</p>",
+      "solutions": "<p>Since \\(|f_{n-1}(x)| \\ge 0\\), \\(f_n(x) \\ge -1\\) for \\(x &gt; 0\\).</p><p>Since \\(f_n(x) = ||f_{n-2}(x)|-1|-1\\), \\(|f_{n-2}(x)|-1 = \\pm(f_n(x)+1)\\). Thus, \\(f_{n-2}(x) = \\pm2 \\pm f_n(x)\\) or \\(f_{n-2}(x) = \\pm f_n(x)\\).</p><p>Hence, since \\(f_{10}(x) = 0\\) in this case, \\(f_8(x)\\) will cover all positive even numbers within 2. Similarly, \\(f_6(x)\\) will cover all positive even numbers within 4. In this way, \\(f_2(x)\\) will cover all positive even numbers within 8. Hence, \\(f_0(x)\\) will cover all even numbers within 10. Thus, \\(f_0(x) = 0, \\pm2, \\pm4, \\pm6, \\pm8, \\pm10\\).</p><p>Notice that for \\(f_0(x) = \\pm10\\), there are 2 values for \\(x\\); for \\(f_0(x) = 0, \\pm2, \\pm4, \\pm6, \\pm8\\), there are 3 values for \\(x\\). Hence, there are \\(3 \\cdot 9 + 2 \\cdot 2 = \\boxed{31}\\) values of \\(x\\).</p>",
+      "answer": "31"
+    },
+    "5": {
+      "problem": "<p>2 red balls, 2 blue balls, and 6 yellow balls are in a jar. Zion picks 4 balls from the jar at random. What is the probability that Zion picks at least 1 red ball and 1 blue ball?</p>",
+      "solutions": "<p>The total number of choices is \\(\\binom{10}{4} = 210\\).</p><p>The number of choices with 0 red ball and 0 blue ball is \\(\\binom{6}{4} = 15\\), since Zion picks 4 yellow balls.</p><p>The number of choices with 1 red ball and 0 blue ball is \\(\\binom{6}{3} \\cdot \\binom{2}{1} = 40\\), since Zion picks 3 yellow balls and 1 red ball. Similarly, the number of choices with 0 red ball and 1 blue ball is also 40.</p><p>Hence, the number of choices that Zion picks at least 1 red ball and 1 blue ball is \\(210 - 15 - 40 - 40 = 115\\), and the probability is \\(\\boxed{\\frac{23}{42}}\\).</p>",
+      "answer": "\\frac{23}{42}"
+    },
+    "6": {
+      "problem": "<p>Let \\(\\triangle ABC\\) be a right-angled triangle with \\(\\angle ABC = 90^\\circ\\) and \\(AB = 4\\). Let \\(D\\) on \\(\\overline{AB}\\) such that \\(AD = 3DB\\) and \\(\\sin \\angle ACD = \\frac{3}{5}\\). What is the length of \\(BC\\)?</p>",
+      "solutions": "<p>Extend \\(CD\\) to \\(E\\) such that \\(AE\\) is perpendicular to \\(CE\\). Let \\(AE = 3x\\). Since \\(\\sin \\angle ACD = \\frac{3}{5}\\), \\(AC = 5x\\). Hence, \\(DE = \\sqrt{AD^2 - AE^2} = 3\\sqrt{1-x^2}\\). Notice that \\(\\triangle AED \\sim \\triangle CBD\\), so we have \\(\\frac{AE}{CB} = \\frac{ED}{BD}\\).</p><p>Because \\(BD = \\frac{3}{4}AB = 3\\), \\(CB = \\frac{3x}{3\\sqrt{1-x^2}} = \\frac{x}{\\sqrt{1-x^2}}\\). Hence, \\(BC^2 + AB^2 = AC^2\\), so \\(\\frac{x^2}{1-x^2}+16 = 25x^2\\).</p><p>Then \\(x = \\frac{2\\sqrt{5}}{5}\\), so \\(BC = \\boxed{2}\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2018_DMM_Individual/6-fig1.png\" width=\"219\" alt=\"\"></p>",
+      "answer": "2"
+    },
+    "7": {
+      "problem": "<p>Find the value of \\[\\frac{1}{1+\\frac{1}{2+\\frac{1}{1+\\frac{1}{2+\\frac{1}{1+\\cdots}}}}}\\]</p>",
+      "solutions": "<p>Let \\[\\frac{1}{1+\\frac{1}{2+\\frac{1}{1+\\frac{1}{2+\\frac{1}{1+\\cdots}}}}} = n.\\]</p><p>Then \\(\\frac{1}{1+\\frac{1}{2+n}} = n\\). Hence, \\(\\frac{n+2}{n+3} = n\\), so \\(n^2+2n-2=0\\). Because \\(n\\) is positive, \\(n = \\boxed{\\sqrt{3}-1}\\).</p>",
+      "answer": "\\sqrt{3}-1"
+    },
+    "8": {
+      "problem": "<p>Consider all possible quadrilaterals \\(\\square ABCD\\) that have the following properties; \\(\\square ABCD\\) has integer side lengths with \\(AB \\parallel CD\\), the distance between \\(\\overline{AB}\\) and \\(\\overline{CD}\\) is 20, and \\(AB = 18\\). What is the maximum area among all these quadrilaterals, minus the minimum area?</p>",
+      "solutions": "<p>Let \\(H\\) be on \\(CD\\) such that \\(AH\\) is perpendicular to \\(CD\\), so \\(AH = 20\\). Since the area of \\(ABCD\\) is \\(\\frac{1}{2}(AB+CD) \\cdot AH = \\frac{1}{2}(18+CD) \\cdot 20\\), the area is maximized when \\(CD\\) is maximized and is minimized when \\(CD\\) is minimized.</p><p>When \\(CD\\) is maximized, \\(DH\\) should be maximized. Since \\(AD^2 = DH^2+AH^2\\), we have \\(AD^2 = DH^2+20^2\\), so \\((AD+DH)(AD-DH) = 400\\). Hence, \\(AD+DH\\) should be the greatest and \\(AD-DH\\) should be the least. Also, \\(AD\\) should be an integer. Therefore, \\(AD+DH = 200\\) and \\(AD-DH = 2\\), so \\(DH = 99\\). Then \\(CD = 216\\), so the maximum area is 2340.</p><p>When \\(CD\\) is minimized, \\(DH\\) should be less than 18 and maximized to make \\(CD &lt; AB\\), otherwise \\(DH\\) could be 0 to make \\(CD = AB\\). Since \\((AD+DH)(AD-DH) = 400\\), \\(DH\\) has a minimum positive value when \\(AD+DH = 40\\) and \\(AD-DH = 10\\), so \\(DH = 15\\). Therefore, \\(CD = 3\\), so the minimum area is 210.</p><p>Hence, the maximum area minus the minimum area is \\(2340 - 210 = \\boxed{2130}\\).</p>",
+      "answer": "2130"
+    },
+    "9": {
+      "problem": "<p>How many perfect cubes exist in the set \\(\\{1^{2018}, 2^{2017}, 3^{2016}, \\ldots, 2017^2, 2018^1\\}\\)?</p>",
+      "solutions": "<p>If \\(a^x\\) is a perfect cube, whether \\(a\\) itself is a perfect cube, or \\(x\\) is a multiple of 3.</p><p>Consider the case when \\(a\\) is a perfect cube. Since \\(12^3 = 1728\\) and \\(13^3 = 2197\\), there are 12 numbers.</p><p>Consider the case when \\(x\\) is a multiple of 3. There are \\(\\lfloor \\frac{2018}{3} \\rfloor = 672\\) numbers.</p><p>By PIE, we have to exclude the case when both \\(a\\) is a perfect cube and \\(x\\) is a multiple of 3. Noting that \\(x\\) is a multiple of 3 only when \\(a\\) is a multiple of 3, we should exclude the cases when \\(a = 3^3, 6^3, 9^3, 12^3\\).</p><p>Therefore, there are \\(12+672-4 = \\boxed{680}\\) perfect cubes.</p>",
+      "answer": "680"
+    },
+    "10": {
+      "problem": "<p>Let \\(n\\) be the number of ways you can fill a \\(2018 \\times 2018\\) array with the digits 1 through 9 such that for every \\(11 \\times 3\\) rectangle (not necessarily for every \\(3 \\times 11\\) rectangle), the sum of the 33 integers in the rectangle is divisible by 9. Compute \\(\\log_3 n\\).</p>",
+      "solutions": "<p>Consider the \\(11 \\times 3\\) rectangle at the upper-left corner. There are \\(9^{32}\\) ways to fill it such that the sum is divisible by 9, since we can fill 32 integers arbitrarily, and then determines the last integer to make sure the sum is divisible by 9.</p><p>Then, we consider the \\(11 \\times 3\\) rectangle one unit right. Since the first 10 columns are filled, there are \\(9^2\\) to fill the 3 integers in the last column, since we can fill 2 integers arbitrarily, and then determines the last integer. Similarly, if we consider the \\(11 \\times 3\\) rectangle one unit down, there are \\(9^{10}\\) ways to fill it.</p><p>Hence, the total number of ways to fill a \\(2018 \\times 2018\\) array is \\[9^{32} \\cdot (9^2)^{2018-11} \\cdot (9^{10})^{2018-3} = 9^{32+2\\cdot2007+10\\cdot2015} = 9^{24196} = 3^{48392}.\\]</p><p>Thus, we have \\(\\log_3 n = \\boxed{48392}\\).</p>",
+      "answer": "48392"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "DMM Team",
+  "year": 2012,
+  "name": "Team Round",
+  "url": "https://dukemathmeet.org/2012/team.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Let \\(2^k\\) be the largest power of 2 dividing \\(30! = 30 \\cdot 29 \\cdot 28 \\cdots 2 \\cdot 1\\). Find \\(k\\).</p>",
+      "solutions": "<p>There are \\(\\lfloor 30/2 \\rfloor\\) multiples of 2 in the range \\([1, 30]\\). Each of these contributes a power of 2. There are \\(\\lfloor 30/4 \\rfloor\\) multiples of 4, and each of these contributes an additional power of 2. This pattern continues for \\(8, 16\\), ad infinitum. Hence we have \\[\\begin{aligned}\nk &amp;= \\lfloor 30/2 \\rfloor + \\lfloor 30/4 \\rfloor + \\lfloor 30/8 \\rfloor + \\lfloor 30/16 \\rfloor + \\lfloor 30/32 \\rfloor + \\cdots \\\\\n&amp;= 15 + 7 + 3 + 1 + 0 + 0 + \\cdots = 26.\n\\end{aligned}\\]</p>",
+      "answer": "26"
+    },
+    "2": {
+      "problem": "<p>Let \\(d(n)\\) be the total number of digits needed to write all the numbers from 1 to \\(n\\) in base 10; for example, \\(d(5) = 5\\) and \\(d(20) = 31\\). Find \\(d(2012)\\).</p>",
+      "solutions": "<p>We will count separately the digits in the numbers \\(1\\)–\\(9\\), \\(10\\)–\\(99\\), \\(100\\)–\\(999\\), and \\(1000\\)–\\(2012\\). We get \\(d(2012) = 9 \\cdot 1 + 90 \\cdot 2 + 900 \\cdot 3 + (2012 - 1000 + 1) \\cdot 4 = 6941\\).</p>",
+      "answer": "6941"
+    },
+    "3": {
+      "problem": "<p>Jim and TongTong play a game. Jim flips 10 coins and TongTong flips 11 coins; whoever gets the most heads wins. If they get the same number of heads, there is a tie. What is the probability that TongTong wins?</p>",
+      "solutions": "<p>Suppose that TongTong first sets aside one of her coins. She and Jim then each flip 10 coins. If TongTong flips more heads, she wins regardless of her extra coin; if Jim flips more heads, she cannot win, even with the extra coin. Hence TongTong has a \\(1/2\\)-chance of winning if she and Jim flip different number of heads. Now if they flip the same number of heads on the first 10 coins, then TongTong flips her extra coin for a \\(1/2\\) chance of winning.</p><p>Hence TongTong has in total a \\(1/2\\)-chance of winning.</p>",
+      "answer": "\\frac{1}{2}"
+    },
+    "4": {
+      "problem": "<p>There are a certain number of potatoes in a pile. When separated into mounds of three, two remain. When divided into mounds of four, three remain. When divided into mounds of five, one remain. It is clear there are at least 150 potatoes in the pile. What is the least number of potatoes there can be in the pile?</p>",
+      "solutions": "<p>If the potatoes are divided into piles of 12, 11 must remain. Similarly, if the potatoes are divided into piles of 60, 11 must remain. Hence the minimum number of such potatoes is \\(3 \\cdot 60 + 11 = 191\\).</p>",
+      "answer": "191"
+    },
+    "5": {
+      "problem": "<p>Call an ordered triple of sets \\((A, B, C)\\) <b>nice</b> if \\(|A \\cap B| = |B \\cap C| = |C \\cap A| = 2\\) and \\(|A \\cap B \\cap C| = 0\\). How many ordered triples of subsets of \\(\\{1, 2, \\cdots, 9\\}\\) are nice? (Note: \\(|S|\\) denotes the number of elements of \\(S\\), and \\(S \\cap T\\) denotes the intersection of \\(S\\) and \\(T\\).)</p>",
+      "solutions": "<p>As \\((A \\cap B) \\cap (A \\cap C) = A \\cap B \\cap C\\), the two elements in \\(A \\cap B\\) are distinct from the two elements in \\(B \\cap C\\), and both of these pairs of two elements are distinct from the two elements in \\(C \\cap A\\).</p><p>There are \\(\\binom{9}{2}\\) ways to choose the elements of \\(A \\cap B\\), \\(\\binom{7}{2}\\) ways to choose the elements of \\(B \\cap C\\), and \\(\\binom{5}{2}\\) ways to choose the elements of \\(C \\cap A\\). Finally, the three elements not yet assigned to any of the sets may appear in exactly one of \\(A, B, C\\) or in none of them. There are thus 4 ways to pick where to assign each of the 3 remaining elements, for a total of \\(\\binom{9}{2}\\binom{7}{2}\\binom{5}{2}4^3 = 483840\\) such ordered triples \\((A, B, C)\\).</p>",
+      "answer": "483840"
+    },
+    "6": {
+      "problem": "<p>Brett has an \\(n \\times n \\times n\\) cube (where \\(n\\) is an integer) which he dips into blue paint. He then cuts the cube into a bunch of \\(1 \\times 1 \\times 1\\) cubes, and notices that the number of un-painted cubes (which is positive) evenly divides the number of painted cubes. What is the largest possible side length of Brett’s original cube?</p>",
+      "solutions": "<p>The number of unpainted cubes is \\((n-2)^3\\) and the number of painted cubes is \\(n^3 - (n-2)^3\\). If \\((n-2)^3 \\mid n^3 - (n-2)^3\\), then \\((n-2)^3 \\mid n^3\\), so we must have \\(n - 2 \\mid n\\). Hence \\(n - 2 \\mid 2\\), so that \\(n \\le 4\\). In case \\(n = 4\\), Brett has 8 unpainted cubes and 56 painted cubes, so Brett’s cube can be at most \\(4 \\times 4 \\times 4\\).</p>",
+      "answer": "4"
+    },
+    "7": {
+      "problem": "<p>Choose two real numbers \\(x\\) and \\(y\\) uniformly at random from the interval \\([0, 1]\\). What is the probability that \\(x\\) is closer to \\(1/4\\) than \\(y\\) is to \\(1/2\\)?</p>",
+      "solutions": "<p>We must have \\(|x - 1/4| \\le |y - 1/2|\\). We obtain four inequalities, depending on the signs of \\(x - 1/4\\) and \\(y - 1/2\\); if we plot the region in \\([0,1]^2\\) satisfying these inequalities, we obtain the following figure:</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2012_DMM_Team/7-fig1.png\" width=\"306\" alt=\"\"></p><p>The total area of this region is \\(7/16\\), which is thus the probability that \\(x, y\\) satisfy \\(|x - 1/4| \\le |y - 1/2|\\).</p>",
+      "answer": "\\frac{7}{16}"
+    },
+    "8": {
+      "problem": "<p>In triangle \\(ABC\\), we have \\(\\angle BAC = 20^\\circ\\) and \\(AB = AC\\). \\(D\\) is a point on segment \\(AB\\) such that \\(AD = BC\\). What is \\(\\angle ADC\\), in degrees?</p>",
+      "solutions": "<p>Construct \\(E\\) opposite \\(AC\\) from \\(B\\) such that \\(AEC\\) is equilateral. As \\(AD = BC\\), \\(EA = AB\\), and \\(\\angle ABC = 80^\\circ = 60^\\circ + 20^\\circ = \\angle DAE\\), we have that \\(\\triangle ABC \\cong \\triangle EAD\\). Hence \\(CE = DE\\), so that \\(\\triangle CDE\\) is isosceles. As \\(\\angle CED = 60^\\circ - 20^\\circ\\), it follows that \\(\\angle DCE = 70^\\circ\\). As \\(\\angle ACE = 60^\\circ\\), it follows that \\(\\angle DCA = 10^\\circ\\), so that \\(\\angle ADC = 150^\\circ\\).</p>",
+      "answer": "150^\\circ"
+    },
+    "9": {
+      "problem": "<p>Let \\(a, b, c, d\\) be real numbers such that \\[ab + c + d = 2012, \\quad bc + d + a = 2010, \\quad cd + a + b = 2013, \\quad da + b + c = 2009.\\]</p><p>Find \\(d\\).</p>",
+      "solutions": "<p>Set \\(s = a + c\\), \\(t = b + d\\), \\(u = a - c\\), \\(v = b - d\\). Adding all four equations and adding 4 to both sides gives \\((s+2)(t+2) = 8048\\). Adding the first and third equations, and subtracting the second and fourth gives \\(uv = 6\\). Adding the first and second and subtracting the third and fourth gives \\(v(s - 2) = 0\\). Adding the first and fourth and subtracting the second and third gives \\(u(t - 2) = -2\\).</p><p>As \\(v \\ne 0\\) since \\(uv = 6\\), it follows that \\(s = 2\\). Hence \\(t = 2010\\). Thus \\(u = -1/1004\\) and \\(v = -6024\\). Hence we know that \\(d = (t - v)/2 = 8034/2 = 4017\\).</p>",
+      "answer": "4017"
+    },
+    "10": {
+      "problem": "<p>Let \\(\\theta \\in [0, 2\\pi)\\) such that \\(\\cos \\theta = 2/3\\). Find \\[\\sum_{n=0}^{\\infty} \\frac{1}{2^n} \\cos(n\\theta).\\]</p>",
+      "solutions": "<p>Write \\(z = \\exp i\\theta\\), and let \\(\\Re(z)\\) denote the real part of the complex number \\(z\\). We have \\[\\begin{aligned}\n\\sum_{n=0}^{\\infty} \\frac{1}{2^n} \\cos(n\\theta) &amp;= \\sum_{n=0}^{\\infty} \\Re\\left( \\left(\\frac{e^{i\\theta}}{2}\\right)^n \\right) = \\Re\\left( \\sum_{n=0}^{\\infty} \\left(\\frac{e^{i\\theta}}{2}\\right)^n \\right) \\\\\n&amp;= \\Re\\left( \\frac{1}{1 - \\frac{e^{i\\theta}}{2}} \\right) = \\Re\\left[ \\frac{1}{1 - \\frac{e^{i\\theta}}{2}} \\left( \\frac{1 - \\frac{e^{-i\\theta}}{2}}{1 - \\frac{e^{-i\\theta}}{2}} \\right) \\right] \\\\\n&amp;= \\Re\\left( \\frac{1 - \\frac{e^{-i\\theta}}{2}}{\\frac{5}{4} - \\cos\\theta} \\right) = \\frac{4 - 2\\cos\\theta}{5 - 4\\cos\\theta}.\n\\end{aligned}\\]</p><p>As \\(\\cos\\theta = 2/3\\), we have \\[\\sum_{n=0}^{\\infty} \\frac{1}{2^n} \\cos(n\\theta) = \\frac{8}{7}.\\]</p>",
+      "answer": "\\frac{8}{7}"
+    }
+  }
+}

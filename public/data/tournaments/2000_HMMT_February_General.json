@@ -1,0 +1,138 @@
+{
+  "test": "HMMT February General",
+  "year": 2000,
+  "name": "General",
+  "url": "https://hmmt-archive.s3.amazonaws.com/tournaments/2000/feb/gen/problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>If \\(a = 2b + c\\), \\(b = 2c + d\\), \\(2c = d + a - 1\\), \\(d = a - c\\), what is \\(b\\)?</p>",
+      "solutions": "<p>Since \\(d = a - c\\), substitute into the equation \\(b = 2c + d\\) to get \\(b = 2c + a - c = a + c\\). Also, substitute into \\(2c = d + a - 1\\) to get \\(2c = a - c + a - 1\\), or \\(3c = 2a - 1\\). Now, since \\(b = a + c\\), we can substitute into \\(a = 2b + c\\) to get \\(a = 2a + 2c + c\\), or \\(a = -3c\\). Since we know \\(3c = 2a - 1\\) from above, we substitute in to get \\(3c = -6c - 1\\), or \\(c = -\\frac{1}{9}\\). Thus, we find that \\(a = \\frac{1}{3}\\), \\(d = \\frac{4}{9}\\), and \\(\\mathbf{b = \\frac{2}{9}}\\).</p>",
+      "answer": "\\frac{2}{9}"
+    },
+    "2": {
+      "problem": "<p>The temperatures \\(f^\\circ\\)F and \\(c^\\circ\\)C are equal when \\(f = \\frac{9}{5}c + 32\\). What temperature is the same in both \\(^\\circ\\)F and \\(^\\circ\\)C?</p>",
+      "solutions": "<p>Let \\(x\\) be the temperature we are looking for, so \\(x = \\frac{9}{5}x + 32\\). So, \\(-\\frac{4}{5}x = 32\\), so \\(x = -\\frac{5}{4} \\cdot 32 = \\mathbf{-40}\\).</p>",
+      "answer": "-40"
+    },
+    "3": {
+      "problem": "<p>A twelve foot tree casts a five foot shadow. How long is Henry’s shadow (at the same time of day) if he is five and a half feet tall?</p>",
+      "solutions": "<p>Let \\(x\\) be the length of Henry’s shadow in feet. Using similar triangles, we find that \\(\\frac{5.5}{12} = \\frac{x}{5}\\), so \\(x = \\frac{5.5}{12} \\cdot 5 = \\frac{11}{24} \\cdot 5 = \\mathbf{\\frac{55}{24}}\\).</p>",
+      "answer": "\\frac{55}{24}"
+    },
+    "4": {
+      "problem": "<p>Tickets for the football game are $10 for students and $15 for non-students. If 3000 fans attend and pay $36250, how many students went?</p>",
+      "solutions": "<p>Let \\(x\\) be the number of students and \\(y\\) be the number of non-students. We then have the equations \\(x + y = 3000\\) and \\(10x + 15y = 36250\\). Substituting, we find that \\(10(3000 - y) + 15y = 36250\\), or \\(30000 - 10y + 15y = 36250\\), so \\(30000 + 5y = 36250\\). So, \\(5y = 6250\\), and \\(y = 1250\\), so \\(x = \\mathbf{1750}\\).</p>",
+      "answer": "1750"
+    },
+    "5": {
+      "problem": "<p>Find the interior angle between two sides of a regular octagon (degrees).</p>",
+      "solutions": "<p>The total number of degrees in an octagon is \\((8-2)\\cdot 180 = 1080\\). Since the degrees are evenly distributed among the angles, the measure of one interior angle is \\(\\frac{1080}{8} = \\mathbf{135^\\circ}\\).</p>",
+      "answer": "135^\\circ"
+    },
+    "6": {
+      "problem": "<p>Three cards, only one of which is an ace, are placed face down on a table. You select one, but do not look at it. The dealer turns over one of the other cards, which is not the ace (if neither are, he picks one of them randomly to turn over). You get a chance to change your choice and pick either of the remaining two face-down cards. If you selected the cards so as to maximize the chance of finding the ace on the second try, what is the probability that you selected it on the</p><p>(a) first try?</p><p>(b) second try?</p>",
+      "solutions": "<p>Pick any card first, then pick the other face-down card.</p><p>(a) \\(\\mathbf{\\frac{1}{3}}\\)</p><p>(b) \\(\\mathbf{\\frac{2}{3}}\\)</p>",
+      "answer": "(a)\\ \\frac{1}{3};\\ (b)\\ \\frac{2}{3}"
+    },
+    "7": {
+      "problem": "<p>Find \\([\\sqrt{19992000}]\\) where \\([x]\\) is the greatest integer less than or equal to \\(x\\).</p>",
+      "solutions": "<p>\\(\\sqrt{19992000} \\approx 4471.241\\), and \\([4471.241] = \\mathbf{4471}\\).</p>",
+      "answer": "4471"
+    },
+    "8": {
+      "problem": "<p>Bobo the clown was juggling his spherical cows again when he realized that when he drops a cow is related to how many cows he started off juggling. If he juggles 1, he drops it after 64 seconds. When juggling 2, he drops one after 55 seconds, and the other 55 seconds later. In fact, he was able to create the following table:</p><p>\\[\\begin{array}{c|ccccccccccc}\n\\text{cows started juggling} &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; 11 \\\\\n\\text{seconds he drops after} &amp; 64 &amp; 55 &amp; 47 &amp; 40 &amp; 33 &amp; 27 &amp; 22 &amp; 18 &amp; 14 &amp; 13 &amp; 12 \\\\\n\\hline\n\\text{cows started juggling} &amp; 12 &amp; 13 &amp; 14 &amp; 15 &amp; 16 &amp; 17 &amp; 18 &amp; 19 &amp; 20 &amp; 21 &amp; 22 \\\\\n\\text{seconds he drops after} &amp; 11 &amp; 10 &amp; 9 &amp; 8 &amp; 7 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 2 &amp; 1\n\\end{array}\\]</p><p>He can only juggle up to 22 cows. To juggle the cows the longest, what number of cows should he start off juggling? How long (in minutes) can he juggle for?</p>",
+      "solutions": "<p>The time that Bobo can juggle is the number of cows times seconds. So, we get the following table:</p><p>\\[\\begin{array}{c|ccccccccccc}\n\\text{cows started juggling} &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; 11 \\\\\n\\text{total time} &amp; 64 &amp; 110 &amp; 141 &amp; 160 &amp; 165 &amp; 162 &amp; 154 &amp; 144 &amp; 126 &amp; 130 &amp; 132 \\\\\n\\hline\n\\text{cows started juggling} &amp; 12 &amp; 13 &amp; 14 &amp; 15 &amp; 16 &amp; 17 &amp; 18 &amp; 19 &amp; 20 &amp; 21 &amp; 22 \\\\\n\\text{total time} &amp; 132 &amp; 130 &amp; 126 &amp; 120 &amp; 112 &amp; 102 &amp; 90 &amp; 76 &amp; 60 &amp; 42 &amp; 22\n\\end{array}\\]</p><p>Thus, we see that the maximum occurs with \\(\\mathbf{5}\\) cows, and the total time is 165 seconds \\(= \\mathbf{2\\frac{3}{4}}\\) minutes.</p>",
+      "answer": "5\\text{ cows};\\ 2\\frac{3}{4}\\text{ minutes}"
+    },
+    "9": {
+      "problem": "<p>Edward’s formula for the stock market predicts correctly that the price of HMMT is directly proportional to a secret quantity \\(x\\) and inversely proportional to \\(y\\), the number of hours he slept the night before. If the price of HMMT is $12 when \\(x = 8\\) and \\(y = 4\\), how many dollars does it cost when \\(x = 4\\) and \\(y = 8\\)?</p>",
+      "solutions": "<p>Let \\(p\\) be the price of HMMT. So \\(p = k \\cdot \\frac{x}{y}\\), where \\(k\\) is a constant to be determined. We know that when \\(x = 8\\) and \\(y = 4\\) that \\(p = 12\\), so, solving for \\(k\\), we find that \\(k = 6\\). So, when \\(x = 4\\) and \\(y = 8\\), we find that \\(p = 6 \\cdot \\frac{4}{8} = \\mathbf{3}\\).</p>",
+      "answer": "3"
+    },
+    "10": {
+      "problem": "<p>Bob has a 12 foot by 20 foot garden. He wants to put fencing around it to keep out the neighbor’s dog. Normal fenceposts cost $2 each while strong ones cost $3 each. If he needs one fencepost for every 2 feet and has $70 to spend on the fenceposts, what is the largest number of strong fenceposts he can buy?</p>",
+      "solutions": "<p>On the 12 foot sides, he needs 7 posts, and on the 20 foot sides, he needs 9 posts, so he needs \\(7+9+7+9 = 32\\) total posts. Let \\(x\\) be the number of normal fenceposts and \\(y\\) be the number of strong fenceposts, so \\(x+y=32\\). To spend $70, we have the equation \\(2x+3y=70\\). Substituting, we find that \\(2(32-y)+3y=70\\), so \\(64-2y+3y=70\\), and \\(64+y=70\\), so \\(y = \\mathbf{6}\\).</p>",
+      "answer": "6"
+    },
+    "11": {
+      "problem": "<p>If \\(a@b = \\frac{a+b}{a-b}\\), find \\(n\\) such that \\(3@n = 3\\).</p>",
+      "solutions": "<p>Substituting, we find that \\(\\frac{3+n}{3-n} = 3\\), so \\(3+n = 9-3n\\), thus \\(4n=6\\). So, \\(n = \\mathbf{\\frac{3}{2}}\\).</p>",
+      "answer": "\\frac{3}{2}"
+    },
+    "12": {
+      "problem": "<p>In 2020, the United States admits North Mathematica as the 51st state. It consists of 5 islands joined by bridges as shown. Is it possible to cross all the bridges without doubling over? If so, what is the difference (positive) between the number of the start island and the number of the end island?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_General/12-fig1.png\" width=\"359\" alt=\"\"></p>",
+      "solutions": "<p>Yes – one possible path is \\(4 \\to 1 \\to 2 \\to 4 \\to 5 \\to 2 \\to 3 \\to 5\\), so the difference between the start island and the end island is \\(\\mathbf{1}\\).</p>",
+      "answer": "1"
+    },
+    "13": {
+      "problem": "<p>How many permutations of 123456 have exactly one number in the correct place?</p>",
+      "solutions": "<p>The number of rearrangements keeping 1 number in its spot and rearranging the other 5 such that none are in the right spot is 44. There are 6 numbers to fix, this gives us an answer of \\(44 \\cdot 6 = \\mathbf{264}\\).</p>",
+      "answer": "264"
+    },
+    "14": {
+      "problem": "<p>The author of this question was born on April 24, 1977. What day of the week was that?</p>",
+      "solutions": "<p>Feburary 26, 2000 is a Saturday. April 24, 2000 is \\(23\\cdot 365+1+1+1+1+1+1+1 = 8401\\) days away from April 24, 1977 (including the leap years). So, Feburary 26, 2000 is \\(8401-3-31-24=8343\\) days after April 24, 1977. Now, \\(\\frac{8343}{7}=1191\\) with a remainder of 6. So, 6 days before Saturday is \\(\\mathbf{Sunday}\\).</p>",
+      "answer": "\\text{Sunday}"
+    },
+    "15": {
+      "problem": "<p>Which is greater: \\((3^5)^{(5^3)}\\) or \\((5^3)^{(3^5)}\\)?</p>",
+      "solutions": "<p>Notice that \\(3^6 = 729\\) while \\(5^4 = 625\\), and since \\(\\ln 5 &gt; \\ln 3\\), it follows that \\(5^4 \\ln 3 &lt; 3^6 \\ln 5\\), so \\(5^3*5 \\ln 3 &lt; 3^5*3 \\ln 5\\), and so by laws of logarithms, \\(5^3 \\ln 3^5 &lt; 3^5 \\ln 5^3\\). Again applying laws of logarithms, it follows that \\(\\ln (3^5)^{(5^3)} &lt; \\ln (5^3)^{(3^5)}\\). So, since \\(\\ln x\\) is an increasing function, it follows that \\((3^5)^{(5^3)} &lt; (5^3)^{(3^5)}\\), and so it follows that \\(\\mathbf{(5^3)^{(3^5)}}\\) <b>is greater</b>. One can also use the laws of exponents to reduce the values to \\(3^{(5^4)}\\) and \\(5^{(3^6)}\\). The second is clearly larger.</p>",
+      "answer": "(5^3)^{3^5}"
+    },
+    "16": {
+      "problem": "<p>Joe bikes \\(x\\) miles East at 20 mph to his friend’s house. He then turns South and bikes \\(x\\) miles at 20 mph to the store. Then, Joe turns East again and goes to his grandma’s house at 14 mph. On this last leg, he has to carry flour he bought for her at the store. Her house is 2 more miles from the store than Joe’s friend’s house is from the store. Joe spends a total of 1 hour on the bike to get to his grandma’s house. If Joe then rides straight home in his grandma’s helicopter at 78 mph, how many minutes does it take Joe to get home from his grandma’s house?</p>",
+      "solutions": "<p>Expressing the total time Joe has biked in hours leads to the equation \\(\\frac{x}{20}+\\frac{x}{20}+\\frac{x+2}{14}=1\\). So, \\(x=5\\). Thus, we can construct the diagram below, and find the total time that it takes to get back: \\(13 * \\frac{1}{78} = \\frac{1}{6}\\) hours, or \\(\\mathbf{10}\\) minutes.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_General/16-fig1.png\" width=\"387\" alt=\"\"></p>",
+      "answer": "10"
+    },
+    "17": {
+      "problem": "<p>In how many distinct ways can the letters of STANTON be arranged?</p>",
+      "solutions": "<p>There are \\(7!\\) ways to arrange those letters. However, for every distinct arrangement, there are \\(2! * 2! = 4\\) total arrangements of the 2 T’s and 2 N’s. Therefore, the total number of distinct ways to arrange the letters is \\(\\frac{7!}{2!2!} = \\mathbf{1260}\\).</p>",
+      "answer": "1260"
+    },
+    "18": {
+      "problem": "<p>You use a lock with four dials, each of which is set to a number between 0 and 9 (inclusive). You can never remember your code, so normally you just leave the lock with each dial one higher than the correct value. Unfortunately, last night someone changed all the values to 5. All you remember about your code is that none of the digits are prime, 0, or 1, and that the average value of the digits is 5. How many combinations will you have to try?</p>",
+      "solutions": "<p>The only digits possible are 4, 6, 8, and 9. The only groups of numbers allowed keeping the average at 5 are 8444 are 6464. There are 4 ways to arrange 8444 and 6 ways to arrange 6464 so there are only \\(\\mathbf{10}\\) combinations to try.</p>",
+      "answer": "10"
+    },
+    "19": {
+      "problem": "<p>Eleven pirates find a treasure chest. When they split up the coins in it, they find that there are 5 coins left. They throw one pirate overboard and split the coins again, only to find that there are 3 coins left over. So, they throw another pirate over and try again. This time, the coins split evenly. What is the least number of coins there could have been?</p>",
+      "solutions": "<p>Let \\(y\\) be the number of coins in the chest. From the problem, we know that \\(y \\equiv 5 \\pmod{11}\\), \\(y \\equiv 3 \\pmod{10}\\), and \\(y \\equiv 0 \\pmod 9\\). Combining these gives us that \\(y \\equiv 423 \\pmod{990}\\), so the answer is \\(\\mathbf{423}\\).</p>",
+      "answer": "423"
+    },
+    "20": {
+      "problem": "<p>Given: \\(AC\\) has length 5, semicircle \\(AB\\) has radius 1, semicircle \\(BC\\) has diameter 3. What percent of the the big circle is shaded?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_General/20-fig1.png\" width=\"148\" alt=\"\"></p>",
+      "solutions": "<p>The area of the big circle is \\(\\left(\\frac{5}{2}\\right)^2 \\pi = \\frac{25}{4}\\pi\\). The area of the circle with diameter \\(AB\\) is \\(\\pi\\), and the area of the circle with diameter \\(BC\\) is \\(\\frac{9}{4}\\pi\\). Thus, the percentage of the big circle that is shaded is \\(\\frac{\\frac{25}{4}\\pi - \\pi - \\frac{9}{4}\\pi}{\\frac{25}{4}\\pi} = \\frac{25-4-9}{25} = \\frac{12}{25} = \\mathbf{48\\%}\\).</p>",
+      "answer": "48\\%"
+    },
+    "21": {
+      "problem": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_General/21-fig1.png\" width=\"122\" alt=\"\"></p><p>Find the area of the six-pointed star if all edges are of length \\(s\\), all acute angles are \\(60^\\circ\\) and all obtuse angles are \\(240^\\circ\\).</p>",
+      "solutions": "<p>It is clear that we can split the figure into 12 equilateral triangles, all of which have side length \\(s\\). So, since the area of one of these triangles is \\(\\frac{s^2\\sqrt{3}}{4}\\), the total area is \\(\\mathbf{3s^2\\sqrt{3}}\\).</p>",
+      "answer": "3s^2\\sqrt{3}"
+    },
+    "22": {
+      "problem": "<p>An equilateral triangle with sides of length 4 has an isosceles triangle with the same base and half the height cut out of it. Find the remaining area.</p>",
+      "solutions": "<p>\\(A_{iso} = \\frac{A_{eq}}{2}\\) so \\(\\Delta A = A_{eq} - A_{iso} = \\frac{1}{2}A_{eq}\\). Also, \\(A_{eq} = \\frac{4^2 \\cdot \\sqrt{3}}{4} = 4\\sqrt{3}\\), so \\(\\Delta A = 2\\sqrt{3}\\). Thus, the area is \\(\\mathbf{2\\sqrt{3}}\\).</p>",
+      "answer": "2\\sqrt{3}"
+    },
+    "23": {
+      "problem": "<p>What are the last two digits of \\(7^{7^7}\\)?</p>",
+      "solutions": "<p>Notice that \\(7^{2k+1} \\equiv 3 \\pmod 4\\) for \\(k \\in \\mathbb{Z}\\) (\\(k\\) is an integer). Also, \\(7^1 \\equiv 7 \\pmod{100}\\), \\(7^2 \\equiv 49 \\pmod{100}\\), \\(7^3 \\equiv 43 \\pmod{100}\\), \\(7^4 \\equiv 1 \\pmod{100}\\), with the cycle repeating afterwards. So, clearly \\(7^{7^7} \\equiv 3 \\pmod 4\\), and since the cycle has period 4 \\(\\pmod{100}\\), we can conclude that \\(7^{7^7} \\equiv \\mathbf{43} \\pmod{100}\\).</p>",
+      "answer": "43"
+    },
+    "24": {
+      "problem": "<p>Peter is randomly filling boxes with candy. If he has 10 pieces of candy and 5 boxes in a row labeled A, B, C, D, and E, how many ways can he distribute the candy so that no two adjacent boxes are empty?</p>",
+      "solutions": "<p>If there are no empty boxes, there are 126 ways of distributing the identical candy. If there is one empty box, there are 84 ways of distributing the candy and 5 ways of choosing the empty box, so there are \\(84 \\cdot 5 = 420\\) ways. If there are two empty boxes, there are 36 ways of distributing the candy and 6 combinations of assigning the empty boxes so that they are not adjacent, so there are \\(36 \\cdot 6 = 216\\) ways. If there are three empty boxes, there are 9 ways of distributing the candy, and only 1 way of arranging the empty boxes. Having four or five empty boxes is impossible, since some two would have to be adjacent. So, the total number of ways is \\(126+420+216+9=\\mathbf{771}\\).</p>",
+      "answer": "771"
+    },
+    "25": {
+      "problem": "<p>How many points does one have to place on a unit square to guarantee that two of them are strictly less than 1/2 unit apart?</p>",
+      "solutions": "<p>We can place 9 points as shown, all at least \\(\\frac{1}{2}\\) unit apart, but the next point must be less than \\(\\frac{1}{2}\\), so \\(\\mathbf{10}\\) points must be placed. There is no arrangement of 10 points with distance at least \\(\\frac{1}{2}\\). The proof of this is a simple application of the Pigeonhole Principle.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2000_HMMT_February_General/25-fig1.png\" width=\"243\" alt=\"\"></p>",
+      "answer": "10"
+    },
+    "26": {
+      "problem": "<p>Janet is trying to find Tim in a Cartesian forest. Janet is \\(5\\sqrt{2}\\) miles from \\((0,0)\\), \\(\\sqrt{41}\\) miles from \\((1,0)\\), and \\(\\sqrt{61}\\) miles from \\((0,1)\\). Tim is \\(\\sqrt{65}\\) miles from \\((0,0)\\), \\(2\\sqrt{13}\\) miles from \\((1,0)\\), and \\(\\sqrt{58}\\) miles from \\((0,1)\\). How many miles apart are Janet and Tim?</p>",
+      "solutions": "<p>Janet is at \\((5,-5)\\) and Tim is at \\((7,4)\\). They are \\(\\mathbf{\\sqrt{85}}\\) miles apart.</p>",
+      "answer": "\\sqrt{85}"
+    }
+  }
+}

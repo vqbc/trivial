@@ -1,0 +1,58 @@
+{
+  "test": "PUMaC Algebra A",
+  "year": 2008,
+  "name": "Algebra",
+  "url": "https://pumac.princeton.edu/s/PUMaC2008_AlgebraA.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Given the sequence \\(1, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, \\ldots\\), find \\(n\\) such that the sum of the first \\(n\\) terms is 2008 or 2009.</p>",
+      "solutions": "<p>Let \\(s_n\\) be the cumulative sums of the sequence. Note that \\(s_1 = 1\\), \\(s_3 = 4\\), \\(s_6 = 9\\), and so on. In particular, if \\(n\\) is equal to the \\(k^{th}\\) triangular number, then \\(s_n = k^2\\), and the \\(n^{th}\\) term is a 1, with all other terms being a 2. \\(44^2 = 1936\\) and \\(45^2 = 2025\\), so we need to count upwards from term number \\(44 \\cdot 45 / 2 = 990\\), knowing that the sequence does not hit another 1 value before passing 2008 and 2009. \\((2008 - 1936)/2 = 72\\), which means we need 36 more 2’s after term 990, which means that the first 1026 terms sum to 2008.</p>",
+      "answer": "1026"
+    },
+    "2": {
+      "problem": "<p>What is the polynomial of smallest degree that passes through \\((-2, 2)\\), \\((-1, 1)\\), \\((0, 2)\\), \\((1, -1)\\), and \\((2, 10)\\)?</p>",
+      "solutions": "<p>\\(x^4+x^3-3x^2-2x+2\\). You can work this out with successive differences.</p>",
+      "answer": "x^4+x^3-3x^2-2x+2"
+    },
+    "3": {
+      "problem": "<p>Let \\(f(n) = 9n^5 - 5n^3 - 4n\\). Find the greatest common divisor of \\(f(17), f(18), \\ldots, f(2009)\\).</p>",
+      "solutions": "<p>Factorize: \\(f(n) = n(n-1)(n+1)(9n^2+4)\\). First observe that \\(\\gcd(a_0, a_1, a_2, \\ldots) = \\gcd(a_0, (\\Delta a)_1, (\\Delta^2 a)_2, \\ldots)\\). From this two things become clear: one, the number we seek (call it \\(G\\)) divides \\(\\Delta^5 f\\), which is identically \\(9 \\cdot 5!\\). Second, that \\(G\\) equals \\(\\gcd(\\ldots, f(-2), f(-1), f(0), f(1), f(2), \\ldots)\\). First, calculate \\(f(2) = 6 \\cdot 40\\) and \\(f(3) = 24 \\cdot 85\\). The gcd of these is 120. Thus \\(G\\) divides 120. To prove \\(G = 120\\), we just have to show that 8 always divides \\(f(n)\\), 3 always divides \\(f(n)\\), and 5 always divides \\(f(n)\\): If \\(n\\) is even, then 2 divides \\(n\\) and 4 divides \\(9n^2+4\\), so 8 divides \\(f(n)\\). If \\(n\\) is odd, then 8 divides \\(n^2-1\\), so 8 divides \\(f(n)\\). Thus 8 always divides \\(f(n)\\). Three always divides \\(n(n+1)(n-1)\\), so it always divides \\(f(n)\\). To prove 5 always divides \\(f(n)\\), observe that if \\(n \\equiv 0, 1, 4\\) then 5 divides \\(n(n-1)(n+1)\\). If \\(n \\equiv 2, 3\\), then since 5 divides \\(f(2)\\) and \\(f(3)\\), it also divides \\(f(n)\\).</p>",
+      "answer": "120"
+    },
+    "4": {
+      "problem": "<p>What’s the greatest integer \\(n\\) for which the system \\(k &lt; x^k &lt; k+1\\) for \\(k = 1, 2, \\ldots, n\\) has a solution?</p>",
+      "solutions": "<p>We have the following inequalities for \\(x\\): \\[\\begin{aligned}\n1 &amp;&lt; x &lt; 2 \\\\\n\\sqrt{2} &amp;&lt; x &lt; \\sqrt{3} \\\\\n\\sqrt[3]{3} &amp;&lt; x &lt; \\sqrt[3]{4} \\\\\n\\sqrt[4]{4} &amp;&lt; x &lt; \\sqrt[4]{5} \\\\\n\\sqrt[5]{5} &amp;&lt; x &lt; \\sqrt[5]{6}\n\\end{aligned}\\] You can see that there clearly is a solution to the first four inequalities, and there can be no solution to the fifth, as \\(3^5 = 243 &gt; 216 = 6^3\\).</p>",
+      "answer": "4"
+    },
+    "5": {
+      "problem": "<p>Let \\(H_k = \\sum_{i=1}^k \\frac{1}{i}\\) for all positive integers \\(k\\). Find a closed-form expression for \\(\\sum_{k=1}^n H_k\\) in terms of \\(n\\) and \\(H_n\\).</p>",
+      "solutions": "<p>The number in question is \\[\\sum_{m=1}^n \\sum_{i=1}^m \\frac{1}{i} = \\sum_{i=1}^n \\sum_{m=i}^n \\frac{1}{i} = \\sum_{i=1}^n \\frac{n+1-i}{i} = (n+1)\\sum_{i=1}^n \\frac{1}{i} - \\sum_{i=1}^n 1 = (n+1)H_n - n\\]</p>",
+      "answer": "(n+1)H_n-n"
+    },
+    "6": {
+      "problem": "<p>Let \\(x\\) be the largest root of \\(x^4 - 2009x + 1\\). Find the nearest integer to \\(\\frac{1}{x^3-2009}\\).</p>",
+      "solutions": "<p>The largest root of \\(x^4 - 2009x + 1\\) is near \\(\\sqrt[3]{2009}\\), which is nearer to 13 since \\(12.5^3 &lt; 2009\\). It is easy to verify that \\(f(12) &lt; 0\\) and \\(f(y) &gt; 0\\) for \\(y &gt; 13\\). Now, if \\(x^4 - 2009x = -1\\), then \\(1/(x^3-2009) = -x \\approx -\\sqrt[3]{2009}\\), as desired.</p>",
+      "answer": "-13"
+    },
+    "7": {
+      "problem": "<p>Suppose \\(x^9 = 1\\) but \\(x^3 \\ne 1\\). Find a polynomial of minimal degree equal to \\(\\frac{1}{1+x}\\).</p>",
+      "solutions": "<p>Since \\(x^9 = 1\\), \\(x^9 - 1 = 0\\), but \\(x^3 - 1\\) is not zero. We take the quotient \\(x^6 + x^3 + 1\\). This polynomial is cyclotomic and irreducible. In particular this means that given any root, no linear combination of the powers of that root can equal zero if the coefficients are rational. Since \\(x^6+x^3+1 = 0\\), we have \\(-1 = x^6+x^3\\), so \\(\\frac{1}{x+1} = -\\frac{x^6+x^3}{x+1} = -x^5+x^4-x^3\\), which equals the above. No polynomial can have smaller or equal degree and return the same value, since the difference with the polynomial already found would be a zero polynomial of degree less than 6.</p>",
+      "answer": "-x^5+x^4-x^3"
+    },
+    "8": {
+      "problem": "<p>Find the polynomial \\(f\\) with the following properties:</p><ul><li>its leading coefficient is 1,</li><li>its coefficients are nonnegative integers,</li><li>\\(72 \\mid f(x)\\) if \\(x\\) is an integer,</li><li>if \\(g\\) is another polynomial with the same properties, then \\(g - f\\) has a nonnegative leading coefficient.</li></ul>",
+      "solutions": "<p>\\(x^6+x^4+34x^2+36x\\). Taking consecutive differences, one can prove that it is impossible to express \\(x^5\\) as a linear combination of smaller powers of \\(x\\) modulo 9, and also that it is impossible to express \\(x^6\\) as anything less than a quartic. \\((x^3-x)^2\\) is a solution modulo 9, and we can add 9 to any coefficient, or \\(3(x^3-x)\\) times any polynomial. In fact, \\(x^3-x\\) is zero mod 24, so by adding and subtracting multiples of \\(3x^3-3x\\) we should be able to obtain \\(x^6+70x^4+x^2\\). Subtract \\(69x^4-69x^2\\) to help minimize. This yields \\(x^6+x^4+70x^2\\). This is congruent to zero mod 24. We know that the first four coefficients are as good as possible, so we will leave them alone. Now we may try and add a quadratic polynomial congruent to zero mod 72 to try and improve. A quadratic polynomial always divisible by 72 has constant term zero mod 72. Let this quadratic addend be \\(ax^2+bx\\), and note that \\(a+b \\equiv 0 \\pmod{72}\\) and \\(4a+2b \\equiv 0 \\pmod{72}\\), by plugging in \\(x=1\\) and \\(x=2\\). So \\(2a \\equiv 0 \\pmod{72}\\), and the only possibility is to add \\(-36x^2+36x\\).</p>",
+      "answer": "x^6+x^4+34x^2+36x"
+    },
+    "9": {
+      "problem": "<p>If \\(p(x)\\) is a polynomial with integer coefficients, let \\(q(x) = \\frac{p(x)}{x(1-x)}\\). If \\(q(x) = q\\left(\\frac{1}{1-x}\\right)\\) for every \\(x \\ne 0\\), and \\(p(2) = -7\\), \\(p(3) = -11\\), find \\(p(10)\\).</p>",
+      "solutions": "<p>Insert the equation for \\(q(x)\\) into itself and you get \\(q\\left(\\frac{x-1}{x}\\right) = q(x)\\). Write \\(q(x)\\) and \\(q\\left(\\frac{x-1}{x}\\right)\\) in terms of \\(x\\) and \\(p(x)\\). Multiplying and clearing denominators, you get \\(p(x) = -x^3 \\cdot p\\left(x - \\frac{1}{x}\\right) = -x^3 \\cdot p\\left(1 - \\frac{1}{x}\\right)\\). Since both sides of the equation must be polynomials, we can see that \\(p(x)\\) is cubic. If \\(p(x) = ax^3+bx^2+cx+d\\), then substitution yields a system of equations equivalent to \\(b+c = -3a = -3d\\). The values of \\(p(2)\\) and \\(p(3)\\) give two more equations: \\(8a+4b+2c+d = 7\\) and \\(27a+9b+3c+d = -11\\). Solving the system of four equations we get \\(a=1, b=-5, c=2, d=1\\). \\(p(10) = 1000-500+20+1 = 521\\).</p>",
+      "answer": "521"
+    },
+    "10": {
+      "problem": "<p>Find the sum of all integer values of \\(n\\) such that the equation \\(\\frac{x}{(yz)^2} + \\frac{y}{(zx)^2} + \\frac{z}{(xy)^2} = n\\) has a solution in positive integers.</p>",
+      "solutions": "<p>That equation is \\(\\frac{x^3+y^3+z^3}{(xyz)^2}\\). Assume that \\(z\\) is the largest number present. Then \\(z^2 \\mid x^3+y^3\\). We want to minimize \\(xy\\). But we know that \\(x^3+y^3 \\ge z^2\\), and so the minimum occurs at \\(y=1\\), \\(x=\\sqrt[3]{z^2-1}\\). Then we have \\(1 \\le \\frac{x^3+y^3+z^3}{(xyz)^2} \\le \\frac{3z^3}{z^2\\sqrt[3]{(z^2-1)^2}}\\), so we have \\(z^2-1 \\le z^{3/2}\\), and so you can check that \\(z \\le 3\\). Then you just try everything with \\(x \\le y \\le z \\le 3\\) and get that you can only get 1 and 3.</p>",
+      "answer": "4"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Geometry B",
+  "year": 2010,
+  "name": "Geometry B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2010_GeometryB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>In a polygon, every external angle is one sixth of its corresponding internal angle. How many sides does the polygon have?</p>",
+      "solutions": "<p>Each external angle is \\(\\frac{180}{7}\\) degrees. So the total number of sides is \\(\\frac{360}{180} \\times 7 = 14\\).</p>",
+      "answer": "14"
+    },
+    "2": {
+      "problem": "<p>On rectangular coordinates, point \\(A = (1, 2)\\), \\(B = (3, 4)\\). \\(P = (a, 0)\\) is on the \\(x\\)-axis. Given that \\(P\\) is chosen such that \\(AP + PB\\) is minimized, compute \\(60a\\).</p>",
+      "solutions": "<p>Reflect \\(A\\) along the \\(x\\)-axis to \\(A'\\), and connect \\(A'B\\); the intersection point is the desired \\(P\\).</p>",
+      "answer": "100"
+    },
+    "3": {
+      "problem": "<p>As in the following diagram, square \\(ABCD\\) and square \\(CEFG\\) are placed side by side (i.e. \\(C\\) is between \\(B\\) and \\(E\\) and \\(G\\) is between \\(C\\) and \\(D\\)). Now \\(CE = 14\\), \\(AB &gt; 14\\), compute the minimal area of \\(\\triangle AEG\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_B/3-fig1.png\" width=\"332\" alt=\"\"></p>",
+      "solutions": "<p>Connect \\(AC\\). Note that two triangles \\(AEG\\) and \\(CEG\\) share the same base and have equal height. So the area of \\(\\triangle AEG\\) is equal to the area of \\(\\triangle CEG = 14 \\times 14 / 2 = 98\\).</p>",
+      "answer": "98"
+    },
+    "4": {
+      "problem": "<p>Unit square \\(ABCD\\) is divided into four rectangles by \\(EF\\) and \\(GH\\), with \\(BF = \\frac{1}{4}\\). \\(EF\\) is parallel to \\(AB\\) and \\(GH\\) parallel to \\(BC\\). \\(EF\\) and \\(GH\\) meet at point \\(P\\). Suppose \\(BF + DH = FH\\), calculate the nearest integer to the degree of \\(\\angle FAH\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_B/4-fig1.png\" width=\"91\" alt=\"\"></p>",
+      "solutions": "<p>Rotate \\(\\triangle ABF\\) counterclockwise \\(90^\\circ\\) to \\(\\triangle ADM\\) and we get \\(AFH\\) and \\(AMH\\) congruent (SSS congruency). Hence \\(\\angle FAH = \\frac{1}{2}\\angle FAM = 45^\\circ\\).</p>",
+      "answer": "45"
+    },
+    "5": {
+      "problem": "<p>In a rectangular plot of land, a man walks in a very peculiar fashion. Labeling the corners \\(ABCD\\), he starts at \\(A\\) and walks to \\(C\\). Then, he walks to the midpoint of side \\(AD\\), say \\(A_1\\). Then, he walks to the midpoint of side \\(CD\\), say \\(C_1\\), and then the midpoint of \\(A_1D\\) which is \\(A_2\\). He continues in this fashion, indefinitely. The total length of his path if \\(AB = 5\\) and \\(BC = 12\\) is of the form \\(a + b\\sqrt{c}\\). Find \\(\\frac{abc}{4}\\).</p>",
+      "solutions": "<p>\\(AC + A_1C = 13 + \\sqrt{61}\\). Hence the total length is \\((1 + 2^{-1} + 2^{-2} + \\cdots)(13 + \\sqrt{61}) = 26 + 2\\sqrt{61}\\).</p>",
+      "answer": "793"
+    },
+    "6": {
+      "problem": "<p>In regular hexagon \\(ABCDEF\\), \\(AC\\), \\(CE\\) are two diagonals. Points \\(M\\), \\(N\\) are on \\(AC\\), \\(CE\\) respectively and satisfy \\(AC : AM = CE : CN = r\\). Suppose \\(B\\), \\(M\\), \\(N\\) are collinear, find \\(100r^2\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_B/6-fig1.png\" width=\"274\" alt=\"\"></p>",
+      "solutions": "<p>Let the side length of the hexagon be \\(1\\). Extend \\(NC\\) and \\(AB\\) to intersect at some point \\(G\\). Then \\(AB = 1\\), \\(BG = 2\\), \\(GC = \\sqrt{3}\\), let \\(CN = x\\). We use \\([XYZ]\\) to denote the area of triangle \\(XYZ\\). Then \\[[BCG] : [BCN] = CG : CN = \\sqrt{3} : x \\qquad [BAN] : [BGN] = BA : BG = 1 : 2\\]</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_B/6-fig2.png\" width=\"255\" alt=\"\"></p><p>Consequently, \\[AM : CM = [BCN] : [BAN] = \\frac{\\sqrt{3}+x}{2} : x = \\frac{\\sqrt{3}+x}{2x}.\\] By condition, \\(AM : AC = CN : CE\\), which translates to \\[\\frac{\\sqrt{3}+x}{\\sqrt{3}+3x} = \\frac{x}{\\sqrt{3}}.\\] Solve for \\(x\\); the only positive solution is \\(1\\). Hence \\(r = CE/CN = \\sqrt{3}/1 = \\sqrt{3}\\).</p>",
+      "answer": "300"
+    },
+    "7": {
+      "problem": "<p>A cuboctahedron is a solid with 6 square faces and 8 equilateral triangle faces, with each edge adjacent to both a square and a triangle (see picture). Suppose the ratio of the volume of an octahedron to a cuboctahedron with the same side length is \\(r\\). Find \\(100r^2\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_B/7-fig1.png\" width=\"212\" alt=\"\"></p>",
+      "solutions": "<p>A cuboctahedron is obtained by chopping off 8 corner tetrahedra of a cube. So the volume of a cuboctahedron of side length \\(1\\) is \\((\\sqrt{2})^3 - 8 \\times \\frac{1}{6}\\left(\\frac{1}{\\sqrt{2}}\\right)^3 = \\frac{5}{3}\\sqrt{2}\\). On the other hand, the volume of a regular octahedron is \\(1^2 \\times \\frac{1}{\\sqrt{2}} \\times \\frac{1}{3} \\times 2 = \\frac{\\sqrt{2}}{3}\\). So the ratio is \\(1 : 5\\).</p>",
+      "answer": "4"
+    },
+    "8": {
+      "problem": "<p>Point \\(P\\) is in the interior of \\(\\triangle ABC\\). The side lengths of \\(ABC\\) are \\(AB = 7\\), \\(BC = 8\\), \\(CA = 9\\). The three feet of perpendicular lines from \\(P\\) to sides \\(BC\\), \\(CA\\), \\(AB\\) are \\(D\\), \\(E\\), \\(F\\) respectively. Suppose the minimal value of \\(\\frac{BC}{PD} + \\frac{CA}{PE} + \\frac{AB}{PF}\\) can be written as \\(\\frac{a}{b}\\sqrt{c}\\), where \\(\\gcd(a,b) = 1\\) and \\(c\\) is square free, calculate \\(abc\\).</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2010_PUMaC_Geometry_B/8-fig1.png\" width=\"180\" alt=\"\"></p>",
+      "solutions": "<p>Let \\(S\\) denote the area of \\(\\triangle ABC\\). Then \\(S = \\frac{1}{2}(BC \\cdot PD + CA \\cdot PE + AB \\cdot FP)\\). By the Cauchy-Schwarz inequality, \\[(BC + CA + AB)^2 \\le \\left(\\frac{BC}{PD} + \\frac{CA}{PE} + \\frac{AB}{PF}\\right)(BC \\cdot PD + CA \\cdot PE + AB \\cdot FP),\\] hence, \\(\\frac{BC}{PD} + \\frac{CA}{PE} + \\frac{AB}{PF} \\ge \\frac{(BC+CA+AB)^2}{2S}\\). So all we need to know is the area of \\(ABC\\), which by Heron’s formula is \\(\\sqrt{12(12-7)(12-8)(12-9)} = 12\\sqrt{5}\\). Therefore, the minimal value is \\(\\frac{(7+8+9)^2}{24\\sqrt{5}} = \\frac{24}{5}\\sqrt{5}\\).</p>",
+      "answer": "600"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "SMT General Tiebreaker",
+  "year": 2013,
+  "name": "General Tiebreaker",
+  "url": "https://www.stanfordmathtournament.org/pdfs/smt2013/general-tiebreaker-problems.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Compute all real nonzero values of \\(b\\) such that \\(bx^2 - bx - b = 0\\) has \\(b\\) as a solution.</p>",
+      "solutions": "<p>Plugging in \\(x = b\\), we have \\(b^3 - b^2 - b = b(b^2 - b - 1) = 0\\). From the quadratic formula, we know that \\(b^2 - b - 1\\) has \\(\\frac{1\\pm\\sqrt{5}}{2}\\) as solutions.</p>",
+      "answer": "\\frac{1\\pm\\sqrt{5}}{2}"
+    },
+    "2": {
+      "problem": "<p>Leo is at the bottom left corner of the grid. If he can only walk up and to the right, how many different paths can he take to the upper right corner?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2013_SMT_General_Tiebreaker/2-fig1.png\" width=\"335\" alt=\"\"></p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/tournaments/2013_SMT_General_Tiebreaker/2-fig2.png\" width=\"309\" alt=\"\"></p>",
+      "answer": "20"
+    },
+    "3": {
+      "problem": "<p>The lines \\(y = 2x+1\\), \\(y = -\\frac{1}{2}x+6\\), and \\(y = -2x-3\\) split the plane into multiple regions. One of the regions has finite area. Compute the area of that region.</p>",
+      "solutions": "<p>The first two lines have an intersection point of \\(A = (2, 5)\\). The first and third lines have an intersection point of \\(B = (-1, -1)\\). The last two lines have an intersection point of \\(C = (-6, 9)\\). We observe that the first and second line are perpendicular. Thus, the area of the triangle is \\(\\frac{AB \\cdot AC}{2} = \\frac{3\\sqrt{5} \\cdot 4\\sqrt{5}}{2} = \\boxed{30}\\).</p>",
+      "answer": "30"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "test": "1966 AHSME",
+  "year": 1966,
+  "problems": {
+    "1": {
+      "problem": "<p>Given that the ratio of \\(3x - 4\\) to \\(y + 15\\) is constant, and \\(y = 3\\) when \\(x = 2\\), then, when \\(y = 12\\), \\(x\\) equals:</p><p>\\(\\text{(A)} \\ \\frac 18 \\qquad \\text{(B)} \\ \\frac 73 \\qquad \\text{(C)} \\ \\frac78 \\qquad \\text{(D)} \\ \\frac72 \\qquad \\text{(E)} \\ 8\\)</p>",
+      "solutions": "<p>Let \\(k\\) be the constant ratio. Then \\(k = \\frac{3(2)-4}{(3)+15} = \\frac{1}{9} = \\frac{3x - 4}{(12) + 15}\\). Solving gives \\(3x - 4 = 3 \\Longrightarrow x = \\frac 73 \\Rightarrow \\mathrm{(B)}\\).</p>",
+      "answer": "B"
+    },
+    "2": {
+      "problem": "<p>When the base of a triangle is increased 10% and the altitude to this base is decreased 10%, the change in area is</p><p>\\(\\text{(A)}\\ 1\\%~\\text{increase}\\qquad\\text{(B)}\\ \\frac{1}2\\%~\\text{increase}\\qquad\\text{(C)}\\ 0\\%\\qquad\\text{(D)}\\ \\frac{1}2\\% ~\\text{decrease}\\qquad\\text{(E)}\\ 1\\% ~\\text{decrease}\\)</p>",
+      "solutions": "<p><i>This problem needs a solution. If you have a solution for it, please help us out by adding it.</i></p>",
+      "answer": "E"
+    },
+    "3": {
+      "problem": "<p>If the arithmetic mean of two numbers is \\(6\\) and their geometric mean is \\(10\\), then an equation with the given two numbers as roots is:</p><p>\\(\\text{(A)} \\ x^2 + 12x + 100 = 0 ~~ \\text{(B)} \\ x^2 + 6x + 100 = 0 ~~ \\text{(C)} \\ x^2 - 12x - 10 = 0\\) \\(\\text{(D)} \\ x^2 - 12x + 100 = 0 \\qquad \\text{(E)} \\ x^2 - 6x + 100 = 0\\)</p>",
+      "solutions": "<p>Let the numbers be \\(\\eta\\) and \\(\\zeta\\).</p><p>\\[\\dfrac{\\eta+\\zeta}{2}=6\\Rightarrow \\eta+\\zeta=12\\] .</p><p>\\[\\sqrt{\\eta\\zeta}=10\\Rightarrow \\eta\\zeta=100\\] .</p><p>The monic quadratic with roots \\(\\eta\\) and \\(\\zeta\\) is \\(x^2-(\\eta+\\zeta)x+\\eta\\zeta\\). Therefore, an equation with \\(\\eta\\) and \\(\\zeta\\) as roots is \\(x^2 - 12x + 100 = 0\\Rightarrow \\text{(D)}\\)</p>",
+      "answer": "D"
+    },
+    "4": {
+      "problem": "<p>Circle I is circumscribed about a given square and circle II is inscribed in the given square. If \\(r\\) is the ratio of the area of circle I to that of circle II, then \\(r\\) equals:</p><p>\\(\\text{(A) } \\sqrt{2} \\quad \\text{(B) } 2 \\quad \\text{(C) } \\sqrt{3} \\quad \\text{(D) } 2\\sqrt{2} \\quad \\text{(E) } 2\\sqrt{3}\\)</p>",
+      "solutions": "<p>Make half of the square’s side \\(x\\). Now the radius of the smaller circle is \\(x\\), so it’s area is \\(\\pi x^2\\). Now find the diameter of the bigger circle. Since half of the square’s side is \\(x\\), the full side is \\(2x\\). Using the Pythagorean theorem, you get the diagonal to be \\(2\\sqrt{2}x\\). Half of that is the radius, or \\(x\\sqrt{2}\\). Using the same equation as before, you get the area of the larger circle to be \\(2x^2 \\pi\\). Putting one over the other and dividing, you get two as the answer: or \\(\\boxed{(B)}\\).</p>",
+      "answer": "B"
+    },
+    "5": {
+      "problem": "<p>The number of values of \\(x\\) satisfying the equation</p><p>\\[\\frac {2x^2 - 10x}{x^2 - 5x} = x - 3\\]</p><p>is:</p><p>\\(\\text{(A)} \\ \\text{zero} \\qquad \\text{(B)} \\ \\text{one} \\qquad \\text{(C)} \\ \\text{two} \\qquad \\text{(D)} \\ \\text{three} \\qquad \\text{(E)} \\ \\text{an integer greater than 3}\\)</p>",
+      "solutions": "<p>Since \\(x^2 - 5x\\) is in the denominator, \\(x \\neq 0,5\\). Simplifying,</p><p>\\[2\\left(\\frac{x^2 - 5}{x^2 - 5}\\right) = 2 = x-3\\]</p><p>Thus \\(x = 5\\), which isn’t in the domain of the equation. Thus there are no values of \\(x \\Rightarrow \\mathrm{(A)}\\).</p>",
+      "answer": "A"
+    },
+    "6": {
+      "problem": "<p>\\(AB\\) is the diameter of a circle centered at \\(O\\). \\(C\\) is a point on the circle such that angle \\(BOC\\) is \\(60^\\circ\\). If the diameter of the circle is \\(5\\) inches, the length of chord \\(AC\\), expressed in inches, is:</p><p>\\(\\text{(A)} \\ 3 \\qquad \\text{(B)} \\ \\frac {5\\sqrt {2}}{2} \\qquad \\text{(C)} \\frac {5\\sqrt3}{2} \\ \\qquad \\text{(D)} \\ 3\\sqrt3 \\qquad \\text{(E)} \\ \\text{none of these}\\)</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/aops/1966_AHSME/6-fig1.png\" width=\"504\" alt=\"\"></p><p>We see that \\(\\angle A\\) is half the measure of \\(\\angle BOC\\), so \\(\\angle A = 30^{\\circ}\\). That makes \\(ABC\\) a \\(30-60-90\\) triangle and sidelength \\(\\overline{AC}\\) equal to \\(\\frac{5\\sqrt{3}}{2}\\). \\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "7": {
+      "problem": "<p>Let \\(\\frac {35x - 29}{x^2 - 3x + 2} = \\frac {N_1}{x - 1} + \\frac {N_2}{x - 2}\\) be an identity in \\(x\\). The numerical value of \\(N_1N_2\\) is:</p><p>\\(\\text{(A)} \\ - 246 \\qquad \\text{(B)} \\ - 210 \\qquad \\text{(C)} \\ - 29 \\qquad \\text{(D)} \\ 210 \\qquad \\text{(E)} \\ 246\\)</p>",
+      "solutions": "<p>\\[\\frac {N_1}{x - 1} + \\frac {N_2}{x - 2} = \\frac{N_1(x-2) + N_2(x-1)}{(x-1)(x-2)} = \\frac{(N_1 + N_2)x - (2N_1 + N_2)}{x^2 - 3x + 2}\\]</p><p>Comparing coefficients, we have the system of two equations</p><p>\\[\\begin{aligned}\nN_1 + N_2 &amp;= 35\\\\\nN_1 + 2N_2 &amp;= 29\n\\end{aligned}\\]</p><p>Subtracting the first equation from the second yields \\(N_2 = -6\\). Substituting yields \\(N_1 = 41\\), and their product is \\(-246 \\Rightarrow \\mathrm{(A)}\\).</p>",
+      "answer": "A"
+    },
+    "8": {
+      "problem": "<p>The length of the common chord of two intersecting circles is \\(16\\) feet. If the radii are \\(10\\) feet and \\(17\\) feet, a possible value for the distance between the centers of the circles, expressed in feet, is:</p><p>\\(\\text{(A)} \\ 27 \\qquad \\text{(B)} \\ 21 \\qquad \\text{(C)} \\ \\sqrt {389} \\qquad \\text{(D)} \\ 15 \\qquad \\text{(E)} \\ \\text{undetermined}\\)</p>",
+      "solutions": "<p><img class=\"latexcenter\" src=\"/data/aops/1966_AHSME/8-fig1.png\" width=\"563\" alt=\"\"></p><p>Let \\(O\\) be the center of the circle of radius \\(10\\) and \\(P\\) be the center of the circle of radius \\(17\\). Chord \\(\\overline{AB} = 16\\) feet.</p><p>\\(\\overline{OA} = \\overline{OB} = 10\\) feet, since they are radii of the same circle. Hence, \\(\\triangle OAB\\) is isoceles with base \\(AB\\). The height of \\(\\triangle OAB\\) from \\(O\\) to \\(AB\\) is \\(\\sqrt {\\overline{OB}^2 - (\\frac{\\overline{AB}}{2})^2} = \\sqrt {10^2 - (\\frac{16}{2})^2} = \\sqrt {100 - 8^2} = \\sqrt {100 - 64} = \\sqrt {36} = 6\\)</p><p>Similarly, \\(\\overline{PA} = \\overline{PB} = 17\\). Therefore, \\(\\triangle PAB\\) is also isoceles with base \\(AB\\). The height of the triangle from \\(P\\) to \\(AB\\) is \\(\\sqrt {\\overline{PB}^2 - (\\frac{\\overline{AB}}{2})^2} = \\sqrt {17^2 - (\\frac{16}{2})^2} = \\sqrt {289 - 8^2} = \\sqrt {289 - 64} = \\sqrt {225} = 15\\)</p><p>The distance between the centers of the circles (points \\(P\\) and \\(O\\)) is the sum of the heights of \\(\\triangle OAB\\) and \\(\\triangle PAB\\), which is \\(6 + 15 = 21 \\Rightarrow \\textbf{(B)}\\)</p>",
+      "answer": "B"
+    },
+    "9": {
+      "problem": "<p>If \\(x = (\\log_82)^{(\\log_28)}\\), then \\(\\log_3x\\) equals:</p><p>\\(\\text{(A)} \\ - 3 \\qquad \\text{(B)} \\ - \\frac13 \\qquad \\text{(C)} \\ \\frac13 \\qquad \\text{(D)} \\ 3 \\qquad \\text{(E)} \\ 9\\)</p>",
+      "solutions": "<p>By definition, \\(\\log_8 2 = \\frac 13\\) and \\(\\log_2 8 = 3\\), so \\(\\log_3 \\left(\\frac{1}{3}\\right)^3 = \\log_3 3^{-3} = -3 \\Rightarrow \\mathrm{(A)}\\).</p>",
+      "answer": "A"
+    },
+    "10": {
+      "problem": "<p>If the sum of two numbers is \\(1\\) and their product is \\(1\\), then the sum of their cubes is:</p><p>\\(\\text{(A)} \\ 2 \\qquad \\text{(B)} \\ - 2 - \\frac {3i\\sqrt {3}}{4} \\qquad \\text{(C)} \\ 0 \\qquad \\text{(D)} \\ - \\frac {3i\\sqrt {3}}{4} \\qquad \\text{(E)} \\ - 2\\)</p>",
+      "solutions": "<p>Let the two numbers be \\(a,b\\); then \\(a^3 + b^3 = (a+b)(a^2 - ab + b^2) = (a+b)[(a+b)^2 -3ab]\\) \\(= (1)[1^2 - 3 \\cdot 1] = -2 \\Rightarrow \\mathrm{(E)}\\).</p>",
+      "answer": "E"
+    },
+    "11": {
+      "problem": "<p>The sides of triangle \\(BAC\\) are in the ratio \\(2:3:4\\). \\(BD\\) is the angle-bisector drawn to the shortest side \\(AC\\), dividing it into segments \\(AD\\) and \\(CD\\). If the length of \\(AC\\) is \\(10\\), then the length of the longer segment of \\(AC\\) is:</p><p>\\(\\text{(A)} \\ 3\\frac{1}{2} \\qquad \\text{(B)} \\ 5 \\qquad \\text{(C)} \\ 5\\frac{5}{7} \\qquad \\text{(D)} \\ 6 \\qquad \\text{(E)} \\ 7\\frac{1}{2}\\)</p>",
+      "solutions": "<p>By the Angle Bisector Theorem, we have \\(\\frac{BA}{AD}=\\frac{BC}{CD}\\) which implies \\(\\frac{AD}{DC}=\\frac{BA}{BC}=\\frac{3}{4}\\). So \\(AC=10=AD+DC=\\frac{7}{4}DC\\), and thus \\(DC=\\frac{40}{7}=5\\frac{5}{7}\\). Hence \\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "12": {
+      "problem": "<p>The number of real values of \\(x\\) that satisfy the equation \\[(2^{6x+3})(4^{3x+6})=8^{4x+5}\\] is:</p><p>\\(\\text{(A)  zero} \\qquad \\text{(B)  one} \\qquad \\text{(C)  two} \\qquad \\text{(D)  three} \\qquad \\text{(E)  greater than 3}\\)</p>",
+      "solutions": "<p>We know that \\(2^{6x+3}\\cdot4^{3x+6}=2^{6x+3}\\cdot(2^2)^{3x+6}=2^{6x+3}\\cdot2^{6x+12}=2^{12x+15}\\). We also know that \\(8^{4x+5}=(2^3)^{4x+5}=2^{12x+15}\\). There are infinite solutions to the equation \\(2^{12x+15}=2^{12x+15}\\), so the answer is \\(\\boxed{\\text{(E)  greater than 3}}\\).</p>",
+      "answer": "E"
+    },
+    "13": {
+      "problem": "<p>The number of points with positive rational coordinates selected from the set of points in the \\(xy\\)-plane such that \\(x+y \\le 5\\), is:</p><p>\\(\\text{(A)} \\ 9 \\qquad \\text{(B)} \\ 10 \\qquad \\text{(C)} \\ 14 \\qquad \\text{(D)} \\ 15 \\qquad \\text{(E) infinite}\\)</p>",
+      "solutions": "<p>\\(\\boxed{E}\\)</p>",
+      "answer": "E"
+    },
+    "14": {
+      "problem": "<p>The length of rectangle \\(ABCD\\) is 5 inches and its width is 3 inches. Diagonal \\(AC\\) is divided into three equal segments by points \\(E\\) and \\(F\\). The area of triangle \\(BEF\\), expressed in square inches, is:</p><p>\\(\\text{(A)} \\frac{3}{2} \\qquad \\text{(B)} \\frac {5}{3} \\qquad \\text{(C)} \\frac{5}{2} \\qquad \\text{(D)} \\frac{1}{3}\\sqrt{34} \\qquad \\text{(E)} \\frac{1}{3}\\sqrt{68}\\)</p>",
+      "solutions": "<p>Draw the rectangle \\(ABCD\\) with \\(AB\\) = \\(5\\) and \\(AD\\) = \\(3\\). We created our diagonal, \\(AC\\) and use the Pythagorean Theorem to find the length of \\(AC\\), which is \\(\\sqrt34\\). Since \\(EF\\) breaks the diagonal into \\(3\\) equal parts, the lenght of \\(EF\\) is \\(\\frac {\\sqrt34}{3}\\). The only other thing we need is the height of \\(BEF\\). Realize that the height of \\(BEF\\) is also the height of right triangle \\(ABC\\) using \\(AC\\) as the base. The area of \\(ABC\\) is \\(\\frac{15}{2}\\) (using the side lengths of the rectangle). The height of \\(ABC\\) to base \\(AC\\) is \\(\\frac{15}{2}\\) divided by \\(\\sqrt34 \\cdot 2\\) (remember, we multiply by \\(2\\) because we are finding the height from the area of a triangle which is \\(\\frac{bh}{2}\\)). That simplfies to \\(\\frac{15}{\\sqrt34}\\) which equal to \\(\\frac{15 \\cdot \\sqrt34}{34}\\). Now doing all the arithmetic, \\(\\frac {\\sqrt34}{3} \\cdot \\frac{15 \\cdot \\sqrt34}{34}\\) = \\(\\frac {5 \\cdot 3}{3 \\cdot 2}\\) = \\(\\frac {5}{2}\\).</p><h2><span class=\"mw-headline\" id=\"Solution_2\">Solution 2</span></h2><p>Draw rectangle \\(ABCD\\) with \\(AB\\) = \\(5\\) and \\(BC\\) = \\(3\\). Next draw a height from vertex \\(B\\) to diagonal \\(AC\\) intersecting at \\(G\\) and similarly from \\(D\\) to \\(AC\\) intersecting at \\(J\\). Let’s call this height \\(h\\) and we can notice that \\(BG\\) = \\(DJ\\) = \\(h\\). Since the points \\(E\\) and \\(F\\) are trisecting diagonal \\(AC\\) the bases and heights of triangles \\(BEA\\), \\(BEF\\), \\(BEC\\), \\(DEA\\), \\(DEF\\), and \\(DEC\\) have the same areas. Hence the area of one of these triangles such as \\(BEF\\) is \\(\\frac{5 \\cdot 3}{2}\\) = \\(\\frac {5}{2}\\). So our answer is \\(\\boxed{C}\\).</p><p>~Math_Genius_164</p>",
+      "answer": "C"
+    },
+    "15": {
+      "problem": "<p>If \\(x-y&gt;x\\) and \\(x+y&lt;y\\), then</p><p>\\(\\text{(A) } y&lt;x \\quad \\text{(B) } x&lt;y \\quad \\text{(C) } x&lt;y&lt;0 \\quad \\text{(D) } x&lt;0,y&lt;0 \\quad \\text{(E) } x&lt;0,y&gt;0\\)</p>",
+      "solutions": "<p>From \\(x-y&gt;x\\), we get that \\(-y&gt;0\\implies y&lt;0\\). From \\(x+y&lt;y\\), we get that \\(x&lt;0\\). So, our final answer is \\(\\boxed{D}\\).</p>",
+      "answer": "D"
+    },
+    "16": {
+      "problem": "<p>If \\(\\frac{4^x}{2^{x+y}}=8\\) and \\(\\frac{9^{x+y}}{3^{5y}}=243\\), \\(x\\) and \\(y\\) real numbers, then \\(xy\\) equals:</p><p>\\(\\text{(A) } \\frac{12}{5} \\quad \\text{(B) } 4 \\quad \\text{(C) } 6 \\quad \\text{(D)} 12 \\quad \\text{(E) } -4\\)</p>",
+      "solutions": "<p>\\(\\frac{4^x}{2^{x+y}}=8\\implies 4^x = 2^{x+y+3}\\implies 2x=x+y+3 \\implies x = y+3\\). \\(\\frac{9^{x+y}}{3^{5y}}=243\\implies 9^{x+y}=3^{5y+5}\\implies 2x+2y=5y+5\\implies 2x = 3y +5\\). So, \\(2y+6=3y+5\\implies y = 1 \\implies x = 4\\). Therefore, \\(xy = 4\\) or \\(\\boxed{B}\\)</p>",
+      "answer": "B"
+    },
+    "17": {
+      "problem": "<p>The number of distinct points common to the curves \\(x^2+4y^2=1\\) and \\(4x^2+y^2=4\\) is:</p><p>\\(\\text{(A) } 0 \\quad \\text{(B) } 1 \\quad \\text{(C) } 2 \\quad \\text{(D) } 3 \\quad \\text{(E) } 4\\)</p>",
+      "solutions": "<p>Let \\(a=x^2\\) and \\(b=y^2\\). We now have a system of 2 linear equations: \\(a+4b=1\\\\4a+b=4\\) Multiplying the first equation by 4 and then subtracting the second equation from the first one, we get: \\(15b=0\\\\b=0\\) Now, we can substitute b to solve for a: \\(4a+0=4\\\\a=1\\) Now note that \\(x^2=1 \\rightarrow x=\\pm 1\\) and \\(y^2=0\\rightarrow y=0\\), so the solutions are \\((1,0), (-1, 0)\\). There are two solutions, meaning that the answer is \\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "18": {
+      "problem": "<p>In a given arithmetic sequence the first term is \\(2\\), the last term is \\(29\\), and the sum of all the terms is \\(155\\). The common difference is:</p><p>\\(\\text{(A) } 3 \\qquad \\text{(B) } 2 \\qquad \\text{(C) } \\frac{27}{19} \\qquad \\text{(D) } \\frac{13}{9} \\qquad \\text{(E) } \\frac{23}{38}\\)</p>",
+      "solutions": "<p>\\(\\boxed{A}\\)</p>",
+      "answer": "A"
+    },
+    "19": {
+      "problem": "<p>Let \\(s_1\\) be the sum of the first \\(n\\) terms of the arithmetic sequence \\(8,12,\\cdots\\) and let \\(s_2\\) be the sum of the first \\(n\\) terms of the arithmetic sequence \\(17,19,\\cdots\\). Assume \\(n \\ne 0\\). Then \\(s_1=s_2\\) for:</p><p>\\(\\text{(A) no value of } n \\quad \\text{(B) one value of } n \\quad \\text{(C) two values of } n \\quad \\text{(D) four values of } n \\quad \\text{(E) more than four values of } n\\)</p>",
+      "solutions": "<p>\\(\\boxed{B}\\)</p>",
+      "answer": "B"
+    },
+    "20": {
+      "problem": "<p>The negation of the proposition \"For all pairs of real numbers \\(a,b\\), if \\(a=0\\), then \\(ab=0\\)\" is: There are real numbers \\(a,b\\) such that</p><p>\\(\\text{(A) } a\\ne 0 \\text{ and } ab\\ne 0 \\qquad \\text{(B) } a\\ne 0 \\text{ and } ab=0  \\qquad \\text{(C) } a=0 \\text{ and } ab\\ne 0\\)</p><p>\\(\\text{(D) } ab\\ne 0 \\text{ and } a\\ne 0 \\qquad \\text{(E) } ab=0 \\text{ and } a\\ne 0\\)</p>",
+      "solutions": "<p>\\(\\boxed{C}\\)</p>",
+      "answer": "C"
+    },
+    "21": {
+      "problem": "<p><img class=\"latexcenter\" src=\"/data/aops/1966_AHSME/21-fig1.png\" width=\"504\" alt=\"\"></p><p>An \"\\(n\\)-pointed star\" is formed as follows: the sides of a convex polygon are numbered consecutively \\(1,2,\\cdots ,k,\\cdots,n,\\text{ }n\\ge 5\\); for all \\(n\\) values of \\(k\\), sides \\(k\\) and \\(k+2\\) are non-parallel, sides \\(n+1\\) and \\(n+2\\) being respectively identical with sides \\(1\\) and \\(2\\); prolong the \\(n\\) pairs of sides numbered \\(k\\) and \\(k+2\\) until they meet. (A figure is shown for the case \\(n=5\\)).</p><p>Let \\(S\\) be the degree-sum of the interior angles at the \\(n\\) points of the star; then \\(S\\) equals:</p><p>\\(\\text{(A) } 180 \\quad \\text{(B) } 360 \\quad \\text{(C) } 180(n+2) \\quad \\text{(D) } 180(n-2) \\quad \\text{(E) } 180(n-4)\\)</p>",
+      "solutions": "<p>\\(\\boxed{E}\\)</p>",
+      "answer": "E"
+    },
+    "22": {
+      "problem": "<p>Consider the statements: (I)\\(\\sqrt{a^2+b^2}=0\\),   (II) \\(\\sqrt{a^2+b^2}=ab\\),   (III) \\(\\sqrt{a^2+b^2}=a+b\\),   (IV) \\(\\sqrt{a^2+b^2}=a - b\\), where we allow \\(a\\) and \\(b\\) to be real or complex numbers. Those statements for which there exist solutions other than \\(a=0\\) and \\(b=0\\), are:</p><p>\\(\\text{(A)  (I),(II),(III),(IV)}\\quad \\text{(B)  (II),(III),(IV) only} \\quad \\text{(C)  (I),(III),(IV) only}\\quad \\text{(D)  (III),(IV) only} \\quad \\text{(E)  (I) only}\\)</p>",
+      "solutions": "<p>We are given the following statements:</p><ol><li>\\(\\sqrt{a^2 + b^2} = 0\\)</li><li>\\(\\sqrt{a^2 + b^2} = ab\\)</li><li>\\(\\sqrt{a^2 + b^2} = a + b\\)</li><li>\\(\\sqrt{a^2 + b^2} = a - b\\)</li></ol><p>We are asked to find the solutions where these statements hold, excluding the trivial solution \\(a = 0\\) and \\(b = 0\\).</p><p><b>Statement (I):</b> \\(\\sqrt{a^2 + b^2} = 0\\)</p><p>Squaring both sides:</p><p>\\[a^2 + b^2 = 0\\]</p><p>For real or complex numbers, \\(a^2 + b^2 = 0\\) implies that both \\(a = 0\\) and \\(b = 0\\) because the sum of squares of two real or complex numbers is 0 only if both are 0.</p><p>Thus, the only solution is \\(a = 0\\) and \\(b = 0\\).</p><p><b>Conclusion for Statement (I):</b> There are no solutions other than \\(a = 0\\) and \\(b = 0\\).</p><p><b>Statement (II):</b> \\(\\sqrt{a^2 + b^2} = ab\\)</p><p>Squaring both sides:</p><p>\\[a^2 + b^2 = (ab)^2 = a^2b^2\\]</p><p>Rearranging:</p><p>\\[a^2 + b^2 - a^2b^2 = 0\\]</p><p>Factoring:</p><p>\\[a^2(1 - b^2) + b^2 = 0\\]</p><p>Testing for specific solutions:</p><ul><li>If \\(a = 1\\) and \\(b = 1\\), we get:</li></ul><p>\\[\\sqrt{1^2 + 1^2} = 1 \\cdot 1 \\quad \\Rightarrow \\quad \\sqrt{2} = 1\\]</p><p>which is false. Thus, there are no simple real solutions.</p><ul><li>For complex solutions, trying specific cases like \\(a = i\\) and \\(b = 1\\) also results in contradictions.</li></ul><p>Thus, this equation has no nonzero solutions.</p><p><b>Conclusion for Statement (II):</b> No solutions other than \\(a = 0\\) and \\(b = 0\\).</p><p><b>Statement (III):</b> \\(\\sqrt{a^2 + b^2} = a + b\\)</p><p>Squaring both sides:</p><p>\\[a^2 + b^2 = (a + b)^2\\]</p><p>Expanding the right-hand side:</p><p>\\[a^2 + b^2 = a^2 + 2ab + b^2\\]</p><p>Canceling \\(a^2 + b^2\\) from both sides:</p><p>\\[0 = 2ab\\]</p><p>Thus:</p><p>\\[ab = 0\\]</p><p>This implies that either \\(a = 0\\) or \\(b = 0\\). Therefore, there are solutions other than \\(a = 0\\) and \\(b = 0\\), such as \\(a = 0\\) and \\(b \\neq 0\\), or \\(a \\neq 0\\) and \\(b = 0\\).</p><p><b>Conclusion for Statement (III):</b> There are solutions other than \\(a = 0\\) and \\(b = 0\\).</p><p><b>Statement (IV):</b> \\(\\sqrt{a^2 + b^2} = a - b\\)</p><p>Squaring both sides:</p><p>\\[a^2 + b^2 = (a - b)^2\\]</p><p>Expanding the right-hand side:</p><p>\\[a^2 + b^2 = a^2 - 2ab + b^2\\]</p><p>Canceling \\(a^2 + b^2\\) from both sides:</p><p>\\[0 = -2ab\\]</p><p>Thus:</p><p>\\[ab = 0\\]</p><p>This implies that either \\(a = 0\\) or \\(b = 0\\). Therefore, there are solutions other than \\(a = 0\\) and \\(b = 0\\), such as \\(a = 0\\) and \\(b \\neq 0\\), or \\(a \\neq 0\\) and \\(b = 0\\).</p><p><b>Conclusion for Statement (IV):</b> There are solutions other than \\(a = 0\\) and \\(b = 0\\).</p><p><b>Final Conclusion:</b></p><p>The statements that have solutions other than \\(a = 0\\) and \\(b = 0\\) are (III) and (IV).</p><p>Thus, the correct answer is:</p><p>\\[\\boxed{\\text{(A) (I), (II), (III), (IV)}}\\]</p><p>~Aoum</p>",
+      "answer": "A"
+    },
+    "23": {
+      "problem": "<p>If \\(x\\) is real and \\(4y^2+4xy+x+6=0\\), then the complete set of values of \\(x\\) for which \\(y\\) is real, is:</p><p>\\(\\text{(A) } x\\le-2 \\text{ or } x\\ge3 \\quad \\text{(B) }  x\\le2 \\text{ or } x\\ge3 \\quad \\text{(C) }  x\\le-3 \\text{ or } x\\ge2 \\quad \\\\ \\text{(D) } -3\\le x\\le2 \\quad \\text{(E) } -2\\le x\\le3\\)</p>",
+      "solutions": "<p>We treat the equation as a quadratic equation in \\(y\\) for which the discriminant</p><p>\\[D=16x^2-16(x+6)=16(x^2-x-6)=16(x-3)(x+2)\\]</p><p>For \\(y\\) to be real \\(D \\ge 0\\). This inequality is satisfied when \\(x \\le -2\\) or \\(x \\ge3\\) or \\(\\boxed{A}\\)</p>",
+      "answer": "A"
+    },
+    "24": {
+      "problem": "<p>If \\(Log_M{N}=Log_N{M},M \\ne N,MN&gt;0,M \\ne 1, N \\ne 1\\), then \\(MN\\) equals:</p><p>\\(\\text{(A) } \\frac{1}{2} \\quad \\text{(B) } 1 \\quad \\text{(C) } 2 \\quad \\text{(D) } 10 \\\\ \\text{(E) a number greater than 2 and less than 10}\\)</p>",
+      "solutions": "<p>If we change the base of \\(Log_M{N}\\) to base \\(N\\), we get \\(\\frac{1}{log_N{M}}= Log_N{M}\\). Multiplying both sides by \\(Log_N{M}\\), we get \\(Log_N{M}^2=1\\). Since \\(N\\not = M\\), \\(Log_N{M}=-1\\). So \\(N^{-1}=M \\rightarrow \\frac{1}{N} = M \\rightarrow MN=1\\). So the answer is \\(\\boxed{B}\\).</p>",
+      "answer": "B"
+    },
+    "25": {
+      "problem": "<p>If \\(F(n+1)=\\frac{2F(n)+1}{2}\\) for \\(n=1,2,\\cdots\\) and \\(F(1)=2\\), then \\(F(101)\\) equals:</p><p>\\(\\text{(A) } 49 \\quad \\text{(B) } 50 \\quad \\text{(C) } 51 \\quad \\text{(D) } 52 \\quad \\text{(E) } 53\\)</p>",
+      "solutions": "<p>Notice that \\(\\frac{2F(n)+1}{2}=F(n)+\\frac{1}{2}.\\)</p><p>This means that for every single increment \\(n\\) goes up from \\(1\\), \\(F(n)\\) will increase by \\(\\frac{1}{2}.\\) Since \\(101\\) is \\(100\\) increments from \\(1\\), \\(F(n)\\) will increase \\(\\frac{1}{2}\\times100=50.\\)</p><p>Since \\(F(1)=2,\\) \\(F(101)\\) will equal \\(2+50=\\boxed{\\text{(D)} \\ 52}.\\)</p><p>Solution by davidaops.</p>",
+      "answer": "D"
+    },
+    "26": {
+      "problem": "<p>Let \\(m\\) be a positive integer and let the lines \\(13x+11y=700\\) and \\(y=mx-1\\) intersect in a point whose coordinates are integers. Then m can be:</p><p>\\(\\text{(A) 4 only} \\quad \\text{(B) 5 only} \\quad \\text{(C) 6 only} \\quad \\text{(D) 7 only} \\\\ \\text{(E) one of the integers 4,5,6,7 and one other positive integer}\\)</p>",
+      "solutions": "<p>Substitute the second equation into the first one, we have \\(13x+11mx-11=700\\).</p><p>So \\((13+11m)x=711\\). So \\(13+11m\\) is a factor of \\(711\\). \\(711=3*3*79\\), so the factors of \\(711\\) are: \\(1, 3, 9, 79, 237, 711\\).</p><p>Clearly, because \\(m\\ge1\\), so \\(13+11m\\ge24\\). So we only need to check whether \\(m\\) is an integer when \\(11m+13=79, 237, 711\\).</p><p>When \\(11m+13=79\\), \\(m=6\\).</p><p>Checking the other two choices, \\(m\\) dosen’t yield to be an integer. So \\(m=6\\) is the only option. Select \\(\\boxed{C}\\).</p><p>~hastapasta</p>",
+      "answer": "C"
+    },
+    "27": {
+      "problem": "<p>At his usual rate a man rows 15 miles downstream in five hours less time than it takes him to return. If he doubles his usual rate, the time downstream is only one hour less than the time upstream. In miles per hour, the rate of the stream’s current is:</p><p>\\(\\text{(A) } 2 \\quad \\text{(B) } \\frac{5}{2} \\quad \\text{(C) } 3 \\quad \\text{(D) } \\frac{7}{2} \\quad \\text{(E) } 4\\)</p>",
+      "solutions": "<p>Let the speed of rowing in still water and water speed be \\(r, w\\).</p><p>Then:</p><p>\\(\\frac{15}{r-w}-\\frac{15}{r+w}=5\\).</p><p>\\(\\frac{15}{2r-w}-\\frac{15}{2r+w}=1\\).</p><p>Solving (remember: both variables must be positive!), we have \\(r=4, w=2\\). Select \\(\\boxed{A}\\).</p><p>~hastapasta</p>",
+      "answer": "A"
+    },
+    "28": {
+      "problem": "<p>Five points \\(O,A,B,C,D\\) are taken in order on a straight line with distances \\(OA = a\\), \\(OB = b\\), \\(OC = c\\), and \\(OD = d\\).  \\(P\\) is a point on the line between \\(B\\) and \\(C\\) and such that \\(AP: PD = BP: PC\\).  Then \\(OP\\) equals:</p><p>\\(\\textbf{(A)} \\frac {b^2 - bc}{a - b + c - d} \\qquad \\textbf{(B)} \\frac {ac - bd}{a - b + c - d} \\\\\n \\textbf{(C)} - \\frac {bd + ac}{a - b + c - d} \\qquad \\textbf{(D)} \\frac {bc + ad}{a + b + c + d} \\qquad \\textbf{(E)} \\frac {ac - bd}{a + b + c + d}\\)</p>",
+      "solutions": "<p>Letting \\(x=OP\\):</p><p>\\[\\frac{AP}{PD}=\\frac{BP}{PC}\\]</p><p>\\[\\frac{x-a}{d-x}=\\frac{x-b}{c-x}\\]</p><p>\\[\\frac{x-a}{d-x}=\\frac{b-x}{x-c}\\]</p><p>\\[(x-a)(x-c)=(b-x)(d-x)\\]</p><p>\\[x^2-ax-cx+ac=x^2-bx-dx+bd\\]</p><p>\\[bx+dx-ax-cx=bd-ac\\]</p><p>\\[x(b+d-a-c)=bd-ac\\]</p><p>\\[x=\\frac{bd-ac}{b+d-a-c}\\]</p><p>\\[x=\\frac{ac-bd}{a-b+c-d}\\]</p><p>Thus, \\(\\boxed{B}\\)</p>",
+      "answer": "B"
+    },
+    "29": {
+      "problem": "<p>The number of positive integers less than \\(1000\\) divisible by neither \\(5\\) nor \\(7\\) is:</p><p>\\(\\text{(A) } 688 \\quad \\text{(B) } 686 \\quad \\text{(C) } 684 \\quad \\text{(D) } 658 \\quad \\text{(E) } 630\\)</p>",
+      "solutions": "<p>The number of positive integers under \\(1000\\) that are divisible by \\(5\\) is \\(\\lfloor\\frac{999}{5}\\rfloor=199\\). The number of positive integers under \\(1000\\) that are divisible by \\(7\\) is \\(\\lfloor\\frac{1000}{7}\\rfloor=142\\). Adding them together, we get \\(341\\). However, we have over counted the numbers which are divisible by \\(35\\). There are \\(\\lfloor\\frac{999}{35}\\rfloor=28\\) of these. So, the number of positive integers divisible be \\(7\\) or \\(5\\) under \\(1000\\) is \\(341-28=313\\). We can conclude that the number of positive integers divisible by neither \\(5\\) or \\(7\\) is \\(999-313=686\\) or answer choice \\(\\boxed{B}\\).</p>",
+      "answer": "B"
+    },
+    "30": {
+      "problem": "<p>If three of the roots of \\(x^4+ax^2+bx+c=0\\) are \\(1\\), \\(2\\), and \\(3\\) then the value of \\(a+c\\) is:</p><p>\\(\\text{(A) } 35 \\quad \\text{(B) } 24 \\quad \\text{(C) } -12 \\quad \\text{(D) } -61 \\quad \\text{(E) } -63\\)</p>",
+      "solutions": "<p>Since this is a quartic equation, there are going to be \\(4\\) solutions. By Vieta’s formulas, since the \\(x^3\\) term is \\(0\\), the sum of the roots is also \\(0\\). Therefore, the 4th root of this polynomial is \\(-6\\). Lastly, by Vieta’s Formulas, \\(a+c=-(1\\cdot2+1\\cdot3+1\\cdot-6+2\\cdot3+2\\cdot-6+3\\cdot-6)+1\\cdot2\\cdot3\\cdot-6=-25-36=-61=\n\\boxed{D}\\)</p>",
+      "answer": "D"
+    },
+    "31": {
+      "problem": "<p><img class=\"latexcenter\" src=\"/data/aops/1966_AHSME/31-fig1.png\" width=\"504\" alt=\"\"></p><p>Triangle \\(ABC\\) is inscribed in a circle with center \\(O'\\). A circle with center \\(O\\) is inscribed in triangle \\(ABC\\). \\(AO\\) is drawn, and extended to intersect the larger circle in \\(D\\). Then we must have:</p><p>\\(\\text{(A) } CD=BD=O'D \\quad \\text{(B) } AO=CO=OD \\quad \\text{(C) } CD=CO=BD \\\\ \\text{(D) } CD=OD=BD \\quad \\text{(E) } O'B=O'C=OD\\)</p>",
+      "solutions": "<p>We will prove that \\(\\triangle DOB\\) and \\(\\triangle COD\\) is isosceles, meaning that \\(CD=OD=BD\\) and hence \\(\\boxed{D}\\).</p><p>Let \\(\\angle A=2\\alpha\\) and \\(\\angle B=2\\beta\\). Since the incentre of a triangle is the intersection of its angle bisectors, \\(\\angle OAB=\\alpha\\) and \\(\\angle ABO=\\beta\\). Hence \\(\\angle DOB=\\alpha +\\beta\\). Since quadrilateral \\(ABCD\\) is cyclic, \\(\\angle CAD=\\alpha=\\angle CBD\\). So \\(\\angle OBD=\\angle OBC+\\angle CBD=\\alpha + \\beta = \\angle DOB\\). This means that \\(\\triangle DOB\\) is isosceles, and hence \\(BD=OD\\).</p><p>Now let \\(\\angle C=2\\gamma\\) which means \\(\\angle ACO=COD=\\gamma\\). Since \\(ABCD\\) is cyclic, \\(\\angle DAB=\\alpha=\\angle DCB.\\) Also, \\(\\angle DAC\\alpha\\) so \\(\\angle DOC=\\alpha + \\gamma\\). Thus, \\(\\angle OCD=\\angle OCB+\\angle BCD=\\gamma + \\alpha=\\angle DOC\\) which means \\(\\triangle COD\\) is isosceles, and hence \\(CD=OD=BD\\).</p><p>Thus our answer is \\(\\boxed{D.}\\)</p>",
+      "answer": "D"
+    },
+    "32": {
+      "problem": "<p>Let \\(M\\) be the midpoint of side \\(AB\\) of triangle \\(ABC\\). Let \\(P\\) be a point on \\(AB\\) between \\(A\\) and \\(M\\), and let \\(MD\\) be drawn parallel to \\(PC\\) and intersecting \\(BC\\) at \\(D\\). If the ratio of the area of triangle \\(BPD\\) to that of triangle \\(ABC\\) is denoted by \\(r\\), then</p><p>\\(\\text{(A) } \\frac{1}{2}&lt;r&lt;1 \\text{,  depending upon the position of P} \\\\ \\text{(B) } r=\\frac{1}{2} \\text{,  independent of the position of P} \\\\ \\text{(C) } \\frac{1}{2} \\le r &lt;1 \\text{,  depending upon the position of P} \\\\ \\text{(D) } \\frac{1}{3}&lt;r&lt;\\frac{2}{3} \\text{,  depending upon the position of P}\\\\ \\text{(E) } r=\\frac{1}{3} \\text{,  independent of the position of P}\\)</p>",
+      "solutions": "<p>Both triangles are similar by some ratio \\(r\\). Place point \\(P\\) on \\(A\\). Then. line \\(MD\\) intersects \\(BC\\) at midpoint \\(D\\), and the ratio of the two triangles is \\(\\frac{1}{2}\\). Place point \\(P\\) on \\(M\\), and then the same thing occurs, line \\(MD\\) intersects \\(BC\\) at midpoint \\(D\\), and the ratio is \\(\\frac{1}{2}\\). Now as \\(P\\) moves between \\(AM\\), \\(D\\) follows it to maintain parallelism. However, the only exception is when \\(P\\) reaches past the midpoint of \\(AM\\), and going towards \\(A\\), when \\(D\\) moves back toward the midpoint of \\(BC\\) to maintain parallelism. Because both triangles are always similar at the extrema points, that are, \\(A\\) and \\(M\\), as \\(P\\) moves around, the value of \\(r\\) won’t change as it is essentially the same as the cevian \\(MD\\) of triangle \\(BPD\\) moving along the base \\(BP\\). So essentially, that the effect of \\(P\\) moving along line \\(AM\\) is essentially just moving the cevian \\(MD\\), as it changes as \\(P\\) moves, along the base. However, because the two triangles are similar, moving the cevian \\(MD\\) is the same as moving the cevian \\(CP\\), and they maintain the same ratio. At the extrema’s, these values of \\(r\\) were \\(\\frac{1}{2}\\). so as \\(P\\) moves, the value of \\(r\\) becomes unchanged and independent of that from the position of \\(P\\). Thus our answer is \\(\\boxed{\\textbf{B}}\\).</p><p>~Pinotation</p>",
+      "answer": "B"
+    },
+    "33": {
+      "problem": "<p>If \\(ab \\ne 0\\) and \\(|a| \\ne |b|\\), the number of distinct values of \\(x\\) satisfying the equation</p><p>\\[\\frac{x-a}{b}+\\frac{x-b}{a}=\\frac{b}{x-a}+\\frac{a}{x-b},\\]</p><p>is:</p><p>\\(\\text{(A) zero}  \\quad \\text{(B) one}  \\quad \\text{(C) two}  \\quad \\text{(D) three}  \\quad \\text{(E) four}\\)</p>",
+      "solutions": "<p>Let \\(m=\\frac{x-a}{b}\\) and \\(n=\\frac{x-b}{a}\\) then we have</p><p>\\[m+n=\\frac{1}{m}+\\frac{1}{n}\\]</p><p>\\[m+n=\\frac{m+n}{mn}\\]</p><p>Notice that the equation is possible iff \\(m+n=0\\) or \\(mn=1\\).</p><p>If \\(m+n=0\\) then</p><p>\\[\\frac{x-a}{b}+\\frac{x-b}{a}=0\\]</p><p>\\[\\frac{x-a}{b}=\\frac{b-x}{a}\\]</p><p>\\[x=\\frac{a^2+b^2}{a+b}\\]</p><p>Which yields \\(1\\) solution for \\(x\\).</p><p>If \\(mn=0\\) then</p><p>\\[(\\frac{x-a}{b})(\\frac{x-b}{a})=1\\]</p><p>\\[x^2-(a+b)x=0\\]</p><p>Solving the quadratic gets another \\(2\\) solutions for \\(x\\).</p><p>Thus there are \\(\\boxed{\\text{(D) three}}\\) solutions in total.</p><p>~Nafer</p>",
+      "answer": "D"
+    },
+    "34": {
+      "problem": "<p>Let \\(r\\) be the speed in miles per hour at which a wheel, \\(11\\) feet in circumference, travels. If the time for a complete rotation of the wheel is shortened by \\(\\frac{1}{4}\\) of a second, the speed \\(r\\) is increased by \\(5\\) miles per hour. Then \\(r\\) is:</p><p>\\(\\text{(A) } 9 \\quad \\text{(B) } 10 \\quad \\text{(C) } 10\\frac{1}{2} \\quad \\text{(D) } 11 \\quad \\text{(E) } 12\\)</p>",
+      "solutions": "<p>The circumference of the wheel is \\(\\frac{11}{5280}\\) miles. Let the time for the rotation in seconds be \\(t\\). So \\(rt=\\frac{11}{5280}*3600\\). We also know reducing the time by \\(\\frac{1}{4}\\) of a second makes \\(r\\) increase by \\(5\\). So \\((r+5)(t-\\frac{1}{4})=\\frac{11}{5280}*3600\\). Solving for \\(r\\) we get \\(r=10\\). So our answer is \\((B)\\) \\(10\\).</p>",
+      "answer": "B"
+    },
+    "35": {
+      "problem": "<p>Let \\(O\\) be an interior point of triangle \\(ABC\\), and let \\(s_1=OA+OB+OC\\). If \\(s_2=AB+BC+CA\\), then</p><p>\\(\\text{(A) for every triangle } s_2&gt;2s_1,s_1 \\le s_2 \\\\\n\\text{(B) for every triangle } s_2&gt;2s_1,s_1 &lt; s_2 \\\\\n\\text{(C) for every triangle } s_1&gt; \\tfrac{1}{2}s_2,s_1 &lt; s_2 \\\\\n\\text{(D) for every triangle } s_2\\ge 2s_1,s_1 \\le s_2 \\\\\n\\text{(E) neither (A) nor (B) nor (C) nor (D) applies to every triangle}\\)</p>",
+      "solutions": "<p>By the Triangle Inequality, we see that \\(s_1 &gt; \\frac12 s_2\\), therefore \\(\\boxed{C}\\). -Dark_Lord</p>",
+      "answer": "C"
+    },
+    "36": {
+      "problem": "<p>Let \\((1+x+x^2)^n=a_0+a_1x+a_2x^2+ \\cdots + a_{2n}x^{2n}\\) be an identity in \\(x\\). If we let \\(s=a_0+a_2+a_4+\\cdots +a_{2n}\\), then \\(s\\) equals:</p><p>\\(\\text{(A) } 2^n \\quad \\text{(B) } 2^n+1 \\quad \\text{(C) } \\frac{3^n-1}{2} \\quad \\text{(D) } \\frac{3^n}{2} \\quad \\text{(E) } \\frac{3^n+1}{2}\\)</p>",
+      "solutions": "<h2><span class=\"mw-headline\" id=\"Solution_1\">Solution 1</span></h2><p>Let \\(f(x)=(1+x+x^2)^n\\) then we have</p><p>\\[f(1)=a_0+a_1+a_2+...+a_{2n}=(1+1+1)^n=3^n\\]</p><p>\\[f(-1)=a_0-a_1+a_2-...+a_{2n}=(1-1+1)^n=1\\]</p><p>Adding yields</p><p>\\[f(1)+f(-1)=2(a_0+a_2+a_4+...+a_{2n})=3^n+1\\]</p><p>Thus \\(s=\\frac{3^n+1}{2}\\), or \\(\\boxed{\\textbf{(E)}}\\).</p><p>~Nafer</p><p>~Minor edits by Qinglang, Nafer wrote a great solution, but put D instead of E</p>",
+      "answer": "E"
+    },
+    "37": {
+      "problem": "<p>Three men, Alpha, Beta, and Gamma, working together, do a job in 6 hours less time than Alpha alone, in 1 hour less time than Beta alone, and in one-half the time needed by Gamma when working alone. Let \\(h\\) be the number of hours needed by Alpha and Beta, working together, to do the job. Then \\(h\\) equals:</p><p>\\(\\text{(A) } \\frac{5}{2} \\quad \\text{(B) } \\frac{3}{2} \\quad \\text{(C) } \\frac{4}{3} \\quad \\text{(D) } \\frac{5}{4} \\quad \\text{(E) } \\frac{3}{4}\\)</p>",
+      "solutions": "<p>Let \\(A\\),\\(B\\),\\(C\\) denote the number of hours needed by Alpha, Beta, Gamma, respectively. We also have their respective efficiency \\(\\frac{1}{A}\\), \\(\\frac{1}{B}\\), and \\(\\frac{1}{C}\\). Thus we get the equations</p><p>\\[\\frac{1}{A}+\\frac{1}{B}+\\frac{1}{C}=\\frac{1}{A-6}\\]</p><p>\\[\\frac{1}{A}+\\frac{1}{B}+\\frac{1}{C}=\\frac{1}{B-1}\\]</p><p>\\[\\frac{1}{A}+\\frac{1}{B}+\\frac{1}{C}=\\frac{2}{C}\\Longrightarrow \\frac{1}{A}+\\frac{1}{B}=\\frac{1}{C}\\]</p><p>Equating the first \\(2\\) equations gets</p><p>\\[\\frac{1}{A-6}=\\frac{1}{B-1}\\Longrightarrow A=B+5\\]</p><p>Substituting the new relation along with the third equation into the first equation gets</p><p>\\[\\frac{2}{A}+\\frac{2}{A-5}=\\frac{1}{A-6}\\]</p><p>Solving the quadratic gets \\(A=3\\) or \\(\\frac{20}{3}\\). Since \\(B=A-5&gt;0\\), \\(A=\\frac{20}{3}\\) is the only legit solution.</p><p>Thus \\(B=\\frac{5}{3}\\) and \\(h=\\frac{1}{\\frac{1}{A}+\\frac{1}{B}}=\\frac{4}{3}\\), \\(\\boxed{\\textbf{(C)}}\\).</p><p>~Nafer</p>",
+      "answer": "C"
+    },
+    "38": {
+      "problem": "<p>In triangle \\(ABC\\) the medians \\(AM\\) and \\(CN\\) to sides \\(BC\\) and \\(AB\\), respectively, intersect in point \\(O\\). \\(P\\) is the midpoint of side \\(AC\\), and \\(MP\\) intersects \\(CN\\) in \\(Q\\). If the area of triangle \\(OMQ\\) is \\(n\\), then the area of triangle \\(ABC\\) is:</p><p>\\(\\text{(A) } 16n \\quad \\text{(B) } 18n \\quad \\text{(C) } 21n \\quad \\text{(D) } 24n \\quad \\text{(E) } 27n\\)</p>",
+      "solutions": "<p>Construct triangle \\(\\triangle ABC\\) with points \\(M,N,P\\) being the midpoints of sides \\(\\overline{CB}, \\overline{AB}, \\overline{AC}\\), respectively. Proceed by drawing all medians. Then draw all medians (so draw \\(\\overline{AM}, \\overline{BP}, \\overline{CN}\\)). Next, draw line \\(\\overline{PM}\\) and label \\(\\overline{PM}\\)’s intersection with \\(\\overline{CN}\\) as the point \\(Q\\). From the problem, the area of \\(\\triangle QMO\\) is \\(n\\), but by vertical angles we know that \\(\\angle QOM = \\angle AOM\\). Furthermore, since line \\(\\overline{PM}\\) is drawn from the midpoint of \\(\\overline{AC}\\) to the midpoint of \\(\\overline{CB}\\), we know that \\(\\overline{PM}\\) is parallel to \\(\\overline{AB}\\) (via SAS similarity on triangles PCM and ABC). From these parallel lines we know that \\(\\angle PMO = \\angle OAB\\) which indicates that \\(\\triangle QOM \\sim \\triangle ANO\\). The linear ratio from \\(\\triangle QOM\\) to \\(\\triangle ANO\\) is 1:2 because line segment \\(\\overline{OM}\\) is one half of line segment \\(\\overline{AO}\\) since \\(\\overline{AO}\\) and \\(\\overline{OM}\\) make up the median \\(\\overline{AM}\\). Thus the area ratio is 1:4. So \\(\\triangle ANO\\) has area \\(4n\\). Since \\(\\triangle ONB\\) has the same height and base as \\(\\triangle ANO\\) we know that the area of \\(\\triangle AOB = 8n\\). The medians form 3 triangles each with area \\(1/3\\) of the total triangle (these triangles are \\(\\triangle AOB, \\triangle COB, \\triangle COA\\)). Thus since \\(\\triangle AOB = 4n \\underset{\\text{multiply by 3}}{\\implies} \\triangle ABC = 24n\\) \\(\\boxed{D}\\).</p><p>- LJ</p>",
+      "answer": "D"
+    },
+    "39": {
+      "problem": "<p>In base \\(R_1\\) the expanded fraction \\(F_1\\) becomes \\(.373737\\cdots\\), and the expanded fraction \\(F_2\\) becomes \\(.737373\\cdots\\). In base \\(R_2\\) fraction \\(F_1\\), when expanded, becomes \\(.252525\\cdots\\), while the fraction \\(F_2\\) becomes \\(.525252\\cdots\\). The sum of \\(R_1\\) and \\(R_2\\), each written in the base ten, is:</p><p>\\(\\text{(A) } 24 \\quad \\text{(B) } 22 \\quad \\text{(C) } 21 \\quad \\text{(D) } 20 \\quad \\text{(E) } 19\\)</p>",
+      "solutions": "<p>First, let’s write \\(F_1\\) as a proper fraction in base \\(R_1\\). To do that, note that: \\(F_1=0.373737\\dots\\) Multiplying this equation on both sides \\(R_1^2\\), we get: \\(R_1^2F_1=37.373737\\dots\\) Subtracting the first equation from the second one, we get: \\(R_1^2F_1-F_1=37\\\\F_1(R_1^2-1)=37\\\\F_1=\\frac{3R_1+7}{R_1^2-1}\\) Using a very similar method as above, we can see that: \\(F_1=\\frac{3R_1+7}{R_1^2-1}=\\frac{2R_2+5}{R_2^2-1}\\) and \\(F_2=\\frac{7R_1+3}{R_1^2-1}=\\frac{5R_2+2}{R_2^2-1}\\). Dividing the 2 equations to get some potential solutions, we get (note that we don’t have to worry about division by zero because \\(R_1,R_2&gt;7\\)): \\(\\frac{3R_1+7}{7R_1+3}=\\frac{2R_2+5}{5R_2+2}\\\\15R_1R_2+6R_1+35R_2+14=14R_1R_2+35R_1+6R_2+15\\\\R_1R_2-29R_1+29R_2=1\\\\\\left(R_1+29\\right)\\left(R_2-29\\right)=-840\\) Since non-integer bases are rarely used, we can try to assume that the solution is positive integers and see if we get any solutions. Notice that \\((R_2-29)\\) has to be a negative factor of 840. We need to plug in values of \\(R_2 &gt; 7\\). 840 divides -21, so we plug in 8 to check. Luckily, when \\(R_2 = 8\\), we see that \\(R_1=11\\), and furthermore, 11+8=19 is one of the answers. We can quickly test it into the original equations \\(F_1=\\frac{3R_1+7}{R_1^2-1}=\\frac{2R_2+5}{R_2^2-1}\\) and \\(F_2=\\frac{7R_1+3}{R_1^2-1}=\\frac{5R_2+2}{R_2^2-1}\\), and we see they indeed work. Therefore the answer is \\(\\boxed{(E)19}\\)</p><p>~Minor edits by Raghav(AOPS - CatalanThinker)</p>",
+      "answer": "E"
+    },
+    "40": {
+      "problem": "<p><img class=\"latexcenter\" src=\"/data/aops/1966_AHSME/40-fig1.png\" width=\"504\" alt=\"\"></p><p>In this figure \\(AB\\) is a diameter of a circle, centered at \\(O\\), with radius \\(a\\). A chord \\(AD\\) is drawn and extended to meet the tangent to the circle at \\(B\\) in point \\(C\\). Point \\(E\\) is taken on \\(AC\\) so the \\(AE=DC\\). Denoting the distances of \\(E\\) from the tangent through \\(A\\) and from the diameter \\(AB\\) by \\(x\\) and \\(y\\), respectively, we can deduce the relation:</p><p>\\(\\text{(A) } y^2=\\frac{x^3}{2a-x} \\quad \\text{(B) } y^2=\\frac{x^3}{2a+x} \\quad \\text{(C) } y^4=\\frac{x^2}{2a-x} \\\\ \\text{(D) } x^2=\\frac{y^2}{2a-x} \\quad \\text{(E) } x^2=\\frac{y^2}{2a+x}\\)</p>",
+      "solutions": "<p>\\(\\boxed{A}\\)</p><p>You can troll this problem completely by taking x=y=r. ~Orion2010</p>",
+      "answer": "A"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "test": "DMM Individual",
+  "year": 2011,
+  "name": "Individual Round",
+  "url": "https://dukemathmeet.org/2011/indiv.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>Elsie M. is fixing a watch with three gears. Gear \\(A\\) makes a full rotation every 5 minutes, gear \\(B\\) makes a full rotation every 8 minutes, and gear \\(C\\) makes a full rotation every 12 minutes. The gears continue spinning until all three gears are in their original positions at the same time. How many minutes will it take for the gears to stop spinning?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "2": {
+      "problem": "<p>Optimus has to pick 10 distinct numbers from the set of positive integers \\(\\{2, 3, 4, \\ldots, 29, 30\\}\\). Denote the numbers he picks by \\(a_1, a_2, \\ldots, a_{10}\\). What is the least possible value of \\[d(a_1) + d(a_2) + \\cdots + d(a_{10}),\\] where \\(d(n)\\) denotes the number of positive integer divisors of \\(n\\)? For example, \\(d(33) = 4\\) since \\(1, 3, 11,\\) and \\(33\\) divide \\(33\\).</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "3": {
+      "problem": "<p>Michael is given a large supply of both \\(1 \\times 3\\) and \\(1 \\times 5\\) dominoes and is asked to arrange some of them to form a \\(6 \\times 13\\) rectangle with one corner square removed. What is the minimum number of \\(1 \\times 3\\) dominoes that Michael can use?</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2011_DMM_Individual/3-fig1.png\" width=\"409\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "4": {
+      "problem": "<p>Andy, Ben, and Chime are playing a game. The probabilities that each player wins the game are, respectively, the roots \\(a\\), \\(b\\), and \\(c\\) of the polynomial \\(x^3 - x^2 + \\frac{111}{400}x - \\frac{9}{400} = 0\\) with \\(a \\le b \\le c\\). If they play the game twice, what is the probability of the same player winning twice?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "5": {
+      "problem": "<p>TongTong is doodling in class and draws a \\(3 \\times 3\\) grid. She then decides to color some (that is, at least one) of the squares blue, such that no two \\(1 \\times 1\\) squares that share an edge or a corner are both colored blue. In how many ways may TongTong color some of the squares blue? TongTong cannot rotate or reflect the board.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2011_DMM_Individual/5-fig1.png\" width=\"228\" alt=\"\"></p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "6": {
+      "problem": "<p>Given a positive integer \\(n\\), we define \\(f(n)\\) to be the smallest possible value of the expression \\[|\\square 1 \\square 2 \\cdots \\square n|,\\] where we may place a \\(+\\) or a \\(-\\) sign in each box. So, for example, \\(f(3) = 0\\), since \\(|+1+2-3| = 0\\). What is \\(f(1) + f(2) + \\cdots + f(2011)\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "7": {
+      "problem": "<p>The Duke Men’s Basketball team plays 11 home games this season. For each game, the team has a \\(\\frac{3}{4}\\) probability of winning, except for the UNC game, which Duke has a \\(\\frac{9}{10}\\) probability of winning. What is the probability that Duke wins an odd number of home games this season?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "8": {
+      "problem": "<p>What is the sum of the integers \\(n\\) such that \\(n^2 + 2n + 2\\) divides \\(n^3 + 4n^2 + 4n - 14\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "9": {
+      "problem": "<p>Let \\(\\{a_n\\}_{n=1}^N\\) be a finite sequence of increasing positive real numbers with \\(a_1 &lt; 1\\) such that \\[a_{n+1} = a_n\\sqrt{1 - a_1^2} + a_1\\sqrt{1 - a_n^2}\\] and \\(a_{10} = 1/2\\). What is \\(a_{20}\\)?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    },
+    "10": {
+      "problem": "<p>Three congruent circles are placed inside a unit square such that they do not overlap. What is the largest possible radius of one of these circles?</p>",
+      "solutions": "<p><i>No official solution was published for this problem.</i></p>",
+      "answer": null
+    }
+  }
+}

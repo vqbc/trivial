@@ -1,0 +1,48 @@
+{
+  "test": "PUMaC Combinatorics B",
+  "year": 2014,
+  "name": "Combinatorics B",
+  "url": "https://pumac.princeton.edu/s/PUMaC2014_CombinatoricsB.pdf",
+  "problems": {
+    "1": {
+      "problem": "<p>A girl and a guy are going to arrive at a train station. If they arrive within 10 minutes of each other, they will instantly fall in love and live happily ever after. But after 10 minutes, whichever one arrives first will fall asleep and they will be forever alone. The girl will arrive between 8 AM and 9 AM with equal probability. The guy will arrive between 7 AM and 8:30 AM, also with equal probability. Let \\(\\frac{p}{q}\\) for \\(p, q\\) coprime be the probability that they fall in love. Find \\(p+q\\).</p>",
+      "solutions": "<p>If the guy arrive between 7 AM and 7:50 AM they will never meet.</p><p>If the guy arrive at 7:5x AM, the girl needs to arrive between 8 AM and 8:0x AM. Hence probability of them meting is \\(\\frac{x}{60}\\), and the average is \\(\\frac{1}{12}\\).</p><p>If the guy arrive at 8:0x AM, the girl can arrive between 8 AM and 8:1x AM. Hence probability of them metting is \\(\\frac{10+x}{60}\\), and the average is \\(\\frac{1}{4}\\).</p><p>If the guy arrives past 8:10 AM, the girl can arrive in a 20 minutes range. Hence probability of them metting is \\(\\frac{1}{3}\\).</p><p>Thus the probabilty they will meet will be \\(\\frac{1}{9}\\frac{1}{12} + \\frac{1}{9}\\frac{1}{4} + \\frac{2}{9}\\frac{1}{3} = \\frac{1}{9}\\), and \\(p+q = \\boxed{10}\\).</p>",
+      "answer": "10"
+    },
+    "2": {
+      "problem": "<p>A \\(100 \\times 100\\) grid is given as shown. We choose a certain number of cells such that exactly two cells in each row and column are selected. Find the sum of numbers in these cells.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2014_PUMaC_Combinatorics_B/2-fig1.png\" width=\"332\" alt=\"\"></p>",
+      "solutions": "<p>We see that entry in row \\(i\\) column \\(j\\) will be \\(100(i-1) + j = a_i + b_j\\). Since each column and each row contains exactly two cells choosen, we see that the sum is \\(\\sum_{i=1}^{100} 2a_i + \\sum_{j=1}^{100} 2b_j = \\sum_{i=1}^{100} 200(i-1) + \\sum_{j=1}^{100} 2j = \\sum_{i=1}^{100} 202i - 200 \\times 100 = 202 \\times 100 \\times 101/2 - 200 \\times 100 = \\boxed{1000100}\\).</p>",
+      "answer": "1000100"
+    },
+    "3": {
+      "problem": "<p>What is the largest \\(n\\) such that a square cannot be partitioned into \\(n\\) smaller, non-overlapping squares?</p>",
+      "solutions": "<p>We see that we can partion \\(n = 6, 7, 8\\) as follow:</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2014_PUMaC_Combinatorics_B/3-fig1.png\" width=\"416\" alt=\"\"></p><p>For \\(n = 5\\), we note that there needs to be a different square in every corner. (If one square is in two corners, it will be the size of the original square). Since the \\(5^{\\text{th}}\\) square can touch only 1 side without being in a corner, there can be at most 1 side with 3 squares touching it. Let this side be \\(AB\\).</p><p>Without loss of generality, let the corner square of \\(D\\) be larger than that of \\(C\\). As can be seen, since there are only 2 squares on sides \\(AD\\), \\(DC\\), the configuration must be as such. However, we realise it is impossible for the corner square of \\(B\\) to be placed in any way such that the line \\(BC\\) is entirely contained.</p><p><img class=\"latexcenter\" src=\"/data/tournaments/2014_PUMaC_Combinatorics_B/3-fig2.png\" width=\"221\" alt=\"\"></p><p>When the corner square of \\(D\\) and \\(C\\) are the same size, we see that their sides are half of the original square and for sides \\(AD\\) and \\(BC\\) to be covered completely, the corner squares of \\(A, B\\) also needs to be half of the original square. Hence there are only 4 squares.</p><p>Thus we conclude that it is impossible for \\(n = \\boxed{5}\\).</p>",
+      "answer": "5"
+    },
+    "4": {
+      "problem": "<p>Let there be 320 points arranged on a circle, labled \\(1, 2, 3, \\ldots, 8, 1, 2, 3, \\ldots, 8, \\ldots\\) in order. Line segments may only be drawn to connect points labelled with the same number. What thethe largest number of non-intersecting line segments one can draw? (Two segments sharing the same endpoint are considered to be intersecting).</p>",
+      "solutions": "<p>Let us label the points \\(p_1, \\ldots, p_{320}\\). Let us consider the shortest line segment \\(p_a p_b\\). We see that there are no lines from points on the smaller sector of the circle defined by this line, \\(p \\in \\{p_{a+1}, p_{a+2}, \\ldots, p_{b-1}\\}\\). Assuming the contrary that there is a line from \\(p\\). Since any line \\(pq\\) must be in the same sector, as otherwise \\(pq\\) will intersect \\(p_a p_b\\), we see that \\(|pq| &lt; |p_a p_b|\\) which is contradictory.</p><p>Since there are no point between \\(p_a\\) and \\(p_b\\), we can effectively, remove this section, leaving the points \\(p_1, \\ldots, p_a, p_{b+1}, \\ldots, p_{320}\\). Since \\(a \\equiv b \\pmod{8}\\), we see that some \\(8k\\) points are removed, for \\(k \\in \\mathbb{N}\\). We now consider the shortest line in the remaining set of points. After recursive removal of at least 8 points for each line removed, we can remove at most 39 such lines, leaving 8 points \\(1, 2, \\ldots, 8\\) on which no further removal is possible.</p><p>We see that \\(\\boxed{39}\\) is possible, with line segment between \\(p_{4k}\\) and \\(p_{320-4k}\\) for \\(k = \\{1, \\ldots, 39\\}\\).</p>",
+      "answer": "39"
+    },
+    "5": {
+      "problem": "<p>Amy has a \\(2 \\times 10\\) puzzle grid which she can use \\(1 \\times 1\\) and \\(1 \\times 2\\) (1 vertical, 2 horizontal) tiles to cover. How many ways can she exactly cover the grid without any tiles overlapping and without rotating the tiles?</p>",
+      "solutions": "<p>First we note that the two rows of \\(1 \\times 10\\) are independent of each other as there are no tiles that can overlap them both.</p><p>For a single row, the number of ways to tile a \\(1 \\times n\\) row, \\(a_n\\) is \\(a_{n-1} + a_{n-2}\\) as if the last tile is a \\(1 \\times 1\\), there are \\(a_{n-1}\\) ways to tile the rest and if the last tile is \\(1 \\times 2\\), there are \\(a_{n-2}\\) ways to tile the rest. We see that since \\(a_1 = 1\\) and \\(a_2 = 2\\), we have \\(a_{10} = 89\\).</p><p>Therefore there are \\(89^2 = \\boxed{7921}\\) ways to tile the entire \\(2 \\times 10\\) puzzle grid.</p>",
+      "answer": "7921"
+    },
+    "6": {
+      "problem": "<p>Consider an orange and black coloring of a \\(20 \\times 14\\) square grid. Let \\(n\\) be the number of coloring such that every row and column has an even number of orange square. Evaluate \\(\\log_2 n\\).</p>",
+      "solutions": "<p>We see that we can color the \\(19 \\times 13\\) subgrid in any way as we wish, and for the last row and column, we can color them to ensure the 19 row and 13 columns all have an even number of orange squares. For the cell at the intersection of the \\(20^{\\text{th}}\\) rows and the \\(14^{\\text{th}}\\) column, we see that we should color it such that the \\(20^{\\text{th}}\\) row has an even number of orange squares. This way the entire grid will have an even number of orange squares. Since we already colored it such that the first 13 columns have even number of orange squares, natrually the \\(14^{\\text{th}}\\) column will also have an even number of orange squares. Thus the rest of the grid has exactly one coloring possible, uniquely determined by the \\(19 \\times 13\\) subgrid.</p><p>Hence \\(n = 2^{19 \\times 13}\\) and \\(\\log_2 n = \\boxed{247}\\).</p>",
+      "answer": "247"
+    },
+    "7": {
+      "problem": "<p>Let \\(S = \\{1, 2, 3, \\ldots, 2014\\}\\). What is the largest subset of \\(S\\) that contains no two elements with a difference of \\(4\\) and \\(7\\)?</p>",
+      "solutions": "<p>We see that \\(0, 4, 8, 1, 5, 9, 2, 6, 10, 3, 7\\) are a series of 11 numbers whoses difference with their neighbours are 4 or 7. Hence in any 11 numbers, there can be at most 5 picked, as other wise two will be adjacent, \\((7,0)\\) included. Since \\(2014 = 183 \\times 11 + 1\\), we see we can have at most \\(183 \\times 5 + 1 = \\boxed{916}\\) elements in the subset. This is possible if we pick all numbers that are \\(4, 1, 9, 6, 3 \\bmod 11\\).</p>",
+      "answer": "916"
+    },
+    "8": {
+      "problem": "<p>There are 60 friends who want to visit each other’s home during summer vacation. Everyday, they decide to either stay home or vist the home of everyone who stayed home that day. Find the minimum number of days required for everyone to have visted their friends’ homes.</p>",
+      "solutions": "<p>In 8 days, let each student go out on 4 days. Since there are \\(\\binom{8}{4} = 70\\) ways to do so, we can let every student go out on distinct combination of 4 days. Thus we see that for any two students \\(A\\) and \\(B\\), there is at least one day for which \\(A\\) goes out to vist while \\(B\\) stays home and vice versa. Hence everyone will have visited all others by \\(\\boxed{8}\\) days.</p><p>For 7 days, by Sperner’s Theorem, we see that the maximum number of subsets of days such that there are no two subsets with one contained in the other, is \\(\\binom{7}{3} = 35\\). Hence 7 days is impossible. Since \\(60 &gt; 35\\), this can also be proven by grouping the combination of days into sets like \\(\\{(1,2,3), (1,2,3,4)\\}\\) where no two students can have their days going out from the same set, and applying pigeonhole principle after that.</p>",
+      "answer": "8"
+    }
+  }
+}
