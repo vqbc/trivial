@@ -106,9 +106,22 @@ const pages = saved.map((file) => {
   const imgs = page.text ? [...page.text.matchAll(WIKI_IMAGE)].map((m) => m[1]) : [];
   return { file, title: page.title, redirect: page.redirect, imgs };
 });
+// Bundled problems aren't saved here, so their redirects come from the
+// archive: an entry with `page` points at the shared problem it redirects
+// to ("2014 AMC 12A Problems/Problem 9" -> the 10A #10 page).
+const archiveRedirects = Object.keys(archive).flatMap((test) => {
+  const file = path.join(DATA, "aops", `${test.replace(/ /g, "_")}.json`);
+  const { problems } = JSON.parse(fs.readFileSync(file, "utf8"));
+  return Object.entries(problems)
+    .filter(([, entry]) => entry.page)
+    .map(([n]) => `${test} Problems/Problem ${n}`);
+});
 write(
   path.join(DATA, "redirects.json"),
-  JSON.stringify(pages.filter((p) => p.redirect).map((p) => p.title)),
+  JSON.stringify([
+    ...pages.filter((p) => p.redirect).map((p) => p.title),
+    ...archiveRedirects,
+  ]),
 );
 
 // Drop bundled copies, unless a non-bundled redirect still points at one.
