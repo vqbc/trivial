@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useState } from "react";
+import { toggleProps } from "../lib/toggle.js";
 import {
   titleCleanup,
   underscores,
@@ -9,7 +10,6 @@ import {
   isTournamentTest,
   normalizeAnswerInput,
 } from "../lib/problems.js";
-import { toggleProps } from "../lib/toggle.js";
 import { fetchAnswer } from "../lib/aops.js";
 import { inArchive } from "../lib/aopsarchive.js";
 import { AOPS_API } from "../lib/constants.js";
