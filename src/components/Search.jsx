@@ -77,7 +77,9 @@ export default function Search() {
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(null);
   const [results, setResults] = useState(null);
-  const [pageExists, setPageExists] = useState(false);
+  // The normalized title ("2014 AMC 12A Problems/Problem 9") when the
+  // search matched an existing page, for the "exists on the wiki" link.
+  const [existingPage, setExistingPage] = useState(null);
   const [shown, setShown] = useState(0);
   const [theoremPending, setTheoremPending] = useState(false);
   const [theorem, setTheorem] = useState(null);
@@ -145,7 +147,7 @@ export default function Search() {
         fetchAllSearchResults(normalized),
       ]);
       if (reqId !== reqIdRef.current) return;
-      setPageExists(exists);
+      setExistingPage(exists ? normalized : null);
       setRaw(all);
       document.title = `Search results for ${original} - Trivial Math Practice`;
     } finally {
@@ -189,10 +191,10 @@ export default function Search() {
 
   const onTagChange = (vals) => setQuery(vals[0] ?? "");
 
-  const aopsHref = query
+  const aopsHref = existingPage
     ? `https://artofproblemsolving.com/wiki/index.php/${encodeURIComponent(
-        underscores(query.trim()),
-      )}`
+        underscores(existingPage),
+      ).replace(/%2F/g, "/")}`
     : null;
 
   return (
@@ -253,10 +255,10 @@ export default function Search() {
         <div className="results-container">
           <span className="results-notice">
             {results.length} results found
-            {pageExists && aopsHref && (
+            {aopsHref && (
               <>
                 {" "}
-                | <a href={aopsHref}>{titleCleanup(query.trim())}</a> exists on
+                | <a href={aopsHref}>{titleCleanup(existingPage)}</a> exists on
                 the wiki
               </>
             )}
