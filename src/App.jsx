@@ -35,6 +35,9 @@ function readViewFromUrl() {
 export default function App() {
   const [view, setView] = useState(readViewFromUrl);
   const [preset, setPreset] = useState(null);
+  // Bumped on every navigation so Practice and Sets start fresh with the
+  // new preset (e.g. AMC 12 Training right after AMC 10 Training).
+  const [navKey, setNavKey] = useState(0);
 
   useEffect(() => {
     const onPop = () => {
@@ -47,10 +50,14 @@ export default function App() {
 
   const navigate = (next, opts = null) => {
     setPreset(opts);
+    setNavKey((k) => k + 1);
+    // Drop any ?page= or ?problems= from the URL: readViewFromUrl checks
+    // those before the hash, so reloading "?page=X#search" showed X.
+    const path = window.location.pathname;
     if (next === "home") {
-      window.history.pushState({}, "", "/");
+      window.history.pushState({}, "", path);
     } else {
-      window.history.pushState({ view: next }, "", `#${next}`);
+      window.history.pushState({ view: next }, "", `${path}#${next}`);
     }
     setView(next);
   };
@@ -62,8 +69,8 @@ export default function App() {
         {view !== "about" && (
           <Home activeView={view} onNavigate={navigate} />
         )}
-        {view === "practice" && <Practice preset={preset} />}
-        {view === "sets" && <Sets preset={preset} />}
+        {view === "practice" && <Practice key={navKey} preset={preset} />}
+        {view === "sets" && <Sets key={navKey} preset={preset} />}
         {view === "search" && <Search />}
         {view === "article" && <ArticleView />}
         {view === "batch" && <BatchView />}
