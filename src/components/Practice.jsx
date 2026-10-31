@@ -19,6 +19,7 @@ import {
 import {
   fullTestName,
   isTournamentTest,
+  needsVersion,
   pickProblem,
   underscores,
 } from "../lib/problems.js";
@@ -75,7 +76,7 @@ function RandomTab({ preset, hasProblem, onResult }) {
   const [tests, setTests] = useState(preset?.tests ?? []);
   const [showDifficultyInfo, setShowDifficultyInfo] = useState(false);
   const [yearRange, setYearRange] = useState(
-    preset?.yearRange ?? [DEFAULT_YEAR_MIN, new Date().getFullYear()],
+    preset?.yearRange ?? [DEFAULT_YEAR_MIN, Math.min(new Date().getFullYear(), YEAR_MAX)],
   );
   const [diffRange, setDiffRange] = useState(
     preset?.diffRange ?? [DIFFICULTY_MIN, DIFFICULTY_MAX],
@@ -210,23 +211,19 @@ function SelectTab({ onResult }) {
   }, [versions, version]);
 
   const go = async () => {
+    // Clear the previous problem along with any error, so it isn't left
+    // showing next to the message.
+    const fail = (message) => {
+      setError(message);
+      onResult(null);
+    };
     setError(null);
-    if (!test) {
-      setError("Choose a test.");
-      return;
+    if (!test) return fail("Choose a test.");
+    if (year === null) return fail("Enter a year.");
+    if (needsVersion(test, versions, year) && !version) {
+      return fail("Choose a version.");
     }
-    if (versions.length && !version) {
-      setError("Choose a version.");
-      return;
-    }
-    if (year === null) {
-      setError("Enter a year.");
-      return;
-    }
-    if (num === null) {
-      setError("Enter a problem number.");
-      return;
-    }
+    if (num === null) return fail("Enter a problem number.");
     const yearsKey = `${test}${version || ""}`;
     const validYears = VALID_YEARS[yearsKey];
     // Tournament availability is checked by the page fetch instead.
@@ -291,7 +288,7 @@ function SelectTab({ onResult }) {
         id="input-singleyear"
         className="input-field"
         type="number"
-        min={1974}
+        min={YEAR_MIN}
         max={YEAR_MAX}
         placeholder="Year"
         value={year ?? ""}
