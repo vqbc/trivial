@@ -5,6 +5,7 @@ import { AOPS_API, DEFAULT_TESTS } from "./constants.js";
 import { latexer } from "./latex.js";
 import { rewriteWikiLinks } from "./links.js";
 import { getProblem, getSolutions } from "./parse.js";
+import { normalizeTitle, wikiPath } from "./wikiKey.js";
 import {
   fetchArchiveAnswer,
   fetchArchiveCategoryPages,
@@ -26,6 +27,8 @@ import {
   isTournamentProblem,
 } from "./tournaments.js";
 
+const BASE = import.meta.env.BASE_URL;
+
 let problemsCache = null;
 let problemsPromise = null;
 
@@ -37,7 +40,7 @@ export async function fetchAllProblems() {
     // USAMO and IMO pages come from the bundled copy (lib/aopsarchive.js)
     // instead of the wiki list.
     problemsPromise = Promise.all([
-      fetch("/data/allproblems.json").then((r) => r.json()),
+      fetch(`${BASE}data/allproblems.json`).then((r) => r.json()),
       fetchArchiveProblems(),
       fetchTournamentProblems(),
     ]).then(([wiki, archive, tournaments]) => [
@@ -56,20 +59,16 @@ let pagesPromise = null;
 export async function fetchAllPages() {
   if (pagesCache) return pagesCache;
   if (!pagesPromise) {
-    pagesPromise = fetch("/data/allpages.json").then((r) => r.json());
+    pagesPromise = fetch(`${BASE}data/allpages.json`).then((r) => r.json());
   }
   pagesCache = await pagesPromise;
   return pagesCache;
 }
 
-// Cached lookup of AoPS Category:<subject> page lists, keyed by subject.
-// Paginates through `cmcontinue` until the wiki stops returning more.
-const categoryCache = new Map();
-
 // Returns the set of problem titles matching the given options. When
 // `subjects` is empty or contains "(All Subjects)", the universe is the
-// preloaded allproblems.json. Otherwise it's the union of AoPS
-// Category:<subject> pages, fetched per subject (cached).
+// preloaded problem list (see fetchAllProblems). Otherwise it's the union
+// of each subject's bundled AoPS and tournament category pages.
 export async function collectMatchingProblems({
   subjects,
   tests,
@@ -106,23 +105,73 @@ export async function collectMatchingProblems({
   return [...out];
 }
 
-export async function fetchCategoryPages(subject) {
-  if (categoryCache.has(subject)) return categoryCache.get(subject);
-  const titles = [];
-  let cmcontinue = null;
-  while (true) {
-    const params =
-      `action=query&list=categorymembers&cmtitle=Category:${encodeURIComponent(subject)}` +
-      `&cmlimit=max&format=json&origin=*` +
-      (cmcontinue ? `&cmcontinue=${encodeURIComponent(cmcontinue)}` : "");
-    const res = await fetch(`${AOPS_API}?${params}`);
-    const json = await res.json();
-    for (const m of json?.query?.categorymembers ?? []) titles.push(m.title);
-    if (!json?.continue) break;
-    cmcontinue = json.continue.cmcontinue;
+// Wiki-hosted images are blocked cross-origin too: dev proxies them, and
+// snapshot pages use the snapshot's copies.
+const WIKI_IMAGES = /(?:https?:)?\/\/artofproblemsolving\.com\/wiki\/images\//g;
+const withImages = (json, base) => {
+  const text = json?.parse?.text;
+  if (text) text["*"] = text["*"].replace(WIKI_IMAGES, base);
+  return json;
+};
+
+// Every AoPS API call goes through here. AoPS blocks cross-origin calls, so
+// dev talks to the live wiki through the Chrome-backed proxy (aops-chrome.js)
+// and production builds read the static snapshot from scripts/snapshot.js,
+// falling back to the live API for anything the snapshot doesn't have.
+// Resolves to null instead of rejecting, so an unreachable wiki shows an
+// error instead of hanging.
+export function aopsApi(params) {
+  const live = () => fetch(`${AOPS_API}?${params}`).then((r) => r.json());
+  const req = import.meta.env.DEV
+    ? fetch(`/aops-api?${params}`)
+        .then((r) => r.json())
+        .then((json) => withImages(json, "/aops-images/"))
+    : snapshotApi(new URLSearchParams(params)).then((json) => json ?? live());
+  return req.catch(() => null);
+}
+
+// Missing or unreadable (e.g. a host's index.html fallback) means "not in
+// the snapshot".
+const readSnapshot = (file) =>
+  fetch(`${BASE}data/${file}`)
+    .then((r) => (r.ok ? r.json() : null))
+    .catch(() => null);
+let categoriesPromise = null;
+let redirectsPromise = null;
+
+// Answers the few api.php queries the app makes from snapshot files, or
+// null when the snapshot doesn't have the answer.
+async function snapshotApi(p) {
+  if (p.get("action") === "parse") {
+    let page = await readSnapshot(`wiki/${wikiPath(p.get("page"))}`);
+    if (page?.redirect) {
+      page = await readSnapshot(`wiki/${wikiPath(page.redirect)}`);
+    }
+    if (!page) return null;
+    const json = { parse: { title: page.title, text: { "*": page.text } } };
+    return withImages(json, `${BASE}data/images/`);
   }
-  categoryCache.set(subject, titles);
-  return titles;
+  if (p.get("list") === "categorymembers") {
+    categoriesPromise ??= readSnapshot("categories.json");
+    const category = p.get("cmtitle").replace(/^Category:/, "");
+    const titles = (await categoriesPromise)?.[category];
+    if (!titles) return null;
+    return { query: { categorymembers: titles.map((title) => ({ title })) } };
+  }
+  if (p.get("list") === "search") {
+    // No full-text index offline: match every search word against titles.
+    // Redirects get the "#REDIRECT" snippet the live API returns, which
+    // Search already filters out. Without a snapshot, use the live search.
+    redirectsPromise ??= readSnapshot("redirects.json").then((r) => r && new Set(r));
+    const redirects = await redirectsPromise;
+    if (!redirects) return null;
+    const words = normalizeTitle(p.get("srsearch")).toLowerCase().split(" ");
+    const pages = await fetchAllPages();
+    const hits = pages.filter((t) => words.every((w) => t.toLowerCase().includes(w)));
+    const snippet = (title) => (redirects.has(title) ? "#REDIRECT" : "");
+    return { query: { search: hits.map((title) => ({ title, snippet: snippet(title) })) } };
+  }
+  return null;
 }
 
 // `redirects=1` makes MediaWiki resolve redirects server-side: the
@@ -131,8 +180,12 @@ export async function fetchCategoryPages(subject) {
 // HTML scraping of the redirect notice.
 async function fetchParsed(page) {
   const params = `action=parse&page=${page}&redirects=1&format=json&origin=*`;
-  const response = await fetch(`${AOPS_API}?${params}`);
-  return response.json();
+  return aopsApi(params);
+}
+
+// Problems served from the bundled archives rather than the wiki API.
+export async function isBundledProblem(pagename) {
+  return (await isTournamentProblem(pagename)) || isArchiveProblem(pagename);
 }
 
 // Fetches a problem page from the AoPS wiki. `redirects=1` on the
