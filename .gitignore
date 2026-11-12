@@ -2,3 +2,5 @@ node_modules
 .prettierrc
 .vscode
 dist
+.aops-chrome
+snapshot.log
