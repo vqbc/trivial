@@ -14,13 +14,18 @@ import {
   DIFFICULTY_MIN,
   DIFFICULTY_MAX,
 } from "../lib/constants.js";
-import { fullTestName, titleCleanup, underscores } from "../lib/problems.js";
+import {
+  fullTestName,
+  needsVersion,
+  titleCleanup,
+  underscores,
+} from "../lib/problems.js";
 import {
   collectMatchingProblems,
   fetchAllProblems,
   fetchProblemBatch,
 } from "../lib/aops.js";
-import { addHistoryBatch } from "../lib/history.js";
+import { addHistoryBatch, batchUrl, removeHistory } from "../lib/history.js";
 import { increment } from "../lib/stats.js";
 import RangeSlider from "./RangeSlider.jsx";
 import Tagify from "./Tagify.jsx";
@@ -87,7 +92,7 @@ function RandomBatchTab({ preset, options, onOptions, onRun }) {
   const [subjects, setSubjects] = useState(preset?.subjects ?? []);
   const [tests, setTests] = useState(preset?.tests ?? []);
   const [yearRange, setYearRange] = useState(
-    preset?.yearRange ?? [DEFAULT_YEAR_MIN, new Date().getFullYear()],
+    preset?.yearRange ?? [DEFAULT_YEAR_MIN, Math.min(new Date().getFullYear(), YEAR_MAX)],
   );
   const [diffRange, setDiffRange] = useState(
     preset?.diffRange ?? [DIFFICULTY_MIN, DIFFICULTY_MAX],
@@ -268,12 +273,12 @@ function PastTestTab({ options, onOptions, onRun }) {
       setError("Choose a test.");
       return;
     }
-    if (versions.length && !version) {
-      setError("Choose a version.");
-      return;
-    }
     if (year === null) {
       setError("Enter a year.");
+      return;
+    }
+    if (needsVersion(test, versions, year) && !version) {
+      setError("Choose a version.");
       return;
     }
     const fullTest = fullTestName(test, version);
@@ -320,7 +325,7 @@ function PastTestTab({ options, onOptions, onRun }) {
           id="input-singleyear"
           className="input-field"
           type="number"
-          min={1974}
+          min={YEAR_MIN}
           max={YEAR_MAX}
           placeholder="Year"
           value={year ?? ""}
@@ -430,21 +435,10 @@ export default function Sets({ preset }) {
           problems = [...problems].sort((a, b) => a.difficulty - b.difficulty);
         }
         const title = options.title.trim() || defaultTitle;
-        addHistoryBatch(
-          problems.map((p) => p.title),
-          problems[0].problem,
-          title,
-        );
+        const loaded = problems.map((p) => p.title);
+        addHistoryBatch(loaded, problems[0].problem, title, testYear, testName);
         increment("numSets");
-        const problemsParam = problems
-          .map((p) => underscores(p.title))
-          .join("|");
-        const url =
-          `?problems=${problemsParam}` +
-          (testName && testYear
-            ? `&testyear=${encodeURIComponent(testYear)}&testname=${encodeURIComponent(testName)}`
-            : "");
-        window.history.pushState({}, "", url);
+        window.history.pushState({}, "", batchUrl(loaded, { title, testYear, testName }));
         setBatch({
           title,
           problems,
@@ -461,9 +455,11 @@ export default function Sets({ preset }) {
   );
 
   const poolRef = useRef([]);
+  const batchRef = useRef(null);
   useEffect(() => {
     poolRef.current = batch?.pool ?? [];
-  }, [batch?.pool]);
+    batchRef.current = batch;
+  }, [batch]);
 
   const replaceProblem = useCallback(async (index) => {
     while (poolRef.current.length > 0) {
@@ -474,14 +470,22 @@ export default function Sets({ preset }) {
         ...poolRef.current.slice(i + 1),
       ];
       const fetched = await fetchProblemBatch([pick]);
+      const current = batchRef.current;
+      if (!current) return;
       if (fetched.length > 0) {
-        const replacement = fetched[0];
-        setBatch((current) => {
-          if (!current) return current;
-          const nextProblems = [...current.problems];
-          nextProblems[index] = replacement;
-          return { ...current, problems: nextProblems, pool: poolRef.current };
-        });
+        const problems = [...current.problems];
+        problems[index] = fetched[0];
+        // Keep the URL and History pointing at the set as it now is.
+        const meta = {
+          title: current.title,
+          testYear: current.testYear,
+          testName: current.testName,
+        };
+        removeHistory(batchUrl(current.problems.map((p) => p.title), meta));
+        const titles = problems.map((p) => p.title);
+        addHistoryBatch(titles, problems[0].problem, meta.title, meta.testYear, meta.testName);
+        window.history.replaceState({}, "", batchUrl(titles, meta));
+        setBatch({ ...current, problems, pool: poolRef.current });
         return;
       }
     }

@@ -1,7 +1,7 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-import { TOURNAMENT_TESTS } from "./constants.js";
+import { TOURNAMENT_TESTS, VALID_YEARS } from "./constants.js";
 import { tournamentDifficulty } from "./tournaments.js";
 
 export const isTournamentTest = (test) => TOURNAMENT_TESTS.includes(test);
@@ -15,10 +15,13 @@ export const validProblem = (problem) =>
   /^\d{4}/.test(problem) &&
   /\d+$/.test(problem);
 
+// "2021 Fall AMC 10A" and "2002 AMC 12P" count as AMC 10 / AMC 12, like
+// the A and B versions.
 export const computeTest = (problem) =>
   problem
     .match(/(\d{4} )(.*)( Problems)/)[2]
-    .replace(/AMC ((?:10)|(?:12))[AB]/, "AMC $1")
+    .replace(/^Fall /, "")
+    .replace(/AMC ((?:10)|(?:12))[ABP]/, "AMC $1")
     .replace(/AIME I+/, "AIME")
     .replace(/AJHSME/, "AMC 8")
     .replace(TOURNAMENT_ROUND, "$1");
@@ -184,6 +187,17 @@ export const underscores = (string) =>
 // Builds the qualified test name used in problem page titles
 // (e.g. "AMC 10A", "AIME I", "Fall AMC 10A") given a base test and an
 // optional version selector.
+// Whether a test needs a version (A/B, I/II, a tournament round) for the
+// given year. Years before the split have none: the 1983–1999 AIME and the
+// 2000–2001 AMC 10/12 are listed under the bare test name in VALID_YEARS.
+export function needsVersion(test, versions, year) {
+  const unversioned = VALID_YEARS[test];
+  return (
+    versions.length > 0 &&
+    !(unversioned && year >= unversioned.min && year <= unversioned.max)
+  );
+}
+
 export function fullTestName(test, version) {
   if (!version) return test;
   if (isTournamentTest(test)) return `${test} ${version}`;
@@ -191,6 +205,15 @@ export function fullTestName(test, version) {
   if (parts.length > 1) return `${parts[0]} ${test}${parts[1]}`;
   if (version === "I" || version === "II") return `${test} ${version}`;
   return `${test}${version}`;
+}
+
+// An answer as typed, in the form answer keys use: uppercase with no
+// spaces (so " c" or "7 + 6sqrt(2)" still match), AIME answers as three
+// digits. Empty when nothing was typed.
+export function normalizeAnswerInput(input, pagename) {
+  const s = sanitize(input).toUpperCase().replace(/\s+/g, "");
+  if (!s) return "";
+  return computeTest(pagename) === "AIME" ? s.padStart(3, "0") : s;
 }
 
 export const sanitize = (string) =>

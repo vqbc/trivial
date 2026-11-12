@@ -23,7 +23,11 @@ function read(key) {
 }
 
 function write(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    // Storage is full or blocked; stats just aren't saved.
+  }
 }
 
 export function readStats() {
@@ -52,8 +56,12 @@ export function clearStats() {
 // last time we touched it.
 export function rollTodayIfNeeded() {
   const today = new Date().toDateString();
-  if (localStorage.getItem("dateToday") !== today) {
-    localStorage.setItem("dateToday", today);
-    write("numToday", 0);
+  try {
+    if (localStorage.getItem("dateToday") !== today) {
+      localStorage.setItem("dateToday", today);
+      write("numToday", 0);
+    }
+  } catch {
+    // Storage is blocked; there's no saved count to reset.
   }
 }

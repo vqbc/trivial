@@ -4,7 +4,6 @@
 import { useEffect, useState } from "react";
 import { fetchProblemBatch } from "../lib/aops.js";
 import { addHistoryBatch } from "../lib/history.js";
-import { increment } from "../lib/stats.js";
 import BatchDisplay from "./BatchDisplay.jsx";
 
 function readBatchFromUrl() {
@@ -17,6 +16,7 @@ function readBatchFromUrl() {
     .filter(Boolean);
   return {
     titles,
+    title: params.get("title"),
     testYear: params.get("testyear"),
     testName: params.get("testname"),
   };
@@ -74,9 +74,12 @@ export default function BatchView() {
         return;
       }
       const title =
-        spec.testYear && spec.testName
+        spec.title ||
+        (spec.testYear && spec.testName
           ? `${spec.testYear} ${spec.testName}`
-          : "Problem Set";
+          : "Problem Set");
+      // Reopening a set moves it to the top of History; it isn't a new
+      // set, so the "sets generated" stat stays the same.
       addHistoryBatch(
         problems.map((p) => p.title),
         problems[0].problem,
@@ -84,7 +87,6 @@ export default function BatchView() {
         spec.testYear,
         spec.testName,
       );
-      increment("numSets");
       setState({
         kind: "ready",
         title,

@@ -3,7 +3,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useRef, useState } from "react";
 import { AOPS_WIKI } from "../lib/constants.js";
-import { titleCleanup, underscores, sanitize, computeTest } from "../lib/problems.js";
+import {
+  normalizeAnswerInput,
+  titleCleanup,
+  underscores,
+} from "../lib/problems.js";
+import { toggleProps } from "../lib/toggle.js";
 import { fetchAnswer } from "../lib/aops.js";
 import { tournamentSource } from "../lib/tournaments.js";
 import { useWikiLinkClicks } from "../lib/links.js";
@@ -42,10 +47,9 @@ function AnswerCheck({ pagename, onAttempt }) {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const original = sanitize(input).toUpperCase();
-    if (!original) return;
-    const normalized =
-      computeTest(pagename) === "AIME" ? original.padStart(3, "0") : original;
+    const normalized = normalizeAnswerInput(input, pagename);
+    if (!normalized) return;
+    const original = input.trim().toUpperCase();
     const correct = isCorrect(pagename, normalized, answer);
     onAttempt(correct);
     setFeedback((prev) => [
@@ -186,7 +190,7 @@ export default function ProblemDisplay({
         <h2
           className="section-header collapse-header"
           id="solutions-header"
-          onClick={onToggleSolutions}
+          {...toggleProps(onToggleSolutions, solutionsOpen)}
         >
           Solutions
         </h2>

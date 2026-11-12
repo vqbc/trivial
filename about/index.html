@@ -155,13 +155,26 @@
     <link href="/src/styles.css" rel="stylesheet" />
     <link href="/src/dark.css" rel="stylesheet" />
     <script>
-      if (
-        JSON.parse(localStorage.getItem("darkTheme")) ||
-        (JSON.parse(localStorage.getItem("darkTheme")) === null &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-      }
+      (function () {
+        const stored = () => {
+          try {
+            return JSON.parse(localStorage.getItem("darkTheme"));
+          } catch {
+            return null;
+          }
+        };
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+        if (stored() || (stored() === null && systemDark.matches)) {
+          document.documentElement.classList.add("dark");
+        }
+        // "System theme" (nothing stored) follows the OS while the page is
+        // open, too.
+        systemDark.addEventListener("change", (e) => {
+          if (stored() === null) {
+            document.documentElement.classList.toggle("dark", e.matches);
+          }
+        });
+      })();
     </script>
   </head>
   <body>

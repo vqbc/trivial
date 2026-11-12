@@ -22,11 +22,16 @@ function load() {
 }
 
 function persist(items) {
-  if (items.length > MAX_ITEMS) items.length = MAX_ITEMS;
-  // Dedupe by title, keeping the most recent entry (which is at the
-  // front since callers `unshift`).
-  const deduped = [...new Map(items.map((i) => [i.title, i])).values()];
-  localStorage.setItem(KEY, JSON.stringify(deduped));
+  // Dedupe by URL, keeping the most recent entry (which is at the front
+  // since callers `unshift`). Titles can repeat: every random set made on
+  // the same day is "Random Set - <date>".
+  const seen = new Set();
+  const deduped = items.filter((i) => !seen.has(i.url) && seen.add(i.url));
+  try {
+    localStorage.setItem(KEY, JSON.stringify(deduped.slice(0, MAX_ITEMS)));
+  } catch {
+    // Storage is full or blocked; history just isn't saved.
+  }
 }
 
 export function readHistory() {
@@ -34,7 +39,28 @@ export function readHistory() {
 }
 
 export function clearHistory() {
-  localStorage.removeItem(KEY);
+  try {
+    localStorage.removeItem(KEY);
+  } catch {
+    // Storage is blocked; nothing was saved.
+  }
+}
+
+export function removeHistory(url) {
+  persist(readHistory().filter((i) => i.url !== url));
+}
+
+// URL of a problem set: its problems, the test for Past Tests (needed for
+// the AMC score cutoffs) and its title, so reopening it from History or a
+// shared link looks the same.
+export function batchUrl(problemTitles, { title, testYear, testName } = {}) {
+  return (
+    `?problems=${underscores(problemTitles.join("|"))}` +
+    (testYear && testName
+      ? `&testyear=${encodeURIComponent(testYear)}&testname=${encodeURIComponent(testName)}`
+      : "") +
+    (title ? `&title=${encodeURIComponent(title)}` : "")
+  );
 }
 
 // Records a single-problem or article view.
@@ -57,9 +83,11 @@ export function addHistoryBatch(
   testYear,
   testName,
 ) {
-  const url =
-    `?problems=${underscores(problemTitles.join("|"))}` +
-    (testYear ? `&testyear=${testYear}&testname=${testName}` : "");
+  const url = batchUrl(problemTitles, {
+    title: customTitle,
+    testYear,
+    testName,
+  });
   const fallbackTitle =
     problemTitles
       .map((t) => titleCleanup(t))
