@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import fs from "fs";
+import { aopsApiText } from "./aops-chrome.js";
 
 (async () => {
 
@@ -8,19 +9,10 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 async function fetchJson(url) {
   const proxyApiKey = process.env.Proxy_API_Key;
 
+  // Without a Zyte key, go through a real Chrome window: AoPS's Cloudflare
+  // check blocks direct requests (see aops-chrome.js).
   if (!proxyApiKey) {
-    const response = await fetch(url, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Direct fetch failed: ${response.status} ${response.statusText}`);
-    }
-
-    return response.json();
+    return JSON.parse(await aopsApiText(new URL(url).search.slice(1)));
   }
 
   const maxAttempts = 6;

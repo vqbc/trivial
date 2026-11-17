@@ -2,9 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useRef, useState } from "react";
-import { AOPS_API } from "../lib/constants.js";
 import { titleCleanup, underscores, validProblem } from "../lib/problems.js";
-import { fetchAllPages, fetchArticlePage } from "../lib/aops.js";
+import {
+  aopsApi,
+  fetchAllPages,
+  fetchArticlePage,
+  isBundledProblem,
+} from "../lib/aops.js";
 import { addHistory } from "../lib/history.js";
 import { increment } from "../lib/stats.js";
 import { ArticleBody } from "./ArticleView.jsx";
@@ -13,11 +17,11 @@ import Tagify from "./Tagify.jsx";
 const PAGE_SIZE = 10;
 
 async function checkPageExists(search) {
+  if (validProblem(search) && (await isBundledProblem(search))) return true;
   const params = `action=parse&page=${encodeURIComponent(
     underscores(search),
   )}&format=json&origin=*`;
-  const res = await fetch(`${AOPS_API}?${params}`);
-  const json = await res.json();
+  const json = await aopsApi(params);
   return Boolean(json?.parse);
 }
 
@@ -27,13 +31,12 @@ async function fetchAllSearchResults(search) {
       search,
     )}` + `&srlimit=max&srqiprofile=wsum_inclinks_pv&format=json&origin=*`;
   const out = [];
-  let url = `${AOPS_API}?${baseParams}`;
+  let params = baseParams;
   while (true) {
-    const res = await fetch(url);
-    const json = await res.json();
+    const json = await aopsApi(params);
     for (const page of json?.query?.search ?? []) out.push(page);
     if (!json?.continue) break;
-    url = `${AOPS_API}?${baseParams}&sroffset=${json.continue.sroffset}`;
+    params = `${baseParams}&sroffset=${json.continue.sroffset}`;
   }
   return out;
 }
@@ -45,8 +48,7 @@ async function fetchTheorems() {
   const params =
     `action=query&list=categorymembers&cmtitle=Category:Theorems` +
     `&cmlimit=max&format=json&origin=*`;
-  const res = await fetch(`${AOPS_API}?${params}`);
-  const json = await res.json();
+  const json = await aopsApi(params);
   theoremCache = (json?.query?.categorymembers ?? [])
     .map((p) => p.title)
     .filter((t) => t !== "H�lder's Inequality" && t !== "Theorems");
@@ -75,7 +77,9 @@ export default function Search() {
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(null);
   const [results, setResults] = useState(null);
-  const [pageExists, setPageExists] = useState(false);
+  // The normalized title ("2014 AMC 12A Problems/Problem 9") when the
+  // search matched an existing page, for the "exists on the wiki" link.
+  const [existingPage, setExistingPage] = useState(null);
   const [shown, setShown] = useState(0);
   const [theoremPending, setTheoremPending] = useState(false);
   const [theorem, setTheorem] = useState(null);
@@ -143,7 +147,7 @@ export default function Search() {
         fetchAllSearchResults(normalized),
       ]);
       if (reqId !== reqIdRef.current) return;
-      setPageExists(exists);
+      setExistingPage(exists ? normalized : null);
       setRaw(all);
       document.title = `Search results for ${original} - Trivial Math Practice`;
     } finally {
@@ -152,6 +156,12 @@ export default function Search() {
   };
 
   const loadInlineArticle = async (pick) => {
+    // Problem links open the full problem view, which also handles
+    // bundled problems that aren't on the wiki API.
+    if (validProblem(pick)) {
+      window.location.href = `?page=${underscores(pick)}`;
+      return;
+    }
     const result = await fetchArticlePage(pick);
     if (!result) {
       setError(`The page "${pick}" could not be loaded.`);
@@ -181,10 +191,10 @@ export default function Search() {
 
   const onTagChange = (vals) => setQuery(vals[0] ?? "");
 
-  const aopsHref = query
+  const aopsHref = existingPage
     ? `https://artofproblemsolving.com/wiki/index.php/${encodeURIComponent(
-        underscores(query.trim()),
-      )}`
+        underscores(existingPage),
+      ).replace(/%2F/g, "/")}`
     : null;
 
   return (
@@ -245,10 +255,10 @@ export default function Search() {
         <div className="results-container">
           <span className="results-notice">
             {results.length} results found
-            {pageExists && aopsHref && (
+            {aopsHref && (
               <>
                 {" "}
-                | <a href={aopsHref}>{titleCleanup(query.trim())}</a> exists on
+                | <a href={aopsHref}>{titleCleanup(existingPage)}</a> exists on
                 the wiki
               </>
             )}

@@ -9,9 +9,8 @@ import {
   computeTest,
   isTournamentTest,
 } from "../lib/problems.js";
-import { fetchAnswer } from "../lib/aops.js";
+import { aopsApi, fetchAnswer } from "../lib/aops.js";
 import { inArchive } from "../lib/aopsarchive.js";
-import { AOPS_API } from "../lib/constants.js";
 
 const STAT_TESTS = new Set([
   "AMC 8",
@@ -80,14 +79,12 @@ function ProblemBlock({
 
 async function loadAnswerKey(test) {
   const params = `action=parse&page=${test} Answer Key&format=json&origin=*`;
-  const res = await fetch(`${AOPS_API}?${params}`);
-  return res.json();
+  return aopsApi(params);
 }
 
 async function fetchAmcStats(testName, testYear) {
   const params = `action=parse&page=AMC_historical_results&format=json&origin=*`;
-  const res = await fetch(`${AOPS_API}?${params}`);
-  const json = await res.json();
+  const json = await aopsApi(params);
   const html = json?.parse?.text?.["*"];
   if (!html) return [];
   const div = document.createElement("div");
