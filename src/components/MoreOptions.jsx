@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useState } from "react";
 import Tagify from "./Tagify.jsx";
+import { toggleProps } from "../lib/toggle.js";
 
 // Collapsible options panel for Sets-style batches. The shape of
 // `value` matches the legacy More Options fields:
@@ -24,7 +25,7 @@ export default function MoreOptions({
       <h3
         className="text-collapse-header"
         id="options-header"
-        onClick={() => setOpen((v) => !v)}
+        {...toggleProps(() => setOpen((v) => !v), open)}
       >
         More Options
       </h3>

@@ -2,12 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 import { useEffect, useState } from "react";
+import { toggleProps } from "../lib/toggle.js";
 import {
   titleCleanup,
   underscores,
-  sanitize,
   computeTest,
   isTournamentTest,
+  normalizeAnswerInput,
 } from "../lib/problems.js";
 import { fetchAnswer } from "../lib/aops.js";
 import { inArchive } from "../lib/aopsarchive.js";
@@ -181,6 +182,8 @@ function ScoringOptions({ mode, amcScoring, onMode, onAmcScoring }) {
 
 function BatchAnswerCheck({ problems, testName, testYear }) {
   const [answers, setAnswers] = useState(null);
+  // Typed answers by problem title, so replacing one problem in a set
+  // keeps the answers to the others.
   const [inputs, setInputs] = useState({});
   const [scored, setScored] = useState(false);
   const [mode, setMode] = useState("show-ans");
@@ -189,8 +192,6 @@ function BatchAnswerCheck({ problems, testName, testYear }) {
 
   useEffect(() => {
     let cancelled = false;
-    setAnswers(null);
-    setInputs({});
     setScored(false);
     setAmcStats(null);
 
@@ -248,11 +249,10 @@ function BatchAnswerCheck({ problems, testName, testYear }) {
   if (!answers || answers.every((a) => a === null)) return null;
 
   const check = (index) => {
-    const raw = sanitize(inputs[index] ?? "").toUpperCase();
-    if (!raw) return { state: "blank", expected: answers[index] };
     const pagename = problems[index].title;
-    let normalized = raw;
-    if (computeTest(pagename) === "AIME") normalized = raw.padStart(3, "0");
+    const normalized = normalizeAnswerInput(inputs[pagename] ?? "", pagename);
+    if (!normalized) return { state: "blank", expected: answers[index] };
+    const raw = normalized;
     const correct =
       normalized === answers[index] ||
       (pagename === "2012 AMC 12B Problems/Problem 12" &&
@@ -263,10 +263,15 @@ function BatchAnswerCheck({ problems, testName, testYear }) {
     return { state: correct ? "right" : "wrong", expected: answers[index], raw };
   };
 
-  const scores = scored ? problems.map((_, i) => check(i)) : null;
-  const right = scores ? scores.filter((s) => s.state === "right").length : 0;
-  const blank = scores ? scores.filter((s) => s.state === "blank").length : 0;
-  const total = problems.length;
+  // Problems without an answer key (e.g. olympiad ones) have no answer
+  // box, so they don't count toward the score.
+  const scores = scored
+    ? problems.map((_, i) => (answers[i] ? check(i) : null))
+    : null;
+  const checked = scores?.filter(Boolean) ?? [];
+  const right = checked.filter((s) => s.state === "right").length;
+  const blank = checked.filter((s) => s.state === "blank").length;
+  const total = answers.filter(Boolean).length;
 
   const sectionCls = `problem-section batchans-${mode === "score-only"
     ? "scoreonly"
@@ -288,9 +293,9 @@ function BatchAnswerCheck({ problems, testName, testYear }) {
                 className="input-field input-batchans"
                 type="text"
                 placeholder="Enter answer"
-                value={inputs[i] ?? ""}
+                value={inputs[p.title] ?? ""}
                 onChange={(e) =>
-                  setInputs({ ...inputs, [i]: e.target.value })
+                  setInputs({ ...inputs, [p.title]: e.target.value })
                 }
               />
               {scores && (
@@ -467,7 +472,7 @@ export default function BatchDisplay({
         <h2
           className="section-header collapse-header"
           id="solutions-header"
-          onClick={() => setSolutionsOpen((v) => !v)}
+          {...toggleProps(() => setSolutionsOpen((v) => !v), solutionsOpen)}
         >
           Solutions
         </h2>

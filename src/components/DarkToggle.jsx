@@ -10,7 +10,22 @@ function labelFor(value) {
 }
 
 function readStored() {
-  return JSON.parse(localStorage.getItem("darkTheme"));
+  try {
+    return JSON.parse(localStorage.getItem("darkTheme"));
+  } catch {
+    return null;
+  }
+}
+
+// The choice is remembered when storage allows; the toggle still works
+// for this page view when it doesn't.
+function store(value) {
+  try {
+    if (value === null) localStorage.removeItem("darkTheme");
+    else localStorage.setItem("darkTheme", JSON.stringify(value));
+  } catch {
+    // Storage is blocked.
+  }
 }
 
 function setColorScheme(content) {
@@ -24,28 +39,29 @@ function setDarkClass(enabled) {
 }
 
 export default function DarkToggle() {
-  const [label, setLabel] = useState(() => labelFor(readStored()));
+  // true / false / null (system), kept in state so the toggle still
+  // cycles when storage is blocked.
+  const [theme, setTheme] = useState(readStored);
 
   const onClick = () => {
-    const current = readStored();
-    if (current === true) {
+    if (theme === true) {
       const systemPrefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)",
       ).matches;
       setDarkClass(systemPrefersDark);
-      localStorage.removeItem("darkTheme");
+      store(null);
       setColorScheme("light dark");
-      setLabel("System theme");
-    } else if (current === null) {
+      setTheme(null);
+    } else if (theme === null) {
       setDarkClass(false);
-      localStorage.setItem("darkTheme", "false");
+      store(false);
       setColorScheme("light");
-      setLabel("Light theme");
+      setTheme(false);
     } else {
       setDarkClass(true);
-      localStorage.setItem("darkTheme", "true");
+      store(true);
       setColorScheme("dark");
-      setLabel("Dark theme");
+      setTheme(true);
     }
   };
 
@@ -56,7 +72,7 @@ export default function DarkToggle() {
       tabIndex={0}
       onClick={onClick}
     >
-      {label}
+      {labelFor(theme)}
     </button>
   );
 }

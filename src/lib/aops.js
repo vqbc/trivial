@@ -163,12 +163,12 @@ export async function fetchProblemBatch(titles, { onProgress } = {}) {
     titles.map(async (title, i) => {
       const fetched = await fetchProblemPage(title);
       if (fetched && fetched.problem && fetched.solutions) {
-        // Sets.jsx passes underscored titles, but problemDifficulty's
-        // regexes need the space-form ("2024 AMC 10A Problems/Problem 1").
-        // The wiki returns the resolved title with spaces; fall back
-        // to normalizing the input ourselves if that's missing.
-        const canonical =
-          fetched.finalPage ?? title.replace(/_/g, " ");
+        // Keep the title that was asked for, even when it redirects to a
+        // shared problem ("2014 AMC 12A Problems/Problem 9" is the 10A #10
+        // page), so a Past Test lists its own problem numbers; answers and
+        // difficulty follow the same title. Sets.jsx passes underscored
+        // titles, but problemDifficulty needs the space form.
+        const canonical = title.replace(/_/g, " ");
         results[i] = {
           title: canonical,
           problem: fetched.problem,

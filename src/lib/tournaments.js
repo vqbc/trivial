@@ -1,9 +1,8 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-import katex from "katex";
 import { TOURNAMENT_TESTS } from "./constants.js";
-import { formatLatex } from "./latex.js";
+import { formatLatex, renderKatex } from "./latex.js";
 
 // College tournament problems come from the bundled archive under
 // public/data/tournaments/ (see buildtournaments.js for the layout)
@@ -146,7 +145,7 @@ export function renderMath(html) {
     /\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)/g,
     (match, display, inline) => {
       const isDisplay = display !== undefined;
-      const rendered = katex.renderToString(
+      const rendered = renderKatex(
         formatLatex(isDisplay ? display : inline),
         { throwOnError: false, displayMode: isDisplay },
       );

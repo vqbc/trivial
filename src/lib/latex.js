@@ -25,6 +25,12 @@ export const formatLatex = (string) =>
     .replace(/\\mathdollar/g, "\\$")
     .replace(/\\textdollar/g, "\\$");
 
+// KaTeX (through at least 0.17.0) draws tall \lfloor / \rfloor with an
+// SVG path containing "MM", which browsers reject (a console error per
+// bracket). Repair it; drop this once KaTeX fixes the path.
+export const renderKatex = (tex, options) =>
+  katex.renderToString(tex, options).replaceAll("\nMM", "\nM");
+
 export function latexer(html) {
   let out = html.replace(
     /<pre>\s+?(.*?)<\/pre>/gs,
@@ -39,7 +45,7 @@ export function latexer(html) {
     if (image.includes("[asy]")) continue;
     const isDisplay = /alt="\\\[|\\begin/.test(image);
     const imageLatex = formatLatex(image.match(/alt="(.*?)"/)[1]);
-    const renderedLatex = katex.renderToString(imageLatex, {
+    const renderedLatex = renderKatex(imageLatex, {
       throwOnError: false,
       displayMode: isDisplay,
     });
@@ -54,7 +60,7 @@ export function latexer(html) {
   // as raw "\( ... \)" text instead of <img class="latex" ...>, so render
   // those through KaTeX as well.
   out = out.replace(/\\\(([\s\S]+?)\\\)/g, (_, latex) => {
-    const rendered = katex.renderToString(formatLatex(latex), {
+    const rendered = renderKatex(formatLatex(latex), {
       throwOnError: false,
       displayMode: false,
     });
