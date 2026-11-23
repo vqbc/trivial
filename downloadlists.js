@@ -79,7 +79,7 @@ async function fetchJson(url) {
 
   let allPages = [];
   let allProblems = [];
-  let numPages = 19000;
+  let numPages = 19500;
 
   let validProblem = (problem) =>
     problem.match(/^\d{4} .* Problems\/Problem [A-Z]?\d+$/);
